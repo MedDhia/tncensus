@@ -1,0 +1,90 @@
+---
+title: "Introduction to tncensus"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Introduction to tncensus}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.width = 7,
+  fig.height = 5
+)
+```
+
+## Overview
+
+**tncensus** provides harmonized delegation-level data from Tunisia's 2014
+and 2024 General Population and Housing Censuses (RGPH).
+
+```{r load}
+library(tncensus)
+data("census_panel")
+data("codebook")
+data("delegation_crosswalk")
+```
+
+The main dataset has `r nrow(census_panel)` rows and `r ncol(census_panel)`
+columns. Each of the 45 indicators appears with `_2014`, `_2024`, and
+`_change` suffixes.
+
+## The codebook
+
+```{r codebook}
+codebook[, c("variable", "domain", "label")]
+```
+
+## Example: unemployment change by region
+
+```{r unemployment}
+unemp <- aggregate(
+  cbind(unemployment_rate_2014, unemployment_rate_2024,
+        unemployment_rate_change) ~ region_2024,
+  data = census_panel, FUN = mean, na.rm = TRUE
+)
+unemp[order(-unemp$unemployment_rate_change), ]
+```
+
+## Example: water infrastructure expansion
+
+```{r water}
+water <- aggregate(
+  pct_sonede_water_change ~ governorate,
+  data = census_panel, FUN = mean, na.rm = TRUE
+)
+head(water[order(-water$pct_sonede_water_change), ], 10)
+```
+
+## The crosswalk
+
+```{r crosswalk}
+table(delegation_crosswalk$match_type)
+head(delegation_crosswalk[delegation_crosswalk$match_type == "fuzzy",
+  c("delegation_2014", "delegation_2024", "gov_2014")], 10)
+```
+
+## Scatter plot
+
+```{r scatter, eval = requireNamespace("ggplot2", quietly = TRUE)}
+library(ggplot2)
+matched <- census_panel[census_panel$matched == TRUE, ]
+ggplot(matched, aes(x = unemployment_rate_2014, y = unemployment_rate_2024,
+                    color = region_2024)) +
+  geom_point(alpha = 0.7) +
+  geom_abline(slope = 1, intercept = 0, linetype = "dashed", color = "grey50") +
+  labs(x = "Unemployment 2014 (%)", y = "Unemployment 2024 (%)",
+       color = "Region",
+       title = "Unemployment persistence across delegations") +
+  theme_minimal()
+```
+
+## Harmonization log
+
+```{r log, eval = FALSE}
+log_path <- system.file("extdata", "harmonization_log.md", package = "tncensus")
+file.edit(log_path)
+```

@@ -1,0 +1,39 @@
+Package: tncensus
+Type: Package
+Title: Harmonized Tunisian Census Data at the Delegation Level
+Version: 0.1.0
+Authors@R: c(
+    person("Tunisian National Institute of Statistics", role = c("dtc", "cph"),
+           comment = "Institut National de la Statistique (INS)"),
+    person(given = "Mohamed Dhia",
+           family = "Hammami",
+           email = "mhammami@syr.edu",
+           role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0003-4498-8770"))
+    )
+Description: Provides harmonized delegation-level data from Tunisia's 2014 and
+    2024 General Population and Housing Censuses (Recensement General de la
+    Population et de l'Habitat, RGPH). Contains 45 socioeconomic indicators
+    covering education, employment, infrastructure, housing, household
+    equipment, and migration for 281 delegations nested in 24 governorates,
+    with a geographic crosswalk resolving name changes between census waves.
+    All variables are rescaled to a common 0-100 percentage metric.
+    Includes a codebook, the delegation-level crosswalk,
+    and a harmonization log documenting every matching and recoding decision.
+License: CC BY 4.0
+URL: https://github.com/MedDhia/tncensus,
+    https://www.mohameddhiahammami.com/data
+BugReports: https://github.com/MedDhia/tncensus/issues
+Encoding: UTF-8
+LazyData: true
+LazyDataCompression: xz
+Depends:
+    R (>= 3.5.0)
+Suggests:
+    ggplot2,
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
+RoxygenNote: 7.3.2
+Roxygen: list(markdown = TRUE)
+Language: en-US

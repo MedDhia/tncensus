@@ -1,0 +1,26 @@
+bibentry(
+  bibtype  = "Manual",
+  title    = "tncensus: Harmonized Tunisian Census Data at the Delegation Level",
+  author   = person("Mohamed Dhia", "Hammami"),
+  year     = "2026",
+  note     = "R package version 0.1.0",
+  url      = "https://github.com/MedDhia/tncensus"
+)
+
+bibentry(
+  bibtype  = "Misc",
+  title    = "R Packages for Tunisia's 2014 and 2024 Censuses",
+  author   = person("Mohamed Dhia", "Hammami"),
+  year     = "2026",
+  url      = "https://mohameddhiahammami.com/data",
+  note     = "Data page with links to rgph2014tn, rgph2024tn, and tncensus packages"
+)
+
+bibentry(
+  bibtype  = "Misc",
+  title    = "Recensement General de la Population et de l'Habitat 2014 et 2024",
+  author   = person(given = "Institut National de la Statistique"),
+  year     = "2024",
+  note     = "Republic of Tunisia",
+  url      = "https://www.ins.tn"
+)
