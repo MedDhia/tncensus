@@ -312,7 +312,7 @@ All contemporary census data (2014, 2024, and earlier national publications) are
 
 The digitized colonial (1891–1956) and historical post-independence census series (1966–2004), as well as the historical geographic crosswalks, were compiled, cleaned, and published in the replication package of:
 
-> **Ben Salah, E., Boughzala, M. S., & Zouabi, O. (2024).** *Historical census and educational data of Tunisia (1891–2014)*. **Journal of Comparative Economics**, 52(4), 1013–1032. [https://doi.org/10.1016/j.jce.2024.09.002](https://doi.org/10.1016/j.jce.2024.09.002)
+> **Ben Salah, M., Chambru, C., & Fourati, M. (2024).** The colonial legacy of education: Evidence from Tunisia. *Journal of Comparative Economics*, 52(4), 773–792. [https://doi.org/10.1016/j.jce.2024.09.002](https://doi.org/10.1016/j.jce.2024.09.002)
 
 If you use the historical or colonial datasets (`colonial_*`, `rgph1966_illiteracy`, `rgph1984_education`, `rgph2004`, `historical_education`, `historical_geonames`, or `delegation_matrix_*`), please cite **Ben Salah et al. (2024)**.
 
