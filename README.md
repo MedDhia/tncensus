@@ -4,7 +4,6 @@
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-blue.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![R >= 4.0.0](https://img.shields.io/badge/R-%3E%3D_4.0.0-blue.svg)](https://www.r-project.org/)
 [![Census Coverage](https://img.shields.io/badge/Census_Coverage-1891--2024-teal.svg)](#datasets-summary)
-[![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.jce.2024.09.002-darkred.svg)](https://doi.org/10.1016/j.jce.2024.09.002)
 
 **tncensus** is a unified R data package providing access to 133 years of Tunisian census data (1891–2024). It brings together contemporary General Population and Housing Censuses (**RGPH 2024**, **RGPH 2014**, **RGPH 2004**), a longitudinally harmonized **2014–2024 Delegation Panel**, pre-independence and post-independence historical censuses (1891–1984), and built-in **GeoJSON administrative boundaries** with multilingual place-name harmonization (Arabic, French, English, and historical transliterations).
 
