@@ -312,9 +312,29 @@ All contemporary census data (2014, 2024, and earlier national publications) are
 
 The digitized colonial (1891–1956) and historical post-independence census series (1966–2004), as well as the historical geographic crosswalks, were compiled, cleaned, and published in the replication package of:
 
-> **Ben Salah, E., Boughzala, M. S., & Zouabi, O. (2024).** *Historical census and educational data of Tunisia (1891–2014)*. **Journal of Comparative Economics**, 52(4), 1013–1032. [https://doi.org/10.1016/j.jce.2024.09.002](https://doi.org/10.1016/j.jce.2024.09.002)
+> **Ben Salah, M., Chambru, C., & Fourati, M. (2024).** The colonial legacy of education: Evidence from Tunisia. *Journal of Comparative Economics*, 52(4), 773–792. [https://doi.org/10.1016/j.jce.2024.09.002](https://doi.org/10.1016/j.jce.2024.09.002)
 
 If you use the historical or colonial datasets (`colonial_*`, `rgph1966_illiteracy`, `rgph1984_education`, `rgph2004`, `historical_education`, `historical_geonames`, or `delegation_matrix_*`), please cite **Ben Salah et al. (2024)**.
+
+### Archival Scans from Gallica (BnF)
+
+The original colonial census publications can be retrieved as PDFs with [`data-raw/bnf_gallica_download.py`](data-raw/bnf_gallica_download.py), which uses the BnF's IIIF API (`openapi.bnf.fr`). The scans themselves are **not redistributed** in this repository and are **not covered by its CC BY 4.0 licence**: they remain subject to the [Gallica terms of use](https://gallica.bnf.fr/edit/und/conditions-dutilisation-des-contenus-de-gallica) and to the terms of the library that holds each original.
+
+Gallica allows free non-commercial reuse provided the source credit is kept; commercial reuse requires a licence. The credit names Gallica and the holding institution, which is not always the BnF:
+
+| Document | Gallica ark | Holding institution | Rights | Credit line |
+|:---|:---|:---|:---:|:---|
+| *Dénombrement de la population européenne civile en Tunisie au 16 décembre 1906* (1907) | [`bd6t53563851`](https://gallica.bnf.fr/ark:/12148/bd6t53563851) | Bibliothèques de l'Université de Poitiers, NUM GIR-220 | [NoC-CR](http://rightsstatements.org/vocab/NoC-CR/1.0/) | Source gallica.bnf.fr / Bibliothèques de l'Université de Poitiers |
+| *Dénombrement de la population civile indigène (musulmane et israélite) en Tunisie au 22 mars 1931* (1932) | [`bpt6k994559s`](https://gallica.bnf.fr/ark:/12148/bpt6k994559s) | BnF, Droit, économie, politique, 8-O3W-167 (1931) | [NoC-NC](http://rightsstatements.org/vocab/NoC-NC/1.0/) | Source gallica.bnf.fr / Bibliothèque nationale de France |
+| *Statistique générale de la Tunisie*, volumes 1922, 1925, 1927, 1929, 1935, 1936, 1939 | see [`bnf_gallica_sources.csv`](data-raw/bnf_gallica_sources.csv) | Ministère des Affaires étrangères, Per 10 | [NoC-CR](http://rightsstatements.org/vocab/NoC-CR/1.0/) | Source gallica.bnf.fr / Ministère des Affaires étrangères |
+
+*NoC-NC*: public domain, non-commercial reuse only. *NoC-CR*: public domain, reuse subject to the contractual terms of the partner library that holds the original. Check that library's terms before any commercial or large-scale reuse. Rights and holdings are taken from each document's IIIF manifest.
+
+When you cite a scan, give the original publication, the credit line and the ark permalink. For example:
+
+> Tunisie, Direction générale de l'intérieur (1932). *Dénombrement de la population civile indigène (musulmane et israélite) en Tunisie au 22 mars 1931*. Tunis : Impr. J. Aloccio. Source gallica.bnf.fr / Bibliothèque nationale de France, <https://gallica.bnf.fr/ark:/12148/bpt6k994559s>.
+
+The catalogue information used to find these documents comes from the BnF catalogue (`catalogue.bnf.fr/api/SRU`), whose metadata is released under the [Licence Ouverte / Open Licence (Etalab)](https://www.bnf.fr/fr/conditions-de-reutilisations-des-donnees-de-la-bnf) on condition that the source and the date of retrieval are given. Source: BnF catalogue général, retrieved 24 November 2026.
 
 ### Citing the `tncensus` Package
 
@@ -335,6 +355,8 @@ To cite the **tncensus** package in publications:
 ## License
 
 This package and its documentation are distributed under the **Creative Commons Attribution 4.0 International License (CC BY 4.0)**. You are free to share and adapt the material for any purpose, provided appropriate credit is given.
+
+This licence does not cover archival scans retrieved from Gallica with the `data-raw` scripts. Those remain under the Gallica terms of use and the terms of each holding library (see [Archival Scans from Gallica](#archival-scans-from-gallica-bnf)).
 
 ---
 
