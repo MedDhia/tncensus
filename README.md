@@ -97,6 +97,43 @@ install.packages(c("sf", "ggplot2", "arrow"))
 
 ## Quickstart & Guided Workflows
 
+### `tidycensus` & `tigris`-Style Interface
+
+If you are familiar with US Census R packages (`tidycensus`, `tigris`), **tncensus** provides drop-in equivalent functions for Tunisia:
+
+```r
+library(tncensus)
+
+# 1. Browse available variables (like tidycensus::load_variables)
+vars_2024 <- load_variables(2024)
+subset(vars_2024, grepl("SONEDE|natural_gas", name))
+
+# 2. Query tidy census data with optional sf geometry (like tidycensus::get_decennial)
+tunis_sf <- get_tn_census(
+  geography   = "delegation",
+  variables   = c(sonede = "utility_connections.total.SONEDE",
+                  gas    = "utility_connections.total.natural_gas"),
+  year        = 2024,
+  governorate = "Tunis",
+  output      = "tidy",
+  geometry    = TRUE
+)
+
+# 3. Query multi-year 2014-2024 panel data directly in wide or tidy format
+panel_edu <- get_tn_census(
+  geography = "delegation",
+  variables = c("pct_higher_ed", "unemployment_rate"),
+  year      = c(2014, 2024),
+  output    = "wide"
+)
+
+# 4. Load filtered administrative boundaries (like tigris::counties / tracts)
+ne_govs   <- tn_governorates(region = "North East")   # 7 governorates
+sfax_dels <- tn_delegations(governorate = "Sfax")     # Sfax delegations
+```
+
+---
+
 ### 1. Exploring 10-Year Socioeconomic Changes (2014–2024 Panel)
 
 The `census_panel` dataset harmonizes 45 indicators between the 2014 and 2024 censuses:
