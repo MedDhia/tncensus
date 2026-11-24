@@ -11,8 +11,9 @@
 #'   \code{census} (\code{"eur1906"} or \code{"ind1931"}), \code{table_id}
 #'   (table number or letter as printed), \code{title_fr}, \code{title_en},
 #'   \code{pages} (printed pages), \code{gallica_ark}, \code{n_rows}, and
-#'   \code{value_type} (\code{"count"}, \code{"percent"}, or
-#'   \code{"rate"}).
+#'   \code{value_type} (\code{"count"}, \code{"percent"}, \code{"rate"},
+#'   or \code{"mixed"} for tables whose \code{measure} column mixes counts
+#'   and shares).
 #'
 #' @seealso \code{\link{load_colonial_census}}
 #' @export
