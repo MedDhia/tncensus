@@ -108,10 +108,10 @@ library(tncensus)
 data("census_panel")
 
 # Top 5 delegations by expansion in higher education attainment (% points)
-top_higher_ed <- census_panel[order(-census_panel$pct_higher_education_change), ]
-head(top_higher_ed[, c("delegation_2024", "governorate", 
-                       "pct_higher_education_2014", "pct_higher_education_2024", 
-                       "pct_higher_education_change")], 5)
+top_higher_ed <- census_panel[order(-census_panel$pct_higher_ed_change), ]
+head(top_higher_ed[, c("delegation_fr_2024", "governorate", 
+                       "pct_higher_ed_2014", "pct_higher_ed_2024", 
+                       "pct_higher_ed_change")], 5)
 
 # Regional averages in piped drinking water (SONEDE) expansion
 aggregate(
@@ -120,6 +120,10 @@ aggregate(
   FUN = mean, na.rm = TRUE
 )
 ```
+
+<p align="center">
+  <img src="man/figures/plot_regional_inequality.png" width="100%" alt="Regional Shifts Across Tunisia's Six Regions (2014 vs 2024)" />
+</p>
 
 ---
 
@@ -135,23 +139,24 @@ library(sf)
 # 1. Load delegation boundaries
 del_sf <- load_geojson("delegations")
 
-# 2. Join with the 2014-2024 census panel by delegation code
+# 2. Join with the 2014-2024 census panel by 2024 delegation name
 del_map <- merge(del_sf, census_panel, 
-                 by.x = "delegation_code", 
-                 by.y = "delegation_code_2024", 
+                 by.x = "delegation_name_2024", 
+                 by.y = "delegation_fr_2024", 
                  all.x = TRUE)
 
-# 3. Plot 10-year change in female labor force participation
+# 3. Plot 2024 higher education attainment across all 264 delegations
 ggplot(del_map) +
-  geom_sf(aes(fill = female_activity_rate_change), color = "white", size = 0.1) +
+  geom_sf(aes(fill = pct_higher_ed_2024), color = "white", linewidth = 0.08) +
   scale_fill_viridis_c(
-    option = "mako", 
-    name = "Change (% pts)", 
+    option = "mako",
+    direction = -1,
+    name = "Share (%)",
     na.value = "grey90"
   ) +
   labs(
-    title = "Evolution of Female Labor Force Participation in Tunisia",
-    subtitle = "Intercensal change between RGPH 2014 and RGPH 2024",
+    title = "Higher Education Attainment in Tunisia (2024)",
+    subtitle = "Population aged 10+ with university degree across 264 delegations",
     caption = "Source: Institut National de la Statistique (INS) via tncensus"
   ) +
   theme_void() +
@@ -161,6 +166,10 @@ ggplot(del_map) +
     legend.position = "right"
   )
 ```
+
+<p align="center">
+  <img src="man/figures/plot_choropleth_panel.png" width="100%" alt="Spatial Geography of Human Capital & Living Standards Across 264 Delegations" />
+</p>
 
 ---
 
@@ -203,7 +212,7 @@ print(historical_education)
 
 # Append 2024 national literacy rate
 nat_2024 <- load_national()
-modern_literacy <- 100 - nat_2024[["illiteracy_rate.total.all"]]
+modern_literacy <- (1 - nat_2024[["illiteracy.all.total.total.total"]]) * 100
 
 # Combine for long-run trend
 hist_trend <- rbind(
@@ -213,6 +222,10 @@ hist_trend <- rbind(
 
 print(hist_trend)
 ```
+
+<p align="center">
+  <img src="man/figures/plot_historical_literacy.png" width="100%" alt="68 Years of Educational Transformation in Tunisia (1956-2024)" />
+</p>
 
 ---
 
@@ -224,8 +237,8 @@ Colonial-era records often use obsolete or phonetically transliterated place nam
 data("historical_geonames")
 
 # Find historical entries for a colonial name variant
-sub <- subset(historical_geonames, grepl("Ferryville|Menzel Bourguiba", name_french, ignore.case = TRUE))
-sub[, c("name_french", "modern_name", "governorate", "latitude", "longitude")]
+sub <- subset(historical_geonames, grepl("Ferryville|Menzel Bourguiba", locality_name_source, ignore.case = TRUE))
+sub[, c("locality_name_source", "locality_name_modern", "delegation_1956", "lat", "lon")]
 ```
 
 To bridge changes in delegation boundaries caused by administrative splits between 1984 and 2014, use `delegation_matrix_merged`:
