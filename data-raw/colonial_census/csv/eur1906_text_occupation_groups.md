@@ -8,7 +8,7 @@ Occupational groups by nationality: persons exercising the profession and their 
 
 Common columns: `census` (= eur1906), `table_id`, `source_page` (printed page),
 `gallica_view` (Gallica view number), `value`, `flag` (empty, `ocr_corrected`,
-`illegible`, `total_mismatch`, `not_applicable`, `derived_from_table_i`; see SPEC.md).
+`illegible`, `total_mismatch`, `not_applicable`, `derived_from_totals`; see SPEC.md).
 Printed "»" is stored as 0. Printed subtotal and total rows are not stored; they
 were used for validation.
 

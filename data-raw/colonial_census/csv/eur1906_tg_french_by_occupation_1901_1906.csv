@@ -1,5 +1,5 @@
 census,table_id,source_page,gallica_view,controle_civil,census_year,occupation_group,occupation_group_fr,sex,sex_fr,value,flag
-eur1906,G,62,61,Béja et Medjez-el-Bab,1906,agriculture,Agriculture,male,Hommes,269,
+eur1906,G,62,61,Béja et Medjez-el-Bab,1906,agriculture,Agriculture,male,Hommes,269,total_mismatch
 eur1906,G,62,61,Béja et Medjez-el-Bab,1906,agriculture,Agriculture,female,Femmes,203,
 eur1906,G,62,61,Béja et Medjez-el-Bab,1906,commerce,Commerce,male,Hommes,57,
 eur1906,G,62,61,Béja et Medjez-el-Bab,1906,commerce,Commerce,female,Femmes,61,
@@ -136,7 +136,7 @@ eur1906,G,62,61,Djerba,1901,transport,Transports,female,Femmes,5,
 eur1906,G,63,61,Djerba,1901,public_administration,Administrations publiques,male,Hommes,34,
 eur1906,G,63,61,Djerba,1901,public_administration,Administrations publiques,female,Femmes,38,
 eur1906,G,63,61,Djerba,1901,police_force,Force publique,male,Hommes,1,
-eur1906,G,63,61,Djerba,1901,police_force,Force publique,female,Femmes,1,
+eur1906,G,63,61,Djerba,1901,police_force,Force publique,female,Femmes,2,ocr_corrected
 eur1906,G,63,61,Djerba,1901,liberal_professions,Professions libérales,male,Hommes,2,
 eur1906,G,63,61,Djerba,1901,liberal_professions,Professions libérales,female,Femmes,1,
 eur1906,G,63,61,Djerba,1901,independent_means,Personnes vivant exclusivement de leurs revenus,male,Hommes,2,

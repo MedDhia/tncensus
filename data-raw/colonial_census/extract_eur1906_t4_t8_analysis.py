@@ -279,7 +279,7 @@ def table_iv():
         for i in range(6):
             for j in range(12):
                 agg[i][j] += nat_rows[i][j]
-                flag = "derived_from_table_i" if (derived and j == 11) else ""
+                flag = "derived_from_totals" if (derived and j == 11) else ""
                 rows.append([CENSUS, t, page, view, circ, NAT[i], NAT_FR[i], DUR[j], DUR_FR[j],
                              nat_rows[i][j], flag])
     # regency totals: every nationality x duration, including derived column
@@ -1173,7 +1173,7 @@ Bizerte 1901 | 220 124 344 355 278 633 831 616 1447 91 77 168 207 152 359 92 184
 Gabès 1906 | 4 3 7 18 20 38 55 61 116 2 2 4 56 79 135 5 1 6 4 6 10 10 8 18 0 1 1 154 181 335
 Gabès 1901 | 16 6 22 43 39 82 42 33 75 1 0 1 49 32 81 10 25 35 5 6 11 6 11 17 0 0 0 172 152 324
 Djerba 1906 | 9 10 19 15 17 32 11 11 22 0 0 0 57 40 97 1 0 1 2 7 9 2 1 3 2 2 4 99 88 187
-Djerba 1901 | 20 19 39 10 8 18 17 17 34 9 5 14 34 38 72 1 1 2 2 1 3 2 2 4 0 0 0 95 92 187
+Djerba 1901 | 20 19 39 10 8 18 17 17 34 9 5 14 34 38 72 1 2 3 2 1 3 2 2 4 0 0 0 95 92 187
 Gafsa et Tozeur 1906 | 13 10 23 52 45 97 215 146 361 55 34 89 61 50 111 8 15 23 7 9 16 0 2 2 2 11 13 413 322 735
 Gafsa et Tozeur 1901 | 10 4 14 47 37 84 93 61 154 32 18 50 59 33 92 11 16 27 2 0 2 8 5 13 0 0 0 262 174 436
 Grombalia 1906 | 268 166 434 46 56 102 90 42 132 38 28 66 94 95 189 16 13 29 15 6 21 19 6 25 5 28 33 691 340 1031
@@ -1208,6 +1208,15 @@ T_G_ENSEMBLE = {
            622, 930, 1552, 966, 886, 1852, 410, 568, 978, 195, 363, 558, 12917, 11284, 24201],
 }
 T_G_FIXES = []
+# Flags set after cross-checking with the independent transcription of Tables VI
+# and VII (extract_eur1906_t6_t7.py). Djerba 1901 police women was first read as
+# 1; the image reads H 1, F 2, T 3 and the printed Djerba 1901 totals then add
+# up. Beja 1906 agriculture men is printed 269, but the printed row total (730),
+# column total (2.660) and Table VII all imply 319: kept as printed, flagged.
+T_G_FLAGS = {
+    ("Djerba", 1901, "police_force", "female"): "ocr_corrected",
+    ("Béja et Medjez-el-Bab", 1906, "agriculture", "male"): "total_mismatch",
+}
 
 
 def table_g():
@@ -1229,7 +1238,8 @@ def table_g():
             if gi < 9:
                 for sex, sex_fr, val in (("male", "Hommes", m), ("female", "Femmes", f)):
                     rows.append([CENSUS, t, 62 if gi < 4 else 63, 61, circ, year, g, gfr, sex,
-                                 sex_fr, val, "" if ok else "total_mismatch"])
+                                 sex_fr, val,
+                                 T_G_FLAGS.get((circ, year, g, sex), "" if ok else "total_mismatch")])
         for s in range(3):
             check(t, f"{circ} {year} totals col {s}", sum(v[3 * gi + s] for gi in range(9)), v[27 + s])
     for year in (1906, 1901):
@@ -1551,7 +1561,7 @@ SRC = ("Dénombrement de la population européenne civile en Tunisie au 16 déce
 COMMON = """
 Common columns: `census` (= eur1906), `table_id`, `source_page` (printed page),
 `gallica_view` (Gallica view number), `value`, `flag` (empty, `ocr_corrected`,
-`illegible`, `total_mismatch`, `not_applicable`, `derived_from_table_i`; see SPEC.md).
+`illegible`, `total_mismatch`, `not_applicable`, `derived_from_totals`; see SPEC.md).
 Printed "»" is stored as 0. Printed subtotal and total rows are not stored; they
 were used for validation.
 
@@ -1572,7 +1582,7 @@ as inhabitants of that locality; "de passage" covers only persons whose usual re
 On pp.18 and 20 (Béja, Medjez-el-Bab, Bizerte, Gabès, Djerba, Téboursouk, Mactar, Sfax,
 Souk-el-Arba, Tabarca) the last column ("de plus de 10 ans") is lost in the binding of the
 scan. Those 60 cells are derived as Table I nationality total minus the sum of the 11 visible
-columns (flag `derived_from_table_i`). The derived values, summed with the printed pp.19/21
+columns (flag `derived_from_totals`). The derived values, summed with the printed pp.19/21
 values, reproduce the printed regency totals ("Ensemble du territoire") for every nationality
 and duration class, which validates them."""),
  "eur1906_t5_sex_age_marital": ("V", "Répartition d'après le sexe, l'âge et l'état civil",

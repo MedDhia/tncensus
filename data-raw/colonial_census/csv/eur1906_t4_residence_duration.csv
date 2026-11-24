@@ -10,7 +10,7 @@ eur1906,IV,18,22,Béja,french,Français,6_7y,compris entre 6 et 7 ans,44,
 eur1906,IV,18,22,Béja,french,Français,7_8y,compris entre 7 et 8 ans,26,
 eur1906,IV,18,22,Béja,french,Français,8_9y,compris entre 8 et 9 ans,53,
 eur1906,IV,18,22,Béja,french,Français,9_10y,compris entre 9 et 10 ans,23,
-eur1906,IV,18,22,Béja,french,Français,gt_10y,de plus de 10 ans,237,derived_from_table_i
+eur1906,IV,18,22,Béja,french,Français,gt_10y,de plus de 10 ans,237,derived_from_totals
 eur1906,IV,18,22,Béja,italian,Italiens,passing_through,de passage en Tunisie,3,
 eur1906,IV,18,22,Béja,italian,Italiens,lt_1y,de moins d'un an,165,
 eur1906,IV,18,22,Béja,italian,Italiens,1_2y,compris entre 1 et 2 ans,165,
@@ -22,7 +22,7 @@ eur1906,IV,18,22,Béja,italian,Italiens,6_7y,compris entre 6 et 7 ans,123,
 eur1906,IV,18,22,Béja,italian,Italiens,7_8y,compris entre 7 et 8 ans,81,
 eur1906,IV,18,22,Béja,italian,Italiens,8_9y,compris entre 8 et 9 ans,56,
 eur1906,IV,18,22,Béja,italian,Italiens,9_10y,compris entre 9 et 10 ans,80,
-eur1906,IV,18,22,Béja,italian,Italiens,gt_10y,de plus de 10 ans,626,derived_from_table_i
+eur1906,IV,18,22,Béja,italian,Italiens,gt_10y,de plus de 10 ans,626,derived_from_totals
 eur1906,IV,18,22,Béja,maltese,Maltais,passing_through,de passage en Tunisie,0,
 eur1906,IV,18,22,Béja,maltese,Maltais,lt_1y,de moins d'un an,2,
 eur1906,IV,18,22,Béja,maltese,Maltais,1_2y,compris entre 1 et 2 ans,0,
@@ -34,7 +34,7 @@ eur1906,IV,18,22,Béja,maltese,Maltais,6_7y,compris entre 6 et 7 ans,3,
 eur1906,IV,18,22,Béja,maltese,Maltais,7_8y,compris entre 7 et 8 ans,0,
 eur1906,IV,18,22,Béja,maltese,Maltais,8_9y,compris entre 8 et 9 ans,2,
 eur1906,IV,18,22,Béja,maltese,Maltais,9_10y,compris entre 9 et 10 ans,1,
-eur1906,IV,18,22,Béja,maltese,Maltais,gt_10y,de plus de 10 ans,28,derived_from_table_i
+eur1906,IV,18,22,Béja,maltese,Maltais,gt_10y,de plus de 10 ans,28,derived_from_totals
 eur1906,IV,18,22,Béja,spanish,Espagnols,passing_through,de passage en Tunisie,0,
 eur1906,IV,18,22,Béja,spanish,Espagnols,lt_1y,de moins d'un an,0,
 eur1906,IV,18,22,Béja,spanish,Espagnols,1_2y,compris entre 1 et 2 ans,1,
@@ -46,7 +46,7 @@ eur1906,IV,18,22,Béja,spanish,Espagnols,6_7y,compris entre 6 et 7 ans,0,
 eur1906,IV,18,22,Béja,spanish,Espagnols,7_8y,compris entre 7 et 8 ans,0,
 eur1906,IV,18,22,Béja,spanish,Espagnols,8_9y,compris entre 8 et 9 ans,1,
 eur1906,IV,18,22,Béja,spanish,Espagnols,9_10y,compris entre 9 et 10 ans,0,
-eur1906,IV,18,22,Béja,spanish,Espagnols,gt_10y,de plus de 10 ans,2,derived_from_table_i
+eur1906,IV,18,22,Béja,spanish,Espagnols,gt_10y,de plus de 10 ans,2,derived_from_totals
 eur1906,IV,18,22,Béja,greek,Grecs,passing_through,de passage en Tunisie,0,
 eur1906,IV,18,22,Béja,greek,Grecs,lt_1y,de moins d'un an,0,
 eur1906,IV,18,22,Béja,greek,Grecs,1_2y,compris entre 1 et 2 ans,0,
@@ -58,7 +58,7 @@ eur1906,IV,18,22,Béja,greek,Grecs,6_7y,compris entre 6 et 7 ans,0,
 eur1906,IV,18,22,Béja,greek,Grecs,7_8y,compris entre 7 et 8 ans,0,
 eur1906,IV,18,22,Béja,greek,Grecs,8_9y,compris entre 8 et 9 ans,0,
 eur1906,IV,18,22,Béja,greek,Grecs,9_10y,compris entre 9 et 10 ans,0,
-eur1906,IV,18,22,Béja,greek,Grecs,gt_10y,de plus de 10 ans,1,derived_from_table_i
+eur1906,IV,18,22,Béja,greek,Grecs,gt_10y,de plus de 10 ans,1,derived_from_totals
 eur1906,IV,18,22,Béja,other_european,Autres,passing_through,de passage en Tunisie,0,
 eur1906,IV,18,22,Béja,other_european,Autres,lt_1y,de moins d'un an,2,
 eur1906,IV,18,22,Béja,other_european,Autres,1_2y,compris entre 1 et 2 ans,6,
@@ -70,7 +70,7 @@ eur1906,IV,18,22,Béja,other_european,Autres,6_7y,compris entre 6 et 7 ans,0,
 eur1906,IV,18,22,Béja,other_european,Autres,7_8y,compris entre 7 et 8 ans,2,
 eur1906,IV,18,22,Béja,other_european,Autres,8_9y,compris entre 8 et 9 ans,0,
 eur1906,IV,18,22,Béja,other_european,Autres,9_10y,compris entre 9 et 10 ans,1,
-eur1906,IV,18,22,Béja,other_european,Autres,gt_10y,de plus de 10 ans,5,derived_from_table_i
+eur1906,IV,18,22,Béja,other_european,Autres,gt_10y,de plus de 10 ans,5,derived_from_totals
 eur1906,IV,18,22,Medjez-el-Bab,french,Français,passing_through,de passage en Tunisie,5,
 eur1906,IV,18,22,Medjez-el-Bab,french,Français,lt_1y,de moins d'un an,41,
 eur1906,IV,18,22,Medjez-el-Bab,french,Français,1_2y,compris entre 1 et 2 ans,91,
@@ -82,7 +82,7 @@ eur1906,IV,18,22,Medjez-el-Bab,french,Français,6_7y,compris entre 6 et 7 ans,29
 eur1906,IV,18,22,Medjez-el-Bab,french,Français,7_8y,compris entre 7 et 8 ans,32,
 eur1906,IV,18,22,Medjez-el-Bab,french,Français,8_9y,compris entre 8 et 9 ans,10,
 eur1906,IV,18,22,Medjez-el-Bab,french,Français,9_10y,compris entre 9 et 10 ans,16,
-eur1906,IV,18,22,Medjez-el-Bab,french,Français,gt_10y,de plus de 10 ans,95,derived_from_table_i
+eur1906,IV,18,22,Medjez-el-Bab,french,Français,gt_10y,de plus de 10 ans,95,derived_from_totals
 eur1906,IV,18,22,Medjez-el-Bab,italian,Italiens,passing_through,de passage en Tunisie,0,
 eur1906,IV,18,22,Medjez-el-Bab,italian,Italiens,lt_1y,de moins d'un an,37,
 eur1906,IV,18,22,Medjez-el-Bab,italian,Italiens,1_2y,compris entre 1 et 2 ans,61,
@@ -94,7 +94,7 @@ eur1906,IV,18,22,Medjez-el-Bab,italian,Italiens,6_7y,compris entre 6 et 7 ans,10
 eur1906,IV,18,22,Medjez-el-Bab,italian,Italiens,7_8y,compris entre 7 et 8 ans,30,
 eur1906,IV,18,22,Medjez-el-Bab,italian,Italiens,8_9y,compris entre 8 et 9 ans,22,
 eur1906,IV,18,22,Medjez-el-Bab,italian,Italiens,9_10y,compris entre 9 et 10 ans,27,
-eur1906,IV,18,22,Medjez-el-Bab,italian,Italiens,gt_10y,de plus de 10 ans,98,derived_from_table_i
+eur1906,IV,18,22,Medjez-el-Bab,italian,Italiens,gt_10y,de plus de 10 ans,98,derived_from_totals
 eur1906,IV,18,22,Medjez-el-Bab,maltese,Maltais,passing_through,de passage en Tunisie,1,
 eur1906,IV,18,22,Medjez-el-Bab,maltese,Maltais,lt_1y,de moins d'un an,2,
 eur1906,IV,18,22,Medjez-el-Bab,maltese,Maltais,1_2y,compris entre 1 et 2 ans,1,
@@ -106,7 +106,7 @@ eur1906,IV,18,22,Medjez-el-Bab,maltese,Maltais,6_7y,compris entre 6 et 7 ans,0,
 eur1906,IV,18,22,Medjez-el-Bab,maltese,Maltais,7_8y,compris entre 7 et 8 ans,0,
 eur1906,IV,18,22,Medjez-el-Bab,maltese,Maltais,8_9y,compris entre 8 et 9 ans,1,
 eur1906,IV,18,22,Medjez-el-Bab,maltese,Maltais,9_10y,compris entre 9 et 10 ans,1,
-eur1906,IV,18,22,Medjez-el-Bab,maltese,Maltais,gt_10y,de plus de 10 ans,17,derived_from_table_i
+eur1906,IV,18,22,Medjez-el-Bab,maltese,Maltais,gt_10y,de plus de 10 ans,17,derived_from_totals
 eur1906,IV,18,22,Medjez-el-Bab,spanish,Espagnols,passing_through,de passage en Tunisie,0,
 eur1906,IV,18,22,Medjez-el-Bab,spanish,Espagnols,lt_1y,de moins d'un an,0,
 eur1906,IV,18,22,Medjez-el-Bab,spanish,Espagnols,1_2y,compris entre 1 et 2 ans,0,
@@ -118,7 +118,7 @@ eur1906,IV,18,22,Medjez-el-Bab,spanish,Espagnols,6_7y,compris entre 6 et 7 ans,0
 eur1906,IV,18,22,Medjez-el-Bab,spanish,Espagnols,7_8y,compris entre 7 et 8 ans,0,
 eur1906,IV,18,22,Medjez-el-Bab,spanish,Espagnols,8_9y,compris entre 8 et 9 ans,0,
 eur1906,IV,18,22,Medjez-el-Bab,spanish,Espagnols,9_10y,compris entre 9 et 10 ans,0,
-eur1906,IV,18,22,Medjez-el-Bab,spanish,Espagnols,gt_10y,de plus de 10 ans,5,derived_from_table_i
+eur1906,IV,18,22,Medjez-el-Bab,spanish,Espagnols,gt_10y,de plus de 10 ans,5,derived_from_totals
 eur1906,IV,18,22,Medjez-el-Bab,greek,Grecs,passing_through,de passage en Tunisie,0,
 eur1906,IV,18,22,Medjez-el-Bab,greek,Grecs,lt_1y,de moins d'un an,0,
 eur1906,IV,18,22,Medjez-el-Bab,greek,Grecs,1_2y,compris entre 1 et 2 ans,0,
@@ -130,7 +130,7 @@ eur1906,IV,18,22,Medjez-el-Bab,greek,Grecs,6_7y,compris entre 6 et 7 ans,0,
 eur1906,IV,18,22,Medjez-el-Bab,greek,Grecs,7_8y,compris entre 7 et 8 ans,0,
 eur1906,IV,18,22,Medjez-el-Bab,greek,Grecs,8_9y,compris entre 8 et 9 ans,0,
 eur1906,IV,18,22,Medjez-el-Bab,greek,Grecs,9_10y,compris entre 9 et 10 ans,1,
-eur1906,IV,18,22,Medjez-el-Bab,greek,Grecs,gt_10y,de plus de 10 ans,1,derived_from_table_i
+eur1906,IV,18,22,Medjez-el-Bab,greek,Grecs,gt_10y,de plus de 10 ans,1,derived_from_totals
 eur1906,IV,18,22,Medjez-el-Bab,other_european,Autres,passing_through,de passage en Tunisie,0,
 eur1906,IV,18,22,Medjez-el-Bab,other_european,Autres,lt_1y,de moins d'un an,2,
 eur1906,IV,18,22,Medjez-el-Bab,other_european,Autres,1_2y,compris entre 1 et 2 ans,2,
@@ -142,7 +142,7 @@ eur1906,IV,18,22,Medjez-el-Bab,other_european,Autres,6_7y,compris entre 6 et 7 a
 eur1906,IV,18,22,Medjez-el-Bab,other_european,Autres,7_8y,compris entre 7 et 8 ans,0,
 eur1906,IV,18,22,Medjez-el-Bab,other_european,Autres,8_9y,compris entre 8 et 9 ans,0,
 eur1906,IV,18,22,Medjez-el-Bab,other_european,Autres,9_10y,compris entre 9 et 10 ans,0,
-eur1906,IV,18,22,Medjez-el-Bab,other_european,Autres,gt_10y,de plus de 10 ans,0,derived_from_table_i
+eur1906,IV,18,22,Medjez-el-Bab,other_european,Autres,gt_10y,de plus de 10 ans,0,derived_from_totals
 eur1906,IV,18,22,Bizerte,french,Français,passing_through,de passage en Tunisie,74,
 eur1906,IV,18,22,Bizerte,french,Français,lt_1y,de moins d'un an,560,
 eur1906,IV,18,22,Bizerte,french,Français,1_2y,compris entre 1 et 2 ans,370,
@@ -154,7 +154,7 @@ eur1906,IV,18,22,Bizerte,french,Français,6_7y,compris entre 6 et 7 ans,317,
 eur1906,IV,18,22,Bizerte,french,Français,7_8y,compris entre 7 et 8 ans,189,
 eur1906,IV,18,22,Bizerte,french,Français,8_9y,compris entre 8 et 9 ans,207,
 eur1906,IV,18,22,Bizerte,french,Français,9_10y,compris entre 9 et 10 ans,155,
-eur1906,IV,18,22,Bizerte,french,Français,gt_10y,de plus de 10 ans,1368,derived_from_table_i
+eur1906,IV,18,22,Bizerte,french,Français,gt_10y,de plus de 10 ans,1368,derived_from_totals
 eur1906,IV,18,22,Bizerte,italian,Italiens,passing_through,de passage en Tunisie,2,
 eur1906,IV,18,22,Bizerte,italian,Italiens,lt_1y,de moins d'un an,543,
 eur1906,IV,18,22,Bizerte,italian,Italiens,1_2y,compris entre 1 et 2 ans,477,
@@ -166,7 +166,7 @@ eur1906,IV,18,22,Bizerte,italian,Italiens,6_7y,compris entre 6 et 7 ans,857,
 eur1906,IV,18,22,Bizerte,italian,Italiens,7_8y,compris entre 7 et 8 ans,604,
 eur1906,IV,18,22,Bizerte,italian,Italiens,8_9y,compris entre 8 et 9 ans,453,
 eur1906,IV,18,22,Bizerte,italian,Italiens,9_10y,compris entre 9 et 10 ans,262,
-eur1906,IV,18,22,Bizerte,italian,Italiens,gt_10y,de plus de 10 ans,2973,derived_from_table_i
+eur1906,IV,18,22,Bizerte,italian,Italiens,gt_10y,de plus de 10 ans,2973,derived_from_totals
 eur1906,IV,18,22,Bizerte,maltese,Maltais,passing_through,de passage en Tunisie,0,
 eur1906,IV,18,22,Bizerte,maltese,Maltais,lt_1y,de moins d'un an,16,
 eur1906,IV,18,22,Bizerte,maltese,Maltais,1_2y,compris entre 1 et 2 ans,23,
@@ -178,7 +178,7 @@ eur1906,IV,18,22,Bizerte,maltese,Maltais,6_7y,compris entre 6 et 7 ans,16,
 eur1906,IV,18,22,Bizerte,maltese,Maltais,7_8y,compris entre 7 et 8 ans,21,
 eur1906,IV,18,22,Bizerte,maltese,Maltais,8_9y,compris entre 8 et 9 ans,16,
 eur1906,IV,18,22,Bizerte,maltese,Maltais,9_10y,compris entre 9 et 10 ans,8,
-eur1906,IV,18,22,Bizerte,maltese,Maltais,gt_10y,de plus de 10 ans,339,derived_from_table_i
+eur1906,IV,18,22,Bizerte,maltese,Maltais,gt_10y,de plus de 10 ans,339,derived_from_totals
 eur1906,IV,18,22,Bizerte,spanish,Espagnols,passing_through,de passage en Tunisie,1,
 eur1906,IV,18,22,Bizerte,spanish,Espagnols,lt_1y,de moins d'un an,11,
 eur1906,IV,18,22,Bizerte,spanish,Espagnols,1_2y,compris entre 1 et 2 ans,6,
@@ -190,7 +190,7 @@ eur1906,IV,18,22,Bizerte,spanish,Espagnols,6_7y,compris entre 6 et 7 ans,6,
 eur1906,IV,18,22,Bizerte,spanish,Espagnols,7_8y,compris entre 7 et 8 ans,3,
 eur1906,IV,18,22,Bizerte,spanish,Espagnols,8_9y,compris entre 8 et 9 ans,2,
 eur1906,IV,18,22,Bizerte,spanish,Espagnols,9_10y,compris entre 9 et 10 ans,1,
-eur1906,IV,18,22,Bizerte,spanish,Espagnols,gt_10y,de plus de 10 ans,36,derived_from_table_i
+eur1906,IV,18,22,Bizerte,spanish,Espagnols,gt_10y,de plus de 10 ans,36,derived_from_totals
 eur1906,IV,18,22,Bizerte,greek,Grecs,passing_through,de passage en Tunisie,0,
 eur1906,IV,18,22,Bizerte,greek,Grecs,lt_1y,de moins d'un an,3,
 eur1906,IV,18,22,Bizerte,greek,Grecs,1_2y,compris entre 1 et 2 ans,1,
@@ -202,7 +202,7 @@ eur1906,IV,18,22,Bizerte,greek,Grecs,6_7y,compris entre 6 et 7 ans,0,
 eur1906,IV,18,22,Bizerte,greek,Grecs,7_8y,compris entre 7 et 8 ans,0,
 eur1906,IV,18,22,Bizerte,greek,Grecs,8_9y,compris entre 8 et 9 ans,1,
 eur1906,IV,18,22,Bizerte,greek,Grecs,9_10y,compris entre 9 et 10 ans,3,
-eur1906,IV,18,22,Bizerte,greek,Grecs,gt_10y,de plus de 10 ans,10,derived_from_table_i
+eur1906,IV,18,22,Bizerte,greek,Grecs,gt_10y,de plus de 10 ans,10,derived_from_totals
 eur1906,IV,18,22,Bizerte,other_european,Autres,passing_through,de passage en Tunisie,0,
 eur1906,IV,18,22,Bizerte,other_european,Autres,lt_1y,de moins d'un an,10,
 eur1906,IV,18,22,Bizerte,other_european,Autres,1_2y,compris entre 1 et 2 ans,13,
@@ -214,7 +214,7 @@ eur1906,IV,18,22,Bizerte,other_european,Autres,6_7y,compris entre 6 et 7 ans,6,
 eur1906,IV,18,22,Bizerte,other_european,Autres,7_8y,compris entre 7 et 8 ans,1,
 eur1906,IV,18,22,Bizerte,other_european,Autres,8_9y,compris entre 8 et 9 ans,2,
 eur1906,IV,18,22,Bizerte,other_european,Autres,9_10y,compris entre 9 et 10 ans,2,
-eur1906,IV,18,22,Bizerte,other_european,Autres,gt_10y,de plus de 10 ans,22,derived_from_table_i
+eur1906,IV,18,22,Bizerte,other_european,Autres,gt_10y,de plus de 10 ans,22,derived_from_totals
 eur1906,IV,18,22,Gabès,french,Français,passing_through,de passage en Tunisie,7,
 eur1906,IV,18,22,Gabès,french,Français,lt_1y,de moins d'un an,28,
 eur1906,IV,18,22,Gabès,french,Français,1_2y,compris entre 1 et 2 ans,25,
@@ -226,7 +226,7 @@ eur1906,IV,18,22,Gabès,french,Français,6_7y,compris entre 6 et 7 ans,22,
 eur1906,IV,18,22,Gabès,french,Français,7_8y,compris entre 7 et 8 ans,11,
 eur1906,IV,18,22,Gabès,french,Français,8_9y,compris entre 8 et 9 ans,8,
 eur1906,IV,18,22,Gabès,french,Français,9_10y,compris entre 9 et 10 ans,16,
-eur1906,IV,18,22,Gabès,french,Français,gt_10y,de plus de 10 ans,142,derived_from_table_i
+eur1906,IV,18,22,Gabès,french,Français,gt_10y,de plus de 10 ans,142,derived_from_totals
 eur1906,IV,18,22,Gabès,italian,Italiens,passing_through,de passage en Tunisie,0,
 eur1906,IV,18,22,Gabès,italian,Italiens,lt_1y,de moins d'un an,11,
 eur1906,IV,18,22,Gabès,italian,Italiens,1_2y,compris entre 1 et 2 ans,8,
@@ -238,7 +238,7 @@ eur1906,IV,18,22,Gabès,italian,Italiens,6_7y,compris entre 6 et 7 ans,13,
 eur1906,IV,18,22,Gabès,italian,Italiens,7_8y,compris entre 7 et 8 ans,17,
 eur1906,IV,18,22,Gabès,italian,Italiens,8_9y,compris entre 8 et 9 ans,12,
 eur1906,IV,18,22,Gabès,italian,Italiens,9_10y,compris entre 9 et 10 ans,10,
-eur1906,IV,18,22,Gabès,italian,Italiens,gt_10y,de plus de 10 ans,235,derived_from_table_i
+eur1906,IV,18,22,Gabès,italian,Italiens,gt_10y,de plus de 10 ans,235,derived_from_totals
 eur1906,IV,18,22,Gabès,maltese,Maltais,passing_through,de passage en Tunisie,0,
 eur1906,IV,18,22,Gabès,maltese,Maltais,lt_1y,de moins d'un an,12,
 eur1906,IV,18,22,Gabès,maltese,Maltais,1_2y,compris entre 1 et 2 ans,1,
@@ -250,7 +250,7 @@ eur1906,IV,18,22,Gabès,maltese,Maltais,6_7y,compris entre 6 et 7 ans,4,
 eur1906,IV,18,22,Gabès,maltese,Maltais,7_8y,compris entre 7 et 8 ans,5,
 eur1906,IV,18,22,Gabès,maltese,Maltais,8_9y,compris entre 8 et 9 ans,8,
 eur1906,IV,18,22,Gabès,maltese,Maltais,9_10y,compris entre 9 et 10 ans,6,
-eur1906,IV,18,22,Gabès,maltese,Maltais,gt_10y,de plus de 10 ans,137,derived_from_table_i
+eur1906,IV,18,22,Gabès,maltese,Maltais,gt_10y,de plus de 10 ans,137,derived_from_totals
 eur1906,IV,18,22,Gabès,spanish,Espagnols,passing_through,de passage en Tunisie,0,
 eur1906,IV,18,22,Gabès,spanish,Espagnols,lt_1y,de moins d'un an,0,
 eur1906,IV,18,22,Gabès,spanish,Espagnols,1_2y,compris entre 1 et 2 ans,1,
@@ -262,7 +262,7 @@ eur1906,IV,18,22,Gabès,spanish,Espagnols,6_7y,compris entre 6 et 7 ans,1,
 eur1906,IV,18,22,Gabès,spanish,Espagnols,7_8y,compris entre 7 et 8 ans,0,
 eur1906,IV,18,22,Gabès,spanish,Espagnols,8_9y,compris entre 8 et 9 ans,0,
 eur1906,IV,18,22,Gabès,spanish,Espagnols,9_10y,compris entre 9 et 10 ans,1,
-eur1906,IV,18,22,Gabès,spanish,Espagnols,gt_10y,de plus de 10 ans,7,derived_from_table_i
+eur1906,IV,18,22,Gabès,spanish,Espagnols,gt_10y,de plus de 10 ans,7,derived_from_totals
 eur1906,IV,18,22,Gabès,greek,Grecs,passing_through,de passage en Tunisie,0,
 eur1906,IV,18,22,Gabès,greek,Grecs,lt_1y,de moins d'un an,0,
 eur1906,IV,18,22,Gabès,greek,Grecs,1_2y,compris entre 1 et 2 ans,0,
@@ -274,7 +274,7 @@ eur1906,IV,18,22,Gabès,greek,Grecs,6_7y,compris entre 6 et 7 ans,0,
 eur1906,IV,18,22,Gabès,greek,Grecs,7_8y,compris entre 7 et 8 ans,0,
 eur1906,IV,18,22,Gabès,greek,Grecs,8_9y,compris entre 8 et 9 ans,0,
 eur1906,IV,18,22,Gabès,greek,Grecs,9_10y,compris entre 9 et 10 ans,0,
-eur1906,IV,18,22,Gabès,greek,Grecs,gt_10y,de plus de 10 ans,1,derived_from_table_i
+eur1906,IV,18,22,Gabès,greek,Grecs,gt_10y,de plus de 10 ans,1,derived_from_totals
 eur1906,IV,18,22,Gabès,other_european,Autres,passing_through,de passage en Tunisie,0,
 eur1906,IV,18,22,Gabès,other_european,Autres,lt_1y,de moins d'un an,0,
 eur1906,IV,18,22,Gabès,other_european,Autres,1_2y,compris entre 1 et 2 ans,0,
@@ -286,7 +286,7 @@ eur1906,IV,18,22,Gabès,other_european,Autres,6_7y,compris entre 6 et 7 ans,0,
 eur1906,IV,18,22,Gabès,other_european,Autres,7_8y,compris entre 7 et 8 ans,0,
 eur1906,IV,18,22,Gabès,other_european,Autres,8_9y,compris entre 8 et 9 ans,0,
 eur1906,IV,18,22,Gabès,other_european,Autres,9_10y,compris entre 9 et 10 ans,0,
-eur1906,IV,18,22,Gabès,other_european,Autres,gt_10y,de plus de 10 ans,2,derived_from_table_i
+eur1906,IV,18,22,Gabès,other_european,Autres,gt_10y,de plus de 10 ans,2,derived_from_totals
 eur1906,IV,18,22,Djerba,french,Français,passing_through,de passage en Tunisie,3,
 eur1906,IV,18,22,Djerba,french,Français,lt_1y,de moins d'un an,15,
 eur1906,IV,18,22,Djerba,french,Français,1_2y,compris entre 1 et 2 ans,6,
@@ -298,7 +298,7 @@ eur1906,IV,18,22,Djerba,french,Français,6_7y,compris entre 6 et 7 ans,7,
 eur1906,IV,18,22,Djerba,french,Français,7_8y,compris entre 7 et 8 ans,2,
 eur1906,IV,18,22,Djerba,french,Français,8_9y,compris entre 8 et 9 ans,5,
 eur1906,IV,18,22,Djerba,french,Français,9_10y,compris entre 9 et 10 ans,7,
-eur1906,IV,18,22,Djerba,french,Français,gt_10y,de plus de 10 ans,86,derived_from_table_i
+eur1906,IV,18,22,Djerba,french,Français,gt_10y,de plus de 10 ans,86,derived_from_totals
 eur1906,IV,18,22,Djerba,italian,Italiens,passing_through,de passage en Tunisie,0,
 eur1906,IV,18,22,Djerba,italian,Italiens,lt_1y,de moins d'un an,6,
 eur1906,IV,18,22,Djerba,italian,Italiens,1_2y,compris entre 1 et 2 ans,4,
@@ -310,7 +310,7 @@ eur1906,IV,18,22,Djerba,italian,Italiens,6_7y,compris entre 6 et 7 ans,5,
 eur1906,IV,18,22,Djerba,italian,Italiens,7_8y,compris entre 7 et 8 ans,5,
 eur1906,IV,18,22,Djerba,italian,Italiens,8_9y,compris entre 8 et 9 ans,1,
 eur1906,IV,18,22,Djerba,italian,Italiens,9_10y,compris entre 9 et 10 ans,0,
-eur1906,IV,18,22,Djerba,italian,Italiens,gt_10y,de plus de 10 ans,54,derived_from_table_i
+eur1906,IV,18,22,Djerba,italian,Italiens,gt_10y,de plus de 10 ans,54,derived_from_totals
 eur1906,IV,18,22,Djerba,maltese,Maltais,passing_through,de passage en Tunisie,0,
 eur1906,IV,18,22,Djerba,maltese,Maltais,lt_1y,de moins d'un an,12,
 eur1906,IV,18,22,Djerba,maltese,Maltais,1_2y,compris entre 1 et 2 ans,13,
@@ -322,7 +322,7 @@ eur1906,IV,18,22,Djerba,maltese,Maltais,6_7y,compris entre 6 et 7 ans,8,
 eur1906,IV,18,22,Djerba,maltese,Maltais,7_8y,compris entre 7 et 8 ans,11,
 eur1906,IV,18,22,Djerba,maltese,Maltais,8_9y,compris entre 8 et 9 ans,7,
 eur1906,IV,18,22,Djerba,maltese,Maltais,9_10y,compris entre 9 et 10 ans,10,
-eur1906,IV,18,22,Djerba,maltese,Maltais,gt_10y,de plus de 10 ans,245,derived_from_table_i
+eur1906,IV,18,22,Djerba,maltese,Maltais,gt_10y,de plus de 10 ans,245,derived_from_totals
 eur1906,IV,18,22,Djerba,spanish,Espagnols,passing_through,de passage en Tunisie,0,
 eur1906,IV,18,22,Djerba,spanish,Espagnols,lt_1y,de moins d'un an,0,
 eur1906,IV,18,22,Djerba,spanish,Espagnols,1_2y,compris entre 1 et 2 ans,0,
@@ -334,7 +334,7 @@ eur1906,IV,18,22,Djerba,spanish,Espagnols,6_7y,compris entre 6 et 7 ans,0,
 eur1906,IV,18,22,Djerba,spanish,Espagnols,7_8y,compris entre 7 et 8 ans,0,
 eur1906,IV,18,22,Djerba,spanish,Espagnols,8_9y,compris entre 8 et 9 ans,0,
 eur1906,IV,18,22,Djerba,spanish,Espagnols,9_10y,compris entre 9 et 10 ans,0,
-eur1906,IV,18,22,Djerba,spanish,Espagnols,gt_10y,de plus de 10 ans,0,derived_from_table_i
+eur1906,IV,18,22,Djerba,spanish,Espagnols,gt_10y,de plus de 10 ans,0,derived_from_totals
 eur1906,IV,18,22,Djerba,greek,Grecs,passing_through,de passage en Tunisie,0,
 eur1906,IV,18,22,Djerba,greek,Grecs,lt_1y,de moins d'un an,8,
 eur1906,IV,18,22,Djerba,greek,Grecs,1_2y,compris entre 1 et 2 ans,5,
@@ -346,7 +346,7 @@ eur1906,IV,18,22,Djerba,greek,Grecs,6_7y,compris entre 6 et 7 ans,0,
 eur1906,IV,18,22,Djerba,greek,Grecs,7_8y,compris entre 7 et 8 ans,5,
 eur1906,IV,18,22,Djerba,greek,Grecs,8_9y,compris entre 8 et 9 ans,1,
 eur1906,IV,18,22,Djerba,greek,Grecs,9_10y,compris entre 9 et 10 ans,2,
-eur1906,IV,18,22,Djerba,greek,Grecs,gt_10y,de plus de 10 ans,12,derived_from_table_i
+eur1906,IV,18,22,Djerba,greek,Grecs,gt_10y,de plus de 10 ans,12,derived_from_totals
 eur1906,IV,18,22,Djerba,other_european,Autres,passing_through,de passage en Tunisie,0,
 eur1906,IV,18,22,Djerba,other_european,Autres,lt_1y,de moins d'un an,4,
 eur1906,IV,18,22,Djerba,other_european,Autres,1_2y,compris entre 1 et 2 ans,3,
@@ -358,7 +358,7 @@ eur1906,IV,18,22,Djerba,other_european,Autres,6_7y,compris entre 6 et 7 ans,0,
 eur1906,IV,18,22,Djerba,other_european,Autres,7_8y,compris entre 7 et 8 ans,4,
 eur1906,IV,18,22,Djerba,other_european,Autres,8_9y,compris entre 8 et 9 ans,1,
 eur1906,IV,18,22,Djerba,other_european,Autres,9_10y,compris entre 9 et 10 ans,0,
-eur1906,IV,18,22,Djerba,other_european,Autres,gt_10y,de plus de 10 ans,4,derived_from_table_i
+eur1906,IV,18,22,Djerba,other_european,Autres,gt_10y,de plus de 10 ans,4,derived_from_totals
 eur1906,IV,19,23,Gafsa,french,Français,passing_through,de passage en Tunisie,2,
 eur1906,IV,19,23,Gafsa,french,Français,lt_1y,de moins d'un an,95,
 eur1906,IV,19,23,Gafsa,french,Français,1_2y,compris entre 1 et 2 ans,67,
@@ -730,7 +730,7 @@ eur1906,IV,20,24,Téboursouk,french,Français,6_7y,compris entre 6 et 7 ans,28,
 eur1906,IV,20,24,Téboursouk,french,Français,7_8y,compris entre 7 et 8 ans,19,
 eur1906,IV,20,24,Téboursouk,french,Français,8_9y,compris entre 8 et 9 ans,13,
 eur1906,IV,20,24,Téboursouk,french,Français,9_10y,compris entre 9 et 10 ans,13,
-eur1906,IV,20,24,Téboursouk,french,Français,gt_10y,de plus de 10 ans,100,derived_from_table_i
+eur1906,IV,20,24,Téboursouk,french,Français,gt_10y,de plus de 10 ans,100,derived_from_totals
 eur1906,IV,20,24,Téboursouk,italian,Italiens,passing_through,de passage en Tunisie,1,
 eur1906,IV,20,24,Téboursouk,italian,Italiens,lt_1y,de moins d'un an,39,
 eur1906,IV,20,24,Téboursouk,italian,Italiens,1_2y,compris entre 1 et 2 ans,30,
@@ -742,7 +742,7 @@ eur1906,IV,20,24,Téboursouk,italian,Italiens,6_7y,compris entre 6 et 7 ans,20,
 eur1906,IV,20,24,Téboursouk,italian,Italiens,7_8y,compris entre 7 et 8 ans,14,
 eur1906,IV,20,24,Téboursouk,italian,Italiens,8_9y,compris entre 8 et 9 ans,14,
 eur1906,IV,20,24,Téboursouk,italian,Italiens,9_10y,compris entre 9 et 10 ans,29,
-eur1906,IV,20,24,Téboursouk,italian,Italiens,gt_10y,de plus de 10 ans,162,derived_from_table_i
+eur1906,IV,20,24,Téboursouk,italian,Italiens,gt_10y,de plus de 10 ans,162,derived_from_totals
 eur1906,IV,20,24,Téboursouk,maltese,Maltais,passing_through,de passage en Tunisie,0,
 eur1906,IV,20,24,Téboursouk,maltese,Maltais,lt_1y,de moins d'un an,0,
 eur1906,IV,20,24,Téboursouk,maltese,Maltais,1_2y,compris entre 1 et 2 ans,0,
@@ -754,7 +754,7 @@ eur1906,IV,20,24,Téboursouk,maltese,Maltais,6_7y,compris entre 6 et 7 ans,0,
 eur1906,IV,20,24,Téboursouk,maltese,Maltais,7_8y,compris entre 7 et 8 ans,0,
 eur1906,IV,20,24,Téboursouk,maltese,Maltais,8_9y,compris entre 8 et 9 ans,1,
 eur1906,IV,20,24,Téboursouk,maltese,Maltais,9_10y,compris entre 9 et 10 ans,0,
-eur1906,IV,20,24,Téboursouk,maltese,Maltais,gt_10y,de plus de 10 ans,12,derived_from_table_i
+eur1906,IV,20,24,Téboursouk,maltese,Maltais,gt_10y,de plus de 10 ans,12,derived_from_totals
 eur1906,IV,20,24,Téboursouk,spanish,Espagnols,passing_through,de passage en Tunisie,0,
 eur1906,IV,20,24,Téboursouk,spanish,Espagnols,lt_1y,de moins d'un an,0,
 eur1906,IV,20,24,Téboursouk,spanish,Espagnols,1_2y,compris entre 1 et 2 ans,0,
@@ -766,7 +766,7 @@ eur1906,IV,20,24,Téboursouk,spanish,Espagnols,6_7y,compris entre 6 et 7 ans,0,
 eur1906,IV,20,24,Téboursouk,spanish,Espagnols,7_8y,compris entre 7 et 8 ans,1,
 eur1906,IV,20,24,Téboursouk,spanish,Espagnols,8_9y,compris entre 8 et 9 ans,0,
 eur1906,IV,20,24,Téboursouk,spanish,Espagnols,9_10y,compris entre 9 et 10 ans,0,
-eur1906,IV,20,24,Téboursouk,spanish,Espagnols,gt_10y,de plus de 10 ans,1,derived_from_table_i
+eur1906,IV,20,24,Téboursouk,spanish,Espagnols,gt_10y,de plus de 10 ans,1,derived_from_totals
 eur1906,IV,20,24,Téboursouk,greek,Grecs,passing_through,de passage en Tunisie,0,
 eur1906,IV,20,24,Téboursouk,greek,Grecs,lt_1y,de moins d'un an,0,
 eur1906,IV,20,24,Téboursouk,greek,Grecs,1_2y,compris entre 1 et 2 ans,0,
@@ -778,7 +778,7 @@ eur1906,IV,20,24,Téboursouk,greek,Grecs,6_7y,compris entre 6 et 7 ans,0,
 eur1906,IV,20,24,Téboursouk,greek,Grecs,7_8y,compris entre 7 et 8 ans,0,
 eur1906,IV,20,24,Téboursouk,greek,Grecs,8_9y,compris entre 8 et 9 ans,0,
 eur1906,IV,20,24,Téboursouk,greek,Grecs,9_10y,compris entre 9 et 10 ans,0,
-eur1906,IV,20,24,Téboursouk,greek,Grecs,gt_10y,de plus de 10 ans,2,derived_from_table_i
+eur1906,IV,20,24,Téboursouk,greek,Grecs,gt_10y,de plus de 10 ans,2,derived_from_totals
 eur1906,IV,20,24,Téboursouk,other_european,Autres,passing_through,de passage en Tunisie,0,
 eur1906,IV,20,24,Téboursouk,other_european,Autres,lt_1y,de moins d'un an,4,
 eur1906,IV,20,24,Téboursouk,other_european,Autres,1_2y,compris entre 1 et 2 ans,2,
@@ -790,7 +790,7 @@ eur1906,IV,20,24,Téboursouk,other_european,Autres,6_7y,compris entre 6 et 7 ans
 eur1906,IV,20,24,Téboursouk,other_european,Autres,7_8y,compris entre 7 et 8 ans,0,
 eur1906,IV,20,24,Téboursouk,other_european,Autres,8_9y,compris entre 8 et 9 ans,2,
 eur1906,IV,20,24,Téboursouk,other_european,Autres,9_10y,compris entre 9 et 10 ans,0,
-eur1906,IV,20,24,Téboursouk,other_european,Autres,gt_10y,de plus de 10 ans,9,derived_from_table_i
+eur1906,IV,20,24,Téboursouk,other_european,Autres,gt_10y,de plus de 10 ans,9,derived_from_totals
 eur1906,IV,20,24,Mactar,french,Français,passing_through,de passage en Tunisie,0,
 eur1906,IV,20,24,Mactar,french,Français,lt_1y,de moins d'un an,4,
 eur1906,IV,20,24,Mactar,french,Français,1_2y,compris entre 1 et 2 ans,3,
@@ -802,7 +802,7 @@ eur1906,IV,20,24,Mactar,french,Français,6_7y,compris entre 6 et 7 ans,3,
 eur1906,IV,20,24,Mactar,french,Français,7_8y,compris entre 7 et 8 ans,3,
 eur1906,IV,20,24,Mactar,french,Français,8_9y,compris entre 8 et 9 ans,2,
 eur1906,IV,20,24,Mactar,french,Français,9_10y,compris entre 9 et 10 ans,2,
-eur1906,IV,20,24,Mactar,french,Français,gt_10y,de plus de 10 ans,41,derived_from_table_i
+eur1906,IV,20,24,Mactar,french,Français,gt_10y,de plus de 10 ans,41,derived_from_totals
 eur1906,IV,20,24,Mactar,italian,Italiens,passing_through,de passage en Tunisie,0,
 eur1906,IV,20,24,Mactar,italian,Italiens,lt_1y,de moins d'un an,0,
 eur1906,IV,20,24,Mactar,italian,Italiens,1_2y,compris entre 1 et 2 ans,0,
@@ -814,7 +814,7 @@ eur1906,IV,20,24,Mactar,italian,Italiens,6_7y,compris entre 6 et 7 ans,1,
 eur1906,IV,20,24,Mactar,italian,Italiens,7_8y,compris entre 7 et 8 ans,1,
 eur1906,IV,20,24,Mactar,italian,Italiens,8_9y,compris entre 8 et 9 ans,1,
 eur1906,IV,20,24,Mactar,italian,Italiens,9_10y,compris entre 9 et 10 ans,1,
-eur1906,IV,20,24,Mactar,italian,Italiens,gt_10y,de plus de 10 ans,12,derived_from_table_i
+eur1906,IV,20,24,Mactar,italian,Italiens,gt_10y,de plus de 10 ans,12,derived_from_totals
 eur1906,IV,20,24,Mactar,maltese,Maltais,passing_through,de passage en Tunisie,0,
 eur1906,IV,20,24,Mactar,maltese,Maltais,lt_1y,de moins d'un an,0,
 eur1906,IV,20,24,Mactar,maltese,Maltais,1_2y,compris entre 1 et 2 ans,0,
@@ -826,7 +826,7 @@ eur1906,IV,20,24,Mactar,maltese,Maltais,6_7y,compris entre 6 et 7 ans,0,
 eur1906,IV,20,24,Mactar,maltese,Maltais,7_8y,compris entre 7 et 8 ans,0,
 eur1906,IV,20,24,Mactar,maltese,Maltais,8_9y,compris entre 8 et 9 ans,0,
 eur1906,IV,20,24,Mactar,maltese,Maltais,9_10y,compris entre 9 et 10 ans,0,
-eur1906,IV,20,24,Mactar,maltese,Maltais,gt_10y,de plus de 10 ans,2,derived_from_table_i
+eur1906,IV,20,24,Mactar,maltese,Maltais,gt_10y,de plus de 10 ans,2,derived_from_totals
 eur1906,IV,20,24,Mactar,spanish,Espagnols,passing_through,de passage en Tunisie,0,
 eur1906,IV,20,24,Mactar,spanish,Espagnols,lt_1y,de moins d'un an,1,
 eur1906,IV,20,24,Mactar,spanish,Espagnols,1_2y,compris entre 1 et 2 ans,0,
@@ -838,7 +838,7 @@ eur1906,IV,20,24,Mactar,spanish,Espagnols,6_7y,compris entre 6 et 7 ans,0,
 eur1906,IV,20,24,Mactar,spanish,Espagnols,7_8y,compris entre 7 et 8 ans,0,
 eur1906,IV,20,24,Mactar,spanish,Espagnols,8_9y,compris entre 8 et 9 ans,0,
 eur1906,IV,20,24,Mactar,spanish,Espagnols,9_10y,compris entre 9 et 10 ans,0,
-eur1906,IV,20,24,Mactar,spanish,Espagnols,gt_10y,de plus de 10 ans,2,derived_from_table_i
+eur1906,IV,20,24,Mactar,spanish,Espagnols,gt_10y,de plus de 10 ans,2,derived_from_totals
 eur1906,IV,20,24,Mactar,greek,Grecs,passing_through,de passage en Tunisie,0,
 eur1906,IV,20,24,Mactar,greek,Grecs,lt_1y,de moins d'un an,0,
 eur1906,IV,20,24,Mactar,greek,Grecs,1_2y,compris entre 1 et 2 ans,0,
@@ -850,7 +850,7 @@ eur1906,IV,20,24,Mactar,greek,Grecs,6_7y,compris entre 6 et 7 ans,0,
 eur1906,IV,20,24,Mactar,greek,Grecs,7_8y,compris entre 7 et 8 ans,0,
 eur1906,IV,20,24,Mactar,greek,Grecs,8_9y,compris entre 8 et 9 ans,0,
 eur1906,IV,20,24,Mactar,greek,Grecs,9_10y,compris entre 9 et 10 ans,0,
-eur1906,IV,20,24,Mactar,greek,Grecs,gt_10y,de plus de 10 ans,0,derived_from_table_i
+eur1906,IV,20,24,Mactar,greek,Grecs,gt_10y,de plus de 10 ans,0,derived_from_totals
 eur1906,IV,20,24,Mactar,other_european,Autres,passing_through,de passage en Tunisie,0,
 eur1906,IV,20,24,Mactar,other_european,Autres,lt_1y,de moins d'un an,0,
 eur1906,IV,20,24,Mactar,other_european,Autres,1_2y,compris entre 1 et 2 ans,1,
@@ -862,7 +862,7 @@ eur1906,IV,20,24,Mactar,other_european,Autres,6_7y,compris entre 6 et 7 ans,0,
 eur1906,IV,20,24,Mactar,other_european,Autres,7_8y,compris entre 7 et 8 ans,0,
 eur1906,IV,20,24,Mactar,other_european,Autres,8_9y,compris entre 8 et 9 ans,0,
 eur1906,IV,20,24,Mactar,other_european,Autres,9_10y,compris entre 9 et 10 ans,0,
-eur1906,IV,20,24,Mactar,other_european,Autres,gt_10y,de plus de 10 ans,0,derived_from_table_i
+eur1906,IV,20,24,Mactar,other_european,Autres,gt_10y,de plus de 10 ans,0,derived_from_totals
 eur1906,IV,20,24,Sfax,french,Français,passing_through,de passage en Tunisie,30,
 eur1906,IV,20,24,Sfax,french,Français,lt_1y,de moins d'un an,140,
 eur1906,IV,20,24,Sfax,french,Français,1_2y,compris entre 1 et 2 ans,125,
@@ -874,7 +874,7 @@ eur1906,IV,20,24,Sfax,french,Français,6_7y,compris entre 6 et 7 ans,104,
 eur1906,IV,20,24,Sfax,french,Français,7_8y,compris entre 7 et 8 ans,106,
 eur1906,IV,20,24,Sfax,french,Français,8_9y,compris entre 8 et 9 ans,94,
 eur1906,IV,20,24,Sfax,french,Français,9_10y,compris entre 9 et 10 ans,95,
-eur1906,IV,20,24,Sfax,french,Français,gt_10y,de plus de 10 ans,638,derived_from_table_i
+eur1906,IV,20,24,Sfax,french,Français,gt_10y,de plus de 10 ans,638,derived_from_totals
 eur1906,IV,20,24,Sfax,italian,Italiens,passing_through,de passage en Tunisie,4,
 eur1906,IV,20,24,Sfax,italian,Italiens,lt_1y,de moins d'un an,254,
 eur1906,IV,20,24,Sfax,italian,Italiens,1_2y,compris entre 1 et 2 ans,163,
@@ -886,7 +886,7 @@ eur1906,IV,20,24,Sfax,italian,Italiens,6_7y,compris entre 6 et 7 ans,142,
 eur1906,IV,20,24,Sfax,italian,Italiens,7_8y,compris entre 7 et 8 ans,156,
 eur1906,IV,20,24,Sfax,italian,Italiens,8_9y,compris entre 8 et 9 ans,200,
 eur1906,IV,20,24,Sfax,italian,Italiens,9_10y,compris entre 9 et 10 ans,165,
-eur1906,IV,20,24,Sfax,italian,Italiens,gt_10y,de plus de 10 ans,1401,derived_from_table_i
+eur1906,IV,20,24,Sfax,italian,Italiens,gt_10y,de plus de 10 ans,1401,derived_from_totals
 eur1906,IV,20,24,Sfax,maltese,Maltais,passing_through,de passage en Tunisie,9,
 eur1906,IV,20,24,Sfax,maltese,Maltais,lt_1y,de moins d'un an,42,
 eur1906,IV,20,24,Sfax,maltese,Maltais,1_2y,compris entre 1 et 2 ans,67,
@@ -898,7 +898,7 @@ eur1906,IV,20,24,Sfax,maltese,Maltais,6_7y,compris entre 6 et 7 ans,57,
 eur1906,IV,20,24,Sfax,maltese,Maltais,7_8y,compris entre 7 et 8 ans,9,
 eur1906,IV,20,24,Sfax,maltese,Maltais,8_9y,compris entre 8 et 9 ans,67,
 eur1906,IV,20,24,Sfax,maltese,Maltais,9_10y,compris entre 9 et 10 ans,60,
-eur1906,IV,20,24,Sfax,maltese,Maltais,gt_10y,de plus de 10 ans,796,derived_from_table_i
+eur1906,IV,20,24,Sfax,maltese,Maltais,gt_10y,de plus de 10 ans,796,derived_from_totals
 eur1906,IV,20,24,Sfax,spanish,Espagnols,passing_through,de passage en Tunisie,0,
 eur1906,IV,20,24,Sfax,spanish,Espagnols,lt_1y,de moins d'un an,0,
 eur1906,IV,20,24,Sfax,spanish,Espagnols,1_2y,compris entre 1 et 2 ans,1,
@@ -910,7 +910,7 @@ eur1906,IV,20,24,Sfax,spanish,Espagnols,6_7y,compris entre 6 et 7 ans,3,
 eur1906,IV,20,24,Sfax,spanish,Espagnols,7_8y,compris entre 7 et 8 ans,0,
 eur1906,IV,20,24,Sfax,spanish,Espagnols,8_9y,compris entre 8 et 9 ans,1,
 eur1906,IV,20,24,Sfax,spanish,Espagnols,9_10y,compris entre 9 et 10 ans,0,
-eur1906,IV,20,24,Sfax,spanish,Espagnols,gt_10y,de plus de 10 ans,2,derived_from_table_i
+eur1906,IV,20,24,Sfax,spanish,Espagnols,gt_10y,de plus de 10 ans,2,derived_from_totals
 eur1906,IV,20,24,Sfax,greek,Grecs,passing_through,de passage en Tunisie,3,
 eur1906,IV,20,24,Sfax,greek,Grecs,lt_1y,de moins d'un an,19,
 eur1906,IV,20,24,Sfax,greek,Grecs,1_2y,compris entre 1 et 2 ans,30,
@@ -922,7 +922,7 @@ eur1906,IV,20,24,Sfax,greek,Grecs,6_7y,compris entre 6 et 7 ans,21,
 eur1906,IV,20,24,Sfax,greek,Grecs,7_8y,compris entre 7 et 8 ans,9,
 eur1906,IV,20,24,Sfax,greek,Grecs,8_9y,compris entre 8 et 9 ans,5,
 eur1906,IV,20,24,Sfax,greek,Grecs,9_10y,compris entre 9 et 10 ans,4,
-eur1906,IV,20,24,Sfax,greek,Grecs,gt_10y,de plus de 10 ans,78,derived_from_table_i
+eur1906,IV,20,24,Sfax,greek,Grecs,gt_10y,de plus de 10 ans,78,derived_from_totals
 eur1906,IV,20,24,Sfax,other_european,Autres,passing_through,de passage en Tunisie,2,
 eur1906,IV,20,24,Sfax,other_european,Autres,lt_1y,de moins d'un an,7,
 eur1906,IV,20,24,Sfax,other_european,Autres,1_2y,compris entre 1 et 2 ans,9,
@@ -934,7 +934,7 @@ eur1906,IV,20,24,Sfax,other_european,Autres,6_7y,compris entre 6 et 7 ans,2,
 eur1906,IV,20,24,Sfax,other_european,Autres,7_8y,compris entre 7 et 8 ans,5,
 eur1906,IV,20,24,Sfax,other_european,Autres,8_9y,compris entre 8 et 9 ans,4,
 eur1906,IV,20,24,Sfax,other_european,Autres,9_10y,compris entre 9 et 10 ans,1,
-eur1906,IV,20,24,Sfax,other_european,Autres,gt_10y,de plus de 10 ans,36,derived_from_table_i
+eur1906,IV,20,24,Sfax,other_european,Autres,gt_10y,de plus de 10 ans,36,derived_from_totals
 eur1906,IV,20,24,Souk-el-Arba,french,Français,passing_through,de passage en Tunisie,20,
 eur1906,IV,20,24,Souk-el-Arba,french,Français,lt_1y,de moins d'un an,133,
 eur1906,IV,20,24,Souk-el-Arba,french,Français,1_2y,compris entre 1 et 2 ans,73,
@@ -946,7 +946,7 @@ eur1906,IV,20,24,Souk-el-Arba,french,Français,6_7y,compris entre 6 et 7 ans,62,
 eur1906,IV,20,24,Souk-el-Arba,french,Français,7_8y,compris entre 7 et 8 ans,46,
 eur1906,IV,20,24,Souk-el-Arba,french,Français,8_9y,compris entre 8 et 9 ans,28,
 eur1906,IV,20,24,Souk-el-Arba,french,Français,9_10y,compris entre 9 et 10 ans,33,
-eur1906,IV,20,24,Souk-el-Arba,french,Français,gt_10y,de plus de 10 ans,327,derived_from_table_i
+eur1906,IV,20,24,Souk-el-Arba,french,Français,gt_10y,de plus de 10 ans,327,derived_from_totals
 eur1906,IV,20,24,Souk-el-Arba,italian,Italiens,passing_through,de passage en Tunisie,48,
 eur1906,IV,20,24,Souk-el-Arba,italian,Italiens,lt_1y,de moins d'un an,129,
 eur1906,IV,20,24,Souk-el-Arba,italian,Italiens,1_2y,compris entre 1 et 2 ans,97,
@@ -958,7 +958,7 @@ eur1906,IV,20,24,Souk-el-Arba,italian,Italiens,6_7y,compris entre 6 et 7 ans,99,
 eur1906,IV,20,24,Souk-el-Arba,italian,Italiens,7_8y,compris entre 7 et 8 ans,77,
 eur1906,IV,20,24,Souk-el-Arba,italian,Italiens,8_9y,compris entre 8 et 9 ans,42,
 eur1906,IV,20,24,Souk-el-Arba,italian,Italiens,9_10y,compris entre 9 et 10 ans,34,
-eur1906,IV,20,24,Souk-el-Arba,italian,Italiens,gt_10y,de plus de 10 ans,612,derived_from_table_i
+eur1906,IV,20,24,Souk-el-Arba,italian,Italiens,gt_10y,de plus de 10 ans,612,derived_from_totals
 eur1906,IV,20,24,Souk-el-Arba,maltese,Maltais,passing_through,de passage en Tunisie,0,
 eur1906,IV,20,24,Souk-el-Arba,maltese,Maltais,lt_1y,de moins d'un an,3,
 eur1906,IV,20,24,Souk-el-Arba,maltese,Maltais,1_2y,compris entre 1 et 2 ans,2,
@@ -970,7 +970,7 @@ eur1906,IV,20,24,Souk-el-Arba,maltese,Maltais,6_7y,compris entre 6 et 7 ans,0,
 eur1906,IV,20,24,Souk-el-Arba,maltese,Maltais,7_8y,compris entre 7 et 8 ans,0,
 eur1906,IV,20,24,Souk-el-Arba,maltese,Maltais,8_9y,compris entre 8 et 9 ans,2,
 eur1906,IV,20,24,Souk-el-Arba,maltese,Maltais,9_10y,compris entre 9 et 10 ans,1,
-eur1906,IV,20,24,Souk-el-Arba,maltese,Maltais,gt_10y,de plus de 10 ans,31,derived_from_table_i
+eur1906,IV,20,24,Souk-el-Arba,maltese,Maltais,gt_10y,de plus de 10 ans,31,derived_from_totals
 eur1906,IV,20,24,Souk-el-Arba,spanish,Espagnols,passing_through,de passage en Tunisie,0,
 eur1906,IV,20,24,Souk-el-Arba,spanish,Espagnols,lt_1y,de moins d'un an,2,
 eur1906,IV,20,24,Souk-el-Arba,spanish,Espagnols,1_2y,compris entre 1 et 2 ans,0,
@@ -982,7 +982,7 @@ eur1906,IV,20,24,Souk-el-Arba,spanish,Espagnols,6_7y,compris entre 6 et 7 ans,0,
 eur1906,IV,20,24,Souk-el-Arba,spanish,Espagnols,7_8y,compris entre 7 et 8 ans,0,
 eur1906,IV,20,24,Souk-el-Arba,spanish,Espagnols,8_9y,compris entre 8 et 9 ans,0,
 eur1906,IV,20,24,Souk-el-Arba,spanish,Espagnols,9_10y,compris entre 9 et 10 ans,1,
-eur1906,IV,20,24,Souk-el-Arba,spanish,Espagnols,gt_10y,de plus de 10 ans,5,derived_from_table_i
+eur1906,IV,20,24,Souk-el-Arba,spanish,Espagnols,gt_10y,de plus de 10 ans,5,derived_from_totals
 eur1906,IV,20,24,Souk-el-Arba,greek,Grecs,passing_through,de passage en Tunisie,0,
 eur1906,IV,20,24,Souk-el-Arba,greek,Grecs,lt_1y,de moins d'un an,0,
 eur1906,IV,20,24,Souk-el-Arba,greek,Grecs,1_2y,compris entre 1 et 2 ans,1,
@@ -994,7 +994,7 @@ eur1906,IV,20,24,Souk-el-Arba,greek,Grecs,6_7y,compris entre 6 et 7 ans,1,
 eur1906,IV,20,24,Souk-el-Arba,greek,Grecs,7_8y,compris entre 7 et 8 ans,0,
 eur1906,IV,20,24,Souk-el-Arba,greek,Grecs,8_9y,compris entre 8 et 9 ans,0,
 eur1906,IV,20,24,Souk-el-Arba,greek,Grecs,9_10y,compris entre 9 et 10 ans,0,
-eur1906,IV,20,24,Souk-el-Arba,greek,Grecs,gt_10y,de plus de 10 ans,3,derived_from_table_i
+eur1906,IV,20,24,Souk-el-Arba,greek,Grecs,gt_10y,de plus de 10 ans,3,derived_from_totals
 eur1906,IV,20,24,Souk-el-Arba,other_european,Autres,passing_through,de passage en Tunisie,1,
 eur1906,IV,20,24,Souk-el-Arba,other_european,Autres,lt_1y,de moins d'un an,0,
 eur1906,IV,20,24,Souk-el-Arba,other_european,Autres,1_2y,compris entre 1 et 2 ans,2,
@@ -1006,7 +1006,7 @@ eur1906,IV,20,24,Souk-el-Arba,other_european,Autres,6_7y,compris entre 6 et 7 an
 eur1906,IV,20,24,Souk-el-Arba,other_european,Autres,7_8y,compris entre 7 et 8 ans,1,
 eur1906,IV,20,24,Souk-el-Arba,other_european,Autres,8_9y,compris entre 8 et 9 ans,0,
 eur1906,IV,20,24,Souk-el-Arba,other_european,Autres,9_10y,compris entre 9 et 10 ans,0,
-eur1906,IV,20,24,Souk-el-Arba,other_european,Autres,gt_10y,de plus de 10 ans,9,derived_from_table_i
+eur1906,IV,20,24,Souk-el-Arba,other_european,Autres,gt_10y,de plus de 10 ans,9,derived_from_totals
 eur1906,IV,20,24,Tabarca,french,Français,passing_through,de passage en Tunisie,7,
 eur1906,IV,20,24,Tabarca,french,Français,lt_1y,de moins d'un an,83,
 eur1906,IV,20,24,Tabarca,french,Français,1_2y,compris entre 1 et 2 ans,96,
@@ -1018,7 +1018,7 @@ eur1906,IV,20,24,Tabarca,french,Français,6_7y,compris entre 6 et 7 ans,36,
 eur1906,IV,20,24,Tabarca,french,Français,7_8y,compris entre 7 et 8 ans,40,
 eur1906,IV,20,24,Tabarca,french,Français,8_9y,compris entre 8 et 9 ans,39,
 eur1906,IV,20,24,Tabarca,french,Français,9_10y,compris entre 9 et 10 ans,43,
-eur1906,IV,20,24,Tabarca,french,Français,gt_10y,de plus de 10 ans,287,derived_from_table_i
+eur1906,IV,20,24,Tabarca,french,Français,gt_10y,de plus de 10 ans,287,derived_from_totals
 eur1906,IV,20,24,Tabarca,italian,Italiens,passing_through,de passage en Tunisie,228,
 eur1906,IV,20,24,Tabarca,italian,Italiens,lt_1y,de moins d'un an,79,
 eur1906,IV,20,24,Tabarca,italian,Italiens,1_2y,compris entre 1 et 2 ans,93,
@@ -1030,7 +1030,7 @@ eur1906,IV,20,24,Tabarca,italian,Italiens,6_7y,compris entre 6 et 7 ans,42,
 eur1906,IV,20,24,Tabarca,italian,Italiens,7_8y,compris entre 7 et 8 ans,37,
 eur1906,IV,20,24,Tabarca,italian,Italiens,8_9y,compris entre 8 et 9 ans,39,
 eur1906,IV,20,24,Tabarca,italian,Italiens,9_10y,compris entre 9 et 10 ans,41,
-eur1906,IV,20,24,Tabarca,italian,Italiens,gt_10y,de plus de 10 ans,350,derived_from_table_i
+eur1906,IV,20,24,Tabarca,italian,Italiens,gt_10y,de plus de 10 ans,350,derived_from_totals
 eur1906,IV,20,24,Tabarca,maltese,Maltais,passing_through,de passage en Tunisie,2,
 eur1906,IV,20,24,Tabarca,maltese,Maltais,lt_1y,de moins d'un an,6,
 eur1906,IV,20,24,Tabarca,maltese,Maltais,1_2y,compris entre 1 et 2 ans,7,
@@ -1042,7 +1042,7 @@ eur1906,IV,20,24,Tabarca,maltese,Maltais,6_7y,compris entre 6 et 7 ans,0,
 eur1906,IV,20,24,Tabarca,maltese,Maltais,7_8y,compris entre 7 et 8 ans,0,
 eur1906,IV,20,24,Tabarca,maltese,Maltais,8_9y,compris entre 8 et 9 ans,1,
 eur1906,IV,20,24,Tabarca,maltese,Maltais,9_10y,compris entre 9 et 10 ans,0,
-eur1906,IV,20,24,Tabarca,maltese,Maltais,gt_10y,de plus de 10 ans,7,derived_from_table_i
+eur1906,IV,20,24,Tabarca,maltese,Maltais,gt_10y,de plus de 10 ans,7,derived_from_totals
 eur1906,IV,20,24,Tabarca,spanish,Espagnols,passing_through,de passage en Tunisie,0,
 eur1906,IV,20,24,Tabarca,spanish,Espagnols,lt_1y,de moins d'un an,1,
 eur1906,IV,20,24,Tabarca,spanish,Espagnols,1_2y,compris entre 1 et 2 ans,0,
@@ -1054,7 +1054,7 @@ eur1906,IV,20,24,Tabarca,spanish,Espagnols,6_7y,compris entre 6 et 7 ans,0,
 eur1906,IV,20,24,Tabarca,spanish,Espagnols,7_8y,compris entre 7 et 8 ans,1,
 eur1906,IV,20,24,Tabarca,spanish,Espagnols,8_9y,compris entre 8 et 9 ans,0,
 eur1906,IV,20,24,Tabarca,spanish,Espagnols,9_10y,compris entre 9 et 10 ans,0,
-eur1906,IV,20,24,Tabarca,spanish,Espagnols,gt_10y,de plus de 10 ans,17,derived_from_table_i
+eur1906,IV,20,24,Tabarca,spanish,Espagnols,gt_10y,de plus de 10 ans,17,derived_from_totals
 eur1906,IV,20,24,Tabarca,greek,Grecs,passing_through,de passage en Tunisie,0,
 eur1906,IV,20,24,Tabarca,greek,Grecs,lt_1y,de moins d'un an,0,
 eur1906,IV,20,24,Tabarca,greek,Grecs,1_2y,compris entre 1 et 2 ans,0,
@@ -1066,7 +1066,7 @@ eur1906,IV,20,24,Tabarca,greek,Grecs,6_7y,compris entre 6 et 7 ans,0,
 eur1906,IV,20,24,Tabarca,greek,Grecs,7_8y,compris entre 7 et 8 ans,0,
 eur1906,IV,20,24,Tabarca,greek,Grecs,8_9y,compris entre 8 et 9 ans,0,
 eur1906,IV,20,24,Tabarca,greek,Grecs,9_10y,compris entre 9 et 10 ans,0,
-eur1906,IV,20,24,Tabarca,greek,Grecs,gt_10y,de plus de 10 ans,0,derived_from_table_i
+eur1906,IV,20,24,Tabarca,greek,Grecs,gt_10y,de plus de 10 ans,0,derived_from_totals
 eur1906,IV,20,24,Tabarca,other_european,Autres,passing_through,de passage en Tunisie,0,
 eur1906,IV,20,24,Tabarca,other_european,Autres,lt_1y,de moins d'un an,1,
 eur1906,IV,20,24,Tabarca,other_european,Autres,1_2y,compris entre 1 et 2 ans,0,
@@ -1078,7 +1078,7 @@ eur1906,IV,20,24,Tabarca,other_european,Autres,6_7y,compris entre 6 et 7 ans,0,
 eur1906,IV,20,24,Tabarca,other_european,Autres,7_8y,compris entre 7 et 8 ans,0,
 eur1906,IV,20,24,Tabarca,other_european,Autres,8_9y,compris entre 8 et 9 ans,0,
 eur1906,IV,20,24,Tabarca,other_european,Autres,9_10y,compris entre 9 et 10 ans,0,
-eur1906,IV,20,24,Tabarca,other_european,Autres,gt_10y,de plus de 10 ans,0,derived_from_table_i
+eur1906,IV,20,24,Tabarca,other_european,Autres,gt_10y,de plus de 10 ans,0,derived_from_totals
 eur1906,IV,21,25,Sousse,french,Français,passing_through,de passage en Tunisie,20,
 eur1906,IV,21,25,Sousse,french,Français,lt_1y,de moins d'un an,204,
 eur1906,IV,21,25,Sousse,french,Français,1_2y,compris entre 1 et 2 ans,135,

@@ -78,7 +78,7 @@ def to_int(tok):
     if t in {"»", "))", ")", "»»", "D", "»."}:
         return 0
     t = t.replace(",", ".").replace("O", "0").replace("o", "0").replace("l", "1").replace("I", "1")
-    if not NUM.match(t):
+    if not NUM.match(t) or not any(c.isdigit() for c in t):
         return None
     return int(t.replace(".", ""))  # thousands are separated by '.'
 

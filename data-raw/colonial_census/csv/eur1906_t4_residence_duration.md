@@ -13,13 +13,13 @@ as inhabitants of that locality; "de passage" covers only persons whose usual re
 On pp.18 and 20 (Béja, Medjez-el-Bab, Bizerte, Gabès, Djerba, Téboursouk, Mactar, Sfax,
 Souk-el-Arba, Tabarca) the last column ("de plus de 10 ans") is lost in the binding of the
 scan. Those 60 cells are derived as Table I nationality total minus the sum of the 11 visible
-columns (flag `derived_from_table_i`). The derived values, summed with the printed pp.19/21
+columns (flag `derived_from_totals`). The derived values, summed with the printed pp.19/21
 values, reproduce the printed regency totals ("Ensemble du territoire") for every nationality
 and duration class, which validates them.
 
 Common columns: `census` (= eur1906), `table_id`, `source_page` (printed page),
 `gallica_view` (Gallica view number), `value`, `flag` (empty, `ocr_corrected`,
-`illegible`, `total_mismatch`, `not_applicable`, `derived_from_table_i`; see SPEC.md).
+`illegible`, `total_mismatch`, `not_applicable`, `derived_from_totals`; see SPEC.md).
 Printed "»" is stored as 0. Printed subtotal and total rows are not stored; they
 were used for validation.
 

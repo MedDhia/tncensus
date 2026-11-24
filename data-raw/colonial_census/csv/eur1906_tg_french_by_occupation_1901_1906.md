@@ -21,7 +21,7 @@ total. The commentary (p.60) warns that the 1901 and 1906 categories are not ful
 
 Common columns: `census` (= eur1906), `table_id`, `source_page` (printed page),
 `gallica_view` (Gallica view number), `value`, `flag` (empty, `ocr_corrected`,
-`illegible`, `total_mismatch`, `not_applicable`, `derived_from_table_i`; see SPEC.md).
+`illegible`, `total_mismatch`, `not_applicable`, `derived_from_totals`; see SPEC.md).
 Printed "»" is stored as 0. Printed subtotal and total rows are not stored; they
 were used for validation.
 
@@ -29,11 +29,9 @@ Method: Gallica's OCR drops many cells on these pages, so every value was
 transcribed from the page images (data-raw/bnf_gallica/pages/bd6t53563851/) and
 checked against the printed totals by extract_eur1906_t4_t8_analysis.py.
 
-Validation: 478 of 502 automated checks pass. Failing checks (all re-read on the image; printed values kept):
+Validation: 482 of 502 automated checks pass. Failing checks (all re-read on the image; printed values kept):
 - Béja et Medjez-el-Bab 1906 totals col 0: computed 680 != printed 730
 - Béja et Medjez-el-Bab 1906 totals col 2: computed 1202 != printed 1252
-- Djerba 1901 totals col 1: computed 91 != printed 92
-- Djerba 1901 totals col 2: computed 186 != printed 187
 - Grombalia 1906 totals col 0: computed 591 != printed 691
 - Grombalia 1906 totals col 1: computed 440 != printed 340
 - Le Kef 1906 transport M+F=T: computed 82 != printed 582
@@ -52,5 +50,3 @@ Validation: 478 of 502 automated checks pass. Failing checks (all re-read on the
 - Ensemble 1906 col 27: computed 18257 != printed 18155
 - Ensemble 1906 col 28: computed 17214 != printed 17314
 - Ensemble 1906 col 29: computed 35471 != printed 35469
-- Ensemble 1901 col 16: computed 929 != printed 930
-- Ensemble 1901 col 17: computed 1551 != printed 1552
