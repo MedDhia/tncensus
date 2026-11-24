@@ -9,12 +9,33 @@ département, colonies, abroad, unknown; as printed), `census_year`, value = per
 Footnote (1): colonies and possessions other than Algeria and Tunisia.
 
 Validation: the printed "à reporter" running totals were checked page by page. p.48 matches
-exactly. On pp.46-47 the printed cells do not add up to the printed totals. The commentary
-(pp.44-45) confirms three printing errors, all flagged `total_mismatch` with the printed
-values kept: Bouches-du-Rhône 1906 printed 822 (commentary 922); Rhône 1901 printed 478
-(commentary's +137 since 1901 implies 498); Loiret 1906 printed 29 (the page total implies
-79). Smaller residual differences (2-10 persons) remain on pp.46-47 after re-reading the
-zoomed images. Allier 1891: the first digit is broken in the scan and was read as 34
+exactly; on pp.46-47 the printed cells do not add up to the printed totals.
+
+Every cell on pp.46-47 was re-read on the scans (views 45-46) and matches the transcription,
+so the remaining differences are in the 1906 printing itself, not in the transcription.
+
+The printed totals are right. The commentary's own summary table (p.40) gives the French
+born in Tunisia, Algeria and France for each census. Its Tunisia and Algeria figures equal
+this table's, and with the colonies, abroad and unknown rows it reproduces this table's
+printed grand totals (9.973, 16.207, 24.201, 34.610). So every discrepancy is in the rows
+for the French départements: their printed cells sum to 6.115, 9.778, 14.006 and 18.288,
+against 6.107, 9.768, 14.036 and 18.439 born in France per p.40.
+
+Three cells are identified as misprints and flagged `total_mismatch` (printed values kept):
+- Bouches-du-Rhône 1906, printed 822: the commentary (p.45) gives 922, and an increase of
+  143 since 1901 (779 + 143 = 922).
+- Rhône 1901, printed 478: the commentary gives 635 in 1906 and +137 since 1901, so 498.
+- Loiret 1906, printed 29: the p.47 page total implies 79 (not confirmed by the commentary).
+The commentary's other ten 1901-1906 increases (Corse, Seine, Gard, Var, Isère, Ardèche,
+Hautes-Alpes, Aude, Hérault, Gironde) all agree with this table.
+
+After these three, small differences remain that the sources cannot assign to a cell.
+They are given as the département cells' sum minus the printed page total:
+- p.46: 1891 -2, 1901 -10, 1906 -1 (1896 agrees)
+- p.47: 1891 +10, 1896 +10 (1901 and 1906 agree once Rhône and Loiret are corrected)
+These cells are not flagged. Sums over départements therefore differ from the printed
+totals by up to 10 persons a year; use the printed totals (or Table B) for the French
+total. Allier 1891: the first digit is broken in the scan and was read as 34
 (`ocr_corrected`).
 
 Common columns: `census` (= eur1906), `table_id`, `source_page` (printed page),
