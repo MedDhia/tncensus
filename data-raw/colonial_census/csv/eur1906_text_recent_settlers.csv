@@ -1,0 +1,7 @@
+census,table_id,source_page,gallica_view,residence_duration,residence_duration_fr,group,measure,value,flag
+eur1906,text_recent_settlers,49,48,lt_5y,depuis cinq ans,french,count,12775,
+eur1906,text_recent_settlers,49,48,lt_5y,depuis cinq ans,other_european,count,26639,
+eur1906,text_recent_settlers,49,48,lt_5y,depuis cinq ans,french_per_100_other,pct,47,
+eur1906,text_recent_settlers,49,48,5_10y,entre cinq et dix ans,french,count,28455,total_mismatch
+eur1906,text_recent_settlers,49,48,5_10y,entre cinq et dix ans,other_european,count,23174,
+eur1906,text_recent_settlers,49,48,5_10y,entre cinq et dix ans,french_per_100_other,pct,36,

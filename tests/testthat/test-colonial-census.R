@@ -19,7 +19,9 @@ test_that("every colonial table loads with the common columns", {
     expect_true(all(df$census == idx$census[i]), info = idx$table[i])
     expect_true(all(is.na(df$flag) |
                       df$flag %in% c("ocr_corrected", "illegible",
-                                     "total_mismatch")), info = idx$table[i])
+                                     "total_mismatch",
+                                     "derived_from_table_i",
+                                     "not_applicable")), info = idx$table[i])
   }
 })
 

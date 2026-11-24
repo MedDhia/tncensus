@@ -1,0 +1,6 @@
+census,table_id,source_page,gallica_view,census_year,measure,value,flag
+eur1906,text_french_totals_1880_1906,36,35,1880,count,708,
+eur1906,text_french_totals_1880_1906,36,35,1891,count,10030,
+eur1906,text_french_totals_1880_1906,36,35,1896,count,16207,
+eur1906,text_french_totals_1880_1906,36,35,1901,count,24201,
+eur1906,text_french_totals_1880_1906,36,35,1906,count,34610,

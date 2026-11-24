@@ -59,8 +59,11 @@ colonial_census_tables <- function() {
 #' corrected from the page images. \code{flag} is empty for values taken
 #' directly from the OCR, \code{"ocr_corrected"} for values corrected from
 #' the scan, \code{"illegible"} for values that could not be read (left
-#' \code{NA}), and \code{"total_mismatch"} where the printed values do not
-#' add up to the printed total. Printed subtotals and totals are not stored as
+#' \code{NA}), \code{"total_mismatch"} where the printed values do not
+#' add up to the printed total (the printed value is kept),
+#' \code{"derived_from_table_i"} for cells lost in the binding and derived
+#' from the printed totals, and \code{"not_applicable"} for questions not
+#' asked of a group (left \code{NA}). Printed subtotals and totals are not stored as
 #' rows. A printed \code{»} is recorded as 0.
 #'
 #' Place names are not harmonized with modern delegations; see

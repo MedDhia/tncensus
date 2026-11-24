@@ -30,7 +30,7 @@ OCR helper: `data-raw/colonial_census/ocr.py` (word positions from Gallica OCR).
 | geography columns | As applicable, from coarse to fine: `controle_civil`, `annexe`, `caidat`, `cheikhat`, `locality`, `commune`. Spelling **exactly as printed** (fix OCR errors, keep period orthography: `Souk-el-Arba`, `Medjez-el-Bab`). Leave empty when not applicable |
 | dimension columns | One per printed dimension, English snake_case values (e.g. `nationality` = `french`, `italian`, `maltese`, `spanish`, `greek`, `other_european`; `sex` = `male`/`female`; `religion` = `muslim`/`jewish`). Add `<dim>_fr` with the label as printed (French) |
 | `value` | Integer count (or numeric for rates/percentages; say which in the notes). `»` printed = 0 |
-| `flag` | Empty, or one of `ocr_corrected` (value fixed by reading the image), `illegible` (value left NA), `total_mismatch` (row/column sums don't match the printed total even after checking the image; keep printed values) |
+| `flag` | Empty, or one of `ocr_corrected` (value fixed by reading the image), `illegible` (value left NA), `total_mismatch` (row/column sums don't match the printed total even after checking the image; keep printed values), `derived_from_table_i` (cell lost in the binding, derived as the Table I total minus the visible cells), `not_applicable` (question not asked of this group, value NA) |
 
 Do **not** store printed subtotal or total rows/columns as data rows, unless the
 table only exists as totals. Use them to validate, and record the result in the
