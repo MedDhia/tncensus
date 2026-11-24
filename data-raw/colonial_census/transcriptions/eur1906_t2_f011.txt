@@ -1,0 +1,36 @@
+# view 11
+Aïn-Bittar | 35 36 1 0 0 0 72
+Baie Ponty | 134 16 0 3 0 5 158
+Menzel-Abderrahman | 9 0 0 0 0 0 9
+Menzel-Djemil | 23 7 5 0 0 0 35
+Zarzouna | 120 56 0 0 4 4 184
+Aïn-Berda, El Azouaz et Sfaïat | 37 8 4 9 0 0 58
+Aïn-Meriem | 6 151 2* 5 0 0 164
+El-Alia | 0 11 0 0 0 0 11
+El-Azib | 44 4 1 0 2 0 51
+Ferryville | 789 1072 4 8 14 9 1896
+Khetmine | 6 69 0 0 0 0 75
+Sidi-Ahmed | 16 25 0 0 0 0 41
+Porto-Farina et El-Aousdja | 42 79 203 0 0 0 324
+Bazbazia | 0 234 0 0 0 0 234
+Protville et environs (Utique, El-Haouidh, Enchir Fartout) | 54 163 0 0 0 5 222
+Raf-Raf | 7 2 0 0 0 0* 9
+Ras-el-Djebel | 11 14 8 0 0 0 33
+Mateur | 265 1580 75 14 0 5 1939
+Aïn-Rhelal | 11 35 0 0 0 0 46
+Michaud | 46 10 0 0 0 1 57
+Tindja et banlieue | 165 169 0 2 1 0 337
+Autres localités du caïdat de Mateur | 261 344 5 1 0 8 619
+Ile de la Galite | 67 107 0 0 0 0 174
+## Contrôle de Gabès
+Gabès | 323 359 195 10 1 2 890
+El-Aouïnet | 3 0 0 0 0 0 3
+El-Hamma (des Beni-Zid) | 4 0 0 0 0 0 4
+Mareth | 0 1 1 0 0 0 2
+Oued-Melah | 5 0 0 0 0 0 5
+Oued-Serrak | 0 5 0 0 0 0 5
+## Annexe de Djerba
+Houmt-Souk | 116 77 302 0 41 25 561
+Adjim | 15 6 29 0 0 3 53
+Aghir | 5 0 0 0 0 0 5
+Beni-Diss, Oualagh | 14 0 0 0 0 0 14

@@ -1,0 +1,74 @@
+# view 21 (printed page 17)
+## A) Français
+= Report | 29513
+Savoie (Haute-) | 148
+Seine | 1228
+Seine-Inférieure | 131
+Seine-et-Marne | 89
+Seine-et-Oise | 147
+Sèvres (Deux-) | 130
+Somme | 70
+Tarn | 194
+Tarn-et-Garonne | 103
+Var | 403
+= A reporter | 32156
+= Report | 32156
+Vaucluse | 283
+Vendée | 45
+Vienne | 93
+Vienne (Haute-) | 132
+Vosges | 119
+Yonne | 101
+Colonies et possessions françaises (1) | 57
+Etranger | 1602
+Lieux inconnus | 22
+= Total général | 34610
+## B) Etrangers
+Tunisie | 36612
+Algérie | 845
+France | 175
+Alsace-Lorraine | 31
+Belgique et Luxembourg | 93
+Suisse | 213
+Allemagne (moins Alsace-Lorraine) | 137
+Angleterre | 106
+Autriche | 98
+Bulgarie | 7
+Danemark | 5
+Espagne | 306
+Italie, Piémont et Ligurie | 581
+Italie, Lombardie | 385
+Italie, Vénétie | 92
+Italie, Emilie | 91
+Italie, Ombrie | 119
+Italie, Toscane | 1334
+Italie, Marches | 46
+Italie, Province de Rome | 256
+Italie, Provinces napolitaines | 1370
+Italie, Sardaigne | 2927
+Italie, Sicile | 45049
+Italie, Provinces non désignées | 429
+= A reporter | 91307
+= Report | 91307
+Grèce | 345
+Hollande | 33
+Malte (île de) | 1867
+Monténégro | 0
+Norvège | 17
+Portugal | 5
+Roumanie | 10
+Russie | 28
+Serbie | 0
+Suède | 7
+Turquie (Europe et Asie) | 222
+Amérique du Nord | 46
+Antilles anglaises | 1
+Amérique du Sud | 37
+Andorre | 1
+Asie | 4
+Australie | 7
+Egypte | 68
+Maroc | 24
+Soudan | 1
+Tripolitaine | 255
+= Total | 94285

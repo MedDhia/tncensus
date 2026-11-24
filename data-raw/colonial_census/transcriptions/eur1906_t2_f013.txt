@@ -1,0 +1,35 @@
+# view 13
+Menzel-Temime | 9 9 0 0 0 0 18
+Nabeul | 194* 125 52 2 4 7 384
+Nabeul (Environs de) | 42 14 1 0 0 1 58
+Sidi-Daoud et Sémaphore | 15 15 0 0 0 0 30
+Soliman | 29 108 2 5 3 8 155
+Soltane (Enchir) | 37 0 0 0 0 0 37
+Takelsa et chantiers | 99 98 13 7 2 6 225
+## Contrôle de Kairouan
+Kairouan | 258 367 25 15 24 47 736
+Fondouk d’El-Aouareb | 3 8 0 0 0 0 11
+Hadjeb-el-Aïoun | 10 6 0 0 1 0 17
+Pichon et ses environs (Chantiers de Bou-Hafna) | 45 43 0 2 0 0 90
+Djebel-Serdj | 7 19 0 0 0 0 26
+Djebel-Trozza | 0 13 0 0 0 0 13
+Aïn-Moularès (Chantiers de la ligne d') | 27 175 7 0 0 1 210
+Cie des Eaux du Sahel (Chantiers de la) | 38 41 1 1 0 1 82
+Fermes non groupées, Chantiers isolés de travaux publics, Gardes des Eaux de Cherichera et Chebika | 44 17 1 0 0 0 62
+## Contrôle du Kef
+Kef | 380 929 35 7 4 11 1366
+Kef (Banlieue) | 22 25 0 0 0 2 49
+Kef (Quartier militaire) | 38 2 0 0 0 0 40
+Aïn-Khanfous | 1 6 0 0 0 0 7
+Aïn-Mesria | 5 17 0 0 0 0 22
+Bir Afou | 3 17 0 0 0 0 20
+Bou-Djabeur | 12 16 0 0 0 0 28
+Djebel-Djerissa | 38 81 1 6 0 0 126
+Djebel-Slata | 3 80 0 0 0 4 87
+Ebba-Ksour | 14 15 1 0 0 0 30
+Fedj-Assène | 6 66 0 0 0 0 72
+Kalaâ-Djerda | 83 254 4 7 0 3 351
+Kalaât-es-Senam | 26* 111 0 0 0 0 137
+Kebbouch | 8 9 0 0 0 0 17
+Krib | 9 5 0 0 0 0 14
+Nebeur | 3* 48 0 0 0* 0 51
