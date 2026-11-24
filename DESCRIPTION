@@ -21,8 +21,10 @@ Description: Comprehensive R data package for Tunisia's population censuses
     (264 delegations, 24 governorates, national totals, 48 indicators);
     (5) 1984 RGPH delegation-level education tables and 1966 governorate
     illiteracy data; (6) historical national education series (1956-2014)
-    and master INS delegation crosswalk; and (7) colonial-era population
-    censuses (1891-1956). Original contemporary data published by INS Tunisia
+    and master INS delegation crosswalk; (7) colonial-era population
+    censuses (1891-1956); and (8) 39 tables transcribed from the 1906
+    European and 1931 indigenous census publications digitized on Gallica
+    (Bibliotheque nationale de France). Original contemporary data published by INS Tunisia
     <https://www.ins.tn/>.
 License: CC BY 4.0
 URL: https://github.com/MedDhia/tncensus,

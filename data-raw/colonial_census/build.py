@@ -16,6 +16,7 @@ import pandas as pd
 HERE = Path(__file__).resolve().parent
 OUT = HERE.parent.parent / "inst" / "extdata" / "colonial"
 ARKS = {"eur1906": "bd6t53563851", "ind1931": "bpt6k994559s"}
+INT_COLS = {"census_year", "base_year", "duplicate"}
 REQUIRED = ["census", "table_id", "source_page", "gallica_view", "value", "flag"]
 FLAGS = {"", "ocr_corrected", "illegible", "total_mismatch", "derived_from_totals",
          "not_applicable"}
@@ -32,14 +33,26 @@ def load(table):
         raise SystemExit(f"{table}: unknown flags {bad}")
     for c in ("source_page", "gallica_view"):
         df[c] = pd.to_numeric(df[c], errors="raise").astype("int32")
+    for c in INT_COLS & set(df.columns):
+        df[c] = pd.to_numeric(df[c].replace("", None), errors="raise").astype("Int32")
     df["value"] = pd.to_numeric(df["value"].replace("", None), errors="raise")
     if (df["value"].dropna() % 1 == 0).all():
         df["value"] = df["value"].astype("Int64")
     # empty strings → NA in text columns, so R sees NA_character_
     for c in df.columns:
-        if df[c].dtype == object:
-            df[c] = df[c].replace("", None)
+        if pd.api.types.is_string_dtype(df[c]) and not pd.api.types.is_numeric_dtype(df[c]):
+            df[c] = df[c].astype(object).where(df[c] != "", None)
     return df
+
+
+def write(df, path):
+    """Write Parquet with plain (not large_) string columns, for portability."""
+    import pyarrow as pa
+    import pyarrow.parquet as pq
+    tbl = pa.Table.from_pandas(df, preserve_index=False)
+    schema = pa.schema([pa.field(f.name, pa.string()) if pa.types.is_large_string(f.type) else f
+                        for f in tbl.schema]).remove_metadata()
+    pq.write_table(tbl.cast(schema), path, compression="zstd")
 
 
 def main():
@@ -48,7 +61,7 @@ def main():
     rows = []
     for _, r in idx.iterrows():
         df = load(r["table"])
-        df.to_parquet(OUT / f"{r['table']}.parquet", compression="zstd", index=False)
+        write(df, OUT / f"{r['table']}.parquet")
         rows.append({**r.to_dict(), "gallica_ark": ARKS[r["census"]], "n_rows": len(df)})
         print(f"{r['table']}: {len(df)} rows, {df.shape[1]} columns")
     stale = {p.stem for p in OUT.glob("*.parquet")} - set(idx["table"]) - {"index"}
@@ -58,7 +71,7 @@ def main():
     out = pd.DataFrame(rows)[["table", "census", "table_id", "title_fr", "title_en", "pages",
                               "gallica_ark", "n_rows", "value_type"]]
     out["n_rows"] = out["n_rows"].astype("int32")
-    out.to_parquet(OUT / "index.parquet", compression="zstd", index=False)
+    write(out, OUT / "index.parquet")
     print(f"index: {len(out)} tables")
 
 

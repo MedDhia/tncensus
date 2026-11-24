@@ -21,6 +21,7 @@
 - **Fast Parquet Storage:** High-dimensional tables (28 disaggregated 2014 tables and full 2024 indicator suites) are backed by Zstandard-compressed Apache Parquet (`arrow`) for lightning-fast loads.
 - **Built-in Administrative GeoJSON & Spatial Boundaries (`load_geojson()`):** Seamlessly load ready-to-map `sf` polygons for National (1), Regional (6), Governorate (24), and Delegation (264) tiers, enriched with Arabic (`_name_ar`), French (`_name`), and alternate romanizations (`_name_alt`).
 - **Deep Historical & Colonial Archives:** Digitized and harmonized from [Ben Salah et al. (2024)](https://doi.org/10.1016/j.jce.2024.09.002), including 1,276 historical geonames, 1984–2014 boundary transition matrices, and colonial population tables.
+- **Original 1906 and 1931 Census Publications (`load_colonial_census()`):** 39 tables (24,575 cells) transcribed from the 1906 European and 1931 indigenous census volumes on Gallica, down to 333 localities (1906) and 804 cheikhats (1931). Every table is checked against its printed totals, and every cell keeps its page and Gallica view, so it can be checked against the scan.
 - **Inequality Metrics:** Built-in functions for calculating Gini coefficients (`gini()`) and Generalized Entropy Theil inequality decompositions (`theil_decompose()`).
 
 ---
@@ -80,6 +81,29 @@ install.packages(c("sf", "ggplot2", "arrow"))
 | `colonial_european_pop` | Locality / Civil Control | 1891–1936 | 525 × 24 | French, Italian, Maltese, and other European populations over 8 censuses. |
 | `colonial_age_caidat_1931` | Caidat | 1931 | 37 × 14 | Age pyramid and sex breakdown of the Tunisian population by caidat. |
 | `colonial_age_controle_civil_1931` | Contrôle Civil | 1931 | 21 × 15 | Age pyramid and sex breakdown of the European population by civil control. |
+
+#### Tables from the original 1906 and 1931 census publications
+
+`load_colonial_census()` loads tables transcribed from two census volumes digitized on [Gallica](#archival-scans-from-gallica-bnf); `colonial_census_tables()` lists all 39. Tables are tidy (one row per printed cell), keep place names as printed, and give each cell's printed page and Gallica view. See [`data-raw/colonial_census/CODEBOOK.md`](data-raw/colonial_census/CODEBOOK.md) for every column and code.
+
+| Table | Admin Level | Rows | Description |
+|:---|:---|---:|:---|
+| `eur1906_t1_circonscription_nationality` | Contrôle Civil | 114 | Europeans by nationality (French, Italian, Maltese, Spanish, Greek, other), 1906. |
+| `eur1906_t2_locality_nationality` | Locality | 1,998 | Europeans by nationality in 333 localities, 1906. |
+| `eur1906_t3_birthplace` | National | 139 | Europeans by place of birth (French départements, foreign countries, Italian provinces). |
+| `eur1906_t4_residence_duration` | Contrôle Civil | 1,368 | Europeans by length of residence in Tunisia and nationality. |
+| `eur1906_t5_sex_age_marital` | National | 336 | Europeans by nationality, sex, age group and marital status. |
+| `eur1906_t6_profession_nationality`, `eur1906_t7_profession_circonscription` | National / Contrôle Civil | 192 / 3,648 | Europeans by profession, active vs family member, sex and nationality. |
+| `eur1906_t8_instruction` | National | 18 | Literacy and knowledge of French by nationality. |
+| `eur1906_ta_*` … `eur1906_tg_*` | Contrôle Civil / Locality | 2,234 | Analysis tables: densities, French population 1891–1906 by district, locality and birthplace, growth coefficients, French by origin, occupations 1901/1906. |
+| `eur1906_text_*` | National | 578 | Twelve small tables printed in the commentary (sex, age, marital status, birthplace, occupations). |
+| `ind1931_t1_controle_nationality`, `ind1931_t2_caidat_nationality` | Contrôle Civil / Caidat | 280 / 518 | Muslim and Jewish population by nationality (Tunisian, Algerian, Moroccan, Sudanese, Syrian, Tripolitanian, other), 1931. |
+| `ind1931_t3_cheikhat_nationality` | Cheikhat | 11,256 | The same for 804 cheikhats in 37 caidats. |
+| `ind1931_t4_*`, `ind1931_t4annex_*` | Contrôle Civil / National | 80 / 28 | 1926 vs 1931, by district and by nationality. |
+| `ind1931_t5_caidat_sex_age`, `ind1931_t5annex_*` | Caidat / National | 296 / 16 | Men, women, boys and girls, by religion; 1926 vs 1931. |
+| `ind1931_t6_caidat_profession`, `ind1931_t6annex_*` | Caidat / National | 592 / 32 | Occupations of men aged 18 and over, by religion; 1926 vs 1931. |
+| `ind1931_t7_communes`, `ind1931_t7annex_communes_1921_1931` | Commune | 116 / 174 | Muslim and Jewish population of the 58 communes; 1921, 1926 and 1931. |
+| `ind1931_t8_localities` | Locality | 562 | Non-commune localities with more than 25 households. |
 
 ### 4. Geographic Boundaries & Spatial Harmonization
 
@@ -285,6 +309,31 @@ data("delegation_matrix_merged")
 head(delegation_matrix_merged, 10)
 ```
 
+### 6. Working with the Original 1906 and 1931 Census Tables
+
+```r
+# List the 39 transcribed tables
+idx <- colonial_census_tables()
+idx[, c("table", "title_en", "n_rows")]
+
+# Europeans by contrôle civil and nationality, 1906 (cross-tabulated)
+t1 <- load_colonial_census("eur1906_t1_circonscription_nationality")
+xtabs(value ~ controle_civil + nationality, data = t1)
+
+# Jewish population by cheikhat in the caidat of Djerba, 1931.
+# Drop the four Tunis-Ville rows that repeat Tunis-Banlieue groups first.
+ch <- load_colonial_census("ind1931_t3_cheikhat_nationality")
+ch <- ch[ch$duplicate == 0, ]
+djerba <- subset(ch, caidat == "Djerba" & religion == "jewish")
+aggregate(value ~ cheikhat, data = djerba, sum)
+
+# Every value can be checked against the scan:
+# https://gallica.bnf.fr/ark:/12148/<gallica_ark>/f<gallica_view>
+subset(ch, flag == "ocr_corrected")[1:5, c("cheikhat", "nationality", "value", "gallica_view")]
+```
+
+Values flagged `total_mismatch` are printed as in the original but do not add up with its printed totals (misprints in the 1906 or 1931 volume); `derived_from_totals` marks cells hidden in the binding and solved from the printed totals; `illegible` and `not_applicable` cells are `NA`.
+
 ---
 
 ## Multilingual Support & Geographic Harmonization
@@ -318,7 +367,7 @@ If you use the historical or colonial datasets (`colonial_*`, `rgph1966_illitera
 
 ### Archival Scans from Gallica (BnF)
 
-The original colonial census publications can be retrieved as PDFs with [`data-raw/bnf_gallica_download.py`](data-raw/bnf_gallica_download.py), which uses the BnF's IIIF API (`openapi.bnf.fr`). The scans themselves are **not redistributed** in this repository and are **not covered by its CC BY 4.0 licence**: they remain subject to the [Gallica terms of use](https://gallica.bnf.fr/edit/und/conditions-dutilisation-des-contenus-de-gallica) and to the terms of the library that holds each original.
+The tables returned by `load_colonial_census()` are transcriptions of the figures in two of these volumes (the 1906 and 1931 censuses below). They are distributed with the package; please cite the original publication and its Gallica credit line, as given in each table's documentation. The original colonial census publications can be retrieved as PDFs with [`data-raw/bnf_gallica_download.py`](data-raw/bnf_gallica_download.py), which uses the BnF's IIIF API (`openapi.bnf.fr`). The scans themselves are **not redistributed** in this repository and are **not covered by its CC BY 4.0 licence**: they remain subject to the [Gallica terms of use](https://gallica.bnf.fr/edit/und/conditions-dutilisation-des-contenus-de-gallica) and to the terms of the library that holds each original.
 
 Gallica allows free non-commercial reuse provided the source credit is kept; commercial reuse requires a licence. The credit names Gallica and the holding institution, which is not always the BnF:
 

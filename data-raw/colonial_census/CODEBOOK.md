@@ -53,7 +53,7 @@ Every table is tidy: one row per printed cell. Printed subtotals and totals are 
 | [`eur1906_text_french_occupation_1896_1906`](#eur1906_text_french_occupation_1896_1906) | text | 61 | 18 | percent | French population by occupational group, 1896, 1901 and 1906 (commentary table) |
 | [`ind1931_t1_controle_nationality`](#ind1931_t1_controle_nationality) | I | 6-7 | 280 | count | Indigenous population by contrôle civil, religion (Muslim, Jewish) and nationality |
 | [`ind1931_t2_caidat_nationality`](#ind1931_t2_caidat_nationality) | II | 8-11 | 518 | count | Indigenous population by caidat, religion and nationality |
-| `ind1931_t3_cheikhat_nationality` | III | 12-97 | (pending) | count | Indigenous population by cheikhat, religion and nationality |
+| [`ind1931_t3_cheikhat_nationality`](#ind1931_t3_cheikhat_nationality) | III | 12-97 | 11,256 | count | Indigenous population by cheikhat, religion and nationality |
 | [`ind1931_t4_controle_1926_1931`](#ind1931_t4_controle_1926_1931) | IV | 98-99 | 80 | count | Indigenous population by contrôle civil and religion, 1926 and 1931 |
 | [`ind1931_t4annex_nationality_1926_1931`](#ind1931_t4annex_nationality_1926_1931) | IV_annex | 100 | 28 | count | Indigenous population by religion and nationality, 1926 and 1931 |
 | [`ind1931_t5_caidat_sex_age`](#ind1931_t5_caidat_sex_age) | V | 102-105 | 296 | count | Muslim and Jewish population by sex and age group (adults, children), by caidat |
@@ -1281,6 +1281,91 @@ Census `ind1931`, table II, printed pages 8-11. 518 rows. Value type: count. Fla
 | `syrian` | Syriens | 74 |
 | `tripolitanian` | Tripolitains | 74 |
 | `tunisian` | Tunisiens | 74 |
+
+### ind1931_t3_cheikhat_nationality
+
+**État de la population indigène par Cheikhats**  
+*Indigenous population by cheikhat, religion and nationality*
+
+Census `ind1931`, table III, printed pages 12-97. 11,256 rows. Value type: count. Flags: (empty) 10,414, ocr_corrected 842. Notes and validation: [`csv/ind1931_t3_cheikhat_nationality.md`](csv/ind1931_t3_cheikhat_nationality.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census) or `ind1931` (1931 indigenous census). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `controle_civil` | Place or label as printed (23 distinct values). |
+| `caidat` | Place or label as printed (37 distinct values). |
+| `cheikhat` | Place or label as printed (779 distinct values). |
+| `cheikhat_note` | Coded dimension. |
+| `duplicate` | Coded dimension. |
+| `religion` | Coded dimension. |
+| `religion_fr` | Printed French label for `religion`. |
+| `nationality` | Coded dimension. |
+| `nationality_fr` | Printed French label for `nationality`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`cheikhat_note`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `(empty)` |  | 8,526 |
+| `(1)` |  | 658 |
+| `(2)` |  | 378 |
+| `(3)` |  | 84 |
+| `(4)` |  | 112 |
+| `Bizerte-Ville (1)` |  | 56 |
+| `Béja-Ville (1)` |  | 28 |
+| `Cercle de Ben-Gardane - Khalifalik des Touazines (1)` |  | 154 |
+| `Cercle de Médenine - Khalifalik des Khzours (2)` |  | 126 |
+| `Cercle de Médenine - Khalifalik des Ksours (suite)` |  | 84 |
+| `Cercle de Zarzis - Khalifalik des Accara (1)` |  | 84 |
+| `Cercle de Zarzis - Khalifalik des Accara (1); Commune de Zarzis (2)` |  | 84 |
+| `Commune de Djerba (1)` |  | 28 |
+| `Commune de Djerba (1); (2)` |  | 14 |
+| `Commune de Nefta (2)` |  | 98 |
+| `Commune de Sfax (2)` |  | 112 |
+| `Commune de Tozeur (3)` |  | 84 |
+| `El-Hamma commune (2)` |  | 42 |
+| `Gabès banlieue (4)` |  | 56 |
+| `Gabès commune (3)` |  | 70 |
+| `Iles de Kerkenah (1)` |  | 56 |
+| `Iles de Kerkenah (1) (suite)` |  | 56 |
+| `Kairouan-Banlieue (1)` |  | 56 |
+| `Kairouan-Ville (2)` |  | 56 |
+| `Kef-Ville (3)` |  | 28 |
+| `Moknine (1)` |  | 42 |
+| `Monastir (2)` |  | 28 |
+| `Touza (3)` |  | 28 |
+| `Zarmedine (4)` |  | 28 |
+
+`duplicate`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `0` |  | 11,200 |
+| `1` |  | 56 |
+
+`religion`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `jewish` | Population israélite | 5,628 |
+| `muslim` | Population musulmane | 5,628 |
+
+`nationality`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `algerian` | Algériens | 1,608 |
+| `moroccan` | Marocains | 1,608 |
+| `other` | Autres nationalités | 1,608 |
+| `sudanese` | Soudanais | 1,608 |
+| `syrian` | Syriens | 1,608 |
+| `tripolitanian` | Tripolitains | 1,608 |
+| `tunisian` | Tunisiens | 1,608 |
 
 ### ind1931_t4_controle_1926_1931
 

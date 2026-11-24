@@ -66,6 +66,11 @@ colonial_census_tables <- function() {
 #' from the printed totals, and \code{"not_applicable"} for questions not
 #' asked of a group (left \code{NA}). Printed subtotals and totals are not stored as
 #' rows. A printed \code{»} is recorded as 0.
+#' 
+#' In \code{ind1931_t3_cheikhat_nationality}, Tunis-Ville lists again four
+#' groups already counted under Tunis-Banlieue (13,440 people), as the
+#' printed footnote explains. These rows have \code{duplicate == 1}; drop
+#' them to reproduce the printed totals.
 #'
 #' Place names are not harmonized with modern delegations; see
 #' \code{\link{historical_geonames}} for a crosswalk of historical names.
@@ -99,8 +104,10 @@ colonial_census_tables <- function() {
 #' loc <- load_colonial_census("eur1906_t2_locality_nationality")
 #' head(loc)
 #'
-#' # Indigenous population by cheikhat, 1931
+#' # Indigenous population by cheikhat, 1931. Drop the four Tunis-Ville rows
+#' # that repeat Tunis-Banlieue groups (duplicate == 1) before summing.
 #' ch <- load_colonial_census("ind1931_t3_cheikhat_nationality")
+#' ch <- ch[ch$duplicate == 0, ]
 #' tapply(ch$value, ch$religion, sum)
 load_colonial_census <- function(table) {
   idx <- colonial_census_tables()
