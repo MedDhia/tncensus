@@ -1,0 +1,96 @@
+{
+ "I": {
+  "row_checks": 20,
+  "row_checks_passed": 20,
+  "empty_ocr_cells_filled_0": 9,
+  "cells_corrected_from_image": 1,
+  "column_total_checks": 17,
+  "column_total_passed": 17
+ },
+ "II": {
+  "row_checks": 37,
+  "row_checks_passed": 37,
+  "empty_ocr_cells_filled_0": 6,
+  "cells_corrected_from_image": 2,
+  "carry_forward_checks": 1,
+  "carry_forward_passed": 1,
+  "column_total_checks": 17,
+  "column_total_passed": 17
+ },
+ "IV": {
+  "row_checks": 80,
+  "row_checks_passed": 80,
+  "crosscheck_table_I": 40,
+  "crosscheck_table_I_passed": 40,
+  "cells_corrected_from_image": 1,
+  "column_total_checks": 6,
+  "column_total_passed": 6
+ },
+ "IV_annex": {
+  "row_checks": 14,
+  "row_checks_passed": 14,
+  "column_total_checks": 6,
+  "column_total_passed": 6,
+  "crosscheck_table_I": 14,
+  "crosscheck_table_I_passed": 14
+ },
+ "V": {
+  "row_checks": 37,
+  "row_checks_passed": 37,
+  "cells_corrected_from_image": 1,
+  "carry_forward_checks": 2,
+  "carry_forward_passed": 2,
+  "column_total_checks": 11,
+  "column_total_passed": 11,
+  "crosscheck_table_II": 74,
+  "crosscheck_table_II_passed": 74
+ },
+ "V_annex": {
+  "row_checks": 8,
+  "row_checks_passed": 8,
+  "column_total_checks": 6,
+  "column_total_passed": 6,
+  "crosscheck_table_V": 8,
+  "crosscheck_table_V_passed": 8
+ },
+ "VI": {
+  "row_checks": 37,
+  "row_checks_passed": 37,
+  "cells_corrected_from_image": 3,
+  "carry_forward_checks": 1,
+  "carry_forward_passed": 1,
+  "column_total_checks": 16,
+  "column_total_passed": 16,
+  "crosscheck_table_V_adult_men": 74,
+  "crosscheck_table_V_adult_men_passed": 74,
+  "empty_ocr_cells_filled_0": 3
+ },
+ "VI_annex": {
+  "row_checks": 16,
+  "row_checks_passed": 16,
+  "crosscheck_table_VI": 16,
+  "crosscheck_table_VI_passed": 16,
+  "column_total_checks": 6,
+  "column_total_passed": 6
+ },
+ "VII": {
+  "row_checks": 58,
+  "row_checks_passed": 57,
+  "cells_corrected_from_image": 2,
+  "printed_inconsistencies_kept": 1
+ },
+ "VII_annex": {
+  "cells_corrected_from_image": 7,
+  "crosscheck_1931_vs_table_VII": 58,
+  "crosscheck_1931_vs_table_VII_passed": 58,
+  "rows_compared_with_image": 58
+ },
+ "VIII": {
+  "row_checks": 281,
+  "row_checks_passed": 281,
+  "empty_ocr_cells_filled_0": 4,
+  "cells_corrected_from_image": 3,
+  "stamp_fragments_dropped": 1,
+  "pages_compared_with_image": 11
+ }
+}
