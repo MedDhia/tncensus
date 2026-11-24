@@ -30,14 +30,11 @@ bibentry(
   title    = "The Colonial Legacy of Education: Evidence from Tunisia",
   author   = c(
     person("Mhamed", "Ben Salah"),
-    person("Cédric", "Chambru"),
+    person("Cedric", "Chambru"),
     person("Maleke", "Fourati")
   ),
   journal  = "Journal of Comparative Economics",
   year     = "2024",
-  volume   = "52",
-  number   = "4",
-  pages    = "773--792",
   doi      = "10.1016/j.jce.2024.09.002",
   url      = "https://doi.org/10.1016/j.jce.2024.09.002",
   note     = "Source of pre-2014 census datasets (replication_package_ben_salah_al_2024)"
