@@ -4,29 +4,28 @@
 \name{tncensus-package}
 \alias{tncensus}
 \alias{tncensus-package}
-\title{tncensus: Harmonized Tunisian Census Data at the Delegation Level}
+\title{tncensus: Tunisian Census Data (1891-2024 Censuses and Harmonized Panel)}
 \description{
-Harmonized delegation-level data from Tunisia's 2014 and 2024 RGPH
-censuses. 45 socioeconomic indicators for 281 delegations in 24
-governorates. Use \code{data("census_panel")}, \code{data("codebook")},
-and \code{data("delegation_crosswalk")}.
+\if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
+
+Comprehensive R data package for Tunisia's population censuses from 1891 to 2024. Combines (1) the harmonized 2014-2024 delegation-level panel (281 delegations, 45 indicators, crosswalk, and codebook); (2) full 2014 RGPH data (264 delegations, 169 variables, and 28 disaggregated tables); (3) full 2024 RGPH data (279 delegations, 24 governorates, national totals, 46 thematic indicators, optional secteur-level download, accessors, and Gini/Theil inequality functions); (4) 2004 RGPH data (264 delegations, 24 governorates, national totals, 48 indicators); (5) 1984 RGPH delegation-level education tables and 1966 governorate illiteracy data; (6) historical national education series (1956-2014) and master INS delegation crosswalk; and (7) colonial-era population censuses (1891-1956). Original contemporary data published by INS Tunisia \url{https://www.ins.tn/}.
 }
 \seealso{
 Useful links:
 \itemize{
   \item \url{https://github.com/MedDhia/tncensus}
-  \item \url{https://mohameddhiahammami.com/data}
+  \item \url{https://www.mohameddhiahammami.com/data}
   \item Report bugs at \url{https://github.com/MedDhia/tncensus/issues}
 }
+
 }
 \author{
-\strong{Maintainer}: Mohamed Dhia Hammami \email{mhammami@syr.edu}
-(\href{https://orcid.org/0000-0003-4498-8770}{ORCID})
+\strong{Maintainer}: Mohamed Dhia Hammami \email{mhammami@syr.edu} (\href{https://orcid.org/0000-0003-4498-8770}{ORCID})
 
 Other contributors:
 \itemize{
-  \item Tunisian National Institute of Statistics (INS) [data collector,
-    copyright holder]
+  \item Institut National de la Statistique (Data collector: INS Tunisia) [data contributor, copyright holder]
 }
+
 }
 \keyword{internal}

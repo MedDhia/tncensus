@@ -7,7 +7,7 @@
 \format{
 A data frame with 45 rows and 5 columns:
 \describe{
-  \item{variable}{Harmonized variable stem.}
+  \item{variable}{Harmonized variable stem (without `_2014`/`_2024`/`_change`).}
   \item{domain}{Thematic domain.}
   \item{label}{Human-readable description.}
   \item{unit}{"percentage (0-100)" or "count".}
@@ -16,10 +16,10 @@ A data frame with 45 rows and 5 columns:
 }
 \source{
 Constructed during harmonization. See
-\code{system.file("extdata", "harmonization_log.md", package = "tncensus")}
+  \code{system.file("extdata", "harmonization_log.md", package = "tncensus")}
 }
 \usage{
-data(codebook)
+codebook
 }
 \description{
 Documents all 45 harmonized indicators in \code{\link{census_panel}}.
@@ -27,8 +27,5 @@ Documents all 45 harmonized indicators in \code{\link{census_panel}}.
 \examples{
 data(codebook)
 unique(codebook$domain)
-}
-\seealso{
-\code{\link{census_panel}}
 }
 \keyword{datasets}

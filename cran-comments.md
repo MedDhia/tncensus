@@ -1,15 +1,14 @@
+## Resubmission / Consolidation Note
+
+Per CRAN reviewer feedback on `rgph2024tn` (asking to consolidate similar
+Tunisian census packages into a single package and to replace `\dontrun{}`
+with `\donttest{}` or unwrapped examples):
+
+* Consolidated `rgph2014tn`, `rgph2024tn`, and `tncensus` into this single
+  unified `tncensus` package (version 1.0.0).
+* Replaced `\dontrun{}` in `download_secteurs()` with `\donttest{}`; all
+  other examples are unwrapped and run in < 5 seconds.
+
 ## R CMD check results
 
-0 errors | 0 warnings | 1 note
-
-* New submission.
-
-## Package purpose
-
-Data package providing harmonized delegation-level census data from
-Tunisia's 2014 and 2024 RGPH. Data from the Institut National de la
-Statistique (INS), redistributed under CC BY 4.0.
-
-## Data size
-
-Compressed package approximately 250 KB. Main dataset: 281 rows x 144 columns.
+0 errors | 0 warnings (with pandoc vignette build) | 1 note (New submission)

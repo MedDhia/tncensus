@@ -15,11 +15,11 @@ A data frame with 263 rows and 5 columns:
 }
 }
 \source{
-Constructed from delegation lists in the 2014 and 2024 RGPH files
-(INS Tunisia).
+Constructed from delegation lists in the 2014 and 2024 RGPH
+  files (INS Tunisia).
 }
 \usage{
-data(delegation_crosswalk)
+delegation_crosswalk
 }
 \description{
 Maps 263 delegation names from the 2014 RGPH to their 2024 equivalents
@@ -28,8 +28,5 @@ Maps 263 delegation names from the 2014 RGPH to their 2024 equivalents
 \examples{
 data(delegation_crosswalk)
 table(delegation_crosswalk$match_type)
-}
-\seealso{
-\code{\link{census_panel}}
 }
 \keyword{datasets}

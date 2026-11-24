@@ -1,0 +1,6 @@
+^cran-comments\.md$
+^data-raw$
+^Rplots\.pdf$
+^man/figures/social-preview\.png$
+^.*\.Rproj$
+^\.Rproj\.user$

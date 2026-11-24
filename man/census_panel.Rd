@@ -5,28 +5,29 @@
 \alias{census_panel}
 \title{Harmonized Tunisian Census Panel, 2014--2024}
 \format{
-A data frame with 281 rows and 144 columns. Nine identifier columns
-plus 45 indicators x 3 suffixes. See \code{\link{codebook}} for details.
+A data frame with 281 rows and 144 columns. Nine identifier
+  columns (governorate, delegation names in French and Arabic, region,
+  coordinates, match flag) plus 45 indicators x 3 suffixes = 135
+  indicator columns. See \code{\link{codebook}} for variable details.
 }
 \source{
-Institut National de la Statistique (INS), Republic of Tunisia.
-RGPH 2014 and RGPH 2024.
+Institut National de la Statistique (INS), Republic of Tunisia,
+  compiled in \code{replication_package_ben_salah_al_2024}
+  (Ben Salah et al., 2024 (\doi{10.1016/j.jce.2024.09.002})).
+  RGPH 2014 and RGPH 2024.
 }
 \usage{
-data(census_panel)
+census_panel
 }
 \description{
 Delegation-level data harmonizing the 2014 and 2024 Tunisian RGPH.
-Contains 45 socioeconomic indicators with \code{_2014}, \code{_2024},
-and \code{_change} suffixes. All percentages on a 0--100 scale.
+Contains 45 socioeconomic indicators with `_2014`, `_2024`, and
+`_change` suffixes. All percentages on a 0--100 scale.
 }
 \examples{
 data(census_panel)
 dim(census_panel)
 aggregate(unemployment_rate_change ~ region_2024,
           data = census_panel, FUN = mean, na.rm = TRUE)
-}
-\seealso{
-\code{\link{codebook}}, \code{\link{delegation_crosswalk}}
 }
 \keyword{datasets}

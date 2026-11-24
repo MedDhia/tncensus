@@ -1,9 +1,9 @@
 bibentry(
   bibtype  = "Manual",
-  title    = "tncensus: Harmonized Tunisian Census Data at the Delegation Level",
+  title    = "tncensus: Tunisian Census Data (RGPH 2014, 2024, and Harmonized Panel)",
   author   = person("Mohamed Dhia", "Hammami"),
   year     = "2026",
-  note     = "R package version 0.1.0",
+  note     = "R package version 1.0.0",
   url      = "https://github.com/MedDhia/tncensus"
 )
 
@@ -12,7 +12,7 @@ bibentry(
   title    = "R Packages for Tunisia's 2014 and 2024 Censuses",
   author   = person("Mohamed Dhia", "Hammami"),
   year     = "2026",
-  url      = "https://mohameddhiahammami.com/data",
+  url      = "https://www.mohameddhiahammami.com/data",
   note     = "Data page with links to rgph2014tn, rgph2024tn, and tncensus packages"
 )
 
@@ -23,4 +23,19 @@ bibentry(
   year     = "2024",
   note     = "Republic of Tunisia",
   url      = "https://www.ins.tn"
+)
+
+bibentry(
+  bibtype  = "Article",
+  title    = "The Colonial Legacy of Education: Evidence from Tunisia",
+  author   = c(
+    person("Mhamed", "Ben Salah"),
+    person("Cedric", "Chambru"),
+    person("Maleke", "Fourati")
+  ),
+  journal  = "Journal of Comparative Economics",
+  year     = "2024",
+  doi      = "10.1016/j.jce.2024.09.002",
+  url      = "https://doi.org/10.1016/j.jce.2024.09.002",
+  note     = "Source of pre-2014 census datasets (replication_package_ben_salah_al_2024)"
 )
