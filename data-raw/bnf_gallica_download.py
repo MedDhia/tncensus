@@ -14,9 +14,11 @@ Usage:
     pip install img2pdf
     python3 data-raw/bnf_gallica_download.py [--out DIR] [--only ARK ...]
 
-Rights: Gallica marks these scans http://rightsstatements.org/vocab/NoC-NC/1.0/
-(public domain, non-commercial reuse; credit "Bibliothèque nationale de
-France / Gallica"). See https://gallica.bnf.fr/edit/und/conditions-dutilisation-des-contenus-de-gallica
+Rights: the scans are public domain but not CC BY. BnF-held documents are
+NoC-NC (non-commercial reuse) and partner-held documents are NoC-CR (holding
+library's terms). Each PDF's metadata records the credit line
+"Source gallica.bnf.fr / <holding institution>", read from the manifest. See
+https://gallica.bnf.fr/edit/und/conditions-dutilisation-des-contenus-de-gallica
 """
 import argparse
 import csv
@@ -61,6 +63,14 @@ def page_urls(manifest):
     return urls
 
 
+def holder(manifest):
+    """Holding institution ("Dépôt" in the manifest metadata), e.g. a partner library."""
+    for item in manifest.get("metadata", []):
+        if item["label"].get("fr", [""])[0] == "Dépôt":
+            return next(iter(item["value"].values()))[0]
+    return "Bibliothèque nationale de France"
+
+
 def fetch_page(job):
     url, path = job
     if path.exists() and path.stat().st_size > 0:
@@ -85,6 +95,7 @@ def download(row, out, workers):
     if not mpath.exists():
         mpath.write_bytes(get(MANIFEST.format(ark=ark)))
     manifest = json.loads(mpath.read_text())
+    credit = "Source gallica.bnf.fr / " + holder(manifest)
     urls = page_urls(manifest)
     jobs = [(u, cache / f"f{i:04d}.jpg") for i, u in enumerate(urls, 1)]
     print(f"[get ] {ark} {row['title'][:70]} — {len(jobs)} pages", flush=True)
@@ -101,8 +112,8 @@ def download(row, out, workers):
             [str(p) for _, p in jobs],
             outputstream=f,
             title=row["title"],
-            author="Bibliothèque nationale de France / Gallica",
-            subject=f"https://gallica.bnf.fr/ark:/12148/{ark} — {row['holding']}",
+            author=credit,
+            subject=f"{credit} — https://gallica.bnf.fr/ark:/12148/{ark} — {row['holding']} — rights: {manifest.get('rights', '')}",
             keywords=["Tunisie", "recensement", "dénombrement", ark],
         )
     tmp.replace(pdf)

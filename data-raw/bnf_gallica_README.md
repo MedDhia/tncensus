@@ -43,10 +43,22 @@ are catalogued as `LNUM` digital deposits (e.g. `cb46735991z`, `cb46736519c`,
 Gallica ark and appear to be readable only on site at the BnF. The 1896 report on
 the French population census (`cb304172920`) is print only.
 
-## Rights
+## Rights and citation
 
-Gallica marks these scans [NoC-NC](http://rightsstatements.org/vocab/NoC-NC/1.0/):
-the works are in the public domain, but reuse of the scans must be
-non-commercial and credited "Bibliothèque nationale de France / Gallica". This
-differs from the package's CC BY 4.0 licence, which is one reason the PDFs are
-not committed.
+Rights and holdings come from each document's IIIF manifest (`rights` and
+`requiredStatement`):
+
+- `bpt6k994559s` (1931 census) is held by the BnF and marked
+  [NoC-NC](http://rightsstatements.org/vocab/NoC-NC/1.0/). Reuse is free if
+  non-commercial; credit "Source gallica.bnf.fr / Bibliothèque nationale de France".
+- `bd6t53563851` (1906 census) is held by the Bibliothèques de l'Université de
+  Poitiers. The seven *Statistique générale* volumes are held by the Ministère
+  des Affaires étrangères. These are marked
+  [NoC-CR](http://rightsstatements.org/vocab/NoC-CR/1.0/): public domain, with
+  reuse subject to the holding library's terms. Credit "Source gallica.bnf.fr /
+  <holding institution>".
+
+The script writes this credit line and the ark permalink into each PDF's
+metadata (Author and Subject). The PDFs are not committed and are not covered by
+the package's CC BY 4.0 licence. See "Archival Scans from Gallica" in the main
+README for citation examples.
