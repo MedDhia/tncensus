@@ -1,0 +1,106 @@
+{
+ "muslim": {
+  "rows": 880,
+  "checks": 122,
+  "failures": [
+   "sgt1922 1920 deaths column vs TOTAUX: cells sum to 29375, printed 29381",
+   "sgt1923 1920 deaths column vs TOTAUX: cells sum to 29375, printed 29381",
+   "sgt1923 1923 deaths column vs TOTAUX: cells sum to 31956, printed 32556",
+   "sgt1924 1920 deaths column vs TOTAUX: cells sum to 29375, printed 29381",
+   "sgt1924 1923 deaths column vs TOTAUX: cells sum to 31956, printed 32556",
+   "sgt1924 1924 deaths column vs TOTAUX: cells sum to 38390, printed 39393",
+   "sgt1925 1923 deaths column vs TOTAUX: cells sum to 31956, printed 32556",
+   "sgt1925 1924 deaths column vs TOTAUX: cells sum to 38390, printed 39393",
+   "sgt1926 1923 deaths column vs TOTAUX: cells sum to 31956, printed 32556",
+   "sgt1926 1924 deaths column vs TOTAUX: cells sum to 38390, printed 39393",
+   "sgt1927 1923 deaths column vs TOTAUX: cells sum to 31956, printed 32556",
+   "sgt1927 1924 deaths column vs TOTAUX: cells sum to 38390, printed 39393",
+   "sgt1927 1927 births column vs TOTAUX: cells sum to 52551, printed 52571",
+   "sgt1928 1924 deaths column vs TOTAUX: cells sum to 38390, printed 39393",
+   "sgt1928 1927 births column vs TOTAUX: cells sum to 52551, printed 52571",
+   "sgt1929 1927 births column vs TOTAUX: cells sum to 52551, printed 52571",
+   "sgt1929 1929 births column vs TOTAUX: cells sum to 54045, printed 59121",
+   "sgt1929 1929 deaths column vs TOTAUX: cells sum to 33404, printed 33384",
+   "sgt1930 1927 births column vs TOTAUX: cells sum to 52551, printed 52571",
+   "sgt1930 1929 births column vs TOTAUX: cells sum to 54045, printed 59121",
+   "sgt1930 1929 deaths column vs TOTAUX: cells sum to 33404, printed 33384",
+   "sgt1935 1932 births column vs TOTAUX: cells sum to 62071, printed 61951",
+   "sgt1935 1934 deaths column vs TOTAUX: cells sum to 38261, printed 38870",
+   "sgt1936 1932 births column vs TOTAUX: cells sum to 62071, printed 61951",
+   "sgt1936 1934 deaths column vs TOTAUX: cells sum to 38261, printed 38870",
+   "sgt1936 1935 births column vs TOTAUX: cells sum to 66476, printed 65477",
+   "sgt1936 1935 deaths column vs TOTAUX: cells sum to 32703, printed 33123",
+   "sgt1936 1936 births column vs TOTAUX: cells sum to 80829, printed 77829",
+   "sgt1939 1935 births column vs TOTAUX: cells sum to 66476, printed 65477",
+   "sgt1939 1935 deaths column vs TOTAUX: cells sum to 32703, printed 33123",
+   "sgt1939 1936 births column vs TOTAUX: cells sum to 80829, printed 77829",
+   "sgt1939 1938 births column vs TOTAUX: cells sum to 65979, printed 65679"
+  ],
+  "compared": 1638,
+  "differences": []
+ },
+ "jewish": {
+  "rows": 880,
+  "checks": 122,
+  "failures": [
+   "sgt1936 1935 deaths column vs TOTAUX: cells sum to 964, printed 957",
+   "sgt1939 1935 deaths column vs TOTAUX: cells sum to 964, printed 957"
+  ],
+  "compared": 1638,
+  "differences": []
+ },
+ "marriages": {
+  "rows": 266,
+  "checks": null,
+  "failures": null,
+  "compared": null,
+  "differences": null
+ },
+ "births": {
+  "rows": 228,
+  "checks": null,
+  "failures": null,
+  "compared": null,
+  "differences": null
+ },
+ "deaths": {
+  "rows": 228,
+  "checks": null,
+  "failures": null,
+  "compared": null,
+  "differences": null
+ },
+ "mixed": {
+  "rows": 192,
+  "checks": null,
+  "failures": null,
+  "compared": null,
+  "differences": null
+ },
+ "european": {
+  "rows": null,
+  "checks": 396,
+  "failures": [
+   "sgt1922 marriages 1921: grooms vs printed total: cells sum to 558, printed 1107",
+   "sgt1927 marriages 1927: grooms vs printed total: cells sum to 534, printed 1068",
+   "sgt1935 births 1933 male: nationalities vs subtotal: cells sum to 3262, printed 3362"
+  ],
+  "compared": 574,
+  "differences": [
+   [
+    "('TOTAUX', 'marriages', 1921)",
+    "sgt1922",
+    "1107",
+    "sgt1924",
+    "558"
+   ],
+   [
+    "('TOTAUX', 'marriages', 1927)",
+    "sgt1927",
+    "1068",
+    "sgt1928",
+    "534"
+   ]
+  ]
+ }
+}
