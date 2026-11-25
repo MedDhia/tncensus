@@ -1258,9 +1258,10 @@ GROUPS4 = [("all_european", "Ensemble des Européens"), ("french", "Français"),
 TEXT_HDR_BASE = ["census", "table_id", "source_page", "gallica_view"]
 
 
-def write_text(name, page, view, dims, rows):
-    """rows: list of (dim values..., measure, value, flag)."""
-    out = [[CENSUS, f"text_{name}", page, view, *r] for r in rows]
+def write_text(name, page, view, dims, rows, where=None):
+    """rows: list of (dim values..., measure, value, flag).
+    where: optional function row -> (page, view) for tables spanning two pages."""
+    out = [[CENSUS, f"text_{name}", *(where(r) if where else (page, view)), *r] for r in rows]
     hdr = TEXT_HDR_BASE + dims + ["measure", "value", "flag"]
     return write(f"eur1906_text_{name}", hdr, out)
 
@@ -1388,7 +1389,10 @@ def text_tables():
         check(t, f"French age shares {y} sum to 100", round(sum(v), 2), 100.0)
         for i, p in enumerate(v):
             rows.append(("french", AGE[i], AGE_FR[i], y, "pct_of_group", p, ""))
-    n["age"] = write_text("age", 50, 49, ["group", "age_group", "age_group_fr", "census_year"], rows)
+    # p.50 prints counts and percent of all Europeans; p.51 the percent within each
+    # nationality (1906) and the French percentages of 1901 and 1896.
+    n["age"] = write_text("age", 50, 49, ["group", "age_group", "age_group_fr", "census_year"], rows,
+                          where=lambda r: (51, 50) if r[4] == "pct_of_group" else (50, 49))
 
     # p.52 (view 51): marital status. The Maltese TOTAL column is cut off in the
     # binding: those proportion cells are NA (illegible).
