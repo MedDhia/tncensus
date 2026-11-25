@@ -65,8 +65,16 @@ def notes(name, title, body, table_key):
           "`table_id`, `source_page` (printed page), `gallica_view`, `value`, `flag` (empty, "
           "`ocr_corrected`, `illegible`, `total_mismatch`, `derived_from_totals`, `not_applicable`, "
           "`reprint_corrected`; see `data-raw/colonial_census/SPEC.md`). A printed `»` is stored as 0. "
-          "Printed totals are not stored; they were used for validation.\n",
+          "Printed totals are not stored; they were used for validation.\n"
+        + _extra_notes(name),
         encoding="utf-8")
+
+
+def _extra_notes(name):
+    """Hand-written notes kept in transcribed/notes_<name>.md (e.g. comparisons
+    made by compare_naturalisations_e.py), appended to the generated notes."""
+    p = OUT.parent / "transcribed" / f"notes_{name}.md"
+    return "\n" + p.read_text(encoding="utf-8").strip() + "\n" if p.exists() else ""
 
 
 # ---------------------------------------------------------------- expulsions
@@ -856,6 +864,64 @@ REC = {
 # 1924 class, enlisted: sgt1935 (the latest printing) prints 39; sgt1925 and sgt1930
 # print 93, which the row identity requires.
 REC_FIX = {("fr_board", 1924, "enlisted_maritime", "sgt1935"): 93}
+REC_FOOTNOTES = {
+    "fr_alloc": "",
+    "fr_educ": "",
+    "fr_board": ("Footnote printed under the table (every edition from sgt1922 to sgt1930), on class "
+                 "1913: *(1) Application de la loi du 7 août 1913* (application of the law of 7 August "
+                 "1913)."),
+    "ind_lottery": ("Footnote printed under the table (sgt1922-sgt1930), on the 1917 and 1918 cells of "
+                    "the surplus and family-support columns (the marks sit slightly differently from one "
+                    "edition to the next): *(1) Envoyés en France : travailleurs agricoles "
+                    "réquisitionnés* (sent to France: requisitioned agricultural workers)."),
+    "ind_educ": ("Footnote printed under the table (sgt1922-sgt1930), on every 1918 cell: *(1) Le "
+                 "remplacement administratif a été supprimé en 1918* (administrative replacement was "
+                 "abolished in 1918)."),
+}
+# What the page images show for each difference between printings (see the per-edition list).
+REC_DIFF_NOTES = {
+    "fr_alloc": """
+The only differences: sgt1927, sgt1928 and sgt1929 print the single man of the 4th part
+(*exclus*) on the 1922 and 1924 rows; sgt1922-sgt1926 and sgt1930 print it on the 1921 and
+1923 rows. Each image was read at full resolution and shows what is transcribed. The row
+totals decide for the 1921/1923 placement: with the 1922/1924 placement the parts of
+sgt1927-sgt1929 add to 514, 620, 674 and 762 against printed totals of 515, 619, 675 and
+761 (listed under Validation). The kept values (sgt1930, the latest printing) are the
+consistent ones, so no flag is needed.
+""",
+    "fr_educ": "",
+    "fr_board": """
+The only difference is the 1924 class, enlisted: 93 in every printing from sgt1924 to
+sgt1930, 39 in sgt1935 (the latest); see above. One doubtful glyph: sgt1926 prints the
+1919 class's postponed as "5" and a broken second glyph (a bare stroke, without the flag
+and foot of this font's 1); it is read as 54, like every other printing, which sgt1926's
+own row identity also needs (491 - 9 - 0 - 54 - 6 - 178 = 244, printed 244).
+""",
+    "ind_lottery": """
+- 1924, family support: sgt1924 prints 3.683; sgt1925-sgt1930 print 3.684. Both images
+  are clear at full resolution. No total or identity decides; the latest printing (3.684,
+  sgt1930) is kept, unflagged.
+- 1926, volunteers: sgt1926 prints 880; sgt1927-sgt1930 and sgt1935 print 261. The sgt1926
+  image clearly reads 880. No check decides; the latest printing (261, sgt1935) is kept,
+  unflagged.
+- 1932, unfit for illness: sgt1935 prints 11.104, sgt1936 (the latest) 11.404; kept 11.404.
+
+The columns follow no identity that could be checked: designated = incorporated +
+exonerated holds for 1913-1916, 1918-1922 and 1925 only (from 1923 the designated are a
+round quota).
+""",
+    "ind_educ": "",
+}
+
+
+def _ranges(years):
+    """[1913, 1914, 1915, 1917] -> '1913-1915, 1917'."""
+    out, start = [], years[0]
+    for a, b in zip(years, years[1:] + [None]):
+        if b != a + 1:
+            out.append(str(start) if start == a else f"{start}-{a}")
+            start = b
+    return ", ".join(out)
 
 
 def recruitment():
@@ -863,7 +929,10 @@ def recruitment():
     printings = defaultdict(dict)          # (tbl, year, item) -> {edition: value}
     where, rowflag = {}, {}
     cur = None
-    for ln in (TR / "recruitment.txt").read_text(encoding="utf-8").splitlines():
+    lines = []
+    for path in [TR / "recruitment.txt"] + sorted(TR.glob("recruitment_*.txt")):
+        lines += path.read_text(encoding="utf-8").splitlines()
+    for ln in lines:
         ln = ln.strip()
         if not ln or ln.startswith("#"):
             continue
@@ -904,20 +973,28 @@ def recruitment():
             printings[(tbl, yr, it)][ed] = v
             where[(tbl, yr, ed)] = (view, page)
             rowflag[(tbl, yr, ed)] = ok
+    for t in REC:
+        FAILS[f"rec_{t}"].sort(key=lambda m: (order.index(m.split()[0]), int(m.split()[1])))
     total_rows = 0
     for tbl, (name, tid, title, cols) in REC.items():
         fr = dict(cols)
         rows, diffs, comp, eq = [], [], 0, 0
+        per_ed = defaultdict(lambda: [0, 0, []])     # edition -> [compared, equal, diffs]
+        src_years = defaultdict(set)                 # latest edition -> years taken from it
         mine = [(k, v) for k, v in printings.items() if k[0] == tbl]
         for (t2, yr, it), eds in sorted(mine, key=lambda kv: (kv[0][1], [c for c, _ in cols].index(kv[0][2]))):
             latest = max(eds, key=order.index)
+            src_years[latest].add(yr)
             for e, v in eds.items():
                 if e != latest:
                     comp += 1
+                    per_ed[e][0] += 1
                     if v == eds[latest]:
                         eq += 1
+                        per_ed[e][1] += 1
                     else:
                         diffs.append(f"{yr} {it}: {e} prints {v}, {latest} prints {eds[latest]}")
+                        per_ed[e][2].append(f"{yr} {it}: {v} (latest printing, {latest}: {eds[latest]})")
             view, page = where[(tbl, yr, latest)]
             flag = "reprint_corrected" if (tbl, yr, it, latest) in REC_FIX else (
                 "" if rowflag[(tbl, yr, latest)] else "total_mismatch")
@@ -927,6 +1004,14 @@ def recruitment():
                          "item", "item_fr", "value", "flag"], rows)
         total_rows += n
         yrs = sorted({r[5] for r in rows})
+        span = defaultdict(list)
+        for (t2, yr, it), eds in mine:
+            for e in eds:
+                span[e].append(yr)
+        windows = ", ".join(f"{e} {min(v)}-{max(v)} (view {where[(tbl, min(v), e)][0]}, p. {where[(tbl, min(v), e)][1]})"
+                            for e, v in sorted(span.items(), key=lambda kv: order.index(kv[0])))
+        sources = ", ".join(f"{_ranges(sorted(v))} from {e}" for e, v in sorted(src_years.items(), key=lambda kv: min(kv[1])))
+        footnotes = REC_FOOTNOTES[tbl]
         unit = "conscription class (classe)" if tbl.startswith("fr") else "year"
         extra = {
             "fr_alloc": "Checks per class: registered - exempted = remaining; the seven parts sum to the printed total; printed total = remaining.",
@@ -934,10 +1019,11 @@ def recruitment():
             "fr_board": ("Check per class (1915 onwards): actually called = registered - exempted - neo-French "
                          "not called - postponed - deferred - enlisted. The third column means *hommes qui, en "
                          "raison de leur âge, n'ont pas été appelés* before 1913 and *néo-français* later; the "
-                         "pre-1915 classes do not follow the identity and are not checked. 1902-1903 are taken "
-                         "from sgt1925 (the 1926-1929 editions, which may also print them, were not "
-                         "transcribed). The 1924 class: sgt1935 prints 39 enlisted, sgt1925 and sgt1930 print "
-                         "93, which the identity requires: 93 kept, flag `reprint_corrected`."),
+                         "pre-1915 classes do not follow the identity and are not checked. Each class is "
+                         "printed in many editions (1913-1915, for example, in every edition from sgt1922 to "
+                         "sgt1930, which is the source kept for them). The 1924 class: sgt1935 prints 39 "
+                         "enlisted, every edition from sgt1924 to sgt1930 prints 93, which the identity "
+                         "requires: 93 kept, flag `reprint_corrected`."),
             "ind_lottery": "No totals are printed and no identity holds between the columns, so this table has no total checks; only the overlapping printings were compared.",
             "ind_educ": "Check per year: the four categories sum to the printed total.",
         }[tbl]
@@ -953,17 +1039,23 @@ row); the values are kept as printed.
 
 ## Editions used and compared
 
-Transcribed: sgt1925 (1916-1925; draft boards 1902-1925), sgt1930 (1921-1930; draft
-boards 1904-1930), sgt1935 (1926-1935; draft boards 1916-1935), sgt1936 (French classes
-1933-1937; indigenous years 1932-1936), sgt1939 (1935-1939). Values for 1916-1920 come
-from sgt1925, although the 1926-1929 editions also print some of these years; the
-1922-1924 and 1926-1929 editions were not transcribed, and classes/years 1913-1915
-(only in the 1922-1924 editions) are not covered, except the draft boards.
+Transcribed (printed window, Gallica view and printed page per edition): {windows}. Transcriptions:
+`transcribed/recruitment.txt` (sgt1925, sgt1930, sgt1935, sgt1936, sgt1939) and
+`transcribed/recruitment_1922_1929.txt` (sgt1922-sgt1924, sgt1926-sgt1929). Each edition
+prints the French tables on one page and the indigenous tables on the facing page.
 
-Every other transcribed printing of the same cell was compared: {comp} comparisons,
-{eq} equal, {comp - eq} different:
+Source edition of each {unit} (the latest edition that prints it, rule 4 of
+`SPEC_ADDENDUM.md`): {sources}.
 
-""" + "".join(f"- {d}\n" for d in diffs)
+{footnotes}
+
+Every other printing of the same cell was compared with the kept (latest) printing:
+{comp} comparisons, {eq} equal, {comp - eq} different. Per edition (cells compared,
+equal, differences):
+
+""" + "".join(f"- {e}: {c} compared, {q} equal" + (": " + "; ".join(d) if d else "") + "\n"
+              for e, (c, q, d) in sorted(per_ed.items(), key=lambda kv: order.index(kv[0]))) + (
+            "\n" + REC_DIFF_NOTES[tbl].strip() + "\n" if REC_DIFF_NOTES[tbl] else "")
         notes(name, title, body, f"rec_{tbl}")
     return total_rows
 

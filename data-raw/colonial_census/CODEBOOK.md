@@ -101,7 +101,7 @@ Every table is tidy: one row per printed cell. Printed subtotals and totals are 
 | [`recruitment_french_draft_boards`](#recruitment_french_draft_boards) | c | by edition | 304 | count | French recruitment: draft-board results, classes 1902-1939 |
 | [`recruitment_french_education`](#recruitment_french_education) | b | by edition | 168 | count | French recruitment: education of recruits, classes 1916-1939 |
 | [`recruitment_indigenous_education`](#recruitment_indigenous_education) | b | by edition | 96 | count | Indigenous recruitment: education of recruits, 1916-1939 |
-| [`recruitment_indigenous_lottery`](#recruitment_indigenous_lottery) | a | by edition | 288 | count | Indigenous recruitment: conscription lotteries and allocation of conscripts, 1916-1939 |
+| [`recruitment_indigenous_lottery`](#recruitment_indigenous_lottery) | a | by edition | 324 | count | Indigenous recruitment: conscription lotteries and allocation of conscripts, 1916-1939 |
 | [`vital_european_births`](#vital_european_births) | etat_civil_europeen | by edition | 228 | count | European births registered, by nationality and sex, 1918-1939 |
 | [`vital_european_deaths`](#vital_european_deaths) | etat_civil_europeen | by edition | 228 | count | European deaths registered, by nationality and sex, 1918-1939 |
 | [`vital_european_marriages`](#vital_european_marriages) | etat_civil_europeen | by edition | 266 | count | European marriages registered, by nationality of groom and bride, 1918-1939 |
@@ -3516,7 +3516,7 @@ Source `sgt`, table b, printed pages by edition. 96 rows. Value type: count. Fla
 **Opérations des Commissions de tirage au sort, répartition des conscrits (recrutement indigène)**  
 *Indigenous recruitment: conscription lotteries and allocation of conscripts, 1916-1939*
 
-Source `sgt`, table a, printed pages by edition. 288 rows. Value type: count. Flags: (empty) 288. Notes and validation: [`../yearbook_demography/csv/recruitment_indigenous_lottery.md`](../yearbook_demography/csv/recruitment_indigenous_lottery.md).
+Source `sgt`, table a, printed pages by edition. 324 rows. Value type: count. Flags: (empty) 324. Notes and validation: [`../yearbook_demography/csv/recruitment_indigenous_lottery.md`](../yearbook_demography/csv/recruitment_indigenous_lottery.md).
 
 | Column | Description |
 |---|---|
@@ -3535,18 +3535,18 @@ Source `sgt`, table a, printed pages by edition. 288 rows. Value type: count. Fl
 
 | Code | Printed label | N |
 |---|---|---:|
-| `designated` | Désignés pour le service militaire | 24 |
-| `discharged_unfit` | Réformés | 24 |
-| `enrolled_ex_officio` | Inscrits d'office (bons absents) incorporés | 24 |
-| `examined` | Examinés pour obtenir le contingent | 24 |
-| `exempt_art36_students` | Dispensés (art. 36) : élèves maîtres, Collège Sadiki, certificat d'études primaires, élèves des mosquées | 24 |
-| `exempt_family_support` | Dispensés comme soutien de famille | 24 |
-| `exonerated_by_payment` | Exonérés par suite du versement du prix de remplacement | 24 |
-| `incorporated` | Incorporés | 24 |
-| `registered_at_lottery` | Inscrits au moment du tirage au sort | 24 |
-| `surplus_to_contingent` | En excédent des besoins du contingent | 24 |
-| `unfit_illness` | Inaptes pour cause de maladie | 24 |
-| `volunteers` | Engagements volontaires | 24 |
+| `designated` | Désignés pour le service militaire | 27 |
+| `discharged_unfit` | Réformés | 27 |
+| `enrolled_ex_officio` | Inscrits d'office (bons absents) incorporés | 27 |
+| `examined` | Examinés pour obtenir le contingent | 27 |
+| `exempt_art36_students` | Dispensés (art. 36) : élèves maîtres, Collège Sadiki, certificat d'études primaires, élèves des mosquées | 27 |
+| `exempt_family_support` | Dispensés comme soutien de famille | 27 |
+| `exonerated_by_payment` | Exonérés par suite du versement du prix de remplacement | 27 |
+| `incorporated` | Incorporés | 27 |
+| `registered_at_lottery` | Inscrits au moment du tirage au sort | 27 |
+| `surplus_to_contingent` | En excédent des besoins du contingent | 27 |
+| `unfit_illness` | Inaptes pour cause de maladie | 27 |
+| `volunteers` | Engagements volontaires | 27 |
 
 ### vital_european_births
 
