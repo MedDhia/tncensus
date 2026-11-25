@@ -17,7 +17,8 @@ from pathlib import Path
 import pandas as pd
 
 HERE = Path(__file__).resolve().parent
-CSV_DIRS = [HERE / "csv", HERE.parent / "yearbook_demography" / "csv"]
+CSV_DIRS = [HERE / "csv", HERE.parent / "yearbook_demography" / "csv",
+            HERE.parent / "yearbook_health_education" / "csv"]
 OUT = HERE.parent.parent / "inst" / "extdata" / "colonial"
 ARKS = {"eur1906": "bd6t53563851", "ind1931": "bpt6k994559s"}
 INT_COLS = {"census_year", "base_year", "duplicate", "year"}

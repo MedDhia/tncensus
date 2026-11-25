@@ -13,7 +13,8 @@ from pathlib import Path
 import pandas as pd
 
 HERE = Path(__file__).resolve().parent
-CSV_DIRS = [HERE / "csv", HERE.parent / "yearbook_demography" / "csv"]
+CSV_DIRS = [HERE / "csv", HERE.parent / "yearbook_demography" / "csv",
+            HERE.parent / "yearbook_health_education" / "csv"]
 
 
 def find(table):
@@ -25,7 +26,7 @@ def find(table):
 
 def notes_link(table):
     p = find(table)
-    rel = "csv" if p.parent == HERE / "csv" else "../yearbook_demography/csv"
+    rel = "csv" if p.parent == HERE / "csv" else f"../{p.parent.parent.name}/csv"
     return f"[`{rel}/{table}.md`]({rel}/{table}.md)"
 COMMON = {
     "census": "Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`).",
