@@ -1,0 +1,4 @@
+census,gallica_ark,table_id,source_page,gallica_view,census_year,category,category_fr,sex,sex_fr,value,flag
+sgt1922,bpt6k9105649x,c,7,31,1921,naturalised,Français par naturalisation,male,Sexe masculin,1188,
+sgt1922,bpt6k9105649x,c,7,31,1921,naturalised,Français par naturalisation,female,Sexe féminin,1985,
+sgt1922,bpt6k9105649x,c,7,31,1921,french_by_origin,Population française d'origine,,,51303,

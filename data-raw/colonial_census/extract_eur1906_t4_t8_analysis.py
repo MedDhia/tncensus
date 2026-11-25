@@ -1668,7 +1668,16 @@ They are given as the département cells' sum minus the printed page total:
 - p.47: 1891 +10, 1896 +10 (1901 and 1906 agree once Rhône and Loiret are corrected)
 These cells are not flagged. Sums over départements therefore differ from the printed
 totals by up to 10 persons a year; use the printed totals (or Table B) for the French
-total. Allier 1891: the first digit is broken in the scan and was read as 34
+total.
+
+The 1922 *Statistique générale* reprints these columns (cens1921_french_birthplace_1891_1921,
+table b) with six different cells: Bouches-du-Rhône 1906 922, Calvados 1906 55, Gironde
+1906 374, Var 1891 110, Var 1901 286, Etranger 1896 679. Each year's changes (1891 -8,
+1896 -10, 1901 +30, 1906 +151) exactly offset the gaps between the départements and the
+printed totals, so the 1922 compilers appear to have forced the columns to add up. Only Bouches-du-Rhône 922 agrees with this volume's
+commentary; Gironde 324 (+58 since 1901) and Var 256 in 1901 (+147 to 403) are confirmed
+by it, which contradicts the 1922 adjustments. The 1922 reprint therefore does not locate
+the remaining residuals. Allier 1891: the first digit is broken in the scan and was read as 34
 (`ocr_corrected`)."""),
  "eur1906_tf_french_by_origin_sex_age_marital": ("F", "Répartition de la population française d'après le sexe, l'âge et l'état civil en distinguant les Français de naissance et les Français par naturalisation, option ou mariage",
    "French population by sex, age and marital status, French by birth vs. by naturalisation, option or marriage",

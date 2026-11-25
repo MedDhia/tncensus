@@ -1,0 +1,101 @@
+# sgt1922 views 28-30 (pp.4-6). Table b) Population civile française d'après le lieu de naissance, recensements 1891-1921.
+# Columns: view | birthplace (as printed) | 1891 1896 1901 1906 1911 1921. A trailing * marks a value corrected from the image (OCR misread).
+# Footnotes: (1) Moselle, Rhin (Bas-): counted with the foreign population for 1891-1911. (2) Colonies: other than Algeria and Tunisia. "Lieux inconnus" was only used in 1906.
+# The 1921 grand total reads 54.426 in the half-resolution scan and in the OCR; the native-resolution scan shows 54.476.
+28 | Tunisie | 1838 3339 5314 9239 13994 19656
+28 | Algérie : Alger | 417 650 841 1274 1448 1784
+28 | Algérie : Constantine | 908 1521 2377 3529 4613 5781
+28 | Algérie : Oran | 162 213 439 448 479 621
+28 | Ain | 84 125 159 201 256 269
+28 | Aisne | 19 36 68 86 121 129
+28 | Allier | 34 96 155 186 266 258
+28 | Alpes (Basses-) | 82 108 158 195 239 265
+28 | Alpes (Hautes-) | 127 165 265 360 454 430
+28 | Alpes-Maritimes | 82 119 130 169 223 247
+28 | Ardèche | 104 164 247 346 425 416
+28 | Ardennes | 18 39 42 65 70 60
+28 | Ariège | 47 70 109 142* 217 195
+28 | Aube | 24 37 47 60 58 86
+28 | Aude | 97 127 222 301 585 560
+28 | Aveyron | 114 178 280 321 406 388
+28 | Bouches-du-Rhône | 414 569 779 922 1072 1067
+28 | Calvados | 17 29 23 55 60 62
+28 | Cantal | 16 37 54 64 68 65
+28 | Charente | 40 74 120 144 158 148
+28 | Charente-Inférieure | 75 131 200 227 334 416
+28 | Cher | 33 74 101 128 122 123
+28 | Corrèze | 32 60 78 119 135 123
+28 | Corse | 574 917 1452 2022 3009 3564
+28 | Côte-d'Or | 64 114 172 212 247 246*
+28 | Côtes-du-Nord | 43 50 90 119 155 183
+28 | Creuse | 19 26 44 63 60 72
+28 | Dordogne | 87 111 151 224 250 238
+28 | Doubs | 84 148* 167 203 339 229
+28 | Drôme | 116 181 284 335* 420 427
+28 | Eure | 16 18 42 46 71 86
+28 | Eure-et-Loir | 10 20 44 38 60 63
+28 | Finistère | 19 43 95 192 410 585
+28 | Gard | 164 260 343 497 621 645
+28 | Garonne (Haute-) | 95 177 222 287 360 330
+28 | Gers | 54 81 102 145 175 150
+29 | Gironde | 101 170 266 374 395 406
+29 | Hérault | 135 186 291 368 459 422
+29 | Ille-et-Vilaine | 30 49 78 106 141 127
+29 | Indre | 16 49 65 82 74 64
+29 | Indre-et-Loire | 19 48 91 96 90 100
+29 | Isère | 173 321 420 546 686 666
+29 | Jura | 61 87 144 179 248 251
+29 | Landes | 34* 35 73 92 119 110
+29 | Loir-et-Cher | 32 38 63 72 72 94
+29 | Loire | 130 169 254 283 344 352
+29 | Loire (Haute-) | 44 79 113 160 175 143
+29 | Loire-Inférieure | 40 62 111 151 165 248
+29 | Loiret | 26 58 81 29 98 111
+29 | Lot | 46 83 88 115 152 119
+29 | Lot-et-Garonne | 64 98 134 178 229 193
+29 | Lozère | 23 40 41 77 114 91
+29 | Maine-et-Loire | 32 58 73 93 103 92
+29 | Manche | 25 34 53 78 118 190
+29 | Marne | 31 52 87 114 119 111
+29 | Marne (Haute-) | 32 55 65 79 87 110
+29 | Mayenne | 12 35 49 52 51 59
+29 | Meurthe-et-Moselle | 75 187 160 185 207 215
+29 | Meuse | 23 45 78 68 82 74
+29 | Morbihan | 28 48 79 134 204 354
+29 | Moselle | 0 0 0 0 0 52
+29 | Nièvre | 43 60 85 116 163 172
+29 | Nord | 69 116 167 199 205 266
+29 | Oise | 16 26 44 56 66 98
+29 | Orne | 19 27 32 42 43 54
+29 | Pas-de-Calais | 32 60 84 105 139 205
+29 | Puy-de-Dôme | 58 99 169 185 198 214
+29 | Pyrénées (Basses-) | 62 82 157 206 225 220
+29 | Pyrénées (Hautes-) | 43 66 119 164 209 208
+29 | Pyrénées-Orientales | 62 94 180 298 340 275
+29 | Rhin (Bas-) | 0 0 0 0 0 116
+30 | Rhin (Haut-), Belfort | 7 101 54 97 103 218
+30 | Rhône | 291 448 478 635 757 699
+30 | Saône (Haute-) | 47 72 93 125 135 146
+30 | Saône-et-Loire | 102 177 194 296 391 351
+30 | Sarthe | 18 27 46 52 88 74
+30 | Savoie | 103 163 203 262 316 256
+30 | Savoie (Haute-) | 51 74 109 148 154 164
+30 | Seine | 408 531 802 1228 1407 1428
+30 | Seine-Inférieure | 43 76 112 131 159 216
+30 | Seine-et-Marne | 25 48 53 89 92 133
+30 | Seine-et-Oise | 49 70 90 147 151 161
+30 | Sèvres (Deux-) | 33 71 97 130 130 128
+30 | Somme | 20 51 56 70 73 85
+30 | Tarn | 56 88 170 194 271 272
+30 | Tarn-et-Garonne | 26 46 79 103 126 108
+30 | Var | 110 189 286 403 535 505
+30 | Vaucluse | 119 181 202 283 333 306
+30 | Vendée | 9 32 26 45 53 81
+30 | Vienne | 17 39 87 93 108 88
+30 | Vienne (Haute-) | 49 67 174 132 135 142
+30 | Vosges | 47 73 97 119 148 165
+30 | Yonne | 37 54 89 101 128 132
+30 | Colonies et Possessions françaises | 18 27 49 57 108 208
+30 | Etranger | 523 679 1145 1602 2043 1861
+30 | Lieux inconnus | 0 0 0 22 0 0
+= | TOTAUX GÉNÉRAUX | 9973 16207 24201 34610 46044 54476

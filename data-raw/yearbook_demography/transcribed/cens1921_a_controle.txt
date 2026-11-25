@@ -1,0 +1,24 @@
+# sgt1922 views 26-27 (pp.2-3). Table a) Superficie, populations (européenne et indigène) et densité de la population par circonscription de Contrôle civil.
+# Columns: no | circonscription | superficie_km2 | french italian maltese spanish greek other_european muslim jewish | total | density
+# Spanish column is lost in the sgt1922 gutter (only » visible); values read from the sgt1923 reprint (view 504), flagged reprint_corrected.
+1 | Béja | 1400 | 1126 1535 88 14 12 24 63690 1149 | 67638 | 48.31
+2 | Bizerte | 3500 | 8632 7754 639 59 23 141 112466 2138 | 131852 | 37.67
+3 | Djerba | 600 | 168 45 353 0 39 2 42188 3800 | 46595 | 77.65
+4 | Gabès | 5350 | 555 306 179 1 0 13 57796 2991 | 61841 | 11.55
+5 | Gafsa | 12100 | 1341 1919 153 6 27 13 104865 821 | 109145 | 9.02
+6 | Grombalia | 2950 | 1266 3136 174 3 14 36 103007 1912 | 109548 | 37.13
+7 | Kairouan | 7200 | 591 382 60 26 12 12 137108 306 | 138497 | 19.23
+8 | Kef (Le) | 5300 | 1240 3508 119 45 16 22 114299 929 | 120178 | 22.67
+9 | Maktar | 2850 | 90 72 6 0 0 0 57541 75 | 57784 | 20.27
+10 | Medjez-el-Bab | 2350 | 1186 606 66 13 5 27 39245 104 | 41252 | 17.55
+11 | Sfax | 9100 | 2313 2609 1443 77 445 79 169991 3500 | 180457 | 19.83
+12 | Souk-el-Arba | 1900 | 1095 1403 51 12 3 25 80393 367 | 83349 | 43.86
+13 | Sousse | 6200 | 3235 3988 1517 79 16 179 255719 4801 | 269534 | 43.46
+14 | Tabarka | 1250 | 805 605 48 30 0 7 54207 46 | 55748 | 44.59
+15 | Teboursouk | 1300 | 787 537 15 2 2 40 34676 58 | 36117 | 27.78
+16 | Thala | 9330 | 322 257 19 1 0 2 87388 178 | 88267 | 9.46
+17 | Tozeur | 650 | 145 19 0 0 0 5 42163 327 | 42659 | 65.62
+18 | Tunis | 2860 | 28385 54836 8439 287 293 1062 153430 22680 | 269312 | 94.16
+19 | Zaghouan | 2940 | 969 1207 90 9 7 20 37096 15 | 39413 | 13.40
+20 | Territoires du Sud | 46000 | 225 75 61 0 6 27 142120 2239 | 144753 | 3.14
+= | TOTAUX | 125180 | 54476 84799 13520 664 920 1736 1889388 48436 | 2093939 | 16.72

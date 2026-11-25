@@ -1,0 +1,41 @@
+census,gallica_ark,table_id,source_page,gallica_view,census_year,town,population_group,population_group_fr,value,flag
+sgt1922,bpt6k9105649x,o,14,38,1921,Tunis,french,Français,22206,
+sgt1922,bpt6k9105649x,o,14,38,1921,Tunis,italian,Italiens,42592,
+sgt1922,bpt6k9105649x,o,14,38,1921,Tunis,maltese,Maltais,7379,
+sgt1922,bpt6k9105649x,o,14,38,1921,Tunis,spanish,Espagnols,235,
+sgt1922,bpt6k9105649x,o,14,38,1921,Tunis,greek,Grecs,247,
+sgt1922,bpt6k9105649x,o,14,38,1921,Tunis,other_european,Autres Européens,813,
+sgt1922,bpt6k9105649x,o,14,38,1921,Tunis,muslim,Musulmans,79175,
+sgt1922,bpt6k9105649x,o,14,38,1921,Tunis,jewish,Israélites,19025,
+sgt1922,bpt6k9105649x,o,14,38,1921,Sfax,french,Français,1529,
+sgt1922,bpt6k9105649x,o,14,38,1921,Sfax,italian,Italiens,2314,
+sgt1922,bpt6k9105649x,o,14,38,1921,Sfax,maltese,Maltais,1094,
+sgt1922,bpt6k9105649x,o,14,38,1921,Sfax,spanish,Espagnols,73,
+sgt1922,bpt6k9105649x,o,14,38,1921,Sfax,greek,Grecs,430,
+sgt1922,bpt6k9105649x,o,14,38,1921,Sfax,other_european,Autres Européens,48,
+sgt1922,bpt6k9105649x,o,14,38,1921,Sfax,muslim,Musulmans,19218,
+sgt1922,bpt6k9105649x,o,14,38,1921,Sfax,jewish,Israélites,3331,
+sgt1922,bpt6k9105649x,o,14,38,1921,Sousse,french,Français,2350,
+sgt1922,bpt6k9105649x,o,14,38,1921,Sousse,italian,Italiens,2887,
+sgt1922,bpt6k9105649x,o,14,38,1921,Sousse,maltese,Maltais,1187,
+sgt1922,bpt6k9105649x,o,14,38,1921,Sousse,spanish,Espagnols,57,
+sgt1922,bpt6k9105649x,o,14,38,1921,Sousse,greek,Grecs,11,
+sgt1922,bpt6k9105649x,o,14,38,1921,Sousse,other_european,Autres Européens,74,
+sgt1922,bpt6k9105649x,o,14,38,1921,Sousse,muslim,Musulmans,9731,
+sgt1922,bpt6k9105649x,o,14,38,1921,Sousse,jewish,Israélites,3503,
+sgt1922,bpt6k9105649x,o,14,38,1921,Kairouan,french,Français,342,
+sgt1922,bpt6k9105649x,o,14,38,1921,Kairouan,italian,Italiens,144,
+sgt1922,bpt6k9105649x,o,14,38,1921,Kairouan,maltese,Maltais,35,
+sgt1922,bpt6k9105649x,o,14,38,1921,Kairouan,spanish,Espagnols,25,
+sgt1922,bpt6k9105649x,o,14,38,1921,Kairouan,greek,Grecs,12,
+sgt1922,bpt6k9105649x,o,14,38,1921,Kairouan,other_european,Autres Européens,4,
+sgt1922,bpt6k9105649x,o,14,38,1921,Kairouan,muslim,Musulmans,18545,
+sgt1922,bpt6k9105649x,o,14,38,1921,Kairouan,jewish,Israélites,294,
+sgt1922,bpt6k9105649x,o,14,38,1921,Bizerte,french,Français,3300,total_mismatch
+sgt1922,bpt6k9105649x,o,14,38,1921,Bizerte,italian,Italiens,3139,total_mismatch
+sgt1922,bpt6k9105649x,o,14,38,1921,Bizerte,maltese,Maltais,248,total_mismatch
+sgt1922,bpt6k9105649x,o,14,38,1921,Bizerte,spanish,Espagnols,28,total_mismatch
+sgt1922,bpt6k9105649x,o,14,38,1921,Bizerte,greek,Grecs,13,total_mismatch
+sgt1922,bpt6k9105649x,o,14,38,1921,Bizerte,other_european,Autres Européens,71,total_mismatch
+sgt1922,bpt6k9105649x,o,14,38,1921,Bizerte,muslim,Musulmans,12842,
+sgt1922,bpt6k9105649x,o,14,38,1921,Bizerte,jewish,Israélites,1597,

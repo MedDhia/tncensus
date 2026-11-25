@@ -1,0 +1,5 @@
+census,gallica_ark,table_id,source_page,gallica_view,census_year,nationality,nationality_fr,measure,value,flag
+sgt1922,bpt6k9105649x,i,10,34,1921,french,Français,illiterate,8452,
+sgt1922,bpt6k9105649x,i,10,34,1921,italian,Italiens,illiterate,42668,
+sgt1922,bpt6k9105649x,i,10,34,1921,maltese,Maltais,illiterate,6887,
+sgt1922,bpt6k9105649x,i,10,34,1921,all_europeans,Ensemble de la population européenne,illiterate,58985,

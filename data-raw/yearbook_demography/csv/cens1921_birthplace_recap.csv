@@ -1,0 +1,11 @@
+census,gallica_ark,table_id,source_page,gallica_view,census_year,nationality,nationality_fr,birthplace,birthplace_fr,value,flag
+sgt1922,bpt6k9105649x,j,11,35,1921,french,Français,tunisia,Tunisie,19656,
+sgt1922,bpt6k9105649x,j,11,35,1921,french,Français,algeria,Algérie,8186,
+sgt1922,bpt6k9105649x,j,11,35,1921,french,Français,france,France,24565,
+sgt1922,bpt6k9105649x,j,11,35,1921,french,Français,abroad,Etranger,1861,
+sgt1922,bpt6k9105649x,j,11,35,1921,french,Français,french_possessions,Possessions françaises,208,
+sgt1922,bpt6k9105649x,j,11,35,1921,italian,Italiens,italy_malta_or_outside_north_africa,"Nés en Italie, à Malte et hors de l'Afrique du Nord",38736,
+sgt1922,bpt6k9105649x,j,11,35,1921,maltese,Maltais,italy_malta_or_outside_north_africa,"Nés en Italie, à Malte et hors de l'Afrique du Nord",2632,
+sgt1922,bpt6k9105649x,j,11,35,1921,other,Autres,italy_malta_or_outside_north_africa,"Nés en Italie, à Malte et hors de l'Afrique du Nord",3088,
+sgt1922,bpt6k9105649x,j,11,35,1921,all_foreigners,Étrangers,tunisia,Nés en Tunisie,56100,
+sgt1922,bpt6k9105649x,j,11,35,1921,all_foreigners,Étrangers,algeria,Nés en Algérie,1083,

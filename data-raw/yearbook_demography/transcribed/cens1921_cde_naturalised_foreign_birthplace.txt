@@ -1,0 +1,57 @@
+# sgt1922 view 31 (p.7).
+# Table c) Français par naturalisation: male | female | total naturalised | total French population of origin | proportion (%)
+c | 1188 1985 3173 51303 5.8
+# Table d) Population étrangère d'après le lieu de naissance: birthplace | 1911 | 1921
+# The number columns are printed half a line below their labels; rows matched by order (36 labels, 36 values).
+# Footnotes: (1) Alsace-Lorraine: counted with the French population in 1921. (2) Italy: by province in table e).
+d | Tunisie | 47412 56100
+d | Algérie | 1026 1083
+d | Alsace-Lorraine | 43 0
+d | Belgique et Luxembourg | 120 147
+d | Suisse | 215 245
+d | Allemagne | 176 25
+d | Angleterre | 128 276
+d | Autriche | 115 30
+d | Bulgarie | 10 39
+d | Danemark | 8 244
+d | Espagne | 333 230
+d | Grèce | 307 157
+d | Hollande | 30 37
+d | Hongrie | 0 3
+d | Italie | 49039 38736
+d | Malte (île de) | 2331 2632
+d | Monténégro | 26 7
+d | Pologne | 0 12
+d | Norvège | 7 16
+d | Portugal | 9 23
+d | Roumanie | 5 12
+d | Russie | 28 174
+d | Serbie | 0 15
+d | Suède | 19 17
+d | Turquie (Europe et Asie) | 311 127
+d | Amérique du Nord | 52 117
+d | Amérique du Sud | 42 35
+d | Afrique : Egypte | 90 23
+d | Afrique : Maroc | 2 16
+d | Afrique : Erythrée | 0 7
+d | Afrique : Tripolitaine | 240 464
+d | Afrique : Autres pays | 3 2
+d | Asie | 11 5
+d | Australie | 4 1
+d | France | 290 196
+d | Pays non désignés | 0 386
+d= | TOTAUX GÉNÉRAUX | 102432 101639
+# Table e) Répartition par province des habitants originaires de l'Italie: province | 1911 | 1921
+e | Piémont, Ligurie | 548 276
+e | Lombardie | 286 249
+e | Vénétie | 92 137
+e | Emilie | 133 173
+e | Ombrie | 164 47
+e | Toscane | 937 838
+e | Marches | 52 69
+e | Provinces de Rome | 269 237
+e | Provinces Napolitaines | 1141 1159
+e | Sardaigne | 4032 2860
+e | Sicile | 41155 32582
+e | Provinces non désignées | 230 109
+e= | Totaux généraux | 49039 38736

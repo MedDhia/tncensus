@@ -1,0 +1,53 @@
+# sgt1922 views 34-35 (pp.10-11).
+# Table h) Population européenne par profession et nationalité (sexe féminin): profession | french italian maltese spanish greek other_european | printed ensemble
+h | agriculture | 147 103 8 3 0 9 | 270
+h | commerce | 601 338 69 36 2 15 | 1061
+h | industry | 365 779 111 11 1 14 | 1281
+h | transport | 87 17 9 0 0 11 | 124
+h | civil_service | 919 89 4 0 0 2 | 1014
+h | liberal_professions | 448 164 21 12 2 93 | 740
+h= | TOTAUX | 2567 1490 222 62 5 144 | 4490
+# Table i) Nombre et proportion des européens illettrés: nationality | illiterate | printed % of the nationality
+# "Ensemble de la population" includes the nationalities not listed (Spanish, Greek, other); stored.
+i | french | 8452 | 15.5
+i | italian | 42668 | 50.3
+i | maltese | 6887 | 50.9
+i | all_europeans | 58985 | 37.7
+# Table j) Récapitulation de la population européenne d'après le lieu de naissance.
+# French: birthplace | number | printed %
+jF | Tunisie | 19656 | 36.08
+jF | Algérie | 8186 | 15.02
+jF | France | 24565 | 45.09
+jF | Etranger | 1861 | 3.4
+jF | Possessions françaises | 208 | 0.38
+jF= | TOTAUX | 54476
+# Foreigners: nationality | total population | born in Italy, Malta or outside North Africa
+jE | Italiens | 84799 | 38736
+jE | Maltais | 13520 | 2632
+jE | Autres | 3320 | 3088
+# Printed for all foreigners only (one bracketed cell): born in Tunisia | born in Algeria | born in North Africa | printed % born in North Africa
+jE= | TOTAUX | 101639 | 44456 | 56100 1083 57183 | 56.26
+# Table k) Population européenne d'après l'âge: age group | all Europeans (incl. not listed) | french | italian | maltese
+# "0 à 2 ans" and "2 à 9" are bracketed into one printed value (0-9). Printed proportions not stored (bases inconsistent).
+k | 0_9 | 32046 9535 18848 3001
+k | 10_19 | 33297 10296 19541 2904
+k | 20_29 | 25401 9086 13351 2362
+k | 30_39 | 23016 8724 10708 1860
+k | 40_49 | 18639 9287 9045 1354
+k | 50_59 | 12212 4291 6490 997
+k | 60plus | 11504 3257 6816 1042
+k= | TOTAUX | 156115 54476 84799 13520
+# Table l) Population européenne d'après le sexe et l'état civil: marital status | male female | printed total
+# Single males printed 44.300; the row total (85.757) and table f) give 44.309: kept as printed, total_mismatch.
+l1 | single | 44300 41448 | 85757
+l1 | married | 30360 30749 | 61109
+l1 | widowed | 1934 6624 | 8558
+l1 | divorced | 227 464 | 691
+l1= | TOTAUX | 76830 79285 | 156115
+# ... et par nationalité d'après le sexe: nationality | male female
+# "Autres" males printed 1.901; the male total (76.830) and the 3.320 other Europeans of table a) require 1.701: kept, total_mismatch.
+l2 | french | 26084 28392
+l2 | italian | 42259 42540
+l2 | maltese | 6786 6734
+l2 | other | 1901 1619
+l2= | TOTAUX | 76830 79285
