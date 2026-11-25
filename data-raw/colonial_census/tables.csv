@@ -24,7 +24,7 @@ eur1906_text_french_totals_1880_1906,eur1906,text,Nombre des Français 1880-1906
 eur1906_text_birthplace_1906,eur1906,text,Lieu de naissance des Européens (texte),"Europeans by place of birth (Tunisia, Algeria, France, elsewhere), 1906 (commentary table)",40,mixed
 eur1906_text_french_birthplace_1891_1906,eur1906,text,Lieu de naissance des Français 1891-1906 (texte),"French population born in Tunisia, Algeria and France, 1891-1906 (commentary table)",40,mixed
 eur1906_text_professional_status,eur1906,text,Personnes exerçant une profession et membres de leur famille (texte),"Europeans exercising a profession versus family members, by sex and nationality (commentary table)",57,mixed
-eur1906_text_occupation_groups,eur1906,text,Répartition par groupes de professions (texte),"Europeans by occupational group and nationality (commentary table)",58,mixed
+eur1906_text_occupation_groups,eur1906,text,Répartition par groupes de professions (texte),Europeans by occupational group and nationality (commentary table),58,mixed
 eur1906_text_french_occupation_1896_1906,eur1906,text,Professions des Français 1896-1906 (texte),"French population by occupational group, 1896, 1901 and 1906 (commentary table)",61,percent
 ind1931_t1_controle_nationality,ind1931,I,État de la population indigène par circonscription de Contrôle Civil,"Indigenous population by contrôle civil, religion (Muslim, Jewish) and nationality",6-7,count
 ind1931_t2_caidat_nationality,ind1931,II,État de la population indigène par Caïdats,"Indigenous population by caidat, religion and nationality",8-11,count
@@ -38,3 +38,55 @@ ind1931_t6annex_profession_1926_1931,ind1931,VI_annex,"Statistique comparée des
 ind1931_t7_communes,ind1931,VII,Population musulmane et israélite des localités érigées en Commune,"Muslim and Jewish population of the communes (municipalities), with caidat",113-114,count
 ind1931_t7annex_communes_1921_1931,ind1931,VII_annex,"Statistique comparée des dénombrements de 1921, 1926 et 1931 concernant la population indigène des localités érigées en commune","Indigenous population of the communes, 1921, 1926 and 1931",115-116,count
 ind1931_t8_localities,ind1931,VIII,Population musulmane et israélite des localités non érigées en Commune et comptant plus de 25 foyers,"Muslim and Jewish population of non-commune localities with more than 25 households, with caidat",117-127,count
+cens1921_age_nationality,sgt,k,Population européenne d'après l'âge,"European population by age group and nationality, 1921",11,count
+cens1921_age_sex_marital,sgt,f,"Population européenne d'après l'âge, le sexe et l'état civil","European population by age group, sex and marital status, by nationality, 1921",8-9,count
+cens1921_birthplace_recap,sgt,j,Récapitulation de la population européenne d'après le lieu de naissance,"Europeans by place of birth: French by birthplace, foreigners born outside North Africa, in Tunisia and in Algeria, 1921",11,count
+cens1921_circonscription_1911_1921,sgt,m,Recensements de 1911 et de 1921 par circonscription administrative (population européenne),"Europeans by circonscription and nationality, 1911 and 1921, with the French population 1891-1921",12-13,count
+cens1921_controle_population,sgt,a,"Superficie, populations (européenne et indigène) et densité de la population par circonscription de Contrôle civil","Area, population (European and indigenous) and population density by contrôle civil, 1921 census",2-3,mixed
+cens1921_europeans_1881_1921,sgt,n,Population européenne par période quinquennales (1881-1921),"European population by nationality, 1881-1921",14,count
+cens1921_five_largest_towns,sgt,o,"Population des cinq plus grandes villes, avec répartition d'après la nationalité","European and indigenous population of the five largest towns, 1921",14,count
+cens1921_foreign_birthplace_1911_1921,sgt,d,Population étrangère d'après le lieu de naissance,"Foreign population by place of birth, 1911 and 1921",7,count
+cens1921_french_birthplace_1891_1921,sgt,b,Population civile française d'après le lieu de naissance (recensements de 1891 à 1921),"French civilian population by place of birth, censuses 1891-1921",4-6,count
+cens1921_french_naturalised,sgt,c,Français par naturalisation,"French by naturalisation, 1921",7,count
+cens1921_illiterates,sgt,i,Nombre et proportion des européens illettrés,"Number of illiterate Europeans, 1921",10,count
+cens1921_italian_provinces_1911_1921,sgt,e,Répartition par province des habitants originaires de l'Italie,"Residents born in Italy by Italian province, 1911 and 1921",7,count
+cens1921_profession_female,sgt,h,Population européenne par profession et nationalité (sexe féminin),"Women by profession and nationality, 1921",10,count
+cens1921_profession_nationality,sgt,g,Population européenne par profession et nationalité (sexes réunis),"European population by profession, status and nationality, both sexes, 1921",8-9,count
+cens1921_sex_marital_nationality,sgt,l,Population européenne d'après le sexe et l'état civil et par nationalité d'après le sexe,"European population by sex and marital status, and by nationality and sex, 1921",11,count
+cens1921_towns_european_population,sgt,p,"Population européenne des villes comptant 1° plus de 1.000 habitants, 2° de 500 à 1.000 habitants","European population of towns with over 1,000 and 500-1,000 Europeans, 1921",14,count
+cens1926_communes,sgt,k,Population européenne et indigène des Centres de la Régence érigés en Communes,"European and indigenous population of the communes, with decree of creation and contrôle civil, 1926 census",14-17,count
+cens1926_controle_nationality,sgt,a,"État de la population civile (européenne et indigène) par circonscription de Contrôle civil, d'après le recensement de 1926","Civilian population (Europeans by nationality, Muslims, Jews) by contrôle civil, 1926 census",2-3,count
+cens1926_foreign_birthplace,sgt,c,Population étrangère d'après le lieu de naissance (recensements de 1921 et 1926),"Foreign (non-French European) population by place of birth, 1921 and 1926",6,count
+cens1926_french_birthplace,sgt,b,Population française d'après le lieu de naissance (de 1891 à 1926 inclus),"French civilian population by place of birth, censuses 1891-1926",4-5,count
+cens1926_italian_provinces,sgt,d,Répartition par province des habitants originaires de l'Italie (recensements de 1921 et 1926),"Inhabitants born in Italy by Italian region, 1921 and 1926",6,count
+cens1926_towns,sgt,j,Population européenne et indigène des cinq plus grandes villes; des villes de plus de 5.000 habitants,"European and indigenous population of all towns over 5,000 (the five largest flagged), 1926 census",13,count
+expulsions_nationality,sgt,expulsions,Expulsions prononcées,"Expulsions by nationality, 1913-1934",by edition,count
+foreigners_movements,sgt,foreigners,Mouvement des étrangers en Tunisie (entrées et sorties),"Foreigners' arrivals and departures by nationality, 1920-1939",by edition,count
+naturalisations_age_men,sgt,c,Naturalisations : âge des hommes naturalisés,"Age of naturalised men, 1922-1939",by edition,count
+naturalisations_by_nationality_sgt1930,sgt,e,Naturalisations par nationalité (édition 1930),"Naturalisations by nationality, legal basis and year, 1891-1930 (1930 edition printing)",by edition,count
+naturalisations_by_nationality_sgt1939,sgt,e,Naturalisations par nationalité (édition 1939),"Naturalisations by nationality and year, 1891-1939 (1939 edition printing)",by edition,count
+naturalisations_civil_status,sgt,b,Naturalisations : renseignements d'état civil sur les naturalisés,"Civil status, residence and birthplace of the naturalised, 1922-1939",by edition,count
+naturalisations_granted,sgt,a,Naturalisations individuelles accordées,"Naturalisations granted, by category and sex, 1922-1939",by edition,count
+naturalisations_nationality,sgt,d,Nationalité des naturalisés,"Nationality of the naturalised, 1922-1930",by edition,count
+naturalisations_profession_groups,sgt,c,Profession des hommes naturalisés,"Profession of naturalised men by occupational group, 1922-1930",by edition,count
+naturalisations_profession_trades,sgt,c,Profession des hommes naturalisés,"Profession of naturalised men by trade, 1935-1939",by edition,count
+recruitment_french_allocation,sgt,a,Répartition du recrutement (recrutement français),"French recruitment: allocation of the conscription class, classes 1916-1939",by edition,count
+recruitment_french_draft_boards,sgt,c,Opérations des Conseils de révision (recrutement français),"French recruitment: draft-board results, classes 1902-1939",by edition,count
+recruitment_french_education,sgt,b,Degré d'instruction des jeunes gens recrutés (recrutement français),"French recruitment: education of recruits, classes 1916-1939",by edition,count
+recruitment_indigenous_education,sgt,b,Degré d'instruction des jeunes gens recrutés (recrutement indigène),"Indigenous recruitment: education of recruits, 1916-1939",by edition,count
+recruitment_indigenous_lottery,sgt,a,"Opérations des Commissions de tirage au sort, répartition des conscrits (recrutement indigène)","Indigenous recruitment: conscription lotteries and allocation of conscripts, 1916-1939",by edition,count
+vital_european_births,sgt,etat_civil_europeen,"Naissances déclarées dans les contrôles civils, communes et postes d'état civil","European births registered, by nationality and sex, 1918-1939",by edition,count
+vital_european_deaths,sgt,etat_civil_europeen,"Décès déclarés dans les contrôles civils, communes et postes d'état civil","European deaths registered, by nationality and sex, 1918-1939",by edition,count
+vital_european_marriages,sgt,etat_civil_europeen,"Mariages déclarés dans les contrôles civils, communes et postes d'état civil","European marriages registered, by nationality of groom and bride, 1918-1939",by edition,count
+vital_jewish_births_deaths,sgt,etat_civil_indigene,Naissances et décès constatés dans la population israélite,"Jewish births and deaths recorded (état civil indigène), by contrôle civil, 1918-1939",by edition,count
+vital_mixed_marriages,sgt,mariages_mixtes,Relevé par nationalité des mariages entre européens et indigènes (tunisiens),"Marriages between Europeans and indigenous Tunisians, by group of groom and bride, 1922-1939",by edition,count
+vital_muslim_births_deaths,sgt,etat_civil_indigene,Naissances et décès constatés dans la population musulmane,"Muslim births and deaths recorded (état civil indigène), by contrôle civil, 1918-1939",by edition,count
+cens1926_age_sex_marital,sgt,e,"Population européenne d'après l'âge, le sexe et l'état civil","European population by nationality, age group, sex and marital status, 1926 census",7-9,count
+cens1926_profession_nationality,sgt,f,Population européenne par profession et nationalité,"European population by profession, status (active or family) and nationality, 1926 census",10-11,count
+cens1926_instruction,sgt,g,Population européenne d'après l'instruction (recensements de 1921 et 1926),"European population by instruction (illiterate, reads, writes, speaks French or Arabic), 1921 and 1926",12,mixed
+cens1931_controle_nationality,sgt,controle,"Répartition, par circonscriptions de Contrôles civils, de la population civile, européenne et indigène, d'après le recensement de 1931","Civilian population (Europeans by nationality, Muslims, Jews) by contrôle civil, 1931 census",2-3,count
+cens1931_compare_1926_1931,sgt,compare,"Statistique comparée des dénombrements de 1926 et 1931 concernant la population européenne de la Tunisie, répartie par circonscriptions administratives","Europeans by circonscription and nationality, 1926 and 1931 censuses",4-5,count
+cens1931_towns,sgt,towns,Population européenne et indigène des cinq plus grandes villes; des villes comptant plus de 5.000 habitants,"European and indigenous population of the five largest towns and of all towns over 5,000, 1931 census",6,count
+cens1936_controle_nationality,sgt,controle,"Répartition, par circonscriptions de Contrôles civils, de la population civile, européenne et indigène, d'après le recensement de 1936","Civilian population (Europeans by nationality, Muslims, Jews) by contrôle civil, 1936 census",2-3,count
+cens1936_compare_1931_1936,sgt,compare,"Statistique comparée des dénombrements de 1931 et 1936 concernant la population européenne de la Tunisie, répartie par circonscriptions administratives","Europeans by circonscription and nationality, 1931 and 1936 censuses",4-5,count
+cens1936_towns,sgt,towns,Population européenne et indigène des cinq plus grandes villes; des villes comptant plus de 5.000 habitants,"European and indigenous population of the five largest towns and of all towns over 5,000, 1936 census",6,count

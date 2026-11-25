@@ -22,9 +22,12 @@ Description: Comprehensive R data package for Tunisia's population censuses
     (5) 1984 RGPH delegation-level education tables and 1966 governorate
     illiteracy data; (6) historical national education series (1956-2014)
     and master INS delegation crosswalk; (7) colonial-era population
-    censuses (1891-1956); and (8) 39 tables transcribed from the 1906
-    European and 1931 indigenous census publications digitized on Gallica
-    (Bibliotheque nationale de France). Original contemporary data published by INS Tunisia
+    censuses (1891-1956); and (8) 91 tables transcribed from the 1906
+    European and 1931 indigenous census publications and from the
+    demography chapter of the Statistique generale de la Tunisie yearbooks
+    (1921-1936 census tables and 1902-1939 vital, migration and
+    naturalisation series), digitized on Gallica (Bibliotheque nationale de
+    France). Original contemporary data published by INS Tunisia
     <https://www.ins.tn/>.
 License: CC BY 4.0
 URL: https://github.com/MedDhia/tncensus,

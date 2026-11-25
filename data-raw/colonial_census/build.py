@@ -60,7 +60,10 @@ def write(df, path):
     import pyarrow as pa
     import pyarrow.parquet as pq
     tbl = pa.Table.from_pandas(df, preserve_index=False)
-    schema = pa.schema([pa.field(f.name, pa.string()) if pa.types.is_large_string(f.type) else f
+    # plain strings, and all-empty columns (Arrow type null) as strings too,
+    # so R reads them as character rather than an unspecified logical
+    schema = pa.schema([pa.field(f.name, pa.string())
+                        if pa.types.is_large_string(f.type) or pa.types.is_null(f.type) else f
                         for f in tbl.schema]).remove_metadata()
     pq.write_table(tbl.cast(schema), path, compression="zstd")
 

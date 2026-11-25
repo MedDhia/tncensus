@@ -2,30 +2,39 @@
 % Please edit documentation in R/colonial_census.R
 \name{colonial_census_tables}
 \alias{colonial_census_tables}
-\title{List Tables from the 1906 and 1931 Colonial Census Publications}
+\title{List Tables from Colonial-Era Census and Statistical Publications}
 \usage{
 colonial_census_tables()
 }
 \value{
 A \code{data.frame} with one row per table and columns
   \code{table} (name to pass to \code{load_colonial_census()}),
-  \code{census} (\code{"eur1906"} or \code{"ind1931"}), \code{table_id}
-  (table number or letter as printed), \code{title_fr}, \code{title_en},
-  \code{pages} (printed pages), \code{gallica_ark}, \code{n_rows}, and
-  \code{value_type} (\code{"count"}, \code{"percent"}, \code{"rate"},
-  or \code{"mixed"} for tables whose \code{measure} column mixes counts
-  and shares).
+  \code{census} (source: \code{"eur1906"}, \code{"ind1931"}, or
+  \code{"sgt"} for the yearbooks), \code{table_id} (table number or letter
+  as printed), \code{title_fr}, \code{title_en}, \code{pages} (printed
+  pages, or \code{"by edition"} for yearbook series), \code{gallica_ark}
+  (semicolon-separated when a series spans several volumes),
+  \code{n_rows}, and \code{value_type} (\code{"count"}, \code{"percent"},
+  \code{"rate"}, or \code{"mixed"} for tables whose \code{measure} column
+  mixes counts and shares).
 }
 \description{
-Returns an index of the tables transcribed from two census publications
-digitized on Gallica (BnF): the 1906 census of the European civilian
-population of Tunisia and the 1931 census of the indigenous (Muslim and
-Jewish) population. Each table can be loaded with
-\code{\link{load_colonial_census}}.
+Returns an index of the tables transcribed from publications digitized on
+Gallica (BnF): the 1906 census of the European civilian population of
+Tunisia, the 1931 census of the indigenous (Muslim and Jewish) population,
+and the \emph{Démographie} chapter of the \emph{Statistique générale de la
+Tunisie} yearbooks (editions 1922--1930, 1935, 1936 and 1939). The
+yearbooks reprint tables from the 1921, 1926, 1931 and 1936 censuses, whose
+own volumes are not on Gallica, and give yearly vital statistics,
+expulsions, naturalisations, foreigners' movements and recruitment. Each
+table can be loaded with \code{\link{load_colonial_census}}.
 }
 \examples{
 idx <- colonial_census_tables()
 idx[, c("table", "title_en", "n_rows")]
+
+# Tables from the 1926 census, reprinted in the yearbooks
+idx[startsWith(idx$table, "cens1926"), c("table", "title_en")]
 }
 \seealso{
 \code{\link{load_colonial_census}}

@@ -1,0 +1,46 @@
+# 1936 census: (A) Populations européenne et indigène des cinq plus grandes villes, and
+# (B) ... des villes comptant 1° plus de 10.000 habitants, 2° de 5.000 à 10.000 habitants.
+# Transcribed from sgt1936 (ark bpt6k91056547, view 17, printed page 6), full-resolution scan.
+# town | contrôle civil | fr it mt sp gr other eur_total | muslims jews indig_total | grand_total
+# NB sgt1936 (A) prints Kairouan Italians 7 and Maltese 171 (swapped); (B) and the sgt1939 reprint of (A)
+# print Italians 171 and Maltese 7, used here (reprint_corrected).
+# Zarzis Muslims: sgt1936 prints 7.244; the sgt1939 reprint prints 7.224, which the printed indigenous
+# and grand totals require (reprint_corrected).
+# Gafsa 'other Europeans' and Mahdia 'other Europeans' are smudged (read as 3 and 1 from the totals).
+@ five 17 6
+Tunis              | Tunis    | 42678 49878 4855 148 117 1201 98877 | 93356 27345 120701 | 219578
+Sfax               | Sfax     | 5224 2610 427 22 273 105 8661 | 31206 3466 34672 | 43333
+Sousse             | Sousse   | 5332 2882 298 51 4 78 8645 | 16079 3741 19820 | 28465
+Bizerte            | Bizerte  | 8054 2980 83 28 13 99 8661 | 15869 1342 17211 | 25872
+Kairouan           | Kairouan | 615 171 7 1 0 69 863 | 21902 226 22128 | 22991
+@ over_10000 17 6
+Tunis              | Tunis    | 42678 49878 4855 148 117 1201 98877 | 93356 27345 120701 | 219578
+Sfax               | Sfax     | 5224 2610 427 22 273 105 8661 | 31206 3466 34672 | 43333
+Sousse             | Sousse   | 5332 2882 298 51 4 78 8645 | 16079 3741 19820 | 28465
+Bizerte            | Bizerte  | 8054 2980 83 28 13 99 8661 | 15869 1342 17211 | 25872
+Kairouan           | Kairouan | 615 171 7 1 0 69 863 | 21902 226 22128 | 22991
+M'Saken            | Sousse   | 42 0 1 0 0 0 43 | 20046 0 20046 | 20088
+Gabès              | Gabès    | 1292 280 74 2 3 106 1757 | 14302 2552 16854 | 18611
+Nefta              | Tozeur   | 29 0 0 0 0 0 29 | 13442 148 13590 | 13619
+Moknine            | Sousse   | 57 14 0 0 0 6 77 | 13477 651 14128 | 14205
+Kalaa-Kebira       | Sousse   | 21 0 0 0 0 0 21 | 14938 0 14938 | 14959
+Tozeur             | Tozeur   | 104 5 0 0 0 3 112 | 11443 143 11586 | 11698
+Béja               | Béja     | 796 1085 9 0 0 42 1932 | 10362 998 11360 | 13292
+Gafsa              | Gafsa    | 650 87 20 0 0 3 760 | 9929 577 10506 | 11266
+Monastir           | Sousse   | 192 81 55 0 1 7 336 | 10094 142 10236 | 10572
+Goulette (La)      | Tunis    | 2713 3801 265 6 4 62 6851 | 2343 1668 4011 | 10862
+@ 5000_10000 17 6
+Ksour-Essaf        | Sousse   | 26 0 0 0 0 2 28 | 9965 0 9965 | 9993
+Mahdia             | Sousse   | 265 231 14 0 0 1 511 | 7639 338 7977 | 8488
+Nabeul             | Grombalia | 432 168 0 4 0 14 618 | 6577 1912 8489 | 9107
+Le Kef             | Le Kef   | 694 641 12 0 0 10 1357 | 6691 807 7498 | 8855
+Djemmal            | Sousse   | 50 21 1 0 0 0 72 | 8133 27 8160 | 8232
+Mateur             | Bizerte  | 398 1169 47 6 0 4 1624 | 5460 332 5792 | 7416
+Zarzis             | Territ. Milit. | 107 9 8 0 0 33 157 | 7224 260 7484 | 7641
+Menzel-Temim       | Grombalia | 43 14 0 0 0 0 57 | 7775 0 7775 | 8532
+Ferryville         | Bizerte  | 4604 1198 32 5 0 25 5864 | 276 190 466 | 6330
+El-Djem            | Sousse   | 38 0 0 0 0 0 38 | 6015 11 6026 | 6064
+El-Hamma           | Gabès    | 19 0 0 0 0 7 26 | 5394 479 5873 | 5899
+Ariana             | Tunis    | 584 383 93 0 0 19 1079 | 1832 2619 4451 | 5530
+Marsa (La)         | Tunis    | 524 298 31 0 0 31 884 | 4654 131 4785 | 5669
+Menzel-bou-Zelfa   | Grombalia | 18 2 0 0 2 0 22 | 5186 110 5296 | 5318

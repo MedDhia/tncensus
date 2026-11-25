@@ -14,11 +14,13 @@ Every table is tidy: one row per printed cell. Printed subtotals and totals are 
 | `derived_from_totals` | Cell hidden in the binding; solved exactly from the printed totals and other tables |
 | `illegible` | Value could not be read or solved; `value` is NA |
 | `not_applicable` | Question not asked of this group; `value` is NA |
+| `reprint_corrected` | Taken from another edition's printing, because this one is misprinted or unreadable |
 
 ## Sources
 
 - `eur1906`: *Dénombrement de la population européenne civile en Tunisie au 16 décembre 1906* (Tunis, 1907). Source gallica.bnf.fr / Bibliothèques de l'Université de Poitiers, <https://gallica.bnf.fr/ark:/12148/bd6t53563851>.
 - `ind1931`: *Dénombrement de la population civile indigène (musulmane et israélite) en Tunisie au 22 mars 1931* (Tunis, 1932). Source gallica.bnf.fr / Bibliothèque nationale de France, <https://gallica.bnf.fr/ark:/12148/bpt6k994559s>.
+- `sgt`: *Statistique générale de la Tunisie* (Tunis, annual), editions 1922-1930, 1935, 1936 and 1939, bound in 7 Gallica volumes (see `../yearbook_demography/EDITIONS.md`). Source gallica.bnf.fr / Ministère des Affaires étrangères.
 
 ## Tables
 
@@ -63,17 +65,69 @@ Every table is tidy: one row per printed cell. Printed subtotals and totals are 
 | [`ind1931_t7_communes`](#ind1931_t7_communes) | VII | 113-114 | 116 | count | Muslim and Jewish population of the communes (municipalities), with caidat |
 | [`ind1931_t7annex_communes_1921_1931`](#ind1931_t7annex_communes_1921_1931) | VII_annex | 115-116 | 174 | count | Indigenous population of the communes, 1921, 1926 and 1931 |
 | [`ind1931_t8_localities`](#ind1931_t8_localities) | VIII | 117-127 | 562 | count | Muslim and Jewish population of non-commune localities with more than 25 households, with caidat |
+| [`cens1921_age_nationality`](#cens1921_age_nationality) | k | 11 | 28 | count | European population by age group and nationality, 1921 |
+| [`cens1921_age_sex_marital`](#cens1921_age_sex_marital) | f | 8-9 | 72 | count | European population by age group, sex and marital status, by nationality, 1921 |
+| [`cens1921_birthplace_recap`](#cens1921_birthplace_recap) | j | 11 | 10 | count | Europeans by place of birth: French by birthplace, foreigners born outside North Africa, in Tunisia and in Algeria, 1921 |
+| [`cens1921_circonscription_1911_1921`](#cens1921_circonscription_1911_1921) | m | 12-13 | 320 | count | Europeans by circonscription and nationality, 1911 and 1921, with the French population 1891-1921 |
+| [`cens1921_controle_population`](#cens1921_controle_population) | a | 2-3 | 200 | mixed | Area, population (European and indigenous) and population density by contrôle civil, 1921 census |
+| [`cens1921_europeans_1881_1921`](#cens1921_europeans_1881_1921) | n | 14 | 34 | count | European population by nationality, 1881-1921 |
+| [`cens1921_five_largest_towns`](#cens1921_five_largest_towns) | o | 14 | 40 | count | European and indigenous population of the five largest towns, 1921 |
+| [`cens1921_foreign_birthplace_1911_1921`](#cens1921_foreign_birthplace_1911_1921) | d | 7 | 72 | count | Foreign population by place of birth, 1911 and 1921 |
+| [`cens1921_french_birthplace_1891_1921`](#cens1921_french_birthplace_1891_1921) | b | 4-6 | 576 | count | French civilian population by place of birth, censuses 1891-1921 |
+| [`cens1921_french_naturalised`](#cens1921_french_naturalised) | c | 7 | 3 | count | French by naturalisation, 1921 |
+| [`cens1921_illiterates`](#cens1921_illiterates) | i | 10 | 4 | count | Number of illiterate Europeans, 1921 |
+| [`cens1921_italian_provinces_1911_1921`](#cens1921_italian_provinces_1911_1921) | e | 7 | 24 | count | Residents born in Italy by Italian province, 1911 and 1921 |
+| [`cens1921_profession_female`](#cens1921_profession_female) | h | 10 | 36 | count | Women by profession and nationality, 1921 |
+| [`cens1921_profession_nationality`](#cens1921_profession_nationality) | g | 8-9 | 132 | count | European population by profession, status and nationality, both sexes, 1921 |
+| [`cens1921_sex_marital_nationality`](#cens1921_sex_marital_nationality) | l | 11 | 16 | count | European population by sex and marital status, and by nationality and sex, 1921 |
+| [`cens1921_towns_european_population`](#cens1921_towns_european_population) | p | 14 | 174 | count | European population of towns with over 1,000 and 500-1,000 Europeans, 1921 |
+| [`cens1926_communes`](#cens1926_communes) | k | 14-17 | 472 | count | European and indigenous population of the communes, with decree of creation and contrôle civil, 1926 census |
+| [`cens1926_controle_nationality`](#cens1926_controle_nationality) | a | 2-3 | 380 | count | Civilian population (Europeans by nationality, Muslims, Jews) by contrôle civil, 1926 census |
+| [`cens1926_foreign_birthplace`](#cens1926_foreign_birthplace) | c | 6 | 72 | count | Foreign (non-French European) population by place of birth, 1921 and 1926 |
+| [`cens1926_french_birthplace`](#cens1926_french_birthplace) | b | 4-5 | 672 | count | French civilian population by place of birth, censuses 1891-1926 |
+| [`cens1926_italian_provinces`](#cens1926_italian_provinces) | d | 6 | 26 | count | Inhabitants born in Italy by Italian region, 1921 and 1926 |
+| [`cens1926_towns`](#cens1926_towns) | j | 13 | 184 | count | European and indigenous population of all towns over 5,000 (the five largest flagged), 1926 census |
+| [`expulsions_nationality`](#expulsions_nationality) | expulsions | by edition | 308 | count | Expulsions by nationality, 1913-1934 |
+| [`foreigners_movements`](#foreigners_movements) | foreigners | by edition | 1,715 | count | Foreigners' arrivals and departures by nationality, 1920-1939 |
+| [`naturalisations_age_men`](#naturalisations_age_men) | c | by edition | 36 | count | Age of naturalised men, 1922-1939 |
+| [`naturalisations_by_nationality_sgt1930`](#naturalisations_by_nationality_sgt1930) | e | by edition | 729 | count | Naturalisations by nationality, legal basis and year, 1891-1930 (1930 edition printing) |
+| [`naturalisations_by_nationality_sgt1939`](#naturalisations_by_nationality_sgt1939) | e | by edition | 512 | count | Naturalisations by nationality and year, 1891-1939 (1939 edition printing) |
+| [`naturalisations_civil_status`](#naturalisations_civil_status) | b | by edition | 156 | count | Civil status, residence and birthplace of the naturalised, 1922-1939 |
+| [`naturalisations_granted`](#naturalisations_granted) | a | by edition | 98 | count | Naturalisations granted, by category and sex, 1922-1939 |
+| [`naturalisations_nationality`](#naturalisations_nationality) | d | by edition | 96 | count | Nationality of the naturalised, 1922-1930 |
+| [`naturalisations_profession_groups`](#naturalisations_profession_groups) | c | by edition | 81 | count | Profession of naturalised men by occupational group, 1922-1930 |
+| [`naturalisations_profession_trades`](#naturalisations_profession_trades) | c | by edition | 85 | count | Profession of naturalised men by trade, 1935-1939 |
+| [`recruitment_french_allocation`](#recruitment_french_allocation) | a | by edition | 240 | count | French recruitment: allocation of the conscription class, classes 1916-1939 |
+| [`recruitment_french_draft_boards`](#recruitment_french_draft_boards) | c | by edition | 304 | count | French recruitment: draft-board results, classes 1902-1939 |
+| [`recruitment_french_education`](#recruitment_french_education) | b | by edition | 168 | count | French recruitment: education of recruits, classes 1916-1939 |
+| [`recruitment_indigenous_education`](#recruitment_indigenous_education) | b | by edition | 96 | count | Indigenous recruitment: education of recruits, 1916-1939 |
+| [`recruitment_indigenous_lottery`](#recruitment_indigenous_lottery) | a | by edition | 288 | count | Indigenous recruitment: conscription lotteries and allocation of conscripts, 1916-1939 |
+| [`vital_european_births`](#vital_european_births) | etat_civil_europeen | by edition | 228 | count | European births registered, by nationality and sex, 1918-1939 |
+| [`vital_european_deaths`](#vital_european_deaths) | etat_civil_europeen | by edition | 228 | count | European deaths registered, by nationality and sex, 1918-1939 |
+| [`vital_european_marriages`](#vital_european_marriages) | etat_civil_europeen | by edition | 266 | count | European marriages registered, by nationality of groom and bride, 1918-1939 |
+| [`vital_jewish_births_deaths`](#vital_jewish_births_deaths) | etat_civil_indigene | by edition | 880 | count | Jewish births and deaths recorded (état civil indigène), by contrôle civil, 1918-1939 |
+| [`vital_mixed_marriages`](#vital_mixed_marriages) | mariages_mixtes | by edition | 192 | count | Marriages between Europeans and indigenous Tunisians, by group of groom and bride, 1922-1939 |
+| [`vital_muslim_births_deaths`](#vital_muslim_births_deaths) | etat_civil_indigene | by edition | 880 | count | Muslim births and deaths recorded (état civil indigène), by contrôle civil, 1918-1939 |
+| [`cens1926_age_sex_marital`](#cens1926_age_sex_marital) | e | 7-9 | 624 | count | European population by nationality, age group, sex and marital status, 1926 census |
+| [`cens1926_profession_nationality`](#cens1926_profession_nationality) | f | 10-11 | 216 | count | European population by profession, status (active or family) and nationality, 1926 census |
+| [`cens1926_instruction`](#cens1926_instruction) | g | 12 | 60 | mixed | European population by instruction (illiterate, reads, writes, speaks French or Arabic), 1921 and 1926 |
+| [`cens1931_controle_nationality`](#cens1931_controle_nationality) | controle | 2-3 | 380 | count | Civilian population (Europeans by nationality, Muslims, Jews) by contrôle civil, 1931 census |
+| [`cens1931_compare_1926_1931`](#cens1931_compare_1926_1931) | compare | 4-5 | 260 | count | Europeans by circonscription and nationality, 1926 and 1931 censuses |
+| [`cens1931_towns`](#cens1931_towns) | towns | 6 | 272 | count | European and indigenous population of the five largest towns and of all towns over 5,000, 1931 census |
+| [`cens1936_controle_nationality`](#cens1936_controle_nationality) | controle | 2-3 | 380 | count | Civilian population (Europeans by nationality, Muslims, Jews) by contrôle civil, 1936 census |
+| [`cens1936_compare_1931_1936`](#cens1936_compare_1931_1936) | compare | 4-5 | 260 | count | Europeans by circonscription and nationality, 1931 and 1936 censuses |
+| [`cens1936_towns`](#cens1936_towns) | towns | 6 | 272 | count | European and indigenous population of the five largest towns and of all towns over 5,000, 1936 census |
 
 ### eur1906_t1_circonscription_nationality
 
 **Répartition par nationalités et circonscriptions administratives**  
 *European population by nationality and administrative district (contrôle civil)*
 
-Census `eur1906`, table I, printed pages 5. 114 rows. Value type: count. Flags: (empty) 112, ocr_corrected 2. Notes and validation: [`csv/eur1906_t1_circonscription_nationality.md`](csv/eur1906_t1_circonscription_nationality.md).
+Source `eur1906`, table I, printed pages 5. 114 rows. Value type: count. Flags: (empty) 112, ocr_corrected 2. Notes and validation: [`csv/eur1906_t1_circonscription_nationality.md`](csv/eur1906_t1_circonscription_nationality.md).
 
 | Column | Description |
 |---|---|
-| `census` | Source volume: `eur1906` (1906 European census) or `ind1931` (1931 indigenous census). |
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
 | `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
 | `source_page` | Printed page number. |
 | `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
@@ -100,11 +154,11 @@ Census `eur1906`, table I, printed pages 5. 114 rows. Value type: count. Flags: 
 **Répartition par nationalités et localités**  
 *European population by nationality and locality*
 
-Census `eur1906`, table II, printed pages 6-15. 1,998 rows. Value type: count. Flags: (empty) 1,970, ocr_corrected 28. Notes and validation: [`csv/eur1906_t2_locality_nationality.md`](csv/eur1906_t2_locality_nationality.md).
+Source `eur1906`, table II, printed pages 6-15. 1,998 rows. Value type: count. Flags: (empty) 1,970, ocr_corrected 28. Notes and validation: [`csv/eur1906_t2_locality_nationality.md`](csv/eur1906_t2_locality_nationality.md).
 
 | Column | Description |
 |---|---|
-| `census` | Source volume: `eur1906` (1906 European census) or `ind1931` (1931 indigenous census). |
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
 | `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
 | `source_page` | Printed page number. |
 | `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
@@ -132,11 +186,11 @@ Census `eur1906`, table II, printed pages 6-15. 1,998 rows. Value type: count. F
 **Répartition d'après le lieu de naissance**  
 *European population by place of birth (French départements and colonies; foreign countries and Italian provinces)*
 
-Census `eur1906`, table III, printed pages 16-17. 139 rows. Value type: count. Flags: (empty) 139. Notes and validation: [`csv/eur1906_t3_birthplace.md`](csv/eur1906_t3_birthplace.md).
+Source `eur1906`, table III, printed pages 16-17. 139 rows. Value type: count. Flags: (empty) 139. Notes and validation: [`csv/eur1906_t3_birthplace.md`](csv/eur1906_t3_birthplace.md).
 
 | Column | Description |
 |---|---|
-| `census` | Source volume: `eur1906` (1906 European census) or `ind1931` (1931 indigenous census). |
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
 | `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
 | `source_page` | Printed page number. |
 | `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
@@ -172,11 +226,11 @@ Census `eur1906`, table III, printed pages 16-17. 139 rows. Value type: count. F
 **Répartition d'après le temps de séjour en Tunisie, par nationalités et circonscriptions administratives**  
 *European population by length of residence in Tunisia, nationality and district*
 
-Census `eur1906`, table IV, printed pages 18-21. 1,368 rows. Value type: count. Flags: (empty) 1,308, derived_from_totals 60. Notes and validation: [`csv/eur1906_t4_residence_duration.md`](csv/eur1906_t4_residence_duration.md).
+Source `eur1906`, table IV, printed pages 18-21. 1,368 rows. Value type: count. Flags: (empty) 1,308, derived_from_totals 60. Notes and validation: [`csv/eur1906_t4_residence_duration.md`](csv/eur1906_t4_residence_duration.md).
 
 | Column | Description |
 |---|---|
-| `census` | Source volume: `eur1906` (1906 European census) or `ind1931` (1931 indigenous census). |
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
 | `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
 | `source_page` | Printed page number. |
 | `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
@@ -221,11 +275,11 @@ Census `eur1906`, table IV, printed pages 18-21. 1,368 rows. Value type: count. 
 **Répartition par nationalités d'après le sexe, l'âge et l'état civil**  
 *European population by nationality, sex, age group and marital status*
 
-Census `eur1906`, table V, printed pages 22-23. 336 rows. Value type: count. Flags: (empty) 336. Notes and validation: [`csv/eur1906_t5_sex_age_marital.md`](csv/eur1906_t5_sex_age_marital.md).
+Source `eur1906`, table V, printed pages 22-23. 336 rows. Value type: count. Flags: (empty) 336. Notes and validation: [`csv/eur1906_t5_sex_age_marital.md`](csv/eur1906_t5_sex_age_marital.md).
 
 | Column | Description |
 |---|---|
-| `census` | Source volume: `eur1906` (1906 European census) or `ind1931` (1931 indigenous census). |
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
 | `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
 | `source_page` | Printed page number. |
 | `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
@@ -284,11 +338,11 @@ Census `eur1906`, table V, printed pages 22-23. 336 rows. Value type: count. Fla
 **Répartition d'après la profession, le sexe et la nationalité**  
 *European population by profession, status (active or family member), sex and nationality*
 
-Census `eur1906`, table VI, printed pages 24-25. 192 rows. Value type: count. Flags: (empty) 192. Notes and validation: [`csv/eur1906_t6_profession_nationality.md`](csv/eur1906_t6_profession_nationality.md).
+Source `eur1906`, table VI, printed pages 24-25. 192 rows. Value type: count. Flags: (empty) 192. Notes and validation: [`csv/eur1906_t6_profession_nationality.md`](csv/eur1906_t6_profession_nationality.md).
 
 | Column | Description |
 |---|---|
-| `census` | Source volume: `eur1906` (1906 European census) or `ind1931` (1931 indigenous census). |
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
 | `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
 | `source_page` | Printed page number. |
 | `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
@@ -348,11 +402,11 @@ Census `eur1906`, table VI, printed pages 24-25. 192 rows. Value type: count. Fl
 **Répartition d'après la profession, le sexe et la nationalité, par circonscriptions administratives**  
 *European population by profession, status, sex and nationality, by district*
 
-Census `eur1906`, table VII, printed pages 26-33. 3,648 rows. Value type: count. Flags: (empty) 3,554, illegible 74, derived_from_totals 16, total_mismatch 4. Notes and validation: [`csv/eur1906_t7_profession_circonscription.md`](csv/eur1906_t7_profession_circonscription.md).
+Source `eur1906`, table VII, printed pages 26-33. 3,648 rows. Value type: count. Flags: (empty) 3,554, illegible 74, derived_from_totals 16, total_mismatch 4. Notes and validation: [`csv/eur1906_t7_profession_circonscription.md`](csv/eur1906_t7_profession_circonscription.md).
 
 | Column | Description |
 |---|---|
-| `census` | Source volume: `eur1906` (1906 European census) or `ind1931` (1931 indigenous census). |
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
 | `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
 | `source_page` | Printed page number. |
 | `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
@@ -412,11 +466,11 @@ Census `eur1906`, table VII, printed pages 26-33. 3,648 rows. Value type: count.
 **Répartition d'après l'instruction**  
 *European population by literacy and knowledge of French*
 
-Census `eur1906`, table VIII, printed pages 34. 18 rows. Value type: count. Flags: (empty) 17, not_applicable 1. Notes and validation: [`csv/eur1906_t8_instruction.md`](csv/eur1906_t8_instruction.md).
+Source `eur1906`, table VIII, printed pages 34. 18 rows. Value type: count. Flags: (empty) 17, not_applicable 1. Notes and validation: [`csv/eur1906_t8_instruction.md`](csv/eur1906_t8_instruction.md).
 
 | Column | Description |
 |---|---|
-| `census` | Source volume: `eur1906` (1906 European census) or `ind1931` (1931 indigenous census). |
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
 | `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
 | `source_page` | Printed page number. |
 | `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
@@ -451,11 +505,11 @@ Census `eur1906`, table VIII, printed pages 34. 18 rows. Value type: count. Flag
 **Proportion entre la population de chaque nationalité et la population européenne totale. Densité de la population européenne**  
 *Share of each nationality in the European population, and European population density, by district*
 
-Census `eur1906`, table A, printed pages 35. 120 rows. Value type: mixed. Flags: (empty) 106, total_mismatch 8, not_applicable 6. Notes and validation: [`csv/eur1906_ta_nationality_shares_density.md`](csv/eur1906_ta_nationality_shares_density.md).
+Source `eur1906`, table A, printed pages 35. 120 rows. Value type: mixed. Flags: (empty) 106, total_mismatch 8, not_applicable 6. Notes and validation: [`csv/eur1906_ta_nationality_shares_density.md`](csv/eur1906_ta_nationality_shares_density.md).
 
 | Column | Description |
 |---|---|
-| `census` | Source volume: `eur1906` (1906 European census) or `ind1931` (1931 indigenous census). |
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
 | `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
 | `source_page` | Printed page number. |
 | `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
@@ -481,11 +535,11 @@ Census `eur1906`, table A, printed pages 35. 120 rows. Value type: mixed. Flags:
 **Population française civile, répartition par circonscriptions administratives. Résultats comparés des recensements de 1891, 1896, 1901 et 1906**  
 *French civilian population by district, 1891, 1896, 1901 and 1906*
 
-Census `eur1906`, table B, printed pages 37. 76 rows. Value type: count. Flags: (empty) 76. Notes and validation: [`csv/eur1906_tb_french_population_1891_1906.md`](csv/eur1906_tb_french_population_1891_1906.md).
+Source `eur1906`, table B, printed pages 37. 76 rows. Value type: count. Flags: (empty) 76. Notes and validation: [`csv/eur1906_tb_french_population_1891_1906.md`](csv/eur1906_tb_french_population_1891_1906.md).
 
 | Column | Description |
 |---|---|
-| `census` | Source volume: `eur1906` (1906 European census) or `ind1931` (1931 indigenous census). |
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
 | `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
 | `source_page` | Printed page number. |
 | `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
@@ -499,11 +553,11 @@ Census `eur1906`, table B, printed pages 37. 76 rows. Value type: count. Flags: 
 **Population française civile. Coefficients d'accroissement par circonscriptions administratives**  
 *French civilian population growth coefficients by district*
 
-Census `eur1906`, table C, printed pages 39. 100 rows. Value type: rate. Flags: (empty) 91, total_mismatch 9. Notes and validation: [`csv/eur1906_tc_french_growth_coefficients.md`](csv/eur1906_tc_french_growth_coefficients.md).
+Source `eur1906`, table C, printed pages 39. 100 rows. Value type: rate. Flags: (empty) 91, total_mismatch 9. Notes and validation: [`csv/eur1906_tc_french_growth_coefficients.md`](csv/eur1906_tc_french_growth_coefficients.md).
 
 | Column | Description |
 |---|---|
-| `census` | Source volume: `eur1906` (1906 European census) or `ind1931` (1931 indigenous census). |
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
 | `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
 | `source_page` | Printed page number. |
 | `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
@@ -526,11 +580,11 @@ Census `eur1906`, table C, printed pages 39. 100 rows. Value type: rate. Flags: 
 **Répartition de la population française civile par localités. Résultats comparés des recensements de 1891, 1896 et 1901**  
 *French civilian population by locality, 1891, 1896 and 1901*
 
-Census `eur1906`, table D, printed pages 41-45. 838 rows. Value type: count. Flags: (empty) 838. Notes and validation: [`csv/eur1906_td_french_population_by_locality_1891_1901.md`](csv/eur1906_td_french_population_by_locality_1891_1901.md).
+Source `eur1906`, table D, printed pages 41-45. 838 rows. Value type: count. Flags: (empty) 838. Notes and validation: [`csv/eur1906_td_french_population_by_locality_1891_1901.md`](csv/eur1906_td_french_population_by_locality_1891_1901.md).
 
 | Column | Description |
 |---|---|
-| `census` | Source volume: `eur1906` (1906 European census) or `ind1931` (1931 indigenous census). |
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
 | `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
 | `source_page` | Printed page number. |
 | `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
@@ -545,11 +599,11 @@ Census `eur1906`, table D, printed pages 41-45. 838 rows. Value type: count. Fla
 **Répartition de la population française civile d'après le lieu de naissance. Résultats comparés des recensements de 1891, 1896, 1901 et 1906**  
 *French civilian population by place of birth, 1891-1906*
 
-Census `eur1906`, table E, printed pages 46-48. 376 rows. Value type: count. Flags: (empty) 372, total_mismatch 3, ocr_corrected 1. Notes and validation: [`csv/eur1906_te_french_by_birthplace_1891_1906.md`](csv/eur1906_te_french_by_birthplace_1891_1906.md).
+Source `eur1906`, table E, printed pages 46-48. 376 rows. Value type: count. Flags: (empty) 372, total_mismatch 3, ocr_corrected 1. Notes and validation: [`csv/eur1906_te_french_by_birthplace_1891_1906.md`](csv/eur1906_te_french_by_birthplace_1891_1906.md).
 
 | Column | Description |
 |---|---|
-| `census` | Source volume: `eur1906` (1906 European census) or `ind1931` (1931 indigenous census). |
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
 | `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
 | `source_page` | Printed page number. |
 | `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
@@ -563,11 +617,11 @@ Census `eur1906`, table E, printed pages 46-48. 376 rows. Value type: count. Fla
 **Répartition de la population française d'après le sexe, l'âge et l'état civil en distinguant les Français de naissance et les Français par naturalisation, option ou mariage**  
 *French population by sex, age and marital status: French by birth versus by naturalisation, option or marriage*
 
-Census `eur1906`, table F, printed pages 54. 112 rows. Value type: count. Flags: (empty) 112. Notes and validation: [`csv/eur1906_tf_french_by_origin_sex_age_marital.md`](csv/eur1906_tf_french_by_origin_sex_age_marital.md).
+Source `eur1906`, table F, printed pages 54. 112 rows. Value type: count. Flags: (empty) 112. Notes and validation: [`csv/eur1906_tf_french_by_origin_sex_age_marital.md`](csv/eur1906_tf_french_by_origin_sex_age_marital.md).
 
 | Column | Description |
 |---|---|
-| `census` | Source volume: `eur1906` (1906 European census) or `ind1931` (1931 indigenous census). |
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
 | `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
 | `source_page` | Printed page number. |
 | `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
@@ -622,11 +676,11 @@ Census `eur1906`, table F, printed pages 54. 112 rows. Value type: count. Flags:
 **Répartition d'après la profession et le sexe, par circonscriptions administratives. Résultats comparés des recensements de 1901 et 1906**  
 *French population by occupational group and sex, by district, 1901 and 1906*
 
-Census `eur1906`, table G, printed pages 62-63. 612 rows. Value type: count. Flags: (empty) 604, total_mismatch 7, ocr_corrected 1. Notes and validation: [`csv/eur1906_tg_french_by_occupation_1901_1906.md`](csv/eur1906_tg_french_by_occupation_1901_1906.md).
+Source `eur1906`, table G, printed pages 62-63. 612 rows. Value type: count. Flags: (empty) 604, total_mismatch 7, ocr_corrected 1. Notes and validation: [`csv/eur1906_tg_french_by_occupation_1901_1906.md`](csv/eur1906_tg_french_by_occupation_1901_1906.md).
 
 | Column | Description |
 |---|---|
-| `census` | Source volume: `eur1906` (1906 European census) or `ind1931` (1931 indigenous census). |
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
 | `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
 | `source_page` | Printed page number. |
 | `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
@@ -665,11 +719,11 @@ Census `eur1906`, table G, printed pages 62-63. 612 rows. Value type: count. Fla
 **Européens fixés en Tunisie depuis cinq ans et depuis cinq à dix ans (texte)**  
 *Europeans settled in Tunisia for under 5 and 5-10 years (commentary table)*
 
-Census `eur1906`, table text, printed pages 49. 6 rows. Value type: mixed. Flags: (empty) 5, total_mismatch 1. Notes and validation: [`csv/eur1906_text_recent_settlers.md`](csv/eur1906_text_recent_settlers.md).
+Source `eur1906`, table text, printed pages 49. 6 rows. Value type: mixed. Flags: (empty) 5, total_mismatch 1. Notes and validation: [`csv/eur1906_text_recent_settlers.md`](csv/eur1906_text_recent_settlers.md).
 
 | Column | Description |
 |---|---|
-| `census` | Source volume: `eur1906` (1906 European census) or `ind1931` (1931 indigenous census). |
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
 | `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
 | `source_page` | Printed page number. |
 | `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
@@ -707,11 +761,11 @@ Census `eur1906`, table text, printed pages 49. 6 rows. Value type: mixed. Flags
 **Répartition par sexe (texte)**  
 *European population by sex and nationality, with shares (commentary table)*
 
-Census `eur1906`, table text, printed pages 49-50. 35 rows. Value type: mixed. Flags: (empty) 33, total_mismatch 2. Notes and validation: [`csv/eur1906_text_sex.md`](csv/eur1906_text_sex.md).
+Source `eur1906`, table text, printed pages 49-50. 35 rows. Value type: mixed. Flags: (empty) 33, total_mismatch 2. Notes and validation: [`csv/eur1906_text_sex.md`](csv/eur1906_text_sex.md).
 
 | Column | Description |
 |---|---|
-| `census` | Source volume: `eur1906` (1906 European census) or `ind1931` (1931 indigenous census). |
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
 | `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
 | `source_page` | Printed page number. |
 | `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
@@ -755,11 +809,11 @@ Census `eur1906`, table text, printed pages 49-50. 35 rows. Value type: mixed. F
 **Répartition par âge (texte)**  
 *European population by age group and nationality, 1896-1906 (commentary table)*
 
-Census `eur1906`, table text, printed pages 50. 98 rows. Value type: mixed. Flags: (empty) 98. Notes and validation: [`csv/eur1906_text_age.md`](csv/eur1906_text_age.md).
+Source `eur1906`, table text, printed pages 50. 98 rows. Value type: mixed. Flags: (empty) 98. Notes and validation: [`csv/eur1906_text_age.md`](csv/eur1906_text_age.md).
 
 | Column | Description |
 |---|---|
-| `census` | Source volume: `eur1906` (1906 European census) or `ind1931` (1931 indigenous census). |
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
 | `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
 | `source_page` | Printed page number. |
 | `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
@@ -805,11 +859,11 @@ Census `eur1906`, table text, printed pages 50. 98 rows. Value type: mixed. Flag
 **Répartition par état civil (texte)**  
 *European population by marital status, sex and nationality (commentary table)*
 
-Census `eur1906`, table text, printed pages 52. 128 rows. Value type: mixed. Flags: (empty) 120, illegible 8. Notes and validation: [`csv/eur1906_text_marital_status.md`](csv/eur1906_text_marital_status.md).
+Source `eur1906`, table text, printed pages 52. 128 rows. Value type: mixed. Flags: (empty) 120, illegible 8. Notes and validation: [`csv/eur1906_text_marital_status.md`](csv/eur1906_text_marital_status.md).
 
 | Column | Description |
 |---|---|
-| `census` | Source volume: `eur1906` (1906 European census) or `ind1931` (1931 indigenous census). |
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
 | `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
 | `source_page` | Printed page number. |
 | `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
@@ -860,11 +914,11 @@ Census `eur1906`, table text, printed pages 52. 128 rows. Value type: mixed. Fla
 **État civil des Français 1896-1906 (texte)**  
 *French population by marital status, 1896-1906, compared with France (commentary table)*
 
-Census `eur1906`, table text, printed pages 53. 16 rows. Value type: percent. Flags: (empty) 16. Notes and validation: [`csv/eur1906_text_french_marital_status_1896_1906.md`](csv/eur1906_text_french_marital_status_1896_1906.md).
+Source `eur1906`, table text, printed pages 53. 16 rows. Value type: percent. Flags: (empty) 16. Notes and validation: [`csv/eur1906_text_french_marital_status_1896_1906.md`](csv/eur1906_text_french_marital_status_1896_1906.md).
 
 | Column | Description |
 |---|---|
-| `census` | Source volume: `eur1906` (1906 European census) or `ind1931` (1931 indigenous census). |
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
 | `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
 | `source_page` | Printed page number. |
 | `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
@@ -904,11 +958,11 @@ Census `eur1906`, table text, printed pages 53. 16 rows. Value type: percent. Fl
 **Français de naissance et Français par naturalisation 1901-1906 (texte)**  
 *French by birth versus naturalised, 1901 and 1906 (commentary table)*
 
-Census `eur1906`, table text, printed pages 55. 44 rows. Value type: mixed. Flags: (empty) 39, total_mismatch 5. Notes and validation: [`csv/eur1906_text_french_by_origin.md`](csv/eur1906_text_french_by_origin.md).
+Source `eur1906`, table text, printed pages 55. 44 rows. Value type: mixed. Flags: (empty) 39, total_mismatch 5. Notes and validation: [`csv/eur1906_text_french_by_origin.md`](csv/eur1906_text_french_by_origin.md).
 
 | Column | Description |
 |---|---|
-| `census` | Source volume: `eur1906` (1906 European census) or `ind1931` (1931 indigenous census). |
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
 | `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
 | `source_page` | Printed page number. |
 | `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
@@ -954,11 +1008,11 @@ Census `eur1906`, table text, printed pages 55. 44 rows. Value type: mixed. Flag
 **Nombre des Français 1880-1906 (texte)**  
 *French population totals, 1880-1906 (commentary)*
 
-Census `eur1906`, table text, printed pages 36. 5 rows. Value type: count. Flags: (empty) 5. Notes and validation: [`csv/eur1906_text_french_totals_1880_1906.md`](csv/eur1906_text_french_totals_1880_1906.md).
+Source `eur1906`, table text, printed pages 36. 5 rows. Value type: count. Flags: (empty) 5. Notes and validation: [`csv/eur1906_text_french_totals_1880_1906.md`](csv/eur1906_text_french_totals_1880_1906.md).
 
 | Column | Description |
 |---|---|
-| `census` | Source volume: `eur1906` (1906 European census) or `ind1931` (1931 indigenous census). |
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
 | `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
 | `source_page` | Printed page number. |
 | `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
@@ -978,11 +1032,11 @@ Census `eur1906`, table text, printed pages 36. 5 rows. Value type: count. Flags
 **Lieu de naissance des Européens (texte)**  
 *Europeans by place of birth (Tunisia, Algeria, France, elsewhere), 1906 (commentary table)*
 
-Census `eur1906`, table text, printed pages 40. 36 rows. Value type: mixed. Flags: (empty) 36. Notes and validation: [`csv/eur1906_text_birthplace_1906.md`](csv/eur1906_text_birthplace_1906.md).
+Source `eur1906`, table text, printed pages 40. 36 rows. Value type: mixed. Flags: (empty) 36. Notes and validation: [`csv/eur1906_text_birthplace_1906.md`](csv/eur1906_text_birthplace_1906.md).
 
 | Column | Description |
 |---|---|
-| `census` | Source volume: `eur1906` (1906 European census) or `ind1931` (1931 indigenous census). |
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
 | `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
 | `source_page` | Printed page number. |
 | `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
@@ -1024,11 +1078,11 @@ Census `eur1906`, table text, printed pages 40. 36 rows. Value type: mixed. Flag
 **Lieu de naissance des Français 1891-1906 (texte)**  
 *French population born in Tunisia, Algeria and France, 1891-1906 (commentary table)*
 
-Census `eur1906`, table text, printed pages 40. 24 rows. Value type: mixed. Flags: (empty) 24. Notes and validation: [`csv/eur1906_text_french_birthplace_1891_1906.md`](csv/eur1906_text_french_birthplace_1891_1906.md).
+Source `eur1906`, table text, printed pages 40. 24 rows. Value type: mixed. Flags: (empty) 24. Notes and validation: [`csv/eur1906_text_french_birthplace_1891_1906.md`](csv/eur1906_text_french_birthplace_1891_1906.md).
 
 | Column | Description |
 |---|---|
-| `census` | Source volume: `eur1906` (1906 European census) or `ind1931` (1931 indigenous census). |
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
 | `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
 | `source_page` | Printed page number. |
 | `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
@@ -1059,11 +1113,11 @@ Census `eur1906`, table text, printed pages 40. 24 rows. Value type: mixed. Flag
 **Personnes exerçant une profession et membres de leur famille (texte)**  
 *Europeans exercising a profession versus family members, by sex and nationality (commentary table)*
 
-Census `eur1906`, table text, printed pages 57. 40 rows. Value type: mixed. Flags: (empty) 40. Notes and validation: [`csv/eur1906_text_professional_status.md`](csv/eur1906_text_professional_status.md).
+Source `eur1906`, table text, printed pages 57. 40 rows. Value type: mixed. Flags: (empty) 40. Notes and validation: [`csv/eur1906_text_professional_status.md`](csv/eur1906_text_professional_status.md).
 
 | Column | Description |
 |---|---|
-| `census` | Source volume: `eur1906` (1906 European census) or `ind1931` (1931 indigenous census). |
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
 | `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
 | `source_page` | Printed page number. |
 | `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
@@ -1111,11 +1165,11 @@ Census `eur1906`, table text, printed pages 57. 40 rows. Value type: mixed. Flag
 **Répartition par groupes de professions (texte)**  
 *Europeans by occupational group and nationality (commentary table)*
 
-Census `eur1906`, table text, printed pages 58. 128 rows. Value type: mixed. Flags: (empty) 128. Notes and validation: [`csv/eur1906_text_occupation_groups.md`](csv/eur1906_text_occupation_groups.md).
+Source `eur1906`, table text, printed pages 58. 128 rows. Value type: mixed. Flags: (empty) 128. Notes and validation: [`csv/eur1906_text_occupation_groups.md`](csv/eur1906_text_occupation_groups.md).
 
 | Column | Description |
 |---|---|
-| `census` | Source volume: `eur1906` (1906 European census) or `ind1931` (1931 indigenous census). |
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
 | `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
 | `source_page` | Printed page number. |
 | `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
@@ -1170,11 +1224,11 @@ Census `eur1906`, table text, printed pages 58. 128 rows. Value type: mixed. Fla
 **Professions des Français 1896-1906 (texte)**  
 *French population by occupational group, 1896, 1901 and 1906 (commentary table)*
 
-Census `eur1906`, table text, printed pages 61. 18 rows. Value type: percent. Flags: (empty) 18. Notes and validation: [`csv/eur1906_text_french_occupation_1896_1906.md`](csv/eur1906_text_french_occupation_1896_1906.md).
+Source `eur1906`, table text, printed pages 61. 18 rows. Value type: percent. Flags: (empty) 18. Notes and validation: [`csv/eur1906_text_french_occupation_1896_1906.md`](csv/eur1906_text_french_occupation_1896_1906.md).
 
 | Column | Description |
 |---|---|
-| `census` | Source volume: `eur1906` (1906 European census) or `ind1931` (1931 indigenous census). |
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
 | `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
 | `source_page` | Printed page number. |
 | `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
@@ -1207,11 +1261,11 @@ Census `eur1906`, table text, printed pages 61. 18 rows. Value type: percent. Fl
 **État de la population indigène par circonscription de Contrôle Civil**  
 *Indigenous population by contrôle civil, religion (Muslim, Jewish) and nationality*
 
-Census `ind1931`, table I, printed pages 6-7. 280 rows. Value type: count. Flags: (empty) 271, ocr_corrected 9. Notes and validation: [`csv/ind1931_t1_controle_nationality.md`](csv/ind1931_t1_controle_nationality.md).
+Source `ind1931`, table I, printed pages 6-7. 280 rows. Value type: count. Flags: (empty) 271, ocr_corrected 9. Notes and validation: [`csv/ind1931_t1_controle_nationality.md`](csv/ind1931_t1_controle_nationality.md).
 
 | Column | Description |
 |---|---|
-| `census` | Source volume: `eur1906` (1906 European census) or `ind1931` (1931 indigenous census). |
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
 | `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
 | `source_page` | Printed page number. |
 | `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
@@ -1247,11 +1301,11 @@ Census `ind1931`, table I, printed pages 6-7. 280 rows. Value type: count. Flags
 **État de la population indigène par Caïdats**  
 *Indigenous population by caidat, religion and nationality*
 
-Census `ind1931`, table II, printed pages 8-11. 518 rows. Value type: count. Flags: (empty) 510, ocr_corrected 8. Notes and validation: [`csv/ind1931_t2_caidat_nationality.md`](csv/ind1931_t2_caidat_nationality.md).
+Source `ind1931`, table II, printed pages 8-11. 518 rows. Value type: count. Flags: (empty) 510, ocr_corrected 8. Notes and validation: [`csv/ind1931_t2_caidat_nationality.md`](csv/ind1931_t2_caidat_nationality.md).
 
 | Column | Description |
 |---|---|
-| `census` | Source volume: `eur1906` (1906 European census) or `ind1931` (1931 indigenous census). |
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
 | `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
 | `source_page` | Printed page number. |
 | `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
@@ -1287,11 +1341,11 @@ Census `ind1931`, table II, printed pages 8-11. 518 rows. Value type: count. Fla
 **État de la population indigène par Cheikhats**  
 *Indigenous population by cheikhat, religion and nationality*
 
-Census `ind1931`, table III, printed pages 12-97. 11,256 rows. Value type: count. Flags: (empty) 10,414, ocr_corrected 842. Notes and validation: [`csv/ind1931_t3_cheikhat_nationality.md`](csv/ind1931_t3_cheikhat_nationality.md).
+Source `ind1931`, table III, printed pages 12-97. 11,256 rows. Value type: count. Flags: (empty) 10,414, ocr_corrected 842. Notes and validation: [`csv/ind1931_t3_cheikhat_nationality.md`](csv/ind1931_t3_cheikhat_nationality.md).
 
 | Column | Description |
 |---|---|
-| `census` | Source volume: `eur1906` (1906 European census) or `ind1931` (1931 indigenous census). |
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
 | `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
 | `source_page` | Printed page number. |
 | `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
@@ -1372,11 +1426,11 @@ Census `ind1931`, table III, printed pages 12-97. 11,256 rows. Value type: count
 **Statistique comparée des dénombrements de 1926-1931 concernant la population indigène de la Tunisie répartie par Contrôles Civils**  
 *Indigenous population by contrôle civil and religion, 1926 and 1931*
 
-Census `ind1931`, table IV, printed pages 98-99. 80 rows. Value type: count. Flags: (empty) 80. Notes and validation: [`csv/ind1931_t4_controle_1926_1931.md`](csv/ind1931_t4_controle_1926_1931.md).
+Source `ind1931`, table IV, printed pages 98-99. 80 rows. Value type: count. Flags: (empty) 80. Notes and validation: [`csv/ind1931_t4_controle_1926_1931.md`](csv/ind1931_t4_controle_1926_1931.md).
 
 | Column | Description |
 |---|---|
-| `census` | Source volume: `eur1906` (1906 European census) or `ind1931` (1931 indigenous census). |
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
 | `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
 | `source_page` | Printed page number. |
 | `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
@@ -1399,11 +1453,11 @@ Census `ind1931`, table IV, printed pages 98-99. 80 rows. Value type: count. Fla
 **Statistique comparée des dénombrements de 1926-1931 concernant le classement de la population indigène d'après l'origine**  
 *Indigenous population by religion and nationality, 1926 and 1931*
 
-Census `ind1931`, table IV_annex, printed pages 100. 28 rows. Value type: count. Flags: (empty) 28. Notes and validation: [`csv/ind1931_t4annex_nationality_1926_1931.md`](csv/ind1931_t4annex_nationality_1926_1931.md).
+Source `ind1931`, table IV_annex, printed pages 100. 28 rows. Value type: count. Flags: (empty) 28. Notes and validation: [`csv/ind1931_t4annex_nationality_1926_1931.md`](csv/ind1931_t4annex_nationality_1926_1931.md).
 
 | Column | Description |
 |---|---|
-| `census` | Source volume: `eur1906` (1906 European census) or `ind1931` (1931 indigenous census). |
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
 | `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
 | `source_page` | Printed page number. |
 | `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
@@ -1439,11 +1493,11 @@ Census `ind1931`, table IV_annex, printed pages 100. 28 rows. Value type: count.
 **Répartition de la population musulmane et israélite d'après le sexe et l'âge**  
 *Muslim and Jewish population by sex and age group (adults, children), by caidat*
 
-Census `ind1931`, table V, printed pages 102-105. 296 rows. Value type: count. Flags: (empty) 296. Notes and validation: [`csv/ind1931_t5_caidat_sex_age.md`](csv/ind1931_t5_caidat_sex_age.md).
+Source `ind1931`, table V, printed pages 102-105. 296 rows. Value type: count. Flags: (empty) 296. Notes and validation: [`csv/ind1931_t5_caidat_sex_age.md`](csv/ind1931_t5_caidat_sex_age.md).
 
 | Column | Description |
 |---|---|
-| `census` | Source volume: `eur1906` (1906 European census) or `ind1931` (1931 indigenous census). |
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
 | `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
 | `source_page` | Printed page number. |
 | `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
@@ -1482,11 +1536,11 @@ Census `ind1931`, table V, printed pages 102-105. 296 rows. Value type: count. F
 **Statistique comparée des dénombrements de 1926-1931 concernant le classement de la population indigène d'après le sexe et l'âge**  
 *Indigenous population by religion, sex and age group, 1926 and 1931*
 
-Census `ind1931`, table V_annex, printed pages 106. 16 rows. Value type: count. Flags: (empty) 16. Notes and validation: [`csv/ind1931_t5annex_sex_age_1926_1931.md`](csv/ind1931_t5annex_sex_age_1926_1931.md).
+Source `ind1931`, table V_annex, printed pages 106. 16 rows. Value type: count. Flags: (empty) 16. Notes and validation: [`csv/ind1931_t5annex_sex_age_1926_1931.md`](csv/ind1931_t5annex_sex_age_1926_1931.md).
 
 | Column | Description |
 |---|---|
-| `census` | Source volume: `eur1906` (1906 European census) or `ind1931` (1931 indigenous census). |
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
 | `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
 | `source_page` | Printed page number. |
 | `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
@@ -1525,11 +1579,11 @@ Census `ind1931`, table V_annex, printed pages 106. 16 rows. Value type: count. 
 **Classement, d'après la profession, des adultes mâles âgés de 18 ans au moins**  
 *Occupations of Muslim and Jewish men aged 18 and over, by caidat*
 
-Census `ind1931`, table VI, printed pages 108-111. 592 rows. Value type: count. Flags: (empty) 586, ocr_corrected 6. Notes and validation: [`csv/ind1931_t6_caidat_profession.md`](csv/ind1931_t6_caidat_profession.md).
+Source `ind1931`, table VI, printed pages 108-111. 592 rows. Value type: count. Flags: (empty) 586, ocr_corrected 6. Notes and validation: [`csv/ind1931_t6_caidat_profession.md`](csv/ind1931_t6_caidat_profession.md).
 
 | Column | Description |
 |---|---|
-| `census` | Source volume: `eur1906` (1906 European census) or `ind1931` (1931 indigenous census). |
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
 | `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
 | `source_page` | Printed page number. |
 | `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
@@ -1580,11 +1634,11 @@ Census `ind1931`, table VI, printed pages 108-111. 592 rows. Value type: count. 
 **Statistique comparée des dénombrements de 1926-1931 concernant le classement, d'après la profession, des adultes mâles âgés de 18 ans au moins**  
 *Occupations of indigenous men aged 18 and over, 1926 and 1931*
 
-Census `ind1931`, table VI_annex, printed pages 112. 32 rows. Value type: count. Flags: (empty) 32. Notes and validation: [`csv/ind1931_t6annex_profession_1926_1931.md`](csv/ind1931_t6annex_profession_1926_1931.md).
+Source `ind1931`, table VI_annex, printed pages 112. 32 rows. Value type: count. Flags: (empty) 32. Notes and validation: [`csv/ind1931_t6annex_profession_1926_1931.md`](csv/ind1931_t6annex_profession_1926_1931.md).
 
 | Column | Description |
 |---|---|
-| `census` | Source volume: `eur1906` (1906 European census) or `ind1931` (1931 indigenous census). |
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
 | `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
 | `source_page` | Printed page number. |
 | `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
@@ -1635,11 +1689,11 @@ Census `ind1931`, table VI_annex, printed pages 112. 32 rows. Value type: count.
 **Population musulmane et israélite des localités érigées en Commune**  
 *Muslim and Jewish population of the communes (municipalities), with caidat*
 
-Census `ind1931`, table VII, printed pages 113-114. 116 rows. Value type: count. Flags: (empty) 113, total_mismatch 2, ocr_corrected 1. Notes and validation: [`csv/ind1931_t7_communes.md`](csv/ind1931_t7_communes.md).
+Source `ind1931`, table VII, printed pages 113-114. 116 rows. Value type: count. Flags: (empty) 113, total_mismatch 2, ocr_corrected 1. Notes and validation: [`csv/ind1931_t7_communes.md`](csv/ind1931_t7_communes.md).
 
 | Column | Description |
 |---|---|
-| `census` | Source volume: `eur1906` (1906 European census) or `ind1931` (1931 indigenous census). |
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
 | `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
 | `source_page` | Printed page number. |
 | `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
@@ -1662,11 +1716,11 @@ Census `ind1931`, table VII, printed pages 113-114. 116 rows. Value type: count.
 **Statistique comparée des dénombrements de 1921, 1926 et 1931 concernant la population indigène des localités érigées en commune**  
 *Indigenous population of the communes, 1921, 1926 and 1931*
 
-Census `ind1931`, table VII_annex, printed pages 115-116. 174 rows. Value type: count. Flags: (empty) 167, ocr_corrected 7. Notes and validation: [`csv/ind1931_t7annex_communes_1921_1931.md`](csv/ind1931_t7annex_communes_1921_1931.md).
+Source `ind1931`, table VII_annex, printed pages 115-116. 174 rows. Value type: count. Flags: (empty) 167, ocr_corrected 7. Notes and validation: [`csv/ind1931_t7annex_communes_1921_1931.md`](csv/ind1931_t7annex_communes_1921_1931.md).
 
 | Column | Description |
 |---|---|
-| `census` | Source volume: `eur1906` (1906 European census) or `ind1931` (1931 indigenous census). |
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
 | `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
 | `source_page` | Printed page number. |
 | `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
@@ -1680,11 +1734,11 @@ Census `ind1931`, table VII_annex, printed pages 115-116. 174 rows. Value type: 
 **Population musulmane et israélite des localités non érigées en Commune et comptant plus de 25 foyers**  
 *Muslim and Jewish population of non-commune localities with more than 25 households, with caidat*
 
-Census `ind1931`, table VIII, printed pages 117-127. 562 rows. Value type: count. Flags: (empty) 557, ocr_corrected 5. Notes and validation: [`csv/ind1931_t8_localities.md`](csv/ind1931_t8_localities.md).
+Source `ind1931`, table VIII, printed pages 117-127. 562 rows. Value type: count. Flags: (empty) 557, ocr_corrected 5. Notes and validation: [`csv/ind1931_t8_localities.md`](csv/ind1931_t8_localities.md).
 
 | Column | Description |
 |---|---|
-| `census` | Source volume: `eur1906` (1906 European census) or `ind1931` (1931 indigenous census). |
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
 | `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
 | `source_page` | Printed page number. |
 | `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
@@ -1709,3 +1763,2601 @@ Census `ind1931`, table VIII, printed pages 117-127. 562 rows. Value type: count
 |---|---|---:|
 | `jewish` | Population israélite | 281 |
 | `muslim` | Population musulmane | 281 |
+
+### cens1921_age_nationality
+
+**Population européenne d'après l'âge**  
+*European population by age group and nationality, 1921*
+
+Source `sgt`, table k, printed pages 11. 28 rows. Value type: count. Flags: (empty) 28. Notes and validation: [`../yearbook_demography/csv/cens1921_age_nationality.md`](../yearbook_demography/csv/cens1921_age_nationality.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `census_year` | Census year the figure refers to. |
+| `nationality` | Coded dimension. |
+| `nationality_fr` | Printed French label for `nationality`. |
+| `age_group` | Coded dimension. |
+| `age_group_fr` | Printed French label for `age_group`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`nationality`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `all_europeans` | Ensemble de la population européenne | 7 |
+| `french` | Français | 7 |
+| `italian` | Italiens | 7 |
+| `maltese` | Maltais | 7 |
+
+`age_group`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `0_9` | 0 à 9 ans | 4 |
+| `10_19` | 10 à 19 | 4 |
+| `20_29` | 20 à 29 | 4 |
+| `30_39` | 30 à 39 | 4 |
+| `40_49` | 40 à 49 | 4 |
+| `50_59` | 50 à 59 | 4 |
+| `60plus` | 60 ans et plus | 4 |
+
+### cens1921_age_sex_marital
+
+**Population européenne d'après l'âge, le sexe et l'état civil**  
+*European population by age group, sex and marital status, by nationality, 1921*
+
+Source `sgt`, table f, printed pages 8-9. 72 rows. Value type: count. Flags: (empty) 69, reprint_corrected 3. Notes and validation: [`../yearbook_demography/csv/cens1921_age_sex_marital.md`](../yearbook_demography/csv/cens1921_age_sex_marital.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `census_year` | Census year the figure refers to. |
+| `nationality` | Coded dimension. |
+| `nationality_fr` | Printed French label for `nationality`. |
+| `age_group` | Coded dimension. |
+| `age_group_fr` | Printed French label for `age_group`. |
+| `marital_status` | Coded dimension. |
+| `marital_status_fr` | Printed French label for `marital_status`. |
+| `sex` | Coded dimension. |
+| `sex_fr` | Printed French label for `sex`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`nationality`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `all_europeans` | Ensemble de la population européenne | 18 |
+| `french` | Français | 18 |
+| `italian` | Italiens | 18 |
+| `maltese` | Maltais | 18 |
+
+`age_group`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `20_39` | De 20 à 39 ans | 24 |
+| `40plus` | De 40 ans et plus | 24 |
+| `lt20` | De moins de 20 ans | 24 |
+
+`marital_status`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `married` | Mariés | 24 |
+| `single` | Célibataires | 24 |
+| `widowed_divorced` | Veufs et divorcés | 24 |
+
+`sex`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `female` | S. F. | 36 |
+| `male` | S. M. | 36 |
+
+### cens1921_birthplace_recap
+
+**Récapitulation de la population européenne d'après le lieu de naissance**  
+*Europeans by place of birth: French by birthplace, foreigners born outside North Africa, in Tunisia and in Algeria, 1921*
+
+Source `sgt`, table j, printed pages 11. 10 rows. Value type: count. Flags: (empty) 10. Notes and validation: [`../yearbook_demography/csv/cens1921_birthplace_recap.md`](../yearbook_demography/csv/cens1921_birthplace_recap.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `census_year` | Census year the figure refers to. |
+| `nationality` | Coded dimension. |
+| `nationality_fr` | Printed French label for `nationality`. |
+| `birthplace` | Coded dimension. |
+| `birthplace_fr` | Printed French label for `birthplace`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`nationality`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `all_foreigners` | Étrangers | 2 |
+| `french` | Français | 5 |
+| `italian` | Italiens | 1 |
+| `maltese` | Maltais | 1 |
+| `other` | Autres | 1 |
+
+`birthplace`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `abroad` | Etranger | 1 |
+| `algeria` | Algérie / Nés en Algérie | 2 |
+| `france` | France | 1 |
+| `french_possessions` | Possessions françaises | 1 |
+| `italy_malta_or_outside_north_africa` | Nés en Italie, à Malte et hors de l'Afrique du Nord | 3 |
+| `tunisia` | Nés en Tunisie / Tunisie | 2 |
+
+### cens1921_circonscription_1911_1921
+
+**Recensements de 1911 et de 1921 par circonscription administrative (population européenne)**  
+*Europeans by circonscription and nationality, 1911 and 1921, with the French population 1891-1921*
+
+Source `sgt`, table m, printed pages 12-13. 320 rows. Value type: count. Flags: (empty) 300, reprint_corrected 20. Notes and validation: [`../yearbook_demography/csv/cens1921_circonscription_1911_1921.md`](../yearbook_demography/csv/cens1921_circonscription_1911_1921.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `census_year` | Census year the figure refers to. |
+| `controle_civil` | Place or label as printed (20 distinct values). |
+| `nationality` | Coded dimension. |
+| `nationality_fr` | Printed French label for `nationality`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`nationality`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `french` | Français / Français (mouvement de la population française) | 120 |
+| `greek` | Grecs | 40 |
+| `italian` | Italiens | 40 |
+| `maltese` | Maltais | 40 |
+| `other_european` | Autres Européens | 40 |
+| `spanish` | Espagnols | 40 |
+
+### cens1921_controle_population
+
+**Superficie, populations (européenne et indigène) et densité de la population par circonscription de Contrôle civil**  
+*Area, population (European and indigenous) and population density by contrôle civil, 1921 census*
+
+Source `sgt`, table a, printed pages 2-3. 200 rows. Value type: mixed. Flags: (empty) 166, reprint_corrected 18, total_mismatch 16. Notes and validation: [`../yearbook_demography/csv/cens1921_controle_population.md`](../yearbook_demography/csv/cens1921_controle_population.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `census_year` | Census year the figure refers to. |
+| `controle_civil` | Place or label as printed (20 distinct values). |
+| `measure` | Coded dimension. |
+| `population_group` | Coded dimension. |
+| `population_group_fr` | Printed French label for `population_group`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `area_km2` |  | 20 |
+| `density_per_km2` |  | 20 |
+| `population` |  | 160 |
+
+`population_group`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `(empty)` |  | 40 |
+| `french` | Français | 20 |
+| `greek` | Grecs | 20 |
+| `italian` | Italiens | 20 |
+| `jewish` | Israélites | 20 |
+| `maltese` | Maltais | 20 |
+| `muslim` | Musulmans | 20 |
+| `other_european` | Autres Européens | 20 |
+| `spanish` | Espagnols | 20 |
+
+### cens1921_europeans_1881_1921
+
+**Population européenne par période quinquennales (1881-1921)**  
+*European population by nationality, 1881-1921*
+
+Source `sgt`, table n, printed pages 14. 34 rows. Value type: count. Flags: (empty) 30, total_mismatch 4. Notes and validation: [`../yearbook_demography/csv/cens1921_europeans_1881_1921.md`](../yearbook_demography/csv/cens1921_europeans_1881_1921.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `census_year` | Census year the figure refers to. |
+| `nationality` | Coded dimension. |
+| `nationality_fr` | Printed French label for `nationality`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`nationality`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `french` | Français | 8 |
+| `greek` | Grecs | 3 |
+| `italian` | Italiens | 8 |
+| `maltese` | Maltais | 8 |
+| `other_european` | Autres Européens / Espagnols, Grecs, Autres européens | 4 |
+| `spanish` | Espagnols | 3 |
+
+### cens1921_five_largest_towns
+
+**Population des cinq plus grandes villes, avec répartition d'après la nationalité**  
+*European and indigenous population of the five largest towns, 1921*
+
+Source `sgt`, table o, printed pages 14. 40 rows. Value type: count. Flags: (empty) 34, total_mismatch 6. Notes and validation: [`../yearbook_demography/csv/cens1921_five_largest_towns.md`](../yearbook_demography/csv/cens1921_five_largest_towns.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `census_year` | Census year the figure refers to. |
+| `town` | Coded dimension. |
+| `population_group` | Coded dimension. |
+| `population_group_fr` | Printed French label for `population_group`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`town`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `Bizerte` |  | 8 |
+| `Kairouan` |  | 8 |
+| `Sfax` |  | 8 |
+| `Sousse` |  | 8 |
+| `Tunis` |  | 8 |
+
+`population_group`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `french` | Français | 5 |
+| `greek` | Grecs | 5 |
+| `italian` | Italiens | 5 |
+| `jewish` | Israélites | 5 |
+| `maltese` | Maltais | 5 |
+| `muslim` | Musulmans | 5 |
+| `other_european` | Autres Européens | 5 |
+| `spanish` | Espagnols | 5 |
+
+### cens1921_foreign_birthplace_1911_1921
+
+**Population étrangère d'après le lieu de naissance**  
+*Foreign population by place of birth, 1911 and 1921*
+
+Source `sgt`, table d, printed pages 7. 72 rows. Value type: count. Flags: (empty) 72. Notes and validation: [`../yearbook_demography/csv/cens1921_foreign_birthplace_1911_1921.md`](../yearbook_demography/csv/cens1921_foreign_birthplace_1911_1921.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `census_year` | Census year the figure refers to. |
+| `birthplace_fr` | Place or label as printed (36 distinct values). |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+### cens1921_french_birthplace_1891_1921
+
+**Population civile française d'après le lieu de naissance (recensements de 1891 à 1921)**  
+*French civilian population by place of birth, censuses 1891-1921*
+
+Source `sgt`, table b, printed pages 4-6. 576 rows. Value type: count. Flags: (empty) 571, ocr_corrected 5. Notes and validation: [`../yearbook_demography/csv/cens1921_french_birthplace_1891_1921.md`](../yearbook_demography/csv/cens1921_french_birthplace_1891_1921.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `census_year` | Census year the figure refers to. |
+| `birthplace_fr` | Place or label as printed (96 distinct values). |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+### cens1921_french_naturalised
+
+**Français par naturalisation**  
+*French by naturalisation, 1921*
+
+Source `sgt`, table c, printed pages 7. 3 rows. Value type: count. Flags: (empty) 3. Notes and validation: [`../yearbook_demography/csv/cens1921_french_naturalised.md`](../yearbook_demography/csv/cens1921_french_naturalised.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `census_year` | Census year the figure refers to. |
+| `category` | Coded dimension. |
+| `category_fr` | Printed French label for `category`. |
+| `sex` | Coded dimension. |
+| `sex_fr` | Printed French label for `sex`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`category`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `french_by_origin` | Population française d'origine | 1 |
+| `naturalised` | Français par naturalisation | 2 |
+
+`sex`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `(empty)` |  | 1 |
+| `female` | Sexe féminin | 1 |
+| `male` | Sexe masculin | 1 |
+
+### cens1921_illiterates
+
+**Nombre et proportion des européens illettrés**  
+*Number of illiterate Europeans, 1921*
+
+Source `sgt`, table i, printed pages 10. 4 rows. Value type: count. Flags: (empty) 4. Notes and validation: [`../yearbook_demography/csv/cens1921_illiterates.md`](../yearbook_demography/csv/cens1921_illiterates.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `census_year` | Census year the figure refers to. |
+| `nationality` | Coded dimension. |
+| `nationality_fr` | Printed French label for `nationality`. |
+| `measure` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`nationality`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `all_europeans` | Ensemble de la population européenne | 1 |
+| `french` | Français | 1 |
+| `italian` | Italiens | 1 |
+| `maltese` | Maltais | 1 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `illiterate` |  | 4 |
+
+### cens1921_italian_provinces_1911_1921
+
+**Répartition par province des habitants originaires de l'Italie**  
+*Residents born in Italy by Italian province, 1911 and 1921*
+
+Source `sgt`, table e, printed pages 7. 24 rows. Value type: count. Flags: (empty) 24. Notes and validation: [`../yearbook_demography/csv/cens1921_italian_provinces_1911_1921.md`](../yearbook_demography/csv/cens1921_italian_provinces_1911_1921.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `census_year` | Census year the figure refers to. |
+| `province_fr` | Place or label as printed (12 distinct values). |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+### cens1921_profession_female
+
+**Population européenne par profession et nationalité (sexe féminin)**  
+*Women by profession and nationality, 1921*
+
+Source `sgt`, table h, printed pages 10. 36 rows. Value type: count. Flags: (empty) 36. Notes and validation: [`../yearbook_demography/csv/cens1921_profession_female.md`](../yearbook_demography/csv/cens1921_profession_female.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `census_year` | Census year the figure refers to. |
+| `nationality` | Coded dimension. |
+| `nationality_fr` | Printed French label for `nationality`. |
+| `profession` | Coded dimension. |
+| `profession_fr` | Printed French label for `profession`. |
+| `sex` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`nationality`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `french` | Français | 6 |
+| `greek` | Grecs | 6 |
+| `italian` | Italiens | 6 |
+| `maltese` | Maltais | 6 |
+| `other_european` | Autres Européens | 6 |
+| `spanish` | Espagnols | 6 |
+
+`profession`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `agriculture` | Agriculture | 6 |
+| `civil_service` | Fonctionnaires | 6 |
+| `commerce` | Commerce | 6 |
+| `industry` | Industrie | 6 |
+| `liberal_professions` | Professions libérales | 6 |
+| `transport` | Transport | 6 |
+
+`sex`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `female` |  | 36 |
+
+### cens1921_profession_nationality
+
+**Population européenne par profession et nationalité (sexes réunis)**  
+*European population by profession, status and nationality, both sexes, 1921*
+
+Source `sgt`, table g, printed pages 8-9. 132 rows. Value type: count. Flags: (empty) 126, total_mismatch 6. Notes and validation: [`../yearbook_demography/csv/cens1921_profession_nationality.md`](../yearbook_demography/csv/cens1921_profession_nationality.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `census_year` | Census year the figure refers to. |
+| `nationality` | Coded dimension. |
+| `nationality_fr` | Printed French label for `nationality`. |
+| `profession` | Coded dimension. |
+| `profession_fr` | Printed French label for `profession`. |
+| `status` | Coded dimension. |
+| `status_fr` | Printed French label for `status`. |
+| `sex` | Coded dimension. |
+| `sex_fr` | Printed French label for `sex`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`nationality`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `french` | Français | 22 |
+| `greek` | Grecs | 22 |
+| `italian` | Italiens | 22 |
+| `maltese` | Maltais | 22 |
+| `other_european` | Autres Européens | 22 |
+| `spanish` | Espagnols | 22 |
+
+`profession`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `agriculture` | Agriculteurs | 18 |
+| `civil_service` | Fonctionnaires | 12 |
+| `commerce` | Commerçants | 18 |
+| `independent_means` | Personnes vivant exclusivement de revenus | 12 |
+| `industry` | Industriels | 18 |
+| `liberal_professions` | Professions libérales | 12 |
+| `police_force` | Force publique | 12 |
+| `transport` | Transports | 18 |
+| `unclassified` | Population non classée | 12 |
+
+`status`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `(empty)` |  | 24 |
+| `active` | Personnes exerçant la profession | 18 |
+| `employer` | Patrons | 24 |
+| `family` | Familles des patrons et ouvriers | 42 |
+| `worker` | Ouvriers | 24 |
+
+`sex`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `(empty)` |  | 108 |
+| `female` | S. F. | 12 |
+| `male` | S. M. | 12 |
+
+### cens1921_sex_marital_nationality
+
+**Population européenne d'après le sexe et l'état civil et par nationalité d'après le sexe**  
+*European population by sex and marital status, and by nationality and sex, 1921*
+
+Source `sgt`, table l, printed pages 11. 16 rows. Value type: count. Flags: (empty) 14, total_mismatch 2. Notes and validation: [`../yearbook_demography/csv/cens1921_sex_marital_nationality.md`](../yearbook_demography/csv/cens1921_sex_marital_nationality.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `census_year` | Census year the figure refers to. |
+| `nationality` | Coded dimension. |
+| `nationality_fr` | Printed French label for `nationality`. |
+| `marital_status` | Coded dimension. |
+| `marital_status_fr` | Printed French label for `marital_status`. |
+| `sex` | Coded dimension. |
+| `sex_fr` | Printed French label for `sex`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`nationality`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `all_europeans` | Ensemble de la population européenne | 8 |
+| `french` | Français | 2 |
+| `italian` | Italiens | 2 |
+| `maltese` | Maltais | 2 |
+| `other` | Autres | 2 |
+
+`marital_status`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `(empty)` |  | 8 |
+| `divorced` | Divorcés | 2 |
+| `married` | Mariés | 2 |
+| `single` | Célibataires | 2 |
+| `widowed` | Veufs | 2 |
+
+`sex`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `female` | Sexe féminin | 8 |
+| `male` | Sexe masculin | 8 |
+
+### cens1921_towns_european_population
+
+**Population européenne des villes comptant 1° plus de 1.000 habitants, 2° de 500 à 1.000 habitants**  
+*European population of towns with over 1,000 and 500-1,000 Europeans, 1921*
+
+Source `sgt`, table p, printed pages 14. 174 rows. Value type: count. Flags: (empty) 168, total_mismatch 6. Notes and validation: [`../yearbook_demography/csv/cens1921_towns_european_population.md`](../yearbook_demography/csv/cens1921_towns_european_population.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `census_year` | Census year the figure refers to. |
+| `town` | Coded dimension. |
+| `size_class` | Coded dimension. |
+| `size_class_fr` | Printed French label for `size_class`. |
+| `town_rank` | Coded dimension. |
+| `nationality` | Coded dimension. |
+| `nationality_fr` | Printed French label for `nationality`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`town`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `Aïn-el-Asker` |  | 6 |
+| `Bizerte` |  | 6 |
+| `Béja` |  | 6 |
+| `Carthage` |  | 6 |
+| `Djerba` |  | 6 |
+| `Djerissa` |  | 6 |
+| `Ferryville` |  | 6 |
+| `Fondouk-Djedid` |  | 6 |
+| `Gabès` |  | 6 |
+| `Gaffour` |  | 6 |
+| `Grombalia` |  | 6 |
+| `Hammam-Lif` |  | 6 |
+| `Kairouan` |  | 6 |
+| `Kalaâ-Djerda` |  | 6 |
+| `La Goulette` |  | 6 |
+| `La Marsa` |  | 6 |
+| `Le Kef` |  | 6 |
+| `Manouba` |  | 6 |
+| `Mateur` |  | 6 |
+| `Maxula-Radès` |  | 6 |
+| `Metlaoui` |  | 6 |
+| `Redeyef` |  | 6 |
+| `Saïda` |  | 6 |
+| `Sfax` |  | 6 |
+| `Souk-el-Arba` |  | 6 |
+| `Souk-el-Khemis` |  | 6 |
+| `Sousse` |  | 6 |
+| `Tabarca` |  | 6 |
+| `Tunis` |  | 6 |
+
+`size_class`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `500_1000` | De 500 à 1.000 habitants | 102 |
+| `gt1000` | Plus de 1.000 habitants | 72 |
+
+`town_rank`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `1` |  | 12 |
+| `10` |  | 12 |
+| `11` |  | 12 |
+| `12` |  | 12 |
+| `13` |  | 6 |
+| `14` |  | 6 |
+| `15` |  | 6 |
+| `16` |  | 6 |
+| `17` |  | 6 |
+| `2` |  | 12 |
+| `3` |  | 12 |
+| `4` |  | 12 |
+| `5` |  | 12 |
+| `6` |  | 12 |
+| `7` |  | 12 |
+| `8` |  | 12 |
+| `9` |  | 12 |
+
+`nationality`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `french` | Français | 29 |
+| `greek` | Grecs | 29 |
+| `italian` | Italiens | 29 |
+| `maltese` | Maltais | 29 |
+| `other_european` | Autres Européens | 29 |
+| `spanish` | Espagnols | 29 |
+
+### cens1926_communes
+
+**Population européenne et indigène des Centres de la Régence érigés en Communes**  
+*European and indigenous population of the communes, with decree of creation and contrôle civil, 1926 census*
+
+Source `sgt`, table k, printed pages 14-17. 472 rows. Value type: count. Flags: (empty) 472. Notes and validation: [`../yearbook_demography/csv/cens1926_communes.md`](../yearbook_demography/csv/cens1926_communes.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `source_page` | Printed page number. |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `commune_no` | Coded dimension. |
+| `commune` | Place or label as printed (59 distinct values). |
+| `decree_date` | Coded dimension. |
+| `decree_date_fr` | Printed French label for `decree_date`. |
+| `controle_civil` | Place or label as printed (19 distinct values). |
+| `population_group` | Coded dimension. |
+| `population_group_fr` | Printed French label for `population_group`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`commune_no`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `1` |  | 8 |
+| `10` |  | 8 |
+| `11` |  | 8 |
+| `12` |  | 8 |
+| `13` |  | 8 |
+| `14` |  | 8 |
+| `15` |  | 8 |
+| `16` |  | 8 |
+| `17` |  | 8 |
+| `18` |  | 8 |
+| `19` |  | 8 |
+| `2` |  | 8 |
+| `20` |  | 8 |
+| `21` |  | 8 |
+| `22` |  | 8 |
+| `23` |  | 8 |
+| `24` |  | 8 |
+| `25` |  | 8 |
+| `26` |  | 8 |
+| `27` |  | 8 |
+| `28` |  | 8 |
+| `29` |  | 8 |
+| `3` |  | 8 |
+| `30` |  | 8 |
+| `31` |  | 8 |
+| `32` |  | 8 |
+| `33` |  | 8 |
+| `34` |  | 8 |
+| `35` |  | 8 |
+| `36` |  | 8 |
+| `37` |  | 8 |
+| `38` |  | 8 |
+| `39` |  | 8 |
+| `4` |  | 8 |
+| `40` |  | 8 |
+| `41` |  | 8 |
+| `42` |  | 8 |
+| `43` |  | 8 |
+| `44` |  | 8 |
+| `45` |  | 8 |
+| `46` |  | 8 |
+| `47` |  | 8 |
+| `48` |  | 8 |
+| `49` |  | 8 |
+| `5` |  | 8 |
+| `50` |  | 8 |
+| `51` |  | 8 |
+| `52` |  | 8 |
+| `53` |  | 8 |
+| `54` |  | 8 |
+| `55` |  | 8 |
+| `56` |  | 8 |
+| `57` |  | 8 |
+| `58` |  | 8 |
+| `59` |  | 8 |
+| `6` |  | 8 |
+| `7` |  | 8 |
+| `8` |  | 8 |
+| `9` |  | 8 |
+
+`decree_date`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `1858` | 1858 | 8 |
+| `1884-06-10` | 10 juin 1884 | 8 |
+| `1884-07-08` | 8 juillet 1884 | 8 |
+| `1884-07-16` | 16 juillet 1884 | 16 |
+| `1884-09-08` | 8 septembre 1884 | 8 |
+| `1887-01-02` | 2 janvier 1887 | 8 |
+| `1887-01-24` | 24 janvier 1887 | 16 |
+| `1887-06-02` | 2 juin 1887 | 8 |
+| `1887-07-13` | 13 juillet 1887 | 8 |
+| `1887-07-30` | 30 juillet 1887 | 8 |
+| `1887-09-13` | 13 septembre 1887 | 8 |
+| `1887-09-25` | 25 septembre 1887 | 8 |
+| `1888-07-23` | 23 juillet 1888 | 8 |
+| `1889-12-24` | 24 décembre 1889 | 8 |
+| `1890-03-18` | 18 mars 1890 | 16 |
+| `1890-06-21` | 21 juin 1890 | 8 |
+| `1892-06-27` | 27 juin 1892 | 8 |
+| `1892-06-28` | 28 juin 1892 | 8 |
+| `1892-11-15` | 15 novembre 1892 | 8 |
+| `1893-02-05` | 5 février 1893 | 8 |
+| `1898-10-12` | 12 octobre 1898 | 8 |
+| `1899-03-09` | 9 mars 1899 | 16 |
+| `1904-02-05` | 5 février 1904 | 8 |
+| `1904-02-09` | 9 février 1904 | 8 |
+| `1905-03-11` | 11 mars 1905 | 8 |
+| `1905-07-25` | 25 juillet 1905 | 8 |
+| `1905-11-20` | 20 novembre 1905 | 8 |
+| `1906-12-13` | 13 décembre 1906 | 8 |
+| `1908-07-01` | 1er juillet 1908 | 8 |
+| `1908-11-11` | 11 novembre 1908 | 8 |
+| `1909-05-08` | 8 mai 1909 | 8 |
+| `1909-09-11` | 11 septembre 1909 | 8 |
+| `1912-04-06` | 6 avril 1912 | 8 |
+| `1913-12-03` | 3 décembre 1913 | 8 |
+| `1916-12-20` | 20 décembre 1916 | 8 |
+| `1919-06-15` | 15 juin 1919 | 8 |
+| `1919-12-25` | 25 décembre 1919 | 8 |
+| `1920-06-09` | 9 juin 1920 | 8 |
+| `1920-08-06` | 6 août 1920 | 8 |
+| `1920-08-20` | 20 août 1920 | 8 |
+| `1920-11-18` | 18 novembre 1920 | 8 |
+| `1920-12-06` | 6 décembre 1920 | 8 |
+| `1921-01-20` | 20 janvier 1921 | 8 |
+| `1921-01-28` | 28 janvier 1921 | 8 |
+| `1921-02-05` | 5 février 1921 | 8 |
+| `1921-02-19` | 19 février 1921 | 48 |
+| `1921-02-22` | 22 février 1921 | 8 |
+| `1922-03-29` | 29 mars 1922 | 16 |
+| `1922-05-09` | 9 mai 1922 | 8 |
+
+`population_group`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `french` | Français | 59 |
+| `greek` | Grecs | 59 |
+| `italian` | Italiens | 59 |
+| `jewish` | Israélites | 59 |
+| `maltese` | Maltais | 59 |
+| `muslim` | Musulmans | 59 |
+| `other_european` | Autres européens | 59 |
+| `spanish` | Espagnols | 59 |
+
+### cens1926_controle_nationality
+
+**État de la population civile (européenne et indigène) par circonscription de Contrôle civil, d'après le recensement de 1926**  
+*Civilian population (Europeans by nationality, Muslims, Jews) by contrôle civil, 1926 census*
+
+Source `sgt`, table a, printed pages 2-3. 380 rows. Value type: count. Flags: (empty) 379, ocr_corrected 1. Notes and validation: [`../yearbook_demography/csv/cens1926_controle_nationality.md`](../yearbook_demography/csv/cens1926_controle_nationality.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `source_page` | Printed page number. |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `census_year` | Census year the figure refers to. |
+| `controle_civil` | Place or label as printed (20 distinct values). |
+| `population_group` | Coded dimension. |
+| `population_group_fr` | Printed French label for `population_group`. |
+| `nationality` | Coded dimension. |
+| `nationality_fr` | Printed French label for `nationality`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`population_group`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `european` | Population européenne | 120 |
+| `jewish` | Population israélite | 120 |
+| `muslim` | Population musulmane | 140 |
+
+`nationality`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `algerian` | Algériens | 40 |
+| `french` | Français | 20 |
+| `greek` | Grecs | 20 |
+| `italian` | Italiens | 20 |
+| `maltese` | Maltais | 20 |
+| `moroccan` | Marocains | 40 |
+| `other` | Autres nationalités | 40 |
+| `other_european` | Autres européens | 20 |
+| `spanish` | Espagnols | 20 |
+| `sudanese` | Soudanais | 20 |
+| `syrian` | Syriens | 40 |
+| `tripolitanian` | Tripolitains | 40 |
+| `tunisian` | Tunisiens | 40 |
+
+### cens1926_foreign_birthplace
+
+**Population étrangère d'après le lieu de naissance (recensements de 1921 et 1926)**  
+*Foreign (non-French European) population by place of birth, 1921 and 1926*
+
+Source `sgt`, table c, printed pages 6. 72 rows. Value type: count. Flags: (empty) 72. Notes and validation: [`../yearbook_demography/csv/cens1926_foreign_birthplace.md`](../yearbook_demography/csv/cens1926_foreign_birthplace.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `source_page` | Printed page number. |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `birthplace_fr` | Place or label as printed (36 distinct values). |
+| `census_year` | Census year the figure refers to. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+### cens1926_french_birthplace
+
+**Population française d'après le lieu de naissance (de 1891 à 1926 inclus)**  
+*French civilian population by place of birth, censuses 1891-1926*
+
+Source `sgt`, table b, printed pages 4-5. 672 rows. Value type: count. Flags: (empty) 668, ocr_corrected 2, total_mismatch 2. Notes and validation: [`../yearbook_demography/csv/cens1926_french_birthplace.md`](../yearbook_demography/csv/cens1926_french_birthplace.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `source_page` | Printed page number. |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `birthplace_fr` | Place or label as printed (96 distinct values). |
+| `census_year` | Census year the figure refers to. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+### cens1926_italian_provinces
+
+**Répartition par province des habitants originaires de l'Italie (recensements de 1921 et 1926)**  
+*Inhabitants born in Italy by Italian region, 1921 and 1926*
+
+Source `sgt`, table d, printed pages 6. 26 rows. Value type: count. Flags: (empty) 26. Notes and validation: [`../yearbook_demography/csv/cens1926_italian_provinces.md`](../yearbook_demography/csv/cens1926_italian_provinces.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `source_page` | Printed page number. |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `province_fr` | Place or label as printed (13 distinct values). |
+| `census_year` | Census year the figure refers to. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+### cens1926_towns
+
+**Population européenne et indigène des cinq plus grandes villes; des villes de plus de 5.000 habitants**  
+*European and indigenous population of all towns over 5,000 (the five largest flagged), 1926 census*
+
+Source `sgt`, table j, printed pages 13. 184 rows. Value type: count. Flags: (empty) 183, total_mismatch 1. Notes and validation: [`../yearbook_demography/csv/cens1926_towns.md`](../yearbook_demography/csv/cens1926_towns.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `source_page` | Printed page number. |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `town` | Coded dimension. |
+| `controle_civil` | Place or label as printed (12 distinct values). |
+| `size_class` | Coded dimension. |
+| `size_class_fr` | Printed French label for `size_class`. |
+| `in_table_i` | Coded dimension. |
+| `population_group` | Coded dimension. |
+| `population_group_fr` | Printed French label for `population_group`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`town`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `Bizerte` |  | 8 |
+| `Béja` |  | 8 |
+| `Djemmal` |  | 8 |
+| `Gabès` |  | 8 |
+| `Gafsa` |  | 8 |
+| `Goulette (La)` |  | 8 |
+| `Kairouan` |  | 8 |
+| `Kalaa-Kebira` |  | 8 |
+| `Ksour-Essaf` |  | 8 |
+| `Le Kef` |  | 8 |
+| `M'Saken` |  | 8 |
+| `Mahdia` |  | 8 |
+| `Mateur` |  | 8 |
+| `Menzel Temime` |  | 8 |
+| `Moknine` |  | 8 |
+| `Monastir` |  | 8 |
+| `Nabeul` |  | 8 |
+| `Nefta` |  | 8 |
+| `Sfax` |  | 8 |
+| `Sousse` |  | 8 |
+| `Tozeur` |  | 8 |
+| `Tunis` |  | 8 |
+| `Zarzis` |  | 8 |
+
+`size_class`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `5000_to_10000` | 2° de 5.000 à 10.000 habitants | 88 |
+| `over_10000` | 1° plus de 10.000 habitants | 96 |
+
+`in_table_i`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `0` |  | 144 |
+| `1` |  | 40 |
+
+`population_group`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `french` | Français | 23 |
+| `greek` | Grecs | 23 |
+| `italian` | Italiens | 23 |
+| `jewish` | Israélites | 23 |
+| `maltese` | Maltais | 23 |
+| `muslim` | Musulmans | 23 |
+| `other_european` | Autres européens | 23 |
+| `spanish` | Espagnols | 23 |
+
+### expulsions_nationality
+
+**Expulsions prononcées**  
+*Expulsions by nationality, 1913-1934*
+
+Source `sgt`, table expulsions, printed pages by edition. 308 rows. Value type: count. Flags: (empty) 308. Notes and validation: [`../yearbook_demography/csv/expulsions_nationality.md`](../yearbook_demography/csv/expulsions_nationality.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `nationality` | Coded dimension. |
+| `nationality_fr` | Printed French label for `nationality`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`nationality`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `anglo_maltese` | Anglo-Maltais | 22 |
+| `austrian` | Autrichiens | 22 |
+| `belgian` | Belges | 22 |
+| `british` | Anglais | 22 |
+| `egyptian` | Egyptiens | 22 |
+| `german` | Allemands | 22 |
+| `greek` | Grecs | 22 |
+| `italian` | Italiens | 22 |
+| `moroccan` | Marocains | 22 |
+| `other` | Divers | 22 |
+| `ottoman` | Ottomans | 22 |
+| `russian` | Russes | 22 |
+| `spanish` | Espagnols | 22 |
+| `swiss` | Suisses | 22 |
+
+### foreigners_movements
+
+**Mouvement des étrangers en Tunisie (entrées et sorties)**  
+*Foreigners' arrivals and departures by nationality, 1920-1939*
+
+Source `sgt`, table foreigners, printed pages by edition. 1,715 rows. Value type: count. Flags: (empty) 1,711, not_applicable 4. Notes and validation: [`../yearbook_demography/csv/foreigners_movements.md`](../yearbook_demography/csv/foreigners_movements.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `movement` | Coded dimension. |
+| `movement_fr` | Printed French label for `movement`. |
+| `nationality` | Coded dimension. |
+| `nationality_fr` | Printed French label for `nationality`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`movement`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `arrivals` | Arrivées | 858 |
+| `departures` | Départs | 857 |
+
+`nationality`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `albanian` | Albanais | 32 |
+| `american` | Américains / Américains (Nord et Sud) | 40 |
+| `argentine` | Argentins | 32 |
+| `armenian` | Arméniens | 32 |
+| `australian` | Australiens | 32 |
+| `austrian` | Autrichiens | 40 |
+| `belgian` | Belges | 40 |
+| `brazilian` | Brésiliens | 32 |
+| `british_anglo_maltese` | Anglais et Anglo-Maltais | 40 |
+| `bulgarian` | Bulgares | 40 |
+| `chilean` | Chiliens | 32 |
+| `chinese` | Chinois | 32 |
+| `colombian` | Colombiens | 32 |
+| `czechoslovak` | Tchéco-Slovaques | 40 |
+| `danish` | Danois | 40 |
+| `dutch` | Hollandais | 40 |
+| `egyptian` | Egyptiens | 40 |
+| `estonian` | Esthoniens | 40 |
+| `finnish` | Finlandais | 40 |
+| `german` | Allemands | 40 |
+| `greek` | Grecs | 40 |
+| `hungarian` | Hongrois | 40 |
+| `indian` | Indous | 27 |
+| `italian` | Italiens | 40 |
+| `japanese` | Japonais | 32 |
+| `latvian` | Lettons | 32 |
+| `lebanese` | Libanais | 32 |
+| `luxembourger` | Luxembourgeois | 40 |
+| `mexican` | Mexicains | 32 |
+| `norwegian` | Norvégiens | 40 |
+| `other` | Autres | 40 |
+| `palestinian` | Palestiniens | 40 |
+| `persian` | Persans | 32 |
+| `polish` | Polonais | 40 |
+| `portuguese` | Portugais | 40 |
+| `romanian` | Roumains | 40 |
+| `russian` | Russes | 40 |
+| `serbian` | Serbes | 32 |
+| `spanish` | Espagnols | 40 |
+| `swedish` | Suédois | 40 |
+| `swiss` | Suisses | 40 |
+| `syrian` | Syriens | 40 |
+| `tripolitanian` | Tripolitains | 40 |
+| `turkish` | Turcs | 40 |
+| `venezuelan` | Vénézuéliens | 40 |
+| `yugoslav` | Yougo-Slaves | 40 |
+
+### naturalisations_age_men
+
+**Naturalisations : âge des hommes naturalisés**  
+*Age of naturalised men, 1922-1939*
+
+Source `sgt`, table c, printed pages by edition. 36 rows. Value type: count. Flags: (empty) 36. Notes and validation: [`../yearbook_demography/csv/naturalisations_age_men.md`](../yearbook_demography/csv/naturalisations_age_men.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `age_group` | Coded dimension. |
+| `age_group_fr` | Printed French label for `age_group`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`age_group`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `25_40` | De 25 à 40 ans | 12 |
+| `over_40` | Plus de 40 ans | 12 |
+| `under_25` | Moins de 25 ans | 12 |
+
+### naturalisations_by_nationality_sgt1930
+
+**Naturalisations par nationalité (édition 1930)**  
+*Naturalisations by nationality, legal basis and year, 1891-1930 (1930 edition printing)*
+
+Source `sgt`, table e, printed pages by edition. 729 rows. Value type: count. Flags: (empty) 726, reprint_corrected 3. Notes and validation: [`../yearbook_demography/csv/naturalisations_by_nationality_sgt1930.md`](../yearbook_demography/csv/naturalisations_by_nationality_sgt1930.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `period` | Coded dimension. |
+| `legal_basis` | Coded dimension. |
+| `legal_basis_fr` | Printed French label for `legal_basis`. |
+| `age_group` | Coded dimension. |
+| `age_group_fr` | Printed French label for `age_group`. |
+| `nationality` | Coded dimension. |
+| `nationality_fr` | Printed French label for `nationality`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`period`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `1891-1898` |  | 27 |
+| `1899-1910` |  | 54 |
+| `1911-1920` |  | 54 |
+| `1915-1924` |  | 54 |
+| `1921` |  | 54 |
+| `1922` |  | 54 |
+| `1923` |  | 54 |
+| `1924` |  | 54 |
+| `1925` |  | 54 |
+| `1926` |  | 54 |
+| `1927` |  | 54 |
+| `1928` |  | 54 |
+| `1929` |  | 54 |
+| `1930` |  | 54 |
+
+`legal_basis`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `d1887` | décret du 29 juillet 1887 | 27 |
+| `d1899` | décret du 28 février 1899 | 54 |
+| `d1910` | décret du 3 octobre 1910 | 216 |
+| `l1914` | loi du 5 août 1914 | 54 |
+| `l1923` | loi du 20 décembre 1923 | 378 |
+
+`age_group`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `adults` | Majeurs | 351 |
+| `minors` | Mineurs | 351 |
+| `total` | Totaux | 27 |
+
+`nationality`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `albanian` | Albanais | 27 |
+| `algerian_jew` | Israélites Algériens | 27 |
+| `algerian_muslim` | Musulmans Algériens | 27 |
+| `anglo_maltese` | Anglo-Maltais | 27 |
+| `austrian` | Autrichiens | 27 |
+| `belgian` | Belges | 27 |
+| `bulgarian` | Bulgares | 27 |
+| `czechoslovak` | Tcheco-Slovaques | 27 |
+| `dutch` | Hollandais | 27 |
+| `german` | Allemands | 27 |
+| `greek` | Grecs | 27 |
+| `hungarian` | Hongrois | 27 |
+| `indigenous_catholic` | Indigènes Catholiques | 27 |
+| `italian` | Italiens | 27 |
+| `luxembourger` | Luxembourgeois | 27 |
+| `norwegian` | Norvégiens | 27 |
+| `other` | Divers | 27 |
+| `polish` | Polonais | 27 |
+| `portuguese` | Portugais | 27 |
+| `romanian` | Roumains | 27 |
+| `russian` | Russes | 27 |
+| `serbian` | Serbes | 27 |
+| `spanish` | Espagnols | 27 |
+| `swiss` | Suisses | 27 |
+| `tunisian_jew` | Israélites Tunisiens | 27 |
+| `tunisian_muslim` | Musulmans Tunisiens | 27 |
+| `turkish_syrian` | Turcs et Syriens | 27 |
+
+### naturalisations_by_nationality_sgt1939
+
+**Naturalisations par nationalité (édition 1939)**  
+*Naturalisations by nationality and year, 1891-1939 (1939 edition printing)*
+
+Source `sgt`, table e, printed pages by edition. 512 rows. Value type: count. Flags: (empty) 511, total_mismatch 1. Notes and validation: [`../yearbook_demography/csv/naturalisations_by_nationality_sgt1939.md`](../yearbook_demography/csv/naturalisations_by_nationality_sgt1939.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `period` | Coded dimension. |
+| `legal_basis` | Coded dimension. |
+| `legal_basis_fr` | Printed French label for `legal_basis`. |
+| `age_group` | Coded dimension. |
+| `age_group_fr` | Printed French label for `age_group`. |
+| `nationality` | Coded dimension. |
+| `nationality_fr` | Printed French label for `nationality`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`period`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `1891-1898` |  | 32 |
+| `1899-1910` |  | 32 |
+| `1911-1922` |  | 32 |
+| `1915-1924` |  | 32 |
+| `1924-1928` |  | 32 |
+| `1929` |  | 32 |
+| `1930` |  | 32 |
+| `1931` |  | 32 |
+| `1932` |  | 32 |
+| `1933` |  | 32 |
+| `1934` |  | 32 |
+| `1935` |  | 32 |
+| `1936` |  | 32 |
+| `1937` |  | 32 |
+| `1938` |  | 32 |
+| `1939` |  | 32 |
+
+`legal_basis`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `d1887` | décret du 29 juillet 1887 | 32 |
+| `d1899` | décret du 28 février 1899 | 32 |
+| `d1910` | décret du 3 octobre 1910 | 32 |
+| `l1914` | loi du 5 août 1914 | 32 |
+| `l1923` | loi du 20 décembre 1923 | 384 |
+
+`age_group`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `total` | Totaux | 512 |
+
+`nationality`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `albanian` | Albanais | 16 |
+| `algerian_catholic` | Algériens catholiques | 16 |
+| `algerian_jew` | Algériens israélites | 16 |
+| `algerian_muslim` | Algériens musulmans | 16 |
+| `austrian` | Autrichiens | 16 |
+| `belgian` | Belges | 16 |
+| `british` | Anglais | 16 |
+| `bulgarian` | Bulgares | 16 |
+| `czechoslovak` | Tchéco-Slovaques | 16 |
+| `dutch` | Hollandais | 16 |
+| `french_west_african` | Indigènes de l'A.O.F. | 16 |
+| `german` | Allemands | 16 |
+| `greek` | Grecs | 16 |
+| `hungarian` | Hongrois | 16 |
+| `indochinese` | Indochinois | 16 |
+| `italian` | Italiens | 16 |
+| `luxembourger` | Luxembourgeois | 16 |
+| `maltese` | Maltais | 16 |
+| `moroccan` | Marocains | 16 |
+| `norwegian_swedish` | Norvégiens et Suédois | 16 |
+| `polish` | Polonais | 16 |
+| `portuguese` | Portugais | 16 |
+| `romanian` | Roumains | 16 |
+| `russian` | Russes | 16 |
+| `spanish` | Espagnols | 16 |
+| `swiss` | Suisses | 16 |
+| `syrian` | Syriens | 16 |
+| `tunisian_catholic` | Tunisiens catholiques | 16 |
+| `tunisian_jew` | Tunisiens israélites | 16 |
+| `tunisian_muslim` | Tunisiens musulmans | 16 |
+| `turkish` | Turcs | 16 |
+| `yugoslav` | Yougo-Slaves | 16 |
+
+### naturalisations_civil_status
+
+**Naturalisations : renseignements d'état civil sur les naturalisés**  
+*Civil status, residence and birthplace of the naturalised, 1922-1939*
+
+Source `sgt`, table b, printed pages by edition. 156 rows. Value type: count. Flags: (empty) 151, total_mismatch 5. Notes and validation: [`../yearbook_demography/csv/naturalisations_civil_status.md`](../yearbook_demography/csv/naturalisations_civil_status.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `section` | Coded dimension. |
+| `sex` | Coded dimension. |
+| `item` | Coded dimension. |
+| `item_fr` | Printed French label for `item`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`section`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `birthplace` |  | 12 |
+| `civil_status` |  | 108 |
+| `residence_in_tunisia` |  | 36 |
+
+`sex`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `female` |  | 54 |
+| `male` |  | 102 |
+
+`item`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `abroad` | Nés à l'étranger | 6 |
+| `divorced` | Divorcées / Divorcés | 24 |
+| `french_territory` | Nés en territoires français | 6 |
+| `less_than_10_years_civilian` | Moins de 10 ans : civils | 9 |
+| `less_than_10_years_military` | Moins de 10 ans : militaires | 9 |
+| `married` | Mariées | 12 |
+| `married_foreign_origin_wife` | Mariés avec des femmes d'origine étrangère | 12 |
+| `married_french_origin_wife` | Mariés avec des femmes d'origine française | 12 |
+| `more_than_10_years_civilian` | Plus de 10 ans : civils | 9 |
+| `more_than_10_years_military` | Plus de 10 ans : militaires | 9 |
+| `single` | Célibataires | 24 |
+| `widowed` | Veufs / Veuves | 24 |
+
+### naturalisations_granted
+
+**Naturalisations individuelles accordées**  
+*Naturalisations granted, by category and sex, 1922-1939*
+
+Source `sgt`, table a, printed pages by edition. 98 rows. Value type: count. Flags: (empty) 98. Notes and validation: [`../yearbook_demography/csv/naturalisations_granted.md`](../yearbook_demography/csv/naturalisations_granted.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `sex` | Coded dimension. |
+| `item` | Coded dimension. |
+| `item_fr` | Printed French label for `item`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`sex`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `female` |  | 49 |
+| `male` |  | 49 |
+
+`item`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `adult_daughters` | Enfants majeurs naturalisés avec leurs parents : filles | 11 |
+| `adult_sons` | Enfants majeurs naturalisés avec leurs parents : garçons | 11 |
+| `men_civil` | Hommes civils | 11 |
+| `men_military` | Hommes militaires | 11 |
+| `men_naturalised` | Hommes naturalisés | 1 |
+| `men_reinstated` | Hommes réintégrés | 1 |
+| `minor_boys` | Enfants mineurs naturalisés avec leurs parents : garçons | 4 |
+| `minor_boys_conditional` | Enfants mineurs naturalisés conditionnellement : garçons | 2 |
+| `minor_boys_definitive` | Enfants mineurs naturalisés définitivement : garçons | 8 |
+| `minor_girls` | Enfants mineurs naturalisés avec leurs parents : filles | 4 |
+| `minor_girls_conditional` | Enfants mineurs naturalisés conditionnellement : filles | 2 |
+| `minor_girls_definitive` | Enfants mineurs naturalisés définitivement : filles | 8 |
+| `women_naturalised` | Femmes naturalisées | 12 |
+| `women_reinstated` | Femmes réintégrées | 12 |
+
+### naturalisations_nationality
+
+**Nationalité des naturalisés**  
+*Nationality of the naturalised, 1922-1930*
+
+Source `sgt`, table d, printed pages by edition. 96 rows. Value type: count. Flags: (empty) 86, total_mismatch 10. Notes and validation: [`../yearbook_demography/csv/naturalisations_nationality.md`](../yearbook_demography/csv/naturalisations_nationality.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `nationality` | Coded dimension. |
+| `nationality_fr` | Printed French label for `nationality`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`nationality`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `algerian_jew` | Israélites-Algériens | 1 |
+| `algerian_jew_pre1870` | Israélites-Algériens (avant 1870) | 8 |
+| `algerian_muslim` | Musulmans-Algériens | 9 |
+| `alsace_lorraine` | Alsaciens-Lorrains | 1 |
+| `anglo_maltese` | Anglo-Maltais | 1 |
+| `austrian` | Autrichiens | 1 |
+| `belgian` | Belges | 2 |
+| `british_anglo_maltese` | Anglais et Anglo-Maltais | 8 |
+| `german` | Allemands | 2 |
+| `italian` | Italiens | 9 |
+| `luxembourger` | Luxembourgeois | 2 |
+| `moroccan` | Marocains | 2 |
+| `other` | Autres nationalités | 9 |
+| `russian` | Russes | 7 |
+| `spanish` | Espagnols | 9 |
+| `swiss` | Suisses | 9 |
+| `tunisian` | Tunisiens | 2 |
+| `tunisian_jew` | Israélites Tunisiens | 7 |
+| `tunisian_muslim` | Musulmans Tunisiens | 7 |
+
+### naturalisations_profession_groups
+
+**Profession des hommes naturalisés**  
+*Profession of naturalised men by occupational group, 1922-1930*
+
+Source `sgt`, table c, printed pages by edition. 81 rows. Value type: count. Flags: (empty) 72, total_mismatch 9. Notes and validation: [`../yearbook_demography/csv/naturalisations_profession_groups.md`](../yearbook_demography/csv/naturalisations_profession_groups.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `profession` | Coded dimension. |
+| `profession_fr` | Printed French label for `profession`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`profession`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `agriculture` | Agriculteurs | 9 |
+| `army` | Armée | 9 |
+| `cafe_keepers` | Cafetiers et débitants de boissons | 8 |
+| `commerce_industry` | Commerce et industrie | 9 |
+| `employees_commerce_admin` | Employés de commerce ou d'administration | 9 |
+| `industry_employees_workers` | Employés et ouvriers d'industrie | 1 |
+| `liberal_professions` | Professions libérales | 9 |
+| `maritime_fishing` | Pêche maritime | 9 |
+| `other` | Autres professions | 9 |
+| `owners_rentiers` | Propriétaires et rentiers | 9 |
+
+### naturalisations_profession_trades
+
+**Profession des hommes naturalisés**  
+*Profession of naturalised men by trade, 1935-1939*
+
+Source `sgt`, table c, printed pages by edition. 85 rows. Value type: count. Flags: (empty) 85. Notes and validation: [`../yearbook_demography/csv/naturalisations_profession_trades.md`](../yearbook_demography/csv/naturalisations_profession_trades.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `profession` | Coded dimension. |
+| `profession_fr` | Printed French label for `profession`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`profession`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `accountants` | Comptables | 3 |
+| `administration_employees` | Employés d'administration | 2 |
+| `army` | Armée | 3 |
+| `bakers` | Boulangers | 2 |
+| `blacksmiths` | Forgerons | 3 |
+| `boilermakers` | Chaudronniers | 1 |
+| `butchers` | Bouchers | 2 |
+| `cft_workers` | Ouvriers C.F.T. | 1 |
+| `chemists` | Chimistes | 2 |
+| `commerce_employees` | Employés de commerce | 2 |
+| `day_labourers` | Journaliers | 3 |
+| `dentists` | Dentistes | 2 |
+| `doctors` | Médecins | 3 |
+| `drivers` | Chauffeurs auto | 3 |
+| `electricians` | Electriciens | 3 |
+| `employees` | Employés | 1 |
+| `engineers` | Ingénieurs | 2 |
+| `farmers` | Agriculteurs | 3 |
+| `fishermen` | Pêcheurs | 3 |
+| `hairdressers` | Coiffeurs | 3 |
+| `jewellers` | Bijoutiers | 1 |
+| `joiners` | Menuisiers | 3 |
+| `lawyers` | Avocats | 1 |
+| `locksmiths` | Serruriers | 1 |
+| `masons` | Maçons | 3 |
+| `mechanics` | Mécaniciens | 3 |
+| `miners` | Mineurs | 2 |
+| `painters` | Peintres | 2 |
+| `public_works_contractors` | Entrepreneurs des travaux publics | 3 |
+| `public_works_employees` | Employés des travaux publics | 1 |
+| `rentiers` | Rentiers | 2 |
+| `sales_representatives` | Représentants de commerce | 1 |
+| `shoemakers` | Cordonniers | 2 |
+| `students` | Etudiants | 3 |
+| `surveyors` | Géomètres | 2 |
+| `surveyors_draughtsmen` | Géomètres dessinateurs | 1 |
+| `tailors` | Tailleurs | 1 |
+| `teachers` | Instituteurs | 1 |
+| `traders` | Commerçants | 3 |
+| `wheelwrights` | Charrons | 2 |
+
+### recruitment_french_allocation
+
+**Répartition du recrutement (recrutement français)**  
+*French recruitment: allocation of the conscription class, classes 1916-1939*
+
+Source `sgt`, table a, printed pages by edition. 240 rows. Value type: count. Flags: (empty) 220, total_mismatch 20. Notes and validation: [`../yearbook_demography/csv/recruitment_french_allocation.md`](../yearbook_demography/csv/recruitment_french_allocation.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `item` | Coded dimension. |
+| `item_fr` | Printed French label for `item`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`item`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `exempted_infirmity` | Exemptés pour infirmités | 24 |
+| `part1_armed_service` | 1re partie : propres au service armé | 24 |
+| `part2_auxiliary_services` | 2e partie : classés dans les services auxiliaires | 24 |
+| `part3_voluntary_enlistment` | 3e partie : liés au service en vertu d'un engagement volontaire, d'un livret ou d'une commission | 24 |
+| `part4_excluded_art4` | 4e partie : exclus en vertu des dispositions de l'art. 4 | 24 |
+| `part5_postponed_art18` | 5e partie : ajournés d'office conformément au § 3 de l'art. 18 | 24 |
+| `part6_auxiliary_on_request` | 6e partie : classés dans les services auxiliaires sur leur demande (art. 19) | 24 |
+| `part7_deferred_art20_21` | 7e partie : ayant obtenu un sursis (art. 20 et 21) | 24 |
+| `registered` | Inscrits définitivement sur les tableaux de recensement | 24 |
+| `remaining` | Reste | 24 |
+
+### recruitment_french_draft_boards
+
+**Opérations des Conseils de révision (recrutement français)**  
+*French recruitment: draft-board results, classes 1902-1939*
+
+Source `sgt`, table c, printed pages by edition. 304 rows. Value type: count. Flags: (empty) 287, total_mismatch 16, reprint_corrected 1. Notes and validation: [`../yearbook_demography/csv/recruitment_french_draft_boards.md`](../yearbook_demography/csv/recruitment_french_draft_boards.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `item` | Coded dimension. |
+| `item_fr` | Printed French label for `item`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`item`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `actually_called` | Appelés réellement sous les drapeaux | 38 |
+| `deferred` | En sursis d'incorporation | 38 |
+| `enlisted_maritime` | Engagés et inscrits maritimes | 38 |
+| `exempted` | Exemptés | 38 |
+| `not_called_age_or_neo_french` | Hommes qui, en raison de leur âge, n'ont pas été appelés / Néo-français qui, en raison de leur âge, n'ont pas été appelés | 38 |
+| `postponed` | Ajournés | 38 |
+| `registered` | Inscrits sur le tableau de recensement | 38 |
+| `to_be_called` | Nombre à appeler sous les drapeaux | 38 |
+
+### recruitment_french_education
+
+**Degré d'instruction des jeunes gens recrutés (recrutement français)**  
+*French recruitment: education of recruits, classes 1916-1939*
+
+Source `sgt`, table b, printed pages by edition. 168 rows. Value type: count. Flags: (empty) 161, total_mismatch 7. Notes and validation: [`../yearbook_demography/csv/recruitment_french_education.md`](../yearbook_demography/csv/recruitment_french_education.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `item` | Coded dimension. |
+| `item_fr` | Printed French label for `item`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`item`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `baccalaureate` | Bacheliers | 24 |
+| `illiterate` | Ne sachant ni lire ni écrire | 24 |
+| `not_verified` | Dont on n'a pu vérifier l'instruction | 24 |
+| `primary_certificate` | Ayant obtenu le brevet de l'enseignement primaire | 24 |
+| `read_only` | Sachant lire seulement | 24 |
+| `read_write` | Sachant lire et écrire | 24 |
+| `read_write_count` | Sachant lire, écrire et compter | 24 |
+
+### recruitment_indigenous_education
+
+**Degré d'instruction des jeunes gens recrutés (recrutement indigène)**  
+*Indigenous recruitment: education of recruits, 1916-1939*
+
+Source `sgt`, table b, printed pages by edition. 96 rows. Value type: count. Flags: (empty) 96. Notes and validation: [`../yearbook_demography/csv/recruitment_indigenous_education.md`](../yearbook_demography/csv/recruitment_indigenous_education.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `item` | Coded dimension. |
+| `item_fr` | Printed French label for `item`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`item`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `read_write_arabic` | Sachant lire et écrire l'arabe | 24 |
+| `read_write_french` | Sachant lire et écrire le français | 24 |
+| `read_write_french_arabic` | Sachant lire et écrire le français et l'arabe | 24 |
+| `speaks_french` | Parlant le français | 24 |
+
+### recruitment_indigenous_lottery
+
+**Opérations des Commissions de tirage au sort, répartition des conscrits (recrutement indigène)**  
+*Indigenous recruitment: conscription lotteries and allocation of conscripts, 1916-1939*
+
+Source `sgt`, table a, printed pages by edition. 288 rows. Value type: count. Flags: (empty) 288. Notes and validation: [`../yearbook_demography/csv/recruitment_indigenous_lottery.md`](../yearbook_demography/csv/recruitment_indigenous_lottery.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `item` | Coded dimension. |
+| `item_fr` | Printed French label for `item`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`item`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `designated` | Désignés pour le service militaire | 24 |
+| `discharged_unfit` | Réformés | 24 |
+| `enrolled_ex_officio` | Inscrits d'office (bons absents) incorporés | 24 |
+| `examined` | Examinés pour obtenir le contingent | 24 |
+| `exempt_art36_students` | Dispensés (art. 36) : élèves maîtres, Collège Sadiki, certificat d'études primaires, élèves des mosquées | 24 |
+| `exempt_family_support` | Dispensés comme soutien de famille | 24 |
+| `exonerated_by_payment` | Exonérés par suite du versement du prix de remplacement | 24 |
+| `incorporated` | Incorporés | 24 |
+| `registered_at_lottery` | Inscrits au moment du tirage au sort | 24 |
+| `surplus_to_contingent` | En excédent des besoins du contingent | 24 |
+| `unfit_illness` | Inaptes pour cause de maladie | 24 |
+| `volunteers` | Engagements volontaires | 24 |
+
+### vital_european_births
+
+**Naissances déclarées dans les contrôles civils, communes et postes d'état civil**  
+*European births registered, by nationality and sex, 1918-1939*
+
+Source `sgt`, table etat_civil_europeen, printed pages by edition. 228 rows. Value type: count. Flags: (empty) 228. Notes and validation: [`../yearbook_demography/csv/vital_european_births.md`](../yearbook_demography/csv/vital_european_births.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `nationality` | Coded dimension. |
+| `nationality_fr` | Printed French label for `nationality`. |
+| `sex` | Coded dimension. |
+| `sex_fr` | Printed French label for `sex`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`nationality`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `french` | Français | 38 |
+| `greek` | Grecs | 38 |
+| `italian` | Italiens | 38 |
+| `maltese` | Maltais | 38 |
+| `other_european` | Autres Européens | 38 |
+| `spanish` | Espagnols | 38 |
+
+`sex`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `female` | Sexe féminin | 114 |
+| `male` | Sexe masculin | 114 |
+
+### vital_european_deaths
+
+**Décès déclarés dans les contrôles civils, communes et postes d'état civil**  
+*European deaths registered, by nationality and sex, 1918-1939*
+
+Source `sgt`, table etat_civil_europeen, printed pages by edition. 228 rows. Value type: count. Flags: (empty) 228. Notes and validation: [`../yearbook_demography/csv/vital_european_deaths.md`](../yearbook_demography/csv/vital_european_deaths.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `nationality` | Coded dimension. |
+| `nationality_fr` | Printed French label for `nationality`. |
+| `sex` | Coded dimension. |
+| `sex_fr` | Printed French label for `sex`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`nationality`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `french` | Français | 38 |
+| `greek` | Grecs | 38 |
+| `italian` | Italiens | 38 |
+| `maltese` | Maltais | 38 |
+| `other_european` | Autres Européens | 38 |
+| `spanish` | Espagnols | 38 |
+
+`sex`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `female` | Sexe féminin | 114 |
+| `male` | Sexe masculin | 114 |
+
+### vital_european_marriages
+
+**Mariages déclarés dans les contrôles civils, communes et postes d'état civil**  
+*European marriages registered, by nationality of groom and bride, 1918-1939*
+
+Source `sgt`, table etat_civil_europeen, printed pages by edition. 266 rows. Value type: count. Flags: (empty) 266. Notes and validation: [`../yearbook_demography/csv/vital_european_marriages.md`](../yearbook_demography/csv/vital_european_marriages.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `nationality` | Coded dimension. |
+| `nationality_fr` | Printed French label for `nationality`. |
+| `spouse` | Coded dimension. |
+| `spouse_fr` | Printed French label for `spouse`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`nationality`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `french` | Français | 38 |
+| `greek` | Grecs | 38 |
+| `italian` | Italiens | 38 |
+| `maltese` | Maltais | 38 |
+| `not_stated` | Époux dont la nationalité n'a pas été signalée | 38 |
+| `other_european` | Autres Européens | 38 |
+| `spanish` | Espagnols | 38 |
+
+`spouse`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `bride` | Épouses | 133 |
+| `groom` | Époux | 133 |
+
+### vital_jewish_births_deaths
+
+**Naissances et décès constatés dans la population israélite**  
+*Jewish births and deaths recorded (état civil indigène), by contrôle civil, 1918-1939*
+
+Source `sgt`, table etat_civil_indigene, printed pages by edition. 880 rows. Value type: count. Flags: (empty) 880. Notes and validation: [`../yearbook_demography/csv/vital_jewish_births_deaths.md`](../yearbook_demography/csv/vital_jewish_births_deaths.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `controle_civil` | Place or label as printed (20 distinct values). |
+| `religion` | Coded dimension. |
+| `religion_fr` | Printed French label for `religion`. |
+| `event` | Coded dimension. |
+| `event_fr` | Printed French label for `event`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`religion`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `jewish` | Population israélite | 880 |
+
+`event`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `births` | Naissances | 440 |
+| `deaths` | Décès | 440 |
+
+### vital_mixed_marriages
+
+**Relevé par nationalité des mariages entre européens et indigènes (tunisiens)**  
+*Marriages between Europeans and indigenous Tunisians, by group of groom and bride, 1922-1939*
+
+Source `sgt`, table mariages_mixtes, printed pages by edition. 192 rows. Value type: count. Flags: (empty) 192. Notes and validation: [`../yearbook_demography/csv/vital_mixed_marriages.md`](../yearbook_demography/csv/vital_mixed_marriages.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `groom_group` | Coded dimension. |
+| `groom_group_fr` | Printed French label for `groom_group`. |
+| `bride_group` | Coded dimension. |
+| `bride_group_fr` | Printed French label for `bride_group`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`groom_group`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `french` | Français | 24 |
+| `italian` | Italiens | 24 |
+| `jewish` | Israélites | 48 |
+| `maltese` | Maltais | 24 |
+| `muslim` | Musulmans | 48 |
+| `other_foreign` | Etrangers autres | 24 |
+
+`bride_group`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `french` | Françaises | 24 |
+| `italian` | Italiennes | 24 |
+| `jewish` | Israélites | 48 |
+| `maltese` | Maltaises | 24 |
+| `muslim` | Musulmanes | 48 |
+| `other_foreign` | Étrangères autres | 24 |
+
+### vital_muslim_births_deaths
+
+**Naissances et décès constatés dans la population musulmane**  
+*Muslim births and deaths recorded (état civil indigène), by contrôle civil, 1918-1939*
+
+Source `sgt`, table etat_civil_indigene, printed pages by edition. 880 rows. Value type: count. Flags: (empty) 878, total_mismatch 2. Notes and validation: [`../yearbook_demography/csv/vital_muslim_births_deaths.md`](../yearbook_demography/csv/vital_muslim_births_deaths.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `controle_civil` | Place or label as printed (20 distinct values). |
+| `religion` | Coded dimension. |
+| `religion_fr` | Printed French label for `religion`. |
+| `event` | Coded dimension. |
+| `event_fr` | Printed French label for `event`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`religion`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `muslim` | Population musulmane | 880 |
+
+`event`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `births` | Naissances | 440 |
+| `deaths` | Décès | 440 |
+
+### cens1926_age_sex_marital
+
+**Population européenne d'après l'âge, le sexe et l'état civil**  
+*European population by nationality, age group, sex and marital status, 1926 census*
+
+Source `sgt`, table e, printed pages 7-9. 624 rows. Value type: count. Flags: (empty) 619, total_mismatch 4, reprint_corrected 1. Notes and validation: [`../yearbook_demography/csv/cens1926_age_sex_marital.md`](../yearbook_demography/csv/cens1926_age_sex_marital.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `census_year` | Census year the figure refers to. |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `nationality` | Coded dimension. |
+| `nationality_fr` | Printed French label for `nationality`. |
+| `age_group` | Coded dimension. |
+| `age_group_fr` | Printed French label for `age_group`. |
+| `marital_status` | Coded dimension. |
+| `marital_status_fr` | Printed French label for `marital_status`. |
+| `sex` | Coded dimension. |
+| `sex_fr` | Printed French label for `sex`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`nationality`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `french` | Français | 104 |
+| `greek` | Grecs | 104 |
+| `italian` | Italiens | 104 |
+| `maltese` | Maltais | 104 |
+| `other_european` | Autres européens | 104 |
+| `spanish` | Espagnols | 104 |
+
+`age_group`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `0_4` | De 0 à 4 ans | 48 |
+| `10_14` | 10 à 14 ans | 48 |
+| `15_19` | 15 à 19 ans | 48 |
+| `20_24` | 20 à 24 ans | 48 |
+| `25_29` | 25 à 29 ans | 48 |
+| `30_34` | 30 à 34 ans | 48 |
+| `35_39` | 35 à 39 ans | 48 |
+| `40_44` | 40 à 44 ans | 48 |
+| `45_49` | 45 à 49 ans | 48 |
+| `50_54` | 50 à 54 ans | 48 |
+| `55_59` | 55 à 59 ans | 48 |
+| `5_9` | 5 à 9 ans | 48 |
+| `60_plus` | 60 ans et au-dessus | 48 |
+
+`marital_status`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `divorced` | Divorcés | 156 |
+| `married` | Mariés | 156 |
+| `single` | Célibataires | 156 |
+| `widowed` | Veufs | 156 |
+
+`sex`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `female` | Sexe féminin | 312 |
+| `male` | Sexe masculin | 312 |
+
+### cens1926_profession_nationality
+
+**Population européenne par profession et nationalité**  
+*European population by profession, status (active or family) and nationality, 1926 census*
+
+Source `sgt`, table f, printed pages 10-11. 216 rows. Value type: count. Flags: (empty) 215, total_mismatch 1. Notes and validation: [`../yearbook_demography/csv/cens1926_profession_nationality.md`](../yearbook_demography/csv/cens1926_profession_nationality.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `census_year` | Census year the figure refers to. |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `nationality` | Coded dimension. |
+| `nationality_fr` | Printed French label for `nationality`. |
+| `profession` | Coded dimension. |
+| `profession_fr` | Printed French label for `profession`. |
+| `status` | Coded dimension. |
+| `status_fr` | Printed French label for `status`. |
+| `sex` | Coded dimension. |
+| `sex_fr` | Printed French label for `sex`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`nationality`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `french` | Français | 36 |
+| `greek` | Grecs | 36 |
+| `italian` | Italiens | 36 |
+| `maltese` | Maltais | 36 |
+| `other_european` | Autres européens | 36 |
+| `spanish` | Espagnols | 36 |
+
+`profession`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `agriculture` | Agriculteurs | 24 |
+| `commerce` | Commerçants | 24 |
+| `independent_means` | Personnes vivant exclusivement de revenus | 24 |
+| `industry` | Industriels | 24 |
+| `liberal_professions` | Représentants des professions libérales | 24 |
+| `police_force` | Représentants et Agents de la force publique | 24 |
+| `public_administration` | Fonctionnaires et Employés des Administrations publiques | 24 |
+| `transport` | Entrepreneurs et Agents de transports | 24 |
+| `unclassified` | Population non classée | 24 |
+
+`status`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `active` | Personnes exerçant elles-mêmes la profession | 108 |
+| `family` | Famille des précédents | 108 |
+
+`sex`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `female` | féminin | 108 |
+| `male` | masculin | 108 |
+
+### cens1926_instruction
+
+**Population européenne d'après l'instruction (recensements de 1921 et 1926)**  
+*European population by instruction (illiterate, reads, writes, speaks French or Arabic), 1921 and 1926*
+
+Source `sgt`, table g, printed pages 12. 60 rows. Value type: mixed. Flags: (empty) 56, not_applicable 3, total_mismatch 1. Notes and validation: [`../yearbook_demography/csv/cens1926_instruction.md`](../yearbook_demography/csv/cens1926_instruction.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `census_year` | Census year the figure refers to. |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `nationality` | Coded dimension. |
+| `nationality_fr` | Printed French label for `nationality`. |
+| `indicator` | Coded dimension. |
+| `indicator_fr` | Printed French label for `indicator`. |
+| `measure` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`nationality`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `french` | Français | 10 |
+| `greek` | Grecs | 10 |
+| `italian` | Italiens | 10 |
+| `maltese` | Maltais | 10 |
+| `other_european` | Autres européens | 10 |
+| `spanish` | Espagnols | 10 |
+
+`indicator`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `illiterate` | Illettrés | 12 |
+| `literate` | Sachant lire et écrire / Sachant lire et écrire (répartition d'après l'instruction en 1921) | 18 |
+| `speaks_arabic` | Parlant arabe | 12 |
+| `speaks_french` | Parlant français / Parlant français (répartition d'après l'instruction en 1921) | 18 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `count` |  | 36 |
+| `pct_of_nationality` |  | 24 |
+
+### cens1931_controle_nationality
+
+**Répartition, par circonscriptions de Contrôles civils, de la population civile, européenne et indigène, d'après le recensement de 1931**  
+*Civilian population (Europeans by nationality, Muslims, Jews) by contrôle civil, 1931 census*
+
+Source `sgt`, table controle, printed pages 2-3. 380 rows. Value type: count. Flags: (empty) 360, derived_from_totals 20. Notes and validation: [`../yearbook_demography/csv/cens1931_controle_nationality.md`](../yearbook_demography/csv/cens1931_controle_nationality.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `census_year` | Census year the figure refers to. |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `controle_civil` | Place or label as printed (20 distinct values). |
+| `population` | Coded dimension. |
+| `population_fr` | Printed French label for `population`. |
+| `nationality` | Coded dimension. |
+| `nationality_fr` | Printed French label for `nationality`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`population`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `european` | Population européenne | 120 |
+| `jewish` | Population israélite | 120 |
+| `muslim` | Population musulmane | 140 |
+
+`nationality`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `algerian` | Algériens | 40 |
+| `french` | Français | 20 |
+| `greek` | Grecs | 20 |
+| `italian` | Italiens | 20 |
+| `maltese` | Maltais | 20 |
+| `moroccan` | Marocains | 40 |
+| `other` | Autres nationalités | 40 |
+| `other_european` | Autres européens | 20 |
+| `spanish` | Espagnols | 20 |
+| `sudanese` | Soudanais | 20 |
+| `syrian` | Syriens | 40 |
+| `tripolitanian` | Tripolitains | 40 |
+| `tunisian` | Tunisiens | 40 |
+
+### cens1931_compare_1926_1931
+
+**Statistique comparée des dénombrements de 1926 et 1931 concernant la population européenne de la Tunisie, répartie par circonscriptions administratives**  
+*Europeans by circonscription and nationality, 1926 and 1931 censuses*
+
+Source `sgt`, table compare, printed pages 4-5. 260 rows. Value type: count. Flags: (empty) 260. Notes and validation: [`../yearbook_demography/csv/cens1931_compare_1926_1931.md`](../yearbook_demography/csv/cens1931_compare_1926_1931.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `census_year` | Census year the figure refers to. |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `controle_civil` | Place or label as printed (20 distinct values). |
+| `controle_civil_printed` | Coded dimension. |
+| `nationality` | Coded dimension. |
+| `nationality_fr` | Printed French label for `nationality`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`controle_civil_printed`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `Bizerte` |  | 13 |
+| `Béja` |  | 13 |
+| `Djerba` |  | 13 |
+| `Gabès` |  | 13 |
+| `Gafsa` |  | 13 |
+| `Grombalia` |  | 13 |
+| `Kairouan` |  | 13 |
+| `Le Kef` |  | 13 |
+| `Maktar` |  | 13 |
+| `Medjez-el-Bab` |  | 13 |
+| `Sfax` |  | 13 |
+| `Souk-el-Arba` |  | 13 |
+| `Sousse` |  | 13 |
+| `Tabarka` |  | 13 |
+| `Territoires du Sud` |  | 13 |
+| `Thala` |  | 13 |
+| `Tozeur` |  | 13 |
+| `Tunis` |  | 13 |
+| `Téboursouk` |  | 13 |
+| `Zaghouan` |  | 13 |
+
+`nationality`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `french` | Français | 40 |
+| `greek` | Grecs | 40 |
+| `italian` | Italiens | 40 |
+| `italian_pantelleria` | Italiens originaires de l'île de Pantelleria | 20 |
+| `maltese` | Maltais | 40 |
+| `other_european` | Autres européens | 40 |
+| `spanish` | Espagnols | 40 |
+
+### cens1931_towns
+
+**Population européenne et indigène des cinq plus grandes villes; des villes comptant plus de 5.000 habitants**  
+*European and indigenous population of the five largest towns and of all towns over 5,000, 1931 census*
+
+Source `sgt`, table towns, printed pages 6. 272 rows. Value type: count. Flags: (empty) 271, total_mismatch 1. Notes and validation: [`../yearbook_demography/csv/cens1931_towns.md`](../yearbook_demography/csv/cens1931_towns.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `census_year` | Census year the figure refers to. |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `table_part` | Coded dimension. |
+| `table_part_fr` | Printed French label for `table_part`. |
+| `town` | Coded dimension. |
+| `controle_civil` | Place or label as printed (12 distinct values). |
+| `population` | Coded dimension. |
+| `group` | Coded dimension. |
+| `group_fr` | Printed French label for `group`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`table_part`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `5000_to_10000` | Villes comptant de 5.000 à 10.000 habitants | 128 |
+| `five_largest` | Population européenne et indigène des cinq plus grandes villes | 40 |
+| `over_10000` | Villes comptant plus de 10.000 habitants | 104 |
+
+`town`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `Ariana` |  | 8 |
+| `Bizerte` |  | 16 |
+| `Béja` |  | 8 |
+| `Djemmal` |  | 8 |
+| `El-Djem` |  | 8 |
+| `El-Hamma` |  | 8 |
+| `Ferryville` |  | 8 |
+| `Gabès` |  | 8 |
+| `Gafsa` |  | 8 |
+| `Goulette (La)` |  | 8 |
+| `Kairouan` |  | 16 |
+| `Kalaa-Kebira` |  | 8 |
+| `Ksour-Essaf` |  | 8 |
+| `Le Kef` |  | 8 |
+| `M'Saken` |  | 8 |
+| `Mahdia` |  | 8 |
+| `Marsa (La)` |  | 8 |
+| `Mateur` |  | 8 |
+| `Menzel Temime` |  | 8 |
+| `Menzel-bou-Zelfa` |  | 8 |
+| `Moknine` |  | 8 |
+| `Monastir` |  | 8 |
+| `Nabeul` |  | 8 |
+| `Nefta` |  | 8 |
+| `Sfax` |  | 16 |
+| `Sousse` |  | 16 |
+| `Tozeur` |  | 8 |
+| `Tunis` |  | 16 |
+| `Zarzis` |  | 8 |
+
+`population`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `european` |  | 204 |
+| `jewish` |  | 34 |
+| `muslim` |  | 34 |
+
+`group`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `french` | Français | 34 |
+| `greek` | Grecs | 34 |
+| `italian` | Italiens | 34 |
+| `jews` | Israélites | 34 |
+| `maltese` | Maltais | 34 |
+| `muslims` | Musulmans | 34 |
+| `other_european` | Autres européens | 34 |
+| `spanish` | Espagnols | 34 |
+
+### cens1936_controle_nationality
+
+**Répartition, par circonscriptions de Contrôles civils, de la population civile, européenne et indigène, d'après le recensement de 1936**  
+*Civilian population (Europeans by nationality, Muslims, Jews) by contrôle civil, 1936 census*
+
+Source `sgt`, table controle, printed pages 2-3. 380 rows. Value type: count. Flags: (empty) 377, total_mismatch 3. Notes and validation: [`../yearbook_demography/csv/cens1936_controle_nationality.md`](../yearbook_demography/csv/cens1936_controle_nationality.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `census_year` | Census year the figure refers to. |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `controle_civil` | Place or label as printed (20 distinct values). |
+| `population` | Coded dimension. |
+| `population_fr` | Printed French label for `population`. |
+| `nationality` | Coded dimension. |
+| `nationality_fr` | Printed French label for `nationality`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`population`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `european` | Population européenne | 120 |
+| `jewish` | Population israélite | 120 |
+| `muslim` | Population musulmane | 140 |
+
+`nationality`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `algerian` | Algériens | 40 |
+| `french` | Français | 20 |
+| `greek` | Grecs | 20 |
+| `italian` | Italiens | 20 |
+| `maltese` | Maltais | 20 |
+| `moroccan` | Marocains | 40 |
+| `other` | Autres nationalités | 40 |
+| `other_european` | Autres européens | 20 |
+| `spanish` | Espagnols | 20 |
+| `sudanese` | Soudanais | 20 |
+| `syrian` | Syriens | 40 |
+| `tripolitanian` | Tripolitains | 40 |
+| `tunisian` | Tunisiens | 40 |
+
+### cens1936_compare_1931_1936
+
+**Statistique comparée des dénombrements de 1931 et 1936 concernant la population européenne de la Tunisie, répartie par circonscriptions administratives**  
+*Europeans by circonscription and nationality, 1931 and 1936 censuses*
+
+Source `sgt`, table compare, printed pages 4-5. 260 rows. Value type: count. Flags: (empty) 259, reprint_corrected 1. Notes and validation: [`../yearbook_demography/csv/cens1936_compare_1931_1936.md`](../yearbook_demography/csv/cens1936_compare_1931_1936.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `census_year` | Census year the figure refers to. |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `controle_civil` | Place or label as printed (20 distinct values). |
+| `controle_civil_printed` | Coded dimension. |
+| `nationality` | Coded dimension. |
+| `nationality_fr` | Printed French label for `nationality`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`controle_civil_printed`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `Bizerte` |  | 13 |
+| `Béja` |  | 13 |
+| `Djerba` |  | 13 |
+| `Gabès` |  | 13 |
+| `Gafsa` |  | 13 |
+| `Grombalia` |  | 13 |
+| `Kairouan` |  | 13 |
+| `Le Kef` |  | 13 |
+| `Maktar` |  | 13 |
+| `Medjez-el-Bab` |  | 13 |
+| `Sfax` |  | 13 |
+| `Souk-el-Arba` |  | 13 |
+| `Sousse` |  | 13 |
+| `Tabarka` |  | 13 |
+| `Territoires du Sud` |  | 13 |
+| `Thala` |  | 13 |
+| `Tozeur` |  | 13 |
+| `Tunis` |  | 13 |
+| `Téboursouk` |  | 13 |
+| `Zaghouan` |  | 13 |
+
+`nationality`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `french` | Français | 40 |
+| `greek` | Grecs | 40 |
+| `italian` | Italiens | 40 |
+| `italian_pantelleria` | Italiens originaires de l'île de Pantelleria | 20 |
+| `maltese` | Maltais | 40 |
+| `other_european` | Autres européens | 40 |
+| `spanish` | Espagnols | 40 |
+
+### cens1936_towns
+
+**Population européenne et indigène des cinq plus grandes villes; des villes comptant plus de 5.000 habitants**  
+*European and indigenous population of the five largest towns and of all towns over 5,000, 1936 census*
+
+Source `sgt`, table towns, printed pages 6. 272 rows. Value type: count. Flags: (empty) 269, reprint_corrected 3. Notes and validation: [`../yearbook_demography/csv/cens1936_towns.md`](../yearbook_demography/csv/cens1936_towns.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `census_year` | Census year the figure refers to. |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `table_part` | Coded dimension. |
+| `table_part_fr` | Printed French label for `table_part`. |
+| `town` | Coded dimension. |
+| `controle_civil` | Place or label as printed (12 distinct values). |
+| `population` | Coded dimension. |
+| `group` | Coded dimension. |
+| `group_fr` | Printed French label for `group`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`table_part`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `5000_to_10000` | Villes comptant de 5.000 à 10.000 habitants | 112 |
+| `five_largest` | Population européenne et indigène des cinq plus grandes villes | 40 |
+| `over_10000` | Villes comptant plus de 10.000 habitants | 120 |
+
+`town`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `Ariana` |  | 8 |
+| `Bizerte` |  | 16 |
+| `Béja` |  | 8 |
+| `Djemmal` |  | 8 |
+| `El-Djem` |  | 8 |
+| `El-Hamma` |  | 8 |
+| `Ferryville` |  | 8 |
+| `Gabès` |  | 8 |
+| `Gafsa` |  | 8 |
+| `Goulette (La)` |  | 8 |
+| `Kairouan` |  | 16 |
+| `Kalaa-Kebira` |  | 8 |
+| `Ksour-Essaf` |  | 8 |
+| `Le Kef` |  | 8 |
+| `M'Saken` |  | 8 |
+| `Mahdia` |  | 8 |
+| `Marsa (La)` |  | 8 |
+| `Mateur` |  | 8 |
+| `Menzel-Temim` |  | 8 |
+| `Menzel-bou-Zelfa` |  | 8 |
+| `Moknine` |  | 8 |
+| `Monastir` |  | 8 |
+| `Nabeul` |  | 8 |
+| `Nefta` |  | 8 |
+| `Sfax` |  | 16 |
+| `Sousse` |  | 16 |
+| `Tozeur` |  | 8 |
+| `Tunis` |  | 16 |
+| `Zarzis` |  | 8 |
+
+`population`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `european` |  | 204 |
+| `jewish` |  | 34 |
+| `muslim` |  | 34 |
+
+`group`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `french` | Français | 34 |
+| `greek` | Grecs | 34 |
+| `italian` | Italiens | 34 |
+| `jews` | Israélites | 34 |
+| `maltese` | Maltais | 34 |
+| `muslims` | Musulmans | 34 |
+| `other_european` | Autres européens | 34 |
+| `spanish` | Espagnols | 34 |

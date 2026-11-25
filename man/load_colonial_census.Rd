@@ -2,7 +2,7 @@
 % Please edit documentation in R/colonial_census.R
 \name{load_colonial_census}
 \alias{load_colonial_census}
-\title{Load a Table from the 1906 or 1931 Colonial Census Publications}
+\title{Load a Table from a Colonial-Era Census or Statistical Publication}
 \source{
 Régence de Tunis, Direction de l'agriculture, du commerce et de la
   colonisation (1907). \emph{Dénombrement de la population européenne
@@ -15,6 +15,10 @@ Régence de Tunis, Direction de l'agriculture, du commerce et de la
   mars 1931}. Tunis: Impr. J. Aloccio. Source gallica.bnf.fr /
   Bibliothèque nationale de France,
   \url{https://gallica.bnf.fr/ark:/12148/bpt6k994559s}.
+
+  Régence de Tunis (1922--1939). \emph{Statistique générale de la
+  Tunisie}. Tunis. Source gallica.bnf.fr / Ministère des Affaires
+  étrangères, \url{https://gallica.bnf.fr/ark:/12148/cb328727346/date}.
 }
 \usage{
 load_colonial_census(table)
@@ -25,35 +29,44 @@ load_colonial_census(table)
 }
 \value{
 A tidy \code{data.frame} with one row per cell of the printed
-  table. Every table has the columns \code{census}, \code{table_id},
-  \code{source_page} (printed page), \code{gallica_view} (Gallica page
-  view, for checking a value against the scan), \code{value} and
-  \code{flag}. Geography columns (\code{controle_civil}, \code{annexe},
-  \code{caidat}, \code{cheikhat}, \code{locality}, \code{commune}) keep the
-  place names as printed. Dimension columns (e.g. \code{nationality},
-  \code{religion}, \code{sex}) hold English codes, each paired with a
-  \code{*_fr} column holding the printed French label.
+  table. Every table has the columns \code{census} (source volume or
+  yearbook edition), \code{table_id}, \code{source_page} (printed page),
+  \code{gallica_view} (Gallica page view, for checking a value against the
+  scan), \code{value} and \code{flag}. Yearbook tables also have
+  \code{gallica_ark}, and \code{census_year} (census tables) or
+  \code{year} (yearly series). Geography columns (\code{controle_civil},
+  \code{annexe}, \code{caidat}, \code{cheikhat}, \code{locality},
+  \code{commune}) keep the place names as printed. Dimension columns (e.g.
+  \code{nationality}, \code{religion}, \code{sex}) hold English codes, each
+  paired with a \code{*_fr} column holding the printed French label.
 }
 \description{
-Loads one table transcribed from the original publications of the 1906
-census of the European civilian population of Tunisia (\emph{Dénombrement
-de la population européenne civile en Tunisie au 16 décembre 1906}) or the
-1931 census of the indigenous population (\emph{Dénombrement de la
-population civile indigène (musulmane et israélite) en Tunisie au 22 mars
-1931}), as digitized on Gallica.
+Loads one table transcribed from the 1906 census of the European civilian
+population of Tunisia, the 1931 census of the indigenous population, or the
+\emph{Démographie} chapter of the \emph{Statistique générale de la Tunisie}
+yearbooks (1922--1939), as digitized on Gallica.
 }
 \details{
-The tables were rebuilt from Gallica's word-level OCR and checked against
-every printed row and column total; values that the OCR misread were
-corrected from the page images. \code{flag} is empty for values taken
-directly from the OCR, \code{"ocr_corrected"} for values corrected from
-the scan, \code{"illegible"} for values that could not be read (left
-\code{NA}), \code{"total_mismatch"} where the printed values do not
-add up to the printed total (the printed value is kept),
-\code{"derived_from_totals"} for cells lost in the binding and derived
-from the printed totals, and \code{"not_applicable"} for questions not
-asked of a group (left \code{NA}). Printed subtotals and totals are not stored as
-rows. A printed \code{»} is recorded as 0.
+The tables were rebuilt from Gallica's word-level OCR or transcribed from
+the page images, and checked against every printed row and column total.
+\code{flag} is empty for values as printed, \code{"ocr_corrected"} for
+values the OCR misread and that were corrected from the scan,
+\code{"illegible"} for values that could not be read (left \code{NA}),
+\code{"total_mismatch"} where the printed values do not add up to the
+printed total (the printed value is kept), \code{"derived_from_totals"}
+for cells lost in the binding and derived from the printed totals,
+\code{"not_applicable"} for questions not asked of a group (left
+\code{NA}), and \code{"reprint_corrected"} for values taken from another
+yearbook edition's printing because this one is misprinted or unreadable.
+Printed subtotals and totals are not stored as rows. A printed \code{»} is
+recorded as 0.
+
+In the yearbooks, \code{census} is the edition the value is taken from
+(\code{"sgt1922"} \ldots \code{"sgt1939"}). Census tables reprinted in
+several editions are stored once and were compared cell by cell with the
+reprints. Yearly series take each year from the latest edition that prints
+it; earlier printings were compared and their differences are listed in the
+notes.
 
 In \code{ind1931_t3_cheikhat_nationality}, Tunis-Ville lists again four
 groups already counted under Tunis-Banlieue (13,440 people), as the
@@ -69,7 +82,8 @@ transcription (Ben Salah et al., 2024).
 
 The tables are stored as Zstandard-compressed Apache Parquet files in
 \code{inst/extdata/colonial}. The transcription scripts and per-table
-notes are in \code{data-raw/colonial_census} in the package repository.
+notes are in \code{data-raw/colonial_census} and
+\code{data-raw/yearbook_demography} in the package repository.
 }
 \examples{
 # European population by nationality and locality, 1906
@@ -81,6 +95,11 @@ head(loc)
 ch <- load_colonial_census("ind1931_t3_cheikhat_nationality")
 ch <- ch[ch$duplicate == 0, ]
 tapply(ch$value, ch$religion, sum)
+
+# Muslim births recorded each year, 1918-1939 (Statistique generale)
+vm <- load_colonial_census("vital_muslim_births_deaths")
+births <- vm[vm$event == "births", ]
+tapply(births$value, births$year, sum)
 }
 \seealso{
 \code{\link{colonial_census_tables}}

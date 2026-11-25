@@ -1,0 +1,86 @@
+# 1926 census, table f) Population européenne par profession et nationalité.
+# Transcribed from sgt1926 (ark bpt6k9105650k, views 574-575, printed pages 10-11),
+# full-resolution scans. Per nationality: persons exercising the profession
+# themselves (M, F), family of the preceding (M, F) | printed subtotals: active,
+# family, nationality total. '»' = 0. Row 'total' = printed TOTAUX line.
+# Categories: agriculture commerce industry transport public_administration
+# police_force liberal_professions independent_means unclassified
+@ french 574 10
+agriculture            2545 154 1826 3689 | 2699 5515 8214
+commerce               2975 785 1936 4096 | 3760 6032 9792
+industry               4336 518 2470 5495 | 4846 7965 12811
+transport              2792 88 1974 4406 | 2880 6380 9260
+public_administration  4502 1241 2446 6060 | 5743 8506 14249
+police_force           562 0 445 1014 | 562 1459 2021
+liberal_professions    1034 376 443 1135 | 1410 1578 2988
+independent_means      773 913 0 0 | 1686 0 1686
+unclassified           3337 6662 0 0 | 9999 0 9999
+total                  22825 10760 11540 25895 | 33585 37435 71020
+@ italian 574 10
+agriculture            4289 108 4463 7732 | 4397 12195 16592
+commerce               3067 364 2233 4476 | 3431 6709 10140
+industry               14971 856 9603 19843 | 15827 29446 45273
+transport              1528 64 1106 2248 | 1592 3354 4946
+public_administration  54 7 69 116 | 61 185 246
+police_force           0 0 0 0 | 0 0 0
+liberal_professions    754 264 425 1002 | 1018 1427 2445
+independent_means      342 410 0 0 | 752 0 752
+unclassified           2777 6045 0 0 | 8822 0 8822
+total                  27782 8118 17899 35417 | 35900 53316 89216
+@ maltese 574 10
+agriculture            209 11 213 271 | 220 484 704
+commerce               694 47 520 939 | 741 1459 2200
+industry               824 124 414 799 | 948 1213 2161
+transport              428 7 239 631 | 435 870 1305
+public_administration  1 0 2 5 | 1 7 8
+police_force           0 0 0 0 | 0 0 0
+liberal_professions    59 16 36 69 | 75 105 180
+independent_means      47 60 0 0 | 107 0 107
+unclassified           689 1042 0 0 | 1731 0 1731
+total                  2951 1307 1424 2714 | 1258 4138 8396
+@ spanish 575 11
+agriculture            16 2 11 20 | 18 31 49
+commerce               50 18 28 43 | 68 71 139
+industry               58 0 22 68 | 58 90 148
+transport              8 1 1 5 | 9 6 15
+public_administration  0 0 0 0 | 0 0 0
+police_force           0 0 0 0 | 0 0 0
+liberal_professions    11 5 3 6 | 16 9 25
+independent_means      4 2 0 0 | 6 0 6
+unclassified           58 78 0 0 | 136 0 136
+total                  205 105 65 142 | 310 207 517
+@ greek 575 11
+agriculture            5 0 5 8 | 5 13 18
+commerce               88 2 51 97 | 90 148 238
+industry               89 2 63 103 | 91 166 257
+transport              12 0 5 6 | 12 11 23
+public_administration  3 0 0 3 | 3 3 6
+police_force           0 0 0 0 | 0 0 0
+liberal_professions    6 1 2 6 | 7 8 15
+independent_means      3 2 0 0 | 5 0 5
+unclassified           26 58 0 0 | 84 0 84
+total                  232 65 126 223 | 297 349 646
+@ other_european 575 11
+agriculture            151 6 42 115 | 157 157 314
+commerce               313 27 177 372 | 340 549 889
+industry               389 41 141 306 | 430 447 877
+transport              63 4 25 50 | 67 75 142
+public_administration  46 8 9 31 | 54 40 94
+police_force           2 0 0 0 | 2 0 2
+liberal_professions    215 68 59 122 | 283 181 464
+independent_means      64 60 0 0 | 124 0 124
+unclassified           223 357 0 0 | 580 0 580
+total                  1466 571 453 996 | 2037 1449 3486
+@ all_europeans 575 11
+agriculture            7215 281 6560 11835 | 7496 18395 25891
+commerce               7187 1243 4945 10023 | 8430 14968 23398
+industry               20667 1533 12713 26614 | 22200 39327 61527
+transport              4831 164 3350 7346 | 4995 10696 15691
+public_administration  4606 1256 2526 6215 | 5862 8741 14603
+police_force           564 0 445 1014 | 564 1459 2023
+liberal_professions    2079 730 968 2340 | 2809 3308 6117
+independent_means      1233 1447 0 0 | 2680 0 2680
+unclassified           7110 14242 0 0 | 21352 0 21352
+total                  55492 20896 31507 65386 | 76388 96893 173281
+# Flags (nationality category column flag note); columns 0-3 = active M, active F, family M, family F
+F french industry 1 total_mismatch printed 518 in all five editions; the printed active subtotal (4.846) and the all-Europeans industry column (1.533) imply 510

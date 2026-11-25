@@ -21,7 +21,7 @@
 - **Fast Parquet Storage:** High-dimensional tables (28 disaggregated 2014 tables and full 2024 indicator suites) are backed by Zstandard-compressed Apache Parquet (`arrow`) for lightning-fast loads.
 - **Built-in Administrative GeoJSON & Spatial Boundaries (`load_geojson()`):** Seamlessly load ready-to-map `sf` polygons for National (1), Regional (6), Governorate (24), and Delegation (264) tiers, enriched with Arabic (`_name_ar`), French (`_name`), and alternate romanizations (`_name_alt`).
 - **Deep Historical & Colonial Archives:** Digitized and harmonized from [Ben Salah et al. (2024)](https://doi.org/10.1016/j.jce.2024.09.002), including 1,276 historical geonames, 1984–2014 boundary transition matrices, and colonial population tables.
-- **Original 1906 and 1931 Census Publications (`load_colonial_census()`):** 39 tables (24,575 cells) transcribed from the 1906 European and 1931 indigenous census volumes on Gallica, down to 333 localities (1906) and 804 cheikhats (1931). Every table is checked against its printed totals, and every cell keeps its page and Gallica view, so it can be checked against the scan.
+- **Original Colonial Census and Statistical Publications (`load_colonial_census()`):** 91 tables (38,432 cells) transcribed from Gallica scans: the 1906 European and 1931 indigenous census volumes (down to 333 localities and 804 cheikhats), and the *Démographie* chapter of 12 *Statistique générale de la Tunisie* yearbooks, which reprint the 1921, 1926, 1931 and 1936 censuses and give yearly births, deaths, marriages, expulsions, naturalisations, foreigners' movements and recruitment (1902–1939). Every table is checked against its printed totals and its reprints, and every cell keeps its page and Gallica view, so it can be checked against the scan.
 - **Inequality Metrics:** Built-in functions for calculating Gini coefficients (`gini()`) and Generalized Entropy Theil inequality decompositions (`theil_decompose()`).
 
 ---
@@ -104,6 +104,20 @@ install.packages(c("sf", "ggplot2", "arrow"))
 | `ind1931_t6_caidat_profession`, `ind1931_t6annex_*` | Caidat / National | 592 / 32 | Occupations of men aged 18 and over, by religion; 1926 vs 1931. |
 | `ind1931_t7_communes`, `ind1931_t7annex_communes_1921_1931` | Commune | 116 / 174 | Muslim and Jewish population of the 58 communes; 1921, 1926 and 1931. |
 | `ind1931_t8_localities` | Locality | 562 | Non-commune localities with more than 25 households. |
+
+#### Tables from the *Statistique générale de la Tunisie* yearbooks (1918–1939)
+
+The *Démographie* chapter of 12 annual editions (1922–1930, 1935, 1936, 1939; see [`data-raw/yearbook_demography/EDITIONS.md`](data-raw/yearbook_demography/EDITIONS.md)). These tables share `load_colonial_census()`; their rows carry the edition (`census = "sgt1927"` etc.) and its `gallica_ark`. Census tables reprinted in several editions are stored once and were compared cell by cell with the reprints; yearly series take each year from the latest edition that prints it.
+
+| Tables | Admin Level | Rows | Description |
+|:---|:---|---:|:---|
+| `cens1921_*` (16 tables) | Contrôle Civil / Circonscription / Town | 1,741 | 1921 census: population and density, French by birthplace 1891–1921, naturalised French, foreigners and Italians by origin, Europeans by age, sex, marital status and profession, illiterates, 1911 vs 1921, Europeans 1881–1921, towns. |
+| `cens1926_*` (9 tables) | Contrôle Civil / Commune / Town | 2,706 | 1926 census: Europeans by nationality, Muslims and Jews by contrôle; French and foreigners by birthplace; Italians by region; age, sex and marital status; profession; instruction; towns over 5,000; the 59 communes with decree dates. |
+| `cens1931_*`, `cens1936_*` (6 tables) | Contrôle Civil / Circonscription / Town | 1,824 | 1931 and 1936 censuses: population by contrôle, Europeans compared with the previous census, towns over 5,000. |
+| `vital_*` (6 tables) | Contrôle Civil / National | 2,674 | Muslim and Jewish births and deaths by contrôle (1918–1939); European marriages, births and deaths by nationality; mixed marriages. |
+| `expulsions_nationality`, `foreigners_movements` | National | 2,023 | Expulsions by nationality (1913–1934); foreigners' arrivals and departures by nationality (1920–1939). |
+| `naturalisations_*` (8 tables) | National | 1,793 | Naturalisations granted, civil status, age, profession and nationality of the naturalised (1922–1939), and two long series by nationality (1891–1930, 1891–1939). |
+| `recruitment_*` (5 tables) | National | 1,096 | French recruitment (allocation, education, draft boards, classes 1902–1939) and indigenous conscription (1916–1939). |
 
 ### 4. Geographic Boundaries & Spatial Harmonization
 
@@ -309,10 +323,10 @@ data("delegation_matrix_merged")
 head(delegation_matrix_merged, 10)
 ```
 
-### 6. Working with the Original 1906 and 1931 Census Tables
+### 6. Working with the Original Colonial Census and Yearbook Tables
 
 ```r
-# List the 39 transcribed tables
+# List the 91 transcribed tables
 idx <- colonial_census_tables()
 idx[, c("table", "title_en", "n_rows")]
 
@@ -330,9 +344,18 @@ aggregate(value ~ cheikhat, data = djerba, sum)
 # Every value can be checked against the scan:
 # https://gallica.bnf.fr/ark:/12148/<gallica_ark>/f<gallica_view>
 subset(ch, flag == "ocr_corrected")[1:5, c("cheikhat", "nationality", "value", "gallica_view")]
+
+# Muslim births recorded each year, 1918-1939 (Statistique générale yearbooks)
+vm <- load_colonial_census("vital_muslim_births_deaths")
+births <- subset(vm, event == "births")
+tapply(births$value, births$year, sum)
+
+# Population of the communes at the 1926 census
+co <- load_colonial_census("cens1926_communes")
+xtabs(value ~ commune + population_group, data = co)[1:5, ]
 ```
 
-Values flagged `total_mismatch` are printed as in the original but do not add up with its printed totals (misprints in the 1906 or 1931 volume); `derived_from_totals` marks cells hidden in the binding and solved from the printed totals; `illegible` and `not_applicable` cells are `NA`.
+Values flagged `total_mismatch` are printed as in the original but do not add up with its printed totals (misprints in the original); `derived_from_totals` marks cells hidden in the binding and solved from the printed totals; `reprint_corrected` marks yearbook values taken from another edition's printing; `illegible` and `not_applicable` cells are `NA`.
 
 ---
 

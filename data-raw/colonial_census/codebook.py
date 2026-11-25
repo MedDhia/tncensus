@@ -13,8 +13,24 @@ from pathlib import Path
 import pandas as pd
 
 HERE = Path(__file__).resolve().parent
+CSV_DIRS = [HERE / "csv", HERE.parent / "yearbook_demography" / "csv"]
+
+
+def find(table):
+    for d in CSV_DIRS:
+        if (d / f"{table}.csv").exists():
+            return d / f"{table}.csv"
+    return None
+
+
+def notes_link(table):
+    p = find(table)
+    rel = "csv" if p.parent == HERE / "csv" else "../yearbook_demography/csv"
+    return f"[`{rel}/{table}.md`]({rel}/{table}.md)"
 COMMON = {
-    "census": "Source volume: `eur1906` (1906 European census) or `ind1931` (1931 indigenous census).",
+    "census": "Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`).",
+    "gallica_ark": "Gallica ark of the bound volume holding that edition (views are numbered within it).",
+    "year": "Year the figure refers to.",
     "table_id": "Table number or letter as printed (`text` for tables printed in the commentary).",
     "source_page": "Printed page number.",
     "gallica_view": "Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>.",
@@ -29,6 +45,9 @@ SOURCES = {
     "ind1931": "*Dénombrement de la population civile indigène (musulmane et israélite) en Tunisie "
                "au 22 mars 1931* (Tunis, 1932). Source gallica.bnf.fr / Bibliothèque nationale de "
                "France, <https://gallica.bnf.fr/ark:/12148/bpt6k994559s>.",
+    "sgt": "*Statistique générale de la Tunisie* (Tunis, annual), editions 1922-1930, 1935, 1936 and 1939, "
+           "bound in 7 Gallica volumes (see `../yearbook_demography/EDITIONS.md`). Source gallica.bnf.fr / "
+           "Ministère des Affaires étrangères.",
 }
 
 
@@ -77,14 +96,15 @@ def main():
            "| `derived_from_totals` | Cell hidden in the binding; solved exactly from the printed totals and other tables |",
            "| `illegible` | Value could not be read or solved; `value` is NA |",
            "| `not_applicable` | Question not asked of this group; `value` is NA |",
+           "| `reprint_corrected` | Taken from another edition's printing, because this one is misprinted or unreadable |",
            "", "## Sources", ""]
     for k, v in SOURCES.items():
         out.append(f"- `{k}`: {v}")
     out += ["", "## Tables", "", "| Table | Printed | Pages | Rows | Values | Title |", "|---|---|---|---:|---|---|"]
     frames = {}
     for _, r in idx.iterrows():
-        p = HERE / "csv" / f"{r['table']}.csv"
-        if not p.exists():
+        p = find(r["table"])
+        if p is None:
             out.append(f"| `{r['table']}` | {r['table_id']} | {r['pages']} | (pending) | {r['value_type']} | {md_escape(r['title_en'])} |")
             continue
         df = pd.read_csv(p, dtype=str, keep_default_na=False, encoding="utf-8-sig")
@@ -98,10 +118,10 @@ def main():
         flags = df["flag"].replace("", "(empty)").value_counts()
         out += ["", f"### {r['table']}", "",
                 f"**{md_escape(r['title_fr'])}**  ", f"*{md_escape(r['title_en'])}*", "",
-                f"Census `{r['census']}`, table {r['table_id']}, printed pages {r['pages']}. "
+                f"Source `{r['census']}`, table {r['table_id']}, printed pages {r['pages']}. "
                 f"{len(df):,} rows. Value type: {r['value_type']}. "
                 f"Flags: " + ", ".join(f"{k} {v:,}" for k, v in flags.items()) + ". "
-                f"Notes and validation: [`csv/{r['table']}.md`](csv/{r['table']}.md).", "",
+                f"Notes and validation: {notes_link(r['table'])}.", "",
                 "| Column | Description |", "|---|---|"]
         coded = []
         for c in df.columns:
