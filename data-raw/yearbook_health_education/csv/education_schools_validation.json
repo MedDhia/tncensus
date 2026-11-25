@@ -1,0 +1,178 @@
+{
+ "summary": {
+  "sgt1922/primary_public": {
+   "schools": 350,
+   "cells": 5950,
+   "row_checks": 1127,
+   "row_checks_passed": 1126,
+   "column_checks": 516,
+   "column_checks_passed": 514,
+   "flags": {
+    "derived_from_totals": 351,
+    "not_applicable": 16,
+    "total_mismatch": 2
+   }
+  },
+  "sgt1922/primary_private": {
+   "schools": 32,
+   "cells": 561,
+   "row_checks": 108,
+   "row_checks_passed": 108,
+   "column_checks": 77,
+   "column_checks_passed": 69,
+   "flags": {
+    "derived_from_totals": 33,
+    "not_applicable": 2,
+    "total_mismatch": 4
+   }
+  },
+  "sgt1922/secondary": {
+   "schools": 8,
+   "cells": 112,
+   "row_checks": 27,
+   "row_checks_passed": 27,
+   "column_checks": 17,
+   "column_checks_passed": 17,
+   "flags": {}
+  },
+  "sgt1922/vocational": {
+   "schools": 21,
+   "cells": 21,
+   "row_checks": 0,
+   "row_checks_passed": 0,
+   "column_checks": 4,
+   "column_checks_passed": 4,
+   "flags": {}
+  },
+  "sgt1930/primary_public": {
+   "schools": 371,
+   "cells": 6307,
+   "row_checks": 1186,
+   "row_checks_passed": 1186,
+   "column_checks": 398,
+   "column_checks_passed": 395,
+   "flags": {
+    "derived_from_totals": 369,
+    "not_applicable": 19,
+    "total_mismatch": 4
+   }
+  }
+ },
+ "mismatches": [],
+ "kept_misprints": [
+  "sgt1922 l122 Djebel-Abiod / Mixte: girls sum 9 != printed 8; printed cell kept, flagged total_mismatch",
+  "sgt1922 l362 Sousse / Filles (école primaire supérieure), avenue Boucher: girls sum 640 != printed 340; printed cell kept, flagged total_mismatch",
+  "sgt1922 l374 AREPORTER / A reporter: girls sum 13248 != printed 13278 (misprinted total cell, see column checks)",
+  "sgt1922 primary_public l257 AREPORTER A reporter: column genprev[1] sum 25577 != printed 25571 (printed total kept; the cells were re-read on the image)",
+  "sgt1922 primary_public l374 AREPORTER A reporter: column girls[3] sum 4240 != printed 4210 (printed total kept; the cells were re-read on the image)",
+  "sgt1922 l428 Redeyef / Ecole mixte de M. Combès: girls sum 86 != printed 78; printed cell kept, flagged total_mismatch",
+  "sgt1922 l433 Tunis / Garçons : Rue du Tribunal: girls sum 70 != printed 70; printed cell kept, flagged total_mismatch",
+  "sgt1922 primary_private l420 AREPORTER A reporter: column cstaff[0] sum 83 != printed 90 (printed total kept; the cells were re-read on the image)",
+  "sgt1922 primary_private l420 AREPORTER A reporter: column cstaff[3] sum 38 != printed 46 (printed total kept; the cells were re-read on the image)",
+  "sgt1922 primary_private l420 AREPORTER A reporter: column cstaff[4] sum 124 != printed 132 (printed total kept; the cells were re-read on the image)",
+  "sgt1922 primary_private l420 AREPORTER A reporter: column boys[3] sum 199 != printed 369 (printed total kept; the cells were re-read on the image)",
+  "sgt1922 primary_private l420 AREPORTER A reporter: column boys[6] sum 813 != printed 983 (printed total kept; the cells were re-read on the image)",
+  "sgt1922 primary_private l420 AREPORTER A reporter: column girls[3] sum 259 != printed 367 (printed total kept; the cells were re-read on the image)",
+  "sgt1922 primary_private l420 AREPORTER A reporter: column girls[6] sum 1615 != printed 1723 (printed total kept; the cells were re-read on the image)",
+  "sgt1922 primary_private l420 AREPORTER A reporter: column genprev[0] sum 2428 != printed 2706 (printed total kept; the cells were re-read on the image)",
+  "sgt1922 l450 Tunis / Petit Lycée Jules-Ferry (1): printed girls total 592, cells sum to 502",
+  "sgt1930 l29 Tunis / Filles : Ecole Paul-Cambon: printed cstaff total 15, cells sum to 35",
+  "sgt1930 l169 Djerissa / Filles: girls sum 78 != printed 76; printed cell kept, flagged total_mismatch",
+  "sgt1930 l231 Hadjeb-el-Aïoun / Mixte: boys sum 156 != printed 155; printed cell kept, flagged total_mismatch",
+  "sgt1930 l317 Masdour / Garçons (franco-arabe): boys sum 54 != printed 53; printed cell kept, flagged total_mismatch",
+  "sgt1930 l317 Masdour / Garçons (franco-arabe): girls sum 4 != printed 3; printed cell kept, flagged total_mismatch",
+  "sgt1930 primary_public l197 AREPORTER A reporter: column cstaff[0] sum 661 != printed 660 (printed total kept; the cells were re-read on the image)",
+  "sgt1930 primary_public l356 AREPORTER A reporter: column genprev[1] sum 42674 != printed 42697 (printed total kept; the cells were re-read on the image)",
+  "sgt1930 primary_public l404 AREPORTER A reporter: column cstaff[0] sum 1229 != printed 1228 (printed total kept; the cells were re-read on the image)"
+ ],
+ "printed_totals": [
+  {
+   "edition": "sgt1922",
+   "block": "primary_public",
+   "label": "Totaux des écoles primaires publiques",
+   "printed": {
+    "cstaff[0]": 1084,
+    "cstaff[1]": 970,
+    "cstaff[2]": 149,
+    "cstaff[3]": 98,
+    "cstaff[4]": 1217,
+    "boys[0]": 3993,
+    "boys[1]": 13280,
+    "boys[2]": 2572,
+    "boys[3]": 4541,
+    "boys[4]": 563,
+    "boys[5]": 148,
+    "boys[6]": 25097,
+    "girls[0]": 3708,
+    "girls[1]": 1560,
+    "girls[2]": 3446,
+    "girls[3]": 4333,
+    "girls[4]": 428,
+    "girls[5]": 136,
+    "girls[6]": 13611,
+    "genprev[0]": 38708,
+    "genprev[1]": 36639
+   }
+  },
+  {
+   "edition": "sgt1922",
+   "block": "primary_private",
+   "label": "Totaux des écoles privées [store]",
+   "printed": {
+    "cstaff[0]": 175,
+    "cstaff[1]": 163,
+    "cstaff[2]": 3,
+    "cstaff[3]": 64,
+    "cstaff[4]": 230,
+    "boys[0]": 578,
+    "boys[1]": 37,
+    "boys[2]": 2103,
+    "boys[3]": 560,
+    "boys[4]": 32,
+    "boys[5]": 12,
+    "boys[6]": 3322,
+    "girls[0]": 797,
+    "girls[1]": 458,
+    "girls[2]": 1356,
+    "girls[3]": 534,
+    "girls[4]": 90,
+    "girls[5]": 31,
+    "girls[6]": 3266,
+    "genprev[0]": 6588,
+    "genprev[1]": 6298
+   }
+  },
+  {
+   "edition": "sgt1922",
+   "block": "secondary",
+   "label": "Totaux",
+   "printed": {
+    "classes[0]": 147,
+    "boys[0]": 1343,
+    "boys[1]": 871,
+    "boys[2]": 496,
+    "boys[3]": 144,
+    "boys[4]": 29,
+    "boys[5]": 33,
+    "boys[6]": 2916,
+    "girls[0]": 982,
+    "girls[1]": 117,
+    "girls[2]": 205,
+    "girls[3]": 71,
+    "girls[4]": 9,
+    "girls[5]": 27,
+    "girls[6]": 1411,
+    "genprev[0]": 4327,
+    "genprev[1]": 4155
+   }
+  },
+  {
+   "edition": "sgt1922",
+   "block": "vocational",
+   "label": "Total",
+   "printed": {
+    "apprentices[0]": 534
+   }
+  }
+ ]
+}

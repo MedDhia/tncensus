@@ -1,0 +1,220 @@
+# sgt1939, ark bpt6k9105739w. Format as in health_pop_sgt1922.txt and sgt1935.
+# Interior table now also lists the Tunis hospitals (Hôp. Civil Français, Sadiki, E. Conseil,
+# Manouba) and the Hôpital régional de Sfax as rows; kept as printed.
+# Hôp. Civil Français beds printed '(a)520' with footnote (a): the 280 beds for soldiers are not included.
+
+@civil_movements view=39 page=33
+cols: adm_m adm_f adm_c adm_t rec_m rec_f rec_c rec_t dth_m dth_f dth_c dth_t
+1937 | 2007 2957 1680 6644 2778 2866 756 6400 188 104 178 470
+1938 | 2337 2586 1713 6636 2139 2480 1562 6181 198 106 151 455
+1939 | 2724 2838 1968 7530 1604 2731 1760 6095 195 107 208 510
+
+@civil_population view=39 page=33 years=1938 1939
+patient_days ; Journées de malades | 163051 153327 0 9724
+patient_days_paying ; Journées de malades payants | 32496 40239 7743 0
+patient_days_indigent ; Journées de malades indigents | 130555 113088 0 17467
+admissions ; Nombre d'admissions | 6636 7530 894 0
+mean_daily_patients ; Effectif moyen journalier | 441 420 0 21
+mean_stay_days ; Durée moyenne du séjour par malade | 24 20 0 4
+
+@civil_consultations view=39 page=33
+cols: dressings consultations radiology total operations
+1937 | 177553 294409 15984 487946 8937
+1938 | 195187 275680 16110 486977 10377
+1939 | 133909 306000 13573 453482 14537
+
+@civil_wards view=40 page=34 year=1939
+cols: medg_m medg_f chir_m chir_f cont_m cont_f nerv_m nerv_f mat_f births total
+french paying | 853 94 265 303 209 9 27 8 278 0 2046
+french free | 667 489 420 602 36 48 34 27 474 756 3553
+french TOTAL | . . . . . . . . . . 5599
+tunisian_muslim paying | 5 8 16 10 1 0 13 3 7 0 63
+tunisian_muslim free | 16 39 12 6 0 3 53 33 3 16 181
+tunisian_muslim TOTAL | . . . . . . . . . . 244
+tunisian_jewish paying | 2 5 27 27 0 0 4 0 5 0 70
+tunisian_jewish free | 182 204 232 322 20 18 27 10 184 123 1322
+tunisian_jewish TOTAL | . . . . . . . . . . 1392
+european paying | 44 40 55 52 4 6 6 1 34 0 242
+european free | 14 10 6 7 1 1 7 4 3 0 53
+european TOTAL | . . . . . . . . . . 295
+beds | 426 . 172 . 82 . 45 . 75 . 800
+TOTAL | 1783 889 1033 1329 271 85 171 86 988 895 7530
+
+@sadiki_movements view=41 page=35
+cols: adm_m adm_f adm_c adm_t rec_m rec_f rec_c rec_t dth_m dth_f dth_c dth_t
+1937 | 1925 2279 676 4880 1770 2183 618 4571 155 96 58 309
+1938 | 1898 2091 664 4653 1703 2001 608 4312 195 90 56 341
+1939 | 1532 1953 606 4091 1407 1856 566 3829 125 97 40 262
+
+@sadiki_population view=41 page=35 years=1938 1939
+patient_days ; Journées de malades | 87632 80653 0 6979
+patient_days_paying ; Journées de malades payants | 3928 10225 6297 0
+patient_days_indigent ; Journées de malades indigents | 83704 70428 0 13276
+admissions ; Nombre d'admissions | 4304 3863 0 441
+mean_daily_patients ; Effectif moyen journalier | 240.08 220.96 0 19.12
+mean_stay_days ; Durée moyenne du séjour par malade | 20.36 20.87 0.51 0
+staff_days_fed ; Journées du personnel nourri | 17885 18250 365 0
+staff_days_not_fed ; Journées du personnel non nourri | 62050 62050 0 0
+
+@sadiki_consultations view=42 page=36
+cols: dressings consultations electrotherapy total operations
+1937 | 298882 57096 24112 380090 17289
+1938 | 300474 57570 23044 381088 17564
+1939 | 259571 55277 54212 369060 15279
+
+@sadiki_wards view=42 page=36 year=1939
+cols: chir_m chir_f eyes_m eyes_f ent_m ent_f med_m med_f mat_f
+beds | 119 48 18 4 10 2 0 38 17
+french paying | 2 1 0 0 1 0 0 0 0
+french free | 0 0 0 0 0 0 0 0 0
+tunisian_muslim paying | 351 10 5 0 6 0 0 0 0
+tunisian_muslim free | 1288 653 168 62 143 74 0 606 352
+tunisian_jewish paying | 2 1 0 0 0 0 0 0 0
+tunisian_jewish free | 0 0 0 0 0 0 0 0 0
+TOTAL | 1643 665 173 62 150 74 0 606 352
+
+@rabta_movements view=42 page=36
+cols: adm_m adm_f adm_c adm_t rec_m rec_f rec_c rec_t dth_m dth_f dth_c dth_t
+1937 | 3264 335 432 4031 2671 281 351 3303 388 53 42 483
+1938 | 2708 272 349 3329 2146 213 289 2648 392 51 25 468
+1939 | 2852 270 320 3442 2371 218 213 2802 409 55 25 489
+
+@rabta_population view=43 page=37 years=1938 1939
+patient_days ; Journées de malades | 81512 70730 0 10782
+patient_days_indigent ; Journées de malades indigents (printed 'indigents') | 4146 6659 2423 0
+patient_days_paying ; Journées de malades payants (printed 'payants') | 77366 64161 0 13205
+admissions ; Nombre d'admissions | 3329 3288 0 41
+mean_daily_patients ; Effectif moyen journalier | 223.32 193.78 0 29.54
+mean_stay_days ; Durée moyenne de séjour par malade | 24.47 20.54 0 3.93
+staff_days_fed ; Journées du personnel nourri | 15813 9574 0 6239
+staff_days_not_fed ; Journées du personnel non nourri | 24397.5 40111 15713.5 0
+
+@rabta_diseases view=43 page=37 year=1939
+cols: french tunisian_muslim tunisian_jewish italian anglo_maltese other total
+Tuberculose pulmonaire | 0 224 0 0 0 0 224
+Tuberculose osseuse | 1 328 0 0 0 0 329
+Typhus | 0 342 0 3 0 0 345
+Fièvre typhoïde | 0 25 0 0 0 0 25
+Variole | 0 0 0 0 0 0 0
+Peste bubonique | 0 0 0 0 0 0 0
+Peste pulmonaire | 0 0 0 0 0 0 0
+Erysipèle | 0 26 0 0 0 0 26
+Coqueluche | 0 2 0 0 0 0 2
+Rougeole | 0 8 0 0 0 0 8
+Rage | 0 1 0 0 0 0 1
+Oreillons | 0 17 0 0 0 0 17
+Lèpre | 0 7 0 0 0 0 7
+Dysentérie | 0 14 0 0 0 0 14
+Dyphtérie | 0 0 0 1 0 0 1
+Paludisme | 1 135 0 0 0 0 136
+Syphiligr. dermatologie | 0 224 0 0 0 0 224
+Médecine générale | 0 1326 0 0 0 0 1326
+Autres maladies | 0 68 0 2 0 0 70
+Méningite cérébro-spinale | 0 8 0 2 0 0 10
+TOTAUX | 2 2755 0 8 0 0 2765
+
+@manouba view=44 page=38 year=1939
+cols: paying_m free_m total_m paying_f free_f total_f paying free total
+french | 5 25 30 11 14 25 16 39 55
+tunisian_muslim | 11 152 163 1 19 20 12 171 183
+tunisian_jewish | 3 37 40 3 22 25 6 59 65
+european | 1 2 3 0 3 3 1 5 6
+TOTAL | 20 216 236 15 58 73 35 274 309
+
+@interior view=44 page=38 year=1939
+cols: beds eur_m eur_f eur_c eur_t ind_m ind_f ind_c ind_t patient_days deu_m deu_f deu_c deu_t din_m din_f din_c din_t consultations
+Béja | 40 55 25 16 96 220 84 45 349 5411 2 1 0 3 7 3 4 14 12350
+Bizerte | 60 58 95 10 163 196 84 10 290 6602 6 4 0 10 14 3 0 17 0
+Djerba | 10 2 5 0 7 88 17 5 110 2262 0 0 0 0 3 3 0 6 8000
+Enfidaville | 11 0 0 0 0 17 4 0 21 214 0 0 0 0 3 1 0 4 6582
+Ferryville | 13 6 8 6 20 66 25 6 97 1888 2 1 0 3 4 1 2 7 6858
+Grombalia | 12 1 0 0 1 97 36 12 145 1499 0 0 0 0 10 2 0 12 21813
+Gabès | 12 2 5 0 7 88 17 5 110 2294 0 0 0 0 3 2 1 6 8000
+Gafsa | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Kairouan | 60 12 26 6 44 320 121 62 503 7254 0 0 0 0 15 13 1 29 10563
+Le Kef | 64 22 54 12 88 314 159 98 571 13425 2 2 0 4 37 26 4 67 6618
+Mateur | 32 15 32 25 72 414 83 36 533 6936 2 0 0 2 20 6 2 28 46852
+Menzel-Temime | 12 0 0 0 0 90 70 33 193 2548 0 0 0 0 1 0 0 1 10934
+Maktar | 12 3 0 0 3 74 21 6 101 1449 0 0 0 0 4 1 0 5 4575
+Medjez-el-Bab | 18 19 33 0 52 80 16 2 98 1234 0 1 0 1 0 1 0 1 0
+Mahdia | 20 2 2 0 4 124 80 17 221 3958 1 0 0 1 9 7 0 16 12245
+Monastir | 40 1 5 0 6 180 196 66 442 9121 0 0 0 0 7 1 4 12 17196
+Médenine | 12 0 0 0 0 53 19 10 82 556 0 0 0 0 10 12 13 35 4880
+Nabeul | 21 1 0 1 2 149 78 15 242 3373 0 0 0 0 7 0 1 8 7075
+Souk-el-Arba | 55 46 31 12 89 288 261 172 721 16958 2 0 0 2 25 12 21 58 3582
+Souk-el-Khemis | 76 79 154 35 268 392 356 122 870 17465 4 4 1 9 15 7 7 29 17500
+Sousse | 150 159 352 214 725 736 715 442 1893 37272 5 7 11 23 79 30 26 135 53114
+Sidi-bou-Zid | 9 1 0 0 1 12 4 1 17 299 0 0 0 0 1 1 0 2 2215
+Tabarka | 3 0 0 0 0 13 0 0 13 136 0 0 0 0 0 0 0 0 13266
+Tébourba | 6 0 0 0 0 0 3 1 4 197 0 0 0 0 0 0 0 0 4995
+Téboursouk | 12 0 0 0 0 65 12 0 77 1780 0 0 0 0 8 2 0 10 5974
+Tozeur | 21 2 1 0 3 156 61 33 250 5313 0 0 0 0 16 2 3 21 15748
+Thala | 12 2 0 0 2 43 27 32 102 2673 0 0 0 0 4 2 1 7 26370
+Zaghouan | 8 1 0 0 1 59 3 0 62 1006 0 0 0 0 5 1 0 6 3624
+Hôp. Rég. Sfax | 219 1712 94 41 1847 1818 437 348 2603 68305 15 6 2 23 72 25 31 128 15083
+Hôp. Civil Français | 520 1360 2077 1463 4900 439 761 505 1705 145222 160 80 117 357 35 27 91 153 468019
+Hôpital Sadiki | 256 3 1 0 4 1532 1953 606 4091 80653 0 0 0 0 125 97 40 262 369060
+Hôpital E. Conseil | 220 1 6 3 10 2851 264 317 3432 70730 0 2 1 3 409 53 24 486 0
+Hôpital Manouba | 220 33 27 0 60 203 45 0 248 93086 4 3 0 7 10 4 0 14 0
+TOTAL | 2236 3598 3033 1844 8475 11177 6012 3007 20196 611119 205 111 132 448 958 345 276 1579 1183491
+
+@tunis_month_nationality view=45 page=39 year=1939
+cols: french tunisian_muslim tunisian_jewish italian anglo_maltese other total
+Janvier | 75 356 49 81 6 6 573
+Février | 58 373 65 55 10 5 566
+Mars | 67 393 59 83 14 6 622
+Avril | 68 347 64 77 7 7 570
+Mai | 61 344 38 56 6 7 512
+Juin | 53 279 32 50 5 3 422
+Juillet | 79 360 70 102 20 6 637
+Août | 56 344 54 74 11 1 540
+Septembre | 69 351 37 67 3 6 533
+Octobre | 91 519 49 110 6 5 780
+Novembre | 79 423 51 75 9 5 642
+Décembre | 62 346 55 83 9 4 559
+TOTAUX | 818 4435 623 913 106 61 6956
+
+@tunis_natality_mortality view=45 page=39 year=1939
+cols: french tunisian_muslim tunisian_jewish italian anglo_maltese other total
+deaths ; Nombre de décès | 818 4435 623 913 106 61 6956
+stillbirths ; Mort-nés | 55 323 31 71 7 5 492
+non_residents ; Non résidents | 56 382 15 45 6 4 508
+deaths_corrected ; Mortalité rectifiée | 707 373 577 797 93 52 5956
+births ; Naissances déclarées | 1111 4483 966 1647 103 50 8360
+births_minus_deaths ; Différence entre naissance et décès | 293 48 343 734 -3 -11 1404
+population ; Population approximative | 42678 93000 27400 49878 4855 1466 219277
+mortality_per_1000 ; Mortalité par 1.000 habitants | 19.16 47.68 22.73 18.30 21.83 41.60 31.72
+
+@tunis_cause_nationality view=46 page=40 year=1939
+cols: french tunisian_muslim tunisian_jewish italian anglo_maltese other total
+Maladies ordinaires | 731 3546 566 830 98 56 5827
+Variole | 0 0 0 0 0 0 0
+Diphtérie | 0 1 2 0 0 0 3
+Fièvre typhoïde | 8 37 7 9 2 0 63
+Typhus exanthématique | 4 89 2 1 0 0 96
+Fièvre récurrente | 0 0 0 0 0 0 0
+Rougeole | 6 83 18 5 0 0 112
+Scarlatine | 0 0 0 0 0 0 0
+Tuberculose de l'appareil respiratoire | 42 538 13 51 5 5 654
+Autres tuberculoses | 17 93 13 10 1 0 134
+Grippe | 5 42 2 5 0 0 54
+Paludisme (malaria) | 5 5 0 2 0 0 12
+Affection cholériforme | 0 0 0 0 0 0 0
+Peste | 0 1 0 0 0 0 1
+TOTAUX | 818 4435 623 913 106 61 6956
+
+@tunis_month_cause view=46 page=40 year=1939
+cols: Maladies ordinaires;Variole;Diphtérie;Fièvre typhoïde;Typhus;Fièvre récurrente;Rougeole;Scarlatine;Tuberculose pulmonaire;Grippe;Paludisme;Affection cholériforme;Peste;TOTAUX
+Janvier | 491 0 0 6 11 0 1 0 54 7 3 0 0 573
+Février | 477 0 0 0 8 0 3 0 64 14 0 0 0 566
+Mars | 492 0 1 5 24 0 13 0 71 16 0 0 0 622
+Avril | 462 0 2 6 9 0 11 0 75 5 0 0 0 570
+Mai | 394 0 0 4 15 0 13 0 80 4 2 0 0 512
+Juin | 333 0 0 4 9 0 22 0 49 5 0 0 0 422
+Juillet | 552 0 0 4 5 0 23 0 51 1 1 0 0 637
+Août | 467 0 0 3 10 0 11 0 49 0 0 0 0 540
+Septembre | 462 0 0 6 1 0 11 0 50 1 2 0 0 533
+Octobre | 714 0 0 10 2 0 5 0 47 1 0 0 1 780
+Novembre | 602 0 0 12 1 0 2 0 24 0 1 0 0 642
+Décembre | 510 0 0 3 1 0 2 0 40 0 3 0 0 559
+TOTAUX | 5956 0 3 63 96 0 112 0 654 54 12 0 1 6956

@@ -1,0 +1,268 @@
+# sgt1926, ark bpt6k9105650k, chapter III "Hygiène et assistance"
+# Conventions as in health_finance_sgt1922.txt.
+
+[receipts_series] views=618,619 pages=54,55 years=1917 1918 1919 1920 1921 1922 1923 1924 1925 1926
+Produit de la taxe sur les bons de poudre et permis de port et d'achat d'armes | 65700 65700 65700 100800 101300 101300 - - - -
+Droits de la taxe par l'Assistance publique sur les décorations du Nichan-Iftikhar | 43100 43100 43100 43100 43100 43100 - - - -
+Produit des amendes et condamnations prononcées par les Tribunaux français de Tunis en matière criminelle, correctionnelle et de simple police | 34800 34800 34800 38000 151500 151500 - - - -
+Produit du droit de 5 francs sur les débits de boissons | » » » » 2400 2400 - - - -
+Part de 50 % dans les produits des concessions dans les cimetières de Tunis | - - - - - - - - - -
+Produit du droit des pauvres et recettes diverses | - - - - - - - - - -
+Produit des concessions dans les cimetières suburbains | 28700 28700 28700 167800 210800 210800 - - - -
+Produit de la taxe sur les théâtres, cinémas, music-halls, instituée par le décret du 20 décembre 1919 | » 60000 80000 » - - - - - -
+Donation Joséphine Virieu | » » 637.50 » - - - - - -
+Augmentation sur recettes diverses votées par la Conférence Consultative | » » » » 20000 20000 » » » »
+Montant unique imprimé en accolade sur les neuf premières lignes | - - - - - - 559100 745500 860300 924100
+TOTAUX | 172300 232300 252937.50 349700 529100 529100 559100 745500 860300 924100
+# 1923 is printed as one bracketed amount in this edition (no footnote).
+
+[budget_receipts] views=620 pages=56 cols=1925 ; 1926 title=b) Recettes
+A | 1 | Allocation forfaitaire sur le produit des encaissements réalisés par le Trésor, pour le compte de l'Assistance publique. (Chapitre III. — Art. 14 du budget de l'Etat) | 860300 924100
+I | Total | 860300 924100
+A | 2 | Allocation complémentaire | » 95000
+I | Total | » 95000
+T | TOTAUX GÉNÉRAUX | 860300 1019100
+# printed: "En plus au budget de 1926: 63.800" (1°), "95.000" (2°), "En plus ... 158.800".
+
+[budget_expenditure] views=621,622,623 pages=57,58,59 year=1926 cols=Crédits prélevés sur la dotation forfaitaire: crédits prévus pour 1926 ; différence avec 1925, en plus ; en moins ; Allocation complémentaire pour 1926 title=c) Dépenses
+H | a) Assistance publique
+A | 1 | Sourds-muets et aveugles | 20000 5000 - -
+A | 2 | Vieillards et incurables | 95500 10500 - -
+D | Service d'assistance aux vieillards de la Société française de bienfaisance de Tunis | 56000
+D | Asile des Petites Sœurs des Pauvres de Tunis | 2500
+D | Asiles des vieillards israélites de Tunis | 4500
+D | Asile des vieillards de Bizerte | 2500
+D | Fonds de concours pour le placement de vieillards dans les Hospices de la Métropole ou d'Algérie | 30000
+A | 3 | Aliénés : Placement d'aliénés dans les Asiles de la Métropole | 120000 55000 - -
+A | 4 | Tuberculeux | mémoire - - -
+A | 5 | Hospitalisation d'étrangers dans les Hôpitaux de Tunis | 30000 » - -
+H | b) Dispensaires et Services d'assistance médicale
+A | 6 | Cliniques pour les maladies d'yeux | 10000 3000 - -
+A | 7 | Société de Secours aux Blessés militaires (pour ses dispensaires) | 6000 » - -
+A | 8 | Union des Femmes de France (pour ses dispensaires) | 5000 1000 - -
+A | 9 | Croix Verte de Tunis et de Bizerte | 3400 » - -
+A | 10 | Consultations internationales de la Société Française de Bienfaisance de Tunis | 12000 » - -
+H | 11. Services d'Assistance israélite
+A | 11a | Hôpital israélite de Tunis | 30000 » 10000 35000
+A | 11b | Communauté israélite de Tunis | 25000 25000 » 25000
+H | c) Protection et Assistance de l'enfance
+A | 12 | Crédits réservés, suivant le tableau annexe, aux œuvres de Protection et d'Assistance de l'Enfance (décret du 15 janvier 1923) | 255000 20000 - -
+S | A reporter | 611900 119500 10000 60000
+H | d) Sociétés de bienfaisance et œuvres d'assistance diverses
+H | Tunis
+A | 13 | Service des indigents de la Société française de Bienfaisance de Tunis | 75000 10000 - 7000
+A | 14 | Fourneau des Pauvres | 26000 » 2000 10000
+A | 15 | Société italienne de bienfaisance | 2000 » - -
+A | 16 | Société musulmane de bienfaisance | 53000 3000 - 10000
+A | 17 | Asile de nuit israélite | 3500 1000 - -
+A | 18 | Cuisines populaires israélites | 15000 5000 - -
+A | 19 | Œuvres israélite des couvertures | 6000 2000 - -
+A | 20 | Œuvre de protection de la jeune fille | 7000 1000 - -
+H | Intérieur
+H | Première Région
+A | 21 | Société française de bienfaisance de Bizerte | 11000 » - -
+A | 22 | Société musulmane de bienfaisance de Bizerte | 3000 » - -
+A | 23 | Société italienne de bienfaisance de Bizerte | 1000 1000 - -
+A | 24 | Société musulmane de bienfaisance de Ferryville | 1000 500 - -
+A | 25 | Société musulmane de bienfaisance de Béja | 500 » - -
+H | Deuxième Région
+A | 26 | Société française de bienfaisance de La Goulette | 1000 » - -
+A | 27 | Dispensaire des Sœurs Missionnaires de Notre-Dame d'Afrique à Carthage | 1500 1500 - -
+A | 28 | Société musulmane de bienfaisance de Nabeul | 3500 1000 - -
+S | A reporter | 821900 145500 12000 87000
+H | Troisième Région
+A | 29 | Société musulmane de bienfaisance du Kef | 1000 500 - -
+H | Quatrième Région
+A | 30 | Société française de bienfaisance de Sousse | 16000 2000 - -
+A | 31 | Société musulmane de bienfaisance de Sousse | 5000 1000 - -
+A | 32 | Société française de bienfaisance de Kairouan | 2500 » - -
+A | 33 | Société musulmane de bienfaisance de Kairouan | 3000 2000 - -
+A | 34 | Caisse de bienfaisance israélite de Sousse | - - - 4000
+H | Cinquième région
+A | 35 | Société française de bienfaisance de Sfax | 11000 3000 - -
+A | 35bis | Société musulmane | 500 500 - -
+A | 36 | Société italienne de bienfaisance de Sfax | 500 » - -
+A | 37 | Société musulmane de bienfaisance de Tozeur | 1500 » - -
+A | 38 | Caisse de bienfaisance israélite de Sfax | - - - 4000
+A | 39 | Legs Joséphine Virieu. — Dotation à une jeune fille française | 637.50 - 637.50 -
+A | 40 | Dépenses imprévues, subventions exceptionnelles et part contributive du Comité supérieur au programme de réalisations d'assistance | 27107.50 - 80252.50 -
+A | 41 | Versement au fonds de réserve du 5 % sur le montant du budget de l'Assistance publique, déduction faite du crédit de 255.000 francs, réservé aux œuvres de protection et d'assistance de l'Enfance | 33455 2190 - -
+T | TOTAUX | 924100 156690 92890 95000
+# printed under the totals: net difference "63.800" (crédits) and "95.000" (allocation complémentaire), together "158.800".
+
+[child_protection] views=624,625 pages=60,61 year=1926 cols=Crédits prélevés sur la dotation forfaitaire: crédits prévus pour 1926 ; différence avec 1925, en plus ; en moins ; Allocation complémentaire pour 1926 title=d) Répartition des Crédits réservés aux œuvres de protection et d'assistance de l'enfance
+A | 1 | Dispensaire Alapetite | 30000 » - -
+A | 2 | Œuvre de la Crèche | 18000 6000 - -
+A | 3 | Œuvre française de protection du premier âge | 10000 » - -
+A | 4 | Fonds de secours aux mères françaises | 20000 10000 - -
+A | 5 | Orphelinat de la Société française de bienfaisance de Tunis | 50000 2000 - -
+A | 6 | Fonds de secours aux orphelinats musulmans | 8000 2000 - -
+A | 7 | Fonds de secours aux orphelinats israélites | 4000 » - -
+A | 8 | Institut Héliothérapique du Kram | 55000 5000 - -
+A | 9 | Garderie israélite de Tunis | 7000 2000 - -
+A | 10 | Fonds de secours aux œuvres d'habillement d'enfants | 10000 4000 - -
+H | Gouttes de Lait
+H | Deuxième Région
+A | 11 | Dispensaire de la Croix Rouge de Tunis | 12000 » - -
+S | A reporter | 224000 31000 - -
+H | Troisième Région, S. S. B. M.
+A | 12 | Goutte de lait de Maktar | 1800 » - -
+A | 13 | Goutte de lait de Thala | 1800 - - -
+H | Quatrième Région
+A | 14 | Goutte de lait Lucien Saint à Sousse | 1800 - - -
+A | 15 | Goutte de lait Lucien Saint à Mehdia | 1800 - - -
+H | Cinquième Région
+A | 16 | Goutte de lait Lucien Saint à Sfax | 1800 - - -
+A | 17 | Goutte de lait Lucien Saint à Gafsa | 1800 - - -
+A | 18 | Goutte de lait Lucien Saint à Tozeur | 1800 - - -
+A | 19 | Goutte de lait Lucien Saint à Gabès | 1800 - - -
+A | 20 | Goutte de lait Lucien Saint à Djerba | 1800 - - -
+A | 21 | Subventions exceptionnelles et dépenses diverses | 2050 - 12000 -
+A | 22 | Versement au fonds de réserve | 12750 1000 - -
+T | TOTAUX | 255000 32000 12000 -
+# printed under the table: "en plus au budget de 1926 ... 20.000"
+
+[societies] views=626,627,628,629 pages=62,63,64,65 year=1926 caisse_debut=1926-01-01 caisse_fin=1927-01-01
+# Names are printed as the addressee ("M. le Président de la Société ..."); stored as printed.
+# Printed over two spreads; "A reporter" / "Report" lines are stored as SUBTOTAL lines and checked.
+Mme la Supérieure des Sœurs Missionnaires de Notre-Dame d'Afrique, à Carthage | 13.75 » 1500 » 1513.75 | 245.15 » » » 902.45 385.15 1532.75 | » | 15542 » » »
+Mme la Supérieure des Sœurs de N.-D. de l'Espérance, rue Bach Hamba, à Tunis | » 500 2000 2000 4500 | 4562.00 355 » » » 479 5396 | » | 34443 120 6760{d} »
+M. le Directeur de l'Hôpital israélite de Tunis | » » 115000 59689.75 174689.75 | 56228.90 » » » 114239.35 17847.70 188315.95 | » | » » » »
+M. le Directeur de l'Hôpital israélite de Bizerte | » 4073.55 1000.00 3330.90 8404.45 | 15 637.05 » » 9199.85 » 9851.90 | » | 307 » » »
+M. le Président de la Société française de Bienfaisance de Tunis | 3526.40 6672.09 274000 18886.40 303084.89 | 37172.22 65316.28 136541.98 7528.21 9218.55 32188.52 287965.76 | 15119.13 | 1690 6668 4472 37
+M. le Président de la Société française de Bienfaisance de Sousse | » » » » » | » » » » » » » | » | » » » »
+M. le Président de la Société française de Bienfaisance de Sfax | 843.05 4666.60 11000 1037.15 17546.80 | 35 10430 3405 » 3123.40 » 16993.40 | 534.40 | 1594 433 12 57
+M. le Président de la Société française de Bienfaisance de Bizerte | 1168.90 707 16000 2143.30 20019.20 | 2333 17131.70 » » » 539.60 20004.30 | 414.90 | 276 3976 » 3
+M. le Président de la Société française de Bienfaisance de Kairouan | 559.25 » 2500 640.60 3699.85 | 180.10 2658 » 350 174.35 » 3362.45 | 337.40 | 45 38 1 6
+M. le Président de la Société française de Bienfaisance de La Goulette | 7.21 237 1000 66 1310.21 | » 1249.35 » » » 22 1271.35 | 38.86 | 56 65 » »
+M. le Président de la Société musulmane de Bienfaisance de Tunis | » 119363.05 70000 61708.85 251071.90 | 54955.25 22832.70 94267.10 1800.00 10797.10 13317.34 197969.49 | 53102.41 | 1634 1534 387 27
+M. le Président de la Société musulmane de Bienfaisance du Kef | 12772.31 13739.00 1000 3644{m} 31175.31 | 425.45 828.95 2760.10 » » 3072.15 7086.65 | 24088.66 | » » » »
+M. le Président de la Société musulmane de Bienfaisance de Sousse | » » » » » | » » » » » » » | » | » » » »
+M. le Président de la Société musulmane de Bienfaisance de Nabeul | 3822.95 2613.90 7616.55 3497.25 17550.65 | 759.25 3588 » » 20 8723.55 13090.80 | 4459.85 | 393 1345 1 7
+M. le Président de la Société musulmane de Bienfaisance de Kairouan | 7864.05 19062.10 6500 4618.20 38044.35 | 1241.25 6210.90 12483.20 235.55 5 1150.85 21326.75 | 16717.60 | 1372 689 1 3
+M. le Président de la Société musulmane de Bienfaisance de Béja | 11417.00 » 250 1160 12827 | 150 350 330 106.80 40 88.50 1065.30 | 11761.70 | 16 12 1 1
+M. le Président de la Société musulmane de Bienfaisance de Tozeur | 3112.50 5050 » 1301 9463.50 | 93.65 6642.25 » » » » 6735.90 | 2727.60 | 240 10 1 5
+M. le Président de la Société musulmane de Bienfaisance de Bizerte | 3457.97 3411.10 3998.50 2121.25 12988.82 | 177.40 8004.50 3257.25 » 169.35 90 11698.50 | 1290.32 | 1624 522 12 »
+M. le Président de la Société musulmane de Bienfaisance de Ferryville | 206.40 1048 499.50 1982.55 3736.45 | 742.10 1600.25 117 » » 947.10 3406.45 | 330 | » » » »
+M. le Président de la Société musulmane de Bienfaisance de Sfax | 4840.75 3810 600.00 19556.15 28806.90 | 1919 15163 » » » 7403.50 24485.50 | 4321.40 | 1020 242 » »
+M. le Président de la Société musulmane de Bienfaisance de Monastir | 5721.29 13074.20 » 3799 22594.49 | » » 12641.05 » » 3361.40 16002.45 | 6592.04 | 75 75 » »
+M. le Président de la Société de Secours aux Blessés militaires de Tunis | 196475.05 66070.30 6000.00 17911.10 286456.45 | 38920.60 » » » » 3224.30 42144.90 | 242456.55 | » » » »
+M. le Président de l'Asile de Nuit et de la Maternité israélite de Tunis | » 3149.70 6500 1895.85 11545.55 | 7577.55 3871.55 » » 3376.80 » 14825.90 | 4156 | 10589 » 1160 »
+M. le Président des Cuisines populaires israélites de Tunis | » 14302.95 15000 71106.10 100409.05 | 16740.95 66014.75 » » » 25522.20 108277.90 | » | 101873 101873 » »
+M. le Président de la Société italienne de Bienfaisance de Tunis | 325.25 9693 2000 42515.10 54533.35 | 7635 35721.15 6226{m} » 2057.25 2241.60 53921 | 612.35 | 562 797 216 743
+M. le Président de la Société italienne de Bienfaisance de Bizerte | » 3730.50 1000 3371.80 8102.30 | 1244.45 5334.20 300 » » 2472.75 9351.40 | » | 146 206 218 15
+M. le Président de la Société italienne de Bienfaisance de Sfax | 135.75 9280.75 1500 1028.95 11945.45 | 382 7611 1507.50 » 750 1060.70 11311.20 | 634.25 | 259 1950 125 27
+SUBTOTAL A reporter | 256269.83 304254.79 546464.55 329031.25 1436020.42 | 233735.27 281550.58 273876.18 10020.56 154073.45 124137.91 1077393.95 | 375714.42 | 173756 120555 13367 931
+M. le Président de l'Œuvre des Couvertures de Tunis | 6368.30 7328.30 3500 5000 22196.60 | 115 29447.90 » » » 22.50 29585.40 | 111.20 | 800 1575 » »
+M. le Président de la Croix Verte de Tunis | » » » » » | » » » » » » » | » | » » » »
+M. le Président de la Croix Verte de Bizerte | 180 200 1500 1100 2980 | 1410 700 » » » 570 2680 | 300 | 249 160 40 »
+M. le docteur Chatenier, clinique pour les maladies d'yeux, à Tunis | » » 3000 » 3000 | 5400 » » » » » 5400 | » | » 933 » »
+Mme la Présidente de la Garderie israélite de Tunis | 32643.45 104376.50 11000 17017.95 165037.90 | 14685.05 8149.60 » » » 26648.75 49483.40 | 115554.50 | » » » »
+Mme la Présidente de l'Union des Femmes de France de Tunis | 40173.40 6358.35 11000 7576.45 65108.20 | 24016.30 130 » » » » 24146.30 | 40961.90 | 43969 » » »
+Mme la Présidente du Fourneau des Pauvres de Tunis | 446.94 5230 42000 37240 84916.94 | 10732.42 65906.55 » » » 2326 78964.97 | 5951.97 | » 98500 » »
+Mme la Présidente de l'Œuvre de Protection de la Jeune Fille de Tunis | » 1850 7000 45000 53850 | 10156 40025 » » » 1215 51396 | 2454 | 92 » » »
+Mme la Présidente du Dispensaire Alapetite de Tunis | 14588.63 895.37 30500 148463.59 194447.59 | 23149.65 » » » » 171297.94 194447.59 | » | 107705 » 107705 »
+Mme la Présidente de l'Œuvre de la Crèche de Tunis | 17387.70 14132.75 18000 1492.03 51012.48 | 28596.58 6492.80 » » » 13649.05 48738.43 | 2274.05 | 635 99733 635 »
+Mme la Présidente de l'Œuvre française de protection du premier âge de Tunis | » 754.50 20000 25.00 20779.50 | 1577.30 » 10418.15 » » » 11995.45 | 8784.05 | » » » »
+Mme la Présidente de l'Institut Héliothérapique du Kram | 27891.80 14607 62000 35000 139498.80 | 22238.10 » 79517.90 » » 12426.45 114182.45 | 25316.35 | 22377 » » »
+Mme la Présidente du Vestiaire Central de Tunis | 33769.67 » 3000 165000 201769.67 | 8149.35 10883.35 » 22105.60 » 154376.90 195515.20 | 6254.47 | 5053 5053 » »
+Mme la Présidente de la Goutte de Lait de Tunis | » » 12000 8000 20000 | 21855 » » » » » 21855 | » | » » » »
+Mme la Présidente de la Goutte de Lait de Maktar | 8882.35 1463 1800 3183.65 15329 | 135.40 3661 » » » 1200 4996.40 | 10332.60 | 899 1376 899 »
+Mme la Présidente de la Goutte de Lait de Thala | 4658.40 » 1800 2000 8458.40 | 60 4150.20 » » » 175.90 4386.10 | 4072.30 | 250 » » »
+Mme la Présidente de la Goutte de Lait de Sousse | 25856.50 18000 1800 8013.79 53670.29 | 7052.70 » 16994.55 » 195.90{d} » 24243.15 | 29427.14 | » » » »
+Mme la Présidente de la Goutte de Lait de Mahdia | » » » » » | » » » » » » » | » | » » » »
+Mme la Présidente de la Goutte de Lait de Sfax | 22885.55 » 1800 29821.90 54507.45 | 5259.70 26201 » » » 730.45 32191.15 | 22316.30 | 312 2350 12000 »
+Mme la Présidente de la Goutte de Lait de Gabès | 1173.43 2384.61 1800 14000 19358.04 | 3000 13923 » » » 760.53 17683.53 | 1674.51 | 4293 37911 1186 »
+Mme la Présidente de la Goutte de Lait de Djerba | 5253.75 5041 1800 11000 23094.75 | 2411.65 8815 » 1848.70 » » 13075.35 | 10019.40 | 9808 » » »
+Mme la Présidente de la Goutte de Lait de Gafsa | 9311.20 » 1800 6735 17846.20 | 1400 10713.40 » » » » 12113.40 | 5732.80 | 120 » » »
+Mme la Présidente de la Goutte de Lait de Tozeur | 12889.12 20 1800 4000 18709.12 | 221.45 6058.80 » » » » 6280.25 | 12428.87 | 1280 » » »
+Mme la Présidente de la Caisse de Secours et de Bienfaisance israélite de Sousse | » 50452.95 4000 121688.43 176141.38 | 53803.47 51095.60 12924.75 » 49500 8658.03 175981.85 | 159.53 | 398 10582 232 »
+Mme la Présidente de la Caisse de Secours et de Bienfaisance israélite de Sfax | 329.92 35577.90 4000 41055.60 80963.42 | 3742.10 74763.20 » 5875.45 7408.35 1910 93699.10 | 12735.68 | 285 124 183 274
+TOTAUX | 520959.94 572927.02 793364.55 1041444.64 2928696.15 | 482902.49 642666.98 393731.53 39850.31 211177.70 520105.41 2290434.42 | 692576.04 | 371979 378852 135247 1205
+
+[institute_budget] institute=pasteur view=637 page=73 year=1926
+receipts: Subventions de l'Etat | 337526.92
+receipts: Subventions particulières | 4755.55
+receipts: Ventes de produits | 406169.20
+receipts: TOTAL DES RECETTES | 748451.67
+expenditure: Personnel | 272626.88
+expenditure: Personnel subalterne | 62441.92
+expenditure: Fonctionnement des Services | 281503.36
+expenditure: TOTAL DES DÉPENSES | 616572.16
+
+[pasteur_products] view=637 page=73 year=1926
+Centre vaccinogène / Vaccin antivariolique, doses préparées et distribuées | doses | 592130
+Service des vaccins microbiens, nombre de doses distribuées / Vaccin antigonococcique | doses | 6440
+Service des vaccins microbiens, nombre de doses distribuées / Vaccin antistaphylococcique | doses | 2651
+Service des vaccins microbiens, nombre de doses distribuées / Vaccin anticoquelucheux | doses | 2331
+Service des vaccins microbiens, nombre de doses distribuées / Vaccin antityphoïdique curatif | doses | 426
+Service des vaccins microbiens, nombre de doses distribuées / Vaccin antityphoïdique préventif | doses | 4133
+Service des vaccins microbiens, nombre de doses distribuées / Vaccin antiméditerranéen curatif n° 1 | doses | 394
+Service des vaccins microbiens, nombre de doses distribuées / Vaccin antiméditerranéen curatif n° 2 | doses | 145
+Service des vaccins microbiens, nombre de doses distribuées / Vaccin antiméditerranéen curatif n° 3 | doses | 77
+Service des vaccins microbiens, nombre de doses distribuées / Vaccin antiméditerranéen (formule spéciale) | doses | 15
+Service des vaccins microbiens, nombre de doses distribuées / Vaccin antipesteux | doses | 173199
+Service des vaccins microbiens, nombre de doses distribuées / Vaccin antistreptobacillaire | doses | 1904
+Service des vaccins microbiens, nombre de doses distribuées / Emulsion de Ducrey pour cutiréaction | ampoules | 184
+Service des vaccins microbiens, nombre de doses distribuées / Autovaccin | échantillons | 60
+Service des vaccins microbiens, nombre de doses distribuées / Filtrat pour intradermoréaction de la fièvre méditerranéenne | ampoules | 99
+Service des sérums de convalescents / Sérum préventif de la rougeole (sérum de convalescents) | flacons de 10 c.c. | 40
+Service des sérums de convalescents / Sérum préventif du typhus exanthématique (sérum de convalescents) | flacons de 10 c.c. | 12
+Produits divers non préparés à l'Institut / Sérum antidiphtérique ordinaire | flacons de 10 c.c. | 3056
+Produits divers non préparés à l'Institut / Sérum antidiphtérique purifié à 5.000 unités | - | 51
+Produits divers non préparés à l'Institut / Sérum antidiphtérique purifié à 1.000 unités | - | 22
+Produits divers non préparés à l'Institut / Sérum antitétanique ordinaire | - | 3845
+Produits divers non préparés à l'Institut / Sérum antitétanique purifié à 1.500 unités | - | 1
+Produits divers non préparés à l'Institut / Sérum antistreptococcique | - | 1080
+Produits divers non préparés à l'Institut / Sérum antivenimeux | - | 450
+Produits divers non préparés à l'Institut / Sérum antidysentérique | - | 1198
+Produits divers non préparés à l'Institut / Sérum antiméningococcique | - | 219
+Produits divers non préparés à l'Institut / Sérum antipneumococcique | - | 234
+Produits divers non préparés à l'Institut / Sérum antigangréneux (antiperfringens) | - | 64
+Produits divers non préparés à l'Institut / Sérum antipesteux | - | 1447
+Produits divers non préparés à l'Institut / Tuberculine brute pour usage vétérinaire | flacons de 5 c.c. | 4
+Produits divers non préparés à l'Institut / Tuberculine brute pour usage médical (solution mère) | - | 2
+Produits divers non préparés à l'Institut / Tuberculine diluée pour usage vétérinaire | - | 163
+Produits divers non préparés à l'Institut / Tuberculine diluée pour cutiréaction | - | 41
+Produits divers non préparés à l'Institut / Malléine diluée | - | 27
+
+[institute_budget] institute=arloing view=638 page=74 year=1926
+receipts: Subvention de l'Etat | 59505
+receipts: Ventes de produits | 154640
+receipts: Recettes diverses | 16315
+receipts: TOTAL DES RECETTES | 230460
+expenditure: Personnel | 111260
+expenditure: Dépenses diverses | 119200
+expenditure: TOTAL DES DÉPENSES | 230460
+
+[arloing_doses] view=639 page=75 year=1926 kind=serum title=c) Doses de sérums distribuées
+cols: Anticlaveleux ; Antitétanique ; Antistreptococcique ; Anticharbonneux ; Contre le charbon symptomatique ; Contre le rouget du porc
+Janvier | 11100 330 20 120 300 »
+Février | 500 850 » » 200 »
+Mars | » 160 20 » » »
+Avril | » 320 300 » 500 »
+Mai | » 30 » » 50 »
+Juin | » 40 » 280 » »
+Juillet | 1000 » » » » »
+Août | » 200 » 100 » »
+Septembre | 50 » » 410 » »
+Octobre | 750 100 » 40 » »
+Novembre | 250 » 80 » » »
+Décembre | » 100 240 » » »
+TOTAUX | 13650 2130 660 950 1050 »
+
+[arloing_doses] view=639 page=75 year=1926 kind=vaccine title=d) Doses de vaccins distribuées
+cols: Vaccin anticlaveleux ; Vaccin contre le charbon symptomatique ; Vaccin contre la fièvre charbonneuse ; Vaccin contre la diphtérie aviaire ; Vaccin contre le typhon aviaire ; Trypanbleu contre la piroplasmose ; Solution contre la piroplasmose
+Janvier | 31705 470 1300 80 » » 2
+Février | 14143 2118 1758 » 40 » »
+Mars | 47897 1255 1630 130 100 » 20
+Avril | 11280 3097 1775 » » » »
+Mai | 18949 3895 1440 350 » » »
+Juin | 29365 1440 3265 » 350 » 90
+Juillet | 22056 130 715 » » 12 230
+Août | 1517 30 1126 » » » 105
+Septembre | 2254 » 1232 » » » »
+Octobre | 1741 470 160 20 » » 224
+Novembre | 4560 210 44 100 100 » »
+Décembre | 14506 165 260 » » » »
+TOTAUX | 200973 13280 13705 680 590 12 671

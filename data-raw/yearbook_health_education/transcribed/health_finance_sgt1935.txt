@@ -1,0 +1,128 @@
+# sgt1935, ark bpt6k9105653t, chapter III "Santé publique"
+# Conventions as in health_finance_sgt1922.txt.
+
+[etat_receipts] views=58 pages=38 year=1935 title=I. Recettes. Crédits alloués pour 1935
+Titre 1er | 1850000
+Titre II | 270000
+TOTAL du crédit pour 1935 | 2120000
+
+[etat_subsidies] views=58,59 pages=38,39 year=1935 cols=Subvention proposée pour 1935, Titre I ; Titre II ; Total title=II. Dépenses
+H | Société française de bienfaisance de Tunis
+A | a | Société française de bienfaisance de Tunis : Consultations internationales | 10000 » 10000
+A | b | Société française de bienfaisance de Tunis : Assistance aux indigents | 145000 » 145000
+A | c | Société française de bienfaisance de Tunis : Vieillards | 95000 » 95000
+A | d | Société française de bienfaisance de Tunis : orphelinat | 116000 » 116000
+A | e | Société française de bienfaisance de Tunis : Secours aux mères françaises nécessiteuses | 45000 » 45000
+A | f | Société française de bienfaisance de Tunis : Service de la rage | 5000 » 5000
+A | g | Société française de bienfaisance de Tunis : Chaussures aux petits français | 4500 » 4500
+A | a | Société musulmane de bienfaisance de Tunis : Assistance médicale | 10000 » 10000
+A | b | Société musulmane de bienfaisance de Tunis : Assistance aux indigents | 131000 » 131000
+A | c | Société musulmane de bienfaisance de Tunis : Vieillards | 30000 » 30000
+A | d | Société musulmane de bienfaisance de Tunis : Orphelinat | 70000 » 70000
+A | e | Société musulmane de bienfaisance de Tunis : Cuisines populaires | 10000 » 10000
+A | a | Communauté israélite de Tunis : Assistance médicale | 10000 » 10000
+A | b | Communauté israélite de Tunis : Vieillards | 30000 » 30000
+A | c | Communauté israélite de Tunis : Service antituberculeux | 40000 » 40000
+A | d | Communauté israélite de Tunis : Orphelinat | 20000 » 20000
+A | - | Rétribution du délégué du Gouvernement près la Communauté israélite de Tunis | 4000 » 4000
+A | a | Fourneau des pauvres : Assistance médicale | 10000 » 10000
+A | b | Fourneau des pauvres : Assistance aux indigents | 75000 » 75000
+A | c | Fourneau des pauvres : Garderie | 20000 » 20000
+A | d | Fourneau des pauvres : Orphelinat de garçons de l'Institut Saint Vincent de Paul à La Marsa | 3000 » 3000
+A | a | Institut Héliothérapique infantile du Kram : Fonctionnement de l'établissement | 110000 » 110000
+A | b | Institut Héliothérapique infantile du Kram : Entretien des enfants placés par l'Administration | 150000 » 150000
+A | - | Société de secours aux blessés militaires | 14000 » 14000
+A | - | Union des Femmes de France | 6500 » 6500
+A | - | Dispensaire de la Croix Rouge de Tunis | 10000 » 10000
+A | - | Croix Verte de Tunis | 5000 » 5000
+A | - | Asile des vieillards des petites sœurs des pauvres de Tunis | 40000 » 40000
+A | - | Dispensaire des Sœurs de N. D. de l'Espérance à Tunis | 5000 » 5000
+A | - | Sœurs de N. D. de l'Assomption à Tunis | 3000 » 3000
+A | - | Dispensaire des Sœurs de N. D. d'Afrique à Carthage | 1500 » 1500
+A | - | Asile de nuit et maternité israélite | 7000 » 7000
+A | - | Cuisines populaires israélites | 20000 » 20000
+A | - | Œuvre israélite des couvertures | 5000 » 5000
+A | - | Garderie israélite | 7000 » 7000
+A | - | Dispensaire scolaire d'hygiène et de médecine préventive des écoles de l'Alliance israélite de Tunis | 7000 » 7000
+A | - | Société italienne de bienfaisance de Tunis | 2250 » 2250
+A | - | Œuvre de la protection de la jeune fille (Fourneau des Pauvres) | 15000 » 15000
+A | - | Dispensaire Alapetite | 75000 » 75000
+A | a | Œuvre de la Crèche : Préventorium de Zaghouan | 8000 » 8000
+A | b | Œuvre de la Crèche : Assistance aux enfants | 75000 » 75000
+A | - | Comité de protection et d'assistance de l'enfance | 130000 120000 250000
+A | - | Œuvre de protection du premier âge | 10000 » 10000
+A | - | Société française de bienfaisance de Bizerte | 12000 » 12000
+A | - | Caisse de secours et de bienfaisance israélite de Bizerte | 3000 » 3000
+A | - | Croix Verte de Bizerte | 2000 » 2000
+A | - | Société française de bienfaisance de Ferryville | 5000 » 5000
+A | - | Société musulmane de bienfaisance de Ferryville | 1500 » 1500
+A | - | Société musulmane de bienfaisance de Nabeul | 6000 » 6000
+A | - | Caisse de secours et de bienfaisance israélite de Nabeul | 3000 » 3000
+A | - | Société musulmane de bienfaisance du Kef | 10500 » 10500
+A | - | Société française de bienfaisance de Sousse | 18000 » 18000
+A | - | Société musulmane de bienfaisance de Sousse | 18000 » 18000
+A | - | Caisse de secours et de bienfaisance israélite de Sousse | 18000 » 18000
+A | - | Société française de bienfaisance de Kairouan | 1000 » 1000
+A | - | Société musulmane de bienfaisance de Kairouan | 3000 » 3000
+A | - | Société musulmane de bienfaisance de Monastir | 3000 » 3000
+A | - | Société française de bienfaisance de Sfax | 2000 » 2000
+A | - | Société musulmane de bienfaisance de Sfax | 27250 » 27250
+A | - | Société italienne de bienfaisance de Sfax | 1000 » 1000
+A | - | Caisse de secours et de bienfaisance israélite de Sfax | 6000 » 6000
+A | - | Société musulmane de bienfaisance de Tozeur | 2000 » 2000
+A | - | Versement de 5 % au fonds de réserve de l'Assistance Publique | 92500 » 92500
+A | - | Placement des tuberculeux dans les sanatoria | » 150000 150000
+A | - | Legs Joséphine Virieu | 637.05{tm} » 637.05{tm}
+A | - | Œuvre des Cantines scolaires | 14000 » 14000
+A | - | Dépenses imprévues | 10862.05{tm} » 10862.05{tm}
+T | TOTAL | 1850000 270000 2120000
+
+[societies_summary] views=60,61 pages=40,41 year=1935 caisse_fin=1935-01-01 totals=none
+# Layout from this edition: total receipts | total expenditure | reste en caisse au 1er janvier 1935 (printed
+# "déficit" where expenditure exceeds receipts: stored as the word) | statistics (personnes secourues, secours en espèces
+# ou en nature, personnes ayant bénéficié de l'assistance, rapatriements). "—" = dash printed. No total line.
+Sœurs Mission. N.D. d'Afrique, Carthage | 1500 2770 déficit | 17000 800 16200 »
+Sœurs de N.D. Espérance, Tunis | 6800 25926 déficit | 74468 15737 11520 »
+Société Française de Bienfaisance, Tunis | 1107073.85 869952.58 237121.27 | 2465 7200 6150 »
+Société Française de Bienfaisance, Sousse | 42610.64 41317.85 1292.79 | 1972 1907 38 27
+Société Française de Bienfaisance, Sfax | 42977.40 26372.05 16605.35 | 3637 263 29 32
+Société Française de Bienfaisance, Bizerte | 48687.16 49629.32 57.84 | 995 13725 4 »
+Société Française de Bienfaisance, Kairouan | » » » | » » » »
+Société Musulmane de Bienfaisance, Tunis | 543679.42 542019.00 1660.42 | 2148 2020 800 »
+Société Musulmane de Bienfaisance du Kef | 15989.90 9886.25 6103.65 | 93 13 2 15
+Société Musulmane de Bienfaisance de Sousse | 54736.92 51058.05 3678.87 | 2015 1874 113 28
+Société Musulmane de Bienfaisance de Nabeul | 41534.81 37719.35 3815.16 | 2000 2357 500 —
+Société Musulmane de Bienfaisance de Kairouan | 75075.00 51034.20 24040.80 | — 502 » 8
+Société Musulmane de Bienfaisance de Tozeur | 22662.83 18778.85 3883.98 | 3210 3435 — —
+Société Musulmane de Bienfaisance de Bizerte | 21061.16 12713.50 9347.66 | 800 300 25 5
+Société Musulmane de Bienfaisance de Ferryville | 17646.90 16186.15 1460.75 | 431 43 » 7
+Société Musulmane de Bienfaisance de Sfax | 173686.25 146533.25 27153 | 256 223 38 17
+Société Musulmane de Bienfaisance de Monastir | 28759.61 15502.24 13257.37 | 76 » — »
+Société de Secours aux Blessés militaires, Tunis | 445681.27 91638.90 354042.37 | » » 120729 »
+Asile de nuit et Maternité israélites, Tunis | 19992.70 21264.05 déficit | 10178 1183 » »
+Cuisines populaires israélites, Tunis | 274521.75 274521.75 » | » » » »
+Société Italienne de Bienfaisance, Tunis | 39221.85 30848.15 8373.70 | 640 933 22530 »
+Société Italienne de Bienfaisance de Sfax | 23050 24050 déficit | » » 127 193
+Communauté israélite de Tunis | 1701502.51 1704878.24 déficit | 16000 150000 6000 349
+Caisse de Secours et de Bienfaisance israélite de Bizerte | 75486.65 75743.05 256.40 | » 7210.95 » »
+Caisse de secours et de bienfaisance israélite de Nabeul | 78916.90 78878.55 38.35 | » » » »
+Communauté israélite de Sfax | 163976.45 163259.80 716.65 | 383 » 61 135
+Caisse de Secours et de Bienfaisance israélite, Sousse | 306614.63 302663.06 3951.57 | » » » »
+Croix Verte de Tunis | 48491.95 48491.95 » | 2007 » » »
+Croix Verte de Bizerte | 6947.15 5182.15 1765.00 | 130 93 275 »
+Garderie Israélite, Tunis | 19150 33748.60 déficit | 130 » » »
+Union des Femmes de France | 239332.92 227966.40 11366.52 | » » » »
+Fourneau des Pauvres de Tunis | 135166.38 131652.55 3513.83 | » 68109 » »
+Protection de la Jeune Fille | 64657.50 63072.35 1585.15 | 183 56320 » »
+Dispensaire Alapetite, Tunis | 124371.37 73676.72 50694.65 | » » » »
+Œuvre de la Crèche de Tunis | 117526.35 71235.05 46286.30 | 456 68300 » »
+Institut Héliothérapique du Kram | 472024.40 471822.40 202 | 170 » » »
+Comité Central de protection et d'assistance de l'enfance | 845727 1077785.74 déficit | — — — »
+Vestiaire Central de Tunis | 331185.71 256577.50 74608.21 | 9966 22486 » »
+Dispensaire scolaire d'hygiène et de médecine préventive des écoles de l'Alliance israélite de Tunis | 30000 30000 » | 700 » » »
+Œuvre française de protection du 1er âge, Tunis | 25883 25883 » | 91 7620 » »
+Préventorium de Zaghouan | 21698 20255 1443 | 110 » » »
+Dispensaire du Fourneau des Pauvres, Tunis | 18472.45 20153.85 déficit | 32545 » » »
+Fourneau des Pauvres, Tunis (Garderie) | 32818 31213 1605 | 283 137825 75 »
+Œuvre israélite des couvertures, Tunis | 31857.75 32622 déficit | 2500 2894 » »
+# Caisse israélite de Bizerte: "Nombre de secours" printed "7.210 95" (a money amount, apparently misplaced), stored 7210.95.
