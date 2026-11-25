@@ -1,0 +1,46 @@
+# Table e) "Naturalisations accordées (1891-1923)", 1923 edition (sgt1923),
+# volume bpt6k9105649x, views 522-523 (printed pp. 20-21). Transcribed from the
+# native-resolution images (hires.py) for the cell-by-cell comparison with
+# csv/naturalisations_by_nationality_sgt1930.csv (compare_naturalisations_e.py).
+# Comparison printing only: no data file is built from it.
+#
+# Format: see naturalisations_e_sgt1922.txt ("»" = 0, "?" = not visible,
+# "-" = blank, "= TOTAUX" printed column totals, "==" printed pair totals).
+#
+# Layout: as sgt1922 (one pair of columns per year, 22 rows, Muslims split into
+# Marocains / Algériens / Tunisiens / Soudanais), extended by 1923 under both the
+# 1910 decree and the 1914 law.
+#
+# Binding: here the 1915 minors column is visible (view 522); the 1917 minors and
+# both 1918 columns (decree of 1910) are squeezed into the gutter. The 1917 minors
+# column shows only faint "»" marks; its total and the 1917 pair total are not
+# visible. 1918 adults (2, 1, 1; total 4) and minors (3; total 3) are read at the
+# left edge of view 523 and agree with sgt1922. The 1917 minors cells are read as
+# "»" (the column is empty in sgt1922 too, whose 1917 pair total is "»").
+
+@ sgt1923 522,523 20,21
+cols | 1891-1898/d1887/T@522 1899-1910/d1899/M@522 1899-1910/d1899/m@522 1911/d1910/M@522 1911/d1910/m@522 1912/d1910/M@522 1912/d1910/m@522 1913/d1910/M@522 1913/d1910/m@522 1914/d1910/M@522 1914/d1910/m@522 1915/d1910/M@522 1915/d1910/m@522 1916/d1910/M@522 1916/d1910/m@522 1917/d1910/M@522 1917/d1910/m@522 1918/d1910/M@523 1918/d1910/m@523 1919/d1910/M@523 1919/d1910/m@523 1920/d1910/M@523 1920/d1910/m@523 1921/d1910/M@523 1921/d1910/m@523 1922/d1910/M@523 1922/d1910/m@523 1923/d1910/M@523 1923/d1910/m@523 1915/l1914/M@523 1915/l1914/m@523 1916/l1914/M@523 1916/l1914/m@523 1917/l1914/M@523 1917/l1914/m@523 1918/l1914/M@523 1918/l1914/m@523 1919/l1914/M@523 1919/l1914/m@523 1920/l1914/M@523 1920/l1914/m@523 1921/l1914/M@523 1921/l1914/m@523 1922/l1914/M@523 1922/l1914/m@523 1923/l1914/M@523 1923/l1914/m@523
+Italiens | 142 436 445 92 107 51 77 31 42 19 37 » » 1 » » » 2 3 7 18 2 » 26 32 151 234 233 291 19 10 34 23 3 1 4 » 3 » 23 19 4 1 7 » 2 »
+Anglo-Maltais | 42 107 118 10 2 21 17 20 19 8 4 2 » 4 4 » » » » » » 7 3 3 2 16 20 18 24 3 » 12 9 5 4 3 » 1 » 7 6 2 » 2 1 » »
+Suisses | 18 21 15 » » 3 7 » » 1 1 2 5 » » » » » » » » » » » » » » 1 » » » 3 » » » 2 » » » » » » » » » » »
+Allemands | 28 22 8 5 3 » » 2 1 » » » » » » » » 1 » » » » » » » » » » » » » » » » » » » 1 » » » » » 1 » » »
+Autrichiens | 10 22 22 » » » » 2 » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » 1 »
+Espagnols | 3 19 8 2 » » » » » 1 » » » » » » » » » » » 1 » » » » » » » 2 » » » » » » » » » » » » » » » » »
+Grecs | 20 6 2 3 4 4 1 » » » » » » » » » » » » » » 1 » » » 1 » 1 » 1 » 1 » » » » » » » » » » » » » » »
+Hollandais | 2 4 5 » » » » » » » » » » » » » » » » » » » » 2 » » » » » » » » » » » » » » » » » » » » » » »
+Portugais | » 3 » » » » » » » » » 1 2 » » » » » » » » » » » » » » » » 2 4 » » » » » » » » » » » » » » » »
+Belges | 6 1 » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » »
+Norvégiens | » 2 2 » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » »
+Bulgares | » 2 » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » »
+Roumains | » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » 1 » » » » » » » » » » » » » » »
+Turcs | » 8 3 1 » 12 16 1 » » » » » » » » » » » » » » » » » 6 2 2 2 » » » » » » » » » » » » » » » » » »
+Polonais | » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » 1 » » »
+Musulmans Marocains | 3 3 2 » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » »
+Musulmans Algériens | 2 5 » 4 4 » » 2 1 2 3 » » » » » » » » » » » » » » 5 7 4 6 » » 1 » » » » » » » 1 » » » » » » »
+Musulmans Tunisiens | 17 71 9 2 5 » » » » » » » » 1 » » » 1 » » » 12 1 2 4 14 7 17 17 2 » 8 » 3 » 5 2 5 » 2 » 4 » 3 3 1 »
+Musulmans Soudanais | 1 » » » » » » » » » » » » » » » » » » » » » » » » » » 1 1 » » » » » » » » » » » » » » » » » »
+Luxembourgeois | 2 » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » » »
+Russes | » 1 » » » » » » » » » » » » » » » » » » » 1 » » » 1 » 4 2 » » » » » » » » » » » » » » 2 » » »
+Israélites tunisiens | » » » 10 10 11 22 5 13 9 13 2 3 » » » » » » 5 3 8 1 4 2 14 13 22 8 14 8 27 8 23 6 3 3 13 » 9 2 3 » 2 » » »
+= TOTAUX | 296 733 639 129 135 102 140 63 76 40 58 7 10 6 4 » ? 4 3 12 21 32 5 37 40 208 283 303 351 43 22 87 40 34 11 17 5 23 » 42 27 13 1 18 4 4 »
+== | 1899-1910/d1899=1372 1911/d1910=264 1912/d1910=242 1913/d1910=139 1914/d1910=98 1915/d1910=17 1916/d1910=10 1917/d1910=? 1918/d1910=7 1919/d1910=33 1920/d1910=37 1921/d1910=77 1922/d1910=491 1923/d1910=654 1915/l1914=65 1916/l1914=127 1917/l1914=45 1918/l1914=22 1919/l1914=23 1920/l1914=69 1921/l1914=14 1922/l1914=22 1923/l1914=4

@@ -1,0 +1,1594 @@
+{
+ "stored": {
+  "sgt1930": "csv/naturalisations_by_nationality_sgt1930.csv",
+  "sgt1939": "csv/naturalisations_by_nationality_sgt1939.csv"
+ },
+ "mappings": {
+  "labels_vs_sgt1930": {
+   "Italiens": "italian",
+   "Anglo-Maltais": "anglo_maltese",
+   "Suisses": "swiss",
+   "Allemands": "german",
+   "Autrichiens": "austrian",
+   "Espagnols": "spanish",
+   "Grecs": "greek",
+   "Hollandais": "dutch",
+   "Portugais": "portuguese",
+   "Belges": "belgian",
+   "Norvégiens": "norwegian",
+   "Bulgares": "bulgarian",
+   "Roumains": "romanian",
+   "Serbes": "serbian",
+   "Polonais": "polish",
+   "Russes": "russian",
+   "Luxembourgeois": "luxembourger",
+   "Turcs": "turkish_syrian",
+   "Turcs et Syriens": "turkish_syrian",
+   "Musulmans Algériens": "algerian_muslim",
+   "Musulmans Tunisiens": "tunisian_muslim",
+   "Israélites Algériens": "algerian_jew",
+   "Israélites Tunisiens": "tunisian_jew",
+   "Israélites tunisiens": "tunisian_jew",
+   "Musulmans Marocains": "other",
+   "Divers": "other",
+   "Musulmans Soudanais": "tunisian_muslim"
+  },
+  "labels_vs_sgt1939": {
+   "Italiens": "italian",
+   "Anglo-Maltais": "maltese",
+   "Suisses": "swiss",
+   "Allemands": "german",
+   "Autrichiens": "austrian",
+   "Espagnols": "spanish",
+   "Grecs": "greek",
+   "Hollandais": "dutch",
+   "Portugais": "portuguese",
+   "Belges": "belgian",
+   "Norvégiens et Suédois": "norwegian_swedish",
+   "Tchéco-Slovaques": "czechoslovak",
+   "Bulgares": "bulgarian",
+   "Hongrois": "hungarian",
+   "Roumains": "romanian",
+   "Yougo-Slaves": "yugoslav",
+   "Turcs": "turkish",
+   "Albanais": "albanian",
+   "Polonais": "polish",
+   "Russes": "russian",
+   "Luxembourgeois": "luxembourger",
+   "Algériens catholiques": "algerian_catholic",
+   "Algériens musulmans": "algerian_muslim",
+   "Algériens israélites": "algerian_jew",
+   "Tunisiens catholiques": "tunisian_catholic",
+   "Tunisiens musulmans": "tunisian_muslim",
+   "Tunisiens israélites": "tunisian_jew",
+   "Anglais": "british",
+   "Divers": "divers_group"
+  },
+  "overrides": {
+   "sgt1922 | Musulmans Soudanais | 1891-1898": "algerian_muslim",
+   "sgt1923 | Musulmans Soudanais | 1891-1898": "algerian_muslim"
+  },
+  "divers_group_sgt1939": [
+   "moroccan",
+   "syrian",
+   "indochinese",
+   "french_west_african"
+  ],
+  "periods": {
+   "sgt1922/sgt1923": "years 1911..1920 (d1910) summed = 1911-1920; 1915..1922/1923 (l1914) summed vs 1915-1924 (subperiod)",
+   "sgt1935": "'1911-1923' (d1910) = sgt1939 '1911-1922'; 1924..1928 summed = 1924-1928",
+   "sgt1936": "1925..1928 summed vs 1924-1928 (no 1924 column: missing_1924)"
+  }
+ },
+ "editions": {
+  "sgt1922": {
+   "transcription": "transcribed/naturalisations_e_sgt1922.txt",
+   "views": "44,45",
+   "pages": "20,21",
+   "compared_with": "sgt1930",
+   "printed_total_checks": {
+    "n": 64,
+    "pass": 62,
+    "fail": [],
+    "not_checkable": [
+     {
+      "check": "1915 d1910 minors column total",
+      "computed": null,
+      "printed": null,
+      "result": "not_checkable",
+      "why": "column partly or wholly hidden in the binding"
+     },
+     {
+      "check": "1915 d1910 adults+minors pair total",
+      "computed": null,
+      "printed": 17,
+      "result": "used_to_derive",
+      "why": "hidden column total = 17 - 7"
+     }
+    ]
+   },
+   "cells": {
+    "exact": {
+     "compared": 168,
+     "equal": 168,
+     "different": 0,
+     "differences": []
+    },
+    "subperiod": {
+     "compared": 42,
+     "equal": 39,
+     "different": 3,
+     "differences": [
+      {
+       "period": "1915-1924",
+       "legal_basis": "l1914",
+       "age_group": "adults",
+       "nationality": "austrian",
+       "reprint": 0,
+       "stored": 1,
+       "reprint_cells": [
+        "Autrichiens 1915=0",
+        "Autrichiens 1916=0",
+        "Autrichiens 1917=0",
+        "Autrichiens 1918=0",
+        "Autrichiens 1919=0",
+        "Autrichiens 1920=0",
+        "Autrichiens 1921=0",
+        "Autrichiens 1922=0"
+       ]
+      },
+      {
+       "period": "1915-1924",
+       "legal_basis": "l1914",
+       "age_group": "adults",
+       "nationality": "italian",
+       "reprint": 97,
+       "stored": 99,
+       "reprint_cells": [
+        "Italiens 1915=19",
+        "Italiens 1916=34",
+        "Italiens 1917=3",
+        "Italiens 1918=4",
+        "Italiens 1919=3",
+        "Italiens 1920=23",
+        "Italiens 1921=4",
+        "Italiens 1922=7"
+       ]
+      },
+      {
+       "period": "1915-1924",
+       "legal_basis": "l1914",
+       "age_group": "adults",
+       "nationality": "tunisian_muslim",
+       "reprint": 32,
+       "stored": 33,
+       "reprint_cells": [
+        "Musulmans Tunisiens 1915=2",
+        "Musulmans Tunisiens 1916=8",
+        "Musulmans Tunisiens 1917=3",
+        "Musulmans Tunisiens 1918=5",
+        "Musulmans Tunisiens 1919=5",
+        "Musulmans Tunisiens 1920=2",
+        "Musulmans Tunisiens 1921=4",
+        "Musulmans Tunisiens 1922=3",
+        "Musulmans Soudanais 1915=0",
+        "Musulmans Soudanais 1916=0",
+        "Musulmans Soudanais 1917=0",
+        "Musulmans Soudanais 1918=0",
+        "Musulmans Soudanais 1919=0",
+        "Musulmans Soudanais 1920=0",
+        "Musulmans Soudanais 1921=0",
+        "Musulmans Soudanais 1922=0"
+       ]
+      }
+     ]
+    }
+   },
+   "hidden_cells": [
+    {
+     "period": "1911-1920",
+     "legal_basis": "d1910",
+     "age_group": "minors",
+     "nationality": "algerian_muslim",
+     "stored": 8,
+     "visible_sum": 8,
+     "implied_hidden": 0,
+     "hidden_cells": [
+      "Musulmans Algériens 1915/d1910/m"
+     ]
+    },
+    {
+     "period": "1911-1920",
+     "legal_basis": "d1910",
+     "age_group": "minors",
+     "nationality": "anglo_maltese",
+     "stored": 49,
+     "visible_sum": 49,
+     "implied_hidden": 0,
+     "hidden_cells": [
+      "Anglo-Maltais 1915/d1910/m"
+     ]
+    },
+    {
+     "period": "1911-1920",
+     "legal_basis": "d1910",
+     "age_group": "minors",
+     "nationality": "austrian",
+     "stored": 0,
+     "visible_sum": 0,
+     "implied_hidden": 0,
+     "hidden_cells": [
+      "Autrichiens 1915/d1910/m"
+     ]
+    },
+    {
+     "period": "1911-1920",
+     "legal_basis": "d1910",
+     "age_group": "minors",
+     "nationality": "belgian",
+     "stored": 0,
+     "visible_sum": 0,
+     "implied_hidden": 0,
+     "hidden_cells": [
+      "Belges 1915/d1910/m"
+     ]
+    },
+    {
+     "period": "1911-1920",
+     "legal_basis": "d1910",
+     "age_group": "minors",
+     "nationality": "bulgarian",
+     "stored": 0,
+     "visible_sum": 0,
+     "implied_hidden": 0,
+     "hidden_cells": [
+      "Bulgares 1915/d1910/m"
+     ]
+    },
+    {
+     "period": "1911-1920",
+     "legal_basis": "d1910",
+     "age_group": "minors",
+     "nationality": "dutch",
+     "stored": 0,
+     "visible_sum": 0,
+     "implied_hidden": 0,
+     "hidden_cells": [
+      "Hollandais 1915/d1910/m"
+     ]
+    },
+    {
+     "period": "1911-1920",
+     "legal_basis": "d1910",
+     "age_group": "minors",
+     "nationality": "german",
+     "stored": 4,
+     "visible_sum": 4,
+     "implied_hidden": 0,
+     "hidden_cells": [
+      "Allemands 1915/d1910/m"
+     ]
+    },
+    {
+     "period": "1911-1920",
+     "legal_basis": "d1910",
+     "age_group": "minors",
+     "nationality": "greek",
+     "stored": 5,
+     "visible_sum": 5,
+     "implied_hidden": 0,
+     "hidden_cells": [
+      "Grecs 1915/d1910/m"
+     ]
+    },
+    {
+     "period": "1911-1920",
+     "legal_basis": "d1910",
+     "age_group": "minors",
+     "nationality": "italian",
+     "stored": 284,
+     "visible_sum": 284,
+     "implied_hidden": 0,
+     "hidden_cells": [
+      "Italiens 1915/d1910/m"
+     ]
+    },
+    {
+     "period": "1911-1920",
+     "legal_basis": "d1910",
+     "age_group": "minors",
+     "nationality": "luxembourger",
+     "stored": 0,
+     "visible_sum": 0,
+     "implied_hidden": 0,
+     "hidden_cells": [
+      "Luxembourgeois 1915/d1910/m"
+     ]
+    },
+    {
+     "period": "1911-1920",
+     "legal_basis": "d1910",
+     "age_group": "minors",
+     "nationality": "norwegian",
+     "stored": 0,
+     "visible_sum": 0,
+     "implied_hidden": 0,
+     "hidden_cells": [
+      "Norvégiens 1915/d1910/m"
+     ]
+    },
+    {
+     "period": "1911-1920",
+     "legal_basis": "d1910",
+     "age_group": "minors",
+     "nationality": "other",
+     "stored": 0,
+     "visible_sum": 0,
+     "implied_hidden": 0,
+     "hidden_cells": [
+      "Musulmans Marocains 1915/d1910/m"
+     ]
+    },
+    {
+     "period": "1911-1920",
+     "legal_basis": "d1910",
+     "age_group": "minors",
+     "nationality": "polish",
+     "stored": 0,
+     "visible_sum": 0,
+     "implied_hidden": 0,
+     "hidden_cells": [
+      "Polonais 1915/d1910/m"
+     ]
+    },
+    {
+     "period": "1911-1920",
+     "legal_basis": "d1910",
+     "age_group": "minors",
+     "nationality": "portuguese",
+     "stored": 2,
+     "visible_sum": 0,
+     "implied_hidden": 2,
+     "hidden_cells": [
+      "Portugais 1915/d1910/m"
+     ]
+    },
+    {
+     "period": "1911-1920",
+     "legal_basis": "d1910",
+     "age_group": "minors",
+     "nationality": "romanian",
+     "stored": 0,
+     "visible_sum": 0,
+     "implied_hidden": 0,
+     "hidden_cells": [
+      "Roumains 1915/d1910/m"
+     ]
+    },
+    {
+     "period": "1911-1920",
+     "legal_basis": "d1910",
+     "age_group": "minors",
+     "nationality": "russian",
+     "stored": 0,
+     "visible_sum": 0,
+     "implied_hidden": 0,
+     "hidden_cells": [
+      "Russes 1915/d1910/m"
+     ]
+    },
+    {
+     "period": "1911-1920",
+     "legal_basis": "d1910",
+     "age_group": "minors",
+     "nationality": "spanish",
+     "stored": 0,
+     "visible_sum": 0,
+     "implied_hidden": 0,
+     "hidden_cells": [
+      "Espagnols 1915/d1910/m"
+     ]
+    },
+    {
+     "period": "1911-1920",
+     "legal_basis": "d1910",
+     "age_group": "minors",
+     "nationality": "swiss",
+     "stored": 13,
+     "visible_sum": 8,
+     "implied_hidden": 5,
+     "hidden_cells": [
+      "Suisses 1915/d1910/m"
+     ]
+    },
+    {
+     "period": "1911-1920",
+     "legal_basis": "d1910",
+     "age_group": "minors",
+     "nationality": "tunisian_jew",
+     "stored": 65,
+     "visible_sum": 62,
+     "implied_hidden": 3,
+     "hidden_cells": [
+      "Israélites tunisiens 1915/d1910/m"
+     ]
+    },
+    {
+     "period": "1911-1920",
+     "legal_basis": "d1910",
+     "age_group": "minors",
+     "nationality": "tunisian_muslim",
+     "stored": 6,
+     "visible_sum": 6,
+     "implied_hidden": 0,
+     "hidden_cells": [
+      "Musulmans Tunisiens 1915/d1910/m",
+      "Musulmans Soudanais 1915/d1910/m"
+     ]
+    },
+    {
+     "period": "1911-1920",
+     "legal_basis": "d1910",
+     "age_group": "minors",
+     "nationality": "turkish_syrian",
+     "stored": 16,
+     "visible_sum": 16,
+     "implied_hidden": 0,
+     "hidden_cells": [
+      "Turcs 1915/d1910/m"
+     ]
+    }
+   ],
+   "absent_rows": {
+    "cells": 66,
+    "nonzero": [],
+    "nationalities": [
+     "albanian",
+     "algerian_jew",
+     "czechoslovak",
+     "hungarian",
+     "indigenous_catholic",
+     "serbian"
+    ]
+   }
+  },
+  "sgt1923": {
+   "transcription": "transcribed/naturalisations_e_sgt1923.txt",
+   "views": "522,523",
+   "pages": "20,21",
+   "compared_with": "sgt1930",
+   "printed_total_checks": {
+    "n": 70,
+    "pass": 68,
+    "fail": [],
+    "not_checkable": [
+     {
+      "check": "1917 d1910 minors column total",
+      "computed": null,
+      "printed": null,
+      "result": "not_checkable",
+      "why": "column partly or wholly hidden in the binding"
+     },
+     {
+      "check": "1917 d1910 adults+minors pair total",
+      "computed": null,
+      "printed": null,
+      "result": "not_checkable",
+      "why": "pair total hidden"
+     }
+    ]
+   },
+   "cells": {
+    "exact": {
+     "compared": 231,
+     "equal": 231,
+     "different": 0,
+     "differences": []
+    },
+    "subperiod": {
+     "compared": 42,
+     "equal": 42,
+     "different": 0,
+     "differences": []
+    }
+   },
+   "hidden_cells": [],
+   "absent_rows": {
+    "cells": 78,
+    "nonzero": [],
+    "nationalities": [
+     "albanian",
+     "algerian_jew",
+     "czechoslovak",
+     "hungarian",
+     "indigenous_catholic",
+     "serbian"
+    ]
+   }
+  },
+  "sgt1925": {
+   "transcription": "transcribed/naturalisations_e_sgt1925.txt",
+   "views": "43",
+   "pages": "19",
+   "compared_with": "sgt1930",
+   "printed_total_checks": {
+    "n": 25,
+    "pass": 25,
+    "fail": [],
+    "not_checkable": []
+   },
+   "cells": {
+    "exact": {
+     "compared": 391,
+     "equal": 391,
+     "different": 0,
+     "differences": []
+    },
+    "subperiod": {
+     "compared": 0,
+     "equal": 0,
+     "different": 0,
+     "differences": []
+    }
+   },
+   "hidden_cells": [],
+   "absent_rows": {
+    "cells": 68,
+    "nonzero": [],
+    "nationalities": [
+     "albanian",
+     "czechoslovak",
+     "hungarian",
+     "indigenous_catholic"
+    ]
+   }
+  },
+  "sgt1926": {
+   "transcription": "transcribed/naturalisations_e_sgt1926.txt",
+   "views": "588,589",
+   "pages": "24,25",
+   "compared_with": "sgt1930",
+   "printed_total_checks": {
+    "n": 28,
+    "pass": 28,
+    "fail": [],
+    "not_checkable": []
+   },
+   "cells": {
+    "exact": {
+     "compared": 437,
+     "equal": 437,
+     "different": 0,
+     "differences": []
+    },
+    "subperiod": {
+     "compared": 0,
+     "equal": 0,
+     "different": 0,
+     "differences": []
+    }
+   },
+   "hidden_cells": [],
+   "absent_rows": {
+    "cells": 76,
+    "nonzero": [],
+    "nationalities": [
+     "albanian",
+     "czechoslovak",
+     "hungarian",
+     "indigenous_catholic"
+    ]
+   }
+  },
+  "sgt1927": {
+   "transcription": "transcribed/naturalisations_e_sgt1927.txt",
+   "views": "52,53",
+   "pages": "24,25",
+   "compared_with": "sgt1930",
+   "printed_total_checks": {
+    "n": 31,
+    "pass": 30,
+    "fail": [
+     {
+      "check": "1927 l1923 adults+minors pair total",
+      "computed": 2958,
+      "printed": 4958,
+      "result": "FAIL"
+     }
+    ],
+    "not_checkable": []
+   },
+   "cells": {
+    "exact": {
+     "compared": 483,
+     "equal": 483,
+     "different": 0,
+     "differences": []
+    },
+    "subperiod": {
+     "compared": 0,
+     "equal": 0,
+     "different": 0,
+     "differences": []
+    }
+   },
+   "hidden_cells": [],
+   "absent_rows": {
+    "cells": 84,
+    "nonzero": [],
+    "nationalities": [
+     "albanian",
+     "czechoslovak",
+     "hungarian",
+     "indigenous_catholic"
+    ]
+   }
+  },
+  "sgt1928": {
+   "transcription": "transcribed/naturalisations_e_sgt1928.txt",
+   "views": "576,577",
+   "pages": "24,25",
+   "compared_with": "sgt1930",
+   "printed_total_checks": {
+    "n": 34,
+    "pass": 34,
+    "fail": [],
+    "not_checkable": []
+   },
+   "cells": {
+    "exact": {
+     "compared": 529,
+     "equal": 529,
+     "different": 0,
+     "differences": []
+    },
+    "subperiod": {
+     "compared": 0,
+     "equal": 0,
+     "different": 0,
+     "differences": []
+    }
+   },
+   "hidden_cells": [],
+   "absent_rows": {
+    "cells": 92,
+    "nonzero": [],
+    "nationalities": [
+     "albanian",
+     "czechoslovak",
+     "hungarian",
+     "indigenous_catholic"
+    ]
+   }
+  },
+  "sgt1935": {
+   "transcription": "transcribed/naturalisations_e_sgt1935.txt",
+   "views": "34,35",
+   "pages": "14,15",
+   "compared_with": "sgt1939",
+   "printed_total_checks": {
+    "n": 16,
+    "pass": 14,
+    "fail": [
+     {
+      "check": "1934 l1923 total column total",
+      "computed": 843,
+      "printed": 832,
+      "result": "FAIL"
+     },
+     {
+      "check": "1935 l1923 total column total",
+      "computed": 667,
+      "printed": 668,
+      "result": "FAIL"
+     }
+    ],
+    "not_checkable": []
+   },
+   "cells": {
+    "exact": {
+     "compared": 348,
+     "equal": 309,
+     "different": 39,
+     "differences": [
+      {
+       "period": "1891-1898",
+       "legal_basis": "d1887",
+       "age_group": "total",
+       "nationality": "divers_group",
+       "reprint": 3,
+       "stored": 0,
+       "reprint_cells": [
+        "Divers 1891-1898=3"
+       ]
+      },
+      {
+       "period": "1891-1898",
+       "legal_basis": "d1887",
+       "age_group": "total",
+       "nationality": "russian",
+       "reprint": 0,
+       "stored": 3,
+       "reprint_cells": [
+        "Russes 1891-1898=0"
+       ]
+      },
+      {
+       "period": "1899-1910",
+       "legal_basis": "d1899",
+       "age_group": "total",
+       "nationality": "divers_group",
+       "reprint": 5,
+       "stored": 0,
+       "reprint_cells": [
+        "Divers 1899-1910=5"
+       ]
+      },
+      {
+       "period": "1899-1910",
+       "legal_basis": "d1899",
+       "age_group": "total",
+       "nationality": "russian",
+       "reprint": 1,
+       "stored": 6,
+       "reprint_cells": [
+        "Russes 1899-1910=1"
+       ]
+      },
+      {
+       "period": "1924-1928",
+       "legal_basis": "l1923",
+       "age_group": "total",
+       "nationality": "albanian",
+       "reprint": 0,
+       "stored": 7,
+       "reprint_cells": [
+        "Albanais 1924=0",
+        "Albanais 1925=0",
+        "Albanais 1926=0",
+        "Albanais 1927=0",
+        "Albanais 1928=0"
+       ]
+      },
+      {
+       "period": "1924-1928",
+       "legal_basis": "l1923",
+       "age_group": "total",
+       "nationality": "algerian_catholic",
+       "reprint": 0,
+       "stored": 11,
+       "reprint_cells": [
+        "Algériens catholiques 1924=0",
+        "Algériens catholiques 1925=0",
+        "Algériens catholiques 1926=0",
+        "Algériens catholiques 1927=0",
+        "Algériens catholiques 1928=0"
+       ]
+      },
+      {
+       "period": "1924-1928",
+       "legal_basis": "l1923",
+       "age_group": "total",
+       "nationality": "algerian_muslim",
+       "reprint": 143,
+       "stored": 132,
+       "reprint_cells": [
+        "Algériens musulmans 1924=9",
+        "Algériens musulmans 1925=40",
+        "Algériens musulmans 1926=30",
+        "Algériens musulmans 1927=57",
+        "Algériens musulmans 1928=7"
+       ]
+      },
+      {
+       "period": "1924-1928",
+       "legal_basis": "l1923",
+       "age_group": "total",
+       "nationality": "austrian",
+       "reprint": 13,
+       "stored": 40,
+       "reprint_cells": [
+        "Autrichiens 1924=0",
+        "Autrichiens 1925=7",
+        "Autrichiens 1926=6",
+        "Autrichiens 1927=0",
+        "Autrichiens 1928=0"
+       ]
+      },
+      {
+       "period": "1924-1928",
+       "legal_basis": "l1923",
+       "age_group": "total",
+       "nationality": "belgian",
+       "reprint": 17,
+       "stored": 21,
+       "reprint_cells": [
+        "Belges 1924=5",
+        "Belges 1925=9",
+        "Belges 1926=0",
+        "Belges 1927=3",
+        "Belges 1928=0"
+       ]
+      },
+      {
+       "period": "1924-1928",
+       "legal_basis": "l1923",
+       "age_group": "total",
+       "nationality": "british",
+       "reprint": 0,
+       "stored": 9,
+       "reprint_cells": [
+        "Anglais 1924=0",
+        "Anglais 1925=0",
+        "Anglais 1926=0",
+        "Anglais 1927=0",
+        "Anglais 1928=0"
+       ]
+      },
+      {
+       "period": "1924-1928",
+       "legal_basis": "l1923",
+       "age_group": "total",
+       "nationality": "czechoslovak",
+       "reprint": 0,
+       "stored": 4,
+       "reprint_cells": [
+        "Tchéco-Slovaques 1924=0",
+        "Tchéco-Slovaques 1925=0",
+        "Tchéco-Slovaques 1926=0",
+        "Tchéco-Slovaques 1927=0",
+        "Tchéco-Slovaques 1928=0"
+       ]
+      },
+      {
+       "period": "1924-1928",
+       "legal_basis": "l1923",
+       "age_group": "total",
+       "nationality": "divers_group",
+       "reprint": 152,
+       "stored": 28,
+       "reprint_cells": [
+        "Divers 1924=0",
+        "Divers 1925=0",
+        "Divers 1926=0",
+        "Divers 1927=75",
+        "Divers 1928=77"
+       ]
+      },
+      {
+       "period": "1924-1928",
+       "legal_basis": "l1923",
+       "age_group": "total",
+       "nationality": "german",
+       "reprint": 13,
+       "stored": 16,
+       "reprint_cells": [
+        "Allemands 1924=0",
+        "Allemands 1925=5",
+        "Allemands 1926=7",
+        "Allemands 1927=1",
+        "Allemands 1928=0"
+       ]
+      },
+      {
+       "period": "1924-1928",
+       "legal_basis": "l1923",
+       "age_group": "total",
+       "nationality": "greek",
+       "reprint": 148,
+       "stored": 153,
+       "reprint_cells": [
+        "Grecs 1924=15",
+        "Grecs 1925=23",
+        "Grecs 1926=36",
+        "Grecs 1927=44",
+        "Grecs 1928=30"
+       ]
+      },
+      {
+       "period": "1924-1928",
+       "legal_basis": "l1923",
+       "age_group": "total",
+       "nationality": "hungarian",
+       "reprint": 0,
+       "stored": 2,
+       "reprint_cells": [
+        "Hongrois 1924=0",
+        "Hongrois 1925=0",
+        "Hongrois 1926=0",
+        "Hongrois 1927=0",
+        "Hongrois 1928=0"
+       ]
+      },
+      {
+       "period": "1924-1928",
+       "legal_basis": "l1923",
+       "age_group": "total",
+       "nationality": "maltese",
+       "reprint": 973,
+       "stored": 1002,
+       "reprint_cells": [
+        "Anglo-Maltais 1924=170",
+        "Anglo-Maltais 1925=244",
+        "Anglo-Maltais 1926=207",
+        "Anglo-Maltais 1927=203",
+        "Anglo-Maltais 1928=149"
+       ]
+      },
+      {
+       "period": "1924-1928",
+       "legal_basis": "l1923",
+       "age_group": "total",
+       "nationality": "polish",
+       "reprint": 9,
+       "stored": 17,
+       "reprint_cells": [
+        "Polonais 1924=0",
+        "Polonais 1925=6",
+        "Polonais 1926=3",
+        "Polonais 1927=0",
+        "Polonais 1928=0"
+       ]
+      },
+      {
+       "period": "1924-1928",
+       "legal_basis": "l1923",
+       "age_group": "total",
+       "nationality": "romanian",
+       "reprint": 0,
+       "stored": 4,
+       "reprint_cells": [
+        "Roumains 1924=0",
+        "Roumains 1925=0",
+        "Roumains 1926=0",
+        "Roumains 1927=0",
+        "Roumains 1928=0"
+       ]
+      },
+      {
+       "period": "1924-1928",
+       "legal_basis": "l1923",
+       "age_group": "total",
+       "nationality": "russian",
+       "reprint": 211,
+       "stored": 212,
+       "reprint_cells": [
+        "Russes 1924=19",
+        "Russes 1925=39",
+        "Russes 1926=43",
+        "Russes 1927=65",
+        "Russes 1928=45"
+       ]
+      },
+      {
+       "period": "1924-1928",
+       "legal_basis": "l1923",
+       "age_group": "total",
+       "nationality": "swiss",
+       "reprint": 42,
+       "stored": 63,
+       "reprint_cells": [
+        "Suisses 1924=17",
+        "Suisses 1925=6",
+        "Suisses 1926=13",
+        "Suisses 1927=6",
+        "Suisses 1928=0"
+       ]
+      },
+      {
+       "period": "1929",
+       "legal_basis": "l1923",
+       "age_group": "total",
+       "nationality": "algerian_catholic",
+       "reprint": 0,
+       "stored": 18,
+       "reprint_cells": [
+        "Algériens catholiques 1929=0"
+       ]
+      },
+      {
+       "period": "1929",
+       "legal_basis": "l1923",
+       "age_group": "total",
+       "nationality": "algerian_muslim",
+       "reprint": 36,
+       "stored": 18,
+       "reprint_cells": [
+        "Algériens musulmans 1929=36"
+       ]
+      },
+      {
+       "period": "1929",
+       "legal_basis": "l1923",
+       "age_group": "total",
+       "nationality": "austrian",
+       "reprint": 0,
+       "stored": 2,
+       "reprint_cells": [
+        "Autrichiens 1929=0"
+       ]
+      },
+      {
+       "period": "1929",
+       "legal_basis": "l1923",
+       "age_group": "total",
+       "nationality": "belgian",
+       "reprint": 0,
+       "stored": 4,
+       "reprint_cells": [
+        "Belges 1929=0"
+       ]
+      },
+      {
+       "period": "1929",
+       "legal_basis": "l1923",
+       "age_group": "total",
+       "nationality": "british",
+       "reprint": 0,
+       "stored": 5,
+       "reprint_cells": [
+        "Anglais 1929=0"
+       ]
+      },
+      {
+       "period": "1929",
+       "legal_basis": "l1923",
+       "age_group": "total",
+       "nationality": "czechoslovak",
+       "reprint": 0,
+       "stored": 2,
+       "reprint_cells": [
+        "Tchéco-Slovaques 1929=0"
+       ]
+      },
+      {
+       "period": "1929",
+       "legal_basis": "l1923",
+       "age_group": "total",
+       "nationality": "divers_group",
+       "reprint": 68,
+       "stored": 10,
+       "reprint_cells": [
+        "Divers 1929=68"
+       ]
+      },
+      {
+       "period": "1929",
+       "legal_basis": "l1923",
+       "age_group": "total",
+       "nationality": "dutch",
+       "reprint": 0,
+       "stored": 1,
+       "reprint_cells": [
+        "Hollandais 1929=0"
+       ]
+      },
+      {
+       "period": "1929",
+       "legal_basis": "l1923",
+       "age_group": "total",
+       "nationality": "german",
+       "reprint": 0,
+       "stored": 9,
+       "reprint_cells": [
+        "Allemands 1929=0"
+       ]
+      },
+      {
+       "period": "1929",
+       "legal_basis": "l1923",
+       "age_group": "total",
+       "nationality": "hungarian",
+       "reprint": 0,
+       "stored": 4,
+       "reprint_cells": [
+        "Hongrois 1929=0"
+       ]
+      },
+      {
+       "period": "1929",
+       "legal_basis": "l1923",
+       "age_group": "total",
+       "nationality": "polish",
+       "reprint": 0,
+       "stored": 7,
+       "reprint_cells": [
+        "Polonais 1929=0"
+       ]
+      },
+      {
+       "period": "1929",
+       "legal_basis": "l1923",
+       "age_group": "total",
+       "nationality": "portuguese",
+       "reprint": 0,
+       "stored": 1,
+       "reprint_cells": [
+        "Portugais 1929=0"
+       ]
+      },
+      {
+       "period": "1929",
+       "legal_basis": "l1923",
+       "age_group": "total",
+       "nationality": "romanian",
+       "reprint": 0,
+       "stored": 3,
+       "reprint_cells": [
+        "Roumains 1929=0"
+       ]
+      },
+      {
+       "period": "1929",
+       "legal_basis": "l1923",
+       "age_group": "total",
+       "nationality": "swiss",
+       "reprint": 0,
+       "stored": 10,
+       "reprint_cells": [
+        "Suisses 1929=0"
+       ]
+      },
+      {
+       "period": "1929",
+       "legal_basis": "l1923",
+       "age_group": "total",
+       "nationality": "turkish",
+       "reprint": 0,
+       "stored": 9,
+       "reprint_cells": [
+        "Turcs 1929=0"
+       ]
+      },
+      {
+       "period": "1929",
+       "legal_basis": "l1923",
+       "age_group": "total",
+       "nationality": "yugoslav",
+       "reprint": 0,
+       "stored": 1,
+       "reprint_cells": [
+        "Yougo-Slaves 1929=0"
+       ]
+      },
+      {
+       "period": "1934",
+       "legal_basis": "l1923",
+       "age_group": "total",
+       "nationality": "tunisian_catholic",
+       "reprint": 5,
+       "stored": 0,
+       "reprint_cells": [
+        "Tunisiens catholiques 1934=5"
+       ]
+      },
+      {
+       "period": "1934",
+       "legal_basis": "l1923",
+       "age_group": "total",
+       "nationality": "tunisian_muslim",
+       "reprint": 6,
+       "stored": 0,
+       "reprint_cells": [
+        "Tunisiens musulmans 1934=6"
+       ]
+      },
+      {
+       "period": "1935",
+       "legal_basis": "l1923",
+       "age_group": "total",
+       "nationality": "czechoslovak",
+       "reprint": 2,
+       "stored": 3,
+       "reprint_cells": [
+        "Tchéco-Slovaques 1935=2"
+       ]
+      }
+     ]
+    },
+    "subperiod": {
+     "compared": 0,
+     "equal": 0,
+     "different": 0,
+     "differences": []
+    }
+   },
+   "hidden_cells": [],
+   "absent_rows": {
+    "cells": 0,
+    "nonzero": [],
+    "nationalities": []
+   }
+  },
+  "sgt1936": {
+   "transcription": "transcribed/naturalisations_e_sgt1936.txt",
+   "views": "23,24",
+   "pages": "12,13",
+   "compared_with": "sgt1939",
+   "printed_total_checks": {
+    "n": 16,
+    "pass": 15,
+    "fail": [
+     {
+      "check": "1926 l1923 total column total",
+      "computed": 3144,
+      "printed": 3174,
+      "result": "FAIL"
+     }
+    ],
+    "not_checkable": []
+   },
+   "cells": {
+    "exact": {
+     "compared": 348,
+     "equal": 328,
+     "different": 20,
+     "differences": [
+      {
+       "period": "1891-1898",
+       "legal_basis": "d1887",
+       "age_group": "total",
+       "nationality": "divers_group",
+       "reprint": 3,
+       "stored": 0,
+       "reprint_cells": [
+        "Divers 1891-1898=3"
+       ]
+      },
+      {
+       "period": "1891-1898",
+       "legal_basis": "d1887",
+       "age_group": "total",
+       "nationality": "russian",
+       "reprint": 0,
+       "stored": 3,
+       "reprint_cells": [
+        "Russes 1891-1898=0"
+       ]
+      },
+      {
+       "period": "1899-1910",
+       "legal_basis": "d1899",
+       "age_group": "total",
+       "nationality": "divers_group",
+       "reprint": 5,
+       "stored": 0,
+       "reprint_cells": [
+        "Divers 1899-1910=5"
+       ]
+      },
+      {
+       "period": "1899-1910",
+       "legal_basis": "d1899",
+       "age_group": "total",
+       "nationality": "russian",
+       "reprint": 1,
+       "stored": 6,
+       "reprint_cells": [
+        "Russes 1899-1910=1"
+       ]
+      },
+      {
+       "period": "1929",
+       "legal_basis": "l1923",
+       "age_group": "total",
+       "nationality": "algerian_catholic",
+       "reprint": 0,
+       "stored": 18,
+       "reprint_cells": [
+        "Algériens catholiques 1929=0"
+       ]
+      },
+      {
+       "period": "1929",
+       "legal_basis": "l1923",
+       "age_group": "total",
+       "nationality": "algerian_muslim",
+       "reprint": 36,
+       "stored": 18,
+       "reprint_cells": [
+        "Algériens musulmans 1929=36"
+       ]
+      },
+      {
+       "period": "1929",
+       "legal_basis": "l1923",
+       "age_group": "total",
+       "nationality": "austrian",
+       "reprint": 0,
+       "stored": 2,
+       "reprint_cells": [
+        "Autrichiens 1929=0"
+       ]
+      },
+      {
+       "period": "1929",
+       "legal_basis": "l1923",
+       "age_group": "total",
+       "nationality": "belgian",
+       "reprint": 0,
+       "stored": 4,
+       "reprint_cells": [
+        "Belges 1929=0"
+       ]
+      },
+      {
+       "period": "1929",
+       "legal_basis": "l1923",
+       "age_group": "total",
+       "nationality": "british",
+       "reprint": 0,
+       "stored": 5,
+       "reprint_cells": [
+        "Anglais 1929=0"
+       ]
+      },
+      {
+       "period": "1929",
+       "legal_basis": "l1923",
+       "age_group": "total",
+       "nationality": "czechoslovak",
+       "reprint": 0,
+       "stored": 2,
+       "reprint_cells": [
+        "Tchéco-Slovaques 1929=0"
+       ]
+      },
+      {
+       "period": "1929",
+       "legal_basis": "l1923",
+       "age_group": "total",
+       "nationality": "divers_group",
+       "reprint": 68,
+       "stored": 10,
+       "reprint_cells": [
+        "Divers 1929=68"
+       ]
+      },
+      {
+       "period": "1929",
+       "legal_basis": "l1923",
+       "age_group": "total",
+       "nationality": "dutch",
+       "reprint": 0,
+       "stored": 1,
+       "reprint_cells": [
+        "Hollandais 1929=0"
+       ]
+      },
+      {
+       "period": "1929",
+       "legal_basis": "l1923",
+       "age_group": "total",
+       "nationality": "german",
+       "reprint": 0,
+       "stored": 9,
+       "reprint_cells": [
+        "Allemands 1929=0"
+       ]
+      },
+      {
+       "period": "1929",
+       "legal_basis": "l1923",
+       "age_group": "total",
+       "nationality": "hungarian",
+       "reprint": 0,
+       "stored": 4,
+       "reprint_cells": [
+        "Hongrois 1929=0"
+       ]
+      },
+      {
+       "period": "1929",
+       "legal_basis": "l1923",
+       "age_group": "total",
+       "nationality": "polish",
+       "reprint": 0,
+       "stored": 7,
+       "reprint_cells": [
+        "Polonais 1929=0"
+       ]
+      },
+      {
+       "period": "1929",
+       "legal_basis": "l1923",
+       "age_group": "total",
+       "nationality": "portuguese",
+       "reprint": 0,
+       "stored": 1,
+       "reprint_cells": [
+        "Portugais 1929=0"
+       ]
+      },
+      {
+       "period": "1929",
+       "legal_basis": "l1923",
+       "age_group": "total",
+       "nationality": "romanian",
+       "reprint": 0,
+       "stored": 3,
+       "reprint_cells": [
+        "Roumains 1929=0"
+       ]
+      },
+      {
+       "period": "1929",
+       "legal_basis": "l1923",
+       "age_group": "total",
+       "nationality": "swiss",
+       "reprint": 0,
+       "stored": 10,
+       "reprint_cells": [
+        "Suisses 1929=0"
+       ]
+      },
+      {
+       "period": "1929",
+       "legal_basis": "l1923",
+       "age_group": "total",
+       "nationality": "turkish",
+       "reprint": 0,
+       "stored": 9,
+       "reprint_cells": [
+        "Turcs 1929=0"
+       ]
+      },
+      {
+       "period": "1929",
+       "legal_basis": "l1923",
+       "age_group": "total",
+       "nationality": "yugoslav",
+       "reprint": 0,
+       "stored": 1,
+       "reprint_cells": [
+        "Yougo-Slaves 1929=0"
+       ]
+      }
+     ]
+    },
+    "subperiod": {
+     "compared": 0,
+     "equal": 0,
+     "different": 0,
+     "differences": []
+    },
+    "not_compared_missing_1924": {
+     "cells": 29,
+     "why": "sgt1936 prints 1925-1928 but no 1924 column, so its sum is not the stored 1924-1928; see derived_1924_1928_with_sgt1935_1924"
+    }
+   },
+   "hidden_cells": [],
+   "absent_rows": {
+    "cells": 0,
+    "nonzero": [],
+    "nationalities": []
+   },
+   "derived_1924_1928_with_sgt1935_1924": {
+    "compared": 29,
+    "equal": 12,
+    "different": 17,
+    "differences": [
+     {
+      "nationality": "albanian",
+      "sgt1936_1925_1928_plus_sgt1935_1924": 0,
+      "stored": 7
+     },
+     {
+      "nationality": "algerian_catholic",
+      "sgt1936_1925_1928_plus_sgt1935_1924": 0,
+      "stored": 11
+     },
+     {
+      "nationality": "algerian_muslim",
+      "sgt1936_1925_1928_plus_sgt1935_1924": 143,
+      "stored": 132
+     },
+     {
+      "nationality": "austrian",
+      "sgt1936_1925_1928_plus_sgt1935_1924": 13,
+      "stored": 40
+     },
+     {
+      "nationality": "belgian",
+      "sgt1936_1925_1928_plus_sgt1935_1924": 17,
+      "stored": 21
+     },
+     {
+      "nationality": "british",
+      "sgt1936_1925_1928_plus_sgt1935_1924": 0,
+      "stored": 9
+     },
+     {
+      "nationality": "czechoslovak",
+      "sgt1936_1925_1928_plus_sgt1935_1924": 0,
+      "stored": 4
+     },
+     {
+      "nationality": "divers_group",
+      "sgt1936_1925_1928_plus_sgt1935_1924": 152,
+      "stored": 28
+     },
+     {
+      "nationality": "german",
+      "sgt1936_1925_1928_plus_sgt1935_1924": 13,
+      "stored": 16
+     },
+     {
+      "nationality": "greek",
+      "sgt1936_1925_1928_plus_sgt1935_1924": 148,
+      "stored": 153
+     },
+     {
+      "nationality": "hungarian",
+      "sgt1936_1925_1928_plus_sgt1935_1924": 0,
+      "stored": 2
+     },
+     {
+      "nationality": "italian",
+      "sgt1936_1925_1928_plus_sgt1935_1924": 6974,
+      "stored": 7004
+     },
+     {
+      "nationality": "maltese",
+      "sgt1936_1925_1928_plus_sgt1935_1924": 973,
+      "stored": 1002
+     },
+     {
+      "nationality": "polish",
+      "sgt1936_1925_1928_plus_sgt1935_1924": 9,
+      "stored": 17
+     },
+     {
+      "nationality": "romanian",
+      "sgt1936_1925_1928_plus_sgt1935_1924": 0,
+      "stored": 4
+     },
+     {
+      "nationality": "russian",
+      "sgt1936_1925_1928_plus_sgt1935_1924": 211,
+      "stored": 212
+     },
+     {
+      "nationality": "swiss",
+      "sgt1936_1925_1928_plus_sgt1935_1924": 42,
+      "stored": 63
+     }
+    ]
+   }
+  }
+ },
+ "sgt1935_vs_sgt1936_shared_columns": {
+  "compared": 406,
+  "equal": 402,
+  "differences": [
+   {
+    "period": "1926",
+    "legal_basis": "l1923",
+    "row": "Italiens",
+    "sgt1935": 1341,
+    "sgt1936": 1311
+   },
+   {
+    "period": "1934",
+    "legal_basis": "l1923",
+    "row": "Tunisiens catholiques",
+    "sgt1935": 5,
+    "sgt1936": 0
+   },
+   {
+    "period": "1934",
+    "legal_basis": "l1923",
+    "row": "Tunisiens musulmans",
+    "sgt1935": 6,
+    "sgt1936": 0
+   },
+   {
+    "period": "1935",
+    "legal_basis": "l1923",
+    "row": "Tchéco-Slovaques",
+    "sgt1935": 2,
+    "sgt1936": 3
+   }
+  ]
+ }
+}

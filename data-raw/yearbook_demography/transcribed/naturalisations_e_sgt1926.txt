@@ -1,0 +1,45 @@
+# Table e) "Naturalisations accordées (1891-1926)", 1926 edition (sgt1926),
+# volume bpt6k9105650k, view(s) 588-589 (printed pp. 24-25). Transcribed from the
+# native-resolution images (hires.py) for the cell-by-cell comparison with
+# csv/naturalisations_by_nationality_sgt1930.csv (compare_naturalisations_e.py).
+# Comparison printing only: no data file is built from it.
+#
+# Format: see naturalisations_e_sgt1922.txt ("»" = 0, "?" = not visible,
+# "-" = blank, "= TOTAUX" printed column totals, "==" printed pair totals).
+#
+# Layout: the sgt1930 layout (1891-1898; 1899-1910; 1911-1920, 1921, 1922, 1923
+# under the 1910 decree; 1915-1924 under the 1914 law; then one pair per year
+# from 1924 under the 1923 law), with the Muslims printed as Marocains /
+# Algériens / Tunisiens under a "Musulmans" brace, no Tchéco-Slovaques, Hongrois,
+# Albanais or Indigènes catholiques row.
+#
+# The 1921 minors column runs into the binding on view 588 but every value is
+# legible (32, 2, 4, 2, total 40).
+
+@ sgt1926 588,589 24,25
+cols | 1891-1898/d1887/T@588 1899-1910/d1899/M@588 1899-1910/d1899/m@588 1911-1920/d1910/M@588 1911-1920/d1910/m@588 1921/d1910/M@588 1921/d1910/m@588 1922/d1910/M@589 1922/d1910/m@589 1923/d1910/M@589 1923/d1910/m@589 1915-1924/l1914/M@589 1915-1924/l1914/m@589 1924/l1923/M@589 1924/l1923/m@589 1925/l1923/M@589 1925/l1923/m@589 1926/l1923/M@589 1926/l1923/m@589
+Italiens | 142 436 445 205 284 26 32 151 234 233 291 99 54 486 563 825 987 618 723
+Anglo-Maltais | 42 107 118 72 49 3 2 16 20 18 24 35 20 83 87 113 131 94 113
+Suisses | 18 21 15 6 13 » » » » 1 » 5 » 6 11 6 » 9 4
+Allemands | 28 22 8 8 4 » » » » » » 2 » » » 3 2 4 3
+Autrichiens | 10 22 22 2 » » » » » » » 1 » » » 6 1 2 4
+Espagnols | 3 19 8 4 » » » » » » » 2 » 8 13 16 27 13 11
+Grecs | 20 6 2 8 5 » » 1 » 1 » 2 » 11 4 12 11 20 16
+Hollandais | 2 4 5 » » 2 » » » » » » » » » » » 2 2
+Portugais | » 3 » 1 2 » » » » » » 2 4 » » » » 2 2
+Belges | 6 1 » » » » » » » » » » » 2 3 2 7 » »
+Norvégiens | » 2 2 » » » » » » » » » » » » » » » »
+Bulgares | » 2 » » » » » » » » » » » » » 1 3 » »
+Roumains | » » » » » » » » » » » 1 » » » » » » »
+Serbes | » » » » » » » » » » » » » 2 2 2 » » »
+Turcs et Syriens | » 8 3 14 16 » » 6 2 2 2 » » 3 1 10 9 26 13
+Polonais | » » » » » » » » » » » 1 » » » 4 2 2 1
+Russes | » 1 » 1 » » » 1 » 4 2 2 » 15 4 36 3 32 11
+Luxembourgeois | 2 » » » » » » » » » » » » » » » » » »
+Musulmans Marocains | 3 3 2 » » » » » » » » » » » » » » » »
+Musulmans Algériens | 3 5 » 8 8 » » 5 7 4 6 2 » 3 6 20 20 12 18
+Musulmans Tunisiens | 17 71 9 16 6 2 4 14 7 18 18 33 5 25 31 94 63 107 76
+Israélites Algériens | » » » » » » » » » » » » » 5 » 6 4 9 3
+Israélites Tunisiens | » » » 50 65 4 2 14 13 22 8 94 27 113 163 416 456 598 624
+= TOTAUX | 296 733 639 395 452 37 40 208 283 303 351 281 110 762 888 1572 1726 1550 1624
+== | 1899-1910/d1899=1372 1911-1920/d1910=847 1921/d1910=77 1922/d1910=491 1923/d1910=654 1915-1924/l1914=391 1924/l1923=1650 1925/l1923=3298 1926/l1923=3174
