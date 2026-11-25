@@ -1,0 +1,94 @@
+# Naturalisations, tables b (civil status), c (age and profession of naturalised
+# men) and d (nationality of the naturalised). Transcribed from the page images.
+# "@ edition view page" starts an edition. Line keys:
+#  b_men    single married_french_wife married_foreign_wife widowed divorced | TOTAL
+#  b_women  single married widowed divorced | TOTAL
+#  b_resid  gt10_civil gt10_military lt10_civil lt10_military     (1922-1930)
+#  b_birth  french_territory_men french_territory_women abroad_men abroad_women (1935-1939)
+#  c_age    under_25 25_40 over_40
+#  c_prof   code=value ... | TOTAL        (codes listed in the script)
+#  d        code=value ... | TOTAL
+@ sgt1922 45 21
+b_men 36 19 71 2 » | 128
+b_women 10 81 7 » | 98
+b_resid 122 2 2 1
+@ sgt1922 44 20
+c_age 12 58 57
+c_prof army=5 agriculture=7 commerce_industry=13 employees_commerce_admin=77 cafe_keepers=» maritime_fishing=1 owners_rentiers=» liberal_professions=6 other=18 | 127
+@ sgt1922 45 21
+d german=1 alsace_lorraine=» british_anglo_maltese=9 belgian=» spanish=» italian=84 algerian_jew_pre1870=» luxembourger=» moroccan=» algerian_muslim=3 swiss=» tunisian=25 other=5 | 127
+@ sgt1923 523 21
+b_men 54 18 105 2 » | 179
+b_women 7 116 4 1 | 128
+b_resid 162 9 7 1
+d german=» austrian=1 british_anglo_maltese=11 belgian=» spanish=» italian=128 algerian_jew_pre1870=» luxembourger=» moroccan=» algerian_muslim=2 swiss=1 tunisian=31 other=5 | 179
+@ sgt1923 522 20
+c_age 22 114 43
+c_prof army=10 agriculture=6 commerce_industry=30 employees_commerce_admin=103 cafe_keepers=2 maritime_fishing=» owners_rentiers=1 liberal_professions=6 other=21 | 179
+@ sgt1924 1010 20
+b_men 97 50 275 8 3 | 434
+b_women 15 299 12 2 | 328
+b_resid 406 3 23 2
+c_age 49 216 169
+c_prof army=5 agriculture=13 commerce_industry=113 employees_commerce_admin=229 cafe_keepers=4 maritime_fishing=1 owners_rentiers=2 liberal_professions=31 other=36 | 434
+d italian=269 british_anglo_maltese=41 swiss=3 spanish=4 russian=11 algerian_jew_pre1870=5 algerian_muslim=2 tunisian_muslim=20 tunisian_jew=71 other=8 | 434
+@ sgt1925 42 18
+b_men 261 74 587 18 » | 940
+b_women 29 586 15 » | 630
+b_resid 877 16 36 11
+c_age 90 555 295
+c_prof army=27 agriculture=45 commerce_industry=201 employees_commerce_admin=401 cafe_keepers=3 maritime_fishing=9 owners_rentiers=6 liberal_professions=55 other=193 | 940
+d italian=447 british_anglo_maltese=61 swiss=3 spanish=9 russian=27 algerian_jew_pre1870=6 algerian_muslim=11 tunisian_muslim=69 tunisian_jew=275 other=32 | 940
+@ sgt1926 587 23
+b_men 273 56 555 12 1 | 897
+b_women 25 617 11 » | 653
+b_resid 792 4 94 7
+c_age 122 489 286
+c_prof army=11 agriculture=37 commerce_industry=167 employees_commerce_admin=334 cafe_keepers=9 maritime_fishing=21 owners_rentiers=5 liberal_professions=46 other=267 | 897
+d italian=346 british_anglo_maltese=49 swiss=5 spanish=5 russian=24 algerian_jew_pre1870=2 algerian_muslim=7 tunisian_muslim=72 tunisian_jew=347 other=40 | 897
+@ sgt1927 51 23
+b_men 245 41 509 6 1 | 802
+b_women 51 555 23 » | 629
+b_resid 754 6 33 9
+c_age 90 447 265
+c_prof army=15 agriculture=41 commerce_industry=199 employees_commerce_admin=332 cafe_keepers=4 maritime_fishing=7 owners_rentiers=11 liberal_professions=38 other=155 | 802
+d italian=302 british_anglo_maltese=37 swiss=4 spanish=9 russian=37 algerian_jew_pre1870=3 algerian_muslim=15 tunisian_muslim=91 tunisian_jew=278 other=26 | 802
+@ sgt1928 575 23
+b_men 275 45 525 9 1 | 855
+b_women 17 568 11 1 | 597
+b_resid 783 23 42 7
+c_age 131 487 237
+c_prof army=30 agriculture=62 commerce_industry=139 employees_commerce_admin=412 cafe_keepers=14 maritime_fishing=14 owners_rentiers=62 liberal_professions=25 other=197 | 855
+d italian=449 british_anglo_maltese=45 swiss=4 spanish=10 russian=25 algerian_jew_pre1870=7 algerian_muslim=8 tunisian_muslim=59 tunisian_jew=213 other=35 | 855
+@ sgt1929 51 23
+b_men 253 32 488 11 2 | 786
+b_women 19 506 12 » | 537
+b_resid 697 12 61 16
+c_age 128 446 212
+c_prof army=28 agriculture=49 commerce_industry=112 employees_commerce_admin=344 cafe_keepers=9 maritime_fishing=15 owners_rentiers=47 liberal_professions=22 other=160 | 786
+d italian=393 british_anglo_maltese=48 swiss=» spanish=5 russian=35 algerian_jew_pre1870=9 algerian_muslim=7 tunisian_muslim=40 tunisian_jew=201 other=49 | 786
+@ sgt1930 581 23
+b_men 210 19 284 2 1 | 516
+b_women 36 295 17 2 | 350
+b_resid 315 1 188 12
+c_age 97 281 138
+c_prof army=13 agriculture=40 commerce_industry=115 employees_commerce_admin=124 industry_employees_workers=200 maritime_fishing=11 owners_rentiers=1 liberal_professions=10 other=2 | 516
+d italian=949 anglo_maltese=113 swiss=6 spanish=5 russian=34 algerian_jew=4 algerian_muslim=3 tunisian_muslim=22 tunisian_jew=397 other=76 | 1609
+@ sgt1935 32 12
+b_men 106 35 101 1 4 | 247
+b_women 14 130 7 2 | 153
+b_birth 147 95 100 58
+c_age 64 127 56
+c_trade army=8 farmers=16 butchers=3 drivers=8 chemists=2 hairdressers=4 traders=25 accountants=13 electricians=4 administration_employees=3 public_works_employees=11 commerce_employees=12 public_works_contractors=4 students=5 blacksmiths=14 surveyors=11 engineers=2 teachers=1 day_labourers=11 masons=32 mechanics=31 joiners=14 miners=1 doctors=4 fishermen=6 rentiers=2 | 247
+@ sgt1936 22 11
+b_men 42 14 51 1 1 | 109
+b_women 9 62 5 3 | 79
+b_birth 68 51 41 28
+c_age 23 65 21
+c_trade army=6 farmers=5 butchers=1 drivers=6 bakers=2 chemists=1 hairdressers=1 traders=4 accountants=4 electricians=3 employees=23 wheelwrights=2 public_works_contractors=2 students=2 blacksmiths=3 surveyors=2 shoemakers=1 painters=1 day_labourers=5 masons=16 mechanics=8 joiners=6 dentists=2 doctors=1 fishermen=1 jewellers=1 | 109
+@ sgt1939 17 11
+b_men 151 73 208 3 3 | 438
+b_women 37 510 32 2 | 581
+b_birth 285 460 153 121
+c_age 81 224 133
+c_trade army=17 lawyers=3 farmers=17 bakers=2 drivers=21 electricians=17 blacksmiths=18 hairdressers=4 traders=36 shoemakers=4 boilermakers=4 wheelwrights=3 commerce_employees=40 administration_employees=16 engineers=4 public_works_contractors=6 accountants=13 students=4 dentists=3 surveyors_draughtsmen=6 tailors=5 painters=7 day_labourers=21 masons=47 mechanics=61 joiners=23 miners=8 doctors=5 fishermen=11 locksmiths=3 cft_workers=4 sales_representatives=4 rentiers=1 | 438
