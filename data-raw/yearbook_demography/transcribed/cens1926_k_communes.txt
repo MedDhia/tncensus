@@ -1,0 +1,63 @@
+# Table k) of the 1926 census: Europeans by nationality and indigenous population of the communes.
+# Transcribed from sgt1927 (bpt6k91056510, views 42-45; printed pp. 14-17), read on the full-resolution scans;
+# every cell compared with sgt1926, sgt1928, sgt1929 and sgt1930. "»" = 0.
+# no | commune | decree date | controle civil | French Italians Maltese Spanish Greeks other_European TOTAL_European Muslims Jews TOTAL_indigenous GRAND_TOTAL
+1 | Aïn-Draham | 28 juin 1892 | Tabarka | 149 82 4 5 0 3 243 108 15 123 366
+2 | Ariana (L') | 1er juillet 1908 | Tunis | 150 145 2 1 0 21 319 1627 1169 2796 3115
+3 | Bardo (Le) | 8 mai 1909 | Tunis | 285 46 0 0 0 11 342 42 0 42 384
+4 | Béja | 13 juillet 1887 | Béja | 756 1109 17 6 8 15 1911 7522 1035 8557 10468
+5 | Ben-Gardane | 13 décembre 1906 | Territoires militaires | 42 7 0 0 0 38 87 757 313 1070 1157
+6 | Bizerte | 16 juillet 1884 | Bizerte | 3951 2511 135 21 19 101 6738 12465 1390 13855 20593
+7 | Carthage | 15 juin 1919 | Tunis | 595 237 58 4 0 127 1021 666 0 666 1687
+8 | Djem (El) | 29 mars 1922 | Sousse | 25 1 0 0 0 0 26 4956 10 4966 4992
+9 | Djemmal | 19 février 1921 | Sousse | 51 11 0 0 0 0 62 7131 10 7141 7203
+10 | Djerba (Houmt-Souk) | 13 septembre 1887 | Djerba | 209 58 264 0 27 2 560 257 3828 4085 4645
+11 | Ebba-Ksour | 20 janvier 1921 | Le Kef | 130 222 8 0 0 3 363 543 127 670 1033
+12 | Feriana | 18 novembre 1920 | Thala | 61 20 0 0 0 6 87 1774 21 1795 1882
+13 | Ferryville | 11 mars 1905 | Bizerte | 3014 1055 34 17 0 35 4155 220 87 307 4462
+14 | Foum-Tatahouine | 6 août 1920 | Territoires militaires | 47 5 7 0 0 0 59 167 445 612 671
+15 | Gabès | 24 janvier 1887 | Gabès | 756 341 97 5 0 71 1270 11354 2495 13849 15119
+16 | Gafsa | 21 juin 1890 | Gafsa | 185 59 3 0 0 1 248 6810 695 7505 7753
+17 | Ghardimaou | 20 novembre 1905 | Souk-el-Arba | 194 147 1 0 0 0 342 293 2 295 637
+18 | Goulette (La) | 10 juin 1884 | Tunis | 1046 2619 243 8 6 59 3981 1369 2057 3426 7407
+19 | Grombalia | 19 février 1921 | Grombalia | 154 597 4 0 0 1 756 1975 23 1998 2754
+20 | Hadjeb-El-Aïoun | 9 mai 1922 | Kairouan | 78 45 2 1 0 1 127 660 116 776 903
+21 | Hamma (El) | 20 août 1920 | Gabès | 12 1 1 0 0 0 14 4575 316 4891 4905
+22 | Hammam-Lif | 9 mars 1899 | Tunis | 502 871 26 2 6 34 1441 944 394 1338 2779
+23 | Kairouan | 2 juin 1887 | Kairouan | 426 155 11 2 0 35 629 18527 270 18797 19426
+24 | Kalaâ-Kebira | 19 février 1921 | Sousse | 10 0 1 0 0 0 11 11815 4 11819 11830
+25 | Kef (Le) | 8 juillet 1884 | Le Kef | 500 626 22 0 0 15 1163 5387 812 6199 7362
+26 | Kram (Le) | 20 décembre 1916 | Tunis | 218 302 56 0 1 23 600 629 17 646 1246
+27 | Krib (Le) | 9 juin 1920 | Téboursouk | 130 124 0 0 1 24 279 140 1 141 420
+28 | Ksour-Essaf | 29 mars 1922 | Sousse | 27 0 0 0 0 0 27 8930 0 8930 8957
+29 | Maharès | 22 février 1921 | Sfax | 15 1 0 1 2 0 19 3027 34 3061 3080
+30 | Mahdia | 2 janvier 1887 | Sousse | 261 188 33 0 1 7 490 6979 419 7398 7888
+31 | Marsa (La) | 6 avril 1912 | Tunis | 385 305 32 1 0 32 755 1912 334 2246 3001
+32 | Mateur | 12 octobre 1898 | Bizerte | 432 1525 69 9 0 20 2055 4678 391 5069 7124
+33 | Maxula-Radès | 9 mars 1899 | Tunis | 961 366 38 1 2 10 1378 1942 0 1942 3320
+34 | Médenine | 3 décembre 1913 | Territoires militaires | 93 33 6 0 1 1 134 478 511 989 1123
+35 | Medjez-el-Bab | 15 novembre 1892 | Medjez-el-Bab | 169 241 13 0 2 12 437 1664 47 1711 2148
+36 | Menzel-Bou-Zelfa | 5 février 1921 | Grombalia | 10 6 0 0 1 0 17 4518 104 4622 4639
+37 | Menzel-Temime | 19 février 1921 | Grombalia | 36 16 0 0 0 0 52 5072 0 5072 5124
+38 | Moknine | 19 février 1921 | Sousse | 36 0 0 0 0 0 36 11539 616 12155 12191
+39 | Monastir | 24 janvier 1887 | Sousse | 151 97 79 21 0 5 353 7816 168 7984 8337
+40 | M'Saken | 19 février 1921 | Sousse | 36 0 1 0 0 0 37 16583 0 16583 16620
+41 | Nabeul | 30 juillet 1887 | Grombalia | 263 151 3 0 0 2 419 5692 1737 7429 7848
+42 | Nefta | 25 décembre 1919 | Tozeur | 31 2 0 0 0 0 33 13131 86 13217 13250
+43 | Pêcherie (La) | 6 décembre 1920 | Bizerte | 213 8 0 1 0 0 222 0 0 0 222
+44 | Philippe-Thomas | 11 novembre 1908 | Gafsa | 148 119 17 1 0 0 285 1416 0 1416 1701
+45 | Saint-Germain | 11 septembre 1909 | Tunis | 193 14 2 0 0 9 218 30 0 30 248
+46 | Sfax | 8 septembre 1884 | Sfax | 3237 2590 542 25 336 154 6884 17574 3265 20839 27723
+47 | Sidi-bou-Saïd | 5 février 1893 | Tunis | 22 10 2 0 0 11 45 1010 0 1010 1055
+48 | Soliman | 28 janvier 1921 | Grombalia | 51 57 0 1 3 7 119 3407 188 3595 3714
+49 | Souk-el-Arba | 25 septembre 1887 | Souk-el-Arba | 430 323 5 0 0 8 766 1646 286 1932 2698
+50 | Souk-el-Khemis | 25 juillet 1905 | Souk-el-Arba | 270 209 15 0 0 8 502 461 71 532 1034
+51 | Sousse | 16 juillet 1884 | Sousse | 3664 2437 563 36 7 149 6856 10714 3728 14442 21298
+52 | Tabarka | 27 juin 1892 | Tabarka | 387 270 4 6 0 3 670 177 15 192 862
+53 | Tébourba | 18 mars 1890 | Tunis | 121 97 12 0 0 0 230 2658 22 2680 2910
+54 | Téboursouk | 9 février 1904 | Téboursouk | 186 97 0 0 0 5 288 4094 53 4147 4435
+55 | Thala | 5 février 1904 | Thala | 54 36 0 0 0 1 91 1177 43 1220 1311
+56 | Tozeur | 23 juillet 1888 | Tozeur | 119 12 0 1 0 20 152 10723 181 10904 11056
+57 | Tunis | 1858 | Tunis | 27922 44076 4994 219 162 1763 79136 82729 24131 106860 185996
+58 | Zaghouan | 18 mars 1890 | Zaghouan | 207 230 1 3 2 6 449 3062 10 3072 3521
+59 | Zarzis | 24 décembre 1889 | Territoires militaires | 106 19 18 0 2 23 168 5444 693 6137 6305
