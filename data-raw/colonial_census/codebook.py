@@ -14,7 +14,8 @@ import pandas as pd
 
 HERE = Path(__file__).resolve().parent
 CSV_DIRS = [HERE / "csv", HERE.parent / "yearbook_demography" / "csv",
-            HERE.parent / "yearbook_health_education" / "csv"]
+            HERE.parent / "yearbook_health_education" / "csv",
+            HERE.parent / "yearbook_other_chapters" / "csv"]
 
 
 def find(table):
