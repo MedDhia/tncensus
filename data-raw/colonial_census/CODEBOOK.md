@@ -151,6 +151,22 @@ Every table is tidy: one row per printed cell. Printed subtotals and totals are 
 | [`health_serum_vaccine_doses_arloing`](#health_serum_vaccine_doses_arloing) | arloing_doses | by edition | 1,152 | count | Institut Arloing (veterinary): doses of serums and vaccines distributed, by product and month (sgt1922–sgt1930) |
 | [`health_hospital_finance`](#health_hospital_finance) | hospital_finance | by edition | 1,376 | francs | Hospitals and infirmaries-dispensaries of the interior: receipts by source and expenditure (sgt1922–sgt1930) |
 | [`health_hospital_day_cost`](#health_hospital_day_cost) | day_cost | by edition | 244 | mixed | Average cost of a patient-day, with patient-days, staff-days and expenditure: French Civil Hospital, Sadiki Hospital, Rabta hospital (sgt1922–sgt1935) |
+| [`education_arabic_courses`](#education_arabic_courses) | arabic_courses | by edition | 52 | count | Higher School of Arabic Language and Literature: course auditors |
+| [`education_canteens`](#education_canteens) | canteens | by edition | 30 | count | School canteens: portions served |
+| [`education_civil_personality_establishments`](#education_civil_personality_establishments) | establishments | by edition | 1,232 | count | Higher, secondary and special education: establishments with civil personality (classes, pupils by nationality and sex), sgt1922–sgt1936 |
+| [`education_commerce_school`](#education_commerce_school) | commerce_school | by edition | 84 | count | School of commerce: pupils by course, nationality and sex (sgt1936, sgt1939) |
+| [`education_comparative`](#education_comparative) | comparative | by edition | 270 | count | Comparative table: establishments, classes, public pupils by nationality and sex, adult auditors, private pupils |
+| [`education_exams_nationality`](#education_exams_nationality) | exams | by edition | 5,400 | count | Examinations: candidates examined and passed, by exam, nationality and sex |
+| [`education_first_degree_sgt1939`](#education_first_degree_sgt1939) | first_degree1939 | by edition | 26 | count | Total first-degree school population (sgt1939) |
+| [`education_libraries`](#education_libraries) | libraries | by edition | 120 | count | Libraries: loans and volumes lent |
+| [`education_music_school`](#education_music_school) | music_school | by edition | 672 | count | School of music: pupils by class and nationality |
+| [`education_primary_totals`](#education_primary_totals) | primary_total | by edition | 429 | count | Total of primary education, by type, nationality and sex (sgt1922–sgt1936) |
+| [`education_quinquennial_pupils`](#education_quinquennial_pupils) | quinquennial | by edition | 84 | count | Quinquennial series of pupils since 1885: boys and girls, public and private |
+| [`education_school_population`](#education_school_population) | population | by edition | 481 | count | Comparative statistics: school population at 31 December by type of school, nationality and sex |
+| [`education_school_population_series`](#education_school_population_series) | population | by edition | 240 | count | School population, all French public and private schools, by nationality and sex (yearly series) |
+| [`education_secondary_establishments_sgt1939`](#education_secondary_establishments_sgt1939) | secondary1939 | by edition | 336 | count | Secondary, higher-primary and technical establishments: pupils by nationality and sex (sgt1939) |
+| [`education_total_pupils`](#education_total_pupils) | total | by edition | 12 | count | Total pupils, public and private education, at 31 December |
+| [`education_vocational`](#education_vocational) | vocational | by edition | 255 | count | Vocational education of the indigenous population: apprentices by school |
 
 ### eur1906_t1_circonscription_nationality
 
@@ -6077,3 +6093,795 @@ Source `sgt`, table day_cost, printed pages by edition. 244 rows. Value type: mi
 | `patient_days` | Nombre de journées de malades | 50 |
 | `staff_days_fed` | Nombre de journées du personnel nourri | 50 |
 | `staff_days_not_fed` | Nombre de journées du personnel non nourri | 50 |
+
+### education_arabic_courses
+
+**École supérieure de langue et de littérature arabes : auditeurs des cours**  
+*Higher School of Arabic Language and Literature: course auditors*
+
+Source `sgt`, table arabic_courses, printed pages by edition. 52 rows. Value type: count. Flags: (empty) 51, derived_from_totals 1. Notes and validation: [`../yearbook_health_education/csv/education_arabic_courses.md`](../yearbook_health_education/csv/education_arabic_courses.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `course` | Coded dimension. |
+| `course_fr` | Printed French label for `course`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`course`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `elementary_spoken` | Cours élémentaire d'arabe parlé (1re et 2e année) | 9 |
+| `elementary_spoken_y1` | Cours élémentaire d'arabe parlé, 1re année | 6 |
+| `elementary_spoken_y2` | Cours élémentaire d'arabe parlé, 2e année | 6 |
+| `elementary_written` | Cours élémentaire d'arabe écrit (1re et 2e année) | 14 |
+| `elementary_written_y1` | Cours élémentaire d'arabe écrit, 1re année | 1 |
+| `elementary_written_y2` | Cours élémentaire d'arabe écrit, 2e année | 1 |
+| `higher_written` | Cours supérieur d'arabe écrit | 15 |
+
+### education_canteens
+
+**Cantines scolaires : portions délivrées**  
+*School canteens: portions served*
+
+Source `sgt`, table canteens, printed pages by edition. 30 rows. Value type: count. Flags: (empty) 30. Notes and validation: [`../yearbook_health_education/csv/education_canteens.md`](../yearbook_health_education/csv/education_canteens.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `portions` | Coded dimension. |
+| `portions_fr` | Printed French label for `portions`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`portions`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `free` | Gratuites | 15 |
+| `paying` | Payantes | 15 |
+
+### education_civil_personality_establishments
+
+**Enseignements supérieur, secondaire et spécial : établissements à personnalité civile**  
+*Higher, secondary and special education: establishments with civil personality (classes, pupils by nationality and sex), sgt1922–sgt1936*
+
+Source `sgt`, table establishments, printed pages by edition. 1,232 rows. Value type: count. Flags: (empty) 1,232. Notes and validation: [`../yearbook_health_education/csv/education_civil_personality_establishments.md`](../yearbook_health_education/csv/education_civil_personality_establishments.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `locality` | Place or label as printed (1 distinct values). |
+| `establishment` | Coded dimension. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `sex` | Coded dimension. |
+| `sex_fr` | Printed French label for `sex`. |
+| `nationality` | Coded dimension. |
+| `nationality_fr` | Printed French label for `nationality`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`establishment`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `Collège Alaoui` |  | 154 |
+| `Collège Sadiki` |  | 154 |
+| `Lycée Armand-Fallières` |  | 28 |
+| `Lycée Armand-Fallières (1)` |  | 126 |
+| `Lycée Carnot` |  | 154 |
+| `Petit Lycée Jules-Ferry` |  | 28 |
+| `Petit Lycée Jules-Ferry (1)` |  | 126 |
+| `École Normale d'Instituteurs` |  | 154 |
+| `École Normale d'Institutrices` |  | 154 |
+| `École profession. E.-Loubet` |  | 14 |
+| `École professionn. E.-Loubet` |  | 126 |
+| `École professionnelle E.-Loubet` |  | 14 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `classes` | Nombre de classes | 88 |
+| `pupils` | Élèves | 1,056 |
+| `pupils_total_previous_year` | Totaux généraux de l'année précédente | 88 |
+
+`sex`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `female` | Filles | 528 |
+| `male` | Garçons | 528 |
+| `total` |  | 176 |
+
+`nationality`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `french` | Français / Françaises | 176 |
+| `italian` | Italiennes / Italiens | 176 |
+| `jewish` | Israélites | 176 |
+| `maltese` | Maltais / Maltaises | 176 |
+| `muslim` | Musulmanes / Musulmans | 176 |
+| `other` | Divers / Diverses | 176 |
+| `total` |  | 176 |
+
+### education_commerce_school
+
+**École de commerce : répartition des élèves dans les différents cours**  
+*School of commerce: pupils by course, nationality and sex (sgt1936, sgt1939)*
+
+Source `sgt`, table commerce_school, printed pages by edition. 84 rows. Value type: count. Flags: (empty) 82, total_mismatch 2. Notes and validation: [`../yearbook_health_education/csv/education_commerce_school.md`](../yearbook_health_education/csv/education_commerce_school.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `course` | Coded dimension. |
+| `course_fr` | Printed French label for `course`. |
+| `sex` | Coded dimension. |
+| `sex_fr` | Printed French label for `sex`. |
+| `nationality` | Coded dimension. |
+| `nationality_fr` | Printed French label for `nationality`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`course`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `accounting_y2` | Cours de comptabilité : 2e année | 24 |
+| `bachelors_section` | Section des bacheliers | 12 |
+| `common_y1` | Cours commun : 1re année | 24 |
+| `secretarial_y2` | Cours de secrétariat : 2e année | 24 |
+
+`sex`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `female` | Filles | 42 |
+| `male` | Garçons | 42 |
+
+`nationality`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `french` | Français / Françaises | 14 |
+| `italian` | Italiennes / Italiens | 14 |
+| `jewish` | Israélites | 14 |
+| `maltese` | Maltais / Maltaises | 14 |
+| `muslim` | Musulmanes / Musulmans | 14 |
+| `other` | Divers / Diverses | 14 |
+
+### education_comparative
+
+**Tableau comparatif**  
+*Comparative table: establishments, classes, public pupils by nationality and sex, adult auditors, private pupils*
+
+Source `sgt`, table comparative, printed pages by edition. 270 rows. Value type: count. Flags: (empty) 270. Notes and validation: [`../yearbook_health_education/csv/education_comparative.md`](../yearbook_health_education/csv/education_comparative.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `item` | Coded dimension. |
+| `item_fr` | Printed French label for `item`. |
+| `sex` | Coded dimension. |
+| `nationality` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`item`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `adult_auditors` | Auditeurs des cours d'adultes / Auditeurs des cours d'adultes (3) | 15 |
+| `n_first_degree_classes` | Nombre total de classes d'enseignement du premier degré | 2 |
+| `n_first_degree_establishments` | Nombre total des établissements d'enseignement du premier degré (a) | 2 |
+| `n_private_schools` | Nombre total d'écoles privées | 13 |
+| `n_public_establishments` | Nombre total d'établissements scolaires publics (1) / Nombre total des établissements d'enseignement public (b) | 15 |
+| `n_public_primary_classes` | Nombre de classes dans les écoles primaires publiques | 13 |
+| `n_public_primary_schools` | Nombre total d'écoles primaires publiques | 13 |
+| `n_second_degree_establishments` | Nombre total des établissements d'enseignement du deuxième degré | 2 |
+| `private_pupils` | Nombre total des élèves de l'enseignement privé | 15 |
+| `pupils_public` | Divers, filles / Divers, garçons / Français, filles / Français, garçons / Israélites, filles / Israélites, garçons / Italiens, filles / Italiens, garçons / Maltais, filles / Maltais, garçons / Musulmans, filles / Musulmans, garçons | 180 |
+
+`sex`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `(empty)` |  | 90 |
+| `female` |  | 90 |
+| `male` |  | 90 |
+
+`nationality`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `(empty)` |  | 90 |
+| `french` |  | 30 |
+| `italian` |  | 30 |
+| `jewish` |  | 30 |
+| `maltese` |  | 30 |
+| `muslim` |  | 30 |
+| `other` |  | 30 |
+
+### education_exams_nationality
+
+**Examens : répartition des candidats par nationalité**  
+*Examinations: candidates examined and passed, by exam, nationality and sex*
+
+Source `sgt`, table exams, printed pages by edition. 5,400 rows. Value type: count. Flags: (empty) 5,398, derived_from_totals 1, ocr_corrected 1. Notes and validation: [`../yearbook_health_education/csv/education_exams_nationality.md`](../yearbook_health_education/csv/education_exams_nationality.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `exam` | Coded dimension. |
+| `exam_fr` | Printed French label for `exam`. |
+| `stage` | Coded dimension. |
+| `stage_fr` | Printed French label for `stage`. |
+| `sex` | Coded dimension. |
+| `sex_fr` | Printed French label for `sex`. |
+| `nationality` | Coded dimension. |
+| `nationality_fr` | Printed French label for `nationality`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`exam`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `arabic_brevet_elementaire` | Examens d'arabe : Brevet élémentaire | 288 |
+| `arabic_diplome_superieur` | Examens d'arabe : Diplôme supérieur | 288 |
+| `arabic_spoken_cert` | Examens d'arabe : Certificat d'arabe parlé | 288 |
+| `baccalaureat` | Baccalauréats | 288 |
+| `beps` | Brevet d'enseignement primaire supérieur | 72 |
+| `beps_agricultural` | Brevet d'enseignement primaire supérieur : Section agricole | 144 |
+| `beps_arts_crafts` | Brevet d'enseignement primaire supérieur : Section arts et métiers | 120 |
+| `beps_commercial` | Brevet d'enseignement primaire supérieur : Section commerciale | 216 |
+| `beps_domestic` | Brevet d'enseignement primaire supérieur : Section ménagère | 168 |
+| `beps_general` | Brevet d'enseignement primaire supérieur : Section générale | 216 |
+| `beps_industrial` | Brevet d'enseignement primaire supérieur : Section industrielle | 168 |
+| `brevet_elementaire` | Brevet élémentaire | 288 |
+| `brevet_superieur` | Brevet supérieur | 288 |
+| `cepe` | Certificat d'études primaires élémentaires | 288 |
+| `emile_loubet_3rd_year_cert` | Certificat de 3e année de l'École Émile Loubet | 216 |
+| `emile_loubet_diploma` | Diplôme de fin d'études de l'École Émile Loubet | 216 |
+| `girls_secondary_cert` | Certificat d'études secondaires / Certificat de fin d'études secondaires | 216 |
+| `girls_secondary_complementary_diploma` | Diplôme complémentaire d'études secondaires (option philosophie) | 72 |
+| `girls_secondary_diploma` | Diplôme d'études secondaires / Diplôme de fin d'études secondaires / Diplôme de fin d'études secondaires (ancien régime) | 216 |
+| `girls_secondary_diploma_new_part1` | Diplôme de fin d'études secondaires (nouveau régime), 1re partie | 24 |
+| `girls_secondary_diploma_new_part2` | Diplôme de fin d'études secondaires (nouveau régime), 2e partie | 24 |
+| `gymnastics_teaching_cert` | Certificat d'aptitude à l'enseignement de la gymnastique (degré élémentaire) | 192 |
+| `paul_cambon_commerce_diploma` | Examens de l'École Paul-Cambon : Diplôme de fin d'études de l'École de commerce | 72 |
+| `paul_cambon_commercial_4th_year` | Examens de l'École Paul-Cambon : Examen de fin d'études de la 4e année commerciale | 24 |
+| `paul_cambon_commercial_cert` | Examens de l'École Paul-Cambon : Certificat d'études pratiques commerciales | 120 |
+| `paul_cambon_industrial_cert` | Examens de l'École Paul-Cambon : Certificat d'études pratiques industrielles | 96 |
+| `paul_cambon_manual_work_cert` | Examens de l'École Paul-Cambon : Certificat de travaux manuels | 216 |
+| `physical_education_teaching_cert` | Certificat d'aptitude à l'éducation physique (degré élémentaire) | 72 |
+| `sadiki_secondary_diploma` | Diplôme de fin d'études secondaires du Collège Sadiki | 288 |
+| `sewing_teaching_cert` | Certificat d'aptitude à l'enseignement élémentaire des travaux de couture | 216 |
+
+`stage`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `examined` | Candidats examinés | 2,700 |
+| `passed` | Candidats reçus | 2,700 |
+
+`sex`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `female` | Aspirantes | 2,700 |
+| `male` | Aspirants | 2,700 |
+
+`nationality`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `french` | Français / Françaises | 900 |
+| `italian` | Italiennes / Italiens | 900 |
+| `jewish` | Israélites | 900 |
+| `maltese` | Maltais / Maltaises | 900 |
+| `muslim` | Musulmanes / Musulmans | 900 |
+| `other` | Divers / Diverses | 900 |
+
+### education_first_degree_sgt1939
+
+**Total général de la population scolaire du premier degré**  
+*Total first-degree school population (sgt1939)*
+
+Source `sgt`, table first_degree1939, printed pages by edition. 26 rows. Value type: count. Flags: (empty) 23, derived_from_totals 2, total_mismatch 1. Notes and validation: [`../yearbook_health_education/csv/education_first_degree_sgt1939.md`](../yearbook_health_education/csv/education_first_degree_sgt1939.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `school_type` | Coded dimension. |
+| `school_type_fr` | Printed French label for `school_type`. |
+| `measure` | Coded dimension. |
+| `sex` | Coded dimension. |
+| `sex_fr` | Printed French label for `sex`. |
+| `nationality` | Coded dimension. |
+| `nationality_fr` | Printed French label for `nationality`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`school_type`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `estab_primary_classes` | Classes élémentaires des établissements de deuxième degré | 13 |
+| `first_degree_establishments` | Établissements d'enseignement du premier degré | 13 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `pupils` |  | 24 |
+| `pupils_total_previous_year` |  | 2 |
+
+`sex`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `female` | Filles | 12 |
+| `male` | Garçons | 12 |
+| `total` |  | 2 |
+
+`nationality`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `french` | Français / Françaises | 4 |
+| `italian` | Italiennes / Italiens | 4 |
+| `jewish` | Israélites | 4 |
+| `maltese` | Maltais / Maltaises | 4 |
+| `muslim` | Musulmanes / Musulmans | 4 |
+| `other` | Divers / Diverses | 4 |
+| `total` |  | 2 |
+
+### education_libraries
+
+**Bibliothèques**  
+*Libraries: loans and volumes lent*
+
+Source `sgt`, table libraries, printed pages by edition. 120 rows. Value type: count. Flags: (empty) 120. Notes and validation: [`../yearbook_health_education/csv/education_libraries.md`](../yearbook_health_education/csv/education_libraries.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `library` | Coded dimension. |
+| `library_fr` | Printed French label for `library`. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`library`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `circulating` | 2° Bibliothèque circulante | 30 |
+| `popular_interior` | 3° Bibliothèques populaires de l'intérieur | 30 |
+| `popular_tunis` | 3° Bibliothèque populaire de Tunis | 30 |
+| `public_tunis` | 1° Bibliothèque publique de Tunis | 30 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `loans` | Prêts | 60 |
+| `volumes_lent` | Volumes prêtés | 60 |
+
+### education_music_school
+
+**École de musique : répartition des élèves dans les différentes classes**  
+*School of music: pupils by class and nationality*
+
+Source `sgt`, table music_school, printed pages by edition. 672 rows. Value type: count. Flags: (empty) 672. Notes and validation: [`../yearbook_health_education/csv/education_music_school.md`](../yearbook_health_education/csv/education_music_school.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `class` | Coded dimension. |
+| `class_fr` | Printed French label for `class`. |
+| `sex` | Coded dimension. |
+| `sex_fr` | Printed French label for `sex`. |
+| `nationality` | Coded dimension. |
+| `nationality_fr` | Printed French label for `nationality`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`class`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `brass` | Classe d'instruments à vent (cuivre) | 66 |
+| `cello` | Classe de violoncelle | 72 |
+| `diction` | Classe de diction | 54 |
+| `enrolled` | Nombre d'élèves inscrits | 66 |
+| `piano` | Classe de piano | 72 |
+| `singing` | Classe de chant | 72 |
+| `solfege` | Classe de solfège | 72 |
+| `viola` | Classe d'alto | 54 |
+| `violin` | Classe de violon | 72 |
+| `woodwind` | Classe d'instruments à vent (bois) | 72 |
+
+`sex`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `total` |  | 672 |
+
+`nationality`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `french` | Français | 112 |
+| `italian` | Italiens | 112 |
+| `jewish` | Israélites | 112 |
+| `maltese` | Maltais | 112 |
+| `muslim` | Musulmans | 112 |
+| `other` | Divers | 112 |
+
+### education_primary_totals
+
+**Total général de l'enseignement primaire**  
+*Total of primary education, by type, nationality and sex (sgt1922–sgt1936)*
+
+Source `sgt`, table primary_total, printed pages by edition. 429 rows. Value type: count. Flags: (empty) 424, derived_from_totals 4, total_mismatch 1. Notes and validation: [`../yearbook_health_education/csv/education_primary_totals.md`](../yearbook_health_education/csv/education_primary_totals.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `school_type` | Coded dimension. |
+| `school_type_fr` | Printed French label for `school_type`. |
+| `measure` | Coded dimension. |
+| `sex` | Coded dimension. |
+| `sex_fr` | Printed French label for `sex`. |
+| `nationality` | Coded dimension. |
+| `nationality_fr` | Printed French label for `nationality`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`school_type`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `estab_primary_classes` | 3° Classes primaires des établissements à personnalité civile (1) | 143 |
+| `private` | 2° Écoles privées | 143 |
+| `public_primary` | 1° Écoles primaires publiques | 143 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `pupils` |  | 396 |
+| `pupils_total_previous_year` |  | 33 |
+
+`sex`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `female` | Filles | 198 |
+| `male` | Garçons | 198 |
+| `total` |  | 33 |
+
+`nationality`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `french` | Français / Françaises | 66 |
+| `italian` | Italiennes / Italiens | 66 |
+| `jewish` | Israélites | 66 |
+| `maltese` | Maltais / Maltaises | 66 |
+| `muslim` | Musulmanes / Musulmans | 66 |
+| `other` | Divers / Diverses | 66 |
+| `total` |  | 33 |
+
+### education_quinquennial_pupils
+
+**Statistique quinquennale des élèves (depuis 1885)**  
+*Quinquennial series of pupils since 1885: boys and girls, public and private*
+
+Source `sgt`, table quinquennial, printed pages by edition. 84 rows. Value type: count. Flags: (empty) 81, reprint_corrected 2, total_mismatch 1. Notes and validation: [`../yearbook_health_education/csv/education_quinquennial_pupils.md`](../yearbook_health_education/csv/education_quinquennial_pupils.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `sex` | Coded dimension. |
+| `sex_fr` | Printed French label for `sex`. |
+| `sector` | Coded dimension. |
+| `sector_fr` | Printed French label for `sector`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`sex`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `female` | Filles | 42 |
+| `male` | Garçons | 42 |
+
+`sector`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `private` | Enseignement privé | 42 |
+| `public` | Enseignement public | 42 |
+
+### education_school_population
+
+**Statistique comparée : population scolaire au 31 décembre**  
+*Comparative statistics: school population at 31 December by type of school, nationality and sex*
+
+Source `sgt`, table population, printed pages by edition. 481 rows. Value type: count. Flags: (empty) 481. Notes and validation: [`../yearbook_health_education/csv/education_school_population.md`](../yearbook_health_education/csv/education_school_population.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `school_type` | Coded dimension. |
+| `school_type_fr` | Printed French label for `school_type`. |
+| `measure` | Coded dimension. |
+| `sex` | Coded dimension. |
+| `sex_fr` | Printed French label for `sex`. |
+| `nationality` | Coded dimension. |
+| `nationality_fr` | Printed French label for `nationality`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`school_type`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `civil_personality` | Établissements à personnalité civile | 143 |
+| `estab_primary_classes` | b) Classes d'enseignement primaire élémentaire (établissements du deuxième degré) | 13 |
+| `first_degree_establishments` | Établissements d'enseignement du premier degré | 13 |
+| `private` | Écoles privées | 156 |
+| `public_primary` | Écoles primaires publiques | 143 |
+| `secondary_courses` | a) Cours secondaires, primaires supérieurs ou techniques (établissements du deuxième degré) | 13 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `pupils` |  | 444 |
+| `pupils_total_previous_year` |  | 37 |
+
+`sex`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `female` | Filles | 222 |
+| `male` | Garçons | 222 |
+| `total` |  | 37 |
+
+`nationality`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `french` | Français / Françaises | 74 |
+| `italian` | Italiennes / Italiens | 74 |
+| `jewish` | Israélites | 74 |
+| `maltese` | Maltais / Maltaises | 74 |
+| `muslim` | Musulmanes / Musulmans | 74 |
+| `other` | Divers / Diverses | 74 |
+| `total` |  | 37 |
+
+### education_school_population_series
+
+**Population scolaire : total général des établissements scolaires français publics et privés**  
+*School population, all French public and private schools, by nationality and sex (yearly series)*
+
+Source `sgt`, table population, printed pages by edition. 240 rows. Value type: count. Flags: (empty) 239, total_mismatch 1. Notes and validation: [`../yearbook_health_education/csv/education_school_population_series.md`](../yearbook_health_education/csv/education_school_population_series.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `sex` | Coded dimension. |
+| `sex_fr` | Printed French label for `sex`. |
+| `nationality` | Coded dimension. |
+| `nationality_fr` | Printed French label for `nationality`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`sex`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `female` | Filles | 120 |
+| `male` | Garçons | 120 |
+
+`nationality`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `french` | Français / Françaises | 40 |
+| `italian` | Italiennes / Italiens | 40 |
+| `jewish` | Israélites | 40 |
+| `maltese` | Maltais / Maltaises | 40 |
+| `muslim` | Musulmanes / Musulmans | 40 |
+| `other` | Divers / Diverses | 40 |
+
+### education_secondary_establishments_sgt1939
+
+**Établissements d'enseignement secondaire, primaire supérieur ou technique : population scolaire**  
+*Secondary, higher-primary and technical establishments: pupils by nationality and sex (sgt1939)*
+
+Source `sgt`, table secondary1939, printed pages by edition. 336 rows. Value type: count. Flags: (empty) 336. Notes and validation: [`../yearbook_health_education/csv/education_secondary_establishments_sgt1939.md`](../yearbook_health_education/csv/education_secondary_establishments_sgt1939.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `branch` | Coded dimension. |
+| `branch_fr` | Printed French label for `branch`. |
+| `establishment` | Coded dimension. |
+| `sex` | Coded dimension. |
+| `sex_fr` | Printed French label for `sex`. |
+| `nationality` | Coded dimension. |
+| `nationality_fr` | Printed French label for `nationality`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`branch`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `higher_primary` | B. Enseignement primaire supérieur | 144 |
+| `secondary` | A. Enseignement secondaire | 96 |
+| `technical` | C. Enseignement technique | 96 |
+
+`establishment`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `Collège Alaoui, Tunis` |  | 12 |
+| `Collège Sadiki, Tunis` |  | 12 |
+| `Collège Stéphen-Pichon, Bizerte` |  | 24 |
+| `Collège de Bizerte` |  | 12 |
+| `Collège de Sfax` |  | 24 |
+| `Collège de Sousse` |  | 24 |
+| `Cours secondaire de filles, Bizerte` |  | 12 |
+| `Lycée Armand-Fallières, Tunis` |  | 12 |
+| `Lycée Carnot, Tunis` |  | 12 |
+| `Lycée Jules-Ferry, Tunis` |  | 12 |
+| `École Paul-Cambon, Tunis` |  | 24 |
+| `École de Montfleury, Tunis` |  | 12 |
+| `École de commerce, Tunis (filles)` |  | 12 |
+| `École de commerce, Tunis (garçons)` |  | 12 |
+| `École normale d'instituteurs, Tunis` |  | 12 |
+| `École normale d'institutrices, Tunis` |  | 12 |
+| `École primaire supérieure, Bizerte` |  | 24 |
+| `École primaire supérieure, Radès` |  | 24 |
+| `École primaire supérieure, Sfax` |  | 12 |
+| `École primaire supérieure, Sousse` |  | 24 |
+| `École Émile-Loubet, Tunis` |  | 12 |
+
+`sex`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `female` | Filles | 168 |
+| `male` | Garçons | 168 |
+
+`nationality`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `french` | Français / Françaises | 56 |
+| `italian` | Italiennes / Italiens | 56 |
+| `jewish` | Israélites | 56 |
+| `maltese` | Maltais / Maltaises | 56 |
+| `muslim` | Musulmanes / Musulmans | 56 |
+| `other` | Divers / Diverses | 56 |
+
+### education_total_pupils
+
+**Total général des élèves de l'enseignement public et privé au 31 décembre**  
+*Total pupils, public and private education, at 31 December*
+
+Source `sgt`, table total, printed pages by edition. 12 rows. Value type: count. Flags: (empty) 12. Notes and validation: [`../yearbook_health_education/csv/education_total_pupils.md`](../yearbook_health_education/csv/education_total_pupils.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `label_fr` | Place or label as printed (12 distinct values). |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+### education_vocational
+
+**Enseignement professionnel de la population indigène (apprentissage)**  
+*Vocational education of the indigenous population: apprentices by school*
+
+Source `sgt`, table vocational, printed pages by edition. 255 rows. Value type: count. Flags: (empty) 254, derived_from_totals 1. Notes and validation: [`../yearbook_health_education/csv/education_vocational.md`](../yearbook_health_education/csv/education_vocational.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `locality` | Place or label as printed (30 distinct values). |
+| `school_fr` | Place or label as printed (56 distinct values). |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |

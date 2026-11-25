@@ -23,12 +23,13 @@ A \code{data.frame} with one row per table and columns
 Returns an index of the tables transcribed from publications digitized on
 Gallica (BnF): the 1906 census of the European civilian population of
 Tunisia, the 1931 census of the indigenous (Muslim and Jewish) population,
-and the \emph{Démographie} and health chapters of the \emph{Statistique
-générale de la Tunisie} yearbooks (editions 1922--1930, 1935, 1936 and
+and the \emph{Démographie}, health and public-instruction chapters of the
+\emph{Statistique générale de la Tunisie} yearbooks (editions 1922--1930, 1935, 1936 and
 1939). The yearbooks reprint tables from the 1921, 1926, 1931 and 1936
 censuses, whose own volumes are not on Gallica, and give yearly vital
 statistics, expulsions, naturalisations, foreigners' movements,
-recruitment, hospital activity and the mortality of Tunis. Each
+recruitment, hospital activity, the mortality of Tunis and school
+enrolment. Each
 table can be loaded with \code{\link{load_colonial_census}}.
 }
 \examples{

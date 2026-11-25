@@ -1,0 +1,537 @@
+{
+ "education_total_pupils": {
+  "rows": 12,
+  "checks": 0,
+  "failed": [],
+  "cross_checks": 24,
+  "cross_differences": [
+   "sgt1939 total page vs tableau comparatif, total général 1939: cells give 98276, printed 97599",
+   "sgt1939 total page vs population table total général + adult auditors: cells give 98276, printed 97599"
+  ],
+  "overlap_compared": 0,
+  "overlap_diffs": []
+ },
+ "education_exams_nationality": {
+  "rows": 5400,
+  "checks": 1798,
+  "failed": [
+   "sgt1922 baccalaureat examined boys: nationalities vs TOTAUX: cells give 280, printed 180",
+   "sgt1922 baccalaureat examined: boys TOTAUX + girls TOTAUX vs TOTAUX GÉNÉRAUX: cells give 234, printed 334",
+   "sgt1922 arabic_spoken_cert examined boys: nationalities vs TOTAUX: cells give 54, printed 51",
+   "sgt1922 arabic_spoken_cert examined: boys TOTAUX + girls TOTAUX vs TOTAUX GÉNÉRAUX: cells give 78, printed 81",
+   "sgt1922 arabic_brevet_elementaire examined boys: nationalities vs TOTAUX: cells give 102, printed 103",
+   "sgt1922 arabic_brevet_elementaire examined: all cells vs TOTAUX GÉNÉRAUX: cells give 104, printed 105",
+   "sgt1923 cepe passed boys: nationalities vs TOTAUX: cells give 838, printed 868",
+   "sgt1923 cepe passed: all cells vs TOTAUX GÉNÉRAUX: cells give 1333, printed 1363",
+   "sgt1923 arabic_spoken_cert examined girls: nationalities vs TOTAUX: cells give 26, printed 25",
+   "sgt1923 arabic_spoken_cert examined: all cells vs TOTAUX GÉNÉRAUX: cells give 105, printed 104",
+   "sgt1924 baccalaureat examined boys: nationalities vs TOTAUX: cells give 363, printed 359",
+   "sgt1924 baccalaureat examined: all cells vs TOTAUX GÉNÉRAUX: cells give 441, printed 437",
+   "sgt1927 cepe examined boys: nationalities vs TOTAUX: cells give 2242, printed 2342",
+   "sgt1927 cepe examined: all cells vs TOTAUX GÉNÉRAUX: cells give 3132, printed 3232",
+   "sgt1927 arabic_diplome_superieur examined: boys TOTAUX + girls TOTAUX vs TOTAUX GÉNÉRAUX: cells give 28, printed 29",
+   "sgt1927 arabic_diplome_superieur examined: all cells vs TOTAUX GÉNÉRAUX: cells give 28, printed 29",
+   "sgt1929 cepe examined boys: nationalities vs TOTAUX: cells give 2739, printed 2736",
+   "sgt1929 cepe examined: all cells vs TOTAUX GÉNÉRAUX: cells give 3623, printed 3620",
+   "sgt1929 sewing_teaching_cert passed girls: nationalities vs TOTAUX: cells give 41, printed 42",
+   "sgt1929 sewing_teaching_cert passed: all cells vs TOTAUX GÉNÉRAUX: cells give 41, printed 42",
+   "sgt1930 baccalaureat examined boys: nationalities vs TOTAUX: cells give 547, printed 549",
+   "sgt1930 baccalaureat examined: all cells vs TOTAUX GÉNÉRAUX: cells give 659, printed 661",
+   "sgt1930 arabic_spoken_cert examined boys: nationalities vs TOTAUX: cells give 56, printed 60",
+   "sgt1930 arabic_spoken_cert examined: all cells vs TOTAUX GÉNÉRAUX: cells give 99, printed 103",
+   "sgt1936 brevet_superieur passed girls: nationalities vs TOTAUX: cells give 31, printed 3",
+   "sgt1936 brevet_superieur passed: boys TOTAUX + girls TOTAUX vs TOTAUX GÉNÉRAUX: cells give 27, printed 55"
+  ],
+  "cross_checks": 0,
+  "cross_differences": [],
+  "overlap_compared": 0,
+  "overlap_diffs": []
+ },
+ "education_civil_personality_establishments": {
+  "rows": 1232,
+  "checks": 539,
+  "failed": [
+   "sgt1922 Petit Lycée Jules-Ferry (1) girls: nationalities vs TOTAUX: cells give 502, printed 592",
+   "sgt1922 Petit Lycée Jules-Ferry (1): boys + girls TOTAUX vs TOTAUX GÉNÉRAUX: cells give 592, printed 502",
+   "sgt1922 female column 6 vs Totaux: cells give 1501, printed 1411",
+   "sgt1935 previous-year column vs Totaux: cells give 6985, printed 6935"
+  ],
+  "cross_checks": 234,
+  "cross_differences": [],
+  "overlap_compared": 0,
+  "overlap_diffs": []
+ },
+ "education_secondary_establishments_sgt1939": {
+  "rows": 336,
+  "checks": 285,
+  "failed": [
+   "sgt1939 technical École primaire supérieure, Sousse: boys + girls TOTAUX vs TOTAUX GÉNÉRAUX: cells give 177, printed 127"
+  ],
+  "cross_checks": 28,
+  "cross_differences": [
+   "sgt1939 total des cours de 2e degré boys column 0 vs population table row a): cells give 2742, printed 2736",
+   "sgt1939 total des cours de 2e degré boys column 6 vs population table row a): cells give 5136, printed 5130",
+   "sgt1939 total des cours de 2e degré girls column 0 vs population table row a): cells give 2343, printed 2463",
+   "sgt1939 total des cours de 2e degré girls column 2 vs population table row a): cells give 570, printed 566",
+   "sgt1939 total des cours de 2e degré girls column 3 vs population table row a): cells give 147, printed 141",
+   "sgt1939 total des cours de 2e degré girls column 6 vs population table row a): cells give 3203, printed 3313"
+  ],
+  "overlap_compared": 0,
+  "overlap_diffs": []
+ },
+ "education_libraries": {
+  "rows": 120,
+  "checks": 0,
+  "failed": [],
+  "cross_checks": 0,
+  "cross_differences": [],
+  "overlap_compared": 72,
+  "overlap_diffs": [
+   [
+    "1935",
+    "('popular_interior', 'loans')",
+    "sgt1935",
+    "41501",
+    "sgt1936",
+    "41500"
+   ]
+  ]
+ },
+ "education_arabic_courses": {
+  "rows": 52,
+  "checks": 0,
+  "failed": [],
+  "cross_checks": 0,
+  "cross_differences": [],
+  "overlap_compared": 27,
+  "overlap_diffs": []
+ },
+ "education_music_school": {
+  "rows": 672,
+  "checks": 119,
+  "failed": [
+   "sgt1929 cello: nationalities vs TOTAUX: cells give 6, printed 16"
+  ],
+  "cross_checks": 0,
+  "cross_differences": [],
+  "overlap_compared": 0,
+  "overlap_diffs": []
+ },
+ "education_commerce_school": {
+  "rows": 84,
+  "checks": 28,
+  "failed": [
+   "sgt1939 secretarial_y2: boys + girls TOTAUX vs TOTAUX GÉNÉRAUX: cells give 18, printed 13",
+   "sgt1939 secretarial_y2: all cells vs TOTAUX GÉNÉRAUX: cells give 18, printed 13",
+   "sgt1939 bachelors_section boys: nationalities vs TOTAUX: cells give 2, printed 0",
+   "sgt1939 bachelors_section: all cells vs TOTAUX GÉNÉRAUX: cells give 6, printed 4"
+  ],
+  "cross_checks": 0,
+  "cross_differences": [],
+  "overlap_compared": 0,
+  "overlap_diffs": []
+ },
+ "education_primary_totals": {
+  "rows": 429,
+  "checks": 308,
+  "failed": [
+   "sgt1930 public_primary boys: nationalities vs TOTAUX: cells give 45129, printed 45138",
+   "sgt1930 TOTAUX block 0 column 0: rows vs total line: cells give 8280, printed 8289"
+  ],
+  "cross_checks": 344,
+  "cross_differences": [
+   "sgt1930 'public_primary' boys column 0: primary/first-degree total vs population table: cells give 6667, printed 6676",
+   "sgt1935 'private' boys column 0: primary/first-degree total vs population table: cells give 770, printed 1050",
+   "sgt1935 'private' boys column 1: primary/first-degree total vs population table: cells give 91, printed 128",
+   "sgt1935 'private' boys column 2: primary/first-degree total vs population table: cells give 1977, printed 2142",
+   "sgt1935 'private' boys column 3: primary/first-degree total vs population table: cells give 713, printed 743",
+   "sgt1935 'private' boys column 4: primary/first-degree total vs population table: cells give 30, printed 38",
+   "sgt1935 'private' boys column 5: primary/first-degree total vs population table: cells give 14, printed 27",
+   "sgt1935 'private' boys column 6: primary/first-degree total vs population table: cells give 3595, printed 4128",
+   "sgt1935 'private' girls column 0: primary/first-degree total vs population table: cells give 1202, printed 1497",
+   "sgt1935 'private' girls column 1: primary/first-degree total vs population table: cells give 545, printed 546",
+   "sgt1935 'private' girls column 2: primary/first-degree total vs population table: cells give 1124, printed 1166",
+   "sgt1935 'private' girls column 3: primary/first-degree total vs population table: cells give 660, printed 682",
+   "sgt1935 'private' girls column 4: primary/first-degree total vs population table: cells give 41, printed 44",
+   "sgt1935 'private' girls column 5: primary/first-degree total vs population table: cells give 16, printed 18",
+   "sgt1935 'private' girls column 6: primary/first-degree total vs population table: cells give 3588, printed 3953",
+   "sgt1936 'private' boys column 0: primary/first-degree total vs population table: cells give 793, printed 1078",
+   "sgt1936 'private' boys column 1: primary/first-degree total vs population table: cells give 81, printed 148",
+   "sgt1936 'private' boys column 2: primary/first-degree total vs population table: cells give 1980, printed 2172",
+   "sgt1936 'private' boys column 3: primary/first-degree total vs population table: cells give 774, printed 803",
+   "sgt1936 'private' boys column 4: primary/first-degree total vs population table: cells give 19, printed 25",
+   "sgt1936 'private' boys column 5: primary/first-degree total vs population table: cells give 18, printed 27",
+   "sgt1936 'private' boys column 6: primary/first-degree total vs population table: cells give 3665, printed 4253",
+   "sgt1936 'private' girls column 0: primary/first-degree total vs population table: cells give 1415, printed 1757",
+   "sgt1936 'private' girls column 1: primary/first-degree total vs population table: cells give 538, printed 543",
+   "sgt1936 'private' girls column 2: primary/first-degree total vs population table: cells give 1256, printed 1265",
+   "sgt1936 'private' girls column 3: primary/first-degree total vs population table: cells give 677, printed 703",
+   "sgt1936 'private' girls column 4: primary/first-degree total vs population table: cells give 51, printed 55",
+   "sgt1936 'private' girls column 5: primary/first-degree total vs population table: cells give 18, printed 20",
+   "sgt1936 'private' girls column 6: primary/first-degree total vs population table: cells give 3955, printed 4343"
+  ],
+  "overlap_compared": 0,
+  "overlap_diffs": []
+ },
+ "education_first_degree_sgt1939": {
+  "rows": 26,
+  "checks": 25,
+  "failed": [
+   "sgt1939 estab_primary_classes boys: nationalities vs TOTAUX: cells give 2934, printed 2634",
+   "sgt1939 TOTAL block 0 column 0: rows vs total line: cells give 10672, printed 10372"
+  ],
+  "cross_checks": 28,
+  "cross_differences": [
+   "sgt1939 'estab_primary_classes' boys column 0: primary/first-degree total vs population table: cells give 1471, printed 1171"
+  ],
+  "overlap_compared": 0,
+  "overlap_diffs": []
+ },
+ "education_vocational": {
+  "rows": 255,
+  "checks": 32,
+  "failed": [
+   "sgt1924 Tunis schools vs bracket total: cells give 233, printed 224"
+  ],
+  "cross_checks": 0,
+  "cross_differences": [],
+  "overlap_compared": 0,
+  "overlap_diffs": []
+ },
+ "education_canteens": {
+  "rows": 30,
+  "checks": 24,
+  "failed": [],
+  "cross_checks": 0,
+  "cross_differences": [],
+  "overlap_compared": 18,
+  "overlap_diffs": []
+ },
+ "education_school_population": {
+  "rows": 481,
+  "checks": 1462,
+  "failed": [
+   "sgt1923 TOTAL_GENERAL boys: nationalities vs TOTAUX: cells give 34737, printed 34657",
+   "sgt1923 TOTAL_GENERAL jewish: boys + girls vs garçons et filles: cells give 10926, printed 10846",
+   "sgt1923 TOTAL_GENERAL block 0 column 2: rows vs total line: cells give 5500, printed 5580",
+   "sgt1929 civil_personality jewish: boys + girls vs garçons et filles: cells give 764, printed 1494",
+   "sgt1929 civil_personality: garçons et filles columns vs TOTAUX GÉNÉRAUX: cells give 6100, printed 5370",
+   "sgt1929 TOTAL_PUBLIC girls: nationalities vs TOTAUX: cells give 19266, printed 19260",
+   "sgt1929 TOTAL_PUBLIC muslim: boys + girls vs garçons et filles: cells give 31036, printed 31030",
+   "sgt1929 TOTAL_PUBLIC jewish: boys + girls vs garçons et filles: cells give 8770, printed 9500",
+   "sgt1929 TOTAL_PUBLIC: garçons et filles columns vs TOTAUX GÉNÉRAUX: cells give 64755, printed 64025",
+   "sgt1929 TOTAL_GENERAL girls: nationalities vs TOTAUX: cells give 23008, printed 23009",
+   "sgt1929 TOTAL_GENERAL french: boys + girls vs garçons et filles: cells give 16742, printed 17742",
+   "sgt1929 TOTAL_GENERAL jewish: boys + girls vs garçons et filles: cells give 11704, printed 12434",
+   "sgt1929 TOTAL_GENERAL other: boys + girls vs garçons et filles: cells give 425, printed 426",
+   "sgt1929 TOTAL_GENERAL: garçons et filles columns vs TOTAUX GÉNÉRAUX: cells give 72999, printed 71269",
+   "sgt1929 TOTAL_PUBLIC block 1 column 1: rows vs total line: cells give 3173, printed 3179",
+   "sgt1929 TOTAL_GENERAL block 1 column 1: rows vs total line: cells give 3783, printed 3777",
+   "sgt1929 TOTAL_GENERAL block 1 column 5: rows vs total line: cells give 201, printed 200",
+   "sgt1929 TOTAL_GENERAL block 2 column 0: rows vs total line: cells give 16742, printed 17742",
+   "sgt1935 comparison 1933 girls: nationalities vs TOTAUX: cells give 27944, printed 27914",
+   "sgt1935 comparison 1933 italian: boys + girls vs garçons et filles: cells give 10514, printed 10484",
+   "sgt1939 TOTAL_GENERAL boys: nationalities vs TOTAUX: cells give 65574, printed 65619",
+   "sgt1939 TOTAL_GENERAL french: boys + girls vs garçons et filles: cells give 28310, printed 28355",
+   "sgt1939 TOTAL_GENERAL block 0 column 0: rows vs total line: cells give 14394, printed 14349"
+  ],
+  "cross_checks": 45,
+  "cross_differences": [],
+  "overlap_compared": 0,
+  "overlap_diffs": []
+ },
+ "education_school_population_series": {
+  "rows": 240,
+  "checks": 0,
+  "failed": [],
+  "cross_checks": 0,
+  "cross_differences": [],
+  "overlap_compared": 336,
+  "overlap_diffs": [
+   [
+    "1923",
+    "('male', 'jewish')",
+    "sgt1923",
+    "5580",
+    "sgt1926",
+    "5500"
+   ],
+   [
+    "1929",
+    "('female', 'other')",
+    "sgt1929",
+    "200",
+    "sgt1930",
+    "201"
+   ],
+   [
+    "1933",
+    "('female', 'italian')",
+    "sgt1935",
+    "5149",
+    "sgt1936",
+    "5119"
+   ]
+  ]
+ },
+ "education_quinquennial_pupils": {
+  "rows": 84,
+  "checks": 484,
+  "failed": [
+   "sgt1922 1920: boys total + girls total vs total général: cells give 44011, printed 42497",
+   "sgt1922 1920: four cells vs total général: cells give 44011, printed 42497",
+   "sgt1923 1920: boys total + girls total vs total général: cells give 44011, printed 42497",
+   "sgt1923 1920: four cells vs total général: cells give 44011, printed 42497",
+   "sgt1924 1920: boys total + girls total vs total général: cells give 44011, printed 42497",
+   "sgt1924 1920: four cells vs total général: cells give 44011, printed 42497",
+   "sgt1925 1920: boys total + girls total vs total général: cells give 44011, printed 42497",
+   "sgt1925 1920: four cells vs total général: cells give 44011, printed 42497",
+   "sgt1926 1920: boys total + girls total vs total général: cells give 44011, printed 42497",
+   "sgt1926 1920: four cells vs total général: cells give 44011, printed 42497",
+   "sgt1926 1926 boys: public + private vs total: cells give 44052, printed 42052",
+   "sgt1926 1926: four cells vs total général: cells give 64667, printed 62667",
+   "sgt1927 1905 boys: public + private vs total: cells give 13158, printed 12958",
+   "sgt1927 1905: four cells vs total général: cells give 21959, printed 21759",
+   "sgt1927 1920: boys total + girls total vs total général: cells give 44011, printed 42497",
+   "sgt1927 1920: four cells vs total général: cells give 44011, printed 42497",
+   "sgt1928 1905 boys: public + private vs total: cells give 13158, printed 12958",
+   "sgt1928 1905: four cells vs total général: cells give 21959, printed 21759",
+   "sgt1928 1920: boys total + girls total vs total général: cells give 44011, printed 42497",
+   "sgt1928 1920: four cells vs total général: cells give 44011, printed 42497",
+   "sgt1929 1905 boys: public + private vs total: cells give 13158, printed 12958",
+   "sgt1929 1905: four cells vs total général: cells give 21959, printed 21759",
+   "sgt1929 1920: boys total + girls total vs total général: cells give 44011, printed 42497",
+   "sgt1929 1920: four cells vs total général: cells give 44011, printed 42497",
+   "sgt1930 1905 boys: public + private vs total: cells give 13158, printed 12958",
+   "sgt1930 1905: four cells vs total général: cells give 21959, printed 21759",
+   "sgt1930 1920: boys total + girls total vs total général: cells give 44011, printed 42497",
+   "sgt1930 1920: four cells vs total général: cells give 44011, printed 42497",
+   "sgt1930 1930 boys: public + private vs total: cells give 52545, printed 51545",
+   "sgt1930 1930: boys total + girls total vs total général: cells give 75752, printed 76752",
+   "sgt1935 1905 boys: public + private vs total: cells give 13158, printed 12958",
+   "sgt1935 1905: four cells vs total général: cells give 21959, printed 21759",
+   "sgt1935 1920: boys total + girls total vs total général: cells give 44011, printed 42497",
+   "sgt1935 1920: four cells vs total général: cells give 44011, printed 42497",
+   "sgt1936 1905 boys: public + private vs total: cells give 13158, printed 12958",
+   "sgt1936 1905: four cells vs total général: cells give 21959, printed 21759",
+   "sgt1936 1920: boys total + girls total vs total général: cells give 44011, printed 42497",
+   "sgt1936 1920: four cells vs total général: cells give 44011, printed 42497",
+   "sgt1939 1905 boys: public + private vs total: cells give 13158, printed 12958",
+   "sgt1939 1905: four cells vs total général: cells give 21959, printed 21759",
+   "sgt1939 1920: boys total + girls total vs total général: cells give 44011, printed 42497",
+   "sgt1939 1920: four cells vs total général: cells give 44011, printed 42497",
+   "sgt1939 1925 girls: public + private vs total: cells give 20172, printed 20175",
+   "sgt1939 1925: four cells vs total général: cells give 59594, printed 59597"
+  ],
+  "cross_checks": 72,
+  "cross_differences": [
+   "sgt1926 1926 boys private vs population table écoles privées: cells give 5199, printed 3199"
+  ],
+  "overlap_compared": 400,
+  "overlap_diffs": [
+   [
+    "1905",
+    "('male', 'public')",
+    "sgt1922",
+    "10799",
+    "sgt1939",
+    "10999"
+   ],
+   [
+    "1905",
+    "('male', 'public')",
+    "sgt1923",
+    "10799",
+    "sgt1939",
+    "10999"
+   ],
+   [
+    "1905",
+    "('male', 'public')",
+    "sgt1924",
+    "10799",
+    "sgt1939",
+    "10999"
+   ],
+   [
+    "1905",
+    "('male', 'public')",
+    "sgt1925",
+    "10799",
+    "sgt1939",
+    "10999"
+   ],
+   [
+    "1905",
+    "('male', 'public')",
+    "sgt1926",
+    "10799",
+    "sgt1939",
+    "10999"
+   ],
+   [
+    "1925",
+    "('female', 'private')",
+    "sgt1925",
+    "3419",
+    "sgt1939",
+    "3416"
+   ],
+   [
+    "1925",
+    "('female', 'private')",
+    "sgt1926",
+    "3419",
+    "sgt1939",
+    "3416"
+   ],
+   [
+    "1925",
+    "('female', 'private')",
+    "sgt1927",
+    "3419",
+    "sgt1939",
+    "3416"
+   ],
+   [
+    "1925",
+    "('female', 'private')",
+    "sgt1928",
+    "3419",
+    "sgt1939",
+    "3416"
+   ],
+   [
+    "1925",
+    "('female', 'private')",
+    "sgt1929",
+    "3419",
+    "sgt1939",
+    "3416"
+   ],
+   [
+    "1925",
+    "('female', 'private')",
+    "sgt1930",
+    "3419",
+    "sgt1939",
+    "3416"
+   ],
+   [
+    "1925",
+    "('female', 'private')",
+    "sgt1935",
+    "3419",
+    "sgt1939",
+    "3416"
+   ],
+   [
+    "1925",
+    "('female', 'private')",
+    "sgt1936",
+    "3419",
+    "sgt1939",
+    "3416"
+   ]
+  ]
+ },
+ "education_comparative": {
+  "rows": 270,
+  "checks": 96,
+  "failed": [
+   "sgt1922 1921: boys by nationality vs comparaison par sexes, garçons: cells give 26020, printed 27951",
+   "sgt1922 1921: girls by nationality vs comparaison par sexes, filles: cells give 14774, printed 14816",
+   "sgt1936 1935: pupils + adult auditors vs total public: cells give 83944, printed 83914",
+   "sgt1936 1935: total public + private vs total général: cells give 91995, printed 92025"
+  ],
+  "cross_checks": 156,
+  "cross_differences": [
+   "sgt1929 pupils muslim female 1929 vs population table, total public: cells give 3173, printed 3179"
+  ],
+  "overlap_compared": 162,
+  "overlap_diffs": [
+   [
+    "1929",
+    "('n_public_establishments',)",
+    "sgt1929",
+    "451",
+    "sgt1930",
+    "461"
+   ],
+   [
+    "1929",
+    "('n_public_primary_schools',)",
+    "sgt1929",
+    "461",
+    "sgt1930",
+    "451"
+   ],
+   [
+    "1935",
+    "('n_public_establishments',)",
+    "sgt1935",
+    "490",
+    "sgt1936",
+    "487"
+   ],
+   [
+    "1935",
+    "('n_public_primary_schools',)",
+    "sgt1935",
+    "480",
+    "sgt1936",
+    "477"
+   ]
+  ]
+ },
+ "_chapters": {
+  "sgt1922": [
+   113,
+   152
+  ],
+  "sgt1923": [
+   597,
+   636
+  ],
+  "sgt1924": [
+   1087,
+   1126
+  ],
+  "sgt1925": [
+   123,
+   162
+  ],
+  "sgt1926": [
+   673,
+   712
+  ],
+  "sgt1927": [
+   135,
+   174
+  ],
+  "sgt1928": [
+   659,
+   698
+  ],
+  "sgt1929": [
+   137,
+   176
+  ],
+  "sgt1930": [
+   671,
+   710
+  ],
+  "sgt1935": [
+   99,
+   108
+  ],
+  "sgt1936": [
+   68,
+   77
+  ],
+  "sgt1939": [
+   65,
+   76
+  ]
+ }
+}

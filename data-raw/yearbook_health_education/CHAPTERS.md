@@ -10,15 +10,15 @@ Confirm the first and last view of each range before relying on it.
 |---|---|---|---|
 | sgt1922 | `bpt6k9105649x` | 65–84 "Assistance publique et santé" | 113–152 (VII) |
 | sgt1923 | `bpt6k9105649x` | 547–568 "Hygiène et assistance" | 597–636 (VII) |
-| sgt1924 | `bpt6k9105649x` | 1035–1058 | 1087–? (VII; chapter VIII's heading was not detected, IX starts at 1159) |
+| sgt1924 | `bpt6k9105649x` | 1035–1058 | 1087–1126 (VII; VIII starts at 1127) |
 | sgt1925 | `bpt6k9105650k` | 69–92 | 123–162 (VII) |
-| sgt1926 | `bpt6k9105650k` | 617–642 | 673–? (VII; VIII not detected, IX starts at 755) |
+| sgt1926 | `bpt6k9105650k` | 617–642 | 673–712 (VII; VIII starts at 713) |
 | sgt1927 | `bpt6k91056510` | 81–104 | 135–174 (VII) |
 | sgt1928 | `bpt6k91056510` | 605–628 | 659–698 (VII) |
 | sgt1929 | `bpt6k9105652d` | 83–106 | 137–176 (VII) |
 | sgt1930 | `bpt6k9105652d` | 615–640 | 671–710 (VII) |
 | sgt1935 | `bpt6k9105653t` | 57–70 "Santé publique" | 99–108 (VII) |
-| sgt1936 | `bpt6k91056547` | 40–51 | between 62 (V) and 78 (VII, Postes): chapter VI, not detected |
+| sgt1936 | `bpt6k91056547` | 40–51 | 68–77 (VI; VII, Postes, starts at 78) |
 | sgt1939 | `bpt6k9105739w` | 35–46 "Assistance et santé publiques" | 65–76 (VI) |
 
 ## Health chapter contents (as in sgt1927; later editions differ)

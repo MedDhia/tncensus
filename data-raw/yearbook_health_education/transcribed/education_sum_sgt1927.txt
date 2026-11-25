@@ -18,7 +18,9 @@ beps_commercial | Brevet d'enseignement primaire supérieur : Section commercial
 beps_commercial | Brevet d'enseignement primaire supérieur : Section commerciale | passed | 2 2 3 5 0 0 12 | 5 0 4 2 1 1 13 | 25
 beps_agricultural | Brevet d'enseignement primaire supérieur : Section agricole | examined | 1 0 0 0 0 0 1 | 0 0 0 0 0 0 0 | 1
 beps_agricultural | Brevet d'enseignement primaire supérieur : Section agricole | passed | 1 0 0 0 0 0 1 | 0 0 0 0 0 0 0 | 1
-beps_domestic | Brevet d'enseignement primaire supérieur : Section ménagère | examined | 0 0 0 0 0 0 0 | 4 0 0 0 0 0 0 | 4
+beps_domestic | Brevet d'enseignement primaire supérieur : Section ménagère | examined | 0 0 0 0 0 0 0 | 4 0 0 0 0 0 . | 4
+# Section ménagère examined, girls: the TOTAUX cell is printed » (blank) although Françaises 4 and TOTAUX
+# GÉNÉRAUX 4; entered as not printed (".").
 beps_domestic | Brevet d'enseignement primaire supérieur : Section ménagère | passed | 0 0 0 0 0 0 0 | 0 0 0 0 0 0 0 | 0
 beps_arts_crafts | Brevet d'enseignement primaire supérieur : Section arts et métiers | examined | 0 0 0 0 0 0 0 | 0 0 0 0 0 0 0 | 0
 beps_arts_crafts | Brevet d'enseignement primaire supérieur : Section arts et métiers | passed | 0 0 0 0 0 0 0 | 0 0 0 0 0 0 0 | 0

@@ -1,0 +1,27 @@
+census,table_id,gallica_ark,source_page,gallica_view,year,school_type,school_type_fr,measure,sex,sex_fr,nationality,nationality_fr,value,flag
+sgt1939,first_degree1939,bpt6k9105739w,66,72,1939,estab_primary_classes,Classes élémentaires des établissements de deuxième degré,pupils,male,Garçons,french,Français,1471,total_mismatch
+sgt1939,first_degree1939,bpt6k9105739w,66,72,1939,estab_primary_classes,Classes élémentaires des établissements de deuxième degré,pupils,male,Garçons,muslim,Musulmans,940,
+sgt1939,first_degree1939,bpt6k9105739w,66,72,1939,estab_primary_classes,Classes élémentaires des établissements de deuxième degré,pupils,male,Garçons,jewish,Israélites,387,
+sgt1939,first_degree1939,bpt6k9105739w,66,72,1939,estab_primary_classes,Classes élémentaires des établissements de deuxième degré,pupils,male,Garçons,italian,Italiens,97,
+sgt1939,first_degree1939,bpt6k9105739w,66,72,1939,estab_primary_classes,Classes élémentaires des établissements de deuxième degré,pupils,male,Garçons,maltese,Maltais,15,
+sgt1939,first_degree1939,bpt6k9105739w,66,72,1939,estab_primary_classes,Classes élémentaires des établissements de deuxième degré,pupils,male,Garçons,other,Divers,24,
+sgt1939,first_degree1939,bpt6k9105739w,67,73,1939,estab_primary_classes,Classes élémentaires des établissements de deuxième degré,pupils,female,Filles,french,Françaises,1194,
+sgt1939,first_degree1939,bpt6k9105739w,67,73,1939,estab_primary_classes,Classes élémentaires des établissements de deuxième degré,pupils,female,Filles,muslim,Musulmanes,142,
+sgt1939,first_degree1939,bpt6k9105739w,67,73,1939,estab_primary_classes,Classes élémentaires des établissements de deuxième degré,pupils,female,Filles,jewish,Israélites,217,
+sgt1939,first_degree1939,bpt6k9105739w,67,73,1939,estab_primary_classes,Classes élémentaires des établissements de deuxième degré,pupils,female,Filles,italian,Italiennes,130,
+sgt1939,first_degree1939,bpt6k9105739w,67,73,1939,estab_primary_classes,Classes élémentaires des établissements de deuxième degré,pupils,female,Filles,maltese,Maltaises,9,
+sgt1939,first_degree1939,bpt6k9105739w,67,73,1939,estab_primary_classes,Classes élémentaires des établissements de deuxième degré,pupils,female,Filles,other,Diverses,25,
+sgt1939,first_degree1939,bpt6k9105739w,67,73,1938,estab_primary_classes,Classes élémentaires des établissements de deuxième degré,pupils_total_previous_year,total,,total,,4306,
+sgt1939,first_degree1939,bpt6k9105739w,66,72,1939,first_degree_establishments,Établissements d'enseignement du premier degré,pupils,male,Garçons,french,Français,9201,
+sgt1939,first_degree1939,bpt6k9105739w,66,72,1939,first_degree_establishments,Établissements d'enseignement du premier degré,pupils,male,Garçons,muslim,Musulmans,37058,derived_from_totals
+sgt1939,first_degree1939,bpt6k9105739w,66,72,1939,first_degree_establishments,Établissements d'enseignement du premier degré,pupils,male,Garçons,jewish,Israélites,3342,derived_from_totals
+sgt1939,first_degree1939,bpt6k9105739w,66,72,1939,first_degree_establishments,Établissements d'enseignement du premier degré,pupils,male,Garçons,italian,Italiens,3150,
+sgt1939,first_degree1939,bpt6k9105739w,66,72,1939,first_degree_establishments,Établissements d'enseignement du premier degré,pupils,male,Garçons,maltese,Maltais,273,
+sgt1939,first_degree1939,bpt6k9105739w,66,72,1939,first_degree_establishments,Établissements d'enseignement du premier degré,pupils,male,Garçons,other,Divers,69,
+sgt1939,first_degree1939,bpt6k9105739w,67,73,1939,first_degree_establishments,Établissements d'enseignement du premier degré,pupils,female,Filles,french,Françaises,8251,
+sgt1939,first_degree1939,bpt6k9105739w,67,73,1939,first_degree_establishments,Établissements d'enseignement du premier degré,pupils,female,Filles,muslim,Musulmanes,6173,
+sgt1939,first_degree1939,bpt6k9105739w,67,73,1939,first_degree_establishments,Établissements d'enseignement du premier degré,pupils,female,Filles,jewish,Israélites,4075,
+sgt1939,first_degree1939,bpt6k9105739w,67,73,1939,first_degree_establishments,Établissements d'enseignement du premier degré,pupils,female,Filles,italian,Italiennes,2829,
+sgt1939,first_degree1939,bpt6k9105739w,67,73,1939,first_degree_establishments,Établissements d'enseignement du premier degré,pupils,female,Filles,maltese,Maltaises,258,
+sgt1939,first_degree1939,bpt6k9105739w,67,73,1939,first_degree_establishments,Établissements d'enseignement du premier degré,pupils,female,Filles,other,Diverses,94,
+sgt1939,first_degree1939,bpt6k9105739w,67,73,1938,first_degree_establishments,Établissements d'enseignement du premier degré,pupils_total_previous_year,total,,total,,75813,
