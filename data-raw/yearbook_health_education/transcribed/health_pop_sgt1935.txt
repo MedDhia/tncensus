@@ -1,7 +1,8 @@
 # sgt1935, ark bpt6k9105653t. Format as in health_pop_sgt1922.txt; 'x' as in sgt1924.
 # Ward tables: rows '<nationality> <paying|free>'; label 'beds' = beds organised (printed
 # in the TOTAL row of the civil table, in its own row in the Sadiki table);
-# 'TOTAL' = printed totals.
+# 'TOTAL' = printed totals. The interior table prints no TOTAL row in this edition.
+# Médenine patient-days printed '2 294 5' = 2.294,5 (half days, as in the Rabta staff days).
 
 @civil_movements view=62 page=42
 cols: adm_m adm_f adm_c adm_t rec_m rec_f rec_c rec_t dth_m dth_f dth_c dth_t
@@ -170,7 +171,7 @@ Gabès | 20 0 0 0 0 110 20 12 142 4956 0 0 0 0 6 2 0 8 3739
 Djerba | 20 2 7 0 9 45 35 80 100 3335 0 0 0 0 2 2 1 5 305
 Gafsa | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 Tozeur | 18 3 3 0 6 118 18 13 149 2336 1 0 0 1 14 4 0 18 19708
-Médenine | 38 1 0 0 1 143 30 15 188 x 1 0 0 1 8 2 2 12 73678
+Médenine | 38 1 0 0 1 143 30 15 188 2294.5 1 0 0 1 8 2 2 12 73678
 
 @tunis_month_nationality view=69 page=49 year=1935
 cols: french tunisian_muslim tunisian_jewish italian anglo_maltese other total

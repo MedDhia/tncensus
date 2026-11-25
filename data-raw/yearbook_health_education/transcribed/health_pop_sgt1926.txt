@@ -38,9 +38,9 @@ cols: adm_m adm_f adm_c adm_t rec_m rec_f rec_c rec_t dth_m dth_f dth_c dth_t
 @sadiki_population view=632 page=68 years=1925 1926
 patient_days ; Journées de malades | 88810 90507 1697 0
 patient_days_paying ; Journées de malades payants | 12472 12771 299 0
-patient_days_indigent ; Journées de malades indigents | 76338 77736 1398 0
+patient_days_indigent ; Journées de malades indigents | 76338 77736 398 0
 admissions ; Nombre d'admissions | 3931 4298 367 0
-mean_daily_patients ; Effectif moyen journalier | 243.31 247.96 4.65 0
+mean_daily_patients ; Effectif moyen journalier | 243.31 247.96 465 0
 mean_stay_days ; Durée moyenne du séjour par malade | 22.56 21.05 0 1.51
 staff_days_fed ; Journées du personnel nourri | 30185 29200 0 985
 staff_days_not_fed ; Journées du personnel non nourri | 18501 20425 1920 0

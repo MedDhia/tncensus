@@ -3,11 +3,12 @@
 #' Returns an index of the tables transcribed from publications digitized on
 #' Gallica (BnF): the 1906 census of the European civilian population of
 #' Tunisia, the 1931 census of the indigenous (Muslim and Jewish) population,
-#' and the \emph{Démographie} chapter of the \emph{Statistique générale de la
-#' Tunisie} yearbooks (editions 1922--1930, 1935, 1936 and 1939). The
-#' yearbooks reprint tables from the 1921, 1926, 1931 and 1936 censuses, whose
-#' own volumes are not on Gallica, and give yearly vital statistics,
-#' expulsions, naturalisations, foreigners' movements and recruitment. Each
+#' and the \emph{Démographie} and health chapters of the \emph{Statistique
+#' générale de la Tunisie} yearbooks (editions 1922--1930, 1935, 1936 and
+#' 1939). The yearbooks reprint tables from the 1921, 1926, 1931 and 1936
+#' censuses, whose own volumes are not on Gallica, and give yearly vital
+#' statistics, expulsions, naturalisations, foreigners' movements,
+#' recruitment, hospital activity and the mortality of Tunis. Each
 #' table can be loaded with \code{\link{load_colonial_census}}.
 #'
 #' @return A \code{data.frame} with one row per table and columns
@@ -45,8 +46,8 @@ colonial_census_tables <- function() {
 #'
 #' Loads one table transcribed from the 1906 census of the European civilian
 #' population of Tunisia, the 1931 census of the indigenous population, or the
-#' \emph{Démographie} chapter of the \emph{Statistique générale de la Tunisie}
-#' yearbooks (1922--1939), as digitized on Gallica.
+#' \emph{Démographie} and health chapters of the \emph{Statistique générale de
+#' la Tunisie} yearbooks (1922--1939), as digitized on Gallica.
 #'
 #' @param table Character string. Name of the table. Use
 #'   \code{\link{colonial_census_tables}()} to list the available tables.
@@ -102,7 +103,8 @@ colonial_census_tables <- function() {
 #' The tables are stored as Zstandard-compressed Apache Parquet files in
 #' \code{inst/extdata/colonial}. The transcription scripts and per-table
 #' notes are in \code{data-raw/colonial_census} and
-#' \code{data-raw/yearbook_demography} in the package repository.
+#' \code{data-raw/yearbook_demography} and
+#' \code{data-raw/yearbook_health_education} in the package repository.
 #'
 #' @source Régence de Tunis, Direction de l'agriculture, du commerce et de la
 #'   colonisation (1907). \emph{Dénombrement de la population européenne

@@ -1,0 +1,682 @@
+{
+ "health_hospital_civil_movements": {
+  "rows": 154,
+  "checks": 132,
+  "failed": [
+   "sgt1926 civil_movements 1926 dth: m+f+c vs total: cells give 189, printed 201",
+   "sgt1927 civil_movements 1926 dth: m+f+c vs total: cells give 189, printed 201",
+   "sgt1928 civil_movements 1926 dth: m+f+c vs total: cells give 189, printed 201",
+   "sgt1929 civil_movements 1926 dth: m+f+c vs total: cells give 189, printed 201",
+   "sgt1930 civil_movements 1926 dth: m+f+c vs total: cells give 189, printed 201",
+   "sgt1935 civil_movements 1933 adm: m+f+c vs total: cells give 5082, printed 5182",
+   "sgt1935 civil_movements 1934 dth: m+f+c vs total: cells give 372, printed 312",
+   "sgt1936 civil_movements 1934 dth: m+f+c vs total: cells give 372, printed 312"
+  ],
+  "overlap_compared": 324,
+  "overlap_diffs": []
+ },
+ "health_hospital_civil_activity": {
+  "rows": 104,
+  "checks": 107,
+  "failed": [
+   "sgt1923 civil_population Journées de malades: difference: cells give -127, printed 0",
+   "sgt1926 civil_population Effectif moyen journalier: difference: cells give -3, printed 3",
+   "sgt1926 civil_population Durée moyenne du séjour par malade: difference: cells give -0.62, printed -1.38",
+   "sgt1927 civil_population Effectif moyen journalier: difference: cells give 28, printed 26",
+   "sgt1929 civil_population Journées de malades payants: difference: cells give 5318, printed 5248",
+   "sgt1930 civil_population Journées de malades: difference: cells give 14128, printed 14428",
+   "sgt1930 civil_population 1929: patient-day categories vs patient days: cells give 110146, printed 110446",
+   "sgt1936 civil_population 1936: patient-day categories vs patient days: cells give 150235, printed 150255"
+  ],
+  "overlap_compared": 72,
+  "overlap_diffs": [
+   [
+    "1925",
+    "patient_days_paying",
+    "sgt1925",
+    "51258",
+    "sgt1926",
+    "33426"
+   ],
+   [
+    "1925",
+    "patient_days_indigent",
+    "sgt1925",
+    "48893",
+    "sgt1926",
+    "66725"
+   ],
+   [
+    "1925",
+    "mean_daily_patients",
+    "sgt1925",
+    "274",
+    "sgt1926",
+    "276"
+   ],
+   [
+    "1926",
+    "staff_days_fed",
+    "sgt1926",
+    "41687",
+    "sgt1927",
+    "70687"
+   ],
+   [
+    "1926",
+    "staff_days_not_fed",
+    "sgt1926",
+    "3518",
+    "sgt1927",
+    "36518"
+   ],
+   [
+    "1929",
+    "patient_days",
+    "sgt1929",
+    "110146",
+    "sgt1930",
+    "110446"
+   ]
+  ]
+ },
+ "health_hospital_civil_ward_days": {
+  "rows": 97,
+  "checks": 100,
+  "failed": [
+   "sgt1922 civil_ward_days Maternité: difference: cells give -4088, printed -18",
+   "sgt1922 civil_ward_days Enfants: difference: cells give 6666, printed 666",
+   "sgt1922 civil_ward_days TOTAUX: difference: cells give -2901, printed 1169",
+   "sgt1922 ward days col 1: wards vs TOTAUX: cells give 86929, printed 92929",
+   "sgt1923 civil_ward_days Maternité: difference: cells give -6051, printed 0",
+   "sgt1923 civil_ward_days Enfants: difference: cells give -12555, printed 0",
+   "sgt1923 civil_ward_days TOTAUX: difference: cells give -18956, printed -350",
+   "sgt1925 civil_ward_days Tribeaudeau: difference: cells give 1880, printed 1180",
+   "sgt1925 ward days col 2: wards vs TOTAUX: cells give 4528, printed 5228"
+  ],
+  "overlap_compared": 47,
+  "overlap_diffs": []
+ },
+ "health_hospital_civil_births": {
+  "rows": 17,
+  "checks": 24,
+  "failed": [],
+  "overlap_compared": 0,
+  "overlap_diffs": []
+ },
+ "health_hospital_civil_consultations": {
+  "rows": 54,
+  "checks": 30,
+  "failed": [
+   "sgt1926 civil_consultations 1926: parts vs total: cells give 72070, printed 72071",
+   "sgt1927 civil_consultations 1926: parts vs total: cells give 72070, printed 72071",
+   "sgt1928 civil_consultations 1926: parts vs total: cells give 72070, printed 72071",
+   "sgt1929 civil_consultations 1926: parts vs total: cells give 72070, printed 72071",
+   "sgt1929 civil_consultations 1929: parts vs total: cells give 51254, printed 51253",
+   "sgt1930 civil_consultations 1926: parts vs total: cells give 72070, printed 72071",
+   "sgt1930 civil_consultations 1929: parts vs total: cells give 50254, printed 51253",
+   "sgt1936 civil_consultations 1936: parts vs total: cells give 223847, printed 223852"
+  ],
+  "overlap_compared": 80,
+  "overlap_diffs": [
+   [
+    "1929",
+    "radiology",
+    "sgt1929",
+    "6003",
+    "sgt1930",
+    "5003"
+   ]
+  ]
+ },
+ "health_hospital_civil_wards": {
+  "rows": 235,
+  "checks": 70,
+  "failed": [
+   "sgt1935 civil_wards french paying: cells vs row total: cells give 862, printed 922",
+   "sgt1935 civil_wards french free: cells vs row total: cells give 2876, printed 2861",
+   "sgt1935 civil_wards tunisian_jewish paying: cells vs row total: cells give 105, printed 108",
+   "sgt1935 civil_wards tunisian_jewish free: cells vs row total: cells give 1120, printed 1132",
+   "sgt1935 civil_wards column medg_f: rows vs TOTAL: cells give 731, printed 791",
+   "sgt1936 civil_wards tunisian_jewish free: cells vs row total: cells give 1204, printed 1404",
+   "sgt1936 civil_wards column medg_f: rows vs TOTAL: cells give 566, printed 766"
+  ],
+  "overlap_compared": 0,
+  "overlap_diffs": []
+ },
+ "health_sadiki_movements": {
+  "rows": 247,
+  "checks": 295,
+  "failed": [
+   "sgt1925 sadiki_movements 1912 dth: m+f+c vs total: cells give 243, printed 245",
+   "sgt1925 sadiki_movements 1913 adm: m+f+c vs total: cells give 2950, printed 2951",
+   "sgt1935 sadiki_movements 1934 rec: m+f+c vs total: cells give 3830, printed 3930",
+   "sgt1936 sadiki_movements 1934 rec: m+f+c vs total: cells give 3830, printed 3930",
+   "sgt1936 sadiki_movements 1935 adm: m+f+c vs total: cells give 4269, printed 4309",
+   "sgt1936 sadiki_movements 1936 adm: m+f+c vs total: cells give 4882, printed 4874",
+   "sgt1936 sadiki_movements 1936 rec: m+f+c vs total: cells give 4531, printed 4331",
+   "sgt1936 sadiki_movements 1936 dth: m+f+c vs total: cells give 323, printed 343"
+  ],
+  "overlap_compared": 869,
+  "overlap_diffs": [
+   [
+    "1935",
+    "('adm', 'f')",
+    "sgt1935",
+    "1488",
+    "sgt1936",
+    "1448"
+   ]
+  ]
+ },
+ "health_sadiki_activity": {
+  "rows": 126,
+  "checks": 123,
+  "failed": [
+   "sgt1922 sadiki_population Journées de malades payants: difference: cells give -2582, printed -3582",
+   "sgt1924 sadiki_population Journées du personnel nourri: difference: cells give 565, printed 365",
+   "sgt1926 sadiki_population Journées de malades indigents: difference: cells give 1398, printed 398",
+   "sgt1926 sadiki_population Effectif moyen journalier: difference: cells give 4.65, printed 465",
+   "sgt1926 sadiki_population Journées du personnel non nourri: difference: cells give 1924, printed 1920",
+   "sgt1929 sadiki_population Journées de malades payants: difference: cells give 933, printed 1003",
+   "sgt1929 sadiki_population Journées du personnel nourri: difference: cells give 9490, printed 10510",
+   "sgt1935 sadiki_population Effectif moyen journalier: difference: cells give -4.71, printed -4.69",
+   "sgt1935 sadiki_population Journées du personnel non nourri: difference: cells give 24620, printed 24820",
+   "sgt1935 sadiki_population 1934: patient-day categories vs patient days: cells give 85206, printed 85226",
+   "sgt1936 sadiki_population Journées de malades: difference: cells give 6905, printed 0",
+   "sgt1936 sadiki_population Journées de malades payants: difference: cells give -1201, printed 5700",
+   "sgt1936 sadiki_population Journées de malades indigents: difference: cells give 8110, printed 6110",
+   "sgt1936 sadiki_population Durée moyenne du séjour par malade: difference: cells give -0.96, printed -0.46",
+   "sgt1936 sadiki_population Journées du personnel non nourri: difference: cells give 353, printed 155",
+   "sgt1936 sadiki_population 1935: patient-day categories vs patient days: cells give 83502, printed 83506"
+  ],
+  "overlap_compared": 72,
+  "overlap_diffs": [
+   [
+    "1935",
+    "patient_days_paying",
+    "sgt1935",
+    "8209",
+    "sgt1936",
+    "8205"
+   ]
+  ]
+ },
+ "health_sadiki_consultations": {
+  "rows": 93,
+  "checks": 76,
+  "failed": [
+   "sgt1924 sadiki_consultations 1919: parts vs total: cells give 83650, printed 83640",
+   "sgt1924 sadiki_consultations 1924: parts vs total: cells give 925991, printed 115991",
+   "sgt1925 sadiki_consultations 1919: parts vs total: cells give 83650, printed 83640",
+   "sgt1925 sadiki_consultations 1924: parts vs total: cells give 925991, printed 115991",
+   "sgt1926 sadiki_consultations 1919: parts vs total: cells give 83650, printed 83640",
+   "sgt1927 sadiki_consultations 1919: parts vs total: cells give 83650, printed 83640",
+   "sgt1928 sadiki_consultations 1919: parts vs total: cells give 83650, printed 83640",
+   "sgt1936 sadiki_consultations 1936: parts vs total: cells give 339090, printed 338786"
+  ],
+  "overlap_compared": 298,
+  "overlap_diffs": [
+   [
+    "1910",
+    "total",
+    "sgt1924",
+    "24594",
+    "sgt1925",
+    "24584"
+   ],
+   [
+    "1924",
+    "external_dressings",
+    "sgt1924",
+    "898176",
+    "sgt1930",
+    "88176"
+   ],
+   [
+    "1924",
+    "external_dressings",
+    "sgt1925",
+    "898176",
+    "sgt1930",
+    "88176"
+   ],
+   [
+    "1934",
+    "total",
+    "sgt1935",
+    "243992",
+    "sgt1936",
+    "253941"
+   ],
+   [
+    "1935",
+    "total",
+    "sgt1935",
+    "261780",
+    "sgt1936",
+    "276530"
+   ]
+  ]
+ },
+ "health_sadiki_wards": {
+  "rows": 189,
+  "checks": 27,
+  "failed": [],
+  "overlap_compared": 0,
+  "overlap_diffs": []
+ },
+ "health_rabta_movements": {
+  "rows": 189,
+  "checks": 156,
+  "failed": [
+   "sgt1929 rabta_movements 1929 dth: m+f+c vs total: cells give 219, printed 270",
+   "sgt1930 rabta_movements 1929 dth: m+f+c vs total: cells give 219, printed 270",
+   "sgt1935 rabta_movements 1933 rec: m+f+c vs total: cells give 1990, printed 1989"
+  ],
+  "overlap_compared": 372,
+  "overlap_diffs": []
+ },
+ "health_rabta_activity": {
+  "rows": 120,
+  "checks": 120,
+  "failed": [
+   "sgt1922 rabta_population Journées du personnel nourri: difference: cells give -578, printed -576",
+   "sgt1923 rabta_population Journées du personnel non nourri: difference: cells give 2, printed 12",
+   "sgt1926 rabta_population Journées de malades: difference: cells give 9548, printed 9458",
+   "sgt1927 rabta_population Journées de malades payants: difference: cells give 204, printed 214",
+   "sgt1935 rabta_population Nombre d'admissions: difference: cells give 2323.853, printed 112",
+   "sgt1935 rabta_population Effectif moyen journalier: difference: cells give -2211.642, printed 1211",
+   "sgt1936 rabta_population Durée moyenne de séjour par malade: difference: cells give -3.31, printed -2.34",
+   "sgt1936 rabta_population Journées du personnel nourri: difference: cells give -281, printed -381",
+   "sgt1939 rabta_population Journées de malades indigents: difference: cells give 2513, printed 2423",
+   "sgt1939 rabta_population 1939: patient-day categories vs patient days: cells give 70820, printed 70730"
+  ],
+  "overlap_compared": 72,
+  "overlap_diffs": [
+   [
+    "1925",
+    "mean_stay_days",
+    "sgt1925",
+    "27.051",
+    "sgt1926",
+    "27.031"
+   ],
+   [
+    "1935",
+    "patient_days_paying",
+    "sgt1935",
+    "2973",
+    "sgt1936",
+    "68698"
+   ],
+   [
+    "1935",
+    "patient_days_indigent",
+    "sgt1935",
+    "68698",
+    "sgt1936",
+    "2973"
+   ],
+   [
+    "1935",
+    "mean_stay_days",
+    "sgt1935",
+    "28.440",
+    "sgt1936",
+    "28.410"
+   ]
+  ]
+ },
+ "health_rabta_diseases_nationality": {
+  "rows": 1170,
+  "checks": 291,
+  "failed": [
+   "sgt1929 rabta_diseases column tunisian_muslim: rows vs TOTAUX: cells give 955, printed 956",
+   "sgt1929 rabta_diseases column total: rows vs TOTAUX: cells give 1019, printed 1020",
+   "sgt1930 rabta_diseases row Dyphtérie: cells vs row total: cells give 5, printed 1",
+   "sgt1930 rabta_diseases column italian: rows vs TOTAUX: cells give 125, printed 121",
+   "sgt1936 rabta_diseases row Typhus: cells vs row total: cells give 20, printed 15",
+   "sgt1936 rabta_diseases row Fièvre typhoïde: cells vs row total: cells give 17, printed 6",
+   "sgt1936 rabta_diseases row Paludisme: cells vs row total: cells give 47, printed 97",
+   "sgt1936 rabta_diseases column tunisian_muslim: rows vs TOTAUX: cells give 3092, printed 3142",
+   "sgt1936 rabta_diseases column total: rows vs TOTAUX: cells give 3167, printed 3183"
+  ],
+  "overlap_compared": 0,
+  "overlap_diffs": []
+ },
+ "health_rabta_admissions_month_nationality": {
+  "rows": 726,
+  "checks": 201,
+  "failed": [
+   "sgt1930 rabta_months row Mai: cells vs row total: cells give 62, printed 52",
+   "sgt1930 rabta_months column total: rows vs TOTAUX: cells give 1116, printed 1126"
+  ],
+  "overlap_compared": 0,
+  "overlap_diffs": []
+ },
+ "health_manouba_patients": {
+  "rows": 52,
+  "checks": 43,
+  "failed": [
+   "sgt1936 manouba column patients_f: rows vs TOTAL: cells give 67, printed 70"
+  ],
+  "overlap_compared": 0,
+  "overlap_diffs": []
+ },
+ "health_interior_hospitals": {
+  "rows": 4171,
+  "checks": 1384,
+  "failed": [
+   "sgt1922 interior column beds: rows vs TOTAL: cells give 435, printed 438",
+   "sgt1922 interior column patient_days: rows vs TOTAL: cells give 68184, printed 65884",
+   "sgt1923 interior Béja eur: m+f+c vs total: cells give 68, printed 62",
+   "sgt1923 interior Tozeur eur: m+f+c vs total: cells give 6, printed 4",
+   "sgt1923 interior TOTAL eur: m+f+c vs total: cells give 532, printed 472",
+   "sgt1923 interior TOTAL ind: m+f+c vs total: cells give 3751, printed 3444",
+   "sgt1923 interior TOTAL din: m+f+c vs total: cells give 207, printed 195",
+   "sgt1923 interior column beds: rows vs TOTAL: cells give 494, printed 457",
+   "sgt1923 interior column eur_f: rows vs TOTAL: cells give 215, printed 275",
+   "sgt1923 interior column eur_c: rows vs TOTAL: cells give 76, printed 73",
+   "sgt1923 interior column eur_t: rows vs TOTAL: cells give 467, printed 472",
+   "sgt1923 interior column ind_m: rows vs TOTAL: cells give 2291, printed 2331",
+   "sgt1923 interior column ind_f: rows vs TOTAL: cells give 792, printed 1009",
+   "sgt1923 interior column ind_t: rows vs TOTAL: cells give 3494, printed 3444",
+   "sgt1923 interior column patient_days: rows vs TOTAL: cells give 78465, printed 77455",
+   "sgt1923 interior column din_m: rows vs TOTAL: cells give 171, printed 168",
+   "sgt1923 interior column din_t: rows vs TOTAL: cells give 210, printed 195",
+   "sgt1923 interior column consultations: rows vs TOTAL: cells give 157634, printed 157594",
+   "sgt1924 interior column patient_days: rows vs TOTAL: cells give 90099, printed 90100",
+   "sgt1924 interior column consultations: rows vs TOTAL: cells give 144642, printed 143742",
+   "sgt1926 interior column patient_days: rows vs TOTAL: cells give 105279, printed 105289",
+   "sgt1926 interior column consultations: rows vs TOTAL: cells give 171296, printed 172295",
+   "sgt1927 interior Kairouan ind: m+f+c vs total: cells give 426, printed 425",
+   "sgt1927 interior column ind_t: rows vs TOTAL: cells give 5440, printed 5441",
+   "sgt1928 interior Béja deu: m+f+c vs total: cells give 5, printed 6",
+   "sgt1928 interior Monastir din: m+f+c vs total: cells give 11, printed 8",
+   "sgt1928 interior Gabès eur: m+f+c vs total: cells give 5, printed 10",
+   "sgt1928 interior TOTAL eur: m+f+c vs total: cells give 941, printed 977",
+   "sgt1928 interior TOTAL ind: m+f+c vs total: cells give 4994, printed 4584",
+   "sgt1928 interior column beds: rows vs TOTAL: cells give 673, printed 732",
+   "sgt1928 interior column eur_f: rows vs TOTAL: cells give 479, printed 448",
+   "sgt1928 interior column ind_m: rows vs TOTAL: cells give 3141, printed 3151",
+   "sgt1928 interior column ind_t: rows vs TOTAL: cells give 4984, printed 4584",
+   "sgt1928 interior column patient_days: rows vs TOTAL: cells give 107355, printed 107385",
+   "sgt1928 interior column deu_f: rows vs TOTAL: cells give 25, printed 26",
+   "sgt1928 interior column din_c: rows vs TOTAL: cells give 22, printed 19",
+   "sgt1929 interior Béja ind: m+f+c vs total: cells give 459, printed 479",
+   "sgt1929 interior TOTAL eur: m+f+c vs total: cells give 948, printed 1160",
+   "sgt1929 interior column eur_t: rows vs TOTAL: cells give 948, printed 1160",
+   "sgt1929 interior column ind_f: rows vs TOTAL: cells give 1326, printed 1226",
+   "sgt1929 interior column ind_t: rows vs TOTAL: cells give 5277, printed 5157",
+   "sgt1930 interior Téboursouk ind: m+f+c vs total: cells give 41, printed 40",
+   "sgt1930 interior Grombalia ind: m+f+c vs total: cells give 167, printed 171",
+   "sgt1930 interior Maktar ind: m+f+c vs total: cells give 103, printed 106",
+   "sgt1930 interior Sousse ind: m+f+c vs total: cells give 750, printed 734",
+   "sgt1930 interior Monastir eur: m+f+c vs total: cells give 6, printed 0",
+   "sgt1930 interior TOTAL deu: m+f+c vs total: cells give 41, printed 40",
+   "sgt1930 interior column eur_t: rows vs TOTAL: cells give 868, printed 874",
+   "sgt1930 interior column ind_t: rows vs TOTAL: cells give 5068, printed 5078",
+   "sgt1930 interior column deu_t: rows vs TOTAL: cells give 41, printed 40",
+   "sgt1935 interior Souk-el-Khémis din: m+f+c vs total: cells give 26, printed 20",
+   "sgt1935 interior Nabeul ind: m+f+c vs total: cells give 252, printed 257",
+   "sgt1935 interior Maktar ind: m+f+c vs total: cells give 138, printed 139",
+   "sgt1935 interior Téboursouk din: m+f+c vs total: cells give 4, printed 9",
+   "sgt1935 interior Djerba ind: m+f+c vs total: cells give 160, printed 100",
+   "sgt1936 interior Bizerte din: m+f+c vs total: cells give 8, printed 9",
+   "sgt1936 interior Souk-el-Khemis ind: m+f+c vs total: cells give 360, printed 668",
+   "sgt1936 interior Tabarka ind: m+f+c vs total: cells give 308, printed 0",
+   "sgt1936 interior Tébourba din: m+f+c vs total: cells give 1, printed 0",
+   "sgt1936 interior Zaghouan deu: m+f+c vs total: cells give 1, printed 0",
+   "sgt1936 interior Maktar ind: m+f+c vs total: cells give 187, printed 197",
+   "sgt1936 interior Le Kef deu: m+f+c vs total: cells give 1, printed 2",
+   "sgt1936 interior Téboursouk eur: m+f+c vs total: cells give 0, printed 2",
+   "sgt1936 interior Enfidaville eur: m+f+c vs total: cells give 62, printed 0",
+   "sgt1936 interior Enfidaville deu: m+f+c vs total: cells give 2, printed 0",
+   "sgt1936 interior Kairouan eur: m+f+c vs total: cells give 18, printed 76",
+   "sgt1936 interior Kairouan deu: m+f+c vs total: cells give 3, printed 4",
+   "sgt1936 interior Mahdia eur: m+f+c vs total: cells give 3, printed 4",
+   "sgt1936 interior Mahdia deu: m+f+c vs total: cells give 1, printed 2",
+   "sgt1936 interior Monastir eur: m+f+c vs total: cells give 349, printed 8",
+   "sgt1936 interior Monastir ind: m+f+c vs total: cells give 704, printed 699",
+   "sgt1936 interior Monastir deu: m+f+c vs total: cells give 9, printed 13",
+   "sgt1936 interior Sousse eur: m+f+c vs total: cells give 0, printed 349",
+   "sgt1936 interior Sousse ind: m+f+c vs total: cells give 1241, printed 1341",
+   "sgt1936 interior Sousse deu: m+f+c vs total: cells give 4, printed 0",
+   "sgt1936 interior Thala eur: m+f+c vs total: cells give 2, printed 0",
+   "sgt1936 interior Gabès eur: m+f+c vs total: cells give 0, printed 2",
+   "sgt1936 interior Djerba ind: m+f+c vs total: cells give 76, printed 98",
+   "sgt1936 interior Gafsa ind: m+f+c vs total: cells give 22, printed 0",
+   "sgt1936 interior Hôpital Régional de Sfax eur: m+f+c vs total: cells give 396, printed 395",
+   "sgt1936 interior TOTAL din: m+f+c vs total: cells give 620, printed 588",
+   "sgt1936 interior column eur_m: rows vs TOTAL: cells give 485, printed 487",
+   "sgt1936 interior column eur_t: rows vs TOTAL: cells give 1495, printed 1491",
+   "sgt1936 interior column ind_f: rows vs TOTAL: cells give 2913, printed 2908",
+   "sgt1936 interior column ind_t: rows vs TOTAL: cells give 10419, printed 10309",
+   "sgt1936 interior column din_m: rows vs TOTAL: cells give 366, printed 350",
+   "sgt1936 interior column din_f: rows vs TOTAL: cells give 151, printed 179",
+   "sgt1936 interior column din_t: rows vs TOTAL: cells give 585, printed 588",
+   "sgt1936 interior column consultations: rows vs TOTAL: cells give 495367, printed 627741",
+   "sgt1939 interior column consultations: rows vs TOTAL: cells give 1183091, printed 1183491"
+  ],
+  "overlap_compared": 0,
+  "overlap_diffs": []
+ },
+ "health_tunis_deaths_month_nationality": {
+  "rows": 864,
+  "checks": 240,
+  "failed": [
+   "sgt1922 tunis_month_nationality row Janvier: cells vs row total: cells give 491, printed 499",
+   "sgt1922 tunis_month_nationality column total: rows vs TOTAUX: cells give 4607, printed 4599"
+  ],
+  "overlap_compared": 0,
+  "overlap_diffs": []
+ },
+ "health_tunis_deaths_month_cause": {
+  "rows": 1872,
+  "checks": 324,
+  "failed": [
+   "sgt1922 tunis_month_cause row Septembre: cells vs row total: cells give 378, printed 379",
+   "sgt1922 tunis_month_cause row Octobre: cells vs row total: cells give 380, printed 379",
+   "sgt1925 tunis_month_cause row Juillet: cells vs row total: cells give 607, printed 608",
+   "sgt1925 tunis_month_cause column Diphtérie: rows vs TOTAUX: cells give 16, printed 17",
+   "sgt1928 tunis_month_cause row Octobre: cells vs row total: cells give 498, printed 490",
+   "sgt1928 tunis_month_cause column Tuberculose: rows vs TOTAUX: cells give 621, printed 613",
+   "sgt1939 tunis_month_cause row TOTAUX: cells vs row total: cells give 6951, printed 6956",
+   "sgt1939 tunis_month_cause column Rougeole: rows vs TOTAUX: cells give 117, printed 112"
+  ],
+  "overlap_compared": 0,
+  "overlap_diffs": []
+ },
+ "health_tunis_deaths_cause_nationality": {
+  "rows": 942,
+  "checks": 253,
+  "failed": [],
+  "overlap_compared": 0,
+  "overlap_diffs": []
+ },
+ "health_tunis_natality_mortality": {
+  "rows": 588,
+  "checks": 336,
+  "failed": [
+   "sgt1924 tunis_natality_mortality row Différence entre naissances et décès: cells vs row total: cells give 1279, printed 1771",
+   "sgt1924 natality col 1: births - deaths vs difference: cells give 253, printed -253",
+   "sgt1924 natality col 4: births - deaths vs difference: cells give -7, printed 7",
+   "sgt1927 natality col 0: deaths - non-residents (- stillbirths) vs rectified: cells give 453, printed 444",
+   "sgt1927 natality col 1: deaths - non-residents (- stillbirths) vs rectified: cells give 2869, printed 2863",
+   "sgt1927 natality col 3: deaths - non-residents (- stillbirths) vs rectified: cells give 804, printed 806",
+   "sgt1927 natality col 6: deaths - non-residents (- stillbirths) vs rectified: cells give 4866, printed 4853",
+   "sgt1928 tunis_natality_mortality row Différence entre naissances et décès: cells vs row total: cells give 2115, printed 2135",
+   "sgt1928 natality col 0: rate vs deaths/population: cells give 15.364, printed 15.71",
+   "sgt1928 natality col 1: rate vs deaths/population: cells give 30.763, printed 30.87",
+   "sgt1928 natality col 5: births - deaths vs difference: cells give 10, printed -10",
+   "sgt1930 natality col 2: rate vs deaths/population: cells give 20.552, printed 20.7",
+   "sgt1935 tunis_natality_mortality row Mortalité rectifiée: cells vs row total: cells give 4623, printed 4624",
+   "sgt1935 tunis_natality_mortality row Différence entre naissances et décès: cells vs row total: cells give 2551, printed 2313",
+   "sgt1935 natality col 4: deaths - non-residents (- stillbirths) vs rectified: cells give 97, printed 96",
+   "sgt1935 natality col 4: births - deaths vs difference: cells give -61, printed 73",
+   "sgt1935 natality col 5: births - deaths vs difference: cells give 11, printed 96",
+   "sgt1936 tunis_natality_mortality row Différence entre naissance et décès: cells vs row total: cells give 2545, printed 2445",
+   "sgt1936 natality col 4: births - deaths vs difference: cells give -33, printed 55",
+   "sgt1939 tunis_natality_mortality row Mortalité rectifiée: cells vs row total: cells give 2599, printed 5956",
+   "sgt1939 natality col 1: deaths - non-residents (- stillbirths) vs rectified: cells give 3730, printed 373"
+  ],
+  "overlap_compared": 0,
+  "overlap_diffs": []
+ },
+ "_cross_checks": {
+  "n": 564,
+  "equal": 561,
+  "differences": [
+   "sgt1922 total: deaths by month sum of printed row totals 4607 vs deaths by cause sum of printed row totals 4599",
+   "sgt1922 Janvier: month x cause total 491 vs month x nationality total 499",
+   "sgt1939 Maladies ordinaires: month x cause TOTAUX 5956 vs cause x nationality total 5827"
+  ]
+ },
+ "_vital_comparison": [
+  {
+   "religion": "muslim",
+   "year": 1922,
+   "city": 2705,
+   "controle": 3594
+  },
+  {
+   "religion": "muslim",
+   "year": 1923,
+   "city": 3315,
+   "controle": 3399
+  },
+  {
+   "religion": "muslim",
+   "year": 1924,
+   "city": 3319,
+   "controle": 3961
+  },
+  {
+   "religion": "muslim",
+   "year": 1925,
+   "city": 3911,
+   "controle": 4600
+  },
+  {
+   "religion": "muslim",
+   "year": 1926,
+   "city": 3087,
+   "controle": 3668
+  },
+  {
+   "religion": "muslim",
+   "year": 1927,
+   "city": 3380,
+   "controle": 3964
+  },
+  {
+   "religion": "muslim",
+   "year": 1928,
+   "city": 3078,
+   "controle": 3675
+  },
+  {
+   "religion": "muslim",
+   "year": 1929,
+   "city": 3247,
+   "controle": 3817
+  },
+  {
+   "religion": "muslim",
+   "year": 1930,
+   "city": 3195,
+   "controle": 3711
+  },
+  {
+   "religion": "muslim",
+   "year": 1935,
+   "city": 3391,
+   "controle": 4022
+  },
+  {
+   "religion": "muslim",
+   "year": 1936,
+   "city": 3758,
+   "controle": 4140
+  },
+  {
+   "religion": "muslim",
+   "year": 1939,
+   "city": 4435,
+   "controle": 5406
+  },
+  {
+   "religion": "jewish",
+   "year": 1922,
+   "city": 541,
+   "controle": 565
+  },
+  {
+   "religion": "jewish",
+   "year": 1923,
+   "city": 615,
+   "controle": 618
+  },
+  {
+   "religion": "jewish",
+   "year": 1924,
+   "city": 630,
+   "controle": 777
+  },
+  {
+   "religion": "jewish",
+   "year": 1925,
+   "city": 652,
+   "controle": 718
+  },
+  {
+   "religion": "jewish",
+   "year": 1926,
+   "city": 611,
+   "controle": 587
+  },
+  {
+   "religion": "jewish",
+   "year": 1927,
+   "city": 643,
+   "controle": 606
+  },
+  {
+   "religion": "jewish",
+   "year": 1928,
+   "city": 531,
+   "controle": 540
+  },
+  {
+   "religion": "jewish",
+   "year": 1929,
+   "city": 586,
+   "controle": 571
+  },
+  {
+   "religion": "jewish",
+   "year": 1930,
+   "city": 593,
+   "controle": 492
+  },
+  {
+   "religion": "jewish",
+   "year": 1935,
+   "city": 528,
+   "controle": 502
+  },
+  {
+   "religion": "jewish",
+   "year": 1936,
+   "city": 618,
+   "controle": 498
+  },
+  {
+   "religion": "jewish",
+   "year": 1939,
+   "city": 623,
+   "controle": 800
+  }
+ ]
+}

@@ -194,6 +194,6 @@ stillbirths ; Morts-nés | 36 253 55 81 7 2 434
 non_residents ; Non résidents | 74 280 18 41 4 1 418
 deaths_corrected ; Mortalité rectifiée | 429 2545 458 736 113 25 4306
 births ; Naissances déclarées | 1035 2985 876 1457 53 35 6441
-births_minus_deaths ; Différence entre naissances et décès | 606 440 418 721 -60 10 2135
+births_minus_deaths ; Différence entre naissances et décès | 606 440 418 721 -60 -10 2135
 population ; Population approximative | 27922 82729 24131 44076 4994 2144 185996
 mortality_per_1000 ; Mortalité par 1.000 habitants | 15.71 30.87 18.97 16.69 22.62 11.66 23.15

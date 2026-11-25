@@ -117,6 +117,26 @@ Every table is tidy: one row per printed cell. Printed subtotals and totals are 
 | [`cens1936_controle_nationality`](#cens1936_controle_nationality) | controle | 2-3 | 380 | count | Civilian population (Europeans by nationality, Muslims, Jews) by contrôle civil, 1936 census |
 | [`cens1936_compare_1931_1936`](#cens1936_compare_1931_1936) | compare | 4-5 | 260 | count | Europeans by circonscription and nationality, 1931 and 1936 censuses |
 | [`cens1936_towns`](#cens1936_towns) | towns | 6 | 272 | count | European and indigenous population of the five largest towns and of all towns over 5,000, 1936 census |
+| [`health_hospital_civil_activity`](#health_hospital_civil_activity) | civil_population | by edition | 104 | mixed | French Civil Hospital of Tunis: patient-days, admissions, mean stay |
+| [`health_hospital_civil_births`](#health_hospital_civil_births) | civil_births | by edition | 17 | count | French Civil Hospital of Tunis: births in the maternity ward |
+| [`health_hospital_civil_consultations`](#health_hospital_civil_consultations) | civil_consultations | by edition | 54 | count | French Civil Hospital of Tunis: external consultations and dressings; operations |
+| [`health_hospital_civil_movements`](#health_hospital_civil_movements) | civil_movements | by edition | 154 | count | French Civil Hospital of Tunis: admissions and discharges |
+| [`health_hospital_civil_ward_days`](#health_hospital_civil_ward_days) | civil_ward_days | by edition | 97 | count | French Civil Hospital of Tunis: patient-days by ward (pavilion) |
+| [`health_hospital_civil_wards`](#health_hospital_civil_wards) | civil_wards | by edition | 235 | count | French Civil Hospital of Tunis: patients by ward, sex, nationality and payment status |
+| [`health_interior_hospitals`](#health_interior_hospitals) | interior | by edition | 4,171 | mixed | Hospitals and dispensaries of the interior: beds, patients, patient-days, deaths, consultations |
+| [`health_manouba_patients`](#health_manouba_patients) | manouba | by edition | 52 | count | Manouba mental hospital: beds and patients |
+| [`health_rabta_activity`](#health_rabta_activity) | rabta_population | by edition | 120 | mixed | Rabta hospital: patient-days, admissions, mean stay |
+| [`health_rabta_admissions_month_nationality`](#health_rabta_admissions_month_nationality) | rabta_months | by edition | 726 | count | Rabta hospital: admissions by month and nationality |
+| [`health_rabta_diseases_nationality`](#health_rabta_diseases_nationality) | rabta_diseases | by edition | 1,170 | count | Rabta hospital: diseases treated (admissions) by nationality |
+| [`health_rabta_movements`](#health_rabta_movements) | rabta_movements | by edition | 189 | count | Rabta contagious-diseases hospital (Ernest-Conseil): admissions and discharges |
+| [`health_sadiki_activity`](#health_sadiki_activity) | sadiki_population | by edition | 126 | mixed | Sadiki Hospital: patient-days, admissions, mean stay |
+| [`health_sadiki_consultations`](#health_sadiki_consultations) | sadiki_consultations | by edition | 93 | count | Sadiki Hospital: external consultations and dressings; operations |
+| [`health_sadiki_movements`](#health_sadiki_movements) | sadiki_movements | by edition | 247 | count | Sadiki Hospital: admissions and discharges |
+| [`health_sadiki_wards`](#health_sadiki_wards) | sadiki_wards | by edition | 189 | count | Sadiki Hospital: patients by ward |
+| [`health_tunis_deaths_cause_nationality`](#health_tunis_deaths_cause_nationality) | tunis_cause_nationality | by edition | 942 | count | Health statistics of the city of Tunis: deaths by cause and nationality |
+| [`health_tunis_deaths_month_cause`](#health_tunis_deaths_month_cause) | tunis_month_cause | by edition | 1,872 | count | Health statistics of the city of Tunis: deaths by month and cause |
+| [`health_tunis_deaths_month_nationality`](#health_tunis_deaths_month_nationality) | tunis_month_nationality | by edition | 864 | count | Health statistics of the city of Tunis: deaths by month and nationality |
+| [`health_tunis_natality_mortality`](#health_tunis_natality_mortality) | tunis_natality_mortality | by edition | 588 | mixed | Comparative natality and mortality in Tunis, by nationality |
 
 ### eur1906_t1_circonscription_nationality
 
@@ -4362,3 +4382,964 @@ Source `sgt`, table towns, printed pages 6. 272 rows. Value type: count. Flags: 
 | `muslims` | Musulmans | 34 |
 | `other_european` | Autres européens | 34 |
 | `spanish` | Espagnols | 34 |
+
+### health_hospital_civil_activity
+
+**Hôpital civil français de Tunis : mouvement de la population**  
+*French Civil Hospital of Tunis: patient-days, admissions, mean stay*
+
+Source `sgt`, table civil_population, printed pages by edition. 104 rows. Value type: mixed. Flags: (empty) 101, reprint_corrected 3. Notes and validation: [`../yearbook_health_education/csv/health_hospital_civil_activity.md`](../yearbook_health_education/csv/health_hospital_civil_activity.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `indicator` | Coded dimension. |
+| `indicator_fr` | Printed French label for `indicator`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`indicator`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `admissions` | Nombre d'admissions | 15 |
+| `mean_daily_patients` | Effectif moyen journalier | 15 |
+| `mean_stay_days` | Durée moyenne du séjour par malade | 15 |
+| `patient_days` | Journées de malades / Journées de malades (totaux) | 15 |
+| `patient_days_indigent` | Journées de malades indigents | 15 |
+| `patient_days_paying` | Journées de malades payants | 15 |
+| `staff_days_fed` | Journées du personnel nourri | 7 |
+| `staff_days_not_fed` | Journées du personnel non nourri | 7 |
+
+### health_hospital_civil_births
+
+**Hôpital civil français de Tunis : naissances à la maternité**  
+*French Civil Hospital of Tunis: births in the maternity ward*
+
+Source `sgt`, table civil_births, printed pages by edition. 17 rows. Value type: count. Flags: (empty) 17. Notes and validation: [`../yearbook_health_education/csv/health_hospital_civil_births.md`](../yearbook_health_education/csv/health_hospital_civil_births.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `category` | Coded dimension. |
+| `category_fr` | Printed French label for `category`. |
+| `sex` | Coded dimension. |
+| `sex_fr` | Printed French label for `sex`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`category`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `illegitimate` | Illégitimes | 8 |
+| `legitimate` | Légitimes | 8 |
+| `stillborn` | Morts-nés | 1 |
+
+`sex`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `female` | Filles | 8 |
+| `male` | Garçons | 8 |
+| `total` | Total | 1 |
+
+### health_hospital_civil_consultations
+
+**Hôpital civil français de Tunis : mouvement de la consultation et des pansements externes ; opérations**  
+*French Civil Hospital of Tunis: external consultations and dressings; operations*
+
+Source `sgt`, table civil_consultations, printed pages by edition. 54 rows. Value type: count. Flags: (empty) 53, reprint_corrected 1. Notes and validation: [`../yearbook_health_education/csv/health_hospital_civil_consultations.md`](../yearbook_health_education/csv/health_hospital_civil_consultations.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `external_dressings` | Pansements externes | 7 |
+| `free_consultations` | Consultations gratuites | 14 |
+| `operations` | Nombre des opérations | 12 |
+| `radiology` | Service de la radiologie | 14 |
+| `staff_external` | Personnel externe | 7 |
+
+### health_hospital_civil_movements
+
+**Hôpital civil français de Tunis : mouvement des entrées et sorties**  
+*French Civil Hospital of Tunis: admissions and discharges*
+
+Source `sgt`, table civil_movements, printed pages by edition. 154 rows. Value type: count. Flags: (empty) 154. Notes and validation: [`../yearbook_health_education/csv/health_hospital_civil_movements.md`](../yearbook_health_education/csv/health_hospital_civil_movements.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `movement` | Coded dimension. |
+| `movement_fr` | Printed French label for `movement`. |
+| `sex_age` | Coded dimension. |
+| `sex_age_fr` | Printed French label for `sex_age`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`movement`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `carried_over_and_admitted` | Report au 1er janvier et entrées / Restants et entrées | 51 |
+| `discharged_died` | Sorties par décès | 51 |
+| `discharged_recovered` | Sorties par guérison | 51 |
+| `remaining_31_december` | Observations et restants au 31 décembre 1925 | 1 |
+
+`sex_age`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `child` | Enfants | 51 |
+| `female` | Femmes | 51 |
+| `male` | Hommes | 51 |
+| `total` | Total | 1 |
+
+### health_hospital_civil_ward_days
+
+**Hôpital civil français de Tunis : répartition des journées par pavillon**  
+*French Civil Hospital of Tunis: patient-days by ward (pavilion)*
+
+Source `sgt`, table civil_ward_days, printed pages by edition. 97 rows. Value type: count. Flags: (empty) 95, total_mismatch 2. Notes and validation: [`../yearbook_health_education/csv/health_hospital_civil_ward_days.md`](../yearbook_health_education/csv/health_hospital_civil_ward_days.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `ward_fr` | Place or label as printed (40 distinct values). |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+### health_hospital_civil_wards
+
+**Hôpital civil français de Tunis : statistiques par pavillon**  
+*French Civil Hospital of Tunis: patients by ward, sex, nationality and payment status*
+
+Source `sgt`, table civil_wards, printed pages by edition. 235 rows. Value type: count. Flags: (empty) 233, total_mismatch 2. Notes and validation: [`../yearbook_health_education/csv/health_hospital_civil_wards.md`](../yearbook_health_education/csv/health_hospital_civil_wards.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `measure` | Coded dimension. |
+| `ward` | Coded dimension. |
+| `ward_fr` | Printed French label for `ward`. |
+| `sex` | Coded dimension. |
+| `nationality` | Coded dimension. |
+| `nationality_fr` | Printed French label for `nationality`. |
+| `payment` | Coded dimension. |
+| `payment_fr` | Printed French label for `payment`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `beds` |  | 15 |
+| `births` |  | 4 |
+| `patients` |  | 216 |
+
+`ward`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `contagious_diseases` | Maladies contagieuses | 51 |
+| `general_medicine` | Médecine générale | 51 |
+| `maternity` | Maternité | 27 |
+| `maternity_births` | Naissances | 4 |
+| `nervous_diseases` | Nerveux | 51 |
+| `surgery` | Chirurgie | 51 |
+
+`sex`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `(empty)` |  | 43 |
+| `female` |  | 96 |
+| `male` |  | 96 |
+
+`nationality`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `(empty)` |  | 15 |
+| `european` | Européens | 55 |
+| `french` | Français | 55 |
+| `tunisian_jewish` | Israélites tunisiens | 55 |
+| `tunisian_muslim` | Musulmans | 55 |
+
+`payment`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `(empty)` |  | 15 |
+| `free` | Gratuits | 112 |
+| `paying` | Payants | 108 |
+
+### health_interior_hospitals
+
+**Hôpitaux, annexes et infirmeries-dispensaires de l'intérieur : malades et décès**  
+*Hospitals and dispensaries of the interior: beds, patients, patient-days, deaths, consultations*
+
+Source `sgt`, table interior, printed pages by edition. 4,171 rows. Value type: mixed. Flags: (empty) 4,171. Notes and validation: [`../yearbook_health_education/csv/health_interior_hospitals.md`](../yearbook_health_education/csv/health_interior_hospitals.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `hospital` | Coded dimension. |
+| `measure` | Coded dimension. |
+| `population` | Coded dimension. |
+| `sex_age` | Coded dimension. |
+| `column_fr` | Place or label as printed (15 distinct values). |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`hospital`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `Bizerte` |  | 116 |
+| `Béja` |  | 176 |
+| `Djerba` |  | 176 |
+| `Enfidaville` |  | 176 |
+| `Ferryville` |  | 148 |
+| `Gabès` |  | 176 |
+| `Gafsa` |  | 45 |
+| `Grombalia` |  | 176 |
+| `Hôp. Civil Français` |  | 15 |
+| `Hôp. Rég. Sfax` |  | 15 |
+| `Hôpital E. Conseil` |  | 15 |
+| `Hôpital Manouba` |  | 15 |
+| `Hôpital Régional de Sfax` |  | 15 |
+| `Hôpital Sadiki` |  | 15 |
+| `Kairouan` |  | 176 |
+| `Kef (Le)` |  | 75 |
+| `Le Kef` |  | 101 |
+| `Mactar` |  | 75 |
+| `Mahdia` |  | 176 |
+| `Maktar` |  | 101 |
+| `Mateur` |  | 176 |
+| `Medjez-el-Bab` |  | 176 |
+| `Menzel-Temime` |  | 44 |
+| `Menzel-Temine` |  | 15 |
+| `Monastir` |  | 176 |
+| `Médenine` |  | 116 |
+| `Médenine et annexes` |  | 60 |
+| `Nabeul` |  | 176 |
+| `Sidi-bou-Zid` |  | 15 |
+| `Smala des Souassi` |  | 15 |
+| `Souk-el-Arba` |  | 176 |
+| `Souk-el-Khemis` |  | 30 |
+| `Souk-el-Khémis` |  | 15 |
+| `Sousse` |  | 176 |
+| `Tabarka` |  | 73 |
+| `Thala` |  | 176 |
+| `Tozeur` |  | 176 |
+| `Tébourba` |  | 45 |
+| `Téboursouk` |  | 176 |
+| `Zaghouan` |  | 176 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `beds` |  | 284 |
+| `consultations` |  | 195 |
+| `deaths` |  | 1,704 |
+| `patient_days` |  | 284 |
+| `patients` |  | 1,704 |
+
+`population`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `(empty)` |  | 284 |
+| `all` |  | 479 |
+| `european` |  | 1,704 |
+| `indigenous` |  | 1,704 |
+
+`sex_age`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `(empty)` |  | 763 |
+| `child` |  | 1,136 |
+| `female` |  | 1,136 |
+| `male` |  | 1,136 |
+
+### health_manouba_patients
+
+**Hôpital psychiatrique de la Manouba**  
+*Manouba mental hospital: beds and patients*
+
+Source `sgt`, table manouba, printed pages by edition. 52 rows. Value type: count. Flags: (empty) 52. Notes and validation: [`../yearbook_health_education/csv/health_manouba_patients.md`](../yearbook_health_education/csv/health_manouba_patients.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `measure` | Coded dimension. |
+| `sex` | Coded dimension. |
+| `nationality` | Coded dimension. |
+| `nationality_fr` | Printed French label for `nationality`. |
+| `payment` | Coded dimension. |
+| `payment_fr` | Printed French label for `payment`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `beds` |  | 4 |
+| `patients` |  | 48 |
+
+`sex`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `female` |  | 26 |
+| `male` |  | 26 |
+
+`nationality`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `(empty)` |  | 4 |
+| `european` | Européens | 12 |
+| `french` | Français | 12 |
+| `tunisian_jewish` | Israélites tunisiens | 12 |
+| `tunisian_muslim` | Musulmans | 12 |
+
+`payment`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `(empty)` |  | 4 |
+| `free` | Gratuits | 24 |
+| `paying` | Payants | 24 |
+
+### health_rabta_activity
+
+**Hôpital de la Rabta : mouvement de la population**  
+*Rabta hospital: patient-days, admissions, mean stay*
+
+Source `sgt`, table rabta_population, printed pages by edition. 120 rows. Value type: mixed. Flags: (empty) 115, reprint_corrected 3, total_mismatch 2. Notes and validation: [`../yearbook_health_education/csv/health_rabta_activity.md`](../yearbook_health_education/csv/health_rabta_activity.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `indicator` | Coded dimension. |
+| `indicator_fr` | Printed French label for `indicator`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`indicator`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `admissions` | Nombre d'admissions | 15 |
+| `mean_daily_patients` | Effectif moyen journalier | 15 |
+| `mean_stay_days` | Durée moyenne de séjour par malade | 15 |
+| `patient_days` | Journées de malades | 15 |
+| `patient_days_indigent` | Journées de malades indigents | 15 |
+| `patient_days_paying` | Journées de malades payants | 15 |
+| `staff_days_fed` | Journées du personnel nourri | 15 |
+| `staff_days_not_fed` | Journées du personnel non nourri | 15 |
+
+### health_rabta_admissions_month_nationality
+
+**Hôpital de la Rabta : entrées par mois et par nationalité**  
+*Rabta hospital: admissions by month and nationality*
+
+Source `sgt`, table rabta_months, printed pages by edition. 726 rows. Value type: count. Flags: (empty) 726. Notes and validation: [`../yearbook_health_education/csv/health_rabta_admissions_month_nationality.md`](../yearbook_health_education/csv/health_rabta_admissions_month_nationality.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `month` | Coded dimension. |
+| `month_fr` | Printed French label for `month`. |
+| `nationality` | Coded dimension. |
+| `nationality_fr` | Printed French label for `nationality`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`month`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `april` | Avril | 60 |
+| `august` | Août | 60 |
+| `carried_over_1_january` | Reports au 1er janvier 1935 | 6 |
+| `december` | Décembre | 60 |
+| `february` | Février | 60 |
+| `january` | Janvier | 60 |
+| `july` | Juillet | 60 |
+| `june` | Juin | 60 |
+| `march` | Mars | 60 |
+| `may` | Mai | 60 |
+| `november` | Novembre | 60 |
+| `october` | Octobre | 60 |
+| `september` | Septembre | 60 |
+
+`nationality`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `anglo_maltese` | Anglo-Maltais | 121 |
+| `french` | Français | 121 |
+| `italian` | Italiens | 121 |
+| `other` | Autres | 121 |
+| `tunisian_jewish` | Israélites tunisiens | 121 |
+| `tunisian_muslim` | Musulmans | 121 |
+
+### health_rabta_diseases_nationality
+
+**Hôpital de la Rabta : maladies traitées par nationalité**  
+*Rabta hospital: diseases treated (admissions) by nationality*
+
+Source `sgt`, table rabta_diseases, printed pages by edition. 1,170 rows. Value type: count. Flags: (empty) 1,168, total_mismatch 2. Notes and validation: [`../yearbook_health_education/csv/health_rabta_diseases_nationality.md`](../yearbook_health_education/csv/health_rabta_diseases_nationality.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `cause` | Coded dimension. |
+| `cause_fr` | Printed French label for `cause`. |
+| `nationality` | Coded dimension. |
+| `nationality_fr` | Printed French label for `nationality`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`cause`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `anthrax` | Charbon | 6 |
+| `bone_tuberculosis` | Tuberculose osseuse | 30 |
+| `bubonic_plague` | Peste bubonique | 24 |
+| `cerebrospinal_meningitis` | Méningite cérébro-spinale | 18 |
+| `chickenpox` | Varicelle | 12 |
+| `diphtheria` | Dyphtérie | 30 |
+| `dysentery` | Dysenterie / Dysentérie | 42 |
+| `erysipelas` | Erysipèle | 66 |
+| `fever_and_malaria` | Fièvre et paludisme | 24 |
+| `general_medicine` | Médecine générale | 18 |
+| `infectious_purpura` | Purpura infect | 6 |
+| `influenza` | Grippe | 6 |
+| `influenzal_bronchitis` | Bronchite grippale | 18 |
+| `leprosy` | Lèpre | 54 |
+| `lethargic_encephalitis` | Encéphalée lithargique | 6 |
+| `malaria` | Paludisme | 48 |
+| `measles` | Rougeole | 66 |
+| `medical_tuberculosis` | Tuberculose médicale | 36 |
+| `mediterranean_fever` | Fièvre méditerranéenne | 6 |
+| `mumps` | Oreillons | 72 |
+| `observation` | Observations | 12 |
+| `observation_and_other` | Observations et autres / Observations et autres maladies | 30 |
+| `other_diseases` | Autres maladies | 42 |
+| `plague` | Peste | 42 |
+| `pneumonic_plague` | Peste pulmonaire | 24 |
+| `pulmonary_tuberculosis` | Tuberculose pulmonaire | 30 |
+| `rabies` | Rage | 66 |
+| `relapsing_fever` | Fièvre récurrente | 12 |
+| `scarlet_fever` | Scarlatine | 12 |
+| `smallpox` | Variole | 72 |
+| `surgical_tuberculosis` | Tuberculose chirurgicale | 36 |
+| `syphilography_dermatology` | Syphiligr. dermatologie | 18 |
+| `typhoid_fever` | Fièvre typhoïde / Typhoïde | 72 |
+| `typhus` | Typhus / Typhus exanthématique | 72 |
+| `whooping_cough` | Coqueluche | 42 |
+
+`nationality`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `anglo_maltese` | Anglo-Maltais | 195 |
+| `french` | Français | 195 |
+| `italian` | Italiens | 195 |
+| `other` | Autres | 195 |
+| `tunisian_jewish` | Israélites tunisiens | 195 |
+| `tunisian_muslim` | Musulmans | 195 |
+
+### health_rabta_movements
+
+**Hôpital des contagieux de la Rabta (Ernest-Conseil) : mouvement des entrées et sorties**  
+*Rabta contagious-diseases hospital (Ernest-Conseil): admissions and discharges*
+
+Source `sgt`, table rabta_movements, printed pages by edition. 189 rows. Value type: count. Flags: (empty) 189. Notes and validation: [`../yearbook_health_education/csv/health_rabta_movements.md`](../yearbook_health_education/csv/health_rabta_movements.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `movement` | Coded dimension. |
+| `movement_fr` | Printed French label for `movement`. |
+| `sex_age` | Coded dimension. |
+| `sex_age_fr` | Printed French label for `sex_age`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`movement`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `carried_over_and_admitted` | Report au 1er janvier et entrées | 60 |
+| `discharged_died` | Sorties par décès | 60 |
+| `discharged_recovered` | Sorties par guérison | 60 |
+| `remaining_31_december` | Restants au 31 décembre | 9 |
+
+`sex_age`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `child` | Enfants | 63 |
+| `female` | Femmes | 63 |
+| `male` | Hommes | 63 |
+
+### health_sadiki_activity
+
+**Hôpital Sadiki : mouvement de la population**  
+*Sadiki Hospital: patient-days, admissions, mean stay*
+
+Source `sgt`, table sadiki_population, printed pages by edition. 126 rows. Value type: mixed. Flags: (empty) 125, reprint_corrected 1. Notes and validation: [`../yearbook_health_education/csv/health_sadiki_activity.md`](../yearbook_health_education/csv/health_sadiki_activity.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `indicator` | Coded dimension. |
+| `indicator_fr` | Printed French label for `indicator`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`indicator`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `admissions` | Nombre d'admissions | 15 |
+| `mean_daily_patients` | Effectif moyen journalier | 15 |
+| `mean_stay_days` | Durée moyenne du séjour par malade | 15 |
+| `patient_days` | Journées de malades | 15 |
+| `patient_days_administrations` | Journées de malades administrations | 2 |
+| `patient_days_indigent` | Journées de malades indigents | 15 |
+| `patient_days_paying` | Journées de malades payants | 15 |
+| `patient_days_work_accidents` | Journées de malades accidents de travail | 2 |
+| `patient_days_wounded_soldiers` | Journées de malades blessés militaires | 2 |
+| `staff_days_fed` | Journées du personnel nourri | 15 |
+| `staff_days_not_fed` | Journées du personnel non nourri | 15 |
+
+### health_sadiki_consultations
+
+**Hôpital Sadiki : mouvement de la consultation et des pansements externes ; opérations**  
+*Sadiki Hospital: external consultations and dressings; operations*
+
+Source `sgt`, table sadiki_consultations, printed pages by edition. 93 rows. Value type: count. Flags: (empty) 93. Notes and validation: [`../yearbook_health_education/csv/health_sadiki_consultations.md`](../yearbook_health_education/csv/health_sadiki_consultations.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `electrotherapy` | Électrothérapie | 6 |
+| `external_dressings` | Pansements externes | 21 |
+| `free_consultations` | Consultations gratuites | 21 |
+| `operations` | Nombre des opérations | 33 |
+| `total` | Total | 12 |
+
+### health_sadiki_movements
+
+**Hôpital Sadiki : mouvement des entrées et sorties**  
+*Sadiki Hospital: admissions and discharges*
+
+Source `sgt`, table sadiki_movements, printed pages by edition. 247 rows. Value type: count. Flags: (empty) 246, reprint_corrected 1. Notes and validation: [`../yearbook_health_education/csv/health_sadiki_movements.md`](../yearbook_health_education/csv/health_sadiki_movements.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `movement` | Coded dimension. |
+| `movement_fr` | Printed French label for `movement`. |
+| `sex_age` | Coded dimension. |
+| `sex_age_fr` | Printed French label for `sex_age`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`movement`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `carried_over_and_admitted` | Report au 1er janvier et entrées | 78 |
+| `discharged_died` | Sorties par décès | 78 |
+| `discharged_recovered` | Sorties par guérison | 78 |
+| `remaining_31_december` | Restants au 31 décembre | 3 |
+| `stillborn` | Nouveau-nés morts-nés | 10 |
+
+`sex_age`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `child` | Enfants | 79 |
+| `female` | Femmes | 79 |
+| `male` | Hommes | 79 |
+| `total` | Total | 10 |
+
+### health_sadiki_wards
+
+**Hôpital Sadiki : statistiques par service**  
+*Sadiki Hospital: patients by ward*
+
+Source `sgt`, table sadiki_wards, printed pages by edition. 189 rows. Value type: count. Flags: (empty) 189. Notes and validation: [`../yearbook_health_education/csv/health_sadiki_wards.md`](../yearbook_health_education/csv/health_sadiki_wards.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `measure` | Coded dimension. |
+| `ward` | Coded dimension. |
+| `ward_fr` | Printed French label for `ward`. |
+| `sex` | Coded dimension. |
+| `nationality` | Coded dimension. |
+| `nationality_fr` | Printed French label for `nationality`. |
+| `payment` | Coded dimension. |
+| `payment_fr` | Printed French label for `payment`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `beds` |  | 27 |
+| `patients` |  | 162 |
+
+`ward`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `ent` | Oreilles, nez, gorge | 42 |
+| `maternity` | Maternité | 21 |
+| `medicine` | Médecine | 42 |
+| `ophthalmology` | Yeux | 42 |
+| `surgery` | Chirurgie | 42 |
+
+`sex`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `female` |  | 105 |
+| `male` |  | 84 |
+
+`nationality`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `(empty)` |  | 27 |
+| `french` | Français | 54 |
+| `tunisian_jewish` | Israélites tunisiens | 54 |
+| `tunisian_muslim` | Musulmans | 54 |
+
+`payment`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `(empty)` |  | 27 |
+| `free` | Gratuits | 81 |
+| `paying` | Payants | 81 |
+
+### health_tunis_deaths_cause_nationality
+
+**Statistique sanitaire de la ville de Tunis : décès par genre de maladie et par nationalité**  
+*Health statistics of the city of Tunis: deaths by cause and nationality*
+
+Source `sgt`, table tunis_cause_nationality, printed pages by edition. 942 rows. Value type: count. Flags: (empty) 942. Notes and validation: [`../yearbook_health_education/csv/health_tunis_deaths_cause_nationality.md`](../yearbook_health_education/csv/health_tunis_deaths_cause_nationality.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `cause` | Coded dimension. |
+| `cause_fr` | Printed French label for `cause`. |
+| `nationality` | Coded dimension. |
+| `nationality_fr` | Printed French label for `nationality`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`cause`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `choleriform_diseases` | Affection cholériforme / Affections cholériformes | 72 |
+| `diphtheria` | Diphtérie | 72 |
+| `influenza` | Grippe | 72 |
+| `malaria` | Paludisme / Paludisme (malaria) | 72 |
+| `measles` | Rougeole | 72 |
+| `ordinary_diseases` | Maladies ordinaires | 72 |
+| `other_tuberculosis` | Autres tuberculoses | 6 |
+| `plague` | Peste | 72 |
+| `relapsing_fever` | Fièvre récurrente | 72 |
+| `respiratory_tuberculosis` | Tuberculose de l'appareil respiratoire | 6 |
+| `scarlet_fever` | Scarlatine | 72 |
+| `smallpox` | Variole | 72 |
+| `tuberculosis` | Tuberculose | 66 |
+| `typhoid_fever` | Fièvre typhoïde | 72 |
+| `typhus` | Typhus / Typhus exanthématique | 72 |
+
+`nationality`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `anglo_maltese` | Anglo-Maltais | 157 |
+| `french` | Français | 157 |
+| `italian` | Italiens | 157 |
+| `other` | Autres | 157 |
+| `tunisian_jewish` | Israélites tunisiens | 157 |
+| `tunisian_muslim` | Musulmans | 157 |
+
+### health_tunis_deaths_month_cause
+
+**Statistique sanitaire de la ville de Tunis : décès par genre de maladie (par mois)**  
+*Health statistics of the city of Tunis: deaths by month and cause*
+
+Source `sgt`, table tunis_month_cause, printed pages by edition. 1,872 rows. Value type: count. Flags: (empty) 1,870, total_mismatch 2. Notes and validation: [`../yearbook_health_education/csv/health_tunis_deaths_month_cause.md`](../yearbook_health_education/csv/health_tunis_deaths_month_cause.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `month` | Coded dimension. |
+| `month_fr` | Printed French label for `month`. |
+| `cause` | Coded dimension. |
+| `cause_fr` | Printed French label for `cause`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`month`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `april` | Avril | 156 |
+| `august` | Août | 156 |
+| `december` | Décembre | 156 |
+| `february` | Février | 156 |
+| `january` | Janvier | 156 |
+| `july` | Juillet | 156 |
+| `june` | Juin | 156 |
+| `march` | Mars | 156 |
+| `may` | Mai | 156 |
+| `november` | Novembre | 156 |
+| `october` | Octobre | 156 |
+| `september` | Septembre | 156 |
+
+`cause`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `choleriform_diseases` | Affection cholériforme / Affections cholériformes | 144 |
+| `diphtheria` | Diphtérie | 144 |
+| `influenza` | Grippe | 144 |
+| `malaria` | Paludisme | 144 |
+| `measles` | Rougeole | 144 |
+| `ordinary_diseases` | Maladies ordinaires | 144 |
+| `plague` | Peste | 144 |
+| `pulmonary_tuberculosis` | Tuberculose pulmonaire | 12 |
+| `relapsing_fever` | Fièvre récurrente | 144 |
+| `scarlet_fever` | Scarlatine | 144 |
+| `smallpox` | Variole | 144 |
+| `tuberculosis` | Tuberculose | 132 |
+| `typhoid_fever` | Fièvre typhoïde | 144 |
+| `typhus` | Typhus | 144 |
+
+### health_tunis_deaths_month_nationality
+
+**Statistique sanitaire de la ville de Tunis : décès par nationalité (par mois)**  
+*Health statistics of the city of Tunis: deaths by month and nationality*
+
+Source `sgt`, table tunis_month_nationality, printed pages by edition. 864 rows. Value type: count. Flags: (empty) 864. Notes and validation: [`../yearbook_health_education/csv/health_tunis_deaths_month_nationality.md`](../yearbook_health_education/csv/health_tunis_deaths_month_nationality.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `month` | Coded dimension. |
+| `month_fr` | Printed French label for `month`. |
+| `nationality` | Coded dimension. |
+| `nationality_fr` | Printed French label for `nationality`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`month`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `april` | Avril | 72 |
+| `august` | Août | 72 |
+| `december` | Décembre | 72 |
+| `february` | Février | 72 |
+| `january` | Janvier | 72 |
+| `july` | Juillet | 72 |
+| `june` | Juin | 72 |
+| `march` | Mars | 72 |
+| `may` | Mai | 72 |
+| `november` | Novembre | 72 |
+| `october` | Octobre | 72 |
+| `september` | Septembre | 72 |
+
+`nationality`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `anglo_maltese` | Anglo-Maltais | 144 |
+| `french` | Français | 144 |
+| `italian` | Italiens | 144 |
+| `other` | Autres | 144 |
+| `tunisian_jewish` | Israélites tunisiens | 144 |
+| `tunisian_muslim` | Musulmans | 144 |
+
+### health_tunis_natality_mortality
+
+**État comparatif de la natalité et de la mortalité à Tunis**  
+*Comparative natality and mortality in Tunis, by nationality*
+
+Source `sgt`, table tunis_natality_mortality, printed pages by edition. 588 rows. Value type: mixed. Flags: (empty) 581, total_mismatch 7. Notes and validation: [`../yearbook_health_education/csv/health_tunis_natality_mortality.md`](../yearbook_health_education/csv/health_tunis_natality_mortality.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `indicator` | Coded dimension. |
+| `indicator_fr` | Printed French label for `indicator`. |
+| `nationality` | Coded dimension. |
+| `nationality_fr` | Printed French label for `nationality`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`indicator`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `births` | Naissances déclarées | 72 |
+| `births_minus_deaths` | Différence entre naissance et décès / Différence entre naissances et décès | 72 |
+| `deaths` | Nombre de décès | 72 |
+| `deaths_corrected` | Mortalité rectifiée | 72 |
+| `mortality_per_1000` | Mortalité par 1.000 habitants | 84 |
+| `non_residents` | Non résidents | 72 |
+| `population` | Population approximative | 72 |
+| `stillbirths` | Mort-nés / Morts-nés | 72 |
+
+`nationality`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `anglo_maltese` | Anglo-Maltais | 96 |
+| `french` | Français | 96 |
+| `italian` | Italiens | 96 |
+| `other` | Autres | 96 |
+| `total` | Totaux | 12 |
+| `tunisian_jewish` | Israélites tunisiens | 96 |
+| `tunisian_muslim` | Musulmans | 96 |

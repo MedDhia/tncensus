@@ -43,8 +43,8 @@ A tidy \code{data.frame} with one row per cell of the printed
 \description{
 Loads one table transcribed from the 1906 census of the European civilian
 population of Tunisia, the 1931 census of the indigenous population, or the
-\emph{Démographie} chapter of the \emph{Statistique générale de la Tunisie}
-yearbooks (1922--1939), as digitized on Gallica.
+\emph{Démographie} and health chapters of the \emph{Statistique générale de
+la Tunisie} yearbooks (1922--1939), as digitized on Gallica.
 }
 \details{
 The tables were rebuilt from Gallica's word-level OCR or transcribed from
@@ -85,7 +85,8 @@ transcription (Ben Salah et al., 2024).
 The tables are stored as Zstandard-compressed Apache Parquet files in
 \code{inst/extdata/colonial}. The transcription scripts and per-table
 notes are in \code{data-raw/colonial_census} and
-\code{data-raw/yearbook_demography} in the package repository.
+\code{data-raw/yearbook_demography} and
+\code{data-raw/yearbook_health_education} in the package repository.
 }
 \examples{
 # European population by nationality and locality, 1906

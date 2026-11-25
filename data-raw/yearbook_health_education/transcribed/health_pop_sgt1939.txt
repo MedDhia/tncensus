@@ -2,6 +2,8 @@
 # Interior table now also lists the Tunis hospitals (Hôp. Civil Français, Sadiki, E. Conseil,
 # Manouba) and the Hôpital régional de Sfax as rows; kept as printed.
 # Hôp. Civil Français beds printed '(a)520' with footnote (a): the 280 beds for soldiers are not included.
+# Rabta population table: printed row order is "indigents" (small figure) then "payants" (large),
+# the reverse of sgt1922-sgt1935; transcribed under the labels as printed (see the notes).
 
 @civil_movements view=39 page=33
 cols: adm_m adm_f adm_c adm_t rec_m rec_f rec_c rec_t dth_m dth_f dth_c dth_t
@@ -25,16 +27,16 @@ cols: dressings consultations radiology total operations
 
 @civil_wards view=40 page=34 year=1939
 cols: medg_m medg_f chir_m chir_f cont_m cont_f nerv_m nerv_f mat_f births total
-french paying | 853 94 265 303 209 9 27 8 278 0 2046
+french paying | 853 94 265 303 209 9 27 8 278 . 2046
 french free | 667 489 420 602 36 48 34 27 474 756 3553
 french TOTAL | . . . . . . . . . . 5599
-tunisian_muslim paying | 5 8 16 10 1 0 13 3 7 0 63
+tunisian_muslim paying | 5 8 16 10 1 0 13 3 7 . 63
 tunisian_muslim free | 16 39 12 6 0 3 53 33 3 16 181
 tunisian_muslim TOTAL | . . . . . . . . . . 244
-tunisian_jewish paying | 2 5 27 27 0 0 4 0 5 0 70
+tunisian_jewish paying | 2 5 27 27 0 0 4 0 5 . 70
 tunisian_jewish free | 182 204 232 322 20 18 27 10 184 123 1322
 tunisian_jewish TOTAL | . . . . . . . . . . 1392
-european paying | 44 40 55 52 4 6 6 1 34 0 242
+european paying | 44 40 55 52 4 6 6 1 34 . 242
 european free | 14 10 6 7 1 1 7 4 3 0 53
 european TOTAL | . . . . . . . . . . 295
 beds | 426 . 172 . 82 . 45 . 75 . 800
@@ -81,8 +83,8 @@ cols: adm_m adm_f adm_c adm_t rec_m rec_f rec_c rec_t dth_m dth_f dth_c dth_t
 
 @rabta_population view=43 page=37 years=1938 1939
 patient_days ; Journées de malades | 81512 70730 0 10782
-patient_days_indigent ; Journées de malades indigents (printed 'indigents') | 4146 6659 2423 0
-patient_days_paying ; Journées de malades payants (printed 'payants') | 77366 64161 0 13205
+patient_days_indigent ; Journées de malades indigents | 4146 6659 2423 0
+patient_days_paying ; Journées de malades payants | 77366 64161 0 13205
 admissions ; Nombre d'admissions | 3329 3288 0 41
 mean_daily_patients ; Effectif moyen journalier | 223.32 193.78 0 29.54
 mean_stay_days ; Durée moyenne de séjour par malade | 24.47 20.54 0 3.93
