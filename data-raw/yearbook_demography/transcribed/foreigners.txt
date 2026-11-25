@@ -322,3 +322,235 @@ Vénézuéliens | » » » » » » » » » »
 Yougo-Slaves | 4 3 2 3 2 3 » 1 2 1
 Autres | 8 11 3 1 2 7 23 14 7 8
 = TOTAUX | 1866 2207 1765 2263 1787 1827 2072 2344 1441 4481
+
+# The 1926 and 1927 editions use an older list of 28 nationalities: Anglais and
+# Anglo-Maltais separately (summed to british_anglo_maltese by the script),
+# Autrichiens et Hongrois together, Autres étrangers.
+@ sgt1926 bpt6k9105650k 590 26
+years | 1917/A 1917/D 1918/A 1918/D 1919/A 1919/D 1920/A 1920/D
+Allemands | » » » » » » 1 »
+Américains | 4 5 2 1 6 2 7 5
+Anglais | » » » » 45 29 13 18
+Anglo-Maltais | 275 349 286 275 375 241 329 186
+Autrichiens et Hongrois | » » » » » » » »
+Belges | 41 25 29 19 40 19 25 14
+Bulgares | » » » » » » » »
+Chinois | » » 1 1 2 4 1 1
+Danois | 1 1 2 1 4 1 1 2
+Egyptiens | » » » » 3 » 2 4
+Espagnols | 51 21 34 39 68 35 39 28
+Grecs | 28 14 6 17 39 18 27 16
+Hollandais | 2 3 4 1 7 4 4 2
+Italiens | 2948 1850 2449 2130 2795 2859 3954 2469
+Libanais | » » » » » » » »
+Norvégiens | 1 1 2 1 3 1 1 1
+Persans | » » » » » » » »
+Portugais | » » » » » » » »
+Roumains | » 1 1 » 4 2 » 2
+Russes | 4 3 4 3 17 4 14 7
+Serbes | » » » » 13 7 25 15
+Suédois | 2 8 5 10 8 4 4 2
+Suisses | 31 17 46 34 39 21 54 29
+Syriens | » » » » » » » »
+Tchéco-Slovaques | » » » » » » » »
+Turcs | » 3 4 5 6 4 2 3
+Yougo-Slaves | » » » » » » » »
+Autres étrangers | » 1 » » 5 2 3 1
+= TOTAUX | 3388 2302 2875 2537 3479 3257 4506 2805
+
+@ sgt1926 bpt6k9105650k 591 27
+years | 1921/A 1921/D 1922/A 1922/D 1923/A 1923/D 1924/A 1924/D 1925/A 1925/D 1926/A 1926/D
+Allemands | 4 3 7 4 9 4 12 10 10 5 25 16
+Américains | 13 9 25 19 17 12 15 12 19 6 17 14
+Anglais | 70 64 58 29 42 36 49 31 50 19 72 42
+Anglo-Maltais | 275 189 345 250 216 118 117 55 111 69 142 58
+Autrichiens et Hongrois | 7 4 4 4 15 11 15 9 17 9 31 17
+Belges | 29 14 29 17 38 14 24 14 53 28 661 28
+Bulgares | 1 1 » » 1 » 5 4 2 2 3 2
+Chinois | 2 1 1 1 4 3 2 2 5 » 16 7
+Danois | » » » » » » 1 1 5 » 13 6
+Egyptiens | 1 » 3 1 2 1 3 2 6 6 4 2
+Espagnols | 48 54 64 29 27 14 25 17 33 11 44 27
+Grecs | 76 39 59 48 62 41 39 11 29 19 28 8
+Hollandais | 14 6 18 11 15 8 15 7 36 22 29 21
+Italiens | 3560 1854 3498 2475 2021 782 1992 873 1585 717 2147 800
+Libanais | » » » » » » » » 3 » » »
+Norvégiens | 4 2 4 4 1 1 6 2 5 3 1 1
+Persans | » » » » » » » » 1 » 3 2
+Portugais | 9 4 13 7 1 1 1 1 2 » 1 1
+Roumains | 7 8 4 1 3 2 10 4 7 5 4 1
+Russes | 450 120 570 140 109 88 53 24 101 55 119 69
+Serbes | 17 14 4 29 5 2 4 3 4 2 4 »
+Suédois | 9 7 4 1 4 1 8 7 6 2 10 5
+Suisses | 84 59 78 34 71 51 89 74 93 45 127 73
+Syriens | » » » » » » 1 » 2 1 3 3
+Tchéco-Slovaques | 4 2 1 » 13 8 20 16 11 10 25 16
+Turcs | 45 24 29 14 32 12 21 9 20 9 12 9
+Yougo-Slaves | 4 1 2 2 » » 3 2 1 1 2 1
+Autres étrangers | 7 4 10 5 10 7 4 2 16 6 19 6
+= TOTAUX | 4740 2483 4830 3125 2718 1217 2534 1192 2233 1052 3562 1235
+
+# sgt1927 prints 1917 (labelled "1917") in the column where 1921 belongs.
+@ sgt1927 bpt6k91056510 54 26
+years | 1918/A 1918/D 1919/A 1919/D 1920/A 1920/D 1917/A 1917/D
+Allemands | » » » » 1 » » »
+Américains | 2 1 6 2 7 5 4 5
+Anglais | » » 45 29 13 18 » »
+Anglo-Maltais | 286 275 375 241 329 186 275 349
+Autrichiens et Hongrois | » » » » » » » »
+Belges | 29 19 40 19 25 14 41 25
+Bulgares | » » » » » » » »
+Chinois | 1 1 2 4 1 1 » »
+Danois | 2 1 4 1 1 2 1 1
+Egyptiens | » » 3 » 2 4 » »
+Espagnols | 34 39 68 35 39 28 51 21
+Grecs | 6 17 39 18 27 16 28 14
+Hollandais | 4 1 7 4 4 2 2 3
+Italiens | 2449 2130 2795 2859 3954 2469 2948 1850
+Libanais | » » » » » » » »
+Norvégiens | 2 1 3 1 1 1 1 1
+Persans | » » » » » » » »
+Portugais | » » » » » » » »
+Roumains | 1 » 4 2 » 2 » 1
+Russes | 4 3 17 4 14 7 4 3
+Serbes | » » 13 7 25 15 » »
+Suédois | 5 10 8 4 4 2 2 8
+Suisses | 46 34 39 21 54 29 31 17
+Syriens | » » » » » » » »
+Tchéco-Slovaques | » » » » » » » »
+Turcs | 4 5 6 4 2 3 » 3
+Yougo-Slaves | » » » » » » » »
+Autres étrangers | » » 5 2 3 1 » 1
+= TOTAUX | 2875 2537 3479 3257 4506 2805 3388 2302
+
+@ sgt1927 bpt6k91056510 55 27
+years | 1922/A 1922/D 1923/A 1923/D 1924/A 1924/D 1925/A 1925/D 1926/A 1926/D 1927/A 1927/D
+Allemands | 7 4 9 4 12 10 10 5 25 16 43 25
+Américains | 25 19 17 12 15 12 19 6 17 14 22 17
+Anglais | 58 29 42 36 49 31 50 19 72 42 61 33
+Anglo-Maltais | 345 250 216 118 117 55 111 69 142 58 143 108
+Autrichiens et Hongrois | 4 4 15 11 15 9 17 9 31 17 16 16
+Belges | 29 17 38 14 24 14 53 28 61 28 42 27
+Bulgares | » » 1 » 5 4 2 2 3 2 » »
+Chinois | 1 1 4 3 2 2 5 » 16 7 15 12
+Danois | » » » » 1 1 5 » 13 6 9 8
+Egyptiens | 3 1 2 1 3 2 6 6 4 2 8 6
+Espagnols | 64 29 27 14 25 17 33 11 44 27 32 21
+Grecs | 59 48 62 41 39 11 29 19 28 8 27 11
+Hollandais | 18 11 15 8 15 7 36 22 29 21 29 17
+Italiens | 3498 2475 2021 782 1992 873 1585 717 2147 800 1726 720
+Libanais | » » » » » » 3 » » » » »
+Norvégiens | 4 4 1 1 6 2 5 3 1 1 2 1
+Persans | » » » » » » 1 » 3 2 2 2
+Portugais | 13 7 1 1 1 1 2 » 1 1 9 3
+Roumains | 4 1 3 2 10 4 7 5 4 1 4 3
+Russes | 570 140 109 88 53 24 101 55 119 69 137 49
+Serbes | 4 29 5 2 4 3 4 2 4 » 9 3
+Suédois | 4 1 4 1 8 7 6 2 10 5 11 8
+Suisses | 78 34 71 51 89 74 93 45 127 73 105 78
+Syriens | » » » » 1 » 2 1 3 3 » »
+Tchéco-Slovaques | 1 » 13 8 20 16 11 10 25 16 35 24
+Turcs | 29 14 32 12 21 9 20 9 12 9 23 13
+Yougo-Slaves | 2 2 » » 3 2 1 1 2 1 5 2
+Autres étrangers | 10 6 10 7 4 2 16 6 19 6 10 5
+= TOTAUX | 4830 3126 2718 1217 2534 1192 2233 1052 3562 1235 2525 1212
+
+# sgt1928: first edition with the 45-nationality list; prints 1917 (labelled "1917")
+# in the 1921 slot. Its 1922 departures column is in the binding and left out.
+@ sgt1928 bpt6k91056510 578 26
+years | 1919/A 1919/D 1920/A 1920/D 1917/A 1917/D 1922/A
+Albanais | » » » » » » »
+Allemands | » » 1 » » » 7
+Américains | 6 2 7 5 4 5 25
+Anglais et Anglo-Maltais | 420 270 342 204 275 349 403
+Argentins | » » » » » » »
+Arméniens | » » » » » » »
+Australiens | » » » » » » »
+Autrichiens | » » » » » » 4
+Belges | 40 19 25 14 41 25 29
+Brésiliens | » » » » » » »
+Bulgares | » » » » » » »
+Chiliens | » » » » » » »
+Chinois | 2 4 1 1 » » 1
+Colombiens | » » » » » » »
+Danois | 4 1 1 2 1 1 »
+Egyptiens | 3 » 2 4 » » 3
+Espagnols | 68 35 39 28 51 21 34
+Esthoniens | » » » » » » 5
+Finlandais | » » » » » » »
+Grecs | 39 18 27 16 28 14 59
+Hollandais | 7 4 4 2 2 3 18
+Hongrois | » » » » » » »
+Italiens | 2795 2859 3954 2469 2948 1850 3498
+Japonais | » » » » » » »
+Lettons | » » » » » » »
+Libanais | » » » » » » »
+Luxembourgeois | » » » » » » »
+Mexicains | » » » » » » »
+Norvégiens | 3 1 1 1 1 1 4
+Palestiniens | » » » » » » »
+Persans | » » » » » » »
+Polonais | » » » » » » »
+Portugais | » » » » » » 13
+Roumains | 4 2 » 2 » 1 4
+Russes | 17 4 14 7 4 3 570
+Serbes | 13 7 25 15 » » 4
+Suédois | 8 4 4 2 2 8 4
+Suisses | 39 21 54 29 31 17 78
+Syriens | » » » » » » »
+Tchéco-Slovaques | » » » » » » 1
+Tripolitains | » » » » » » »
+Turcs | 6 4 2 3 » 3 29
+Vénézuéliens | » » » » » » 2
+Yougo-Slaves | » » » » » » »
+Autres | 5 2 3 1 » 1 10
+= TOTAUX | 3479 3257 4505 2805 3388 2302 4830
+
+@ sgt1928 bpt6k91056510 579 27
+years | 1923/A 1923/D 1924/A 1924/D 1925/A 1925/D 1926/A 1926/D 1927/A 1927/D 1928/A 1928/D
+Albanais | » » » » » » » » » » 2 5
+Allemands | 9 4 12 10 10 5 25 16 43 25 336 426
+Américains | 17 12 15 12 19 6 17 14 22 17 532 909
+Anglais et Anglo-Maltais | 258 154 166 86 161 88 214 100 204 141 3793 3888
+Argentins | » » » » » » » » » » 6 4
+Arméniens | » » » » » » » » » » » 3
+Australiens | » » » » » » » » » » » 2
+Autrichiens | 15 11 15 9 17 9 31 17 16 16 115 144
+Belges | 38 14 24 14 53 28 61 28 42 27 144 138
+Brésiliens | » » » » » » » » » » 3 »
+Bulgares | 1 » 5 4 2 2 3 2 » » 1 1
+Chiliens | » » » » » » » » » » 7 1
+Chinois | 4 3 2 2 5 » 16 7 15 12 14 8
+Colombiens | » » » » » » » » » » » 2
+Danois | » » 1 1 5 » 13 6 9 8 38 63
+Egyptiens | 2 1 3 2 6 6 4 2 8 6 22 3
+Espagnols | 27 14 25 17 33 11 44 27 32 21 37 58
+Esthoniens | » » » » » » » » » » 9 »
+Finlandais | » » » » » » » » » » 14 18
+Grecs | 62 41 39 11 29 19 28 8 27 11 50 65
+Hollandais | 15 8 15 7 36 22 29 21 29 17 53 72
+Hongrois | » » » » » » » » » » 38 40
+Italiens | 2021 782 1992 873 1585 717 2147 800 1725 720 7425 6892
+Japonais | » » » » » » » » » » » 1
+Lettons | » » » » » » » » » » » 9
+Libanais | » » » » 3 » » » » » » »
+Luxembourgeois | » » » » » » » » » » 3 1
+Mexicains | » » » » » » » » » » 2 »
+Norvégiens | 1 1 6 2 5 3 1 1 2 1 196 17
+Palestiniens | » » » » » » » » » » 2 »
+Persans | » » » » » » » » » » » »
+Polonais | » » » » » » » » » » 94 91
+Portugais | 1 1 1 1 2 » 1 1 9 3 4 3
+Roumains | 3 2 10 4 7 5 4 1 4 3 30 12
+Russes | 109 88 53 24 101 55 119 69 137 49 110 83
+Serbes | 5 2 4 3 4 2 4 » 9 3 » »
+Suédois | 4 1 8 7 6 2 10 5 11 8 45 71
+Suisses | 71 51 89 74 93 45 127 73 105 78 163 241
+Syriens | » » » » » » » » » » 11 7
+Tchéco-Slovaques | 13 8 20 16 11 10 25 16 35 24 115 163
+Tripolitains | 11 » » » » » » » » » 2 63
+Turcs | 32 12 21 9 20 9 12 9 23 13 19 16
+Vénézuéliens | » » » » » » » » » » » 1
+Yougo-Slaves | » » 3 2 1 1 2 1 5 2 8 13
+Autres | 10 7 4 2 16 6 19 6 10 5 » »
+= TOTAUX | 2718 1217 2534 1192 2233 1052 3562 1235 2525 1212 13234 13534

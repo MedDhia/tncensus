@@ -21,7 +21,7 @@
 - **Fast Parquet Storage:** High-dimensional tables (28 disaggregated 2014 tables and full 2024 indicator suites) are backed by Zstandard-compressed Apache Parquet (`arrow`) for lightning-fast loads.
 - **Built-in Administrative GeoJSON & Spatial Boundaries (`load_geojson()`):** Seamlessly load ready-to-map `sf` polygons for National (1), Regional (6), Governorate (24), and Delegation (264) tiers, enriched with Arabic (`_name_ar`), French (`_name`), and alternate romanizations (`_name_alt`).
 - **Deep Historical & Colonial Archives:** Digitized and harmonized from [Ben Salah et al. (2024)](https://doi.org/10.1016/j.jce.2024.09.002), including 1,276 historical geonames, 1984–2014 boundary transition matrices, and colonial population tables.
-- **Original Colonial Census and Statistical Publications (`load_colonial_census()`):** 91 tables (38,432 cells) transcribed from Gallica scans: the 1906 European and 1931 indigenous census volumes (down to 333 localities and 804 cheikhats), and the *Démographie* chapter of 12 *Statistique générale de la Tunisie* yearbooks, which reprint the 1921, 1926, 1931 and 1936 censuses and give yearly births, deaths, marriages, expulsions, naturalisations, foreigners' movements and recruitment (1902–1939). Every table is checked against its printed totals and its reprints, and every cell keeps its page and Gallica view, so it can be checked against the scan.
+- **Original Colonial Census and Statistical Publications (`load_colonial_census()`):** 91 tables (38,457 cells) transcribed from Gallica scans: the 1906 European and 1931 indigenous census volumes (down to 333 localities and 804 cheikhats), and the *Démographie* chapter of 12 *Statistique générale de la Tunisie* yearbooks, which reprint the 1921, 1926, 1931 and 1936 censuses and give yearly births, deaths, marriages, expulsions, naturalisations, foreigners' movements and recruitment (1902–1939). Every table is checked against its printed totals and its reprints, and every cell keeps its page and Gallica view, so it can be checked against the scan.
 - **Inequality Metrics:** Built-in functions for calculating Gini coefficients (`gini()`) and Generalized Entropy Theil inequality decompositions (`theil_decompose()`).
 
 ---
@@ -84,7 +84,7 @@ install.packages(c("sf", "ggplot2", "arrow"))
 
 #### Tables from the original 1906 and 1931 census publications
 
-`load_colonial_census()` loads tables transcribed from two census volumes digitized on [Gallica](#archival-scans-from-gallica-bnf); `colonial_census_tables()` lists all 39. Tables are tidy (one row per printed cell), keep place names as printed, and give each cell's printed page and Gallica view. See [`data-raw/colonial_census/CODEBOOK.md`](data-raw/colonial_census/CODEBOOK.md) for every column and code.
+`load_colonial_census()` loads tables transcribed from two census volumes digitized on [Gallica](#archival-scans-from-gallica-bnf); `colonial_census_tables()` lists all 39. Tables are tidy (one row per printed cell), keep place names as printed (canonical names and coordinates are in `colonial_place_crosswalk`), and give each cell's printed page and Gallica view. See [`data-raw/colonial_census/CODEBOOK.md`](data-raw/colonial_census/CODEBOOK.md) for every column and code.
 
 | Table | Admin Level | Rows | Description |
 |:---|:---|---:|:---|
@@ -115,7 +115,7 @@ The *Démographie* chapter of 12 annual editions (1922–1930, 1935, 1936, 1939;
 | `cens1926_*` (9 tables) | Contrôle Civil / Commune / Town | 2,706 | 1926 census: Europeans by nationality, Muslims and Jews by contrôle; French and foreigners by birthplace; Italians by region; age, sex and marital status; profession; instruction; towns over 5,000; the 59 communes with decree dates. |
 | `cens1931_*`, `cens1936_*` (6 tables) | Contrôle Civil / Circonscription / Town | 1,824 | 1931 and 1936 censuses: population by contrôle, Europeans compared with the previous census, towns over 5,000. |
 | `vital_*` (6 tables) | Contrôle Civil / National | 2,674 | Muslim and Jewish births and deaths by contrôle (1918–1939); European marriages, births and deaths by nationality; mixed marriages. |
-| `expulsions_nationality`, `foreigners_movements` | National | 2,023 | Expulsions by nationality (1913–1934); foreigners' arrivals and departures by nationality (1920–1939). |
+| `expulsions_nationality`, `foreigners_movements` | National | 2,048 | Expulsions by nationality (1913–1934); foreigners' arrivals and departures by nationality (1917–1939). |
 | `naturalisations_*` (8 tables) | National | 1,793 | Naturalisations granted, civil status, age, profession and nationality of the naturalised (1922–1939), and two long series by nationality (1891–1930, 1891–1939). |
 | `recruitment_*` (5 tables) | National | 1,096 | French recruitment (allocation, education, draft boards, classes 1902–1939) and indigenous conscription (1916–1939). |
 
@@ -129,6 +129,7 @@ The *Démographie* chapter of 12 annual editions (1922–1930, 1935, 1936, 1939;
 | `load_geojson("national")` | `sf` MultiPolygon | 1 | 5 | National coastal & terrestrial boundary of Tunisia. |
 | `delegation_codes_ins` | Crosswalk Table | 264 | 11 | Master INS crosswalk connecting 1984 codes, modern codes, UN SALB, & coords. |
 | `historical_geonames` | Gazeteer Table | 1,276 | 14 | Historical place names mapped to modern equivalents, coordinates, & GeoNames. |
+| `colonial_place_crosswalk` | Crosswalk Table | 1,977 | 16 | Every place name printed in the `load_colonial_census()` tables, with canonical spelling, contrôle civil and caidat, linked to `historical_geonames` (1,242 links, 1,227 with coordinates). |
 | `delegation_matrix_merged` | Transition Matrix | 217 | 5 | Time-consistent merged delegation units reconciling 1984–2014 boundary splits. |
 
 ---

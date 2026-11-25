@@ -20,7 +20,7 @@ HERE = Path(__file__).resolve().parent
 CSV_DIRS = [HERE / "csv", HERE.parent / "yearbook_demography" / "csv"]
 OUT = HERE.parent.parent / "inst" / "extdata" / "colonial"
 ARKS = {"eur1906": "bd6t53563851", "ind1931": "bpt6k994559s"}
-INT_COLS = {"census_year", "base_year", "duplicate"}
+INT_COLS = {"census_year", "base_year", "duplicate", "year"}
 REQUIRED = ["census", "table_id", "source_page", "gallica_view", "value", "flag"]
 FLAGS = {"", "ocr_corrected", "illegible", "total_mismatch", "derived_from_totals",
          "not_applicable", "reprint_corrected"}

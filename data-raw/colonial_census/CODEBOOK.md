@@ -88,7 +88,7 @@ Every table is tidy: one row per printed cell. Printed subtotals and totals are 
 | [`cens1926_italian_provinces`](#cens1926_italian_provinces) | d | 6 | 26 | count | Inhabitants born in Italy by Italian region, 1921 and 1926 |
 | [`cens1926_towns`](#cens1926_towns) | j | 13 | 184 | count | European and indigenous population of all towns over 5,000 (the five largest flagged), 1926 census |
 | [`expulsions_nationality`](#expulsions_nationality) | expulsions | by edition | 308 | count | Expulsions by nationality, 1913-1934 |
-| [`foreigners_movements`](#foreigners_movements) | foreigners | by edition | 1,715 | count | Foreigners' arrivals and departures by nationality, 1920-1939 |
+| [`foreigners_movements`](#foreigners_movements) | foreigners | by edition | 1,740 | count | Foreigners' arrivals and departures by nationality, 1920-1939 |
 | [`naturalisations_age_men`](#naturalisations_age_men) | c | by edition | 36 | count | Age of naturalised men, 1922-1939 |
 | [`naturalisations_by_nationality_sgt1930`](#naturalisations_by_nationality_sgt1930) | e | by edition | 729 | count | Naturalisations by nationality, legal basis and year, 1891-1930 (1930 edition printing) |
 | [`naturalisations_by_nationality_sgt1939`](#naturalisations_by_nationality_sgt1939) | e | by edition | 512 | count | Naturalisations by nationality and year, 1891-1939 (1939 edition printing) |
@@ -2842,7 +2842,7 @@ Source `sgt`, table expulsions, printed pages by edition. 308 rows. Value type: 
 **Mouvement des étrangers en Tunisie (entrées et sorties)**  
 *Foreigners' arrivals and departures by nationality, 1920-1939*
 
-Source `sgt`, table foreigners, printed pages by edition. 1,715 rows. Value type: count. Flags: (empty) 1,711, not_applicable 4. Notes and validation: [`../yearbook_demography/csv/foreigners_movements.md`](../yearbook_demography/csv/foreigners_movements.md).
+Source `sgt`, table foreigners, printed pages by edition. 1,740 rows. Value type: count. Flags: (empty) 1,671, reprint_corrected 65, not_applicable 4. Notes and validation: [`../yearbook_demography/csv/foreigners_movements.md`](../yearbook_demography/csv/foreigners_movements.md).
 
 | Column | Description |
 |---|---|
@@ -2863,59 +2863,60 @@ Source `sgt`, table foreigners, printed pages by edition. 1,715 rows. Value type
 
 | Code | Printed label | N |
 |---|---|---:|
-| `arrivals` | Arrivées | 858 |
-| `departures` | Départs | 857 |
+| `arrivals` | Arrivées | 853 |
+| `departures` | Départs | 887 |
 
 `nationality`:
 
 | Code | Printed label | N |
 |---|---|---:|
-| `albanian` | Albanais | 32 |
-| `american` | Américains / Américains (Nord et Sud) | 40 |
-| `argentine` | Argentins | 32 |
-| `armenian` | Arméniens | 32 |
-| `australian` | Australiens | 32 |
-| `austrian` | Autrichiens | 40 |
-| `belgian` | Belges | 40 |
-| `brazilian` | Brésiliens | 32 |
-| `british_anglo_maltese` | Anglais et Anglo-Maltais | 40 |
-| `bulgarian` | Bulgares | 40 |
-| `chilean` | Chiliens | 32 |
-| `chinese` | Chinois | 32 |
-| `colombian` | Colombiens | 32 |
-| `czechoslovak` | Tchéco-Slovaques | 40 |
-| `danish` | Danois | 40 |
-| `dutch` | Hollandais | 40 |
-| `egyptian` | Egyptiens | 40 |
-| `estonian` | Esthoniens | 40 |
-| `finnish` | Finlandais | 40 |
-| `german` | Allemands | 40 |
-| `greek` | Grecs | 40 |
-| `hungarian` | Hongrois | 40 |
-| `indian` | Indous | 27 |
-| `italian` | Italiens | 40 |
-| `japanese` | Japonais | 32 |
-| `latvian` | Lettons | 32 |
-| `lebanese` | Libanais | 32 |
-| `luxembourger` | Luxembourgeois | 40 |
-| `mexican` | Mexicains | 32 |
-| `norwegian` | Norvégiens | 40 |
-| `other` | Autres | 40 |
-| `palestinian` | Palestiniens | 40 |
-| `persian` | Persans | 32 |
-| `polish` | Polonais | 40 |
-| `portuguese` | Portugais | 40 |
-| `romanian` | Roumains | 40 |
-| `russian` | Russes | 40 |
-| `serbian` | Serbes | 32 |
-| `spanish` | Espagnols | 40 |
-| `swedish` | Suédois | 40 |
-| `swiss` | Suisses | 40 |
-| `syrian` | Syriens | 40 |
-| `tripolitanian` | Tripolitains | 40 |
-| `turkish` | Turcs | 40 |
-| `venezuelan` | Vénézuéliens | 40 |
-| `yugoslav` | Yougo-Slaves | 40 |
+| `albanian` | Albanais | 24 |
+| `american` | Américains | 46 |
+| `argentine` | Argentins | 24 |
+| `armenian` | Arméniens | 24 |
+| `australian` | Australiens | 24 |
+| `austrian` | Autrichiens | 32 |
+| `austrian_hungarian` | Autrichiens et Hongrois | 22 |
+| `belgian` | Belges | 46 |
+| `brazilian` | Brésiliens | 24 |
+| `british_anglo_maltese` | Anglais / Anglais + Anglo-Maltais | 46 |
+| `bulgarian` | Bulgares | 46 |
+| `chilean` | Chiliens | 24 |
+| `chinese` | Chinois | 38 |
+| `colombian` | Colombiens | 24 |
+| `czechoslovak` | Tchéco-Slovaques | 46 |
+| `danish` | Danois | 46 |
+| `dutch` | Hollandais | 46 |
+| `egyptian` | Egyptiens | 46 |
+| `estonian` | Esthoniens | 33 |
+| `finnish` | Finlandais | 32 |
+| `german` | Allemands | 46 |
+| `greek` | Grecs | 46 |
+| `hungarian` | Hongrois | 32 |
+| `indian` | Indous | 23 |
+| `italian` | Italiens | 46 |
+| `japanese` | Japonais | 24 |
+| `latvian` | Lettons | 24 |
+| `lebanese` | Libanais | 38 |
+| `luxembourger` | Luxembourgeois | 32 |
+| `mexican` | Mexicains | 24 |
+| `norwegian` | Norvégiens | 46 |
+| `other` | Autres | 46 |
+| `palestinian` | Palestiniens | 32 |
+| `persian` | Persans | 38 |
+| `polish` | Polonais | 32 |
+| `portuguese` | Portugais | 46 |
+| `romanian` | Roumains | 46 |
+| `russian` | Russes | 46 |
+| `serbian` | Serbes | 38 |
+| `spanish` | Espagnols | 46 |
+| `swedish` | Suédois | 46 |
+| `swiss` | Suisses | 46 |
+| `syrian` | Syriens | 46 |
+| `tripolitanian` | Tripolitains | 33 |
+| `turkish` | Turcs | 46 |
+| `venezuelan` | Vénézuéliens | 33 |
+| `yugoslav` | Yougo-Slaves | 46 |
 
 ### naturalisations_age_men
 

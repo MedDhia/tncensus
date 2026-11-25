@@ -90,8 +90,10 @@ colonial_census_tables <- function() {
 #' printed footnote explains. These rows have \code{duplicate == 1}; drop
 #' them to reproduce the printed totals.
 #'
-#' Place names are not harmonized with modern delegations; see
-#' \code{\link{historical_geonames}} for a crosswalk of historical names.
+#' Place names are kept as printed. \code{\link{colonial_place_crosswalk}}
+#' gives every printed name a canonical spelling and contrôle civil and, where
+#' unambiguous, a link to \code{\link{historical_geonames}} (modern name and
+#' coordinates).
 #' Some figures overlap \code{\link{colonial_european_pop}},
 #' \code{\link{colonial_tunisian_pop}} and
 #' \code{\link{colonial_age_caidat_1931}}, which come from a different

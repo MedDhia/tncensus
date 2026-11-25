@@ -591,3 +591,73 @@
 #' data(delegation_matrix_merged)
 #' head(delegation_matrix_merged)
 "delegation_matrix_merged"
+
+
+#' Place-Name Crosswalk for the Colonial Census and Yearbook Tables
+#'
+#' One row for every place name printed in the tables returned by
+#' \code{\link{load_colonial_census}}, with a canonical spelling, a canonical
+#' contrôle civil (and caidat), and, where the match is unambiguous, a link to
+#' the gazetteer \code{\link{historical_geonames}} (modern name, 2024 locality
+#' id, coordinates). Join it to a table on the printed name and its context,
+#' e.g. \code{locality} and \code{controle_civil}, or \code{cheikhat} and
+#' \code{caidat}.
+#'
+#' @format A \code{data.frame} with 1,977 rows and 16 columns:
+#' \describe{
+#'   \item{level}{Column the name appears in: \code{"controle_civil"},
+#'     \code{"annexe"}, \code{"caidat"}, \code{"commune"}, \code{"cheikhat"}
+#'     or \code{"locality"}.}
+#'   \item{name_printed}{The name exactly as stored in the tables.}
+#'   \item{controle_civil_printed, caidat_printed}{The contrôle civil and
+#'     caidat printed with it (context; \code{NA} if the table has none).}
+#'   \item{name_std}{Canonical name: 1931 spellings for contrôles and caidats;
+#'     for other places the printed name without qualifiers such as
+#'     "(Ville)", "(Banlieue)" or "(partie rurale)".}
+#'   \item{controle_civil_std, caidat_std}{Canonical contrôle civil and
+#'     caidat. The southern military territories, printed as "Territoire(s) du
+#'     Sud" or "Territoires militaires" and in 1931 by subdivision, are all
+#'     \code{"Territoires militaires du Sud"}.}
+#'   \item{note}{Composite or renamed units, 1906 annexes, subdivisions.}
+#'   \item{match}{For communes, cheikhats and localities: \code{"exact"}
+#'     (normalised names equal), \code{"qualifier_stripped"} (equal after
+#'     dropping a printed qualifier), \code{"ambiguous"} (several gazetteer
+#'     entries remain after narrowing by caidat or contrôle), \code{"conflict"}
+#'     (one candidate, but the gazetteer places it in another contrôle civil;
+#'     not linked), or \code{"none"}. \code{NA} for contrôles, annexes and
+#'     caidats.}
+#'   \item{n_candidates}{Number of gazetteer candidates for ambiguous and
+#'     conflicting rows; 1 when linked; 0 otherwise.}
+#'   \item{locality_id_2024, locality_name_modern, delegation_1956, lat,
+#'     lon}{From \code{historical_geonames}, for linked rows.}
+#'   \item{tables}{The tables the name appears in, separated by semicolons.}
+#' }
+#'
+#' @details Names are compared after normalising accents, case, hyphens,
+#'   apostrophes, Arabic articles and common transliteration variants
+#'   (ou/u, dj/j, kh/k, ch/sh); no fuzzy matching is done. Of the 1,866
+#'   commune, cheikhat and locality rows, 1,242 are linked (1,227 with
+#'   coordinates). Links were checked against the gazetteer's own 1931
+#'   contrôle civil, allowing for the 1906 annexes, the later contrôle of
+#'   Zaghouan (carved out of Tunis) and the military territories.
+#'
+#' @source Built by \code{data-raw/colonial_census/place_crosswalk.py} from the
+#'   tables in \code{inst/extdata/colonial} and
+#'   \code{\link{historical_geonames}} (Ben Salah et al., 2024
+#'   (\doi{10.1016/j.jce.2024.09.002})).
+#'
+#' @seealso \code{\link{load_colonial_census}}, \code{\link{historical_geonames}}
+#'
+#' @examples
+#' data(colonial_place_crosswalk)
+#' table(colonial_place_crosswalk$level, colonial_place_crosswalk$match,
+#'       useNA = "ifany")
+#'
+#' # Map the 1931 cheikhats to coordinates
+#' ch <- load_colonial_census("ind1931_t3_cheikhat_nationality")
+#' xw <- subset(colonial_place_crosswalk, level == "cheikhat",
+#'              c(name_printed, caidat_printed, lat, lon))
+#' ch <- merge(ch, xw, by.x = c("cheikhat", "caidat"),
+#'             by.y = c("name_printed", "caidat_printed"), all.x = TRUE)
+#' mean(!is.na(ch$lat))
+"colonial_place_crosswalk"

@@ -36,3 +36,24 @@ test_that("every colonial table loads with the common columns", {
 test_that("load_colonial_census() rejects unknown tables", {
   expect_error(load_colonial_census("nope"), "not found")
 })
+
+test_that("colonial_place_crosswalk covers every printed place name", {
+  data(colonial_place_crosswalk, package = "tncensus", envir = environment())
+  xw <- colonial_place_crosswalk
+  expect_true(all(c("level", "name_printed", "controle_civil_std", "match",
+                    "lat", "lon") %in% names(xw)))
+  expect_true(all(xw$match %in% c(NA, "exact", "qualifier_stripped",
+                                  "ambiguous", "conflict", "none")))
+  linked <- xw$match %in% c("exact", "qualifier_stripped")
+  expect_true(all(!is.na(xw$locality_id_2024[linked])))
+  expect_true(all(is.na(xw$locality_id_2024[!linked])))
+  # every cheikhat of the 1931 volume has a crosswalk row in its caidat
+  ch <- unique(load_colonial_census("ind1931_t3_cheikhat_nationality")[
+    , c("cheikhat", "caidat")])
+  key_ch <- paste(ch$cheikhat, ch$caidat)
+  key_xw <- with(subset(xw, level == "cheikhat"),
+                 paste(name_printed, caidat_printed))
+  expect_true(all(key_ch %in% key_xw))
+  # canonical controles are a small closed set
+  expect_lte(length(unique(xw$controle_civil_std[xw$level == "controle_civil"])), 23)
+})

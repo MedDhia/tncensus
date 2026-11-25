@@ -630,38 +630,102 @@ FOR_NAT = {"Albanais": "albanian", "Allemands": "german", "Américains": "americ
            "Tripolitains": "tripolitanian", "Turcs": "turkish", "Vénézuéliens": "venezuelan",
            "Yougo-Slaves": "yugoslav", "Autres": "other"}
 MOV = {"A": ("arrivals", "Arrivées"), "D": ("departures", "Départs")}
+FOR_NAT.update({"Anglais": "british_anglo_maltese", "Anglo-Maltais": "british_anglo_maltese",
+                "Autrichiens et Hongrois": "austrian_hungarian", "Autres étrangers": "other"})
+OLD_LIST = {"sgt1926", "sgt1927"}            # 28-nationality list
+# Columns whose latest printing is wrong (see the notes): use this edition instead.
+# 1921: the 1929-1930 editions print 1917's figures as 1921 (sgt1927 and sgt1928 had put
+# the 1917 column in the 1921 slot, labelled 1917); only sgt1926 prints 1921 itself.
+# 1922-1927: the 1928-1935 editions re-keyed these years onto the 45-nationality list
+# with errors; the older printings named here add up to the printed totals.
+FOR_GOOD = {(1921, "A"): "sgt1926", (1921, "D"): "sgt1926",
+            (1922, "A"): "sgt1927", (1922, "D"): "sgt1927", (1923, "A"): "sgt1927",
+            (1924, "A"): "sgt1927", (1925, "A"): "sgt1927", (1925, "D"): "sgt1927",
+            (1926, "A"): "sgt1926", (1926, "D"): "sgt1927",
+            (1927, "A"): "sgt1927", (1927, "D"): "sgt1927"}
 
 
 def foreigners():
     t = "foreigners"
     order = list(ARKS)
-    printings = defaultdict(dict)        # (year, mov, nat_code) -> {edition: (value, block, label)}
+    cols_by = {}                              # (edition, year, mov) -> {code: value}
+    meta = {}                                 # (edition, year, mov) -> (page, view)
+    labels = defaultdict(set)
     for b in parse_blocks(TR / "foreigners.txt"):
         cols = [c.split("/") for c in b["cols"]]
         sums = [0] * len(cols)
         for lab, vals in b["rows"]:
             assert len(vals) == len(cols), (b["edition"], b["view"], lab, len(vals))
+            code = FOR_NAT[lab]
+            labels[code].add(lab)
             for i, (y, m) in enumerate(cols):
                 v = None if vals[i] == "_" else num(vals[i])
                 sums[i] += v or 0
-                printings[(int(y), m, FOR_NAT[lab])][b["edition"]] = (v, b, lab)
+                d = cols_by.setdefault((b["edition"], int(y), m), {})
+                if code in d and d[code] is not None and v is not None:
+                    d[code] += v                     # Anglais + Anglo-Maltais
+                else:
+                    d[code] = v
+                meta[(b["edition"], int(y), m)] = (int(b["page"]), int(b["view"]))
         tot = [num(x) for x in b["total"]]
         for i, (y, m) in enumerate(cols):
             check(t, f"{b['edition']} {y} {MOV[m][0]} column total", sums[i], tot[i])
-    rows, diffs, compared, equal = [], [], 0, 0
-    for (y, m, nat), eds in sorted(printings.items()):
-        latest = max(eds, key=order.index)
-        v, b, lab = eds[latest]
-        for e, (v2, _, _) in eds.items():
-            if e == latest:
+
+    def view(ed, y, m, collapse):
+        d = dict(cols_by[(ed, y, m)])
+        if collapse and ed not in OLD_LIST:
+            d["austrian_hungarian"] = (d.pop("austrian", 0) or 0) + (d.pop("hungarian", 0) or 0)
+        return d
+
+    rows, diffs, compared, equal, fixes = [], [], 0, 0, []
+    for (y, m) in sorted({(y, m) for (_, y, m) in cols_by}):
+        eds = sorted([e for (e, y2, m2) in cols_by if (y2, m2) == (y, m)], key=order.index)
+        latest = eds[-1]
+        chosen = FOR_GOOD.get((y, m), latest)
+        old = chosen in OLD_LIST or any(e in OLD_LIST for e in eds)
+        base = view(chosen, y, m, chosen in OLD_LIST)
+        # compare every other printing with the chosen one
+        for e in eds:
+            if e == chosen:
                 continue
-            compared += 1
-            if v2 == v:
-                equal += 1
-            else:
-                diffs.append(f"{y} {MOV[m][0]} {nat}: {e} prints {v2}, {latest} prints {v}")
-        rows.append([latest, ARKS[latest], "foreigners", int(b["page"]), int(b["view"]), y, MOV[m][0],
-                     MOV[m][1], nat, lab, "" if v is None else v, "not_applicable" if v is None else ""])
+            other = view(e, y, m, chosen in OLD_LIST or e in OLD_LIST)
+            ref = view(chosen, y, m, chosen in OLD_LIST or e in OLD_LIST)
+            for code in sorted(set(ref) | set(other)):
+                a, bv = ref.get(code), other.get(code)
+                if a is None and bv is None:
+                    continue
+                if (code not in ref and not bv) or (code not in other and not a):
+                    continue                        # category printed by one list only, zero
+                compared += 1
+                if a == bv:
+                    equal += 1
+                else:
+                    diffs.append(f"{y} {MOV[m][0]} {code}: {e} prints {bv}, {chosen} prints {a}")
+        # per-cell source: the chosen edition, or (no correction) the latest edition that
+        # prints the nationality at all
+        src = {code: chosen for code in base}
+        if chosen == latest:
+            for e in eds:
+                for code, v in view(e, y, m, False).items():
+                    if code not in base or src[code] == e or order.index(e) > order.index(src[code]):
+                        if code not in base or order.index(e) >= order.index(src[code]):
+                            base[code], src[code] = v, e
+        lat = view(latest, y, m, chosen in OLD_LIST) if chosen != latest else base
+        for code in sorted(set(base) | set(lat)):
+            v = base.get(code)
+            page, viewno = meta[(src.get(code, chosen), y, m)]
+            if code not in base:
+                if not lat.get(code):
+                    continue
+                v = 0                                # printed only by the faulty re-keying
+            flag = "not_applicable" if v is None else ""
+            if chosen != latest and v != lat.get(code, 0 if v == 0 else None):
+                flag = "reprint_corrected"
+                fixes.append(f"{y} {MOV[m][0]} {code}: {latest} prints {lat.get(code)}, kept {v} from {chosen}")
+            lab = " + ".join(sorted(labels[code] & ({"Anglais", "Anglo-Maltais"} if chosen in OLD_LIST and code == "british_anglo_maltese" else labels[code]))) if chosen in OLD_LIST and code == "british_anglo_maltese" else sorted(labels[code])[0]
+            ce = src.get(code, chosen)
+            rows.append([ce, ARKS[ce], "foreigners", page, viewno, y, MOV[m][0], MOV[m][1], code, lab,
+                         "" if v is None else v, flag])
     n = write("foreigners_movements", ["census", "gallica_ark", "table_id", "source_page", "gallica_view",
                                        "year", "movement", "movement_fr", "nationality", "nationality_fr",
                                        "value", "flag"], rows)
@@ -669,50 +733,83 @@ def foreigners():
     body = f"""
 *Mouvement des étrangers en Tunisie, entrées et sorties*: foreigners' arrivals and
 departures by nationality, {years[0]}-{years[-1]}. {n} rows: one per year, movement and
-nationality. Each cell is taken from the latest edition that prints it (`census`).
+nationality. Each cell is taken from the latest edition that prints it (`census`),
+except the columns listed under "Corrections", where the latest printing is wrong.
 
-Columns: `year`, `movement` (`arrivals` / `departures`), `nationality` (English code;
-`british_anglo_maltese` = *Anglais et Anglo-Maltais*; `american` = *Américains*, from 1936
-*Américains (Nord et Sud)*; `other` = *Autres*), `nationality_fr` (as printed), `value` =
-persons. A footnote in the 1929 and 1930 editions says that for 1923-1926 the figures are
-declarations of residence (men and women, children excluded). In 1933 Serbs are printed
-as "compris dans les Yougoslaves" and Tripolitanians as "compris dans les Italiens":
-`value` NA, flag `not_applicable`.
+Columns: `year`, `movement` (`arrivals` / `departures`), `nationality` (English code),
+`nationality_fr` (as printed), `value` = persons. A footnote in the 1926-1930 editions
+says that for 1923-1926 the figures are declarations of residence (men and women,
+children excluded). In 1933 Serbs are printed as "compris dans les Yougoslaves" and
+Tripolitanians as "compris dans les Italiens": `value` NA, flag `not_applicable`.
+
+Two lists of nationalities are used. The 1926 and 1927 editions list 28 (with *Anglais*
+and *Anglo-Maltais* separately, summed here into `british_anglo_maltese`;
+*Autrichiens et Hongrois* together, `austrian_hungarian`; *Autres étrangers* = `other`);
+from 1928 the table lists 45 (46 with *Indous* from 1935), and from 1936 32. Years taken
+from the 1926-1927 editions (1917-1918, 1921-1927, see below) therefore use the short
+list.
 
 ## Sources used
 
-- sgt1929 (pp. 26, view 54): 1920 (and 1921-1923, compared).
-- sgt1930 (pp. 26-27, views 584-585): 1921-1930; latest printing of
-  1921-1925 and of the 1929 departures (which are in the binding of sgt1935).
-- sgt1935 (pp. 16-17, views 36-37): 1926-1935; latest printing of 1926-1931, and of
+- sgt1926 (pp. 26-27, views 590-591): 1917-1926; the only printing of 1921.
+- sgt1927 (pp. 26-27, views 54-55): 1918-1927; latest printing of 1918.
+- sgt1928 (pp. 26-27, views 578-579): 1917, 1919-1928; latest printing of 1917 and 1919.
+- sgt1929 (p. 26, view 54): 1920-1923; latest printing of 1920.
+- sgt1930 (pp. 26-27, views 584-585): 1921-1930; the 1929 departures (in the binding of
+  sgt1935).
+- sgt1935 (pp. 16-17, views 36-37): 1926-1935; latest printing of 1928-1931, and of
   1932-1934 for the nationalities that the 1936 edition no longer lists.
 - sgt1936 (p. 14, view 25): 1932-1936; latest printing of 1932-1934 where it lists the
   nationality.
 - sgt1939 (p. 14, view 20): 1935-1939.
 
-From 1936 the table lists 32 nationalities instead of 46: rows such as Albanians,
-Argentines, Armenians, Brazilians, Chinese, Japanese, Latvians, Lebanese, Mexicans,
-Persians and Serbs disappear, but the printed totals still include them; so the 1936 and
-1939 editions' rows do not add up to their own totals (see Validation).
+## The year labels of 1917 and 1921
+
+The 1926 edition prints 1917-1926 in order. The 1927 edition (1918-1927) prints 1918,
+1919, 1920 and then, in the slot where 1921 belongs, a column labelled **1917** with
+1917's figures (3.388 arrivals, 2.302 departures; Italians 2.948 / 1.850), and no 1921.
+The 1928 edition does the same (1919, 1920, "1917", 1922...). The 1929 and 1930 editions
+keep that column but label it **1921**. So the figures printed as 1921 in the 1929 and
+1930 editions are 1917's; the only printing of 1921 is the 1926 edition's (4.740 / 2.483,
+whose cells add up to its printed totals). Here, 1917 is taken from sgt1928 (its
+correctly labelled column, identical to sgt1926 and sgt1927) and 1921 from sgt1926.
+
+## Corrections (`reprint_corrected`)
+
+Besides 1921, the 1928 edition re-keyed 1922-1927 onto its new list of nationalities, and
+the 1929-1935 editions copied it. The re-keyed columns do not add up to their printed
+totals, while the 1926-1927 printings do; so those columns are taken from the older
+printing (`FOR_GOOD` in the script):
+
+- 1922 arrivals: Spaniards printed 34 for 64; Estonians 5 and Venezuelans 2 added, Yugoslavs
+  2 dropped. 1922 departures: Belgians printed 7 for 17.
+- 1923 arrivals: Tripolitanians 11 added (not in the older printing, which adds up without
+  them).
+- 1924 arrivals: Syrians 1 dropped. 1925: Persians 1 and Syrians 2 / 1 dropped. 1926
+  departures and 1927: Persians and Syrians dropped; 1927 arrivals Italians 1.725 for 1.726.
+- 1926 arrivals: the 1927 and later editions print Belgians 61 with a total of 3.562, which
+  their cells do not reach; the 1926 edition prints 661, and its cells then add up to
+  3.562. 661 is kept.
+
+Every cell that changes is listed here:
+
+""" + "".join(f"- {x}\n" for x in fixes) + f"""
+Columns that still do not add up are misprints with no consistent printing: 1920 arrivals
+(sgt1929 prints a total of 4.505; cells and the older printings give 4.506), 1928 arrivals,
+1929 arrivals, 1930 departures, 1931 (arrivals printed 55.302, cells 19.546), 1933-1934,
+and the 1936-1939 editions, whose rows omit 14 nationalities that their totals include.
 
 ## Comparison of the overlapping printings
 
-{compared} comparisons, {equal} equal, {compared - equal} different:
+Every other printing of each cell was compared with the kept value (categories mapped
+between the two lists: Anglais + Anglo-Maltais; Autrichiens + Hongrois): {compared}
+comparisons, {equal} equal, {compared - equal} different:
 
 """ + "".join(f"- {d}\n" for d in diffs) + """
-## Not covered (open issues)
-
-- **1917-1919, and the 1925-1928 editions.** The 1926, 1927 and 1928 editions print
-  1917-1926, 1918-1927 and 1919-1928. Their first columns carry the figures that the
-  1929 and 1930 editions print for 1921 and later (e.g. sgt1926's "1917" = 3.388
-  arrivals and 2.302 departures, Italians 2.948 / 1.850, exactly sgt1930's 1921), so the
-  year labels of one set of editions are wrong. Until the 1926-1928 tables are
-  transcribed in full and the labels resolved, 1917-1919 are left out and those
-  editions are not compared. The 1925 edition (1925 only, with separate rows for
-  *Anglais* and *Anglo-Maltais*) is not compared either; its totals (2.233 / 1.052)
-  equal sgt1930's 1925.
+The 1925 edition (1925 only, with its own list including Cubains, Lithuaniens, Péruviens)
+was not transcribed; its totals (2.233 / 1.052) equal the kept 1925 values.
 """
-    notes("foreigners_movements", "Foreigners' arrivals and departures by nationality, 1920-1939", body, t)
+    notes("foreigners_movements", "Foreigners' arrivals and departures by nationality, 1917-1939", body, t)
     return n
 
 
