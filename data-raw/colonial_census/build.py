@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
 """Build inst/extdata/colonial/*.parquet from the transcribed CSVs.
 
-Reads data-raw/colonial_census/csv/<table>.csv and the table index
-data-raw/colonial_census/tables.csv (table, census, table_id, title_fr,
-title_en, pages, value_type). It writes one Zstandard-compressed Parquet file
+Reads <table>.csv from data-raw/colonial_census/csv/ (1906 and 1931 census
+volumes) or data-raw/yearbook_demography/csv/ (Statistique generale de la
+Tunisie yearbooks), and the table index data-raw/colonial_census/tables.csv
+(table, census, table_id, title_fr, title_en, pages, value_type). In the
+index, census is "eur1906", "ind1931" or "sgt"; rows of an "sgt" table carry
+the edition code (sgt1922 ... sgt1939) and their volume's gallica_ark. It writes one Zstandard-compressed Parquet file
 per table plus index.parquet, which load_colonial_census() and
 colonial_census_tables() read.
 
@@ -14,17 +17,24 @@ from pathlib import Path
 import pandas as pd
 
 HERE = Path(__file__).resolve().parent
+CSV_DIRS = [HERE / "csv", HERE.parent / "yearbook_demography" / "csv"]
 OUT = HERE.parent.parent / "inst" / "extdata" / "colonial"
 ARKS = {"eur1906": "bd6t53563851", "ind1931": "bpt6k994559s"}
 INT_COLS = {"census_year", "base_year", "duplicate"}
 REQUIRED = ["census", "table_id", "source_page", "gallica_view", "value", "flag"]
 FLAGS = {"", "ocr_corrected", "illegible", "total_mismatch", "derived_from_totals",
-         "not_applicable"}
+         "not_applicable", "reprint_corrected"}
+
+
+def find(table):
+    hits = [d / f"{table}.csv" for d in CSV_DIRS if (d / f"{table}.csv").exists()]
+    if len(hits) != 1:
+        raise SystemExit(f"{table}: expected one CSV, found {hits}")
+    return hits[0]
 
 
 def load(table):
-    df = pd.read_csv(HERE / "csv" / f"{table}.csv", dtype=str, keep_default_na=False,
-                     encoding="utf-8-sig")
+    df = pd.read_csv(find(table), dtype=str, keep_default_na=False, encoding="utf-8-sig")
     missing = [c for c in REQUIRED if c not in df.columns]
     if missing:
         raise SystemExit(f"{table}: missing columns {missing}")
@@ -61,8 +71,16 @@ def main():
     rows = []
     for _, r in idx.iterrows():
         df = load(r["table"])
+        if r["census"] == "sgt":
+            if not df["census"].str.startswith("sgt").all() or "gallica_ark" not in df.columns:
+                raise SystemExit(f"{r['table']}: yearbook rows need sgt* census codes and gallica_ark")
+            ark = ";".join(sorted(df["gallica_ark"].dropna().unique()))
+        else:
+            if not (df["census"] == r["census"]).all():
+                raise SystemExit(f"{r['table']}: census column does not match the index")
+            ark = ARKS[r["census"]]
         write(df, OUT / f"{r['table']}.parquet")
-        rows.append({**r.to_dict(), "gallica_ark": ARKS[r["census"]], "n_rows": len(df)})
+        rows.append({**r.to_dict(), "gallica_ark": ark, "n_rows": len(df)})
         print(f"{r['table']}: {len(df)} rows, {df.shape[1]} columns")
     stale = {p.stem for p in OUT.glob("*.parquet")} - set(idx["table"]) - {"index"}
     for s in stale:
