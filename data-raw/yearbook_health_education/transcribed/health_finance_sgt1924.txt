@@ -20,10 +20,10 @@ TOTAUX | 172300 172300 172300 232300 252937.50 349700 529100 529100 559100 74550
 # first nine lines, with no footnote; stored as one line.
 
 [budget_receipts] views=1038 pages=48 cols=1923 ; 1924 title=b) Recettes et dépenses du budget de l'Assistance publique. Recettes
-1. Allocation sur le produit des ressources réalisées par le Trésor pour le compte de l'Assistance publique. Chap. III. — Art. 14 du budget de l'Etat | 529100 745500
-2. Allocation complémentaire | 30000 mémoire
-3. Mémoire. — Dotation Joséphine Virieu (673 fr. 50). Dotation comprise dans l'allocation figurant à l'article premier | - -
-TOTAUX | 559100 745500
+A | 1 | Allocation sur le produit des ressources réalisées par le Trésor pour le compte de l'Assistance publique. Chap. III. — Art. 14 du budget de l'Etat | 529100 745500
+A | 2 | Allocation complémentaire | 30000 mémoire
+A | 3 | Mémoire. — Dotation Joséphine Virieu (673 fr. 50). Dotation comprise dans l'allocation figurant à l'article premier | - -
+T | TOTAUX | 559100 745500
 # printed under the table: "En plus au budget de 1924 ... 186.400"
 
 [budget_expenditure] views=1038,1039,1040,1041 pages=48,49,50,51 year=1924 cols=Crédits alloués en 1924 ; Différences avec les crédits de 1923, en plus ; en moins
@@ -256,3 +256,53 @@ Octobre | » 480 250 9
 Novembre | 1770 » 5 12
 Décembre | 3700 200 » 21
 TOTAUX | 21975 7325 4167 674
+
+# Hospitals and infirmaries-dispensaries of the interior, a) Situation financière (francs; the year is the
+# edition's year, as for the interior table of health_pop). Drafted from Gallica OCR with column bands taken
+# from the page rules, then checked against the printed row and column totals and the page image.
+[hospital_finance] view=1052 page=62 year=1924 cols=state ; temporary_indigenous_contributions ; public_assistance ; habous ; municipalities ; patient_day_receipts ; other_receipts ; total_receipts ; expenditure
+Medjez-el-Bab | 37500 2500 » 2000 1500 6406.75 175 50081.75 57175.54
+Béja | 32900 7500 » 4000 2400 10695.50 142 57637.50 57321.64
+Kef (Le) | 37000 9000 » 2500 3400 16462.25 42238.15 110600.40 137481.60
+Sousse | 52600 22400 » 10000 5000 32770 500 123270 136945.30
+Mahdia | 5000 12000 » 2000 18000 2975 6773.27 46748.27 43300
+Souk-el-Arba | 51000 5000 » » 3000 17303.85 16103.62 92407.47 73027.30
+Monastir | 23000 7000 » » 1000 5523 27962.14 64485.14 47780.76
+Nabeul | 9500 4500 » 4500 3000 2797.75 3136.86 27434.61 25197.39
+Mateur | 28500 4000 » 2000 2500 5724 900 43624 44940.06
+Kairouan | 28300 8700 » 10100 6000 6374.50 37498.96 96973.46 83296.36
+Grombalia | 10750 3500 2000 » » 3274 12546.92 32070.92 26832.17
+Thala | 2500 2500 » 1000 » 1274.30 38344.34 45618.64 34581.59
+Zaghouan | 5500 4800 » 2000 300 669 30430.02 43699.02 23480.16
+Djerba | 7400 3100 » 2000 3425 1952 5677.30 23554.30 18478.48
+Mactar | 13500 9000 » 1000 » 4552 » 28052 31889.11
+Ferryville | 16200 1300 100000 » 1000 720 1781.65 121001.65 18995.17
+Médenine et annexes | 36750 8180 » » 3200 » 119012.12 167142.12 65026.91
+Enfidaville | 12600 2000 » » » 2198 » 16798 13090.13
+Téboursouk | 6500 4200 » 650 » 1031.50 290.70 12672.20 12273.05
+Tozeur | 4500 6000 » » 2500 1206.25 51139.36 65345.61 14335.17
+Gabès | 15400 15000 » 4000 4500 1780 9 40689 37677
+TOTAL | 436900 142180 102000 47750 60725 125689.65 394661.41 1309906.06 1002764.89
+
+# Day-cost table "Prix moyen de la journée de traitement" (number of patient-days and staff-days, expenditure
+# in francs, cost per patient-day in francs as printed: 2 or 3 decimals). Row label = year; the civil-hospital
+# table of sgt1922-sgt1925 has one row printed "Civils" (or the year), stored as the edition's year.
+[day_cost] hospital=civil view=1047 page=57 years=1924 cols=patient_days ; staff_days_fed ; staff_days_not_fed ; total_days ; expenditure ; cost_per_patient_day
+1924 | 100402 52369 13481 65850 1900816.37 18.93
+
+[day_cost] hospital=sadiki view=1048 page=58 years=1915 1916 1917 1918 1919 1920 1921 1922 1923 1924 cols=patient_days ; staff_days_fed ; staff_days_not_fed ; total_days ; expenditure ; cost_per_patient_day
+1915 | 66120 34181 2555 102856 228556.39 3.456
+1916 | 70971 37292 2562 110835 240256.47 3.385
+1917 | 73503 37866 2555 113924 243876.73 3.331
+1918 | 73846 38762 2555 115163 310005.55 4.198
+1919 | 76331 39256 2590 118177 401908.44 5.262
+1920 | 78262 39785 3640 121687 678655.50 8.671
+1921 | 81581 42125 4045 127751 792307.74 9.711
+1922 | 82306 45990 4745 133046 810819.95 9.851
+1923 | 89047 31390 18480 138917 959638.75 10.766
+1924 | 89037 31955 18965 139957 1102825.72 12.386
+
+[day_cost] hospital=rabta view=1050 page=60 years=1922 1923 1924 cols=patient_days ; staff_days_fed ; staff_days_not_fed ; total_days ; expenditure ; cost_per_patient_day
+1922 | 1965 3118 1798 6881 72703.28 36.999
+1923 | 8124 3232 1800 13156 126915.23 15.622
+1924 | 12495 3576 2190 18261 152752.29 12.225

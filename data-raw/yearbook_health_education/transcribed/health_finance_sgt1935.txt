@@ -32,6 +32,7 @@ A | d | Fourneau des pauvres : Orphelinat de garçons de l'Institut Saint Vincen
 A | a | Institut Héliothérapique infantile du Kram : Fonctionnement de l'établissement | 110000 » 110000
 A | b | Institut Héliothérapique infantile du Kram : Entretien des enfants placés par l'Administration | 150000 » 150000
 A | - | Société de secours aux blessés militaires | 14000 » 14000
+@ view=59 page=39
 A | - | Union des Femmes de France | 6500 » 6500
 A | - | Dispensaire de la Croix Rouge de Tunis | 10000 » 10000
 A | - | Croix Verte de Tunis | 5000 » 5000
@@ -107,6 +108,7 @@ Communauté israélite de Tunis | 1701502.51 1704878.24 déficit | 16000 150000 
 Caisse de Secours et de Bienfaisance israélite de Bizerte | 75486.65 75743.05 256.40 | » 7210.95 » »
 Caisse de secours et de bienfaisance israélite de Nabeul | 78916.90 78878.55 38.35 | » » » »
 Communauté israélite de Sfax | 163976.45 163259.80 716.65 | 383 » 61 135
+@ view=61 page=41
 Caisse de Secours et de Bienfaisance israélite, Sousse | 306614.63 302663.06 3951.57 | » » » »
 Croix Verte de Tunis | 48491.95 48491.95 » | 2007 » » »
 Croix Verte de Bizerte | 6947.15 5182.15 1765.00 | 130 93 275 »
@@ -126,3 +128,22 @@ Dispensaire du Fourneau des Pauvres, Tunis | 18472.45 20153.85 déficit | 32545 
 Fourneau des Pauvres, Tunis (Garderie) | 32818 31213 1605 | 283 137825 75 »
 Œuvre israélite des couvertures, Tunis | 31857.75 32622 déficit | 2500 2894 » »
 # Caisse israélite de Bizerte: "Nombre de secours" printed "7.210 95" (a money amount, apparently misplaced), stored 7210.95.
+
+# Day-cost table "Prix moyen de la journée de traitement" (number of patient-days and staff-days, expenditure
+# in francs, cost per patient-day in francs as printed: 2 or 3 decimals). Row label = year; the civil-hospital
+# table of sgt1922-sgt1925 has one row printed "Civils" (or the year), stored as the edition's year.
+[day_cost] hospital=civil view=62 page=42 years=1933 1934 1935 cols=patient_days ; staff_days_fed ; staff_days_not_fed ; total_days ; expenditure ; cost_per_patient_day
+1933 | 126146 46225 46980 219351 3967598.39 29.76
+1934 | 130644 43798 47502 221944 3748997.06 27.02
+1935 | 140472 44019 47723 232214 - -
+
+[day_cost] hospital=sadiki view=64 page=44 years=1933 1934 1935 cols=patient_days ; staff_days_fed ; staff_days_not_fed ; total_days ; expenditure ; cost_per_patient_day
+1933 | 83923 36204 30295 150422 2620599.27 31.226
+1934 | 85226 34675 31025 150926 2489931.15 29.215
+1935 | 83506 16425 35645 155776 - -
+
+[day_cost] hospital=rabta view=66 page=46 years=1933 1934 1935 cols=patient_days ; staff_days_fed ; staff_days_not_fed ; total_days ; expenditure ; cost_per_patient_day
+1933 | 68330 20490 8426 97246 1198338.99 17.41
+1934 | 71229 21412.5 8962 101603.5 1165955.56 16.369
+1935 | 71671 19006 12813.5 103490.5 - -
+# 1935: expenditure and cost per day not printed (blank cells), stored as not printed.

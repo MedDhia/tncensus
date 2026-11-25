@@ -1,0 +1,17 @@
+census,table_id,gallica_ark,source_page,gallica_view,year,article,line_fr,line_en,value,flag
+sgt1924,budget_receipts,bpt6k9105649x,48,1038,1923,1,Allocation sur le produit des ressources réalisées par le Trésor pour le compte de l'Assistance publique. Chap. III. — Art. 14 du budget de l'Etat,allocation_proceeds_ressources_realisees_tresor_compte_public_assistan,529100,
+sgt1924,budget_receipts,bpt6k9105649x,48,1038,1923,2,Allocation complémentaire,allocation_complementary,30000,
+sgt1925,budget_receipts,bpt6k9105650k,48,72,1924,1,Allocation sur le produit des ressources réalisées par le Trésor pour le compte de l'Assistance publique. Chap. III. — Art. 14 du budget de l'Etat,allocation_proceeds_ressources_realisees_tresor_compte_public_assistan,745500,
+sgt1925,budget_receipts,bpt6k9105650k,48,72,1924,2,Allocation complémentaire,allocation_complementary,,not_applicable
+sgt1926,budget_receipts,bpt6k9105650k,56,620,1925,1,"Allocation forfaitaire sur le produit des encaissements réalisés par le Trésor, pour le compte de l'Assistance publique. (Chapitre III. — Art. 14 du budget de l'Etat)",allocation_forfaitaire_proceeds_encaissements_realises_tresor_compte_p,860300,
+sgt1926,budget_receipts,bpt6k9105650k,56,620,1925,2,Allocation complémentaire,allocation_complementary,0,
+sgt1927,budget_receipts,bpt6k91056510,55,83,1926,1,"Produits des encaissements réalisés par le Trésor pour le compte de l'Assistance publique (Chap. III. — Titre I. — Art. 13, § 1)",proceeds_encaissements_realises_tresor_compte_public_assistance_chap_i,924100,
+sgt1927,budget_receipts,bpt6k91056510,55,83,1926,2,Ressources exceptionnelles,ressources_exceptionnelles,95000,
+sgt1928,budget_receipts,bpt6k91056510,55,607,1927,1,Produits des encaissements réalisés par le Trésor pour le compte de l'Assistance publique (Chap. III. — Titre I. — Art. 13 § 1),proceeds_encaissements_realises_tresor_compte_public_assistance_chap_i,1027600,
+sgt1928,budget_receipts,bpt6k91056510,55,607,1927,2,Ressources exceptionnelles,ressources_exceptionnelles,414400,
+sgt1929,budget_receipts,bpt6k9105652d,57,85,1928,1,Produits des encaissements réalisés par le Trésor pour le compte de l'Assistance publique (Chap. III. — Titre I. — Art. 13 § 1),proceeds_encaissements_realises_tresor_compte_public_assistance_chap_i,1164100,
+sgt1929,budget_receipts,bpt6k9105652d,57,85,1928,2,Ressources exceptionnelles,ressources_exceptionnelles,396300,
+sgt1930,budget_receipts,bpt6k9105652d,59,617,1929,1,Produits des encaissements réalisés par le Trésor pour le compte de l'Assistance publique (Chap. III. — Titre I. — Art. 13 § 1),proceeds_encaissements_realises_tresor_compte_public_assistance_chap_i,1344000,
+sgt1930,budget_receipts,bpt6k9105652d,59,617,1929,2,Ressources exceptionnelles. Prélèvements sur le fonds de réserve,ressources_exceptionnelles_prelevements_reserve_fund,690000,
+sgt1930,budget_receipts,bpt6k9105652d,59,617,1930,1,Produits des encaissements réalisés par le Trésor pour le compte de l'Assistance publique (Chap. III. — Titre I. — Art. 13 § 1),proceeds_encaissements_realises_tresor_compte_public_assistance_chap_i,2178200,
+sgt1930,budget_receipts,bpt6k9105652d,59,617,1930,2,Ressources exceptionnelles. Prélèvements sur le fonds de réserve,ressources_exceptionnelles_prelevements_reserve_fund,742050,

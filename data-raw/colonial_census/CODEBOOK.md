@@ -137,6 +137,20 @@ Every table is tidy: one row per printed cell. Printed subtotals and totals are 
 | [`health_tunis_deaths_month_cause`](#health_tunis_deaths_month_cause) | tunis_month_cause | by edition | 1,872 | count | Health statistics of the city of Tunis: deaths by month and cause |
 | [`health_tunis_deaths_month_nationality`](#health_tunis_deaths_month_nationality) | tunis_month_nationality | by edition | 864 | count | Health statistics of the city of Tunis: deaths by month and nationality |
 | [`health_tunis_natality_mortality`](#health_tunis_natality_mortality) | tunis_natality_mortality | by edition | 588 | mixed | Comparative natality and mortality in Tunis, by nationality |
+| [`health_assistance_receipts_series`](#health_assistance_receipts_series) | receipts_series | by edition | 86 | francs | Public assistance budget: receipts by budget line, ten-year series (sgt1922–sgt1926) |
+| [`health_assistance_expenditure_series`](#health_assistance_expenditure_series) | expenditure_series | by edition | 875 | francs | Public assistance budget: expenditure by budget line, ten-year series (sgt1922–sgt1923) |
+| [`health_assistance_budget_receipts`](#health_assistance_budget_receipts) | budget_receipts | by edition | 16 | francs | Public assistance budget: receipts by article, budget year and previous year (sgt1924–sgt1930) |
+| [`health_assistance_budget_credits`](#health_assistance_budget_credits) | budget_expenditure | by edition | 671 | francs | Public assistance budget: credits (expenditure) by article (sgt1924–sgt1930) |
+| [`health_child_protection_credits`](#health_child_protection_credits) | child_protection | by edition | 266 | francs | Credits reserved for child-protection and child-assistance works, by work (sgt1924–sgt1930) |
+| [`health_subsidised_societies`](#health_subsidised_societies) | societies | by edition | 5,208 | mixed | Accounts of the societies and charities subsidised by public assistance: receipts, expenditure, cash balance and people assisted (sgt1922–sgt1930) |
+| [`health_subsidised_societies_summary`](#health_subsidised_societies_summary) | societies_summary | by edition | 293 | mixed | Subsidised societies and charities: total receipts, expenditure, balance and people assisted (sgt1935 layout) |
+| [`health_assistance_etat_receipts`](#health_assistance_etat_receipts) | etat_receipts | by edition | 6 | francs | Public assistance budget statement: receipts, credits allotted (sgt1935–sgt1939) |
+| [`health_assistance_etat_subsidies`](#health_assistance_etat_subsidies) | etat_subsidies | by edition | 450 | francs | Public assistance budget statement: subsidies granted by society (sgt1935–sgt1939) |
+| [`health_institutes_budget`](#health_institutes_budget) | institute_budget | by edition | 112 | francs | Institut Pasteur and Institut Arloing: budget receipts and expenditure (sgt1922–sgt1930) |
+| [`health_serum_vaccine_doses_pasteur`](#health_serum_vaccine_doses_pasteur) | pasteur_products | by edition | 237 | count | Institut Pasteur: vaccines, serums and other products distributed, by product (sgt1922–sgt1930) |
+| [`health_serum_vaccine_doses_arloing`](#health_serum_vaccine_doses_arloing) | arloing_doses | by edition | 1,152 | count | Institut Arloing (veterinary): doses of serums and vaccines distributed, by product and month (sgt1922–sgt1930) |
+| [`health_hospital_finance`](#health_hospital_finance) | hospital_finance | by edition | 1,376 | francs | Hospitals and infirmaries-dispensaries of the interior: receipts by source and expenditure (sgt1922–sgt1930) |
+| [`health_hospital_day_cost`](#health_hospital_day_cost) | day_cost | by edition | 244 | mixed | Average cost of a patient-day, with patient-days, staff-days and expenditure: French Civil Hospital, Sadiki Hospital, Rabta hospital (sgt1922–sgt1935) |
 
 ### eur1906_t1_circonscription_nationality
 
@@ -5343,3 +5357,723 @@ Source `sgt`, table tunis_natality_mortality, printed pages by edition. 588 rows
 | `total` | Totaux | 12 |
 | `tunisian_jewish` | Israélites tunisiens | 96 |
 | `tunisian_muslim` | Musulmans | 96 |
+
+### health_assistance_receipts_series
+
+**Assistance publique : recettes (séries décennales)**  
+*Public assistance budget: receipts by budget line, ten-year series (sgt1922–sgt1926)*
+
+Source `sgt`, table receipts_series, printed pages by edition. 86 rows. Value type: francs. Flags: (empty) 86. Notes and validation: [`../yearbook_health_education/csv/health_assistance_receipts_series.md`](../yearbook_health_education/csv/health_assistance_receipts_series.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `line_fr` | Place or label as printed (13 distinct values). |
+| `line_en` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`line_en`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `1°_allocation_forfaitaire_proceeds_ressources_realisees_tresor_compte` |  | 1 |
+| `2°_allocations_complementaires_annee_1923` |  | 1 |
+| `augmentation_receipts_diverses_votees_conference_consultative` |  | 14 |
+| `donation_josephine_virieu` |  | 7 |
+| `droits_tax_public_assistance_decorations_nichan_iftikhar` |  | 10 |
+| `montant_unique_imprime_accolade_neuf_premieres_lignes` |  | 4 |
+| `part_50_%_dans_proceeds_concessions_dans_cimetieres_tunis` |  | 1 |
+| `proceeds_concessions_dans_cimetieres_suburbains` |  | 10 |
+| `proceeds_duty_5_francs_debits_boissons` |  | 10 |
+| `proceeds_duty_pauvres_receipts_diverses` |  | 1 |
+| `proceeds_fines_condamnations_prononcees_tribunaux_french_tunis_matiere` |  | 10 |
+| `proceeds_tax_bons_poudre_permis_port_achat_armes` |  | 10 |
+| `proceeds_tax_theatres_cinemas_music_halls_instituee_decret_20_decembre` |  | 7 |
+
+### health_assistance_expenditure_series
+
+**Assistance publique : dépenses (séries décennales)**  
+*Public assistance budget: expenditure by budget line, ten-year series (sgt1922–sgt1923)*
+
+Source `sgt`, table expenditure_series, printed pages by edition. 875 rows. Value type: francs. Flags: (empty) 875. Notes and validation: [`../yearbook_health_education/csv/health_assistance_expenditure_series.md`](../yearbook_health_education/csv/health_assistance_expenditure_series.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `part_fr` | Place or label as printed (5 distinct values). |
+| `line_fr` | Place or label as printed (82 distinct values). |
+| `line_en` | Text (82 distinct values). |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+### health_assistance_budget_receipts
+
+**Recettes du budget de l'Assistance publique**  
+*Public assistance budget: receipts by article, budget year and previous year (sgt1924–sgt1930)*
+
+Source `sgt`, table budget_receipts, printed pages by edition. 16 rows. Value type: francs. Flags: (empty) 15, not_applicable 1. Notes and validation: [`../yearbook_health_education/csv/health_assistance_budget_receipts.md`](../yearbook_health_education/csv/health_assistance_budget_receipts.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `article` | Coded dimension. |
+| `line_fr` | Place or label as printed (7 distinct values). |
+| `line_en` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`article`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `1` |  | 8 |
+| `2` |  | 8 |
+
+`line_en`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `allocation_complementary` |  | 3 |
+| `allocation_forfaitaire_proceeds_encaissements_realises_tresor_compte_p` |  | 1 |
+| `allocation_proceeds_ressources_realisees_tresor_compte_public_assistan` |  | 2 |
+| `proceeds_encaissements_realises_tresor_compte_public_assistance_chap_i` |  | 5 |
+| `ressources_exceptionnelles` |  | 3 |
+| `ressources_exceptionnelles_prelevements_reserve_fund` |  | 2 |
+
+### health_assistance_budget_credits
+
+**Dépenses du budget de l'Assistance publique : crédits par article**  
+*Public assistance budget: credits (expenditure) by article (sgt1924–sgt1930)*
+
+Source `sgt`, table budget_expenditure, printed pages by edition. 671 rows. Value type: francs. Flags: (empty) 665, total_mismatch 4, not_applicable 2. Notes and validation: [`../yearbook_health_education/csv/health_assistance_budget_credits.md`](../yearbook_health_education/csv/health_assistance_budget_credits.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `section_fr` | Place or label as printed (37 distinct values). |
+| `article` | Text (124 distinct values). |
+| `line_type` | Coded dimension. |
+| `line_fr` | Place or label as printed (173 distinct values). |
+| `line_en` | Text (116 distinct values). |
+| `measure` | Coded dimension. |
+| `column_fr` | Place or label as printed (8 distinct values). |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`line_type`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `article` |  | 637 |
+| `detail` |  | 34 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `credit` |  | 76 |
+| `credit_complementary_allocation` |  | 7 |
+| `credit_detail` |  | 34 |
+| `credit_lump_sum_allocation` |  | 41 |
+| `credit_title_I` |  | 230 |
+| `credit_title_II` |  | 230 |
+| `credit_title_II_complementary` |  | 53 |
+
+### health_child_protection_credits
+
+**Répartition des crédits réservés aux œuvres de protection et d'assistance de l'enfance**  
+*Credits reserved for child-protection and child-assistance works, by work (sgt1924–sgt1930)*
+
+Source `sgt`, table child_protection, printed pages by edition. 266 rows. Value type: francs. Flags: (empty) 266. Notes and validation: [`../yearbook_health_education/csv/health_child_protection_credits.md`](../yearbook_health_education/csv/health_child_protection_credits.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `section_fr` | Place or label as printed (25 distinct values). |
+| `article` | Text (75 distinct values). |
+| `line_type` | Coded dimension. |
+| `line_fr` | Place or label as printed (74 distinct values). |
+| `line_en` | Text (61 distinct values). |
+| `measure` | Coded dimension. |
+| `column_fr` | Place or label as printed (9 distinct values). |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`line_type`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `article` |  | 254 |
+| `detail` |  | 12 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `credit` |  | 36 |
+| `credit_detail` |  | 12 |
+| `credit_lump_sum_allocation` |  | 22 |
+| `credit_title_I` |  | 111 |
+| `credit_title_II` |  | 85 |
+
+### health_subsidised_societies
+
+**Situation des sociétés et œuvres subventionnées sur le budget de l'Assistance publique**  
+*Accounts of the societies and charities subsidised by public assistance: receipts, expenditure, cash balance and people assisted (sgt1922–sgt1930)*
+
+Source `sgt`, table societies, printed pages by edition. 5,208 rows. Value type: mixed. Flags: (empty) 5,197, derived_from_totals 8, total_mismatch 3. Notes and validation: [`../yearbook_health_education/csv/health_subsidised_societies.md`](../yearbook_health_education/csv/health_subsidised_societies.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `society_fr` | Place or label as printed (177 distinct values). |
+| `society_en` | Text (94 distinct values). |
+| `group` | Coded dimension. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`group`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `balance` |  | 345 |
+| `expenditure` |  | 2,070 |
+| `receipts` |  | 1,380 |
+| `statistics` |  | 1,413 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `cash_1_january` | En caisse au 1er janvier | 345 |
+| `cash_remaining_end_of_year` | Reste en caisse au 1er janvier suivant | 345 |
+| `festivities_and_donations` | Fêtes et dons | 345 |
+| `general_expenses` | Frais généraux | 345 |
+| `maintenance_orphans_elderly` | Entretien d'orphelins, vieillards, etc. | 345 |
+| `meals_distributed` | Repas distribués | 41 |
+| `medical_assistance` | Assistance médicale | 345 |
+| `other_expenses` | Dépenses diverses | 345 |
+| `other_subsidies_and_receipts` | Subventions et recettes diverses | 345 |
+| `persons_assisted` | Nombre de personnes secourues | 343 |
+| `persons_medical_assistance` | Nombre de personnes ayant bénéficié de l'assistance médicale | 343 |
+| `public_assistance_subsidies` | Subventions A. P. | 345 |
+| `relief_cash_or_kind` | Secours en espèces ou nature | 345 |
+| `relief_grants_cash_or_kind` | Nombre de secours en espèces ou nature | 343 |
+| `relief_through_work` | Assistance par le travail | 345 |
+| `repatriations` | Nombre de rapatriements | 343 |
+
+### health_subsidised_societies_summary
+
+**Situation des sociétés et œuvres subventionnées (récapitulation, sgt1935)**  
+*Subsidised societies and charities: total receipts, expenditure, balance and people assisted (sgt1935 layout)*
+
+Source `sgt`, table societies_summary, printed pages by edition. 293 rows. Value type: mixed. Flags: (empty) 284, not_applicable 9. Notes and validation: [`../yearbook_health_education/csv/health_subsidised_societies_summary.md`](../yearbook_health_education/csv/health_subsidised_societies_summary.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `society_fr` | Place or label as printed (43 distinct values). |
+| `society_en` | Coded dimension. |
+| `group` | Coded dimension. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`society_en`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `central_clothing_store_tunis` |  | 7 |
+| `charity_french_infant_protection_tunis` |  | 7 |
+| `charity_jewish_couvertures_tunis` |  | 7 |
+| `comite_central_protection_assistance_childhood` |  | 4 |
+| `creche_charity_tunis` |  | 7 |
+| `day_nursery_jewish_tunis` |  | 7 |
+| `dispensary_alapetite_tunis` |  | 7 |
+| `dispensary_poor_kitchen_tunis` |  | 7 |
+| `dispensary_scolaire_hygiene_medecine_preventive_ecoles_alliance_jewish` |  | 7 |
+| `french_benevolent_society_bizerte` |  | 7 |
+| `french_benevolent_society_sfax` |  | 7 |
+| `french_benevolent_society_sousse` |  | 7 |
+| `french_benevolent_society_tunis` |  | 7 |
+| `green_cross_bizerte` |  | 7 |
+| `green_cross_tunis` |  | 7 |
+| `heliotherapy_institute_kram` |  | 7 |
+| `italian_benevolent_society_sfax` |  | 7 |
+| `italian_benevolent_society_tunis` |  | 7 |
+| `jewish_community_sfax` |  | 7 |
+| `jewish_community_tunis` |  | 7 |
+| `jewish_relief_and_benevolent_fund_bizerte` |  | 7 |
+| `jewish_relief_and_benevolent_fund_nabeul` |  | 7 |
+| `jewish_relief_and_benevolent_fund_sousse` |  | 7 |
+| `muslim_benevolent_society_bizerte` |  | 7 |
+| `muslim_benevolent_society_ferryville` |  | 7 |
+| `muslim_benevolent_society_kairouan` |  | 6 |
+| `muslim_benevolent_society_kef` |  | 7 |
+| `muslim_benevolent_society_monastir` |  | 6 |
+| `muslim_benevolent_society_nabeul` |  | 6 |
+| `muslim_benevolent_society_sfax` |  | 7 |
+| `muslim_benevolent_society_sousse` |  | 7 |
+| `muslim_benevolent_society_tozeur` |  | 5 |
+| `muslim_benevolent_society_tunis` |  | 7 |
+| `night_shelter_maternity_jewish_tunis` |  | 7 |
+| `poor_kitchen_tunis` |  | 7 |
+| `poor_kitchen_tunis_day_nursery` |  | 7 |
+| `preventorium_zaghouan` |  | 7 |
+| `protection_of_young_girls` |  | 7 |
+| `sisters_mission_n_afrique_carthage` |  | 7 |
+| `sisters_n_esperance_tunis` |  | 7 |
+| `society_for_aid_to_wounded_soldiers_tunis` |  | 7 |
+| `soup_kitchens_jewish_tunis` |  | 7 |
+| `union_of_french_women` |  | 7 |
+
+`group`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `accounts` |  | 129 |
+| `statistics` |  | 164 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `cash_remaining_1_january_next` | Reste en caisse au 1er janvier 1935 | 43 |
+| `persons_assisted` | Nombre de personnes secourues | 41 |
+| `persons_medical_assistance` | Nombre de personnes ayant bénéficié de l'assistance médicale | 40 |
+| `relief_grants_cash_or_kind` | Nombre de secours en espèces ou nature | 42 |
+| `repatriations` | Nombre de rapatriements | 41 |
+| `total_expenditure` | Dépenses | 43 |
+| `total_receipts` | Recettes | 43 |
+
+### health_assistance_etat_receipts
+
+**État des recettes et des dépenses du budget de l'Assistance publique : I. Recettes**  
+*Public assistance budget statement: receipts, credits allotted (sgt1935–sgt1939)*
+
+Source `sgt`, table etat_receipts, printed pages by edition. 6 rows. Value type: francs. Flags: (empty) 6. Notes and validation: [`../yearbook_health_education/csv/health_assistance_etat_receipts.md`](../yearbook_health_education/csv/health_assistance_etat_receipts.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `line_fr` | Place or label as printed (4 distinct values). |
+| `line_en` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`line_en`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `title_1er` |  | 2 |
+| `title_ier_—_credit_special_inscrit_budget_etat` |  | 1 |
+| `title_ii` |  | 2 |
+| `title_ii_—_disponibilite_reserve_fund_numeraire` |  | 1 |
+
+### health_assistance_etat_subsidies
+
+**État des recettes et des dépenses du budget de l'Assistance publique : II. Dépenses (subventions)**  
+*Public assistance budget statement: subsidies granted by society (sgt1935–sgt1939)*
+
+Source `sgt`, table etat_subsidies, printed pages by edition. 450 rows. Value type: francs. Flags: (empty) 448, total_mismatch 2. Notes and validation: [`../yearbook_health_education/csv/health_assistance_etat_subsidies.md`](../yearbook_health_education/csv/health_assistance_etat_subsidies.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `section_fr` | Place or label as printed (13 distinct values). |
+| `article` | Coded dimension. |
+| `line_type` | Coded dimension. |
+| `line_fr` | Place or label as printed (162 distinct values). |
+| `line_en` | Text (99 distinct values). |
+| `measure` | Coded dimension. |
+| `column_fr` | Place or label as printed (4 distinct values). |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`article`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `-` |  | 300 |
+| `a` |  | 38 |
+| `b` |  | 38 |
+| `c` |  | 24 |
+| `d` |  | 24 |
+| `e` |  | 12 |
+| `f` |  | 6 |
+| `g` |  | 6 |
+| `h` |  | 2 |
+
+`line_type`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `article` |  | 450 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `credit_title_I` |  | 225 |
+| `credit_title_II` |  | 225 |
+
+### health_institutes_budget
+
+**Institut Pasteur et Institut Arloing : budget**  
+*Institut Pasteur and Institut Arloing: budget receipts and expenditure (sgt1922–sgt1930)*
+
+Source `sgt`, table institute_budget, printed pages by edition. 112 rows. Value type: francs. Flags: (empty) 112. Notes and validation: [`../yearbook_health_education/csv/health_institutes_budget.md`](../yearbook_health_education/csv/health_institutes_budget.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `institute` | Coded dimension. |
+| `institute_fr` | Printed French label for `institute`. |
+| `side` | Coded dimension. |
+| `line_fr` | Place or label as printed (15 distinct values). |
+| `line_en` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`institute`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `arloing` | Institut Arloing | 58 |
+| `pasteur` | Institut Pasteur | 54 |
+
+`side`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `expenditure` |  | 50 |
+| `receipts` |  | 62 |
+
+`line_en`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `junior_staff` |  | 9 |
+| `miscellaneous_expenditure` |  | 9 |
+| `miscellaneous_receipts` |  | 9 |
+| `part2_new_receipts` |  | 3 |
+| `part2_receipts_carried_forward` |  | 2 |
+| `part2_use_of_new_receipts` |  | 2 |
+| `part3_expenditure_closed_years` |  | 3 |
+| `part3_outstanding_payments` |  | 3 |
+| `private_subsidies` |  | 9 |
+| `running_of_services` |  | 9 |
+| `sales_of_products` |  | 18 |
+| `staff` |  | 18 |
+| `state_subsidy` |  | 18 |
+
+### health_serum_vaccine_doses_pasteur
+
+**Institut Pasteur : travaux de l'Institut (vaccins et sérums distribués)**  
+*Institut Pasteur: vaccines, serums and other products distributed, by product (sgt1922–sgt1930)*
+
+Source `sgt`, table pasteur_products, printed pages by edition. 237 rows. Value type: count. Flags: (empty) 237. Notes and validation: [`../yearbook_health_education/csv/health_serum_vaccine_doses_pasteur.md`](../yearbook_health_education/csv/health_serum_vaccine_doses_pasteur.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `service_fr` | Place or label as printed (5 distinct values). |
+| `product_fr` | Place or label as printed (49 distinct values). |
+| `product_en` | Coded dimension. |
+| `unit_fr` | Place or label as printed (7 distinct values). |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`product_en`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `autovaccin` |  | 5 |
+| `emulsion_ducrey_cutireaction` |  | 5 |
+| `filtrat_intradermoreaction_fievre_mediterraneenne` |  | 5 |
+| `mallein_diluee` |  | 2 |
+| `serum_antivenom` |  | 9 |
+| `serum_diphtheria` |  | 6 |
+| `serum_diphtheria_ordinaire` |  | 5 |
+| `serum_diphtheria_purifie_1_000_unites` |  | 5 |
+| `serum_diphtheria_purifie_5_000_unites` |  | 5 |
+| `serum_dysentery` |  | 9 |
+| `serum_gas_gangrene_antiperfringens` |  | 5 |
+| `serum_meningococcal` |  | 9 |
+| `serum_plague` |  | 9 |
+| `serum_pneumococcal` |  | 5 |
+| `serum_preventive_rougeole_serum_convalescents` |  | 5 |
+| `serum_preventive_typhus_exanthematique_serum_convalescents` |  | 5 |
+| `serum_streptococcal` |  | 9 |
+| `serum_tetanus` |  | 4 |
+| `serum_tetanus_5_000` |  | 1 |
+| `serum_tetanus_5_000_unites` |  | 3 |
+| `serum_tetanus_ordinaire` |  | 5 |
+| `serum_tetanus_purifie_1_500_unites` |  | 5 |
+| `toxine_diphterique_intradermoreaction_schick` |  | 3 |
+| `tuberculin_brute_usage_medical_solution_mother` |  | 5 |
+| `tuberculin_brute_usage_veterinaire` |  | 1 |
+| `tuberculin_diluee` |  | 4 |
+| `tuberculin_diluee_cutireaction` |  | 2 |
+| `tuberculin_diluee_usage_veterinaire` |  | 2 |
+| `tuberculin_diluee_usage_veterinaire_intradermoreaction_chez_homme` |  | 3 |
+| `vaccine_cholera_preventive` |  | 4 |
+| `vaccine_diphtheria_10_cc` |  | 3 |
+| `vaccine_diphtheria_3_ampoules` |  | 1 |
+| `vaccine_diphtheria_5_ampoules` |  | 1 |
+| `vaccine_diphtheria_ampoules` |  | 1 |
+| `vaccine_gonococcal` |  | 9 |
+| `vaccine_mediterranean_fever` |  | 4 |
+| `vaccine_mediterranean_fever_curative_n°_1` |  | 5 |
+| `vaccine_mediterranean_fever_curative_n°_2` |  | 5 |
+| `vaccine_mediterranean_fever_curative_n°_3` |  | 2 |
+| `vaccine_mediterranean_fever_formule_speciale` |  | 1 |
+| `vaccine_plague` |  | 9 |
+| `vaccine_smallpox_doses_prepared_distributed` |  | 9 |
+| `vaccine_staphylococcal` |  | 9 |
+| `vaccine_streptobacillary` |  | 5 |
+| `vaccine_streptobacillary_fourniture_industrielle` |  | 1 |
+| `vaccine_typhoid_curative` |  | 9 |
+| `vaccine_typhoid_preventive` |  | 9 |
+| `vaccine_whooping_cough` |  | 9 |
+
+### health_serum_vaccine_doses_arloing
+
+**Institut Arloing : doses de sérums et de vaccins distribuées**  
+*Institut Arloing (veterinary): doses of serums and vaccines distributed, by product and month (sgt1922–sgt1930)*
+
+Source `sgt`, table arloing_doses, printed pages by edition. 1,152 rows. Value type: count. Flags: (empty) 1,152. Notes and validation: [`../yearbook_health_education/csv/health_serum_vaccine_doses_arloing.md`](../yearbook_health_education/csv/health_serum_vaccine_doses_arloing.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `kind` | Coded dimension. |
+| `product_fr` | Place or label as printed (19 distinct values). |
+| `product_en` | Coded dimension. |
+| `unit_fr` | Place or label as printed (4 distinct values). |
+| `month` | Coded dimension. |
+| `month_fr` | Printed French label for `month`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`kind`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `serum` |  | 564 |
+| `vaccine` |  | 588 |
+
+`product_en`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `anthrax` |  | 108 |
+| `contre_anthrax` |  | 36 |
+| `contre_blackleg` |  | 108 |
+| `contre_swine_erysipelas` |  | 24 |
+| `proceeds_divers` |  | 24 |
+| `sheep_pox` |  | 132 |
+| `solution_contre_piroplasmosis` |  | 72 |
+| `streptococcal` |  | 108 |
+| `tetanus` |  | 108 |
+| `trypanblau` |  | 48 |
+| `trypanbleu_contre_piroplasmosis` |  | 24 |
+| `vaccine_anthrax` |  | 48 |
+| `vaccine_blackleg` |  | 48 |
+| `vaccine_contre_anthrax` |  | 24 |
+| `vaccine_contre_blackleg` |  | 24 |
+| `vaccine_contre_fowl_diphtheria` |  | 72 |
+| `vaccine_contre_fowl_typhoid` |  | 72 |
+| `vaccine_sheep_pox` |  | 72 |
+
+`month`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `april` | Avril | 96 |
+| `august` | Août | 96 |
+| `december` | Décembre | 96 |
+| `february` | Février | 96 |
+| `january` | Janvier | 96 |
+| `july` | Juillet | 96 |
+| `june` | Juin | 96 |
+| `march` | Mars | 96 |
+| `may` | Mai | 96 |
+| `november` | Novembre | 96 |
+| `october` | Octobre | 96 |
+| `september` | Septembre | 96 |
+
+### health_hospital_finance
+
+**Hôpitaux et infirmeries-dispensaires de l'intérieur : situation financière**  
+*Hospitals and infirmaries-dispensaries of the interior: receipts by source and expenditure (sgt1922–sgt1930)*
+
+Source `sgt`, table hospital_finance, printed pages by edition. 1,376 rows. Value type: francs. Flags: (empty) 1,370, derived_from_totals 3, total_mismatch 2, not_applicable 1. Notes and validation: [`../yearbook_health_education/csv/health_hospital_finance.md`](../yearbook_health_education/csv/health_hospital_finance.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `hospital` | Coded dimension. |
+| `measure` | Coded dimension. |
+| `column_fr` | Place or label as printed (15 distinct values). |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`hospital`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `Bizerte` |  | 34 |
+| `Béja` |  | 64 |
+| `Djerba` |  | 64 |
+| `Enfidaville` |  | 64 |
+| `Ferryville` |  | 52 |
+| `Gabès` |  | 56 |
+| `Grombalia` |  | 64 |
+| `Kairouan` |  | 64 |
+| `Kef (Le)` |  | 30 |
+| `Le Kef` |  | 34 |
+| `Mactar` |  | 30 |
+| `Madhia` |  | 18 |
+| `Mahdia` |  | 46 |
+| `Maktar` |  | 34 |
+| `Mateur` |  | 64 |
+| `Medjez-el-Bab` |  | 64 |
+| `Menzel-Temime` |  | 6 |
+| `Monastir` |  | 64 |
+| `Médenine` |  | 34 |
+| `Médenine et annexes` |  | 30 |
+| `Nabeul` |  | 64 |
+| `Souk-el-Arba` |  | 64 |
+| `Sousse` |  | 64 |
+| `Tabarka` |  | 12 |
+| `Thala` |  | 64 |
+| `Tozeur` |  | 64 |
+| `Téboursouk` |  | 64 |
+| `Zaghouan` |  | 64 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `communes` |  | 21 |
+| `expenditure` |  | 194 |
+| `habous` |  | 106 |
+| `municipalities` |  | 106 |
+| `municipality` |  | 67 |
+| `other_receipts` |  | 194 |
+| `patient_day_receipts` |  | 194 |
+| `public_assistance` |  | 106 |
+| `region` |  | 88 |
+| `regions` |  | 44 |
+| `state` |  | 194 |
+| `temporary_indigenous_contributions` |  | 62 |
+
+### health_hospital_day_cost
+
+**Prix moyen de la journée de traitement**  
+*Average cost of a patient-day, with patient-days, staff-days and expenditure: French Civil Hospital, Sadiki Hospital, Rabta hospital (sgt1922–sgt1935)*
+
+Source `sgt`, table day_cost, printed pages by edition. 244 rows. Value type: mixed. Flags: (empty) 243, reprint_corrected 1. Notes and validation: [`../yearbook_health_education/csv/health_hospital_day_cost.md`](../yearbook_health_education/csv/health_hospital_day_cost.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `hospital` | Coded dimension. |
+| `hospital_fr` | Printed French label for `hospital`. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`hospital`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `civil` | Hôpital civil français de Tunis | 58 |
+| `rabta` | Hôpital des contagieux de la Rabta (Ernest-Conseil) | 78 |
+| `sadiki` | Hôpital Sadiki | 108 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `cost_per_patient_day` | Prix moyen (de revient) de la journée de malade | 47 |
+| `expenditure` | Montant des dépenses | 47 |
+| `patient_days` | Nombre de journées de malades | 50 |
+| `staff_days_fed` | Nombre de journées du personnel nourri | 50 |
+| `staff_days_not_fed` | Nombre de journées du personnel non nourri | 50 |

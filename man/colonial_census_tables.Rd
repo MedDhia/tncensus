@@ -15,8 +15,9 @@ A \code{data.frame} with one row per table and columns
   pages, or \code{"by edition"} for yearbook series), \code{gallica_ark}
   (semicolon-separated when a series spans several volumes),
   \code{n_rows}, and \code{value_type} (\code{"count"}, \code{"percent"},
-  \code{"rate"}, or \code{"mixed"} for tables whose \code{measure} column
-  mixes counts and shares).
+  \code{"rate"}, \code{"francs"} for money amounts (francs, centimes
+  kept), or \code{"mixed"} for tables whose \code{measure} column mixes
+  counts, shares or amounts).
 }
 \description{
 Returns an index of the tables transcribed from publications digitized on

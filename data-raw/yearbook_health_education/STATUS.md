@@ -1,6 +1,7 @@
 # Status
 
-**Done and in the package:** the health chapter's population tables
+**Done and in the package:** the health chapter's finance tables
+(`csv/health_*` from `extract_health_finance.py`, 14 tables) and its population tables
 (`csv/health_*`, 20 tables, built by `extract_health_population.py`): hospitals
 and Tunis mortality, all 12 editions, validated (see each notes file and
 `csv/health_validation.json`).
@@ -10,7 +11,7 @@ table below.
 
 | Part | Transcribed (`transcribed/`) | Script | Validated |
 |---|---|---|---|
-| Health: budgets and institutes | `health_finance_*`: 1922-1930, 1935 (10 of 12 editions) | none yet | no |
+| Health: budgets and institutes | `health_finance_*`: all 12 editions | `extract_health_finance.py` | **yes** (in the package; budget tables partly verified against OCR only, see notes) |
 | Health: hospitals and Tunis mortality | `health_pop_*`: all 12 editions | `extract_health_population.py` | **yes** (in the package) |
 | Instruction: summary tables | `education_sum_*`: 1922-1927 (6 of 12) | `extract_education_summary.py` (draft) | no |
 | Instruction: school lists | `education_schools_*`: 1922; 1930 in progress; 1939 not started | `extract_education_schools.py` (draft); `csv/education_schools.csv` is a draft | no |

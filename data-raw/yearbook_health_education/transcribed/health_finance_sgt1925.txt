@@ -19,10 +19,10 @@ TOTAUX | 172300 172300 172300 232300 252937.50 349700 529100 529100 559100 74550
 # The title says (1916-1925) but the first column printed is 1915.
 
 [budget_receipts] views=72 pages=48 cols=1924 ; 1925 title=b) Recettes et dépenses du budget de l'Assistance publique. Recettes
-1. Allocation sur le produit des ressources réalisées par le Trésor pour le compte de l'Assistance publique. Chap. III. — Art. 14 du budget de l'Etat | 745500 860300
-2. Allocation complémentaire | mémoire mémoire
-3. Mémoire. — Dotation Joséphine Virieu (673 fr. 50). Dotation comprise dans l'allocation figurant à l'article premier | - -
-TOTAUX | 745500 860300
+A | 1 | Allocation sur le produit des ressources réalisées par le Trésor pour le compte de l'Assistance publique. Chap. III. — Art. 14 du budget de l'Etat | 745500 860300
+A | 2 | Allocation complémentaire | mémoire mémoire
+A | 3 | Mémoire. — Dotation Joséphine Virieu (673 fr. 50). Dotation comprise dans l'allocation figurant à l'article premier | - -
+T | TOTAUX | 745500 860300
 # printed under the table: "En plus au budget de 1925 ... 114.800"
 
 [budget_expenditure] views=72,73,74,75 pages=48,49,50,51 year=1925 cols=Crédits alloués en 1925 ; Différences avec les crédits de 1924, en plus ; en moins
@@ -253,3 +253,63 @@ Novembre | 2265 265 » » 60 » »
 Décembre | 2000 90 » » » » »
 TOTAUX | 21623 6839 12780 460 520 360 760
 # "Typanblaï" printed for trypan blue ("Trypanbleu"); "typhon aviaire" as printed (fowl typhoid).
+
+# Hospitals and infirmaries-dispensaries of the interior, a) Situation financière (francs; the year is the
+# edition's year, as for the interior table of health_pop). Drafted from Gallica OCR with column bands taken
+# from the page rules, then checked against the printed row and column totals and the page image.
+[hospital_finance] view=86 page=62 year=1925 cols=state ; region ; communes ; patient_day_receipts ; other_receipts ; total_receipts ; expenditure
+Medjez-el-Bab | 27000 20000 2000 7808.5 2969.02 59777.52 58088.16
+Béja | 27000 8500 8500 16589 17142 77731 77737.83
+Kef (Le) | 72170 19000 6000 25881.55 16170 137076.50{tm} 145203.91
+Sousse | 60000 35000 18500 41756 » 155256 275138.3
+Mahdia | 15000 4000 29000 3271 5417.56 56688.56 52691.18
+Souk-el-Arba | 40800 12000 8000 20148.5 18226.02 99174.52 87949.61
+Monastir | 27000 9000 5000 8138 17561.58 66699.58 59474.52
+Nabeul | 26558.35 2000 4750 4045.75 1557.22 38911.32 34864.55
+Mateur | 21000 13500 4500 15902 » 54902 54178.41
+Kairouan | 40000 23000 10000 12204.65 32202.09 117406.74 112014.21
+Grombalia | 12750 3500 1000 471.8 10436.03 28157.83 28941.54
+Thala | 7000 1500 » 440 84887.17 93827.17 115777.02
+Zaghouan | 9000 3500 500 632 14882.9 28514.9 18803.15
+Djerba | 59800 4000 3800 4598 5475.22 77693.22{tm} 33067.1
+Mactar | 19500 14000 » 5280 18483.99 57263.99 28289.57
+# Ferryville: total receipts and expenditure printed » (not reported; stored NA, not_applicable); the printed
+# TOTAL line (receipts 1.402.416,35 = 1.435.487,65 - 33.071,30) leaves Ferryville out. The column of total receipts
+# agrees with the printed TOTAL (within 20) when Kef (Le) and Djerba are taken at the sum of their parts.
+Ferryville | 32071.30 1000 » » » x x
+Médenine et annexes | 44930 » 1800 » 87768.14 134498.14 71277.04
+Enfidaville | 9500 5500 » 2212 10992.21 28204.21 11591.05
+Téboursouk | 9000 9000 500 1645.5 118 20263.5 15321.66
+Tozeur | 6500 4000 5000 623 11221.60 27344.60 20609
+Gabès | 18500 13500 5500 3400 » 40900 36913.39
+TOTAL | 585079.65 205500 114350 175047.25 355510.75 1402416.35 1337976.2
+
+# Day-cost table "Prix moyen de la journée de traitement" (number of patient-days and staff-days, expenditure
+# in francs, cost per patient-day in francs as printed: 2 or 3 decimals). Row label = year; the civil-hospital
+# table of sgt1922-sgt1925 has one row printed "Civils" (or the year), stored as the edition's year.
+[day_cost] hospital=civil view=81 page=57 years=1925 cols=patient_days ; staff_days_fed ; staff_days_not_fed ; total_days ; expenditure ; cost_per_patient_day
+1925 | 100151 48449 16118 148600 2139991.94 21.367
+
+[day_cost] hospital=sadiki view=82 page=58 years=1912 1913 1914 1915 1916 1917 1918 1919 1920 1921 1922 1923 1924 1925 cols=patient_days ; staff_days_fed ; staff_days_not_fed ; total_days ; expenditure ; cost_per_patient_day
+1912 | 70680 30295 3660 104635 244999.67 3.237
+1913 | 73036 30660 3850 107546 222234.86 3.043
+1914 | 64306 32537 4015 100858 221088.17 3.438
+1915 | 66120 34181 2555 102856 228556.39 3.456
+1916 | 70971 37292 2562 110835 240256.47 3.385
+1917 | 73503 37866 2555 113924 243876.73 3.331
+1918 | 73846 38762 2555 115163 310005.55 4.198
+1919 | 76331 39256 2590 118177 401908.44 5.262
+1920 | 78262 39785 3640 121687 678655.50 8.671
+1921 | 81581 42125 4045 127751 792307.74 9.711
+1922 | 82306 45990 4745 133046 810819.95 9.851
+1923 | 89047 31390 18480 138917 959638.75 10.889
+1924 | 89037 31955 18965 139957 1102826.62 12.386
+1925 | 88810 30185 18505 137500 1229658.95 13.845
+
+# Rabta: half staff-days are printed as a separate "05" after the thousands ("4.817 05" = 4.817,5; the total
+# 23.820,50 needs 4.817,5), as in the later reprints.
+[day_cost] hospital=rabta view=84 page=60 years=1922 1923 1924 1925 cols=patient_days ; staff_days_fed ; staff_days_not_fed ; total_days ; expenditure ; cost_per_patient_day
+1922 | 1965 3118 1798 6881 72703.28 36.999
+1923 | 8124 3232 1800 13156 126915.23 15.622
+1924 | 12495 3576 2190 18261 152752.29 12.225
+1925 | 16543 4817.5 2460 23820.50 233886.51 14.138

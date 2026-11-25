@@ -131,12 +131,12 @@ M. le Directeur de l'Hôpital israélite de Tunis | » » 115000 59689.75 174689
 M. le Directeur de l'Hôpital israélite de Bizerte | » 4073.55 1000.00 3330.90 8404.45 | 15 637.05 » » 9199.85 » 9851.90 | » | 307 » » »
 M. le Président de la Société française de Bienfaisance de Tunis | 3526.40 6672.09 274000 18886.40 303084.89 | 37172.22 65316.28 136541.98 7528.21 9218.55 32188.52 287965.76 | 15119.13 | 1690 6668 4472 37
 M. le Président de la Société française de Bienfaisance de Sousse | » » » » » | » » » » » » » | » | » » » »
-M. le Président de la Société française de Bienfaisance de Sfax | 843.05 4666.60 11000 1037.15 17546.80 | 35 10430 3405 » 3123.40 » 16993.40 | 534.40 | 1594 433 12 57
-M. le Président de la Société française de Bienfaisance de Bizerte | 1168.90 707 16000 2143.30 20019.20 | 2333 17131.70 » » » 539.60 20004.30 | 414.90 | 276 3976 » 3
+M. le Président de la Société française de Bienfaisance de Sfax | 843.05 4666.60 11000 1037.15 17546.80 | 35 10430 3405 » 3123.40 » 16993.40 | 534.40{tm} | 1594 433 12 57
+M. le Président de la Société française de Bienfaisance de Bizerte | 1168.90 707 16000 2143.30 20019.20 | 2333 17131.70 » » » 539.60 20004.30 | 414.90{tm} | 276 3976 » 3
 M. le Président de la Société française de Bienfaisance de Kairouan | 559.25 » 2500 640.60 3699.85 | 180.10 2658 » 350 174.35 » 3362.45 | 337.40 | 45 38 1 6
 M. le Président de la Société française de Bienfaisance de La Goulette | 7.21 237 1000 66 1310.21 | » 1249.35 » » » 22 1271.35 | 38.86 | 56 65 » »
 M. le Président de la Société musulmane de Bienfaisance de Tunis | » 119363.05 70000 61708.85 251071.90 | 54955.25 22832.70 94267.10 1800.00 10797.10 13317.34 197969.49 | 53102.41 | 1634 1534 387 27
-M. le Président de la Société musulmane de Bienfaisance du Kef | 12772.31 13739.00 1000 3644{m} 31175.31 | 425.45 828.95 2760.10 » » 3072.15 7086.65 | 24088.66 | » » » »
+M. le Président de la Société musulmane de Bienfaisance du Kef | 12772.31 13739.00 1000 3644 31175.31 | 425.45 828.95 2760.10 » » 3072.15 7086.65 | 24088.66 | » » » »
 M. le Président de la Société musulmane de Bienfaisance de Sousse | » » » » » | » » » » » » » | » | » » » »
 M. le Président de la Société musulmane de Bienfaisance de Nabeul | 3822.95 2613.90 7616.55 3497.25 17550.65 | 759.25 3588 » » 20 8723.55 13090.80 | 4459.85 | 393 1345 1 7
 M. le Président de la Société musulmane de Bienfaisance de Kairouan | 7864.05 19062.10 6500 4618.20 38044.35 | 1241.25 6210.90 12483.20 235.55 5 1150.85 21326.75 | 16717.60 | 1372 689 1 3
@@ -149,7 +149,7 @@ M. le Président de la Société musulmane de Bienfaisance de Monastir | 5721.29
 M. le Président de la Société de Secours aux Blessés militaires de Tunis | 196475.05 66070.30 6000.00 17911.10 286456.45 | 38920.60 » » » » 3224.30 42144.90 | 242456.55 | » » » »
 M. le Président de l'Asile de Nuit et de la Maternité israélite de Tunis | » 3149.70 6500 1895.85 11545.55 | 7577.55 3871.55 » » 3376.80 » 14825.90 | 4156 | 10589 » 1160 »
 M. le Président des Cuisines populaires israélites de Tunis | » 14302.95 15000 71106.10 100409.05 | 16740.95 66014.75 » » » 25522.20 108277.90 | » | 101873 101873 » »
-M. le Président de la Société italienne de Bienfaisance de Tunis | 325.25 9693 2000 42515.10 54533.35 | 7635 35721.15 6226{m} » 2057.25 2241.60 53921 | 612.35 | 562 797 216 743
+M. le Président de la Société italienne de Bienfaisance de Tunis | 325.25 9693 2000 42515.10 54533.35 | 7635 35721.15 6226 » 2057.25 2241.60 53921 | 612.35 | 562 797 216 743
 M. le Président de la Société italienne de Bienfaisance de Bizerte | » 3730.50 1000 3371.80 8102.30 | 1244.45 5334.20 300 » » 2472.75 9351.40 | » | 146 206 218 15
 M. le Président de la Société italienne de Bienfaisance de Sfax | 135.75 9280.75 1500 1028.95 11945.45 | 382 7611 1507.50 » 750 1060.70 11311.20 | 634.25 | 259 1950 125 27
 SUBTOTAL A reporter | 256269.83 304254.79 546464.55 329031.25 1436020.42 | 233735.27 281550.58 273876.18 10020.56 154073.45 124137.91 1077393.95 | 375714.42 | 173756 120555 13367 931
@@ -266,3 +266,58 @@ Octobre | 1741 470 160 20 » » 224
 Novembre | 4560 210 44 100 100 » »
 Décembre | 14506 165 260 » » » »
 TOTAUX | 200973 13280 13705 680 590 12 671
+
+# Hospitals and infirmaries-dispensaries of the interior, a) Situation financière (francs; the year is the
+# edition's year, as for the interior table of health_pop). Drafted from Gallica OCR with column bands taken
+# from the page rules, then checked against the printed row and column totals and the page image.
+[hospital_finance] view=635 page=71 year=1926 cols=state ; regions ; public_assistance ; habous ; municipalities ; patient_day_receipts ; other_receipts ; total_receipts ; expenditure
+Béja | 20000 15000 » » 8500 20973 10106.50 74579.50 70779.25
+Bizerte | 23500 3000 1000 » 6000 » » 33500 27781.63
+Ferryville | 100930 » 34430 » 12000 27565.75 914.57 175840.32 157059.60
+Mateur | 26500 » 15000 » 4500 18885 66 64951 63459.80
+Souk-el-Arba | 19000 33000 » » 8000 39185 39761.06 138946.06 124368.24
+Grombalia | 19000 4000 » » 2868 7158.50 7420.65 40447.15 33055.15
+Nabeul | 20000 4500 » » 4250 3423 4046.77 36219.77 35875.11
+Zaghouan | 9000 » 3500 » 500 1272 9714.75 23986.75 12520.83
+Le Kef | 102000 40000 » » 9000 38003.15 19132.49 208135.64 170321.37
+Téboursouk | 9000 6000 » » 500 1282 177.20 16959.20 12346.04
+Maktar | 17500 12000 » » » 4607 25276.10 59383.10 59966.40
+Medjez-el-Bab | 45000 20000 » » 2000 9937.50 1800.51 78738.01 71152.14
+Sousse | 56000 90000 » » 24000 66866 1650 238516 228047
+Enfidaville | 9500 5500 » » » 2602 16613.16 34215.16 12479.08
+Mahdia | 19200 12000 » 6000 24500 5169 » 66869 62498.24
+Monastir | 46500 20000 » » 7500 9042 29473.84 112515.84 87345.29
+Thala | 3500 3500 » » » 645 10970.45 18615.45 20502.11
+Kairouan | 35000 25000 » » 10000 13212.50 123041.94 206254.44 189200.68
+Gabès | 19500 13500 » » 10000 2000 » 45000 38294.62
+Djerba | 25000 4000 » » 4000 5153.50 42368.09 80521.59 31525.01
+Tozeur | 8500 4000 » » 4500 980.25 8285.05 26265.30 20618.58
+Médenine | 49300 » » » 3200 » 52694.20 105184.20 90051.85
+TOTAUX | 683430 315000 53930 6000 145818 277962.15 403503.33 1885643.48 1619248.02
+
+# Day-cost table "Prix moyen de la journée de traitement" (number of patient-days and staff-days, expenditure
+# in francs, cost per patient-day in francs as printed: 2 or 3 decimals). Row label = year; the civil-hospital
+# table of sgt1922-sgt1925 has one row printed "Civils" (or the year), stored as the edition's year.
+[day_cost] hospital=civil view=630 page=66 years=1924 1925 1926 cols=patient_days ; staff_days_fed ; staff_days_not_fed ; total_days ; expenditure ; cost_per_patient_day
+1924 | 100402 52369 13481 166252 1900811.37 18.93
+1925 | 100151 48449 16118 164718 2139991.94 21.36
+1926 | 98762 41687 3518 143967 2536647.65 25.68
+
+[day_cost] hospital=sadiki view=631 page=67 years=1917 1918 1919 1920 1921 1922 1923 1924 1925 1926 cols=patient_days ; staff_days_fed ; staff_days_not_fed ; total_days ; expenditure ; cost_per_patient_day
+1917 | 73503 37866 2555 113924 243876.73 3.331
+1918 | 73846 38762 2555 115163 310005.55 4.198
+1919 | 76331 39256 2590 118177 401908.44 5.262
+1920 | 78262 39785 3640 121687 678655.50 8.671
+1921 | 81581 42125 4045 127751 792307.74 9.711
+1922 | 82306 45990 4745 133046 810819.95 9.851
+1923 | 89047 31390 18480 138917 959638.75 10.889
+1924 | 89037 31955 18965 139957 1102826.62 12.386
+1925 | 88810 30185 18505 137500 1229658.95 13.845
+1926 | 90507 29200 20425 140132 1517312.08 16.764
+
+[day_cost] hospital=rabta view=633 page=69 years=1922 1923 1924 1925 1926 cols=patient_days ; staff_days_fed ; staff_days_not_fed ; total_days ; expenditure ; cost_per_patient_day
+1922 | 1965 3118 1798 6881 72703.28 36.999
+1923 | 8124 3232 1800 13156 126915.23 15.622
+1924 | 12495 3576 2190 18261 152752.29 12.225
+1925 | 16543 4817.5 2460 23820.50 233886.51 14.138
+1926 | 26091 5795 3474 35360 306649.76 11.752

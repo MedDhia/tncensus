@@ -222,3 +222,56 @@ Octobre | » 100 950 »
 Novembre | » 400 40 7
 Décembre | » » » »
 TOTAUX | 40025 8164 6661 710
+
+# Hospitals and infirmaries-dispensaries of the interior, a) Situation financière (francs; the year is the
+# edition's year, as for the interior table of health_pop). Drafted from Gallica OCR with column bands taken
+# from the page rules, then checked against the printed row and column totals and the page image.
+[hospital_finance] view=561 page=59 year=1923 cols=state ; temporary_indigenous_contributions ; public_assistance ; habous ; municipalities ; patient_day_receipts ; other_receipts ; total_receipts ; expenditure
+# Medjez-el-Bab expenditure is printed "50.8988 73" (a doubled 8); 50.898,73 is the value the column total needs.
+Medjez-el-Bab | 32500 2500 » 2000 1000 7254.30 15392.24 60646.54 50898.73
+Béja | 22900 5500 » 4000 2400 7144.5 142 42086.5 41663.59
+Kef (Le) | 47000 6000 » 2500 2400 12942.5 1376.35 72218.85 49666.51
+Sousse | 52600 12000 » 10000 3000 30608.4 2034.39 110242.79 97377.83
+Mahdia | 5000 4000 » 2000 15000 2498.4 6715.78 35214.18 34436.25
+Souk-el-Arba | 40000 5000 » » 3000 11744.25 4706 64450.25 56895.8
+Monastir | 23000 7000 » » 1000 1611 30846.08 63457.08 29407.98
+Nabeul | 7600 4500 » 4500 2400 1512 3815.98 24327.98 24890.43
+Mateur | 28500 4000 » 2000 2500 5724 900 43624 44940.06
+Kairouan | 33000 4500 » 10100 6000 2322 24353.56 80275.56 78614.2
+Grombalia | 10750 3500 2000 » » 3274 12546.92 32070.92 26832.17
+Thala | 2500 2500 » 4000 » » 6306.53 15306.53 11979.55
+Zaghouan | 5500 2300 » 4000 » » 148.5 11948.5 6071.62
+Djerba | 3400 2000 » 2000 1600 1128 4990.82 15118.82 11490.67
+Mactar | 17700 5100 » 4000 » 5721 8200 40721 25698.41
+Ferryville | 14700 1500 » » 700 830 140 17870 17264.19
+Médenine et annexes | 36750 8180 » 42784.6 3200 520 46685.44 138120.04 51453.62
+Enfidaville | 12600 2000 » » » 883.85 » 15483.85 16979.52
+Téboursouk | 6000 2000 » 2600 500 1648.36 434.3 13182.66 12361.31
+Tozeur | 10890 4500 » » 4750 2351 2050 24541 19689.44
+Gabès | » » » » » » » » »
+TOTAL | 412890 88580 2000 96484.6 49450 99717.56 171784.89 920907.05 708611.88
+
+# Day-cost table "Prix moyen de la journée de traitement" (number of patient-days and staff-days, expenditure
+# in francs, cost per patient-day in francs as printed: 2 or 3 decimals). Row label = year; the civil-hospital
+# table of sgt1922-sgt1925 has one row printed "Civils" (or the year), stored as the edition's year.
+[day_cost] hospital=civil view=557 page=55 years=1923 cols=patient_days ; staff_days_fed ; staff_days_not_fed ; total_days ; expenditure ; cost_per_patient_day
+1923 | 89901 51520 12032 153453 1673520.64 18.615
+
+[day_cost] hospital=sadiki view=558 page=56 years=1914 1915 1916 1917 1918 1919 1920 1921 1922 1923 cols=patient_days ; staff_days_fed ; staff_days_not_fed ; total_days ; expenditure ; cost_per_patient_day
+1914 | 64306 32537 4015 100858 221088.07 3.438
+1915 | 66120 34181 2555 102856 228556.39 3.456
+1916 | 70971 37292 2562 110835 240256.47 3.385
+1917 | 73503 37866 2555 113924 243876.73 3.331
+1918 | 73846 38762 2555 115163 310005.55 4.198
+1919 | 76331 39256 2590 118177 401908.44 5.262
+1920 | 78262 39785 3640 121687 678655.50 8.671
+1921 | 81581 42125 4045 127751 792307.74 9.711
+1922 | 82306 45990 4745 133046 810819.95 9.851
+1923 | 89047 31390 18480 138917 959638.75 10.766
+
+[day_cost] hospital=rabta view=559 page=57 years=1919 1920 1921 1922 1923 cols=patient_days ; staff_days_fed ; staff_days_not_fed ; total_days ; expenditure ; cost_per_patient_day
+1919 | 4130 2326 1710 8166 47108 11.406
+1920 | 8548 3136 1800 13484 90808.23 10.623
+1921 | 6292 3696 1800 11788 106230.04 16.883
+1922 | 1965 3118 1798 6881 72703.28 36.999
+1923 | 8124 3232 1800 13156 126915.23 15.622

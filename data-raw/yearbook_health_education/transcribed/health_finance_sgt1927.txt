@@ -133,7 +133,7 @@ Société Musulmane de Bienfaisance, Tunis | 53102.41 112963.89 84000 33932.35 2
 Société Musulmane de Bienfaisance du Kef | 24089.16 5515.85 1000 1162 31767.01 | 2.54 7372.04 3523 » » » 10897.94 | 20869.07 | 60 » » 10
 Société Musulmane de Bienfaisance de Sousse | » » » » » | » » » » » » » | » | » » » »
 Société Musulmane de Bienfaisance de Nabeul | » » » » » | » » » » » » » | » | » » » »
-Société Musulmane de Bienfaisance de Kairouan | 7864.05 22613.95 3000 10977.35 44455.35 | 156.25 2692 16474.15 » » 18755.95 38078.35 | 637 | 2314 506 » 46
+Société Musulmane de Bienfaisance de Kairouan | 7864.05 22613.95 3000 10977.35 44455.35 | 156.25 2692 16474.15 » » 18755.95 38078.35 | 637{tm} | 2314 506 » 46
 Société Musulmane de Bienfaisance de Béja | » » » » » | » » » » » » » | » | » » » »
 Société Musulmane de Bienfaisance de Tozeur | 2727.60 2500 1000 » 6227.60 | » 5011.50 » » 277.40 370 5658.90 | 568.70 | » 10 1 »
 Société Musulmane de Bienfaisance de Bizerte | 1290.32 3863.90 7000 » 12154.22 | 56.45 5960.50 4720.55 » 100 139.50 10977 | 1177.22 | 1972 657 2 7
@@ -261,3 +261,61 @@ Octobre | 156 2990 310 110 100 710
 Novembre | 400 1400 130 270 50 300
 Décembre | 350 27248 75 50 » 500
 TOTAUX | 12367 89221 8060 1620 665 4600
+
+# Hospitals and infirmaries-dispensaries of the interior, a) Situation financière (francs; the year is the
+# edition's year, as for the interior table of health_pop). Drafted from Gallica OCR with column bands taken
+# from the page rules, then checked against the printed row and column totals and the page image.
+[hospital_finance] view=97 page=69 year=1927 cols=state ; regions ; public_assistance ; habous ; municipalities ; patient_day_receipts ; other_receipts ; total_receipts ; expenditure
+Béja | 20000 20000 » » 8500 22995 37834.40 109329.4 96489.76
+Bizerte | 72500 4000 » » 6000 9684.9 7544.49 99729.39 96159.22
+Ferryville | 66180 8000 » » 11000 59489.36 93190 237859.36 162738.62
+Mateur | 34500 60000 » » 4500 17652 20.5 116672.5 75405.71
+Souk-el-Arba | 32000 35000 » » 13000 44040 55691.51 179731.51 157786.71
+Grombalia | 19000 8000 » » 1000 5780 7797.1 41577.1 41036.2
+Nabeul | 28500 5000 » » 4250 4168.75 896.16 42814.91 33987.84
+Zaghouan | 11000 5350 » » 500 6273 3 23126 15717.04
+Le Kef | 92000 120000 » » 9000 32304.7 50621.6 303926.3 282144.38
+Téboursouk | 12500 8000 » » 500 2000 500 23500 18000
+Maktar | 21000 15000 » » » 4455 23926 64381 65321.5
+Medjez-el-Bab | 28000 25000 » » 2500 9955 37620.67 103075.67 87649.24
+Sousse | 77000 106000 » » 35000 77479 128926.97 424405.97 396579.85
+Enfidaville | 9500 5500 » » » 680 22122.08 37802.08 12817.64
+Mahdia | 5000 25000 » » 28000 5635 12200 75835 75137.42
+# Monastir: Régions printed 50.000; 40.000 closes both the row total (175.990,17) and the column total (554.850).
+Monastir | 67000 50000{tm} » » 11500 21682 35808.17 175990.17 147099.11
+Thala | 3500 3500 » » 1500 1555 10050.23 20105.23 7314.07
+Kairouan | 57000 37000 » » 16000 15835.5 43161 168996.5 148761.74
+Gabès | 30000 13500 » » 5500 11078 » 60078 56777.78
+# Djerba: the first digit of the State subsidy is lost in the binding ("?0.000"); 20.000 closes the row total.
+Djerba | 20000{d} 7000 » » 4500 7015 53977.73 92492.73 25460.4
+Tozeur | 7500 4000 » » 9000 1152 9413.37 31065.37 33720.53
+Médenine | 66400 » » » 3200 » 41324.2 110924.2 58304.5
+TOTAUX | 780080 554850 » » 174950 360909.21 672629.18 2543418.39 2104406.55
+
+# Day-cost table "Prix moyen de la journée de traitement" (number of patient-days and staff-days, expenditure
+# in francs, cost per patient-day in francs as printed: 2 or 3 decimals). Row label = year; the civil-hospital
+# table of sgt1922-sgt1925 has one row printed "Civils" (or the year), stored as the edition's year.
+[day_cost] hospital=civil view=92 page=64 years=1924 1925 1926 1927 cols=patient_days ; staff_days_fed ; staff_days_not_fed ; total_days ; expenditure ; cost_per_patient_day
+1924 | 100402 52369 13481 166252 1900811.37 18.93
+1925 | 100151 48449 16118 164718 2139991.94 21.36
+1926 | 98762 41687 3518 143967 2536647.65 25.68
+1927 | 110052 76147 39000 225199 3261440.95 29.63
+
+[day_cost] hospital=sadiki view=93 page=65 years=1918 1919 1920 1921 1922 1923 1924 1925 1926 1927 cols=patient_days ; staff_days_fed ; staff_days_not_fed ; total_days ; expenditure ; cost_per_patient_day
+1918 | 73846 38762 2555 115163 310005.55 4.198
+1919 | 76331 39256 2590 118177 401908.44 5.262
+1920 | 78262 39785 3640 121687 678655.50 8.671
+1921 | 81581 42125 4045 127751 792307.74 9.711
+1922 | 82306 45990 4745 133046 810819.95 9.851
+1923 | 89047 31390 18480 138917 959638.75 10.889
+1924 | 89037 31955 18965 139957 1102826.62 12.386
+1925 | 88810 30185 18505 137500 1229658.95 13.845
+1926 | 90507 29200 20425 140132 1517312.08 16.764
+1927 | 88784 32540 20970 142294 1985314.45 22.361
+
+[day_cost] hospital=rabta view=95 page=67 years=1923 1924 1925 1926 1927 cols=patient_days ; staff_days_fed ; staff_days_not_fed ; total_days ; expenditure ; cost_per_patient_day
+1923 | 8124 3232 1800 13156 126915.23 15.622
+1924 | 12495 3576 2190 18261 152752.29 12.225
+1925 | 16543 4817.5 2460 23820.50 233886.51 14.138
+1926 | 26091 5795 3474 35360 306649.76 11.752
+1927 | 27134 7718 4080 38932 425029.46 15.674
