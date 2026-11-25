@@ -1,20 +1,36 @@
 # Tunisian census scans from Gallica (BnF)
 
-`bnf_gallica_download.py` rebuilds full-resolution PDFs of the Tunisian census
-documents digitized on Gallica, using the BnF's official IIIF gateway
-(`openapi.bnf.fr`). `gallica.bnf.fr` itself is behind Cloudflare and refuses
-scripted access. The gateway has no PDF endpoint, so the script downloads each
-page as a full-resolution JPEG and wraps the pages losslessly into a PDF.
+`bnf_gallica_download.py` rebuilds PDFs of the Tunisian census documents
+digitized on Gallica, using the BnF's official IIIF gateway (`openapi.bnf.fr`).
+`gallica.bnf.fr` itself is behind Cloudflare and refuses scripted access. The
+gateway has no PDF endpoint, so the script downloads every page and wraps the
+pages into one PDF per document.
 
 ```bash
-pip install img2pdf
-python3 data-raw/bnf_gallica_download.py          # all 9 documents, ~2.6 GB
+pip install img2pdf pillow
+python3 data-raw/bnf_gallica_download.py                      # all 9 documents, full resolution (~5.5 GB)
+python3 data-raw/bnf_gallica_download.py --resolution half    # half resolution (~1 GB), much faster
 python3 data-raw/bnf_gallica_download.py --only bd6t53563851 bpt6k994559s   # census volumes only
 ```
 
-The output goes to `data-raw/bnf_gallica/pdf/`, which is gitignored. Downloaded
-pages are cached in `data-raw/bnf_gallica/pages/`, so an interrupted run resumes
-where it stopped.
+**Resolution.** A whole-page request to the gateway (`full/max`) is capped at
+half the scan's native size: for example 1380 × 2121 pixels for a 2760 × 4243
+page. The gateway does serve a region at native size when the request names an
+explicit output width, so by default (`--resolution full`) the script fetches
+each page as 900-pixel tiles at native resolution, stitches them, and
+re-encodes the page once as JPEG (quality 92). `--resolution half` makes one
+`full/max` request per page and keeps the JPEG byte for byte; it is lossless
+with respect to what the gateway serves, four to five times smaller, and much
+faster. The 1906 census volume, for instance, is 210 MB at full resolution and
+38 MB at half.
+
+Full-resolution PDFs go to `data-raw/bnf_gallica/pdf/`, half-resolution ones to
+`data-raw/bnf_gallica/pdf_half/`, both gitignored. Pages are cached in
+`data-raw/bnf_gallica/pages_full/` or `data-raw/bnf_gallica/pages/`, so an
+interrupted run resumes where it stopped. The transcriptions in
+`data-raw/colonial_census/` and `data-raw/yearbook_demography/` use the
+half-resolution page cache plus native-resolution crops of hard-to-read cells
+(`data-raw/yearbook_demography/hires.py`).
 
 ## Sources (`bnf_gallica_sources.csv`)
 
