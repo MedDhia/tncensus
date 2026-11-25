@@ -155,8 +155,8 @@ def collect():
             cai = None if cai is None or cai != cai else cai
             for lvl in cols:
                 v = r[lvl]
-                if v is None or v != v:
-                    continue
+                if v is None or v != v or str(v).startswith("TOTAL"):
+                    continue   # empty, or a printed-total marker, not a place
                 key = (lvl, v, ctl if lvl in ("commune", "cheikhat", "locality", "annexe") else None,
                        cai if lvl in ("commune", "cheikhat", "locality") else None)
                 seen[key].add(f.stem)

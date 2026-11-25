@@ -1086,34 +1086,48 @@ locality,Abattoirs,Tunis,,Abattoirs,Tunis,,,none,0,,,,,,eur1906_t2_locality_nati
 locality,Abbassia (El),,Sfax,Abbassia (El),Sfax,Sfax,,none,0,,,,,,ind1931_t8_localities
 locality,Abbés,,Djerid,Abbés,Tozeur,Djerid,,none,0,,,,,,ind1931_t8_localities
 locality,Adjim,Gabès,,Adjim,Gabès,,,exact,1,597,Adjim,,33.73,10.76,eur1906_t2_locality_nationality
+locality,Adjim (Djerba),,,Adjim (Djerba),,,,none,0,,,,,,education_schools
 locality,Affar,Annexe de Djerba,,Affar,Djerba,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
+locality,Agareb (El),,,Agareb (El),,,,exact,1,1,Agareb,,34.741726,10.526864,education_schools
 locality,Aghir,Gabès,,Aghir,Gabès,,,exact,1,152,Aghir,,33.763479,11.017629,eur1906_t2_locality_nationality
 locality,Ahouech (El),,Nabeul,Ahouech (El),Grombalia,Nabeul,,none,0,,,,,,ind1931_t8_localities
 locality,Ahzeg,,Djebeniana,Ahzeg,Sfax,Djebeniana,,exact,1,549,Ahzeg,,35.02806,10.96051,ind1931_t8_localities
 locality,Akouache-Dar-Cheikh,,Mahdia,Akouache-Dar-Cheikh,Sousse,Mahdia,,none,0,,,,,,ind1931_t8_localities
+locality,Akouda,,,Akouda,,,,exact,1,125,Akouda,,35.8731356324848,10.565715689794,education_schools
 locality,Akouda,,Sousse,Akouda,Sousse,Sousse,,exact,1,125,Akouda,,35.8731356324848,10.565715689794,ind1931_t8_localities
 locality,Alia (El),,Bizerte,Alia (El),Bizerte,Bizerte,,exact,1,129,El-Alia,,37.171665,10.03251,ind1931_t8_localities
+locality,Alia (El),,,Alia (El),,,,exact,1,129,El-Alia,,37.171665,10.03251,education_schools
 locality,Amdoun,Contrôle de Béja,,Amdoun,Béja,,,exact,1,285,Amdoun,,36.7734,9.085012,eur1906_td_french_population_by_locality_1891_1901
 locality,Amdouns,Béja,,Amdouns,Béja,,,none,0,,,,,,eur1906_t2_locality_nationality
+locality,Aouareb (El),,,Aouareb (El),,,,exact,1,140,Haouareb,,35.5684557913378,9.77034732578002,education_schools
 locality,Aouina,Tunis,,Aouina,Tunis,,,exact,1,141,El-Aouina,,36.853093,10.257077,eur1906_t2_locality_nationality
 locality,Aouina (El),,Nefzaoua,Aouina (El),Territoires militaires du Sud,Nefzaoua,,exact,1,878,El-Aouina,,33.449203,9.041363,ind1931_t8_localities
 locality,Aouina (El),,Tunis-Banlieue,Aouina (El),Tunis,Tunis-Banlieue,,exact,1,141,El-Aouina,,36.853093,10.257077,ind1931_t8_localities
 locality,Aouinet-Oum-Hend,,,Aouinet-Oum-Hend,,,,none,0,,,,,,ind1931_t8_localities
 locality,Aousdja,,Bizerte,Aousdja,Bizerte,Bizerte,,exact,1,134,Aousdja,,37.14169,10.101721,ind1931_t8_localities
+locality,Aousdja (El),,,Aousdja (El),,,,exact,1,134,Aousdja,,37.14169,10.101721,education_schools
+locality,Aouïna (El),,,Aouïna (El),,,,ambiguous,2,,,,,,education_schools
 locality,Aram,,Aradh,Aram,Gabès,Aradh,,exact,1,807,Aram,,33.583574,10.318444,ind1931_t8_localities
 locality,Araïna (El),,Fraichiches,Araïna (El),Thala,Fraichiches,,none,0,,,,,,ind1931_t8_localities
 locality,Ariana,Contrôle de Tunis,,Ariana,Tunis,,,exact,1,143,Ariana,,36.858639,10.187773,eur1906_td_french_population_by_locality_1891_1901
+locality,Ariana,,,Ariana,,,,exact,1,143,Ariana,,36.858639,10.187773,education_schools
 locality,Ariana,Tunis,,Ariana,Tunis,,,exact,1,143,Ariana,,36.858639,10.187773,eur1906_t2_locality_nationality
+locality,Ariana (L'),,,Ariana (L'),,,,exact,1,143,Ariana,,36.858639,10.187773,education_schools
+locality,Armand-Colin,,,Armand-Colin,,,,exact,1,2,El M'nagha,,36.55536,9.944775,education_schools
+locality,Aroussa (El),,,Aroussa (El),,,,exact,1,142,El-Aroussa,,36.376872,9.452703,education_schools
+locality,Attar,,,Attar,,,,exact,1,13,Attar,,36.733332,10.083161,education_schools
 locality,Attaïa (El),,Sfax,Attaïa (El),Sfax,Sfax,,none,0,,,,,,ind1931_t8_localities
 locality,Autres lieux,Contrôle de Sfax,,Autres lieux,Sfax,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,Autres localités du caïdat de Mateur,Bizerte,,Autres localités du caïdat de Mateur,Bizerte,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,Ayaïcha (El),,Gafsa,Ayaïcha (El),Gafsa,Gafsa,,exact,1,679,El-Ayaicha,,34.247694,9.250047,ind1931_t8_localities
+locality,Azib (El),,,Azib (El),,,,ambiguous,2,,,,,,education_schools
 locality,"Aïn-Berda, El Azouaz et Sfaïat",Bizerte,,Aïn-Berda,Bizerte,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,"Aïn-Berda, camp",Contrôle de Bizerte,,Aïn-Berda,Bizerte,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,Aïn-Bittar,Bizerte,,Aïn-Bittar,Bizerte,,,exact,1,472,Aïn-Bittar,,37.247827,9.909697,eur1906_t2_locality_nationality
 locality,Aïn-Bittar,Contrôle de Bizerte,,Aïn-Bittar,Bizerte,,,exact,1,472,Aïn-Bittar,,37.247827,9.909697,eur1906_td_french_population_by_locality_1891_1901
 locality,Aïn-Djemala,Annexe de Teboursouk,,Aïn-Djemala,Téboursouk,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,Aïn-Draham,Annexe de Tabarca,,Aïn-Draham,Tabarka,,,exact,1,294,Aïn-Draham,,36.77716,8.689778,eur1906_td_french_population_by_locality_1891_1901
+locality,Aïn-Draham,,,Aïn-Draham,,,,exact,1,294,Aïn-Draham,,36.77716,8.689778,education_schools
 locality,Aïn-Draham,Souk-el-Arba,,Aïn-Draham,Souk-el-Arba,,,exact,1,294,Aïn-Draham,,36.77716,8.689778,eur1906_t2_locality_nationality
 locality,Aïn-Dridja,Contrôle de Mactar,,Aïn-Dridja,Maktar,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,Aïn-Frara,Contrôle de Thala,,Aïn-Frara,Thala,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
@@ -1126,9 +1140,11 @@ locality,Aïn-Khemouda,Contrôle de Thala,,Aïn-Khemouda,Thala,,,none,0,,,,,,eur
 locality,Aïn-Meriem,Bizerte,,Aïn-Meriem,Bizerte,,,exact,1,458,Aïn-Mériem,,37.300559,9.854081,eur1906_t2_locality_nationality
 locality,Aïn-Meriem,Contrôle de Bizerte,,Aïn-Meriem,Bizerte,,,exact,1,458,Aïn-Mériem,,37.300559,9.854081,eur1906_td_french_population_by_locality_1891_1901
 locality,Aïn-Mesria,Le Kef,,Aïn-Mesria,Le Kef,,,exact,1,224,Aïn-Mesria,,35.906838,8.742449,eur1906_t2_locality_nationality
+locality,Aïn-Moularès,,,Aïn-Moularès,,,,exact,1,163,Aïn-Moularès,,34.488889,8.271315,education_schools
 locality,Aïn-Moularès (Chantiers de la ligne d'),Kairouan,,Aïn-Moularès (Chantiers de la ligne d'),Kairouan,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,Aïn-Mzita,Contrôle de Mactar,,Aïn-Mzita,Maktar,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,Aïn-Rhelal,Bizerte,,Aïn-Rhelal,Bizerte,,,none,0,,,,,,eur1906_t2_locality_nationality
+locality,Aïn-Rhellal,,,Aïn-Rhellal,,,,none,0,,,,,,education_schools
 locality,Aïn-Roumi,Béja,,Aïn-Roumi,Béja,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,Aïn-Roumi,Contrôle de Bizerte,,Aïn-Roumi,Bizerte,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,Aïn-Sedja,Contrôle de Mactar,,Aïn-Sedja,Maktar,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
@@ -1136,39 +1152,53 @@ locality,"Aïn-Terglech, Aïn-Rhelal",Tunis,,Aïn-Terglech,Tunis,,,none,0,,,,,,e
 locality,Aïn-Touireuf,Contrôle du Kef,,Aïn-Touireuf,Le Kef,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,Aïn-Tounga,Annexe de Medjez-el-Bab,,Aïn-Tounga,Medjez-el-Bab,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,Aïn-Zannouch,Gafsa,,Aïn-Zannouch,Gafsa,,,none,0,,,,,,eur1906_t2_locality_nationality
+locality,Aïn-el-Asker,,,Aïn-el-Asker,,,,exact,1,97,Aïn-El-Asker,,36.573955,9.993222,education_schools
 locality,Aïn-el-Asker,Tunis,,Aïn-el-Asker,Tunis,,,exact,1,97,Aïn-El-Asker,,36.573955,9.993222,eur1906_t2_locality_nationality
 locality,Aïn-el-Garça,Annexe de Teboursouk,,Aïn-el-Garça,Téboursouk,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,"Babouch, Bordj-Hammam (Banlieue ouest d'Aïn-Draham)",Souk-el-Arba,,Babouch,Souk-el-Arba,,,qualifier_stripped,1,295,Babouch,,36.799608,8.677285,eur1906_t2_locality_nationality
 locality,Baie Ponty,Bizerte,,Baie Ponty,Bizerte,,,exact,1,25,Baie Ponty,,37.25702,9.835388,eur1906_t2_locality_nationality
 locality,Baie Sans-Nom,Contrôle de Bizerte,,Baie Sans-Nom,Bizerte,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
+locality,Baie-Ponty,,,Baie-Ponty,,,,exact,1,25,Baie Ponty,,37.25702,9.835388,education_schools
 locality,Bardo,Tunis,,Bardo,Tunis,,,exact,1,328,Le Bardo,,36.813457,10.14071,eur1906_t2_locality_nationality
+locality,Bardo (Le),,,Bardo (Le),,,,ambiguous,2,,,,,,education_schools
 locality,Bargou,Mactar,,Bargou,Maktar,,,exact,1,936,Bargou,,36.09,9.5658,eur1906_t2_locality_nationality
+locality,Bathan (El),,,Bathan (El),,,,exact,1,36,El-Bathan,,36.803965,9.845121,education_schools
 locality,Bathan (El),,Tunis-Banlieue,Bathan (El),Tunis,Tunis-Banlieue,,exact,1,36,El-Bathan,,36.803965,9.845121,ind1931_t8_localities
 locality,Bazbazia,Bizerte,,Bazbazia,Bizerte,,,none,0,,,,,,eur1906_t2_locality_nationality
+locality,Bazina,,,Bazina,,,,exact,1,41,Bazina,,36.96384,9.299734,education_schools
 locality,Bazma,,Nefzaoua,Bazma,Territoires militaires du Sud,Nefzaoua,,none,0,,,,,,ind1931_t8_localities
 locality,Bechelli,,,Bechelli,,,,exact,1,879,Bechelli,,33.61824,8.917286,ind1931_t8_localities
 locality,Bechri,,,Bechri,,,,exact,1,881,Bechri,,33.79,8.772937,ind1931_t8_localities
 locality,Bekalta,,Mahdia,Bekalta,Sousse,Mahdia,,exact,1,55,Bekalta,,35.615685,10.990684,ind1931_t8_localities
+locality,Bekalta,,,Bekalta,,,,exact,1,55,Bekalta,,35.615685,10.990684,education_schools
 locality,Bekalta,Sousse,,Bekalta,Sousse,,,exact,1,55,Bekalta,,35.615685,10.990684,eur1906_t2_locality_nationality
 locality,Belli,Contrôle de Grombalia,,Belli,Grombalia,,,exact,1,64,Belli,,36.567494,10.554707,eur1906_td_french_population_by_locality_1891_1901
+locality,Belli,,,Belli,,,,exact,1,64,Belli,,36.567494,10.554707,education_schools
 locality,Belli,,Soliman,Belli,Grombalia,Soliman,,exact,1,64,Belli,,36.567494,10.554707,ind1931_t8_localities
 locality,"Belli, Nianou et environs",Grombalia,,Belli,Grombalia,,,qualifier_stripped,1,64,Belli,,36.567494,10.554707,eur1906_t2_locality_nationality
 locality,Belvédère,Tunis,,Belvédère,Tunis,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,Bembla,,Monastir,Bembla,Sousse,Monastir,,exact,1,836,Bembla,,35.695591,10.793047,ind1931_t8_localities
+locality,Bembla,,,Bembla,,,,exact,1,836,Bembla,,35.695591,10.793047,education_schools
+locality,Ben-Arous,,,Ben-Arous,,,,exact,1,384,Ben-Arous,,36.753622,10.22472,education_schools
 locality,Ben-Arous,Tunis,,Ben-Arous,Tunis,,,exact,1,384,Ben-Arous,,36.753622,10.22472,eur1906_t2_locality_nationality
+locality,Ben-Arous (Fochville),,,Ben-Arous (Fochville),,,,none,0,,,,,,education_schools
 locality,Ben-Bachir,Contrôle de Souk-el-Arba,,Ben-Bachir,Souk-el-Arba,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,Ben-Bachir,Souk-el-Arba,,Ben-Bachir,Souk-el-Arba,,,none,0,,,,,,eur1906_t2_locality_nationality
+locality,Ben-Gardane,,,Ben-Gardane,,,,exact,1,79,Ben-Gardane,,33.1398106305503,11.2162781205863,education_schools
 locality,Ben-Gardane,Territoires du Sud,,Ben-Gardane,Territoires militaires du Sud,,,exact,1,79,Ben-Gardane,,33.1398106305503,11.2162781205863,eur1906_t2_locality_nationality
 locality,Ben-Ghardane,Territoire du Sud,,Ben-Ghardane,Territoires militaires du Sud,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,Ben-Ghilouz,,Aradh,Ben-Ghilouz,Gabès,Aradh,,none,0,,,,,,ind1931_t8_localities
 locality,Beni-Diss,Annexe de Djerba,,Beni-Diss,Djerba,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,"Beni-Diss, Oualagh",Gabès,,Beni-Diss,Gabès,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,Beni-Hassan,,,Beni-Hassan,,,,none,0,,,,,,ind1931_t8_localities
+locality,Beni-Hassen,,,Beni-Hassen,,,,exact,1,822,Beni-Hassen,,35.566893,10.808155,education_schools
 locality,Beni-Kalthoum,,Sousse,Beni-Kalthoum,Sousse,Sousse,,none,0,,,,,,ind1931_t8_localities
 locality,Beni-Khaled,Contrôle de Grombalia,,Beni-Khaled,Grombalia,,,exact,1,82,Beni-Khalled,,36.647836,10.591507,eur1906_td_french_population_by_locality_1891_1901
+locality,Beni-Khalled,,,Beni-Khalled,,,,exact,1,82,Beni-Khalled,,36.647836,10.591507,education_schools
 locality,Beni-Khalled,,Soliman,Beni-Khalled,Grombalia,Soliman,,exact,1,82,Beni-Khalled,,36.647836,10.591507,ind1931_t8_localities
 locality,Beni-Kheddache,,Ouerghemma (Terr. de Médenine),Beni-Kheddache,Territoires militaires du Sud,Ouerghemma,,none,0,,,,,,ind1931_t8_localities
 locality,Beni-Khiar,,Nabeul,Beni-Khiar,Grombalia,Nabeul,,exact,1,85,Beni-Khiar,,36.459844,10.783682,ind1931_t8_localities
+locality,Beni-Khiar,,,Beni-Khiar,,,,exact,1,85,Beni-Khiar,,36.459844,10.783682,education_schools;education_vocational
 locality,Beni-Mazem,Annexe de Tabarca,,Beni-Mazem,Tabarka,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,Beni-Rabia,,Monastir,Beni-Rabia,Sousse,Monastir,,exact,1,832,Beni-Rabia,,35.672525,10.568485,ind1931_t8_localities
 locality,Beni-Zelten,,Matmata,Beni-Zelten,Territoires militaires du Sud,Matmata,,exact,1,796,Beni-Zelten,,33.5472398994148,10.0941118831629,ind1931_t8_localities
@@ -1176,21 +1206,30 @@ locality,Beni-Zelten,Territoires du Sud,,Beni-Zelten,Territoires militaires du S
 locality,Bennane,,Monastir,Bennane,Sousse,Monastir,,none,0,,,,,,ind1931_t8_localities
 locality,Bennane,Sousse,,Bennane,Sousse,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,Berghouthia,,Nefzaoua,Berghouthia,Territoires militaires du Sud,Nefzaoua,,none,0,,,,,,ind1931_t8_localities
+locality,Besbessia,,,Besbessia,,,,exact,1,91,Besbessia,,36.398653,10.526932,education_schools
 locality,Bhirine (El),,Oulad-Aoun,Bhirine (El),Maktar,Oulad-Aoun,,none,0,,,,,,ind1931_t8_localities
 locality,Bir Afou,Le Kef,,Bir Afou,Le Kef,,,none,0,,,,,,eur1906_t2_locality_nationality
+locality,Bir-Chaaba,,,Bir-Chaaba,,,,exact,1,106,Bir-Chaaba,,,,education_schools
 locality,Bir-Chellouf,,Nabeul,Bir-Chellouf,Grombalia,Nabeul,,none,0,,,,,,ind1931_t8_localities
 locality,Bir-Droudj,Tunis,,Bir-Droudj,Tunis,,,exact,1,389,Bir-Drouj,,,,eur1906_t2_locality_nationality
+locality,Bir-Halima,,,Bir-Halima,,,,exact,1,107,Bir-Halima,,36.395754,10.04325,education_schools
 locality,Bir-Halima,Tunis,,Bir-Halima,Tunis,,,exact,1,107,Bir-Halima,,36.395754,10.04325,eur1906_t2_locality_nationality
 locality,Bir-M'Cherga,Contrôle de Tunis,,Bir-M'Cherga,Tunis,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
+locality,Bir-M'cherga,,,Bir-M'cherga,,,,none,0,,,,,,education_schools
+locality,Bir-M'roua,,,Bir-M'roua,,,,exact,1,103,Bir-M'roua,,36.793189,10.625039,education_schools
 locality,Bir-Mcherga,Tunis,,Bir-Mcherga,Tunis,,,exact,1,98,Bir-Mcherga,,36.516241,9.95827,eur1906_t2_locality_nationality
 locality,Bir-Oum-Ali,Thala,,Bir-Oum-Ali,Thala,,,exact,1,324,Bir-Oum-Ali,,35.040568,8.373259,eur1906_t2_locality_nationality
 locality,Bir-Taïeb,,Monastir,Bir-Taïeb,Sousse,Monastir,,exact,1,840,Bir-Taieb,,35.651259,10.695194,ind1931_t8_localities
+locality,Bir-Touil,,,Bir-Touil,,,,ambiguous,2,,,,,,education_schools
 locality,Bir-bou-Rekba,Contrôle de Grombalia,,Bir-bou-Rekba,Grombalia,,,ambiguous,2,,,,,,eur1906_td_french_population_by_locality_1891_1901
+locality,Bir-bou-Rekba,,,Bir-bou-Rekba,,,,ambiguous,2,,,,,,education_schools
 locality,Bir-el-Bey,Tunis,,Bir-el-Bey,Tunis,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,Bir-oum-Ali,Contrôle de Thala,,Bir-oum-Ali,Thala,,,exact,1,324,Bir-Oum-Ali,,35.040568,8.373259,eur1906_td_french_population_by_locality_1891_1901
+locality,Birine,,,Birine,,,,exact,1,108,Birine,,36.717609,10.107189,education_schools
 locality,Birine,Tunis,,Birine,Tunis,,,exact,1,108,Birine,,36.717609,10.107189,eur1906_t2_locality_nationality
 locality,Bizerte,Bizerte,,Bizerte,Bizerte,,,exact,1,109,Bizerte,,37.274767,9.863165,eur1906_t2_locality_nationality
 locality,Bizerte,Contrôle de Bizerte,,Bizerte,Bizerte,,,exact,1,109,Bizerte,,37.274767,9.863165,eur1906_td_french_population_by_locality_1891_1901
+locality,Bizerte,,,Bizerte,,,,exact,1,109,Bizerte,,37.274767,9.863165,education_schools;education_vocational
 locality,Bizerte (Banlieue Ouest),Bizerte,,Bizerte (Banlieue Ouest),Bizerte,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,"Bizerte (Banlieue, route de Mateur)",Bizerte,,Bizerte (Banlieue,Bizerte,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,Bled-el-Hader,,Djerid,Bled-el-Hader,Tozeur,Djerid,,exact,1,635,Bled-El-Hader,,33.91175,8.133053,ind1931_t8_localities
@@ -1199,6 +1238,7 @@ locality,Bordj-Chakir,Tunis,,Bordj-Chakir,Tunis,,,none,0,,,,,,eur1906_t2_localit
 locality,Bordj-Djelidj,Gabès,,Bordj-Djelidj,Gabès,,,exact,1,155,Bordj-Djellidj,,33.886893,10.746657,eur1906_t2_locality_nationality
 locality,Bordj-Djellidj,Annexe de Djerba,,Bordj-Djellidj,Djerba,,,exact,1,155,Bordj-Djellidj,,33.886893,10.746657,eur1906_td_french_population_by_locality_1891_1901
 locality,Bordj-French,Annexe de Medjez-el-Bab,,Bordj-French,Medjez-el-Bab,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
+locality,Bordj-Frendj,,,Bordj-Frendj,,,,exact,1,369,Bordj-Frendj,,36.69078,9.81001,education_schools
 locality,Bordj-Gourbal,Tunis,,Bordj-Gourbal,Tunis,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,Bordj-Messaadine,Tunis,,Bordj-Messaadine,Tunis,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,Bordj-Messaoudi,Annexe de Teboursouk,,Bordj-Messaoudi,Téboursouk,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
@@ -1214,8 +1254,10 @@ locality,Bou-Abdallah,,Nefzaoua,Bou-Abdallah,Territoires militaires du Sud,Nefza
 locality,Bou-Arada,Annexe de Medjez-el-Bab,,Bou-Arada,Medjez-el-Bab,,,exact,1,110,Bou-Arada,,36.351026,9.624131,eur1906_td_french_population_by_locality_1891_1901
 locality,Bou-Arada,Béja,,Bou-Arada,Béja,,,exact,1,110,Bou-Arada,,36.351026,9.624131,eur1906_t2_locality_nationality
 locality,Bou-Arada,,Medjez-El-Bab,Bou-Arada,Medjez-el-Bab,Medjez-el-Bab,,exact,1,110,Bou-Arada,,36.351026,9.624131,ind1931_t8_localities
+locality,Bou-Arada,,,Bou-Arada,,,,exact,1,110,Bou-Arada,,36.351026,9.624131,education_schools
 locality,Bou-Argoub,Contrôle de Grombalia,,Bou-Argoub,Grombalia,,,exact,1,111,Bou-Argoub,,36.530964,10.551338,eur1906_td_french_population_by_locality_1891_1901
 locality,Bou-Arkoub,Grombalia,,Bou-Arkoub,Grombalia,,,ambiguous,2,,,,,,eur1906_t2_locality_nationality
+locality,Bou-Arkoub,,,Bou-Arkoub,,,,ambiguous,2,,,,,,education_schools
 locality,Bou-Chebka,Contrôle de Thala,,Bou-Chebka,Thala,,,exact,1,317,Bou-Chebka,,35.165838,8.421163,eur1906_td_french_population_by_locality_1891_1901
 locality,Bou-Chebka,Thala,,Bou-Chebka,Thala,,,exact,1,317,Bou-Chebka,,35.165838,8.421163,eur1906_t2_locality_nationality
 locality,Bou-Chemma,,Aradh,Bou-Chemma,Gabès,Aradh,,exact,1,913,Bou-Chemma,,33.905024,10.061352,ind1931_t8_localities
@@ -1224,55 +1266,77 @@ locality,Bou-Djabeur,Contrôle du Kef,,Bou-Djabeur,Le Kef,,,none,0,,,,,,eur1906_
 locality,Bou-Djabeur,Le Kef,,Bou-Djabeur,Le Kef,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,Bou-Djelida,,Medjez-El-Bab,Bou-Djelida,Medjez-el-Bab,Medjez-el-Bab,,none,0,,,,,,ind1931_t8_localities
 locality,Bou-Ficha,Contrôle de Sousse,,Bou-Ficha,Sousse,,,exact,1,112,Bou-Ficha,,36.299035,10.453706,eur1906_td_french_population_by_locality_1891_1901
+locality,Bou-Ficha,,,Bou-Ficha,,,,exact,1,112,Bou-Ficha,,36.299035,10.453706,education_schools
 locality,Bou-Ficha,,Sousse,Bou-Ficha,Sousse,Sousse,,exact,1,112,Bou-Ficha,,36.299035,10.453706,ind1931_t8_localities
 locality,Bou-Ficha,Sousse,,Bou-Ficha,Sousse,,,exact,1,112,Bou-Ficha,,36.299035,10.453706,eur1906_t2_locality_nationality
 locality,Bou-Ficha (kil.72),Grombalia,,Bou-Ficha (kil.72),Grombalia,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,Bou-Hadjer,,Monastir,Bou-Hadjer,Sousse,Monastir,,none,0,,,,,,ind1931_t8_localities
+locality,Bou-Jaber,,,Bou-Jaber,,,,exact,1,113,Bou-Jaber,,35.741712,8.299264,education_schools
 locality,Bou-Krim,,Nabeul,Bou-Krim,Grombalia,Nabeul,,none,0,,,,,,ind1931_t8_localities
 locality,Bou-Merdès,,Mahdia,Bou-Merdès,Sousse,Mahdia,,none,0,,,,,,ind1931_t8_localities
+locality,Bou-Merdès,,,Bou-Merdès,,,,none,0,,,,,,education_schools
 locality,Bou-Rebia,Tunis,,Bou-Rebia,Tunis,,,exact,1,414,Bou-El-Rebia,,36.59833,10.12111,eur1906_t2_locality_nationality
+locality,Bou-Thadi,,,Bou-Thadi,,,,exact,1,114,Bou-Thadi,,35.098354,10.269289,education_schools
 locality,Boudher,,Monastir,Boudher,Sousse,Monastir,,exact,1,838,Boudher,,35.66,10.82902,ind1931_t8_localities
 locality,Bourgine,Sousse,,Bourgine,Sousse,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,Boutis,,Oulad-Aoun,Boutis,Maktar,Oulad-Aoun,,none,0,,,,,,ind1931_t8_localities
 locality,Brij (El),,Soliman,Brij (El),Grombalia,Soliman,,none,0,,,,,,ind1931_t8_localities
 locality,Béja,Béja,,Béja,Béja,,,exact,1,49,Béja,,36.7250612934603,9.18327240560908,eur1906_t2_locality_nationality
 locality,Béja,Contrôle de Béja,,Béja,Béja,,,exact,1,49,Béja,,36.7250612934603,9.18327240560908,eur1906_td_french_population_by_locality_1891_1901
+locality,Béja,,,Béja,,,,exact,1,49,Béja,,36.7250612934603,9.18327240560908,education_schools;education_vocational
 locality,Béja (banlieue),Béja,,Béja,Béja,,,qualifier_stripped,1,49,Béja,,36.7250612934603,9.18327240560908,eur1906_t2_locality_nationality
 locality,Béja (banlieue),Contrôle de Béja,,Béja,Béja,,,qualifier_stripped,1,49,Béja,,36.7250612934603,9.18327240560908,eur1906_td_french_population_by_locality_1891_1901
 locality,Béjaoua (Manouba),Tunis,,Béjaoua (Manouba),Tunis,,,none,0,,,,,,eur1906_t2_locality_nationality
+locality,Camp-Servière,,,Camp-Servière,,,,exact,1,188,Camp Serviere,,36.64639,10.44278,education_schools
 locality,Cap Blanc,Contrôle de Bizerte,,Cap Blanc,Bizerte,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,Cap Bon,Contrôle de Grombalia,,Cap Bon,Grombalia,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,Cap Serrat,Contrôle de Bizerte,,Cap Serrat,Bizerte,,,exact,1,455,Cap-Serrat,,37.220659,9.209368,eur1906_td_french_population_by_locality_1891_1901
 locality,Carthage,Contrôle de Tunis,,Carthage,Tunis,,,exact,1,115,Carthage,,36.850797,10.330343,eur1906_td_french_population_by_locality_1891_1901
+locality,Carthage,,,Carthage,,,,exact,1,115,Carthage,,36.850797,10.330343,education_schools
 locality,Carthage,Tunis,,Carthage,Tunis,,,exact,1,115,Carthage,,36.850797,10.330343,eur1906_t2_locality_nationality
 locality,Cedada,,Djerid,Cedada,Tozeur,Djerid,,exact,1,634,Cedada,,34.0177,8.2711,ind1931_t8_localities
+locality,Chahal,,,Chahal,,,,exact,1,116,Chaal,,34.557985,10.310195,education_schools
 locality,Chaouach,,Medjez-El-Bab,Chaouach,Medjez-el-Bab,Medjez-el-Bab,,none,0,,,,,,ind1931_t8_localities
 locality,Chaouat,Contrôle de Tunis,,Chaouat,Tunis,,,exact,1,354,Chaouat,,36.88928,9.94512,eur1906_td_french_population_by_locality_1891_1901
+locality,Chaouat,,,Chaouat,,,,exact,1,354,Chaouat,,36.88928,9.94512,education_schools
 locality,Chassart-Tefaha,Annexe de Medjez-el-Bab,,Chassart-Tefaha,Medjez-el-Bab,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,Chaâbet-Chemlali,,Matmata,Chaâbet-Chemlali,Territoires militaires du Sud,Matmata,,none,0,,,,,,ind1931_t8_localities
 locality,Chaâbet-Semaâla,,,Chaâbet-Semaâla,,,,none,0,,,,,,ind1931_t8_localities
+locality,Chebaou,,,Chebaou,,,,exact,1,117,Chebaou,,36.844812,10.03241,education_schools
 locality,Chebaou,Tunis,,Chebaou,Tunis,,,exact,1,117,Chebaou,,36.844812,10.03241,eur1906_t2_locality_nationality
 locality,Chebba,,Djebeniana,Chebba,Sfax,Djebeniana,,exact,1,118,Chebba,,35.23369,11.110785,ind1931_t8_localities
 locality,Chebba,Sfax,,Chebba,Sfax,,,exact,1,118,Chebba,,35.23369,11.110785,eur1906_t2_locality_nationality
+locality,Chebba (La),,,Chebba (La),,,,exact,1,118,Chebba,,35.23369,11.110785,education_schools
 locality,Chenini,Contrôle de Gabès,,Chenini,Gabès,,,exact,1,505,Chenini,,33.872785,10.062594,eur1906_td_french_population_by_locality_1891_1901
 locality,Chenini,,Aradh,Chenini,Gabès,Aradh,,exact,1,505,Chenini,,33.872785,10.062594,ind1931_t8_localities
 locality,Chenini,,Tatahouine,Chenini,Territoires militaires du Sud,Tatahouine,,exact,1,1116,Chenini,,32.914882,10.268837,ind1931_t8_localities
+locality,Chenini de Gabès,,,Chenini de Gabès,,,,none,0,,,,,,education_schools
 locality,Chergui,,Sfax,Chergui,Sfax,Sfax,,none,0,,,,,,ind1931_t8_localities
+locality,Chergui (Kerkenna),,,Chergui (Kerkenna),,,,none,0,,,,,,education_schools
 locality,Choutrana,Contrôle de Tunis,,Choutrana,Tunis,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,Choutrana,Tunis,,Choutrana,Tunis,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,Chouïchia,Souk-el-Arba,,Chouïchia,Souk-el-Arba,,,exact,1,1045,Chouichia,,36.53333,8.61667,eur1906_t2_locality_nationality
+locality,Chuiggui,,,Chuiggui,,,,exact,1,119,Chouigui,,36.8789035454845,9.80268817896235,education_schools
 locality,Cie des Eaux du Sahel (Chantiers de la),Kairouan,,Cie des Eaux du Sahel (Chantiers de la),Kairouan,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,Crétéville,Contrôle de Tunis,,Crétéville,Tunis,,,exact,1,120,Creteville,,36.66188,10.32442,eur1906_td_french_population_by_locality_1891_1901
+locality,Crétéville,,,Crétéville,,,,exact,1,120,Creteville,,36.66188,10.32442,education_schools
 locality,Crétéville,Tunis,,Crétéville,Tunis,,,exact,1,120,Creteville,,36.66188,10.32442,eur1906_t2_locality_nationality
+locality,Cédouikech (Djerba),,,Cédouikech (Djerba),,,,none,0,,,,,,education_schools
+locality,Cédriane (Djerba),,,Cédriane (Djerba),,,,none,0,,,,,,education_schools
 locality,Damous,,Monastir,Damous,Sousse,Monastir,,exact,1,843,Damous,,35.668068,10.77733,ind1931_t8_localities
 locality,Dar-Ben-Salem,,Mahdia,Dar-Ben-Salem,Sousse,Mahdia,,none,0,,,,,,ind1931_t8_localities
 locality,Dar-Braham,,Mahdia,Dar-Braham,Sousse,Mahdia,,none,0,,,,,,ind1931_t8_localities
 locality,Dar-Chabane,,Nabeul,Dar-Chabane,Grombalia,Nabeul,,none,0,,,,,,ind1931_t8_localities
+locality,Dar-Chabane,,,Dar-Chabane,,,,none,0,,,,,,education_schools
 locality,Dar-el-Koudiat,Contrôle de Bizerte,,Dar-el-Koudiat,Bizerte,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
+locality,De Carnières,,,De Carnières,,,,exact,1,121,De Carnieres,,36.952127,9.984937,education_schools
 locality,Debabcha,,Nefzaoua,Debabcha,Territoires militaires du Sud,Nefzaoua,,none,0,,,,,,ind1931_t8_localities
 locality,Degache,Gafsa,,Degache,Gafsa,,,exact,1,180,Degache,,33.9880067188828,8.22202793871273,eur1906_t2_locality_nationality
 locality,Deggache,,Djerid,Deggache,Tozeur,Djerid,,exact,1,180,Degache,,33.9880067188828,8.22202793871273,ind1931_t8_localities
+locality,Deggache,,,Deggache,,,,exact,1,180,Degache,,33.9880067188828,8.22202793871273,education_schools
+locality,Deggache (El-Oudiane),,,Deggache (El-Oudiane),,,,none,0,,,,,,education_schools
 locality,Dehibat,,Tatahouine,Dehibat,Territoires militaires du Sud,Tatahouine,,exact,1,1128,Dehibat,,32.009904,10.697422,ind1931_t8_localities
+locality,Depienne,,,Depienne,,,,exact,1,122,Depienne,,36.456393,10.024742,education_schools
 locality,Dernaïa,Contrôle de Thala,,Dernaïa,Thala,,,exact,1,320,Dernaïa,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,Dernaïa,Thala,,Dernaïa,Thala,,,exact,1,320,Dernaïa,,,,eur1906_t2_locality_nationality
 locality,Dhouaouda,,Bizerte,Dhouaouda,Bizerte,Bizerte,,exact,1,526,Dhouaouda,,37.022,9.40433,ind1931_t8_localities
@@ -1283,6 +1347,7 @@ locality,Djebba,Annexe de Teboursouk,,Djebba,Téboursouk,,,none,0,,,,,,eur1906_t
 locality,Djebel Abiod des Nefzas,Béja,,Djebel Abiod des Nefzas,Béja,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,Djebel Chara,Béja,,Djebel Chara,Béja,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,Djebel ben Amar,Béja,,Djebel ben Amar,Béja,,,none,0,,,,,,eur1906_t2_locality_nationality
+locality,Djebel-Abiod,,,Djebel-Abiod,,,,exact,1,123,Djebel-Abiod,,36.9749257194446,9.07494146384493,education_schools
 locality,Djebel-Abiodh,,Béja,Djebel-Abiodh,Béja,Béja,,none,0,,,,,,ind1931_t8_localities
 locality,Djebel-Chambi,Thala,,Djebel-Chambi,Thala,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,Djebel-Chouichia,Contrôle de Souk-el-Arba,,Djebel-Chouichia,Souk-el-Arba,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
@@ -1290,61 +1355,80 @@ locality,Djebel-Djelloud,Contrôle de Tunis,,Djebel-Djelloud,Tunis,,,exact,1,421
 locality,"Djebel-Djelloud, Dubosville",Tunis,,Djebel-Djelloud,Tunis,,,qualifier_stripped,1,421,Djebel-Djelloud,,36.772788,10.209442,eur1906_t2_locality_nationality
 locality,Djebel-Djerissa,Le Kef,,Djebel-Djerissa,Le Kef,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,Djebel-Djougar,Tunis,,Djebel-Djougar,Tunis,,,none,0,,,,,,eur1906_t2_locality_nationality
+locality,Djebel-Hallouf,,,Djebel-Hallouf,,,,exact,1,124,Djebel-Hallouf,,36.73333,8.91667,education_schools
 locality,Djebel-Hallouf,Souk-el-Arba,,Djebel-Hallouf,Souk-el-Arba,,,exact,1,124,Djebel-Hallouf,,36.73333,8.91667,eur1906_t2_locality_nationality
 locality,Djebel-Harraba,Contrôle du Kef,,Djebel-Harraba,Le Kef,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,Djebel-Kebbauch,Contrôle du Kef,,Djebel-Kebbauch,Le Kef,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,Djebel-Kebir,Contrôle de Bizerte,,Djebel-Kebir,Bizerte,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
+locality,Djebel-Mdilla,,,Djebel-Mdilla,,,,exact,1,126,Djebel-Mdilla,,34.287598,8.749657,education_schools
 locality,Djebel-Nador (fort),Contrôle de Bizerte,,Djebel-Nador (fort),Bizerte,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,Djebel-Rara (fort),Contrôle de Bizerte,,Djebel-Rara (fort),Bizerte,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,Djebel-Serdj,Kairouan,,Djebel-Serdj,Kairouan,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,Djebel-Slata,Le Kef,,Djebel-Slata,Le Kef,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,Djebel-Trozza,Kairouan,,Djebel-Trozza,Kairouan,,,exact,1,127,Djebel-Trozza,,35.542355,9.580693,eur1906_t2_locality_nationality
+locality,Djebel-Trozza,,,Djebel-Trozza,,,,exact,1,127,Djebel-Trozza,,35.542355,9.580693,education_schools
 locality,Djebel-Zebbeus,Thala,,Djebel-Zebbeus,Thala,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,"Djebel-ben-Drahar, Djebel-Brika, Djebel-Charra, Hammam-es-Semane, Hammam-M'Seïda, Khanguet-Kef-Tout, Oued-Maden et Sidi-Ahmed",Contrôle de Béja,,Djebel-ben-Drahar,Béja,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,Djebeniana,,Djebeniana,Djebeniana,Sfax,Djebeniana,,exact,1,540,Djebeniana,,35.04,10.91,ind1931_t8_localities
+locality,Djebeniana,,,Djebeniana,,,,exact,1,540,Djebeniana,,35.04,10.91,education_schools
 locality,Djebibina,,Zaghouan,Djebibina,Zaghouan,Zaghouan,,exact,1,1199,Djebibina,,36.12,10.1,ind1931_t8_localities
 locality,Djebibina,Tunis,,Djebibina,Tunis,,,exact,1,1199,Djebibina,,36.12,10.1,eur1906_t2_locality_nationality
 locality,Djedeïda,Contrôle de Tunis,,Djedeïda,Tunis,,,exact,1,1150,Djedeida,,36.85,9.929745,eur1906_td_french_population_by_locality_1891_1901
+locality,Djedeïda,,,Djedeïda,,,,exact,1,1150,Djedeida,,36.85,9.929745,education_schools
 locality,Djedeïda,,Tunis-Banlieue,Djedeïda,Tunis,Tunis-Banlieue,,exact,1,1150,Djedeida,,36.85,9.929745,ind1931_t8_localities
 locality,Djedeïda,Tunis,,Djedeïda,Tunis,,,exact,1,1150,Djedeida,,36.85,9.929745,eur1906_t2_locality_nationality
 locality,Djedida,,Nefzaoua,Djedida,Territoires militaires du Sud,Nefzaoua,,none,0,,,,,,ind1931_t8_localities
 locality,Djemma,,,Djemma,,,,none,0,,,,,,ind1931_t8_localities
 locality,Djemmal,Contrôle de Sousse,,Djemmal,Sousse,,,exact,1,128,Jemmel,,35.622038,10.771803,eur1906_td_french_population_by_locality_1891_1901
+locality,Djemmal,,,Djemmal,,,,exact,1,128,Jemmel,,35.622038,10.771803,education_schools
 locality,Djemmal,Sousse,,Djemmal,Sousse,,,exact,1,128,Jemmel,,35.622038,10.771803,eur1906_t2_locality_nationality
 locality,Djendouba (Caïdat de),Souk-el-Arba,,Djendouba (Caïdat de),Souk-el-Arba,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,Djeradou,,Zaghouan,Djeradou,Zaghouan,Zaghouan,,exact,1,1200,Jradou,,36.271026,10.327211,ind1931_t8_localities
+locality,Djerissa,,,Djerissa,,,,exact,1,131,Djerissa,,35.84663,8.63531,education_schools
 locality,Djersine,,Nefzaoua,Djersine,Territoires militaires du Sud,Nefzaoua,,exact,1,884,Djersine,,33.54,8.823094,ind1931_t8_localities
 locality,Djeziret-El-Ouchichi,,,Djeziret-El-Ouchichi,,,,none,0,,,,,,ind1931_t8_localities
 locality,Djouaber,,Sfax,Djouaber,Sfax,Sfax,,none,0,,,,,,ind1931_t8_localities
 locality,Djouana,Annexe de Djerba,,Djouana,Djerba,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
+locality,Djouggar,,,Djouggar,,,,exact,1,132,Djouggar,,36.2672503111265,9.94300807639639,education_schools
+locality,Djédeida,,,Djédeida,,,,exact,1,1150,Djedeida,,36.85,9.929745,education_vocational
 locality,Douala,,Soliman,Douala,Grombalia,Soliman,,none,0,,,,,,ind1931_t8_localities
 locality,Douar Neffet,Annexe de Teboursouk,,Douar Neffet,Téboursouk,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,Douar-ech-Chott,Tunis,,Douar-ech-Chott,Tunis,,,none,0,,,,,,eur1906_t2_locality_nationality
+locality,Douaria,,,Douaria,,,,exact,1,133,Douaria,,37.039625,9.21063,education_schools
 locality,Douemis,Annexe de Teboursouk,,Douemis,Téboursouk,,,conflict,1,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,Dougga,,Téboursouk,Dougga,Téboursouk,Téboursouk,,exact,1,1134,Dougga,,36.42,9.22,ind1931_t8_localities
 locality,Douirat,,Tatahouine,Douirat,Territoires militaires du Sud,Tatahouine,,exact,1,1114,Douirat,,32.856297,10.288776,ind1931_t8_localities
 locality,Douz,,Nefzaoua,Douz,Territoires militaires du Sud,Nefzaoua,,exact,1,135,Douz,,33.4571656103363,9.02502023425873,ind1931_t8_localities
+locality,Douz,,,Douz,,,,exact,1,135,Douz,,33.4571656103363,9.02502023425873,education_schools
 locality,Douémis (Mornag),Tunis,,Douémis (Mornag),Tunis,,,none,0,,,,,,eur1906_t2_locality_nationality
+locality,Dra ben Djouder,,,Dra ben Djouder,,,,exact,1,136,Draa Ben Djouder,,36.273409,10.020848,education_schools
 locality,Draà ben-Djouder,Tunis,,Draà ben-Djouder,Tunis,,,exact,1,136,Draa Ben Djouder,,36.273409,10.020848,eur1906_t2_locality_nationality
+locality,Dubosville,,,Dubosville,,,,exact,1,137,Dubosville,,36.7800456445957,10.1923712831916,education_schools
 locality,Ebba-Ksour,Le Kef,,Ebba-Ksour,Le Kef,,,exact,1,138,Ebba-Ksour,,35.946201894084,8.83074324008434,eur1906_t2_locality_nationality
+locality,Ebba-Ksour,,,Ebba-Ksour,,,,exact,1,138,Ebba-Ksour,,35.946201894084,8.83074324008434,education_schools
+locality,Eddekhila,,,Eddekhila,,,,exact,1,139,Eddekhila,,36.86343,9.710727,education_schools
 locality,El Mahrine,Tunis,,El Mahrine,Tunis,,,exact,1,394,El-Mahrine,,36.76225,9.85601,eur1906_t2_locality_nationality
 locality,El Mellaha (Lansarine),Tunis,,El Mellaha (Lansarine),Tunis,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,El-Adjered,Thala,,El-Adjered,Thala,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,El-Adjim,Annexe de Djerba,,El-Adjim,Djerba,,,exact,1,597,Adjim,,33.73,10.76,eur1906_td_french_population_by_locality_1891_1901
+locality,El-Adjim,,,El-Adjim,,,,exact,1,597,Adjim,,33.73,10.76,education_vocational
 locality,El-Afareg,Béja,,El-Afareg,Béja,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,El-Ajib (route de Tunis),Contrôle de Bizerte,,El-Ajib (route de Tunis),Bizerte,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,El-Akhouat,Annexe de Teboursouk,,El-Akhouat,Téboursouk,,,exact,1,265,El-Akhouat,,36.255615,9.255199,eur1906_td_french_population_by_locality_1891_1901
 locality,"El-Akhouat, Le Krib",Le Kef,,El-Akhouat,Le Kef,,,qualifier_stripped,1,235,El-Akouat,,36.27692,9.23823,eur1906_t2_locality_nationality
 locality,El-Ala,Contrôle de Kairouan,,El-Ala,Kairouan,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
+locality,El-Alem,,,El-Alem,,,,exact,1,147,El-Alem,,35.909873,10.057267,education_schools
 locality,El-Alia,Bizerte,,El-Alia,Bizerte,,,exact,1,129,El-Alia,,37.171665,10.03251,eur1906_t2_locality_nationality
 locality,El-Alia,Contrôle de Bizerte,,El-Alia,Bizerte,,,exact,1,129,El-Alia,,37.171665,10.03251,eur1906_td_french_population_by_locality_1891_1901
 locality,El-Aouïnet,Gabès,,El-Aouïnet,Gabès,,,exact,1,506,El-Aouinet,,33.984888,10.004186,eur1906_t2_locality_nationality
 locality,"El-Arich, Fedj-el-Adoun, Rihana, Aïn-bou-Deroua",Le Kef,,El-Arich,Le Kef,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,El-Aroussa,Béja,,El-Aroussa,Béja,,,exact,1,142,El-Aroussa,,36.376872,9.452703,eur1906_t2_locality_nationality
+locality,El-Attaïa (Kerkenna),,,El-Attaïa (Kerkenna),,,,none,0,,,,,,education_schools
 locality,El-Azib,Bizerte,,El-Azib,Bizerte,,,ambiguous,2,,,,,,eur1906_t2_locality_nationality
 locality,El-Azonaj (camp),Contrôle de Bizerte,,El-Azonaj (camp),Bizerte,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,El-Biban,Territoire du Sud,,El-Biban,Territoires militaires du Sud,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,El-Djem,Contrôle de Sousse,,El-Djem,Sousse,,,exact,1,148,El-Jem,,35.2964650075559,10.7068982120322,eur1906_td_french_population_by_locality_1891_1901
+locality,El-Djem,,,El-Djem,,,,exact,1,148,El-Jem,,35.2964650075559,10.7068982120322,education_schools
 locality,El-Djem,Sousse,,El-Djem,Sousse,,,exact,1,148,El-Jem,,35.2964650075559,10.7068982120322,eur1906_t2_locality_nationality
 locality,El-Euch (fort),Contrôle de Bizerte,,El-Euch (fort),Bizerte,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,El-Feïdja,Contrôle de Souk-el-Arba,,El-Feïdja,Souk-el-Arba,,,exact,1,1266,Feija,,36.486107,8.309115,eur1906_td_french_population_by_locality_1891_1901
@@ -1359,13 +1443,16 @@ locality,El-Hamma (des Beni-Zid),Gabès,,El-Hamma (des Beni-Zid),Gabès,,,none,0
 locality,El-Haouid,Contrôle de Bizerte,,El-Haouid,Bizerte,,,exact,1,1270,El-Haouid,,37.0840269307432,9.98654329920046,eur1906_td_french_population_by_locality_1891_1901
 locality,El-Kantara,Annexe de Djerba,,El-Kantara,Djerba,,,exact,1,156,El-Kantara,,33.684519,10.918133,eur1906_td_french_population_by_locality_1891_1901
 locality,El-Kantara,Gabès,,El-Kantara,Gabès,,,exact,1,156,El-Kantara,,33.684519,10.918133,eur1906_t2_locality_nationality
+locality,El-May (Djerba),,,El-May (Djerba),,,,none,0,,,,,,education_schools
 locality,El-Onk,Sousse,,El-Onk,Sousse,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,El-Oubira,Contrôle de Thala,,El-Oubira,Thala,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,El-Oubira,Thala,,El-Oubira,Thala,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,El-Oudiane,Annexe de Tozeur,,El-Oudiane,Tozeur,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,Elleus,,Le Kef,Elleus,Le Kef,Le Kef,,exact,1,764,Elleus,,35.948681,9.096841,ind1931_t8_localities
+locality,Ellès,,,Ellès,,,,none,0,,,,,,education_schools
 locality,Enfida (Enchir),Béja,,Enfida (Enchir),Béja,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,Enfidaville,Contrôle de Sousse,,Enfidaville,Sousse,,,exact,1,3,Enfidaville,,36.134153,10.375055,eur1906_td_french_population_by_locality_1891_1901
+locality,Enfidaville,,,Enfidaville,,,,exact,1,3,Enfidaville,,36.134153,10.375055,education_schools
 locality,Enfidaville,Sousse,,Enfidaville,Sousse,,,exact,1,3,Enfidaville,,36.134153,10.375055,eur1906_t2_locality_nationality
 locality,Enfidaville (Dar-El-Bey),,Sousse,Enfidaville (Dar-El-Bey),Sousse,Sousse,,none,0,,,,,,ind1931_t8_localities
 locality,Fartouna,,Nabeul,Fartouna,Grombalia,Nabeul,,exact,1,871,Fartouna,,36.75,10.780321,ind1931_t8_localities
@@ -1374,6 +1461,8 @@ locality,Fatnassa,,Nefzaoua,Fatnassa,Territoires militaires du Sud,Nefzaoua,,amb
 locality,Fedj-Assène,Le Kef,,Fedj-Assène,Le Kef,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,Fedj-Hassein,Contrôle du Kef,,Fedj-Hassein,Le Kef,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,Fedj-el-Adoum,Annexe de Teboursouk,,Fedj-el-Adoum,Téboursouk,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
+locality,Fedjet Khemaken,,,Fedjet Khemaken,,,,none,0,,,,,,education_schools
+locality,Fedjet-Khemakhem,,,Fedjet-Khemakhem,,,,none,0,,,,,,education_schools
 locality,Fehri (El),,Nabeul,Fehri (El),Grombalia,Nabeul,,none,0,,,,,,ind1931_t8_localities
 locality,Feriana,Contrôle de Thala,,Feriana,Thala,,,exact,1,649,Feriana,,34.9430540101271,8.56531927971463,eur1906_td_french_population_by_locality_1891_1901
 locality,Feriana,Thala,,Feriana,Thala,,,exact,1,649,Feriana,,34.9430540101271,8.56531927971463,eur1906_t2_locality_nationality
@@ -1382,68 +1471,104 @@ locality,"Fermes non groupées, Chantiers isolés de travaux publics, Gardes des
 locality,Fernana (banlieue est d'Aïn-Draham),Souk-el-Arba,,Fernana (banlieue est d'Aïn-Draham),Souk-el-Arba,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,Ferryville,Bizerte,,Ferryville,Bizerte,,,exact,1,453,Ferryville,,37.153727,9.788891,eur1906_t2_locality_nationality
 locality,Ferryville,Contrôle de Bizerte,,Ferryville,Bizerte,,,exact,1,453,Ferryville,,37.153727,9.788891,eur1906_td_french_population_by_locality_1891_1901
+locality,Ferryville,,,Ferryville,,,,exact,1,453,Ferryville,,37.153727,9.788891,education_schools;education_vocational
 locality,Feïdja,Souk-el-Arba,,Feïdja,Souk-el-Arba,,,exact,1,1266,Feija,,36.486107,8.309115,eur1906_t2_locality_nationality
 locality,Fondouck-Djedid,Grombalia,,Fondouck-Djedid,Grombalia,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,Fondouk d’El-Aouareb,Kairouan,,Fondouk d’El-Aouareb,Kairouan,,,none,0,,,,,,eur1906_t2_locality_nationality
+locality,Fondouk-Choucha,,,Fondouk-Choucha,,,,exact,1,378,Fondouk-Choucha,,36.75778,10.24806,education_schools
 locality,Fondouk-Choucha,Tunis,,Fondouk-Choucha,Tunis,,,exact,1,378,Fondouk-Choucha,,36.75778,10.24806,eur1906_t2_locality_nationality
 locality,Fondouk-Djedid,Contrôle de Grombalia,,Fondouk-Djedid,Grombalia,,,exact,1,187,Fondouk-Djedid,,36.65455,10.452888,eur1906_td_french_population_by_locality_1891_1901
+locality,Fondouk-Djedid,,,Fondouk-Djedid,,,,ambiguous,2,,,,,,education_schools
 locality,Fondouk-Djedid (banlieue),Contrôle de Grombalia,,Fondouk-Djedid,Grombalia,,,qualifier_stripped,1,187,Fondouk-Djedid,,36.65455,10.452888,eur1906_td_french_population_by_locality_1891_1901
+locality,Fondouk-Hafaïed,,,Fondouk-Hafaïed,,,,exact,1,5,Fondouk-Hafaied,,36.475003,10.608637,education_schools
+locality,Fouchana,,,Fouchana,,,,exact,1,417,Fouchana,,36.699714,10.167437,education_schools
+locality,Foum-Tatahouine,,,Foum-Tatahouine,,,,none,0,,,,,,education_schools
 locality,Frïet (El),,Sousse,Frïet (El),Sousse,Sousse,,exact,1,1068,El-Friet,,35.77,10.63,ind1931_t8_localities
+locality,Furna,,,Furna,,,,ambiguous,2,,,,,,education_schools
+locality,Fériana,,,Fériana,,,,exact,1,649,Feriana,,34.9430540101271,8.56531927971463,education_schools
 locality,Gabès,Gabès,,Gabès,Gabès,,,exact,1,7,Gabès,,33.8857096933919,10.0996046929066,eur1906_t2_locality_nationality
+locality,Gabès,,,Gabès,,,,exact,1,7,Gabès,,33.8857096933919,10.0996046929066,education_schools;education_vocational
+locality,Gabès (Chenini),,,Gabès (Chenini),,,,none,0,,,,,,education_vocational
+locality,Gabès (Menzel),,,Gabès (Menzel),,,,none,0,,,,,,education_vocational
 locality,Gabès (port),Contrôle de Gabès,,Gabès (port),Gabès,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,Gaffour,Le Kef,,Gaffour,Le Kef,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,Gafour,Annexe de Teboursouk,,Gafour,Téboursouk,,,exact,1,8,Gafour,,36.323129,9.32117,eur1906_td_french_population_by_locality_1891_1901
+locality,Gafour,,,Gafour,,,,exact,1,8,Gafour,,36.323129,9.32117,education_schools
 locality,Gafour,,Téboursouk,Gafour,Téboursouk,Téboursouk,,exact,1,8,Gafour,,36.323129,9.32117,ind1931_t8_localities
 locality,Gafsa,Gafsa,,Gafsa,Gafsa,,,exact,1,161,Gafsa,,34.423705,8.782501,eur1906_t2_locality_nationality
+locality,Gafsa,,,Gafsa,,,,exact,1,161,Gafsa,,34.423705,8.782501,education_vocational
+locality,Gafsa (gare),,,Gafsa (gare),,,,none,0,,,,,,education_schools
+locality,Gafsa (ville),,,Gafsa,,,,qualifier_stripped,1,161,Gafsa,,34.423705,8.782501,education_schools
 locality,Gafsa-Gare,Gafsa,,Gafsa-Gare,Gafsa,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,Gafsa-gare,Contrôle de Gafsa,,Gafsa-gare,Gafsa,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,Gafsa-ville,Contrôle de Gafsa,,Gafsa-ville,Gafsa,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
+locality,Galite (La),,,Galite (La),,,,none,0,,,,,,education_schools
 locality,Gallala,Annexe de Djerba,,Gallala,Djerba,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
+locality,Gamart,,,Gamart,,,,exact,1,9,Gamart,,36.910101,10.286288,education_schools
 locality,Gamart,Tunis,,Gamart,Tunis,,,exact,1,9,Gamart,,36.910101,10.286288,eur1906_t2_locality_nationality
 locality,Gamboura-Kebira,,Djelass,Gamboura-Kebira,Kairouan,Djelass,,none,0,,,,,,ind1931_t8_localities
 locality,Gamboura-Seghira,,,Gamboura-Seghira,,,,none,0,,,,,,ind1931_t8_localities
 locality,Gamouda,Contrôle de Gafsa,,Gamouda,Gafsa,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,Garia (El),,Ouled-Ayar,Garia (El),Maktar,Oulad-Ayar,,exact,1,955,El-Garia,,35.77,9.48,ind1931_t8_localities
+locality,Garn-Alfaya,,,Garn-Alfaya,,,,exact,1,10,Garn-Alfaya,,36.025211,8.517282,education_schools
 locality,Ghanem el-Kebir,Annexe de Medjez-el-Bab,,Ghanem el-Kebir,Medjez-el-Bab,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,Ghar (El),,Ouled-Aoun,Ghar (El),Maktar,Oulad-Aoun,,exact,1,938,El-Ghar,,36.05,9.65,ind1931_t8_localities
 locality,Ghardimaou,Contrôle de Souk-el-Arba,,Ghardimaou,Souk-el-Arba,,,exact,1,11,Ghardimaou,,36.447103544526,8.43827133348973,eur1906_td_french_population_by_locality_1891_1901
+locality,Ghardimaou,,,Ghardimaou,,,,exact,1,11,Ghardimaou,,36.447103544526,8.43827133348973,education_schools
 locality,Ghardimaou (Caïdat de),Souk-el-Arba,,Ghardimaou (Caïdat de),Souk-el-Arba,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,Ghardimaou (Centre),Souk-el-Arba,,Ghardimaou,Souk-el-Arba,,,qualifier_stripped,1,11,Ghardimaou,,36.447103544526,8.43827133348973,eur1906_t2_locality_nationality
 locality,Ghazouane,Annexe de Tabarca,,Ghazouane,Tabarka,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,Ghelissia,,Nefzaoua,Ghelissia,Territoires militaires du Sud,Nefzaoua,,none,0,,,,,,ind1931_t8_localities
 locality,Ghennouche,,Aradh,Ghennouche,Gabès,Aradh,,exact,1,870,Ghennouche,,33.94,10.0646,ind1931_t8_localities
+locality,Ghenouche,,,Ghenouche,,,,none,0,,,,,,education_schools
+locality,Ghomrassen,,,Ghomrassen,,,,exact,1,12,Ghomrassen,,33.060144,10.33998,education_schools
 locality,Ghomrassen,,Tatahouine,Ghomrassen,Territoires militaires du Sud,Tatahouine,,exact,1,12,Ghomrassen,,33.060144,10.33998,ind1931_t8_localities
 locality,Goubellat,Annexe de Medjez-el-Bab,,Goubellat,Medjez-el-Bab,,,exact,1,311,Goubellat,,36.5397119046798,9.66120413773614,eur1906_td_french_population_by_locality_1891_1901
 locality,Goubellat,Béja,,Goubellat,Béja,,,exact,1,311,Goubellat,,36.5397119046798,9.66120413773614,eur1906_t2_locality_nationality
+locality,Goubellat (Le),,,Goubellat (Le),,,,exact,1,311,Goubellat,,36.5397119046798,9.66120413773614,education_schools
+locality,Goulette (La),,,Goulette (La),,,,exact,1,14,La Goulette,,36.820138,10.304205,education_schools
 locality,"Goussat-el-Bey, Dkrila",Tunis,,Goussat-el-Bey,Tunis,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,Graïba,Contrôle de Sfax,,Graïba,Sfax,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,Graïba,Sfax,,Graïba,Sfax,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,Grich-el-Oued,,Medjez-El-Bab,Grich-el-Oued,Medjez-el-Bab,Medjez-el-Bab,,none,0,,,,,,ind1931_t8_localities
 locality,Grombalia,Contrôle de Grombalia,,Grombalia,Grombalia,,,exact,1,1003,Grombalia,,36.6,10.5,eur1906_td_french_population_by_locality_1891_1901
 locality,Grombalia,Grombalia,,Grombalia,Grombalia,,,exact,1,1003,Grombalia,,36.6,10.5,eur1906_t2_locality_nationality
+locality,Grombalia,,,Grombalia,,,,exact,1,1003,Grombalia,,36.6,10.5,education_schools;education_vocational
 locality,Grombalia (Environs de),Grombalia,,Grombalia (Environs de),Grombalia,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,Grombalia (banlieue),Contrôle de Grombalia,,Grombalia,Grombalia,,,qualifier_stripped,1,1003,Grombalia,,36.6,10.5,eur1906_td_french_population_by_locality_1891_1901
 locality,Gueliâ (El),,Djelass,Gueliâ (El),Kairouan,Djelass,,none,0,,,,,,ind1931_t8_localities
 locality,Gueliâ (El),,Nefzaoua,Gueliâ (El),Territoires militaires du Sud,Nefzaoua,,none,0,,,,,,ind1931_t8_localities
 locality,Guellala,Gabès,,Guellala,Gabès,,,exact,1,603,Guellala,,33.73,10.86,eur1906_t2_locality_nationality
+locality,Guellala (Djerba),,,Guellala (Djerba),,,,none,0,,,,,,education_schools
 locality,Guermassa,,Tatahouine,Guermassa,Territoires militaires du Sud,Tatahouine,,none,0,,,,,,ind1931_t8_localities
 locality,Guettar (El),,Gafsa,Guettar (El),Gafsa,Gafsa,,none,0,,,,,,ind1931_t8_localities
+locality,Guétar (El),,,Guétar (El),,,,exact,1,145,El-Guetar,,34.339324,8.950145,education_schools
 locality,Hadjaj (El),,Medjez-El-Bab,Hadjaj (El),Medjez-el-Bab,Medjez-el-Bab,,none,0,,,,,,ind1931_t8_localities
 locality,Hadjeb-el-Aïoun,Contrôle de Kairouan,,Hadjeb-el-Aïoun,Kairouan,,,exact,1,210,Hadjeb El-Aïoun,,35.393639,9.542921,eur1906_td_french_population_by_locality_1891_1901
 locality,Hadjeb-el-Aïoun,Kairouan,,Hadjeb-el-Aïoun,Kairouan,,,exact,1,210,Hadjeb El-Aïoun,,35.393639,9.542921,eur1906_t2_locality_nationality
+locality,Hadjeb-el-Aïoun,,,Hadjeb-el-Aïoun,,,,ambiguous,2,,,,,,education_schools
 locality,Hafi-Rass,,Matmata,Hafi-Rass,Territoires militaires du Sud,Matmata,,none,0,,,,,,ind1931_t8_localities
 locality,Hafsa,,Matmata,Hafsa,Territoires militaires du Sud,Matmata,,none,0,,,,,,ind1931_t8_localities
+locality,Hamaïm,,,Hamaïm,,,,none,0,,,,,,education_schools
 locality,Hamaïm,Tunis,,Hamaïm,Tunis,,,none,0,,,,,,eur1906_t2_locality_nationality
+locality,Hamma (El),,,Hamma (El),,,,ambiguous,2,,,,,,education_schools
+locality,Hamma (El) de Gabès,,,Hamma (El) de Gabès,,,,exact,1,15,Hamma de Gabes,,33.878581,9.75173,education_schools
+locality,Hamma (El) du Djerid,,,Hamma (El) du Djerid,,,,exact,1,179,El-Hamma du Djerid,,33.9974860897746,8.17062268988454,education_schools
 locality,Hammam-Lif,Contrôle de Tunis,,Hammam-Lif,Tunis,,,exact,1,17,Hammam-Lif,,36.723072,10.344176,eur1906_td_french_population_by_locality_1891_1901
+locality,Hammam-Lif,,,Hammam-Lif,,,,exact,1,17,Hammam-Lif,,36.723072,10.344176,education_schools
 locality,Hammam-Lif,Tunis,,Hammam-Lif,Tunis,,,exact,1,17,Hammam-Lif,,36.723072,10.344176,eur1906_t2_locality_nationality
 locality,Hammam-Sousse,Contrôle de Sousse,,Hammam-Sousse,Sousse,,,exact,1,1076,Hammam-Sousse,,35.856807,10.595364,eur1906_td_french_population_by_locality_1891_1901
+locality,Hammam-Sousse,,,Hammam-Sousse,,,,exact,1,1076,Hammam-Sousse,,35.856807,10.595364,education_schools
 locality,Hammam-Sousse,,Sousse,Hammam-Sousse,Sousse,Sousse,,exact,1,1076,Hammam-Sousse,,35.856807,10.595364,ind1931_t8_localities
 locality,Hammam-Sousse,Sousse,,Hammam-Sousse,Sousse,,,exact,1,1076,Hammam-Sousse,,35.856807,10.595364,eur1906_t2_locality_nationality
 locality,Hammamet,Contrôle de Grombalia,,Hammamet,Grombalia,,,exact,1,856,Hammamet,,36.41,10.622471,eur1906_td_french_population_by_locality_1891_1901
 locality,Hammamet,Grombalia,,Hammamet,Grombalia,,,exact,1,856,Hammamet,,36.41,10.622471,eur1906_t2_locality_nationality
 locality,Hammamet,,Nabeul,Hammamet,Grombalia,Nabeul,,exact,1,856,Hammamet,,36.41,10.622471,ind1931_t8_localities
+locality,Hammamet,,,Hammamet,,,,ambiguous,2,,,,,,education_schools
+locality,Hammaïm,,,Hammaïm,,,,exact,1,16,Hammaim,,,,education_schools
 locality,Haouaria (El),,Nabeul,Haouaria (El),Grombalia,Nabeul,,exact,1,201,Haouaria,,37.0497825586771,11.0115295196622,ind1931_t8_localities
 locality,Hara-Kebira,Annexe de Djerba,,Hara-Kebira,Djerba,,,exact,1,594,Hara-Kebira,,33.865056,10.866151,eur1906_td_french_population_by_locality_1891_1901
+locality,Hara-Srira (Djerba),,,Hara-Srira (Djerba),,,,none,0,,,,,,education_schools
 locality,Hassi-Djerbi,,Ouerghemma (Terr. de Zarzis),Hassi-Djerbi,Territoires militaires du Sud,Ouerghemma,,none,0,,,,,,ind1931_t8_localities
 locality,Haïdra,Contrôle de Thala,,Haïdra,Thala,,,exact,1,321,Haïdra,,35.565431,8.444066,eur1906_td_french_population_by_locality_1891_1901
 locality,Haïdra,Thala,,Haïdra,Thala,,,exact,1,321,Haïdra,,35.565431,8.444066,eur1906_t2_locality_nationality
@@ -1451,50 +1576,71 @@ locality,Hedage,,Matmata,Hedage,Territoires militaires du Sud,Matmata,,none,0,,,
 locality,Hencha (El),,Mahdia,Hencha (El),Sousse,Mahdia,,conflict,1,,,,,,ind1931_t8_localities
 locality,Heraïria,,Tunis-Banlieue,Heraïria,Tunis,Tunis-Banlieue,,none,0,,,,,,ind1931_t8_localities
 locality,Hergla,Contrôle de Sousse,,Hergla,Sousse,,,exact,1,19,Hergla,,36.030038,10.507693,eur1906_td_french_population_by_locality_1891_1901
+locality,Hergla,,,Hergla,,,,exact,1,19,Hergla,,36.030038,10.507693,education_schools
 locality,Hergla,,Sousse,Hergla,Sousse,Sousse,,exact,1,19,Hergla,,36.030038,10.507693,ind1931_t8_localities
+locality,Hiboun,,,Hiboun,,,,exact,1,20,Hiboun,,35.52268,11.031582,education_schools
 locality,Hiboune,,Mahdia,Hiboune,Sousse,Mahdia,,none,0,,,,,,ind1931_t8_localities
 locality,Houch-Sfaïa,,Ouled-Ayar,Houch-Sfaïa,Maktar,Oulad-Ayar,,none,0,,,,,,ind1931_t8_localities
 locality,Houmt-Souk,Annexe de Djerba,,Houmt-Souk,Djerba,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,Houmt-Souk,Gabès,,Houmt-Souk,Gabès,,,none,0,,,,,,eur1906_t2_locality_nationality
+locality,Houmt-Souk,,,Houmt-Souk,,,,none,0,,,,,,education_vocational
+locality,Houmt-Souk (Djerba),,,Houmt-Souk (Djerba),,,,none,0,,,,,,education_schools
 locality,Ile Cani,Contrôle de Bizerte,,Ile Cani,Bizerte,,,exact,1,494,Ile Cani,,37.355316,10.123625,eur1906_td_french_population_by_locality_1891_1901
 locality,Ile de la Galite,Annexe de Tabarca,,Ile de la Galite,Tabarka,,,conflict,1,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,Ile de la Galite,Bizerte,,Ile de la Galite,Bizerte,,,exact,1,489,Ile de la Galite,,37.5303,8.933494,eur1906_t2_locality_nationality
 locality,Jalta,Contrôle de Bizerte,,Jalta,Bizerte,,,exact,1,464,Jalta,,37.07417,9.53222,eur1906_td_french_population_by_locality_1891_1901
+locality,Jalta,,,Jalta,,,,exact,1,464,Jalta,,37.07417,9.53222,education_schools
+locality,Jama,,,Jama,,,,exact,1,21,Jema (Siliana),,36.1123814873654,9.2848002252173,education_schools
 locality,Jama,,Ouled-Aoun,Jama,Maktar,Oulad-Aoun,,exact,1,21,Jema (Siliana),,36.1123814873654,9.2848002252173,ind1931_t8_localities
 locality,K'sar-Beni-Aïssa,,Matmata,K'sar-Beni-Aïssa,Territoires militaires du Sud,Matmata,,none,0,,,,,,ind1931_t8_localities
 locality,Kairouan,Kairouan,,Kairouan,Kairouan,,,exact,1,22,Kairouan,,35.675914,10.091924,eur1906_t2_locality_nationality
+locality,Kairouan,,,Kairouan,,,,exact,1,22,Kairouan,,35.675914,10.091924,education_schools;education_vocational
 locality,Kalaa (El),,Nefzaoua,Kalaa (El),Territoires militaires du Sud,Nefzaoua,,exact,1,873,El-Kalaa,,33.484854,9.007165,ind1931_t8_localities
 locality,Kalaa-Djerda,,Tadjerouine,Kalaa-Djerda,Le Kef,Tadjerouine,,exact,1,230,Kalaa-Djerda,,35.6633492337049,8.58598584079496,ind1931_t8_localities
+locality,Kalaat-Senam (Mine),,,Kalaat-Senam (Mine),,,,none,0,,,,,,education_schools
 locality,Kalaâ-Djerda,Le Kef,,Kalaâ-Djerda,Le Kef,,,exact,1,230,Kalaa-Djerda,,35.6633492337049,8.58598584079496,eur1906_t2_locality_nationality
+locality,Kalaâ-Djerda,,,Kalaâ-Djerda,,,,exact,1,230,Kalaa-Djerda,,35.6633492337049,8.58598584079496,education_schools
+locality,Kalaâ-Kebira,,,Kalaâ-Kebira,,,,exact,1,23,Kalaa-Kebira,,35.869824,10.535237,education_schools
 locality,Kalaâ-Kebira,Sousse,,Kalaâ-Kebira,Sousse,,,exact,1,23,Kalaa-Kebira,,35.869824,10.535237,eur1906_t2_locality_nationality
 locality,Kalaâ-Seghira,,Sousse,Kalaâ-Seghira,Sousse,Sousse,,exact,1,1077,Kalaa-Seghira,,35.821903894416,10.566678108306,ind1931_t8_localities
 locality,Kalaâ-Sghira,Sousse,,Kalaâ-Sghira,Sousse,,,none,0,,,,,,eur1906_t2_locality_nationality
+locality,Kalaâ-Srira,,,Kalaâ-Srira,,,,none,0,,,,,,education_schools
 locality,Kalaât-Ben-Aïssa,,Matmata,Kalaât-Ben-Aïssa,Territoires militaires du Sud,Matmata,,none,0,,,,,,ind1931_t8_localities
 locality,Kalaât-Landeleuss,,Tunis-Banlieue,Kalaât-Landeleuss,Tunis,Tunis-Banlieue,,none,0,,,,,,ind1931_t8_localities
 locality,Kalaât-Senam,,Tadjerouine,Kalaât-Senam,Le Kef,Tadjerouine,,none,0,,,,,,ind1931_t8_localities
+locality,Kalaât-el-Andleuss,,,Kalaât-el-Andleuss,,,,exact,1,24,Kalaat-El-Andalous,,37.061832,10.119917,education_schools
 locality,Kalaât-es-Senam,Le Kef,,Kalaât-es-Senam,Le Kef,,,none,0,,,,,,eur1906_t2_locality_nationality
+locality,Kalaât-es-Senam (gare),,,Kalaât-es-Senam (gare),,,,none,0,,,,,,education_schools
 locality,Kalâa-Djerda,Contrôle du Kef,,Kalâa-Djerda,Le Kef,,,exact,1,230,Kalaa-Djerda,,35.6633492337049,8.58598584079496,eur1906_td_french_population_by_locality_1891_1901
 locality,Kalâa-Kebira,Contrôle de Sousse,,Kalâa-Kebira,Sousse,,,exact,1,23,Kalaa-Kebira,,35.869824,10.535237,eur1906_td_french_population_by_locality_1891_1901
 locality,Kalâa-Sghira,Contrôle de Sousse,,Kalâa-Sghira,Sousse,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
+locality,Kanguet-el-Hadjaj,,,Kanguet-el-Hadjaj,,,,exact,1,183,Khanguet-El-Hadjadj,,36.617603,10.406839,education_schools
 locality,Kasrine (El),,Madjeurs,Kasrine (El),Thala,Madjeurs,,exact,1,647,Kasserine,,35.17,8.84,ind1931_t8_localities
 locality,Kasserine,Contrôle de Thala,,Kasserine,Thala,,,exact,1,647,Kasserine,,35.17,8.84,eur1906_td_french_population_by_locality_1891_1901
+locality,Kasserine,,,Kasserine,,,,exact,1,647,Kasserine,,35.17,8.84,education_schools
 locality,Kasserine,Thala,,Kasserine,Thala,,,exact,1,647,Kasserine,,35.17,8.84,eur1906_t2_locality_nationality
 locality,Kebbouch,Le Kef,,Kebbouch,Le Kef,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,Kebili,,Nefzaoua,Kebili,Territoires militaires du Sud,Nefzaoua,,exact,1,26,Kebili,,33.7029352692366,8.96913732215862,ind1931_t8_localities
+locality,Kebili,,,Kebili,,,,exact,1,26,Kebili,,33.7029352692366,8.96913732215862,education_schools
 locality,Kebili,Territoire du Sud,,Kebili,Territoires militaires du Sud,,,exact,1,26,Kebili,,33.7029352692366,8.96913732215862,eur1906_td_french_population_by_locality_1891_1901
 locality,Kebili,Territoires du Sud,,Kebili,Territoires militaires du Sud,,,exact,1,26,Kebili,,33.7029352692366,8.96913732215862,eur1906_t2_locality_nationality
 locality,Kef,Contrôle du Kef,,Kef,Le Kef,,,exact,1,38,Le Kef,,36.169628,8.707127,eur1906_td_french_population_by_locality_1891_1901
 locality,Kef,Le Kef,,Kef,Le Kef,,,exact,1,38,Le Kef,,36.169628,8.707127,eur1906_t2_locality_nationality
 locality,Kef (Banlieue),Le Kef,,Kef,Le Kef,,,qualifier_stripped,1,38,Le Kef,,36.169628,8.707127,eur1906_t2_locality_nationality
+locality,Kef (Le),,,Kef (Le),,,,exact,1,38,Le Kef,,36.169628,8.707127,education_schools;education_vocational
 locality,Kef (Quartier militaire),Le Kef,,Kef,Le Kef,,,qualifier_stripped,1,38,Le Kef,,36.169628,8.707127,eur1906_t2_locality_nationality
+locality,Kef-Chambi,,,Kef-Chambi,,,,none,0,,,,,,education_schools
 locality,Kelibia,Contrôle de Grombalia,,Kelibia,Grombalia,,,exact,1,863,Kelibia,,36.8455913215579,11.094512414525,eur1906_td_french_population_by_locality_1891_1901
 locality,Kelibia,Grombalia,,Kelibia,Grombalia,,,exact,1,863,Kelibia,,36.8455913215579,11.094512414525,eur1906_t2_locality_nationality
 locality,Kelibia,,Nabeul,Kelibia,Grombalia,Nabeul,,exact,1,863,Kelibia,,36.8455913215579,11.094512414525,ind1931_t8_localities
+locality,Kelibia,,,Kelibia,,,,exact,1,863,Kelibia,,36.8455913215579,11.094512414525,education_schools
 locality,Kellabine,,Sfax,Kellabine,Sfax,Sfax,,none,0,,,,,,ind1931_t8_localities
+locality,Kellabine (Kerkenna),,,Kellabine (Kerkenna),,,,none,0,,,,,,education_schools
 locality,Kerkenna,Sfax,,Kerkenna,Sfax,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,Kerker,Sousse,,Kerker,Sousse,,,exact,1,780,Kerker,,35.469196,10.655964,eur1906_t2_locality_nationality
 locality,Kesra,Mactar,,Kesra,Maktar,,,exact,1,957,Kesra,,35.813811,9.365255,eur1906_t2_locality_nationality
 locality,Kesra,,Ouled-Ayar,Kesra,Maktar,Oulad-Ayar,,exact,1,957,Kesra,,35.813811,9.365255,ind1931_t8_localities
+locality,Kesra (La),,,Kesra (La),,,,exact,1,957,Kesra,,35.813811,9.365255,education_schools
 locality,Kessara,Contrôle de Mactar,,Kessara,Maktar,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,Ketana,,Aradh,Ketana,Gabès,Aradh,,exact,1,833,Ketana,,33.76,10.20837,ind1931_t8_localities
 locality,Khalled,Annexe de Teboursouk,,Khalled,Téboursouk,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
@@ -1502,53 +1648,73 @@ locality,Khanguet,Contrôle de Grombalia,,Khanguet,Grombalia,,,none,0,,,,,,eur19
 locality,Khanguet Kef Tout,Béja,,Khanguet Kef Tout,Béja,,,exact,1,153,Khanguet-Kef-Tout,,36.9,9.11667,eur1906_t2_locality_nationality
 locality,Khanguet-Gare et Semech,Grombalia,,Khanguet-Gare et Semech,Grombalia,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,Khanguet-Kef-Tout,Contrôle de Béja,,Khanguet-Kef-Tout,Béja,,,exact,1,153,Khanguet-Kef-Tout,,36.9,9.11667,eur1906_td_french_population_by_locality_1891_1901
+locality,Khanguet-el-Hadjaj,,,Khanguet-el-Hadjaj,,,,exact,1,183,Khanguet-El-Hadjadj,,36.617603,10.406839,education_schools
 locality,Khanguet-el-Hajaj et Ben-Aïech,Grombalia,,Khanguet-el-Hajaj et Ben-Aïech,Grombalia,,,none,0,,,,,,eur1906_t2_locality_nationality
+locality,Khanguet-gare,,,Khanguet-gare,,,,none,0,,,,,,education_schools
 locality,Khenis,,Monastir,Khenis,Sousse,Monastir,,exact,1,845,Khenis,,35.71,10.815102,ind1931_t8_localities
 locality,Kheraïb (El),,Sfax,Kheraïb (El),Sfax,Sfax,,none,0,,,,,,ind1931_t8_localities
 locality,Kheriba (El),,Djebeniana,Kheriba (El),Sfax,Djebeniana,,exact,1,548,El-Kheriba,,34.983057,10.895782,ind1931_t8_localities
 locality,Khetmine,Bizerte,,Khetmine,Bizerte,,,none,0,,,,,,eur1906_t2_locality_nationality
+locality,Khlédia,,,Khlédia,,,,exact,1,28,Khledia,,36.644301,10.193304,education_schools
 locality,Khroumir-Atatfa,Annexe de Tabarca,,Khroumir-Atatfa,Tabarka,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,Khroumir-Tabarca,Annexe de Tabarca,,Khroumir-Tabarca,Tabarka,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,Klédia,Tunis,,Klédia,Tunis,,,exact,1,28,Khledia,,36.644301,10.193304,eur1906_t2_locality_nationality
 locality,Knaïs,,Sousse,Knaïs,Sousse,Sousse,,exact,1,1072,Knaïs,,35.68,10.51,ind1931_t8_localities
 locality,Korba,Contrôle de Grombalia,,Korba,Grombalia,,,exact,1,29,Korba,,36.57277,10.857826,eur1906_td_french_population_by_locality_1891_1901
 locality,Korba,,Nabeul,Korba,Grombalia,Nabeul,,exact,1,29,Korba,,36.57277,10.857826,ind1931_t8_localities
+locality,Korba,,,Korba,,,,exact,1,29,Korba,,36.57277,10.857826,education_schools
 locality,Korbeus,Contrôle de Grombalia,,Korbeus,Grombalia,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,Korbous,Grombalia,,Korbous,Grombalia,,,exact,1,192,Korbous,,36.816613,10.568155,eur1906_t2_locality_nationality
+locality,Korbous,,,Korbous,,,,exact,1,192,Korbous,,36.816613,10.568155,education_schools
 locality,Korbous,,Soliman,Korbous,Grombalia,Soliman,,exact,1,192,Korbous,,36.816613,10.568155,ind1931_t8_localities
 locality,Korhens,Contrôle du Kef,,Korhens,Le Kef,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,Korib,Annexe de Teboursouk,,Korib,Téboursouk,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
+locality,Kouba-Kebira,,,Kouba-Kebira,,,,exact,1,191,Kouba-Kebira,,36.60228,10.58419,education_schools
+locality,Kram,,,Kram,,,,exact,1,357,Le Kram,,36.834315,10.316352,education_schools
 locality,Kram,Tunis,,Kram,Tunis,,,exact,1,357,Le Kram,,36.834315,10.316352,eur1906_t2_locality_nationality
 locality,Krib,Annexe de Teboursouk,,Krib,Téboursouk,,,exact,1,39,Krib,,36.329189,9.133385,eur1906_td_french_population_by_locality_1891_1901
 locality,Krib,Le Kef,,Krib,Le Kef,,,exact,1,39,Krib,,36.329189,9.133385,eur1906_t2_locality_nationality
+locality,Krib (Le),,,Krib (Le),,,,exact,1,39,Krib,,36.329189,9.133385,education_schools
 locality,Kriz,Gafsa,,Kriz,Gafsa,,,exact,1,633,Kriz,,34.036762,8.340696,eur1906_t2_locality_nationality
 locality,Kriz,,Djerid,Kriz,Tozeur,Djerid,,exact,1,633,Kriz,,34.036762,8.340696,ind1931_t8_localities
 locality,Kroussiah,Contrôle de Sousse,,Kroussiah,Sousse,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,Krussiah-Sahali,Sousse,,Krussiah-Sahali,Sousse,,,none,0,,,,,,eur1906_t2_locality_nationality
+locality,Ksar (El),,,Ksar (El),,,,ambiguous,3,,,,,,education_schools
 locality,Ksar Mezoual,Béja,,Ksar Mezoual,Béja,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,Ksar-Ellal,Contrôle de Sousse,,Ksar-Ellal,Sousse,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,Ksar-Hellal,,Monastir,Ksar-Hellal,Sousse,Monastir,,exact,1,32,Ksar-Hellal,,35.647952,10.875709,ind1931_t8_localities
+locality,Ksar-Hellal,,,Ksar-Hellal,,,,exact,1,32,Ksar-Hellal,,35.647952,10.875709,education_schools;education_vocational
+locality,Ksar-Lahmar,,,Ksar-Lahmar,,,,exact,1,33,Ksar-Lahmar,,,,education_schools
 locality,Ksar-Tyr,Annexe de Medjez-el-Bab,,Ksar-Tyr,Medjez-el-Bab,,,exact,1,326,Ksar-Tyr,,36.60154,9.79419,eur1906_td_french_population_by_locality_1891_1901
 locality,Ksar-Tyr et région Est,Béja,,Ksar-Tyr et région Est,Béja,,,none,0,,,,,,eur1906_t2_locality_nationality
+locality,Ksar-el-Ahmar,,,Ksar-el-Ahmar,,,,none,0,,,,,,education_schools
+locality,Ksiba-Sousse,,,Ksiba-Sousse,,,,exact,1,34,Ksibet,,,,education_schools
 locality,Ksibet-El-Mediouni,,,Ksibet-El-Mediouni,,,,exact,1,846,Ksibet-El-Médiouni,,35.69,10.844557,ind1931_t8_localities
 locality,Ksibet-Mediouni,Sousse,,Ksibet-Mediouni,Sousse,,,exact,1,846,Ksibet-El-Médiouni,,35.69,10.844557,eur1906_t2_locality_nationality
 locality,Ksibet-Sousse,,Sousse,Ksibet-Sousse,Sousse,Sousse,,exact,1,1065,Ksibet-Sousse,,35.773105,10.625366,ind1931_t8_localities
 locality,Ksibet-Sousse,Sousse,,Ksibet-Sousse,Sousse,,,exact,1,1065,Ksibet-Sousse,,35.773105,10.625366,eur1906_t2_locality_nationality
 locality,Ksour,Contrôle du Kef,,Ksour,Le Kef,,,exact,1,1096,El-Ksour,,35.89487,8.88403,eur1906_td_french_population_by_locality_1891_1901
+locality,Ksour,,,Ksour,,,,ambiguous,2,,,,,,education_schools
 locality,Ksour,,Tadjerouine,Ksour,Le Kef,Tadjerouine,,exact,1,1096,El-Ksour,,35.89487,8.88403,ind1931_t8_localities
 locality,Ksour-Essaf,Contrôle de Sousse,,Ksour-Essaf,Sousse,,,exact,1,35,Ksour-Essaf,,35.4167923124299,10.9961352983127,eur1906_td_french_population_by_locality_1891_1901
+locality,Ksour-Essaf,,,Ksour-Essaf,,,,exact,1,35,Ksour-Essaf,,35.4167923124299,10.9961352983127,education_schools
 locality,Ksour-Saf,Sousse,,Ksour-Saf,Sousse,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,Kéreddine,Tunis,,Kéreddine,Tunis,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,La Cebala (Mornag),Tunis,,La Cebala (Mornag),Tunis,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,La Cebala (route de Bizerte),Tunis,,La Cebala (route de Bizerte),Tunis,,,none,0,,,,,,eur1906_t2_locality_nationality
+locality,La Chebba,,,La Chebba,,,,exact,1,118,Chebba,,35.23369,11.110785,education_vocational
 locality,La Goulette,Contrôle de Tunis,,La Goulette,Tunis,,,exact,1,14,La Goulette,,36.820138,10.304205,eur1906_td_french_population_by_locality_1891_1901
 locality,La Goulette-Neuve,Tunis,,La Goulette-Neuve,Tunis,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,La Goulette-Vieille,Tunis,,La Goulette-Vieille,Tunis,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,La Hafsia,Tunis,,La Hafsia,Tunis,,,exact,1,371,El-Hafsia,,36.802944,10.169428,eur1906_t2_locality_nationality
+locality,La Hencha,,,La Hencha,,,,exact,1,559,El-Hencha,,35.119239,10.740723,education_schools
+locality,La Laverie (Djebel-Reças),,,La Laverie (Djebel-Reças),,,,exact,1,37,La Laverie (Djebel-Recas),,36.609871,10.319313,education_schools
 locality,La Laverie (Mine du Djebel-Reças),Tunis,,La Laverie (Mine du Djebel-Reças),Tunis,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,La Malga,Tunis,,La Malga,Tunis,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,La Manouba,Contrôle de Tunis,,La Manouba,Tunis,,,exact,1,45,Manouba,,36.809328,10.086327,eur1906_td_french_population_by_locality_1891_1901
+locality,La Manouba,,,La Manouba,,,,exact,1,45,Manouba,,36.809328,10.086327,education_schools
 locality,La Marsa,Contrôle de Tunis,,La Marsa,Tunis,,,exact,1,46,La Marsa,,36.894009,10.312697,eur1906_td_french_population_by_locality_1891_1901
+locality,La Marsa,,,La Marsa,,,,exact,1,46,La Marsa,,36.894009,10.312697,education_schools
 locality,La Marsa,Tunis,,La Marsa,Tunis,,,exact,1,46,La Marsa,,36.894009,10.312697,eur1906_t2_locality_nationality
 locality,La Mornaghia,Tunis,,La Mornaghia,Tunis,,,exact,1,372,Mornaguia,,36.757159,10.015531,eur1906_t2_locality_nationality
 locality,La Skira,Contrôle de Sfax,,La Skira,Sfax,,,exact,1,278,Skhira,,34.298556,10.076657,eur1906_td_french_population_by_locality_1891_1901
@@ -1560,8 +1726,10 @@ locality,Laalaa (El),,Zaghouan,Laalaa (El),Zaghouan,Zaghouan,,none,0,,,,,,ind193
 locality,Lagered,Contrôle de Thala,,Lagered,Thala,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,Lala,,Gafsa,Lala,Gafsa,Gafsa,,exact,1,677,Lala,,34.39,8.82,ind1931_t8_localities
 locality,Lamta,,Monastir,Lamta,Sousse,Monastir,,exact,1,847,Lamta,,35.675369,10.880429,ind1931_t8_localities
+locality,Lamta,,,Lamta,,,,exact,1,847,Lamta,,35.675369,10.880429,education_schools
 locality,Landas-Dajinville,Contrôle de Sfax,,Landas-Dajinville,Sfax,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,Le Bardo,Contrôle de Tunis,,Le Bardo,Tunis,,,exact,1,328,Le Bardo,,36.813457,10.14071,eur1906_td_french_population_by_locality_1891_1901
+locality,Le Kef,,,Le Kef,,,,exact,1,38,Le Kef,,36.169628,8.707127,education_schools
 locality,Le Kram,Contrôle de Tunis,,Le Kram,Tunis,,,exact,1,357,Le Kram,,36.834315,10.316352,eur1906_td_french_population_by_locality_1891_1901
 locality,Louza (El),,Djebeniana,Louza (El),Sfax,Djebeniana,,exact,1,550,Louza,,35.03,11,ind1931_t8_localities
 locality,M'Kada,Contrôle de Bizerte,,M'Kada,Bizerte,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
@@ -1571,31 +1739,47 @@ locality,M'rira,Tunis,,M'rira,Tunis,,,exact,1,418,M'Rira,,36.71877,10.15907,eur1
 locality,M'saïd,,Nefzaoua,M'saïd,Territoires militaires du Sud,Nefzaoua,,none,0,,,,,,ind1931_t8_localities
 locality,Maalga (El),,Tunis-Banlieue,Maalga (El),Tunis,Tunis-Banlieue,,none,0,,,,,,ind1931_t8_localities
 locality,Maamoura (El),,Nabeul,Maamoura (El),Grombalia,Nabeul,,exact,1,853,El-Maamoura,,36.46,10.806427,ind1931_t8_localities
+locality,Maareth,,,Maareth,,,,exact,1,40,Maareth,,33.618174,10.286115,education_schools
 locality,Mactar,Contrôle de Mactar,,Mactar,Maktar,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,Mactar,Mactar,,Mactar,Maktar,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,Madhia,Sousse,,Madhia,Sousse,,,none,0,,,,,,eur1906_t2_locality_nationality
+locality,Maharine,,,Maharine,,,,exact,1,42,Maharine,,,,education_schools
+locality,Maharès,,,Maharès,,,,exact,1,734,Al-Maharas,,34.5276354727116,10.4970924885485,education_schools
 locality,Maharès,Sfax,,Maharès,Sfax,,,exact,1,734,Al-Maharas,,34.5276354727116,10.4970924885485,eur1906_t2_locality_nationality
+locality,Mahboubine (Djerba),,,Mahboubine (Djerba),,,,none,0,,,,,,education_schools
 locality,Mahdia,Contrôle de Sousse,,Mahdia,Sousse,,,exact,1,43,Mahdia,,35.503843,11.062875,eur1906_td_french_population_by_locality_1891_1901
+locality,Mahdia,,,Mahdia,,,,exact,1,43,Mahdia,,35.503843,11.062875,education_schools;education_vocational
 locality,Maisonnette des équipes,Contrôle de Gafsa,,Maisonnette des équipes,Gafsa,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,Majoura,,Gafsa,Majoura,Gafsa,Gafsa,,exact,1,678,Majoura,,34.66,9.24,ind1931_t8_localities
 locality,Maknassy,Contrôle de Gafsa,,Maknassy,Gafsa,,,exact,1,165,Maknassy,,34.606659,9.607053,eur1906_td_french_population_by_locality_1891_1901
 locality,Maknassy,Gafsa,,Maknassy,Gafsa,,,exact,1,165,Maknassy,,34.606659,9.607053,eur1906_t2_locality_nationality
+locality,Maknassy,,,Maknassy,,,,exact,1,165,Maknassy,,34.606659,9.607053,education_schools
+locality,Maktar,,,Maktar,,,,exact,1,44,Maktar,,35.855891,9.205556,education_schools
 locality,Maktar,,Ouled-Ayar,Maktar,Maktar,Oulad-Ayar,,exact,1,44,Maktar,,35.855891,9.205556,ind1931_t8_localities
 locality,Manouba,Tunis,,Manouba,Tunis,,,exact,1,45,Manouba,,36.809328,10.086327,eur1906_t2_locality_nationality
+locality,Manouba (La),,,Manouba (La),,,,exact,1,45,Manouba,,36.809328,10.086327,education_schools
 locality,Manouba (La),,Tunis-Banlieue,Manouba (La),Tunis,Tunis-Banlieue,,exact,1,45,Manouba,,36.809328,10.086327,ind1931_t8_localities
 locality,Mansoura (El),,Nefzaoua,Mansoura (El),Territoires militaires du Sud,Nefzaoua,,exact,1,874,El-Mansoura,,33.7261,8.9386,ind1931_t8_localities
 locality,Mansoura (El),,Ouled-Ayar,Mansoura (El),Maktar,Oulad-Ayar,,exact,1,958,El-Mansoura,,35.795485,9.486382,ind1931_t8_localities
 locality,Mansourah,Territoire du Sud,,Mansourah,Territoires militaires du Sud,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,Mareth,Gabès,,Mareth,Gabès,,,exact,1,818,Mareth,,33.62,10.2828,eur1906_t2_locality_nationality
 locality,Mareth,,Aradh,Mareth,Gabès,Aradh,,exact,1,818,Mareth,,33.62,10.2828,ind1931_t8_localities
+locality,Mareth,,,Mareth,,,,exact,1,818,Mareth,,33.62,10.2828,education_schools
+locality,Marquez-Kamoun,,,Marquez-Kamoun,,,,none,0,,,,,,education_schools
+locality,Marsa (La),,,Marsa (La),,,,exact,1,46,La Marsa,,36.894009,10.312697,education_schools
 locality,Masdour,,Monastir,Masdour,Sousse,Monastir,,exact,1,47,Masdour,,35.680924,10.728863,ind1931_t8_localities
+locality,Masdour,,,Masdour,,,,exact,1,47,Masdour,,35.680924,10.728863,education_schools
 locality,Massicault,Tunis,,Massicault,Tunis,,,none,0,,,,,,eur1906_t2_locality_nationality
+locality,Massicault (Bordj-el-Amri),,,Massicault (Bordj-el-Amri),,,,exact,1,48,Massicault (Borj-el-Amri),,36.713153,9.8835,education_schools
 locality,Mateur,Bizerte,,Mateur,Bizerte,,,exact,1,50,Mateur,,37.038887,9.664764,eur1906_t2_locality_nationality
+locality,Mateur,,,Mateur,,,,exact,1,50,Mateur,,37.038887,9.664764,education_schools
 locality,Mateur (ville et gare),Contrôle de Bizerte,,Mateur (ville et gare),Bizerte,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,Matmata,,Matmata,Matmata,Territoires militaires du Sud,Matmata,,exact,1,438,Matmata,,33.544142,9.967566,ind1931_t8_localities
+locality,Matmata,,,Matmata,,,,exact,1,438,Matmata,,33.544142,9.967566,education_schools
 locality,Matmata,Territoires du Sud,,Matmata,Territoires militaires du Sud,,,exact,1,438,Matmata,,33.544142,9.967566,eur1906_t2_locality_nationality
 locality,Matmata-Kebira,Territoire du Sud,,Matmata-Kebira,Territoires militaires du Sud,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,Maxula-Radès,Contrôle de Tunis,,Maxula-Radès,Tunis,,,exact,1,51,Maxula-Rades,,36.771457,10.280813,eur1906_td_french_population_by_locality_1891_1901
+locality,Maxula-Radès,,,Maxula-Radès,,,,exact,1,51,Maxula-Rades,,36.771457,10.280813,education_schools
 locality,Maxula-Radès,Tunis,,Maxula-Radès,Tunis,,,exact,1,51,Maxula-Rades,,36.771457,10.280813,eur1906_t2_locality_nationality
 locality,Maxula-Radès et Megrine,Contrôle de Tunis,,Maxula-Radès et Megrine,Tunis,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,Maârif (El),,Tadjerouine,Maârif (El),Le Kef,Tadjerouine,,none,0,,,,,,ind1931_t8_localities
@@ -1603,9 +1787,12 @@ locality,Medenine,Territoire du Sud,,Medenine,Territoires militaires du Sud,,,ex
 locality,Medioula,,Ouled-Aoun,Medioula,Maktar,Oulad-Aoun,,none,0,,,,,,ind1931_t8_localities
 locality,Medjez-el-Bab,Annexe de Medjez-el-Bab,,Medjez-el-Bab,Medjez-el-Bab,,,exact,1,52,Medjez-El-Bab,,36.647829,9.612908,eur1906_td_french_population_by_locality_1891_1901
 locality,Medjez-el-Bab,Béja,,Medjez-el-Bab,Béja,,,exact,1,52,Medjez-El-Bab,,36.647829,9.612908,eur1906_t2_locality_nationality
+locality,Medjez-el-Bab,,,Medjez-el-Bab,,,,exact,1,52,Medjez-El-Bab,,36.647829,9.612908,education_schools
 locality,Medjez-el-Bab (Banlieue),Béja,,Medjez-el-Bab,Béja,,,qualifier_stripped,1,52,Medjez-El-Bab,,36.647829,9.612908,eur1906_t2_locality_nationality
 locality,Medou (El),,Aradh,Medou (El),Gabès,Aradh,,none,0,,,,,,ind1931_t8_localities
 locality,Megrine,Contrôle de Tunis,,Megrine,Tunis,,,exact,1,53,Megrine,,36.769903,10.232833,eur1906_td_french_population_by_locality_1891_1901
+locality,Mehdia,,,Mehdia,,,,none,0,,,,,,education_schools
+locality,Meheri-Zebbeus,,,Meheri-Zebbeus,,,,none,0,,,,,,education_schools
 locality,Mekna,Annexe de Tabarca,,Mekna,Tabarka,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,Mekna,Souk-el-Arba,,Mekna,Souk-el-Arba,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,Mellasine,,Tunis-Banlieue,Mellasine,Tunis,Tunis-Banlieue,,exact,1,1145,El-Mellassine,,36.797294,10.15956,ind1931_t8_localities
@@ -1616,66 +1803,94 @@ locality,Menara (El),,Aradh,Menara (El),Gabès,Aradh,,conflict,1,,,,,,ind1931_t8
 locality,Menchia (El),,Nefzaoua,Menchia (El),Territoires militaires du Sud,Nefzaoua,,exact,1,872,El-Menchia,,33.7828,8.8558,ind1931_t8_localities
 locality,"Menilha,Villejacques",Tunis,,Menilha,Tunis,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,Menzel,Contrôle de Gabès,,Menzel,Gabès,,,conflict,1,,,,,,eur1906_td_french_population_by_locality_1891_1901
+locality,Menzel-Abdarrahmane,,,Menzel-Abdarrahmane,,,,none,0,,,,,,education_schools
 locality,Menzel-Abderrahman,Bizerte,,Menzel-Abderrahman,Bizerte,,,exact,1,493,Menzel-Abderrahman,,37.236276,9.855015,eur1906_t2_locality_nationality
 locality,Menzel-Abderrahmane,,Bizerte,Menzel-Abderrahmane,Bizerte,Bizerte,,none,0,,,,,,ind1931_t8_localities
 locality,Menzel-Bir-Taïeb,Sousse,,Menzel-Bir-Taïeb,Sousse,,,exact,1,312,Menzel-Bir-Taïeb,,35.651111,10.694693,eur1906_t2_locality_nationality
 locality,Menzel-Dar-bel-Ouar,Sousse,,Menzel-Dar-bel-Ouar,Sousse,,,exact,1,306,Menzel-Dar-bel-Ouar,,36.039999,10.324091,eur1906_t2_locality_nationality
 locality,Menzel-Djemil,Bizerte,,Menzel-Djemil,Bizerte,,,exact,1,56,Menzel-Djemil,,37.237477,9.916086,eur1906_t2_locality_nationality
 locality,Menzel-Djemil,Contrôle de Bizerte,,Menzel-Djemil,Bizerte,,,exact,1,56,Menzel-Djemil,,37.237477,9.916086,eur1906_td_french_population_by_locality_1891_1901
-locality,Menzel-Djemil,,,Menzel-Djemil,,,,exact,1,56,Menzel-Djemil,,37.237477,9.916086,ind1931_t8_localities
+locality,Menzel-Djemil,,,Menzel-Djemil,,,,exact,1,56,Menzel-Djemil,,37.237477,9.916086,education_schools;ind1931_t8_localities
 locality,Menzel-Harb,,Monastir,Menzel-Harb,Sousse,Monastir,,exact,1,823,Menzel-Harb,,35.701949,10.742805,ind1931_t8_localities
 locality,Menzel-Horr,,Nabeul,Menzel-Horr,Grombalia,Nabeul,,exact,1,867,Menzel-Horr,,36.727424,10.955501,ind1931_t8_localities
 locality,Menzel-Kamel,,Monastir,Menzel-Kamel,Sousse,Monastir,,exact,1,834,Menzel-Kamel,,35.624047,10.667211,ind1931_t8_localities
+locality,Menzel-Kamel,,,Menzel-Kamel,,,,exact,1,834,Menzel-Kamel,,35.624047,10.667211,education_schools
 locality,Menzel-Khir,,,Menzel-Khir,,,,exact,1,825,Menzel-Khir,,35.696796,10.711245,ind1931_t8_localities
 locality,Menzel-Temime,Contrôle de Grombalia,,Menzel-Temime,Grombalia,,,exact,1,860,Menzel-Temime,,36.78,10.98853,eur1906_td_french_population_by_locality_1891_1901
 locality,Menzel-Temime,Grombalia,,Menzel-Temime,Grombalia,,,exact,1,860,Menzel-Temime,,36.78,10.98853,eur1906_t2_locality_nationality
+locality,Menzel-Temime,,,Menzel-Temime,,,,exact,1,860,Menzel-Temime,,36.78,10.98853,education_schools;education_vocational
 locality,Menzel-bou-Zelfa,Contrôle de Grombalia,,Menzel-bou-Zelfa,Grombalia,,,exact,1,998,Menzel-Bou-Zelfa,,36.683053,10.58443,eur1906_td_french_population_by_locality_1891_1901
 locality,Menzel-bou-Zelfa,Grombalia,,Menzel-bou-Zelfa,Grombalia,,,exact,1,998,Menzel-Bou-Zelfa,,36.683053,10.58443,eur1906_t2_locality_nationality
+locality,Menzel-bou-Zelfa,,,Menzel-bou-Zelfa,,,,exact,1,998,Menzel-Bou-Zelfa,,36.683053,10.58443,education_schools
 locality,Menzel-dar-bel-Ouar,Contrôle de Sousse,,Menzel-dar-bel-Ouar,Sousse,,,exact,1,306,Menzel-Dar-bel-Ouar,,36.039999,10.324091,eur1906_td_french_population_by_locality_1891_1901
+locality,Merira,,,Merira,,,,none,0,,,,,,education_schools
+locality,Merira-centre,,,Merira-centre,,,,none,0,,,,,,education_schools
 locality,Mesjed-Aïssa,,,Mesjed-Aïssa,,,,exact,1,826,Mesjed-Aissa,,35.724094,10.714614,ind1931_t8_localities
 locality,Messadine,,Sousse,Messadine,Sousse,Sousse,,exact,1,1063,El-Messadine,,35.761503,10.595108,ind1931_t8_localities
 locality,Messaïba et Areg,,Djerid,Messaïba et Areg,Tozeur,Djerid,,none,0,,,,,,ind1931_t8_localities
 locality,Methouia,,Aradh,Methouia,Gabès,Aradh,,exact,1,859,Methouia,,33.96,10.004755,ind1931_t8_localities
+locality,Methouia,,,Methouia,,,,exact,1,859,Methouia,,33.96,10.004755,education_schools
 locality,Metlaoui,Contrôle de Gafsa,,Metlaoui,Gafsa,,,exact,1,166,Metlaoui,,34.326044,8.40181,eur1906_td_french_population_by_locality_1891_1901
+locality,Metlaoui,,,Metlaoui,,,,exact,1,166,Metlaoui,,34.326044,8.40181,education_schools;education_vocational
 locality,Metlaoui-Gare,Gafsa,,Metlaoui-Gare,Gafsa,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,Metlaoui-Mine,Gafsa,,Metlaoui-Mine,Gafsa,,,none,0,,,,,,eur1906_t2_locality_nationality
+locality,Metlaoui-Mine,,,Metlaoui-Mine,,,,none,0,,,,,,education_schools
+locality,Metlaoui-mine,,,Metlaoui-mine,,,,none,0,,,,,,education_vocational
 locality,Metline,,Bizerte,Metline,Bizerte,Bizerte,,exact,1,1261,Metline,,37.2440276709603,10.0454114589679,ind1931_t8_localities
+locality,Metline,,,Metline,,,,exact,1,1261,Metline,,37.2440276709603,10.0454114589679,education_schools
 locality,Metrech,Annexe de Djerba,,Metrech,Djerba,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,Mezawack,Sousse,,Mezawack,Sousse,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,Mezzouna,Sfax,,Mezzouna,Sfax,,,exact,1,279,Mezzouna,,34.577636,9.842697,eur1906_t2_locality_nationality
 locality,Michaud,Bizerte,,Michaud,Bizerte,,,exact,1,57,Michaud,,37.063356,9.597683,eur1906_t2_locality_nationality
+locality,Michaud,,,Michaud,,,,exact,1,57,Michaud,,37.063356,9.597683,education_schools
 locality,Midoun,Annexe de Djerba,,Midoun,Djerba,,,exact,1,609,Midoun,,33.807084,10.991436,eur1906_td_french_population_by_locality_1891_1901
 locality,Midoun,Gabès,,Midoun,Gabès,,,exact,1,609,Midoun,,33.807084,10.991436,eur1906_t2_locality_nationality
+locality,Midoun (Djerba),,,Midoun (Djerba),,,,none,0,,,,,,education_schools
+locality,Moghrane,,,Moghrane,,,,exact,1,58,Moghrane,,36.4221103901326,10.0904015798556,education_schools
 locality,Moghrane,Tunis,,Moghrane,Tunis,,,exact,1,58,Moghrane,,36.4221103901326,10.0904015798556,eur1906_t2_locality_nationality
 locality,Mohammedia,Contrôle de Tunis,,Mohammedia,Tunis,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,"Mohammedia, Fouchana",Tunis,,Mohammedia,Tunis,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,Moknine,Contrôle de Sousse,,Moknine,Sousse,,,exact,1,59,Moknine,,35.62915752625,10.8997464194273,eur1906_td_french_population_by_locality_1891_1901
+locality,Moknine,,,Moknine,,,,exact,1,59,Moknine,,35.62915752625,10.8997464194273,education_schools
 locality,Moknine,Sousse,,Moknine,Sousse,,,exact,1,59,Moknine,,35.62915752625,10.8997464194273,eur1906_t2_locality_nationality
 locality,Monastir,Contrôle de Sousse,,Monastir,Sousse,,,exact,1,60,Monastir,,35.7693905804844,10.8195665940049,eur1906_td_french_population_by_locality_1891_1901
+locality,Monastir,,,Monastir,,,,exact,1,60,Monastir,,35.7693905804844,10.8195665940049,education_schools;education_vocational
 locality,Monastir,Sousse,,Monastir,Sousse,,,exact,1,60,Monastir,,35.7693905804844,10.8195665940049,eur1906_t2_locality_nationality
 locality,Monchar,Béja,,Monchar,Béja,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,Monchar,Contrôle de Béja,,Monchar,Béja,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,Mornag,Contrôle de Tunis,,Mornag,Tunis,,,exact,1,1142,Mornag,,36.69,10.3,eur1906_td_french_population_by_locality_1891_1901
 locality,Mornaghia,Contrôle de Tunis,,Mornaghia,Tunis,,,exact,1,372,Mornaguia,,36.757159,10.015531,eur1906_td_french_population_by_locality_1891_1901
+locality,Mornaghia,,,Mornaghia,,,,exact,1,372,Mornaguia,,36.757159,10.015531,education_schools
 locality,Mouamena El,,Sfax,Mouamena El,Sfax,Sfax,,none,0,,,,,,ind1931_t8_localities
 locality,Mouareddine,,Sousse,Mouareddine,Sousse,Sousse,,none,0,,,,,,ind1931_t8_localities
 locality,Moâtamer,,Sousse,Moâtamer,Sousse,Sousse,,exact,1,1073,Moatamer,,35.75,10.69,ind1931_t8_localities
+locality,Msaken,,,Msaken,,,,exact,1,61,Msaken,,35.725724,10.580434,education_schools
+locality,Munchar,,,Munchar,,,,ambiguous,2,,,,,,education_schools
+locality,Médenine,,,Médenine,,,,exact,1,903,Medenine,,33.34,10.49,education_schools
 locality,Médenine,Territoires du Sud,,Médenine,Territoires militaires du Sud,,,exact,1,903,Medenine,,33.34,10.49,eur1906_t2_locality_nationality
 locality,Méginine (El),,Medjez-El-Bab,Méginine (El),Medjez-el-Bab,Medjez-el-Bab,,none,0,,,,,,ind1931_t8_localities
+locality,Mégrine,,,Mégrine,,,,exact,1,53,Megrine,,36.769903,10.232833,education_schools
 locality,Mégrine,Tunis,,Mégrine,Tunis,,,exact,1,53,Megrine,,36.769903,10.232833,eur1906_t2_locality_nationality
+locality,Mélita (Djerba),,,Mélita (Djerba),,,,none,0,,,,,,education_schools
+locality,Mélita (Kerkenna),,,Mélita (Kerkenna),,,,none,0,,,,,,education_schools
+locality,Métameur,,,Métameur,,,,exact,1,441,Metameur,,33.372689,10.441974,education_schools
 locality,Métameur,,Ouerghemma (Terr. de Médenine),Métameur,Territoires militaires du Sud,Ouerghemma,,exact,1,441,Metameur,,33.372689,10.441974,ind1931_t8_localities
 locality,M’Saken,Sousse,,M’Saken,Sousse,,,exact,1,61,Msaken,,35.725724,10.580434,eur1906_t2_locality_nationality
 locality,Nabeul,Contrôle de Grombalia,,Nabeul,Grombalia,,,exact,1,63,Nabeul,,36.4512808841432,10.735593849038,eur1906_td_french_population_by_locality_1891_1901
 locality,Nabeul,Grombalia,,Nabeul,Grombalia,,,exact,1,63,Nabeul,,36.4512808841432,10.735593849038,eur1906_t2_locality_nationality
+locality,Nabeul,,,Nabeul,,,,exact,1,63,Nabeul,,36.4512808841432,10.735593849038,education_schools;education_vocational
 locality,Nabeul (Environs de),Grombalia,,Nabeul (Environs de),Grombalia,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,Nagta,,La Skhira,Nagta,Sfax,La Skhira,,none,0,,,,,,ind1931_t8_localities
 locality,Nassen,Contrôle de Tunis,,Nassen,Tunis,,,exact,1,382,Nassen,,36.703106,10.233807,eur1906_td_french_population_by_locality_1891_1901
+locality,Nassen,,,Nassen,,,,exact,1,382,Nassen,,36.703106,10.233807,education_schools
 locality,Nassen,Tunis,,Nassen,Tunis,,,exact,1,382,Nassen,,36.703106,10.233807,eur1906_t2_locality_nationality
 locality,Nebeur,Contrôle du Kef,,Nebeur,Le Kef,,,exact,1,65,Nebeur,,36.298741,8.768777,eur1906_td_french_population_by_locality_1891_1901
 locality,Nebeur,Le Kef,,Nebeur,Le Kef,,,exact,1,65,Nebeur,,36.298741,8.768777,eur1906_t2_locality_nationality
 locality,Nebeur,,Le Kef,Nebeur,Le Kef,Le Kef,,exact,1,65,Nebeur,,36.298741,8.768777,ind1931_t8_localities
+locality,Nebeur,,,Nebeur,,,,exact,1,65,Nebeur,,36.298741,8.768777,education_schools
 locality,Nefta,Annexe de Tozeur,,Nefta,Tozeur,,,exact,1,181,Nefta,,33.871243,7.879161,eur1906_td_french_population_by_locality_1891_1901
 locality,Nefta,Gafsa,,Nefta,Gafsa,,,exact,1,181,Nefta,,33.871243,7.879161,eur1906_t2_locality_nationality
+locality,Nefta,,,Nefta,,,,exact,1,181,Nefta,,33.871243,7.879161,education_schools
 locality,Nefza,Contrôle de Béja,,Nefza,Béja,,,exact,1,184,Nefza,,36.9865440869283,9.07963103225535,eur1906_td_french_population_by_locality_1891_1901
 locality,Nefzas,Béja,,Nefzas,Béja,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,Negga,,Nefzaoua,Negga,Territoires militaires du Sud,Nefzaoua,,none,0,,,,,,ind1931_t8_localities
@@ -1686,15 +1901,19 @@ locality,Nianou,Contrôle de Grombalia,,Nianou,Grombalia,,,exact,1,1004,Nianou,,
 locality,Nianou,,Soliman,Nianou,Grombalia,Soliman,,exact,1,1004,Nianou,,36.604223,10.552403,ind1931_t8_localities
 locality,Nouaël,,Nefzaoua,Nouaël,Territoires militaires du Sud,Nefzaoua,,none,0,,,,,,ind1931_t8_localities
 locality,Ouallag,Annexe de Djerba,,Ouallag,Djerba,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
+locality,Ouardenine,,,Ouardenine,,,,exact,1,308,Ouardenine,,35.710094,10.677519,education_schools
 locality,Ouardenine,Sousse,,Ouardenine,Sousse,,,exact,1,308,Ouardenine,,35.710094,10.677519,eur1906_t2_locality_nationality
 locality,Oudna,Tunis,,Oudna,Tunis,,,ambiguous,2,,,,,,eur1906_t2_locality_nationality
+locality,Oudref (El),,,Oudref (El),,,,exact,1,850,Oudref,,33.98,9.967346,education_schools
 locality,Oued-Ceddine,Contrôle de Mactar,,Oued-Ceddine,Maktar,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,Oued-El-Ar-Ar,,Medjez-El-Bab,Oued-El-Ar-Ar,Medjez-el-Bab,Medjez-el-Bab,,none,0,,,,,,ind1931_t8_localities
+locality,Oued-Ellil,,,Oued-Ellil,,,,exact,1,360,Oued-Ellil,,36.842942,10.041607,education_schools
 locality,Oued-Gueriana (Manouba),Tunis,,Oued-Gueriana (Manouba),Tunis,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,Oued-Laya,Contrôle de Sousse,,Oued-Laya,Sousse,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,Oued-Laya,Sousse,,Oued-Laya,Sousse,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,Oued-Melah,Contrôle de Gabès,,Oued-Melah,Gabès,,,exact,1,150,Oued-Melah,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,Oued-Melah,Gabès,,Oued-Melah,Gabès,,,exact,1,150,Oued-Melah,,,,eur1906_t2_locality_nationality
+locality,Oued-Meliz,,,Oued-Meliz,,,,exact,1,1036,Oued-Meliz,,36.47,8.55,education_schools
 locality,Oued-Meliz,Souk-el-Arba,,Oued-Meliz,Souk-el-Arba,,,exact,1,1036,Oued-Meliz,,36.47,8.55,eur1906_t2_locality_nationality
 locality,Oued-Meliz-Chemtou,Contrôle de Souk-el-Arba,,Oued-Meliz-Chemtou,Souk-el-Arba,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,Oued-Remel,Contrôle du Kef,,Oued-Remel,Le Kef,,,exact,1,774,Oued-Remel,,36.19179,8.65015,eur1906_td_french_population_by_locality_1891_1901
@@ -1704,6 +1923,8 @@ locality,Oued-Serrak,Gabès,,Oued-Serrak,Gabès,,,none,0,,,,,,eur1906_t2_localit
 locality,Oued-Tindja,Contrôle de Bizerte,,Oued-Tindja,Bizerte,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,Oued-Zargua,Annexe de Medjez-el-Bab,,Oued-Zargua,Medjez-el-Bab,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,Oued-Zargua,Béja,,Oued-Zargua,Béja,,,none,0,,,,,,eur1906_t2_locality_nationality
+locality,Oued-Zebib (Djerba),,,Oued-Zebib (Djerba),,,,none,0,,,,,,education_schools
+locality,Oued-Zerga,,,Oued-Zerga,,,,exact,1,66,Oued-Zerga,,36.666128,9.441974,education_schools
 locality,Oued-el-Lil (Manouba),Tunis,,Oued-el-Lil (Manouba),Tunis,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,Ouedref,,Aradh,Ouedref,Gabès,Aradh,,none,0,,,,,,ind1931_t8_localities
 locality,Ouerdanine,,Sousse,Ouerdanine,Sousse,Sousse,,none,0,,,,,,ind1931_t8_localities
@@ -1716,31 +1937,42 @@ locality,Oulad-bou-Ghanem,Contrôle du Kef,,Oulad-bou-Ghanem,Le Kef,,,none,0,,,,
 locality,Ouled-Gassem,,Sfax,Ouled-Gassem,Sfax,Sfax,,none,0,,,,,,ind1931_t8_localities
 locality,Ouled-Ghida,,Fraichiches,Ouled-Ghida,Thala,Fraichiches,,conflict,1,,,,,,ind1931_t8_localities
 locality,"Ouled-Ghida, Route Kalaâ-Djerda-Thala (Chantiers de la)",Thala,,Ouled-Ghida,Thala,,,conflict,1,,,,,,eur1906_t2_locality_nationality
+locality,Ouled-Kacem (Kerkenna),,,Ouled-Kacem (Kerkenna),,,,none,0,,,,,,education_schools
 locality,Ouled-Khallouf,,Medjez-El-Bab,Ouled-Khallouf,Medjez-el-Bab,Medjez-el-Bab,,none,0,,,,,,ind1931_t8_localities
 locality,Ouled-Majed,,Djerid,Ouled-Majed,Tozeur,Djerid,,exact,1,632,Ouled-Majed,,33.998076,8.246262,ind1931_t8_localities
+locality,Ouled-Yanèg (Kerkenna),,,Ouled-Yanèg (Kerkenna),,,,none,0,,,,,,education_schools
 locality,Ouled-Yanègue,,Sfax,Ouled-Yanègue,Sfax,Sfax,,none,0,,,,,,ind1931_t8_localities
+locality,Ouled-bou Ali (Kerkenna),,,Ouled-bou Ali (Kerkenna),,,,none,0,,,,,,education_schools
 locality,Oum-Dhouil,,Nabeul,Oum-Dhouil,Grombalia,Nabeul,,exact,1,869,Oum-Dhouil,,36.71,10.830714,ind1931_t8_localities
 locality,Oum-Es-Somaâ,,Nefzaoua,Oum-Es-Somaâ,Territoires militaires du Sud,Nefzaoua,,exact,1,887,Oum-Somaa,,33.7852,8.8155,ind1931_t8_localities
 locality,Oum-el-Ksob,Contrôle de Gafsa,,Oum-el-Ksob,Gafsa,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,Ousseltia,,Djelass,Ousseltia,Kairouan,Djelass,,exact,1,216,Ousseltia,,35.849438,9.586498,ind1931_t8_localities
+locality,Ousseltia,,,Ousseltia,,,,exact,1,216,Ousseltia,,35.849438,9.586498,education_schools
 locality,Ouzafa,Contrôle de Mactar,,Ouzafa,Maktar,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,Palmes,Sousse,,Palmes,Sousse,,,none,0,,,,,,eur1906_t2_locality_nationality
+locality,Philippe-Thomas,,,Philippe-Thomas,,,,none,0,,,,,,education_schools
+locality,Pichon,,,Pichon,,,,exact,1,209,Pichon,,35.633494,9.677498,education_schools
 locality,Pichon et ses environs (Chantiers de Bou-Hafna),Kairouan,,Pichon et ses environs (Chantiers de Bou-Hafna),Kairouan,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,Pont de Trajan,Béja,,Pont de Trajan,Béja,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,Pont-de-Trajan,Contrôle de Béja,,Pont-de-Trajan,Béja,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,Pont-du-Fahs,Contrôle de Tunis,,Pont-du-Fahs,Tunis,,,exact,1,68,Pont du Fahs,,36.375261,9.906328,eur1906_td_french_population_by_locality_1891_1901
+locality,Pont-du-Fahs,,,Pont-du-Fahs,,,,exact,1,68,Pont du Fahs,,36.375261,9.906328,education_schools
 locality,Pont-du-Fahs,,Zaghouan,Pont-du-Fahs,Zaghouan,Zaghouan,,exact,1,68,Pont du Fahs,,36.375261,9.906328,ind1931_t8_localities
 locality,Pont-du-Fahs,Tunis,,Pont-du-Fahs,Tunis,,,exact,1,68,Pont du Fahs,,36.375261,9.906328,eur1906_t2_locality_nationality
 locality,Porto-Farina,Contrôle de Bizerte,,Porto-Farina,Bizerte,,,exact,1,512,Porto-Farina,,37.156795,10.232743,eur1906_td_french_population_by_locality_1891_1901
 locality,Porto-Farina,,Bizerte,Porto-Farina,Bizerte,Bizerte,,exact,1,512,Porto-Farina,,37.156795,10.232743,ind1931_t8_localities
+locality,Porto-Farina,,,Porto-Farina,,,,exact,1,512,Porto-Farina,,37.156795,10.232743,education_schools
 locality,Porto-Farina et El-Aousdja,Bizerte,,Porto-Farina et El-Aousdja,Bizerte,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,Potinville,Contrôle de Tunis,,Potinville,Tunis,,,exact,1,69,Bordj-Cédria,,36.695423,10.387659,eur1906_td_french_population_by_locality_1891_1901
+locality,Potinville,,,Potinville,,,,exact,1,69,Bordj-Cédria,,36.695423,10.387659,education_schools
 locality,Potinville,Tunis,,Potinville,Tunis,,,exact,1,69,Bordj-Cédria,,36.695423,10.387659,eur1906_t2_locality_nationality
+locality,Protville,,,Protville,,,,exact,1,484,Protville,,36.992086,10.06452,education_schools
 locality,Protville (Région de Guclaât-Andless),Tunis,,Protville (Région de Guclaât-Andless),Tunis,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,"Protville et environs (Utique, El-Haouidh, Enchir Fartout)",Bizerte,,Protville et environs (Utique,Bizerte,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,Rabta,,Nefzaoua,Rabta,Territoires militaires du Sud,Nefzaoua,,none,0,,,,,,ind1931_t8_localities
 locality,Raf-Raf,Bizerte,,Raf-Raf,Bizerte,,,exact,1,515,Raf-Raf,,37.1900824717558,10.1832343878014,eur1906_t2_locality_nationality
 locality,Raf-Raf,,Bizerte,Raf-Raf,Bizerte,Bizerte,,exact,1,515,Raf-Raf,,37.1900824717558,10.1832343878014,ind1931_t8_localities
+locality,Raf-Raf,,,Raf-Raf,,,,exact,1,515,Raf-Raf,,37.1900824717558,10.1832343878014,education_schools
 locality,Ras-Djebel,,Bizerte,Ras-Djebel,Bizerte,Bizerte,,exact,1,480,Ras-Djebel,,37.21572,10.1253,ind1931_t8_localities
 locality,Ras-Tabia,Contrôle de Tunis,,Ras-Tabia,Tunis,,,exact,1,334,Ras-Tabia,,36.819494,10.150498,eur1906_td_french_population_by_locality_1891_1901
 locality,Ras-Tabia,,Tunis-Banlieue,Ras-Tabia,Tunis,Tunis-Banlieue,,exact,1,334,Ras-Tabia,,36.819494,10.150498,ind1931_t8_localities
@@ -1748,16 +1980,25 @@ locality,Ras-Tabia,Tunis,,Ras-Tabia,Tunis,,,exact,1,334,Ras-Tabia,,36.819494,10.
 locality,Ras-Tuguernisse,Annexe de Djerba,,Ras-Tuguernisse,Djerba,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,Ras-el-Djebel,Bizerte,,Ras-el-Djebel,Bizerte,,,exact,1,480,Ras-Djebel,,37.21572,10.1253,eur1906_t2_locality_nationality
 locality,Ras-el-Djebel,Contrôle de Bizerte,,Ras-el-Djebel,Bizerte,,,exact,1,480,Ras-Djebel,,37.21572,10.1253,eur1906_td_french_population_by_locality_1891_1901
+locality,Ras-el-Djebel,,,Ras-el-Djebel,,,,exact,1,480,Ras-Djebel,,37.21572,10.1253,education_schools;education_vocational
 locality,Ras-el-Oued,Contrôle de Gabès,,Ras-el-Oued,Gabès,,,exact,1,1273,Ras El-Oued,,33.86647,10.045091,eur1906_td_french_population_by_locality_1891_1901
 locality,Rebahine,Béja,,Rebahine,Béja,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,Rebahine,Contrôle de Béja,,Rebahine,Béja,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
+locality,Rebiba,,,Rebiba,,,,exact,1,240,Rebiba,,35.80175,8.37899,education_schools
+locality,"Rebiba, gare",,,Rebiba,,,,qualifier_stripped,1,240,Rebiba,,35.80175,8.37899,education_schools
+locality,"Rebiba, mine",,,Rebiba,,,,qualifier_stripped,1,240,Rebiba,,35.80175,8.37899,education_schools
 locality,Redeyef,,Gafsa,Redeyef,Gafsa,Gafsa,,exact,1,167,Redeyef,,34.38193,8.14707,ind1931_t8_localities
+locality,Redeyef,,,Redeyef,,,,exact,1,167,Redeyef,,34.38193,8.14707,education_schools
 locality,Redeyeff,Gafsa,,Redeyeff,Gafsa,,,none,0,,,,,,eur1906_t2_locality_nationality
+locality,Redjich,,,Redjich,,,,exact,1,784,Rejich,,35.46661,11.042531,education_schools
 locality,Rejich,,Mahdia,Rejich,Sousse,Mahdia,,exact,1,784,Rejich,,35.46661,11.042531,ind1931_t8_localities
 locality,Remada,,Tatahouine,Remada,Territoires militaires du Sud,Tatahouine,,exact,1,1251,,Délégation de Dehibat,32.316291,10.395254,ind1931_t8_localities
 locality,Remla,,Sfax,Remla,Sfax,Sfax,,none,0,,,,,,ind1931_t8_localities
+locality,Remla (Kerkenna),,,Remla (Kerkenna),,,,none,0,,,,,,education_schools
 locality,Reyville,Contrôle de Sousse,,Reyville,Sousse,,,exact,1,70,Reyville,,36.282834,10.475758,eur1906_td_french_population_by_locality_1891_1901
+locality,Reyville,,,Reyville,,,,exact,1,70,Reyville,,36.282834,10.475758,education_schools
 locality,Reyville,Sousse,,Reyville,Sousse,,,exact,1,70,Reyville,,36.282834,10.475758,eur1906_t2_locality_nationality
+locality,Rohia,,,Rohia,,,,ambiguous,2,,,,,,education_schools
 locality,Roudha,,Mahdia,Roudha,Sousse,Mahdia,,none,0,,,,,,ind1931_t8_localities
 locality,Rouhia,Contrôle de Mactar,,Rouhia,Maktar,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,Rouhia,Mactar,,Rouhia,Maktar,,,none,0,,,,,,eur1906_t2_locality_nationality
@@ -1767,48 +2008,76 @@ locality,Route de Monastir,Contrôle de Sousse,,Route de Monastir,Sousse,,,none,
 locality,Région de Mateur,Contrôle de Bizerte,,Région de Mateur,Bizerte,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,Région de Saadia,Contrôle de Kairouan,,Région de Saadia,Kairouan,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,Sabria,,Nefzaoua,Sabria,Territoires militaires du Sud,Nefzaoua,,exact,1,877,Sabria,,33.354274,8.74764,ind1931_t8_localities
+locality,Sahaline,,,Sahaline,,,,none,0,,,,,,education_schools
 locality,Sahaline,Sousse,,Sahaline,Sousse,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,Sahalines,Contrôle de Sousse,,Sahalines,Sousse,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
+locality,Saheline,,,Saheline,,,,exact,1,1071,Saheline,,35.75,10.71,education_schools
 locality,Saheline,,Sousse,Saheline,Sousse,Sousse,,exact,1,1071,Saheline,,35.75,10.71,ind1931_t8_localities
 locality,Saint-Cyprien,Contrôle de Tunis,,Saint-Cyprien,Tunis,,,exact,1,375,Saint-Cyprien,,36.75389,9.97611,eur1906_td_french_population_by_locality_1891_1901
+locality,Saint-Cyprien,,,Saint-Cyprien,,,,exact,1,375,Saint-Cyprien,,36.75389,9.97611,education_schools
 locality,Saint-Cyprien,Tunis,,Saint-Cyprien,Tunis,,,exact,1,375,Saint-Cyprien,,36.75389,9.97611,eur1906_t2_locality_nationality
+locality,Saint-Germain,,,Saint-Germain,,,,exact,1,72,Saint-Germain,,36.74594,10.3078,education_schools
 locality,Saint-Germain,Tunis,,Saint-Germain,Tunis,,,exact,1,72,Saint-Germain,,36.74594,10.3078,eur1906_t2_locality_nationality
+locality,Saint-Henri,,,Saint-Henri,,,,exact,1,335,Saint-Henri,,36.8133127565276,10.1401763419838,education_schools
 locality,Saint-Henri,Tunis,,Saint-Henri,Tunis,,,exact,1,335,Saint-Henri,,36.8133127565276,10.1401763419838,eur1906_t2_locality_nationality
 locality,Sainte-Marie-du-Zit,Contrôle de Tunis,,Sainte-Marie-du-Zit,Tunis,,,exact,1,423,Sainte-Marie-du-Zit,,36.4183438699199,10.3041731960309,eur1906_td_french_population_by_locality_1891_1901
 locality,Sainte-Marie-du-Zit,Tunis,,Sainte-Marie-du-Zit,Tunis,,,exact,1,423,Sainte-Marie-du-Zit,,36.4183438699199,10.3041731960309,eur1906_t2_locality_nationality
+locality,Sakiet-Ed-Daïr,,,Sakiet-Ed-Daïr,,,,exact,1,971,Sakiet-El-Dair,,34.78,10.795,education_schools
+locality,Sakiet-Ez-Zit,,,Sakiet-Ez-Zit,,,,exact,1,973,Sakiet-El-Zit,,34.8,10.76,education_schools
+locality,Sakiet-Ezzit,,,Sakiet-Ezzit,,,,none,0,,,,,,education_vocational
+locality,Sakiet-Mine,,,Sakiet-Mine,,,,exact,1,74,Sakiet-Mine,,36.221203,8.358202,education_schools
 locality,Sakiet-Sidi-Youssef,Contrôle du Kef,,Sakiet-Sidi-Youssef,Le Kef,,,exact,1,772,Sakiet-Sidi-Youssef,,36.22,8.355395,eur1906_td_french_population_by_locality_1891_1901
 locality,Sakiet-Sidi-Youssef,Le Kef,,Sakiet-Sidi-Youssef,Le Kef,,,exact,1,772,Sakiet-Sidi-Youssef,,36.22,8.355395,eur1906_t2_locality_nationality
 locality,Sakiet-Sidi-Youssef,,Le Kef,Sakiet-Sidi-Youssef,Le Kef,Le Kef,,exact,1,772,Sakiet-Sidi-Youssef,,36.22,8.355395,ind1931_t8_localities
+locality,Sakiet-Sidi-Youssef,,,Sakiet-Sidi-Youssef,,,,exact,1,772,Sakiet-Sidi-Youssef,,36.22,8.355395,education_schools
 locality,Salambo,Tunis,,Salambo,Tunis,,,none,0,,,,,,eur1906_t2_locality_nationality
+locality,Salammbô,,,Salammbô,,,,exact,1,75,Salammbo,,36.838061,10.320945,education_schools
 locality,Salines,Le Kef,,Salines,Le Kef,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,Sartout,,Sfax,Sartout,Sfax,Sfax,,none,0,,,,,,ind1931_t8_localities
 locality,Saïada,Contrôle de Sousse,,Saïada,Sousse,,,exact,1,848,Saiada,,35.66,10.899901,eur1906_td_french_population_by_locality_1891_1901
 locality,Saïada,,Monastir,Saïada,Sousse,Monastir,,exact,1,848,Saiada,,35.66,10.899901,ind1931_t8_localities
+locality,Saïda,,,Saïda,,,,exact,1,351,Saïda,,36.8283,9.96963,education_schools
 locality,Saïda (près Djedeïda),Tunis,,Saïda (près Djedeïda),Tunis,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,Sbeïtla,Contrôle de Thala,,Sbeïtla,Thala,,,exact,1,665,Sbeitla,,35.2293172832342,9.12985405406912,eur1906_td_french_population_by_locality_1891_1901
+locality,Sbeïtla,,,Sbeïtla,,,,exact,1,665,Sbeitla,,35.2293172832342,9.12985405406912,education_schools
 locality,Sbeïtla,Thala,,Sbeïtla,Thala,,,exact,1,665,Sbeitla,,35.2293172832342,9.12985405406912,eur1906_t2_locality_nationality
 locality,Sbiba,Contrôle de Thala,,Sbiba,Thala,,,exact,1,664,Sbiba,,35.5420985498429,9.07379104412885,eur1906_td_french_population_by_locality_1891_1901
+locality,Sbiba,,,Sbiba,,,,exact,1,664,Sbiba,,35.5420985498429,9.07379104412885,education_schools
 locality,Sbiba,Thala,,Sbiba,Thala,,,exact,1,664,Sbiba,,35.5420985498429,9.07379104412885,eur1906_t2_locality_nationality
 locality,Schuiggui,Contrôle de Tunis,,Schuiggui,Tunis,,,exact,1,119,Chouigui,,36.8789035454845,9.80268817896235,eur1906_td_french_population_by_locality_1891_1901
 locality,Schuiggui,Tunis,,Schuiggui,Tunis,,,exact,1,119,Chouigui,,36.8789035454845,9.80268817896235,eur1906_t2_locality_nationality
+locality,Sebbala-du-Mornag,,,Sebbala-du-Mornag,,,,exact,1,76,Sebbala-du-Mornag,,36.67931,10.29195,education_schools
 locality,Sebguine,Contrôle de Tunis,,Sebguine,Tunis,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,Sedjenane,,Mateur,Sedjenane,Bizerte,Mateur,,exact,1,454,Sedjenane,,37.0576560512723,9.23990483816083,ind1931_t8_localities
 locality,Sedjoumi,Contrôle de Tunis,,Sedjoumi,Tunis,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
+locality,Sedjoumi,,,Sedjoumi,,,,none,0,,,,,,education_schools
 locality,Sedjoumi,Tunis,,Sedjoumi,Tunis,,,none,0,,,,,,eur1906_t2_locality_nationality
+locality,Seillonville,,,Seillonville,,,,none,0,,,,,,education_schools
+locality,Sekarna,,,Sekarna,,,,exact,1,77,Sekarna,,,,education_schools
 locality,Seldja Ras-El-Aïoun,Gafsa,,Seldja Ras-El-Aïoun,Gafsa,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,Sembat,,Aradh,Sembat,Gabès,Aradh,,none,0,,,,,,ind1931_t8_localities
 locality,Sened,Gafsa,,Sened,Gafsa,,,exact,1,78,Sened,,34.540061,9.254983,eur1906_t2_locality_nationality
 locality,Sened,,Gafsa,Sened,Gafsa,Gafsa,,exact,1,78,Sened,,34.540061,9.254983,ind1931_t8_localities
+locality,Sened,,,Sened,,,,exact,1,78,Sened,,34.540061,9.254983,education_schools
 locality,Sers,Contrôle du Kef,,Sers,Le Kef,,,exact,1,242,Sers,,36.077579,9.021234,eur1906_td_french_population_by_locality_1891_1901
 locality,Sers,Le Kef,,Sers,Le Kef,,,exact,1,242,Sers,,36.077579,9.021234,eur1906_t2_locality_nationality
+locality,Sers,,,Sers,,,,exact,1,242,Sers,,36.077579,9.021234,education_schools
+locality,Sers-gare,,,Sers-gare,,,,none,0,,,,,,education_schools
+locality,Sers-village,,,Sers-village,,,,none,0,,,,,,education_schools
+locality,Sfax,,,Sfax,,,,exact,1,80,Sfax,,34.73309867816,10.7583704515768,education_schools;education_vocational
 locality,Sfax,Sfax,,Sfax,Sfax,,,exact,1,80,Sfax,,34.73309867816,10.7583704515768,eur1906_t2_locality_nationality
+locality,Sidi-Abbès,,,Sidi-Abbès,,,,exact,1,81,Sidi-Abbes,,34.76094,10.73096,education_schools
 locality,Sidi-Ahmed,Bizerte,,Sidi-Ahmed,Bizerte,,,exact,1,470,Sidi-Ahmed,,37.247682,9.779529,eur1906_t2_locality_nationality
 locality,Sidi-Ahmed,Béja,,Sidi-Ahmed,Béja,,,exact,1,177,Sidi-Ahmed,,36.942036,9.11982,eur1906_t2_locality_nationality
 locality,Sidi-Ahmed-Djedidi,,Medjez-El-Bab,Sidi-Ahmed-Djedidi,Medjez-el-Bab,Medjez-el-Bab,,none,0,,,,,,ind1931_t8_localities
 locality,Sidi-Ali-Ben-Nasr-Allah,,Djelass,Sidi-Ali-Ben-Nasr-Allah,Kairouan,Djelass,,none,0,,,,,,ind1931_t8_localities
 locality,Sidi-Ali-Chebab,,Bizerte,Sidi-Ali-Chebab,Bizerte,Bizerte,,none,0,,,,,,ind1931_t8_localities
 locality,Sidi-Alouane,,Mahdia,Sidi-Alouane,Sousse,Mahdia,,exact,1,791,Sidi-Allouane,,35.371567,10.937811,ind1931_t8_localities
+locality,Sidi-Alouane,,,Sidi-Alouane,,,,exact,1,791,Sidi-Allouane,,35.371567,10.937811,education_schools
+locality,Sidi-Ameur,,,Sidi-Ameur,,,,exact,1,1064,Sidi-Ameur,,35.739443,10.705365,education_schools
 locality,Sidi-Ameur,,Sousse,Sidi-Ameur,Sousse,Sousse,,exact,1,1064,Sidi-Ameur,,35.739443,10.705365,ind1931_t8_localities
+locality,Sidi-Amor-b.-Salem,,,Sidi-Amor-b.-Salem,,,,none,0,,,,,,education_schools
+locality,Sidi-Assaker,,,Sidi-Assaker,,,,exact,1,785,Sidi-Assaker,,35.41676,10.88955,education_schools
 locality,Sidi-Athman,Tunis,,Sidi-Athman,Tunis,,,exact,1,355,Sidi-Athman,,36.966622,9.921459,eur1906_t2_locality_nationality
 locality,Sidi-Athmane,Contrôle de Tunis,,Sidi-Athmane,Tunis,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,Sidi-Ayed,Béja,,Sidi-Ayed,Béja,,,exact,1,350,Sidi-Ayed,,36.352139,9.391437,eur1906_t2_locality_nationality
@@ -1819,60 +2088,81 @@ locality,Sidi-Daoud,Contrôle de Grombalia,,Sidi-Daoud,Grombalia,,,none,0,,,,,,e
 locality,Sidi-Daoud et Sémaphore,Grombalia,,Sidi-Daoud et Sémaphore,Grombalia,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,Sidi-Djaber,Sousse,,Sidi-Djaber,Sousse,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,Sidi-Fathallah,,Tunis-Banlieue,Sidi-Fathallah,Tunis,Tunis-Banlieue,,exact,1,385,Sidi-Fathallah,,36.76552,10.20821,ind1931_t8_localities
+locality,Sidi-Freidj,,,Sidi-Freidj,,,,none,0,,,,,,education_schools
 locality,Sidi-Hamada,,Ouled-Aoun,Sidi-Hamada,Maktar,Oulad-Aoun,,none,0,,,,,,ind1931_t8_localities
 locality,Sidi-Meskine,Contrôle de Souk-el-Arba,,Sidi-Meskine,Souk-el-Arba,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,Sidi-Mimoun (Enchir),Béja,,Sidi-Mimoun (Enchir),Béja,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,Sidi-Mohamed-b.-Ali,Contrôle de Kairouan,,Sidi-Mohamed-b.-Ali,Kairouan,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,Sidi-Naceur,,Medjez-El-Bab,Sidi-Naceur,Medjez-el-Bab,Medjez-el-Bab,,conflict,1,,,,,,ind1931_t8_localities
+locality,Sidi-Naceur-Allah,,,Sidi-Naceur-Allah,,,,none,0,,,,,,education_schools
 locality,Sidi-Naïja,,Monastir,Sidi-Naïja,Sousse,Monastir,,exact,1,849,Sidi-Naidja,,35.55,10.868096,ind1931_t8_localities
 locality,Sidi-Saïd,Contrôle de Mactar,,Sidi-Saïd,Maktar,,,exact,1,1227,,Délégation de Mahdia,35.612062,11.02675,eur1906_td_french_population_by_locality_1891_1901
 locality,Sidi-Tabet,Contrôle de Tunis,,Sidi-Tabet,Tunis,,,exact,1,419,Sidi-Thabet,,36.926323,10.045836,eur1906_td_french_population_by_locality_1891_1901
+locality,Sidi-Tabet,,,Sidi-Tabet,,,,exact,1,419,Sidi-Thabet,,36.926323,10.045836,education_schools
 locality,Sidi-Tabet,Tunis,,Sidi-Tabet,Tunis,,,exact,1,419,Sidi-Thabet,,36.926323,10.045836,eur1906_t2_locality_nationality
 locality,Sidi-Zehili,Annexe de Teboursouk,,Sidi-Zehili,Téboursouk,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
+locality,Sidi-Zehili,,,Sidi-Zehili,,,,none,0,,,,,,education_schools
 locality,Sidi-Zehili (Chantier de),Béja,,Sidi-Zehili (Chantier de),Béja,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,"Sidi-Zehili, Dougga, Bordj-Brahim, Douémis",Le Kef,,Sidi-Zehili,Le Kef,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,Sidi-bou-Ali,Contrôle de Sousse,,Sidi-bou-Ali,Sousse,,,exact,1,1060,Sidi-Bou-Ali,,35.956844,10.473347,eur1906_td_french_population_by_locality_1891_1901
+locality,Sidi-bou-Ali,,,Sidi-bou-Ali,,,,exact,1,1060,Sidi-Bou-Ali,,35.956844,10.473347,education_schools
 locality,Sidi-bou-Ali,Sousse,,Sidi-bou-Ali,Sousse,,,exact,1,1060,Sidi-Bou-Ali,,35.956844,10.473347,eur1906_t2_locality_nationality
+locality,Sidi-bou-Aouane,,,Sidi-bou-Aouane,,,,exact,1,83,Sidi-Bou-Aouane,,36.69299,9.00924,education_schools
 locality,Sidi-bou-Rouis,Le Kef,,Sidi-bou-Rouis,Le Kef,,,exact,1,247,Sidi-Bou-Rouis,,36.177737,9.125122,eur1906_t2_locality_nationality
+locality,Sidi-bou-Saïd,,,Sidi-bou-Saïd,,,,exact,1,84,Sidi-Bou-Said,,36.870357,10.34204,education_schools
 locality,Sidi-bou-Saïd,Tunis,,Sidi-bou-Saïd,Tunis,,,exact,1,84,Sidi-Bou-Said,,36.870357,10.34204,eur1906_t2_locality_nationality
 locality,Sidi-bou-Zid,Gafsa,,Sidi-bou-Zid,Gafsa,,,exact,1,171,Sidi-Bouzid,,35.0356729310449,9.48608998863544,eur1906_t2_locality_nationality
+locality,Sidi-bou-Zid,,,Sidi-bou-Zid,,,,exact,1,171,Sidi-Bouzid,,35.0356729310449,9.48608998863544,education_schools
 locality,Sidi-el-Hani,Contrôle de Sousse,,Sidi-el-Hani,Sousse,,,exact,1,309,Sidi-El-Hani,,35.67926,10.32296,eur1906_td_french_population_by_locality_1891_1901
 locality,Sidi-el-Hani,Sousse,,Sidi-el-Hani,Sousse,,,exact,1,309,Sidi-El-Hani,,35.67926,10.32296,eur1906_t2_locality_nationality
 locality,Sidii,Le Kef,,Sidii,Le Kef,,,none,0,,,,,,eur1906_t2_locality_nationality
+locality,Siliana,,,Siliana,,,,exact,1,271,Siliana,,36.0876356470366,9.37312446299586,education_schools
 locality,Siliana,,Ouled-Aoun,Siliana,Maktar,Oulad-Aoun,,exact,1,271,Siliana,,36.0876356470366,9.37312446299586,ind1931_t8_localities
+locality,Sillonville,,,Sillonville,,,,none,0,,,,,,education_schools
 locality,Skalba,,Nabeul,Skalba,Grombalia,Nabeul,,none,0,,,,,,ind1931_t8_localities
+locality,Slata,,,Slata,,,,exact,1,1101,Slata,,35.8684,8.43274,education_schools
 locality,Slouguia,,Medjez-El-Bab,Slouguia,Medjez-el-Bab,Medjez-el-Bab,,none,0,,,,,,ind1931_t8_localities
 locality,Smala des Souassi,Sousse,,Smala des Souassi,Sousse,,,exact,1,86,Smala-des-Souassi,,35.35083,10.54525,eur1906_t2_locality_nationality
+locality,Smala-des-Souassi,,,Smala-des-Souassi,,,,exact,1,86,Smala-des-Souassi,,35.35083,10.54525,education_schools
 locality,Smindja,Contrôle de Tunis,,Smindja,Tunis,,,exact,1,1194,Smindja,,36.451467,10.023204,eur1906_td_french_population_by_locality_1891_1901
 locality,Smindja (Depienne),Tunis,,Smindja (Depienne),Tunis,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,Soliman,Contrôle de Grombalia,,Soliman,Grombalia,,,exact,1,997,Soliman,,36.7,10.49,eur1906_td_french_population_by_locality_1891_1901
 locality,Soliman,Grombalia,,Soliman,Grombalia,,,exact,1,997,Soliman,,36.7,10.49,eur1906_t2_locality_nationality
+locality,Soliman,,,Soliman,,,,exact,1,997,Soliman,,36.7,10.49,education_schools
 locality,Soltane (Enchir),Grombalia,,Soltane (Enchir),Grombalia,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,Somaâ,,Nabeul,Somaâ,Grombalia,Nabeul,,exact,1,855,Somaa,,36.54,10.780334,ind1931_t8_localities
+locality,Somaâ,,,Somaâ,,,,exact,1,855,Somaa,,36.54,10.780334,education_schools
 locality,Souassi,Contrôle de Sousse,,Souassi,Sousse,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,Souiniettes,Tunis,,Souiniettes,Tunis,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,Souk-el-Arba,Contrôle de Souk-el-Arba,,Souk-el-Arba,Souk-el-Arba,,,exact,1,87,Souk El-Arba (Jendouba),,36.4969326358885,8.77643419432405,eur1906_td_french_population_by_locality_1891_1901
+locality,Souk-el-Arba,,,Souk-el-Arba,,,,exact,1,87,Souk El-Arba (Jendouba),,36.4969326358885,8.77643419432405,education_schools
 locality,Souk-el-Arba,Souk-el-Arba,,Souk-el-Arba,Souk-el-Arba,,,exact,1,87,Souk El-Arba (Jendouba),,36.4969326358885,8.77643419432405,eur1906_t2_locality_nationality
 locality,Souk-el-Biez,,Nefzaoua,Souk-el-Biez,Territoires militaires du Sud,Nefzaoua,,none,0,,,,,,ind1931_t8_localities
 locality,Souk-el-Djemaa,Contrôle de Mactar,,Souk-el-Djemaa,Maktar,,,exact,1,1268,Souk El-Djemaa,,35.8791920023891,9.13577474040477,eur1906_td_french_population_by_locality_1891_1901
 locality,Souk-el-Khemis,Contrôle de Souk-el-Arba,,Souk-el-Khemis,Souk-el-Arba,,,exact,1,88,Souk El-Khemis (Bou Salem),,36.6075297328957,8.96956890839965,eur1906_td_french_population_by_locality_1891_1901
+locality,Souk-el-Khemis,,,Souk-el-Khemis,,,,exact,1,88,Souk El-Khemis (Bou Salem),,36.6075297328957,8.96956890839965,education_schools
 locality,Souk-el-Khemis (Caïdat de),Souk-el-Arba,,Souk-el-Khemis (Caïdat de),Souk-el-Arba,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,Souk-el-Khemis (Centre),Souk-el-Arba,,Souk-el-Khemis,Souk-el-Arba,,,qualifier_stripped,1,88,Souk El-Khemis (Bou Salem),,36.6075297328957,8.96956890839965,eur1906_t2_locality_nationality
 locality,Souk-el-Khemis-de-Silama,Contrôle de Mactar,,Souk-el-Khemis-de-Silama,Maktar,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
+locality,Soukra (La),,,Soukra (La),,,,exact,1,391,La Soukra,,36.879188,10.263228,education_schools
 locality,Sousse,Contrôle de Sousse,,Sousse,Sousse,,,exact,1,89,Sousse,,35.8246122656788,10.6351825862153,eur1906_td_french_population_by_locality_1891_1901
+locality,Sousse,,,Sousse,,,,exact,1,89,Sousse,,35.8246122656788,10.6351825862153,education_schools;education_vocational
 locality,Sousse,Sousse,,Sousse,Sousse,,,exact,1,89,Sousse,,35.8246122656788,10.6351825862153,eur1906_t2_locality_nationality
 locality,Sousse (Banlieue),Sousse,,Sousse,Sousse,,,qualifier_stripped,1,89,Sousse,,35.8246122656788,10.6351825862153,eur1906_t2_locality_nationality
 locality,Soya,Contrôle de Sousse,,Soya,Sousse,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,Soza-Salmsun,Sousse,,Soza-Salmsun,Sousse,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,St-Joseph-de-Thibar,Annexe de Teboursouk,,St-Joseph-de-Thibar,Téboursouk,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
+locality,St-Joseph-de-Thibar,,,St-Joseph-de-Thibar,,,,none,0,,,,,,education_schools
 locality,St-Martin-de-Thibar,Annexe de Teboursouk,,St-Martin-de-Thibar,Téboursouk,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,Ste-Marie-de-Thibar,Annexe de Teboursouk,,Ste-Marie-de-Thibar,Téboursouk,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,Tabak-el Kelb,Sousse,,Tabak-el Kelb,Sousse,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,Tabarca,Annexe de Tabarca,,Tabarca,Tabarka,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
+locality,Tabarca,,,Tabarca,,,,none,0,,,,,,education_schools
 locality,Tabarca,Souk-el-Arba,,Tabarca,Souk-el-Arba,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,Tabarca (Banlieue),Souk-el-Arba,,Tabarca,Souk-el-Arba,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,Tabia-el-Oubira,Sousse,,Tabia-el-Oubira,Sousse,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,Tadjerouine,Le Kef,,Tadjerouine,Le Kef,,,exact,1,1088,Tadjerouine,,35.89,8.55,eur1906_t2_locality_nationality
+locality,Tadjerouine,,,Tadjerouine,,,,exact,1,1088,Tadjerouine,,35.89,8.55,education_schools
 locality,Tadjerouine,,Tadjerouine,Tadjerouine,Le Kef,Tadjerouine,,exact,1,1088,Tadjerouine,,35.89,8.55,ind1931_t8_localities
 locality,Tadjimès,Annexe de Djerba,,Tadjimès,Djerba,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,Takelsa,Contrôle de Grombalia,,Takelsa,Grombalia,,,exact,1,1002,Takelsa,,36.793189,10.625039,eur1906_td_french_population_by_locality_1891_1901
@@ -1891,11 +2181,15 @@ locality,Tazerka,Contrôle de Grombalia,,Tazerka,Grombalia,,,exact,1,854,Tazerka
 locality,Tazerka,,Nabeul,Tazerka,Grombalia,Nabeul,,exact,1,854,Tazerka,,36.55,10.8329,ind1931_t8_localities
 locality,Teboulba,Contrôle de Sousse,,Teboulba,Sousse,,,exact,1,90,Teboulba,,35.641863053178,10.9658633597544,eur1906_td_french_population_by_locality_1891_1901
 locality,Teboulba,,Mahdia,Teboulba,Sousse,Mahdia,,exact,1,90,Teboulba,,35.641863053178,10.9658633597544,ind1931_t8_localities
+locality,Teboulba,,,Teboulba,,,,exact,1,90,Teboulba,,35.641863053178,10.9658633597544,education_schools;education_vocational
 locality,Teboulba,Sousse,,Teboulba,Sousse,,,exact,1,90,Teboulba,,35.641863053178,10.9658633597544,eur1906_t2_locality_nationality
 locality,Teboulbou,,Aradh,Teboulbou,Gabès,Aradh,,exact,1,902,Teboulbou,,33.84246,10.130017,ind1931_t8_localities
+locality,Teboulbou,,,Teboulbou,,,,exact,1,902,Teboulbou,,33.84246,10.130017,education_schools
 locality,Tebourba,Contrôle de Tunis,,Tebourba,Tunis,,,exact,1,1146,Tebourba,,36.84,9.85,eur1906_td_french_population_by_locality_1891_1901
+locality,Tebourba,,,Tebourba,,,,exact,1,1146,Tebourba,,36.84,9.85,education_schools
 locality,Tebourba,Tunis,,Tebourba,Tunis,,,exact,1,1146,Tebourba,,36.84,9.85,eur1906_t2_locality_nationality
 locality,Teboursouk,Annexe de Teboursouk,,Teboursouk,Téboursouk,,,exact,1,92,Téboursouk,,36.4578701666472,9.24907540240675,eur1906_td_french_population_by_locality_1891_1901
+locality,Teboursouk,,,Teboursouk,,,,exact,1,92,Téboursouk,,36.4578701666472,9.24907540240675,education_schools
 locality,Teboursouk (camp militaire),Annexe de Teboursouk,,Teboursouk (camp militaire),Téboursouk,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,Tella,Annexe de Teboursouk,,Tella,Téboursouk,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,Telmine,,Nefzaoua,Telmine,Territoires militaires du Sud,Nefzaoua,,exact,1,875,Telmine,,33.716877,8.919184,ind1931_t8_localities
@@ -1904,31 +2198,42 @@ locality,Tesdaïn,Annexe de Djerba,,Tesdaïn,Djerba,,,none,0,,,,,,eur1906_td_fre
 locality,Testour,Annexe de Medjez-el-Bab,,Testour,Medjez-el-Bab,,,exact,1,802,Testour,,36.55,9.441998,eur1906_td_french_population_by_locality_1891_1901
 locality,Testour,Béja,,Testour,Béja,,,exact,1,802,Testour,,36.55,9.441998,eur1906_t2_locality_nationality
 locality,Testour,,Medjez-El-Bab,Testour,Medjez-el-Bab,Medjez-el-Bab,,exact,1,802,Testour,,36.55,9.441998,ind1931_t8_localities
+locality,Testour,,,Testour,,,,exact,1,802,Testour,,36.55,9.441998,education_schools
 locality,Thala,Contrôle de Thala,,Thala,Thala,,,exact,1,93,Thala,,35.583106,8.666934,eur1906_td_french_population_by_locality_1891_1901
+locality,Thala,,,Thala,,,,exact,1,93,Thala,,35.583106,8.666934,education_schools
 locality,Thala,Thala,,Thala,Thala,,,exact,1,93,Thala,,35.583106,8.666934,eur1906_t2_locality_nationality
 locality,"Thibar, Djebba",Le Kef,,Thibar,Le Kef,,,qualifier_stripped,1,263,Thibar,,36.522949,9.104555,eur1906_t2_locality_nationality
 locality,Thyna,Sfax,,Thyna,Sfax,,,exact,1,276,Thyna,,34.666284,10.69571,eur1906_t2_locality_nationality
 locality,Thélepte,,Madjeurs,Thélepte,Thala,Madjeurs,,exact,1,315,Thélepte,,34.9767133627851,8.59267460839986,ind1931_t8_localities
 locality,Tijma,,Matmata,Tijma,Territoires militaires du Sud,Matmata,,none,0,,,,,,ind1931_t8_localities
 locality,Tindja,,Mateur,Tindja,Bizerte,Mateur,,exact,1,440,Tindja,,37.160191,9.764415,ind1931_t8_localities
+locality,Tindja,,,Tindja,,,,exact,1,440,Tindja,,37.160191,9.764415,education_schools
 locality,Tindja et banlieue,Bizerte,,Tindja et banlieue,Bizerte,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,Tombar,,Nefzaoua,Tombar,Territoires militaires du Sud,Nefzaoua,,none,0,,,,,,ind1931_t8_localities
+locality,Touireuf,,,Touireuf,,,,exact,1,94,Touireuf,,36.339293,8.581352,education_schools
 locality,Toujane,,Matmata,Toujane,Territoires militaires du Sud,Matmata,,exact,1,799,Toudjane,,33.466013,10.131121,ind1931_t8_localities
 locality,Toukabeur,,Medjez-El-Bab,Toukabeur,Medjez-el-Bab,Medjez-el-Bab,,exact,1,95,Toukabeur,,36.708481,9.520848,ind1931_t8_localities
+locality,Toukabeur,,,Toukabeur,,,,exact,1,95,Toukabeur,,36.708481,9.520848,education_schools
 locality,Tourki,,Soliman,Tourki,Grombalia,Soliman,,exact,1,190,Turki,,36.575238,10.514759,ind1931_t8_localities
 locality,Touza,Contrôle de Sousse,,Touza,Sousse,,,exact,1,820,Touza,,35.6320931507089,10.8277401977649,eur1906_td_french_population_by_locality_1891_1901
 locality,Touza,,Monastir,Touza,Sousse,Monastir,,exact,1,820,Touza,,35.6320931507089,10.8277401977649,ind1931_t8_localities
 locality,Touza,Sousse,,Touza,Sousse,,,exact,1,820,Touza,,35.6320931507089,10.8277401977649,eur1906_t2_locality_nationality
 locality,Tozeur,Annexe de Tozeur,,Tozeur,Tozeur,,,exact,1,96,Tozeur,,33.918534,8.122933,eur1906_td_french_population_by_locality_1891_1901
 locality,Tozeur,Gafsa,,Tozeur,Gafsa,,,exact,1,96,Tozeur,,33.918534,8.122933,eur1906_t2_locality_nationality
+locality,Tozeur,,,Tozeur,,,,exact,1,96,Tozeur,,33.918534,8.122933,education_schools;education_vocational
+locality,Triaga,,,Triaga,,,,exact,1,280,Triaga,,34.966791,10.369416,education_schools
 locality,Triaga,Sfax,,Triaga,Sfax,,,exact,1,280,Triaga,,34.966791,10.369416,eur1906_t2_locality_nationality
 locality,Tunis,Contrôle de Tunis,,Tunis,Tunis,,,exact,1,325,Tunis,,36.799257,10.176146,eur1906_td_french_population_by_locality_1891_1901
+locality,Tunis,,,Tunis,,,,exact,1,325,Tunis,,36.799257,10.176146,education_civil_personality_establishments;education_schools;education_vocational
 locality,Tunis,Tunis,,Tunis,Tunis,,,exact,1,325,Tunis,,36.799257,10.176146,eur1906_t2_locality_nationality
 locality,Turganess,Gabès,,Turganess,Gabès,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,Turki,Contrôle de Grombalia,,Turki,Grombalia,,,exact,1,190,Turki,,36.575238,10.514759,eur1906_td_french_population_by_locality_1891_1901
+locality,Turki,,,Turki,,,,exact,1,190,Turki,,36.575238,10.514759,education_schools
+locality,Tébourba,,,Tébourba,,,,exact,1,1146,Tebourba,,36.84,9.85,education_vocational
 locality,Téboursouk,Le Kef,,Téboursouk,Le Kef,,,exact,1,92,Téboursouk,,36.4578701666472,9.24907540240675,eur1906_t2_locality_nationality
 locality,Téchine,,Matmata,Téchine,Territoires militaires du Sud,Matmata,,exact,1,1230,,Délégation de Matmata,33.476277,10.000219,ind1931_t8_localities
 locality,Téhente,,Mateur,Téhente,Bizerte,Mateur,,none,0,,,,,,ind1931_t8_localities
+locality,Utique,,,Utique,,,,exact,1,99,Utique,,37.05038,9.97594,education_schools
 locality,"Ville de Kairouan, quartier : Banlieue",Contrôle de Kairouan,,Ville de Kairouan,Kairouan,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,"Ville de Kairouan, quartier : Chorfa",Contrôle de Kairouan,,Ville de Kairouan,Kairouan,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,"Ville de Kairouan, quartier : Djelbia",Contrôle de Kairouan,,Ville de Kairouan,Kairouan,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
@@ -1943,10 +2248,12 @@ locality,"Ville de Sfax, quartier : Gendarmerie",Contrôle de Sfax,,Ville de Sfa
 locality,"Ville de Sfax, quartier : Marine",Contrôle de Sfax,,Ville de Sfax,Sfax,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,"Ville de Sfax, quartier : Moulinville",Contrôle de Sfax,,Ville de Sfax,Sfax,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,"Ville de Sfax, quartier : Picville",Contrôle de Sfax,,Ville de Sfax,Sfax,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
+locality,Villejacques,,,Villejacques,,,,exact,1,100,Villejacques,,36.863058,10.111336,education_schools
 locality,Voie ferrée Kairouan-Aïn-Moularès (Chantiers de la),Thala,,Voie ferrée Kairouan-Aïn-Moularès (Chantiers de la),Thala,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,Zafrane,Le Kef,,Zafrane,Le Kef,,,exact,1,249,Zafrane,,36.14557,8.79654,eur1906_t2_locality_nationality
 locality,Zaghdoud,,Djelass,Zaghdoud,Kairouan,Djelass,,none,0,,,,,,ind1931_t8_localities
 locality,Zaghouan,Contrôle de Tunis,,Zaghouan,Tunis,,,exact,1,101,Zaghouan,,36.4031395193389,10.1420536107131,eur1906_td_french_population_by_locality_1891_1901
+locality,Zaghouan,,,Zaghouan,,,,exact,1,101,Zaghouan,,36.4031395193389,10.1420536107131,education_schools
 locality,Zaghouan,Tunis,,Zaghouan,Tunis,,,exact,1,101,Zaghouan,,36.4031395193389,10.1420536107131,eur1906_t2_locality_nationality
 locality,Zagrarine,,Matmata,Zagrarine,Territoires militaires du Sud,Matmata,,none,0,,,,,,ind1931_t8_localities
 locality,Zaouiet-Djedidi,,Soliman,Zaouiet-Djedidi,Grombalia,Soliman,,none,0,,,,,,ind1931_t8_localities
@@ -1960,7 +2267,9 @@ locality,Zaouit-El-Anès,,Nefzaoua,Zaouit-El-Anès,Territoires militaires du Sud
 locality,Zaouit-El-Arab,,Djerid,Zaouit-El-Arab,Tozeur,Djerid,,none,0,,,,,,ind1931_t8_localities
 locality,Zaouit-Sidi-Et-Toumi,,Soliman,Zaouit-Sidi-Et-Toumi,Grombalia,Soliman,,none,0,,,,,,ind1931_t8_localities
 locality,Zarat,,Aradh,Zarat,Gabès,Aradh,,exact,1,797,Zarat,,33.67,10.352662,ind1931_t8_localities
+locality,Zarat,,,Zarat,,,,exact,1,797,Zarat,,33.67,10.352662,education_schools
 locality,Zarmedine,,Monastir,Zarmedine,Sousse,Monastir,,none,0,,,,,,ind1931_t8_localities
+locality,Zarzis,,,Zarzis,,,,exact,1,102,Zarzis,,33.5033032662621,11.1109307269972,education_schools
 locality,Zarzis,Territoire du Sud,,Zarzis,Territoires militaires du Sud,,,exact,1,102,Zarzis,,33.5033032662621,11.1109307269972,eur1906_td_french_population_by_locality_1891_1901
 locality,Zarzis (Commune),Territoires du Sud,,Zarzis,Territoires militaires du Sud,,,qualifier_stripped,1,102,Zarzis,,33.5033032662621,11.1109307269972,eur1906_t2_locality_nationality
 locality,Zarzis (Environs de),Territoires du Sud,,Zarzis (Environs de),Territoires militaires du Sud,,,none,0,,,,,,eur1906_t2_locality_nationality
@@ -1969,10 +2278,13 @@ locality,Zaâfrane,,Nefzaoua,Zaâfrane,Territoires militaires du Sud,Nefzaoua,,n
 locality,Zbir (Enchir),Béja,,Zbir (Enchir),Béja,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,Zegana,,Mahdia,Zegana,Sousse,Mahdia,,none,0,,,,,,ind1931_t8_localities
 locality,Zemarten,,Matmata,Zemarten,Territoires militaires du Sud,Matmata,,none,0,,,,,,ind1931_t8_localities
+locality,Zeramdine,,,Zeramdine,,,,exact,1,819,Zeramdine,,35.575462,10.735922,education_schools
 locality,Zergane,,Djerid,Zergane,Tozeur,Djerid,,none,0,,,,,,ind1931_t8_localities
 locality,Zouaouine (Ez),,Bizerte,Zouaouine (Ez),Bizerte,Bizerte,,none,0,,,,,,ind1931_t8_localities
 locality,Zouarines,Contrôle du Kef,,Zouarines,Le Kef,,,exact,1,251,Les Zouarines,,36.01667,8.91667,eur1906_td_french_population_by_locality_1891_1901
 locality,Zouarines,Le Kef,,Zouarines,Le Kef,,,exact,1,251,Les Zouarines,,36.01667,8.91667,eur1906_t2_locality_nationality
 locality,Zraoua,,Matmata,Zraoua,Territoires militaires du Sud,Matmata,,exact,1,795,Zraoua,,33.573594,9.823606,ind1931_t8_localities
+locality,Zriba,,,Zriba,,,,ambiguous,2,,,,,,education_schools
 locality,Zriba,,Ouled-Aoun,Zriba,Maktar,Oulad-Aoun,,exact,1,943,Zriba,,35.942331,9.502637,ind1931_t8_localities
 locality,Zriba,,Zaghouan,Zriba,Zaghouan,Zaghouan,,exact,1,1190,Zriba,,36.317036,10.169349,ind1931_t8_localities
+locality,Zéramdine,,,Zéramdine,,,,exact,1,819,Zeramdine,,35.575462,10.735922,education_schools

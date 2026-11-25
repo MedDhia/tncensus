@@ -167,6 +167,7 @@ Every table is tidy: one row per printed cell. Printed subtotals and totals are 
 | [`education_secondary_establishments_sgt1939`](#education_secondary_establishments_sgt1939) | secondary1939 | by edition | 336 | count | Secondary, higher-primary and technical establishments: pupils by nationality and sex (sgt1939) |
 | [`education_total_pupils`](#education_total_pupils) | total | by edition | 12 | count | Total pupils, public and private education, at 31 December |
 | [`education_vocational`](#education_vocational) | vocational | by edition | 255 | count | Vocational education of the indigenous population: apprentices by school |
+| [`education_schools`](#education_schools) | public_schools | by edition | 14,960 | count | Public primary schools and private schools, school by school: classes, staff and pupils by sex and nationality (sgt1922, sgt1930) |
 
 ### eur1906_t1_circonscription_nationality
 
@@ -6885,3 +6886,77 @@ Source `sgt`, table vocational, printed pages by edition. 255 rows. Value type: 
 | `school_fr` | Place or label as printed (56 distinct values). |
 | `value` | The printed figure. |
 | `flag` | Data-quality flag; see the legend at the top. |
+
+### education_schools
+
+**Écoles primaires publiques et écoles privées, école par école**  
+*Public primary schools and private schools, school by school: classes, staff and pupils by sex and nationality (sgt1922, sgt1930)*
+
+Source `sgt`, table public_schools, printed pages by edition. 14,960 rows. Value type: count. Flags: (empty) 14,131, derived_from_totals 778, not_applicable 39, total_mismatch 12. Notes and validation: [`../yearbook_health_education/csv/education_schools.md`](../yearbook_health_education/csv/education_schools.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `school_sector` | Coded dimension. |
+| `inspection_district` | Coded dimension. |
+| `locality` | Place or label as printed (304 distinct values). |
+| `school` | Text (172 distinct values). |
+| `school_group_fr` | Place or label as printed (1 distinct values). |
+| `row_order` | Text (466 distinct values). |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `sex` | Coded dimension. |
+| `sex_fr` | Printed French label for `sex`. |
+| `nationality` | Coded dimension. |
+| `nationality_fr` | Printed French label for `nationality`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`school_sector`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `private` |  | 1,088 |
+| `public` |  | 13,872 |
+
+`inspection_district`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `(empty)` |  | 14,960 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `classes` | Nombre de classes | 880 |
+| `pupils` | Élèves | 10,560 |
+| `pupils_total_previous_year` | Totaux généraux de l'année précédente | 880 |
+| `staff_arabic` | Maîtres arabes | 880 |
+| `staff_french_diploma` | Maîtres pourvus de diplômes français | 880 |
+| `staff_other` | Maîtres divers | 880 |
+
+`sex`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `female` | Filles | 5,280 |
+| `male` | Garçons | 5,280 |
+| `total` |  | 4,400 |
+
+`nationality`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `french` | Français / Françaises | 1,760 |
+| `italian` | Italiennes / Italiens | 1,760 |
+| `jewish` | Israélites | 1,760 |
+| `maltese` | Maltais / Maltaises | 1,760 |
+| `muslim` | Musulmanes / Musulmans | 1,760 |
+| `other` | Divers / Diverses | 1,760 |
+| `total` |  | 4,400 |

@@ -1,10 +1,10 @@
 # Statistique générale de la Tunisie, édition 1922 (situation au 31 décembre 1922), volume bpt6k9105649x
-# Chapitre VII, Instruction publique et beaux-arts.
-# Format of school lines (fields separated by " | "):
-#   locality | school | classes staff_fr staff_ar staff_div staff_tot | boys fr mus isr ita mal div tot | girls fr mus isr ita mal div tot | total previous_year
-# "»" = printed dash for zero; "?" = cell not legible (hidden in the binding), derived from the row total.
-# Special localities: REPORT (printed "Report"), AREPORTER ("A reporter"), TOTAL (printed total line; label in the school field).
-# "@ block name" starts a table; "## views L R pages pL pR" starts a spread.
+# Chapitre VII, Instruction publique et beaux-arts. Lists a) Écoles primaires publiques (views 118-143) and b) Écoles privées (views 144-147).
+# Format: see the docstring of ../extract_education_schools.py. School lines:
+#   locality | school | classes staff_fr staff_ar staff_div staff_TOT | boys fr mus isr ita mal div TOT | girls fr mus isr ita mal div TOT | TOTAUX_généraux previous_year
+# "»" printed dash = 0; "?" hidden in the binding, solved from the row total; "na" a word instead of a number;
+# "v#w" printed v kept, totals imply w; "v#" misprinted printed total; "a+b" one cell printed as two numbers.
+# REPORT / AREPORTER / TOTAL = printed "Report" / "A reporter" / final total lines (checks only).
 
 @ primary_public sector=public level=primary cols=cstaff,boys,girls,genprev table=a)_Ecoles_primaires_publiques
 ## views 118 119 pages 94 95
@@ -254,7 +254,7 @@ Mateur | Garçons | 5 6 » » 6 | 41 ? 35 138 2 » 218 | » » » » » » » | 
 Mateur | Garçons (franco-arabe) | 3 2 1 » 3 | » ? » » » » 107 | » » » » » » » | 107 88
 Mateur | Filles (internat) | 6 7 » » 7 | » ? » » » » » | 41 7 36 119 7 4 214 | 214 215
 Mateur | Enfantine | 2 2 » » 2 | 5 ? 17 32 » » 54 | 5 1 11 24 » » 41 | 95 90
-AREPORTER | A reporter | 735 651 94 76 821 | 2719 ? 1768 3548 414 76 17038 | 2517 778 2525 3389 311 69 9589 | 26627 25571#
+AREPORTER | A reporter | 735 651 94 76 821 | 2719 ? 1768 3548 414 76 17038 | 2517 778 2525 3389 311 69 9589 | 26627 25571#  # previous-year total printed 25.571; the Report of this page plus its rows give 25.577 (rows re-read); the next page's Report repeats 25.571
 ## views 134 135 pages 110 111
 REPORT | Report | 735 651 94 76 821 | 2719 ? 1768 3548 414 76 17038 | 2517 778 2525 3389 311 69 9589 | 26627 25571
 Matmata | Garçons | 2 1 1 » 2 | » ? 2 » » » 34 | » » » » » » » | 34 37
@@ -394,8 +394,7 @@ Zarzis | Garçons | 3 2 1 » 3 | 8 ? 6 4 » » 94 | » » » » » » » | 94 10
 Zarzis | Filles | 1 1 » » 1 | » ? » » » » » | 11 4 9 5 » 2 31 | 31 31
 Zeramdine | Garçons | 1 1 » » 1 | » ? » » » » 64 | » » » » » » » | 64 na  # "Création"
 Zriba | Mixte | 1 1 » » 1 | 6 ? » » » » 7 | 3 2 » 1 » » 6 | 13 18
-TOTAL | Totaux des écoles primaires publiques | 1084 970 149 98 1217 | 3993 ? 2572 4541 563 148 25097 | 3708 1560 3446 4333 428 136 13611 | 38708 36639
-CMP | Total général de l'enseignement primaire, 1° écoles primaires publiques (views 148-149) | - - - - - | 3993 13280 2572 4541 563 148 25097 | 3708 1560 3446 4333 428 136 13611 | 38708 36639
+TOTAL | Totaux des écoles primaires publiques | 1084 970 149 98 1217 | 3993 ? 2572 4541 563 148 25097 | 3708 1560 3446 4333 428 136 13611 | 38708 36639  # Musulmans in the binding, solved from the boys' total (13.280, as printed in the primary-education total). Previous-year total: the rows add to 36.645; the final total carries the 6 lost in the misprinted carry-over of view 133 (25.571 for 25.577)
 
 @ primary_private sector=private level=primary cols=cstaff,boys,girls,genprev table=b)_Ecoles_privées
 ## views 144 145 pages 120 121
@@ -435,45 +434,5 @@ Tunis | Filles | 19 23 » 4 27 | » ? » » » » » | 32 » 1020 23 1 6 1082 | 
 Sfax | Garçons | 5 4 » 2 6 | » ? 222 » » » 235 | » » » » » » » | 235 225
 Sfax | Filles | 2 2 » » 2 | » ? » » » » » | » » 76 » » » 76 | 76 87
 Sousse | Garçons | 5 3 » 2 5 | » ? 152 » » » 152 | » » » » » » » | 152 154
-TOTAL | Totaux des écoles privées [store] | 175 163 3 64 230 | 578 ? 2103 560 32 12 3322 | 797 458 1356 534 90 31 3266 | 6588 6298
-CMP | Total général de l'enseignement primaire, 2° écoles privées (views 148-149) | - - - - - | 578 37 2103 560 32 12 3322 | 797 458 1356 534 90 31 3266 | 6588 6298  # the comparison counts the 278 pupils not itemised (Ecole Umberto Ier?)
+TOTAL | Totaux des écoles privées | 175 163 3 64 230 | 578 ? 2103 560 32 12 3322 | 797 458 1356 534 90 31 3266 | 6588 6298  # stored (see notes): includes the 7 classes, 8 Maîtres divers, 170 Italian boys and 108 Italian girls of the first spread's carry-over that are not itemised (apparently the Ecole Umberto Ier, Bizerte); Musulmans in the binding, solved from the boys' total (37, as in the primary-education total)
 
-@ secondary sector=public level=secondary_higher_special cols=classes,boys,girls,genprev table=Enseignements_supérieur,_secondaire_et_spécial._a)_Etablissements_à_personnalité_civile
-## view 117 page 93
-Tunis | Lycée Carnot | 45 | 712 154 481 75 17 29 1468 | » » » » » » » | 1468 1450
-Tunis | Collège Sadiki | 13 | » 435 » » » » 435 | » » » » » » » | 435 406
-Tunis | Collège Alaoui | 16 | 212 155 10 18 2 » 397 | » » » » » » » | 397 308
-Tunis | Ecole Normale d'Instituteurs | 8 | 107 96 » 7 1 » 211 | 1 » » » » » 1 | 212 232
-Tunis | Ecole professionn. E.-Loubet | 16 | 290 31 5 43 9 4 382 | » » » » » » » | 382 372
-Tunis | Lycée Armand-Fallières (1) | 23 | » » » » » » » | 499 4 81 18 3 9 614 | 614 570
-Tunis | Ecole Normale d'Institutrices | 11 | 22 » » 1 » » 23 | 174 101 1 11 6 1 294 | 317 326
-Tunis | Petit Lycée Jules-Ferry (1) | 15 | » » » » » » » | 308 12 123 42 » 17 592#502 | 502 491  # girls total printed 592; cells, general total and column total give 502
-TOTAL | Totaux | 147 | 1343 871 496 144 29 33 2916 | 982 117 205 71 9 27 1411 | 4327 4155
-
-@ vocational sector=public level=vocational cols=apprentices table=c)_Enseignement_professionnel_des_indigènes_;_apprentissage
-## view 148 page 124
-Tunis | Ecole place Halfaouine | 32
-Tunis | Ecole rue du Tribunal | 21
-Tunis | Ecole rue du Trésor | 19
-Tunis | Ecole place aux Moutons | 21
-Tunis | Ecole rue El-Monastiri (internat d'apprentissage) | 51
-Tunis | Ecole rue Sidi-Essourdou | 31
-SUB | Tunis (bracketed total) | 175
-El-Adjim | | 16
-Bizerte | | 6
-Ferryville | | 22
-Gabès | | 26
-Gafsa | | 24
-Grombalia | | 2
-AREPORTER | A reporter | 271
-REPORT | Report | 271
-Kairouan | | 61
-Ksar-Hellal | | 29
-Mahdia | | 5
-La Chebba | | »
-Metlaoui | | 21
-Ras-el-Djebel | | »
-Sfax | | 60
-Sousse | | 81
-Teboulba | | 6
-TOTAL | Total | 534

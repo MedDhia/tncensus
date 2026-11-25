@@ -1,24 +1,11 @@
 # Status
 
-**Done and in the package:** the public-instruction summary tables
-(`csv/education_*` except `education_schools`, 16 tables, from
-`extract_education_summary.py`), the health chapter's finance tables
-(`csv/health_*` from `extract_health_finance.py`, 14 tables) and its population tables
-(`csv/health_*`, 20 tables, built by `extract_health_population.py`): hospitals
-and Tunis mortality, all 12 editions, validated (see each notes file and
-`csv/health_validation.json`).
+**All four parts are done and in the package** (validated; see each notes
+file and the `csv/*validation.json` files):
 
-**Work in progress, not in the package and not validated:** the rest of the
-table below.
-
-| Part | Transcribed (`transcribed/`) | Script | Validated |
+| Part | Transcriptions | Script | Tables |
 |---|---|---|---|
-| Health: budgets and institutes | `health_finance_*`: all 12 editions | `extract_health_finance.py` | **yes** (in the package; budget tables partly verified against OCR only, see notes) |
-| Health: hospitals and Tunis mortality | `health_pop_*`: all 12 editions | `extract_health_population.py` | **yes** (in the package) |
-| Instruction: summary tables | `education_sum_*`: all 12 editions | `extract_education_summary.py` | **yes** (in the package) |
-| Instruction: school lists | `education_schools_*`: 1922; 1930 in progress; 1939 not started | `extract_education_schools.py` (draft); `csv/education_schools.csv` is a draft | no |
-
-To finish: complete the transcriptions, run each script, check every printed
-total (see `data-raw/colonial_census/SPEC.md` and
-`data-raw/yearbook_demography/SPEC_ADDENDUM.md`), write the notes files, then
-add the tables to `tables.csv` and rebuild.
+| Health: hospitals and Tunis mortality | `health_pop_*`, 12 editions | `extract_health_population.py` | 20 `health_*` |
+| Health: budgets and institutes | `health_finance_*`, 12 editions | `extract_health_finance.py` | 14 `health_*` (budget cells partly verified against OCR only, see notes) |
+| Instruction: summary tables | `education_sum_*`, 12 editions | `extract_education_summary.py` | 16 `education_*` |
+| Instruction: school lists | `education_schools_*`, 1922 and 1930 (1939 prints none) | `extract_education_schools.py` | `education_schools` |
