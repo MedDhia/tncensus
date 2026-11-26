@@ -1,0 +1,117 @@
+# Communes chapter, sgt1927 (ark bpt6k91056510): "d) Droits d'abatage" (no year printed in the heading; year =
+# the edition year). Three two-page spreads, views 70-71, 72-73, 74-75 (printed pages 42-47); view 69 ends the
+# loans table, view 76 opens "Concessions sur la voie publique".
+# Format as in communes_slaughter_sgt1923.txt. Layout as sgt1926 (page totals for the row-total column only) but
+# with "Autres" (not "Âne") before "Chameau"; communes taxing per kilogram print » throughout with the rate in
+# Observations. 'P:' = row total that includes dues not itemised ("Dont ... viandes foraines", "Y compris ...").
+# A tariff printed on two lines is written 'a/b'. Observation texts printed across two lines are assigned to the
+# commune they describe (La Goulette's begins on the Ghardimaou line, Hammam-Lif's on the El Hamma line).
+# Reading: every line read on native-resolution crops of each whole spread (0.55 scale); the goat column at the
+# binding on 1.4-1.5x strips (legible in full); every failing row re-read on full-scale strips. OCR not used.
+@slaughter view=70 view2=71 page=42 year=1927
+cols: beef_t beef_s veal_t veal_s sheep_t sheep_s goat_t goat_s pig_t pig_s horse_t horse_s other_t other_s camel_t camel_s total
+animals_fr:beef=Bœuf;veal=Veau;sheep=Mouton et agneaux;goat=Chèvre et chevreaux;pig=Porc;horse=Chevaux et mulets;other=Autres;camel=Chameau
+# obs: 0 fr. 06 par kg. de viande abattue.
+Aïn-Draham | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2068.75
+Ariana | 6 1338 2 108 0.70 929 0 0 0 0 0 0 0 0 0 0 2375.20
+Bardo (Le) | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Ben-Gardane | 4 136 4 28 0.50 913.50 0.50 2969.50 0 0 0 0 0.50 66.50 2.50 60 4165.50
+# obs: 0 fr. 15 par kg. de viande abattue.
+Béja | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 51803.65
+# obs: 0 fr. 15 par kg. de viande abattue.
+Bizerte | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 302694.60
+Carthage | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+# The row total is printed » (sums 14.602 not added).
+Djemmal | 8 992 6 942 2 10876 1 1344 0 0 0 0 0 0 8 448 0
+# obs: 0 fr. 12 ar kg. de viande abattue.
+Djerba | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 10020.30
+# obs: 0 fr. 15 par kg. de viande abattue.
+Ebba-Ksour | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 18615.45
+El-Djem | 5 25 2.50 10 1 2506 0.60 885.60 0 0 0 0 0 0 6 60 3486.60
+# obs: 0 fr. 20 et 0 fr. 30 (viande de porc) par kg. de viande abattue.
+Ferryville | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 26355.95
+Fériana | 10 220 0 0 2.50 2700 2.50 1650 0 0 0 0 0 0 20 100 4670
+# obs: Dont 332 fr. 80 viandes foraines.
+Foum-Tatahouine | T:4_et_2_25 255.25 0 0 T:0,75-0,45 1788.75 0.45 3548.55 0 0 0 0 0 0 4 39.25 P:5965.60
+# obs: 0 fr. 15 par kg. de viande abattue.
+Gabès | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 53206.60
+# obs: 0 fr. 15 par kg. de viande abattue.
+Gafsa | T:7_et_10 1851 T:5_et_8 132 T:1,50-2,50 9548 T:1,50-2,50 5733.50 T:7_et_10 24 0 0 1.50 30 T:10_et_20 1010 18328.50
+Ghardimaou | 2.50 100 2.50 92.50 0.60 190.20 0.40 235.60 2 44 0 0 0 0 0 0 662.30
+# obs: 0 fr. 20 par kg. de viande abattue à l'abattoir municipal et 0 fr. 30 c. pour les viandes foraines.
+Goulette (La) | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 63621.80
+# obs: Dont 197 fr. 40 de viandes foraines.
+Grombalia | 6 1446 6 474 T:1_et_1_20 1361.40 T:0,50-0,60/1_» 1226.60 6 48 0 0 0 0 3 6 P:4779.40
+# obs: 0 fr. 06 par kg. de viande abattue.
+Hadjeb-el-Aïoun | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2469.65
+A reporter | . . . . . . . . . . . . . . . . 575289.85
+
+@slaughter view=72 view2=73 page=44 year=1927
+cols: beef_t beef_s veal_t veal_s sheep_t sheep_s goat_t goat_s pig_t pig_s horse_t horse_s other_t other_s camel_t camel_s total
+animals_fr:beef=Bœuf;veal=Veau;sheep=Mouton et agneaux;goat=Chèvre et chevreaux;pig=Porc;horse=Chevaux et mulets;other=Autres;camel=Chameau
+Report | . . . . . . . . . . . . . . . . 575289.85
+Hamma (El) | 7 98 4 36 1.20 2544 1 2402 0 0 0 0 T:0_10_par_kg. 32.10 6 162 5274.10
+# obs: 0 fr. 06 par kg. de viande abattue à l'abattoir et 0 fr. 10 pour les viandes foraines.
+Hammam-Lif | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4134.25
+# obs: 0 fr. 20 par kg. de viande abattue.
+Kairouan | 0 17326.20 0 1862 0 27980.10 0 14133.70 0 0 0 0 0 0 0 13691.20 74993.20
+# obs: 0 fr. 20 par kg. de viande abattue.
+Kalaa-Kebira | 0 472.20 0 0 0 4877.10 0 2847.20 0 0 0 0 0 0 0 1346.40 9582.90
+# obs: 0 fr. 25 par kg. de viande abattue.
+Kef (Le) | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 59152.50
+Krib (Le) | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Ksour-Essaf | 5 30 0 0 T:1,_et_0,60 5619 0.60 795.60 0 0 0 0 0 0 5 275 7619.60
+# obs: 0 fr. 04 par kg. de viande abattue.
+Maharès | 0 0 0 0 0 0 0 73.35 0 0 0 0 0 0 0 0 73.35
+# obs: 0 fr. 15 par kg. de viande abattue.
+Mahdia | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 7349.60
+# obs: 0 fr. 30 par kg. de viande abattue.
+Marsa (La) | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 10881.45
+# obs: 0 fr. 20 par kg. de viande abattue.
+Mateur | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 37842.60
+Maxula-Radès | 8 896 4 348 T:1,20-1,50/0,80 1251.90 1 39 7 56 0 0 0 0 0 0 2590.90
+Médenine | 2.50 120 0 0 0.50 1364.50 0.50 4663.50 2.50 10 0 0 0 0 2.50 150 6308
+Medjez-el-Bab | 6 108 2 594 2 4368 2 4940 6 204 0 0 0 0 0 0 10214
+Menzel-bou-Zelfa | 6 36 6 342 1 4020 1 2307 0 0 0 0 0 0 3 21 6726
+Menzel-Temime | T:8_et_10 468 T:4_et_5 732 T:1,50_et_2 9233.50 T:1,05_et_1 4847.50 0 0 0 0 0 0 6 60 15362.80
+Moknine | 6 2100 6 124 2 13888 1 2079 0 0 0 0 0 0 5 85 18776
+# obs: Droits affermés.
+Monastir | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 10046
+# obs: 0 fr. 20 par kg. de viande abattue.
+M'saken | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 11043.10
+A reporter | . . . . . . . . . . . . . . . . 872980.20
+
+@slaughter view=74 view2=75 page=46 year=1927
+cols: beef_t beef_s veal_t veal_s sheep_t sheep_s goat_t goat_s pig_t pig_s horse_t horse_s other_t other_s camel_t camel_s total
+animals_fr:beef=Bœuf;veal=Veau;sheep=Mouton et agneaux;goat=Chèvre et chevreaux;pig=Porc;horse=Chevaux et mulets;other=Autres;camel=Chameau
+Report | . . . . . . . . . . . . . . . . 872980.20
+# obs: Dont 40 fr. 20 viande foraine.
+Nabeul | 6 6732 6 72 1.20 5684.40 0.60 249.60 6 18 0 0 0 0 0 0 P:12834.20
+Nefta | 6 102 0 0 1.25 2882.50 0.75 1386.75 0 0 0 0 0 0 6 1482 5853.25
+Pêcherie (La) | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Philippe-Thomas | 5 140 3 12 1 1071 0.90 468.90 0 0 0 0 0 0 5 55 1746.90
+Saint-Germain | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+# obs: 0 fr. 20 par kg. (bœufs, veaux, porcs). — 0 fr. 10 (chèvres et chevreaux). 0 fr. 30 (autres viandes).
+Sfax | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 117626.75
+Sbeïtla | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+# obs: 0 fr. 30 par kg. de viande abattue.
+Sidi-bou-Saïd | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 10714.95
+Soliman | 2 534 2 102 0.40 2116.40 0.30 2102.70 0 0 0 0 0 0 1.50 6 4861.10
+# obs: 0 fr. 10 par kg. de viande abattue.
+Souk-el-Arba | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 10551
+# obs: 0 fr. 20 par kg. de viande abattue.
+Souk-el-Khemis | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 21131.40
+# obs: 0 fr. 25 par kg. de viande abattue.
+Sousse | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 135259.75
+# obs: Marché en adjudication.
+Tabarka | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4400
+# obs: 0 fr. 30 par kg. de viande abattue.
+Tebourba | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 7870.40
+Téboursouk | 5 1205 0 0 0.60 2802 0.50 3150 0 0 0 0 0 0 0 0 7157
+Thala | 3 207 0 0 0.50 1145.50 0.40 1722.40 0 0 0 0 0 0 0 0 2867.90
+Tozeur | 6 408 6 12 1.50 6150 0.75 1355.25 0 0 0 0 0 0 7 980 8905.25
+# obs: Y compris 12.420 fr. fêtes de l'Aïd El Kebir et Israélite.
+Tunis | T:8,50_et_7 204503 5 5510 T:2,00-1,50/0,75 116116.25 T:1_et_0,50 42274 9 47979 5 4540 2 562 8 1040 P:437944.25
+Zaghouan | 6 96 4 212 T:1,50_et_1 1492 1 7074 0 0 0 0 0 0 0 0 8811
+Zarzis | 4 44 0 0 0.75 847.50 0.75 1072.50 0 0 0 0 0 0 4 12 1976
+Totaux | . . . . . . . . . . . . . . . . 1673491

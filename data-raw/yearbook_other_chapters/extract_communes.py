@@ -1211,10 +1211,24 @@ def write_more(name, rows):
 # with the row total. Transcriptions transcribed/communes_slaughter_<edition>.txt (format in their header).
 
 SL_ANIMALS = {"beef": "Bœuf", "veal": "Veau", "sheep": "Mouton et agneaux", "goat": "Chèvre et chevreaux",
-              "pig": "Porc", "horse": "Chevaux et mulets", "camel": "Chameau", "other": "Autres"}
+              "pig": "Porc", "horse": "Chevaux et mulets", "camel": "Chameau", "other": "Autres",
+              "donkey": "Âne"}
 SL_MEASURE = {"t": ("tariff_per_head", "Tarif par tête"), "s": ("sums_collected", "Sommes perçues"),
               "total": ("total_collected", "Totaux")}
 SL_CHK = Checks()
+# Printed cells that a failing row check and a failing column check both point to (kept as printed, flagged).
+# The sgt1923 failures are listed in the notes only (no cell is flagged there).
+SL_FLAG = {
+    ("sgt1922", "Saint-Germain", "sheep_s"): "total_mismatch",  # 6 printed; row total and sheep Totaux exclude it
+    ("sgt1924", "Sousse", "goat_s"): "total_mismatch",          # 6.460,55; row and goat Totaux both 10.000 more
+    ("sgt1924", "Tunis", "camel_s"): "total_mismatch",          # "11 52"; row and camel Totaux both 1.140,48 more
+}
+
+
+def sl_eq(ed, what, got, printed):
+    """One check, counted overall ('slaughter') and per edition."""
+    SL_CHK.eq("slaughter", what, got, printed)
+    SL_CHK.eq(ed, what, got, printed)
 
 
 def parse_slaughter(path, ed):
@@ -1238,6 +1252,9 @@ def parse_slaughter(path, ed):
         if line.startswith("cols:"):
             cur["cols"] = line[5:].split()
             continue
+        if line.startswith("callnotes:"):        # numbered notes called from tariff cells "(n) »" (sgt1926 on)
+            cur["callnotes"] = dict(x.split("=", 1) for x in line[10:].split(";"))
+            continue
         if line.startswith("animals_fr:"):
             cur["animals_fr"] = dict(x.split("=", 1) for x in line[11:].split(";"))
             continue
@@ -1251,7 +1268,10 @@ def parse_slaughter(path, ed):
 
 
 def sl_num(tok):
-    """(value, flag, text): '.' absent, '?' illegible, 'T:' text tariff, '~' covered by a text across the row."""
+    """(value, flag, text): '.' absent, '?' illegible, 'T:' text tariff, '~' covered by a text across the row,
+    'NNN.xx' francs legible and centimes hidden in the binding (value solved in build_slaughter)."""
+    if tok.endswith(".xx"):
+        return None, "hidden", Decimal(tok[:-3])
     if tok == ".":
         return None, "absent", None
     if tok == "?":
@@ -1285,18 +1305,34 @@ def build_slaughter(write=True, verbose=False):
             for r in sec["rows"]:
                 lab = r["label"]
                 vals = {c: sl_num(t) for c, t in r["cells"].items()}
+                hid = [c for c in sums if vals[c][1] == "hidden"]
+                if hid and not is_sl_tot(lab):
+                    # one sum with its centimes in the binding: solved from the row total, checked on the francs
+                    if len(hid) != 1 or hid[0] == "total" or vals["total"][0] is None:
+                        raise ValueError(f"{ed} {lab}: cannot solve hidden cells {hid}")
+                    c = hid[0]
+                    got = vals["total"][0] - sum(vals[k][0] for k in sums
+                                                 if k not in ("total", c) and vals[k][0] is not None)
+                    francs = vals[c][2]
+                    sl_eq(ed, f"{ed} p.{sec['page']} {lab}: {c} solved from Totaux vs francs printed",
+                              Decimal(int(got)), francs)
+                    vals[c] = (got, "derived_from_totals", None) if int(got) == francs else \
+                        (francs, "total_mismatch", None)
                 if is_sl_tot(lab):
                     if re.match(r"(?i)^report", lab):
                         for c in sums:
                             if carried is not None and vals[c][0] is not None and c in carried:
-                                SL_CHK.eq("slaughter", f"{ed} p.{sec['page']} Report {c} vs previous A reporter",
+                                sl_eq(ed, f"{ed} p.{sec['page']} Report {c} vs previous A reporter",
                                           carried[c], vals[c][0])
                             if vals[c][0] is not None:
                                 acc[c] += vals[c][0]
                         continue
                     for c in sums:
                         if vals[c][0] is not None:
-                            SL_CHK.eq("slaughter", f"{ed} p.{sec['page']} {lab} {c}", acc[c], vals[c][0])
+                            sl_eq(ed, f"{ed} p.{sec['page']} {lab} {c}", acc[c], vals[c][0])
+                        elif vals[c][1] == "hidden":          # column total with centimes in the binding
+                            sl_eq(ed, f"{ed} p.{sec['page']} {lab} {c} (francs; centimes hidden)",
+                                      Decimal(int(acc[c])), vals[c][2])
                     carried = {c: vals[c][0] for c in sums if vals[c][0] is not None}
                     continue
                 for c in sums:
@@ -1305,12 +1341,13 @@ def build_slaughter(write=True, verbose=False):
                 ss_ = [vals[c][0] for c in sums if c != "total"]
                 itemised = any(v for v in ss_ if v is not None) and not any(
                     t == "~" for t in r["cells"].values()) and not r["cells"]["total"].startswith("P:")
-                if itemised and vals["total"][0] is not None:
-                    SL_CHK.eq("slaughter", f"{ed} p.{sec['page']} {lab}: sums vs Totaux",
+                if itemised and vals["total"][0] is not None and not hid:
+                    sl_eq(ed, f"{ed} p.{sec['page']} {lab}: sums vs Totaux",
                               sum(v for v in ss_ if v is not None), vals["total"][0])
                 notes = " ".join(r["note"])
                 for c, tok in r["cells"].items():
                     v, flag, text = vals[c]
+                    flag = SL_FLAG.get((ed, lab, c), flag)
                     if flag == "absent":
                         continue
                     if c == "total":
@@ -1319,6 +1356,8 @@ def build_slaughter(write=True, verbose=False):
                         animal, kind = "all", "total"
                     else:
                         animal, kind = c.rsplit("_", 1)
+                    if text and re.fullmatch(r"\(\d+\)", text) and text in sec.get("callnotes", {}):
+                        text = f"{text} » [{sec['callnotes'][text]}]"
                     if tok == "~":
                         text = re.sub(r"^span:\s*", "", next((n for n in r["note"] if n.startswith("span:")), ""))
                     right = c not in sec["cols"][:sec.get("nleft", 8)]
@@ -1329,6 +1368,7 @@ def build_slaughter(write=True, verbose=False):
                                      commune=lab, animal=animal, animal_fr=afr, measure=SL_MEASURE[kind][0],
                                      measure_fr=SL_MEASURE[kind][1],
                                      value=None if v is None else (format(v.normalize(), "f") if kind == "t"
+                                                                    or tok.endswith(".xx") and flag != "derived_from_totals"
                                                                     else f"{v:.2f}"),
                                      text_fr=text or "", flag=flag,
                                      _obs=" ".join(n[4:].strip() for n in r["note"] if n.startswith("obs:"))))
@@ -1354,65 +1394,241 @@ def write_slaughter(rows):
     (OUT / "communes_slaughter_dues.md").write_text(slaughter_notes(rows))
 
 
+# Views of the table per edition (confirmed on the page images) and what each edition's notes say.
+SL_VIEWS = {"sgt1922": "58–59", "sgt1923": "536–541", "sgt1924": "1024–1029", "sgt1925": "58–63",
+            "sgt1926": "606–611", "sgt1927": "70–75", "sgt1928": "594–599", "sgt1929": "70–75",
+            "sgt1930": "602–607"}
+SL_ED = {
+    "sgt1922": dict(
+        layout="One two-page spread (views 58–59, pp. 34–35) with a single *Totaux* line; heading *d) Droits "
+               "d'abatage* with no year (`year` = 1922, the edition year, as for the chapter's other sgt1922 "
+               "tables). Column order beef, veal, sheep, goat | pig, horse, **camel, other**. Communes taxing per "
+               "kilogram (or not taxing) have a text printed across the whole row instead of figures (*0 fr. 06 "
+               "par kilogr. de viande abattue*, *compris avec la commune de La Goulette*, *Droits affermés*): "
+               "their 16 cells are stored NA, `not_applicable`, with the text in `text_fr`, and their printed "
+               "row total as `animal` = `all`. Bizerte: rate text over beef–goat, pigs itemised (10 fr., 11.340), "
+               "rule over the rest. Many tariffs are printed as several rates (\"6, 8\", \"7 70-6 20-5 70\"): "
+               "`not_applicable` with the text. Footnotes: El-Djem (1) and Ksour-Essaf (3) *Commune créée le 29 "
+               "mars 1922*; Hadjeb-el-Aïoun (2) *Commune créée le 9 mai 1922*.",
+        reading="Every line read on native-resolution crops of both pages (left page full width; right page "
+                "with the commune names stitched in), the goat column on 1.4× and 5× crops across the binding, "
+                "multi-rate tariffs on full-scale crops. Gallica's OCR is very poor on this spread and was not "
+                "used for any value. The goat sums run into the binding: francs legible (repeated on the gutter "
+                "of the right page), centimes lost. 32 goat sums are solved from the row total "
+                "(`derived_from_totals`), each checked against the printed francs.",
+        failures="Re-read on crops; printed values kept. (i) Djemmal and Zaghouan goat sums print 680 and 4 003 "
+                 "but their row totals give 689,30 and 4.903,50: stored as the printed francs (680, 4003; "
+                 "centimes hidden), `total_mismatch`. (ii) The goat *Totaux* 71.647 matches neither reading (the "
+                 "row totals and the other printed column totals imply 71.946,88). (iii) Saint-Germain prints a "
+                 "lone 6 in the sheep sums with row total »; the sheep *Totaux* also excludes it (sum − 6 = "
+                 "printed): stored, `total_mismatch`. (iv) The grand total 1.219.603,74 is the sum of the row "
+                 "totals less Téboursouk's 5.358,80 (a line left out of the addition). (v) Camel (−1,00) and "
+                 "*Autres* (+0,10) column totals differ slightly; every cell of both columns re-read."),
+    "sgt1923": dict(
+        layout="Three two-page spreads (views 536–541, pp. 34–39), *A reporter* / *Report* between them; heading "
+               "*Droits d'abatage perçus en 1923*. Column order beef, veal, sheep, goat | pig, horse, other, camel. "
+               "Communes taxing per kilogram print » in every cell and their rate in *Observations*; their row "
+               "total is stored as `animal` = `all` (Ferryville, Gabès, La Goulette, Hammam-Lif, Mahdia, Mateur, "
+               "Souk-el-Arba, Souk-el-Khemis, Sousse; and Bizerte, where only pigs are itemised, 6.180 of "
+               "118.241,40).",
+        reading="All three spreads read on native-resolution crops of both pages stitched at the same height "
+                "(0.55–0.85 scale, every line), with separate full-scale strips of the goat column, which runs "
+                "into the binding (its last digits repeat on the gutter of the right page) and of the pig tariff "
+                "column; Gallica's OCR served as a draft only.",
+        failures="Re-read on the image; printed values kept, no cell flagged (e.g. Tunis 8,50 × … 329.970 + … = "
+                 "536.346,35 printed 518.346,35; Tebourba 4.540 printed 3.540; La Marsa 9.954,60 printed "
+                 "10.854,60)."),
+    "sgt1924": dict(
+        layout="Three two-page spreads (views 1024–1029, pp. 34–39) with *A reporter* / *Report*; heading *d) "
+               "Droits d'abatage* with no year (`year` = 1924, the edition year). Column order as sgt1923 (… pig, "
+               "horse, other, camel), with an *Observations* column. Many tariffs printed as text (\"0,06 par kg.\", "
+               "\"5 et 4\", \"0,60-1,00\", two rates braced on two lines, written \"a/b\"): `not_applicable` with the "
+               "text. Mahdia prints its rate \"0 08\" also in the beef sums column: stored as text (NA), so the row "
+               "counts as non-itemised and its total (6.143,68) is kept. Monastir's beef tariff column prints "
+               "\"1.048 »\" (stored 1048 as printed). Observations are assigned to the commune they describe where "
+               "the text starts a line higher (Ferryville, Tozeur).",
+        reading="Every line read on native-resolution crops of each whole spread (both pages stitched, 0.55 "
+                "scale); every failing row, every page-total line and the goat column at the binding re-read on "
+                "full-scale strips (0.9–3×). The goat sums are legible in full in this edition. Gallica's OCR "
+                "used as a draft only (it misreads e.g. Djemmal's sheep sum as 3.162,40; the image shows 3.462,40).",
+        failures="Every failing row and total line re-read on full-scale strips; printed values kept. Two cells are "
+                 "pinned down by a row check and a column check failing by the same amount and are flagged "
+                 "`total_mismatch`: Sousse goat 6.460,55 (row and goat *Totaux* both imply 16.460,55) and Tunis "
+                 "camel \"11 52\" (both imply 1.152). Djemmal sheep 3.462,40 agrees with its row total; the first "
+                 "*A reporter* (sheep 44.437,96) evidently carries 3.162,40, and the *Report* reprints it as 44.437,90. "
+                 "The other failures are small differences (0,02–6,00 francs) or rows whose printed total "
+                 "disagrees with its cells (Kairouan 600, Zaghouan 800)."),
+    "sgt1925": dict(
+        layout="Three two-page spreads (views 58–63, pp. 34–39) with *A reporter* / *Report* and *Observations*; "
+               "heading *d) Droits d'abatage* with no year (`year` = 1925). Column order as sgt1923. Text tariffs "
+               "(\"0,06 par kg.\", \"6 » les 100 kil.\", \"4 et 5 fr.\") are `not_applicable` with the text. Some "
+               "per-kilogram communes print the rate, or its second line \"kil.\", in a sums column (Béja veal, "
+               "sheep and goat; Ebba-Ksour and Mahdia beef): stored as text (NA), so these rows count as "
+               "non-itemised and their printed totals are kept. Bizerte: pigs itemised (8.232), total stored "
+               "as `all` (it includes the per-kilo dues). M'saken's goat sum loses its last centime digit in "
+               "the binding (solved from the row total: 1.267,80).",
+        reading="Every line read on native-resolution crops of each whole spread (0.55 scale); the goat column "
+                "at the binding on 1.6–3× strips; all rows of the third spread, every failing row and every "
+                "page-total line re-read on full-scale strips (0.8–0.85×). Gallica's OCR used as a draft only.",
+        failures="Every failing row and total line re-read on full-scale strips; printed values kept, no cell "
+                 "flagged (no failing row and failing column share the same difference). The camel *A reporter* "
+                 "of p. 34 (3.620) is 1.766,80 above its cells and the final camel *Totaux* 1.766,80 below them, "
+                 "so the camel column is consistent over the table; the p. 38 *Report* of the grand total "
+                 "(635.503,59) differs from the p. 36 *A reporter* (635.305,39); the last page's *Totaux* for "
+                 "beef, goat, pig and the total disagree with their cells (pig by 8.310)."),
+    "sgt1926": dict(
+        layout="Three two-page spreads (views 606–611, pp. 34–39); heading *d) Droits d'abatage* with no year "
+               "(`year` = 1926). New layout: the column *Autres* is replaced by *Âne* (`donkey`, before the "
+               "camel), and *A reporter* / *Report* / *Totaux* are printed for the row-total column only. Many "
+               "tariff cells print a note call \"(n) »\" referring to numbered notes in the *Observations* column "
+               "(numbering restarts on each page): `not_applicable`, `text_fr` = the call and the note text in "
+               "brackets. Rows whose total includes foreign-meat dues not itemised (*Y compris … viandes "
+               "foraines*: Foum-Tatahouine, Grombalia, Nabeul) and rows with no itemised sums keep their row total "
+               "as `animal` = `all`. Kairouan prints \"4 20\" in the horse tariff column with the sums » (stored "
+               "as a tariff).",
+        reading="Every line read on native-resolution crops of each whole spread (0.55 scale); the goat column "
+                "at the binding on 1.5–2.5× strips (legible in full); the third spread (faint print), every "
+                "itemised row of it and every failing row re-read on full-scale strips. Gallica's OCR not used "
+                "for values.",
+        failures="Every failing row re-read on full-scale strips of both pages; printed values kept, no cell "
+                 "flagged (only the row-total column has page totals, so no failure can be pinned to one cell). "
+                 "The final *Totaux* (1.368.192,41) is 19.699,90 above the *Report* plus the p. 39 row totals, "
+                 "every one of which was re-read; Téboursouk's goat sum reads 263,45 against a row total that "
+                 "implies 2.943,45."),
+    "sgt1927": dict(
+        layout="Three two-page spreads (views 70–75, pp. 42–47); heading *d) Droits d'abatage* with no year "
+               "(`year` = 1927). Layout as sgt1926 (page totals for the row-total column only), but with *Autres* "
+               "again (no *Âne*); per-kilogram communes print » throughout with the rate in *Observations* "
+               "(Kairouan, Kalaa-Kebira and Maharès itemise sums with the tariff »: stored 0 as printed). New "
+               "commune Sbeïtla (all »). Rows whose total includes foreign-meat dues (*Dont … viandes foraines*: "
+               "Foum-Tatahouine, Grombalia, Nabeul) or festival dues (Tunis: *Y compris 12.420 fr. fêtes de l'Aïd "
+               "El Kebir et Israélite*) keep their row total as `animal` = `all`.",
+        reading="Every line read on native-resolution crops of each whole spread (0.55 scale); the goat column "
+                "at the binding on 1.4–1.5× strips (legible in full); every failing row and the row-total column "
+                "re-read on full-scale strips. Gallica's OCR not used for values.",
+        failures="Every failing row re-read on full-scale strips of both pages; printed values kept, no cell "
+                 "flagged. Djemmal's row total is printed » although its sums (14.602) are itemised; the p. 44 "
+                 "*A reporter* is 280 below the *Report* plus the row totals."),
+    "sgt1928": dict(
+        layout="Three two-page spreads (views 594–599, pp. 42–47); heading *d) Droits d'abatage* with no year "
+               "(`year` = 1928). Layout as sgt1927, but **no page totals at all** (no *A reporter*, *Report* or "
+               "*Totaux*), so only the row checks apply. Commune names as printed in this edition (\"Bardo\", "
+               "\"Gardimaou\", \"Hammama\", \"Kalâa-Kebira\", \"Kef\", \"Krib\", \"La Marsa\", \"Foum Tatahouine\"). "
+               "Ariana prints \"0 70\" in the goat sums column (the tariff repeated; stored 0.70 as printed).",
+        reading="View 595 (right page of the first spread) has almost no Gallica OCR text, and the whole table "
+                "was read on the images: native-resolution crops of each spread (0.55 scale, 530-pixel bands), "
+                "the goat column at the binding on 1.2–1.3× strips (legible in full), the faint third spread "
+                "and every failing row re-read on full-scale strips. The left-page OCR was used only to locate "
+                "row positions; no value rests on it.",
+        failures="Every failing row re-read on full-scale strips of both pages; printed values kept, no cell "
+                 "flagged (no column totals are printed, so no failure can be pinned to one cell)."),
+    "sgt1929": dict(
+        layout="Three two-page spreads (views 70–75, pp. 42–47); heading *d) Droits d'abatage* with no year "
+               "(`year` = 1929). Headings in the plural (*Bœufs et vaches*, *Veaux*, …), *Ânes* (`donkey`) in place "
+               "of *Autres*, and no page totals, so only the row checks apply. **Not a reprint of sgt1928**: the "
+               "commune list and layout are the same but every itemised row differs (e.g. Ariana beef 1.980 vs "
+               "1.500, Djemmal total 19.101 vs 17.207, Bizerte 414.643 vs 361.948,70), so both editions are kept "
+               "as separate years and no cell comparison applies. Text printed in a sums column (Kalâa-Kebira "
+               "goat \"65.899 kil. 500\" and pig \"0 20\", Soliman goat \"99.270\" kilos) is stored as text (NA). "
+               "Kairouan's row total prints \"4.91  0\" with type missing: `illegible`. On p. 44 some lines sit a "
+               "little off their commune names; values follow the printed order, which matches the names.",
+        reading="Every line read on native-resolution crops of each whole spread (0.55 scale, 540-pixel bands); "
+                "the goat column is clear of the binding in this volume; every failing row re-read on "
+                "full-scale strips of both pages. Gallica's OCR used only to locate row positions.",
+        failures="Every failing row re-read on full-scale strips of both pages; printed values kept, no cell "
+                 "flagged (no column totals are printed). Menzel-Temime's total (15.219,30) includes dues not "
+                 "itemised (Observations: *5.297,50 et 6 kilos viande foraine à 0,30, au total*)."),
+    "sgt1930": dict(
+        layout="Three two-page spreads (views 602–607, pp. 44–49); heading *d) Droits d'abatage* with no year "
+               "(`year` = 1930). Layout as sgt1929 (*Ânes*, no page totals, so only the row checks apply). Rows "
+               "whose total includes non-itemised dues keep it as `animal` = `all` (Maxula-Radès *Y compris "
+               "viandes foraines*; Menzel-Temime *Y compris 38 fr. 40 …*; Tunis, whose sheep sums column prints "
+               "two amounts, \"38.158\" over \"139.045,50\", stored as text, with the note *Les taxes pour abatage "
+               "des agneaux et chevaux sont comprises dans la somme de 139.045 fr. 10*). Sfax prints per-kilogram "
+               "rates (\"0 30 par kil.\" …) in five tariff columns.",
+        reading="Every line read on native-resolution crops of each whole spread (0.55 scale, 540-pixel bands); "
+                "the goat column at the binding on 1.4× strips (centimes repeat on the gutter; legible in full); "
+                "every failing row re-read on full-scale strips of both pages. Gallica's OCR used only to locate "
+                "row positions.",
+        failures="Every failing row re-read on full-scale strips of both pages; printed values kept, no cell "
+                 "flagged (no column totals are printed). Medjez-el-Bab's goat sum prints \"66 50\" where its row "
+                 "total implies 6.050; Foum Tatahouine's total (8.526,25) is close to its cells without the beef "
+                 "264."),
+}
+
+
 def slaughter_notes(rows):
     eds = [e for e in ORDER if e in {r["census"] for r in rows}]
+    missing = [e for e in SL_VIEWS if e not in eds]
     fl = defaultdict(list)
     for r in rows:
         if r["flag"]:
             fl[r["flag"]].append(r)
     obs = sorted({(r["census"], r["commune"], r["_obs"]) for r in rows if r["_obs"]})
+    n_all, f_all = SL_CHK.n["slaughter"], SL_CHK.fail["slaughter"]
     L = ["# Droits d'abatage (slaughter dues)", "",
          "*Slaughter dues collected by each commune: tariff per head and sums collected for each kind of "
          "animal, and the total collected.*", "",
-         "Source: *Statistique générale de la Tunisie*, chapter *Communes*, table d) *Droits d'abatage perçus en "
-         "<année>*, editions " + ", ".join(eds) + ". Source gallica.bnf.fr / Ministère des Affaires étrangères "
+         "Source: *Statistique générale de la Tunisie*, chapter *Communes*, table d) *Droits d'abatage [perçus en "
+         "<année>]*, editions " + ", ".join(eds) + ". Source gallica.bnf.fr / Ministère des Affaires étrangères "
          "(NoC-CR).", "",
          f"Pages and views of the stored values: {fmt_views(rows)}.", "",
          "Rebuild: `python3 data-raw/yearbook_other_chapters/extract_communes.py build` (transcriptions "
          "`../transcribed/communes_slaughter_<edition>.txt`).", "",
-         f"Rows: {len(rows)}. Printed once per edition (SPEC_ADDENDUM rule 5); `year` = the year in the heading.", "",
-         "**Coverage: only sgt1923 (1923) is transcribed.** The table is printed in every edition sgt1922–sgt1930 "
-         "(sgt1922 views 58–59; sgt1923 536–541; sgt1924 1024–1029; sgt1925 58–63; sgt1926 606–611; sgt1927 70–75; "
-         "sgt1928 594–599, view 595 nearly blank in the OCR and to be checked; sgt1929 70–75; sgt1930 602–607) "
-         "and not in sgt1935–sgt1939. The other eight editions are not done yet. sgt1922 uses a different, "
-         "denser layout (one spread, many communes taxing per kilogram with the rate printed across the row).", "",
+         f"Rows: {len(rows)} (" + ", ".join(f"{e} {sum(r['census'] == e for r in rows)}" for e in eds) + "). "
+         "Printed once per edition (SPEC_ADDENDUM rule 5); `year` = the year in the heading.", "",
+         "**Coverage:** " + ", ".join(f"{e} (views {SL_VIEWS[e]})" for e in eds) + " transcribed"
+         + (("; not done: " + ", ".join(f"{e} (views {SL_VIEWS[e]})" for e in missing)) if missing else "")
+         + ". The table is not printed in sgt1935–sgt1939.", "",
          "## Columns", "",
          "- `census`, `table_id`, `gallica_ark`, `source_page`, `gallica_view`, `year`: as in the other files "
-         "(left page: beef to goat; right page: pig to camel and the total)",
-         "- `commune`: as printed",
+         "(left page: beef to goat; right page: pig, horse, camel/other and the total)",
+         "- `commune`: as printed (footnote calls such as \"(1)\" kept)",
          "- `animal`: `beef` (Bœuf), `veal` (Veau), `sheep` (Mouton et agneaux), `goat` (Chèvre [et chevreaux]), "
-         "`pig` (Porc), `horse` (Chevaux et mulets), `other` (Autres), `camel` (Chameau); `all` for a total "
+         "`pig` (Porc), `horse` (Chevaux et mulets), `other` (Autres; to sgt1925), `donkey` (Âne; from sgt1926), "
+         "`camel` (Chameau); `all` for a total "
          "stored on its own (see below)",
-         "- `animal_fr`: column heading (French)",
+         "- `animal_fr`: column heading as printed in that edition (French)",
          "- `measure`: `tariff_per_head` (*Tarif par tête*, francs), `sums_collected` (*Sommes perçues*, francs), "
          "`total_collected` (*Totaux*)",
-         "- `value`: francs; printed » = 0. Tariffs as printed (\"0 15\" = 0.15)",
-         "- `text_fr`: text printed in place of a tariff (e.g. \"0,10 par kg\", \"1,00-1,20\")",
-         "- `flag`: empty, `not_applicable` (tariff printed as text: value NA, text in `text_fr`), `illegible`", "",
-         "The row *Totaux* is stored only for communes whose dues are not itemised by animal (all sums » and the "
-         "total printed, i.e. dues levied per kilogram: Ferryville, Gabès, La Goulette, Hammam-Lif, Mahdia, Mateur, "
-         "Souk-el-Arba, Souk-el-Khemis, Sousse; and Bizerte, where only pigs are itemised, 6.180 of 118.241,40): "
-         "`animal` = `all`, `measure` = `total_collected`. For the other communes it equals the sum of the "
-         "animals and is used for the check only. The page totals (*A reporter*, *Report*, *Totaux*) are not "
-         "stored.", "",
-         "**Image versus OCR.** All three spreads were read on native-resolution crops of both pages stitched at "
-         "the same height (0.55–0.85 scale, every line), with separate full-scale strips of the goat column, "
-         "which runs into the binding (its last digits repeat on the gutter of the right page) and of the pig "
-         "tariff column; Gallica's OCR served as a draft only. Every failed check was re-read on a crop.", "",
-         "Observations column (printed text, translated): " + "; ".join(
-             f"{c} ({e}): *{o}*" for e, c, o in obs) + ". (Béja: dues at 0 fr. 05 per kg live weight except pigs, "
-         "10 fr. per head; the others: rate per kilogram of meat, *Affermés* = farmed out, *Taxes instituées en "
-         "1924* = dues introduced in 1924.)", "",
+         "- `value`: francs; printed » = 0. Tariffs as printed (\"0 15\" = 0.15). A sum stored as whole francs "
+         "without centimes (e.g. `680`) has its centimes hidden in the binding and could not be solved",
+         "- `text_fr`: text printed in place of a tariff or across the row (e.g. \"0,10 par kg\", \"1,00-1,20\", "
+         "\"0 fr. 06 par kilogr. de viande abattue\")",
+         "- `flag`: empty; `not_applicable` (tariff printed as text, or cell covered by a text printed across the "
+         "row: value NA, text in `text_fr`); `derived_from_totals` (sum whose centimes are hidden in the binding, "
+         "solved as row total − other sums and checked against the printed francs); `total_mismatch` (printed "
+         "value kept although the checks show it inconsistent, see the edition's section); `illegible`", "",
+         "The row *Totaux* is stored only for communes whose dues are not itemised by animal (all sums » or a "
+         "text across the row, and the total printed: dues levied per kilogram, farmed out, or counted with "
+         "another commune): `animal` = `all`, `measure` = `total_collected`. For the other communes it equals the "
+         "sum of the animals and is used for the check only. The page totals (*A reporter*, *Report*, *Totaux*) "
+         "are not stored.", "",
+         "Observations column (printed text, translated below): " + "; ".join(
+             f"{c} ({e}): *{o}*" for e, c, o in obs) + ". (*par kil. poids vif* = per kg live weight; *par kilo "
+         "[de viande abattue]* = per kilogram of meat; *Affermés* = farmed out; *Taxes instituées en 1924* = dues "
+         "introduced in 1924.)", "",
          "## Validation", "",
-         f"- Checks: {SL_CHK.n['slaughter']} (each itemised row against its *Totaux*; every column of each page "
-         f"against the *A reporter* / *Totaux* line, with the carried *Report*); passed "
-         f"{SL_CHK.n['slaughter'] - len(SL_CHK.fail['slaughter'])}; failed {len(SL_CHK.fail['slaughter'])}. Each "
-         "failure was re-read on the image and the printed values are kept (e.g. Tunis 8,50 × … 329.970 + … = "
-         "536.346,35 printed 518.346,35; Tebourba 4.540 printed 3.540; La Marsa 9.954,60 printed 10.854,60):", ""]
-    L += ["  - " + x for x in SL_CHK.fail["slaughter"]]
-    L += ["", "- Flagged cells: " + (", ".join(f"{k}: {len(v)}" for k, v in sorted(fl.items())) or "none") + "."]
+         f"Checks, all editions: {n_all} (each itemised row against its *Totaux*; every column of each page "
+         f"against the *A reporter* / *Totaux* line, with the carried *Report*; each sum solved from the row "
+         f"total against its printed francs); passed {n_all - len(f_all)}; failed {len(f_all)}. Every failure "
+         f"was re-read on a native-resolution crop.", ""]
+    for e in eds:
+        info, fails = SL_ED.get(e, {}), SL_CHK.fail[e]
+        L += [f"### {e} (`{EDITIONS[e]}`, views {SL_VIEWS[e]})", "",
+              f"- Rows: {sum(r['census'] == e for r in rows)}. " + info.get("layout", ""),
+              "- Image versus OCR: " + info.get("reading", ""),
+              f"- Checks: {SL_CHK.n[e]}; passed {SL_CHK.n[e] - len(fails)}; failed {len(fails)}."
+              + (" " + info.get("failures", "") if fails else "")]
+        L += ["  - " + x for x in fails]
+        if info.get("extra"):
+            L += ["- " + x for x in info["extra"]]
+        L += [""]
+    L += ["## Flagged cells", "",
+          "- " + (", ".join(f"{k}: {len(v)}" for k, v in sorted(fl.items())) or "none") + "."]
     for k, v in sorted(fl.items()):
         L += [f"  - {r['census']} {r['commune']} {r['animal']} {r['measure']}: {k}"
+              + (f" = {r['value']}" if r["value"] not in (None, "") else "")
               + (f" (printed \"{r['text_fr']}\")" if r["text_fr"] else "") for r in v]
     return "\n".join(L) + "\n"
 

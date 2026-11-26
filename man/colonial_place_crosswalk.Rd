@@ -5,7 +5,7 @@
 \alias{colonial_place_crosswalk}
 \title{Place-Name Crosswalk for the Colonial Census and Yearbook Tables}
 \format{
-A \code{data.frame} with 2,341 rows and 16 columns:
+A \code{data.frame} with 2,348 rows and 16 columns:
 \describe{
   \item{level}{Column the name appears in: \code{"controle_civil"},
     \code{"annexe"}, \code{"caidat"}, \code{"commune"}, \code{"cheikhat"}
@@ -56,8 +56,8 @@ e.g. \code{locality} and \code{controle_civil}, or \code{cheikhat} and
 \details{
 Names are compared after normalising accents, case, hyphens,
   apostrophes, Arabic articles and common transliteration variants
-  (ou/u, dj/j, kh/k, ch/sh); no fuzzy matching is done. Of the 2,230
-  commune, cheikhat and locality rows, 1,516 are linked (1,495 with
+  (ou/u, dj/j, kh/k, ch/sh); no fuzzy matching is done. Of the 2,237
+  commune, cheikhat and locality rows, 1,519 are linked (1,498 with
   coordinates). Links were checked against the gazetteer's own 1931
   contrôle civil, allowing for the 1906 annexes, the later contrôle of
   Zaghouan (carved out of Tunis) and the military territories.

@@ -177,7 +177,7 @@ Every table is tidy: one row per printed cell. Printed subtotals and totals are 
 | [`communes_terraces`](#communes_terraces) | terraces | by edition | 3,510 | mixed | Pavement concessions: café terraces (chairs and tables of lemonade sellers) and street stalls (goods of all kinds): number, surface and receipts, per commune |
 | [`communes_loans_caisse`](#communes_loans_caisse) | caisse | by edition | 3,697 | francs | Municipal loans from the Caisse des Prêts Communaux: one block per commune, one line per loan, with terms, annuities due and paid, arrears and capital amortised / outstanding at the end of the year |
 | [`communes_loans_tunis_bonds`](#communes_loans_tunis_bonds) | tunis_bonds | by edition | 256 | francs | Bond loans of the city of Tunis (1891 and 1897): coupons and bonds due, paid in the year and earlier, lapsed, and outstanding at the close of the year |
-| [`communes_slaughter_dues`](#communes_slaughter_dues) | slaughter | by edition | 963 | mixed | Slaughter dues collected by each commune: tariff per head and sums collected for each kind of animal, and the total collected |
+| [`communes_slaughter_dues`](#communes_slaughter_dues) | slaughter | by edition | 8,650 | mixed | Slaughter dues collected by each commune: tariff per head and sums collected for each kind of animal, and the total collected |
 
 ### eur1906_t1_circonscription_nationality
 
@@ -7245,7 +7245,7 @@ Source `sgt`, table tunis_bonds, printed pages by edition. 256 rows. Value type:
 **Droits d'abatage (slaughter dues)**  
 *Slaughter dues collected by each commune: tariff per head and sums collected for each kind of animal, and the total collected*
 
-Source `sgt`, table slaughter, printed pages by edition. 963 rows. Value type: mixed. Flags: (empty) 960, not_applicable 3. Notes and validation: [`../yearbook_other_chapters/csv/communes_slaughter_dues.md`](../yearbook_other_chapters/csv/communes_slaughter_dues.md).
+Source `sgt`, table slaughter, printed pages by edition. 8,650 rows. Value type: mixed. Flags: (empty) 8,033, not_applicable 580, derived_from_totals 31, total_mismatch 5, illegible 1. Notes and validation: [`../yearbook_other_chapters/csv/communes_slaughter_dues.md`](../yearbook_other_chapters/csv/communes_slaughter_dues.md).
 
 | Column | Description |
 |---|---|
@@ -7255,33 +7255,34 @@ Source `sgt`, table slaughter, printed pages by edition. 963 rows. Value type: m
 | `source_page` | Printed page number. |
 | `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
 | `year` | Year the figure refers to. |
-| `commune` | Place or label as printed (59 distinct values). |
+| `commune` | Place or label as printed (78 distinct values). |
 | `animal` | Coded dimension. |
 | `animal_fr` | Printed French label for `animal`. |
 | `measure` | Coded dimension. |
 | `measure_fr` | Printed French label for `measure`. |
 | `value` | The printed figure. |
-| `text_fr` | Place or label as printed (3 distinct values). |
+| `text_fr` | Place or label as printed (187 distinct values). |
 | `flag` | Data-quality flag; see the legend at the top. |
 
 `animal`:
 
 | Code | Printed label | N |
 |---|---|---:|
-| `all` | Tous animaux | 19 |
-| `beef` | Bœuf | 118 |
-| `camel` | Chameau | 118 |
-| `goat` | Chèvre et chevreaux | 118 |
-| `horse` | Chevaux et mulets | 118 |
-| `other` | Autres | 118 |
-| `pig` | Porc | 118 |
-| `sheep` | Mouton et agneaux | 118 |
-| `veal` | Veau | 118 |
+| `all` | Tous animaux | 218 |
+| `beef` | Bœuf / Bœufs / Bœufs et vaches | 1,054 |
+| `camel` | Chameau / Chameaux | 1,054 |
+| `donkey` | Âne / Ânes | 348 |
+| `goat` | Chèvre / Chèvre et chevreaux / Chèvres / Chèvres et chevreaux | 1,054 |
+| `horse` | Chevaux et mulets | 1,054 |
+| `other` | Autres | 706 |
+| `pig` | Porc / Porcs | 1,054 |
+| `sheep` | Mouton et agneaux / Moutons / Moutons et agneaux | 1,054 |
+| `veal` | Veau / Veaux | 1,054 |
 
 `measure`:
 
 | Code | Printed label | N |
 |---|---|---:|
-| `sums_collected` | Sommes perçues | 472 |
-| `tariff_per_head` | Tarif par tête | 472 |
-| `total_collected` | Totaux | 19 |
+| `sums_collected` | Sommes perçues | 4,216 |
+| `tariff_per_head` | Tarif par tête | 4,216 |
+| `total_collected` | Totaux | 218 |

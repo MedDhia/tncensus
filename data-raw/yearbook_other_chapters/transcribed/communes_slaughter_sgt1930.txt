@@ -1,0 +1,112 @@
+# Communes chapter, sgt1930 (ark bpt6k9105652d): "d) Droits d'abatage" (no year printed in the heading; year =
+# the edition year). Three two-page spreads, views 602-603, 604-605, 606-607 (printed pages 44-49); view 601 ends
+# the loans table, view 608 opens "Concessions sur la voie publique".
+# Format as in communes_slaughter_sgt1923.txt. Layout as sgt1929 (plural headings, "Ânes" before "Chameaux", no
+# page totals). 'P:' = row total that includes dues not itemised (foreign meat, Tunis lambs and horses).
+# Reading: every line read on native-resolution crops of each whole spread (0.55 scale, 540-pixel bands), the goat
+# column at the binding on 1.4x strips (its centimes repeat on the gutter of the right page; legible in full),
+# every failing row re-read on full-scale strips. Gallica OCR used only to locate row positions.
+@slaughter view=602 view2=603 page=44 year=1930
+cols: beef_t beef_s veal_t veal_s sheep_t sheep_s goat_t goat_s pig_t pig_s horse_t horse_s donkey_t donkey_s camel_t camel_s total
+animals_fr:beef=Bœufs et vaches;veal=Veaux;sheep=Moutons et agneaux;goat=Chèvres et chevreaux;pig=Porcs;horse=Chevaux et mulets;donkey=Ânes;camel=Chameaux
+# obs: 0,06 par kilo de viande abattue.
+Aïn-Draham | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2199.03
+Ariana | 6 2252 2 40 0.70 1895.60 0 0 0 0 0 0 0 0 0 0 4187.60
+Bardo | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Ben-Gardane | 4 64 4 28 0.50 1321 0.50 3546.50 0 0 0 0 0 0 2.50 277.50 5237
+# obs: 0,20 par kilo de viande abattue.
+Béja | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 67376
+# obs: 21 francs pour les porcs, par tête; le reste 0,15 et 0,10 par kilo de viande abattue.
+Bizerte | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 387208.05
+Carthage | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Djemmal | 8 1968 6 1758 2 14676 1 2792 0 0 0 0 0 0 8 832 22026
+# obs: 0,12 par kilo de viande abattue.
+Djerba | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 14097.25
+# obs: 165.141 kilos de viande abattue, à 0,25 le kilo.
+Ebba-Ksour | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 41285.25
+El-Djem | 5 45 2.50 28.50 1 1894 T:0.60/et_0,50 869.40 0 0 0 0 0 0 5 75 2911.90
+# obs: 0,20 par kilo de viande abattue (0,30 pour les porcs et 0,40 pour les viandes foraines).
+Ferryville | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 66143.70
+# obs: Perçus avec les droits de marché.
+Fériana | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3500
+Foum Tatahouine | 4 264 0 0 0.75 3131.75 0.75 5314.50 T:0_10/par_kil. 32.50 0 0 0 0 4 48 8526.25
+# obs: 0,15 par kilo de viande abattue.
+Gabès | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 61141.25
+# obs: 0,25 par kilo de viande abattue.
+Gafsa | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 43534
+# obs: Dans la taxe sur la viande de porc sont compris 64 sangliers à 2 fr.
+Gardimaou | 2.50 542.50 0 0 0.60 499.20 0.40 819.20 2 166 0 0 0 0 0 0 2026.90
+# obs: 0,30 par kilo de viande abattue.
+Goulette (La) | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 108860.90
+Grombalia | T:6_et_7_fr. 3739 0 0 1.20 2234.40 1.20 1760.40 T:6_et_10_f. 238 0 0 0 0 3 3 7974.80
+# obs: 0 fr. 06 par kilo de viande abattue.
+Hadjeb-el-Aïoun | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3288.70
+
+@slaughter view=604 view2=605 page=46 year=1930
+cols: beef_t beef_s veal_t veal_s sheep_t sheep_s goat_t goat_s pig_t pig_s horse_t horse_s donkey_t donkey_s camel_t camel_s total
+animals_fr:beef=Bœufs et vaches;veal=Veaux;sheep=Moutons et agneaux;goat=Chèvres et chevreaux;pig=Porcs;horse=Chevaux et mulets;donkey=Ânes;camel=Chameaux
+El-Hamma | 7 119 4 88 T:1,20_et/0,90 4137.60 T:1_»/et_0,70 3539 0 0 0 0 0 0 T:6_et_3 72 7955.60
+# obs: 0 fr. 20 par kilo de viande abattue.
+Hammam-Lif | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5357.82
+# obs: Par kilo 0 fr. 30.
+Kairouan | 0 34740 0 0 0 61848 0 33633 0 0 0 0 0 0 0 12780 143031
+# obs: 0,20 par kilo de viande abattue.
+Kalâa-Kebira | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6189.10
+# obs: 0,25 par kilo de viande abattue.
+Kef | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 72448.30
+# obs: acquises avec les droits de marché.
+Krib | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3421.70
+Ksour Essaf | 5 65 2.50 2.50 T:1_et_0,60 5206 T:0_60/et_0,30 1348.40 0 0 0 0 0 0 5 240 6861.90
+# obs: 0 fr. 04 par kilo.
+Maharès | 0 9.60 0 0 0 228.20 0 145.50 0 0 0 0 0 0 0 7.70 391
+# obs: 52.081 kilos à 0,20 par kilo de viande abattue.
+Mahdia | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 10416.20
+# obs: 0,30 par kilo de viande abattue.
+La Marsa | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 16086.79
+# obs: 0,20 par kilo de viande abattue.
+Mateur | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 51666.20
+# obs: Y compris viandes foraines.
+Maxula-Radès | 12 3376 8 442 T:2_fr._et/3_fr. 7613.90 2 24 15 142 0 0 0 0 0 0 P:13497.65
+Médenine | 4 121.50 0 0 0.75 2085.50 0.75 5576.75 0 0 0 0 0 0 4 67.50 7845.25
+# The goat sums print "66 50"; the row total implies 6.050.
+Medjez-el-Bab | 6 192 2 944 2 4704 2 66.50 6 84 0 0 0 0 5 6 11980
+# obs: Droits mis en adjudication.
+Menzel-Bou-Zelfa | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 10900
+# obs: Y compris 38 fr. 40 droits sur viandes foraines.
+Menzel-Temime | 8 1556 T:4_et_5 398 1.50 8271.50 1 5283.50 0 0 0 0 0 0 6 54 P:15601.40
+Moknine | 6 1320 6 2520 2 13406 1 4171 0 0 0 0 0 0 5 190 21607
+Monastir | 12 7056 8 240 T:4_et_2_50 13054 T:3_et_2 250 0 0 0 0 0 0 0 0 20600
+# obs: 0 fr. 30 par kilo de viande abattue.
+M'Saken | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3437.20
+# obs: 0,20 par kilo de viande abattue.
+Nabeul | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 27407.60
+Nefta | 7 112 6 2442.50 1.50 2596.10 0 0 0 0 0 0 0 0 7 959 6209.60
+
+@slaughter view=606 view2=607 page=48 year=1930
+cols: beef_t beef_s veal_t veal_s sheep_t sheep_s goat_t goat_s pig_t pig_s horse_t horse_s donkey_t donkey_s camel_t camel_s total
+animals_fr:beef=Bœufs et vaches;veal=Veaux;sheep=Moutons et agneaux;goat=Chèvres et chevreaux;pig=Porcs;horse=Chevaux et mulets;donkey=Ânes;camel=Chameaux
+Philippe Thomas | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Saint-Germain | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Sfax | T:0_30/par_kil. 0 0 0 0 0 T:0_20/par_kil. 0 T:0_35/par_kil. 0 0 0 T:0_30/par_kil. 0 T:0_20/par_kil. 0 221218.15
+Sbeïtla | 9 387 9 333 2 5270 2 3074 0 0 0 0 0 0 20 80 9148
+# obs: 0,30 par kilo de viande abattue.
+Sidi-bou-Saïd | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 27202.41
+# obs: 0,20 par kilo de viande abattue.
+Soliman | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 15871.90
+# obs: 149.082 kilos à raison de 0,10 par kilo de viande abattue.
+Souk-el-Arba | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 14908.20
+# obs: 0,25 par kilo de viande abattue: 117.639 kilos à 0,25.
+Souk-el-Khemis | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 29409.75
+# obs: 731.862 kilos de viande abattue à 0,30 par kilo.
+Sousse | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 219558.60
+Tabarka | 9 1080 9 333 1.75 155.75 1.20 241.20 9 414 0 0 0 0 0 0 2223.95
+# obs: 0,30 par kilo de viande abattue.
+Tébourba | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 16061.70
+Téboursouk | 5 1155 5 21 0.60 2460.60 0.50 1954 4 27 0 0 0 0 0 0 5617.60
+Thala | 3 252 3 16 1.50 2575 0.40 3221.40 0 0 0 0 0 0 0 0 6064.40
+Tozeur | 10 960 0 0 3 14883.10 2 6508.10 0 0 0 0 0 0 11 748 23099.20
+# The sheep sums column prints two amounts, "38.158" over "139.045,50" (stored as text).
+# obs: Les taxes pour abatage des agneaux et chevaux sont comprises dans la somme de 139.045 fr. 10.
+Tunis | T:8,50_et_7 251266 5 4840 T:2,1,50_et/1,00 T:38.158/139.045,50 0 0 9 26415 5 3805 2 504 8 632 P:574064.15
+Zaghouan | 6 30 4 340 1.50 1480.50 1 9877 0 0 0 0 0 0 0 0 11727.50
+Zarzis | 5 104 0 0 1 1537.50 1 1162.50 0 0 0 0 0 0 5 72 2876
