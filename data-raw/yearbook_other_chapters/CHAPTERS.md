@@ -37,7 +37,7 @@ Notes:
 | Step | Scope |
 |---|---|
 | 1 | Communes: **done** (`extract_communes.py`, all tables, surveyed page by page) |
-| 2 | Justice, prisons, property |
+| 2 | Justice: **done** (`extract_justice.py`; hearing-schedule text pages not transcribed). Prisons: summary table only (`extract_prisons.py`). Property: to do |
 | 3 | Posts, public works |
 | 4 | Finances |
 | 5 | Agriculture |

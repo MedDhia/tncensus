@@ -1,0 +1,232 @@
+# Justice chapter (chapter IV), sgt1922 (ark bpt6k9105649x), views 85-94 (85 chapter title, 86 blank).
+# Transcribed with the Gallica OCR as a draft, checked against the page images (native-resolution crops
+# via data-raw/yearbook_demography/hires.py). Format: see extract_justice.py.
+# '@<table> view=<view> page=<page> [key=value ...]', a 'cols:' line, rows 'label | v v v'.
+# Integers without thousands separator; money 'francs.centimes'; printed » = 0; '?' = illegible.
+# A trailing '!' on a value marks a cell read on the image that differs from the Gallica OCR (ocr_corrected).
+# 'img:' lines list the sections whose every cell was read on the page image.
+
+@fr_criminal view=87 page=63 court=Tunis years=1913-1922
+cols: criminal correctional_contradictory correctional_default total
+1913 | 48 1385 326 1759
+1914 | 46 1531 289 1866
+1915 | 37 1318 253 1608
+1916 | 27 1248 129 1404
+1917 | 28 1182 95 1287
+1918 | 24 1440 262 1726
+1919 | 22 1336 137 1473
+1920 | 25 1654 248 1927
+1921 | 44 1802 396 2198
+1922 | 22 1650 364 2036
+
+@fr_civil view=87 page=63 court=Tunis years=1913-1922
+cols: contradictory default preparatory on_petition total
+1913 | 998 582 280 1026 2886
+1914 | 956 509 256 890 2619
+1915 | 275 186 94 503 1058
+1916 | 422 467 109 105 1103
+1917 | 507 411 137 105 1150
+1918 | 521 293 177 232 1223
+1919 | 588 360 201 761 1910
+1920 | 750 264 159 768 1941
+1921 | 857 589 217 822 2485
+1922 | 1005 708 262 851 2826
+
+@fr_commercial view=88 page=64 court=Tunis years=1913-1922
+cols: contradictory default preparatory on_petition bankruptcies liquidations total
+1913 | 871 313 123 400 72 64 1843
+1914 | 666 202 135 223 118 67 1411
+1915 | 261 65 91 100 5 8 530
+1916 | 452 252 85 195 12 19 1015
+1917 | 355 166 107 112 17 12 769
+1918 | 256 166 92 97 9 4 624
+1919 | 419 149 70 71 6 3 718
+1920 | 714 264 306 68 17 1 1370
+1921 | 1117 592 460 139 12 7 2327
+1922 | 2780 758 335 299 109 19 2780
+
+@fr_criminal view=89 page=65 court=Sousse years=1913-1922
+cols: criminal correctional_contradictory correctional_default total
+1913 | 22 536 124 682
+1914 | 10 487 74 571
+1915 | 14 374 77 465
+1916 | 8 332 81 421
+1917 | 7 319 85 411
+1918 | 11 298 57 366
+1919 | 16 311 65 392
+1920 | 18 416 104 520
+1921 | 10 450 98 558
+1922 | 8 372 54 434
+
+@fr_civil view=89 page=65 court=Sousse years=1913-1922
+cols: contradictory default preparatory on_petition total
+1913 | 209 199 32 690 1130
+1914 | 287 170 33 377 867
+1915 | 151 68 11 29 259
+1916 | 160 136 20 34 400
+1917 | 181 205 11 39 436
+1918 | 112 210 15 55 392
+1919 | 228 163 60 263 714
+1920 | 234 197 51 58 540
+1921 | 188 400 36 35 659
+1922 | 177 352 25 53 607
+
+@fr_commercial view=90 page=66 court=Sousse years=1913-1922
+cols: contradictory default preparatory on_petition bankruptcies liquidations total
+1913 | 151 84 5 115 8 7 370
+1914 | 198 55 10 270 27 14 574
+1915 | 97 16 16 8 1 1 149
+1916 | 138 111 10 14 0 4 377
+1917 | 101 149 5 13 4 1 273
+1918 | 87 127 5 9 0 1 229
+1919 | 185 102 23 25 0 0 235
+1920 | 126 104 18 55 0 7 242
+1921 | 209 508 50 48 4 0 819
+1922 | 345 813 27 201 32 45 1463
+
+@tn_ouzara_criminal view=91 page=67 years=1918-1922
+cols: 1918 1919 1920 1921 1922
+pending_start | 123 229 494 506 569
+entered | 660 991 891 830 218
+TOTAUX | 783 1220 1385 1336 787
+out_no_case | 299 342 546 427 0
+out_judgment | 255 384 333 340 741
+out_total | 554 726 879 767 741
+pending_end | 229 494 506 569 46
+
+@tn_appeals_civil view=91 page=67 year=1922
+cols: pending_start entered total_to_judge confirmed partly_reversed fully_reversed struck_off out_total pending_end
+Driba | 175 614 789 365 46 55 4 470 319
+Sousse | 125 288 413 172 17 23 7 219 194
+Sfax | 64 227 291 137 13 11 7 168 123
+Le Kef | 56 201 257 111 12 13 14 150 107
+Kairouan | 59 187 246 118 6 9 5 138 108
+Gafsa | 65 114 179 61 3 5 10 79 100
+Gabès | 19 110 129 62 7 7 5 81 48
+TOTAUX | 563 1741 2304 1026 104 123 52 1305 999
+
+@tn_appeals_correctional view=91 page=67 year=1922
+cols: pending_start entered total_to_judge confirmed partly_reversed fully_reversed struck_off out_total pending_end
+Driba | 347 339 686 442 143 73 9 667 19
+Sousse | 125 182 307 202 47 31 26 306 1
+Sfax | 77 142 219 102 34 19 25 180 39
+Le Kef | 79 63 142 74 11 11 18 114 28
+Kairouan | 96 153 249 141 23 30 13 207 42
+Gafsa | 66 63 129 88 9 6 8 111 18
+Gabès | 56 87 143 78 11 17 9 115 28
+TOTAUX | 846 1029 1875 1127 278 187 108 1700 185
+
+@tn_regional view=92 page=68 matter=civil years=1918-1922
+img: all
+cols: 1918:pending_start 1918:entered 1918:pending_end 1919:pending_start 1919:entered 1919:pending_end 1920:pending_start 1920:entered 1920:pending_end 1921:pending_start 1921:entered 1921:pending_end 1922:pending_start 1922:entered 1922:pending_end
+Driba | 702 3240 1051 1051 3266 1398 1398 3965 1533 1533 5031 2022 2022 5518 3461
+Sousse | 450 3606 963 963 3184 1416 1416 2702 823 823 3206 917 917 3450 896
+Sfax | 100 1495 163 163 1534 401 401 1891 407 407 2334 702 702 1964 267
+Le Kef | 241 1625 381 381 1571 342 342 1926 755 755 2408 1156 1156 2306 966
+Kairouan | 129 1278 129 129 1408 174 174 1446 207 207 1734 326 326 1742 401
+Gafsa | 27 884 126 126 818 201 201 870 112 112 1209 256 256 998 200
+Gabès | 356 1297 79 79 1560 52 52 1586 368 368 1183 238 238 1476 347
+TOTAUX | 2005 13425 2892 2892 13341 3984 3984 14386 4205 4205 17125 5617 5617 17454 6538
+
+@tn_regional view=92 page=68 matter=correctional years=1918-1922
+img: all
+cols: 1918:pending_start 1918:entered 1918:pending_end 1919:pending_start 1919:entered 1919:pending_end 1920:pending_start 1920:entered 1920:pending_end 1921:pending_start 1921:entered 1921:pending_end 1922:pending_start 1922:entered 1922:pending_end
+Driba | 1175 4975 1494 1494 5402 1660 1660 7575 1304 1304 7367 442 442 3386 222
+Sousse | 277 3292 274 274 4048 488 488 5345 332 332 4923 216 216 3785 143
+Sfax | 52 1210 62 62 1545 259 259 2099 404 404 1681! 228 228 1017 259
+Le Kef | 178 1338 144 144 1937 135 135 2588 549 549 2565 634 634 4803 690
+Kairouan | 64 1188 130 130 1694 99 99 2146 218 218 1859 149 149 1749 282
+Gafsa | 10 1384 10 10 2023 101 101 2005 99 99 1721 179 179 1362 315
+Gabès | 257 1094 12 12 1340 13 13 1350 162 162 1555 128 128 1040 80
+TOTAUX | 2013 14481 2126 2126 17980 2755 2755 23108 3068 3068 21671 1976 1976 17142 1991
+
+@tn_caids view=93 page=69 years=1921-1922
+img: civil 1921 column (whole column re-read on the image: sum 14.939, printed 14.844)
+cols: civil:1921 civil:1922 penal:1921 penal:1922
+Caïd de Aïn-Draham | 2 0! 152 104
+Caïd de Béja | 49 37 640 792
+Caïd de Bizerte | 288 352 920 878
+Caïd du Cap-Bon | 1130 978 1599 992
+Caïd des Djelass | 20 1 108 60
+Caïd du Djerid | 54 57 82 39
+Caïd des Fraichiche | 92 68 212 261
+Caïd des Hemmama | 45 21 88 204
+Caïd de Mahdia | 1356 1129 883 202
+Caïd des Majeur | 4 35 110 181
+Caïd de Mateur | 65 27 201 100
+Caïd de Matmata | 132 188 268 366!
+Caïd de Medjez-el-Bab | 150 165 510 568
+Caïd de Monastir | 603 612 746 778
+Caïd des Nefzaoua | 51 153 7 200
+Caïd de Ouerghemma | 340 352 234 93
+Caïd des Ouled-Aoun | 85 39 242 216
+Caïd des Ouled-Ayar | 78 66 358 353
+Caïd de La Skhira | 1 13 142 53
+Caïd des Souassi | 382 390 508 492
+Caïd de Souk-el-Arba | 286 272 538 213
+Caïd de Tadjerouine | 97 112 245 214
+Caïd de Téboursouk | 36 27 381 367
+Caïd de Zaghouan | 51 94 632 554
+Caïd de Djerba | 327 243 521 572
+Kahia de l'Enfida | 9 6 3 6
+Kahia de Soliman | 576 1109 1044 1136
+Kahia de Souk-el-Khemis | 130 46 387 228
+Kahia de La Regba | 673 615 532 431
+Kahia de Tataouine | 34 46 230 181
+Kahia de Tabarka | 0 0 0 72
+Khalifa des Beni-Zid | 71 85 166 162
+Khalifa de Djemal | 340 535 374 584
+Khalifa de Djelass-el-Guebala | 21 68 82 91
+Khalifa d'El-Djem | 444 307 18 7
+Khalifa de Hadjeb-el-Aïoun | 19 14 79 81
+Khalifa de Maknassy | 71 56 26 15
+Khalifa de Metlaoui | 12 37 38 69
+Khalifa de Tébourba | 11 0 206 133
+Khalifa des Touazine | 212 167 264 214
+Khalifa de Zarzis | 234 107 257 253
+Khalifa des Hemarna | 64 18 200 194
+Khalifa du Sers | 23 134 49 122
+Khalifa de Bou-Arada | 25 126 90 119
+Khalifa de Tamerza | 23 24 23 43
+Khalifa de Gafour | 0 1 39 41
+Khalifa de Nefta | 0 11 0 141
+Khalifa de Sbeitla | 0 27 0 79
+Khalifa des Ouled-Ouezzez | 0 0 0 0
+Président de la Driba | 2440 1434 11060 14818
+Président de Sousse | 973 803 2129 2491
+Président de Sfax | 1320 649 2921 4473
+Président de Kef | 58 161 381 436
+Président de Kairouan | 577 645 815 897
+Président de Gafsa | 268 246 319 522
+Président de Gabès | 587 604 487 587
+TOTAUX | 14844 13572 32546 37478
+
+@tn_appeal_rate view=94 page=70 year=1922
+cols: civil_appealable civil_appeals civil_pct penal_appealable penal_appeals penal_pct
+Driba | 2108 614 29.13 1170 339 28.97
+Sousse | 2302 288 12.50 1497 182 12.15
+Sfax | 1060 227 21.41 702 142 2.22
+Kef | 1810 201 11.10 863 63 7.30
+Kairouan | 1015 187 18.42 505 153 30.29
+Gafsa | 622 114 18.32 640 63 9.84
+Gabès | 931 110 11.81 680 87 12.50
+TOTAUX | 9848 1741 17.66 6057 1029 16.98
+
+@tn_fees view=94 page=70 year=1922
+cols: registration_stamp_duties chancery_stamp_duties fines_proportional_duties total
+Ouzara | 64643.98 25958.55 303000.39 393602.92
+Driba | 167692.62 45479.92 169450.55 382623.09
+Sousse | 96652.35 11664.60 141076.61 249393.56
+Sfax | 41490.23 10200.00 39137.79 90828.02
+Kef | 92599.63 5689.00 294041.95 392330.58
+Kairouan | 32223.16 5395.00 23086.74 60704.90
+Gafsa | 18614.68 20726.86 71212.39 110553.93
+Gabès | 49568.32 3804.00 64992.28 118364.60
+Caïds, Kahias, Khalifas et Présidents des Tribunaux régionaux | 0 24957.54 222824.20 247781.74
+TOTAUX | 563484.97 153875.47 1328822.90 2046183.34
+
+@fr_judgments_execution view=94 page=70 year=1922
+cols: value
+deposited | 134
+executed_in_full | 69
+remaining | 65

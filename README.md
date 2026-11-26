@@ -21,7 +21,7 @@
 - **Fast Parquet Storage:** High-dimensional tables (28 disaggregated 2014 tables and full 2024 indicator suites) are backed by Zstandard-compressed Apache Parquet (`arrow`) for lightning-fast loads.
 - **Built-in Administrative GeoJSON & Spatial Boundaries (`load_geojson()`):** Seamlessly load ready-to-map `sf` polygons for National (1), Regional (6), Governorate (24), and Delegation (264) tiers, enriched with Arabic (`_name_ar`), French (`_name`), and alternate romanizations (`_name_alt`).
 - **Deep Historical & Colonial Archives:** Digitized and harmonized from [Ben Salah et al. (2024)](https://doi.org/10.1016/j.jce.2024.09.002), including 1,276 historical geonames, 1984–2014 boundary transition matrices, and colonial population tables.
-- **Original Colonial Census and Statistical Publications (`load_colonial_census()`):** 161 tables (113,183 cells) transcribed from Gallica scans: the 1906 European and 1931 indigenous census volumes (down to 333 localities and 804 cheikhats), and the *Démographie* chapter of 12 *Statistique générale de la Tunisie* yearbooks, which reprint the 1921, 1926, 1931 and 1936 censuses and give yearly births, deaths, marriages, expulsions, naturalisations, foreigners' movements and recruitment (1902–1939), plus hospital activity, Tunis mortality by cause and nationality, the public-assistance budget, and school enrolment by nationality and sex (with a pupil series from 1885). Every table is checked against its printed totals and its reprints, and every cell keeps its page and Gallica view, so it can be checked against the scan.
+- **Original Colonial Census and Statistical Publications (`load_colonial_census()`):** 178 tables (119,674 cells) transcribed from Gallica scans: the 1906 European and 1931 indigenous census volumes (down to 333 localities and 804 cheikhats), and the *Démographie* chapter of 12 *Statistique générale de la Tunisie* yearbooks, which reprint the 1921, 1926, 1931 and 1936 censuses and give yearly births, deaths, marriages, expulsions, naturalisations, foreigners' movements and recruitment (1902–1939), plus hospital activity, Tunis mortality by cause and nationality, the public-assistance budget, and school enrolment by nationality and sex (with a pupil series from 1885). Every table is checked against its printed totals and its reprints, and every cell keeps its page and Gallica view, so it can be checked against the scan.
 - **Inequality Metrics:** Built-in functions for calculating Gini coefficients (`gini()`) and Generalized Entropy Theil inequality decompositions (`theil_decompose()`).
 
 ---
@@ -122,6 +122,8 @@ The *Démographie* chapter of 12 annual editions (1922–1930, 1935, 1936, 1939;
 | `education_*` (16 tables) | National / Establishment | 9,723 | Public-instruction chapter: total pupils; examination candidates and passes by exam, nationality and sex; secondary, higher and special establishments; primary-education totals; school population by type of school, nationality and sex (yearly series 1919–1939, quinquennial from 1885); vocational education; libraries, canteens, Arabic courses, music and commerce schools. |
 | `education_schools` | School | 14,960 | School-by-school lists of public primary and private schools for 1922 and 1930 (382 and 497 schools): locality, classes, staff, and pupils by sex and nationality. |
 | `communes_*` (19 tables) | Commune | 27,005 | Communes chapter: receipts and expenditure of each commune (1918–1938); communal property (1922–1937); building permits (1922–1936) and building values (1939); café terraces and street stalls (1922–1935); municipal loans and Tunis city bonds (1922–1929); slaughter dues per animal (1922–1930); water networks and sales (1913–1939); Tunis gas consumption (1913–1939) and gas works (1934–1939); electricity networks (1922–1930), production and distribution (1935–1939). |
+| `justice_*` (16 tables) | Court / Caidat | 6,335 | Justice chapter: French criminal, civil and commercial cases (1913–1939); Ouzara, regional courts, caids, prosecutors, investigation, indictment and revision chambers (1918–1930); appeal rates; court fees and fines; the 1935–1939 Tunisian courts. |
+| `prisons_*` (1 table) | National | 156 | Prisons chapter: prison population, entries, releases and days of detention (1913–1939). The chapter's other tables are in progress. |
 | `recruitment_*` (5 tables) | National | 1,132 | French recruitment (allocation, education, draft boards, classes 1902–1939) and indigenous conscription (1913–1939). |
 
 ### 4. Geographic Boundaries & Spatial Harmonization
@@ -332,7 +334,7 @@ head(delegation_matrix_merged, 10)
 ### 6. Working with the Original Colonial Census and Yearbook Tables
 
 ```r
-# List the 161 transcribed tables
+# List the 178 transcribed tables
 idx <- colonial_census_tables()
 idx[, c("table", "title_en", "n_rows")]
 

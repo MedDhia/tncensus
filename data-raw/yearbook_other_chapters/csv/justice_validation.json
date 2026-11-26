@@ -1,0 +1,1404 @@
+{
+ "justice_french_criminal": {
+  "rows": 150,
+  "checks": 198,
+  "failed": [
+   "sgt1922 p.63 (f87) fr_criminal [Tunis] 1917: total = criminal + correctional_contradictory + correctional_default: cells give 1305, printed 1287 (difference -18)",
+   "sgt1922 p.63 (f87) fr_criminal [Tunis] 1919: total = criminal + correctional_contradictory + correctional_default: cells give 1495, printed 1473 (difference -22)",
+   "sgt1922 p.63 (f87) fr_criminal [Tunis] 1921: total = criminal + correctional_contradictory + correctional_default: cells give 2242, printed 2198 (difference -44)",
+   "sgt1922 p.65 (f89) fr_criminal [Sousse] 1920: total = criminal + correctional_contradictory + correctional_default: cells give 538, printed 520 (difference -18)",
+   "sgt1923 p.72 (f570) fr_criminal [Tunis] 1917: total = criminal + correctional_contradictory + correctional_default: cells give 1305, printed 1287 (difference -18)",
+   "sgt1923 p.72 (f570) fr_criminal [Tunis] 1919: total = criminal + correctional_contradictory + correctional_default: cells give 1495, printed 1473 (difference -22)",
+   "sgt1923 p.72 (f570) fr_criminal [Tunis] 1921: total = criminal + correctional_contradictory + correctional_default: cells give 2242, printed 2198 (difference -44)",
+   "sgt1923 p.74 (f572) fr_criminal [Sousse] 1920: total = criminal + correctional_contradictory + correctional_default: cells give 538, printed 520 (difference -18)",
+   "sgt1923 p.74 (f572) fr_criminal [Sousse] 1923: total = criminal + correctional_contradictory + correctional_default: cells give 449, printed 432 (difference -17)",
+   "sgt1924 p.70 (f1060) fr_criminal [Tunis] 1917: total = criminal + correctional_contradictory + correctional_default: cells give 1305, printed 1287 (difference -18)",
+   "sgt1924 p.70 (f1060) fr_criminal [Tunis] 1919: total = criminal + correctional_contradictory + correctional_default: cells give 1495, printed 1473 (difference -22)",
+   "sgt1924 p.70 (f1060) fr_criminal [Tunis] 1921: total = criminal + correctional_contradictory + correctional_default: cells give 2242, printed 2198 (difference -44)",
+   "sgt1924 p.72 (f1062) fr_criminal [Sousse] 1920: total = criminal + correctional_contradictory + correctional_default: cells give 538, printed 520 (difference -18)",
+   "sgt1924 p.72 (f1062) fr_criminal [Sousse] 1923: total = criminal + correctional_contradictory + correctional_default: cells give 449, printed 432 (difference -17)",
+   "sgt1925 p.70 (f94) fr_criminal 1920: total@Sousse = criminal@Sousse + correctional_contradictory@Sousse + correctional_default@Sousse: cells give 638, printed 520 (difference -118)",
+   "sgt1925 p.70 (f94) fr_criminal 1923: total@Sousse = criminal@Sousse + correctional_contradictory@Sousse + correctional_default@Sousse: cells give 449, printed 432 (difference -17)",
+   "sgt1925 p.70 (f94) fr_criminal 1917: total@Tunis = criminal@Tunis + correctional_contradictory@Tunis + correctional_default@Tunis: cells give 1305, printed 1287 (difference -18)",
+   "sgt1925 p.70 (f94) fr_criminal 1919: total@Tunis = criminal@Tunis + correctional_contradictory@Tunis + correctional_default@Tunis: cells give 1495, printed 1473 (difference -22)",
+   "sgt1925 p.70 (f94) fr_criminal 1921: total@Tunis = criminal@Tunis + correctional_contradictory@Tunis + correctional_default@Tunis: cells give 2242, printed 2198 (difference -44)",
+   "sgt1925 p.70 (f94) fr_criminal 1925: total@Tunis = criminal@Tunis + correctional_contradictory@Tunis + correctional_default@Tunis: cells give 2079, printed 2050 (difference -29)",
+   "sgt1926 p.80 (f644) fr_criminal 1920: total@Sousse = criminal@Sousse + correctional_contradictory@Sousse + correctional_default@Sousse: cells give 638, printed 520 (difference -118)",
+   "sgt1926 p.80 (f644) fr_criminal 1923: total@Sousse = criminal@Sousse + correctional_contradictory@Sousse + correctional_default@Sousse: cells give 449, printed 432 (difference -17)",
+   "sgt1926 p.80 (f644) fr_criminal 1917: total@Tunis = criminal@Tunis + correctional_contradictory@Tunis + correctional_default@Tunis: cells give 1305, printed 1287 (difference -18)",
+   "sgt1926 p.80 (f644) fr_criminal 1919: total@Tunis = criminal@Tunis + correctional_contradictory@Tunis + correctional_default@Tunis: cells give 1495, printed 1473 (difference -22)",
+   "sgt1926 p.80 (f644) fr_criminal 1921: total@Tunis = criminal@Tunis + correctional_contradictory@Tunis + correctional_default@Tunis: cells give 2242, printed 2198 (difference -44)",
+   "sgt1926 p.80 (f644) fr_criminal 1925: total@Tunis = criminal@Tunis + correctional_contradictory@Tunis + correctional_default@Tunis: cells give 2079, printed 2050 (difference -29)",
+   "sgt1926 p.80 (f644) fr_criminal 1926: total@Tunis = criminal@Tunis + correctional_contradictory@Tunis + correctional_default@Tunis: cells give 1824, printed 1787 (difference -37)",
+   "sgt1927 p.82 (f106) fr_criminal 1920: total@Sousse = criminal@Sousse + correctional_contradictory@Sousse + correctional_default@Sousse: cells give 638, printed 520 (difference -118)",
+   "sgt1927 p.82 (f106) fr_criminal 1923: total@Sousse = criminal@Sousse + correctional_contradictory@Sousse + correctional_default@Sousse: cells give 449, printed 432 (difference -17)",
+   "sgt1927 p.82 (f106) fr_criminal 1919: total@Tunis = criminal@Tunis + correctional_contradictory@Tunis + correctional_default@Tunis: cells give 1495, printed 1473 (difference -22)",
+   "sgt1927 p.82 (f106) fr_criminal 1921: total@Tunis = criminal@Tunis + correctional_contradictory@Tunis + correctional_default@Tunis: cells give 2242, printed 2198 (difference -44)",
+   "sgt1927 p.82 (f106) fr_criminal 1925: total@Tunis = criminal@Tunis + correctional_contradictory@Tunis + correctional_default@Tunis: cells give 2079, printed 2050 (difference -29)",
+   "sgt1927 p.82 (f106) fr_criminal 1926: total@Tunis = criminal@Tunis + correctional_contradictory@Tunis + correctional_default@Tunis: cells give 1824, printed 1787 (difference -37)",
+   "sgt1928 p.78 (f630) fr_criminal 1920: total@Sousse = criminal@Sousse + correctional_contradictory@Sousse + correctional_default@Sousse: cells give 638, printed 520 (difference -118)",
+   "sgt1928 p.78 (f630) fr_criminal 1923: total@Sousse = criminal@Sousse + correctional_contradictory@Sousse + correctional_default@Sousse: cells give 449, printed 432 (difference -17)",
+   "sgt1928 p.78 (f630) fr_criminal 1928: total@Sousse = criminal@Sousse + correctional_contradictory@Sousse + correctional_default@Sousse: cells give 702, printed 704 (difference 2)",
+   "sgt1928 p.78 (f630) fr_criminal 1919: total@Tunis = criminal@Tunis + correctional_contradictory@Tunis + correctional_default@Tunis: cells give 1495, printed 1473 (difference -22)",
+   "sgt1928 p.78 (f630) fr_criminal 1921: total@Tunis = criminal@Tunis + correctional_contradictory@Tunis + correctional_default@Tunis: cells give 2242, printed 2198 (difference -44)",
+   "sgt1928 p.78 (f630) fr_criminal 1925: total@Tunis = criminal@Tunis + correctional_contradictory@Tunis + correctional_default@Tunis: cells give 2079, printed 2050 (difference -29)",
+   "sgt1928 p.78 (f630) fr_criminal 1926: total@Tunis = criminal@Tunis + correctional_contradictory@Tunis + correctional_default@Tunis: cells give 1824, printed 1787 (difference -37)",
+   "sgt1929 p.80 (f108) fr_criminal 1920: total@Sousse = criminal@Sousse + correctional_contradictory@Sousse + correctional_default@Sousse: cells give 638, printed 520 (difference -118)",
+   "sgt1929 p.80 (f108) fr_criminal 1923: total@Sousse = criminal@Sousse + correctional_contradictory@Sousse + correctional_default@Sousse: cells give 449, printed 432 (difference -17)",
+   "sgt1929 p.80 (f108) fr_criminal 1928: total@Sousse = criminal@Sousse + correctional_contradictory@Sousse + correctional_default@Sousse: cells give 702, printed 704 (difference 2)",
+   "sgt1929 p.80 (f108) fr_criminal 1929: total@Sousse = criminal@Sousse + correctional_contradictory@Sousse + correctional_default@Sousse: cells give 711, printed 712 (difference 1)",
+   "sgt1929 p.80 (f108) fr_criminal 1921: total@Tunis = criminal@Tunis + correctional_contradictory@Tunis + correctional_default@Tunis: cells give 2242, printed 2198 (difference -44)",
+   "sgt1929 p.80 (f108) fr_criminal 1925: total@Tunis = criminal@Tunis + correctional_contradictory@Tunis + correctional_default@Tunis: cells give 2079, printed 2050 (difference -29)",
+   "sgt1929 p.80 (f108) fr_criminal 1926: total@Tunis = criminal@Tunis + correctional_contradictory@Tunis + correctional_default@Tunis: cells give 1824, printed 1787 (difference -37)",
+   "sgt1929 p.80 (f108) fr_criminal 1929: total@Tunis = criminal@Tunis + correctional_contradictory@Tunis + correctional_default@Tunis: cells give 2269, printed 2236 (difference -33)",
+   "sgt1930 p.84 (f642) fr_criminal 1923: total@Sousse = criminal@Sousse + correctional_contradictory@Sousse + correctional_default@Sousse: cells give 449, printed 432 (difference -17)",
+   "sgt1930 p.84 (f642) fr_criminal 1928: total@Sousse = criminal@Sousse + correctional_contradictory@Sousse + correctional_default@Sousse: cells give 702, printed 704 (difference 2)",
+   "sgt1930 p.84 (f642) fr_criminal 1929: total@Sousse = criminal@Sousse + correctional_contradictory@Sousse + correctional_default@Sousse: cells give 711, printed 712 (difference 1)",
+   "sgt1930 p.84 (f642) fr_criminal 1921: total@Tunis = criminal@Tunis + correctional_contradictory@Tunis + correctional_default@Tunis: cells give 2242, printed 2198 (difference -44)",
+   "sgt1930 p.84 (f642) fr_criminal 1925: total@Tunis = criminal@Tunis + correctional_contradictory@Tunis + correctional_default@Tunis: cells give 2079, printed 2050 (difference -29)",
+   "sgt1930 p.84 (f642) fr_criminal 1926: total@Tunis = criminal@Tunis + correctional_contradictory@Tunis + correctional_default@Tunis: cells give 1824, printed 1787 (difference -37)",
+   "sgt1930 p.84 (f642) fr_criminal 1929: total@Tunis = criminal@Tunis + correctional_contradictory@Tunis + correctional_default@Tunis: cells give 2269, printed 2236 (difference -33)",
+   "sgt1935 p.52 (f72) fr_criminal 1933: total@Tunis = criminal@Tunis + correctional_contradictory@Tunis + correctional_default@Tunis: cells give 3390, printed 3384 (difference -6)"
+  ],
+  "overlap_compared": 444,
+  "overlap_diffs": [
+   [
+    [
+     1920,
+     "Sousse",
+     null,
+     null,
+     null,
+     null,
+     "correctional_contradictory"
+    ],
+    "sgt1922",
+    "416",
+    "sgt1929",
+    "516"
+   ],
+   [
+    [
+     1920,
+     "Sousse",
+     null,
+     null,
+     null,
+     null,
+     "correctional_contradictory"
+    ],
+    "sgt1923",
+    "416",
+    "sgt1929",
+    "516"
+   ],
+   [
+    [
+     1920,
+     "Sousse",
+     null,
+     null,
+     null,
+     null,
+     "correctional_contradictory"
+    ],
+    "sgt1924",
+    "416",
+    "sgt1929",
+    "516"
+   ]
+  ],
+  "reprint_corrected": []
+ },
+ "justice_french_civil": {
+  "rows": 200,
+  "checks": 195,
+  "failed": [
+   "sgt1922 p.63 (f87) fr_civil [Tunis] 1914: total = contradictory + default + preparatory + on_petition: cells give 2611, printed 2619 (difference 8)",
+   "sgt1922 p.63 (f87) fr_civil [Tunis] 1917: total = contradictory + default + preparatory + on_petition: cells give 1160, printed 1150 (difference -10)",
+   "sgt1922 p.65 (f89) fr_civil [Sousse] 1916: total = contradictory + default + preparatory + on_petition: cells give 350, printed 400 (difference 50)",
+   "sgt1923 p.72 (f570) fr_civil [Tunis] 1917: total = contradictory + default + preparatory + on_petition: cells give 1160, printed 1150 (difference -10)",
+   "sgt1923 p.74 (f572) fr_civil [Sousse] 1916: total = contradictory + default + preparatory + on_petition: cells give 350, printed 400 (difference 50)",
+   "sgt1924 p.70 (f1060) fr_civil [Tunis] 1917: total = contradictory + default + preparatory + on_petition: cells give 1160, printed 1150 (difference -10)",
+   "sgt1924 p.72 (f1062) fr_civil [Sousse] 1916: total = contradictory + default + preparatory + on_petition: cells give 350, printed 400 (difference 50)",
+   "sgt1925 p.70 (f94) fr_civil 1916: total@Sousse = contradictory@Sousse + default@Sousse + preparatory@Sousse + on_petition@Sousse: cells give 350, printed 400 (difference 50)",
+   "sgt1925 p.70 (f94) fr_civil 1920: total@Sousse = contradictory@Sousse + default@Sousse + preparatory@Sousse + on_petition@Sousse: cells give 535, printed 540 (difference 5)",
+   "sgt1925 p.70 (f94) fr_civil 1922: total@Sousse = contradictory@Sousse + default@Sousse + preparatory@Sousse + on_petition@Sousse: cells give 607, printed 602 (difference -5)",
+   "sgt1925 p.70 (f94) fr_civil 1924: total@Sousse = contradictory@Sousse + default@Sousse + preparatory@Sousse + on_petition@Sousse: cells give 1058, printed 1038 (difference -20)",
+   "sgt1925 p.70 (f94) fr_civil 1917: total@Tunis = contradictory@Tunis + default@Tunis + preparatory@Tunis + on_petition@Tunis: cells give 1160, printed 1150 (difference -10)",
+   "sgt1925 p.70 (f94) fr_civil 1918: total@Tunis = contradictory@Tunis + default@Tunis + preparatory@Tunis + on_petition@Tunis: cells give 1168, printed 1223 (difference 55)",
+   "sgt1925 p.70 (f94) fr_civil 1921: total@Tunis = contradictory@Tunis + default@Tunis + preparatory@Tunis + on_petition@Tunis: cells give 1885, printed 2485 (difference 600)",
+   "sgt1925 p.70 (f94) fr_civil 1924: total@Tunis = contradictory@Tunis + default@Tunis + preparatory@Tunis + on_petition@Tunis: cells give 3075, printed 3025 (difference -50)",
+   "sgt1926 p.80 (f644) fr_civil 1920: total@Sousse = contradictory@Sousse + default@Sousse + preparatory@Sousse + on_petition@Sousse: cells give 535, printed 540 (difference 5)",
+   "sgt1926 p.80 (f644) fr_civil 1922: total@Sousse = contradictory@Sousse + default@Sousse + preparatory@Sousse + on_petition@Sousse: cells give 607, printed 602 (difference -5)",
+   "sgt1926 p.80 (f644) fr_civil 1924: total@Sousse = contradictory@Sousse + default@Sousse + preparatory@Sousse + on_petition@Sousse: cells give 1058, printed 1038 (difference -20)",
+   "sgt1926 p.80 (f644) fr_civil 1917: total@Tunis = contradictory@Tunis + default@Tunis + preparatory@Tunis + on_petition@Tunis: cells give 1160, printed 1150 (difference -10)",
+   "sgt1926 p.80 (f644) fr_civil 1918: total@Tunis = contradictory@Tunis + default@Tunis + preparatory@Tunis + on_petition@Tunis: cells give 1168, printed 1223 (difference 55)",
+   "sgt1926 p.80 (f644) fr_civil 1921: total@Tunis = contradictory@Tunis + default@Tunis + preparatory@Tunis + on_petition@Tunis: cells give 1885, printed 2485 (difference 600)",
+   "sgt1926 p.80 (f644) fr_civil 1924: total@Tunis = contradictory@Tunis + default@Tunis + preparatory@Tunis + on_petition@Tunis: cells give 3075, printed 3025 (difference -50)",
+   "sgt1927 p.82 (f106) fr_civil 1920: total@Sousse = contradictory@Sousse + default@Sousse + preparatory@Sousse + on_petition@Sousse: cells give 535, printed 540 (difference 5)",
+   "sgt1927 p.82 (f106) fr_civil 1922: total@Sousse = contradictory@Sousse + default@Sousse + preparatory@Sousse + on_petition@Sousse: cells give 607, printed 602 (difference -5)",
+   "sgt1927 p.82 (f106) fr_civil 1924: total@Sousse = contradictory@Sousse + default@Sousse + preparatory@Sousse + on_petition@Sousse: cells give 1058, printed 1038 (difference -20)",
+   "sgt1927 p.82 (f106) fr_civil 1927: total@Sousse = contradictory@Sousse + default@Sousse + preparatory@Sousse + on_petition@Sousse: cells give 1224, printed 1233 (difference 9)",
+   "sgt1927 p.82 (f106) fr_civil 1918: total@Tunis = contradictory@Tunis + default@Tunis + preparatory@Tunis + on_petition@Tunis: cells give 1168, printed 1223 (difference 55)",
+   "sgt1927 p.82 (f106) fr_civil 1921: total@Tunis = contradictory@Tunis + default@Tunis + preparatory@Tunis + on_petition@Tunis: cells give 1885, printed 2485 (difference 600)",
+   "sgt1927 p.82 (f106) fr_civil 1924: total@Tunis = contradictory@Tunis + default@Tunis + preparatory@Tunis + on_petition@Tunis: cells give 3075, printed 3025 (difference -50)",
+   "sgt1928 p.78 (f630) fr_civil 1920: total@Sousse = contradictory@Sousse + default@Sousse + preparatory@Sousse + on_petition@Sousse: cells give 535, printed 540 (difference 5)",
+   "sgt1928 p.78 (f630) fr_civil 1922: total@Sousse = contradictory@Sousse + default@Sousse + preparatory@Sousse + on_petition@Sousse: cells give 607, printed 602 (difference -5)",
+   "sgt1928 p.78 (f630) fr_civil 1924: total@Sousse = contradictory@Sousse + default@Sousse + preparatory@Sousse + on_petition@Sousse: cells give 1058, printed 1038 (difference -20)",
+   "sgt1928 p.78 (f630) fr_civil 1927: total@Sousse = contradictory@Sousse + default@Sousse + preparatory@Sousse + on_petition@Sousse: cells give 1224, printed 1233 (difference 9)",
+   "sgt1928 p.78 (f630) fr_civil 1928: total@Sousse = contradictory@Sousse + default@Sousse + preparatory@Sousse + on_petition@Sousse: cells give 1467, printed 1489 (difference 22)",
+   "sgt1928 p.78 (f630) fr_civil 1921: total@Tunis = contradictory@Tunis + default@Tunis + preparatory@Tunis + on_petition@Tunis: cells give 1885, printed 2485 (difference 600)",
+   "sgt1928 p.78 (f630) fr_civil 1924: total@Tunis = contradictory@Tunis + default@Tunis + preparatory@Tunis + on_petition@Tunis: cells give 3075, printed 3025 (difference -50)",
+   "sgt1929 p.80 (f108) fr_civil 1920: total@Sousse = contradictory@Sousse + default@Sousse + preparatory@Sousse + on_petition@Sousse: cells give 535, printed 540 (difference 5)",
+   "sgt1929 p.80 (f108) fr_civil 1922: total@Sousse = contradictory@Sousse + default@Sousse + preparatory@Sousse + on_petition@Sousse: cells give 607, printed 602 (difference -5)",
+   "sgt1929 p.80 (f108) fr_civil 1924: total@Sousse = contradictory@Sousse + default@Sousse + preparatory@Sousse + on_petition@Sousse: cells give 1058, printed 1038 (difference -20)",
+   "sgt1929 p.80 (f108) fr_civil 1927: total@Sousse = contradictory@Sousse + default@Sousse + preparatory@Sousse + on_petition@Sousse: cells give 1224, printed 1233 (difference 9)",
+   "sgt1929 p.80 (f108) fr_civil 1928: total@Sousse = contradictory@Sousse + default@Sousse + preparatory@Sousse + on_petition@Sousse: cells give 1467, printed 1489 (difference 22)",
+   "sgt1929 p.80 (f108) fr_civil 1929: total@Sousse = contradictory@Sousse + default@Sousse + preparatory@Sousse + on_petition@Sousse: cells give 2004, printed 1933 (difference -71)",
+   "sgt1929 p.80 (f108) fr_civil 1921: total@Tunis = contradictory@Tunis + default@Tunis + preparatory@Tunis + on_petition@Tunis: cells give 1885, printed 2485 (difference 600)",
+   "sgt1929 p.80 (f108) fr_civil 1924: total@Tunis = contradictory@Tunis + default@Tunis + preparatory@Tunis + on_petition@Tunis: cells give 3075, printed 3025 (difference -50)",
+   "sgt1929 p.80 (f108) fr_civil 1929: total@Tunis = contradictory@Tunis + default@Tunis + preparatory@Tunis + on_petition@Tunis: cells give 5825, printed 5225 (difference -600)",
+   "sgt1930 p.84 (f642) fr_civil 1922: total@Sousse = contradictory@Sousse + default@Sousse + preparatory@Sousse + on_petition@Sousse: cells give 607, printed 602 (difference -5)",
+   "sgt1930 p.84 (f642) fr_civil 1924: total@Sousse = contradictory@Sousse + default@Sousse + preparatory@Sousse + on_petition@Sousse: cells give 1058, printed 1038 (difference -20)",
+   "sgt1930 p.84 (f642) fr_civil 1927: total@Sousse = contradictory@Sousse + default@Sousse + preparatory@Sousse + on_petition@Sousse: cells give 1224, printed 1233 (difference 9)",
+   "sgt1930 p.84 (f642) fr_civil 1928: total@Sousse = contradictory@Sousse + default@Sousse + preparatory@Sousse + on_petition@Sousse: cells give 1467, printed 1489 (difference 22)",
+   "sgt1930 p.84 (f642) fr_civil 1929: total@Sousse = contradictory@Sousse + default@Sousse + preparatory@Sousse + on_petition@Sousse: cells give 2004, printed 1933 (difference -71)",
+   "sgt1930 p.84 (f642) fr_civil 1921: total@Tunis = contradictory@Tunis + default@Tunis + preparatory@Tunis + on_petition@Tunis: cells give 1885, printed 2485 (difference 600)",
+   "sgt1930 p.84 (f642) fr_civil 1924: total@Tunis = contradictory@Tunis + default@Tunis + preparatory@Tunis + on_petition@Tunis: cells give 3075, printed 3025 (difference -50)",
+   "sgt1930 p.84 (f642) fr_civil 1929: total@Tunis = contradictory@Tunis + default@Tunis + preparatory@Tunis + on_petition@Tunis: cells give 5825, printed 5225 (difference -600)",
+   "sgt1935 p.52 (f72) fr_civil 1933: total@Tunis = contradictory@Tunis + default@Tunis + preparatory@Tunis + on_petition@Tunis: cells give 13629, printed 12953 (difference -676)",
+   "sgt1936 p.43 (f54) fr_civil 1934: total@Tunis = contradictory@Tunis + default@Tunis + preparatory@Tunis + on_petition@Tunis: cells give 15136, printed 15133 (difference -3)",
+   "sgt1936 p.43 (f54) fr_civil 1936: total@Tunis = contradictory@Tunis + default@Tunis + preparatory@Tunis + on_petition@Tunis: cells give 9825, printed 11456 (difference 1631)"
+  ],
+  "overlap_compared": 592,
+  "overlap_diffs": [
+   [
+    [
+     1918,
+     "Tunis",
+     null,
+     null,
+     null,
+     null,
+     "preparatory"
+    ],
+    "sgt1922",
+    "177",
+    "sgt1927",
+    "122"
+   ],
+   [
+    [
+     1918,
+     "Tunis",
+     null,
+     null,
+     null,
+     null,
+     "preparatory"
+    ],
+    "sgt1923",
+    "177",
+    "sgt1927",
+    "122"
+   ],
+   [
+    [
+     1918,
+     "Tunis",
+     null,
+     null,
+     null,
+     null,
+     "preparatory"
+    ],
+    "sgt1924",
+    "177",
+    "sgt1927",
+    "122"
+   ],
+   [
+    [
+     1921,
+     "Tunis",
+     null,
+     null,
+     null,
+     null,
+     "contradictory"
+    ],
+    "sgt1922",
+    "857",
+    "sgt1930",
+    "257"
+   ],
+   [
+    [
+     1921,
+     "Tunis",
+     null,
+     null,
+     null,
+     null,
+     "contradictory"
+    ],
+    "sgt1923",
+    "857",
+    "sgt1930",
+    "257"
+   ],
+   [
+    [
+     1921,
+     "Tunis",
+     null,
+     null,
+     null,
+     null,
+     "contradictory"
+    ],
+    "sgt1924",
+    "857",
+    "sgt1930",
+    "257"
+   ],
+   [
+    [
+     1920,
+     "Sousse",
+     null,
+     null,
+     null,
+     null,
+     "default"
+    ],
+    "sgt1922",
+    "197",
+    "sgt1929",
+    "192"
+   ],
+   [
+    [
+     1920,
+     "Sousse",
+     null,
+     null,
+     null,
+     null,
+     "default"
+    ],
+    "sgt1923",
+    "197",
+    "sgt1929",
+    "192"
+   ],
+   [
+    [
+     1920,
+     "Sousse",
+     null,
+     null,
+     null,
+     null,
+     "default"
+    ],
+    "sgt1924",
+    "197",
+    "sgt1929",
+    "192"
+   ],
+   [
+    [
+     1924,
+     "Sousse",
+     null,
+     null,
+     null,
+     null,
+     "contradictory"
+    ],
+    "sgt1924",
+    "343",
+    "sgt1930",
+    "363"
+   ],
+   [
+    [
+     1934,
+     "Tunis",
+     null,
+     null,
+     null,
+     null,
+     "contradictory"
+    ],
+    "sgt1935",
+    "7711",
+    "sgt1936",
+    "7714"
+   ]
+  ],
+  "reprint_corrected": [
+   [
+    [
+     "justice_french_civil",
+     1918,
+     "Tunis",
+     null,
+     null,
+     "preparatory"
+    ],
+    "sgt1927",
+    "122",
+    "sgt1924",
+    "177",
+    "sgt1922-sgt1924 print 177 and the 1918 Tunis total 1.223 = 521 + 293 + 177 + 232; sgt1925-sgt1930 print 122"
+   ],
+   [
+    [
+     "justice_french_civil",
+     1921,
+     "Tunis",
+     null,
+     null,
+     "contradictory"
+    ],
+    "sgt1930",
+    "257",
+    "sgt1924",
+    "857",
+    "sgt1922-sgt1924 print 857 and the 1921 Tunis total 2.485 = 857 + 589 + 217 + 822; sgt1925-sgt1930 print 257"
+   ],
+   [
+    [
+     "justice_french_civil",
+     1920,
+     "Sousse",
+     null,
+     null,
+     "default"
+    ],
+    "sgt1929",
+    "192",
+    "sgt1924",
+    "197",
+    "sgt1922-sgt1924 print 197 and the 1920 Sousse total 540 = 234 + 197 + 51 + 58; sgt1925-sgt1929 print 192"
+   ],
+   [
+    [
+     "justice_french_civil",
+     1924,
+     "Sousse",
+     null,
+     null,
+     "contradictory"
+    ],
+    "sgt1930",
+    "363",
+    "sgt1924",
+    "343",
+    "sgt1924 prints 343 and the 1924 Sousse total 1.038 = 343 + 461 + 42 + 192; sgt1925-sgt1930 print 363"
+   ],
+   [
+    [
+     "justice_french_civil",
+     1934,
+     "Tunis",
+     null,
+     null,
+     "contradictory"
+    ],
+    "sgt1936",
+    "7714",
+    "sgt1935",
+    "7711",
+    "sgt1935 prints 7.711 and the 1934 Tunis total 15.133 = 7.711 + 6.067 + 912 + 443; sgt1936 prints 7.714"
+   ]
+  ]
+ },
+ "justice_french_commercial": {
+  "rows": 300,
+  "checks": 196,
+  "failed": [
+   "sgt1922 p.64 (f88) fr_commercial [Tunis] 1922: total = contradictory + default + preparatory + on_petition + bankruptcies + liquidations: cells give 4300, printed 2780 (difference -1520)",
+   "sgt1922 p.66 (f90) fr_commercial [Sousse] 1915: total = contradictory + default + preparatory + on_petition + bankruptcies + liquidations: cells give 139, printed 149 (difference 10)",
+   "sgt1922 p.66 (f90) fr_commercial [Sousse] 1916: total = contradictory + default + preparatory + on_petition + bankruptcies + liquidations: cells give 277, printed 377 (difference 100)",
+   "sgt1922 p.66 (f90) fr_commercial [Sousse] 1919: total = contradictory + default + preparatory + on_petition + bankruptcies + liquidations: cells give 335, printed 235 (difference -100)",
+   "sgt1922 p.66 (f90) fr_commercial [Sousse] 1920: total = contradictory + default + preparatory + on_petition + bankruptcies + liquidations: cells give 310, printed 242 (difference -68)",
+   "sgt1923 p.73 (f571) fr_commercial [Tunis] 1922: total = contradictory + default + preparatory + on_petition + bankruptcies + liquidations: cells give 4300, printed 2780 (difference -1520)",
+   "sgt1923 p.75 (f573) fr_commercial [Sousse] 1915: total = contradictory + default + preparatory + on_petition + bankruptcies + liquidations: cells give 139, printed 149 (difference 10)",
+   "sgt1923 p.75 (f573) fr_commercial [Sousse] 1916: total = contradictory + default + preparatory + on_petition + bankruptcies + liquidations: cells give 277, printed 377 (difference 100)",
+   "sgt1923 p.75 (f573) fr_commercial [Sousse] 1919: total = contradictory + default + preparatory + on_petition + bankruptcies + liquidations: cells give 335, printed 235 (difference -100)",
+   "sgt1923 p.75 (f573) fr_commercial [Sousse] 1920: total = contradictory + default + preparatory + on_petition + bankruptcies + liquidations: cells give 310, printed 242 (difference -68)",
+   "sgt1924 p.71 (f1061) fr_commercial [Tunis] 1922: total = contradictory + default + preparatory + on_petition + bankruptcies + liquidations: cells give 4300, printed 2780 (difference -1520)",
+   "sgt1924 p.73 (f1063) fr_commercial [Sousse] 1915: total = contradictory + default + preparatory + on_petition + bankruptcies + liquidations: cells give 139, printed 149 (difference 10)",
+   "sgt1924 p.73 (f1063) fr_commercial [Sousse] 1916: total = contradictory + default + preparatory + on_petition + bankruptcies + liquidations: cells give 277, printed 377 (difference 100)",
+   "sgt1924 p.73 (f1063) fr_commercial [Sousse] 1919: total = contradictory + default + preparatory + on_petition + bankruptcies + liquidations: cells give 335, printed 235 (difference -100)",
+   "sgt1924 p.73 (f1063) fr_commercial [Sousse] 1920: total = contradictory + default + preparatory + on_petition + bankruptcies + liquidations: cells give 310, printed 242 (difference -68)",
+   "sgt1925 p.71 (f95) fr_commercial 1916: total@Sousse = contradictory@Sousse + default@Sousse + preparatory@Sousse + on_petition@Sousse + bankruptcies@Sousse + liquidations@Sousse: cells give 277, printed 377 (difference 100)",
+   "sgt1925 p.71 (f95) fr_commercial 1919: total@Sousse = contradictory@Sousse + default@Sousse + preparatory@Sousse + on_petition@Sousse + bankruptcies@Sousse + liquidations@Sousse: cells give 335, printed 235 (difference -100)",
+   "sgt1925 p.71 (f95) fr_commercial 1920: total@Sousse = contradictory@Sousse + default@Sousse + preparatory@Sousse + on_petition@Sousse + bankruptcies@Sousse + liquidations@Sousse: cells give 310, printed 242 (difference -68)",
+   "sgt1925 p.71 (f95) fr_commercial 1922: total@Tunis = contradictory@Tunis + default@Tunis + preparatory@Tunis + on_petition@Tunis + bankruptcies@Tunis + liquidations@Tunis: cells give 4300, printed 2780 (difference -1520)",
+   "sgt1926 p.81 (f645) fr_commercial 1919: total@Sousse = contradictory@Sousse + default@Sousse + preparatory@Sousse + on_petition@Sousse + bankruptcies@Sousse + liquidations@Sousse: cells give 335, printed 235 (difference -100)",
+   "sgt1926 p.81 (f645) fr_commercial 1920: total@Sousse = contradictory@Sousse + default@Sousse + preparatory@Sousse + on_petition@Sousse + bankruptcies@Sousse + liquidations@Sousse: cells give 310, printed 242 (difference -68)",
+   "sgt1926 p.81 (f645) fr_commercial 1922: total@Tunis = contradictory@Tunis + default@Tunis + preparatory@Tunis + on_petition@Tunis + bankruptcies@Tunis + liquidations@Tunis: cells give 4300, printed 2780 (difference -1520)",
+   "sgt1926 p.81 (f645) fr_commercial 1926: total@Tunis = contradictory@Tunis + default@Tunis + preparatory@Tunis + on_petition@Tunis + bankruptcies@Tunis + liquidations@Tunis: cells give 3145, printed 3170 (difference 25)",
+   "sgt1927 p.83 (f107) fr_commercial 1919: total@Sousse = contradictory@Sousse + default@Sousse + preparatory@Sousse + on_petition@Sousse + bankruptcies@Sousse + liquidations@Sousse: cells give 335, printed 235 (difference -100)",
+   "sgt1927 p.83 (f107) fr_commercial 1920: total@Sousse = contradictory@Sousse + default@Sousse + preparatory@Sousse + on_petition@Sousse + bankruptcies@Sousse + liquidations@Sousse: cells give 310, printed 242 (difference -68)",
+   "sgt1927 p.83 (f107) fr_commercial 1922: total@Tunis = contradictory@Tunis + default@Tunis + preparatory@Tunis + on_petition@Tunis + bankruptcies@Tunis + liquidations@Tunis: cells give 4300, printed 2780 (difference -1520)",
+   "sgt1927 p.83 (f107) fr_commercial 1926: total@Tunis = contradictory@Tunis + default@Tunis + preparatory@Tunis + on_petition@Tunis + bankruptcies@Tunis + liquidations@Tunis: cells give 3145, printed 3170 (difference 25)",
+   "sgt1928 p.79 (f631) fr_commercial 1919: total@Sousse = contradictory@Sousse + default@Sousse + preparatory@Sousse + on_petition@Sousse + bankruptcies@Sousse + liquidations@Sousse: cells give 335, printed 235 (difference -100)",
+   "sgt1928 p.79 (f631) fr_commercial 1920: total@Sousse = contradictory@Sousse + default@Sousse + preparatory@Sousse + on_petition@Sousse + bankruptcies@Sousse + liquidations@Sousse: cells give 310, printed 242 (difference -68)",
+   "sgt1928 p.79 (f631) fr_commercial 1922: total@Tunis = contradictory@Tunis + default@Tunis + preparatory@Tunis + on_petition@Tunis + bankruptcies@Tunis + liquidations@Tunis: cells give 4300, printed 2780 (difference -1520)",
+   "sgt1928 p.79 (f631) fr_commercial 1926: total@Tunis = contradictory@Tunis + default@Tunis + preparatory@Tunis + on_petition@Tunis + bankruptcies@Tunis + liquidations@Tunis: cells give 3145, printed 3170 (difference 25)",
+   "sgt1929 p.81 (f109) fr_commercial 1920: total@Sousse = contradictory@Sousse + default@Sousse + preparatory@Sousse + on_petition@Sousse + bankruptcies@Sousse + liquidations@Sousse: cells give 310, printed 242 (difference -68)",
+   "sgt1929 p.81 (f109) fr_commercial 1922: total@Tunis = contradictory@Tunis + default@Tunis + preparatory@Tunis + on_petition@Tunis + bankruptcies@Tunis + liquidations@Tunis: cells give 4300, printed 2780 (difference -1520)",
+   "sgt1929 p.81 (f109) fr_commercial 1926: total@Tunis = contradictory@Tunis + default@Tunis + preparatory@Tunis + on_petition@Tunis + bankruptcies@Tunis + liquidations@Tunis: cells give 3145, printed 3170 (difference 25)",
+   "sgt1929 p.81 (f109) fr_commercial 1929: total@Tunis = contradictory@Tunis + default@Tunis + preparatory@Tunis + on_petition@Tunis + bankruptcies@Tunis + liquidations@Tunis: cells give 4138, printed 4128 (difference -10)",
+   "sgt1930 p.85 (f643) fr_commercial 1922: total@Tunis = contradictory@Tunis + default@Tunis + preparatory@Tunis + on_petition@Tunis + bankruptcies@Tunis + liquidations@Tunis: cells give 4300, printed 2780 (difference -1520)",
+   "sgt1930 p.85 (f643) fr_commercial 1926: total@Tunis = contradictory@Tunis + default@Tunis + preparatory@Tunis + on_petition@Tunis + bankruptcies@Tunis + liquidations@Tunis: cells give 3145, printed 3170 (difference 25)",
+   "sgt1930 p.85 (f643) fr_commercial 1929: total@Tunis = contradictory@Tunis + default@Tunis + preparatory@Tunis + on_petition@Tunis + bankruptcies@Tunis + liquidations@Tunis: cells give 4138, printed 4128 (difference -10)",
+   "sgt1935 p.52 (f72) fr_commercial 1933: total@Sousse = contradictory@Sousse + default@Sousse + preparatory@Sousse + on_petition@Sousse + bankruptcies@Sousse + liquidations@Sousse: cells give 2388, printed 2378 (difference -10)",
+   "sgt1935 p.52 (f72) fr_commercial 1934: total@Sousse = contradictory@Sousse + default@Sousse + preparatory@Sousse + on_petition@Sousse + bankruptcies@Sousse + liquidations@Sousse: cells give 1442, printed 1542 (difference 100)",
+   "sgt1936 p.43 (f54) fr_commercial 1934: total@Sousse = contradictory@Sousse + default@Sousse + preparatory@Sousse + on_petition@Sousse + bankruptcies@Sousse + liquidations@Sousse: cells give 1442, printed 1542 (difference 100)",
+   "sgt1936 p.43 (f54) fr_commercial 1936: total@Sousse = contradictory@Sousse + default@Sousse + preparatory@Sousse + on_petition@Sousse + bankruptcies@Sousse + liquidations@Sousse: cells give 685, printed 677 (difference -8)",
+   "sgt1939 p.43 (f49) fr_commercial 1937: total@Sousse = contradictory@Sousse + default@Sousse + preparatory@Sousse + on_petition@Sousse + bankruptcies@Sousse + liquidations@Sousse: cells give 530, printed 522 (difference -8)"
+  ],
+  "overlap_compared": 888,
+  "overlap_diffs": [],
+  "reprint_corrected": []
+ },
+ "justice_ouzara_criminal": {
+  "rows": 73,
+  "checks": 171,
+  "failed": [
+   "sgt1924 p.74 (f1064) tn_ouzara_criminal 1920: TOTAUX = pending_start + entered: cells give 1375, printed 1385 (difference 10)",
+   "sgt1926 p.83 (f647) tn_ouzara_criminal 1923: out_total = out_acquittal + out_conviction: cells give 197, printed 237 (difference 40)"
+  ],
+  "overlap_compared": 152,
+  "overlap_diffs": [
+   [
+    [
+     1920,
+     null,
+     null,
+     null,
+     null,
+     null,
+     "pending_start"
+    ],
+    "sgt1922",
+    "494",
+    "sgt1924",
+    "484"
+   ],
+   [
+    [
+     1920,
+     null,
+     null,
+     null,
+     null,
+     null,
+     "pending_start"
+    ],
+    "sgt1923",
+    "494",
+    "sgt1924",
+    "484"
+   ],
+   [
+    [
+     1922,
+     null,
+     null,
+     null,
+     null,
+     null,
+     "out_acquittal"
+    ],
+    "sgt1924",
+    "0",
+    "sgt1926",
+    "67"
+   ],
+   [
+    [
+     1922,
+     null,
+     null,
+     null,
+     null,
+     null,
+     "out_acquittal"
+    ],
+    "sgt1925",
+    "0",
+    "sgt1926",
+    "67"
+   ],
+   [
+    [
+     1923,
+     null,
+     null,
+     null,
+     null,
+     null,
+     "out_acquittal"
+    ],
+    "sgt1924",
+    "0",
+    "sgt1927",
+    "56"
+   ],
+   [
+    [
+     1923,
+     null,
+     null,
+     null,
+     null,
+     null,
+     "out_acquittal"
+    ],
+    "sgt1925",
+    "0",
+    "sgt1927",
+    "56"
+   ],
+   [
+    [
+     1923,
+     null,
+     null,
+     null,
+     null,
+     null,
+     "out_acquittal"
+    ],
+    "sgt1926",
+    "16",
+    "sgt1927",
+    "56"
+   ],
+   [
+    [
+     1924,
+     null,
+     null,
+     null,
+     null,
+     null,
+     "out_acquittal"
+    ],
+    "sgt1924",
+    "0",
+    "sgt1928",
+    "51"
+   ],
+   [
+    [
+     1924,
+     null,
+     null,
+     null,
+     null,
+     null,
+     "out_acquittal"
+    ],
+    "sgt1925",
+    "0",
+    "sgt1928",
+    "51"
+   ],
+   [
+    [
+     1922,
+     null,
+     null,
+     null,
+     null,
+     null,
+     "out_conviction"
+    ],
+    "sgt1924",
+    "741",
+    "sgt1926",
+    "674"
+   ],
+   [
+    [
+     1922,
+     null,
+     null,
+     null,
+     null,
+     null,
+     "out_conviction"
+    ],
+    "sgt1925",
+    "741",
+    "sgt1926",
+    "674"
+   ],
+   [
+    [
+     1923,
+     null,
+     null,
+     null,
+     null,
+     null,
+     "out_conviction"
+    ],
+    "sgt1924",
+    "237",
+    "sgt1927",
+    "181"
+   ],
+   [
+    [
+     1923,
+     null,
+     null,
+     null,
+     null,
+     null,
+     "out_conviction"
+    ],
+    "sgt1925",
+    "237",
+    "sgt1927",
+    "181"
+   ],
+   [
+    [
+     1924,
+     null,
+     null,
+     null,
+     null,
+     null,
+     "out_conviction"
+    ],
+    "sgt1924",
+    "265",
+    "sgt1928",
+    "214"
+   ],
+   [
+    [
+     1924,
+     null,
+     null,
+     null,
+     null,
+     null,
+     "out_conviction"
+    ],
+    "sgt1925",
+    "265",
+    "sgt1928",
+    "214"
+   ]
+  ],
+  "reprint_corrected": [
+   [
+    [
+     "justice_ouzara_criminal",
+     1920,
+     null,
+     null,
+     null,
+     "pending_start"
+    ],
+    "sgt1924",
+    "484",
+    "sgt1923",
+    "494",
+    "sgt1922-sgt1923 print 494 and the 1920 total 1.385 = 494 + 891; sgt1924 prints 484"
+   ]
+  ]
+ },
+ "justice_ouzara_appeals": {
+  "rows": 686,
+  "checks": 450,
+  "failed": [
+   "sgt1924 p.74 (f1064) tn_appeals_civil Gafsa: out_total = confirmed + partly_reversed + fully_reversed + struck_off: cells give 97, printed 103 (difference 6)",
+   "sgt1924 p.74 (f1064) tn_appeals_civil partly_reversed: lines vs TOTAUX: cells give 195, printed 201 (difference 6)",
+   "sgt1926 p.83 (f647) tn_appeals_civil Le Kef: total_to_judge = pending_start + entered: cells give 505, printed 605 (difference 100)",
+   "sgt1926 p.83 (f647) tn_appeals_civil Le Kef: pending_end = total_to_judge + -out_total: cells give 416, printed 316 (difference -100)",
+   "sgt1926 p.83 (f647) tn_appeals_civil total_to_judge: lines vs TOTAUX: cells give 3702, printed 3602 (difference -100)",
+   "sgt1928 p.81 (f633) tn_appeals_civil Le Kef: out_total = confirmed + partly_reversed + fully_reversed + struck_off: cells give 162, printed 172 (difference 10)",
+   "sgt1928 p.81 (f633) tn_appeals_civil TOTAUX: out_total = confirmed + partly_reversed + fully_reversed + struck_off: cells give 1123, printed 1133 (difference 10)",
+   "sgt1922 p.67 (f91) tn_appeals_correctional TOTAUX: pending_end = total_to_judge + -out_total: cells give 175, printed 185 (difference 10)",
+   "sgt1922 p.67 (f91) tn_appeals_correctional pending_end: lines vs TOTAUX: cells give 175, printed 185 (difference 10)"
+  ],
+  "overlap_compared": 0,
+  "overlap_diffs": [],
+  "reprint_corrected": []
+ },
+ "justice_regional_courts": {
+  "rows": 766,
+  "checks": 1114,
+  "failed": [
+   "sgt1922 p.68 (f92) tn_regional [civil] 1921:entered: lines vs TOTAUX: cells give 17105, printed 17125 (difference 20)",
+   "sgt1922 p.68 (f92) tn_regional [correctional] 1919:entered: lines vs TOTAUX: cells give 17989, printed 17980 (difference -9)",
+   "sgt1923 p.77 (f575) tn_regional [civil] 1921:entered: lines vs TOTAUX: cells give 17105, printed 17125 (difference 20)",
+   "sgt1923 p.77 (f575) tn_regional [civil] 1923:entered: lines vs TOTAUX: cells give 16183, printed 16083 (difference -100)",
+   "sgt1923 p.77 (f575) tn_regional [correctional] 1919:entered: lines vs TOTAUX: cells give 17989, printed 17980 (difference -9)",
+   "sgt1924 p.75 (f1065) tn_regional [civil] 1921:entered: lines vs TOTAUX: cells give 17105, printed 17125 (difference 20)",
+   "sgt1924 p.75 (f1065) tn_regional [civil] 1922:pending_start: lines vs TOTAUX: cells give 5617, printed 5647 (difference 30)",
+   "sgt1924 p.75 (f1065) tn_regional [civil] 1923:entered: lines vs TOTAUX: cells give 16183, printed 16083 (difference -100)",
+   "sgt1924 p.75 (f1065) tn_regional [civil] 1924:pending_end: lines vs TOTAUX: cells give 4407, printed 4377 (difference -30)",
+   "sgt1924 p.75 (f1065) tn_regional [civil] TOTAUX: pending_end 1921 = pending_start 1922: cells give 5617, printed 5647 (difference 30)",
+   "sgt1925 p.74 (f98) tn_regional [civil] 1921:entered: lines vs TOTAUX: cells give 17105, printed 17125 (difference 20)",
+   "sgt1925 p.74 (f98) tn_regional [civil] 1923:entered: lines vs TOTAUX: cells give 16183, printed 16083 (difference -100)",
+   "sgt1926 p.84 (f648) tn_regional [civil] 1926:entered: lines vs TOTAUX: cells give 11933, printed 12133 (difference 200)",
+   "sgt1929 p.84 (f112) tn_regional [correctional] 1927:convicted: lines vs TOTAUX: cells give 13587, printed 13857 (difference 270)",
+   "sgt1929 p.84 (f112) tn_regional [correctional] 1928:convicted: lines vs TOTAUX: cells give 11661, printed 11631 (difference -30)",
+   "sgt1929 p.84 (f112) tn_regional [correctional] Driba 1928: pending_end = pending_start + entered - convicted - acquitted: cells give 1144, printed 1174 (difference 30)",
+   "sgt1929 p.84 (f112) tn_regional [correctional] TOTAUX 1927: pending_end = pending_start + entered - convicted - acquitted: cells give 2864, printed 3134 (difference 270)",
+   "sgt1930 p.88 (f646) tn_regional [civil] 1930:pending_start: lines vs TOTAUX: cells give 5388, printed 5748 (difference 360)",
+   "sgt1930 p.88 (f646) tn_regional [civil] Driba: pending_end 1929 = pending_start 1930: cells give 2952, printed 2592 (difference -360)",
+   "sgt1930 p.88 (f646) tn_regional [correctional] Gafsa 1930: pending_end = pending_start + entered - convicted - acquitted: cells give 190, printed 207 (difference 17)",
+   "sgt1930 p.88 (f646) tn_regional [correctional] TOTAUX 1930: pending_end = pending_start + entered - convicted - acquitted: cells give 4154, printed 4171 (difference 17)"
+  ],
+  "overlap_compared": 1784,
+  "overlap_diffs": [
+   [
+    [
+     1924,
+     null,
+     "civil",
+     null,
+     null,
+     "Gafsa",
+     "pending_end"
+    ],
+    "sgt1924",
+    "143",
+    "sgt1928",
+    "113"
+   ],
+   [
+    [
+     1926,
+     null,
+     "civil",
+     null,
+     null,
+     "Gabès",
+     "entered"
+    ],
+    "sgt1926",
+    "605",
+    "sgt1930",
+    "805"
+   ],
+   [
+    [
+     1928,
+     null,
+     "correctional",
+     null,
+     null,
+     "Driba",
+     "convicted"
+    ],
+    "sgt1929",
+    "3168",
+    "sgt1930",
+    "3138"
+   ]
+  ],
+  "reprint_corrected": []
+ },
+ "justice_caids_presidents": {
+  "rows": 1474,
+  "checks": 54,
+  "failed": [
+   "sgt1922 p.69 (f93) tn_caids civil:1921: lines vs TOTAUX: cells give 14939, printed 14844 (difference -95)",
+   "sgt1922 p.69 (f93) tn_caids civil:1922: lines vs TOTAUX: cells give 13512, printed 13572 (difference 60)",
+   "sgt1924 p.76 (f1066) tn_caids civil:1924: lines vs TOTAUX: cells give 13210, printed 13220 (difference 10)",
+   "sgt1924 p.76 (f1066) tn_caids penal:1924: lines vs TOTAUX: cells give 40547, printed 40558 (difference 11)",
+   "sgt1925 p.77 (f101) tn_caids penal:1924: lines vs TOTAUX: cells give 40557, printed 40547 (difference -10)",
+   "sgt1926 p.87 (f651) tn_caids penal:1926: lines vs A reporter: cells give 43839, printed 43842 (difference 3)",
+   "sgt1926 p.87 (f651) tn_caids civil:1926: lines vs TOTAUX: cells give 9324, printed 9334 (difference 10)",
+   "sgt1927 p.89 (f113) tn_caids penal:1926: lines vs A reporter: cells give 43841, printed 43842 (difference 1)",
+   "sgt1927 p.89 (f113) tn_caids civil:1926: lines vs TOTAUX: cells give 9328, printed 9334 (difference 6)",
+   "sgt1927 p.89 (f113) tn_caids penal:1927: lines vs TOTAUX: cells give 53263, printed 53163 (difference -100)",
+   "sgt1928 p.85 (f637) tn_caids penal:1927: lines vs TOTAUX: cells give 53263, printed 53163 (difference -100)"
+  ],
+  "overlap_compared": 1090,
+  "overlap_diffs": [
+   [
+    [
+     1922,
+     null,
+     "civil",
+     null,
+     null,
+     "zarzis",
+     "cases"
+    ],
+    "sgt1922",
+    "107",
+    "sgt1923",
+    "167"
+   ],
+   [
+    [
+     1924,
+     null,
+     "civil",
+     null,
+     null,
+     "djemmal",
+     "cases"
+    ],
+    "sgt1924",
+    "59",
+    "sgt1925",
+    "227"
+   ],
+   [
+    [
+     1924,
+     null,
+     "penal",
+     null,
+     null,
+     "djemmal",
+     "cases"
+    ],
+    "sgt1924",
+    "84",
+    "sgt1925",
+    "692"
+   ],
+   [
+    [
+     1924,
+     null,
+     "civil",
+     null,
+     null,
+     "jlasselguebala",
+     "cases"
+    ],
+    "sgt1924",
+    "345",
+    "sgt1925",
+    "59"
+   ],
+   [
+    [
+     1924,
+     null,
+     "penal",
+     null,
+     null,
+     "jlasselguebala",
+     "cases"
+    ],
+    "sgt1924",
+    "13",
+    "sgt1925",
+    "94"
+   ],
+   [
+    [
+     1924,
+     null,
+     "civil",
+     null,
+     null,
+     "eldjem",
+     "cases"
+    ],
+    "sgt1924",
+    "39",
+    "sgt1925",
+    "345"
+   ],
+   [
+    [
+     1924,
+     null,
+     "penal",
+     null,
+     null,
+     "eldjem",
+     "cases"
+    ],
+    "sgt1924",
+    "128",
+    "sgt1925",
+    "13"
+   ],
+   [
+    [
+     1924,
+     null,
+     "civil",
+     null,
+     null,
+     "hadjebelaioun",
+     "cases"
+    ],
+    "sgt1924",
+    "30",
+    "sgt1925",
+    "39"
+   ],
+   [
+    [
+     1924,
+     null,
+     "penal",
+     null,
+     null,
+     "hadjebelaioun",
+     "cases"
+    ],
+    "sgt1924",
+    "28",
+    "sgt1925",
+    "128"
+   ],
+   [
+    [
+     1924,
+     null,
+     "civil",
+     null,
+     null,
+     "maknassi",
+     "cases"
+    ],
+    "sgt1924",
+    "20",
+    "sgt1925",
+    "30"
+   ],
+   [
+    [
+     1924,
+     null,
+     "penal",
+     null,
+     null,
+     "maknassi",
+     "cases"
+    ],
+    "sgt1924",
+    "170",
+    "sgt1925",
+    "28"
+   ],
+   [
+    [
+     1924,
+     null,
+     "civil",
+     null,
+     null,
+     "metlaoui",
+     "cases"
+    ],
+    "sgt1924",
+    "0",
+    "sgt1925",
+    "20"
+   ],
+   [
+    [
+     1924,
+     null,
+     "penal",
+     null,
+     null,
+     "metlaoui",
+     "cases"
+    ],
+    "sgt1924",
+    "442",
+    "sgt1925",
+    "170"
+   ],
+   [
+    [
+     1924,
+     null,
+     "civil",
+     null,
+     null,
+     "tebourba",
+     "cases"
+    ],
+    "sgt1924",
+    "168",
+    "sgt1925",
+    "0"
+   ],
+   [
+    [
+     1924,
+     null,
+     "penal",
+     null,
+     null,
+     "tebourba",
+     "cases"
+    ],
+    "sgt1924",
+    "157",
+    "sgt1925",
+    "442"
+   ],
+   [
+    [
+     1924,
+     null,
+     "civil",
+     null,
+     null,
+     "zarzis",
+     "cases"
+    ],
+    "sgt1924",
+    "0",
+    "sgt1925",
+    "117"
+   ],
+   [
+    [
+     1924,
+     null,
+     "penal",
+     null,
+     null,
+     "zarzis",
+     "cases"
+    ],
+    "sgt1924",
+    "0",
+    "sgt1925",
+    "179"
+   ],
+   [
+    [
+     1924,
+     null,
+     "civil",
+     null,
+     null,
+     "P:sousse",
+     "cases"
+    ],
+    "sgt1924",
+    "770",
+    "sgt1925",
+    "945"
+   ],
+   [
+    [
+     1924,
+     null,
+     "civil",
+     null,
+     null,
+     "P:sfax",
+     "cases"
+    ],
+    "sgt1924",
+    "945",
+    "sgt1925",
+    "770"
+   ],
+   [
+    [
+     1925,
+     null,
+     "civil",
+     null,
+     null,
+     "utique",
+     "cases"
+    ],
+    "sgt1925",
+    "136",
+    "sgt1926",
+    "0"
+   ],
+   [
+    [
+     1925,
+     null,
+     "penal",
+     null,
+     null,
+     "utique",
+     "cases"
+    ],
+    "sgt1925",
+    "114",
+    "sgt1926",
+    "0"
+   ],
+   [
+    [
+     1925,
+     null,
+     "civil",
+     null,
+     null,
+     "touazine",
+     "cases"
+    ],
+    "sgt1925",
+    "0",
+    "sgt1926",
+    "136"
+   ],
+   [
+    [
+     1925,
+     null,
+     "penal",
+     null,
+     null,
+     "touazine",
+     "cases"
+    ],
+    "sgt1925",
+    "0",
+    "sgt1926",
+    "114"
+   ],
+   [
+    [
+     1926,
+     null,
+     "penal",
+     null,
+     null,
+     "P:kef",
+     "cases"
+    ],
+    "sgt1926",
+    "622",
+    "sgt1927",
+    "624"
+   ],
+   [
+    [
+     1926,
+     null,
+     "civil",
+     null,
+     null,
+     "ouledouezzez",
+     "cases"
+    ],
+    "sgt1926",
+    "0",
+    "sgt1927",
+    "4"
+   ]
+  ],
+  "reprint_corrected": []
+ },
+ "justice_appeal_rate": {
+  "rows": 558,
+  "checks": 224,
+  "failed": [
+   "sgt1922 p.70 (f94) tn_appeal_rate Sfax: penal_pct = 100 x appeals / appealable (to 0.01): cells give 20.23, printed 2.22 (difference -18.01)",
+   "sgt1922 p.70 (f94) tn_appeal_rate Gabès: penal_pct = 100 x appeals / appealable (to 0.01): cells give 12.79, printed 12.50 (difference -0.29)",
+   "sgt1922 p.70 (f94) tn_appeal_rate TOTAUX: civil_pct = 100 x appeals / appealable (to 0.01): cells give 17.68, printed 17.66 (difference -0.02)",
+   "sgt1923 p.79 (f577) tn_appeal_rate Kef: civil_pct = 100 x appeals / appealable (to 0.01): cells give 11.30, printed 11.22 (difference -0.08)",
+   "sgt1925 p.79 (f103) tn_appeal_rate Driba: civil_pct = 100 x appeals / appealable (to 0.01): cells give 23.93, printed 23.96 (difference 0.03)",
+   "sgt1925 p.79 (f103) tn_appeal_rate Gabès: civil_pct = 100 x appeals / appealable (to 0.01): cells give 26.52, printed 26.37 (difference -0.15)",
+   "sgt1926 p.89 (f653) tn_appeal_rate Driba: civil_pct = 100 x appeals / appealable (to 0.01): cells give 24.62, printed 24.22 (difference -0.40)",
+   "sgt1927 p.91 (f115) tn_appeal_rate Gabès: penal_pct = 100 x appeals / appealable (to 0.01): cells give 19.07, printed 19.19 (difference 0.12)",
+   "sgt1928 p.87 (f639) tn_appeal_rate penal_appealable: lines vs TOTAUX: cells give 9589, printed 10219 (difference 630)",
+   "sgt1928 p.87 (f639) tn_appeal_rate Sousse: civil_pct = 100 x appeals / appealable (to 0.01): cells give 29.05, printed 29.71 (difference 0.66)",
+   "sgt1928 p.87 (f639) tn_appeal_rate Le Kef: civil_pct = 100 x appeals / appealable (to 0.01): cells give 35.71, printed 35.91 (difference 0.20)",
+   "sgt1928 p.87 (f639) tn_appeal_rate Sfax: penal_pct = 100 x appeals / appealable (to 0.01): cells give 63.98, printed 14.58 (difference -49.40)",
+   "sgt1929 p.89 (f117) tn_appeal_rate penal_appeals: lines vs TOTAUX: cells give 2494, printed 2495 (difference 1)",
+   "sgt1929 p.89 (f117) tn_appeal_rate Driba: penal_pct = 100 x appeals / appealable (to 0.01): cells give 20.06, printed 20.08 (difference 0.02)",
+   "sgt1930 p.93 (f651) tn_appeal_rate Le Kef: civil_pct = 100 x appeals / appealable (to 0.01): cells give 83.52, printed 83.44 (difference -0.08)",
+   "sgt1930 p.93 (f651) tn_appeal_rate Gafsa: penal_pct = 100 x appeals / appealable (to 0.01): cells give 24.46, printed 24.70 (difference 0.24)",
+   "sgt1935 p.59 (f79) tn_appeal_rate Béja: penal_pct = 100 x appeals / appealable (to 0.01): cells give 10.59, printed 10.51 (difference -0.08)",
+   "sgt1936 p.46 (f57) tn_appeal_rate penal_appealable: lines vs TOTAUX: cells give 18578, printed 18278 (difference -300)",
+   "sgt1936 p.46 (f57) tn_appeal_rate Gabès: penal_pct = 100 x appeals / appealable (to 0.01): cells give 19.11, printed 23.92 (difference 4.81)",
+   "sgt1939 p.46 (f52) tn_appeal_rate Sfax: penal_pct = 100 x appeals / appealable (to 0.01): cells give 19.78, printed 19.72 (difference -0.06)",
+   "sgt1939 p.46 (f52) tn_appeal_rate Béja: penal_pct = 100 x appeals / appealable (to 0.01): cells give 15.01, printed 14.99 (difference -0.02)"
+  ],
+  "overlap_compared": 0,
+  "overlap_diffs": [],
+  "reprint_corrected": []
+ },
+ "justice_fees_fines": {
+  "rows": 363,
+  "checks": 181,
+  "failed": [
+   "sgt1924 p.77 (f1067) tn_fees Sfax: total = registration_stamp_duties + chancery_stamp_duties + fines_proportional_duties: cells give 106964.46, printed 105964.46 (difference -1000.00)",
+   "sgt1924 p.77 (f1067) tn_fees Gabès: total = registration_stamp_duties + chancery_stamp_duties + fines_proportional_duties: cells give 105625.60, printed 111844.60 (difference 6219.00)",
+   "sgt1924 p.77 (f1067) tn_fees chancery_stamp_duties: lines vs TOTAUX: cells give 119116.59, printed 125335.59 (difference 6219.00)",
+   "sgt1924 p.77 (f1067) tn_fees total: lines vs TOTAUX: cells give 1587018.59, printed 1588018.59 (difference 1000.00)",
+   "sgt1925 p.79 (f103) tn_fees Gafsa: total = registration_stamp_duties + chancery_stamp_duties + fines_proportional_duties: cells give 115971.91, printed 118971.91 (difference 3000.00)",
+   "sgt1925 p.79 (f103) tn_fees fines_proportional_duties: lines vs TOTAUX: cells give 1142738.47, printed 1145738.47 (difference 3000.00)",
+   "sgt1926 p.89 (f653) tn_fees TOTAUX: total = registration_stamp_duties + chancery_stamp_duties + fines_proportional_duties: cells give 2647336.24, printed 2650336.24 (difference 3000.00)",
+   "sgt1926 p.89 (f653) tn_fees fines_proportional_duties: lines vs TOTAUX: cells give 1494258.25, printed 1491258.25 (difference -3000.00)",
+   "sgt1927 p.91 (f115) tn_fees Ouzara: total = registration_stamp_duties + chancery_stamp_duties + fines_proportional_duties: cells give 475259.55, printed 474959.55 (difference -300.00)",
+   "sgt1927 p.91 (f115) tn_fees Kairouan: total = registration_stamp_duties + chancery_stamp_duties + fines_proportional_duties: cells give 128119.30, printed 128120.30 (difference 1.00)",
+   "sgt1927 p.91 (f115) tn_fees chancery_stamp_duties: lines vs TOTAUX: cells give 140520.70, printed 140220.70 (difference -300.00)",
+   "sgt1927 p.91 (f115) tn_fees total: lines vs TOTAUX: cells give 3296417.00, printed 3296416 (difference -1.00)",
+   "sgt1928 p.87 (f639) tn_fees Gabès: total = registration_stamp_duties + chancery_stamp_duties + fines_proportional_duties: cells give 208207.02, printed 253207.02 (difference 45000.00)",
+   "sgt1928 p.87 (f639) tn_fees fines_proportional_duties: lines vs TOTAUX: cells give 2448915.04, printed 2493915.04 (difference 45000.00)",
+   "sgt1929 p.89 (f117) tn_fees Ouzara: total = registration_stamp_duties + chancery_stamp_duties + fines_proportional_duties: cells give 782302.36, printed 728302.36 (difference -54000.00)",
+   "sgt1929 p.89 (f117) tn_fees total: lines vs TOTAUX: cells give 6094842.18, printed 6148842.18 (difference 54000.00)",
+   "sgt1930 p.93 (f651) tn_fees Driba: total = registration_stamp_duties + chancery_stamp_duties + fines_proportional_duties: cells give 1441194.25, printed 1442194.25 (difference 1000.00)",
+   "sgt1930 p.93 (f651) tn_fees total: lines vs TOTAUX: cells give 7014982.11, printed 7013982.11 (difference -1000.00)",
+   "sgt1936 p.46 (f57) tn_fees Caïds: total = fines_proportional_duties + registration_stamp_duties + chancery_stamp_duties: cells give 278833.48, printed 278833.49 (difference 0.01)",
+   "sgt1936 p.46 (f57) tn_fees TOTAUX: total = fines_proportional_duties + registration_stamp_duties + chancery_stamp_duties: cells give 5948607.06, printed 5948539.06 (difference -68.00)",
+   "sgt1936 p.46 (f57) tn_fees fines_proportional_duties: lines vs TOTAUX: cells give 4898054.74, printed 4898054.75 (difference 0.01)",
+   "sgt1936 p.46 (f57) tn_fees total: lines vs TOTAUX: cells give 5948607.06, printed 5948539.06 (difference -68.00)"
+  ],
+  "overlap_compared": 0,
+  "overlap_diffs": [],
+  "reprint_corrected": []
+ },
+ "justice_french_judgments_execution": {
+  "rows": 24,
+  "checks": 14,
+  "failed": [],
+  "overlap_compared": 0,
+  "overlap_diffs": [],
+  "reprint_corrected": []
+ },
+ "justice_regional_prosecutors": {
+  "rows": 384,
+  "checks": 102,
+  "failed": [
+   "sgt1928 p.83 (f635) tn_parquets Kairouan: entered = dismissed + direct_summons + to_investigation + to_police_court + to_french_courts + to_other_tunisian_courts + pending_end: cells give 3864, printed 3869 (difference 5)",
+   "sgt1928 p.83 (f635) tn_parquets dismissed: lines vs TOTAUX: cells give 17259, printed 17264 (difference 5)",
+   "sgt1930 p.89 (f647) tn_parquets Le Kef: entered = dismissed + direct_summons + to_investigation + to_police_court + to_french_courts + to_other_tunisian_courts + pending_end: cells give 8206, printed 8204 (difference -2)",
+   "sgt1930 p.89 (f647) tn_parquets Gafsa: entered = dismissed + direct_summons + to_investigation + to_police_court + to_french_courts + to_other_tunisian_courts + pending_end: cells give 2872, printed 2874 (difference 2)"
+  ],
+  "overlap_compared": 0,
+  "overlap_diffs": [],
+  "reprint_corrected": []
+ },
+ "justice_regional_investigation": {
+  "rows": 517,
+  "checks": 296,
+  "failed": [],
+  "overlap_compared": 0,
+  "overlap_diffs": [],
+  "reprint_corrected": []
+ },
+ "justice_indictment_chamber": {
+  "rows": 48,
+  "checks": 12,
+  "failed": [],
+  "overlap_compared": 0,
+  "overlap_diffs": [],
+  "reprint_corrected": []
+ },
+ "justice_revision_chamber": {
+  "rows": 72,
+  "checks": 36,
+  "failed": [],
+  "overlap_compared": 0,
+  "overlap_diffs": [],
+  "reprint_corrected": []
+ },
+ "justice_ouzara_correctional_appeals_detail": {
+  "rows": 360,
+  "checks": 190,
+  "failed": [],
+  "overlap_compared": 0,
+  "overlap_diffs": [],
+  "reprint_corrected": []
+ },
+ "justice_tunisian_courts_1935_1939": {
+  "rows": 360,
+  "checks": 146,
+  "failed": [
+   "sgt1936 p.45 (f56) tn_stats default: lines vs TOTAUX: cells give 6205, printed 6211 (difference 6)",
+   "sgt1936 p.45 (f56) tn_stats total: lines vs TOTAUX: cells give 19528, printed 19534 (difference 6)"
+  ],
+  "overlap_compared": 4,
+  "overlap_diffs": [],
+  "reprint_corrected": []
+ },
+ "_chapter_views": {
+  "sgt1922": [
+   85,
+   94
+  ],
+  "sgt1923": [
+   569,
+   578
+  ],
+  "sgt1924": [
+   1059,
+   1068
+  ],
+  "sgt1925": [
+   93,
+   104
+  ],
+  "sgt1926": [
+   643,
+   654
+  ],
+  "sgt1927": [
+   105,
+   116
+  ],
+  "sgt1928": [
+   629,
+   640
+  ],
+  "sgt1929": [
+   107,
+   118
+  ],
+  "sgt1930": [
+   641,
+   652
+  ],
+  "sgt1935": [
+   71,
+   80
+  ],
+  "sgt1936": [
+   52,
+   57
+  ],
+  "sgt1939": [
+   47,
+   52
+  ]
+ },
+ "_survey": {
+  "sgt1922": "f85 chapter title; f86 blank; f87 Tribunal de Tunis a) affaires criminelles et correctionnelles 1913-1922, b) affaires civiles; f88 c) affaires commerciales, d) audiences régulières et foraines des justices de paix du ressort (text); f89 Tribunal de Sousse a), b); f90 c), d) audiences (text); f91 Justice tunisienne, Ouzara a) affaires criminelles 1918-1922, b) appels en matière civile, c) appels en matière correctionnelle; f92 Tribunaux régionaux 1918-1922, affaires civiles and correctionnelles (page printed sideways); f93 juridiction des caïds, kahias ou khalifas délégués et présidents des tribunaux régionaux 1921-1922; f94 Divers a) usage du droit d'appel, b) produit des taxes et amendes, c) exécution des jugements français. Next chapter (Établissements pénitentiaires) at f95.",
+  "sgt1923": "f569 title; f570-f577 as sgt1922 (Tunis f570-f571, Sousse f572-f573, Ouzara f574, tribunaux régionaux 1919-1923 f575 sideways, caïds 1922-1923 f576, divers a)-c) f577); f578 blank.",
+  "sgt1924": "f1059 title; f1060-f1067 as sgt1922 (Tunis f1060-f1061, Sousse f1062-f1063, Ouzara f1064, régionaux 1920-1924 f1065 sideways, caïds f1066, divers f1067); f1068 blank.",
+  "sgt1925": "f93 title (f92 is the end of chapter III); f94 Justice française a) criminelles et correctionnelles, b) civiles 1916-1925, Tunis and Sousse side by side; f95 c) commerciales, audiences of the justices of the peace (Tunis); f96 audiences (Sousse); f97 Ouzara a) criminelles 1921-1925, b) appels civils, c) appels correctionnels; f98 tribunaux régionaux a) affaires civiles, b) affaires correctionnelles (1921-1922; 1923-1925 on f99, with jugements de condamnation / d'acquittement); f99 travaux des parquets; f100 travaux des chambres d'instruction, travaux de la Chambre d'accusation; f101-f102 juridiction des présidents des tribunaux régionaux, justices cantonales, caïdats, kahialiks et khalifaliks 1924-1925; f103 divers a) droit d'appel, b) taxes et amendes; f104 Chambre de révision a)-c), d) bureau d'exécution des jugements français.",
+  "sgt1926": "f643 title; f644 a), b) 1917-1926; f645 c), audiences (Tunis); f646 audiences (Sousse); f647 Ouzara a)-c) (appels correctionnels now split by kind of judgment appealed); f648-f649 tribunaux régionaux 1922-1926; f649 parquets; f650 chambres d'instruction, Chambre d'accusation; f651-f652 présidents, caïds etc. 1925-1926; f653 divers; f654 Chambre de révision, exécution.",
+  "sgt1927": "f105 title; f106 a), b) 1918-1927; f107 c), d) audiences Tunis; f108 e) audiences Sousse; f109 Ouzara; f110-f111 régionaux 1923-1927; f111 parquets; f112 instruction, accusation; f113-f114 présidents 1926-1927; f115 divers; f116 révision, exécution.",
+  "sgt1928": "f629 title; f630 a), b) 1919-1928; f631 c), audiences Tunis; f632 audiences Sousse; f633 Ouzara; f634-f635 régionaux 1924-1928; f635 parquets; f636 instruction, accusation; f637-f638 présidents 1927-1928; f639 divers; f640 révision, exécution.",
+  "sgt1929": "f107 title; f108 a), b) 1920-1929; f109 c), audiences Tunis; f110 audiences Sousse; f111 Ouzara; f112-f113 régionaux 1925-1929; f113 parquets; f114 instruction, accusation; f115-f116 présidents 1928-1929; f117 divers; f118 révision, exécution (now with judgments left from earlier years and attempts at execution).",
+  "sgt1930": "f641 title; f642 a), b) 1921-1930; f643 c), audiences Tunis; f644 audiences Sousse; f645 Ouzara; f646-f647 régionaux 1926-1930 (Béja from 1930); f647 parquets; f648 instruction, accusation; f649-f650 présidents 1929-1930; f651 divers; f652 révision, exécution.",
+  "sgt1935": "f71 title; f72 Tribunaux de Tunis et de Sousse a)-c) 1933-1935; f73 d) audiences (Tunis); f74 e) audiences (Sousse); f75 Justice tunisienne, juridictions de droit commun, statistique 1935: I. Chambre des requêtes, II. Tribunaux d'appel de l'Ouzara a) civiles, b) pénales, c) Chambre des mises en accusation; f76 III. Tribunaux de première instance a) civiles, b) pénales; f77 c) parquets, d) chambres d'instruction; f78 IV. juridictions des présidents et officiers de police judiciaire 1934-1935, V. bureau d'exécution des jugements français, VI. assistance judiciaire; f79 VII. usage du droit d'appel, VIII. produit des taxes et amendes; f80 blank.",
+  "sgt1936": "f52 title (chapter IV Justice, which also holds the prisons tables f58-f61); f53 blank; f54 Tribunaux de Tunis et de Sousse, criminelles et correctionnelles, civiles, commerciales 1934-1936; f55 juridictions de droit commun 1936: I. Chambre des requêtes, II. Ouzara 1° civiles, 2° pénales, 3° mises en accusation; f56 III. première instance 1° civiles, 2° pénales (contradictoires / par défaut), IV. présidents et officiers de police judiciaire 1935-1936; f57 V. assistance judiciaire, VI. droit d'appel, VII. taxes et amendes. No audiences table, no parquets / instruction tables.",
+  "sgt1939": "f47 title (chapter IV, prisons from f53); f48 blank; f49 Tribunaux de Tunis et de Sousse 1937-1939; f50 I. Chambre des requêtes, II. Ouzara 1°-3°; f51 III. première instance 1°, 2°, IV. présidents et juges cantonaux 1938-1939; f52 V. assistance judiciaire, VI. droit d'appel, VII. taxes et amendes (with the new courts of Bizerte, Nabeul, Moknine, Djerba)."
+ }
+}

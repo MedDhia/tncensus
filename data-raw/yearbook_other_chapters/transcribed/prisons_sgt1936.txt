@@ -1,0 +1,11 @@
+# Prisons tables of sgt1936 (ark bpt6k91056547): printed inside chapter IV Justice, views 58-61 (f62 is the
+# title of chapter V Propriété foncière).
+
+@recap view=61 page=50 years=1932-1936
+img: all
+cols: start entries exits end detention_days average
+1932 | 2624 13544 13510 2658 957617 2616
+1933 | 2658 13832 13635 2855 979567 2683
+1934 | 2855 17057 17274 ? 1087387 2979
+1935 | 2638 20037 19673 3002 1102260 3020
+1936 | 3002 21409 21168 3243 1167380 3198

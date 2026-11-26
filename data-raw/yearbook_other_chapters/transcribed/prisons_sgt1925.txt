@@ -1,0 +1,7 @@
+# Prisons chapter (chapter V), sgt1925 (ark bpt6k9105650k), views 105-112 (105 title, 106 blank).
+
+@recap view=112 page=88 years=1924-1925
+img: all
+cols: start entries exits end detention_days average
+1924 | 3035 15537 15377 3195 1113165 3041
+1925 | 3195 17110 17141 3164 1182172 3238

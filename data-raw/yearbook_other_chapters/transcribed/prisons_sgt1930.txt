@@ -1,0 +1,7 @@
+# Prisons chapter (chapter V), sgt1930 (ark bpt6k9105652d), views 653-662 (653 title, 654 blank, 662 blank).
+
+@recap view=661 page=103 years=1929-1930
+img: all
+cols: start entries exits end detention_days average
+1929 | 2700 14017 14738 1979 949075 2600
+1930 | 1979 14388 14015 2352 907611 2479

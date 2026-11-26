@@ -1,0 +1,7 @@
+# Prisons chapter (chapter V), sgt1928 (ark bpt6k91056510), views 641-650 (641 title, 642 blank, 650 blank).
+
+@recap view=649 page=97 years=1927-1928
+img: all
+cols: start entries exits end detention_days average
+1927 | 3325 17548 17459 3414 1168078 3200
+1928 | 3414 15747 16461 2700 1105753 3021

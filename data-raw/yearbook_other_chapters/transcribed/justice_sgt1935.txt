@@ -1,0 +1,155 @@
+# Justice chapter (chapter IV), sgt1935 (ark bpt6k9105653t), views 71-80 (71 chapter title, 80 blank).
+# Format: see yb_tables.py. Every numeric cell of this edition was read on the page images (f72, f75-f79).
+# f73-f74: audiences of the justices of the peace (text tables, see the notes).
+
+@fr_criminal view=72 page=52 years=1933-1935
+img: all
+cols: criminal@Tunis criminal@Sousse correctional_contradictory@Tunis correctional_contradictory@Sousse correctional_default@Tunis correctional_default@Sousse total@Tunis total@Sousse
+1933 | 39 11 2437 606 914 202 3384 819
+1934 | 44 13 3075 454 1162 161 4281 628
+1935 | 62 8 3778 399 1113 110 4953 517
+
+@fr_civil view=72 page=52 years=1933-1935
+img: all
+cols: contradictory@Tunis contradictory@Sousse default@Tunis default@Sousse preparatory@Tunis preparatory@Sousse on_petition@Tunis on_petition@Sousse total@Tunis total@Sousse
+1933 | 7207 686 5224 410 676 92 522 237 12953 1425
+1934 | 7711 708 6067 283 912 78 443 114 15133 1183
+1935 | 5016 677 4739 231 173 130 558 50 10486 1088
+
+@fr_commercial view=72 page=52 years=1933-1935
+img: all
+cols: contradictory@Tunis contradictory@Sousse default@Tunis default@Sousse preparatory@Tunis preparatory@Sousse on_petition@Tunis on_petition@Sousse bankruptcies@Tunis bankruptcies@Sousse liquidations@Tunis liquidations@Sousse total@Tunis total@Sousse
+1933 | 2375 951 1665 660 843 39 2148 581 618 144 23 13 7672 2378
+1934 | 2249 545 1198 445 1003 48 2703 312 539 79 54 13 7746 1542
+1935 | 1472 515 893 271 931 59 773 334 345 69 42 5 4456 1253
+
+@tn_stats view=75 page=55 year=1935 section=requests_chamber section_fr="I. Chambre des requêtes" fr_civil="Jugements en matière civile" fr_criminal="Jugements en matière criminelle" fr_correctional="Jugements en matière correctionnelle" fr_total="Total"
+img: all
+cols: civil criminal correctional total
+check: total = civil + criminal + correctional
+Chambre des requêtes | 255 24 160 439
+
+@tn_stats view=75 page=55 year=1935 section=ouzara_civil section_fr="II. Tribunaux d'appel de l'Ouzara, a) Affaires civiles" fr_final="Jugements définitifs" fr_preparatory="Jugements préparatoires" fr_summary="Référés" fr_total="Total"
+img: all
+cols: final preparatory summary total
+check: total = final + preparatory + summary
+Ouzara | 1137 402 466 2005
+
+@tn_stats view=75 page=55 year=1935 section=ouzara_penal section_fr="II. Tribunaux d'appel de l'Ouzara, b) Affaires pénales" fr_criminal_final="Jugements criminels : définitifs" fr_criminal_preparatory="Jugements criminels : préparatoires" fr_criminal_total="Jugements criminels : total" fr_correctional_final="Jugements correctionnels : définitifs" fr_correctional_preparatory="Jugements correctionnels : préparatoires" fr_correctional_total="Jugements correctionnels : total" fr_total="Totaux"
+img: all
+cols: criminal_final criminal_preparatory criminal_total correctional_final correctional_preparatory correctional_total total
+check: criminal_total = criminal_final + criminal_preparatory
+check: correctional_total = correctional_final + correctional_preparatory
+check: total = criminal_total + correctional_total
+Ouzara | 165 104 269 2571 99 2670 2939
+
+@tn_stats view=75 page=55 year=1935 section=ouzara_indictment section_fr="II. Tribunaux d'appel de l'Ouzara, c) Chambre des mises en accusation" fr_procedures="Jugements réglant les procédures" fr_incidents="Jugements réglant les incidents de procédures" fr_after_cassation="Jugements statuant sur renvoi après cassation" fr_total="Total"
+img: all
+cols: procedures incidents after_cassation total
+check: total = procedures + incidents + after_cassation
+Chambre des mises en accusation | 304 64 48 416
+
+@tn_stats view=76 page=56 year=1935 section=first_instance_civil section_fr="III. Tribunaux de première instance, a) Affaires civiles" fr_final="Jugements définitifs" fr_preparatory="Jugements préparatoires" fr_summary="Référés" fr_total="Total"
+img: all
+cols: final preparatory summary total
+check: total = final + preparatory + summary
+Driba | 3209 626 2260 6095
+Sousse | 1895 117 339 2351
+Kairouan | 510 86 224 820
+Kef | 538 137 46 721
+Sfax | 699 227 20 946
+Gafsa | 336 85 60 481
+Gabès | 416 82 93 591
+Béja | 464 37 68 569
+TOTAUX | 8067 1397 3110 12574
+
+@tn_stats view=76 page=56 year=1935 section=first_instance_penal section_fr="III. Tribunaux de première instance, b) Affaires pénales" fr_final="Jugements définitifs" fr_preparatory="Jugements préparatoires" fr_total="Total"
+img: all
+cols: final preparatory total
+check: total = final + preparatory
+Driba | 6078 324 6402
+Sousse | 4703 76 4779
+Kairouan | 965 12 977
+Kef | 2313 150 2463
+Sfax | 1285 150 1435
+Gafsa | 1261 66 1327
+Gabès | 1391 132 1523
+Béja | 1331 76 1407
+TOTAUX | 19327 986 20313
+
+@tn_stats view=77 page=57 year=1935 section=prosecutors section_fr="c) Travaux des Parquets des Tribunaux régionaux" fr_dismissed="Affaires classées" fr_direct_summons="Citation directe" fr_to_investigation="Affaires mises à l'instruction" fr_to_police_court="Renvois en simple police" fr_divested="Dessaisissements" fr_total="Total"
+img: all
+cols: dismissed direct_summons to_investigation to_police_court divested total
+check: total = dismissed + direct_summons + to_investigation + to_police_court + divested
+Driba | 4149 5354 931 30921 189 41544
+Sousse | 6153 3465 118 3088 111 12935
+Kairouan | 2881 844 137 1365 190 5417
+Kef | 2863 1652 435 1632 84 6666
+Sfax | 3397 1121 197 3697 177 8589
+Gafsa | 1611 1345 128 1388 96 4568
+Gabès | 1796 1013 90 1247 65 4211
+Béja | 1121 1189 127 1420 233 4090
+TOTAUX | 23971 15983 2163 44758 1145 88020
+
+@tn_stats view=77 page=57 year=1935 section=investigation section_fr="d) Travaux des Chambres d'instruction" fr_no_case="Ordonnances statuant sur la procédure : non-lieu" fr_referral="Ordonnances statuant sur la procédure : renvoi devant une juridiction" fr_divested="Ordonnances statuant sur la procédure : dessaisissement" fr_final_total="Ordonnances statuant sur la procédure : total" fr_interlocutory="Ordonnances rendues en cours de procédure" fr_total="Total général"
+img: all
+cols: no_case referral divested final_total interlocutory total
+check: final_total = no_case + referral + divested
+check: total = final_total + interlocutory
+Driba | 331 558 32 921 2132 3053
+Sousse | 41 96 0 137 158 295
+Kairouan | 53 87 2 142 116 258
+Kef | 168 243 4 415 10 425
+Sfax | 84 115 9 208 100 308
+Gafsa | 40 87 1 128 0 128
+Gabès | 31 58 2 91 35 126
+Béja | 81 60 7 148 0 148
+TOTAUX | 829 1304 57 2190 2551 4741
+
+@tn_stats view=78 page=58 section=presidents section_fr="IV. Juridictions des présidents et officiers de police judiciaire" year=1935 fr_civil_1934="Affaires civiles 1934" fr_civil_1935="Affaires civiles 1935" fr_penal_1934="Affaires pénales 1934" fr_penal_1935="Affaires pénales 1935"
+img: all
+# TOTAUX penal 1934 printed "41.31·" (last digit not legible; by the column sum 41.312)
+cols: civil_1934 civil_1935 penal_1934 penal_1935
+Tribunaux régionaux | 2081 3958 28785 34491
+Officiers de police judiciaire | 2025 1560 12527 12181
+TOTAUX | 4106 5518 ? 46672
+
+@fr_judgments_execution view=78 page=58 year=1935
+img: all
+cols: value
+attempted | 87
+executed_in_full | 3
+out_total | 90
+
+@tn_stats view=78 page=58 year=1935 section=legal_aid section_fr="VI. Travaux du bureau de l'assistance judiciaire" fr_granted="Assistance accordée" fr_refused="Assistance refusée" fr_filed="Demandes classées en l'état" fr_incompetence="Incompétence" fr_total="Totaux"
+img: all
+cols: granted refused filed incompetence total
+check: total = granted + refused + filed + incompetence
+Bureau de l'assistance judiciaire | 310 440 422 108 1280
+
+@tn_appeal_rate view=79 page=59 year=1935
+img: all
+cols: civil_appealable civil_appeals civil_pct penal_appealable penal_appeals penal_pct
+Driba | 3209 352 10.96 6078 801 13.178
+Sousse | 1895 177 9.34 4703 547 11.63
+Kairouan | 510 69 13.52 965 170 17.61
+Le Kef | 538 65 12.08 2313 193 8.34
+Sfax | 699 91 13.01 1285 140 10.89
+Gafsa | 336 52 15.47 1261 196 15.54
+Gabès | 416 61 14.66 1391 269 19.33
+Béja | 464 63 13.57 1331 141 10.51
+
+@tn_fees view=79 page=59 year=1935 fr_registration_stamp_duties="Montant des taxes d'enrôlement" fr_chancery_stamp_duties="Droit de timbre et de chancellerie"
+img: all
+cols: registration_stamp_duties chancery_stamp_duties fines_proportional_duties total
+Ouzara | 141230.60 1698.20 376663.64 519592.44
+Driba | 531535.16 11045.20 1346279.23 1888859.59
+Sousse | 104571.24 136641.52 1770418.12 2011630.88
+Kairouan | 58868.40 45.00 240417.58 299330.98
+Le Kef | 54330.20 4030.00 146790.00 205150.20
+Sfax | 46577.80 15.00 162199.34 208792.14
+Gafsa | 38882.94 75.00 246411.36 285369.30
+Gabès | 53976.49 1020.27 268945.98 323942.74
+Béja | 26016.80 41104.50 257036.47 324157.77
+Présidents et officiers police judiciaire | 68448.64 1660.00 192025.53 262134.17
+TOTAUX | 1124438.27 197334.69 5007187.25 6328960.21

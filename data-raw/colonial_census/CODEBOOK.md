@@ -188,6 +188,23 @@ Every table is tidy: one row per printed cell. Printed subtotals and totals are 
 | [`communes_electricity_lines`](#communes_electricity_lines) | distr2 | by edition | 108 | count | Length of the high- and low-voltage lines by power station and town or region electrified (sgt1935, sgt1936, sgt1939) |
 | [`communes_electricity_1922_1927`](#communes_electricity_1922_1927) | elec22 | by edition | 561 | mixed | Electricity by locality, earlier layout (sgt1922–sgt1927): length of the network, installed power at 31 December (hectowatts), subscribers, kilowatt-hours consumed (private customers, public lighting) and gross receipts (private customers, town) |
 | [`communes_electricity_1928`](#communes_electricity_1928) | elec28 | by edition | 255 | mixed | Electricity by locality, sgt1928: length of the network, installed power at 31 December 1928, subscribers, kilowatt-hours consumed and gross receipts, each split by private customers / town and lighting / power |
+| [`justice_appeal_rate`](#justice_appeal_rate) | tn_appeal_rate | by edition | 558 | mixed | Use of the right of appeal |
+| [`justice_caids_presidents`](#justice_caids_presidents) | tn_caids | by edition | 1,474 | count | Jurisdiction of the caïds, kahias or khalifas and of the presidents of the regional courts: civil and penal cases |
+| [`justice_fees_fines`](#justice_fees_fines) | tn_fees | by edition | 363 | francs | Proceeds of taxes and fines |
+| [`justice_french_civil`](#justice_french_civil) | fr_civil | by edition | 200 | count | French justice: civil cases, by court |
+| [`justice_french_commercial`](#justice_french_commercial) | fr_commercial | by edition | 300 | count | French justice: commercial cases, by court |
+| [`justice_french_criminal`](#justice_french_criminal) | fr_criminal | by edition | 150 | count | French justice: criminal and correctional cases judged, by court |
+| [`justice_french_judgments_execution`](#justice_french_judgments_execution) | fr_judgments_execution | by edition | 24 | count | Execution of French judgments |
+| [`justice_indictment_chamber`](#justice_indictment_chamber) | tn_accusation | by edition | 48 | count | Work of the indictment chamber |
+| [`justice_ouzara_appeals`](#justice_ouzara_appeals) | tn_appeals_civil | by edition | 686 | count | Tunisian justice, Ouzara: civil and correctional appeals, by court of first instance |
+| [`justice_ouzara_correctional_appeals_detail`](#justice_ouzara_correctional_appeals_detail) | tn_appeals_correctional2 | by edition | 360 | count | Tunisian justice, Ouzara: correctional appeals, by kind of judgment appealed and decision |
+| [`justice_ouzara_criminal`](#justice_ouzara_criminal) | tn_ouzara_criminal | by edition | 73 | count | Tunisian justice, Ouzara: criminal cases (movement) |
+| [`justice_regional_courts`](#justice_regional_courts) | tn_regional | by edition | 766 | count | Regional courts: civil and correctional proceedings (movement) |
+| [`justice_regional_investigation`](#justice_regional_investigation) | tn_instruction | by edition | 517 | count | Work of the investigating chambers of the regional courts |
+| [`justice_regional_prosecutors`](#justice_regional_prosecutors) | tn_parquets | by edition | 384 | count | Work of the public prosecutors' offices of the regional courts |
+| [`justice_revision_chamber`](#justice_revision_chamber) | tn_revision | by edition | 72 | count | Work of the review chamber |
+| [`justice_tunisian_courts_1935_1939`](#justice_tunisian_courts_1935_1939) | tn_stats | by edition | 360 | count | Tunisian justice, ordinary courts: yearly statistics (from sgt1935) |
+| [`prisons_population_recap`](#prisons_population_recap) | recap | by edition | 156 | count | Prison population: yearly summary |
 
 ### eur1906_t1_circonscription_nationality
 
@@ -7809,3 +7826,671 @@ Source `sgt`, table elec28, printed pages by edition. 255 rows. Value type: mixe
 | `kW` |  | 34 |
 | `kWh` |  | 68 |
 | `m` |  | 17 |
+
+### justice_appeal_rate
+
+**Usage du droit d'appel**  
+*Use of the right of appeal*
+
+Source `sgt`, table tn_appeal_rate, printed pages by edition. 558 rows. Value type: mixed. Flags: (empty) 536, ocr_corrected 12, not_applicable 10. Notes and validation: [`../yearbook_other_chapters/csv/justice_appeal_rate.md`](../yearbook_other_chapters/csv/justice_appeal_rate.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `tribunal` | Coded dimension. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`tribunal`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `Béja` |  | 54 |
+| `Driba` |  | 72 |
+| `Gabès` |  | 72 |
+| `Gafsa` |  | 72 |
+| `Kairouan` |  | 72 |
+| `Kef` |  | 36 |
+| `Le Kef` |  | 36 |
+| `Sfax` |  | 72 |
+| `Sousse` |  | 72 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `civil_appealable` | Affaires civiles : affaires appelables | 93 |
+| `civil_appeals` | Affaires civiles : nombre d'appels | 93 |
+| `civil_pct` | Affaires civiles : moyenne pour cent | 93 |
+| `penal_appealable` | Affaires pénales : affaires appelables | 93 |
+| `penal_appeals` | Affaires pénales : nombre d'appels | 93 |
+| `penal_pct` | Affaires pénales : moyenne pour cent | 93 |
+
+### justice_caids_presidents
+
+**Juridiction des caïds, kahias ou khalifas délégués et des présidents des tribunaux régionaux : affaires civiles et pénales**  
+*Jurisdiction of the caïds, kahias or khalifas and of the presidents of the regional courts: civil and penal cases*
+
+Source `sgt`, table tn_caids, printed pages by edition. 1,474 rows. Value type: count. Flags: (empty) 1,467, not_applicable 4, ocr_corrected 3. Notes and validation: [`../yearbook_other_chapters/csv/justice_caids_presidents.md`](../yearbook_other_chapters/csv/justice_caids_presidents.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `matter` | Coded dimension. |
+| `jurisdiction` | Text (137 distinct values). |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`matter`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `civil` |  | 737 |
+| `penal` |  | 737 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `cases` | Affaires | 1,474 |
+
+### justice_fees_fines
+
+**Produit des taxes et amendes**  
+*Proceeds of taxes and fines*
+
+Source `sgt`, table tn_fees, printed pages by edition. 363 rows. Value type: francs. Flags: (empty) 360, ocr_corrected 3. Notes and validation: [`../yearbook_other_chapters/csv/justice_fees_fines.md`](../yearbook_other_chapters/csv/justice_fees_fines.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `tribunal` | Coded dimension. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`tribunal`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `(line printed without label)` |  | 3 |
+| `Bizerte` |  | 3 |
+| `Béja` |  | 24 |
+| `Caïds` |  | 3 |
+| `Caïds, Kahias, Khalifas et Présidents des Tribunaux régionaux` |  | 12 |
+| `Djerba` |  | 3 |
+| `Driba` |  | 36 |
+| `Gabès` |  | 36 |
+| `Gafsa` |  | 36 |
+| `Juges cantonaux (caïds, kahias, khalifats)` |  | 3 |
+| `Kairouan` |  | 36 |
+| `Kef` |  | 18 |
+| `Le Kef` |  | 18 |
+| `Moknine` |  | 3 |
+| `Nabeul` |  | 3 |
+| `Ouzara` |  | 36 |
+| `Présidents des Tribunaux régionaux, Juges cantonaux, Caïds, Kahias et Khalifats` |  | 15 |
+| `Présidents et officiers police judiciaire` |  | 3 |
+| `Sfax` |  | 36 |
+| `Sousse` |  | 36 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `chancery_stamp_duties` | Droit de timbre et de chancellerie / Droits de chancellerie / Montant des droits de timbre et de chancellerie perçus sur les grosses et expéditions | 121 |
+| `fines_proportional_duties` | Amendes / Montant des amendes et des droits proportionnels y afférents | 121 |
+| `registration_stamp_duties` | Droits d'enrôlement / Montant des droits de timbre et d'enregistrement / Montant des taxes d'enrôlement | 121 |
+
+### justice_french_civil
+
+**Justice française : affaires civiles, par tribunal**  
+*French justice: civil cases, by court*
+
+Source `sgt`, table fr_civil, printed pages by edition. 200 rows. Value type: count. Flags: (empty) 195, reprint_corrected 5. Notes and validation: [`../yearbook_other_chapters/csv/justice_french_civil.md`](../yearbook_other_chapters/csv/justice_french_civil.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `court` | Coded dimension. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`court`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `Sousse` |  | 100 |
+| `Tunis` |  | 100 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `contradictory` | Contradictoires | 50 |
+| `default` | Défaut | 50 |
+| `on_petition` | Sur requête | 50 |
+| `preparatory` | Préparatoires | 50 |
+
+### justice_french_commercial
+
+**Justice française : affaires commerciales, par tribunal**  
+*French justice: commercial cases, by court*
+
+Source `sgt`, table fr_commercial, printed pages by edition. 300 rows. Value type: count. Flags: (empty) 299, ocr_corrected 1. Notes and validation: [`../yearbook_other_chapters/csv/justice_french_commercial.md`](../yearbook_other_chapters/csv/justice_french_commercial.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `court` | Coded dimension. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`court`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `Sousse` |  | 150 |
+| `Tunis` |  | 150 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `bankruptcies` | Faillites | 50 |
+| `contradictory` | Contradictoires | 50 |
+| `default` | Défaut | 50 |
+| `liquidations` | Liquidations | 50 |
+| `on_petition` | Sur requête | 50 |
+| `preparatory` | Préparatoires | 50 |
+
+### justice_french_criminal
+
+**Justice française : affaires criminelles et correctionnelles jugées, par tribunal**  
+*French justice: criminal and correctional cases judged, by court*
+
+Source `sgt`, table fr_criminal, printed pages by edition. 150 rows. Value type: count. Flags: (empty) 150. Notes and validation: [`../yearbook_other_chapters/csv/justice_french_criminal.md`](../yearbook_other_chapters/csv/justice_french_criminal.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `court` | Coded dimension. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`court`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `Sousse` |  | 75 |
+| `Tunis` |  | 75 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `correctional_contradictory` | Affaires correctionnelles jugées contradictoirement | 50 |
+| `correctional_default` | Affaires correctionnelles jugées par défaut | 50 |
+| `criminal` | Affaires criminelles jugées | 50 |
+
+### justice_french_judgments_execution
+
+**Exécution des jugements français**  
+*Execution of French judgments*
+
+Source `sgt`, table fr_judgments_execution, printed pages by edition. 24 rows. Value type: count. Flags: (empty) 24. Notes and validation: [`../yearbook_other_chapters/csv/justice_french_judgments_execution.md`](../yearbook_other_chapters/csv/justice_french_judgments_execution.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `attempted` | Tentatives d'exécution | 3 |
+| `deposited` | Jugements déposés du 1er janvier au 31 décembre | 9 |
+| `executed_in_full` | Jugements exécutés totalement | 10 |
+| `pending_start` | Il restait de l'année précédente / Restant à juger au 31 décembre de l'année précédente | 2 |
+
+### justice_indictment_chamber
+
+**Travaux de la Chambre d'accusation (Chambre des mises en accusation)**  
+*Work of the indictment chamber*
+
+Source `sgt`, table tn_accusation, printed pages by edition. 48 rows. Value type: count. Flags: (empty) 48. Notes and validation: [`../yearbook_other_chapters/csv/justice_indictment_chamber.md`](../yearbook_other_chapters/csv/justice_indictment_chamber.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+### justice_ouzara_appeals
+
+**Justice tunisienne, Ouzara : appels en matière civile et correctionnelle, par tribunal ayant rendu les décisions frappées d'appel**  
+*Tunisian justice, Ouzara: civil and correctional appeals, by court of first instance*
+
+Source `sgt`, table tn_appeals_civil, printed pages by edition. 686 rows. Value type: count. Flags: (empty) 680, ocr_corrected 6. Notes and validation: [`../yearbook_other_chapters/csv/justice_ouzara_appeals.md`](../yearbook_other_chapters/csv/justice_ouzara_appeals.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `matter` | Coded dimension. |
+| `tribunal` | Coded dimension. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`matter`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `civil` |  | 483 |
+| `correctional` |  | 203 |
+
+`tribunal`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `Béja` |  | 49 |
+| `Driba` |  | 91 |
+| `Gabès` |  | 91 |
+| `Gafsa` |  | 91 |
+| `Kairouan` |  | 91 |
+| `Le Kef` |  | 91 |
+| `Sfax` |  | 91 |
+| `Sousse` |  | 91 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `confirmed` | Affaires sorties : par confirmation | 98 |
+| `entered` | Affaires entrées dans l'année / Procédures inscrites dans l'année | 98 |
+| `fully_reversed` | Affaires sorties : par réformation totale | 98 |
+| `partly_reversed` | Affaires sorties : par réformation partielle | 98 |
+| `pending_end` | Reste (au 31 décembre) | 98 |
+| `pending_start` | Il restait de l'année précédente / Restant à juger au 31 décembre de l'année précédente | 98 |
+| `struck_off` | Affaires sorties : rayées du rôle | 98 |
+
+### justice_ouzara_correctional_appeals_detail
+
+**Justice tunisienne, Ouzara : appels en matière correctionnelle (affaires sorties par nature du jugement frappé d'appel et de la décision)**  
+*Tunisian justice, Ouzara: correctional appeals, by kind of judgment appealed and decision*
+
+Source `sgt`, table tn_appeals_correctional2, printed pages by edition. 360 rows. Value type: count. Flags: (empty) 360. Notes and validation: [`../yearbook_other_chapters/csv/justice_ouzara_correctional_appeals_detail.md`](../yearbook_other_chapters/csv/justice_ouzara_correctional_appeals_detail.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `matter` | Coded dimension. |
+| `tribunal` | Coded dimension. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`matter`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `correctional` |  | 360 |
+
+`tribunal`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `Béja` |  | 45 |
+| `Driba` |  | 45 |
+| `Gabès` |  | 45 |
+| `Gafsa` |  | 45 |
+| `Kairouan` |  | 45 |
+| `Le Kef` |  | 45 |
+| `Sfax` |  | 45 |
+| `Sousse` |  | 45 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `acq_confirmed` | Venues sur jugements d'acquittement : confirmées | 40 |
+| `acq_reversed` | Venues sur jugements d'acquittement : infirmées | 40 |
+| `conv_confirmed` | Venues sur jugements de condamnation, décisions confirmées : par confirmation pure et simple | 40 |
+| `conv_confirmed_increased` | Venues sur jugements de condamnation, décisions confirmées : avec augmentation de peine | 40 |
+| `conv_confirmed_reduced` | Venues sur jugements de condamnation, décisions confirmées : avec diminution de peine | 40 |
+| `conv_reversed` | Venues sur jugements de condamnation : décisions infirmées | 40 |
+| `entered` | Affaires entrées dans l'année / Procédures inscrites dans l'année | 40 |
+| `pending_end` | Reste (au 31 décembre) | 40 |
+| `pending_start` | Il restait de l'année précédente / Restant à juger au 31 décembre de l'année précédente | 40 |
+
+### justice_ouzara_criminal
+
+**Justice tunisienne, Ouzara : affaires criminelles**  
+*Tunisian justice, Ouzara: criminal cases (movement)*
+
+Source `sgt`, table tn_ouzara_criminal, printed pages by edition. 73 rows. Value type: count. Flags: (empty) 70, ocr_corrected 2, reprint_corrected 1. Notes and validation: [`../yearbook_other_chapters/csv/justice_ouzara_criminal.md`](../yearbook_other_chapters/csv/justice_ouzara_criminal.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `entered` | Affaires entrées dans l'année / Procédures inscrites dans l'année | 13 |
+| `out_acquittal` | Il est sorti : par acquittement | 11 |
+| `out_conviction` | Il est sorti : par condamnation | 11 |
+| `out_judgment` | Il est sorti : par jugement | 6 |
+| `out_no_case` | Il est sorti : par non-lieu | 6 |
+| `pending_end` | Reste (au 31 décembre) | 13 |
+| `pending_start` | Il restait de l'année précédente / Restant à juger au 31 décembre de l'année précédente | 13 |
+
+### justice_regional_courts
+
+**Tribunaux régionaux : affaires civiles et correctionnelles (procédures)**  
+*Regional courts: civil and correctional proceedings (movement)*
+
+Source `sgt`, table tn_regional, printed pages by edition. 766 rows. Value type: count. Flags: (empty) 699, not_applicable 64, ocr_corrected 3. Notes and validation: [`../yearbook_other_chapters/csv/justice_regional_courts.md`](../yearbook_other_chapters/csv/justice_regional_courts.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `matter` | Coded dimension. |
+| `tribunal` | Coded dimension. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`matter`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `civil` |  | 303 |
+| `correctional` |  | 463 |
+
+`tribunal`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `Béja` |  | 80 |
+| `Driba` |  | 98 |
+| `Gabès` |  | 98 |
+| `Gafsa` |  | 98 |
+| `Kairouan` |  | 98 |
+| `Le Kef` |  | 98 |
+| `Sfax` |  | 98 |
+| `Sousse` |  | 98 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `acquitted` | Affaires jugées : jugements d'acquittement ou de relaxe | 80 |
+| `convicted` | Affaires jugées : jugements de condamnation | 80 |
+| `entered` | Affaires entrées dans l'année / Procédures inscrites dans l'année | 202 |
+| `pending_end` | Reste (au 31 décembre) | 202 |
+| `pending_start` | Il restait de l'année précédente / Restant à juger au 31 décembre de l'année précédente | 202 |
+
+### justice_regional_investigation
+
+**Travaux des chambres d'instruction des tribunaux régionaux**  
+*Work of the investigating chambers of the regional courts*
+
+Source `sgt`, table tn_instruction, printed pages by edition. 517 rows. Value type: count. Flags: (empty) 506, ocr_corrected 11. Notes and validation: [`../yearbook_other_chapters/csv/justice_regional_investigation.md`](../yearbook_other_chapters/csv/justice_regional_investigation.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+### justice_regional_prosecutors
+
+**Travaux des parquets des tribunaux régionaux**  
+*Work of the public prosecutors' offices of the regional courts*
+
+Source `sgt`, table tn_parquets, printed pages by edition. 384 rows. Value type: count. Flags: (empty) 384. Notes and validation: [`../yearbook_other_chapters/csv/justice_regional_prosecutors.md`](../yearbook_other_chapters/csv/justice_regional_prosecutors.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+### justice_revision_chamber
+
+**Travaux de la Chambre de révision**  
+*Work of the review chamber*
+
+Source `sgt`, table tn_revision, printed pages by edition. 72 rows. Value type: count. Flags: (empty) 71, ocr_corrected 1. Notes and validation: [`../yearbook_other_chapters/csv/justice_revision_chamber.md`](../yearbook_other_chapters/csv/justice_revision_chamber.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+### justice_tunisian_courts_1935_1939
+
+**Justice tunisienne, juridictions de droit commun : statistique annuelle (Chambre des requêtes, Tribunaux d'appel de l'Ouzara, Tribunaux de première instance, parquets, chambres d'instruction, présidents et officiers de police judiciaire, assistance judiciaire)**  
+*Tunisian justice, ordinary courts: yearly statistics (from sgt1935)*
+
+Source `sgt`, table tn_stats, printed pages by edition. 360 rows. Value type: count. Flags: (empty) 360. Notes and validation: [`../yearbook_other_chapters/csv/justice_tunisian_courts_1935_1939.md`](../yearbook_other_chapters/csv/justice_tunisian_courts_1935_1939.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `section` | Coded dimension. |
+| `section_fr` | Printed French label for `section`. |
+| `tribunal` | Coded dimension. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`section`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `first_instance_civil` | III. Tribunaux de première instance, 1° Affaires civiles / III. Tribunaux de première instance, a) Affaires civiles | 96 |
+| `first_instance_penal` | III. Tribunaux de première instance, 2° Affaires pénales / III. Tribunaux de première instance, b) Affaires pénales | 72 |
+| `investigation` | d) Travaux des Chambres d'instruction | 48 |
+| `legal_aid` | V. Travaux du bureau d'assistance judiciaire / V. Travaux du bureau de l'assistance judiciaire / VI. Travaux du bureau de l'assistance judiciaire | 15 |
+| `ouzara_civil` | II. Tribunaux d'appel de l'Ouzara, 1° Affaires civiles / II. Tribunaux d'appel de l'Ouzara, a) Affaires civiles | 12 |
+| `ouzara_indictment` | II. Tribunaux d'appel de l'Ouzara, 3° Chambre des mises en accusation / II. Tribunaux d'appel de l'Ouzara, c) Chambre des mises en accusation | 12 |
+| `ouzara_penal` | II. Tribunaux d'appel de l'Ouzara, 2° Affaires pénales / II. Tribunaux d'appel de l'Ouzara, b) Affaires pénales | 21 |
+| `presidents` | IV. Juridictions des présidents et juges cantonaux / IV. Juridictions des présidents et officiers de police judiciaire | 24 |
+| `prosecutors` | c) Travaux des Parquets des Tribunaux régionaux | 48 |
+| `requests_chamber` | I. Chambre des requêtes | 12 |
+
+`tribunal`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `Bureau de l'assistance judiciaire` |  | 15 |
+| `Béja` |  | 33 |
+| `Chambre des mises en accusation` |  | 12 |
+| `Chambre des requêtes` |  | 12 |
+| `Driba` |  | 33 |
+| `Gabès` |  | 33 |
+| `Gafsa` |  | 33 |
+| `Juges cantonaux (Caïdats, Kahias, Khalifats), compétence restreinte` |  | 4 |
+| `Juges cantonaux (compétence étendue)` |  | 4 |
+| `Kairouan` |  | 33 |
+| `Kef` |  | 33 |
+| `Officiers de police judiciaire` |  | 6 |
+| `Ouzara` |  | 33 |
+| `Sfax` |  | 33 |
+| `Sousse` |  | 33 |
+| `Tribunaux régionaux` |  | 10 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `after_cassation` | Jugements statuant sur renvoi après cassation | 3 |
+| `civil` | Affaires civiles 1934 / Affaires civiles 1935 / Affaires civiles 1936 / Affaires civiles 1938 / Affaires civiles 1939 / Jugements en matière civile | 15 |
+| `contradictory` | Jugements contradictoires | 16 |
+| `correctional` | Jugements en matière correctionnelle | 3 |
+| `correctional_final` | Jugements correctionnels : définitifs | 3 |
+| `correctional_preparatory` | Jugements correctionnels : préparatoires | 3 |
+| `correctional_total` | Jugements correctionnels : total | 3 |
+| `criminal` | Jugements en matière criminelle | 3 |
+| `criminal_final` | Jugements criminels : définitifs | 3 |
+| `criminal_preparatory` | Jugements criminels : préparatoires | 3 |
+| `criminal_total` | Jugements criminels : total | 3 |
+| `default` | Jugements par défaut | 16 |
+| `direct_summons` | Citation directe | 8 |
+| `dismissed` | Affaires classées | 8 |
+| `divested` | Dessaisissements / Ordonnances statuant sur la procédure : dessaisissement | 16 |
+| `filed` | Demandes classées en l'état | 3 |
+| `final` | Jugements définitifs | 35 |
+| `final_total` | Ordonnances statuant sur la procédure : total | 8 |
+| `granted` | Assistance accordée | 3 |
+| `incidents` | Jugements réglant les incidents de procédure / Jugements réglant les incidents de procédures | 3 |
+| `incompetence` | Incompétence | 3 |
+| `interlocutory` | Ordonnances rendues en cours de procédure | 8 |
+| `no_case` | Ordonnances statuant sur la procédure : non-lieu | 8 |
+| `penal` | Affaires pénales 1934 / Affaires pénales 1935 / Affaires pénales 1936 / Affaires pénales 1938 / Affaires pénales 1939 | 12 |
+| `preparatory` | Jugements préparatoires | 35 |
+| `procedures` | Jugements réglant les procédures | 3 |
+| `referral` | Ordonnances statuant sur la procédure : renvoi devant une juridiction | 8 |
+| `refused` | Assistance refusée | 3 |
+| `summary` | Référés | 27 |
+| `to_investigation` | Affaires mises à l'instruction | 8 |
+| `to_police_court` | Renvois en simple police | 8 |
+| `total` | Total / Total général / Totaux | 79 |
+
+### prisons_population_recap
+
+**Récapitulation du chiffre des détenus**  
+*Prison population: yearly summary*
+
+Source `sgt`, table recap, printed pages by edition. 156 rows. Value type: count. Flags: (empty) 155, reprint_corrected 1. Notes and validation: [`../yearbook_other_chapters/csv/prisons_population_recap.md`](../yearbook_other_chapters/csv/prisons_population_recap.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `average` | Effectif moyen | 26 |
+| `detention_days` | Nombre de journées de détention | 26 |
+| `end` | Effectif au 31 décembre | 26 |
+| `entries` | Nombre d'entrées | 26 |
+| `exits` | Nombre de sorties | 26 |
+| `start` | Effectif au 1er janvier | 26 |
