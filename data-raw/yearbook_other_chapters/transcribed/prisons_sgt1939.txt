@@ -9,3 +9,34 @@ cols: start entries exits end detention_days average
 1937 | 3243 21814 21985 3072 1186434 3251
 1938 | 3072 24785 23984 3873 1334749 3656
 1939 | 3873 19322 20264 2931 1267582 3472
+
+@condemned_age view=53 page=47 year=1939
+img: all
+cols: age_0_10 age_11_15 age_16_20 age_21_30 age_31_40 age_41_50 age_51_plus male female first_offender recidivist total
+Français | 0 0 6 50 40 18 11 119 6 45 80 125
+Algériens | 0 0 8 28 31 13 6 86 0 39 47 86
+Italiens | 0 1 8 65 37 21 16 141 7 79 69 148
+Maltais | 0 0 0 3 4 4 3 14 0 6 8 14
+Grecs | 0 0 0 1 2 0 0 3 0 1 2 3
+Espagnols | 0 0 0 0 0 0 0 0 0 0 0 0
+Autres européens | 0 0 0 2 0 1 1 4 0 4 0 4
+Tunisiens musulmans | 3 237 1466 3866 1993 943 556 8754 310 4433 4631 9064
+Tunisiens israélites | 0 2 15 91 27 19 25 163 16 85 94 179
+Marocains | 0 0 3 10 8 3 3 26 1 18 9 27
+Tripolitains | 0 0 15 36 33 14 7 100 5 37 68 105
+Divers | 0 0 0 0 3 0 0 3 0 3 0 3
+Totaux | 3 240 1521 4152 2178 1036 628 9413 345 4750 5008 9758
+
+@condemned_offence view=53 page=47 year=1939
+img: all
+cols: dp.Européens dp.Tunisiens hl.Français hl.Algériens hl.Européens hl.Musulmans hl.Israélites hl.Divers hl.Total rc.Français rc.Algériens rc.Européens rc.Musulmans rc.Divers rc.Total pl.Français pl.Algériens pl.Européens pl.Musulmans pl.Israélites pl.Divers pl.Total ps.Français ps.Algériens ps.Européens ps.Musulmans ps.Israélites ps.Divers ps.Total
+Meurtre | 0 0 0 1 0 23 0 0 24 1 1 0 0 0 2 0 0 0 9 0 0 9 0 0 0 2 0 0 2
+Coups, blessures et agressions | 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 28 0 0 28 13 12 15 516 7 9 572
+Attentat à la pudeur | 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 1 0 13 0 0 14 1 0 1 94 1 0 97
+Vol | 0 0 0 0 0 7 0 0 7 0 0 0 4 0 4 2 0 1 209 0 2 214 25 48 36 4150 36 34 4329
+Ivresse | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 1 2 0 1276 6 9 1294
+Délit de paccage | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2 0 0 2
+Faillis | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4 2 7 174 4 0 191
+Politiques | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5 0 0 5
+Divers | 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 5 160 5 2 172 79 15 96 2442 120 36 2788
+Totaux | 0 0 0 1 0 33 0 0 34 1 1 0 4 0 6 2 2 6 419 5 4 438 123 79 155 8661 174 88 9280

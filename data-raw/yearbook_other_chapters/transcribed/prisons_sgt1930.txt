@@ -5,3 +5,51 @@ img: all
 cols: start entries exits end detention_days average
 1929 | 2700 14017 14738 1979 949075 2600
 1930 | 1979 14388 14015 2352 907611 2479
+
+@condemned_age view=655 page=97 year=1930
+img: all
+cols: age_0_10 age_11_15 age_16_20 age_21_30 age_31_40 age_41_50 age_51_plus male female first_offender recidivist total
+Français | 0 0 7 19 9 3 1 36 3 20 19 39
+Algériens | 0 0 9 27 21 5 5 65 2 48 19 67
+Italiens | 0 7 40 81 29 9 10 164 12 126 50 176
+Maltais | 0 0 0 0 1 3 1 5 0 2 3 5
+Grecs | 0 0 0 0 0 0 0 0 0 0 0 0
+Espagnols | 0 0 0 0 0 0 0 0 0 0 0 0
+Autres européens | 0 0 0 2 0 0 0 2 0 2 0 2
+Tunisiens musulmans | 6 136 1092 3288 1627 679 361 7017 172 3924 3265 7189
+Tunisiens israélites | 0 0 8 32 23 7 2 72 0 44 28 72
+Marocains | 0 1 4 25 14 12 3 59 0 41 18 59
+Tripolitains | 0 1 6 111 60 16 4 198 0 98 100 198
+Divers | 0 0 2 8 10 1 0 21 0 13 8 21
+Totaux | 6 145 1168 3593 1794 735 397 7639 189 4318 3510 7828
+
+@condemned_offence view=655 page=97 year=1930
+img: all
+cols: dp.Européens dp.Tunisiens hl.Français hl.Algériens hl.Européens hl.Musulmans hl.Israélites hl.Divers hl.Total rc.Français rc.Algériens rc.Européens rc.Musulmans rc.Israélites rc.Total pl.Français pl.Algériens pl.Européens pl.Musulmans pl.Israélites pl.Divers pl.Total ps.Français ps.Algériens ps.Européens ps.Musulmans ps.Israélites ps.Divers ps.Total
+Meurtre | 0 0 0 0 1 33 0 1 35 0 0 2 0 0 2 1 0 4 19 1 5 30 0 1 7 55 0 2 65
+Coups, blessures, agressions | 0 0 0 0 0 10 0 0 10 0 0 0 0 0 0 0 0 1 29 0 1 31 11 18 32 1069 16 11 1157
+Attentat à la pudeur | 0 0 0 0 0 6 0 0 6 0 0 0 0 0 0 0 0 1 72 0 0 73 2 0 6 186 1 1 196
+Vol | 0 0 0 0 0 9 0 0 9 0 0 1 0 1 2 0 5 11 252 5 8 281 10 18 33 2604 15 26 2706
+Ivresse | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3 4 11 1801 3 57 1879
+Délit de paccage | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 35 0 1 36
+Faillis et dettiers | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4 3 24 69 19 0 119
+Divers | 0 0 0 0 0 4 0 0 4 0 0 0 0 0 0 0 0 5 42 0 3 50 9 17 43 997 11 60 1137
+Totaux | 0 0 0 0 1 62 0 1 64 0 0 3 0 1 4 1 5 22 414 6 17 465 39 61 156 6816 65 158 7295
+
+@work_days view=656 page=98 year=1930 split=adm_agriculture_directorate:657:99
+img: all
+# Two-page spread (labels and the columns up to the Administration's Municipalités on p. 98, the rest on p. 99).
+cols: emp_municipalities emp_beylical_works emp_education emp_hospitals emp_agriculture_directorate emp_salines emp_mines adm_controles_detached_gaols adm_controles_in_prisons adm_municipalities adm_agriculture_directorate adm_hospitals_lazarets_asylums adm_public_works adm_interior_directorate adm_courts adm_education_directorate int_contractors_espadrilles int_contractors_coffee_sorting int_contractors_scourtins int_admin_buildings_misc total
+Béja | 0 0 0 788 0 0 0 0 661 5167 0 0 0 0 0 0 0 0 0 793 7409
+Bizerte | 0 0 0 0 0 0 0 0 708 0 0 0 0 0 0 0 0 0 0 730 1438
+Gabès | 0 0 0 0 0 0 0 1240 3162 1368 0 0 0 0 0 0 0 0 0 3605 9375
+Gafsa | 0 0 0 0 0 0 0 0 3961 1279 0 0 0 0 329 0 0 0 0 1663 7232
+Kairouan | 0 0 0 0 0 0 0 0 1095 11460 0 0 810 0 0 0 0 0 0 2190 15555
+Le Kef | 0 0 0 0 0 0 0 4169 1242 8147 0 2029 930 0 0 0 0 0 0 2060 18577
+Sfax | 0 0 0 0 0 0 0 0 1984 0 0 0 0 0 0 0 0 0 0 8430 10414
+Sousse | 0 0 0 1643 0 0 0 0 786 5662 0 402 0 0 963 0 0 0 0 2518 11974
+Tunis | 50 11550 1239 19344 7632 17642 114789 1478 822 0 2995 263 124 640 0 6895 0 3491 0 59374 248328
+Bardo | 0 2820 0 0 0 0 0 0 0 0 0 5046 1067 0 0 0 10158 0 0 2678 21769
+Porto-Farina | 0 0 0 0 0 0 0 0 0 911 0 0 0 0 0 0 38148 0 30642 26348 96049
+Djebel Djougar | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 86133 86133
+Totaux | 50 14370 1239 21775 7632 17642 114789 6887 14421 33994 2995 7740 2931 640 1292 6895 48306 3491 30642 196522 534253

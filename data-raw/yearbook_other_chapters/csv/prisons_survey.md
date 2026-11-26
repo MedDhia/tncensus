@@ -34,5 +34,5 @@ Page-by-page survey of the *Établissements pénitentiaires* tables (chapter V u
 
 ## Not transcribed
 
-Not transcribed yet (this session ran out of budget after the Justice chapter): every table of the chapter except the récapitulation, i.e. a) prisoners by nationality, age, sex and penal category; b) by nationality, nature of the offence and sentence; c) days of work of the prisoners by establishment and kind of work; d) expenditure and days of detention by establishment (cost per day, products of the work); mouvement général d'entrée et de sortie by establishment (two tables); transfers; deaths by prison and disease; guard staff compared with the maximum daily population. Their views are listed above, per edition.
+Transcribed: the récapitulation (prisons_population_recap), a) condemned prisoners by nationality, age, sex and penal category (prisons_condemned_nationality_age), b) by nationality, offence and sentence (prisons_condemned_offence), c) days of work (prisons_work_days), d) expenditure and days of detention for sgt1922-sgt1928 (prisons_expenditure). Not transcribed yet: d) for sgt1929, sgt1930 and sgt1935; mouvement général d'entrée et de sortie by establishment (two tables); transfers; deaths by prison and disease; guard staff compared with the maximum daily population. Their views are listed above, per edition.
 

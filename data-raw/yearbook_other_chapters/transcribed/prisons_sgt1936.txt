@@ -9,3 +9,35 @@ cols: start entries exits end detention_days average
 1934 | 2855 17057 17274 ? 1087387 2979
 1935 | 2638 20037 19673 3002 1102260 3020
 1936 | 3002 21409 21168 3243 1167380 3198
+
+@condemned_age view=58 page=47 year=1936
+img: all
+cols: age_0_10 age_11_15 age_16_20 age_21_30 age_31_40 age_41_50 age_51_plus male female first_offender recidivist total
+# Français 11-15 ans: the 2 is printed rotated a quarter turn
+Français | 0 2 12 101 26 20 13 169 5 65 109 174
+Algériens | 0 2 13 49 30 18 11 121 2 79 44 123
+Italiens | 0 0 26 107 67 16 13 222 7 132 97 229
+Maltais | 0 0 0 3 11 2 3 16 3 12 7 19
+Grecs | 0 0 0 0 0 1 0 1 0 0 1 1
+Espagnols | 0 0 0 0 0 0 0 0 0 0 0 0
+Autres européens | 0 0 0 3 1 1 0 5 0 3 2 5
+Tunisiens musulmans | 3 177 1421 4296 1878 813 480 8902 166 4575 4493 9068
+Tunisiens israélites | 0 1 21 68 17 6 10 113 10 53 70 123
+Marocains | 0 0 2 11 4 2 2 21 0 13 8 21
+Tripolitains | 0 2 14 52 68 25 8 168 1 82 87 169
+Divers | 0 0 1 4 6 0 0 11 0 7 4 11
+Totaux | 3 184 1510 4694 2108 904 540 9749 194 5021 4922 9943
+
+@condemned_offence view=58 page=47 year=1936
+img: all
+cols: dp.Européens dp.Tunisiens hl.Français hl.Algériens hl.Européens hl.Musulmans hl.Israélites hl.Divers hl.Total rc.Français rc.Algériens rc.Européens rc.Musulmans rc.Divers rc.Total pl.Français pl.Algériens pl.Européens pl.Musulmans pl.Israélites pl.Divers pl.Total ps.Français ps.Algériens ps.Européens ps.Musulmans ps.Israélites ps.Divers ps.Total
+Meurtre | 0 0 0 4 0 25 0 1 30 1 1 3 0 0 5 1 0 2 11 1 1 16 3 1 1 42 0 0 47
+Coups, blessures, agressions | 0 0 0 0 0 0 0 1 1 0 0 0 6 0 6 0 0 1 38 2 0 41 22 20 23 797 9 7 878
+Attentat à la pudeur | 0 0 0 0 0 1 0 0 1 0 0 0 2 0 2 0 0 4 36 0 0 40 1 0 2 151 0 1 155
+Vol | 0 0 0 0 0 2 0 0 2 1 0 0 1 1 3 3 0 0 187 2 4 196 69 42 37 4041 29 41 4259
+Ivresse | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 2 2 0 1787 17 23 1831
+Délit de paccage | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6 0 9 0 1 16
+Faillis | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2 3 17 193 7 0 222
+Politiques | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6 0 0 6 0 0 0 2 0 0 2
+Divers | 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 41 0 0 41 69 44 164 1763 56 45 2141
+Totaux | 0 0 0 4 0 29 0 2 35 2 1 3 9 1 16 4 0 7 330 5 5 341 168 118 244 8785 118 118 9551

@@ -177,3 +177,7 @@ justice_regional_prosecutors,sgt,tn_parquets,Travaux des parquets des tribunaux 
 justice_revision_chamber,sgt,tn_revision,Travaux de la Chambre de révision,Work of the review chamber,by edition,count
 justice_tunisian_courts_1935_1939,sgt,tn_stats,"Justice tunisienne, juridictions de droit commun : statistique annuelle (Chambre des requêtes, Tribunaux d'appel de l'Ouzara, Tribunaux de première instance, parquets, chambres d'instruction, présidents et officiers de police judiciaire, assistance judiciaire)","Tunisian justice, ordinary courts: yearly statistics (from sgt1935)",by edition,count
 prisons_population_recap,sgt,recap,Récapitulation du chiffre des détenus,Prison population: yearly summary,by edition,count
+prisons_condemned_nationality_age,sgt,condemned_age,"Répartition des condamnés d'après la nationalité, l'âge, le sexe et la catégorie pénale","Condemned prisoners by nationality, age, sex and penal category",by edition,count
+prisons_condemned_offence,sgt,condemned_offence,"Répartition des condamnés d'après la nationalité, la nature du délit et la catégorie pénale","Condemned prisoners by nationality, offence and sentence",by edition,count
+prisons_work_days,sgt,work_days,Journées de travail des détenus,"Days of work of the prisoners, by prison and work site",by edition,count
+prisons_expenditure,sgt,expenditure,Tableau comparatif des dépenses et des journées de détention,"Expenditure and days of detention, by prison (cost per day of detention, products of the work)",by edition,mixed

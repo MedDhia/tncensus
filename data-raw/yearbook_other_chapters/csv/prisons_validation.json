@@ -175,5 +175,107 @@
   "sgt1936": "inside chapter IV (Justice): f58 répartition des condamnés d'après la nationalité, l'âge, le sexe; d'après la nationalité et la nature du délit; f59-f60 mouvement général d'entrée et de sortie (two tables); f61 récapitulation du chiffre des détenus 1932-1936. f62 = chapter V Propriété foncière.",
   "sgt1939": "inside chapter IV (Justice): f53 répartition par nationalité, âge, sexe; par nationalité et nature du délit; f54-f55 mouvement général d'entrée et de sortie (two tables); f56 récapitulation 1935-1939. f57 = chapter V Propriété foncière."
  },
- "_not_transcribed": "Not transcribed yet (this session ran out of budget after the Justice chapter): every table of the chapter except the récapitulation, i.e. a) prisoners by nationality, age, sex and penal category; b) by nationality, nature of the offence and sentence; c) days of work of the prisoners by establishment and kind of work; d) expenditure and days of detention by establishment (cost per day, products of the work); mouvement général d'entrée et de sortie by establishment (two tables); transfers; deaths by prison and disease; guard staff compared with the maximum daily population. Their views are listed above, per edition."
+ "_not_transcribed": "Transcribed: the récapitulation (prisons_population_recap), a) condemned prisoners by nationality, age, sex and penal category (prisons_condemned_nationality_age), b) by nationality, offence and sentence (prisons_condemned_offence), c) days of work (prisons_work_days), d) expenditure and days of detention for sgt1922-sgt1928 (prisons_expenditure). Not transcribed yet: d) for sgt1929, sgt1930 and sgt1935; mouvement général d'entrée et de sortie by establishment (two tables); transfers; deaths by prison and disease; guard staff compared with the maximum daily population. Their views are listed above, per edition.",
+ "prisons_expenditure": {
+  "rows": 793,
+  "checks": 287,
+  "failed": [
+   "sgt1923 p.81 (f583) expenditure Bardo: total = personnel + food + upkeep: cells give 86421.59, printed 86421.99 (difference 0.40)",
+   "sgt1923 p.81 (f583) expenditure Béja: total = personnel + food + upkeep: cells give 29456.94, printed 29456.99 (difference 0.05)",
+   "sgt1923 p.81 (f583) expenditure Kairouan: price per day = total / days (to the last printed decimal): cells give 1.2319, printed 1.2518 (difference 0.0199)",
+   "sgt1923 p.81 (f583) expenditure personnel: lines vs TOTAUX*: cells give 597547.85, printed 597548.25 (difference 0.40)",
+   "sgt1923 p.81 (f583) expenditure food: lines vs TOTAUX*: cells give 1058943.96, printed 1058944.01 (difference 0.05)",
+   "sgt1923 p.81 (f583) expenditure products: lines vs TOTAUX*: cells give 73619.23, printed 73620.13 (difference 0.90)",
+   "sgt1924 p.83 (f1073) expenditure Tunis: price per day = total / days (to the last printed decimal): cells give 1.8354, printed 1.8351 (difference -0.0003)",
+   "sgt1924 p.83 (f1073) expenditure Kairouan: total = personnel + food + upkeep: cells give 85587.97, printed 85787.97 (difference 200.00)",
+   "sgt1924 p.83 (f1073) expenditure Gabès: price per day = total / days (to the last printed decimal): cells give 1.8786, printed 1.8746 (difference -0.0040)",
+   "sgt1924 p.83 (f1073) expenditure days: lines vs Totaux: cells give 1113155, printed 1113165 (difference 10)",
+   "sgt1924 p.83 (f1073) expenditure personnel: lines vs Totaux: cells give 637850.85, printed 638050.85 (difference 200.00)",
+   "sgt1925 p.85 (f109) expenditure Tunis: price per day = total / days (to the last printed decimal): cells give 2.2646, printed 2.2640 (difference -0.0006)",
+   "sgt1925 p.85 (f109) expenditure personnel: lines vs Totaux: cells give 955974.78, printed 955974.72 (difference -0.06)",
+   "sgt1925 p.85 (f109) expenditure Totaux: total = personnel + food + upkeep: cells give 2429107.52, printed 2429107.58 (difference 0.06)",
+   "sgt1926 p.94 (f658) expenditure Le Kef: total = personnel + food + upkeep: cells give 96179.46, printed 96180.46 (difference 1.00)",
+   "sgt1926 p.94 (f658) expenditure food: lines vs Totaux: cells give 1163118.55, printed 1163119.55 (difference 1.00)",
+   "sgt1926 p.94 (f658) expenditure En Algérie: total = personnel + food + upkeep: cells give 212043.75, printed 212043.07 (difference -0.68)",
+   "sgt1926 p.94 (f658) expenditure food: lines vs Totaux généraux (Dépenses et Recettes)*: cells give 1460639.95, printed 1460640.95 (difference 1.00)",
+   "sgt1926 p.94 (f658) expenditure total: lines vs Totaux généraux (Dépenses et Recettes)*: cells give 2863527.98, printed 2863528.66 (difference 0.68)",
+   "sgt1927 p.92 (f120) expenditure Porto-Farina: total = personnel + food + upkeep: cells give 311339.10, printed 311339.30 (difference 0.20)",
+   "sgt1927 p.92 (f120) expenditure upkeep: lines vs Totaux: cells give 484023.76, printed 484023.96 (difference 0.20)",
+   "sgt1927 p.92 (f120) expenditure upkeep: lines vs Totaux généraux (Dépenses et Recettes)*: cells give 509741.35, printed 509741.55 (difference 0.20)",
+   "sgt1928 p.92 (f644) expenditure Gabès: total = personnel + food + upkeep: cells give 109492.95, printed 109392.95 (difference -100.00)",
+   "sgt1928 p.92 (f644) expenditure Sfax: total = personnel + food + upkeep: cells give 449839.79, printed 159829.79 (difference -290010.00)",
+   "sgt1928 p.92 (f644) expenditure Sousse: total = personnel + food + upkeep: cells give 195127.18, printed 186151.84 (difference -8975.34)",
+   "sgt1928 p.92 (f644) expenditure upkeep: lines vs Totaux: cells give 831992.08, printed 532906.74 (difference -299085.34)",
+   "sgt1928 p.92 (f644) expenditure upkeep: lines vs Totaux généraux (Dépenses et Recettes)*: cells give 1160414.06, printed 861328.72 (difference -299085.34)"
+  ],
+  "overlap_compared": 0,
+  "overlap_diffs": []
+ },
+ "prisons_work_days": {
+  "rows": 1983,
+  "checks": 289,
+  "failed": [
+   "sgt1922 p.74 (f98) work_days Sfax: total = ext_agriculture + ext_saline + ext_hopital_sadiki + public_works + roads_municipality + agri_education + agri_hospitals + agri_controles + agri_prisons + agri_other + saline + mines_phosphates + espadrilles_alfa + other: cells give 6512, printed 6482 (difference -30)",
+   "sgt1922 p.74 (f98) work_days espadrilles_alfa: lines vs Totaux: cells give 34842, printed 34812 (difference -30)",
+   "sgt1923 p.80 (f582) work_days Tunis: total = ext_agriculture_livestock + ext_saline + ext_hospitals + public_works + roads_sweeping + agri_agricultural_education + agri_hospitals + agri_public_gardens + agri_prisons + agri_companies + colleges_schools + saline + espadrilles_alfa + controles_civils + other: cells give 94634, printed 92783 (difference -1851)",
+   "sgt1923 p.80 (f582) work_days Totaux: total = ext_agriculture_livestock + ext_saline + ext_hospitals + public_works + roads_sweeping + agri_agricultural_education + agri_hospitals + agri_public_gardens + agri_prisons + agri_companies + colleges_schools + saline + espadrilles_alfa + controles_civils + other: cells give 407692, printed 423108 (difference 15416)",
+   "sgt1923 p.80 (f582) work_days espadrilles_alfa: lines vs Totaux: cells give 42981, printed 41130 (difference -1851)",
+   "sgt1923 p.80 (f582) work_days total: lines vs Totaux: cells give 407692, printed 423108 (difference 15416)",
+   "sgt1925 p.84 (f108) work_days Totaux: total = emp_agricultural + emp_salines + emp_hospitals + emp_education_municipality + adm_controles_fed_gaols + adm_controles_fed_prisons + adm_municipalities + adm_agricultural + adm_hospitals_asylums_orphanages + adm_education_agriculture + adm_public_works + adm_mines_phosphates + int_espadrilles + int_scourtins_mats_brooms + int_other: cells give 412919, printed 412926 (difference 7)",
+   "sgt1925 p.84 (f108) work_days adm_controles_fed_prisons: lines vs Totaux: cells give 10077, printed 10070 (difference -7)",
+   "sgt1928 p.92 (f644) work_days Sfax: total = emp_municipalities + emp_agricultural + emp_education + emp_hospitals + emp_agriculture_directorate + emp_salines + emp_mines + adm_controles_detached_gaols + adm_controles_in_prisons + adm_municipalities + adm_agricultural + adm_hospitals_lazarets + adm_public_works + adm_courts + adm_education + int_contractors_espadrilles + int_contractors_coffee_sorting + int_contractors_scourtins + int_admin_buildings_misc: cells give 8195, printed 8495 (difference 300)",
+   "sgt1928 p.92 (f644) work_days total: lines vs Totaux: cells give 573980, printed 573680 (difference -300)"
+  ],
+  "overlap_compared": 0,
+  "overlap_diffs": []
+ },
+ "prisons_condemned_offence": {
+  "rows": 2496,
+  "checks": 821,
+  "failed": [
+   "sgt1922 p.73 (f97) condemned_offence Vol: ps.Total = ps.Français + ps.Européens + ps.Algériens + ps.Tunisiens + ps.Tripolitains + ps.Israélites: cells give 3032, printed 3035 (difference 3)",
+   "sgt1922 p.73 (f97) condemned_offence ps.Français: lines vs Totaux: cells give 28, printed 31 (difference 3)",
+   "sgt1929 p.93 (f121) condemned_offence Totaux: ps.Total = ps.Français + ps.Algériens + ps.Européens + ps.Musulmans + ps.Israélites + ps.Divers: cells give 7272, printed 7273 (difference 1)",
+   "sgt1929 p.93 (f121) condemned_offence ps.Français: lines vs Totaux: cells give 27, printed 26 (difference -1)",
+   "sgt1935 p.63 (f83) condemned_offence Attentat à la pudeur: ps.Total = ps.Français + ps.Algériens + ps.Européens + ps.Musulmans + ps.Israélites + ps.Divers: cells give 206, printed 205 (difference -1)",
+   "sgt1935 p.63 (f83) condemned_offence Attentat à la pudeur: grand_total = dp.Européens + dp.Tunisiens + hl.Total + rc.Total + pl.Total + ps.Total: cells give 234, printed 235 (difference 1)",
+   "sgt1935 p.63 (f83) condemned_offence ps.Total: lines vs Totaux: cells give 9479, printed 9480 (difference 1)",
+   "sgt1936 p.47 (f58) condemned_offence Totaux: pl.Total = pl.Français + pl.Algériens + pl.Européens + pl.Musulmans + pl.Israélites + pl.Divers: cells give 351, printed 341 (difference -10)",
+   "sgt1936 p.47 (f58) condemned_offence pl.Musulmans: lines vs Totaux: cells give 320, printed 330 (difference 10)",
+   "sgt1926 p.93 (f657) condemned_offence Totaux, all sentences vs the nationality / age table's total (sgt1926 p.93 (f657) condemned_age): cells give 9148, printed 9149 (difference 1)"
+  ],
+  "overlap_compared": 0,
+  "overlap_diffs": []
+ },
+ "prisons_condemned_nationality_age": {
+  "rows": 1551,
+  "checks": 670,
+  "failed": [
+   "sgt1922 p.73 (f97) condemned_age Italiens: total = age_0_10 + age_11_15 + age_16_20 + age_21_30 + age_31_40 + age_41_50 + age_51_plus: cells give 141, printed 144 (difference 3)",
+   "sgt1922 p.73 (f97) condemned_age Totaux: total = age_0_10 + age_11_15 + age_16_20 + age_21_30 + age_31_40 + age_41_50 + age_51_plus: cells give 8224, printed 8227 (difference 3)",
+   "sgt1922 p.73 (f97) condemned_age Italiens: age_total = age_0_10 + age_11_15 + age_16_20 + age_21_30 + age_31_40 + age_41_50 + age_51_plus: cells give 141, printed 144 (difference 3)",
+   "sgt1922 p.73 (f97) condemned_age Totaux: age_total = age_0_10 + age_11_15 + age_16_20 + age_21_30 + age_31_40 + age_41_50 + age_51_plus: cells give 8224, printed 8227 (difference 3)",
+   "sgt1928 p.91 (f643) condemned_age Tripolitains: total = age_0_10 + age_11_15 + age_16_20 + age_21_30 + age_31_40 + age_41_50 + age_51_plus: cells give 198, printed 192 (difference -6)",
+   "sgt1928 p.91 (f643) condemned_age Tripolitains: total = male + female: cells give 198, printed 192 (difference -6)",
+   "sgt1928 p.91 (f643) condemned_age Tripolitains: total = first_offender + recidivist: cells give 198, printed 192 (difference -6)",
+   "sgt1928 p.91 (f643) condemned_age total: lines vs Totaux: cells give 8276, printed 8282 (difference 6)",
+   "sgt1929 p.93 (f121) condemned_age Français: total = male + female: cells give 35, printed 34 (difference -1)",
+   "sgt1929 p.93 (f121) condemned_age Français: total = first_offender + recidivist: cells give 41, printed 34 (difference -7)",
+   "sgt1929 p.93 (f121) condemned_age Algériens: total = first_offender + recidivist: cells give 141, printed 72 (difference -69)",
+   "sgt1929 p.93 (f121) condemned_age Italiens: total = first_offender + recidivist: cells give 144, printed 96 (difference -48)",
+   "sgt1929 p.93 (f121) condemned_age Maltais: total = first_offender + recidivist: cells give 20, printed 14 (difference -6)",
+   "sgt1929 p.93 (f121) condemned_age Grecs: total = first_offender + recidivist: cells give 2, printed 1 (difference -1)",
+   "sgt1929 p.93 (f121) condemned_age Tunisiens israélites: total = first_offender + recidivist: cells give 60, printed 57 (difference -3)",
+   "sgt1929 p.93 (f121) condemned_age Marocains: total = first_offender + recidivist: cells give 27, printed 24 (difference -3)",
+   "sgt1929 p.93 (f121) condemned_age Tripolitains: total = first_offender + recidivist: cells give 189, printed 365 (difference 176)",
+   "sgt1929 p.93 (f121) condemned_age Divers: total = first_offender + recidivist: cells give 77, printed 67 (difference -10)",
+   "sgt1929 p.93 (f121) condemned_age male: lines vs Totaux: cells give 7655, printed 7654 (difference -1)",
+   "sgt1929 p.93 (f121) condemned_age first_offender: lines vs Totaux: cells give 4109, printed 4035 (difference -74)",
+   "sgt1929 p.93 (f121) condemned_age recidivist: lines vs Totaux: cells give 3692, printed 3795 (difference 103)",
+   "sgt1930 p.97 (f655) condemned_age Totaux: total = age_0_10 + age_11_15 + age_16_20 + age_21_30 + age_31_40 + age_41_50 + age_51_plus: cells give 7838, printed 7828 (difference -10)",
+   "sgt1930 p.97 (f655) condemned_age age_51_plus: lines vs Totaux: cells give 387, printed 397 (difference 10)"
+  ],
+  "overlap_compared": 0,
+  "overlap_diffs": []
+ }
 }

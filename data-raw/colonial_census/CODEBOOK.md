@@ -205,6 +205,10 @@ Every table is tidy: one row per printed cell. Printed subtotals and totals are 
 | [`justice_revision_chamber`](#justice_revision_chamber) | tn_revision | by edition | 72 | count | Work of the review chamber |
 | [`justice_tunisian_courts_1935_1939`](#justice_tunisian_courts_1935_1939) | tn_stats | by edition | 360 | count | Tunisian justice, ordinary courts: yearly statistics (from sgt1935) |
 | [`prisons_population_recap`](#prisons_population_recap) | recap | by edition | 156 | count | Prison population: yearly summary |
+| [`prisons_condemned_nationality_age`](#prisons_condemned_nationality_age) | condemned_age | by edition | 1,551 | count | Condemned prisoners by nationality, age, sex and penal category |
+| [`prisons_condemned_offence`](#prisons_condemned_offence) | condemned_offence | by edition | 2,496 | count | Condemned prisoners by nationality, offence and sentence |
+| [`prisons_work_days`](#prisons_work_days) | work_days | by edition | 1,983 | count | Days of work of the prisoners, by prison and work site |
+| [`prisons_expenditure`](#prisons_expenditure) | expenditure | by edition | 793 | mixed | Expenditure and days of detention, by prison (cost per day of detention, products of the work) |
 
 ### eur1906_t1_circonscription_nationality
 
@@ -8494,3 +8498,255 @@ Source `sgt`, table recap, printed pages by edition. 156 rows. Value type: count
 | `entries` | Nombre d'entrées | 26 |
 | `exits` | Nombre de sorties | 26 |
 | `start` | Effectif au 1er janvier | 26 |
+
+### prisons_condemned_nationality_age
+
+**Répartition des condamnés d'après la nationalité, l'âge, le sexe et la catégorie pénale**  
+*Condemned prisoners by nationality, age, sex and penal category*
+
+Source `sgt`, table condemned_age, printed pages by edition. 1,551 rows. Value type: count. Flags: (empty) 1,525, total_mismatch 26. Notes and validation: [`../yearbook_other_chapters/csv/prisons_condemned_nationality_age.md`](../yearbook_other_chapters/csv/prisons_condemned_nationality_age.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `nationality` | Coded dimension. |
+| `nationality_fr` | Printed French label for `nationality`. |
+| `breakdown` | Coded dimension. |
+| `category` | Coded dimension. |
+| `category_fr` | Printed French label for `category`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`nationality`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `algerian` | Algériens / — (Algériens) | 132 |
+| `danish` | Danois | 22 |
+| `french` | Français | 132 |
+| `greek` | Grecs | 121 |
+| `italian` | Italiens | 132 |
+| `maltese` | Anglais (Maltais) / Anglo-Maltais / Maltais | 132 |
+| `moroccan` | Marocains | 132 |
+| `other` | Divers | 132 |
+| `other_european` | Autres européens | 88 |
+| `serbian` | Serbes | 11 |
+| `spanish` | Espagnols | 121 |
+| `tripolitanian` | Tripolitains | 132 |
+| `tunisian_jewish` | Israélites (sujet musulmans) / Tunisiens israélites | 132 |
+| `tunisian_muslim` | Musulmans (sujet musulmans) / Tunisiens musulmans | 132 |
+
+`breakdown`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `age` |  | 987 |
+| `penal_category` |  | 282 |
+| `sex` |  | 282 |
+
+`category`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `age_0_10` | Catégorie par âge : 10 ans et au-dessous | 141 |
+| `age_11_15` | Catégorie par âge : 11 ans à 15 ans | 141 |
+| `age_16_20` | Catégorie par âge : 16 ans à 20 ans | 141 |
+| `age_21_30` | Catégorie par âge : 21 ans à 30 ans | 141 |
+| `age_31_40` | Catégorie par âge : 31 ans à 40 ans | 141 |
+| `age_41_50` | Catégorie par âge : 41 ans à 50 ans | 141 |
+| `age_51_plus` | Catégorie par âge : 51 ans et au-dessus | 141 |
+| `female` | Catégorie par sexe : sexe féminin | 141 |
+| `first_offender` | Catégorie pénale : primaires | 141 |
+| `male` | Catégorie par sexe : sexe masculin | 141 |
+| `recidivist` | Catégorie pénale : récidivistes | 141 |
+
+### prisons_condemned_offence
+
+**Répartition des condamnés d'après la nationalité, la nature du délit et la catégorie pénale**  
+*Condemned prisoners by nationality, offence and sentence*
+
+Source `sgt`, table condemned_offence, printed pages by edition. 2,496 rows. Value type: count. Flags: (empty) 2,494, total_mismatch 1, row_realigned 1. Notes and validation: [`../yearbook_other_chapters/csv/prisons_condemned_offence.md`](../yearbook_other_chapters/csv/prisons_condemned_offence.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `offence` | Coded dimension. |
+| `offence_fr` | Printed French label for `offence`. |
+| `penalty` | Coded dimension. |
+| `penalty_fr` | Printed French label for `penalty`. |
+| `nationality` | Coded dimension. |
+| `nationality_fr` | Printed French label for `nationality`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`offence`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `assault` | Coups, blessures / Coups, blessures et agressions / Coups, blessures, agressions | 294 |
+| `bankrupts` | Faillis | 123 |
+| `bankrupts_debtors` | Faillis et dettiers | 150 |
+| `debtors` | Dettiers | 69 |
+| `drunkenness` | Ivresse | 294 |
+| `escape` | Evasions | 21 |
+| `grazing_offence` | Délit de pacage / Délit de paccage | 294 |
+| `indecent_assault` | Attentat à la pudeur | 294 |
+| `murder` | Meurtre | 294 |
+| `other` | Divers | 294 |
+| `political` | Politiques | 75 |
+| `theft` | Vol | 294 |
+
+`penalty`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `death` | Peine capitale | 150 |
+| `hard_labour` | Travaux forcés | 603 |
+| `prison_1y_or_less` | Emprisonnement à 1 an et au-dessous | 630 |
+| `prison_over_1y` | Emprisonnement à 1 an et 1 jour et au-dessus | 603 |
+| `reclusion` | Réclusion | 510 |
+
+`nationality`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `algerian` | Algériens | 408 |
+| `european` | Européens | 483 |
+| `french` | Français | 408 |
+| `other` | Divers | 297 |
+| `tripolitanian` | Tripolitains | 27 |
+| `tunisian` | Tunisiens | 75 |
+| `tunisian_jewish` | Israélites / Tunisiens : Israélites | 390 |
+| `tunisian_muslim` | Tunisiens / Tunisiens : Musulmans | 408 |
+
+### prisons_work_days
+
+**Journées de travail des détenus**  
+*Days of work of the prisoners, by prison and work site*
+
+Source `sgt`, table work_days, printed pages by edition. 1,983 rows. Value type: count. Flags: (empty) 1,977, row_realigned 4, total_mismatch 2. Notes and validation: [`../yearbook_other_chapters/csv/prisons_work_days.md`](../yearbook_other_chapters/csv/prisons_work_days.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `establishment` | Coded dimension. |
+| `work` | Text (72 distinct values). |
+| `work_fr` | Printed French label for `work`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`establishment`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `Bardo` |  | 154 |
+| `Bizerte` |  | 154 |
+| `Béja` |  | 154 |
+| `Colonie (jeunes détenus)` |  | 44 |
+| `Dj.-Djougar` |  | 59 |
+| `Djebel Djougar` |  | 77 |
+| `Gabès` |  | 154 |
+| `Gafsa` |  | 154 |
+| `Kairouan` |  | 154 |
+| `Kef` |  | 59 |
+| `La Goulette` |  | 77 |
+| `Le Kef` |  | 95 |
+| `Porto-Farina` |  | 154 |
+| `Pénitencier du Djougar` |  | 18 |
+| `Salahia` |  | 14 |
+| `Sfax` |  | 154 |
+| `Sousse` |  | 154 |
+| `Tunis` |  | 154 |
+
+### prisons_expenditure
+
+**Tableau comparatif des dépenses et des journées de détention**  
+*Expenditure and days of detention, by prison (cost per day of detention, products of the work)*
+
+Source `sgt`, table expenditure, printed pages by edition. 793 rows. Value type: mixed. Flags: (empty) 768, not_applicable 15, total_mismatch 10. Notes and validation: [`../yearbook_other_chapters/csv/prisons_expenditure.md`](../yearbook_other_chapters/csv/prisons_expenditure.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `establishment` | Coded dimension. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`establishment`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `Bardo` |  | 49 |
+| `Bizerte` |  | 49 |
+| `Béja` |  | 49 |
+| `Chantiers extérieurs` |  | 35 |
+| `Colonie` |  | 7 |
+| `Colonie (Djouggar)` |  | 14 |
+| `Dans les Hôpitaux` |  | 21 |
+| `Djebel-Djouggar` |  | 7 |
+| `Détachés dans les geôles` |  | 7 |
+| `Détenus en Algérie` |  | 7 |
+| `En Algérie` |  | 21 |
+| `En détention hors de Tunisie` |  | 14 |
+| `En traitement dans les hôpitaux` |  | 14 |
+| `Gabès` |  | 49 |
+| `Gafsa` |  | 49 |
+| `Geôles` |  | 14 |
+| `Géôles` |  | 7 |
+| `Kairouan` |  | 49 |
+| `La Goulette` |  | 35 |
+| `Le Kef` |  | 49 |
+| `Porto-Farina` |  | 49 |
+| `Prisons de la Régence (note 1)` |  | 16 |
+| `Pénitencier agricole du Djebel Djougar` |  | 14 |
+| `Pénitencier du Djougar` |  | 7 |
+| `Sfax` |  | 49 |
+| `Sousse` |  | 49 |
+| `Sur les chantiers extérieurs` |  | 14 |
+| `Tunis` |  | 49 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `days` | Nombre de journées de détention | 111 |
+| `food` | Dépenses totales : entretien des détenus : nourriture des détenus | 111 |
+| `personnel` | Dépenses totales : Personnel (sgt1922 Art. 13; sgt1923 Art. 1er; sgt1924-sgt1925 Art. 9) | 111 |
+| `price_food` | Note (1) : prix de la journée, frais de nourriture | 4 |
+| `price_per_day` | Prix de la journée de détention | 115 |
+| `price_personnel` | Note (1) : prix de la journée, frais de personnel | 4 |
+| `price_upkeep` | Note (1) : prix de la journée, frais d'entretien | 4 |
+| `products` | Produit du travail, produits divers (sgt1922: bénéfices de cantine, produit du travail, produits divers; from sgt1926: … versés au Trésor) | 111 |
+| `total` | Dépenses totales : Total | 111 |
+| `upkeep` | Dépenses totales : entretien des détenus : entretien et dépenses diverses / dépenses diverses | 111 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `days` |  | 111 |
+| `francs` |  | 555 |
+| `francs_per_day` |  | 127 |

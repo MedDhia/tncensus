@@ -13,3 +13,89 @@ cols: start entries exits end detention_days average
 1920 | 2735 21289 20584 3440 1209043 3087
 1921 | 3457 19373 19495 3335 1274705 3492
 1922 | 3322 15196 15327 3191 1138902 3120
+
+@condemned_age view=97 page=73 year=1922
+img: all
+cols: age_0_10 age_11_15 age_16_20 age_21_30 age_31_40 age_41_50 age_51_plus age_total male female first_offender recidivist total
+Français | 0 0 4 26 9 8 0 47 44 3 15 32 47
+— (Algériens) | 0 0 25 59 52 7 10 153 153 0 85 68 153
+Italiens | 0 0 20 64 26 13 18 144 139 5 60 84 144
+Anglais (Maltais) | 0 0 2 6 5 3 2 18 17 1 10 8 18
+Grecs | 0 0 3 2 0 0 0 5 5 0 4 1 5
+Espagnols | 0 0 0 0 0 0 1 1 0 1 0 1 1
+Serbes | 0 0 0 0 0 0 0 0 0 0 0 0 0
+Divers | 0 0 1 1 2 0 1 5 5 0 3 2 5
+Musulmans (sujet musulmans) | 7 201 1410 3407 1670 600 283 7578 7417 161 3796 3782 7578
+Israélites (sujet musulmans) | 0 0 17 43 23 11 9 103 99 4 50 53 103
+Tripolitains | 0 2 29 71 34 11 3 150 148 2 84 66 150
+Marocains | 0 0 1 10 11 0 1 23 23 0 18 5 23
+Totaux | 7 203 1512 3689 1832 653 328 8227 8050 177 4125 4102 8227
+
+@condemned_offence view=97 page=73 year=1922
+img: all
+cols: hl.Français hl.Européens hl.Algériens hl.Tunisiens hl.Israélites hl.Total rc.Français rc.Européens rc.Algériens rc.Tunisiens rc.Israélites rc.Total pl.Français pl.Européens pl.Algériens pl.Tunisiens pl.Israélites pl.Total ps.Français ps.Européens ps.Algériens ps.Tunisiens ps.Tripolitains ps.Israélites ps.Total
+Meurtre | 0 0 1 172 2 175 0 1 0 4 0 5 0 1 1 21 0 23 0 0 2 51 0 1 54
+Coups, blessures, agressions | 0 0 0 57 1 58 0 0 1 6 0 7 0 0 1 51 0 52 6 11 33 839 0 6 895
+Attentat à la pudeur | 0 0 1 66 0 67 0 0 1 4 0 5 0 0 0 13 0 13 0 2 1 105 0 0 108
+Vol | 6 1 0 224 2 233 2 0 0 24 0 26 7 14 8 437 5 471 11 33 61 2890 0 37 3035
+Ivresse | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 1 3 15 1776 0 29 1824
+Délit de pacage | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 94 0 0 94
+Evasions | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 10 0 10 0 0 0 162 0 0 162
+Dettiers | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2 27 6 54 0 4 93
+Divers | 0 0 0 7 0 7 0 0 0 1 0 1 1 2 0 16 0 19 8 79 20 666 0 16 789
+Totaux | 6 1 2 526 5 540 2 1 2 39 0 44 8 17 10 549 5 589 31 155 138 6637 0 93 7054
+
+@work_days view=98 page=74 year=1922
+img: all
+# "Total par établissement" column printed into the binding; its last digits read on an enlarged crop.
+cols: ext_agriculture ext_saline ext_hopital_sadiki public_works roads_municipality agri_education agri_hospitals agri_controles agri_prisons agri_other saline mines_phosphates espadrilles_alfa other total
+Bardo | 9741 0 0 0 953 0 0 0 5754 472 0 0 30147 0 47067
+Béja | 188 0 0 0 0 0 0 0 0 0 0 0 0 0 188
+Bizerte | 839 0 0 0 0 0 0 769 0 0 0 0 0 0 1608
+Gabès | 0 0 0 4170 9151 796 0 1208 0 346 0 0 0 0 15671
+Gafsa | 0 0 0 391 8011 635 0 3120 1391 114 0 1308 2330 0 17300
+La Goulette | 21431 13160 0 1258 3053 0 0 0 0 80 0 8346 0 0 47328
+Kairouan | 0 0 0 0 14846 0 0 0 0 0 0 0 0 0 14846
+Kef | 3613 0 0 1497 8104 0 0 0 0 0 0 0 0 0 13214
+Porto-Farina | 0 0 0 0 0 0 0 0 15860 0 505 0 520 8460 25345
+Sfax | 341 0 0 1050 3276 0 0 0 0 0 0 0 1845 0 6482
+Sousse | 4278 0 0 0 10008 0 0 0 0 0 0 0 0 0 14286
+Salahia | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Tunis | 25249 0 18000 0 4517 9026 7597 9857 36500 5572 0 0 0 0 116318
+Dj.-Djougar | 0 0 0 0 0 0 0 0 104238 0 0 0 0 0 104238
+Colonie (jeunes détenus) | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Totaux | 65680 13160 18000 8366 61919 10457 7597 14954 163743 6584 505 9654 34812 8460 423891
+
+@expenditure view=99 page=75 year=1922
+img: all
+# Columns: Nombre de journées de détention; Dépenses totales: Art. 13 Personnel, Art. 14 entretien et dépenses
+# diverses, Art. 14 nourriture des détenus, Total art. 13 et 14; Prix de la journée de détention (1); Bénéfices de
+# cantine, produit du travail, produits divers. Money in francs.centimes; price per day in francs to 4 decimals.
+# Total lines: "Totaux" = the lines since the previous total line; "Totaux*" = every data line above.
+# '-' = nothing printed in a total line's cell that only totals the days.
+cols: days personnel upkeep food total price_per_day products
+Tunis | 402820 215490.84 190487.75 256041.46 662020.05 1.6434 13950.75
+Bardo | 57529 27373.87 20404.28 31769.58 79547.73 1.3827 11101.26
+La Goulette | 38342 26433.16 12873.95 24954.11 64261.22 1.6760 3117.95
+Porto-Farina | 123705 40250.57 39921.52 73993.78 154165.87 1.2462 2599.55
+Bizerte | 25072 15390.99 8960.30 15996.77 40348.06 1.6092 1598.72
+Béja | 12677 12046.66 4769.90 7646.41 24462.97 1.9297 1836.52
+Le Kef | 58452 15701.23 18541.86 36134.57 70377.66 1.2040 14938.22
+Sousse | 83126 29829.89 31736.20 52062.90 113628.99 1.3669 3837.27
+Kairouan | 53458 13159.19 17457.78 35143.30 65760.27 1.2301 3577.12
+Sfax | 62128 22513.22 22774.72 36265.85 81553.79 1.3126 1676.60
+Gabès | 35548 17606.90 11583.34 26667.77 55858.01 1.5713 1876.25
+Gafsa | 38681 14746.66 12415.76 26376.88 53539.30 1.3841 5725.42
+Totaux | 991538 450543.18 391927.36 623053.38 1465523.92 1.4780 65835.63
+Colonie | 147364 0 36841 86803.20 123644.20 0.8390 0
+Totaux* | 1138902 450543.18 428768.36 709856.58 1589168.12 - -
+Chantiers extérieurs | 96840 0 0 0 0 0 0
+TOTAL des journées de détention* | 1235742 - - - - - -
+Geôles | 0 0 3461.98 121893.63 125355.61 0 0
+
+@expenditure_note view=99 page=75 year=1922
+img: all
+# Footnote (1): "Le prix de la journée de détention dans les prisons de la Régence est de : 1 fr. 4780 se décomposant
+# ainsi : Frais de personnel 0 fr. 4544, d'entretien 0 fr. 3953, de nourriture 0 fr. 6283".
+cols: price_personnel price_upkeep price_food price_per_day
+Prisons de la Régence (note 1) | 0.4544 0.3953 0.6283 1.4780

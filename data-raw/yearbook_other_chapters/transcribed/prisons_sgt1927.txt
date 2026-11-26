@@ -5,3 +5,75 @@ img: all
 cols: start entries exits end detention_days average
 1926 | 3164 17464 17303 3325 1132897 3104
 1927 | 3325 17548 17459 3414 1168078 3200
+
+@condemned_age view=119 page=91 year=1927
+img: all
+cols: age_0_10 age_11_15 age_16_20 age_21_30 age_31_40 age_41_50 age_51_plus male female first_offender recidivist total
+Français | 0 0 5 29 9 4 1 44 4 24 24 48
+Algériens | 0 1 20 57 36 18 7 123 16 86 53 139
+Italiens | 0 1 21 64 21 19 8 123 11 56 78 134
+Maltais | 0 1 0 7 4 2 5 19 0 14 5 19
+Grecs | 0 0 0 1 0 0 0 1 0 1 0 1
+Espagnols | 0 0 0 0 0 0 0 0 0 0 0 0
+Autres européens | 0 0 0 0 0 0 0 0 0 0 0 0
+Tunisiens musulmans | 10 210 1499 3719 1727 712 320 8030 167 4239 3958 8197
+Tunisiens israélites | 0 2 11 25 22 9 4 73 0 44 29 73
+Marocains | 0 0 14 45 32 8 4 103 0 83 20 103
+Tripolitains | 0 1 27 99 59 24 5 213 2 107 108 215
+Divers | 0 0 1 23 8 5 0 37 0 21 16 37
+Totaux | 10 216 1598 4069 1918 801 354 8766 200 4675 4291 8966
+
+@condemned_offence view=119 page=91 year=1927
+img: all
+cols: dp.Européens dp.Tunisiens hl.Français hl.Algériens hl.Européens hl.Musulmans hl.Israélites hl.Divers hl.Total rc.Français rc.Algériens rc.Européens rc.Musulmans rc.Israélites rc.Total pl.Français pl.Algériens pl.Européens pl.Musulmans pl.Israélites pl.Divers pl.Total ps.Français ps.Algériens ps.Européens ps.Musulmans ps.Israélites ps.Divers ps.Total
+Meurtre | 0 0 5 0 0 41 0 4 50 2 0 1 0 0 3 2 0 2 19 0 0 23 2 1 0 42 0 0 45
+Coups, blessures, agressions | 0 0 0 0 0 7 0 0 7 0 0 0 0 0 0 0 1 1 16 0 2 20 6 26 23 801 8 21 885
+Attentat à la pudeur | 0 0 4 0 0 8 0 0 12 0 0 0 1 0 1 0 1 6 46 0 0 53 0 0 1 163 1 8 173
+Vol | 0 0 4 0 0 13 0 2 19 3 1 3 6 0 13 3 13 3 382 2 5 408 9 50 29 4116 22 80 4306
+Ivresse | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 18 0 1565 8 84 1675
+Délit de paccage | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2 38 0 1 41
+Faillis et dettiers | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 4 4 27 7 1 44
+Divers | 0 0 0 0 0 4 0 0 4 0 0 0 0 0 0 0 0 0 26 0 8 34 5 19 78 928 26 94 1150
+Totaux | 0 0 13 0 0 73 0 6 92 5 1 4 7 0 17 5 15 12 489 2 15 538 23 118 137 7680 72 289 8319
+
+@work_days view=120 page=92 year=1927 split=adm_municipalities:121:93
+img: all
+# Two-page spread (labels and the columns up to Contrôles civils / dans les prisons on p. 92, the rest on p. 93).
+cols: emp_municipalities emp_agricultural emp_education emp_hospitals emp_agriculture_directorate emp_salines emp_mines adm_controles_detached_gaols adm_controles_in_prisons adm_municipalities adm_agricultural adm_hospitals_lazarets adm_public_works adm_courts adm_education int_contractors_espadrilles int_contractors_coffee_sorting int_contractors_scourtins int_admin_buildings_misc total
+Béja | 0 0 0 852 0 0 0 0 0 5358 0 0 0 0 0 0 0 0 1178 7388
+Bizerte | 0 0 0 0 0 0 0 0 718 0 0 0 0 0 0 0 0 0 730 1448
+Gabès | 0 0 0 0 0 0 0 2008 3708 3145 0 0 0 0 0 0 0 0 5310 14171
+Gafsa | 0 0 0 0 0 0 0 999 5024 3159 0 0 0 313 118 0 0 0 1423 11036
+Kairouan | 0 0 0 0 0 0 0 0 0 12715 0 437 340 0 0 0 0 0 2314 15806
+Le Kef | 0 0 0 0 0 0 0 4211 1185 4375 0 1701 0 964 0 0 0 0 1318 13754
+Sfax | 0 0 0 0 0 0 0 0 0 2234 0 0 502 0 0 0 0 0 5019 7755
+Sousse | 0 0 0 1457 0 0 0 0 734 3811 0 660 0 662 0 0 0 0 2971 10295
+Tunis | 1200 15669 1687 20474 6273 20983 87400 6714 1291 4282 603 15284 0 0 6818 1330 1289 0 52359 243656
+Bardo | 0 2792 0 0 0 0 0 0 0 0 0 14236 1225 0 0 27688 0 0 3282 49223
+Porto-Farina | 0 0 0 0 0 0 0 0 0 447 0 0 595 0 0 0 0 46071 22474 69587
+Djebel Djougar | 0 0 0 0 0 0 0 0 0 0 77745 0 0 0 0 0 0 0 24074 101819
+Totaux | 1200 18461 1687 22783 6273 20983 87400 13932 12660 39526 78348 32318 2662 1939 6936 29018 1289 46071 122452 545938
+
+@expenditure view=120 page=92 year=1927 split=personnel:121:93
+img: all
+# Two-page spread: designation and days on p. 92 (f120), the money on p. 93 (f121). Columns as sgt1926.
+# Bardo Total: the hundreds digit is broken in the printing ("158.'09 75"); read as 1 (= 158.109,75, the sum of
+# the three expenditure columns). Totaux line: price 2 805 "(Prix moyen)"; products blank.
+cols: days personnel food upkeep total price_per_day products
+Béja | 14254 32653.20 22227.48 12726.76 67607.44 4.743 12055.50
+Bizerte | 12151 27099.83 15931.44 8282.12 51313.39 4.222 20.05
+Gabès | 33935 35139.70 56305.27 15416.88 106861.85 3.149 7244.05
+Gafsa | 42965 31449.92 65349.91 15572.99 112372.82 2.615 7396.56
+Kairouan | 64316 45000.58 97857.31 19378.55 162236.44 2.522 30447.00
+Le Kef | 61607 44224.75 76072.07 17342.71 137639.53 2.234 9910.82
+Sfax | 51833 54446.76 73981.85 21584.24 150012.85 2.894 1383.45
+Sousse | 83324 71167.50 123123.49 30212.13 224503.12 2.694 8756.99
+Tunis | 504289 547746.32 601411.71 270126.92 1419284.95 2.814 20329.77
+Bardo | 58814 68699.70 66715.32 22694.73 158109.75 2.688 42195.18
+Porto-Farina | 106616 136484.18 124169.19 50685.73 311339.30 2.920 32691.61
+Totaux | 1034104 1094112.44 1323145.04 484023.96 2901281.44 2.805 -
+Pénitencier agricole du Djebel Djougar | 133974 205573.36 0 0 205573.36 - 207.35
+Chantiers extérieurs | 199769 45799.66 43696.62 0 89496.28 - 275166.38
+Dans les Hôpitaux | 5404 0 20771 0 20771 - 0
+En Algérie | 42105 0 239392.98 25717.59 265110.57 - 0
+Totaux généraux (Dépenses et Recettes)* | 1415356 1345485.46 1627005.64 509741.55 3482232.65 - 447804.71
