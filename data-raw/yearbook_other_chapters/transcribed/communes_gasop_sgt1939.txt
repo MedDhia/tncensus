@@ -1,0 +1,22 @@
+# sgt1939 p.23, view 29: "Exploitation du gaz à Tunis" (1938-1939). No "voies privées" line and no lengths by
+# diameter: only the total length of mains (printed as an item, not a total of printed cells). Read on native
+# crops (0.8 scale); OCR agrees.
+@gasop view=29 page=23 years=1938 1939
+emission | 6869100 6775970
+subscribers | 12521 12847
+cons_public | 12742 7230
+cons_ordinary | 5983269 5726858
+cons_reduced | 286736 291896
+cons_TOTAL | 6282747 6025984
+len_all | 160828 166304
+#
+# Same page, lower table: "GAZ — Consommations (Ville de Tunis)" 1935-1939, the series of communes_gas_tunis
+# (columns Éclairage public / Abonnés / Total général; consumption m3 and receipts fr. c.). Read on a native crop
+# (0.6 scale). 1935-1936 equal the sgt1936 printing in every cell.
+@gastunis view=29 page=23 years=1935-1939
+cols: cons_public rec_public cons_private rec_private cons_total rec_total
+1935 | 27094 63187.67 5129803 4689366.10 5156897 4752553.77
+1936 | 20839 47340.43 5537210 7788430.21 5558049 4835770.64
+1937 | 15396 41548.64 6130451 6181091.63 6145847 6222640.27
+1938 | 12742 17553.00 6270005 8835293.00 6282747 8852846.00
+1939 | 7230 10845.00 6018754 9212668.00 6025984 9223513.00

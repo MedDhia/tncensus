@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
 """Communes chapter (chapter II) of the Statistique générale de la Tunisie,
 12 editions 1922-1939: municipal budgets and communal property (this file), and
-loans, building permits and terraces/stalls (communes_more.py, run from here).
+loans, building permits and terraces/stalls, slaughter dues, and (section "public services" at the end) the
+water service, the Tunis gas works and the electricity tables, written to csv/communes_water_*.csv,
+communes_gas_operation.csv, communes_gas_tunis_1937_1939.csv, communes_electricity_*.csv and
+csv/communes_validation_services.json (the earlier outputs are unchanged).
 
   python3 extract_communes.py check   parse transcriptions, run every check, print failures
   python3 extract_communes.py build   ... and write csv/communes_*.csv, their .md notes
@@ -841,8 +844,8 @@ def fill_1925(sec, row, head, by_ed):
 def build_more(write=True, verbose=False):
     secs = []
     for f in sorted(TR.glob("communes_*_sgt*.txt")):
-        if f.name.startswith("communes_slaughter_"):
-            continue                     # read by build_slaughter
+        if f.name.startswith(("communes_slaughter_", "communes_water_", "communes_gasop_", "communes_elec_")):
+            continue                     # read by build_slaughter / build_services
         ed = re.search(r"(sgt\d{4})", f.name).group(1)
         secs += parse_more(f, ed)
     res = {}
@@ -1633,10 +1636,999 @@ def slaughter_notes(rows):
     return "\n".join(L) + "\n"
 
 
+# @@SERVICES BEGIN@@
+# =================================================================== public services (water, gas, electricity)
+# Service des eaux (pipe lengths, rule 4; water sales, rule 5), Exploitation du gaz à Tunis (sgt1935-sgt1939) and
+# the electricity tables (Éclairage). Transcriptions transcribed/communes_water_<edition>.txt,
+# communes_gasop_<edition>.txt, communes_elec_<edition>.txt; format in their headers. Written to new files only
+# (csv/communes_water*.csv, communes_gas_operation.csv, communes_electricity*.csv, their notes, and
+# csv/communes_validation_services.json); the files above are not touched.
+
+SV_CHK = Checks()
+
+
+def sv_key(name):
+    """Locality key for matching printings: accents, punctuation, footnote calls and known renamings removed."""
+    import unicodedata
+    k = re.sub(r"\s*\(\d\)", "", name)
+    k = "".join(c for c in unicodedata.normalize("NFD", k) if unicodedata.category(c) != "Mn").lower()
+    k = re.sub(r"[^a-z]", "", k)
+    for pre, to in (("sousse", "sousse"), ("mrira", "mrirafouchana"), ("darchabane", "darchabane"),
+                    ("mejezelbab", "medjezelbab"), ("gaffour", "gafour")):
+        if k.startswith(pre):
+            k = to
+    return k
+
+
+def parse_sv(path, ed):
+    """Sections '@<table> view=.. [view2=..] page=.. key=value ...' (values: one token, or several for
+    years= / printed_years= / left=), optional 'cols:' line, rows 'label | tokens'."""
+    secs, cur = [], None
+    for line in path.read_text().splitlines():
+        line = line.rstrip()
+        if not line.strip() or line.startswith("#"):
+            continue
+        if line.startswith("@"):
+            parts = line[1:].split()
+            cur = {"table": parts[0], "ed": ed, "ark": EDITIONS[ed], "rows": [], "cols": None}
+            for k, v in re.findall(r"(\w+)=(.+?)(?=\s+\w+=|$)", " ".join(parts[1:])):
+                cur[k] = v.strip()
+            for k in ("view", "view2", "page"):
+                if k in cur:
+                    cur[k] = int(cur[k])
+            if "years" in cur:
+                ys = cur["years"]
+                cur["years"] = (list(range(int(ys[:4]), int(ys[5:]) + 1)) if re.fullmatch(r"\d{4}-\d{4}", ys)
+                                else [int(y) for y in ys.split()])
+            secs.append(cur)
+            continue
+        if line.startswith("cols:"):
+            cur["cols"] = line[5:].split()
+            continue
+        label, vals = line.rsplit("|", 1)
+        cur["rows"].append({"label": label.strip(), "toks": vals.split()})
+    return secs
+
+
+class WLen:
+    """A printed pipe length. Tokens: 'km.mmm' or 'km.mmm,dd' (km and m sub-columns; ',dd' decimals of a metre),
+    '»' = 0, '281.-' = km printed with the metres blank (taken as 281 km), 'p:319.8' = only the first digits are
+    legible (rest in the binding; NA), 'T:text' = text instead of a number (NA), '.' = blank cell (not stored)."""
+    __slots__ = ("raw", "value", "flag", "text", "prefix")
+
+    def __init__(self, raw):
+        self.raw, self.flag, self.text, self.prefix = raw, "", None, None
+        if raw in ("»", "néant"):
+            self.value = Decimal(0)
+        elif raw == ".":
+            self.value, self.flag = None, "absent"
+        elif raw.startswith("p:"):
+            self.value, self.flag, self.prefix = None, "illegible", raw[2:]
+        elif raw.startswith("T:"):
+            self.value, self.flag, self.text = None, "not_applicable", raw[2:].replace("_", " ")
+        elif raw.endswith(".-"):
+            self.value = Decimal(raw[:-2]) * 1000
+        else:
+            m = re.fullmatch(r"(\d+)\.(\d{3})(?:,(\d{2}))?", raw)
+            if not m:
+                raise ValueError(f"bad length token {raw!r}")
+            self.value = Decimal(m.group(1)) * 1000 + Decimal(m.group(2)) + (Decimal(m.group(3)) / 100 if m.group(3)
+                                                                             else 0)
+
+    def out(self):
+        if self.value is None:
+            return None
+        return str(int(self.value)) if self.value == int(self.value) else f"{self.value:.2f}"
+
+    def same(self, other):
+        """Equal as printed; a partly legible printing is compared on its legible digits."""
+        if self.value is not None and other.value is not None:
+            return self.value == other.value
+        a, b = (self, other) if self.prefix is not None else (other, self)
+        if a.prefix is not None and b.value is not None:
+            return b.raw.replace(",", "").startswith(a.prefix) or (b.value == 0 and a.prefix == "")
+        return self.raw == other.raw
+
+
+def money_tok(raw):
+    """(value or None, flag, text) for a money cell: '»'/'néant' = 0, 'T:text' = text (NA, not_applicable)."""
+    if raw in ("»", "néant"):
+        return Decimal(0), "", None
+    if raw.startswith("T:"):
+        return None, "not_applicable", raw[2:].replace("_", " ")
+    if raw == "?":
+        return None, "illegible", None
+    return Decimal(raw), "", None
+
+
+def sv_secs(prefix):
+    secs = []
+    for ed in ORDER:
+        f = TR / f"communes_{prefix}_{ed}.txt"
+        if f.exists():
+            secs += parse_sv(f, ed)
+    return secs
+
+
+# (year, locality key) -> edition stored instead of the latest printing, which is an evident misprint: sgt1936 prints
+# the 1935 lengths of Armand Colin and Eddekhila one line low (Armand Colin 0.920 repeats Aïn-el-Asker's line,
+# Eddekhila 1.303 is Armand Colin's figure; Eddekhila's 2.274 of 1931-1935 and 1936 is lost). sgt1935 prints them
+# on their own lines (1.303 / 2.274), consistent with 1931-1934 and with sgt1936's own 1936 column for Eddekhila.
+WATER_REPRINT = {(1935, "armandcolin"): "sgt1935", (1935, "eddekhila"): "sgt1935"}
+
+
+def build_water():
+    secs = sv_secs("water")
+    printings = defaultdict(dict)        # (year, key) -> ed -> dict(cell, label, sec, view)
+    order = {}
+    sales = []
+    for sec in secs:
+        years = sec["years"]
+        left = [int(y) for y in sec.get("left", "").split()]
+        for r in sec["rows"]:
+            toks = r["toks"]
+            if len(toks) != len(years) + 1:
+                raise ValueError(f"{sec['ed']} water {r['label']!r}: {len(toks)} tokens for {len(years)} years + sales")
+            k = sv_key(r["label"])
+            order.setdefault(k, len(order))
+            for y, t in zip(years, toks[:-1]):
+                c = WLen(t)
+                if c.flag == "absent":
+                    continue
+                view = sec["view"] if ("view2" not in sec or y in left) else sec["view2"]
+                page = sec["page"] + (0 if ("view2" not in sec or y in left) else 1)
+                printings[(y, k)][sec["ed"]] = dict(cell=c, label=r["label"], sec=sec, view=view, page=page)
+            v, fl, text = money_tok(toks[-1])
+            sales.append(dict(census=sec["ed"], table_id="water", gallica_ark=sec["ark"],
+                              source_page=sec["page"] + (1 if "view2" in sec else 0),
+                              gallica_view=sec.get("view2", sec["view"]), year=int(sec["sales"]),
+                              locality=r["label"], measure="water_sales_receipts",
+                              measure_fr=f"Vente d'eau : Recettes en {sec.get('sales_heading', sec['sales'])}",
+                              value=None if v is None else f"{v:.2f}", text_fr=text or "", flag=fl))
+    rows, compared, diffs = [], 0, []
+    for (y, k), by in sorted(printings.items(), key=lambda kv: (kv[0][0], order[kv[0][1]])):
+        eds = [e for e in ORDER if e in by]
+        latest = eds[-1]
+        src, flag = latest, by[latest]["cell"].flag
+        if (y, k) in WATER_REPRINT:
+            src, flag = WATER_REPRINT[(y, k)], "reprint_corrected"
+        if by[latest]["cell"].value is None and by[latest]["cell"].prefix is not None:
+            # partly legible in the latest printing: the latest fully legible printing that agrees with the
+            # legible digits is stored instead (reprint_corrected)
+            ok = [e for e in eds[:-1] if by[e]["cell"].value is not None and by[e]["cell"].same(by[latest]["cell"])]
+            if ok:
+                src, flag = ok[-1], "reprint_corrected"
+        for e in eds:
+            if e == latest:
+                continue
+            compared += 1
+            if not by[e]["cell"].same(by[latest]["cell"]):
+                diffs.append((y, by[latest]["label"], e, by[e]["cell"].raw, latest, by[latest]["cell"].raw))
+        p = by[src]
+        rows.append(dict(census=p["sec"]["ed"], table_id="water", gallica_ark=p["sec"]["ark"], source_page=p["page"],
+                         gallica_view=p["view"], year=y, locality=by[latest]["label"] if src == latest else p["label"],
+                         measure="pipe_length_m", measure_fr="Développement des canalisations (km. m.)",
+                         value=p["cell"].out(), text_fr=p["cell"].text or "", flag=flag,
+                         _from=(latest, by[latest]["cell"].raw) if src != latest else None,
+                         _eds=",".join(eds)))
+    return rows, compared, diffs, sales, secs
+
+
+SV_DIMS = {
+    "communes_water_pipes": ["locality", "measure", "measure_fr"],
+    "communes_water_sales": ["locality", "measure", "measure_fr"],
+    "communes_gas_operation": ["commune", "measure", "measure_fr", "unit"],
+    "communes_gas_tunis_1937_1939": ["commune", "lighting", "lighting_fr", "measure", "measure_fr"],
+    "communes_electricity_networks": ["locality", "measure", "measure_fr", "unit"],
+    "communes_electricity_production": ["centrale", "measure", "measure_fr", "unit"],
+    "communes_electricity_distribution": ["region", "measure", "measure_fr", "unit"],
+    "communes_electricity_lines": ["centrale", "area", "measure", "measure_fr", "unit"],
+}
+SV_NOTEXT = {"communes_gas_operation", "communes_gas_tunis_1937_1939"}
+SV_VAL = {}     # name -> validation summary for communes_validation_services.json
+
+
+def sv_write_csv(name, rows):
+    cols = COMMON + SV_DIMS[name] + ["value"] + ([] if name in SV_NOTEXT else ["text_fr"]) + ["flag"]
+    with (OUT / f"{name}.csv").open("w", newline="") as f:
+        w = csv.DictWriter(f, fieldnames=cols, lineterminator="\n", extrasaction="ignore")
+        w.writeheader()
+        for r in rows:
+            w.writerow({k: ("" if r.get(k) is None else r.get(k)) for k in cols})
+
+
+def sv_header(title_fr, title_en, rows, transcr, rule, coldoc):
+    eds = [e for e in ORDER if e in {r["census"] for r in rows}]
+    years = sorted({r["year"] for r in rows})
+    L = [f"# {title_fr}", "", f"*{title_en}*", "",
+         "Source: *Statistique générale de la Tunisie*, chapter *Communes*, editions " + ", ".join(eds)
+         + " (stored values). Source gallica.bnf.fr / Ministère des Affaires étrangères (NoC-CR).", "",
+         f"Pages and views of the stored values: {fmt_views(rows)}.", "",
+         "Rebuild: `python3 data-raw/yearbook_other_chapters/extract_communes.py build` (transcriptions "
+         f"`../transcribed/{transcr}`). Per-check output: `communes_validation_services.json`.", "",
+         f"Rows: {len(rows)}. Years: {', '.join(map(str, years))}.", "", rule, "", "## Columns", ""]
+    for c, d in coldoc:
+        L.append(f"- `{c}`: {d}")
+    return L + [""]
+
+
+SV_BASECOLS = [
+    ("census", "edition the value is taken from (`sgt1922` … `sgt1939`)"),
+    ("table_id", "transcription section"),
+    ("gallica_ark", "Gallica volume ark (views are numbered within a volume)"),
+    ("source_page", "printed page number of the cell"),
+    ("gallica_view", "Gallica view (fNNNN) of the cell"),
+]
+
+
+def water_notes(rows, compared, diffs, sales):
+    by_ed_sales = defaultdict(int)
+    for r in sales:
+        by_ed_sales[r["census"]] += 1
+    cd = SV_BASECOLS + [
+        ("year", "year of the length (column heading; see the misprinted headings below)"),
+        ("locality", "locality as printed in the edition the value is taken from"),
+        ("measure", "`pipe_length_m`"),
+        ("measure_fr", "*Développement des canalisations* (printed in two sub-columns *km.* and *m.*)"),
+        ("value", "length of the pipe network in **metres** (printed km × 1000 + printed m; decimals of a metre "
+                  "where printed, e.g. 72.819 50 → 72819.50); printed » = 0"),
+        ("text_fr", "text printed instead of a number"),
+        ("flag", "empty; `reprint_corrected` (value taken from another printing of the same year, see below); "
+                 "`not_applicable` (text instead of a number, value NA)"),
+    ]
+    L = sv_header("Service des eaux : développement des canalisations",
+                  "Water service: length of the water-supply pipe network of each locality, ten years per edition "
+                  "(two years from sgt1936).", rows, "communes_water_<edition>.txt",
+                  "Printed for overlapping year windows (sgt1922: 1913–1922 … sgt1930: 1921–1930; sgt1935: 1926–1935; "
+                  "sgt1936: 1935–1936; sgt1939: 1938–1939): each year is taken from the **latest** edition that "
+                  "prints it (SPEC_ADDENDUM rule 4; `census` = that edition) and every other printing of the same "
+                  "cell is compared below. 1937 is not printed. The water sales of the same tables, one year per "
+                  "edition, are in `communes_water_sales.csv`.", cd)
+    L += WATER_TEXT
+    L += ["## Validation", "",
+          "- No total is printed in any of these tables (no column or row totals), so no sum check is possible; "
+          "the validation is the comparison of the overlapping printings.",
+          f"- Overlapping printings (rule 4): {compared} cell comparisons with the stored (latest) printing; "
+          f"{len(diffs)} differences (a partly legible sgt1935 1929 cell counts as equal when its legible digits "
+          "match):", "",
+          "| year | locality (latest) | other edition | printed there | latest edition | printed there |",
+          "|---|---|---|---|---|---|"]
+    L += [f"| {d[0]} | {d[1]} | {d[2]} | {d[3]} | {d[4]} | {d[5]} |" for d in diffs]
+    fl = [r for r in rows if r["flag"]]
+    L += ["", f"- Flagged cells: {len(fl)}."]
+    for r in fl:
+        L.append(f"  - {r['year']} {r['locality']}: {r['value'] if r['value'] is not None else 'NA'} ({r['flag']}"
+                 + (f"; stored from {r['census']}, latest printing {r['_from'][0]} prints `{r['_from'][1]}`"
+                    if r.get("_from") else "") + (f"; printed \"{r['text_fr']}\"" if r["text_fr"] else "") + ")")
+    return "\n".join(L) + "\n"
+
+
+WATER_TEXT = [
+    "**Editions and layout.** *Service des eaux — Développement des canalisations ; vente d'eau*: sgt1922 p. 38 "
+    "(view 62), sgt1923 p. 42 (544), sgt1924 p. 42 (1032), sgt1925 p. 42 (66), sgt1926 p. 50 (614), sgt1927 p. 50 "
+    "(78), sgt1928 p. 50 (602); headed *Service des eaux (Régies d'État)* in sgt1929 p. 50 (78), sgt1930 p. 52 "
+    "(610), sgt1935 pp. 28–29 (views 48–49, a two-page spread), sgt1936 p. 21 (32) and sgt1939 p. 22 (28). The "
+    "locality list grows from 7 (sgt1922–sgt1924) to 51 (sgt1936, sgt1939). sgt1929 and later list only the "
+    "state-run (*régie*) services: Nabeul, Ferryville, Mateur, Tozeur, Le Kef, Béja, Tabarka, Kairouan, Téboursouk, "
+    "Medjez-el-Bab and Gabès are dropped in sgt1929, and Béja, Tabarka, Gabès … return in sgt1935 with » for the "
+    "years before they became régies. Their earlier lengths therefore come from the last edition that printed them "
+    "(e.g. Nabeul 1928 from sgt1928).",
+    "**Misprinted year headings.** sgt1923 and sgt1924 head the 1923 column \"1913\"; sgt1925 heads 1923 \"1913\" "
+    "and 1925 \"1915\". The columns are assigned by position (they continue the sequence, and the figures match the "
+    "1923/1925 columns of the later editions). sgt1927 heads its sales column \"Recettes en 1926\" but its amounts "
+    "are new (see `communes_water_sales.md`).",
+    "**What the lengths are.** Up to 1926 every printing gives cumulative network lengths. sgt1927, sgt1928 and "
+    "sgt1929 print small figures for 1927–1929 for the large towns (Bizerte 345 m, Sousse 213 m, Sfax 300 m in "
+    "1927; Bizerte 337 m, Sousse 225 m in 1928), apparently the extensions of the year, and » where nothing was "
+    "added, while the other localities keep cumulative figures (Hammamet 9.017). sgt1930 and sgt1935 reprint "
+    "1927–1929 as cumulative lengths (Bizerte 12.725 / 13.062 / 19.370). The stored values are those of the latest "
+    "printing (cumulative); the earlier printings are listed as differences. The Sousse series is printed as "
+    "*Sousse* (to sgt1929), *Sousse-Monastir et villages* (sgt1930) and *Sousse, Kairouan et villages du Sahel* "
+    "(sgt1935–sgt1939): the overlapping years agree (222.878 … 224.360), so the three labels are matched as one "
+    "series; from 1927 the figure drops to 183.837 (a redefined network). Other renamings matched: *M'Rira "
+    "Fouchai* (the label is cut by the column rule) = *M'Rira Fouchana (Mohamédia)*; *Dar Chabane* = *Dar Chabane "
+    "El-Fehri*; *Mejez el Bab* = *Medjez-el-Bab*; *Gaffour* = *Gafour*; accents ignored (Tébourba, Fériana, "
+    "Kélibia, Sbeïtla …).",
+    "**Particular cells.** Tunis 1924 is printed \"281\" with the metres blank in all six printings (sgt1924–"
+    "sgt1930): stored as 281000. sgt1925 prints Tunis 1925 \"571 107\" (all later printings 287 107) and "
+    "Ferryville 1925 \"9 104 50\" (later 9 104). sgt1929 Dar Chabane 1926 is blank (not stored; sgt1935 »). "
+    "sgt1935: the 1929 column runs into the binding of the spread (views 48–49) and only its first digits are "
+    "legible; its 17 non-zero cells are stored from sgt1930 (`reprint_corrected`), each agreeing with the legible "
+    "digits (Tunis \"319 8…\" = 319.826 …). sgt1936, 1935: M'Rira-Fouchana prints *constitué en Syndicat* (formed "
+    "into a syndicate; NA, `not_applicable`); sgt1936 prints the 1935 lengths of Armand Colin and Eddekhila one "
+    "line low (Armand Colin 0.920 = Aïn-el-Asker's figure repeated, Eddekhila 1.303 = Armand Colin's): these two "
+    "are stored from sgt1935 (1.303 and 2.274, `reprint_corrected`). sgt1936 also prints, for 1935, Thala 2.507 "
+    "(sgt1935: 8.979,78), Fériana 3.994 (3.557,20), Sbeïtla 2.200 (»), Gafsa 5.001 (»), Sidi-bou-Ali 2.032 "
+    "(2.052), and Souk-el-Arba / Souk-el-Khemis 12.862 / 23.187 (sgt1935: 23.187 / 12.862, which itself swaps the "
+    "two towns' 1932–1933 figures); these are kept from sgt1936 as rule 4 requires (no printing can be shown "
+    "wrong). sgt1939 Sfax prints 1938 \"843 40\" and 1939 \"1.002 30\" (sgt1936: 225.741 km): stored as printed "
+    "(843.40 m and 1002.30 m).",
+    "**Image versus OCR.** Every cell of every edition was read on native-resolution crops of the page images "
+    "(whole table at 0.45–0.6 scale, then the label column stitched to the value columns at 0.6–1.0 scale, the "
+    "sgt1935 binding strip of both views at 0.75, and single cells at 1.5–2×). Gallica's OCR was used only as a "
+    "draft for sgt1922–sgt1924 (where it agrees with the images); it is scrambled for sgt1925–sgt1930 and was not "
+    "used there. No value rests on the OCR alone.",
+    "",
+]
+
+
+def sales_notes(sales):
+    cd = SV_BASECOLS + [
+        ("year", "year of the sales (*Recettes en <année>*)"),
+        ("locality", "locality as printed"),
+        ("measure", "`water_sales_receipts`"),
+        ("measure_fr", "column heading as printed (*Vente d'eau : Recettes en <année>*)"),
+        ("value", "francs with centimes; printed » and *néant* = 0.00"),
+        ("text_fr", "text printed instead of an amount"),
+        ("flag", "empty or `not_applicable` (text instead of an amount: value NA, text in `text_fr`)"),
+    ]
+    L = sv_header("Service des eaux : vente d'eau (recettes)",
+                  "Water service: receipts from the sale of water, per locality, for the edition year.", sales,
+                  "communes_water_<edition>.txt", "Printed once per edition (SPEC_ADDENDUM rule 5), as the last "
+                  "column of the pipe-length table (`communes_water_pipes.md`); `year` = the year of the receipts. "
+                  "No year is printed twice.", cd)
+    # sgt1927's column is headed 1926: compare it with sgt1926's 1926 sales
+    a = {sv_key(r["locality"]): r["value"] for r in sales if r["census"] == "sgt1926"}
+    b = {sv_key(r["locality"]): r["value"] for r in sales if r["census"] == "sgt1927"}
+    lab = {sv_key(r["locality"]): r["locality"] for r in sales if r["census"] == "sgt1927"}
+    common = [k for k in b if k in a]
+    eq = [k for k in common if a[k] == b[k]]
+    SV_VAL["sales_1927_vs_1926"] = dict(compared=len(common), equal=eq)
+    L += ["**Headings.** sgt1922–sgt1935 *Recettes en <année>*, sgt1936 and sgt1939 *Recette en <année>*. sgt1927 "
+          "heads the column \"Recettes en 1926\", but of the "
+          f"{len(common)} localities also in sgt1926 only {len(eq)} have the same amount as sgt1926's 1926 sales "
+          f"({', '.join(f'{lab[k]} {a[k]}' for k in eq) or 'none'}; Tunis 3.478.497,30 against 2.762.081,90), so the column is taken as the "
+          "1927 receipts (`year` = 1927, heading kept in `measure_fr`). Gabès prints 19.379,80 in both sgt1927 "
+          "and sgt1928 (kept as printed).", "",
+          "**Texts.** sgt1936: El-Aroussa, Le Goubellat and Testour, *Les régies ne fonctionnent qu'à partir du 1er "
+          "janvier 1937* (the services only operate from 1 January 1937; printed across the three lines); Gafour, "
+          "*Régie à partir du 1-1-37*; sgt1939: Aïn-Kerma \"(1)\", footnote *Ne fonctionne pas encore* (not working "
+          "yet). These are NA, `not_applicable`. *Néant* (sgt1935, sgt1936) is stored as 0.00. In sgt1936 the value "
+          "lines sit half a line off their names; they were assigned in order (51 lines for 51 names).", "",
+          "**Image versus OCR.** Every amount read on native-resolution crops (see `communes_water_pipes.md`); "
+          "OCR not relied on.", "",
+          "## Validation", "",
+          "- No totals are printed, so there is no sum check; each year is printed once, so there is no overlap "
+          "comparison (the sgt1927 heading was checked against sgt1926 as above).",
+          f"- Rows per edition: " + ", ".join(f"{e} {sum(r['census'] == e for r in sales)}" for e in ORDER
+                                              if any(r['census'] == e for r in sales)) + "."]
+    fl = [r for r in sales if r["flag"]]
+    L += [f"- Flagged cells: {len(fl)}."] + [f"  - {r['census']} {r['locality']}: {r['flag']} (\"{r['text_fr']}\")"
+                                             for r in fl]
+    return "\n".join(L) + "\n"
+
+
+GASOP = {
+    "emission": ("gas_emitted_m3", "Émission totale de l'année en mètres cubes", "m3"),
+    "subscribers": ("subscribers", "Nombre d'abonnés au 31 décembre", "count"),
+    "cons_public": ("consumed_m3_public_lighting", "Nombre de mètres cubes consommés : Éclairage public", "m3"),
+    "cons_private_roads": ("consumed_m3_private_roads_lighting",
+                           "Nombre de mètres cubes consommés : Éclairage — voies privées", "m3"),
+    "cons_ordinary": ("consumed_m3_private_ordinary_tariff",
+                      "Nombre de mètres cubes consommés : Particuliers (tarif ordinaire)", "m3"),
+    "cons_reduced": ("consumed_m3_administration_reduced_tariff",
+                     "Nombre de mètres cubes consommés : Administration et divers (tarif réduit)", "m3"),
+    "len_all": ("mains_length_m_all_diameters", "Longueur totale des canalisations en service au 31 décembre", "m"),
+}
+for _d in (500, 400, 350, 300, 250, 200, 175, 150, 100, 90, 80, 70, 60, 50):
+    GASOP[f"len_{_d}"] = (f"mains_length_m_diameter_{_d}mm",
+                          f"Longueur totale des canalisations en service au 31 décembre : diamètre {_d} m/m", "m")
+
+
+def build_gasop():
+    secs = [s for s in sv_secs("gasop") if s["table"] == "gasop"]
+    printings = defaultdict(dict)
+    for sec in secs:
+        years = [int(y) for y in sec["years"]] if isinstance(sec["years"], list) else sec["years"]
+        for r in sec["rows"]:
+            for y, t in zip(years, r["toks"]):
+                printings[(y, r["label"])][sec["ed"]] = dict(v=Decimal(t), raw=t, sec=sec)
+        for y in years:
+            col = {r["label"]: Decimal(r["toks"][years.index(y)]) for r in sec["rows"]}
+            cons = [k for k in col if k.startswith("cons_") and k != "cons_TOTAL"]
+            SV_CHK.eq("gasop", f"{sec['ed']} p.{sec['page']} {y}: m3 consumed by use vs TOTAL",
+                      sum(col[k] for k in cons), col["cons_TOTAL"])
+            lens = [k for k in col if re.fullmatch(r"len_\d+", k)]
+            if lens:
+                SV_CHK.eq("gasop", f"{sec['ed']} p.{sec['page']} {y}: lengths by diameter vs TOTAL",
+                          sum(col[k] for k in lens), col["len_TOTAL"])
+    rows, compared, diffs = [], 0, []
+    items = list(GASOP)
+    for (y, item), by in sorted(printings.items(), key=lambda kv: (kv[0][0], (items + ["cons_TOTAL", "len_TOTAL"])
+                                                                   .index(kv[0][1]))):
+        eds = [e for e in ORDER if e in by]
+        latest = eds[-1]
+        for e in eds[:-1]:
+            compared += 1
+            if by[e]["v"] != by[latest]["v"]:
+                diffs.append((y, item, e, by[e]["raw"], latest, by[latest]["raw"]))
+        if item.endswith("TOTAL"):
+            continue
+        p = by[latest]
+        code, fr, unit = GASOP[item]
+        rows.append(dict(census=latest, table_id="gasop", gallica_ark=p["sec"]["ark"], source_page=p["sec"]["page"],
+                         gallica_view=p["sec"]["view"], year=y, commune="Tunis", measure=code, measure_fr=fr,
+                         unit=unit, value=str(int(p["v"])), flag=""))
+    return rows, compared, diffs, printings
+
+
+def gas_tunis_printings():
+    """communes_gas_tunis cells (existing transcriptions, section @gas) plus sgt1939's @gastunis printing."""
+    out = defaultdict(dict)       # (year, col) -> ed -> Cell
+    for ed in ORDER:
+        for sec in parse(ed):
+            if sec["table"] == "gas":
+                for r in sec["rows"]:
+                    for c, cell in zip(sec["cols"], r["cells"]):
+                        out[(int(r["label"]), c)][ed] = cell
+    for sec in sv_secs("gasop"):
+        if sec["table"] == "gastunis":
+            for r in sec["rows"]:
+                for c, t in zip(sec["cols"], r["toks"]):
+                    out[(int(r["label"]), c)][sec["ed"]] = Cell(t)
+    return out
+
+
+def build_gas_1937(gt):
+    """sgt1939's GAZ — Consommations (Ville de Tunis), years not in communes_gas_tunis (1937-1939)."""
+    sec = [s for s in sv_secs("gasop") if s["table"] == "gastunis"][0]
+    check_rows = []
+    rows, compared, same = [], 0, 0
+    for r in sec["rows"]:
+        y = int(r["label"])
+        d = {c: Cell(t) for c, t in zip(sec["cols"], r["toks"])}
+        for m in ("cons", "rec"):
+            SV_CHK.eq("gas_1937", f"sgt1939 p.23 {y} {m}: public + subscribers vs total",
+                      d[f"{m}_public"].value + d[f"{m}_private"].value, d[f"{m}_total"].value)
+        if y <= 1936:
+            for c in sec["cols"]:
+                others = {e: x for e, x in gt[(y, c)].items() if e != "sgt1939"}
+                for e, x in others.items():
+                    compared += 1
+                    same += x.value == d[c].value
+                    if x.value != d[c].value:
+                        check_rows.append((y, c, e, x.raw, d[c].raw))
+            continue
+        for c in sec["cols"]:
+            m, l = c.split("_")
+            if l == "total":
+                continue
+            fr = {"public": "Éclairage public", "private": "Abonnés"}[l]
+            cell = d[c]
+            rows.append(dict(census="sgt1939", table_id="gastunis", gallica_ark=sec["ark"], source_page=sec["page"],
+                             gallica_view=sec["view"], year=y, commune="Tunis", lighting=GAS[l][0], lighting_fr=fr,
+                             measure=GAS_M[m][0], measure_fr=GAS_M[m][1],
+                             value=str(int(cell.value)) if m == "cons" else cell.money(), flag=""))
+    return rows, compared, same, check_rows
+
+
+def gas_cross(printings, gt):
+    """Exploitation du gaz vs GAZ — Consommations, same edition and year: public + private roads = public
+    lighting; ordinary + reduced tariff = private lighting / subscribers; TOTAL = total general."""
+    out = []
+    for (y, item), by in printings.items():
+        if item != "cons_TOTAL":
+            continue
+        for e in by:
+            def g(it):
+                x = printings.get((y, it), {}).get(e)
+                return x["v"] if x else Decimal(0)
+            for what, got, col in (("public + private roads", g("cons_public") + g("cons_private_roads"), "cons_public"),
+                                   ("ordinary + reduced tariff", g("cons_ordinary") + g("cons_reduced"), "cons_private"),
+                                   ("TOTAL", g("cons_TOTAL"), "cons_total")):
+                c = gt.get((y, col), {}).get(e)
+                if c is None:
+                    continue
+                SV_CHK.eq("gas_cross", f"{e} {y}: Exploitation {what} vs GAZ Consommations {col}", got, c.value)
+                out.append((e, y, col))
+    return out
+
+
+def gasop_notes(rows, compared, diffs):
+    cd = SV_BASECOLS + [
+        ("year", "year of the figures (column heading)"),
+        ("commune", "`Tunis`"),
+        ("measure", "English code of the printed line (`gas_emitted_m3`, `subscribers`, `consumed_m3_*`, "
+                    "`mains_length_m_diameter_<d>mm`, `mains_length_m_all_diameters`)"),
+        ("measure_fr", "line label as printed (French)"),
+        ("unit", "`m3` (mètres cubes), `m` (mètres) or `count`"),
+        ("value", "integer, in the unit as printed"),
+        ("flag", "empty (no cell is flagged)"),
+    ]
+    L = sv_header("Exploitation du gaz à Tunis", "Operation of the Tunis gas works: gas emitted, subscribers, "
+                  "gas consumed by use, and length of the mains in service by diameter.", rows,
+                  "communes_gasop_<edition>.txt", "Printed for two-year windows (sgt1935: 1934–1935; sgt1936: "
+                  "1935–1936; sgt1939: 1938–1939): each year is taken from the latest edition printing it (rule 4); "
+                  "1935, printed twice, is stored from sgt1936 and the sgt1935 printing compared. 1937 is not printed.",
+                  cd)
+    L += ["**Tables.** sgt1935 p. 31 (view 51) *Exploitation du gaz à Tunis (1934-1935)*; sgt1936 p. 23 (view 34) "
+          "and sgt1939 p. 23 (view 29) *Exploitation du gaz à Tunis*. Lines: *Émission totale de l'année en mètres "
+          "cubes*; *Nombre d'abonnés au 31 décembre*; *Nombre de mètres cubes consommés*: *Éclairage public*, *— "
+          "voies privées* (lighting of private roads; not printed in sgt1939), *Particuliers (tarif ordinaire)*, "
+          "*Administration et divers (tarif réduit)*, *Total* (not stored, used for the check); *Longueur totale des "
+          "canalisations en service au 31 décembre* by diameter 500 … 50 m/m with a *Total* (sgt1935, sgt1936; the "
+          "total is not stored), or as a single figure (sgt1939, stored as `mains_length_m_all_diameters`).", "",
+          "**Image versus OCR.** Every cell was read on native-resolution crops (0.5–1.0 scale); the OCR (which "
+          "agrees except for the sgt1936 \"50\" line, read \"90\") was a draft only.", "",
+          "**Overlap with `communes_gas_tunis`.** The gas consumption series (*Gaz : consommation (ville de Tunis)*) "
+          "gives the same gas in two columns: its *Éclairage public* consumption equals *Éclairage public* + *voies "
+          "privées* here, its *Éclairage privé* / *Abonnés* consumption equals *Particuliers* + *Administration*, "
+          "and its total equals the *Total* here. These identities were checked for every year both tables print in "
+          "the same edition (sgt1935: 1934, 1935; sgt1936: 1935, 1936; sgt1939: 1938, 1939; result below). Only "
+          "the breakdown (voies privées; ordinary / reduced tariff), the gas emitted, the subscribers and the mains "
+          "are new; receipts are only in `communes_gas_tunis`.", "",
+          "**sgt1939 also prints the consumption series** (*GAZ — Consommations (Ville de Tunis)*, 1935–1939, on "
+          "the same page 23, view 29, headed *Éclairage public / Abonnés / Total général*), which "
+          "`communes_gas_tunis.md` says is absent. Its 1935–1936 cells equal the sgt1936 printing stored there "
+          "(compared below); 1937–1939 are stored in `communes_gas_tunis_1937_1939.csv`, because "
+          "`communes_gas_tunis.csv` is kept unchanged. Under rule 4 the 1935–1936 rows of `communes_gas_tunis.csv` "
+          "would carry `census` = sgt1939 (same values).", "",
+          "## Validation", ""]
+    L += [f"- Printed totals (m3 consumed by use vs *Total*; lengths by diameter vs *Total*): {SV_CHK.n['gasop']}; "
+          f"passed {SV_CHK.n['gasop'] - len(SV_CHK.fail['gasop'])}; failed {len(SV_CHK.fail['gasop'])}:"]
+    L += [f"  - {x}" for x in SV_CHK.fail["gasop"]]
+    L += ["  Both failures were re-read on a native-resolution crop and are as printed (no cell flagged): the "
+          "1936 consumption *Total* 5.548.049 is 10.000 below the sum of its lines, which the consumption series "
+          "prints as 5.558.049 (in sgt1936 and sgt1939); the 1936 lengths sum to 149.960 against the printed "
+          "150.007.",
+          f"- Cross-table identities with the consumption series, same edition and year: {SV_CHK.n['gas_cross']}; "
+          f"passed {SV_CHK.n['gas_cross'] - len(SV_CHK.fail['gas_cross'])}; failed "
+          f"{len(SV_CHK.fail['gas_cross'])}:"] + [f"  - {x}" for x in SV_CHK.fail["gas_cross"]]
+    L += [f"- Overlapping printings (1935: sgt1935 and sgt1936): {compared} cells compared (totals included); "
+          f"{len(diffs)} differences." + ("" if not diffs else " " + "; ".join(map(str, diffs))),
+          "- Note: in 1935 the 70 mm and 60 mm lines read 5.080 / 33.403 in both printings, while 1934 reads "
+          "30.996 / 5.080; kept as printed.", "- Flagged cells: none."]
+    return "\n".join(L) + "\n"
+
+
+def gas1937_notes(rows, compared, same, cr):
+    cd = SV_BASECOLS + [("year", "year"), ("commune", "`Tunis`"),
+                        ("lighting", "`public_lighting` (*Éclairage public*) or `private_lighting` (*Abonnés*: "
+                                     "subscribers, the *Éclairage privé* of the earlier editions)"),
+                        ("lighting_fr", "column heading as printed in sgt1939"),
+                        ("measure", "`consumption_m3` or `receipts`"), ("measure_fr", "column heading (French)"),
+                        ("value", "consumption in cubic metres (integer); receipts in francs with centimes "
+                                  "(printed » in the centimes = .00)"),
+                        ("flag", "empty (no cell is flagged)")]
+    L = sv_header("GAZ — Consommations (Ville de Tunis), 1937–1939",
+                  "Gas consumption and receipts, city of Tunis, public lighting and subscribers: the years "
+                  "1937–1939, printed only in sgt1939.", rows, "communes_gasop_sgt1939.txt, section `@gastunis`",
+                  "Continuation of `communes_gas_tunis.csv` (same columns and codes), kept in a separate file so "
+                  "that file stays unchanged. sgt1939 prints 1935–1939; only 1937–1939 are stored here.", cd)
+    L += ["sgt1939 p. 23, view 29, lower table. Read on a native-resolution crop (0.6 scale); OCR agrees. The "
+          "TOTAL GÉNÉRAL columns are not stored (row checks).", "", "## Validation", "",
+          f"- Row checks (public + subscribers vs total, consumption and receipts, 1935–1939): "
+          f"{SV_CHK.n['gas_1937']}; failed {len(SV_CHK.fail['gas_1937'])}:"]
+    L += [f"  - {x}" for x in SV_CHK.fail["gas_1937"]]
+    L += ["  The 1936 receipts failure is the same misprint as in sgt1936 (7.835.770,64 printed 4.835.770,64), see "
+          "`communes_gas_tunis.md`.",
+          f"- Overlap with `communes_gas_tunis` (1935–1936, sgt1939 against every earlier printing): {compared} "
+          f"cells compared, {same} equal" + ("." if not cr else "; differences: " + "; ".join(map(str, cr))),
+          "- Cross-check with *Exploitation du gaz à Tunis* (same page): 1938 and 1939 public, subscriber and "
+          "total consumption agree (see `communes_gas_operation.md`).", "- Flagged cells: none."]
+    return "\n".join(L) + "\n"
+
+
+# ----------------------------------------------------------------- electricity
+
+EL_MEAS = {
+    # sgt1929-sgt1930 table a) Électricité (networks): code, French heading, unit
+    "len": ("network_length_m", "Longueur des canalisations", "m"),
+    "pw_l": ("installed_power_lighting_kw", "Puissance des installations en service au 31 décembre : Éclairage", "kW"),
+    "pw_o": ("installed_power_other_kw", "Puissance des installations en service au 31 décembre : Autres usages", "kW"),
+    "pw_t": ("installed_power_total_kw", "Puissance des installations : TOTAL", "kW"),
+    "sub_l": ("subscribers_lighting", "Nombre d'abonnés : Éclairage", "count"),
+    "sub_o": ("subscribers_other", "Nombre d'abonnés : Autres usages", "count"),
+    "sub_ht": ("subscribers_high_voltage", "Nombre d'abonnés : Haute tension", "count"),
+    "sub_t": ("subscribers_total", "Nombre d'abonnés : TOTAL", "count"),
+    "kwh_pl": ("kwh_private_lighting", "Nombre de kilowattheures consommés : Particuliers, Éclairage", "kWh"),
+    "kwh_pf": ("kwh_private_power", "Nombre de kilowattheures consommés : Particuliers, Force", "kWh"),
+    "kwh_vl": ("kwh_town_lighting", "Nombre de kilowattheures consommés : Ville, Éclairage", "kWh"),
+    "kwh_vf": ("kwh_town_power", "Nombre de kilowattheures consommés : Ville, Force", "kWh"),
+    "kwh_t": ("kwh_total", "Kilowattheures consommés : TOTAL", "kWh"),
+    "rec_pl": ("receipts_private_lighting", "Produits bruts : Particuliers, Éclairage", "francs"),
+    "rec_pf": ("receipts_private_power", "Produits bruts : Particuliers, Force", "francs"),
+    "rec_vl": ("receipts_town_lighting", "Produits bruts : Ville, Éclairage", "francs"),
+    "rec_vf": ("receipts_town_power", "Produits bruts : Ville, Force", "francs"),
+    "rec_t": ("receipts_total", "Produits bruts : TOTAL", "francs"),
+    "redev": ("royalty_to_town_and_control_fee", "Redevance à la ville et droit de contrôle", "francs"),
+    "droits": ("underground_occupation_dues", "Droits d'occupation des sous-sols", "francs"),
+    # production
+    "st_kw": ("steam_turbines_installed_kw", "Production thermique, turbines à vapeur : puissance des usines installée", "kW"),
+    "st_kwh": ("steam_turbines_energy_kwh", "Production thermique, turbines à vapeur : énergie fournie aux réseaux "
+                                            "(aux bornes de l'usine)", "kWh"),
+    "ic_kw": ("combustion_engines_installed_kw", "Production thermique, moteurs à combustion interne : puissance "
+                                                "installée des usines", "kW"),
+    "ic_kwh": ("combustion_engines_energy_kwh", "Production thermique, moteurs à combustion interne : énergie fournie "
+                                                "aux réseaux (aux bornes de l'usine)", "kWh"),
+    "tot_kw": ("total_installed_kw", "Production totale aux bornes de sortie de l'usine : puissance installée totale",
+               "kW"),
+    "max_kw": ("maximum_power_produced_kw", "Production totale : puissance maximum produite", "kW"),
+    "tot_kwh": ("total_energy_produced_kwh", "Production totale : énergie produite totale", "kWh"),
+    # distribution, Tableau I
+    "ht_traction": ("kwh_high_voltage_traction", "Énergie livrée, haute tension : Traction", "kWh"),
+    "ht_other": ("kwh_high_voltage_other", "Énergie livrée, haute tension : Autres usages", "kWh"),
+    "ht_public": ("kwh_high_voltage_public_services", "Énergie livrée, haute tension : Services publics", "kWh"),
+    "ht_t": ("kwh_high_voltage_total", "Énergie livrée, haute tension : TOTAL", "kWh"),
+    "bt_dom": ("kwh_low_voltage_light_domestic", "Énergie livrée, basse tension : Lumière et usages domestiques", "kWh"),
+    "bt_force": ("kwh_low_voltage_power", "Énergie livrée, basse tension : Force", "kWh"),
+    "bt_publight": ("kwh_low_voltage_public_lighting", "Énergie livrée, basse tension : Éclairage publics", "kWh"),
+    "bt_public": ("kwh_low_voltage_public_services", "Énergie livrée, basse tension : Services publics", "kWh"),
+    "bt_t": ("kwh_low_voltage_total", "Énergie livrée, basse tension : TOTAL", "kWh"),
+    "total": ("kwh_total_high_and_low_voltage", "TOTAL général haute et basse tension", "kWh"),
+    # distribution, Tableau II
+    "len_ht": ("line_length_high_voltage_m", "Longueurs des lignes : haute tension", "m"),
+    "len_bt": ("line_length_low_voltage_m", "Longueurs des lignes : basse tension", "m"),
+}
+# row totals (not stored; used for the checks): column -> its parts
+EL_ROW = {
+    "elec": [("pw_t", ["pw_l", "pw_o"]), ("sub_t", ["sub_l", "sub_o"]),
+             ("kwh_t", ["kwh_pl", "kwh_pf", "kwh_vl", "kwh_vf"]), ("rec_t", ["rec_pl", "rec_pf", "rec_vl", "rec_vf"])],
+    "prod": [("tot_kw", ["st_kw", "ic_kw"]), ("tot_kwh", ["st_kwh", "ic_kwh"])],
+    "distr1": [("sub_t", ["sub_l", "sub_o", "sub_ht"]), ("ht_t", ["ht_traction", "ht_other", "ht_public"]),
+               ("bt_t", ["bt_dom", "bt_force", "bt_publight", "bt_public"]), ("total", ["ht_t", "bt_t"])],
+    "distr2": [],
+}
+EL_TOTALCOLS = {"pw_t", "sub_t", "kwh_t", "rec_t", "tot_kw", "tot_kwh", "ht_t", "bt_t", "total"}
+EL_FILES = {"elec": "communes_electricity_networks", "prod": "communes_electricity_production",
+            "distr1": "communes_electricity_distribution", "distr2": "communes_electricity_lines"}
+# printed cells flagged total_mismatch: the row check fails and the cell is evidently on the wrong line (see notes)
+TRAM = "Compagnie des Tramways de Tunis (Banlieue de Tunis et dans un rayon de 60 km. autour de Tunis)"
+EL_FLAG = {("sgt1930", "Oued-Sahil", "pw_l"): "total_mismatch", ("sgt1930", "Bizerte", "pw_l"): "total_mismatch",
+           # a row check and a column check fail by the same amount
+           ("sgt1935", TRAM, "sub_o"): "total_mismatch",            # 745; both imply 475
+           ("sgt1936", TRAM, "bt_force"): "total_mismatch",         # 8.374.526; both imply 837.452,6
+           ("sgt1939", "Ferryville (Centrale de Ferryville) Alternatif", "bt_public"): "total_mismatch"}  # 27.984,6 / 27.894,6
+
+
+class ECell:
+    __slots__ = ("raw", "value", "flag", "text", "prefix")
+
+    def __init__(self, raw):
+        self.raw, self.flag, self.text, self.prefix = raw, "", None, None
+        if raw in ("»", "néant"):
+            self.value = Decimal(0)
+        elif raw == ".":
+            self.value, self.flag = None, "absent"
+        elif raw.startswith("T:"):
+            self.value, self.flag, self.text = None, "not_applicable", raw[2:].replace("_", " ")
+        elif raw.startswith("S:"):          # two figures printed in one cell
+            self.value = sum(Decimal(x) for x in raw[2:].split("+"))
+            self.text = " / ".join(raw[2:].split("+"))
+        elif raw.startswith("p:"):
+            self.value, self.prefix, self.flag = None, raw[2:].replace(".", ""), "partial"
+        else:
+            self.value = Decimal(raw)
+
+
+def el_rows(sec):
+    out = []
+    n = len(sec["cols"])
+    for r in sec["rows"]:
+        toks = r["toks"]
+        if r["label"] == "GRANDTOTAL":
+            toks = toks + ["."] * (n - len(toks))
+        if len(toks) < n and toks and toks[-1].startswith("T:"):
+            toks = toks + [toks[-1]] * (n - len(toks))
+        if len(toks) != n:
+            raise ValueError(f"{sec['ed']} {sec['table']} {r['label']!r}: {len(toks)} tokens for {n} columns")
+        out.append((r["label"], {c: ECell(t) for c, t in zip(sec["cols"], toks)}))
+    return out
+
+
+def el_fmt(v, unit):
+    if v is None:
+        return None
+    if unit == "francs":
+        return f"{v:.2f}"
+    return str(int(v)) if v == int(v) else format(v.normalize(), "f")
+
+
+def build_electricity():
+    secs = [s for s in sv_secs("elec") if s["table"] in EL_FILES]
+    res = defaultdict(list)
+    derived = []
+    for sec in secs:
+        t, ed = sec["table"], sec["ed"]
+        rows = el_rows(sec)
+        excl = sec.get("ht_excl_traction") == "1"
+        rels = [(a, [x for x in b if not (excl and x == "ht_traction")]) for a, b in EL_ROW[t]]
+        data = [(lab, c) for lab, c in rows if lab not in ("Totaux", "GRANDTOTAL")]
+        tot = dict(rows).get("Totaux")
+        # solve partly legible cells from their row identity, then check the legible digits
+        for lab, c in rows:
+            for col, cell in c.items():
+                if cell.prefix is None:
+                    continue
+                tgt, parts = next((a, b) for a, b in rels if col in b)
+                v = c[tgt].value - sum(c[x].value for x in parts if x != col)
+                ok = str(v).replace(".", "").startswith(cell.prefix)
+                SV_CHK.n[f"elec_{t}"] += 1
+                if not ok:
+                    SV_CHK.fail[f"elec_{t}"].append(f"{ed} {lab} {col}: solved {v}, legible digits {cell.prefix}")
+                cell.value, cell.flag = v, "derived_from_totals"
+                derived.append((ed, t, lab, col, v, cell.prefix))
+        for lab, c in rows:
+            if lab == "GRANDTOTAL":
+                continue
+            for tgt, parts in rels:
+                if c[tgt].value is None or any(c[x].value is None for x in parts):
+                    continue
+                SV_CHK.eq(f"elec_{t}", f"{ed} p.{sec['page']} {lab}: {' + '.join(parts)} vs {tgt}",
+                          sum(c[x].value for x in parts), c[tgt].value)
+        if tot:
+            for col in sec["cols"]:
+                xs = [c[col] for _, c in data if c[col].flag != "absent"]
+                if tot[col].value is None or any(x.value is None for x in xs if x.flag != "not_applicable"):
+                    continue
+                SV_CHK.eq(f"elec_{t}", f"{ed} p.{sec['page']} column {col} vs Totaux",
+                          sum(x.value for x in xs if x.value is not None), tot[col].value)
+        gt = dict(rows).get("GRANDTOTAL")
+        if gt:
+            g = Decimal(sec["rows"][-1]["toks"][0])
+            SV_CHK.eq(f"elec_{t}", f"{ed} p.{sec['page']} Totaux HT + BT vs grand total",
+                      tot["len_ht"].value + tot["len_bt"].value, g)
+        left = int(sec.get("left", 99))
+        for lab, c in data:
+            for j, (col, cell) in enumerate(c.items()):
+                if col in EL_TOTALCOLS or cell.flag == "absent":
+                    continue
+                code, fr, unit = EL_MEAS[col]
+                right = "view2" in sec and j >= left
+                flag = cell.flag if cell.flag in ("not_applicable", "derived_from_totals") else ""
+                flag = EL_FLAG.get((ed, lab, col), flag)
+                rec = dict(census=ed, table_id=t, gallica_ark=sec["ark"],
+                           source_page=sec["page"] + (1 if right else 0),
+                           gallica_view=sec["view2"] if right else sec["view"], year=int(sec["year"]),
+                           measure=code, measure_fr=fr, unit=unit, value=el_fmt(cell.value, unit),
+                           text_fr=cell.text or "", flag=flag)
+                if t == "distr2":
+                    cen, area = lab.split(" :: ")
+                    rec.update(centrale=cen, area=area)
+                elif t == "prod":
+                    rec.update(centrale=lab)
+                elif t == "distr1":
+                    rec.update(region=lab)
+                else:
+                    rec.update(locality=lab)
+                res[EL_FILES[t]].append(rec)
+    return res, derived
+
+
+EL_DIMS = {
+    "communes_electricity_networks": ["locality", "measure", "measure_fr", "unit"],
+    "communes_electricity_production": ["centrale", "measure", "measure_fr", "unit"],
+    "communes_electricity_distribution": ["region", "measure", "measure_fr", "unit"],
+    "communes_electricity_lines": ["centrale", "area", "measure", "measure_fr", "unit"],
+}
+EL_TOPIC = {"communes_electricity_networks": "elec_elec", "communes_electricity_production": "elec_prod",
+            "communes_electricity_distribution": "elec_distr1", "communes_electricity_lines": "elec_distr2"}
+EL_TITLE = {
+    "communes_electricity_networks": (
+        "a) Électricité : longueur des canalisations ; puissance des installations ; abonnés ; consommation ; produits",
+        "Electricity by locality (sgt1929, sgt1930): length of the network, installed power at 31 December, "
+        "subscribers, kilowatt-hours consumed and gross receipts."),
+    "communes_electricity_production": (
+        "Production d'électricité", "Electricity production by power station (sgt1935, sgt1936, sgt1939): "
+        "installed power and energy of steam turbines and internal-combustion engines, maximum power produced."),
+    "communes_electricity_distribution": (
+        "Distribution d'électricité, Tableau I : abonnés et énergie livrée par les réseaux à la consommation",
+        "Electricity distribution by distributor or region (sgt1935, sgt1936, sgt1939): subscribers and "
+        "energy delivered at high and low voltage by use."),
+    "communes_electricity_lines": (
+        "Distribution d'électricité, Tableau II : longueurs des lignes",
+        "Length of the high- and low-voltage lines by power station and town or region electrified (sgt1935, "
+        "sgt1936, sgt1939)."),
+}
+EL_TEXT = {
+    "communes_electricity_networks": [
+        "**Tables.** sgt1929 pp. 52–53 (views 80–81) and sgt1930 pp. 54–55 (views 612–613), each a two-page spread "
+        "headed *a) Électricité : longueur des canalisations ; puissance des installations ; abonnés ; consommation ; "
+        "produits* in the *Éclairage* pages. Left page: locality, length (mètres), power of the installations in service "
+        "at 31 December (kW: *Éclairage*, *Autres usages*, *TOTAL*), subscribers (*Éclairage*, *Autres usages*, "
+        "*TOTAL*), kWh consumed by private customers (*Particuliers*: *Éclairage*, *Force*). Right page: kWh consumed "
+        "by the town (*Ville*: *Éclairage*, *Force*), kWh *TOTAL*, gross receipts (*Produits bruts*: Particuliers "
+        "Éclairage / Force, Ville Éclairage / Force, *TOTAL*, francs), *Redevance à la ville et droit de contrôle* "
+        "and *Droits d'occupation des sous-sols* (francs). The row totals (power, subscribers, kWh, receipts) are "
+        "not stored; they are used for the row checks. No column totals are printed. `year` = the year of the "
+        "power heading (*au 31 décembre 1929 / 1930*), taken for the whole table.",
+        "**Units.** Length in metres as printed (\"160.700\" = 160 700 m; sgt1929 prints some short lengths as "
+        "\"0.850\" = 850 m, as the table header says *mètres*); power in kW as printed (Mateur 1929 \"236.92\" "
+        "kept as 236.92 kW; Sfax 1929 prints 1.384.490 / 1.002.600 / 2.387.090 and Gabès 221.260 / 5.500 / "
+        "226.760, apparently watts, kept as printed); kWh with one decimal where printed; francs with centimes.",
+        "**Text cells.** In sgt1929 several localities print a text across the consumption and receipts columns "
+        "instead of figures: La Goulette *Région Bac compris dans Djebel-Djelloud*, Ste-Monique and Archevêché "
+        "*Compris dans Sidi-bou-Saïd*, La Soukra and Cherguia *Compris dans Montplaisir*, Forgemol *Compris dans Le "
+        "Bardo*, Mégrine *Compris dans Djebel-Djelloud* (consumption counted with that locality); Salammbo's town "
+        "lighting *Compris dans Carthage* and Dermech's *id.*: each covered cell is NA, `not_applicable`, with the "
+        "text in `text_fr`. Hammam-Lif and Mornag are braced in the kWh and receipts columns (sgt1929): those cells "
+        "are stored under `Hammam-Lif et Mornag`. sgt1930 braces Ste-Monique, Sidi-bou-Saïd, Archevêché and La "
+        "Soukra, Chergula in all columns (one row each, joined label).",
+        "**sgt1930 layout faults.** (1) The kWh *Force* column of view 612 curves into the binding and its lower "
+        "lines sit up to half a line above their names; they were assigned in order and every line was confirmed by "
+        "kWh TOTAL − the three other kWh cells (St-Germain \"4 8\" = 4,8 kWh). (2) In the power columns, from "
+        "Beni-Khalled the TOTAL column runs one line late (Beni-Khalled 12 + » printed 13 = Beni-Khiar's total; "
+        "Fondouk-Djedid 2 + » printed 12 …), and the lighting cells of Oued-Sahil and Bizerte carry 550 and "
+        "221.260 (Bizerte 550 + 400 = 950, its printed total; 221.260 is Gabès's 1929 figure, a line of type left "
+        "standing). Printed values are stored; Oued-Sahil and Bizerte lighting power are flagged `total_mismatch`.",
+        "**Image versus OCR.** Every cell was read on native-resolution crops (each page in three bands at 0.62–0.7 "
+        "scale, the label column stitched to the value columns; small-type kWh cells at 2–5×). The OCR was used as a "
+        "draft and to locate lines. Doubtful reading: sgt1929 Tunis kWh *Particuliers Force* \"3.467,748 8\" in "
+        "condensed type (stored 3467748.8); a reading 3.167.748,8 would reduce Tunis's kWh row failure from "
+        "300.230,8 to 230,8, but the glyph matches the 4 of \"748\".",
+    ],
+    "communes_electricity_production": [
+        "**Tables.** *Production d'électricité*: sgt1935 p. 32 (view 52; view 53, given in the scope as part of the "
+        "table, is a blank page), sgt1936 p. 24 (view 35), sgt1939 p. 24 (view 30). Rows: power stations (*Centrale "
+        "de La Goulette, de Ferryville, de Bizerte, de Béja, de Souk-el-Arba, de Sousse, de Sfax, de Gabès, de "
+        "Gafsa*). Columns: *Production thermique d'énergie électrique* by steam turbines (*Turbines à vapeur*: "
+        "installed power of the plants, kW; energy supplied to the networks at the plant terminals, kWh) and by "
+        "internal-combustion engines (*Moteurs à combustion interne*: same two columns), and *Production totale "
+        "d'énergie électrique aux bornes de sortie de l'usine* (installed power, kW; maximum power produced, kW; "
+        "energy produced, kWh). The total installed power and total energy are row totals (not stored); the "
+        "column-total line is not stored either. Only La Goulette has steam turbines.",
+        "**Year.** No year is printed in the headings; `year` is the edition year (1935, 1936, 1939), as for the "
+        "other once-per-edition tables of these editions. Printed once per edition (rule 5), so there is no overlap.",
+        "**Image versus OCR.** Every cell read on native-resolution crops (0.45–0.6 scale). The OCR was a draft; "
+        "it misreads sgt1936 46.914.360 as 40.914.300 and 1.692.517 as 1.092.517.",
+    ],
+    "communes_electricity_distribution": [
+        "**Tables.** *Distribution d'électricité, Tableau I* (sgt1935 pp. 34–35, views 54–55) and the same table "
+        "without a number in sgt1936 (pp. 26–27, views 37–38) and sgt1939 (pp. 26–27, views 32–33); each a two-page "
+        "spread. Rows: distributors or regions (*Compagnie des Tramways de Tunis (Banlieue de Tunis et dans un rayon "
+        "de 60 km. autour de Tunis)*, *Compagnie du Gaz de Tunis (à Tunis)*, … *Gafsa*). Columns: number of "
+        "subscribers (*Éclairage*, *Autres usages*, *Haute tension*, *TOTAL*), and energy delivered by the networks to "
+        "consumers (*Énergie livrée par les réseaux à la consommation*, kWh): high voltage (*Traction*, *Autres "
+        "usages*, *Services publics*, *TOTAL*), low voltage (*Lumière et usages domestiques*, *Force*, *Éclairage(s) "
+        "publics*, *Services publics*, *TOTAL*), and *TOTAL général haute et basse tension*. The TOTAL columns and the "
+        "column-total line are not stored (checks). `year` = edition year (no year printed). Braced names "
+        "(*Ferryville (Fourniture C. T. T.)* / *(Centrale de Ferryville)*, *Bizerte - La Pêcherie* / *Région de "
+        "Bizerte*) share one line of figures and are stored under the joined label; sgt1939 instead gives "
+        "Ferryville *Continu* and *Alternatif* lines and a *Région de Ferryville* line.",
+        "**HT total without traction in sgt1939.** In sgt1939 the HT TOTAL is *Autres usages* + *Services publics* "
+        "only, and the *TOTAL général* = HT TOTAL + BT TOTAL, so the traction energy (8.432.247 kWh, Tramways) is in "
+        "neither (sgt1935 and sgt1936 include it). The row checks follow the printed definition of each edition.",
+        "**Cells in the binding.** sgt1935 Tramways HT *Autres usages* is printed \"5.900.714\" with the decimal "
+        "digit in the binding; sgt1939's whole HT *Autres usages* column runs into the binding, with only its leading "
+        "digits legible. These cells are solved from the row identity (HT total − the other HT cells) and checked "
+        "against the legible digits (all agree; listed below), flag `derived_from_totals`.",
+        "**Other particular cells.** sgt1936 Bizerte BT *Services publics* prints two figures one above the other "
+        "(106.605 and 39.060, for the two braced names): stored as their sum, 145665, with the printed text in "
+        "`text_fr` (the BT total 1.050.746 includes both). sgt1936 Téboursouk's BT services publics, BT total and "
+        "total général are printed on the line below its name. sgt1936 Tramways subscribers print 10.185 high-voltage "
+        "subscribers (total 20.370; the column total 10.338 confirms it).",
+        "**Image versus OCR.** Every cell read on native-resolution crops (each page in two bands at 0.48–0.62 "
+        "scale; the binding strips of both views stitched; faint cells checked against the row totals). OCR was a "
+        "draft (it misreads e.g. sgt1936 Goulette subscribers 1.496 as 1.406).",
+    ],
+    "communes_electricity_lines": [
+        "**Tables.** *Distribution d'électricité, Tableau II* (sgt1935 p. 36, view 56), and the same table without "
+        "a number in sgt1936 (p. 25, view 36) and sgt1939 (p. 25, view 31): length of the lines (*Longueurs des "
+        "lignes*, metres) at high voltage (*Haute tension*) and low voltage (*Basse tension*), by power station "
+        "(*Centrales*, braced over the towns it serves) and town or region electrified (*Villes ou régions "
+        "électrifiées*). Column totals (and in sgt1936 a grand total HT + BT, 2.168.093) are not stored. `year` = "
+        "edition year (no year printed). sgt1935 braces *Bizerte-Pêcherie* and *Région de Bizerte* into one line "
+        "(joined label); sgt1936 and sgt1939 give them separately.",
+        "**Image versus OCR.** Every cell read on native-resolution crops (0.45–0.5 scale); OCR was a draft only "
+        "(it is poor on sgt1939).",
+    ],
+}
+
+
+def el_notes(name, rows, derived):
+    dims = EL_DIMS[name]
+    doc = dict(SV_BASECOLS)
+    doc.update(year="year of the figures (see below)", locality="locality as printed",
+               centrale="power station as printed", region="distributor or region as printed (braced names joined "
+                                                                "with ' + ')",
+               area="town or region electrified, as printed", measure="English code of the printed column",
+               measure_fr="column heading as printed (French), with its group heading", unit="unit of `value`: "
+               "`m`, `kW`, `kWh`, `count` or `francs`",
+               value="number in `unit`, as printed (decimals kept; francs with centimes); printed » = 0",
+               text_fr="text printed instead of a number (or the two figures of a double cell)",
+               flag="empty; `not_applicable` (text instead of a number: value NA); `derived_from_totals` (cell "
+                    "partly in the binding, solved from the row identity and checked against its legible digits); "
+                    "`total_mismatch` (printed value kept; a row check and a column check, or the evident line "
+                    "fault described below, show it inconsistent)")
+    L = sv_header(EL_TITLE[name][0], EL_TITLE[name][1], rows, "communes_elec_<edition>.txt",
+                  "Printed once per edition (SPEC_ADDENDUM rule 5); no year is printed twice, so there is no overlap "
+                  "comparison.", [(c, doc[c]) for c in ["census", "table_id", "gallica_ark", "source_page",
+                                                        "gallica_view", "year"] + dims + ["value", "text_fr", "flag"]])
+    for p_ in EL_TEXT[name]:
+        L += [p_, ""]
+    tp = EL_TOPIC[name]
+    L += ["## Validation", "",
+          f"- Checks (row totals, column-total line, solved cells against legible digits): {SV_CHK.n[tp]}; passed "
+          f"{SV_CHK.n[tp] - len(SV_CHK.fail[tp])}; failed {len(SV_CHK.fail[tp])}. Every failure was re-read on a "
+          "native-resolution crop; printed values are kept."]
+    L += [f"  - {x}" for x in SV_CHK.fail[tp]]
+    L += EL_FAIL_TEXT.get(name, [])
+    dv = [d for d in derived if EL_FILES[d[1]] == name]
+    if dv:
+        L += [f"- Cells solved from the row identity ({len(dv)}, `derived_from_totals` except the Totaux line, "
+              "which is not stored):"]
+        L += [f"  - {d[0]} {d[2]} {d[3]}: {d[4]} (legible digits {d[5]})" for d in dv]
+    fl = [r for r in rows if r["flag"] and r["flag"] != "not_applicable"]
+    na = [r for r in rows if r["flag"] == "not_applicable"]
+    L += [f"- Flagged cells: not_applicable {len(na)} (text cells, see above)"
+          + "".join(f"; {k} {sum(r['flag'] == k for r in fl)}" for k in sorted({r['flag'] for r in fl})) + "."]
+    L += [f"  - {r['census']} {r.get('locality') or r.get('region') or r.get('centrale')} {r['measure']} = "
+          f"{r['value']} ({r['flag']})" for r in fl]
+    return "\n".join(L) + "\n"
+
+
+EL_FAIL_TEXT = {
+    "communes_electricity_networks": [
+        "  The failures are in the print: e.g. sgt1929 Mateur receipts TOTAL 22.562,52 (= its town-lighting cell) for "
+        "292.562,52, Sousse kWh TOTAL 323.925 for 723.925, Sfax 527.120,9 for 1.437.120,9; sgt1930 the power-column "
+        "line fault described above (Beni-Khalled to Bizerte). Except for the two sgt1930 lighting cells, no stored "
+        "cell can be singled out (only row totals are printed), so none is flagged.",
+    ],
+    "communes_electricity_production": [
+        "  sgt1939: the printed column total of the energy produced, 68.715.636 kWh, is 2.000.000 below the sum of "
+        "the stations (70.715.636) and below the sum of its own line (57.966.290 + 12.749.346); it is a total line "
+        "(not stored), so no stored cell is flagged.",
+    ],
+    "communes_electricity_distribution": [
+        "  Pinned cells (`total_mismatch`): sgt1935 Tramways subscribers *Autres usages* 745 (row and column checks "
+        "both imply 475); sgt1936 Tramways BT *Force* 8.374.526 (both imply 837.452,6); sgt1939 Ferryville "
+        "*Alternatif* BT *Services publics* 27.984,6 (both imply 27.894,6). **sgt1939 BT totals:** in 12 of the 18 lines "
+        "(besides Ferryville Alternatif) the BT TOTAL exceeds the sum of the four printed BT columns (Tramways by 1.496.466, Sousse 138.234, Sfax "
+        "142.678 …; the column total by 1.891.193), while each BT column agrees with its own column total, and HT "
+        "TOTAL + BT TOTAL = TOTAL général on every line. The BT TOTAL therefore includes some low-voltage energy "
+        "not shown in any printed column; no cell is wrong and none is flagged.",
+    ],
+}
+
+
+def build_services(write=True, verbose=False):
+    rows, compared, diffs, sales, _ = build_water()
+    SV_VAL["communes_water_pipes"] = dict(rows=len(rows), checks=0, overlap_compared=compared,
+                                          overlap_diffs=[list(map(str, d)) for d in diffs])
+    SV_VAL["communes_water_sales"] = dict(rows=len(sales), checks=0)
+    res = {"communes_water_pipes": rows, "communes_water_sales": sales}
+    notes = {"communes_water_pipes": water_notes(rows, compared, diffs, sales),
+             "communes_water_sales": sales_notes(sales)}
+    grows, gcomp, gdiffs, gprint = build_gasop()
+    gt = gas_tunis_printings()
+    g7, g7c, g7s, g7cr = build_gas_1937(gt)
+    gas_cross(gprint, gt)
+    res["communes_gas_operation"] = grows
+    res["communes_gas_tunis_1937_1939"] = g7
+    notes["communes_gas_operation"] = gasop_notes(grows, gcomp, gdiffs)
+    notes["communes_gas_tunis_1937_1939"] = gas1937_notes(g7, g7c, g7s, g7cr)
+    SV_VAL["communes_gas_operation"] = dict(rows=len(grows), checks=SV_CHK.n["gasop"], failed=SV_CHK.fail["gasop"],
+                                            cross_checks=SV_CHK.n["gas_cross"], cross_failed=SV_CHK.fail["gas_cross"],
+                                            overlap_compared=gcomp, overlap_diffs=[list(map(str, d)) for d in gdiffs])
+    SV_VAL["communes_gas_tunis_1937_1939"] = dict(rows=len(g7), checks=SV_CHK.n["gas_1937"],
+                                                  failed=SV_CHK.fail["gas_1937"], overlap_compared=g7c,
+                                                  overlap_equal=g7s)
+    eres, derived = build_electricity()
+    for name, rs in eres.items():
+        res[name] = rs
+        notes[name] = el_notes(name, rs, derived)
+        tp = EL_TOPIC[name]
+        SV_VAL[name] = dict(rows=len(rs), checks=SV_CHK.n[tp], failed=SV_CHK.fail[tp],
+                            solved_cells=[list(map(str, d)) for d in derived if EL_FILES[d[1]] == name])
+    if write:
+        for name, rs in res.items():
+            sv_write_csv(name, rs)
+            (OUT / f"{name}.md").write_text(notes[name])
+        (OUT / "communes_validation_services.json").write_text(
+            json.dumps(SV_VAL, indent=1, ensure_ascii=False) + "\n")
+    if verbose:
+        for name, rs in res.items():
+            print(f"{name}: {len(rs)} rows")
+        print(f"  water overlap: {compared} compared, {len(diffs)} differences")
+    return res
+# @@SERVICES END@@
+
+
 if __name__ == "__main__":
     cmd = sys.argv[1] if len(sys.argv) > 1 else "check"
     build_more(write=(cmd == "build"), verbose=(cmd == "check"))
     build_slaughter(write=(cmd == "build"), verbose=(cmd == "check"))
+    build_services(write=(cmd == "build"), verbose=(cmd == "check"))
     res = build(write=(cmd == "build"))
     for name, r in res.items():
         print(f"{name}: {len(r['rows'])} rows; checks {r['checks']['n']}, failed {len(r['checks']['fail'])}; "

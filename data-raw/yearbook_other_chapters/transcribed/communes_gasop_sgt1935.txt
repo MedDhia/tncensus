@@ -1,0 +1,26 @@
+# sgt1935 p.31, view 51: "Exploitation du gaz à Tunis (1934-1935)". Every cell read on native crops (0.5 and 0.9
+# scale); OCR agrees. Items: emission (m3), subscribers at 31 Dec, m3 consumed by use (+ printed TOTAL), length of
+# mains in service at 31 Dec by diameter in mm (metres; + printed TOTAL).
+@gasop view=51 page=31 years=1934 1935
+emission | 5219740 5676150
+subscribers | 8014 8677
+cons_public | 29169 23564
+cons_private_roads | 3559 3530
+cons_ordinary | 4552083 4878933
+cons_reduced | 238604 250870
+cons_TOTAL | 4823415 5156897
+len_500 | 1179 1179
+len_400 | 2015 2015
+len_350 | 643 643
+len_300 | 4102 4312
+len_250 | 6814 6814
+len_200 | 9121 10710
+len_175 | 550 550
+len_150 | 15198 17441
+len_100 | 8229 8491
+len_90 | 1220 1220
+len_80 | 23843 27848
+len_70 | 30996 5080
+len_60 | 5080 33403
+len_50 | 20140 19840
+len_TOTAL | 129130 139546

@@ -1,0 +1,28 @@
+# sgt1929 p.50, view 78: "Service des eaux (Régies d'État) a) Développement des canalisations; vente d'eau
+# (1920-1929)". Only the state-run (régie) services: 23 localities (no Nabeul, Ferryville, Mateur, Tozeur, Le Kef,
+# Béja, Tabarka, Kairouan, Téboursouk, Medjez-el-Bab, Gabès). Read on native crops (whole table 0.45 scale;
+# labels + 1924-1929 + sales at 0.8). Dar Chabane 1926: cell blank (stored as not printed).
+@water view=78 page=50 years=1920-1929 sales=1929
+Tunis | 236.371 244.151 262.287 272.318 281.- 287.107 302.721 309.016 319.826 302.511 6560919.10
+Bizerte | 11.251 11.347 11.514 12.380 12.380 12.380 12.380 0.345 0.337 19.370 300017.15
+Sousse | 222.845 222.878 223.430 223.430 223.430 223.790 224.360 0.213 0.225 0.642 711320.35
+Mahdia | » » 11.220 11.220 11.220 11.220 11.220 » 11.245 » 9100.00
+Thala | » » 2.674 2.674 2.674 2.674 2.674 » » 0.070 3275.50
+Sfax | 199.949 199.949 200.349 203.629 205.549 210.031 211.610 0.300 » 1.736 612327.55
+Tebourba | 1.690 1.690 1.690 1.726 1.760 3.498 5.258 » 1.738 1.826 19299.00
+Enfidaville | » » » » » 13.610 13.610 » 1.210 » 5574.70
+Pichon | » » » » » 0.680 1.116 » 0.532 » 811.00
+Feriana | » » » » » 3.414 3.414 » » » 1085.00
+M'Rira Fouchai | » » » » » 10.060 10.060 » » 15.600 6897.60
+Hammamet | » » » » » 7.700 7.700 9.017 8.593 9.017 8914.35
+Kelibia | » » » » » 2.800 2.800 2.850 3.714 2.850 1057.60
+Menzel Temime | » » » » » 2.040 2.040 2.392 2.022 2.392 1815.60
+Sbeïtla | » » » » » 3.037 4.230 » » 0.060 2879.50
+Gafsa | » » » » » 3.642 3.642 » » » 35517.50
+Dar Chabane | » » » » » » . 4.622 4.774 5.044 1535.40
+Aguareb | » » » » » » » 9.000 9.000 » »
+Djebeniana | » » » » » » » » 1.700 » »
+Monastir | » » » » » » » » » » »
+M'Saken | » » » » » » » » » » »
+Maktar | » » » » » » » » » » »
+Le Sers | » » » » » » » » 0.319 » »

@@ -1,0 +1,13 @@
+census,table_id,gallica_ark,source_page,gallica_view,year,commune,lighting,lighting_fr,measure,measure_fr,value,flag
+sgt1939,gastunis,bpt6k9105739w,23,29,1937,Tunis,public_lighting,Éclairage public,consumption_m3,Consommation (mètres cubes),15396,
+sgt1939,gastunis,bpt6k9105739w,23,29,1937,Tunis,public_lighting,Éclairage public,receipts,Recettes (fr. c.),41548.64,
+sgt1939,gastunis,bpt6k9105739w,23,29,1937,Tunis,private_lighting,Abonnés,consumption_m3,Consommation (mètres cubes),6130451,
+sgt1939,gastunis,bpt6k9105739w,23,29,1937,Tunis,private_lighting,Abonnés,receipts,Recettes (fr. c.),6181091.63,
+sgt1939,gastunis,bpt6k9105739w,23,29,1938,Tunis,public_lighting,Éclairage public,consumption_m3,Consommation (mètres cubes),12742,
+sgt1939,gastunis,bpt6k9105739w,23,29,1938,Tunis,public_lighting,Éclairage public,receipts,Recettes (fr. c.),17553.00,
+sgt1939,gastunis,bpt6k9105739w,23,29,1938,Tunis,private_lighting,Abonnés,consumption_m3,Consommation (mètres cubes),6270005,
+sgt1939,gastunis,bpt6k9105739w,23,29,1938,Tunis,private_lighting,Abonnés,receipts,Recettes (fr. c.),8835293.00,
+sgt1939,gastunis,bpt6k9105739w,23,29,1939,Tunis,public_lighting,Éclairage public,consumption_m3,Consommation (mètres cubes),7230,
+sgt1939,gastunis,bpt6k9105739w,23,29,1939,Tunis,public_lighting,Éclairage public,receipts,Recettes (fr. c.),10845.00,
+sgt1939,gastunis,bpt6k9105739w,23,29,1939,Tunis,private_lighting,Abonnés,consumption_m3,Consommation (mètres cubes),6018754,
+sgt1939,gastunis,bpt6k9105739w,23,29,1939,Tunis,private_lighting,Abonnés,receipts,Recettes (fr. c.),9212668.00,

@@ -1,0 +1,12 @@
+# Service des eaux: Développement des canalisations ; vente d'eau (1913-1922). sgt1922 p.38, view 62.
+# Lengths printed in two sub-columns "km. m." -> written km.mmm ; » = 0 ; "281.-" = km printed, metres blank.
+# Sales: Recettes en <year>, francs.centimes ; » printed = 0.
+# Read on native-resolution crop (whole table, 0.6 scale); OCR agrees.
+@water view=62 page=38 years=1913-1922 sales=1922
+Tunis | 217.116 226.616 227.968 228.746 228.746 229.508 231.068 236.371 244.151 262.287 1961485.50
+Bizerte | 11.222 11.309 11.309 11.391 11.391 11.391 11.391 15.251 15.347 15.514 190890.54
+Sousse | 217.996 221.027 221.312 221.848 221.922 222.652 222.652 222.845 222.878 223.430 317452.80
+Mahdia | » » » » » » » » » 11.220 3500.00
+Thala | » » » » » » » » » 2.674 3929.60
+Sfax | 26.800 196.359 196.359 196.359 196.359 197.834 199.949 199.949 199.949 200.349 262361.65
+Tebourba | » » » » » » » 1.690 1.690 1.690 3812.30

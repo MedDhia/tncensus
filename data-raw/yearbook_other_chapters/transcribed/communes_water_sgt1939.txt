@@ -1,0 +1,56 @@
+# sgt1939 p.22, view 28: "Service des eaux (Régies d'État) Développement des canalisations, vente d'eau": lengths
+# 1938 and 1939, sales "Recette en 1939". Every cell read on native crops (0.6 scale). Decimals printed after a
+# space ("916.541 50" = 916 km 541,50 m). Sfax 1938 printed "843 40" and 1939 "1.002 30" (i.e. 843,40 m and
+# 1.002,30 m, although 1936 printed 225.741): stored as printed. Footnote (1) on Aïn-Kerma's sales: "Ne
+# fonctionne pas encore" (not yet working).
+@water view=28 page=22 years=1938-1939 sales=1939
+Tunis | 916.541,50 920.571,50 17871121.24
+Bizerte | 127.031 128.671 1360897.60
+Sousse, Kairouan et villages du Sahel | 347.166 347.295 1860595.45
+Thala | 2.507 2.507 30546.60
+Sfax | 0.843,40 1.002,30 1729730.56
+Tébourba | 2.094 2.094 65869.10
+Enfidaville | 13.747,40 13.747,40 39752.10
+Pichon | 0.572 0.572 3551.05
+Fériana | 3.994 3.994 6210.00
+Hammamet | 10.396 10.396 59351.98
+Kélibia | 2.850 2.850 3350.10
+Sbeïtla | 2.200 2.200 33262.90
+Dar Chabane El Fehri | 4.992 4.992 4398.60
+Aguareb | 9.000 9.000 1627.85
+Djebeniana | 1.560 1.560 1325.10
+Maktar | 0.300 » 12800.00
+Le Sers | 2.100 2.100 »
+Sedjenane | 4.257 4.257 10197.10
+Bou-Thadi | 1.000 1.000 6325.00
+Aïn-el-Asker | 0.920 0.920 2924.80
+Armand Colin | 3.022 3.022 »
+Eddekhila | 2.274 2.274 407.50
+Zriba Segermès | 43.655 43.655 30884.50
+Bir-Méroua | 0.720 0.720 »
+Bou-Arada | 5.200 5.200 19896.70
+Le Goubellat | 0.540 0.540 821.40
+Bou-Ficha | 14.219 14.219 10025.60
+Gafour | 1.562 1.763,50 15418.30
+Siliana | 0.428 » 12200.00
+Tadjérouine | 1.300 1.300 1222.50
+Kalaat-es-Senam | 3.170 3.170 2037.50
+Chebaou | 1.375 1.375 447.50
+Djedeïda | 2.285 2.285 19192.50
+Chaouat | 1.134 1.134 4389.30
+Massicault | » 0.600 776.50
+Nefta | 2.846 2.846 31989.54
+Revoil | 8.160 8.160 5765.00
+La Mornaghia | 0.067 0.067 2468.80
+Sidi-Bou-Zid | 1.827,15 1.827,15 5710.94
+Sbikha | 0.380 0.380 1463.40
+El-Aroussa | 7.700 7.700 3288.70
+Sened | » » 933.40
+Porto-Farina | 7.420 7.420 11365.33
+Ousseltia | 1.600 1.600 2405.20
+Kasserine | 1.428 1.428 6038.60
+Aïn-Kerma | 9.000 9.000 T:(1)_Ne_fonctionne_pas_encore
+Bathan-Zraïb | 18.900 18.900 8951.20
+Testour | 2.105 2.105 3593.05
+Zeramedine | 0.125 0.550 »
+Maknassy | » » 6240.00

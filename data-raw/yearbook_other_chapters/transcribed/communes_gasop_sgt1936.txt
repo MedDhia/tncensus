@@ -1,0 +1,25 @@
+# sgt1936 p.23, view 34: "Exploitation du gaz à Tunis" (1935-1936). Every cell read on native crops (0.6 scale);
+# the OCR reads the 50 mm line as "90".
+@gasop view=34 page=23 years=1935 1936
+emission | 5676150 6012470
+subscribers | 8677 9579
+cons_public | 23564 19829
+cons_private_roads | 3530 1010
+cons_ordinary | 4878933 5267647
+cons_reduced | 250870 269563
+cons_TOTAL | 5156897 5548049
+len_500 | 1179 1179
+len_400 | 2015 2015
+len_350 | 643 643
+len_300 | 4312 4312
+len_250 | 6814 6814
+len_200 | 10710 10800
+len_175 | 550 550
+len_150 | 17441 20012
+len_100 | 8491 10890
+len_90 | 1220 1310
+len_80 | 27848 30193
+len_70 | 5080 5080
+len_60 | 33403 36322
+len_50 | 19840 19840
+len_TOTAL | 139546 150007

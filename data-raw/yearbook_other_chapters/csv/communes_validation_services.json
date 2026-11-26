@@ -1,0 +1,1034 @@
+{
+ "communes_water_pipes": {
+  "rows": 1084,
+  "checks": 0,
+  "overlap_compared": 1487,
+  "overlap_diffs": [
+   [
+    "1920",
+    "Bizerte",
+    "sgt1922",
+    "15.251",
+    "sgt1929",
+    "11.251"
+   ],
+   [
+    "1921",
+    "Bizerte",
+    "sgt1922",
+    "15.347",
+    "sgt1930",
+    "11.347"
+   ],
+   [
+    "1922",
+    "Bizerte",
+    "sgt1922",
+    "15.514",
+    "sgt1930",
+    "11.514"
+   ],
+   [
+    "1925",
+    "Tunis",
+    "sgt1925",
+    "571.107",
+    "sgt1930",
+    "287.107"
+   ],
+   [
+    "1925",
+    "Ferryville",
+    "sgt1925",
+    "9.104,50",
+    "sgt1928",
+    "9.104"
+   ],
+   [
+    "1925",
+    "Sbeitla",
+    "sgt1925",
+    "3.037",
+    "sgt1930",
+    "»"
+   ],
+   [
+    "1925",
+    "Sbeitla",
+    "sgt1926",
+    "3.037",
+    "sgt1930",
+    "»"
+   ],
+   [
+    "1925",
+    "Sbeitla",
+    "sgt1927",
+    "3.037",
+    "sgt1930",
+    "»"
+   ],
+   [
+    "1925",
+    "Sbeitla",
+    "sgt1928",
+    "3.037",
+    "sgt1930",
+    "»"
+   ],
+   [
+    "1925",
+    "Sbeitla",
+    "sgt1929",
+    "3.037",
+    "sgt1930",
+    "»"
+   ],
+   [
+    "1926",
+    "Sbeitla",
+    "sgt1926",
+    "4.230",
+    "sgt1935",
+    "»"
+   ],
+   [
+    "1926",
+    "Sbeitla",
+    "sgt1927",
+    "4.230",
+    "sgt1935",
+    "»"
+   ],
+   [
+    "1926",
+    "Sbeitla",
+    "sgt1928",
+    "4.230",
+    "sgt1935",
+    "»"
+   ],
+   [
+    "1926",
+    "Sbeitla",
+    "sgt1929",
+    "4.230",
+    "sgt1935",
+    "»"
+   ],
+   [
+    "1926",
+    "Béja",
+    "sgt1926",
+    "3.000",
+    "sgt1935",
+    "»"
+   ],
+   [
+    "1926",
+    "Béja",
+    "sgt1927",
+    "3.000",
+    "sgt1935",
+    "»"
+   ],
+   [
+    "1926",
+    "Béja",
+    "sgt1928",
+    "3.000",
+    "sgt1935",
+    "»"
+   ],
+   [
+    "1926",
+    "Tabarka",
+    "sgt1926",
+    "7.000",
+    "sgt1935",
+    "»"
+   ],
+   [
+    "1926",
+    "Tabarka",
+    "sgt1927",
+    "7.000",
+    "sgt1935",
+    "»"
+   ],
+   [
+    "1926",
+    "Tabarka",
+    "sgt1928",
+    "7.000",
+    "sgt1935",
+    "»"
+   ],
+   [
+    "1927",
+    "Bizerte",
+    "sgt1927",
+    "0.345",
+    "sgt1935",
+    "12.725"
+   ],
+   [
+    "1927",
+    "Bizerte",
+    "sgt1928",
+    "0.345",
+    "sgt1935",
+    "12.725"
+   ],
+   [
+    "1927",
+    "Bizerte",
+    "sgt1929",
+    "0.345",
+    "sgt1935",
+    "12.725"
+   ],
+   [
+    "1927",
+    "Sousse, Kairouan et villages du Sahel",
+    "sgt1927",
+    "0.213",
+    "sgt1935",
+    "183.837"
+   ],
+   [
+    "1927",
+    "Sousse, Kairouan et villages du Sahel",
+    "sgt1928",
+    "0.213",
+    "sgt1935",
+    "183.837"
+   ],
+   [
+    "1927",
+    "Sousse, Kairouan et villages du Sahel",
+    "sgt1929",
+    "0.213",
+    "sgt1935",
+    "183.837"
+   ],
+   [
+    "1927",
+    "Mahdia",
+    "sgt1927",
+    "»",
+    "sgt1935",
+    "11.220"
+   ],
+   [
+    "1927",
+    "Mahdia",
+    "sgt1928",
+    "»",
+    "sgt1935",
+    "11.220"
+   ],
+   [
+    "1927",
+    "Mahdia",
+    "sgt1929",
+    "»",
+    "sgt1935",
+    "11.220"
+   ],
+   [
+    "1927",
+    "Thala",
+    "sgt1927",
+    "»",
+    "sgt1935",
+    "2.674"
+   ],
+   [
+    "1927",
+    "Thala",
+    "sgt1928",
+    "»",
+    "sgt1935",
+    "2.674"
+   ],
+   [
+    "1927",
+    "Thala",
+    "sgt1929",
+    "»",
+    "sgt1935",
+    "2.674"
+   ],
+   [
+    "1927",
+    "Sfax",
+    "sgt1927",
+    "0.300",
+    "sgt1935",
+    "211.910"
+   ],
+   [
+    "1927",
+    "Sfax",
+    "sgt1928",
+    "0.300",
+    "sgt1935",
+    "211.910"
+   ],
+   [
+    "1927",
+    "Sfax",
+    "sgt1929",
+    "0.300",
+    "sgt1935",
+    "211.910"
+   ],
+   [
+    "1927",
+    "Tebourba",
+    "sgt1927",
+    "»",
+    "sgt1935",
+    "1.826"
+   ],
+   [
+    "1927",
+    "Tebourba",
+    "sgt1928",
+    "»",
+    "sgt1935",
+    "1.826"
+   ],
+   [
+    "1927",
+    "Tebourba",
+    "sgt1929",
+    "»",
+    "sgt1935",
+    "1.826"
+   ],
+   [
+    "1927",
+    "Enfidaville",
+    "sgt1927",
+    "»",
+    "sgt1935",
+    "13.610"
+   ],
+   [
+    "1927",
+    "Enfidaville",
+    "sgt1928",
+    "»",
+    "sgt1935",
+    "13.610"
+   ],
+   [
+    "1927",
+    "Enfidaville",
+    "sgt1929",
+    "»",
+    "sgt1935",
+    "13.610"
+   ],
+   [
+    "1927",
+    "Pichon",
+    "sgt1927",
+    "»",
+    "sgt1935",
+    "1.116"
+   ],
+   [
+    "1927",
+    "Pichon",
+    "sgt1928",
+    "»",
+    "sgt1935",
+    "1.116"
+   ],
+   [
+    "1927",
+    "Pichon",
+    "sgt1929",
+    "»",
+    "sgt1935",
+    "1.116"
+   ],
+   [
+    "1927",
+    "Feriana",
+    "sgt1927",
+    "»",
+    "sgt1935",
+    "3.414"
+   ],
+   [
+    "1927",
+    "Feriana",
+    "sgt1928",
+    "»",
+    "sgt1935",
+    "3.414"
+   ],
+   [
+    "1927",
+    "Feriana",
+    "sgt1929",
+    "»",
+    "sgt1935",
+    "3.414"
+   ],
+   [
+    "1927",
+    "M'Rira Fouchana (Mohamédia)",
+    "sgt1927",
+    "»",
+    "sgt1935",
+    "10.060"
+   ],
+   [
+    "1927",
+    "M'Rira Fouchana (Mohamédia)",
+    "sgt1928",
+    "»",
+    "sgt1935",
+    "10.060"
+   ],
+   [
+    "1927",
+    "M'Rira Fouchana (Mohamédia)",
+    "sgt1929",
+    "»",
+    "sgt1935",
+    "10.060"
+   ],
+   [
+    "1927",
+    "Gafsa",
+    "sgt1927",
+    "»",
+    "sgt1935",
+    "3.642"
+   ],
+   [
+    "1927",
+    "Gafsa",
+    "sgt1928",
+    "»",
+    "sgt1935",
+    "3.642"
+   ],
+   [
+    "1927",
+    "Gafsa",
+    "sgt1929",
+    "»",
+    "sgt1935",
+    "3.642"
+   ],
+   [
+    "1927",
+    "Béja",
+    "sgt1927",
+    "0.611",
+    "sgt1935",
+    "»"
+   ],
+   [
+    "1927",
+    "Béja",
+    "sgt1928",
+    "0.611",
+    "sgt1935",
+    "»"
+   ],
+   [
+    "1928",
+    "Bizerte",
+    "sgt1928",
+    "0.337",
+    "sgt1935",
+    "13.062"
+   ],
+   [
+    "1928",
+    "Bizerte",
+    "sgt1929",
+    "0.337",
+    "sgt1935",
+    "13.062"
+   ],
+   [
+    "1928",
+    "Sousse, Kairouan et villages du Sahel",
+    "sgt1928",
+    "0.225",
+    "sgt1935",
+    "183.837"
+   ],
+   [
+    "1928",
+    "Sousse, Kairouan et villages du Sahel",
+    "sgt1929",
+    "0.225",
+    "sgt1935",
+    "183.837"
+   ],
+   [
+    "1928",
+    "Thala",
+    "sgt1928",
+    "»",
+    "sgt1935",
+    "2.674"
+   ],
+   [
+    "1928",
+    "Thala",
+    "sgt1929",
+    "»",
+    "sgt1935",
+    "2.674"
+   ],
+   [
+    "1928",
+    "Sfax",
+    "sgt1928",
+    "»",
+    "sgt1935",
+    "211.910"
+   ],
+   [
+    "1928",
+    "Sfax",
+    "sgt1929",
+    "»",
+    "sgt1935",
+    "211.910"
+   ],
+   [
+    "1928",
+    "Tebourba",
+    "sgt1928",
+    "1.738",
+    "sgt1935",
+    "1.826"
+   ],
+   [
+    "1928",
+    "Tebourba",
+    "sgt1929",
+    "1.738",
+    "sgt1935",
+    "1.826"
+   ],
+   [
+    "1928",
+    "Enfidaville",
+    "sgt1928",
+    "1.210",
+    "sgt1935",
+    "14.820"
+   ],
+   [
+    "1928",
+    "Enfidaville",
+    "sgt1929",
+    "1.210",
+    "sgt1935",
+    "14.820"
+   ],
+   [
+    "1928",
+    "Pichon",
+    "sgt1928",
+    "0.532",
+    "sgt1935",
+    "1.648"
+   ],
+   [
+    "1928",
+    "Pichon",
+    "sgt1929",
+    "0.532",
+    "sgt1935",
+    "1.648"
+   ],
+   [
+    "1928",
+    "Feriana",
+    "sgt1928",
+    "»",
+    "sgt1935",
+    "3.414"
+   ],
+   [
+    "1928",
+    "Feriana",
+    "sgt1929",
+    "»",
+    "sgt1935",
+    "3.414"
+   ],
+   [
+    "1928",
+    "M'Rira Fouchana (Mohamédia)",
+    "sgt1928",
+    "»",
+    "sgt1935",
+    "10.060"
+   ],
+   [
+    "1928",
+    "M'Rira Fouchana (Mohamédia)",
+    "sgt1929",
+    "»",
+    "sgt1935",
+    "10.060"
+   ],
+   [
+    "1928",
+    "Hammamet",
+    "sgt1928",
+    "8.593",
+    "sgt1935",
+    "9.017"
+   ],
+   [
+    "1928",
+    "Hammamet",
+    "sgt1929",
+    "8.593",
+    "sgt1935",
+    "9.017"
+   ],
+   [
+    "1928",
+    "Kelibia",
+    "sgt1928",
+    "3.714",
+    "sgt1935",
+    "2.850"
+   ],
+   [
+    "1928",
+    "Kelibia",
+    "sgt1929",
+    "3.714",
+    "sgt1935",
+    "2.850"
+   ],
+   [
+    "1928",
+    "Gafsa",
+    "sgt1928",
+    "»",
+    "sgt1935",
+    "3.642"
+   ],
+   [
+    "1928",
+    "Gafsa",
+    "sgt1929",
+    "»",
+    "sgt1935",
+    "3.642"
+   ],
+   [
+    "1928",
+    "Béja",
+    "sgt1928",
+    "0.360",
+    "sgt1935",
+    "»"
+   ],
+   [
+    "1928",
+    "Le Sers",
+    "sgt1928",
+    "0.319",
+    "sgt1935",
+    "»"
+   ],
+   [
+    "1928",
+    "Le Sers",
+    "sgt1929",
+    "0.319",
+    "sgt1935",
+    "»"
+   ],
+   [
+    "1929",
+    "Tunis",
+    "sgt1929",
+    "302.511",
+    "sgt1935",
+    "p:319.8"
+   ],
+   [
+    "1929",
+    "Sousse, Kairouan et villages du Sahel",
+    "sgt1929",
+    "0.642",
+    "sgt1935",
+    "p:183.8"
+   ],
+   [
+    "1929",
+    "Mahdia",
+    "sgt1929",
+    "»",
+    "sgt1935",
+    "p:11.2"
+   ],
+   [
+    "1929",
+    "Thala",
+    "sgt1929",
+    "0.070",
+    "sgt1935",
+    "p:2.7"
+   ],
+   [
+    "1929",
+    "Sfax",
+    "sgt1929",
+    "1.736",
+    "sgt1935",
+    "p:213.6"
+   ],
+   [
+    "1929",
+    "Enfidaville",
+    "sgt1929",
+    "»",
+    "sgt1935",
+    "p:14.8"
+   ],
+   [
+    "1929",
+    "Pichon",
+    "sgt1929",
+    "»",
+    "sgt1935",
+    "p:1.6"
+   ],
+   [
+    "1929",
+    "Feriana",
+    "sgt1929",
+    "»",
+    "sgt1935",
+    "p:3.4"
+   ],
+   [
+    "1929",
+    "Sbeitla",
+    "sgt1929",
+    "0.060",
+    "sgt1935",
+    "»"
+   ],
+   [
+    "1929",
+    "Gafsa",
+    "sgt1929",
+    "»",
+    "sgt1935",
+    "p:3.6"
+   ],
+   [
+    "1929",
+    "Dar Chabane El-Fehri",
+    "sgt1929",
+    "5.044",
+    "sgt1935",
+    "p:4.8"
+   ],
+   [
+    "1929",
+    "Aguareb",
+    "sgt1929",
+    "»",
+    "sgt1935",
+    "p:9.0"
+   ],
+   [
+    "1929",
+    "Djebeniana",
+    "sgt1929",
+    "»",
+    "sgt1935",
+    "p:1.7"
+   ],
+   [
+    "1935",
+    "Thala",
+    "sgt1935",
+    "8.979,78",
+    "sgt1936",
+    "2.507"
+   ],
+   [
+    "1935",
+    "Fériana",
+    "sgt1935",
+    "3.557,20",
+    "sgt1936",
+    "3.994"
+   ],
+   [
+    "1935",
+    "M'Rira-Fouchana (Mohamédia)",
+    "sgt1935",
+    "»",
+    "sgt1936",
+    "T:constitué_en_Syndicat"
+   ],
+   [
+    "1935",
+    "Sbeïtla",
+    "sgt1935",
+    "»",
+    "sgt1936",
+    "2.200"
+   ],
+   [
+    "1935",
+    "Gafsa",
+    "sgt1935",
+    "»",
+    "sgt1936",
+    "5.001"
+   ],
+   [
+    "1935",
+    "Armand Colin",
+    "sgt1935",
+    "1.303",
+    "sgt1936",
+    "0.920"
+   ],
+   [
+    "1935",
+    "Eddekhila",
+    "sgt1935",
+    "2.274",
+    "sgt1936",
+    "1.303"
+   ],
+   [
+    "1935",
+    "Sidi-bou-Ali",
+    "sgt1935",
+    "2.052",
+    "sgt1936",
+    "2.032"
+   ],
+   [
+    "1935",
+    "Souk-el-Arba",
+    "sgt1935",
+    "23.187",
+    "sgt1936",
+    "12.862"
+   ],
+   [
+    "1935",
+    "Souk-el-Khemis",
+    "sgt1935",
+    "12.862",
+    "sgt1936",
+    "23.187"
+   ]
+  ]
+ },
+ "communes_water_sales": {
+  "rows": 338,
+  "checks": 0
+ },
+ "sales_1927_vs_1926": {
+  "compared": 24,
+  "equal": [
+   "tozeur",
+   "lekef"
+  ]
+ },
+ "communes_gas_operation": {
+  "rows": 72,
+  "checks": 10,
+  "failed": [
+   "sgt1936 p.23 1936: m3 consumed by use vs TOTAL: cells give 5558049, printed 5548049 (difference -10000)",
+   "sgt1936 p.23 1936: lengths by diameter vs TOTAL: cells give 149960, printed 150007 (difference 47)"
+  ],
+  "cross_checks": 18,
+  "cross_failed": [
+   "sgt1936 1936: Exploitation TOTAL vs GAZ Consommations cons_total: cells give 5548049, printed 5558049 (difference 10000)"
+  ],
+  "overlap_compared": 22,
+  "overlap_diffs": []
+ },
+ "communes_gas_tunis_1937_1939": {
+  "rows": 12,
+  "checks": 10,
+  "failed": [
+   "sgt1939 p.23 1936 rec: public + subscribers vs total: cells give 7835770.64, printed 4835770.64 (difference -3000000.00)"
+  ],
+  "overlap_compared": 18,
+  "overlap_equal": 18
+ },
+ "communes_electricity_networks": {
+  "rows": 1190,
+  "checks": 302,
+  "failed": [
+   "sgt1929 p.52 Tunis: kwh_pl + kwh_pf + kwh_vl + kwh_vf vs kwh_t: cells give 9145969.8, printed 8845739.0 (difference -300230.8)",
+   "sgt1929 p.52 Carthage: kwh_pl + kwh_pf + kwh_vl + kwh_vf vs kwh_t: cells give 29006.3, printed 29606.3 (difference 600.0)",
+   "sgt1929 p.52 Carthage: rec_pl + rec_pf + rec_vl + rec_vf vs rec_t: cells give 59815.61, printed 59575.01 (difference -240.60)",
+   "sgt1929 p.52 St-Henri: rec_pl + rec_pf + rec_vl + rec_vf vs rec_t: cells give 69967.39, printed 69867.30 (difference -100.09)",
+   "sgt1929 p.52 Djebel-Djelloud: kwh_pl + kwh_pf + kwh_vl + kwh_vf vs kwh_t: cells give 1600394.0, printed 1600314.0 (difference -80.0)",
+   "sgt1929 p.52 Hammam-Lif et Mornag: rec_pl + rec_pf + rec_vl + rec_vf vs rec_t: cells give 714115.13, printed 714116.13 (difference 1.00)",
+   "sgt1929 p.52 Bizerte: rec_pl + rec_pf + rec_vl + rec_vf vs rec_t: cells give 1077443.45, printed 1076443.45 (difference -1000.00)",
+   "sgt1929 p.52 Mateur: rec_pl + rec_pf + rec_vl + rec_vf vs rec_t: cells give 292562.52, printed 22562.52 (difference -270000.00)",
+   "sgt1929 p.52 Zarzouna: kwh_pl + kwh_pf + kwh_vl + kwh_vf vs kwh_t: cells give 2484.00, printed 3084.00 (difference 600.00)",
+   "sgt1929 p.52 Béja: rec_pl + rec_pf + rec_vl + rec_vf vs rec_t: cells give 353929.89, printed 353923.89 (difference -6.00)",
+   "sgt1929 p.52 Sousse: kwh_pl + kwh_pf + kwh_vl + kwh_vf vs kwh_t: cells give 723925.00, printed 323925.00 (difference -400000.00)",
+   "sgt1929 p.52 Sousse: rec_pl + rec_pf + rec_vl + rec_vf vs rec_t: cells give 1514954.17, printed 1494954.17 (difference -20000.00)",
+   "sgt1929 p.52 Sfax: kwh_pl + kwh_pf + kwh_vl + kwh_vf vs kwh_t: cells give 1437120.90, printed 527120.9 (difference -910000.00)",
+   "sgt1929 p.52 Sfax: rec_pl + rec_pf + rec_vl + rec_vf vs rec_t: cells give 2221011.68, printed 2221811.68 (difference 800.00)",
+   "sgt1930 p.54 La Goulette: pw_l + pw_o vs pw_t: cells give 613, printed 663 (difference 50)",
+   "sgt1930 p.54 Tunis: kwh_pl + kwh_pf + kwh_vl + kwh_vf vs kwh_t: cells give 10093568.0, printed 10090268 (difference -3300.0)",
+   "sgt1930 p.54 La Soukra, Chergula: rec_pl + rec_pf + rec_vl + rec_vf vs rec_t: cells give 132496.33, printed 132496.30 (difference -0.03)",
+   "sgt1930 p.54 Mornag: rec_pl + rec_pf + rec_vl + rec_vf vs rec_t: cells give 75868.75, printed 67868.75 (difference -8000.00)",
+   "sgt1930 p.54 Soliman: kwh_pl + kwh_pf + kwh_vl + kwh_vf vs kwh_t: cells give 8556.9, printed 8556.6 (difference -0.3)",
+   "sgt1930 p.54 Menzel-bou-Zelfa: kwh_pl + kwh_pf + kwh_vl + kwh_vf vs kwh_t: cells give 5456.8, printed 6456.8 (difference 1000.0)",
+   "sgt1930 p.54 Beni-Khalled: pw_l + pw_o vs pw_t: cells give 12, printed 13 (difference 1)",
+   "sgt1930 p.54 Fondouk-Djedid: pw_l + pw_o vs pw_t: cells give 2, printed 12 (difference 10)",
+   "sgt1930 p.54 Creteville: pw_l + pw_o vs pw_t: cells give 4, printed 2 (difference -2)",
+   "sgt1930 p.54 Cebala du Mornag: pw_l + pw_o vs pw_t: cells give 3, printed 4 (difference 1)",
+   "sgt1930 p.54 Oued-Sahil: pw_l + pw_o vs pw_t: cells give 550, printed 3 (difference -547)",
+   "sgt1930 p.54 Bizerte: pw_l + pw_o vs pw_t: cells give 221660, printed 950 (difference -220710)",
+   "sgt1930 p.54 Bizerte: kwh_pl + kwh_pf + kwh_vl + kwh_vf vs kwh_t: cells give 462910.0, printed 522910.0 (difference 60000.0)",
+   "sgt1930 p.54 Ferryville: sub_l + sub_o vs sub_t: cells give 337, printed 327 (difference -10)",
+   "sgt1930 p.54 Ferryville: kwh_pl + kwh_pf + kwh_vl + kwh_vf vs kwh_t: cells give 108211.8, printed 108210.0 (difference -1.8)",
+   "sgt1930 p.54 Sousse: rec_pl + rec_pf + rec_vl + rec_vf vs rec_t: cells give 1593608.21, printed 1593598.21 (difference -10.00)"
+  ],
+  "solved_cells": []
+ },
+ "communes_electricity_production": {
+  "rows": 135,
+  "checks": 81,
+  "failed": [
+   "sgt1939 p.24 Totaux: st_kwh + ic_kwh vs tot_kwh: cells give 70715636, printed 68715636 (difference -2000000)",
+   "sgt1939 p.24 column tot_kwh vs Totaux: cells give 70715636, printed 68715636 (difference -2000000)"
+  ],
+  "solved_cells": []
+ },
+ "communes_electricity_distribution": {
+  "rows": 520,
+  "checks": 271,
+  "failed": [
+   "sgt1935 p.34 Compagnie des Tramways de Tunis (Banlieue de Tunis et dans un rayon de 60 km. autour de Tunis): sub_l + sub_o + sub_ht vs sub_t: cells give 9843, printed 9573 (difference -270)",
+   "sgt1935 p.34 column sub_o vs Totaux: cells give 2637, printed 2367 (difference -270)",
+   "sgt1936 p.26 Compagnie des Tramways de Tunis (Banlieue de Tunis et dans un rayon de 60 km. autour de Tunis): bt_dom + bt_force + bt_publight + bt_public vs bt_t: cells give 9977968.3, printed 2440894.9 (difference -7537073.4)",
+   "sgt1936 p.26 column bt_force vs Totaux: cells give 11059282.5, printed 3522209.1 (difference -7537073.4)",
+   "sgt1939 p.26 Compagnie des Tramways de Tunis (Banlieue de Tunis et dans un rayon de 60 km. autour de Tunis): bt_dom + bt_force + bt_publight + bt_public vs bt_t: cells give 2466598.1, printed 3963064.1 (difference 1496466.0)",
+   "sgt1939 p.26 Ferryville (Centrale de Ferryville) Alternatif: bt_dom + bt_force + bt_publight + bt_public vs bt_t: cells give 206599.7, printed 206509.7 (difference -90.0)",
+   "sgt1939 p.26 Bizerte — La Pêcherie + Région de Bizerte: bt_dom + bt_force + bt_publight + bt_public vs bt_t: cells give 1098749, printed 1132769 (difference 34020)",
+   "sgt1939 p.26 Béja: bt_dom + bt_force + bt_publight + bt_public vs bt_t: cells give 214190.0, printed 214512 (difference 322.0)",
+   "sgt1939 p.26 Souk-el-Khemis: bt_dom + bt_force + bt_publight + bt_public vs bt_t: cells give 59652, printed 62786 (difference 3134)",
+   "sgt1939 p.26 Le Kef: bt_dom + bt_force + bt_publight + bt_public vs bt_t: cells give 76364.0, printed 79863 (difference 3499.0)",
+   "sgt1939 p.26 Concession d'État région Souk-el-Arba, Souk-el-Khemis, Le Kef, Téboursouk: bt_dom + bt_force + bt_publight + bt_public vs bt_t: cells give 26394.0, printed 28574 (difference 2180.0)",
+   "sgt1939 p.26 Sahel: bt_dom + bt_force + bt_publight + bt_public vs bt_t: cells give 646829, printed 655436 (difference 8607)",
+   "sgt1939 p.26 Sousse: bt_dom + bt_force + bt_publight + bt_public vs bt_t: cells give 897722, printed 1035956 (difference 138234)",
+   "sgt1939 p.26 Kairouan: bt_dom + bt_force + bt_publight + bt_public vs bt_t: cells give 195092, printed 215277 (difference 20185)",
+   "sgt1939 p.26 Sfax: bt_dom + bt_force + bt_publight + bt_public vs bt_t: cells give 1306008, printed 1448686 (difference 142678)",
+   "sgt1939 p.26 Gabès: bt_dom + bt_force + bt_publight + bt_public vs bt_t: cells give 302733, printed 331732 (difference 28999)",
+   "sgt1939 p.26 Gafsa: bt_dom + bt_force + bt_publight + bt_public vs bt_t: cells give 179387, printed 192256 (difference 12869)",
+   "sgt1939 p.26 Totaux: bt_dom + bt_force + bt_publight + bt_public vs bt_t: cells give 17951109.7, printed 19842302.7 (difference 1891193.0)",
+   "sgt1939 p.26 column bt_public vs Totaux: cells give 1211346.4, printed 1211256.4 (difference -90.0)"
+  ],
+  "solved_cells": [
+   [
+    "sgt1935",
+    "distr1",
+    "Compagnie des Tramways de Tunis (Banlieue de Tunis et dans un rayon de 60 km. autour de Tunis)",
+    "ht_other",
+    "5900714.5",
+    "5900714"
+   ],
+   [
+    "sgt1939",
+    "distr1",
+    "Compagnie des Tramways de Tunis (Banlieue de Tunis et dans un rayon de 60 km. autour de Tunis)",
+    "ht_other",
+    "12050484.5",
+    "1205048"
+   ],
+   [
+    "sgt1939",
+    "distr1",
+    "Compagnie du Gaz de Tunis",
+    "ht_other",
+    "4807613",
+    "480761"
+   ],
+   [
+    "sgt1939",
+    "distr1",
+    "Bizerte — La Pêcherie + Région de Bizerte",
+    "ht_other",
+    "105077",
+    "10507"
+   ],
+   [
+    "sgt1939",
+    "distr1",
+    "Concession d'État région Souk-el-Arba, Souk-el-Khemis, Le Kef, Téboursouk",
+    "ht_other",
+    "225534",
+    "22553"
+   ],
+   [
+    "sgt1939",
+    "distr1",
+    "Sahel",
+    "ht_other",
+    "69388",
+    "6938"
+   ],
+   [
+    "sgt1939",
+    "distr1",
+    "Sousse",
+    "ht_other",
+    "63275",
+    "6327"
+   ],
+   [
+    "sgt1939",
+    "distr1",
+    "Sfax",
+    "ht_other",
+    "3327706",
+    "332770"
+   ],
+   [
+    "sgt1939",
+    "distr1",
+    "Totaux",
+    "ht_other",
+    "20649077.5",
+    "2064907"
+   ]
+  ]
+ },
+ "communes_electricity_lines": {
+  "rows": 108,
+  "checks": 7,
+  "failed": [],
+  "solved_cells": []
+ }
+}

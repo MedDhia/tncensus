@@ -178,6 +178,14 @@ Every table is tidy: one row per printed cell. Printed subtotals and totals are 
 | [`communes_loans_caisse`](#communes_loans_caisse) | caisse | by edition | 3,697 | francs | Municipal loans from the Caisse des Prêts Communaux: one block per commune, one line per loan, with terms, annuities due and paid, arrears and capital amortised / outstanding at the end of the year |
 | [`communes_loans_tunis_bonds`](#communes_loans_tunis_bonds) | tunis_bonds | by edition | 256 | francs | Bond loans of the city of Tunis (1891 and 1897): coupons and bonds due, paid in the year and earlier, lapsed, and outstanding at the close of the year |
 | [`communes_slaughter_dues`](#communes_slaughter_dues) | slaughter | by edition | 8,650 | mixed | Slaughter dues collected by each commune: tariff per head and sums collected for each kind of animal, and the total collected |
+| [`communes_water_pipes`](#communes_water_pipes) | water | by edition | 1,084 | mixed | Water service: length of the water-supply pipe network of each locality, ten years per edition (two years from sgt1936) |
+| [`communes_water_sales`](#communes_water_sales) | water | by edition | 338 | francs | Water service: receipts from the sale of water, per locality, for the edition year |
+| [`communes_gas_operation`](#communes_gas_operation) | gasop | by edition | 72 | count | Operation of the Tunis gas works: gas emitted, subscribers, gas consumed by use, and length of the mains in service by diameter |
+| [`communes_gas_tunis_1937_1939`](#communes_gas_tunis_1937_1939) | gastunis | by edition | 12 | mixed | Gas consumption and receipts, city of Tunis, public lighting and subscribers: the years 1937–1939, printed only in sgt1939 |
+| [`communes_electricity_networks`](#communes_electricity_networks) | elec | by edition | 1,190 | mixed | Electricity by locality (sgt1929, sgt1930): length of the network, installed power at 31 December, subscribers, kilowatt-hours consumed and gross receipts |
+| [`communes_electricity_production`](#communes_electricity_production) | prod | by edition | 135 | mixed | Electricity production by power station (sgt1935, sgt1936, sgt1939): installed power and energy of steam turbines and internal-combustion engines, maximum power produced |
+| [`communes_electricity_distribution`](#communes_electricity_distribution) | distr1 | by edition | 520 | mixed | Electricity distribution by distributor or region (sgt1935, sgt1936, sgt1939): subscribers and energy delivered at high and low voltage by use |
+| [`communes_electricity_lines`](#communes_electricity_lines) | distr2 | by edition | 108 | count | Length of the high- and low-voltage lines by power station and town or region electrified (sgt1935, sgt1936, sgt1939) |
 
 ### eur1906_t1_circonscription_nationality
 
@@ -7286,3 +7294,414 @@ Source `sgt`, table slaughter, printed pages by edition. 8,650 rows. Value type:
 | `sums_collected` | Sommes perçues | 4,216 |
 | `tariff_per_head` | Tarif par tête | 4,216 |
 | `total_collected` | Totaux | 218 |
+
+### communes_water_pipes
+
+**Service des eaux : développement des canalisations**  
+*Water service: length of the water-supply pipe network of each locality, ten years per edition (two years from sgt1936)*
+
+Source `sgt`, table water, printed pages by edition. 1,084 rows. Value type: mixed. Flags: (empty) 1,064, reprint_corrected 19, not_applicable 1. Notes and validation: [`../yearbook_other_chapters/csv/communes_water_pipes.md`](../yearbook_other_chapters/csv/communes_water_pipes.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `locality` | Place or label as printed (90 distinct values). |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `value` | The printed figure. |
+| `text_fr` | Place or label as printed (1 distinct values). |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `pipe_length_m` | Développement des canalisations (km. m.) | 1,084 |
+
+### communes_water_sales
+
+**Service des eaux : vente d'eau (recettes)**  
+*Water service: receipts from the sale of water, per locality, for the edition year*
+
+Source `sgt`, table water, printed pages by edition. 338 rows. Value type: francs. Flags: (empty) 333, not_applicable 5. Notes and validation: [`../yearbook_other_chapters/csv/communes_water_sales.md`](../yearbook_other_chapters/csv/communes_water_sales.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `locality` | Place or label as printed (90 distinct values). |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `value` | The printed figure. |
+| `text_fr` | Place or label as printed (3 distinct values). |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `water_sales_receipts` | Vente d'eau : Recettes en 1922 / Vente d'eau : Recettes en 1923 / Vente d'eau : Recettes en 1924 / Vente d'eau : Recettes en 1925 / Vente d'eau : Recettes en 1926 / Vente d'eau : Recettes en 1928 / Vente d'eau : Recettes en 1929 / Vente d'eau : Recettes en 1930 / Vente d'eau : Recettes en 1935 / Vente d'eau : Recettes en 1936 / Vente d'eau : Recettes en 1939 | 338 |
+
+### communes_gas_operation
+
+**Exploitation du gaz à Tunis**  
+*Operation of the Tunis gas works: gas emitted, subscribers, gas consumed by use, and length of the mains in service by diameter*
+
+Source `sgt`, table gasop, printed pages by edition. 72 rows. Value type: count. Flags: (empty) 72. Notes and validation: [`../yearbook_other_chapters/csv/communes_gas_operation.md`](../yearbook_other_chapters/csv/communes_gas_operation.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `commune` | Place or label as printed (1 distinct values). |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `consumed_m3_administration_reduced_tariff` | Nombre de mètres cubes consommés : Administration et divers (tarif réduit) | 5 |
+| `consumed_m3_private_ordinary_tariff` | Nombre de mètres cubes consommés : Particuliers (tarif ordinaire) | 5 |
+| `consumed_m3_private_roads_lighting` | Nombre de mètres cubes consommés : Éclairage — voies privées | 3 |
+| `consumed_m3_public_lighting` | Nombre de mètres cubes consommés : Éclairage public | 5 |
+| `gas_emitted_m3` | Émission totale de l'année en mètres cubes | 5 |
+| `mains_length_m_all_diameters` | Longueur totale des canalisations en service au 31 décembre | 2 |
+| `mains_length_m_diameter_100mm` | Longueur totale des canalisations en service au 31 décembre : diamètre 100 m/m | 3 |
+| `mains_length_m_diameter_150mm` | Longueur totale des canalisations en service au 31 décembre : diamètre 150 m/m | 3 |
+| `mains_length_m_diameter_175mm` | Longueur totale des canalisations en service au 31 décembre : diamètre 175 m/m | 3 |
+| `mains_length_m_diameter_200mm` | Longueur totale des canalisations en service au 31 décembre : diamètre 200 m/m | 3 |
+| `mains_length_m_diameter_250mm` | Longueur totale des canalisations en service au 31 décembre : diamètre 250 m/m | 3 |
+| `mains_length_m_diameter_300mm` | Longueur totale des canalisations en service au 31 décembre : diamètre 300 m/m | 3 |
+| `mains_length_m_diameter_350mm` | Longueur totale des canalisations en service au 31 décembre : diamètre 350 m/m | 3 |
+| `mains_length_m_diameter_400mm` | Longueur totale des canalisations en service au 31 décembre : diamètre 400 m/m | 3 |
+| `mains_length_m_diameter_500mm` | Longueur totale des canalisations en service au 31 décembre : diamètre 500 m/m | 3 |
+| `mains_length_m_diameter_50mm` | Longueur totale des canalisations en service au 31 décembre : diamètre 50 m/m | 3 |
+| `mains_length_m_diameter_60mm` | Longueur totale des canalisations en service au 31 décembre : diamètre 60 m/m | 3 |
+| `mains_length_m_diameter_70mm` | Longueur totale des canalisations en service au 31 décembre : diamètre 70 m/m | 3 |
+| `mains_length_m_diameter_80mm` | Longueur totale des canalisations en service au 31 décembre : diamètre 80 m/m | 3 |
+| `mains_length_m_diameter_90mm` | Longueur totale des canalisations en service au 31 décembre : diamètre 90 m/m | 3 |
+| `subscribers` | Nombre d'abonnés au 31 décembre | 5 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `count` |  | 5 |
+| `m` |  | 44 |
+| `m3` |  | 23 |
+
+### communes_gas_tunis_1937_1939
+
+**GAZ — Consommations (Ville de Tunis), 1937–1939**  
+*Gas consumption and receipts, city of Tunis, public lighting and subscribers: the years 1937–1939, printed only in sgt1939*
+
+Source `sgt`, table gastunis, printed pages by edition. 12 rows. Value type: mixed. Flags: (empty) 12. Notes and validation: [`../yearbook_other_chapters/csv/communes_gas_tunis_1937_1939.md`](../yearbook_other_chapters/csv/communes_gas_tunis_1937_1939.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `commune` | Place or label as printed (1 distinct values). |
+| `lighting` | Coded dimension. |
+| `lighting_fr` | Printed French label for `lighting`. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`lighting`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `private_lighting` | Abonnés | 6 |
+| `public_lighting` | Éclairage public | 6 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `consumption_m3` | Consommation (mètres cubes) | 6 |
+| `receipts` | Recettes (fr. c.) | 6 |
+
+### communes_electricity_networks
+
+**a) Électricité : longueur des canalisations ; puissance des installations ; abonnés ; consommation ; produits**  
+*Electricity by locality (sgt1929, sgt1930): length of the network, installed power at 31 December, subscribers, kilowatt-hours consumed and gross receipts*
+
+Source `sgt`, table elec, printed pages by edition. 1,190 rows. Value type: mixed. Flags: (empty) 1,116, not_applicable 72, total_mismatch 2. Notes and validation: [`../yearbook_other_chapters/csv/communes_electricity_networks.md`](../yearbook_other_chapters/csv/communes_electricity_networks.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `locality` | Place or label as printed (51 distinct values). |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `text_fr` | Place or label as printed (7 distinct values). |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `installed_power_lighting_kw` | Puissance des installations en service au 31 décembre : Éclairage | 80 |
+| `installed_power_other_kw` | Puissance des installations en service au 31 décembre : Autres usages | 80 |
+| `kwh_private_lighting` | Nombre de kilowattheures consommés : Particuliers, Éclairage | 79 |
+| `kwh_private_power` | Nombre de kilowattheures consommés : Particuliers, Force | 79 |
+| `kwh_town_lighting` | Nombre de kilowattheures consommés : Ville, Éclairage | 79 |
+| `kwh_town_power` | Nombre de kilowattheures consommés : Ville, Force | 79 |
+| `network_length_m` | Longueur des canalisations | 80 |
+| `receipts_private_lighting` | Produits bruts : Particuliers, Éclairage | 79 |
+| `receipts_private_power` | Produits bruts : Particuliers, Force | 79 |
+| `receipts_town_lighting` | Produits bruts : Ville, Éclairage | 79 |
+| `receipts_town_power` | Produits bruts : Ville, Force | 79 |
+| `royalty_to_town_and_control_fee` | Redevance à la ville et droit de contrôle | 79 |
+| `subscribers_lighting` | Nombre d'abonnés : Éclairage | 80 |
+| `subscribers_other` | Nombre d'abonnés : Autres usages | 80 |
+| `underground_occupation_dues` | Droits d'occupation des sous-sols | 79 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `count` |  | 160 |
+| `francs` |  | 474 |
+| `kW` |  | 160 |
+| `kWh` |  | 316 |
+| `m` |  | 80 |
+
+### communes_electricity_production
+
+**Production d'électricité**  
+*Electricity production by power station (sgt1935, sgt1936, sgt1939): installed power and energy of steam turbines and internal-combustion engines, maximum power produced*
+
+Source `sgt`, table prod, printed pages by edition. 135 rows. Value type: mixed. Flags: (empty) 135. Notes and validation: [`../yearbook_other_chapters/csv/communes_electricity_production.md`](../yearbook_other_chapters/csv/communes_electricity_production.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `centrale` | Coded dimension. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `text_fr` | Place or label as printed (0 distinct values). |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`centrale`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `Centrale de Bizerte` |  | 15 |
+| `Centrale de Béja` |  | 15 |
+| `Centrale de Ferryville` |  | 15 |
+| `Centrale de Gabès` |  | 15 |
+| `Centrale de Gafsa` |  | 15 |
+| `Centrale de La Goulette` |  | 10 |
+| `Centrale de Sfax` |  | 15 |
+| `Centrale de Souk-el-Arba` |  | 15 |
+| `Centrale de Sousse` |  | 15 |
+| `Centrale de la Goulette` |  | 5 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `combustion_engines_energy_kwh` | Production thermique, moteurs à combustion interne : énergie fournie aux réseaux (aux bornes de l'usine) | 27 |
+| `combustion_engines_installed_kw` | Production thermique, moteurs à combustion interne : puissance installée des usines | 27 |
+| `maximum_power_produced_kw` | Production totale : puissance maximum produite | 27 |
+| `steam_turbines_energy_kwh` | Production thermique, turbines à vapeur : énergie fournie aux réseaux (aux bornes de l'usine) | 27 |
+| `steam_turbines_installed_kw` | Production thermique, turbines à vapeur : puissance des usines installée | 27 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `kW` |  | 81 |
+| `kWh` |  | 54 |
+
+### communes_electricity_distribution
+
+**Distribution d'électricité, Tableau I : abonnés et énergie livrée par les réseaux à la consommation**  
+*Electricity distribution by distributor or region (sgt1935, sgt1936, sgt1939): subscribers and energy delivered at high and low voltage by use*
+
+Source `sgt`, table distr1, printed pages by edition. 520 rows. Value type: mixed. Flags: (empty) 509, derived_from_totals 8, total_mismatch 3. Notes and validation: [`../yearbook_other_chapters/csv/communes_electricity_distribution.md`](../yearbook_other_chapters/csv/communes_electricity_distribution.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `region` | Coded dimension. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `text_fr` | Place or label as printed (1 distinct values). |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`region`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `Bizerte - La Pêcherie + Région de Bizerte` |  | 10 |
+| `Bizerte — La Pêcherie + Région de Bizerte` |  | 20 |
+| `Béja` |  | 30 |
+| `Compagnie des Tramways de Tunis (Banlieue de Tunis et dans un rayon de 60 km. autour de Tunis)` |  | 30 |
+| `Compagnie du Gaz de Tunis` |  | 10 |
+| `Compagnie du Gaz de Tunis (à La Goulette)` |  | 20 |
+| `Compagnie du Gaz de Tunis (à Tunis)` |  | 20 |
+| `Concession d'État région Souk-el-Arba, Souk-el-Khemis, Le Kef, Téboursouk` |  | 20 |
+| `Concession d'État, région S. E. A., S. E. K., le Kef et Téboursouk` |  | 10 |
+| `Ferryville (Centrale de Ferryville) Alternatif` |  | 10 |
+| `Ferryville (Centrale de Ferryville) Continu` |  | 10 |
+| `Ferryville (Fourniture C. T. T.) + Ferryville (Centrale de Ferryville)` |  | 10 |
+| `Ferryville (fourniture C.T.T.) + Ferryville (centrale de Ferryville)` |  | 10 |
+| `Gabès` |  | 30 |
+| `Gafsa` |  | 30 |
+| `Kairouan` |  | 30 |
+| `Le Kef` |  | 30 |
+| `Région de Ferryville` |  | 10 |
+| `Sahel` |  | 30 |
+| `Sfax` |  | 30 |
+| `Souk-el-Arba` |  | 30 |
+| `Souk-el-Khemis` |  | 30 |
+| `Sousse` |  | 30 |
+| `Téboursouk` |  | 30 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `kwh_high_voltage_other` | Énergie livrée, haute tension : Autres usages | 52 |
+| `kwh_high_voltage_public_services` | Énergie livrée, haute tension : Services publics | 52 |
+| `kwh_high_voltage_traction` | Énergie livrée, haute tension : Traction | 52 |
+| `kwh_low_voltage_light_domestic` | Énergie livrée, basse tension : Lumière et usages domestiques | 52 |
+| `kwh_low_voltage_power` | Énergie livrée, basse tension : Force | 52 |
+| `kwh_low_voltage_public_lighting` | Énergie livrée, basse tension : Éclairage publics | 52 |
+| `kwh_low_voltage_public_services` | Énergie livrée, basse tension : Services publics | 52 |
+| `subscribers_high_voltage` | Nombre d'abonnés : Haute tension | 52 |
+| `subscribers_lighting` | Nombre d'abonnés : Éclairage | 52 |
+| `subscribers_other` | Nombre d'abonnés : Autres usages | 52 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `count` |  | 156 |
+| `kWh` |  | 364 |
+
+### communes_electricity_lines
+
+**Distribution d'électricité, Tableau II : longueurs des lignes**  
+*Length of the high- and low-voltage lines by power station and town or region electrified (sgt1935, sgt1936, sgt1939)*
+
+Source `sgt`, table distr2, printed pages by edition. 108 rows. Value type: count. Flags: (empty) 108. Notes and validation: [`../yearbook_other_chapters/csv/communes_electricity_lines.md`](../yearbook_other_chapters/csv/communes_electricity_lines.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `centrale` | Coded dimension. |
+| `area` | Coded dimension. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `text_fr` | Place or label as printed (0 distinct values). |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`centrale`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `Bizerte` |  | 10 |
+| `Béja` |  | 6 |
+| `Ferryville` |  | 6 |
+| `Gabès` |  | 6 |
+| `Gafsa` |  | 6 |
+| `La Goulette` |  | 20 |
+| `Sfax` |  | 6 |
+| `Souk-el-Arba` |  | 30 |
+| `Sousse` |  | 18 |
+
+`area`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `Bizerte Pêcherie` |  | 4 |
+| `Bizerte-Pêcherie + Région de Bizerte` |  | 2 |
+| `Béja` |  | 6 |
+| `Concession Compagnie des Tramways de Tunis` |  | 6 |
+| `Ferryville` |  | 2 |
+| `Ferryville (courant continu)` |  | 2 |
+| `Ferryville (et région de Ferryville)` |  | 2 |
+| `Gabès` |  | 6 |
+| `Gafsa` |  | 6 |
+| `Kairouan (fourniture Union Électrique tunisienne)` |  | 2 |
+| `Kairouan (fourniture Union électrique tunisienne)` |  | 4 |
+| `La Goulette` |  | 4 |
+| `Le Kef` |  | 6 |
+| `Région Bizerte` |  | 4 |
+| `Région Souk-el-Arba, Souk-el-Khemis, Le Kef, Téboursouk` |  | 2 |
+| `Région de Ferryville (fourniture C.T.T.)` |  | 4 |
+| `Région de Souk-el-Arba, Souk-el-Khemis, Le Kef, Téboursouk` |  | 4 |
+| `Sahel de Sousse` |  | 6 |
+| `Sfax` |  | 6 |
+| `Souk-el-Arba` |  | 6 |
+| `Souk-el-Khemis` |  | 6 |
+| `Sousse` |  | 6 |
+| `Tunis` |  | 6 |
+| `Téboursouk` |  | 6 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `line_length_high_voltage_m` | Longueurs des lignes : haute tension | 54 |
+| `line_length_low_voltage_m` | Longueurs des lignes : basse tension | 54 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `m` |  | 108 |
