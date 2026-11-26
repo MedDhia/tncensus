@@ -186,6 +186,8 @@ Every table is tidy: one row per printed cell. Printed subtotals and totals are 
 | [`communes_electricity_production`](#communes_electricity_production) | prod | by edition | 135 | mixed | Electricity production by power station (sgt1935, sgt1936, sgt1939): installed power and energy of steam turbines and internal-combustion engines, maximum power produced |
 | [`communes_electricity_distribution`](#communes_electricity_distribution) | distr1 | by edition | 520 | mixed | Electricity distribution by distributor or region (sgt1935, sgt1936, sgt1939): subscribers and energy delivered at high and low voltage by use |
 | [`communes_electricity_lines`](#communes_electricity_lines) | distr2 | by edition | 108 | count | Length of the high- and low-voltage lines by power station and town or region electrified (sgt1935, sgt1936, sgt1939) |
+| [`communes_electricity_1922_1927`](#communes_electricity_1922_1927) | elec22 | by edition | 561 | mixed | Electricity by locality, earlier layout (sgt1922–sgt1927): length of the network, installed power at 31 December (hectowatts), subscribers, kilowatt-hours consumed (private customers, public lighting) and gross receipts (private customers, town) |
+| [`communes_electricity_1928`](#communes_electricity_1928) | elec28 | by edition | 255 | mixed | Electricity by locality, sgt1928: length of the network, installed power at 31 December 1928, subscribers, kilowatt-hours consumed and gross receipts, each split by private customers / town and lighting / power |
 
 ### eur1906_t1_circonscription_nationality
 
@@ -7705,3 +7707,105 @@ Source `sgt`, table distr2, printed pages by edition. 108 rows. Value type: coun
 | Code | Printed label | N |
 |---|---|---:|
 | `m` |  | 108 |
+
+### communes_electricity_1922_1927
+
+**a) Électricité : longueur des canalisations ; puissance des installations ; abonnés ; consommation ; produits**  
+*Electricity by locality, earlier layout (sgt1922–sgt1927): length of the network, installed power at 31 December (hectowatts), subscribers, kilowatt-hours consumed (private customers, public lighting) and gross receipts (private customers, town)*
+
+Source `sgt`, table elec22, printed pages by edition. 561 rows. Value type: mixed. Flags: (empty) 561. Notes and validation: [`../yearbook_other_chapters/csv/communes_electricity_1922_1927.md`](../yearbook_other_chapters/csv/communes_electricity_1922_1927.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `locality` | Place or label as printed (17 distinct values). |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `text_fr` | Place or label as printed (1 distinct values). |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `installed_power_lighting_hw` | Puissance des installations en service au 31 décembre : Éclairage | 51 |
+| `installed_power_other_hw` | Puissance des installations en service au 31 décembre : Autres usages | 51 |
+| `kwh_private` | Nombre de kilowats-heures consommés : Particuliers | 51 |
+| `kwh_public_lighting` | Nombre de kilowats-heures consommés : Éclairage public | 51 |
+| `network_length_m` | Longueur des canalisations | 51 |
+| `receipts_private` | Produits bruts : Particuliers | 51 |
+| `receipts_town` | Produits bruts : Ville | 51 |
+| `royalty_to_town_and_control_fee` | Redevance à la ville et droit de contrôle | 51 |
+| `subscribers_lighting` | Nombre d'abonnés : Éclairage | 51 |
+| `subscribers_other` | Nombre d'abonnés : Autres usages | 51 |
+| `underground_occupation_dues` | Droit d'occupation du sous-sol | 51 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `count` |  | 102 |
+| `francs` |  | 204 |
+| `hW` |  | 102 |
+| `kWh` |  | 102 |
+| `m` |  | 51 |
+
+### communes_electricity_1928
+
+**a) Électricité : longueur des canalisations ; puissance des installations ; abonnés ; consommation ; produits**  
+*Electricity by locality, sgt1928: length of the network, installed power at 31 December 1928, subscribers, kilowatt-hours consumed and gross receipts, each split by private customers / town and lighting / power*
+
+Source `sgt`, table elec28, printed pages by edition. 255 rows. Value type: mixed. Flags: (empty) 255. Notes and validation: [`../yearbook_other_chapters/csv/communes_electricity_1928.md`](../yearbook_other_chapters/csv/communes_electricity_1928.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `locality` | Place or label as printed (17 distinct values). |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `text_fr` | Place or label as printed (0 distinct values). |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `installed_power_lighting_kw` | Puissance des installations en service au 31 décembre : Éclairage | 17 |
+| `installed_power_other_kw` | Puissance des installations en service au 31 décembre : Autres usages | 17 |
+| `kwh_private_lighting` | Kilowatheures consommés : Particuliers, Éclairage | 17 |
+| `kwh_private_power` | Kilowatheures consommés : Particuliers, Force | 17 |
+| `kwh_town_lighting` | Kilowatheures consommés : Ville, Éclairage | 17 |
+| `kwh_town_power` | Kilowatheures consommés : Ville, Force | 17 |
+| `network_length_m` | Longueur des canalisations | 17 |
+| `receipts_private_lighting` | Produits bruts : Particuliers, Éclairage | 17 |
+| `receipts_private_power` | Produits bruts : Particuliers, Force | 17 |
+| `receipts_town_lighting` | Produits bruts : Ville, Éclairage | 17 |
+| `receipts_town_power` | Produits bruts : Ville, Force | 17 |
+| `royalty_to_town_and_control_fee` | Redevance à la ville et droit de contrôle | 17 |
+| `subscribers_lighting` | Nombre d'abonnés : Éclairage | 17 |
+| `subscribers_other` | Nombre d'abonnés : Autres usages | 17 |
+| `underground_occupation_dues` | Droits d'occupation des sous-sols | 17 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `count` |  | 34 |
+| `francs` |  | 102 |
+| `kW` |  | 34 |
+| `kWh` |  | 68 |
+| `m` |  | 17 |

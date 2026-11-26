@@ -1,0 +1,20 @@
+# sgt1926 pp.50-51, views 614-615 (volume bpt6k9105650k), lower half of the water page (left) and of the gas page
+# (right): "ÉCLAIRAGE. a) Electricité : longueur des canalisations ; puissance des installations ; abonnés ;
+# consommation ; produits". Same layout as sgt1922-sgt1925 (power in hectowats; no year printed; no column totals).
+# Tokens as in communes_elec_sgt1922.txt, plus 'W:value:word' = a figure with a word printed beneath it.
+# Faint, broken type throughout. Every cell read on native-resolution crops (left page at 0.6 and 0.9, right page at
+# 0.9-1.1; doubtful cells at 2-4x); every row total agrees, which confirms the faint figures of the summed columns.
+# OCR agrees where it reads (it misreads many faint digits: Bizerte 32.107, Sfax 25.116, Béja 10.890, Tunis 15.371).
+# Doubtful, unchecked cell: Tunis length "157.26?" (last digit broken, read 0 like the broken 0 of "83.330" beside it;
+# the OCR gives "157.26>").
+# Tunis Redevance: "482.337 05" with the word "majoration" printed beneath it. Sfax Redevance printed "12.110.42".
+@elec22 view=614 view2=615 page=50 year=1926 left=7
+cols: len pw_l pw_o pw_t sub_l sub_o sub_t kwh_p kwh_pub kwh_t rec_p rec_v rec_t redev droits
+La Goulette | 15710 3520 520 4040 673 14 687 139384 12631 152015 216780.39 22568.17 239348.56 » »
+Tunis | 157260 83330 35470 118800 15374 636 16010 5882759 212846 6095605 7896612.15 506805.40 8403417.55 W:482337.05:majoration »
+Bizerte | 32407 3700 1500 5200 1441 31 1472 281909 35100 317009 546266.00 56371.00 602637.00 » »
+Ferryville | 12200 45 49 94 241 12 253 88500 10238 98738 152165.00 20505.00 172670.00 » »
+Sousse | 22836 8661 2150 10811 1732 83 1815 508615 82150 590765 715675.00 85000.00 800675.00 » »
+Sfax | 25146 8857 3930 12787 1801 52 1853 519457 92395 611852 751264.00 103303.00 854567.00 12110.42 »
+Béja | 10896 54 26 80 525 30 555 54636 8230 62866 162343.00 20500.00 182843.00 » »
+Kairouan | 18200 240 » 240 470 » 470 160800 » 160800 166350.00 » 166350.00 » »

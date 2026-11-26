@@ -1,0 +1,133 @@
+{
+ "communes_electricity_1922_1927": {
+  "rows": 561,
+  "checks": 204,
+  "failed": [
+   "sgt1922 p.39 La Goulette: rec_p + rec_v vs rec_t: cells give 105399.31, printed 105399.23 (difference -0.08)",
+   "sgt1923 p.43 Tunis: rec_p + rec_v vs rec_t: cells give 5190051.19, printed 5190051.09 (difference -0.10)",
+   "sgt1923 p.42 Ferryville: pw_l + pw_o vs pw_t: cells give 820, printed 770 (difference -50)",
+   "sgt1923 p.42 Sousse: sub_l + sub_o vs sub_t: cells give 1120, printed 1122 (difference 2)",
+   "sgt1923 p.43 Sfax: kwh_p + kwh_pub vs kwh_t: cells give 280267, printed 208267 (difference -72000)",
+   "sgt1924 p.42 Tunis: pw_l + pw_o vs pw_t: cells give 82479, printed 82481 (difference 2)",
+   "sgt1924 p.43 Tunis: kwh_p + kwh_pub vs kwh_t: cells give 4635957, printed 4635997 (difference 40)",
+   "sgt1924 p.43 Tunis: rec_p + rec_v vs rec_t: cells give 4939282.10, printed 4939282.00 (difference -0.10)",
+   "sgt1924 p.43 Sfax: kwh_p + kwh_pub vs kwh_t: cells give 319466.99, printed 319446.99 (difference -20.00)",
+   "sgt1925 p.42 Tunis: sub_l + sub_o vs sub_t: cells give 13812, printed 13882 (difference 70)",
+   "sgt1925 p.43 Bizerte: rec_p + rec_v vs rec_t: cells give 490728.70, printed 540728.70 (difference 50000.00)",
+   "sgt1927 p.51 Tunis: rec_p + rec_v vs rec_t: cells give 11008600.12, printed 11008598.12 (difference -2.00)",
+   "sgt1927 p.50 Bizerte: pw_l + pw_o vs pw_t: cells give 4978446, printed 4278446 (difference -700000)",
+   "sgt1927 p.51 Gabès: kwh_p + kwh_pub vs kwh_t: cells give 20031, printed 20631 (difference 600)"
+  ],
+  "by_edition": {
+   "sgt1922": {
+    "rows": 77,
+    "checks": 28,
+    "failed": 1
+   },
+   "sgt1923": {
+    "rows": 66,
+    "checks": 24,
+    "failed": 4
+   },
+   "sgt1924": {
+    "rows": 66,
+    "checks": 24,
+    "failed": 4
+   },
+   "sgt1925": {
+    "rows": 77,
+    "checks": 28,
+    "failed": 2
+   },
+   "sgt1926": {
+    "rows": 88,
+    "checks": 32,
+    "failed": 0
+   },
+   "sgt1927": {
+    "rows": 187,
+    "checks": 68,
+    "failed": 3
+   }
+  },
+  "prefix_checks": [
+   [
+    "sgt1922",
+    "Tunis",
+    "sub_t",
+    "949",
+    "9495",
+    "True"
+   ],
+   [
+    "sgt1922",
+    "Bizerte",
+    "sub_t",
+    "109",
+    "1098",
+    "True"
+   ],
+   [
+    "sgt1922",
+    "Ferryville",
+    "sub_t",
+    "22",
+    "225",
+    "True"
+   ],
+   [
+    "sgt1922",
+    "Sousse",
+    "sub_t",
+    "97",
+    "972",
+    "True"
+   ],
+   [
+    "sgt1922",
+    "Sfax",
+    "sub_t",
+    "106",
+    "1063",
+    "True"
+   ],
+   [
+    "sgt1922",
+    "Béja",
+    "sub_t",
+    "29",
+    "294",
+    "True"
+   ],
+   [
+    "sgt1922",
+    "La Goulette",
+    "sub_t",
+    "38",
+    "389",
+    "True"
+   ]
+  ],
+  "solved_cells": []
+ },
+ "communes_electricity_1928": {
+  "rows": 255,
+  "checks": 68,
+  "failed": [
+   "sgt1928 p.50 Carthage: sub_l + sub_o vs sub_t: cells give 88, printed 98 (difference 10)",
+   "sgt1928 p.50 Hammam-Lif: pw_l + pw_o vs pw_t: cells give 695707, printed 595707 (difference -100000)",
+   "sgt1928 p.50 Hammam-Lif: sub_l + sub_o vs sub_t: cells give 717, printed 617 (difference -100)",
+   "sgt1928 p.51 Ariana: kwh_pl + kwh_pf + kwh_vl + kwh_vf vs kwh_t: cells give 72578.5, printed 72578.0 (difference -0.5)",
+   "sgt1928 p.51 La Marsa: rec_pl + rec_pf + rec_vl + rec_vf vs rec_t: cells give 342602.46, printed 342512.46 (difference -90.00)"
+  ],
+  "by_edition": {
+   "sgt1928": {
+    "rows": 255,
+    "checks": 68,
+    "failed": 5
+   }
+  },
+  "prefix_checks": [],
+  "solved_cells": []
+ }
+}

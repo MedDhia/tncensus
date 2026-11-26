@@ -36,7 +36,7 @@ Notes:
 
 | Step | Scope |
 |---|---|
-| 1 | Communes |
+| 1 | Communes: **done** (`extract_communes.py`, all tables, surveyed page by page) |
 | 2 | Justice, prisons, property |
 | 3 | Posts, public works |
 | 4 | Finances |
