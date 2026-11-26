@@ -55,3 +55,136 @@ Bardo | 0 2755 0 0 0 0 0 0 0 0 0 7270 1191 0 0 28128 0 0 3192 42536
 Porto-Farina | 0 0 0 0 0 0 0 0 0 779 0 0 0 0 0 0 0 50448 28412 79639
 Djebel Djougar | 0 0 0 0 0 0 0 0 0 0 101290 0 0 0 0 0 0 0 4920 106210
 Totaux | 1093 16667 1236 17823 10809 17357 106988 5930 14633 36202 102092 19473 1235 1876 2956 29973 2170 50448 109249 548210
+
+@expenditure view=122 page=94 year=1929 split=personnel:123:95
+img: all
+# Two-page spread: designation and days on p. 94 (f122), the money on p. 95 (f123). Columns as sgt1926-sgt1928.
+# Totaux line: price 3 733 "Prix moyen", products printed » (stored '-': no printed total). Dans les Hôpitaux,
+# products: printed «. Bardo personnel: the tens-of-centimes 2 is broken ("?0", the same glyph as the 2 of 3 629).
+cols: days personnel food upkeep total price_per_day products
+Béja | 11649 43097.90 17974.85 9549.11 70621.86 6.062 9661.50
+Bizerte | 7824 31558.77 11025.43 5910.24 48494.44 6.198 0
+Gabès | 35036 41643.07 54395.59 18723.80 114762.46 3.275 2928.95
+Gafsa | 24934 41473.05 34029.01 15006.77 90508.83 3.629 7380.50
+Kairouan | 49237 53692.62 70792.96 29418.01 153903.59 3.125 30399.36
+Le Kef | 75146 55266.02 90123.13 22314.31 167703.46 2.231 14655.40
+Sfax | 40853 67215.92 52448.46 61243.35 180907.73 4.428 99.25
+Sousse | 55077 87701.87 71862.65 29338.63 188903.15 3.429 10438.15
+Tunis | 355727 718214.47 435825.31 297527.87 1451567.65 4.080 31407.32
+Bardo | 48470 85613.20 60110.94 24664.21 170388.35 3.515 50806.66
+Porto-Farina | 104631 198344.45 128356.80 54041.92 380743.17 3.638 31083.35
+Totaux | 808584 1423821.34 1026945.13 567738.22 3018504.69 3.733 -
+Pénitencier agricole du Djebel Djougar | 140491 245000.65 0 53394.63 298395.28 - 0
+Chantiers extérieurs | 207998 59477.05 0 12031.25 71508.30 - 331434.96
+Dans les Hôpitaux | 5844 0 0 34222.75 34222.75 - 0
+En Algérie | 49729 0 0 319988.83 319988.83 - 0
+Totaux généraux (Dépenses et Recettes)* | 1212646 1728299.04 1026945.13 987375.68 3742619.85 - 520295.40
+
+@movement_men view=124 page=96 year=1929 split=out_provisional:125:97
+img: all
+# e) Mouvement général d'entrée et de sortie. Effectif au 31 décembre 1929 des détenus (Hommes et jeunes
+# garçons). Two-page spread, p. 96 (f124) up to "par libération conditionnelle" (in the binding, read on an
+# enlarged crop), p. 97 (f125) from "par libération provisoire". The two halves of p. 97 carry each other's
+# headings: the upper table, which continues the men's table of p. 96, is headed "… des détenues (Femmes et
+# jeunes filles)", the lower one "… des détenus (Hommes et jeunes garçons)"; p. 97 also prints "Sorties pendant
+# l'année 1928" and "Population au 31 décembre 1926" (sic). Stored by content (the lines of each half continue
+# the table above it on p. 96: every line checks).
+# Totaux, de l'état de liberté: printed 19.325 for lines summing to 10.325 (Total des entrées 13.642 needs
+# 10.325). Décédés: the 97 printed on the Sousse line is stored on the Tunis line (row_realigned; Sousse 0):
+# with it there neither line gives its Total des sorties (1.454 for 1.357, 5.902 for 5.999), with it here both do.
+cols: start in_free in_other_prisons re_escape re_conditional re_provisional in_total out_sentence out_pardon out_conditional out_provisional out_acquittal out_administrative tr_central tr_correction tr_convict_depots tr_other_prisons tr_work_sites tr_various out_escaped out_died out_executed out_total end detention_days
+Béja | 22 363 84 3 0 0 450 73 0 0 0 0 328 0 0 0 37 7 0 0 0 0 445 27 11546
+Bizerte | 15 386 1 2 0 0 389 75 0 0 12 4 46 0 0 0 242 0 1 0 0 0 380 24 7657
+Gabès | 89 568 9 0 0 7 584 270 0 0 28 166 31 0 0 0 86 11 13 0 1 0 606 57 34384
+Gafsa | 78 405 9 3 0 0 417 267 0 0 40 24 38 0 0 0 57 0 10 2 0 0 438 57 24629
+Kairouan | 98 902 5 2 0 7 916 481 1 0 32 96 41 0 0 0 131 18 21 3 0 0 866 148 48431
+Le Kef | 175 1048 38 0 0 5 1091 606 0 0 0 144 0 0 0 0 257 0 93 1 1 0 1120 146 73025
+Sfax | 102 1605 144 3 0 11 1763 984 0 0 254 130 30 0 0 0 302 0 50 1 0 0 1751 114 40153
+Sousse | 167 1054 266 5 0 20 1345 548 0 0 120 180 55 0 0 0 420 7 27 0 0 0 1357 155 53951
+Tunis | 948 3994 1584 8 0 11 5597 2059 5 10 474 506 21 175 1033 339 320 668 281 11 97 0 5999 546 339766
+Le Bardo | 137 0 282 2 0 0 284 167 5 0 0 0 9 0 0 92 88 52 7 1 0 0 421 0 48470
+Porto-Farina | 334 0 239 0 0 0 239 138 1 5 0 0 0 0 0 0 135 0 0 3 8 0 290 283 104631
+Pénitencier Agricole du Djebel Djougar | 468 0 566 1 0 0 567 491 2 10 0 0 0 0 0 0 160 0 0 13 5 0 681 354 140491
+Totaux | 2633 19325 3227 29 0 61 13642 6459 14 25 1020 1250 599 175 1033 431 2235 763 503 35 112 0 14354 1921 927135
+
+@movement_women view=124 page=96 year=1929 split=out_provisional:125:97
+img: all
+# f) the same for the women, lower half of the spread (p. 97 half headed "Hommes et jeunes garçons", see
+# above). Gabès, de l'état de liberté printed 3: the line gives its Total des entrées 10 with 9, and the column
+# its printed 335 with 9 (6 short as printed). "Population au 31 décembre 1929": every line prints the figure
+# of its "Population au 31 décembre 1928" column (», », 2, 3, », 4, 3, 2, 53; Totaux 67): the column is a
+# repeat of the start column; start + entries − exits gives 58 for all prisons, which with the men's 1.921 is
+# the récapitulation's 1.979.
+cols: start in_free in_other_prisons re_escape re_conditional re_provisional in_total out_sentence out_pardon out_conditional out_provisional out_acquittal out_administrative tr_central tr_correction tr_other_prisons tr_various out_escaped out_died out_executed out_total end detention_days
+Béja | 0 7 0 0 0 0 7 0 0 0 0 0 7 0 0 0 0 0 0 0 7 0 103
+Bizerte | 0 14 0 0 0 0 14 1 0 0 1 0 3 0 0 8 1 0 0 0 14 0 166
+Gabès | 2 3 0 0 0 1 10 1 0 0 3 1 0 0 0 6 1 0 0 0 12 2 652
+Gafsa | 3 2 1 0 0 0 3 1 0 0 0 3 0 0 0 1 1 0 0 0 6 3 305
+Kairouan | 0 28 1 0 0 2 31 4 0 0 13 4 0 0 0 2 4 0 0 0 27 0 806
+Le Kef | 4 28 0 0 0 0 28 11 0 0 2 4 0 0 0 5 5 0 0 0 27 4 2121
+Sfax | 3 79 7 0 0 0 86 46 0 0 12 15 2 0 0 10 0 0 0 0 85 3 700
+Sousse | 2 27 8 0 0 1 36 13 0 0 3 4 2 0 0 7 4 0 0 0 33 2 1126
+Tunis | 53 141 19 0 0 0 160 75 3 12 31 23 0 3 0 0 23 1 2 0 173 53 15961
+Totaux | 67 335 36 0 0 4 375 152 3 12 65 54 14 3 0 39 39 1 2 0 384 67 21940
+
+@transfers view=126 page=98 year=1929
+img: all
+# g) Service des transfèrements (upper half of p. 98). Label = "destination // observations".
+cols: transfers prisoners
+Prisons tunisiennes // Prévenus ou condamnés. | 581 2261
+Prisons algériennes // Appelants, mandats d'arrêt. | 36 146
+Maisons centrales (Algérie) // Algériens. | 3 29
+Maisons de correction (Tunisie) // Tunisiens | 61 1033
+Dépôts de forçats : Algérie // | 9 82
+Dépôts de forçats : Tunisie // | 11 352
+Chantiers extérieurs // | 117 756
+Destinations diverses // Expulsés, évacués sur les hôpitaux. | 188 556
+Totaux | 1006 5215
+
+@deaths view=126 page=98 year=1929 heads="Tuberculose pulmonaire;Grippe;Pneumonie;Bronchite;Affectation cardiaque (sic);Cachexie;Syphilis;Fièvre typhoïde;Paludisme;Typhus;Dysenterie;Urémie;Ascite (printed Asteïte);Entérite;Sénilité;Hémiplégie;Pleurésie;Adénite;Méningite;Congestion pulmonaire;Phtisie"
+img: all
+# h) État numérique des décès par prison et par maladie (lower half of p. 98).
+cols: tuberculose grippe pneumonie bronchite affection_cardiaque cachexie syphilis fievre_typhoide paludisme typhus dysenterie uremie ascite enterite senilite hemiplegie pleuresie adenite meningite congestion_pulmonaire phtisie total
+Béja | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Bizerte | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Gabès | 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1
+Gafsa | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Kairouan | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Le Kef | 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1
+Sfax | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Sousse | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Tunis : Infirmerie centrale | 53 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 2 0 0 0 56
+Tunis : Infirmerie de la prison | 13 0 1 2 4 8 0 0 0 2 3 0 1 2 2 1 2 1 1 0 0 43
+Le Bardo | 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1
+Porto-Farina | 2 0 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2 2 8
+Djebel Djougar | 0 0 0 0 1 0 0 0 0 0 1 0 0 0 2 1 0 0 0 0 0 5
+Hôpitaux | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Totaux | 68 0 3 2 7 9 0 0 0 2 4 1 1 2 4 2 2 3 1 2 2 115
+
+@guard view=127 page=99 year=1929
+img: all
+# i) État comparatif du personnel de garde … (upper half of p. 99).
+cols: max_daily agents_french agents_indigenous wardresses
+Béja : Hommes | 134 2 2 0
+Béja : Femmes | 5 0 0 1
+Bizerte : Hommes | 34 1 1 0
+Bizerte : Femmes | 3 0 0 1
+Gabès : Hommes | 115 2 2 0
+Gabès : Femmes | 5 0 0 1
+Gafsa : Hommes | 96 2 2 0
+Gafsa : Femmes | 4 0 0 1
+Kairouan : Hommes | 183 2 2 0
+Kairouan : Femmes | 7 0 0 1
+Le Kef : Hommes | 242 2 2 0
+Le Kef : Femmes | 10 0 0 1
+Sfax : Hommes | 161 2 3 0
+Sfax : Femmes | 12 0 0 1
+Sousse : Hommes | 233 4 3 0
+Sousse : Femmes | 7 0 0 1
+Tunis : Hommes | 1032 29 15 0
+Tunis : Femmes | 60 0 0 2
+Le Bardo : Hommes | 158 2 5 0
+Porto-Farina : Hommes | 336 8 9 0
+Pénitencier agricole du Djougar : Hommes | 380 13 0 0
+Pénitencier agricole du Djougar : Pupilles | 146 3 0 0
+Totaux | 3363 72 46 10

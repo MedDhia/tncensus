@@ -35,7 +35,7 @@ Cells stored from an earlier printing (flag `reprint_corrected`): 1934 end: 2638
 
 sgt1924 reprints 1915 with end 3.082 and 1.012.231 days (sgt1922-sgt1923: 2.874 and 1.092.231); the latest printing is stored by rule 4 (3.082 also satisfies 3.147 + 23.044 − 23.109), the earlier figures are listed among the differences.
 
-Survey of the whole chapter in every edition, and the tables not yet transcribed: `prisons_survey.md`.
+Survey of the whole chapter in every edition: `prisons_survey.md`.
 
 ## Validation
 

@@ -207,8 +207,12 @@ Every table is tidy: one row per printed cell. Printed subtotals and totals are 
 | [`prisons_population_recap`](#prisons_population_recap) | recap | by edition | 156 | count | Prison population: yearly summary |
 | [`prisons_condemned_nationality_age`](#prisons_condemned_nationality_age) | condemned_age | by edition | 1,551 | count | Condemned prisoners by nationality, age, sex and penal category |
 | [`prisons_condemned_offence`](#prisons_condemned_offence) | condemned_offence | by edition | 2,496 | count | Condemned prisoners by nationality, offence and sentence |
-| [`prisons_work_days`](#prisons_work_days) | work_days | by edition | 1,983 | count | Days of work of the prisoners, by prison and work site |
-| [`prisons_expenditure`](#prisons_expenditure) | expenditure | by edition | 793 | mixed | Expenditure and days of detention, by prison (cost per day of detention, products of the work) |
+| [`prisons_work_days`](#prisons_work_days) | work_days | by edition | 2,235 | count | Days of work of the prisoners, by prison and work site |
+| [`prisons_expenditure`](#prisons_expenditure) | expenditure | by edition | 1,094 | mixed | Expenditure and days of detention, by prison (cost per day of detention, products of the work) |
+| [`prisons_movement`](#prisons_movement) | movement_men;movement_women | by edition | 6,382 | count | Prison population movement by prison: population at 1 January, entries and exits by kind, population at 31 December, days of detention (men and boys; women and girls) |
+| [`prisons_transfers`](#prisons_transfers) | transfers | by edition | 168 | count | Transfers of prisoners by destination |
+| [`prisons_deaths`](#prisons_deaths) | deaths | by edition | 3,054 | count | Deaths of prisoners by prison and by disease |
+| [`prisons_guard_staff`](#prisons_guard_staff) | guard;guard_note | by edition | 896 | count | Guard staff compared with the maximum daily number of prisoners, by prison |
 
 ### eur1906_t1_circonscription_nationality
 
@@ -8634,7 +8638,7 @@ Source `sgt`, table condemned_offence, printed pages by edition. 2,496 rows. Val
 **Journées de travail des détenus**  
 *Days of work of the prisoners, by prison and work site*
 
-Source `sgt`, table work_days, printed pages by edition. 1,983 rows. Value type: count. Flags: (empty) 1,977, row_realigned 4, total_mismatch 2. Notes and validation: [`../yearbook_other_chapters/csv/prisons_work_days.md`](../yearbook_other_chapters/csv/prisons_work_days.md).
+Source `sgt`, table work_days, printed pages by edition. 2,235 rows. Value type: count. Flags: (empty) 2,217, derived_from_totals 12, row_realigned 4, total_mismatch 2. Notes and validation: [`../yearbook_other_chapters/csv/prisons_work_days.md`](../yearbook_other_chapters/csv/prisons_work_days.md).
 
 | Column | Description |
 |---|---|
@@ -8645,7 +8649,7 @@ Source `sgt`, table work_days, printed pages by edition. 1,983 rows. Value type:
 | `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
 | `year` | Year the figure refers to. |
 | `establishment` | Coded dimension. |
-| `work` | Text (72 distinct values). |
+| `work` | Text (83 distinct values). |
 | `work_fr` | Printed French label for `work`. |
 | `value` | The printed figure. |
 | `flag` | Data-quality flag; see the legend at the top. |
@@ -8654,31 +8658,31 @@ Source `sgt`, table work_days, printed pages by edition. 1,983 rows. Value type:
 
 | Code | Printed label | N |
 |---|---|---:|
-| `Bardo` |  | 154 |
-| `Bizerte` |  | 154 |
-| `Béja` |  | 154 |
+| `Bardo` |  | 175 |
+| `Bizerte` |  | 175 |
+| `Béja` |  | 175 |
 | `Colonie (jeunes détenus)` |  | 44 |
 | `Dj.-Djougar` |  | 59 |
-| `Djebel Djougar` |  | 77 |
-| `Gabès` |  | 154 |
-| `Gafsa` |  | 154 |
-| `Kairouan` |  | 154 |
+| `Djebel Djougar` |  | 98 |
+| `Gabès` |  | 175 |
+| `Gafsa` |  | 175 |
+| `Kairouan` |  | 175 |
 | `Kef` |  | 59 |
 | `La Goulette` |  | 77 |
-| `Le Kef` |  | 95 |
-| `Porto-Farina` |  | 154 |
+| `Le Kef` |  | 116 |
+| `Porto-Farina` |  | 175 |
 | `Pénitencier du Djougar` |  | 18 |
 | `Salahia` |  | 14 |
-| `Sfax` |  | 154 |
-| `Sousse` |  | 154 |
-| `Tunis` |  | 154 |
+| `Sfax` |  | 175 |
+| `Sousse` |  | 175 |
+| `Tunis` |  | 175 |
 
 ### prisons_expenditure
 
 **Tableau comparatif des dépenses et des journées de détention**  
 *Expenditure and days of detention, by prison (cost per day of detention, products of the work)*
 
-Source `sgt`, table expenditure, printed pages by edition. 793 rows. Value type: mixed. Flags: (empty) 768, not_applicable 15, total_mismatch 10. Notes and validation: [`../yearbook_other_chapters/csv/prisons_expenditure.md`](../yearbook_other_chapters/csv/prisons_expenditure.md).
+Source `sgt`, table expenditure, printed pages by edition. 1,094 rows. Value type: mixed. Flags: (empty) 1,061, not_applicable 19, total_mismatch 14. Notes and validation: [`../yearbook_other_chapters/csv/prisons_expenditure.md`](../yearbook_other_chapters/csv/prisons_expenditure.md).
 
 | Column | Description |
 |---|---|
@@ -8699,54 +8703,344 @@ Source `sgt`, table expenditure, printed pages by edition. 793 rows. Value type:
 
 | Code | Printed label | N |
 |---|---|---:|
-| `Bardo` |  | 49 |
-| `Bizerte` |  | 49 |
-| `Béja` |  | 49 |
-| `Chantiers extérieurs` |  | 35 |
+| `Bardo` |  | 70 |
+| `Bizerte` |  | 70 |
+| `Béja` |  | 70 |
+| `Chantiers extérieurs` |  | 49 |
 | `Colonie` |  | 7 |
 | `Colonie (Djouggar)` |  | 14 |
-| `Dans les Hôpitaux` |  | 21 |
+| `Dans les Hôpitaux` |  | 28 |
+| `Djebel Djougar` |  | 7 |
 | `Djebel-Djouggar` |  | 7 |
+| `Détachements extérieurs` |  | 7 |
 | `Détachés dans les geôles` |  | 7 |
+| `Détachés dans les établissements pénitentiaires d'Algérie` |  | 7 |
 | `Détenus en Algérie` |  | 7 |
-| `En Algérie` |  | 21 |
+| `En Algérie` |  | 35 |
 | `En détention hors de Tunisie` |  | 14 |
 | `En traitement dans les hôpitaux` |  | 14 |
-| `Gabès` |  | 49 |
-| `Gafsa` |  | 49 |
+| `Gabès` |  | 70 |
+| `Gafsa` |  | 70 |
 | `Geôles` |  | 14 |
 | `Géôles` |  | 7 |
-| `Kairouan` |  | 49 |
+| `Kairouan` |  | 70 |
 | `La Goulette` |  | 35 |
-| `Le Kef` |  | 49 |
-| `Porto-Farina` |  | 49 |
+| `Le Kef` |  | 70 |
+| `Porto-Farina` |  | 70 |
 | `Prisons de la Régence (note 1)` |  | 16 |
-| `Pénitencier agricole du Djebel Djougar` |  | 14 |
+| `Pénitencier agricole du Djebel Djougar` |  | 28 |
 | `Pénitencier du Djougar` |  | 7 |
-| `Sfax` |  | 49 |
-| `Sousse` |  | 49 |
+| `Sfax` |  | 70 |
+| `Sousse` |  | 70 |
 | `Sur les chantiers extérieurs` |  | 14 |
-| `Tunis` |  | 49 |
+| `Tunis` |  | 70 |
 
 `measure`:
 
 | Code | Printed label | N |
 |---|---|---:|
-| `days` | Nombre de journées de détention | 111 |
-| `food` | Dépenses totales : entretien des détenus : nourriture des détenus | 111 |
-| `personnel` | Dépenses totales : Personnel (sgt1922 Art. 13; sgt1923 Art. 1er; sgt1924-sgt1925 Art. 9) | 111 |
+| `days` | Nombre de journées de détention | 154 |
+| `food` | Dépenses totales : entretien des détenus : nourriture des détenus | 154 |
+| `personnel` | Dépenses totales : Personnel (sgt1922 Art. 13; sgt1923 Art. 1er; sgt1924-sgt1925 Art. 9) | 154 |
 | `price_food` | Note (1) : prix de la journée, frais de nourriture | 4 |
-| `price_per_day` | Prix de la journée de détention | 115 |
+| `price_per_day` | Prix de la journée de détention | 158 |
 | `price_personnel` | Note (1) : prix de la journée, frais de personnel | 4 |
 | `price_upkeep` | Note (1) : prix de la journée, frais d'entretien | 4 |
-| `products` | Produit du travail, produits divers (sgt1922: bénéfices de cantine, produit du travail, produits divers; from sgt1926: … versés au Trésor) | 111 |
-| `total` | Dépenses totales : Total | 111 |
-| `upkeep` | Dépenses totales : entretien des détenus : entretien et dépenses diverses / dépenses diverses | 111 |
+| `products` | Produit du travail, produits divers (sgt1922: bénéfices de cantine, produit du travail, produits divers; from sgt1926: … versés au Trésor) | 154 |
+| `total` | Dépenses totales : Total | 154 |
+| `upkeep` | Dépenses totales : entretien des détenus : entretien et dépenses diverses / dépenses diverses | 154 |
 
 `unit`:
 
 | Code | Printed label | N |
 |---|---|---:|
-| `days` |  | 111 |
-| `francs` |  | 555 |
-| `francs_per_day` |  | 127 |
+| `days` |  | 154 |
+| `francs` |  | 770 |
+| `francs_per_day` |  | 170 |
+
+### prisons_movement
+
+**Mouvement général d'entrée et de sortie. Effectif au 31 décembre**  
+*Prison population movement by prison: population at 1 January, entries and exits by kind, population at 31 December, days of detention (men and boys; women and girls)*
+
+Source `sgt`, table movement_men;movement_women, printed pages by edition. 6,382 rows. Value type: count. Flags: (empty) 6,350, total_mismatch 17, derived_from_totals 13, row_realigned 2. Notes and validation: [`../yearbook_other_chapters/csv/prisons_movement.md`](../yearbook_other_chapters/csv/prisons_movement.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `sex_group` | Coded dimension. |
+| `sex_group_fr` | Printed French label for `sex_group`. |
+| `establishment` | Coded dimension. |
+| `flow` | Coded dimension. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`sex_group`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `men_boys` | Hommes et jeunes garçons | 3,685 |
+| `women_girls` | Femmes et jeunes filles | 2,697 |
+
+`establishment`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `Bizerte` |  | 548 |
+| `Béja` |  | 548 |
+| `Détachements extérieurs` |  | 80 |
+| `Gabès` |  | 548 |
+| `Gafsa` |  | 548 |
+| `Hôpitaux` |  | 23 |
+| `Kairouan` |  | 548 |
+| `La Goulette` |  | 225 |
+| `Le Bardo` |  | 374 |
+| `Le Kef` |  | 548 |
+| `Porto-Farina` |  | 374 |
+| `Pénitencier Agricole du Djebel Djougar` |  | 141 |
+| `Pénitencier Agricole du Djebel-Djougar` |  | 179 |
+| `Pénitencier agricole du Djebel-Djougar` |  | 54 |
+| `Sfax` |  | 548 |
+| `Sousse` |  | 548 |
+| `Tunis` |  | 548 |
+
+`flow`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `days` |  | 278 |
+| `entry` |  | 1,455 |
+| `exit` |  | 4,093 |
+| `stock` |  | 556 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `detention_days` | Total des journées de détention | 278 |
+| `end` | Population au 31 décembre de l'année | 278 |
+| `in_free` | Entrées pendant l'année : venant de l'état de liberté | 278 |
+| `in_hospitals` | Entrées pendant l'année : venant des hôpitaux | 66 |
+| `in_other_prisons` | Entrées pendant l'année : venant d'autres prisons et autres lieux de détention | 278 |
+| `out_acquittal` | Sorties pendant l'année : par acquittement, ordonnance de non-lieu ou sursis | 278 |
+| `out_administrative` | Sorties pendant l'année : par ordre administratif | 278 |
+| `out_amnesty` | Sorties pendant l'année : par amnistie | 53 |
+| `out_colons_controles` | Sorties pendant l'année : colons et contrôles | 26 |
+| `out_conditional` | Sorties pendant l'année : par (libération) conditionnelle | 252 |
+| `out_died` | Sorties pendant l'année : décédés | 278 |
+| `out_escaped` | Sorties pendant l'année : évadés | 278 |
+| `out_evacuated_hospitals` | Sorties pendant l'année : évacués sur les hôpitaux | 52 |
+| `out_executed` | Sorties pendant l'année : exécutés | 278 |
+| `out_pardon` | Sorties pendant l'année : par grâce | 182 |
+| `out_pardon_amnesty` | Sorties pendant l'année : par grâce ou amnistie | 78 |
+| `out_pardon_amnesty_2` | Sorties pendant l'année : par grâce ou amnistie (column printed a second time, sgt1924 women) | 13 |
+| `out_provisional` | Sorties pendant l'année : par libération provisoire | 252 |
+| `out_provisional_conditional` | Sorties pendant l'année : par libération provisoire et conditionnelle | 26 |
+| `out_sentence` | Sorties pendant l'année : par expiration de peine | 278 |
+| `re_colons` | Entrées pendant l'année : réintégrés colons | 26 |
+| `re_conditional` | Entrées pendant l'année : réintégrés après libération conditionnelle | 174 |
+| `re_escape` | Entrées pendant l'année : réintégrés après évasion | 251 |
+| `re_hospital` | Entrées pendant l'année : réintégrés de l'hôpital | 104 |
+| `re_provisional` | Entrées pendant l'année : réintégrés après libération provisoire | 278 |
+| `start` | Population au 31 décembre de l'année précédente | 278 |
+| `tr_alg_appellants` | Sorties pendant l'année : transférés en Algérie : appelants / en appel | 66 |
+| `tr_alg_central` | Sorties pendant l'année : transférés en Algérie : centrales | 66 |
+| `tr_alg_convict_depot` | Sorties pendant l'année : transférés en Algérie : dépôt de forçats | 26 |
+| `tr_alg_el_harrach` | Sorties pendant l'année : transférés en Algérie : El-Harrach | 13 |
+| `tr_central` | Sorties pendant l'année : transférés dans les maisons centrales | 186 |
+| `tr_central_agricultural` | Sorties pendant l'année : transférés dans les maisons centrales et pénitencier agricole | 26 |
+| `tr_convict_depots` | Sorties pendant l'année : transférés dans les dépôts de forçats | 163 |
+| `tr_correction` | Sorties pendant l'année : transférés dans les maisons de correction | 174 |
+| `tr_expelled_algeria` | Sorties pendant l'année : transférés : expulsés dirigés sur la frontière algérienne / à la frontière algérienne | 52 |
+| `tr_hospitals` | Sorties pendant l'année : transférés dans les hôpitaux | 52 |
+| `tr_localities` | Sorties pendant l'année : transférés dans diverses localités | 65 |
+| `tr_other_prisons` | Sorties pendant l'année : transférés dans d'autres prisons | 212 |
+| `tr_tun_bagnes` | Sorties pendant l'année : transférés en Tunisie : dans les bagnes tunisiens | 39 |
+| `tr_tun_remand` | Sorties pendant l'année : transférés en Tunisie : dans les maisons d'arrêt / prisons d'arrêt | 66 |
+| `tr_various` | Sorties pendant l'année : transférés sur diverses destinations | 174 |
+| `tr_work_sites` | Sorties pendant l'année : transférés sur les chantiers extérieurs | 111 |
+
+### prisons_transfers
+
+**Prison de Tunis : transfèrements (sgt1922-sgt1925); Service des transfèrements (sgt1926-sgt1935)**  
+*Transfers of prisoners by destination*
+
+Source `sgt`, table transfers, printed pages by edition. 168 rows. Value type: count. Flags: (empty) 168. Notes and validation: [`../yearbook_other_chapters/csv/prisons_transfers.md`](../yearbook_other_chapters/csv/prisons_transfers.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `destination` | Coded dimension. |
+| `destination_fr` | Printed French label for `destination`. |
+| `observations_fr` | Place or label as printed (28 distinct values). |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`destination`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `algerian_border` | Frontière algérienne | 8 |
+| `algerian_prisons` | Prisons algériennes | 12 |
+| `algiers_remand_prison` | Maison d'arrêt Alger | 16 |
+| `central_correction_algeria` | Maisons centrales et correction (Algérie) | 4 |
+| `central_prison_algeria` | Maison centrale d'Algérie | 4 |
+| `central_prisons` | Maisons centrales | 10 |
+| `central_prisons_algeria` | Maisons centrales (Algérie) | 2 |
+| `controles_colons` | Contrôles civils et colons | 4 |
+| `convict_depots_algeria` | Dépôts de forçats : Algérie | 12 |
+| `convict_depots_tunisia` | Dépôts de forçats : Tunisie | 12 |
+| `correction_house` | Maison de correction | 2 |
+| `correction_houses` | Maisons de correction | 6 |
+| `correction_houses_tunisia` | Maisons de correction (Tunisie) | 6 |
+| `departmental_prisons` | Prisons départementales | 2 |
+| `el_harrach` | L'Harrach | 8 |
+| `french_algerian_judicial_remand` | Maisons d'arrêt des autorités judiciaires françaises ou algériennes | 6 |
+| `marseille` | Marseille | 8 |
+| `outside_work_sites` | Chantiers extérieurs | 12 |
+| `tunisian_prisons` | Prisons tunisiennes | 18 |
+| `various_destinations` | Destinations diverses | 12 |
+| `various_localities` | Dirigés sur diverses localités | 4 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `prisoners` | Nombre de détenus transférés | 84 |
+| `transfers` | Nombre de transfèrements | 84 |
+
+### prisons_deaths
+
+**État numérique des décès par prison et par maladie**  
+*Deaths of prisoners by prison and by disease*
+
+Source `sgt`, table deaths, printed pages by edition. 3,054 rows. Value type: count. Flags: (empty) 3,053, total_mismatch 1. Notes and validation: [`../yearbook_other_chapters/csv/prisons_deaths.md`](../yearbook_other_chapters/csv/prisons_deaths.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `establishment` | Coded dimension. |
+| `disease` | Text (66 distinct values). |
+| `disease_fr` | Printed French label for `disease`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`establishment`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `Bizerte` |  | 205 |
+| `Béja` |  | 205 |
+| `Chantiers extérieurs` |  | 20 |
+| `Djebel Djougar` |  | 59 |
+| `Djebel-Djougar` |  | 46 |
+| `Djebel-Djouggar` |  | 46 |
+| `Gabès` |  | 205 |
+| `Gafsa` |  | 205 |
+| `Hôpital Sadiki et Hôpital civil` |  | 46 |
+| `Hôpital Sadiki et hôpital civil` |  | 46 |
+| `Hôpitaux` |  | 59 |
+| `Kairouan` |  | 205 |
+| `La Goulette` |  | 92 |
+| `Le Bardo` |  | 205 |
+| `Le Kef` |  | 205 |
+| `Porto-Farina` |  | 205 |
+| `Pénitencier du Djougar` |  | 34 |
+| `Pénitencier du Djouggar` |  | 20 |
+| `Sfax` |  | 205 |
+| `Sousse` |  | 205 |
+| `Tunis : Détention et hôpitaux` |  | 20 |
+| `Tunis : Hôpitaux` |  | 34 |
+| `Tunis : Infirmerie centrale` |  | 93 |
+| `Tunis : Infirmerie de la Prison` |  | 46 |
+| `Tunis : Infirmerie de la prison` |  | 139 |
+| `Tunis : Infirmerie des femmes` |  | 92 |
+| `Tunis : Infirmerie pénitentiaire` |  | 112 |
+
+### prisons_guard_staff
+
+**État comparatif du personnel de garde avec l'effectif journalier maximum de chaque établissement de détention**  
+*Guard staff compared with the maximum daily number of prisoners, by prison*
+
+Source `sgt`, table guard;guard_note, printed pages by edition. 896 rows. Value type: count. Flags: (empty) 895, not_applicable 1. Notes and validation: [`../yearbook_other_chapters/csv/prisons_guard_staff.md`](../yearbook_other_chapters/csv/prisons_guard_staff.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `establishment` | Coded dimension. |
+| `line` | Coded dimension. |
+| `line_fr` | Printed French label for `line`. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`establishment`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `Bardo` |  | 16 |
+| `Bizerte` |  | 80 |
+| `Béja` |  | 80 |
+| `Chantiers miniers et salines` |  | 4 |
+| `Djebel-Djougar` |  | 16 |
+| `Djebel-Djougar (note 1)` |  | 2 |
+| `Djebel-Djouggar (note 1)` |  | 2 |
+| `Douaria` |  | 4 |
+| `Gabès` |  | 80 |
+| `Gafsa` |  | 80 |
+| `Kairouan` |  | 80 |
+| `Kalâa-Djerda` |  | 4 |
+| `La Goulette` |  | 20 |
+| `Le Bardo` |  | 24 |
+| `Le Kef` |  | 80 |
+| `Porto-Farina` |  | 40 |
+| `Pénitencier agricole du Djougar` |  | 40 |
+| `Salahia` |  | 4 |
+| `Sfax` |  | 80 |
+| `Sousse` |  | 80 |
+| `Tunis` |  | 80 |
+
+`line`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `(empty)` |  | 72 |
+| `juveniles` | Pupilles | 16 |
+| `men` | Hommes | 440 |
+| `mine_detachment` | détachement mines | 8 |
+| `women` | Femmes | 360 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `agents_french` | Agents français (from sgt1924: Cadre A) | 223 |
+| `agents_indigenous` | Agents indigènes (from sgt1924: Cadre B) | 223 |
+| `agents_indigenous_temporary` | Note (1) : agents indigènes temporaires | 4 |
+| `max_daily` | Effectif maximum journalier | 223 |
+| `wardresses` | Surveillantes | 223 |

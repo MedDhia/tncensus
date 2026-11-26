@@ -181,3 +181,7 @@ prisons_condemned_nationality_age,sgt,condemned_age,"Répartition des condamnés
 prisons_condemned_offence,sgt,condemned_offence,"Répartition des condamnés d'après la nationalité, la nature du délit et la catégorie pénale","Condemned prisoners by nationality, offence and sentence",by edition,count
 prisons_work_days,sgt,work_days,Journées de travail des détenus,"Days of work of the prisoners, by prison and work site",by edition,count
 prisons_expenditure,sgt,expenditure,Tableau comparatif des dépenses et des journées de détention,"Expenditure and days of detention, by prison (cost per day of detention, products of the work)",by edition,mixed
+prisons_movement,sgt,movement_men;movement_women,Mouvement général d'entrée et de sortie. Effectif au 31 décembre,"Prison population movement by prison: population at 1 January, entries and exits by kind, population at 31 December, days of detention (men and boys; women and girls)",by edition,count
+prisons_transfers,sgt,transfers,Prison de Tunis : transfèrements (sgt1922-sgt1925); Service des transfèrements (sgt1926-sgt1935),Transfers of prisoners by destination,by edition,count
+prisons_deaths,sgt,deaths,État numérique des décès par prison et par maladie,Deaths of prisoners by prison and by disease,by edition,count
+prisons_guard_staff,sgt,guard;guard_note,État comparatif du personnel de garde avec l'effectif journalier maximum de chaque établissement de détention,"Guard staff compared with the maximum daily number of prisoners, by prison",by edition,count

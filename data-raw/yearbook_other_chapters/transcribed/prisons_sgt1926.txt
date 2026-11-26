@@ -82,3 +82,106 @@ En Algérie | 38215 0 212043.75 0 212043.07 - 0
 Dans les Hôpitaux | 5135 0 24630 0 24630 - 0
 Chantiers extérieurs | 132947 0 0 0 0 - 84484.27
 Totaux généraux (Dépenses et Recettes)* | - 967687.63 1460640.95 435200.08 2863528.66 - 227271.25
+
+@movement_men view=660 page=96 year=1926 split=out_provisional:661:97
+img: all
+# e) Mouvement général d'entrée et de sortie. Effectif au 31 décembre 1926 des détenus (Hommes et jeunes
+# garçons); two-page spread, up to "par libération conditionnelle" on p. 96 (f660), from "par libération
+# provisoire" on p. 97 (f661). Sousse, d'autres prisons: printed "-343" (a stray dash before the figure).
+# Sousse, transférés dans d'autres prisons: middle digit stained (looks like 782); read 732, which gives both
+# the Sousse Total des sorties (1.804) and the column total (3.705).
+cols: start in_free in_other_prisons re_escape re_conditional re_provisional in_total out_sentence out_pardon out_conditional out_provisional out_acquittal out_administrative tr_central tr_correction tr_convict_depots tr_other_prisons tr_work_sites tr_various out_escaped out_died out_executed out_total end detention_days
+Béja | 23 121 44 0 0 3 168 69 0 0 46 0 0 0 0 0 45 0 0 2 0 0 162 29 8754
+Bizerte | 26 560 76 2 0 0 638 59 0 0 63 1 86 0 0 0 367 70 0 0 0 0 646 18 10674
+Gabès | 130 747 24 0 0 12 783 325 0 0 39 226 5 0 0 0 146 34 15 14 0 0 804 109 40848
+Gafsa | 91 790 34 8 0 0 832 379 0 0 0 265 39 0 0 0 99 17 0 7 2 0 808 115 49498
+Kairouan | 137 1187 4 0 0 0 1191 564 0 0 193 156 21 0 0 0 216 0 7 1 0 0 1158 170 57550
+Le Kef | 137 948 46 0 0 9 1003 371 0 0 198 46 42 0 0 0 284 50 23 1 2 0 1017 123 46610
+Sfax | 114 1540 217 7 0 10 1774 1025 0 0 208 98 27 0 0 0 398 0 0 4 0 0 1760 128 47713
+Sousse | 189 1443 343 14 0 70 1870 620 0 0 268 138 25 0 0 0 732 0 16 4 1 0 1804 255 76853
+Tunis | 1201 5263 1920 19 0 1 7203 2680 11 15 792 651 12 9 631 349 773 639 448 8 59 2 7079 1325 437930
+Le Bardo | 125 0 333 0 0 0 333 146 2 6 0 0 0 0 0 0 140 0 0 13 0 0 307 151 48852
+La Goulette | 156 0 339 0 0 0 339 332 1 0 1 0 0 0 0 0 53 0 0 17 0 0 404 91 20465
+Porto-Farina | 349 0 199 0 0 0 199 55 2 1 0 0 0 0 0 0 185 0 0 1 1 0 245 303 111872
+Pénitencier Agricole du Djebel Djougar | 416 0 718 0 0 0 718 380 3 7 0 0 0 0 0 0 267 0 0 33 4 0 694 440 151197
+Totaux | 3094 12599 4297 50 0 105 17051 7005 19 29 1808 1581 257 9 631 349 3705 810 509 105 69 2 16888 3257 1108816
+
+@movement_women view=660 page=96 year=1926 split=out_provisional:661:97
+img: all
+# f) the same for the women (Femmes et jeunes filles), lower half of the spread; only the nine prisons
+# holding women are printed.
+cols: start in_free in_other_prisons re_escape re_conditional re_provisional in_total out_sentence out_pardon out_conditional out_provisional out_acquittal out_administrative tr_central tr_correction tr_convict_depots tr_other_prisons tr_work_sites tr_various out_escaped out_died out_executed out_total end detention_days
+Béja | 1 4 0 0 0 0 4 1 0 0 3 0 0 0 0 0 1 0 0 0 0 0 5 0 69
+Bizerte | 2 12 0 0 0 0 12 0 0 0 3 0 5 0 0 0 6 0 0 0 0 0 14 0 95
+Gabès | 1 22 1 0 0 0 23 4 0 0 8 3 0 0 0 0 4 0 1 0 0 0 20 4 882
+Gafsa | 0 12 0 0 0 0 12 4 0 0 0 7 0 0 0 0 1 0 0 0 0 0 12 0 190
+Kairouan | 1 34 0 0 0 0 34 17 0 0 9 3 0 0 0 0 4 0 0 0 0 0 33 2 831
+Le Kef | 3 9 6 0 0 0 15 3 0 0 5 0 0 0 0 0 7 0 1 0 0 0 16 2 772
+Sfax | 6 80 4 0 0 1 85 53 0 0 7 14 0 0 0 0 9 0 0 0 0 0 83 8 1805
+Sousse | 6 29 13 0 0 2 44 8 0 0 8 4 0 0 0 0 22 0 2 0 0 0 44 6 1412
+Tunis | 50 160 19 0 4 1 184 82 2 0 49 23 0 0 0 0 5 0 27 0 0 0 188 46 18025
+Totaux | 70 362 43 0 4 4 413 172 2 0 92 54 5 0 0 0 59 0 31 0 0 0 415 68 24081
+
+@transfers view=662 page=98 year=1926
+img: all
+# g) Service des transfèrements (upper half of p. 98; all prisons, not only Tunis). Label = "destination //
+# observations".
+cols: transfers prisoners
+Prisons tunisiennes // Prévenus ou condamnés à toutes peines. | 728 3669
+Prisons algériennes // Appelants, mandats d'arrêt. | 26 95
+Maisons centrales // | 7 9
+Maisons de correction // | 23 631
+Dépôts de forçats : Algérie // | 18 50
+Dépôts de forçats : Tunisie // | 21 299
+Chantiers extérieurs // | 109 810
+Destinations diverses // Expulsés, évacués, etc. | 138 540
+Totaux | 1070 6103
+
+@deaths view=662 page=98 year=1926 heads="Tuberculose pulmonaire;Grippe;Pneumonie;Bronchite;Affection cardiaque;Cachexie;Typhus;Fièvre typhoïde;Paludisme;Syphilis;Dysenterie;Péritonite;Cancer;Urémie"
+img: all
+# h) État numérique des décès par prison et par maladie (lower half of p. 98). Tunis split into Infirmerie
+# centrale, Infirmerie de la prison, Hôpitaux.
+cols: tuberculose grippe pneumonie bronchite affection_cardiaque cachexie typhus fievre_typhoide paludisme syphilis dysenterie peritonite cancer uremie total
+Béja | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Bizerte | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Gabès | 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1
+Gafsa | 2 0 0 0 0 0 0 0 0 0 0 0 0 0 2
+Kairouan | 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1
+Le Kef | 1 0 0 0 0 0 0 0 0 0 0 1 0 0 2
+Sfax | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Sousse | 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1
+Tunis : Infirmerie centrale | 47 0 0 0 0 1 0 0 0 0 0 0 0 0 48
+Tunis : Infirmerie de la prison | 4 0 2 0 0 0 0 0 0 0 2 2 1 0 11
+Tunis : Hôpitaux | 0 0 0 0 0 0 0 0 0 1 0 1 1 0 3
+Le Bardo | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Porto-Farina | 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1
+Pénitencier du Djougar | 0 0 0 1 0 0 0 0 3 0 0 0 0 0 4
+Totaux | 54 0 2 1 1 1 1 0 4 1 2 4 2 1 74
+
+@guard view=663 page=99 year=1926
+img: all
+# i) État comparatif du personnel de garde … (upper half of p. 99). The Totaux line is printed empty (no
+# totals); no column check is possible.
+cols: max_daily agents_french agents_indigenous wardresses
+Béja : Hommes | 40 1 1 0
+Béja : Femmes | 2 0 0 1
+Bizerte : Hommes | 98 1 1 0
+Bizerte : Femmes | 1 0 0 1
+Gabès : Hommes | 160 1 2 0
+Gabès : Femmes | 8 0 0 1
+Gafsa : Hommes | 191 1 2 0
+Gafsa : Femmes | 4 0 0 1
+Kairouan : Hommes | 223 1 2 0
+Kairouan : Femmes | 6 0 0 1
+Le Kef : Hommes | 187 2 2 0
+Le Kef : Femmes | 6 0 0 1
+Sfax : Hommes | 181 2 3 0
+Sfax : Femmes | 12 0 0 1
+Sousse : Hommes | 276 3 3 0
+Sousse : Femmes | 8 0 0 1
+Tunis : Hommes | 1373 29 20 0
+Tunis : Femmes | 60 0 0 2
+Le Bardo : Hommes | 168 2 5 0
+La Goulette : Hommes | 235 1 4 0
+Porto-Farina : Hommes | 376 7 6 0
+Pénitencier agricole du Djougar : Hommes | 533 16 0 0

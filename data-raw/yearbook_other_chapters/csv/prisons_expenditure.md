@@ -2,13 +2,13 @@
 
 *Expenditure and days of detention, by prison (cost per day of detention, products of the work).*
 
-Source: *Statistique générale de la Tunisie*, chapter *Établissements pénitentiaires*, editions sgt1922, sgt1923, sgt1924, sgt1925, sgt1926, sgt1927, sgt1928. Source gallica.bnf.fr / Ministère des Affaires étrangères.
+Source: *Statistique générale de la Tunisie*, chapter *Établissements pénitentiaires*, editions sgt1922, sgt1923, sgt1924, sgt1925, sgt1926, sgt1927, sgt1928, sgt1929, sgt1930, sgt1935. Source gallica.bnf.fr / Ministère des Affaires étrangères.
 
-Pages and views of the stored values: sgt1922 (`bpt6k9105649x`): p. 75, f99; sgt1923 (`bpt6k9105649x`): p. 81, f583; sgt1924 (`bpt6k9105649x`): p. 83, f1073; sgt1925 (`bpt6k9105650k`): p. 85, f109; sgt1926 (`bpt6k9105650k`): p. 94, f658, p. 95, f659; sgt1927 (`bpt6k91056510`): p. 92, f120, p. 93, f121; sgt1928 (`bpt6k91056510`): p. 92, f644, p. 93, f645.
+Pages and views of the stored values: sgt1922 (`bpt6k9105649x`): p. 75, f99; sgt1923 (`bpt6k9105649x`): p. 81, f583; sgt1924 (`bpt6k9105649x`): p. 83, f1073; sgt1925 (`bpt6k9105650k`): p. 85, f109; sgt1926 (`bpt6k9105650k`): p. 94, f658, p. 95, f659; sgt1927 (`bpt6k91056510`): p. 92, f120, p. 93, f121; sgt1928 (`bpt6k91056510`): p. 92, f644, p. 93, f645; sgt1929 (`bpt6k9105652d`): p. 94, f122, p. 95, f123; sgt1930 (`bpt6k9105652d`): p. 98, f656, p. 99, f657; sgt1935 (`bpt6k9105653t`): p. 64, f84, p. 65, f85.
 
 Transcriptions: `../transcribed/prisons_<edition>.txt`; rebuild with `python3 data-raw/yearbook_other_chapters/extract_prisons.py build`.
 
-Rows: 793. Years: 1922, 1923, 1924, 1925, 1926, 1927, 1928.
+Rows: 1094. Years: 1922, 1923, 1924, 1925, 1926, 1927, 1928, 1929, 1930, 1935.
 
 Units: days of detention; francs with centimes; francs per day.
 
@@ -29,7 +29,7 @@ Printed once per edition for the edition year (SPEC_ADDENDUM rule 5): every edit
 - `value`: number of days of detention, francs (centimes after the point) or francs per day (to the decimals printed: 4 up to sgt1925, 3 from sgt1926)
 - `flag`: empty, `ocr_corrected`, `illegible`, `total_mismatch`, `not_applicable` (SPEC.md)
 
-Table d) of the chapter. Transcribed for sgt1922-sgt1928; sgt1929, sgt1930 and sgt1935 print the same table but are **not transcribed yet** (see the survey).
+Table d) of the chapter, printed sgt1922-sgt1935 (sgt1936 and sgt1939 print no such table); every edition is transcribed. sgt1929-sgt1935 keep sgt1926's columns. sgt1930 prints prices to four decimals again and prices the lower lines and the Totaux généraux; sgt1935 has Djebel Djougar and "Détachements extérieurs" above the Totaux, a last line "Détachés dans les établissements pénitentiaires d'Algérie" (only days, total and price; the other money columns printed ») and no Totaux généraux line.
 
 The printed `Total` column is stored, unlike other totals, because several lines print only a total (sgt1924 En traitement dans les hôpitaux, En détention hors de Tunisie). The "Totaux", "TOTAL des journées de détention" and "Totaux généraux (Dépenses et Recettes)" lines are not stored; they are the checks. A total line marked `*` in the transcription sums every line above it, the others the lines since the previous total line. Cells not printed (blank price column under the lower lines) are NA with flag `not_applicable`; » = 0.
 
@@ -39,15 +39,17 @@ Footnote (1) text (sgt1922-sgt1925): "Le prix de la journée de détention dans 
 
 sgt1923: the price column prints "1 4012 (1)" on the TOTAL des journées line with "(1) Prix moyen" under it and 1 4012 again on the TOTAUX line; neither is stored (the footnote carries 1,4012). sgt1927 Bardo total: hundreds digit broken in the printing, read as 1 (158.109,75 = the sum of its components). sgt1928 Totaux line prints » under Personnel and Produits although the lines are not »; the Totaux total 2.987.183,76 does include the personnel of the lines.
 
-Unlocated differences (failed checks without a flagged cell; printed values confirmed on crops): sgt1923 products column 0,90 short of the TOTAUX; sgt1924 days column 10 short of the Totaux; sgt1925 personnel column 0,06 over the Totaux and the Totaux line's components 0,06 under its total; price-per-day differences of 0,0003-0,0040 (sgt1924 Tunis, Gabès; sgt1925 Tunis), which look like prices computed on slightly different figures.
+Unlocated differences (failed checks without a flagged cell; printed values confirmed on crops): sgt1923 products column 0,90 short of the TOTAUX; sgt1924 days column 10 short of the Totaux; sgt1925 personnel column 0,06 over the Totaux and the Totaux line's components 0,06 under its total; price-per-day differences of 0,0002-0,0040 (sgt1924 Tunis, Gabès; sgt1925 Tunis; sgt1930 Kairouan, En Algérie; sgt1935 Kairouan, Djebel Djougar, Détachés … d'Algérie), which look like prices computed on slightly different figures. Larger price differences are flagged (below).
+
+sgt1929-sgt1935: amounts printed without centimes ("201.520 »", "15 »", sgt1935 Béja products "9.225") are stored as whole francs; « (ditto) under a » is stored as 0. sgt1929 Bardo personnel 85.613,20: the 2 is broken ("?0") as elsewhere on the page; 20 is the reading that gives the line and column totals.
 
 Every cell was read on the native-resolution page images; every failing check re-read on an enlarged crop (the printed values were confirmed).
 
-Cells flagged `total_mismatch` (printed value kept, re-read on a native-resolution crop): sgt1923: Bardo / personnel (printed 33.532,38: the Bardo line sums to 86.421,59 for a printed total 86.421,99 and the column to 597.547,85 for 597.548,25, both 0,40 short); sgt1923: Béja / food (printed 11.249,14: the Béja line and the nourriture column are both 0,05 short of their printed totals); sgt1923: Kairouan / price_per_day (printed 1,2518; 66.170,63 / 53.715 days = 1,2319); sgt1924: Kairouan / personnel (printed 16.357,56: the Kairouan line and the personnel column are both 200 short of their printed totals); sgt1926: Le Kef / food (printed 49.693,34: the Le Kef line and the nourriture column are both 1,00 short of their printed totals); sgt1926: En Algérie / total (printed 212.043,07 for a nourriture of 212.043,75 and nothing else; the Totaux généraux (2.863.528,66) needs 212.043,75); sgt1927: Porto-Farina / upkeep (printed 50.685,73: the Porto-Farina line and the dépenses diverses column are both 0,20 short of their printed totals); sgt1928: Sfax / upkeep (printed 327.485,87; the Sfax total 159.829,79 needs 37.475,87, the figure printed on the Sousse line below); sgt1928: Sousse / upkeep (printed 37.475,87 (the Sfax figure); the Sousse total 186.151,84 needs 28.500,53); sgt1928: Gabès / total (printed 109.392,95 for components summing to 109.492,95; the column total agrees with the other cells only if Gabès or Sousse dépenses diverses differ by the same 100 (see the failed checks)).
+Cells flagged `total_mismatch` (printed value kept, re-read on a native-resolution crop): sgt1923: Bardo / personnel (printed 33.532,38: the Bardo line sums to 86.421,59 for a printed total 86.421,99 and the column to 597.547,85 for 597.548,25, both 0,40 short); sgt1923: Béja / food (printed 11.249,14: the Béja line and the nourriture column are both 0,05 short of their printed totals); sgt1923: Kairouan / price_per_day (printed 1,2518; 66.170,63 / 53.715 days = 1,2319); sgt1924: Kairouan / personnel (printed 16.357,56: the Kairouan line and the personnel column are both 200 short of their printed totals); sgt1926: Le Kef / food (printed 49.693,34: the Le Kef line and the nourriture column are both 1,00 short of their printed totals); sgt1926: En Algérie / total (printed 212.043,07 for a nourriture of 212.043,75 and nothing else; the Totaux généraux (2.863.528,66) needs 212.043,75); sgt1927: Porto-Farina / upkeep (printed 50.685,73: the Porto-Farina line and the dépenses diverses column are both 0,20 short of their printed totals); sgt1928: Sfax / upkeep (printed 327.485,87; the Sfax total 159.829,79 needs 37.475,87, the figure printed on the Sousse line below); sgt1928: Sousse / upkeep (printed 37.475,87 (the Sfax figure); the Sousse total 186.151,84 needs 28.500,53); sgt1928: Gabès / total (printed 109.392,95 for components summing to 109.492,95; the column total agrees with the other cells only if Gabès or Sousse dépenses diverses differ by the same 100 (see the failed checks)); sgt1930: Béja / food (printed 34.555,77: the Béja line (129.900,88) and the nourriture column (878.763,98) are both 0,04 short of the cells, at this cell); sgt1935: Bizerte / price_per_day (printed 4,982; 58.761,13 / 11.640 days = 5,048 (days, total and components all check against the Totaux)); sgt1935: Sfax / price_per_day (printed 3,885; 158.747,36 / 35.901 days = 4,422 (days, total and components all check against the Totaux)); sgt1935: Tunis / price_per_day (printed 3,222; 1.450.653,04 / 448.918 days = 3,231 (days, total and components all check against the Totaux)).
 
 ## Validation
 
-- Checks against printed totals and identities: 287; passed: 260; failed: 27.
+- Checks against printed totals and identities: 406; passed: 368; failed: 38.
 
 Failed checks (printed values kept; every failure was re-read on a native-resolution crop, or recurs unchanged in another edition's printing of the same cells):
 
@@ -78,10 +80,21 @@ Failed checks (printed values kept; every failure was re-read on a native-resolu
   - sgt1928 p.92 (f644) expenditure Sousse: total = personnel + food + upkeep: cells give 195127.18, printed 186151.84 (difference -8975.34)
   - sgt1928 p.92 (f644) expenditure upkeep: lines vs Totaux: cells give 831992.08, printed 532906.74 (difference -299085.34)
   - sgt1928 p.92 (f644) expenditure upkeep: lines vs Totaux généraux (Dépenses et Recettes)*: cells give 1160414.06, printed 861328.72 (difference -299085.34)
+  - sgt1930 p.98 (f656) expenditure Béja: total = personnel + food + upkeep: cells give 129900.92, printed 129900.88 (difference -0.04)
+  - sgt1930 p.98 (f656) expenditure Kairouan: price per day = total / days (to the last printed decimal): cells give 3.7781, printed 3.7783 (difference 0.0002)
+  - sgt1930 p.98 (f656) expenditure food: lines vs Totaux: cells give 878764.02, printed 878763.98 (difference -0.04)
+  - sgt1930 p.98 (f656) expenditure En Algérie: price per day = total / days (to the last printed decimal): cells give 6.9336, printed 6.9303 (difference -0.0033)
+  - sgt1930 p.98 (f656) expenditure food: lines vs Totaux généraux (Dépenses et Recettes)*: cells give 901820.59, printed 901820.55 (difference -0.04)
+  - sgt1935 p.64 (f84) expenditure Bizerte: price per day = total / days (to the last printed decimal): cells give 5.048, printed 4.982 (difference -0.066)
+  - sgt1935 p.64 (f84) expenditure Kairouan: price per day = total / days (to the last printed decimal): cells give 3.970, printed 3.972 (difference 0.002)
+  - sgt1935 p.64 (f84) expenditure Sfax: price per day = total / days (to the last printed decimal): cells give 4.422, printed 3.885 (difference -0.537)
+  - sgt1935 p.64 (f84) expenditure Tunis: price per day = total / days (to the last printed decimal): cells give 3.231, printed 3.222 (difference -0.009)
+  - sgt1935 p.64 (f84) expenditure Djebel Djougar: price per day = total / days (to the last printed decimal): cells give 2.233, printed 2.230 (difference -0.003)
+  - sgt1935 p.64 (f84) expenditure Détachés dans les établissements pénitentiaires d'Algérie: price per day = total / days (to the last printed decimal): cells give 6.384, printed 6.387 (difference 0.003)
 
 - Overlapping printings: 0 cell comparisons with other editions printing the same cell; 0 differences.
 
-- Flagged cells: not_applicable: 15, total_mismatch: 10.
+- Flagged cells: not_applicable: 19, total_mismatch: 14.
 
   - sgt1923 p.81 1923 Bardo / personnel / francs = 33532.38 (total_mismatch)
   - sgt1923 p.81 1923 Béja / food / francs = 11249.14 (total_mismatch)
@@ -108,9 +121,17 @@ Failed checks (printed values kept; every failure was re-read on a native-resolu
   - sgt1928 p.93 1928 Chantiers extérieurs / price_per_day / francs_per_day = NA (not_applicable)
   - sgt1928 p.93 1928 Dans les Hôpitaux / price_per_day / francs_per_day = NA (not_applicable)
   - sgt1928 p.93 1928 En Algérie / price_per_day / francs_per_day = NA (not_applicable)
+  - sgt1929 p.95 1929 Pénitencier agricole du Djebel Djougar / price_per_day / francs_per_day = NA (not_applicable)
+  - sgt1929 p.95 1929 Chantiers extérieurs / price_per_day / francs_per_day = NA (not_applicable)
+  - sgt1929 p.95 1929 Dans les Hôpitaux / price_per_day / francs_per_day = NA (not_applicable)
+  - sgt1929 p.95 1929 En Algérie / price_per_day / francs_per_day = NA (not_applicable)
+  - sgt1930 p.99 1930 Béja / food / francs = 34555.77 (total_mismatch)
+  - sgt1935 p.65 1935 Bizerte / price_per_day / francs_per_day = 4.982 (total_mismatch)
+  - sgt1935 p.65 1935 Sfax / price_per_day / francs_per_day = 3.885 (total_mismatch)
+  - sgt1935 p.65 1935 Tunis / price_per_day / francs_per_day = 3.222 (total_mismatch)
 
 ## Image versus OCR
 
-- Read cell by cell on the page images (11 printings): sgt1922 f99, sgt1923 f583, sgt1924 f1073, sgt1925 f109, sgt1926 f658, sgt1927 f120, sgt1928 f644, sgt1922 f99, sgt1923 f583, sgt1924 f1073, sgt1925 f109.
+- Read cell by cell on the page images (14 printings): sgt1922 f99, sgt1923 f583, sgt1924 f1073, sgt1925 f109, sgt1926 f658, sgt1927 f120, sgt1928 f644, sgt1929 f122, sgt1930 f656, sgt1935 f84, sgt1922 f99, sgt1923 f583, sgt1924 f1073, sgt1925 f109.
 - Drafted from the Gallica OCR and accepted on the checks above, with every failing check and every unclear OCR token re-read on a native-resolution crop (0 printings): none.
 - Cells whose image reading differs from the OCR (flag `ocr_corrected`): 0.
