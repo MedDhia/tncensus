@@ -15,6 +15,7 @@ Every table is tidy: one row per printed cell. Printed subtotals and totals are 
 | `illegible` | Value could not be read or solved; `value` is NA |
 | `not_applicable` | Question not asked of this group; `value` is NA |
 | `reprint_corrected` | Taken from another edition's printing, because this one is misprinted or unreadable |
+| `row_realigned` | Printed on the wrong line of the table; stored on the row its content belongs to (the notes list each case) |
 
 ## Sources
 
@@ -168,6 +169,9 @@ Every table is tidy: one row per printed cell. Printed subtotals and totals are 
 | [`education_total_pupils`](#education_total_pupils) | total | by edition | 12 | count | Total pupils, public and private education, at 31 December |
 | [`education_vocational`](#education_vocational) | vocational | by edition | 255 | count | Vocational education of the indigenous population: apprentices by school |
 | [`education_schools`](#education_schools) | public_schools | by edition | 14,960 | count | Public primary schools and private schools, school by school: classes, staff and pupils by sex and nationality (sgt1922, sgt1930) |
+| [`communes_budget`](#communes_budget) | budget | by edition | 2,510 | francs | Municipal finances: receipts and expenditure of each commune |
+| [`communes_property`](#communes_property) | property | by edition | 1,959 | francs | Communal property: real estate and movable assets owned by each commune at 31 December |
+| [`communes_gas_tunis`](#communes_gas_tunis) | gas | by edition | 96 | mixed | Gas consumption and receipts, city of Tunis, public and private lighting |
 
 ### eur1906_t1_circonscription_nationality
 
@@ -6960,3 +6964,97 @@ Source `sgt`, table public_schools, printed pages by edition. 14,960 rows. Value
 | `muslim` | Musulmanes / Musulmans | 1,760 |
 | `other` | Divers / Diverses | 1,760 |
 | `total` |  | 4,400 |
+
+### communes_budget
+
+**Finances municipales : a) Budget des communes**  
+*Municipal finances: receipts and expenditure of each commune*
+
+Source `sgt`, table budget, printed pages by edition. 2,510 rows. Value type: francs. Flags: (empty) 2,425, illegible 59, row_realigned 20, reprint_corrected 6. Notes and validation: [`../yearbook_other_chapters/csv/communes_budget.md`](../yearbook_other_chapters/csv/communes_budget.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `commune` | Place or label as printed (67 distinct values). |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `expenditure` | Dépenses | 1,255 |
+| `receipts` | Recettes / Recettes y compris excédents laissés par les exercices antérieurs | 1,255 |
+
+### communes_property
+
+**Biens communaux : valeurs immobilières et mobilières appartenant aux communes au 31 décembre**  
+*Communal property: real estate and movable assets owned by each commune at 31 December*
+
+Source `sgt`, table property, printed pages by edition. 1,959 rows. Value type: francs. Flags: (empty) 1,959. Notes and validation: [`../yearbook_other_chapters/csv/communes_property.md`](../yearbook_other_chapters/csv/communes_property.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `commune` | Place or label as printed (61 distinct values). |
+| `category` | Coded dimension. |
+| `category_fr` | Printed French label for `category`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`category`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `movable_assets` | Valeurs mobilières | 653 |
+| `private_domain_real_estate` | Valeurs immobilières : immeubles du domaine privé | 653 |
+| `public_domain_real_estate` | Valeurs immobilières : immeubles du domaine public | 653 |
+
+### communes_gas_tunis
+
+**Gaz : consommation (ville de Tunis)**  
+*Gas consumption and receipts, city of Tunis, public and private lighting*
+
+Source `sgt`, table gas, printed pages by edition. 96 rows. Value type: mixed. Flags: (empty) 94, not_applicable 2. Notes and validation: [`../yearbook_other_chapters/csv/communes_gas_tunis.md`](../yearbook_other_chapters/csv/communes_gas_tunis.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `commune` | Place or label as printed (1 distinct values). |
+| `lighting` | Coded dimension. |
+| `lighting_fr` | Printed French label for `lighting`. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`lighting`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `private_lighting` | Éclairage privé | 48 |
+| `public_lighting` | Éclairage public | 48 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `consumption_m3` | Consommation (mètres cubes) | 48 |
+| `receipts` | Recettes (fr. c.) | 48 |

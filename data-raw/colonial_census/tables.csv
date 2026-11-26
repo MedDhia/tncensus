@@ -141,3 +141,6 @@ education_secondary_establishments_sgt1939,sgt,secondary1939,"Établissements d'
 education_total_pupils,sgt,total,Total général des élèves de l'enseignement public et privé au 31 décembre,"Total pupils, public and private education, at 31 December",by edition,count
 education_vocational,sgt,vocational,Enseignement professionnel de la population indigène (apprentissage),Vocational education of the indigenous population: apprentices by school,by edition,count
 education_schools,sgt,public_schools,"Écoles primaires publiques et écoles privées, école par école","Public primary schools and private schools, school by school: classes, staff and pupils by sex and nationality (sgt1922, sgt1930)",by edition,count
+communes_budget,sgt,budget,Finances municipales : a) Budget des communes,Municipal finances: receipts and expenditure of each commune,by edition,francs
+communes_property,sgt,property,Biens communaux : valeurs immobilières et mobilières appartenant aux communes au 31 décembre,Communal property: real estate and movable assets owned by each commune at 31 December,by edition,francs
+communes_gas_tunis,sgt,gas,Gaz : consommation (ville de Tunis),"Gas consumption and receipts, city of Tunis, public and private lighting",by edition,mixed

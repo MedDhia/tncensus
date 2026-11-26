@@ -99,6 +99,7 @@ def main():
            "| `illegible` | Value could not be read or solved; `value` is NA |",
            "| `not_applicable` | Question not asked of this group; `value` is NA |",
            "| `reprint_corrected` | Taken from another edition's printing, because this one is misprinted or unreadable |",
+           "| `row_realigned` | Printed on the wrong line of the table; stored on the row its content belongs to (the notes list each case) |",
            "", "## Sources", ""]
     for k, v in SOURCES.items():
         out.append(f"- `{k}`: {v}")

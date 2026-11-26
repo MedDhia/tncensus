@@ -57,8 +57,10 @@ values the OCR misread and that were corrected from the scan,
 printed total (the printed value is kept), \code{"derived_from_totals"}
 for cells lost in the binding and derived from the printed totals,
 \code{"not_applicable"} for questions not asked of a group (left
-\code{NA}), and \code{"reprint_corrected"} for values taken from another
-yearbook edition's printing because this one is misprinted or unreadable.
+\code{NA}), \code{"reprint_corrected"} for values taken from another
+yearbook edition's printing because this one is misprinted or unreadable,
+and \code{"row_realigned"} for values printed on the wrong line of a table
+and stored on the row they belong to (the notes list each case).
 Printed subtotals and totals are not stored as rows. A printed \code{»} is
 recorded as 0.
 

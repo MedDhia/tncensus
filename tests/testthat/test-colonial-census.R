@@ -29,7 +29,8 @@ test_that("every colonial table loads with the common columns", {
                                      "total_mismatch",
                                      "derived_from_totals",
                                      "not_applicable",
-                                     "reprint_corrected")), info = idx$table[i])
+                                     "reprint_corrected",
+                                     "row_realigned")), info = idx$table[i])
   }
 })
 

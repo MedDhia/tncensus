@@ -603,7 +603,7 @@
 #' e.g. \code{locality} and \code{controle_civil}, or \code{cheikhat} and
 #' \code{caidat}.
 #'
-#' @format A \code{data.frame} with 2,289 rows and 16 columns:
+#' @format A \code{data.frame} with 2,311 rows and 16 columns:
 #' \describe{
 #'   \item{level}{Column the name appears in: \code{"controle_civil"},
 #'     \code{"annexe"}, \code{"caidat"}, \code{"commune"}, \code{"cheikhat"}
@@ -635,8 +635,8 @@
 #'
 #' @details Names are compared after normalising accents, case, hyphens,
 #'   apostrophes, Arabic articles and common transliteration variants
-#'   (ou/u, dj/j, kh/k, ch/sh); no fuzzy matching is done. Of the 2,178
-#'   commune, cheikhat and locality rows, 1,473 are linked (1,452 with
+#'   (ou/u, dj/j, kh/k, ch/sh); no fuzzy matching is done. Of the 2,200
+#'   commune, cheikhat and locality rows, 1,489 are linked (1,468 with
 #'   coordinates). Links were checked against the gazetteer's own 1931
 #'   contrôle civil, allowing for the 1906 annexes, the later contrôle of
 #'   Zaghouan (carved out of Tunis) and the military territories.
