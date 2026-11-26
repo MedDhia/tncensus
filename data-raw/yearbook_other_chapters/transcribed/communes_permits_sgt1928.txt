@@ -1,0 +1,65 @@
+# Communes chapter, sgt1928 (ark bpt6k91056510): "Concessions sur la voie publique, a) Autorisations de bâtir".
+# Drafted from Gallica OCR, every cell read on native-resolution crops of the page image.
+# Integers; printed » = 0; 'néant' kept as the word (stored 0); '?' = illegible; 'x' = not applicable.
+# Values are printed about half a line below their labels; rows assigned by counting lines (58 value lines
+# for 58 labels). No total is printed on this page. Hammam-Lif n_auth: last digit damaged, read 83 (or 88).
+@permits view=600 page=48 year=1928
+cols: constructions raising n_auth
+Aïn-Draham | 0 0 0
+Ariana | 30 7 37
+Bardo (Le) | 0 0 0
+Ben-Gardane | 0 0 0
+Béja | 13 1 14
+Bizerte | 15 12 20
+Carthage | 0 0 26
+Djemmal | 0 0 0
+Djerba | 7 1 27
+Ebba-Ksour | 4 1 5
+El Djem | 0 0 0
+Fériana | 0 0 0
+Ferryville | 0 0 0
+Foum-Tatahouine | 0 3 1
+Gabès | 7 3 10
+Gafsa | 1 2 9
+Ghardimaou | 2 2 4
+Goulette (La) | 71 10 81
+Grombalia | 7 0 0
+Hadjeb-el-Aïoun | 0 0 0
+Hamma (El) | 0 0 0
+Hammam-Lif | 41 3 83
+Kairouan | 3 2 5
+Kalaa-Kebira | 12 0 43
+Kef (Le) | 8 4 12
+Krib (Le) | 0 0 0
+Ksour-Essaf | 4 0 4
+Maharès | 0 0 0
+Mahdia | 6 2 8
+Marsa (La) | 16 3 19
+Mateur | 32 3 35
+Maxula-Radès | 21 6 27
+Médenine | 0 0 30
+Medjez-el-Bab | 0 0 31
+Menzel-bou-Zelfa | 0 0 0
+Menzel-Temime | 5 0 5
+Moknine | 19 10 29
+Monastir | 2 3 5
+M'saken | 12 3 15
+Nabeul | 11 3 100
+Nefta | 0 0 0
+Philippe-Thomas | 0 0 0
+Saint-Germain | 0 0 5
+Sbeïtla | 0 0 0
+Sfax | 34 25 59
+Sidi-bou-Saïd | 1 1 2
+Soliman | 0 0 0
+Souk-el-Arba | 3 0 3
+Souk-el-Khemis | 5 0 5
+Sousse | 50 4 54
+Tabarka | 2 4 6
+Tebourba | 2 0 2
+Téboursouk | 5 2 7
+Thala | 0 0 0
+Tozeur | 0 0 9
+Tunis | 557 140 697
+Zaghouan | 0 0 1
+Zarzis | 0 0 11

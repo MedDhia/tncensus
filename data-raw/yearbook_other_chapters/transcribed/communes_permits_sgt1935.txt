@@ -1,0 +1,66 @@
+# Communes chapter, sgt1935 (ark bpt6k9105653t): "Concessions sur la voie publique, a) Autorisation de bâtir".
+# Drafted from Gallica OCR, every cell read on native-resolution crops of the page image.
+# Integers; printed » = 0; 'néant' kept as the word (stored 0); '?' = illegible; 'x' = not applicable.
+# No total printed. The n_auth column runs into the binding: last digits are curved into the gutter on view 46;
+# they were read on the gutter strip at the left edge of view 47 (the same print, photographed flat), which
+# gives Ariana 34, Grombalia 22, Kalaa-Kebira 112, Maxula-Radès 62 (view 46 alone suggests 31/23/113/63).
+@permits view=46 page=26 year=1935
+cols: constructions raising n_auth
+Aïn-Draham | 3 0 3
+Ariana | 17 4 34
+Bardo (Le) | 12 15 27
+Béja | 4 0 4
+Ben-Gardane | 0 0 0
+Bizerte | 37 39 296
+Carthage | 7 2 15
+Djemmal | 9 8 17
+Djerba | 71 0 71
+Ebba-Ksour | 0 0 0
+El-Djem | 3 0 3
+Fériana | 1 0 1
+Ferryville | 28 5 33
+Foum-Tatahouine | 0 4 4
+Gabès | 29 1 24
+Gafsa | 3 1 5
+Ghardimaou | 0 0 0
+Goulette (La) | 27 3 30
+Grombalia | 22 0 22
+Hadjeb-el-Aïoun | 0 0 0
+Hammam-Lif | 27 1 43
+Hamma (El) | 0 0 0
+Kairouan | 8 7 15
+Kalaa-Kebira | 102 10 112
+Ksour-Essaf | 26 0 26
+Kef | 1 3 0
+Krib | 0 0 0
+Maharès | 56 9 65
+Mahdia | 14 4 18
+Marsa (La) | 18 3 21
+Mateur | 0 0 0
+Maxula-Radès | 17 1 62
+Médenine | 6 2 21
+Medjez-el-Bab | 6 1 7
+Menzel-bou-Zelfa | 1 1 2
+Menzel-Temime | 4 0 4
+Moknine | 15 2 17
+Monastir | 4 5 9
+M'saken | 12 0 12
+Nabeul | 13 2 15
+Nefta | 2 0 2
+Philippe-Thomas | 0 0 0
+Saint-Germain | 26 2 49
+Sbeïtla | 1 1 2
+Sfax | 90 12 302
+Sidi-bou-Saïd | 0 2 0
+Soliman | 5 0 5
+Souk-el-Arba | 11 0 11
+Souk-el-Khemis | 1 1 2
+Sousse | 73 17 90
+Tabarka | 2 3 5
+Tébourba | 0 0 0
+Téboursouk | 0 0 0
+Thala | 6 0 8
+Tozeur | 0 0 0
+Tunis | 533 536 1069
+Zaghouan | 2 5 41
+Zarzis | 5 0 19

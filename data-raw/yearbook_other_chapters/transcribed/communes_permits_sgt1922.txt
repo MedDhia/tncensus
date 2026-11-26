@@ -1,0 +1,67 @@
+# Communes chapter, sgt1922 (ark bpt6k9105649x): "Concessions sur la voie publique, a) Autorisations de bâtir".
+# Drafted from Gallica OCR, every cell read on native-resolution crops of the page image.
+# Format as in communes_<edition>.txt: '@<table> view= page= year=', 'cols:', rows 'label | v v v'.
+# Integers; printed » = 0; 'néant' kept as the word (stored 0); '?' = illegible.
+# cols: constructions = Constructions ou reconstructions; raising = Surélévation; n_auth = Nombre d'autorisations.
+@permits view=60 page=36 year=1922
+cols: constructions raising n_auth
+Aïn-Draham | 0 0 0
+Ariana | 15 2 17
+Bardo (Le) | 0 0 0
+Ben-Gardane | 0 0 0
+Béja | 6 9 15
+Bizerte | 10 4 14
+Carthage | 14 1 15
+Djemmal | 14 0 14
+Djerba | 0 0 0
+Ebba-Ksour | 8 0 8
+Ferryville | 1 1 2
+El-Djem (1) | 0 0 0
+Fériana | 0 0 0
+Foum-Tatahouine | 0 0 0
+Gabès | 1 1 2
+Gafsa | 5 0 5
+Ghardimaou | 3 0 3
+Goulette (La) | 24 3 27
+Grombalia | 13 6 19
+Hadjeb-el-Aïoun (2) | 0 0 0
+Hammam-Lif | 7 0 7
+Hamma (El) | 7 0 7
+Kairouan | 1 0 1
+Kalaa-Kebira | 0 0 0
+Ksour-Essaf (3) | 0 0 0
+Kef (Le) | 18 0 18
+Kram (Le) | 16 0 16
+Krib (Le) | 0 0 0
+Maharès | 2 0 2
+Mahdia | 25 7 32
+Marsa (La) | 30 9 39
+Mateur | 9 1 10
+Maxula-Radès | 10 3 13
+Médenine | 36 2 38
+Medjez-el-Bab | 0 0 0
+M'saken | 6 0 6
+Menzel-bou-Zelfa | 0 0 0
+Menzel-Temime | 6 1 7
+Moknine | 6 1 7
+Monastir | 6 7 13
+Nabeul | 16 9 25
+Nefta | 0 0 0
+Pêcherie (La) | 0 0 0
+Philippe-Thomas | 0 0 0
+Saint-Germain | 5 0 5
+Sfax | 15 10 25
+Sidi-bou-Saïd | 1 0 1
+Soliman | 0 0 0
+Souk-el-Arba | 4 0 4
+Souk-el-Khemis | 3 0 3
+Sousse | 77 17 94
+Tabarka | 0 0 0
+Thala | 0 0 0
+Tebourba | 0 0 0
+Téboursouk | 1 0 1
+Tunis | 349 83 432
+Tozeur | 0 1 1
+Zaghouan | 2 4 6
+Zarzis | 0 1 1
+Totaux | 772 183 955

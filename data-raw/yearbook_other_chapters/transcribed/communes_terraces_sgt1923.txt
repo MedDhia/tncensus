@@ -1,0 +1,69 @@
+# Communes chapter, sgt1923 (ark bpt6k9105649x): "Concessions sur la voie publique, b) Terrasses et étalages".
+# Read on native-resolution crops (right-hand page, no labels); each value line matched to the commune label
+# of the facing page (view 542) by its OCR line position (same y within 10 px) and by counting lines.
+# Columns as in sgt1922. 'x' = no number: text printed instead (comment on the row).
+@terraces view=543 page=41 year=1923
+cols: terr_n terr_surf terr_prod stall_n stall_surf stall_prod
+Aïn-Draham | 0 0 0 0 400 80
+Ariana | 0 0 385 0 0 1140
+Bardo (Le) | 0 0 0 0 0 0
+Ben-Gardane | 0 0 0 28952 24755 13426.60
+Béja | 13 55 962.25 136 586 13347.60
+Bizerte | 47100 47100 4710 113 400 3316
+Carthage | 0 0 0 0 0 0
+Djemmal | 0 31 372 0 0 0
+Djerba | 100 6154 615.40 30 2000 200
+Ebba-Ksour | 0 0 0 0 0 0
+El-Djem | 0 0 0 0 0 0
+Fériana | 0 0 0 0 0 0
+Ferryville | 24200 12100 1210 400 20599 2059.90
+Foum-Tatahouine | 0 0 0 25 140 47
+Gabès | 18 96 900.50 0 0 0
+# Gafsa: stall_n printed "Divers"
+Gafsa | 30 100 3600 x 1000 250
+Ghardimaou | 0 0 0 0 0 0
+Goulette (La) | 0 0 0 0 0 0
+Grombalia | 0 0 0 0 0 0
+Hadjeb-el-Aïoun | 38 228 114 1 6 165.20
+Hammam-Lif | 16 307 461 290 10789 1612.35
+Hamma (El) | 0 0 0 0 0 0
+Kairouan | 44 144000 18000 0 162000 2025
+Kalaa-Kebira | 0 0 0 0 0 0
+Ksour-Essaf | 0 0 0 0 0 0
+# Kef (Le): "Concédés à l'adjudicataire" printed across the row
+Kef (Le) | x x x x x x
+Kram (Le) | 0 0 0 0 0 0
+Krib (Le) | 0 0 0 0 0 0
+Maharès | 0 0 0 0 0 0
+Mahdia | 180 180 2460 15 30 460
+Marsa (La) | 230 40 960 30 60 2074.20
+Mateur | 27 0 2384 700 0 8430
+Maxula-Radès | 38 19 280 0 0 947
+Médenine | 3 823.50 1027.50 0 73 37.50
+Medjez-el-Bab | 0 0 0 0 0 0
+M'saken | 0 0 0 0 0 0
+Menzel-bou-Zelfa | 4 20 240 3 10 120
+Menzel-Temime | 5 7285 740 0 0 0
+Moknine | 0 0 0 0 0 0
+# Monastir: "Affermés" printed across the row
+Monastir | x x x x x x
+Nabeul | 360 90 1800 0 0 5539.65
+Nefta | 0 0 0 0 0 0
+Pêcherie (La) | 0 0 0 0 0 0
+Philippe-Thomas | 0 0 0 0 0 5842.80
+Saint-Germain | 0 0 0 0 0 0
+Sfax | 0 0 0 0 0 0
+Sidi-bou-Saïd | 45 13 195 8 15 206.75
+Soliman | 0 0 0 0 0 0
+Souk-el-Arba | 16 64 2467.60 7 14 756
+Souk-el-Khemis | 3 15 710 0 8610 1722.10
+Sousse | 0 1077 4308 2058 0 20153.46
+Tabarka | 600 2010 402 1 375 76
+Thala | 0 0 0 871 1877 217.55
+Tebourba | 12 360 72 0 6715 1343
+Téboursouk | 0 0 1192.90 0 0 1168.45
+Tunis | 104 678 4477.25 79 109.50 658.25
+Tozeur | 0 0 0 0 0 0
+Zaghouan | 2 60 180 2 48 144
+Zarzis | 525 1050 524 320 842 565.60
+Totaux | 73713 223955.50 55750.40 34041 241453.50 88131.96

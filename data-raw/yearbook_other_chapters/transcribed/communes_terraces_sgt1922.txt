@@ -1,0 +1,68 @@
+# Communes chapter, sgt1922 (ark bpt6k9105649x): "Concessions sur la voie publique, b) Terrasses et étalages".
+# Read on native-resolution crops of the page image (right-hand page, no labels): rows assigned by counting
+# lines and checked against the facing page's n_auth column visible in the gutter. Gallica OCR as draft only.
+# Columns: Terrasses (chaises de tables de limonadiers): Nombre, Surface (mètre carré), Produits (fr. c.);
+# Étalages (dépôts de marchandises de toutes sortes): Nombre, Surface (m²), Produits (fr. c.).
+# Decimals after '.', no thousands separator; » = 0; 'x' = text printed across the row (see comment).
+@terraces view=61 page=37 year=1922
+cols: terr_n terr_surf terr_prod stall_n stall_surf stall_prod
+Aïn-Draham | 0 0 0 0 511.50 102.30
+Ariana | 0 0 385 0 0 630
+Bardo (Le) | 0 0 0 0 0 0
+Ben-Gardane | 0 0 0 0 64985 9747.75
+Béja | 5 34 0 96 371 11200
+Bizerte | 42900 42900 4290 124 510 3820.55
+Carthage | 0 0 0 0 0 0
+Djemmal | 0 12600 420 0 0 0
+Djerba | 0 0 0 16 5874 587.40
+Ebba-Ksour | 0 0 0 0 0 30250
+Ferryville | 12200 12200 1220 3704 14815 1481.45
+El-Djem (1) | 0 0 0 0 0 0
+Fériana | 0 0 0 0 0 0
+Foum-Tatahouine | 0 0 0 0 0 0
+Gabès | 25 135 1628.80 0 0 0
+Gafsa | 176 44 528 11554 12800 32000
+Ghardimaou | 0 0 0 3 123 31.80
+Goulette (La) | 0 0 0 0 0 0
+Grombalia | 0 0 0 0 0 0
+Hadjeb-el-Aïoun (2) | 0 0 0 0 0 0
+Hammam-Lif | 16 390 576 270 8634 1295.10
+Hamma (El) | 0 0 0 0 0 0
+Kairouan | 52 383 13979.50 0 0 24266.40
+Kalaa-Kebira | 0 0 0 0 0 0
+Ksour-Essaf (3) | 0 0 0 0 0 0
+Kef (Le) | 0 0 0 0 0 0
+Kram (Le) | 0 0 0 0 0 0
+Krib (Le) | 0 0 0 0 0 0
+Maharès | 0 0 0 0 0 0
+Mahdia | 0 340 1922.15 0 3 11.75
+Marsa (La) | 245 45 1170 30 67.50 2792
+Mateur | 0 0 0 0 0 13050.40
+Maxula-Radès | 64 16 400 49 76 1583.40
+Médenine | 5 189 95.45 0 0 0
+Medjez-el-Bab | 0 0 0 0 0 0
+M'saken | 0 0 0 0 0 0
+Menzel-bou-Zelfa | 3 23 230 8 31 310
+Menzel-Temime | 0 0 0 0 0 0
+Moknine | 0 0 0 0 0 0
+Monastir | 0 0 0 0 0 0
+Nabeul | 0 0 0 0 0 17000
+Nefta | 0 0 0 0 0 0
+Pêcherie (La) | 0 0 0 0 0 0
+Philippe-Thomas | 0 0 0 0 0 9130.60
+Saint-Germain | 0 0 0 0 0 0
+Sfax | 0 295 12390 196 241 10122
+Sidi-bou-Saïd | 50 15 200 8 12 216
+Soliman | 0 0 0 0 0 1042.95
+Souk-el-Arba | 0 120 4600 0 35 1340
+Souk-el-Khemis | 9 18 810 12 32 1440
+Sousse | 0 1634.30 4137.20 0 1589.43 6757.75
+Tabarka | 0 1442 288.40 0 1090 218
+Thala | 350 1400 210 760 760 114
+Tebourba | 10 3650 730 0 3775 755.50
+Téboursouk | 0 0 1595.70 0 0 1022.40
+Tunis | 254 1673 43482.25 534 799.80 11872.40
+Tozeur | 0 0 0 0 0 0
+Zaghouan | 2 60 180 2 48 144
+Zarzis | 320 744 372 420 955 727.65
+Totaux | 56686 79750.30 95840.45 17786 118238.23 195063.55

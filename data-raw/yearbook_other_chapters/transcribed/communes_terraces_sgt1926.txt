@@ -1,0 +1,72 @@
+# Communes chapter, sgt1926 (ark bpt6k9105650k): "Concessions sur la voie publique, b) Terrasses et étalages".
+# Read on native-resolution crops (right-hand page, no labels, faint print); value lines matched to the labels of
+# the facing page (view 612) by OCR line position and by counting lines (58 lines). Gallica OCR as draft only.
+# Only the stall_prod column has a printed total (TOTAL). 'x' = no number: text printed instead.
+# Faint cells read on the image where the OCR differs: El-Djem stall_prod 35.696,10 (OCR 33.696,10); Kef stall_prod
+# 40.200 (OCR 10.200); Mateur terr_prod 4.321,40 (OCR 1.321,10); Sousse stall_prod 45.580,79 (OCR 13.580,79).
+# Footnotes of the page (calls on the labels of view 612): (1) Produits affermés. (2) Étalages (par métrés et par
+# abonnements). (3) Concédés avec les droits de marché. (4) Adjugé avec les droits de marché. (5)-(6) Adjudication /
+# affermés avec les marchés. (7) Autorisations ... pendant cette année (partly illegible in the binding).
+@terraces view=613 page=49 year=1926
+cols: terr_n terr_surf terr_prod stall_n stall_surf stall_prod
+Aïn-Draham | 0 0 0 0 65 130.90
+Ariana | 0 60 642.40 0 0 0
+Bardo (Le) | 0 0 0 0 0 0
+Ben-Gardane | 0 0 0 115293 61326 38899.80
+Béja (1) | 0 0 0 0 0 15000
+Bizerte | 64200 64200 6420 125 1130 4020
+Carthage | 0 0 0 0 0 0
+Djemmal | 0 15695 516 0 0 0
+Djerba | 9700 9700 970 8140 8140 814
+Ebba-Ksour | 0 0 0 0 0 0
+El-Djem (2) | 0 0 0 0 0 35696.10
+Ferryville | 700 700 1400 2386.66 2386.66 5968.65
+Fériana | 0 0 0 0 0 0
+Foum-Tatahouine | 0 0 0 10 504 25.20
+Gabès | 27 160 1850 8 26 238.10
+Gafsa | 40 100 3600 0 500 4500
+Ghardimaou | 0 0 0 3 0 195
+Goulette (La) | 60 225 7723.75 76 170 880.10
+Grombalia | 0 0 0 0 0 0
+Hadjeb-el-Aïoun | 6 36 216 0 0 0
+Hamma (El) | 0 0 0 0 0 0
+Hammam-Lif | 33 480 512.60 380 19839 2975.95
+Kairouan (3) | 0 0 0 0 0 0
+Kalaa-Kebira | 0 0 0 0 0 0
+Kef (Le) (4) | 415 420 0 22 120 40200
+Krib (Le) | 0 0 0 0 0 0
+Ksour-Essaf | 60 60 692 0 0 0
+Maharès | 0 0 0 0 0 0
+Mahdia | 120 120 4608 6 12 460
+Marsa (La) | 260 52 1625 19 48 1354
+Mateur | 47 320 4321.40 376 1234 8262.20
+# Maxula-Radès: stall_n "Divers", stall_surf "0,50 et 0,10 le m²" (a rate)
+Maxula-Radès | 0 0 863 x x 667.20
+Médenine | 5 474 237 0 0 0
+Medjez-el-Bab | 8 480 1380 0 20390 4078
+Menzel-bou-Zelfa | 0 0 0 0 13000 2600
+Menzel-Temime | 5 6255 625.50 0 0 0
+Moknine | 0 0 0 0 0 0
+Monastir (5) | 0 0 0 0 0 0
+M'saken | 0 0 0 0 0 8935.25
+Nabeul | 512 103 2060 0 0 7503.15
+Nefta | 0 0 0 0 0 0
+Pêcherie (La) | 0 0 0 0 0 0
+Philippe-Thomas | 0 0 0 0 0 0
+Saint-Germain | 0 0 0 0 0 0
+Sfax | 730 630 26460 250 350 14700
+Sidi-bou-Saïd | 49 16 299 7 15 154.70
+Soliman | 0 0 0 0 16082 1608
+Souk-el-Arba | 10 70 2580 13 26 998.40
+Souk-el-Khemis | 0 27 1458 0 6028 1205.70
+Sousse | 1436 1434 5744 3075 3075 45580.79
+Tabarka (6) | 0 0 0 0 0 1500
+# Tebourba: stall_n "Divers"
+Tebourba | 27 2250 450 x 19768.50 3953.70
+Téboursouk | 0 0 0 0 0 0
+Thala | 0 0 0 0 0 0
+Tozeur | 6 0 540 8 0 1920
+Tunis (7) | 101 615 5694.10 29 46 6678.60
+Zaghouan | 7 124 372 4 48 144
+Zarzis | 220 690 300 320 840 840
+Total | . . . . . 263016.49

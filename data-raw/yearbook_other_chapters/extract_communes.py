@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Communes chapter (chapter II) of the Statistique générale de la Tunisie,
-12 editions 1922-1939: municipal budgets and communal property.
+12 editions 1922-1939: municipal budgets and communal property (this file), and
+loans, building permits and terraces/stalls (communes_more.py, run from here).
 
   python3 extract_communes.py check   parse transcriptions, run every check, print failures
   python3 extract_communes.py build   ... and write csv/communes_*.csv, their .md notes
@@ -572,8 +573,493 @@ def build(write=True):
     return res
 
 
+# =================================================================== more tables
+# Loans (Emprunts communaux; Caisse des Prêts Communaux), building permits (Autorisations de bâtir;
+# Constructions immobilières 1939) and terraces / street stalls (Terrasses et étalages).
+# Transcriptions: transcribed/communes_<topic>_<edition>.txt. Same conventions as above, plus:
+#   'x' = text printed instead of a number (stored NA, not_applicable; the text is in a '#' comment above
+#   the row and in the notes), '?' = illegible (NA, illegible), 'néant' = printed "néant" (stored 0),
+#   '= <heading>' starts a commune block (loans), 'NNN.xx' = franc part only (centimes in the binding).
+# Every table here is printed once per edition (SPEC_ADDENDUM rule 5); the year is the edition's.
+
+MORE_MEASURES = {
+    "permits": {
+        "constructions": ("constructions", "Constructions ou reconstructions"),
+        "raising": ("raising", "Surélévation"),
+        "n_auth": ("permits_issued", "Nombre d'autorisations"),
+    },
+    "constructions": {
+        "n_auth": ("permits_issued", "Nombre total des autorisations de bâtir"),
+        "housing": ("value_housing", "Valeur : logements à usage d'habitation"),
+        "commercial": ("value_commercial_industrial", "Valeur : bâtiments commerciaux et industriels"),
+        "other": ("value_other", "Valeur : constructions diverses"),
+    },
+    "terraces": {
+        "terr_n": ("terraces_number", "Terrasses (chaises de tables de limonadiers) : nombre"),
+        "terr_surf": ("terraces_surface_m2", "Terrasses : surface (mètre carré)"),
+        "terr_prod": ("terraces_receipts", "Terrasses : produits"),
+        "stall_n": ("stalls_number", "Étalages (dépôts de marchandises de toutes sortes) : nombre"),
+        "stall_surf": ("stalls_surface_m2", "Étalages : surface (mètre carré)"),
+        "stall_prod": ("stalls_receipts", "Étalages : produits"),
+    },
+    "caisse": {
+        "dur": ("duration_years", "Durée des emprunts (ans)"),
+        "cap_net": ("capital_received", "Capital net touché par la Commune"),
+        "cap_nom": ("capital_nominal", "Capital nominal à rembourser par la Commune"),
+        "rate": ("interest_rate_pct", "Taux de l'intérêt"),
+        "annuity": ("annuity", "Montant de chaque annuité"),
+        "due": ("annuities_due_to_date", "Annuités échues à la fin de l'année"),
+        "paid_year": ("paid_in_year", "Payements : en <année>"),
+        "paid_before": ("paid_before", "Payements : antérieurement"),
+        "paid_total": ("paid_total", "Payements : total"),
+        "arrears": ("arrears", "Restes à payer sur les annuités échues"),
+        "amortised": ("capital_amortised", "Amortissement : capital compris dans les annuités payées"),
+        "remaining": ("capital_remaining", "Amortissement : capital restant à amortir à la fin de l'année"),
+    },
+    "tunis_bonds": {
+        "dur": ("duration_years", "Durée des emprunts (ans)"),
+        "rate": ("interest_rate_pct", "Taux de l'intérêt"),
+        "cap_net": ("capital_received", "Capital net encaissé par la Commune"),
+        "cap_nom": ("capital_nominal", "Capital nominal à rembourser par la Commune"),
+        "int_due": ("interest_due", "Sommes échues : intérêts (coupons échus)"),
+        "cap_due": ("capital_due", "Sommes échues : capitaux (obligations sorties aux tirages)"),
+        "int_paid_year": ("interest_paid_in_year", "Payements effectués en <année> : intérêts"),
+        "cap_paid_year": ("capital_paid_in_year", "Payements effectués en <année> : capitaux"),
+        "int_paid_before": ("interest_paid_before", "Payements effectués antérieurement : intérêts"),
+        "cap_paid_before": ("capital_paid_before", "Payements effectués antérieurement : capitaux"),
+        "int_paid_total": ("interest_paid_total", "Payements effectués, total : intérêts"),
+        "cap_paid_total": ("capital_paid_total", "Payements effectués, total : capitaux"),
+        "int_lapsed": ("interest_lapsed", "Sommes atteintes par la déchéance : intérêts"),
+        "cap_lapsed": ("capital_lapsed", "Sommes atteintes par la déchéance : capitaux"),
+        "int_outstanding": ("interest_outstanding", "Restes à payer à la clôture de l'exercice : intérêts"),
+        "cap_outstanding": ("capital_outstanding", "Restes à payer à la clôture de l'exercice : capitaux"),
+    },
+}
+INT_COLS = {"constructions", "raising", "n_auth", "terr_n", "stall_n", "dur"}
+MORE_CHK = Checks()
+
+
+class MCell:
+    __slots__ = ("raw", "value", "hidden", "flag")
+
+    def __init__(self, raw):
+        self.raw, self.hidden, self.flag = raw, raw.endswith(".xx"), ""
+        if raw == "x":
+            self.value, self.flag = None, "not_applicable"
+        elif raw == "?":
+            self.value, self.flag = None, "illegible"
+        elif raw == ".":
+            self.value, self.flag = None, "absent"
+        elif raw == "néant":
+            self.value = Decimal(0)
+        elif self.hidden:
+            self.value, self.flag = Decimal(raw[:-3]), "illegible"
+        else:
+            self.value = Decimal(raw)
+
+    def num(self):
+        return self.value
+
+    def out(self, col):
+        if self.value is None or self.hidden:
+            return None
+        if col in INT_COLS and self.value == int(self.value):
+            return str(int(self.value))
+        if col == "rate" or self.value != int(self.value) or col.endswith("surf"):
+            return format(self.value.normalize(), "f") if col in ("rate",) or col.endswith("surf") else f"{self.value:.2f}"
+        return f"{self.value:.2f}"
+
+
+def parse_more(path, ed):
+    secs, cur, head, comment = [], None, None, []
+    for line in path.read_text().splitlines():
+        line = line.rstrip()
+        if not line.strip():
+            continue
+        if line.startswith("#"):
+            if cur is not None:
+                comment.append(line[1:].strip())
+            continue
+        if line.startswith("@"):
+            parts = line[1:].split()
+            cur = {"table": parts[0], "ed": ed, "ark": EDITIONS[ed], "rows": []}
+            for k, v in re.findall(r"(\w+)=(\S+)", " ".join(parts[1:])):
+                cur[k] = int(v)
+            secs.append(cur)
+            head, comment = None, []
+            continue
+        if line.startswith("cols:"):
+            cur["cols"] = line[5:].split()
+            continue
+        if line.startswith("="):
+            head = line[1:].strip()
+            continue
+        label, vals = line.rsplit("|", 1)
+        cells = [MCell(x) for x in vals.split()]
+        if len(cells) != len(cur["cols"]):
+            raise ValueError(f"{path.name} {label!r}: {len(cells)} values for {len(cur['cols'])} columns")
+        cur["rows"].append({"label": label.strip(), "head": head, "cells": dict(zip(cur["cols"], cells)),
+                            "note": " ".join(comment)})
+        comment = []
+    return secs
+
+
+def is_tot(label):
+    return re.match(r"(?i)^tota", label) is not None
+
+
+def commune_of(head):
+    return re.sub(r"^Commune (de la |de |d'|d’|du )", lambda m: "" if m.group(1) in ("de ", "d'", "d’") else
+                  {"de la ": "la ", "du ": "le "}[m.group(1)], head)
+
+
+def chk_col_totals(topic, sec, groups):
+    """groups: list of (name, data rows, total row). Hidden centimes widen the tolerance."""
+    for name, data, tot in groups:
+        for c in sec["cols"]:
+            t = tot["cells"][c]
+            if t.value is None:
+                continue
+            # a cell with text instead of a number ('x') adds nothing to the printed total
+            xs = [r["cells"][c] for r in data if r["cells"][c].flag != "not_applicable"]
+            if any(x.value is None for x in xs):
+                MORE_CHK.n[topic + "_skipped"] += 1
+                continue
+            nh = sum(1 for x in xs + [t] if x.hidden)
+            got = sum(x.value for x in xs)
+            MORE_CHK.n[topic] += 1
+            tol = Decimal(nh) * Decimal("0.99")
+            if abs(got - t.value) > tol:
+                MORE_CHK.fail[topic].append(f"{sec['ed']} p.{sec['page']} {name} {c}: cells give {got}, "
+                                            f"printed total {t.raw} (difference {t.value - got})")
+
+
+def chk_identities(topic, sec, row, rels, name):
+    for tgt, plus, minus in rels:
+        cs = [row["cells"][c] for c in [tgt] + plus + minus]
+        if any(x.value is None for x in cs):
+            continue
+        nh = sum(1 for x in cs if x.hidden)
+        got = sum(row["cells"][c].value for c in plus) - sum(row["cells"][c].value for c in minus)
+        MORE_CHK.n[topic] += 1
+        if abs(got - row["cells"][tgt].value) > Decimal(nh) * Decimal("0.99"):
+            MORE_CHK.fail[topic].append(f"{sec['ed']} p.{sec['page']} {name}: {tgt} printed "
+                                        f"{row['cells'][tgt].raw}, {' + '.join(plus)}"
+                                        f"{''.join(' - ' + m for m in minus)} = {got}")
+
+
+LOAN_RELS = {
+    "caisse": [("paid_total", ["paid_year", "paid_before"], []), ("arrears", ["due"], ["paid_total"]),
+               ("remaining", ["cap_nom"], ["amortised"])],
+    "tunis_bonds": [("int_paid_total", ["int_paid_year", "int_paid_before"], []),
+                    ("cap_paid_total", ["cap_paid_year", "cap_paid_before"], []),
+                    ("int_outstanding", ["int_due"], ["int_paid_total", "int_lapsed"]),
+                    ("cap_outstanding", ["cap_due"], ["cap_paid_total", "cap_lapsed"])],
+}
+
+
+def more_rows(sec, row, topic, commune, extra):
+    out = []
+    for c, cell in row["cells"].items():
+        code, fr = MORE_MEASURES[sec["table"]][c]
+        flag = cell.flag if cell.flag != "absent" else ""
+        if cell.flag == "absent":
+            continue
+        right = "view2" in sec and c not in LEFT_COLS.get(sec["table"], ())
+        out.append(dict(census=sec["ed"], table_id=sec["table"], gallica_ark=sec["ark"],
+                        source_page=sec["page"] + (1 if right else 0),
+                        gallica_view=sec.get("view2", sec["view"]) if c not in LEFT_COLS.get(sec["table"], ())
+                        else sec["view"], year=sec["year"], commune=commune, **extra,
+                        measure=code, measure_fr=fr.replace("<année>", str(sec["year"])),
+                        value=cell.out(c), flag=flag,
+                        _hidden=str(cell.value) if cell.hidden else None, _note=row["note"]))
+    return out
+
+
+# columns printed on the left page of a two-page loan spread (the others are on view2)
+LEFT_COLS = {"caisse": ("dur", "cap_net", "cap_nom", "rate", "annuity"),
+             "tunis_bonds": ("dur", "rate", "cap_net", "cap_nom", "int_due", "cap_due")}
+
+
+def build_more(write=True, verbose=False):
+    secs = []
+    for f in sorted(TR.glob("communes_*_sgt*.txt")):
+        ed = re.search(r"(sgt\d{4})", f.name).group(1)
+        secs += parse_more(f, ed)
+    res = {}
+    # ---- building permits (one layout sgt1922-sgt1936)
+    rows = []
+    for s in [s for s in secs if s["table"] == "permits"]:
+        data = [r for r in s["rows"] if not is_tot(r["label"])]
+        tots = [r for r in s["rows"] if is_tot(r["label"])]
+        if tots:
+            chk_col_totals("permits", s, [("communes", data, tots[0])])
+        for r in data:
+            rows += more_rows(s, r, "permits", r["label"], {})
+    res["communes_building_permits"] = rows
+    rows = []
+    for s in [s for s in secs if s["table"] == "constructions"]:
+        for r in s["rows"]:
+            rows += more_rows(s, r, "constructions", r["label"], {})
+    res["communes_building_values_1939"] = rows
+    # ---- terraces
+    rows = []
+    for s in [s for s in secs if s["table"] == "terraces"]:
+        data = [r for r in s["rows"] if not is_tot(r["label"])]
+        tots = [r for r in s["rows"] if is_tot(r["label"])]
+        if tots:
+            chk_col_totals("terraces", s, [("communes", data, tots[0])])
+        for r in data:
+            rows += more_rows(s, r, "terraces", r["label"], {})
+    res["communes_terraces"] = rows
+    # ---- loans
+    xed = []   # cross-edition: paid_before(N) = paid_total(N-1)
+    for t, name in (("caisse", "communes_loans_caisse"), ("tunis_bonds", "communes_loans_tunis_bonds")):
+        rows = []
+        for s in [s for s in secs if s["table"] == t]:
+            groups = defaultdict(list)
+            for r in s["rows"]:
+                groups[r["head"]].append(r)
+            gl = []
+            for head, rs in groups.items():
+                data = [r for r in rs if not is_tot(r["label"])]
+                tots = [r for r in rs if is_tot(r["label"])]
+                for r in rs:
+                    chk_identities("loans", s, r, LOAN_RELS[t], f"{head} / {r['label']}")
+                if tots:
+                    gl.append((head, data, tots[0]))
+                for i, r in enumerate(data, 1):
+                    rows += more_rows(s, r, "loans", commune_of(head), dict(commune_heading_fr=head,
+                                                                           loan_fr=r["label"]))
+            chk_col_totals("loans", s, gl)
+        res[name] = rows
+    # cross-edition consistency of the loan tables
+    for name, pairs in (("communes_loans_caisse", [("paid_before", "paid_total")]),
+                        ("communes_loans_tunis_bonds", [("interest_paid_before", "interest_paid_total"),
+                                                        ("capital_paid_before", "capital_paid_total")])):
+        idx = {}
+        for r in res[name]:
+            idx[(r["year"], r["commune"], r["loan_fr"], r["measure"])] = r
+        for (y, c, l, m), r in idx.items():
+            for before, total in pairs:
+                if m != MORE_MEASURES["caisse" if "caisse" in name else "tunis_bonds"].get(
+                        {"paid_before": "paid_before"}.get(before, ""), (before,))[0] and m != before:
+                    continue
+                p = idx.get((y - 1, c, l, total))
+                if p is None or r["value"] is None or p["value"] is None:
+                    continue
+                MORE_CHK.n["loans_xed"] += 1
+                if Decimal(r["value"]) != Decimal(p["value"]):
+                    xed.append(f"{c} {l}: {before} {y} ({r['census']}) = {r['value']}, {total} {y - 1} "
+                               f"({p['census']}) = {p['value']}")
+    MORE_CHK.fail["loans_xed"] = xed
+    if write:
+        for name, rows in res.items():
+            write_more(name, rows)
+    if verbose:
+        for name, rows in res.items():
+            print(f"{name}: {len(rows)} rows")
+        for t in ("permits", "terraces", "loans", "loans_xed"):
+            print(f"  checks {t}: {MORE_CHK.n[t]}, failed {len(MORE_CHK.fail[t])}"
+                  + (f", skipped (NA cell in column) {MORE_CHK.n[t + '_skipped']}" if MORE_CHK.n[t + '_skipped'] else ""))
+            for f_ in MORE_CHK.fail[t]:
+                print("    FAIL", f_)
+    return res
+
+
+MORE_DIMS = {
+    "communes_building_permits": ["commune", "measure", "measure_fr"],
+    "communes_building_values_1939": ["commune", "measure", "measure_fr"],
+    "communes_terraces": ["commune", "measure", "measure_fr"],
+    "communes_loans_caisse": ["commune", "commune_heading_fr", "loan_fr", "measure", "measure_fr"],
+    "communes_loans_tunis_bonds": ["commune", "commune_heading_fr", "loan_fr", "measure", "measure_fr"],
+}
+
+
+MORE_NOTES = {
+    "communes_building_permits": (
+        "Concessions sur la voie publique : a) Autorisations de bâtir",
+        "Building permits issued by each commune: constructions or reconstructions, raisings (surélévations) "
+        "and number of permits.",
+        "communes_permits_<edition>.txt",
+        "count (integer); printed » and printed *néant* are stored as 0",
+        ["Table a) of the *Concessions sur la voie publique* pages (sgt1922–sgt1935), \"Autorisations de bâtir "
+         "délivrées en 1936\" in sgt1936. Columns: *Constructions ou reconstructions*, *Surélévation*, *Nombre "
+         "d'autorisations* (sgt1936: footnote (1) on the last column, *Toutes opérations comprises*). The number "
+         "of permits is often not the sum of the first two columns (e.g. Gabès 1924: 8 + 2, 65 permits); this is "
+         "how the table is printed, so no row identity is checked. sgt1939 prints a different table "
+         "(`communes_building_values_1939.csv`). sgt1935 page 26 of view 46.",
+         "**Image versus OCR.** Every cell of every edition was read on native-resolution crops of the page "
+         "image (half-page strips of the label column and the three value columns); Gallica's OCR was only used "
+         "as a draft and to locate lines. In sgt1928, sgt1929 and sgt1930 the values are printed half a line to a "
+         "full line below their labels and the OCR assigns them to the wrong commune; the rows were assigned by "
+         "counting the 58 value lines against the 58 labels. Uncertain readings: sgt1928 Hammam-Lif permits 83 "
+         "(last digit damaged, or 88); sgt1929 Tunis permits printed with a broken middle digit (7?7) → NA, "
+         "`illegible`. sgt1935: the permits column is curved into the binding on view 46; Ariana 34, Grombalia "
+         "22, Kalaa-Kebira 112 and Maxula-Radès 62 were read on the gutter strip visible at the left edge of view "
+         "47 (view 46 alone suggests 31/23/113/63).",
+         "Not applicable cells: sgt1924 El-Djem (\"Il n'existe pas de droits de voirie à El-Djem\" printed "
+         "across the row); sgt1930 Foum-Tatahouine raising printed \"3 m. 50\" (a length, not a count).",
+         "Printed totals: sgt1922–sgt1925 all three columns; sgt1926 and sgt1927 the permits column only; none "
+         "from sgt1928. Failed checks were re-read on the images (the printed cells are as transcribed); "
+         "no single cell explains them, so no cell is flagged.",
+         "Footnotes (calls kept in the commune names): sgt1922 (1) El-Djem, (2) Hadjeb-el-Aïoun, (3) Ksour-Essaf: "
+         "*Commune créée le 29 mars 1922 / 9 mai 1922 / 29 mars 1922*. sgt1926–sgt1930 calls on Béja, El-Djem, "
+         "Kairouan, Kef, Monastir, Tabarka, Tunis, Ferryville, Menzel-bou-Zelfa, Soliman, Zarzis refer to notes "
+         "on the stalls/terraces of the facing page (see `communes_terraces.md`)."]),
+    "communes_building_values_1939": (
+        "Constructions immobilières en 1939 (Villes de plus de 5.000 habitants)",
+        "Building in 1939, towns of more than 5,000 inhabitants: number of building permits and value of the "
+        "buildings (housing, commercial and industrial, other).",
+        "communes_constructions_sgt1939.txt",
+        "permits: integer count (*néant* = 0); values: francs (no centimes printed, stored with .00 only where "
+        "printed so: here integers)",
+        ["sgt1939 page 21 (view 27) only; it replaces the *Autorisations de bâtir* table of the earlier editions. "
+         "30 towns, in the printed order (not alphabetical). No total is printed, so there is no check. All "
+         "cells read on a native-resolution crop of the page (OCR as draft). Gabès housing is printed "
+         "\"860.000\" (OCR \"8(50.000\")."]),
+    "communes_terraces": (
+        "Concessions sur la voie publique : b) Terrasses et étalages",
+        "Pavement concessions: café terraces (chairs and tables of lemonade sellers) and street stalls "
+        "(goods of all kinds): number, surface and receipts, per commune.",
+        "communes_terraces_<edition>.txt",
+        "number: integer as printed; surface: square metres (*mètre carré*), decimals as printed; receipts "
+        "(*produits*): francs with centimes. Printed » and *néant* = 0",
+        ["Table b) of the *Concessions sur la voie publique* pages, printed on the right-hand page facing table "
+         "a) (building permits), **without commune labels**: each value line was matched to the commune labels of "
+         "the facing page by OCR line position and by counting lines, and checked against the large communes "
+         "(Bizerte, Kairouan, Sfax, Sousse, Tunis). sgt1922–sgt1930 and sgt1935; sgt1936 and sgt1939 print no "
+         "such table.",
+         "**Image versus OCR.** Every cell was read on native-resolution crops of the page images (half-page "
+         "crops at ~0.7 scale, re-cropped at full scale where faint); the OCR was a draft only. The sgt1926 page "
+         "is faint: El-Djem stalls 35.696,10, Kef 40.200, Mateur terraces 4.321,40 and Sousse stalls 45.580,79 "
+         "were read on the image where the OCR differs.",
+         "**What the numbers are.** Communes reported very differently: \"number\" is sometimes the surface "
+         "repeated (Bizerte 42.900 / 42.900 m²) or a count of days or tickets; surfaces are sometimes rates "
+         "(Nabeul 1928 \"1 20\", 1935 \"0 30\"). Values are stored as printed; the cells where the printed "
+         "entry is text (\"droits affermés\", \"divers\", \"variables\", \"concédés à l'adjudicataire\", "
+         "\"70 m2 à 1 fr.\" …) are NA with flag `not_applicable` and the text is listed below. sgt1925 Tunis "
+         "stalls surface is printed \"965.057\": the printed total (404.045,87) is consistent with 965,057 m² "
+         "(the sum is then 1,26 short), not 965.057 m²; stored as printed (965057) and the column check fails. "
+         "sgt1925 Médenine stalls number printed \"233 50\" stored 233.50.",
+         "Footnotes and remarks printed with the table: sgt1926 (1) Produits affermés; (2) Étalages (par métrés et "
+         "par abonnements); (3) Concédés avec les droits de marché; (4) Adjugé avec les droits de marché; (5)–(6) "
+         "adjudication / affermés avec les marchés. sgt1927: (1) Droits affermés en 1927; (2) Droits donnés en "
+         "adjudication; (3) Affermé avec les droits de marché; (4) Produits affermés avec les droits de marché; "
+         "(5) Droits affermés. sgt1928, under the table: *Il y a lieu d'ajouter à ces droits : 505 étalages sur "
+         "façades soit 758 m2 25 : 16.476 20* (to be added: 505 façade stalls, 758,25 m², 16.476,20 fr.; not "
+         "stored as a row, no commune named). sgt1929: (1)(2) Droits adjugés; (3) Montant total des droits de "
+         "concession; (4) Droits affermés avec les droits de marché. sgt1930: (1) Y compris droits colportage; "
+         "(2) Droits adjugés; (3)(4) Droits affermés avec ceux du marché; (5) avec droits de marché; (6) Droits "
+         "affermés. sgt1935 *Observations* column: Bizerte, parking dues collected by a contractor, 38.627 fr. in "
+         "1935; Grombalia (1), dues collected by the market farmer, 19.701 fr. to the commune in 1935; "
+         "Maxula-Radès, of which 2.705 fr. collected by tickets; Sidi-bou-Saïd, parking 550 fr.; Sousse, of which "
+         "3.803,30 fr. collected by tickets.",
+         "Printed totals: sgt1922–sgt1925 every column (TOTAUX), sgt1926 and sgt1927 the stalls receipts only "
+         "(TOTAL), none afterwards. sgt1923 matches in all six columns. The sgt1924 mismatches (notably stalls "
+         "receipts, 33.356 fr. short) were re-read line by line on the image without finding the cause; the "
+         "printed cells are kept and nothing is flagged, but a misassigned or misread line in that edition cannot "
+         "be excluded."]),
+    "communes_loans_caisse": (
+        "Finances municipales : c) Emprunts contractés à la Caisse des Prêts Communaux",
+        "Municipal loans from the Caisse des Prêts Communaux: one block per commune, one line per loan, with "
+        "terms, annuities due and paid, arrears and capital amortised / outstanding at the end of the year.",
+        "communes_loans_<edition>.txt, section `@caisse`",
+        "francs with centimes, except `duration_years` (years) and `interest_rate_pct` (percent: \"3 75\" = "
+        "3.75, \"7 »\" = 7)",
+        ["Two-page spreads (left page: columns 1–6, date to annuity; right page: columns 7–13). `gallica_view` "
+         "is the view of the page the cell is printed on. Editions transcribed: **sgt1922, sgt1923, sgt1924 and "
+         "sgt1925 only**. sgt1925: the first spread (views 52–53: Tunis, Béja, Bizerte, Ferryville) is not "
+         "transcribed because view 52 is a black image in the Gallica scan; only views 54–57 are stored for that "
+         "edition. sgt1926–sgt1930 (three to four spreads each, e.g. sgt1930 views 594–601) are not done.",
+         "**Image versus OCR.** Every cell was read on native-resolution crops of the spreads (left and right "
+         "page stitched at the same height); the OCR was used to find the column positions and lines. In "
+         "sgt1922 the annuity column runs into the binding: the centimes are hidden, so those cells are NA, "
+         "`illegible` (franc parts listed below); sgt1924 has the same for the first two Tunis loans and the "
+         "three Sfax/Sousse 3,75 % loans and Souk-el-Khemis total.",
+         "Checks: for every loan line and total line, total payments = payments in the year + earlier payments; "
+         "arrears = annuities due − total payments; capital remaining = nominal capital − capital amortised; and "
+         "every commune *Totaux* line against its loans. Cross-edition: earlier payments of year N = total "
+         "payments of year N−1. Every failure was re-read on a native-resolution crop and the printed value is "
+         "kept; most are visible slips in the print (e.g. sgt1922 and sgt1923 print Tunis's total capital "
+         "5.600.000 for four loans summing to 9.600.000; sgt1923 and sgt1924 repeat the 1923 payment 137.221,20 "
+         "of the Sfax 1909 9-million loan while the total includes 418.708,10; Souk-el-Arba's nominal capital "
+         "is printed » in sgt1922–23).",
+         "Durations are as printed (\"30 ans\" → 30). The *Capital nominal* of Souk-el-Arba 1921 is printed » in "
+         "sgt1922 and sgt1923 (stored 0.00)."]),
+    "communes_loans_tunis_bonds": (
+        "Finances municipales : b) Emprunts communaux (Commune de Tunis)",
+        "Bond loans of the city of Tunis (1891 and 1897): coupons and bonds due, paid in the year and earlier, "
+        "lapsed, and outstanding at the close of the year.",
+        "communes_loans_<edition>.txt, section `@tunis_bonds`",
+        "francs with centimes, except `duration_years` and `interest_rate_pct` (\"3 1/2\" = 3.5)",
+        ["Top of the first loan spread (columns 1–7 on the left page, 8–17 on the right). Editions transcribed: "
+         "sgt1922, sgt1923, sgt1924 (sgt1925: left page view 52 is a black image, not transcribed; sgt1926–"
+         "sgt1930 not done). All cells read on native-resolution crops. In sgt1922 the column *capitaux "
+         "(obligations sorties aux tirages)* runs into the binding: centimes hidden, cells NA `illegible` with "
+         "the franc part below. Checks: total = year + earlier payments (interest and capital), outstanding = due "
+         "− paid − lapsed, the *Totaux* line, and earlier payments(N) = total payments(N−1) across editions."]),
+}
+
+
+def write_more(name, rows):
+    cols = COMMON + MORE_DIMS[name] + ["value", "flag"]
+    with (OUT / f"{name}.csv").open("w", newline="") as f:
+        w = csv.DictWriter(f, fieldnames=cols, lineterminator="\n", extrasaction="ignore")
+        w.writeheader()
+        for r in rows:
+            w.writerow({k: ("" if r.get(k) is None else r.get(k)) for k in cols})
+    # validation lists for the notes (written by hand around these generated lists)
+    topic = {"communes_building_permits": "permits", "communes_terraces": "terraces",
+             "communes_loans_caisse": "loans", "communes_loans_tunis_bonds": "loans",
+             "communes_building_values_1939": None}[name]
+    L = [f"Rows: {len(rows)}."]
+    if topic:
+        fails = [x for x in MORE_CHK.fail[topic]
+                 if (name != "communes_loans_caisse" or "p." in x)]
+        L += [f"Checks ({topic}): {MORE_CHK.n[topic]}; failed: {len(MORE_CHK.fail[topic])}."]
+        L += ["  - " + x for x in fails]
+        if topic == "loans":
+            L += [f"Cross-edition checks (paid before in year N = paid total in year N-1): "
+                  f"{MORE_CHK.n['loans_xed']}; differences: {len(MORE_CHK.fail['loans_xed'])}."]
+            L += ["  - " + x for x in MORE_CHK.fail["loans_xed"]]
+    fl = defaultdict(list)
+    for r in rows:
+        if r["flag"]:
+            fl[r["flag"]].append(r)
+    L += [f"Flagged cells: " + (", ".join(f"{k}: {len(v)}" for k, v in sorted(fl.items())) or "none") + "."]
+    for k, v in sorted(fl.items()):
+        for r in v:
+            L.append(f"  - {r['census']} {r['commune']}"
+                     + (f" / {r['loan_fr']}" if r.get("loan_fr") else "") + f" {r['measure']}: {k}"
+                     + (f" (franc part {r['_hidden']})" if r.get("_hidden") else "")
+                     + (f" — printed text: {r['_note']}" if k == "not_applicable" and r.get("_note") else ""))
+    eds = [e for e in ORDER if e in {r["census"] for r in rows}]
+    H = [f"# {MORE_NOTES[name][0]}", "", f"*{MORE_NOTES[name][1]}*", "",
+         "Source: *Statistique générale de la Tunisie*, chapter *Communes*, editions " + ", ".join(eds)
+         + ". Source gallica.bnf.fr / Ministère des Affaires étrangères (NoC-CR).", "",
+         f"Pages and views of the stored values: {fmt_views(rows)}.", "",
+         f"Rebuild: `python3 data-raw/yearbook_other_chapters/extract_communes.py build` (transcriptions "
+         f"`../transcribed/{MORE_NOTES[name][2]}`).", "",
+         "Printed once per edition (SPEC_ADDENDUM rule 5): `year` is the year the edition reports on; no year is "
+         "printed twice, so there is no overlap to compare.", "", "## Columns", ""]
+    doc = dict(COLDOC, table_id="transcription section", commune="commune as printed (for loans: the name in the "
+               "block heading, e.g. `Tunis` from *Commune de Tunis*; `le Kef` from *Commune du Kef*)",
+               commune_heading_fr="block heading exactly as printed", loan_fr="date of the loan as printed "
+               "(identifies the loan within the commune)", measure="English code of the printed column",
+               measure_fr="column heading as printed (French)", value=MORE_NOTES[name][3],
+               flag="empty, `not_applicable` (text printed instead of a number: value NA; the text is listed "
+               "below), `illegible` (value NA; for money with hidden centimes the franc part is listed below)",
+               year="year of the edition's figures (exercice / calendar year)")
+    for c in COMMON + MORE_DIMS[name] + ["value", "flag"]:
+        H.append(f"- `{c}`: {doc[c]}")
+    H += [""] + [p_ + "\n" for p_ in MORE_NOTES[name][4]] + ["## Validation", ""]
+    (OUT / f"{name}.md").write_text("\n".join(H + L) + "\n")
+
+
 if __name__ == "__main__":
     cmd = sys.argv[1] if len(sys.argv) > 1 else "check"
+    build_more(write=(cmd == "build"), verbose=(cmd == "check"))
     res = build(write=(cmd == "build"))
     for name, r in res.items():
         print(f"{name}: {len(r['rows'])} rows; checks {r['checks']['n']}, failed {len(r['checks']['fail'])}; "

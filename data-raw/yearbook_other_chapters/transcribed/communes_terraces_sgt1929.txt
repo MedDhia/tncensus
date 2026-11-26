@@ -1,0 +1,81 @@
+# Communes chapter, sgt1929 (ark bpt6k9105652d): "Concessions sur la voie publique, b) Terrasses et étalages".
+# Read on native-resolution crops (right-hand page, no labels): 58 evenly spaced value lines for the 58 labels
+# of the facing page (view 76), assigned in order (checks: line 6 = Bizerte 70.025, line 44 = Sfax, line 50 =
+# Sousse, line 56 = Tunis). Gallica OCR as draft only. No total printed.
+# 'x' = no number: text printed instead (comment on the row); 'néant' printed -> stored 0.
+# Footnotes: (1) Droits adjugés. (2) Droits adjugés. (3) Montant total des droits de concession.
+# (4) Droits affermés avec les droits de marché.
+@terraces view=77 page=49 year=1929
+cols: terr_n terr_surf terr_prod stall_n stall_surf stall_prod
+Aïn-Draham | 0 0 0 0 50 10
+Ariana | 0 125.40 1253.40 0 0 0
+Bardo (Le) | 0 0 néant 0 0 néant
+Ben-Gardane | 0 0 0 0 0 14266.20
+# Béja: terr_surf "concédés à l'adjudic."
+Béja | 0 x 0 0 0 25000
+Bizerte | 70025 70025 8500 145 1300 5000
+Carthage | 0 0 néant 0 0 néant
+# Djemmal: terr_surf "droits affermés"
+Djemmal | 0 x 0 0 0 0
+Djerba | 5170 6449 1934.70 580 944 283.20
+Ebba-Ksour | 0 0 0 0 0 0
+# El Djem: terr_surf "droits affermés"
+El Djem | 0 x 0 0 0 0
+Ferryville | 4800 1200 3600 3952 16000 8000
+Fériana | 0 0 néant 0 0 néant
+Foum-Tatahouine | 0 0 0 21 2548 127.40
+Gabès | 13 801 1602 9 73 219
+# Gafsa: stall_n "divers"
+Gafsa | 140 70 1400 x 750 8500
+# Ghardimaou: stall_prod "910 80 (1)" (droits adjugés)
+Ghardimaou | 0 0 0 0 0 910.80
+Goulette (La) | 32 320 12000 111 250 11250
+Grombalia | 0 0 714 0 0 0
+# Hadjeb-el-Aïoun: terr_surf printed "36 m. 7"
+Hadjeb-el-Aïoun | 6 x 216 4000 4000 2002.90
+Hamma (El) | 0 0 néant 0 0 néant
+Hammam-Lif | 21 164 4790 0 0 néant
+# Kairouan: stall_prod "50.805 (2)" (droits adjugés)
+Kairouan | 0 0 0 0 0 50805
+Kalaa-Kebira | 0 0 0 0 0 0
+# Kef (Le): terr_prod "droits adjugés"; stall_prod "90.100 (3)" (total of the concession dues)
+Kef (Le) | 54 140 x 15 125 90100
+Krib (Le) | 0 0 0 0 0 0
+Ksour-Essaf | 86 86 1012 0 0 0
+Maharès | 0 0 0 0 0 0
+Mahdia | 90 90 5400 12 24 1728
+Marsa (La) | 268 64 3750 39 60 3613.40
+Mateur | 21 250 2350 2150 2300 13715.30
+# Maxula-Radès: terr_surf "3 m2 par jour"; stall_n "divers"
+Maxula-Radès | 2 x 547.50 x 1295 647.50
+Médenine | 0 0 0 148 351 220.50
+Medjez-el-Bab | 0 4900 1380 0 60348 16383
+Menzel-bou-Zelfa | 0 0 0 0 0 néant
+Menzel-Temime | 5 3350 335 0 0 0
+Moknine | 0 0 0 0 0 néant
+# Monastir: "(4)" printed in the terr_prod column: droits affermés avec les droits de marché
+Monastir | 0 0 x 0 0 0
+# M'saken: terr_surf "droits affermés"
+M'saken | 0 x 0 0 0 29972.20
+# Nabeul: "droits affermés avec les droits de marché" across columns 3-5
+Nabeul | 0 0 x x x 27000
+Nefta | 0 0 0 0 0 néant
+Philippe-Thomas | 0 0 néant 0 0 néant
+Saint-Germain | 0 0 0 0 0 0
+Sfax | 25 613.50 25768 270 410 17210.50
+Sbeïtla | 0 500 200 0 798 319.50
+Sidi-bou-Saïd | 48 18 295 10 20 315
+Soliman | 0 0 0 0 0 néant
+Souk-el-Arba | 13 132 9504 3 10 720
+Souk-el-Khemis | 540 410 2268 1212 1212 7299.15
+# Sousse: stall_surf printed "2.988 m. 60"
+Sousse | 0 2265 12558 0 2988.60 53972.80
+Tabarka | 2 0 160 22 0 440
+Tebourba | 50 100 900 0 9010 3604
+Téboursouk | 0 0 0 0 0 néant
+Thala | 0 0 0 0 792 277.20
+Tozeur | 0 0 0 0 0 néant
+Tunis | 76 290 18943.80 38 55 3347.60
+Zaghouan | 0 0 néant 0 0 néant
+# Zarzis: terr_prod "droits affermés"
+Zarzis | 0 0 x 0 0 0

@@ -21,7 +21,7 @@
 - **Fast Parquet Storage:** High-dimensional tables (28 disaggregated 2014 tables and full 2024 indicator suites) are backed by Zstandard-compressed Apache Parquet (`arrow`) for lightning-fast loads.
 - **Built-in Administrative GeoJSON & Spatial Boundaries (`load_geojson()`):** Seamlessly load ready-to-map `sf` polygons for National (1), Regional (6), Governorate (24), and Delegation (264) tiers, enriched with Arabic (`_name_ar`), French (`_name`), and alternate romanizations (`_name_alt`).
 - **Deep Historical & Colonial Archives:** Digitized and harmonized from [Ben Salah et al. (2024)](https://doi.org/10.1016/j.jce.2024.09.002), including 1,276 historical geonames, 1984–2014 boundary transition matrices, and colonial population tables.
-- **Original Colonial Census and Statistical Publications (`load_colonial_census()`):** 145 tables (90,743 cells) transcribed from Gallica scans: the 1906 European and 1931 indigenous census volumes (down to 333 localities and 804 cheikhats), and the *Démographie* chapter of 12 *Statistique générale de la Tunisie* yearbooks, which reprint the 1921, 1926, 1931 and 1936 censuses and give yearly births, deaths, marriages, expulsions, naturalisations, foreigners' movements and recruitment (1902–1939), plus hospital activity, Tunis mortality by cause and nationality, the public-assistance budget, and school enrolment by nationality and sex (with a pupil series from 1885). Every table is checked against its printed totals and its reprints, and every cell keeps its page and Gallica view, so it can be checked against the scan.
+- **Original Colonial Census and Statistical Publications (`load_colonial_census()`):** 150 tables (97,541 cells) transcribed from Gallica scans: the 1906 European and 1931 indigenous census volumes (down to 333 localities and 804 cheikhats), and the *Démographie* chapter of 12 *Statistique générale de la Tunisie* yearbooks, which reprint the 1921, 1926, 1931 and 1936 censuses and give yearly births, deaths, marriages, expulsions, naturalisations, foreigners' movements and recruitment (1902–1939), plus hospital activity, Tunis mortality by cause and nationality, the public-assistance budget, and school enrolment by nationality and sex (with a pupil series from 1885). Every table is checked against its printed totals and its reprints, and every cell keeps its page and Gallica view, so it can be checked against the scan.
 - **Inequality Metrics:** Built-in functions for calculating Gini coefficients (`gini()`) and Generalized Entropy Theil inequality decompositions (`theil_decompose()`).
 
 ---
@@ -121,7 +121,7 @@ The *Démographie* chapter of 12 annual editions (1922–1930, 1935, 1936, 1939;
 | `health_*` finance (14 tables) | National / Hospital / Society | 10,992 | Health chapter, finance: public-assistance receipts, expenditure and credits; child-protection credits; accounts of subsidised charities; Pasteur and Arloing institute budgets and doses distributed; provincial hospitals' finances; cost of a patient-day (1912–1939). |
 | `education_*` (16 tables) | National / Establishment | 9,723 | Public-instruction chapter: total pupils; examination candidates and passes by exam, nationality and sex; secondary, higher and special establishments; primary-education totals; school population by type of school, nationality and sex (yearly series 1919–1939, quinquennial from 1885); vocational education; libraries, canteens, Arabic courses, music and commerce schools. |
 | `education_schools` | School | 14,960 | School-by-school lists of public primary and private schools for 1922 and 1930 (382 and 497 schools): locality, classes, staff, and pupils by sex and nationality. |
-| `communes_*` (3 tables) | Commune | 4,565 | Communes chapter: receipts and expenditure of each commune (1918–1938), communal property at 31 December (1922–1937), gas consumption in Tunis (1913–1936). Further tables of this chapter are in progress. |
+| `communes_*` (8 tables) | Commune | 11,363 | Communes chapter: receipts and expenditure of each commune (1918–1938); communal property (1922–1937); building permits (1922–1936) and building values (1939); café terraces and street stalls (1922–1935); municipal loans and Tunis city bonds (1922–1925); gas consumption in Tunis (1913–1936). Loans for 1926–1930, slaughter dues, water, electricity and gas operation are in progress. |
 | `recruitment_*` (5 tables) | National | 1,132 | French recruitment (allocation, education, draft boards, classes 1902–1939) and indigenous conscription (1913–1939). |
 
 ### 4. Geographic Boundaries & Spatial Harmonization
@@ -134,7 +134,7 @@ The *Démographie* chapter of 12 annual editions (1922–1930, 1935, 1936, 1939;
 | `load_geojson("national")` | `sf` MultiPolygon | 1 | 5 | National coastal & terrestrial boundary of Tunisia. |
 | `delegation_codes_ins` | Crosswalk Table | 264 | 11 | Master INS crosswalk connecting 1984 codes, modern codes, UN SALB, & coords. |
 | `historical_geonames` | Gazeteer Table | 1,276 | 14 | Historical place names mapped to modern equivalents, coordinates, & GeoNames. |
-| `colonial_place_crosswalk` | Crosswalk Table | 2,311 | 16 | Every place name printed in the `load_colonial_census()` tables, with canonical spelling, contrôle civil and caidat, linked to `historical_geonames` (1,489 links, 1,468 with coordinates). |
+| `colonial_place_crosswalk` | Crosswalk Table | 2,341 | 16 | Every place name printed in the `load_colonial_census()` tables, with canonical spelling, contrôle civil and caidat, linked to `historical_geonames` (1,516 links, 1,495 with coordinates). |
 | `delegation_matrix_merged` | Transition Matrix | 217 | 5 | Time-consistent merged delegation units reconciling 1984–2014 boundary splits. |
 
 ---
@@ -332,7 +332,7 @@ head(delegation_matrix_merged, 10)
 ### 6. Working with the Original Colonial Census and Yearbook Tables
 
 ```r
-# List the 145 transcribed tables
+# List the 150 transcribed tables
 idx <- colonial_census_tables()
 idx[, c("table", "title_en", "n_rows")]
 

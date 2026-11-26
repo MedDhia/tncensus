@@ -172,6 +172,11 @@ Every table is tidy: one row per printed cell. Printed subtotals and totals are 
 | [`communes_budget`](#communes_budget) | budget | by edition | 2,510 | francs | Municipal finances: receipts and expenditure of each commune |
 | [`communes_property`](#communes_property) | property | by edition | 1,959 | francs | Communal property: real estate and movable assets owned by each commune at 31 December |
 | [`communes_gas_tunis`](#communes_gas_tunis) | gas | by edition | 96 | mixed | Gas consumption and receipts, city of Tunis, public and private lighting |
+| [`communes_building_permits`](#communes_building_permits) | permits | by edition | 1,932 | mixed | Building permits issued by each commune: constructions or reconstructions, raisings (surélévations) and number of permits |
+| [`communes_building_values_1939`](#communes_building_values_1939) | constructions | by edition | 120 | mixed | Building in 1939, towns of more than 5,000 inhabitants: number of building permits and value of the buildings (housing, commercial and industrial, other) |
+| [`communes_terraces`](#communes_terraces) | terraces | by edition | 3,510 | mixed | Pavement concessions: café terraces (chairs and tables of lemonade sellers) and street stalls (goods of all kinds): number, surface and receipts, per commune |
+| [`communes_loans_caisse`](#communes_loans_caisse) | caisse | by edition | 1,140 | francs | Municipal loans from the Caisse des Prêts Communaux: one block per commune, one line per loan, with terms, annuities due and paid, arrears and capital amortised / outstanding at the end of the year |
+| [`communes_loans_tunis_bonds`](#communes_loans_tunis_bonds) | tunis_bonds | by edition | 96 | francs | Bond loans of the city of Tunis (1891 and 1897): coupons and bonds due, paid in the year and earlier, lapsed, and outstanding at the close of the year |
 
 ### eur1906_t1_circonscription_nationality
 
@@ -7058,3 +7063,178 @@ Source `sgt`, table gas, printed pages by edition. 96 rows. Value type: mixed. F
 |---|---|---:|
 | `consumption_m3` | Consommation (mètres cubes) | 48 |
 | `receipts` | Recettes (fr. c.) | 48 |
+
+### communes_building_permits
+
+**Concessions sur la voie publique : a) Autorisations de bâtir**  
+*Building permits issued by each commune: constructions or reconstructions, raisings (surélévations) and number of permits*
+
+Source `sgt`, table permits, printed pages by edition. 1,932 rows. Value type: mixed. Flags: (empty) 1,927, not_applicable 4, illegible 1. Notes and validation: [`../yearbook_other_chapters/csv/communes_building_permits.md`](../yearbook_other_chapters/csv/communes_building_permits.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `commune` | Place or label as printed (85 distinct values). |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `constructions` | Constructions ou reconstructions | 644 |
+| `permits_issued` | Nombre d'autorisations | 644 |
+| `raising` | Surélévation | 644 |
+
+### communes_building_values_1939
+
+**Constructions immobilières en 1939 (Villes de plus de 5.000 habitants)**  
+*Building in 1939, towns of more than 5,000 inhabitants: number of building permits and value of the buildings (housing, commercial and industrial, other)*
+
+Source `sgt`, table constructions, printed pages by edition. 120 rows. Value type: mixed. Flags: (empty) 120. Notes and validation: [`../yearbook_other_chapters/csv/communes_building_values_1939.md`](../yearbook_other_chapters/csv/communes_building_values_1939.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `commune` | Place or label as printed (30 distinct values). |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `permits_issued` | Nombre total des autorisations de bâtir | 30 |
+| `value_commercial_industrial` | Valeur : bâtiments commerciaux et industriels | 30 |
+| `value_housing` | Valeur : logements à usage d'habitation | 30 |
+| `value_other` | Valeur : constructions diverses | 30 |
+
+### communes_terraces
+
+**Concessions sur la voie publique : b) Terrasses et étalages**  
+*Pavement concessions: café terraces (chairs and tables of lemonade sellers) and street stalls (goods of all kinds): number, surface and receipts, per commune*
+
+Source `sgt`, table terraces, printed pages by edition. 3,510 rows. Value type: mixed. Flags: (empty) 3,324, not_applicable 186. Notes and validation: [`../yearbook_other_chapters/csv/communes_terraces.md`](../yearbook_other_chapters/csv/communes_terraces.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `commune` | Place or label as printed (83 distinct values). |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `stalls_number` | Étalages (dépôts de marchandises de toutes sortes) : nombre | 585 |
+| `stalls_receipts` | Étalages : produits | 585 |
+| `stalls_surface_m2` | Étalages : surface (mètre carré) | 585 |
+| `terraces_number` | Terrasses (chaises de tables de limonadiers) : nombre | 585 |
+| `terraces_receipts` | Terrasses : produits | 585 |
+| `terraces_surface_m2` | Terrasses : surface (mètre carré) | 585 |
+
+### communes_loans_caisse
+
+**Finances municipales : c) Emprunts contractés à la Caisse des Prêts Communaux**  
+*Municipal loans from the Caisse des Prêts Communaux: one block per commune, one line per loan, with terms, annuities due and paid, arrears and capital amortised / outstanding at the end of the year*
+
+Source `sgt`, table caisse, printed pages by edition. 1,140 rows. Value type: francs. Flags: (empty) 1,111, illegible 29. Notes and validation: [`../yearbook_other_chapters/csv/communes_loans_caisse.md`](../yearbook_other_chapters/csv/communes_loans_caisse.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `commune` | Place or label as printed (23 distinct values). |
+| `commune_heading_fr` | Place or label as printed (23 distinct values). |
+| `loan_fr` | Place or label as printed (36 distinct values). |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `annuities_due_to_date` | Annuités échues à la fin de l'année | 95 |
+| `annuity` | Montant de chaque annuité | 95 |
+| `arrears` | Restes à payer sur les annuités échues | 95 |
+| `capital_amortised` | Amortissement : capital compris dans les annuités payées | 95 |
+| `capital_nominal` | Capital nominal à rembourser par la Commune | 95 |
+| `capital_received` | Capital net touché par la Commune | 95 |
+| `capital_remaining` | Amortissement : capital restant à amortir à la fin de l'année | 95 |
+| `duration_years` | Durée des emprunts (ans) | 95 |
+| `interest_rate_pct` | Taux de l'intérêt | 95 |
+| `paid_before` | Payements : antérieurement | 95 |
+| `paid_in_year` | Payements : en 1922 / Payements : en 1923 / Payements : en 1924 / Payements : en 1925 | 95 |
+| `paid_total` | Payements : total | 95 |
+
+### communes_loans_tunis_bonds
+
+**Finances municipales : b) Emprunts communaux (Commune de Tunis)**  
+*Bond loans of the city of Tunis (1891 and 1897): coupons and bonds due, paid in the year and earlier, lapsed, and outstanding at the close of the year*
+
+Source `sgt`, table tunis_bonds, printed pages by edition. 96 rows. Value type: francs. Flags: (empty) 94, illegible 2. Notes and validation: [`../yearbook_other_chapters/csv/communes_loans_tunis_bonds.md`](../yearbook_other_chapters/csv/communes_loans_tunis_bonds.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `commune` | Place or label as printed (1 distinct values). |
+| `commune_heading_fr` | Place or label as printed (1 distinct values). |
+| `loan_fr` | Place or label as printed (2 distinct values). |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `capital_due` | Sommes échues : capitaux (obligations sorties aux tirages) | 6 |
+| `capital_lapsed` | Sommes atteintes par la déchéance : capitaux | 6 |
+| `capital_nominal` | Capital nominal à rembourser par la Commune | 6 |
+| `capital_outstanding` | Restes à payer à la clôture de l'exercice : capitaux | 6 |
+| `capital_paid_before` | Payements effectués antérieurement : capitaux | 6 |
+| `capital_paid_in_year` | Payements effectués en 1922 : capitaux / Payements effectués en 1923 : capitaux / Payements effectués en 1924 : capitaux | 6 |
+| `capital_paid_total` | Payements effectués, total : capitaux | 6 |
+| `capital_received` | Capital net encaissé par la Commune | 6 |
+| `duration_years` | Durée des emprunts (ans) | 6 |
+| `interest_due` | Sommes échues : intérêts (coupons échus) | 6 |
+| `interest_lapsed` | Sommes atteintes par la déchéance : intérêts | 6 |
+| `interest_outstanding` | Restes à payer à la clôture de l'exercice : intérêts | 6 |
+| `interest_paid_before` | Payements effectués antérieurement : intérêts | 6 |
+| `interest_paid_in_year` | Payements effectués en 1922 : intérêts / Payements effectués en 1923 : intérêts / Payements effectués en 1924 : intérêts | 6 |
+| `interest_paid_total` | Payements effectués, total : intérêts | 6 |
+| `interest_rate_pct` | Taux de l'intérêt | 6 |

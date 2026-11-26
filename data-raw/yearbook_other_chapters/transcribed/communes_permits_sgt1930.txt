@@ -1,0 +1,66 @@
+# Communes chapter, sgt1930 (ark bpt6k9105652d): "Concessions sur la voie publique, a) Autorisations de bâtir".
+# Drafted from Gallica OCR, every cell read on native-resolution crops of the page image.
+# Integers; printed » = 0; 'néant' kept as the word (stored 0); '?' = illegible; 'x' = not applicable.
+# The value lines drift from half a line to nearly a full line below their labels down the page; rows assigned
+# by counting lines (58 value lines in each column for 58 labels). No total printed.
+# Foum-Tatahouine, raising: printed "3 m. 50" (a length, not a count) -> 'x', stored NA.
+@permits view=608 page=50 year=1930
+cols: constructions raising n_auth
+Aïn-Draham | 0 0 néant
+Ariana | 21 8 29
+Bardo (Le) | 0 0 0
+Ben-Gardane | 0 0 0
+Béja | 12 7 19
+Bizerte | 49 16 59
+Carthage | 25 2 27
+Djemmal | 4 0 4
+Djerba | 7 0 41
+Ebba-Ksour | 5 1 6
+El Djem | 3 0 3
+Ferryville (1) | 12 0 12
+Fériana | 0 0 néant
+Foum-Tatahouine | 0 x 5
+Gabès | 32 3 35
+Gafsa | 22 1 23
+Ghardimaou | 0 0 néant
+Goulette (La) | 99 15 339
+Grombalia | 8 0 0
+Hadjeb-el-Aïoun | 0 0 0
+Hamma (El) | 0 0 0
+Hammam-Lif | 71 10 81
+Kairouan | 3 6 9
+Kalaa-Kebira | 52 0 55
+Kef (Le) (2) | 33 3 55
+Krib (Le) | 0 0 néant
+Ksour-Essaf | 3 1 4
+Maharès | 0 0 0
+Mahdia | 2 1 3
+Marsa (La) | 29 4 33
+Mateur | 9 0 9
+Maxula-Radès | 15 3 45
+Médenine | 0 0 17
+Medjez-el-Bab | 6 0 6
+Menzel-bou-Zelfa (3) | 0 0 néant
+Menzel-Temime | 5 0 5
+Moknine | 30 7 0
+Monastir | 4 3 7
+M'saken | 0 0 17
+Nabeul | 37 6 145
+Nefta | 0 0 néant
+Philippe-Thomas | 0 0 néant
+Saint-Germain | 18 17 35
+Sfax | 49 26 75
+Sbeïtla | 4 1 5
+Sidi-bou-Saïd | 2 1 3
+Soliman (4) | 0 0 néant
+Souk-el-Arba | 8 1 9
+Souk-el-Khemis | 2 1 3
+Sousse | 61 18 79
+Tabarka (5) | 2 0 2
+Tebourba | 2 1 3
+Téboursouk | 0 0 néant
+Thala | 3 0 3
+Tozeur | 0 0 néant
+Tunis | 255 115 370
+Zaghouan | 0 0 néant
+Zarzis (6) | 0 0 7
