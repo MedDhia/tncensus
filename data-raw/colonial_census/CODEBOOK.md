@@ -226,6 +226,12 @@ Every table is tidy: one row per printed cell. Printed subtotals and totals are 
 | [`property_titles`](#property_titles) | titles | by edition | 160 | mixed | Land registry: land titles issued (total, from subdivisions, after a registration judgment, with final area and value), by year |
 | [`property_conservation_recap`](#property_conservation_recap) | recap;registered | by edition | 132 | mixed | Land registry: cumulative summary at 31 December (requisitions filed and finally decided, titles created) and enzel rents and mortgage claims registered |
 | [`property_transfers_1939`](#property_transfers_1939) | transfers | by edition | 38 | mixed | Land registry: transfers inter vivos of registered properties in 1939, by contrôle civil (number and value) |
+| [`posts_network`](#posts_network) | network | by edition | 312 | mixed | Posts, telegraphs and telephones: network at 31 December |
+| [`posts_operations`](#posts_operations) | operations | by edition | 1,290 | mixed | Posts, telegraphs and telephones: traffic (correspondence, money orders, registered items, collections, parcels, telegrams, telephone conversations, savings bank) |
+| [`posts_finance`](#posts_finance) | finance | by edition | 192 | francs | Posts, telegraphs and telephones: revenue, expenditure and balance |
+| [`posts_money_orders_italy`](#posts_money_orders_italy) | mo_italy | by edition | 168 | mixed | Money orders sent from Tunisia to Italy, by month |
+| [`posts_money_orders_summary`](#posts_money_orders_summary) | mo_summary | by edition | 152 | mixed | Money orders issued in Tunisia for France and Italy, and issued in France and Italy for Tunisia |
+| [`posts_savings_accounts`](#posts_savings_accounts) | savings | by edition | 191 | mixed | National savings bank (Caisse nationale d'épargne): accounts opened by depositor group, deposits, withdrawals and depositors' balance |
 
 ### eur1906_t1_circonscription_nationality
 
@@ -9867,3 +9873,346 @@ Source `sgt`, table transfers, printed pages by edition. 38 rows. Value type: mi
 |---|---|---:|
 | `count` |  | 19 |
 | `francs` |  | 19 |
+
+### posts_network
+
+**Postes, Télégraphes, Téléphones. Renseignements généraux : a) Réseau**  
+*Posts, telegraphs and telephones: network at 31 December*
+
+Source `sgt`, table network, printed pages by edition. 312 rows. Value type: mixed. Flags: (empty) 312. Notes and validation: [`../yearbook_other_chapters/csv/posts_network.md`](../yearbook_other_chapters/csv/posts_network.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `service` | Coded dimension. |
+| `service_fr` | Printed French label for `service`. |
+| `item` | Coded dimension. |
+| `item_fr` | Printed French label for `item`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`service`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `posts` | Postes | 144 |
+| `telegraphs` | Télégraphes | 96 |
+| `telephones` | Téléphones | 72 |
+
+`item`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `courier_km` | Parcours quotidiens des courriers de terre et par chemins de fer | 24 |
+| `distributions` | Distribution des postes | 24 |
+| `letter_boxes` | Boîtes aux lettres | 24 |
+| `post_offices` | Bureaux de poste | 24 |
+| `postal_agencies` | Agences postales | 24 |
+| `route_km` | Longueur des chemins de fer et des routes parcourues par les courriers | 24 |
+| `tel_lines_km` | Longueur des lignes d'abonnés | 24 |
+| `tel_sets` | Postes d'abonnés | 24 |
+| `tel_wires_km` | Longueur des fils des circuits interurbains | 24 |
+| `tg_lines_km` | Longueur des lignes | 24 |
+| `tg_offices` | Bureaux de télégraphe | 24 |
+| `tg_stations` | Gares ouvertes à la télégraphie | 24 |
+| `tg_wires_km` | Longueur des fils | 24 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `count` |  | 168 |
+| `km` |  | 144 |
+
+### posts_operations
+
+**Postes, Télégraphes, Téléphones. Renseignements généraux : b) Exploitation**  
+*Posts, telegraphs and telephones: traffic (correspondence, money orders, registered items, collections, parcels, telegrams, telephone conversations, savings bank)*
+
+Source `sgt`, table operations, printed pages by edition. 1,290 rows. Value type: mixed. Flags: (empty) 1,282, reprint_corrected 3, not_applicable 3, derived_from_totals 1, row_realigned 1. Notes and validation: [`../yearbook_other_chapters/csv/posts_operations.md`](../yearbook_other_chapters/csv/posts_operations.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `service` | Coded dimension. |
+| `service_fr` | Printed French label for `service`. |
+| `item` | Coded dimension. |
+| `item_fr` | Printed French label for `item`. |
+| `origin` | Coded dimension. |
+| `origin_fr` | Printed French label for `origin`. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`service`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `pension_advances` | Avances sur pensions | 8 |
+| `postal_cheques` | Chèques postaux | 6 |
+| `posts` | Postes | 866 |
+| `savings` | Caisse d'Épargne | 161 |
+| `telegraphs` | Télégraphes | 212 |
+| `telephones` | Téléphones | 37 |
+
+`item`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `advances_granted` | Avances sur pensions : avances consenties | 4 |
+| `arrears_paid` | Avances sur pensions : solde d'arrérages payés | 4 |
+| `bills_for_acceptance` | Valeurs présentées à l'acceptation | 24 |
+| `collections` | Recouvrements (arrivée) | 144 |
+| `conversations` | Nombre de conversations | 25 |
+| `conversations_suburban` | Nombre de conversations : suburbaines | 2 |
+| `conversations_urban` | Nombre de conversations : urbaines | 2 |
+| `correspondence` | Nombre de correspondances (départ et arrivée) | 72 |
+| `current_accounts` | Chèques postaux : nombre de comptes courants au 31 décembre | 2 |
+| `depositors_balance` | Avoir des déposants | 27 |
+| `deposits` | Versements | 54 |
+| `money_orders_issued` | Mandats de poste émis | 160 |
+| `money_orders_paid` | Mandats de poste payés | 160 |
+| `operations_credit` | Chèques postaux : montant des opérations, crédit | 2 |
+| `operations_debit` | Chèques postaux : montant des opérations, débit | 2 |
+| `parcels_dispatched` | Colis postaux : départ | 81 |
+| `parcels_received` | Colis postaux : arrivée | 81 |
+| `passbooks_opened` | Nombre de livrets ouverts | 24 |
+| `passbooks_outstanding` | Nombre de livrets ouverts au 31 décembre | 2 |
+| `radio_receivers` | Nombre de postes récepteurs de T.S.F. déclarés au 31 décembre | 2 |
+| `radiotelephone_france_tunisia` | Nombre de conversations radio-téléphoniques : sens France-Tunisie | 2 |
+| `radiotelephone_tunisia_france` | Nombre de conversations radio-téléphoniques : sens Tunisie-France | 2 |
+| `registered_items` | Chargements et objets recommandés (départ) | 144 |
+| `subscribers` | Nombre d'abonnés au téléphone au 31 décembre | 2 |
+| `telegrams_official_received` | Service officiel : arrivée | 27 |
+| `telegrams_official_sent` | Service officiel : départ | 27 |
+| `telegrams_received` | Télégrammes d'arrivée | 79 |
+| `telegrams_sent` | Télégrammes de départ | 79 |
+| `withdrawals` | Remboursements | 54 |
+
+`origin`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `(empty)` |  | 290 |
+| `all` | Tunisie, France, Étranger (one figure printed across the three lines) | 2 |
+| `ff` | France et Étranger (one figure printed across both lines) | 4 |
+| `foreign` | Étranger | 330 |
+| `france` | France | 330 |
+| `tunisia` | Tunisie | 334 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `amount` | Montant | 393 |
+| `number` | Nombre | 897 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `count` |  | 897 |
+| `francs` |  | 393 |
+
+### posts_finance
+
+**Postes, Télégraphes, Téléphones. Renseignements généraux : c) Situation financière**  
+*Posts, telegraphs and telephones: revenue, expenditure and balance*
+
+Source `sgt`, table finance, printed pages by edition. 192 rows. Value type: francs. Flags: (empty) 179, not_applicable 12, reprint_corrected 1. Notes and validation: [`../yearbook_other_chapters/csv/posts_finance.md`](../yearbook_other_chapters/csv/posts_finance.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `item` | Coded dimension. |
+| `item_fr` | Printed French label for `item`. |
+| `kind` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`item`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `deficit` | Déficit | 24 |
+| `expenses` | Dépenses | 24 |
+| `net_product` | Produit net | 24 |
+| `rev_cne_subsidy` | Produits : Subvention de la Caisse d'Épargne | 24 |
+| `rev_posts` | Produits : Postes | 24 |
+| `rev_rents` | Produits : Loyers payés par le Gouvernement Tunisien | 24 |
+| `rev_telegraphs` | Produits : Télégraphes | 24 |
+| `rev_telephones` | Produits : Téléphones | 24 |
+
+`kind`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `balance` |  | 48 |
+| `expenses` |  | 24 |
+| `revenue` |  | 120 |
+
+### posts_money_orders_italy
+
+**Mouvements des mandats-poste : a) Mandats-poste envoyés de Tunisie en Italie**  
+*Money orders sent from Tunisia to Italy, by month*
+
+Source `sgt`, table mo_italy, printed pages by edition. 168 rows. Value type: mixed. Flags: (empty) 168. Notes and validation: [`../yearbook_other_chapters/csv/posts_money_orders_italy.md`](../yearbook_other_chapters/csv/posts_money_orders_italy.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `month` | Coded dimension. |
+| `month_fr` | Printed French label for `month`. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`month`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `1` | Janvier | 14 |
+| `10` | Octobre | 14 |
+| `11` | Novembre | 14 |
+| `12` | Décembre | 14 |
+| `2` | Février | 14 |
+| `3` | Mars | 14 |
+| `4` | Avril | 14 |
+| `5` | Mai | 14 |
+| `6` | Juin | 14 |
+| `7` | Juillet | 14 |
+| `8` | Août | 14 |
+| `9` | Septembre | 14 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `amount` | Montant | 84 |
+| `number` | Nombre | 84 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `count` |  | 84 |
+| `francs` |  | 84 |
+
+### posts_money_orders_summary
+
+**Mouvements des mandats-poste : b) Mandats-poste établis en Tunisie ou à destination de la Tunisie**  
+*Money orders issued in Tunisia for France and Italy, and issued in France and Italy for Tunisia*
+
+Source `sgt`, table mo_summary, printed pages by edition. 152 rows. Value type: mixed. Flags: (empty) 152. Notes and validation: [`../yearbook_other_chapters/csv/posts_money_orders_summary.md`](../yearbook_other_chapters/csv/posts_money_orders_summary.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `flow` | Coded dimension. |
+| `flow_fr` | Printed French label for `flow`. |
+| `partner` | Coded dimension. |
+| `partner_fr` | Printed French label for `partner`. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`flow`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `issued_in_tunisia` | Mandats-poste établis en Tunisie | 76 |
+| `payable_in_tunisia` | Mandats-poste à destination de la Tunisie | 76 |
+
+`partner`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `france` | A destination de la France / Émis en France | 76 |
+| `italy` | A destination de l'Italie / Émis en Italie | 76 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `amount` | Montant | 76 |
+| `number` | Nombre | 76 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `count` |  | 76 |
+| `francs` |  | 76 |
+
+### posts_savings_accounts
+
+**Caisse nationale d'épargne. Comptes ouverts**  
+*National savings bank (Caisse nationale d'épargne): accounts opened by depositor group, deposits, withdrawals and depositors' balance*
+
+Source `sgt`, table savings, printed pages by edition. 191 rows. Value type: mixed. Flags: (empty) 191. Notes and validation: [`../yearbook_other_chapters/csv/posts_savings_accounts.md`](../yearbook_other_chapters/csv/posts_savings_accounts.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `item` | Coded dimension. |
+| `item_fr` | Printed French label for `item`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`item`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `depositors_balance` | Avoir des déposants | 27 |
+| `deposits` | Montant des versements | 27 |
+| `french` | A des Français | 22 |
+| `italian` | A des étrangers : Italiens | 22 |
+| `jewish` | A des Israélites | 22 |
+| `muslim` | A des Musulmans | 22 |
+| `other_foreign` | A des étrangers : autres étrangers | 22 |
+| `withdrawals` | Montant des remboursements | 27 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `count` |  | 110 |
+| `francs` |  | 81 |

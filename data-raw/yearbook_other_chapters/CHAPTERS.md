@@ -17,9 +17,9 @@ of a range on the page before relying on it.**
 | Justice (`justice_`) | 85–94 | 569–578 | 1059–1068 | 93–104 | 643–654 | 105–116 | 629–640 | 107–118 | 641–652 | 71–80 | 52–61 | 47–56 |
 | Prisons (`prisons_`) | 95–102 | 579–586 | 1069–1076 | 105–112 | 655–664 | 117–126 | 641–650 | 119–128 | 653–662 | 81–90 | ? | ? |
 | Property / Tribunal mixte / Propriété foncière (`property_`) | 103–112 | 587–596 | 1077–1086 | 113–122 | 665–672 | 127–134 | 651–658 | 129–136 | 663–670 | 91–98 | 62–67? | 57–64 |
-| Posts, telegraphs, telephones (`posts_`) | 153–172 | 637–662 | 1127–1158 | 163–198 | 713–754 | 175–216 | 699–740 | 177–218 | 711–752 | 109–116 | 78–? | 77–82 |
-| Public works (`publicworks_`) | 173–184 | 663–674 | 1159–1170 | 199–210 | 755–766 | 217–228 | 741–752 | 219–230 | 753–764 | 117–126 | ? | 83–92 |
-| Finances (`finance_`) | 185–230 | 675–720 | 1171–1216 | 211–286 | 767–802 | 229–258 | 753–782 | 231–260 | 765–794 | 127–138 | ? | 93–98 |
+| Posts, telegraphs, telephones (`posts_`) | 153–172 | 637–662 | 1127–1158 | 163–198 | 713–754 | 175–216 | 699–740 | 177–218 | 711–752 | 109–116 | 78–83 | 77–82 |
+| Public works (`publicworks_`) | 173–184 | 663–674 | 1159–1170 | 199–210 | 755–766 | 217–228 | 741–752 | 219–230 | 753–764 | 117–126 | 84–93 | 83–92 |
+| Finances (`finance_`) | 185–230 | 675–720 | 1171–1216 | 211–286 | 767–802 | 229–258 | 753–782 | 231–260 | 765–794 | 127–138 | 94–99 | 93–98 |
 | Agriculture (`agriculture_`) | 231–280 | 721–770 | 1217–1274 | 287–342 | 803–852 | 259–314 | 783–842 | 261–320 | 795–856 | 139–154 | 100–145 | 99–114 |
 | Teaching and research institutions (`research_`) | – | – | – | – | – | – | – | – | – | 155–184 | ? | 115–122 |
 | Commerce and navigation (`commerce_`) | 281–436 | 771–926 | 1275–1430 | 343–498 | 853–1008 | 315–470 | 843–998 | 321–476 | 857–1012 | 185–290 | 146–171 | 123–150 |
@@ -38,7 +38,7 @@ Notes:
 |---|---|
 | 1 | Communes: **done** (`extract_communes.py`, all tables, surveyed page by page) |
 | 2 | Justice: **done** (`extract_justice.py`; hearing-schedule text pages not transcribed). Prisons: **done** (`extract_prisons.py`, 9 tables, survey in `csv/prisons_survey.md`). Property: **done** (`extract_property.py`, 13 tables, survey in `csv/property_survey.md`) |
-| 3 | Posts, public works |
+| 3 | Posts: **done** (`extract_posts.py`, 6 tables, survey in `csv/posts_survey.md`; exchange-rate pages to do). Public works: in progress |
 | 4 | Finances |
 | 5 | Agriculture |
 | 6 | Colonisation, economic institutions, labour, research institutions |

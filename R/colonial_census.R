@@ -4,13 +4,13 @@
 #' Gallica (BnF): the 1906 census of the European civilian population of
 #' Tunisia, the 1931 census of the indigenous (Muslim and Jewish) population,
 #' and the \emph{Démographie}, health, public-instruction, communes, justice,
-#' prisons and land-registration chapters of the
+#' prisons, land-registration and posts chapters of the
 #' \emph{Statistique générale de la Tunisie} yearbooks (editions 1922--1930, 1935, 1936 and
 #' 1939). The yearbooks reprint tables from the 1921, 1926, 1931 and 1936
 #' censuses, whose own volumes are not on Gallica, and give yearly vital
 #' statistics, expulsions, naturalisations, foreigners' movements,
 #' recruitment, hospital activity, the mortality of Tunis, school
-#' enrolment, municipal budgets, court cases, the prison population and land registration. Each
+#' enrolment, municipal budgets, court cases, the prison population, land registration and postal traffic. Each
 #' table can be loaded with \code{\link{load_colonial_census}}.
 #'
 #' @return A \code{data.frame} with one row per table and columns
@@ -51,7 +51,7 @@ colonial_census_tables <- function() {
 #' Loads one table transcribed from the 1906 census of the European civilian
 #' population of Tunisia, the 1931 census of the indigenous population, or the
 #' \emph{Démographie}, health, public-instruction, communes, justice,
-#' prisons and land-registration chapters of the
+#' prisons, land-registration and posts chapters of the
 #' \emph{Statistique générale de la Tunisie} yearbooks (1922--1939), as
 #' digitized on Gallica.
 #'
