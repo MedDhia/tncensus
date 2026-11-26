@@ -213,6 +213,19 @@ Every table is tidy: one row per printed cell. Printed subtotals and totals are 
 | [`prisons_transfers`](#prisons_transfers) | transfers | by edition | 168 | count | Transfers of prisoners by destination |
 | [`prisons_deaths`](#prisons_deaths) | deaths | by edition | 3,054 | count | Deaths of prisoners by prison and by disease |
 | [`prisons_guard_staff`](#prisons_guard_staff) | guard;guard_note | by edition | 896 | count | Guard staff compared with the maximum daily number of prisoners, by prison |
+| [`property_tribunal_cases`](#property_tribunal_cases) | activity;cases | by edition | 306 | count | Tribunal mixte (land registration court): cases and work of the court, by seat |
+| [`property_pending_requisitions`](#property_pending_requisitions) | pending;pending_age | by edition | 3,606 | count | Tribunal mixte: registration requisitions pending at 31 December, by stage of the proceeding and by year of filing, by judge |
+| [`property_results_legal_status`](#property_results_legal_status) | legal_status | by edition | 216 | count | Results of the registration proceedings: properties by legal status, outcome and seat |
+| [`property_results_charges`](#property_results_charges) | charges;charges_summary | by edition | 312 | mixed | Results of the registration proceedings: enzel rents and mortgages on the properties, by outcome and seat; number of land titles carrying the mortgages |
+| [`property_results_location`](#property_results_location) | location | by edition | 432 | count | Results of the registration proceedings: urban and rural properties by legal status, outcome and seat |
+| [`property_results_areas`](#property_results_areas) | areas | by edition | 288 | hectares | Results of the registration proceedings: areas registered and areas refused or abandoned, by urban / rural, legal status and seat |
+| [`property_oppositions`](#property_oppositions) | oppositions | by edition | 94 | count | Results of the registration proceedings: oppositions judged, by decision and seat |
+| [`property_claimants`](#property_claimants) | claimant_nationality;claimant_status | by edition | 666 | count | Results of the registration proceedings: claimants whose requisition was finally decided, by legal quality and by nationality, outcome and seat |
+| [`property_requisitions`](#property_requisitions) | requisitions | by edition | 160 | mixed | Land registry: registration requisitions filed, by nationality of the claimant, with declared areas and values, by year |
+| [`property_requisitions_value`](#property_requisitions_value) | value_brackets | by edition | 128 | count | Land registry: registration requisitions by bracket of declared value, by year |
+| [`property_titles`](#property_titles) | titles | by edition | 160 | mixed | Land registry: land titles issued (total, from subdivisions, after a registration judgment, with final area and value), by year |
+| [`property_conservation_recap`](#property_conservation_recap) | recap;registered | by edition | 132 | mixed | Land registry: cumulative summary at 31 December (requisitions filed and finally decided, titles created) and enzel rents and mortgage claims registered |
+| [`property_transfers_1939`](#property_transfers_1939) | transfers | by edition | 38 | mixed | Land registry: transfers inter vivos of registered properties in 1939, by contrôle civil (number and value) |
 
 ### eur1906_t1_circonscription_nationality
 
@@ -9044,3 +9057,813 @@ Source `sgt`, table guard;guard_note, printed pages by edition. 896 rows. Value 
 | `agents_indigenous_temporary` | Note (1) : agents indigènes temporaires | 4 |
 | `max_daily` | Effectif maximum journalier | 223 |
 | `wardresses` | Surveillantes | 223 |
+
+### property_tribunal_cases
+
+**Tribunal mixte. Travaux du Tribunal : a) Statistique des affaires**  
+*Tribunal mixte (land registration court): cases and work of the court, by seat*
+
+Source `sgt`, table activity;cases, printed pages by edition. 306 rows. Value type: count. Flags: (empty) 306. Notes and validation: [`../yearbook_other_chapters/csv/property_tribunal_cases.md`](../yearbook_other_chapters/csv/property_tribunal_cases.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `seat` | Coded dimension. |
+| `seat_fr` | Printed French label for `seat`. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`seat`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `sousse` | Siège de Sousse | 153 |
+| `tunis` | Siège de Tunis | 153 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `entered` | Entrées pendant l'année / Réquisitions reçues (affaires entrées) pendant l'année | 24 |
+| `expertises` | 7° Expertises effectuées par des hommes de l'art | 18 |
+| `hearings` | 2° Audiences tenues depuis le 1er janvier | 24 |
+| `inspections` | 6° Enquêtes sur les lieux effectuées par les magistrats | 24 |
+| `interlocutory` | 4° Jugements avant faire droit, ordonnant des mesures préparatoires ou des justifications complémentaires | 24 |
+| `judg_radiation` | 3° Jugements définitifs : c) prononçant la radiation de la réquisition à la demande des parties | 24 |
+| `judg_registration` | 3° Jugements définitifs : a) prononçant l'immatriculation | 24 |
+| `judg_rejection` | 3° Jugements définitifs : b) prononçant le rejet de la réquisition | 24 |
+| `judged` | Jugées pendant l'année / Affaires jugées pendant l'année | 24 |
+| `pending_end` | Restant à juger au 31 décembre / Affaires en cours au 31 décembre | 24 |
+| `pending_start` | Restant au 31 décembre de l'année précédente / Affaires en cours au 31 décembre de l'année précédente | 24 |
+| `rectification` | 5° Jugements sur requête tendant à la rectification d'erreurs matérielles (décrets des 15 février et 19 mars 1897) | 24 |
+| `requisitions` | 1° Réquisitions d'immatriculation dont le Tribunal mixte a été saisi depuis le 1er janvier | 24 |
+
+### property_pending_requisitions
+
+**Tribunal mixte. b) Situation des affaires d'immatriculation en cours au 31 décembre**  
+*Tribunal mixte: registration requisitions pending at 31 December, by stage of the proceeding and by year of filing, by judge*
+
+Source `sgt`, table pending;pending_age, printed pages by edition. 3,606 rows. Value type: count. Flags: (empty) 3,601, total_mismatch 4, derived_from_totals 1. Notes and validation: [`../yearbook_other_chapters/csv/property_pending_requisitions.md`](../yearbook_other_chapters/csv/property_pending_requisitions.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `category` | Coded dimension. |
+| `category_fr` | Printed French label for `category`. |
+| `filing_year` | Coded dimension. |
+| `judge_group` | Coded dimension. |
+| `judge_group_fr` | Printed French label for `judge_group`. |
+| `judge` | Coded dimension. |
+| `judge_fr` | Printed French label for `judge`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`category`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `I.1` | I. Réquisitions en suspens pour des causes indépendantes du Tribunal mixte : 1° Procédure préliminaire de publicité et de bornage en cours à la Conservation de la Propriété foncière et au Service topographique | 121 |
+| `I.2` | I. Réquisitions en suspens : 2° Instances pendantes devant une autre juridiction | 121 |
+| `I.3` | I. Réquisitions en suspens : 3° Causes diverses (établissement du plan définitif par le Service topographique ; bornage complémentaire ; nouvelle publicité, etc.) | 121 |
+| `II.1` | II. Réquisitions à l'instruction après accomplissement des formalités préliminaires de publicité et de bornage ou après un jugement avant faire droit : 1° Procédure d'oppositions en cours, recherches et formalités diverses en vue du renvoi à l'audience | 121 |
+| `II.2` | II. Réquisitions à l'instruction : 2° Exécution de mesures préparatoires ordonnées par jugement | 121 |
+| `III` | III. Réquisitions à l'audience (fixées au rôle ou en délibéré) | 50 |
+| `III.1` | III. Réquisitions à l'audience : 1° Fixées au rôle | 71 |
+| `III.2` | III. Réquisitions à l'audience : 2° En délibéré | 71 |
+| `IV` | IV. Nombre de réquisitions remontant à l'année 1904 / IV. Nombre de réquisitions remontant à l'année 1905 / IV. Nombre de réquisitions remontant à l'année 1906 / IV. Nombre de réquisitions remontant à l'année 1907 / IV. Nombre de réquisitions remontant à l'année 1908 / IV. Nombre de réquisitions remontant à l'année 1909 / IV. Nombre de réquisitions remontant à l'année 1909-1910 / IV. Nombre de réquisitions remontant à l'année 1910 / IV. Nombre de réquisitions remontant à l'année 1911 / IV. Nombre de réquisitions remontant à l'année 1911-1912 / IV. Nombre de réquisitions remontant à l'année 1912 / IV. Nombre de réquisitions remontant à l'année 1913 / IV. Nombre de réquisitions remontant à l'année 1913-1914 / IV. Nombre de réquisitions remontant à l'année 1914 / IV. Nombre de réquisitions remontant à l'année 1915 / IV. Nombre de réquisitions remontant à l'année 1916 / IV. Nombre de réquisitions remontant à l'année 1917 / IV. Nombre de réquisitions remontant à l'année 1918 / IV. Nombre de réquisitions remontant à l'année 1919 / IV. Nombre de réquisitions remontant à l'année 1920 / IV. Nombre de réquisitions remontant à l'année 1921 / IV. Nombre de réquisitions remontant à l'année 1922 / IV. Nombre de réquisitions remontant à l'année 1923 / IV. Nombre de réquisitions remontant à l'année 1924 / IV. Nombre de réquisitions remontant à l'année 1925 / IV. Nombre de réquisitions remontant à l'année 1926 / IV. Nombre de réquisitions remontant à l'année 1927 / IV. Nombre de réquisitions remontant à l'année 1928 / IV. Nombre de réquisitions remontant à l'année 1929 / IV. Nombre de réquisitions remontant à l'année 1930 / IV. Nombre de réquisitions remontant à l'année 1931 / IV. Nombre de réquisitions remontant à l'année 1932 / IV. Nombre de réquisitions remontant à l'année 1933 / IV. Nombre de réquisitions remontant à l'année 1934 / IV. Nombre de réquisitions remontant à l'année 1935 / IV. Nombre de réquisitions remontant à l'année 1936 / IV. Nombre de réquisitions remontant à l'année 1937 / IV. Nombre de réquisitions remontant à l'année 1938 / IV. Nombre de réquisitions remontant à l'année 1939 | 2,702 |
+| `V` | V. Requêtes pour rectifications d'erreurs matérielles (décrets des 25 février et 19 mars 1897) | 107 |
+
+`filing_year`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `(empty)` |  | 904 |
+| `1904` |  | 21 |
+| `1905` |  | 42 |
+| `1906` |  | 83 |
+| `1907` |  | 95 |
+| `1908` |  | 95 |
+| `1909` |  | 95 |
+| `1909-1910` |  | 24 |
+| `1910` |  | 95 |
+| `1911` |  | 97 |
+| `1911-1912` |  | 24 |
+| `1912` |  | 97 |
+| `1913` |  | 109 |
+| `1913-1914` |  | 12 |
+| `1914` |  | 107 |
+| `1915` |  | 119 |
+| `1916` |  | 119 |
+| `1917` |  | 119 |
+| `1918` |  | 119 |
+| `1919` |  | 121 |
+| `1920` |  | 121 |
+| `1921` |  | 121 |
+| `1922` |  | 121 |
+| `1923` |  | 110 |
+| `1924` |  | 100 |
+| `1925` |  | 90 |
+| `1926` |  | 79 |
+| `1927` |  | 69 |
+| `1928` |  | 60 |
+| `1929` |  | 50 |
+| `1930` |  | 38 |
+| `1931` |  | 26 |
+| `1932` |  | 26 |
+| `1933` |  | 26 |
+| `1934` |  | 26 |
+| `1935` |  | 26 |
+| `1936` |  | 14 |
+| `1937` |  | 2 |
+| `1938` |  | 2 |
+| `1939` |  | 2 |
+
+`judge_group`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `commissioned` | Magistrats du siège spécialement commis par jugement pour certaines formalités ou enquêtes | 606 |
+| `delegated` | Magistrats du siège délégués à l'instruction par le Président en remplacement d'un juge rapporteur empêché (art. 6 du décret du 30 avril 1903) | 606 |
+| `delegated_or_commissioned` | Magistrats du siège délégués à l'instruction par le Président en remplacement d'un juge rapporteur empêché ou spécialement commis par jugement pour certaines formalités ou enquêtes (art. 6 du décret du 30 avril 1903) | 875 |
+| `rapporteur_sousse` | Juges rapporteurs, siège de Sousse | 736 |
+| `rapporteur_tunis` | Juges rapporteurs, siège de Tunis | 723 |
+| `seat` | Siège | 60 |
+
+`judge`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `1` | (1) / 1 | 558 |
+| `2` | (2) / 2 | 558 |
+| `3` | (3) / 3 | 558 |
+| `4` | 4 | 125 |
+| `5` | 5 | 125 |
+| `6` | (6) / 6 | 125 |
+| `7` | (7) / 7 | 125 |
+| `A` | A | 327 |
+| `B` | B | 299 |
+| `B1` | B(1) | 28 |
+| `B2` | B(2) | 28 |
+| `B3` | B(3) | 28 |
+| `C` | C | 155 |
+| `C1` | C(1) / C1 | 115 |
+| `C2` | C(2) / C2 | 115 |
+| `C3` | C(3) / C3 | 27 |
+| `D` | D | 31 |
+| `D1` | D(1) | 94 |
+| `D2` | D(2) | 94 |
+| `E` | E | 31 |
+| `sousse` | Sousse | 30 |
+| `tunis` | Tunis | 30 |
+
+### property_results_legal_status
+
+**Résultats des instances d'immatriculation. a) État juridique et charge des immeubles (nombre d'immeubles)**  
+*Results of the registration proceedings: properties by legal status, outcome and seat*
+
+Source `sgt`, table legal_status, printed pages by edition. 216 rows. Value type: count. Flags: (empty) 216. Notes and validation: [`../yearbook_other_chapters/csv/property_results_legal_status.md`](../yearbook_other_chapters/csv/property_results_legal_status.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `legal_status` | Coded dimension. |
+| `legal_status_fr` | Printed French label for `legal_status`. |
+| `outcome` | Coded dimension. |
+| `outcome_fr` | Printed French label for `outcome`. |
+| `seat` | Coded dimension. |
+| `seat_fr` | Printed French label for `seat`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`legal_status`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `enzel` | enzel | 72 |
+| `habous` | habous | 72 |
+| `melk` | melk | 72 |
+
+`outcome`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `radiation` | Radiation | 72 |
+| `registration` | Immatriculation | 72 |
+| `rejection` | Rejet | 72 |
+
+`seat`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `sousse` | Sousse | 108 |
+| `tunis` | Tunis | 108 |
+
+### property_results_charges
+
+**Résultats des instances d'immatriculation. a) État juridique et charge des immeubles (montant des rentes d'enzel et des hypothèques)**  
+*Results of the registration proceedings: enzel rents and mortgages on the properties, by outcome and seat; number of land titles carrying the mortgages*
+
+Source `sgt`, table charges;charges_summary, printed pages by edition. 312 rows. Value type: mixed. Flags: (empty) 312. Notes and validation: [`../yearbook_other_chapters/csv/property_results_charges.md`](../yearbook_other_chapters/csv/property_results_charges.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `charge` | Coded dimension. |
+| `amount` | Coded dimension. |
+| `measure_fr` | Place or label as printed (5 distinct values). |
+| `outcome` | Coded dimension. |
+| `outcome_fr` | Printed French label for `outcome`. |
+| `seat` | Coded dimension. |
+| `seat_fr` | Printed French label for `seat`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`charge`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `enzel_rent` |  | 144 |
+| `mortgage` |  | 168 |
+
+`amount`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `declared` |  | 144 |
+| `registered` |  | 144 |
+| `titles` |  | 24 |
+
+`outcome`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `(empty)` |  | 24 |
+| `radiation` | Radiation | 96 |
+| `registration` | Immatriculation | 96 |
+| `rejection` | Rejet | 96 |
+
+`seat`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `sousse` | Sousse | 156 |
+| `tunis` | Tunis | 156 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `francs` |  | 288 |
+| `titles` |  | 24 |
+
+### property_results_location
+
+**Résultats des instances d'immatriculation. b) Situation des immeubles**  
+*Results of the registration proceedings: urban and rural properties by legal status, outcome and seat*
+
+Source `sgt`, table location, printed pages by edition. 432 rows. Value type: count. Flags: (empty) 431, total_mismatch 1. Notes and validation: [`../yearbook_other_chapters/csv/property_results_location.md`](../yearbook_other_chapters/csv/property_results_location.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `location` | Coded dimension. |
+| `location_fr` | Printed French label for `location`. |
+| `legal_status` | Coded dimension. |
+| `legal_status_fr` | Printed French label for `legal_status`. |
+| `outcome` | Coded dimension. |
+| `outcome_fr` | Printed French label for `outcome`. |
+| `seat` | Coded dimension. |
+| `seat_fr` | Printed French label for `seat`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`location`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `rural` | Immeubles ruraux | 216 |
+| `urban` | Immeubles urbains | 216 |
+
+`legal_status`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `enzel` | enzel | 144 |
+| `habous` | habous | 144 |
+| `melk` | melk | 144 |
+
+`outcome`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `radiation` | Radiation | 144 |
+| `registration` | Immatriculation | 144 |
+| `rejection` | Rejet | 144 |
+
+`seat`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `sousse` | Sousse | 216 |
+| `tunis` | Tunis | 216 |
+
+### property_results_areas
+
+**Résultats des instances d'immatriculation. c) Superficies**  
+*Results of the registration proceedings: areas registered and areas refused or abandoned, by urban / rural, legal status and seat*
+
+Source `sgt`, table areas, printed pages by edition. 288 rows. Value type: hectares. Flags: (empty) 285, total_mismatch 2, derived_from_totals 1. Notes and validation: [`../yearbook_other_chapters/csv/property_results_areas.md`](../yearbook_other_chapters/csv/property_results_areas.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `location` | Coded dimension. |
+| `location_fr` | Printed French label for `location`. |
+| `legal_status` | Coded dimension. |
+| `legal_status_fr` | Printed French label for `legal_status`. |
+| `outcome` | Coded dimension. |
+| `outcome_fr` | Printed French label for `outcome`. |
+| `seat` | Coded dimension. |
+| `seat_fr` | Printed French label for `seat`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`location`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `rural` | Immeubles ruraux | 144 |
+| `urban` | Immeubles urbains | 144 |
+
+`legal_status`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `enzel` | enzel | 96 |
+| `habous` | habous | 96 |
+| `melk` | melk | 96 |
+
+`outcome`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `refused_or_abandoned` | Surfaces dont l'immatriculation a été refusée par le Tribunal ou abandonnée par les parties | 144 |
+| `registered` | Surfaces immatriculées | 144 |
+
+`seat`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `sousse` | Sousse | 144 |
+| `tunis` | Tunis | 144 |
+
+### property_oppositions
+
+**Résultats des instances d'immatriculation. d) Jugement des oppositions**  
+*Results of the registration proceedings: oppositions judged, by decision and seat*
+
+Source `sgt`, table oppositions, printed pages by edition. 94 rows. Value type: count. Flags: (empty) 93, not_applicable 1. Notes and validation: [`../yearbook_other_chapters/csv/property_oppositions.md`](../yearbook_other_chapters/csv/property_oppositions.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `decision` | Coded dimension. |
+| `decision_fr` | Printed French label for `decision`. |
+| `seat` | Coded dimension. |
+| `seat_fr` | Printed French label for `seat`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`decision`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `accepted` | accueillies | 20 |
+| `not_ruled` | sur lesquelles il n'a pas été statué | 20 |
+| `referred` | renvoyées devant les juridictions de droit commun | 14 |
+| `rejected` | rejetées | 20 |
+| `withdrawn` | suivies de désistement | 20 |
+
+`seat`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `sousse` | Sousse | 47 |
+| `tunis` | Tunis | 47 |
+
+### property_claimants
+
+**Résultats des instances d'immatriculation. e) Nombre et qualité juridique, f) Nationalité des personnes dont la réquisition a reçu une solution définitive**  
+*Results of the registration proceedings: claimants whose requisition was finally decided, by legal quality and by nationality, outcome and seat*
+
+Source `sgt`, table claimant_nationality;claimant_status, printed pages by edition. 666 rows. Value type: count. Flags: (empty) 664, total_mismatch 1, derived_from_totals 1. Notes and validation: [`../yearbook_other_chapters/csv/property_claimants.md`](../yearbook_other_chapters/csv/property_claimants.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `legal_quality` | Coded dimension. |
+| `legal_quality_fr` | Printed French label for `legal_quality`. |
+| `nationality` | Coded dimension. |
+| `nationality_fr` | Printed French label for `nationality`. |
+| `outcome` | Coded dimension. |
+| `outcome_fr` | Printed French label for `outcome`. |
+| `seat` | Coded dimension. |
+| `seat_fr` | Printed French label for `seat`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`legal_quality`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `(empty)` |  | 486 |
+| `enzel_holders` | Enzélistes ou co-enzélistes | 60 |
+| `owners` | Propriétaires ou co-propriétaires | 60 |
+| `real_right_holders` | Détenteurs de droits réels divers (art. 22 de la loi foncière) | 60 |
+
+`nationality`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `(empty)` |  | 180 |
+| `belgian` | Belges | 36 |
+| `british` | Anglais | 66 |
+| `foreign` | Etrangers | 4 |
+| `french` | Français | 70 |
+| `german` | Allemands | 12 |
+| `greek` | Grecs | 30 |
+| `italian` | Italiens | 66 |
+| `other` | Divers | 66 |
+| `spanish` | Espagnols | 48 |
+| `swiss` | Suisses | 18 |
+| `tunisian` | Tunisiens | 70 |
+
+`outcome`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `registration_obtained` | Qui ont obtenu l'immatriculation | 224 |
+| `requisition_rejected` | Dont la réquisition a été rejetée | 224 |
+| `requisition_renounced` | Qui ont renoncé à leur réquisition | 218 |
+
+`seat`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `sousse` | Sousse | 333 |
+| `tunis` | Tunis | 333 |
+
+### property_requisitions
+
+**Conservation foncière. Réquisitions d'immatriculation : a) Nationalité des requérants, nombre, contenances et valeurs déclarées**  
+*Land registry: registration requisitions filed, by nationality of the claimant, with declared areas and values, by year*
+
+Source `sgt`, table requisitions, printed pages by edition. 160 rows. Value type: mixed. Flags: (empty) 155, row_realigned 2, total_mismatch 2, derived_from_totals 1. Notes and validation: [`../yearbook_other_chapters/csv/property_requisitions.md`](../yearbook_other_chapters/csv/property_requisitions.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `period` | Coded dimension. |
+| `period_fr` | Printed French label for `period`. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`period`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `1886-1909` | De 1886 à 1909 | 5 |
+| `1886-1932` | De 1886 à 1932 | 5 |
+| `1886-1933` | De 1886 à 1933 | 5 |
+| `1886-1934` | De 1886 à 1934 | 5 |
+| `1910` | 1910 | 5 |
+| `1911` | 1911 | 5 |
+| `1912` | 1912 | 5 |
+| `1913` | 1913 | 5 |
+| `1914` | 1914 | 5 |
+| `1915` | 1915 | 5 |
+| `1916` | 1916 | 5 |
+| `1917` | 1917 | 5 |
+| `1918` | 1918 | 5 |
+| `1919` | 1919 | 5 |
+| `1920` | 1920 | 5 |
+| `1921` | 1921 | 5 |
+| `1922` | 1922 | 5 |
+| `1923` | 1923 | 5 |
+| `1924` | 1924 | 5 |
+| `1925` | 1925 | 5 |
+| `1926` | 1926 | 5 |
+| `1927` | 1927 | 5 |
+| `1928` | 1928 | 5 |
+| `1929` | 1929 | 5 |
+| `1930` | 1930 | 5 |
+| `1933` | 1933 | 5 |
+| `1934` | 1934 | 5 |
+| `1935` | 1935 | 5 |
+| `1936` | 1936 | 5 |
+| `1937` | 1937 | 5 |
+| `1938` | 1938 | 5 |
+| `1939` | 1939 | 5 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `area` | Contenances déclarées (hectares) | 32 |
+| `foreign` | Étrangers | 32 |
+| `french` | Français | 32 |
+| `tunisian` | Tunisiens | 32 |
+| `value` | Valeurs déclarées (francs) | 32 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `count` |  | 96 |
+| `francs` |  | 32 |
+| `hectares` |  | 32 |
+
+### property_requisitions_value
+
+**Conservation foncière. Réquisitions d'immatriculation : b) Répartition d'après les valeurs déclarées**  
+*Land registry: registration requisitions by bracket of declared value, by year*
+
+Source `sgt`, table value_brackets, printed pages by edition. 128 rows. Value type: count. Flags: (empty) 128. Notes and validation: [`../yearbook_other_chapters/csv/property_requisitions_value.md`](../yearbook_other_chapters/csv/property_requisitions_value.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `period` | Coded dimension. |
+| `period_fr` | Printed French label for `period`. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`period`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `1886-1909` | De 1886 à 1909 | 4 |
+| `1886-1932` | De 1886 à 1932 | 4 |
+| `1886-1933` | De 1886 à 1933 | 4 |
+| `1886-1934` | De 1886 à 1934 | 4 |
+| `1910` | 1910 | 4 |
+| `1911` | 1911 | 4 |
+| `1912` | 1912 | 4 |
+| `1913` | 1913 | 4 |
+| `1914` | 1914 | 4 |
+| `1915` | 1915 | 4 |
+| `1916` | 1916 | 4 |
+| `1917` | 1917 | 4 |
+| `1918` | 1918 | 4 |
+| `1919` | 1919 | 4 |
+| `1920` | 1920 | 4 |
+| `1921` | 1921 | 4 |
+| `1922` | 1922 | 4 |
+| `1923` | 1923 | 4 |
+| `1924` | 1924 | 4 |
+| `1925` | 1925 | 4 |
+| `1926` | 1926 | 4 |
+| `1927` | 1927 | 4 |
+| `1928` | 1928 | 4 |
+| `1929` | 1929 | 4 |
+| `1930` | 1930 | 4 |
+| `1933` | 1933 | 4 |
+| `1934` | 1934 | 4 |
+| `1935` | 1935 | 4 |
+| `1936` | 1936 | 4 |
+| `1937` | 1937 | 4 |
+| `1938` | 1938 | 4 |
+| `1939` | 1939 | 4 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `12001_60000` | De 12.001 fr. à 60.000 | 32 |
+| `3001_12000` | De 3.001 fr. à 12.000 | 32 |
+| `ge_60001` | De 60.001 fr. et au-dessus | 32 |
+| `le_3000` | De 3.000 fr. et au-dessous | 32 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `count` |  | 128 |
+
+### property_titles
+
+**Conservation foncière. Titres délivrés : nombre, contenances et valeurs définitives**  
+*Land registry: land titles issued (total, from subdivisions, after a registration judgment, with final area and value), by year*
+
+Source `sgt`, table titles, printed pages by edition. 160 rows. Value type: mixed. Flags: (empty) 157, total_mismatch 2, derived_from_totals 1. Notes and validation: [`../yearbook_other_chapters/csv/property_titles.md`](../yearbook_other_chapters/csv/property_titles.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `period` | Coded dimension. |
+| `period_fr` | Printed French label for `period`. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`period`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `1886-1909` | De 1886 à 1909 | 5 |
+| `1886-1932` | De 1886 à 1932 | 5 |
+| `1886-1933` | De 1886 à 1933 | 5 |
+| `1886-1934` | De 1886 à 1934 | 5 |
+| `1910` | 1910 | 5 |
+| `1911` | 1911 | 5 |
+| `1912` | 1912 | 5 |
+| `1913` | 1913 | 5 |
+| `1914` | 1914 | 5 |
+| `1915` | 1915 | 5 |
+| `1916` | 1916 | 5 |
+| `1917` | 1917 | 5 |
+| `1918` | 1918 | 5 |
+| `1919` | 1919 | 5 |
+| `1920` | 1920 | 5 |
+| `1921` | 1921 | 5 |
+| `1922` | 1922 | 5 |
+| `1923` | 1923 | 5 |
+| `1924` | 1924 | 5 |
+| `1925` | 1925 | 5 |
+| `1926` | 1926 | 5 |
+| `1927` | 1927 | 5 |
+| `1928` | 1928 | 5 |
+| `1929` | 1929 | 5 |
+| `1930` | 1930 | 5 |
+| `1933` | 1933 | 5 |
+| `1934` | 1934 | 5 |
+| `1935` | 1935 | 5 |
+| `1936` | 1936 | 5 |
+| `1937` | 1937 | 5 |
+| `1938` | 1938 | 5 |
+| `1939` | 1939 | 5 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `area` | Titres délivrés en suite d'un jugement d'immatriculation : contenance définitive (hectares) | 32 |
+| `judgment` | Titres délivrés en suite d'un jugement d'immatriculation : nombre | 32 |
+| `subdivision` | Titres provenant de lotissements | 32 |
+| `total_titles` | Nombre total des titres délivrés | 32 |
+| `value` | Titres délivrés en suite d'un jugement d'immatriculation : valeur définitive (francs) | 32 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `count` |  | 96 |
+| `francs` |  | 32 |
+| `hectares` |  | 32 |
+
+### property_conservation_recap
+
+**Conservation foncière. Récapitulation : a) Nombre de demandes déposées et de titres créés ; b) Rentes d'enzel et créances hypothécaires inscrites**  
+*Land registry: cumulative summary at 31 December (requisitions filed and finally decided, titles created) and enzel rents and mortgage claims registered*
+
+Source `sgt`, table recap;registered, printed pages by edition. 132 rows. Value type: mixed. Flags: (empty) 132. Notes and validation: [`../yearbook_other_chapters/csv/property_conservation_recap.md`](../yearbook_other_chapters/csv/property_conservation_recap.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `area_declared` | Contenances déclarées (hectares) | 12 |
+| `area_registered` | Contenance des immeubles immatriculés (hectares) | 12 |
+| `demands` | Nombre de demandes déposées | 12 |
+| `enzel_rents` | Rentes d'enzel inscrites au 31 décembre | 12 |
+| `mortgage_claims` | Créances hypothécaires inscrites au 31 décembre | 12 |
+| `solved` | Nombre de demandes ayant reçu une solution définitive | 12 |
+| `titles_established` | Nombre de titres établis | 12 |
+| `titles_mutation` | Titres nouveaux créés par suite de mutation partielle | 12 |
+| `titles_total` | Nombre total des titres au 31 décembre | 12 |
+| `value_declared` | Valeurs déclarées (francs) | 12 |
+| `value_registered` | Valeur (francs) | 12 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `count` |  | 60 |
+| `francs` |  | 48 |
+| `hectares` |  | 24 |
+
+### property_transfers_1939
+
+**Conservation de la propriété foncière. Mutations entre vifs en 1939 d'immeubles immatriculés**  
+*Land registry: transfers inter vivos of registered properties in 1939, by contrôle civil (number and value)*
+
+Source `sgt`, table transfers, printed pages by edition. 38 rows. Value type: mixed. Flags: (empty) 38. Notes and validation: [`../yearbook_other_chapters/csv/property_transfers_1939.md`](../yearbook_other_chapters/csv/property_transfers_1939.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `controle_civil` | Place or label as printed (19 distinct values). |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `number` | Nombre | 19 |
+| `value` | Valeur (francs) | 19 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `count` |  | 19 |
+| `francs` |  | 19 |

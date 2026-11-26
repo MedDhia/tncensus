@@ -73,6 +73,7 @@ CONTROLE = {
     "Territoire militaire de Matmata": "Territoires militaires du Sud",
     "Cercle militaire de Tatahouine": "Territoires militaires du Sud",
     "Cercles de Médenine, Ben-Gardane et Zarzis": "Territoires militaires du Sud",
+    "Territoire Militaire (Medenine)": "Territoires militaires du Sud",
     # 1906 Table G groups two districts in one row.
     "Béja et Medjez-el-Bab": "Béja et Medjez-el-Bab", "Gafsa et Tozeur": "Gafsa et Tozeur",
     "Ensemble du territoire (printed)": "Tunisie (total)",
