@@ -175,8 +175,9 @@ Every table is tidy: one row per printed cell. Printed subtotals and totals are 
 | [`communes_building_permits`](#communes_building_permits) | permits | by edition | 1,932 | mixed | Building permits issued by each commune: constructions or reconstructions, raisings (surélévations) and number of permits |
 | [`communes_building_values_1939`](#communes_building_values_1939) | constructions | by edition | 120 | mixed | Building in 1939, towns of more than 5,000 inhabitants: number of building permits and value of the buildings (housing, commercial and industrial, other) |
 | [`communes_terraces`](#communes_terraces) | terraces | by edition | 3,510 | mixed | Pavement concessions: café terraces (chairs and tables of lemonade sellers) and street stalls (goods of all kinds): number, surface and receipts, per commune |
-| [`communes_loans_caisse`](#communes_loans_caisse) | caisse | by edition | 1,140 | francs | Municipal loans from the Caisse des Prêts Communaux: one block per commune, one line per loan, with terms, annuities due and paid, arrears and capital amortised / outstanding at the end of the year |
-| [`communes_loans_tunis_bonds`](#communes_loans_tunis_bonds) | tunis_bonds | by edition | 96 | francs | Bond loans of the city of Tunis (1891 and 1897): coupons and bonds due, paid in the year and earlier, lapsed, and outstanding at the close of the year |
+| [`communes_loans_caisse`](#communes_loans_caisse) | caisse | by edition | 3,697 | francs | Municipal loans from the Caisse des Prêts Communaux: one block per commune, one line per loan, with terms, annuities due and paid, arrears and capital amortised / outstanding at the end of the year |
+| [`communes_loans_tunis_bonds`](#communes_loans_tunis_bonds) | tunis_bonds | by edition | 256 | francs | Bond loans of the city of Tunis (1891 and 1897): coupons and bonds due, paid in the year and earlier, lapsed, and outstanding at the close of the year |
+| [`communes_slaughter_dues`](#communes_slaughter_dues) | slaughter | by edition | 963 | mixed | Slaughter dues collected by each commune: tariff per head and sums collected for each kind of animal, and the total collected |
 
 ### eur1906_t1_circonscription_nationality
 
@@ -7160,7 +7161,7 @@ Source `sgt`, table terraces, printed pages by edition. 3,510 rows. Value type: 
 **Finances municipales : c) Emprunts contractés à la Caisse des Prêts Communaux**  
 *Municipal loans from the Caisse des Prêts Communaux: one block per commune, one line per loan, with terms, annuities due and paid, arrears and capital amortised / outstanding at the end of the year*
 
-Source `sgt`, table caisse, printed pages by edition. 1,140 rows. Value type: francs. Flags: (empty) 1,111, illegible 29. Notes and validation: [`../yearbook_other_chapters/csv/communes_loans_caisse.md`](../yearbook_other_chapters/csv/communes_loans_caisse.md).
+Source `sgt`, table caisse, printed pages by edition. 3,697 rows. Value type: francs. Flags: (empty) 3,631, reprint_corrected 34, illegible 30, not_applicable 2. Notes and validation: [`../yearbook_other_chapters/csv/communes_loans_caisse.md`](../yearbook_other_chapters/csv/communes_loans_caisse.md).
 
 | Column | Description |
 |---|---|
@@ -7170,9 +7171,9 @@ Source `sgt`, table caisse, printed pages by edition. 1,140 rows. Value type: fr
 | `source_page` | Printed page number. |
 | `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
 | `year` | Year the figure refers to. |
-| `commune` | Place or label as printed (23 distinct values). |
-| `commune_heading_fr` | Place or label as printed (23 distinct values). |
-| `loan_fr` | Place or label as printed (36 distinct values). |
+| `commune` | Place or label as printed (30 distinct values). |
+| `commune_heading_fr` | Place or label as printed (30 distinct values). |
+| `loan_fr` | Place or label as printed (67 distinct values). |
 | `measure` | Coded dimension. |
 | `measure_fr` | Printed French label for `measure`. |
 | `value` | The printed figure. |
@@ -7182,25 +7183,25 @@ Source `sgt`, table caisse, printed pages by edition. 1,140 rows. Value type: fr
 
 | Code | Printed label | N |
 |---|---|---:|
-| `annuities_due_to_date` | Annuités échues à la fin de l'année | 95 |
-| `annuity` | Montant de chaque annuité | 95 |
-| `arrears` | Restes à payer sur les annuités échues | 95 |
-| `capital_amortised` | Amortissement : capital compris dans les annuités payées | 95 |
-| `capital_nominal` | Capital nominal à rembourser par la Commune | 95 |
-| `capital_received` | Capital net touché par la Commune | 95 |
-| `capital_remaining` | Amortissement : capital restant à amortir à la fin de l'année | 95 |
-| `duration_years` | Durée des emprunts (ans) | 95 |
-| `interest_rate_pct` | Taux de l'intérêt | 95 |
-| `paid_before` | Payements : antérieurement | 95 |
-| `paid_in_year` | Payements : en 1922 / Payements : en 1923 / Payements : en 1924 / Payements : en 1925 | 95 |
-| `paid_total` | Payements : total | 95 |
+| `annuities_due_to_date` | Annuités échues à la fin de l'année | 309 |
+| `annuity` | Montant de chaque annuité | 306 |
+| `arrears` | Restes à payer sur les annuités échues | 309 |
+| `capital_amortised` | Amortissement : capital compris dans les annuités payées | 309 |
+| `capital_nominal` | Capital nominal à rembourser par la Commune | 307 |
+| `capital_received` | Capital net touché par la Commune | 307 |
+| `capital_remaining` | Amortissement : capital restant à amortir à la fin de l'année | 309 |
+| `duration_years` | Durée des emprunts (ans) | 307 |
+| `interest_rate_pct` | Taux de l'intérêt | 307 |
+| `paid_before` | Payements : antérieurement | 309 |
+| `paid_in_year` | Payements : en 1922 / Payements : en 1923 / Payements : en 1924 / Payements : en 1925 / Payements : en 1926 / Payements : en 1927 / Payements : en 1928 / Payements : en 1929 | 309 |
+| `paid_total` | Payements : total | 309 |
 
 ### communes_loans_tunis_bonds
 
 **Finances municipales : b) Emprunts communaux (Commune de Tunis)**  
 *Bond loans of the city of Tunis (1891 and 1897): coupons and bonds due, paid in the year and earlier, lapsed, and outstanding at the close of the year*
 
-Source `sgt`, table tunis_bonds, printed pages by edition. 96 rows. Value type: francs. Flags: (empty) 94, illegible 2. Notes and validation: [`../yearbook_other_chapters/csv/communes_loans_tunis_bonds.md`](../yearbook_other_chapters/csv/communes_loans_tunis_bonds.md).
+Source `sgt`, table tunis_bonds, printed pages by edition. 256 rows. Value type: francs. Flags: (empty) 242, reprint_corrected 8, derived_from_totals 4, illegible 2. Notes and validation: [`../yearbook_other_chapters/csv/communes_loans_tunis_bonds.md`](../yearbook_other_chapters/csv/communes_loans_tunis_bonds.md).
 
 | Column | Description |
 |---|---|
@@ -7222,19 +7223,65 @@ Source `sgt`, table tunis_bonds, printed pages by edition. 96 rows. Value type: 
 
 | Code | Printed label | N |
 |---|---|---:|
-| `capital_due` | Sommes échues : capitaux (obligations sorties aux tirages) | 6 |
-| `capital_lapsed` | Sommes atteintes par la déchéance : capitaux | 6 |
-| `capital_nominal` | Capital nominal à rembourser par la Commune | 6 |
-| `capital_outstanding` | Restes à payer à la clôture de l'exercice : capitaux | 6 |
-| `capital_paid_before` | Payements effectués antérieurement : capitaux | 6 |
-| `capital_paid_in_year` | Payements effectués en 1922 : capitaux / Payements effectués en 1923 : capitaux / Payements effectués en 1924 : capitaux | 6 |
-| `capital_paid_total` | Payements effectués, total : capitaux | 6 |
-| `capital_received` | Capital net encaissé par la Commune | 6 |
-| `duration_years` | Durée des emprunts (ans) | 6 |
-| `interest_due` | Sommes échues : intérêts (coupons échus) | 6 |
-| `interest_lapsed` | Sommes atteintes par la déchéance : intérêts | 6 |
-| `interest_outstanding` | Restes à payer à la clôture de l'exercice : intérêts | 6 |
-| `interest_paid_before` | Payements effectués antérieurement : intérêts | 6 |
-| `interest_paid_in_year` | Payements effectués en 1922 : intérêts / Payements effectués en 1923 : intérêts / Payements effectués en 1924 : intérêts | 6 |
-| `interest_paid_total` | Payements effectués, total : intérêts | 6 |
-| `interest_rate_pct` | Taux de l'intérêt | 6 |
+| `capital_due` | Sommes échues : capitaux (obligations sorties aux tirages) | 16 |
+| `capital_lapsed` | Sommes atteintes par la déchéance : capitaux | 16 |
+| `capital_nominal` | Capital nominal à rembourser par la Commune | 16 |
+| `capital_outstanding` | Restes à payer à la clôture de l'exercice : capitaux | 16 |
+| `capital_paid_before` | Payements effectués antérieurement : capitaux | 16 |
+| `capital_paid_in_year` | Payements effectués en 1922 : capitaux / Payements effectués en 1923 : capitaux / Payements effectués en 1924 : capitaux / Payements effectués en 1925 : capitaux / Payements effectués en 1926 : capitaux / Payements effectués en 1927 : capitaux / Payements effectués en 1928 : capitaux / Payements effectués en 1929 : capitaux | 16 |
+| `capital_paid_total` | Payements effectués, total : capitaux | 16 |
+| `capital_received` | Capital net encaissé par la Commune | 16 |
+| `duration_years` | Durée des emprunts (ans) | 16 |
+| `interest_due` | Sommes échues : intérêts (coupons échus) | 16 |
+| `interest_lapsed` | Sommes atteintes par la déchéance : intérêts | 16 |
+| `interest_outstanding` | Restes à payer à la clôture de l'exercice : intérêts | 16 |
+| `interest_paid_before` | Payements effectués antérieurement : intérêts | 16 |
+| `interest_paid_in_year` | Payements effectués en 1922 : intérêts / Payements effectués en 1923 : intérêts / Payements effectués en 1924 : intérêts / Payements effectués en 1925 : intérêts / Payements effectués en 1926 : intérêts / Payements effectués en 1927 : intérêts / Payements effectués en 1928 : intérêts / Payements effectués en 1929 : intérêts | 16 |
+| `interest_paid_total` | Payements effectués, total : intérêts | 16 |
+| `interest_rate_pct` | Taux de l'intérêt | 16 |
+
+### communes_slaughter_dues
+
+**Droits d'abatage (slaughter dues)**  
+*Slaughter dues collected by each commune: tariff per head and sums collected for each kind of animal, and the total collected*
+
+Source `sgt`, table slaughter, printed pages by edition. 963 rows. Value type: mixed. Flags: (empty) 960, not_applicable 3. Notes and validation: [`../yearbook_other_chapters/csv/communes_slaughter_dues.md`](../yearbook_other_chapters/csv/communes_slaughter_dues.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `commune` | Place or label as printed (59 distinct values). |
+| `animal` | Coded dimension. |
+| `animal_fr` | Printed French label for `animal`. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `value` | The printed figure. |
+| `text_fr` | Place or label as printed (3 distinct values). |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`animal`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `all` | Tous animaux | 19 |
+| `beef` | Bœuf | 118 |
+| `camel` | Chameau | 118 |
+| `goat` | Chèvre et chevreaux | 118 |
+| `horse` | Chevaux et mulets | 118 |
+| `other` | Autres | 118 |
+| `pig` | Porc | 118 |
+| `sheep` | Mouton et agneaux | 118 |
+| `veal` | Veau | 118 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `sums_collected` | Sommes perçues | 472 |
+| `tariff_per_head` | Tarif par tête | 472 |
+| `total_collected` | Totaux | 19 |

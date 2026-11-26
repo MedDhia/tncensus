@@ -2,13 +2,13 @@
 
 *Municipal loans from the Caisse des Prêts Communaux: one block per commune, one line per loan, with terms, annuities due and paid, arrears and capital amortised / outstanding at the end of the year.*
 
-Source: *Statistique générale de la Tunisie*, chapter *Communes*, editions sgt1922, sgt1923, sgt1924, sgt1925. Source gallica.bnf.fr / Ministère des Affaires étrangères (NoC-CR).
+Source: *Statistique générale de la Tunisie*, chapter *Communes*, editions sgt1922, sgt1923, sgt1924, sgt1925, sgt1926, sgt1927, sgt1929, sgt1930. Source gallica.bnf.fr / Ministère des Affaires étrangères (NoC-CR).
 
-Pages and views of the stored values: sgt1922 (`bpt6k9105649x`): p. 30, f54, p. 31, f55, p. 32, f56, p. 33, f57; sgt1923 (`bpt6k9105649x`): p. 30, f532, p. 31, f533, p. 32, f534, p. 33, f535; sgt1924 (`bpt6k9105649x`): p. 30, f1020, p. 31, f1021, p. 32, f1022, p. 33, f1023; sgt1925 (`bpt6k9105650k`): p. 30, f54, p. 31, f55, p. 32, f56, p. 33, f57.
+Pages and views of the stored values: sgt1922 (`bpt6k9105649x`): p. 30, f54, p. 31, f55, p. 32, f56, p. 33, f57; sgt1923 (`bpt6k9105649x`): p. 30, f532, p. 31, f533, p. 32, f534, p. 33, f535; sgt1924 (`bpt6k9105649x`): p. 30, f1020, p. 31, f1021, p. 32, f1022, p. 33, f1023; sgt1925 (`bpt6k9105650k`): p. 28, f52, p. 29, f53, p. 30, f54, p. 31, f55, p. 32, f56, p. 33, f57; sgt1926 (`bpt6k9105650k`): p. 36, f600, p. 37, f601, p. 38, f602, p. 39, f603, p. 40, f604, p. 41, f605; sgt1927 (`bpt6k91056510`): p. 36, f64, p. 37, f65, p. 38, f66, p. 39, f67, p. 40, f68, p. 41, f69; sgt1929 (`bpt6k9105652d`): p. 36, f64, p. 37, f65, p. 38, f66, p. 39, f67, p. 40, f68, p. 41, f69; sgt1930 (`bpt6k9105652d`): p. 36, f594, p. 37, f595, p. 38, f596, p. 39, f597, p. 40, f598, p. 41, f599, p. 42, f600, p. 43, f601.
 
 Rebuild: `python3 data-raw/yearbook_other_chapters/extract_communes.py build` (transcriptions `../transcribed/communes_loans_<edition>.txt, section `@caisse``).
 
-Printed once per edition (SPEC_ADDENDUM rule 5): `year` is the year the edition reports on; no year is printed twice, so there is no overlap to compare.
+Printed once per edition (SPEC_ADDENDUM rule 5): `year` is the year of the figures. The one year printed twice, 1928 (sgt1928, reprinted unchanged in sgt1929), is stored from the later edition (sgt1929) and every cell of the sgt1928 printing is compared (rule 4; result under Validation).
 
 ## Columns
 
@@ -24,20 +24,23 @@ Printed once per edition (SPEC_ADDENDUM rule 5): `year` is the year the edition 
 - `measure`: English code of the printed column
 - `measure_fr`: column heading as printed (French)
 - `value`: francs with centimes, except `duration_years` (years) and `interest_rate_pct` (percent: "3 75" = 3.75, "7 »" = 7)
-- `flag`: empty, `not_applicable` (text printed instead of a number: value NA; the text is listed below), `illegible` (value NA; for money with hidden centimes the franc part is listed below)
+- `flag`: empty, `not_applicable` (text printed instead of a number: value NA; the text is listed below), `illegible` (value NA; for money with hidden centimes the franc part is listed below), `reprint_corrected` (sgt1925 view 52, black image: value taken from sgt1924 = sgt1926), `derived_from_totals` (sgt1925 bond sums due, solved from the right page)
 
-Two-page spreads (left page: columns 1–6, date to annuity; right page: columns 7–13). `gallica_view` is the view of the page the cell is printed on. Editions transcribed: **sgt1922, sgt1923, sgt1924 and sgt1925 only**. sgt1925: the first spread (views 52–53: Tunis, Béja, Bizerte, Ferryville) is not transcribed because view 52 is a black image in the Gallica scan; only views 54–57 are stored for that edition. sgt1926–sgt1930 (three to four spreads each, e.g. sgt1930 views 594–601) are not done.
+Two-page spreads (left page: columns 1–6, date to annuity; right page: columns 7–13). `gallica_view` is the view of the page the cell is printed on. Editions transcribed: sgt1922–sgt1930 (two spreads up to sgt1925, three in sgt1926–sgt1929, four in sgt1930); the later editions print no loan table. `year` is the year of the figures: sgt1922 → 1922 … sgt1928 → 1928; **sgt1929 reprints the 1928 tables** (same type, same headings "à la fin de 1928", every cell equal; see Validation) and sgt1930 gives 1929 (its Caisse headings still read "à la fin de 1928" / "en 1928", but the bond headings say 1929 and every *antérieurement* cell continues the 1928 totals). There is no 1930 table.
 
-**Image versus OCR.** Every cell was read on native-resolution crops of the spreads (left and right page stitched at the same height); the OCR was used to find the column positions and lines. In sgt1922 the annuity column runs into the binding: the centimes are hidden, so those cells are NA, `illegible` (franc parts listed below); sgt1924 has the same for the first two Tunis loans and the three Sfax/Sousse 3,75 % loans and Souk-el-Khemis total.
+**sgt1925, first spread (views 52–53).** View 52 (left page) is a black image in the Gallica scan, but view 53 (right page) is legible: its columns 7–13 for Tunis (4 loans and Totaux), Béja (3), Bizerte and Ferryville were transcribed from the image (view 53 has no dates or headings; each line was matched by its numbers: earlier payments = 1924 totals of sgt1924, totals = earlier payments of sgt1926, every line agrees). Columns 2–6 (terms) of view 52 are taken from the printings on both sides when sgt1924 and sgt1926 print the same value (flag `reprint_corrected`, `gallica_view` 52, listed below); they are left out where the two differ (Tunis 31 décembre 1921 annuity: 192.304,75 in sgt1924, 384.609,50 in sgt1926) or where only sgt1926 prints the loan (Béja 23 mai 1924 and 5 juin 1924). The annuities due at the end of 1925 (column 7) are on view 53 and are stored. The column totals of view 52 are lost.
 
-Checks: for every loan line and total line, total payments = payments in the year + earlier payments; arrears = annuities due − total payments; capital remaining = nominal capital − capital amortised; and every commune *Totaux* line against its loans. Cross-edition: earlier payments of year N = total payments of year N−1. Every failure was re-read on a native-resolution crop and the printed value is kept; most are visible slips in the print (e.g. sgt1922 and sgt1923 print Tunis's total capital 5.600.000 for four loans summing to 9.600.000; sgt1923 and sgt1924 repeat the 1923 payment 137.221,20 of the Sfax 1909 9-million loan while the total includes 418.708,10; Souk-el-Arba's nominal capital is printed » in sgt1922–23).
+**Image versus OCR.** Every cell was read on native-resolution crops of the page images (full or half-page strips; the OCR was used only as a draft and to locate lines). sgt1929: the six pages were read on the images and compared line by line with the sgt1928 transcription (identical, misprints included); its annuity column is not cut by the binding, so the 1928 annuities are complete. Hidden centimes: sgt1922 annuity column (into the binding), sgt1924 a few annuities, sgt1928 the annuities of view 590 (stored from sgt1929 anyway). Faint digits completed by shape and confirmed by column 4 − column 12 are listed in the transcription comments (sgt1930 Monastir, Sfax). Illegible: sgt1928/29 Sfax 10 mai 1923 total payments printed "549.81 90" (a digit missing; NA) and Souk-el-Khemis Totaux "71.34 72" (total row, not stored).
 
-Durations are as printed ("30 ans" → 30). The *Capital nominal* of Souk-el-Arba 1921 is printed » in sgt1922 and sgt1923 (stored 0.00).
+Checks: for every loan line and total line, total payments = payments in the year + earlier payments; arrears = annuities due − total payments; capital remaining = nominal capital − capital amortised; and every commune *Totaux* line against its loans. Cross-edition: earlier payments of year N = total payments of year N−1 (loans matched by commune heading, date and order within the block; the Kram loan of 16 mai 1924, listed under La Goulette from sgt1930, and Souk-el-Khemis "8 février 1921" in sgt1930 = "28 février 1921" are matched by hand). Every failure was re-read on a native-resolution crop and the printed value is kept (no cell is flagged for a failed check); most are visible slips in the print (e.g. sgt1922–23 Tunis capital total 5.600.000 for 9.600.000; sgt1928/29 Hammam-Lif total payments "2.435 80" for 22.435,80, Kairouan "91.763 26" for 191.763,26, Béja remaining total "11.661788 43" for 1.661.788,43, Sfax earlier payments "391627 50" for 319.627,50). The sgt1930 *antérieurement* column departs from the 1928 totals for several loans (e.g. Tunis 20 mai 1924: 1.130.416,97 against 1.125.883,64; 27 juillet 1926: 905.976,35 against 675.287,74): read twice on the image, kept as printed.
+
+Text cells: Médenine 23 mai 1924, capital remaining printed "(1)" with footnote *(1) Soldé par anticipation* (repaid early), sgt1927 and sgt1928/29: NA, `not_applicable`; the loan is no longer listed in sgt1930. Commune du Kram is listed until sgt1929 (merged with La Goulette in 1926). Two loans of one commune can share a date (Sfax 22 juin 1909 ×2; La Goulette 16 mai 1924 ×2 in sgt1930): they are distinct lines, in printed order. Durations are as printed ("30 ans" → 30). The *Capital nominal* of Souk-el-Arba 1921 is printed » in sgt1922 and sgt1923 (stored 0.00).
 
 ## Validation
 
-Rows: 1140.
-Checks (loans): 597; failed: 35.
+Rows: 3697. Years: 1922 (sgt1922), 1923 (sgt1923), 1924 (sgt1924), 1925 (sgt1925), 1926 (sgt1926), 1927 (sgt1927), 1928 (sgt1929), 1929 (sgt1930).
+
+- Checks (row identities and commune *Totaux*): 2101; passed: 1955; failed: 146 (printed values kept; each re-read on the image); skipped (a cell of the column NA): 2.
   - sgt1922 p.30 Commune de Tunis / Totaux: remaining printed 9052156.44, cap_nom - amortised = 5052156.44
   - sgt1922 p.30 Commune de Béja / 3 avril 1907: arrears printed 0, due - paid_total = 200.00
   - sgt1922 p.30 Commune de Béja / 3 avril 1907: remaining printed 82902.52, cap_nom - amortised = 82909.52
@@ -59,6 +62,8 @@ Checks (loans): 597; failed: 35.
   - sgt1924 p.32 Commune de Sfax / Totaux: paid_total printed 5001458.22, paid_year + paid_before = 4719971.32
   - sgt1924 p.32 Commune de Sfax paid_total: cells give 4911458.22, printed total 5001458.22 (difference 90000.00)
   - sgt1924 p.32 Commune de Sfax amortised: cells give 507504.60, printed total 508504.60 (difference 1000.00)
+  - sgt1925 p.28 Commune de Béja / Totaux: paid_total printed 268791, paid_year + paid_before = 278791.00
+  - sgt1925 p.28 Commune de Béja paid_before: cells give 174077.14, printed total 184077.14 (difference 10000.00)
   - sgt1925 p.30 Commune de Monastir / Totaux: remaining printed 32814.27, cap_nom - amortised = 32014.27
   - sgt1925 p.30 Commune de Sfax / 22 juin 1909: remaining printed 9179907.72, cap_nom - amortised = 9229907.72
   - sgt1925 p.30 Commune de Monastir cap_nom: cells give 48800, printed total 48000 (difference -800)
@@ -73,13 +78,192 @@ Checks (loans): 597; failed: 35.
   - sgt1925 p.32 Commune de Sousse remaining: cells give 1328203.57, printed total 1328203.67 (difference 0.10)
   - sgt1925 p.32 Commune de La Marsa paid_total: cells give 30693.89, printed total 30093.89 (difference -600.00)
   - sgt1925 p.32 Commune de La Marsa remaining: cells give 348714.23, printed total 448714.23 (difference 100000.00)
-Cross-edition checks (paid before in year N = paid total in year N-1): 62; differences: 5.
+  - sgt1926 p.36 Commune de Tunis / 20 mai 1924: arrears printed 0, due - paid_total = -800.00
+  - sgt1926 p.36 Commune de Bizerte / 20 février 1904: remaining printed 965839.29, cap_nom - amortised = 1021839.29
+  - sgt1926 p.36 Commune de Ferryville / 16 mars 1911: remaining printed 68859.52, cap_nom - amortised = 73959.52
+  - sgt1926 p.36 Commune de Tunis annuity: cells give 1078402.00, printed total 1078492 (difference 90.00)
+  - sgt1926 p.36 Commune de Tunis due: cells give 6544802.91, printed total 6545602.91 (difference 800.00)
+  - sgt1926 p.38 Commune de Kairouan / 19 octobre 1912: remaining printed 148767.25, cap_nom - amortised = 163367.25
+  - sgt1926 p.38 Commune de Monastir / 3 mars 1908: remaining printed 10157.52, cap_nom - amortised = 10957.52
+  - sgt1926 p.38 Commune de Monastir cap_nom: cells give 48800, printed total 48000 (difference -800)
+  - sgt1926 p.38 Commune de Sfax annuity: cells give 597419.94, printed total 597410.94 (difference -9.00)
+  - sgt1926 p.40 Commune de Sousse / 20 juin 1923: paid_total printed 65102.03, paid_year + paid_before = 65612.03
+  - sgt1926 p.40 Commune de Sousse / 20 juin 1923: arrears printed 0, due - paid_total = 510.00
+  - sgt1926 p.40 Commune de Carthage / 5 juin 1924: arrears printed 0, due - paid_total = 1.00
+  - sgt1926 p.40 Commune de Sousse paid_total: cells give 838899.92, printed total 839409.92 (difference 510.00)
+  - sgt1927 p.36 Commune de Tunis / 20 mai 1924: remaining printed 4659713.63, cap_nom - amortised = 4659712.63
+  - sgt1927 p.36 Commune de Tunis / Totaux: paid_total printed 8888695.02, paid_year + paid_before = 7888695.02
+  - sgt1927 p.36 Commune de Béja / 23 mai 1924: paid_total printed 63352.23, paid_year + paid_before = 63332.23
+  - sgt1927 p.36 Commune de Béja / 23 mai 1924: arrears printed 0, due - paid_total = -20.00
+  - sgt1927 p.36 Commune de Béja / 23 mai 1924: remaining printed 246991.81, cap_nom - amortised = 246991.51
+  - sgt1927 p.36 Commune de Béja / Totaux: paid_total printed 553770.95, paid_year + paid_before = 553774.95
+  - sgt1927 p.36 Commune de Béja / Totaux: arrears printed 0, due - paid_total = 4.00
+  - sgt1927 p.36 Commune de Ferryville / 16 mars 1911: remaining printed 67450.22, cap_nom - amortised = 72550.22
+  - sgt1927 p.36 Commune de Ferryville / Totaux: remaining printed 567450.22, cap_nom - amortised = 572550.22
+  - sgt1927 p.36 Commune de Tunis paid_before: cells give 6920126.03, printed total 5920126.03 (difference -1000000.00)
+  - sgt1927 p.36 Commune de Tunis remaining: cells give 26900970.40, printed total 26900969.40 (difference -1.00)
+  - sgt1927 p.36 Commune de Béja paid_total: cells give 553794.95, printed total 553770.95 (difference -24.00)
+  - sgt1927 p.36 Commune de Béja amortised: cells give 129751.65, printed total 129751.35 (difference -0.30)
+  - sgt1927 p.38 Commune de Kairouan / 19 octobre 1912: remaining printed 138481.61, cap_nom - amortised = 153081.61
+  - sgt1927 p.38 Commune de Monastir / 3 mars 1908: remaining printed 8183.63, cap_nom - amortised = 8983.63
+  - sgt1927 p.38 Commune de Nabeul / 29 avril 1926: paid_total printed 12862.43, paid_year + paid_before = 12882.43
+  - sgt1927 p.38 Commune de Monastir cap_nom: cells give 48800, printed total 48000 (difference -800)
+  - sgt1927 p.38 Commune de Nabeul paid_before: cells give 21835.41, printed total 21815.41 (difference -20.00)
+  - sgt1927 p.40 Commune de Sousse / Totaux: paid_total printed 924021.48, paid_year + paid_before = 924531.48
+  - sgt1927 p.40 Commune de La Marsa / 5 avril 1924: paid_total printed 43081.68, paid_year + paid_before = 43072.68
+  - sgt1927 p.40 Commune de La Marsa / 13 mars 1926: remaining printed 68407.25, cap_nom - amortised = 68497.25
+  - sgt1927 p.40 Commune de Médenine / 23 mai 1924: arrears printed 0, due - paid_total = -24860.45
+  - sgt1927 p.40 Commune du Kef / Totaux: remaining printed 341921.87, cap_nom - amortised = 342011.87
+  - sgt1927 p.40 Commune de Sousse paid_before: cells give 838899.92, printed total 839409.92 (difference 510.00)
+  - sgt1927 p.40 Commune de La Marsa paid_before: cells give 77532.62, printed total 77541.62 (difference 9.00)
+  - sgt1927 p.40 Commune de La Marsa remaining: cells give 510291.66, printed total 510381.66 (difference 90.00)
+  - sgt1927 p.40 Commune du Kef amortised: cells give 8078.13, printed total 7988.13 (difference -90.00)
+  - sgt1928 p.36 Commune de Tunis / 27 juillet 1926: arrears printed 0, due - paid_total = 0.05
+  - sgt1928 p.36 Commune de Béja / 3 avril 1907: paid_total printed 212446.68, paid_year + paid_before = 212446.58
+  - sgt1928 p.36 Commune de Béja / Totaux: paid_total printed 703679.35, paid_year + paid_before = 701655.35
+  - sgt1928 p.36 Commune de Béja / Totaux: remaining printed 11661788.43, cap_nom - amortised = 1661788.43
+  - sgt1928 p.36 Commune de Ferryville / 16 mars 1911: arrears printed 0, due - paid_total = -2000.00
+  - sgt1928 p.36 Commune de Ferryville / 8 août 1924: arrears printed 0, due - paid_total = -60
+  - sgt1928 p.36 Commune de Tunis due: cells give 10857264.06, printed total 10857264.01 (difference -0.05)
+  - sgt1928 p.36 Commune de Béja paid_year: cells give 149884.30, printed total 147884.40 (difference -1999.90)
+  - sgt1928 p.36 Commune de Béja paid_before: cells give 553794.95, printed total 553770.95 (difference -24.00)
+  - sgt1928 p.36 Commune de Béja remaining: cells give 1661788.43, printed total 11661788.43 (difference 10000000.00)
+  - sgt1928 p.36 Commune de Ferryville due: cells give 126183.87, printed total 128243.87 (difference 2060.00)
+  - sgt1928 p.38 Commune d'Hammam-Lif / 1er décembre 1908: paid_total printed 2435.80, paid_year + paid_before = 22435.80
+  - sgt1928 p.38 Commune d'Hammam-Lif / 1er décembre 1908: arrears printed 0, due - paid_total = 20000.00
+  - sgt1928 p.38 Commune de Kairouan / 19 octobre 1912: paid_total printed 91763.26, paid_year + paid_before = 191763.26
+  - sgt1928 p.38 Commune de Kairouan / 19 octobre 1912: arrears printed 0, due - paid_total = 100000.00
+  - sgt1928 p.38 Commune de Monastir / 31 juillet 1924: remaining printed 20861.86, cap_nom - amortised = 21861.96
+  - sgt1928 p.38 Commune de Monastir / Totaux: remaining printed 27671.31, cap_nom - amortised = 27871.41
+  - sgt1928 p.38 Commune de Sfax / 1er août 1904 et 22 juin 1909: paid_total printed 328646.72, paid_year + paid_before = 400646.72
+  - sgt1928 p.38 Commune de Sfax / 22 juin 1909: arrears printed 0, due - paid_total = 180.00
+  - sgt1928 p.38 Commune de Sfax / Totaux: paid_total printed 7429612.99, paid_year + paid_before = 7429610.99
+  - sgt1928 p.38 Commune de Monastir cap_nom: cells give 48800, printed total 48000 (difference -800)
+  - sgt1928 p.38 Commune de Sfax due: cells give 7429792.99, printed total 7429612.99 (difference -180.00)
+  - sgt1928 p.38 Commune de Sfax paid_year: cells give 597419.94, printed total 597417.94 (difference -2.00)
+  - sgt1928 p.38 Commune de Sfax paid_before: cells give 6904193.05, printed total 6832193.05 (difference -72000.00)
+  - sgt1928 p.40 Commune du Krib / 10 mars 1925: remaining printed 23706.55, cap_nom - amortised = 23706.65
+  - sgt1929 p.36 Commune de Tunis / 27 juillet 1926: arrears printed 0, due - paid_total = 0.05
+  - sgt1929 p.36 Commune de Béja / 3 avril 1907: paid_total printed 212446.68, paid_year + paid_before = 212446.58
+  - sgt1929 p.36 Commune de Béja / Totaux: paid_total printed 703679.35, paid_year + paid_before = 701655.35
+  - sgt1929 p.36 Commune de Béja / Totaux: remaining printed 11661788.43, cap_nom - amortised = 1661788.43
+  - sgt1929 p.36 Commune de Ferryville / 16 mars 1911: arrears printed 0, due - paid_total = -2000.00
+  - sgt1929 p.36 Commune de Ferryville / 8 août 1924: arrears printed 0, due - paid_total = -60
+  - sgt1929 p.36 Commune de Tunis due: cells give 10857264.06, printed total 10857264.01 (difference -0.05)
+  - sgt1929 p.36 Commune de Béja paid_year: cells give 149884.30, printed total 147884.40 (difference -1999.90)
+  - sgt1929 p.36 Commune de Béja paid_before: cells give 553794.95, printed total 553770.95 (difference -24.00)
+  - sgt1929 p.36 Commune de Béja remaining: cells give 1661788.43, printed total 11661788.43 (difference 10000000.00)
+  - sgt1929 p.36 Commune de Ferryville due: cells give 126183.87, printed total 128243.87 (difference 2060.00)
+  - sgt1929 p.38 Commune d'Hammam-Lif / 1er décembre 1908: paid_total printed 2435.80, paid_year + paid_before = 22435.80
+  - sgt1929 p.38 Commune d'Hammam-Lif / 1er décembre 1908: arrears printed 0, due - paid_total = 20000.00
+  - sgt1929 p.38 Commune de Kairouan / 19 octobre 1912: paid_total printed 91763.26, paid_year + paid_before = 191763.26
+  - sgt1929 p.38 Commune de Kairouan / 19 octobre 1912: arrears printed 0, due - paid_total = 100000.00
+  - sgt1929 p.38 Commune de Monastir / 31 juillet 1924: remaining printed 20861.86, cap_nom - amortised = 21861.96
+  - sgt1929 p.38 Commune de Monastir / Totaux: remaining printed 27671.31, cap_nom - amortised = 27871.41
+  - sgt1929 p.38 Commune de Sfax / 1er août 1904 et 22 juin 1909: paid_total printed 328646.72, paid_year + paid_before = 400646.72
+  - sgt1929 p.38 Commune de Sfax / 22 juin 1909: arrears printed 0, due - paid_total = 180.00
+  - sgt1929 p.38 Commune de Sfax / Totaux: paid_total printed 7429612.99, paid_year + paid_before = 7429610.99
+  - sgt1929 p.38 Commune de Monastir cap_nom: cells give 48800, printed total 48000 (difference -800)
+  - sgt1929 p.38 Commune de Sfax due: cells give 7429792.99, printed total 7429612.99 (difference -180.00)
+  - sgt1929 p.38 Commune de Sfax paid_year: cells give 597419.94, printed total 597417.94 (difference -2.00)
+  - sgt1929 p.38 Commune de Sfax paid_before: cells give 6904193.05, printed total 6832193.05 (difference -72000.00)
+  - sgt1929 p.40 Commune du Krib / 10 mars 1925: remaining printed 23706.55, cap_nom - amortised = 23706.65
+  - sgt1930 p.36 Commune de Tunis / Totaux: remaining printed 47576622.44, cap_nom - amortised = 46576622.44
+  - sgt1930 p.36 Commune de Béja / 5 juin 1924: paid_total printed 532837.67, paid_year + paid_before = 532817.67
+  - sgt1930 p.36 Commune de Bizerte / 20 février 1904: paid_total printed 1068372, paid_year + paid_before = 1068582.00
+  - sgt1930 p.36 Commune de Bizerte / 20 février 1904: arrears printed 0, due - paid_total = 210
+  - sgt1930 p.36 Commune de Tunis remaining: cells give 46576622.44, printed total 47576622.44 (difference 1000000.00)
+  - sgt1930 p.36 Commune de Béja paid_before: cells give 712424.20, printed total 712444.20 (difference 20.00)
+  - sgt1930 p.36 Commune de Bizerte paid_total: cells give 1516799.77, printed total 1517009.77 (difference 210.00)
+  - sgt1930 p.38 Commune de Monastir / 3 mars 1908: paid_total printed 35709.32, paid_year + paid_before = 35697.32
+  - sgt1930 p.38 Commune de Monastir / Totaux: paid_total printed 44586.56, paid_year + paid_before = 44574.56
+  - sgt1930 p.38 Commune de Monastir / Totaux: remaining printed 26776.51, cap_nom - amortised = 25976.51
+  - sgt1930 p.38 Commune de Sfax / Totaux: paid_total printed 8027032.93, paid_year + paid_before = 8027030.93
+  - sgt1930 p.38 Commune de Monastir cap_nom: cells give 48800, printed total 48000 (difference -800)
+  - sgt1930 p.38 Commune de Sfax paid_year: cells give 597419.94, printed total 597417.94 (difference -2.00)
+  - sgt1930 p.40 Commune de Souk-el-Khemis / 8 février 1921: paid_total printed 71744.66, paid_year + paid_before = 71745.36
+  - sgt1930 p.40 Commune de Souk-el-Khemis / Totaux: paid_total printed 100099.02, paid_year + paid_before = 100099.72
+  - sgt1930 p.42 Commune du Kef / 3 juillet 1926: paid_total printed 36045.48, paid_year + paid_before = 36045.98
+  - sgt1930 p.42 Commune de Gabès / 25 mars 1927: paid_total printed 10882.50, paid_year + paid_before = 10882.60
+  - sgt1930 p.42 Commune du Kef due: cells give 124680.28, printed total 124680.78 (difference 0.50)
+  - sgt1930 p.42 Commune du Kef paid_total: cells give 124680.28, printed total 124680.78 (difference 0.50)
+- Cross-edition checks (paid before in year N = paid total in year N-1): 237; differences: 28.
   - Béja 3 avril 1907: paid_before 1923 (sgt1923) = 152669.04, paid_total 1922 (sgt1922) = 152699.04
   - Béja 3 avril 1907: paid_before 1924 (sgt1924) = 162956.98, paid_total 1923 (sgt1923) = 162596.98
-  - Sfax 22 juin 1909: paid_before 1924 (sgt1924) = 4221811.26, paid_total 1923 (sgt1923) = 3940324.36
+  - Sfax 22 juin 1909 (2): paid_before 1924 (sgt1924) = 4221811.26, paid_total 1923 (sgt1923) = 3940324.36
   - Sfax 1er août 1904 et 22 juin 1909: paid_before 1925 (sgt1925) = 292569.84, paid_total 1924 (sgt1924) = 202569.84
   - La Marsa 5 avril 1924: paid_before 1925 (sgt1925) = 3300.00, paid_total 1924 (sgt1924) = 9930.28
-Flagged cells: illegible: 29.
+  - Sousse 1er mars 1911: paid_before 1926 (sgt1926) = 207706.49, paid_total 1925 (sgt1925) = 207716.49
+  - Béja 5 juin 1924: paid_before 1927 (sgt1927) = 170814.56, paid_total 1926 (sgt1926) = 64519.99
+  - Nabeul 5 avril 1910: paid_before 1927 (sgt1927) = 21282.08, paid_total 1926 (sgt1926) = 22667.24
+  - Nabeul 29 avril 1926: paid_before 1927 (sgt1927) = 553.33, paid_total 1926 (sgt1926) = 533.33
+  - La Marsa 5 avril 1924: paid_before 1927 (sgt1927) = 29812.12, paid_total 1926 (sgt1926) = 29821.12
+  - La Marsa 13 mars 1926: paid_before 1927 (sgt1927) = 9126.61, paid_total 1926 (sgt1926) = 0.00
+  - Sfax 1er août 1904 et 22 juin 1909: paid_before 1928 (sgt1929) = 391627.50, paid_total 1927 (sgt1927) = 319627.50
+  - Tunis 20 mai 1924: paid_before 1929 (sgt1930) = 1130416.97, paid_total 1928 (sgt1929) = 1125883.64
+  - Tunis 22 mars 1926: paid_before 1929 (sgt1930) = 1453307.80, paid_total 1928 (sgt1929) = 1479569.36
+  - Tunis 27 juillet 1926: paid_before 1929 (sgt1930) = 905976.35, paid_total 1928 (sgt1929) = 675287.74
+  - Béja 23 mai 1924: paid_before 1929 (sgt1930) = 84239.27, paid_total 1928 (sgt1929) = 84259.27
+  - Béja 5 juin 1924: paid_before 1929 (sgt1930) = 415738.25, paid_total 1928 (sgt1929) = 406973.40
+  - Ferryville 8 août 1924: paid_before 1929 (sgt1930) = 81893.86, paid_total 1928 (sgt1929) = 75464.00
+  - Hammam-Lif 1er décembre 1908: paid_before 1929 (sgt1930) = 22435.80, paid_total 1928 (sgt1929) = 2435.80
+  - Kairouan 19 octobre 1912: paid_before 1929 (sgt1930) = 291764.26, paid_total 1928 (sgt1929) = 91763.26
+  - Mahdia 27 mars 1909: paid_before 1929 (sgt1930) = 129704.82, paid_total 1928 (sgt1929) = 129702.82
+  - Souk-el-Khemis 8 février 1921: paid_before 1929 (sgt1930) = 62123.40, paid_total 1928 (sgt1929) = 62123.60
+  - Sousse 1er mars 1911: paid_before 1929 (sgt1930) = 250574.91, paid_total 1928 (sgt1929) = 250564.91
+  - Sousse 20 juin 1923: paid_before 1929 (sgt1930) = 154015.75, paid_total 1928 (sgt1929) = 153505.75
+  - La Marsa 16 avril 1924: paid_before 1929 (sgt1930) = 91636.13, paid_total 1928 (sgt1929) = 89575.57
+  - La Marsa 13 mars 1926: paid_before 1929 (sgt1930) = 16199.89, paid_total 1928 (sgt1929) = 23273.17
+  - la Goulette 16 mai 1924: paid_before 1929 (sgt1930) = 44924.06, paid_total 1928 (sgt1929) = 45646.28
+  - le Kef 3 juillet 1926: paid_before 1929 (sgt1930) = 22080.92, paid_total 1928 (sgt1929) = 21098.39
+- 1928 printed twice (sgt1928 and sgt1929; stored from sgt1929, rule 4): 552 cells compared; differences: 0 (sgt1928 franc-only annuities compared on the franc part).
+- sgt1925 view 52 (black image), left-page cells: 34 filled, 11 left out:
+  - Commune de Tunis / 28 août 1903 duration_years: 30 (sgt1924 = sgt1926)
+  - Commune de Tunis / 28 août 1903 capital_received: 1400000 (sgt1924 = sgt1926)
+  - Commune de Tunis / 28 août 1903 capital_nominal: 1478000 (sgt1924 = sgt1926)
+  - Commune de Tunis / 28 août 1903 interest_rate_pct: 3.75 (sgt1924 = sgt1926)
+  - Commune de Tunis / 28 août 1903 annuity: 81656.24 (sgt1924 81656.xx; sgt1926 81656.24)
+  - Commune de Tunis / 1er octobre 1907 duration_years: 30 (sgt1924 = sgt1926)
+  - Commune de Tunis / 1er octobre 1907 capital_received: 200000 (sgt1924 = sgt1926)
+  - Commune de Tunis / 1er octobre 1907 capital_nominal: 214600 (sgt1924 = sgt1926)
+  - Commune de Tunis / 1er octobre 1907 interest_rate_pct: 3.75 (sgt1924 = sgt1926)
+  - Commune de Tunis / 1er octobre 1907 annuity: 11912 (sgt1924 11912.xx; sgt1926 11912)
+  - Commune de Tunis / 30 juin 1908 duration_years: 55 (sgt1924 = sgt1926)
+  - Commune de Tunis / 30 juin 1908 capital_received: 4000000 (sgt1924 = sgt1926)
+  - Commune de Tunis / 30 juin 1908 capital_nominal: 4292000 (sgt1924 = sgt1926)
+  - Commune de Tunis / 30 juin 1908 interest_rate_pct: 3.75 (sgt1924 = sgt1926)
+  - Commune de Tunis / 30 juin 1908 annuity: 184726.88 (sgt1924 = sgt1926)
+  - Commune de Tunis / 31 décembre 1921 duration_years: 35 (sgt1924 = sgt1926)
+  - Commune de Tunis / 31 décembre 1921 capital_received: 5000000 (sgt1924 = sgt1926)
+  - Commune de Tunis / 31 décembre 1921 capital_nominal: 5000000 (sgt1924 = sgt1926)
+  - Commune de Tunis / 31 décembre 1921 interest_rate_pct: 7 (sgt1924 = sgt1926)
+  - Commune de Tunis / 31 décembre 1921 annuity: not stored (sgt1924 192304.75; sgt1926 384609.50)
+  - Commune de Béja / 3 avril 1907 duration_years: 25 (sgt1924 = sgt1926)
+  - Commune de Béja / 3 avril 1907 capital_received: 150000 (sgt1924 = sgt1926)
+  - Commune de Béja / 3 avril 1907 capital_nominal: 161000 (sgt1924 = sgt1926)
+  - Commune de Béja / 3 avril 1907 interest_rate_pct: 3.75 (sgt1924 = sgt1926)
+  - Commune de Béja / 3 avril 1907 annuity: 9897.94 (sgt1924 = sgt1926)
+  - Commune de Béja / 23 mai 1924 duration_years: not stored (sgt1926 40)
+  - Commune de Béja / 23 mai 1924 capital_received: not stored (sgt1926 250000)
+  - Commune de Béja / 23 mai 1924 capital_nominal: not stored (sgt1926 250000)
+  - Commune de Béja / 23 mai 1924 interest_rate_pct: not stored (sgt1926 8)
+  - Commune de Béja / 23 mai 1924 annuity: not stored (sgt1926 20907.04)
+  - Commune de Béja / 5 juin 1924 duration_years: not stored (sgt1926 40)
+  - Commune de Béja / 5 juin 1924 capital_received: not stored (sgt1926 1400000)
+  - Commune de Béja / 5 juin 1924 capital_nominal: not stored (sgt1926 1400000)
+  - Commune de Béja / 5 juin 1924 interest_rate_pct: not stored (sgt1926 8)
+  - Commune de Béja / 5 juin 1924 annuity: not stored (sgt1926 117079.42)
+  - Commune de Bizerte / 20 février 1904 duration_years: 60 (sgt1924 = sgt1926)
+  - Commune de Bizerte / 20 février 1904 capital_received: 1000000 (sgt1924 = sgt1926)
+  - Commune de Bizerte / 20 février 1904 capital_nominal: 1056000 (sgt1924 = sgt1926)
+  - Commune de Bizerte / 20 février 1904 interest_rate_pct: 3.75 (sgt1924 = sgt1926)
+  - Commune de Bizerte / 20 février 1904 annuity: 44301.24 (sgt1924 = sgt1926)
+  - Commune de Ferryville / 16 mars 1911 duration_years: 50 (sgt1924 = sgt1926)
+  - Commune de Ferryville / 16 mars 1911 capital_received: 70000 (sgt1924 = sgt1926)
+  - Commune de Ferryville / 16 mars 1911 capital_nominal: 75100 (sgt1924 = sgt1926)
+  - Commune de Ferryville / 16 mars 1911 interest_rate_pct: 3.75 (sgt1924 = sgt1926)
+  - Commune de Ferryville / 16 mars 1911 annuity: 3333.36 (sgt1924 = sgt1926)
+Flagged cells: illegible: 30, not_applicable: 2, reprint_corrected: 34.
   - sgt1922 Tunis / 28 août 1903 annuity: illegible (franc part 81656)
   - sgt1922 Tunis / 1er octobre 1907 annuity: illegible (franc part 11912)
   - sgt1922 Tunis / 30 juin 1908 annuity: illegible (franc part 184726)
@@ -109,3 +293,40 @@ Flagged cells: illegible: 29.
   - sgt1924 Sousse / 21 février 1906 et 1er mars 1911 annuity: illegible (franc part 13462)
   - sgt1924 Sousse / 2 mars 1908 et 1er mars 1911 annuity: illegible (franc part 13170)
   - sgt1924 Sousse / 1er mars 1911 annuity: illegible (franc part 14286)
+  - sgt1929 Sfax / 10 mai 1923 paid_total: illegible
+  - sgt1927 Médenine / 23 mai 1924 capital_remaining: not_applicable — printed text: capital remaining printed "(1)", footnote (1) "Soldé par anticipation" (repaid early)
+  - sgt1929 Médenine / 23 mai 1924 capital_remaining: not_applicable — printed text: capital remaining printed "(1)", footnote (1) "Soldé par anticipation" (repaid early)
+  - sgt1925 Tunis / 28 août 1903 duration_years: reprint_corrected
+  - sgt1925 Tunis / 28 août 1903 capital_received: reprint_corrected
+  - sgt1925 Tunis / 28 août 1903 capital_nominal: reprint_corrected
+  - sgt1925 Tunis / 28 août 1903 interest_rate_pct: reprint_corrected
+  - sgt1925 Tunis / 28 août 1903 annuity: reprint_corrected
+  - sgt1925 Tunis / 1er octobre 1907 duration_years: reprint_corrected
+  - sgt1925 Tunis / 1er octobre 1907 capital_received: reprint_corrected
+  - sgt1925 Tunis / 1er octobre 1907 capital_nominal: reprint_corrected
+  - sgt1925 Tunis / 1er octobre 1907 interest_rate_pct: reprint_corrected
+  - sgt1925 Tunis / 1er octobre 1907 annuity: reprint_corrected
+  - sgt1925 Tunis / 30 juin 1908 duration_years: reprint_corrected
+  - sgt1925 Tunis / 30 juin 1908 capital_received: reprint_corrected
+  - sgt1925 Tunis / 30 juin 1908 capital_nominal: reprint_corrected
+  - sgt1925 Tunis / 30 juin 1908 interest_rate_pct: reprint_corrected
+  - sgt1925 Tunis / 30 juin 1908 annuity: reprint_corrected
+  - sgt1925 Tunis / 31 décembre 1921 duration_years: reprint_corrected
+  - sgt1925 Tunis / 31 décembre 1921 capital_received: reprint_corrected
+  - sgt1925 Tunis / 31 décembre 1921 capital_nominal: reprint_corrected
+  - sgt1925 Tunis / 31 décembre 1921 interest_rate_pct: reprint_corrected
+  - sgt1925 Béja / 3 avril 1907 duration_years: reprint_corrected
+  - sgt1925 Béja / 3 avril 1907 capital_received: reprint_corrected
+  - sgt1925 Béja / 3 avril 1907 capital_nominal: reprint_corrected
+  - sgt1925 Béja / 3 avril 1907 interest_rate_pct: reprint_corrected
+  - sgt1925 Béja / 3 avril 1907 annuity: reprint_corrected
+  - sgt1925 Bizerte / 20 février 1904 duration_years: reprint_corrected
+  - sgt1925 Bizerte / 20 février 1904 capital_received: reprint_corrected
+  - sgt1925 Bizerte / 20 février 1904 capital_nominal: reprint_corrected
+  - sgt1925 Bizerte / 20 février 1904 interest_rate_pct: reprint_corrected
+  - sgt1925 Bizerte / 20 février 1904 annuity: reprint_corrected
+  - sgt1925 Ferryville / 16 mars 1911 duration_years: reprint_corrected
+  - sgt1925 Ferryville / 16 mars 1911 capital_received: reprint_corrected
+  - sgt1925 Ferryville / 16 mars 1911 capital_nominal: reprint_corrected
+  - sgt1925 Ferryville / 16 mars 1911 interest_rate_pct: reprint_corrected
+  - sgt1925 Ferryville / 16 mars 1911 annuity: reprint_corrected

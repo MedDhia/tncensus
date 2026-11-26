@@ -1,0 +1,95 @@
+# Communes chapter, sgt1923 (ark bpt6k9105649x): "d) Droits d'abatage perçus en 1923". Three two-page spreads,
+# views 536-537, 538-539, 540-541 (printed pages 34-39).
+# Format: '@slaughter view=<left> view2=<right> page=<left page> year=<year>', 'cols:' (column order as printed),
+# rows '<commune as printed> | values'; 'A reporter', 'Report', 'Totaux' rows are the printed running totals.
+# Columns: <animal>_t = "Tarif par tête" (francs per head), <animal>_s = "Sommes perçues" (francs);
+# total = "Totaux" (row total). Printed » = 0. 'T:<text>' = tariff printed as text (e.g. a range "1,00-1,20",
+# '_' for spaces); '~' = cell covered by a text printed across the row (the text is in the '# span:' comment);
+# '?' = illegible. '# obs:' = the "Observations" column.
+# Reading: tariffs and the cells next to the binding (goat sums, pig tariff and sums) read on native-resolution
+# crops; the other sums drafted from Gallica OCR and checked against the row totals and the "A reporter" lines;
+# every cell where the OCR did not parse or a check failed was read on the image.
+@slaughter view=536 view2=537 page=34 year=1923
+cols: beef_t beef_s veal_t veal_s sheep_t sheep_s goat_t goat_s pig_t pig_s horse_t horse_s other_t other_s camel_t camel_s total
+Aïn-Draham | 6 996.06 0 136.26 0 737 0 597.51 0 85.80 0 0 0 45.42 0 0 2598.15
+Ariana | 6 2502 2 170 0.70 859.60 0 0 0 0 0 0 0 0 0 0 3531.60
+Bardo (Le) | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Ben-Gardane | 4 148.50 4 43 0.50 771.90 0.50 3013.50 0 0 0 0 0 0 2.50 146.50 4123.40
+Béja | 8 8496.35 8 740.24 8 8629.68 8 4172.32 8 356.88 0 0 20 44.80 8 89.20 22529.47
+# obs: La perception a lieu à raison de 0 fr. 05 par kil. poids vif, sauf pour les porcs qui paient 10 fr. par tête.
+Bizerte | 0 0 0 0 0 0 0 0 10 6180 0 0 0 0 0 0 P:118241.40
+Carthage | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Djemmal | 5 585 4 960 1 1985 0.60 894 5 0 0 0 0.60 2122.20 5 55 6601.20
+Djerba | 6 113.60 6 59.65 6 681.40 6 2588.10 6 21.75 6 563.95 6 286.55 0 399.50 4714.50
+Ebba-Ksour | 6 900 2.50 988 1 5396 0.60 3929.40 4 40 0.60 872.40 0.30 189.90 6 12 12327.70
+Fériana | 3 90 2 32 0.75 306.75 0.50 317 0 0 0 0 0.50 69.50 0 0 815.25
+El-Djem | 5 75 2.50 275 1 1200 0.60 2011.20 0 0 0 0 0 0 5 100 3661.20
+# obs: Pour 233.483 kil. 500 de viande.
+Ferryville | T:0,10_par_kg 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 23348.35
+Foum-Tatahouine | 2 578 0 0 0.30 1003.20 0.30 1834.80 0 0 0 0 0 0 2 28 3444
+# obs: 0 fr. 15 par kilo de viande abattue.
+Gabès | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 51015.10
+Gafsa | 7 3192 5 235 1.50 11515.50 1.50 6394.50 7 7 0 0 0 0 10 290 21634
+Ghardimaou | 2.50 125 2.50 70 0.60 157.20 0.40 180.40 2 24 0 0 0 0 0 0 556.60
+# obs: Droits perçus au kilo.
+Goulette (La) | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 60549.40
+Grombalia | 6 1830 0 0 T:1,00-1,20 1637.80 T:0,60-0,50 697 6 54 0 0 0 0 0 0 4218.80
+Hadjeb-el-Aïoun | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+A reporter | . 19631.51 . 3709.15 . 34881.03 . 26629.73 . 6769.43 . 1436.35 . 2758.37 . 1120.20 343910.12
+
+@slaughter view=538 view2=539 page=36 year=1923
+cols: beef_t beef_s veal_t veal_s sheep_t sheep_s goat_t goat_s pig_t pig_s horse_t horse_s other_t other_s camel_t camel_s total
+Report | . 19631.51 . 3709.15 . 34881.03 . 26629.73 . 6769.43 . 1436.35 . 2758.37 . 1120.20 343910.12
+Hammam-Lif | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 7528.95
+Hamma (El) | 0 0 3 39 0.90 1544.40 0.80 1168 0 0 0 0 0 0 3 360 3111.40
+Kairouan | 5 14190 2 574 0.80 18116 0.40 3173.60 5 10 0 0 0 0 6 1614 37677.60
+Kalaa-Kebira | 6 6 2.50 7.50 7 285 0.60 579 0 0 0 0 4 36 6 66 979.30
+Ksour-Essaf | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Kef (Le) | 8.25 4496.25 2.65 948.70 1.05 6377.90 0.70 5294.30 4.90 258 5.25 1265.25 0.30 702 9.75 29.25 19707.35
+Kram (Le) | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Krib (Le) | 0 0 0 0 0.45 53.55 0.40 42.80 0 0 0 0 0 0 0 0 96.35
+# obs: Taxes instituées en 1924.
+Maharès | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Mahdia | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4957.20
+Marsa (La) | 0.15 7805 0.15 109.20 0.15 2040.40 0 0 0 0 0 0 0 0 0 0 10854.60
+# obs: 6 fr. par 100 kil. pour toutes catégories d'animaux.
+Mateur | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 11782.05
+Maxula-Radès | 8 1648 4 668 1.20 717.60 1 14 7 56 0 0 0 1018.80 0 0 4122.40
+Médenine | 1.50 130.50 1.50 1.50 0.30 1067.10 0.30 1943.20 1.50 22.50 0 0 0 0 1.50 36 3197.80
+# obs: Affermés.
+Medjez-el-Bab | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+M'saken | 6 0 4 12 1 1617 0.60 3323.60 0 0 0 0 0.30 100.50 6 432 5485.10
+Menzel-bou-Zelfa | 6 1848 0 0 1 581 1 4541 0 0 0 0 0 0 0 0 6970
+Menzel-Temime | 8 1814 0 0 1.50 4087.40 1 3093 0 0 0 0 0 0 3 33 9027.40
+Moknine | 5 175 2.50 407.50 1 1419 0.60 150.60 0.30 51.90 0.60 2478 4 2844 5 35 7561
+Monastir | 10 888 7 1127 3 3126 3 130 1.50 189 8 7790 0 0 2 2445 15695
+A reporter | . 52632.26 . 7603.55 . 75913.38 . 50073.83 . 7356.83 . 12969.60 . 7459.67 . 6170.45 492654.62
+
+@slaughter view=540 view2=541 page=38 year=1923
+cols: beef_t beef_s veal_t veal_s sheep_t sheep_s goat_t goat_s pig_t pig_s horse_t horse_s other_t other_s camel_t camel_s total
+Report | . 52632.26 . 7603.55 . 75913.38 . 50073.83 . 7356.83 . 12969.60 . 7459.67 . 6170.45 492654.62
+Nabeul | 6 9264 0 0 1.20 5649.60 0.60 376.80 6 18 0 0 0 0 3 12 15320.40
+Nefta | 2.50 150 0 0 0.60 1606.80 0.40 1423.20 0 0 0 0 0 0 2.50 443.50 3622.50
+Pêcherie (La) | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Philippe-Thomas | 5 1335 3 75 1 4432 0.90 2026.40 6 808 0 0 0 0 5 50 8726.40
+Saint-Germain | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Sfax | 10 39240 6 6948 1.50 55923.60 0.50 9674.50 10 2030 0 0 0 0 6 474 114390
+# obs: 0 fr. 15 par kilo.
+Sidi-bou-Saïd | 0.15 7190 0.15 92.40 0.15 1905 0.15 0.90 0 0 0 0 0 0 0 0 9187.30
+Soliman | 2 868 2 112 0.40 1162 0.30 1140 2 4 0 0 0 0 1.50 10.50 3296.50
+# obs: 0 fr. 10 par kilo.
+Souk-el-Arba | 0.10 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 15574.20
+# obs: 0 fr. 09 par kilo.
+Souk-el-Khemis | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8108.40
+# The beef tariff column of the Sousse line reads "0 09" (sic; Observations: 0 fr. 15 par kilo).
+# obs: 0 fr. 15 par kilo.
+Sousse | 0.09 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 87685
+Tabarka | 4 764 3 1137 0.70 418.60 0.60 548.40 4 140 0 0 2 196 0 0 3204.05
+Thala | 3 318 0 0 0.50 1710.50 0.40 1614 0 0 0 0 0 0 0 0 3642.50
+Tebourba | 7 720 5 285 1 2495 0.80 1040 0 0 0 0 0 0 0 0 3540
+Téboursouk | 3 300 3 1500 0.45 1350.45 0.40 1508.40 0 0 0 0 0 0 0 0 4658.85
+Tunis | 8.50 329970 5 7610.50 2 153438.80 1 13292.05 9 29079 5 1990 2 483 8 483 518346.35
+Tozeur | 1.50 418.50 0 0 0.50 2665.50 0.30 878.10 0 0 0 0 0 0 2 80 4042.10
+Zaghouan | 5 1060 4 236 1 1570 0.75 4666.50 5 45 0 0 0 0 0 0 7577.50
+Zarzis | 4 388 0 0 0.75 2002.50 0.75 667.50 0 0 0 0 0 0 4 56 3114
+Totaux | . 444617.76 . 25594.45 . 312243.73 . 88925.56 . 39480.83 . 14959.60 . 8138.67 . 7779.45 1306790.67

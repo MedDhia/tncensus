@@ -1,5 +1,5 @@
 # Communes chapter, sgt1925 (ark bpt6k9105650k): "Finances municipales: b) Emprunts communaux" (Tunis bond
-# loans) and "c) Emprunts contractés à la Caisse des Prêts Communaux". Two-page spreads, views 52-53, 54-55 and 56-57. View 52 (left page of the first spread: Tunis bonds and the Caisse loans of Tunis, Béja, Bizerte, Ferryville) is a black image in the Gallica scan, so that spread is not transcribed.
+# loans) and "c) Emprunts contractés à la Caisse des Prêts Communaux". Two-page spreads, views 52-53, 54-55 and 56-57. View 52 (left page of the first spread: Tunis bonds and the Caisse loans of Tunis, Béja, Bizerte, Ferryville) is a black image in the Gallica scan: only the right page (view 53) of that spread is transcribed, see below.
 # Read on native-resolution crops of the page images; Gallica OCR used only to locate the lines.
 # Format: '@<table> view=<left view> view2=<right view> page=<left page> year=<exercice>', 'cols:', then
 # '= <commune heading as printed>' and rows '<date of the loan as printed> | values', 'Totaux | ...' per commune.
@@ -10,6 +10,38 @@
 #   (columns 2-17 of the table).
 # @caisse cols: dur cap_net cap_nom rate annuity due paid_year paid_before paid_total arrears amortised
 #   remaining (columns 2-13 of the table).
+# Recovered by the third worker: view 53 (right page of the first spread) is legible. Its columns are
+# transcribed below from native-resolution crops; the left-page columns (duration, capital, rate, annuity) are
+# on the black view 52 and are left absent ('.'). View 53 carries no loan dates or commune headings: each line
+# is identified by its numbers, earlier payments = total payments 1924 of sgt1924 and total payments = earlier
+# payments of sgt1926 (every line matches both), and the headings are those of sgt1924/sgt1926. The column
+# heading of the bond payments in the year reads "de 1924" (sic; "jusqu'à la fin de 1925" and "à la clôture de
+# l'exercice 1925" in the same heading, "1925" on the Caisse columns).
+@tunis_bonds view=52 view2=53 page=28 year=1925
+cols: dur rate cap_net cap_nom int_due cap_due int_paid_year cap_paid_year int_paid_before cap_paid_before int_paid_total cap_paid_total int_lapsed cap_lapsed int_outstanding cap_outstanding
+= Commune de Tunis
+17 février 1891 | . . . . . . 65467.50 69298.75 3414713.75 1610388.75 3480181.25 1679687.50 1478.75 0 49052.50 75795
+31 janvier 1897 | . . . . . . 48685 29973.75 1755635 634062.50 1804320 664036.25 481.25 0 35577.50 32815
+Totaux | . . . . . . 114152.50 99272.50 5170348.75 2244451.25 5284501.25 2343723.75 1960 0 84630 108610
+
+@caisse view=52 view2=53 page=28 year=1925
+cols: dur cap_net cap_nom rate annuity due paid_year paid_before paid_total arrears amortised remaining
+= Commune de Tunis
+28 août 1903 | . . . . . 1816297.76 81656.24 1734641.52 1816297.76 0 911473.40 566526.60
+1er octobre 1907 | . . . . . 213243.73 11912 201331.73 213243.73 0 94702.82 119897.18
+30 juin 1908 | . . . . . 2620852.06 184726.88 2436125.18 2620852.06 0 242422.09 4049577.91
+31 décembre 1921 | . . . . . 937415.86 192304.75 745111.11 937415.86 0 17304.75 4982695.25
+Totaux | . . . . . 5587809.41 470599.87 5117209.54 5587809.41 0 1265903.06 9718696.94
+= Commune de Béja
+3 avril 1907 | . . . . . 182752.86 9897.94 172854.92 182752.86 0 99888.64 61111.36
+23 mai 1924 | . . . . . 21518.15 20907.04 611.11 21518.15 0 925.18 249074.82
+5 juin 1924 | . . . . . 64519.99 63908.88 611.11 64519.99 0 0 1400000
+Totaux | . . . . . 268791 94713.86 184077.14 268791 0 100813.82 1710186.18
+= Commune de Bizerte
+20 février 1904 | . . . . . 891377.04 44301.24 847075.80 891377.04 0 84829.67 971170.33
+= Commune de Ferryville
+16 mars 1911 | . . . . . 42779.79 3333.36 39446.43 42779.79 0 5771.57 69328.43
+
 @caisse view=54 view2=55 page=30 year=1925
 cols: dur cap_net cap_nom rate annuity due paid_year paid_before paid_total arrears amortised remaining
 = Commune d'Hammam-Lif

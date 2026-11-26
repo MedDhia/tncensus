@@ -851,42 +851,42 @@ cheikhat,Zourgane,Cercle militaire de Tatahouine,Tatahouine,Zourgane,Territoires
 cheikhat,Zraoua,Territoire militaire de Matmata,Matmata,Zraoua,Territoires militaires du Sud,Matmata,,exact,1,795,Zraoua,,33.573594,9.823606,ind1931_t3_cheikhat_nationality
 cheikhat,Zriba,Maktar,Oulad-Aoun,Zriba,Maktar,Oulad-Aoun,,exact,1,943,Zriba,,35.942331,9.502637,ind1931_t3_cheikhat_nationality
 cheikhat,Zriba,Zaghouan,Zaghouan,Zriba,Zaghouan,Zaghouan,,exact,1,1190,Zriba,,36.317036,10.169349,ind1931_t3_cheikhat_nationality
-commune,Ariana,,,Ariana,,,,exact,1,143,Ariana,,36.858639,10.187773,communes_budget;communes_building_permits;communes_building_values_1939;communes_property;communes_terraces;ind1931_t7annex_communes_1921_1931
+commune,Ariana,,,Ariana,,,,exact,1,143,Ariana,,36.858639,10.187773,communes_budget;communes_building_permits;communes_building_values_1939;communes_property;communes_slaughter_dues;communes_terraces;ind1931_t7annex_communes_1921_1931
 commune,Ariana (L'),,Tunis-Banlieue,Ariana (L'),Tunis,Tunis-Banlieue,,exact,1,143,Ariana,,36.858639,10.187773,ind1931_t7_communes
 commune,Ariana (L'),Tunis,,Ariana (L'),Tunis,,,exact,1,143,Ariana,,36.858639,10.187773,cens1926_communes
 commune,Aïn-Draham,,Aïn-Draham,Aïn-Draham,Tabarka,Aïn-Draham,,exact,1,294,Aïn-Draham,,36.77716,8.689778,ind1931_t7_communes
-commune,Aïn-Draham,,,Aïn-Draham,,,,exact,1,294,Aïn-Draham,,36.77716,8.689778,communes_budget;communes_building_permits;communes_property;communes_terraces;ind1931_t7annex_communes_1921_1931
+commune,Aïn-Draham,,,Aïn-Draham,,,,exact,1,294,Aïn-Draham,,36.77716,8.689778,communes_budget;communes_building_permits;communes_property;communes_slaughter_dues;communes_terraces;ind1931_t7annex_communes_1921_1931
 commune,Aïn-Draham,Tabarka,,Aïn-Draham,Tabarka,,,exact,1,294,Aïn-Draham,,36.77716,8.689778,cens1926_communes
 commune,Bardo,,,Bardo,,,,ambiguous,2,,,,,,ind1931_t7_communes;ind1931_t7annex_communes_1921_1931
-commune,Bardo (Le),,,Bardo (Le),,,,ambiguous,2,,,,,,communes_budget;communes_building_permits;communes_property;communes_terraces
+commune,Bardo (Le),,,Bardo (Le),,,,ambiguous,2,,,,,,communes_budget;communes_building_permits;communes_property;communes_slaughter_dues;communes_terraces
 commune,Bardo (Le),Tunis,,Bardo (Le),Tunis,,,exact,1,328,Le Bardo,,36.813457,10.14071,cens1926_communes
-commune,Ben-Gardane,,,Ben-Gardane,,,,exact,1,79,Ben-Gardane,,33.1398106305503,11.2162781205863,communes_budget;communes_building_permits;communes_property;communes_terraces;ind1931_t7annex_communes_1921_1931
+commune,Ben-Gardane,,,Ben-Gardane,,,,exact,1,79,Ben-Gardane,,33.1398106305503,11.2162781205863,communes_budget;communes_building_permits;communes_property;communes_slaughter_dues;communes_terraces;ind1931_t7annex_communes_1921_1931
 commune,Ben-Gardane,,Ouerghemma,Ben-Gardane,Territoires militaires du Sud,Ouerghemma,,exact,1,79,Ben-Gardane,,33.1398106305503,11.2162781205863,ind1931_t7_communes
 commune,Ben-Gardane,Territoires militaires,,Ben-Gardane,Territoires militaires du Sud,,,exact,1,79,Ben-Gardane,,33.1398106305503,11.2162781205863,cens1926_communes
 commune,Bizerte,Bizerte,,Bizerte,Bizerte,,,exact,1,109,Bizerte,,37.274767,9.863165,cens1926_communes
 commune,Bizerte,,Bizerte,Bizerte,Bizerte,Bizerte,,exact,1,109,Bizerte,,37.274767,9.863165,ind1931_t7_communes
-commune,Bizerte,,,Bizerte,,,,exact,1,109,Bizerte,,37.274767,9.863165,communes_budget;communes_building_permits;communes_building_values_1939;communes_loans_caisse;communes_property;communes_terraces;ind1931_t7annex_communes_1921_1931
+commune,Bizerte,,,Bizerte,,,,exact,1,109,Bizerte,,37.274767,9.863165,communes_budget;communes_building_permits;communes_building_values_1939;communes_loans_caisse;communes_property;communes_slaughter_dues;communes_terraces;ind1931_t7annex_communes_1921_1931
 commune,Béja,Béja,,Béja,Béja,,,exact,1,49,Béja,,36.7250612934603,9.18327240560908,cens1926_communes
 commune,Béja,,Béja,Béja,Béja,Béja,,exact,1,49,Béja,,36.7250612934603,9.18327240560908,ind1931_t7_communes
-commune,Béja,,,Béja,,,,exact,1,49,Béja,,36.7250612934603,9.18327240560908,communes_budget;communes_building_permits;communes_building_values_1939;communes_loans_caisse;communes_property;communes_terraces;ind1931_t7annex_communes_1921_1931
+commune,Béja,,,Béja,,,,exact,1,49,Béja,,36.7250612934603,9.18327240560908,communes_budget;communes_building_permits;communes_building_values_1939;communes_loans_caisse;communes_property;communes_slaughter_dues;communes_terraces;ind1931_t7annex_communes_1921_1931
 commune,Béja (1),,,Béja,,,,qualifier_stripped,1,49,Béja,,36.7250612934603,9.18327240560908,communes_building_permits;communes_terraces
-commune,Carthage,,,Carthage,,,,exact,1,115,Carthage,,36.850797,10.330343,communes_budget;communes_building_permits;communes_loans_caisse;communes_property;communes_terraces;ind1931_t7annex_communes_1921_1931
+commune,Carthage,,,Carthage,,,,exact,1,115,Carthage,,36.850797,10.330343,communes_budget;communes_building_permits;communes_loans_caisse;communes_property;communes_slaughter_dues;communes_terraces;ind1931_t7annex_communes_1921_1931
 commune,Carthage,,Tunis-Banlieue,Carthage,Tunis,Tunis-Banlieue,,exact,1,115,Carthage,,36.850797,10.330343,ind1931_t7_communes
 commune,Carthage,Tunis,,Carthage,Tunis,,,exact,1,115,Carthage,,36.850797,10.330343,cens1926_communes
 commune,Djem (El),Sousse,,Djem (El),Sousse,,,exact,1,148,El-Jem,,35.2964650075559,10.7068982120322,cens1926_communes
 commune,Djemmal,,Monastir,Djemmal,Sousse,Monastir,,exact,1,128,Jemmel,,35.622038,10.771803,ind1931_t7_communes
-commune,Djemmal,,,Djemmal,,,,exact,1,128,Jemmel,,35.622038,10.771803,communes_budget;communes_building_permits;communes_building_values_1939;communes_property;communes_terraces;ind1931_t7annex_communes_1921_1931
+commune,Djemmal,,,Djemmal,,,,exact,1,128,Jemmel,,35.622038,10.771803,communes_budget;communes_building_permits;communes_building_values_1939;communes_property;communes_slaughter_dues;communes_terraces;ind1931_t7annex_communes_1921_1931
 commune,Djemmal,Sousse,,Djemmal,Sousse,,,exact,1,128,Jemmel,,35.622038,10.771803,cens1926_communes
 commune,Djerba,,Djerba,Djerba,Djerba,Djerba,,none,0,,,,,,ind1931_t7_communes
-commune,Djerba,,,Djerba,,,,none,0,,,,,,communes_budget;communes_building_permits;communes_property;communes_terraces;ind1931_t7annex_communes_1921_1931
+commune,Djerba,,,Djerba,,,,none,0,,,,,,communes_budget;communes_building_permits;communes_property;communes_slaughter_dues;communes_terraces;ind1931_t7annex_communes_1921_1931
 commune,Djerba (Houmt-Souk),Djerba,,Djerba (Houmt-Souk),Djerba,,,none,0,,,,,,cens1926_communes
 commune,Ebba-Ksour,Le Kef,,Ebba-Ksour,Le Kef,,,exact,1,138,Ebba-Ksour,,35.946201894084,8.83074324008434,cens1926_communes
 commune,Ebba-Ksour,,Le Kef,Ebba-Ksour,Le Kef,Le Kef,,exact,1,138,Ebba-Ksour,,35.946201894084,8.83074324008434,ind1931_t7_communes
-commune,Ebba-Ksour,,,Ebba-Ksour,,,,exact,1,138,Ebba-Ksour,,35.946201894084,8.83074324008434,communes_budget;communes_building_permits;communes_property;communes_terraces;ind1931_t7annex_communes_1921_1931
+commune,Ebba-Ksour,,,Ebba-Ksour,,,,exact,1,138,Ebba-Ksour,,35.946201894084,8.83074324008434,communes_budget;communes_building_permits;communes_loans_caisse;communes_property;communes_slaughter_dues;communes_terraces;ind1931_t7annex_communes_1921_1931
 commune,El Djem,,,El Djem,,,,exact,1,148,El-Jem,,35.2964650075559,10.7068982120322,communes_building_permits;communes_terraces
 commune,El Djem (2),,,El Djem,,,,qualifier_stripped,1,148,El-Jem,,35.2964650075559,10.7068982120322,communes_building_permits;communes_terraces
 commune,El-Djem,,Mahdia,El-Djem,Sousse,Mahdia,,exact,1,148,El-Jem,,35.2964650075559,10.7068982120322,ind1931_t7_communes
-commune,El-Djem,,,El-Djem,,,,exact,1,148,El-Jem,,35.2964650075559,10.7068982120322,communes_budget;communes_building_permits;communes_building_values_1939;communes_property;communes_terraces;ind1931_t7annex_communes_1921_1931
+commune,El-Djem,,,El-Djem,,,,exact,1,148,El-Jem,,35.2964650075559,10.7068982120322,communes_budget;communes_building_permits;communes_building_values_1939;communes_property;communes_slaughter_dues;communes_terraces;ind1931_t7annex_communes_1921_1931
 commune,El-Djem (1),,,El-Djem,,,,qualifier_stripped,1,148,El-Jem,,35.2964650075559,10.7068982120322,communes_building_permits;communes_terraces
 commune,El-Djem (2),,,El-Djem,,,,qualifier_stripped,1,148,El-Jem,,35.2964650075559,10.7068982120322,communes_building_permits;communes_terraces
 commune,El-Hamma,,,El-Hamma,,,,ambiguous,2,,,,,,communes_building_values_1939
@@ -895,45 +895,45 @@ commune,Feriana,,,Feriana,,,,exact,1,649,Feriana,,34.9430540101271,8.56531927971
 commune,Feriana,Thala,,Feriana,Thala,,,exact,1,649,Feriana,,34.9430540101271,8.56531927971463,cens1926_communes
 commune,Ferryville,Bizerte,,Ferryville,Bizerte,,,exact,1,453,Ferryville,,37.153727,9.788891,cens1926_communes
 commune,Ferryville,,Bizerte,Ferryville,Bizerte,Bizerte,,exact,1,453,Ferryville,,37.153727,9.788891,ind1931_t7_communes
-commune,Ferryville,,,Ferryville,,,,exact,1,453,Ferryville,,37.153727,9.788891,communes_budget;communes_building_permits;communes_building_values_1939;communes_loans_caisse;communes_property;communes_terraces;ind1931_t7annex_communes_1921_1931
+commune,Ferryville,,,Ferryville,,,,exact,1,453,Ferryville,,37.153727,9.788891,communes_budget;communes_building_permits;communes_building_values_1939;communes_loans_caisse;communes_property;communes_slaughter_dues;communes_terraces;ind1931_t7annex_communes_1921_1931
 commune,Ferryville (1),,,Ferryville,,,,qualifier_stripped,1,453,Ferryville,,37.153727,9.788891,communes_building_permits;communes_terraces
-commune,Foum-Tatahouine,,,Foum-Tatahouine,,,,none,0,,,,,,communes_building_permits;communes_terraces;ind1931_t7annex_communes_1921_1931
+commune,Foum-Tatahouine,,,Foum-Tatahouine,,,,none,0,,,,,,communes_building_permits;communes_slaughter_dues;communes_terraces;ind1931_t7annex_communes_1921_1931
 commune,Foum-Tatahouine,,Tatahouine,Foum-Tatahouine,Territoires militaires du Sud,Tatahouine,,none,0,,,,,,ind1931_t7_communes
 commune,Foum-Tatahouine,Territoires militaires,,Foum-Tatahouine,Territoires militaires du Sud,,,none,0,,,,,,cens1926_communes
-commune,Fériana,,,Fériana,,,,exact,1,649,Feriana,,34.9430540101271,8.56531927971463,communes_budget;communes_building_permits;communes_property;communes_terraces;ind1931_t7annex_communes_1921_1931
+commune,Fériana,,,Fériana,,,,exact,1,649,Feriana,,34.9430540101271,8.56531927971463,communes_budget;communes_building_permits;communes_property;communes_slaughter_dues;communes_terraces;ind1931_t7annex_communes_1921_1931
 commune,Gabès,Gabès,,Gabès,Gabès,,,exact,1,7,Gabès,,33.8857096933919,10.0996046929066,cens1926_communes
 commune,Gabès,,Aradh,Gabès,Gabès,Aradh,,exact,1,7,Gabès,,33.8857096933919,10.0996046929066,ind1931_t7_communes
-commune,Gabès,,,Gabès,,,,exact,1,7,Gabès,,33.8857096933919,10.0996046929066,communes_budget;communes_building_permits;communes_building_values_1939;communes_property;communes_terraces;ind1931_t7annex_communes_1921_1931
+commune,Gabès,,,Gabès,,,,exact,1,7,Gabès,,33.8857096933919,10.0996046929066,communes_budget;communes_building_permits;communes_building_values_1939;communes_loans_caisse;communes_property;communes_slaughter_dues;communes_terraces;ind1931_t7annex_communes_1921_1931
 commune,Gafsa,Gafsa,,Gafsa,Gafsa,,,exact,1,161,Gafsa,,34.423705,8.782501,cens1926_communes
 commune,Gafsa,,Gafsa,Gafsa,Gafsa,Gafsa,,exact,1,161,Gafsa,,34.423705,8.782501,ind1931_t7_communes
-commune,Gafsa,,,Gafsa,,,,exact,1,161,Gafsa,,34.423705,8.782501,communes_budget;communes_building_permits;communes_building_values_1939;communes_property;communes_terraces;ind1931_t7annex_communes_1921_1931
-commune,Ghardimaou,,,Ghardimaou,,,,exact,1,11,Ghardimaou,,36.447103544526,8.43827133348973,communes_budget;communes_building_permits;communes_loans_caisse;communes_property;communes_terraces;ind1931_t7annex_communes_1921_1931
+commune,Gafsa,,,Gafsa,,,,exact,1,161,Gafsa,,34.423705,8.782501,communes_budget;communes_building_permits;communes_building_values_1939;communes_loans_caisse;communes_property;communes_slaughter_dues;communes_terraces;ind1931_t7annex_communes_1921_1931
+commune,Ghardimaou,,,Ghardimaou,,,,exact,1,11,Ghardimaou,,36.447103544526,8.43827133348973,communes_budget;communes_building_permits;communes_loans_caisse;communes_property;communes_slaughter_dues;communes_terraces;ind1931_t7annex_communes_1921_1931
 commune,Ghardimaou,,Souk-El-Arba,Ghardimaou,Souk-el-Arba,Souk-el-Arba,,exact,1,11,Ghardimaou,,36.447103544526,8.43827133348973,ind1931_t7_communes
 commune,Ghardimaou,Souk-el-Arba,,Ghardimaou,Souk-el-Arba,,,exact,1,11,Ghardimaou,,36.447103544526,8.43827133348973,cens1926_communes
-commune,Goulette (La),,,Goulette (La),,,,exact,1,14,La Goulette,,36.820138,10.304205,communes_budget;communes_building_permits;communes_building_values_1939;communes_property;communes_terraces;ind1931_t7annex_communes_1921_1931
+commune,Goulette (La),,,Goulette (La),,,,exact,1,14,La Goulette,,36.820138,10.304205,communes_budget;communes_building_permits;communes_building_values_1939;communes_property;communes_slaughter_dues;communes_terraces;ind1931_t7annex_communes_1921_1931
 commune,Goulette (La),,Tunis-Banlieue,Goulette (La),Tunis,Tunis-Banlieue,,exact,1,14,La Goulette,,36.820138,10.304205,ind1931_t7_communes
 commune,Goulette (La),Tunis,,Goulette (La),Tunis,,,exact,1,14,La Goulette,,36.820138,10.304205,cens1926_communes
 commune,Grombalia,Grombalia,,Grombalia,Grombalia,,,exact,1,1003,Grombalia,,36.6,10.5,cens1926_communes
-commune,Grombalia,,,Grombalia,,,,exact,1,1003,Grombalia,,36.6,10.5,communes_budget;communes_building_permits;communes_property;communes_terraces;ind1931_t7annex_communes_1921_1931
+commune,Grombalia,,,Grombalia,,,,exact,1,1003,Grombalia,,36.6,10.5,communes_budget;communes_building_permits;communes_property;communes_slaughter_dues;communes_terraces;ind1931_t7annex_communes_1921_1931
 commune,Grombalia,,Soliman,Grombalia,Grombalia,Soliman,,exact,1,1003,Grombalia,,36.6,10.5,ind1931_t7_communes
 commune,Hadjeb-El-Aïoun,Kairouan,,Hadjeb-El-Aïoun,Kairouan,,,exact,1,210,Hadjeb El-Aïoun,,35.393639,9.542921,cens1926_communes
 commune,Hadjeb-El-Aïoun,,Djelass,Hadjeb-El-Aïoun,Kairouan,Djelass,,exact,1,210,Hadjeb El-Aïoun,,35.393639,9.542921,ind1931_t7_communes
 commune,Hadjeb-El-Aïoun,,,Hadjeb-El-Aïoun,,,,ambiguous,2,,,,,,ind1931_t7annex_communes_1921_1931
 commune,Hadjeb-el-Aioun,,,Hadjeb-el-Aioun,,,,ambiguous,2,,,,,,communes_budget;communes_property
-commune,Hadjeb-el-Aïoun,,,Hadjeb-el-Aïoun,,,,ambiguous,2,,,,,,communes_building_permits;communes_terraces
+commune,Hadjeb-el-Aïoun,,,Hadjeb-el-Aïoun,,,,ambiguous,2,,,,,,communes_building_permits;communes_slaughter_dues;communes_terraces
 commune,Hadjeb-el-Aïoun (2),,,Hadjeb-el-Aïoun,,,,ambiguous,2,,,,,,communes_building_permits;communes_terraces
 commune,Hamma (El),Gabès,,Hamma (El),Gabès,,,exact,1,507,El-Hamma,,33.8841,9.79184,cens1926_communes
 commune,Hamma (El),,Aradh,Hamma (El),Gabès,Aradh,,exact,1,507,El-Hamma,,33.8841,9.79184,ind1931_t7_communes
-commune,Hamma (El),,,Hamma (El),,,,ambiguous,2,,,,,,communes_building_permits;communes_terraces;ind1931_t7annex_communes_1921_1931
+commune,Hamma (El),,,Hamma (El),,,,ambiguous,2,,,,,,communes_building_permits;communes_slaughter_dues;communes_terraces;ind1931_t7annex_communes_1921_1931
 commune,Hamma de Gabès (El),,,Hamma de Gabès (El),,,,exact,1,15,Hamma de Gabes,,33.878581,9.75173,communes_budget;communes_property
-commune,Hammam-Lif,,,Hammam-Lif,,,,exact,1,17,Hammam-Lif,,36.723072,10.344176,communes_budget;communes_building_permits;communes_loans_caisse;communes_property;communes_terraces;ind1931_t7annex_communes_1921_1931
+commune,Hammam-Lif,,,Hammam-Lif,,,,exact,1,17,Hammam-Lif,,36.723072,10.344176,communes_budget;communes_building_permits;communes_loans_caisse;communes_property;communes_slaughter_dues;communes_terraces;ind1931_t7annex_communes_1921_1931
 commune,Hammam-Lif,,Tunis-Banlieue,Hammam-Lif,Tunis,Tunis-Banlieue,,exact,1,17,Hammam-Lif,,36.723072,10.344176,ind1931_t7_communes
 commune,Hammam-Lif,Tunis,,Hammam-Lif,Tunis,,,exact,1,17,Hammam-Lif,,36.723072,10.344176,cens1926_communes
 commune,Kairouan,Kairouan,,Kairouan,Kairouan,,,exact,1,22,Kairouan,,35.675914,10.091924,cens1926_communes
 commune,Kairouan,,Kairouan,Kairouan,Kairouan,Kairouan,,exact,1,22,Kairouan,,35.675914,10.091924,ind1931_t7_communes
-commune,Kairouan,,,Kairouan,,,,exact,1,22,Kairouan,,35.675914,10.091924,communes_budget;communes_building_permits;communes_building_values_1939;communes_loans_caisse;communes_property;communes_terraces;ind1931_t7annex_communes_1921_1931
+commune,Kairouan,,,Kairouan,,,,exact,1,22,Kairouan,,35.675914,10.091924,communes_budget;communes_building_permits;communes_building_values_1939;communes_loans_caisse;communes_property;communes_slaughter_dues;communes_terraces;ind1931_t7annex_communes_1921_1931
 commune,Kairouan (3),,,Kairouan,,,,qualifier_stripped,1,22,Kairouan,,35.675914,10.091924,communes_building_permits;communes_terraces
-commune,Kalaa-Kebira,,,Kalaa-Kebira,,,,exact,1,23,Kalaa-Kebira,,35.869824,10.535237,communes_budget;communes_building_permits;communes_building_values_1939;communes_property;communes_terraces
+commune,Kalaa-Kebira,,,Kalaa-Kebira,,,,exact,1,23,Kalaa-Kebira,,35.869824,10.535237,communes_budget;communes_building_permits;communes_building_values_1939;communes_property;communes_slaughter_dues;communes_terraces
 commune,Kalaa-Kebira (3),,,Kalaa-Kebira,,,,qualifier_stripped,1,23,Kalaa-Kebira,,35.869824,10.535237,communes_building_permits;communes_terraces
 commune,Kalaâ-Kebira,,Sousse,Kalaâ-Kebira,Sousse,Sousse,,exact,1,23,Kalaa-Kebira,,35.869824,10.535237,ind1931_t7_communes
 commune,Kalaâ-Kebira,Sousse,,Kalaâ-Kebira,Sousse,,,exact,1,23,Kalaa-Kebira,,35.869824,10.535237,cens1926_communes
@@ -942,18 +942,18 @@ commune,Kalla-Kebira,,,Kalla-Kebira,,,,none,0,,,,,,communes_budget
 commune,Kef,,,Kef,,,,exact,1,38,Le Kef,,36.169628,8.707127,communes_building_permits;communes_terraces
 commune,Kef (Le),Le Kef,,Kef (Le),Le Kef,,,exact,1,38,Le Kef,,36.169628,8.707127,cens1926_communes
 commune,Kef (Le),,Le Kef,Kef (Le),Le Kef,Le Kef,,exact,1,38,Le Kef,,36.169628,8.707127,ind1931_t7_communes
-commune,Kef (Le),,,Kef (Le),,,,exact,1,38,Le Kef,,36.169628,8.707127,communes_budget;communes_building_permits;communes_property;communes_terraces;ind1931_t7annex_communes_1921_1931
+commune,Kef (Le),,,Kef (Le),,,,exact,1,38,Le Kef,,36.169628,8.707127,communes_budget;communes_building_permits;communes_property;communes_slaughter_dues;communes_terraces;ind1931_t7annex_communes_1921_1931
 commune,Kef (Le) (2),,,Kef (Le),,,,qualifier_stripped,1,38,Le Kef,,36.169628,8.707127,communes_building_permits;communes_terraces
 commune,Kef (Le) (4),,,Kef (Le),,,,qualifier_stripped,1,38,Le Kef,,36.169628,8.707127,communes_building_permits;communes_terraces
-commune,Kram (Le),,,Kram (Le),,,,exact,1,357,Le Kram,,36.834315,10.316352,communes_budget;communes_building_permits;communes_property;communes_terraces
+commune,Kram (Le),,,Kram (Le),,,,exact,1,357,Le Kram,,36.834315,10.316352,communes_budget;communes_building_permits;communes_property;communes_slaughter_dues;communes_terraces
 commune,Kram (Le),Tunis,,Kram (Le),Tunis,,,exact,1,357,Le Kram,,36.834315,10.316352,cens1926_communes
 commune,Kram (Le) (1),,,Kram (Le),,,,qualifier_stripped,1,357,Le Kram,,36.834315,10.316352,communes_budget
 commune,Krib,,,Krib,,,,exact,1,39,Krib,,36.329189,9.133385,communes_building_permits;communes_terraces
-commune,Krib (Le),,,Krib (Le),,,,exact,1,39,Krib,,36.329189,9.133385,communes_budget;communes_building_permits;communes_property;communes_terraces;ind1931_t7annex_communes_1921_1931
+commune,Krib (Le),,,Krib (Le),,,,exact,1,39,Krib,,36.329189,9.133385,communes_budget;communes_building_permits;communes_property;communes_slaughter_dues;communes_terraces;ind1931_t7annex_communes_1921_1931
 commune,Krib (Le),,Téboursouk,Krib (Le),Téboursouk,Téboursouk,,exact,1,39,Krib,,36.329189,9.133385,ind1931_t7_communes
 commune,Krib (Le),Téboursouk,,Krib (Le),Téboursouk,,,exact,1,39,Krib,,36.329189,9.133385,cens1926_communes
 commune,Ksour-Essaf,,Mahdia,Ksour-Essaf,Sousse,Mahdia,,exact,1,35,Ksour-Essaf,,35.4167923124299,10.9961352983127,ind1931_t7_communes
-commune,Ksour-Essaf,,,Ksour-Essaf,,,,exact,1,35,Ksour-Essaf,,35.4167923124299,10.9961352983127,communes_budget;communes_building_permits;communes_building_values_1939;communes_property;communes_terraces;ind1931_t7annex_communes_1921_1931
+commune,Ksour-Essaf,,,Ksour-Essaf,,,,exact,1,35,Ksour-Essaf,,35.4167923124299,10.9961352983127,communes_budget;communes_building_permits;communes_building_values_1939;communes_property;communes_slaughter_dues;communes_terraces;ind1931_t7annex_communes_1921_1931
 commune,Ksour-Essaf,Sousse,,Ksour-Essaf,Sousse,,,exact,1,35,Ksour-Essaf,,35.4167923124299,10.9961352983127,cens1926_communes
 commune,Ksour-Essaf (3),,,Ksour-Essaf,,,,qualifier_stripped,1,35,Ksour-Essaf,,35.4167923124299,10.9961352983127,communes_building_permits;communes_terraces
 commune,La Marsa,,,La Marsa,,,,exact,1,46,La Marsa,,36.894009,10.312697,communes_loans_caisse
@@ -961,71 +961,71 @@ commune,Le Kef,,,Le Kef,,,,exact,1,38,Le Kef,,36.169628,8.707127,communes_buildi
 commune,M'Saken,,,M'Saken,,,,none,0,,,,,,communes_building_permits;communes_building_values_1939;ind1931_t7annex_communes_1921_1931
 commune,M'Saken,,Sousse,M'Saken,Sousse,Sousse,,none,0,,,,,,ind1931_t7_communes
 commune,M'Saken,Sousse,,M'Saken,Sousse,,,none,0,,,,,,cens1926_communes
-commune,M'saken,,,M'saken,,,,none,0,,,,,,communes_budget;communes_building_permits;communes_property;communes_terraces
+commune,M'saken,,,M'saken,,,,none,0,,,,,,communes_budget;communes_building_permits;communes_property;communes_slaughter_dues;communes_terraces
 commune,Maharès,,La Skhira,Maharès,Sfax,La Skhira,,exact,1,734,Al-Maharas,,34.5276354727116,10.4970924885485,ind1931_t7_communes
-commune,Maharès,,,Maharès,,,,exact,1,734,Al-Maharas,,34.5276354727116,10.4970924885485,communes_budget;communes_building_permits;communes_property;communes_terraces;ind1931_t7annex_communes_1921_1931
+commune,Maharès,,,Maharès,,,,exact,1,734,Al-Maharas,,34.5276354727116,10.4970924885485,communes_budget;communes_building_permits;communes_property;communes_slaughter_dues;communes_terraces;ind1931_t7annex_communes_1921_1931
 commune,Maharès,Sfax,,Maharès,Sfax,,,exact,1,734,Al-Maharas,,34.5276354727116,10.4970924885485,cens1926_communes
 commune,Mahdia,,Mahdia,Mahdia,Sousse,Mahdia,,exact,1,43,Mahdia,,35.503843,11.062875,ind1931_t7_communes
-commune,Mahdia,,,Mahdia,,,,exact,1,43,Mahdia,,35.503843,11.062875,communes_budget;communes_building_permits;communes_building_values_1939;communes_loans_caisse;communes_property;communes_terraces;ind1931_t7annex_communes_1921_1931
+commune,Mahdia,,,Mahdia,,,,exact,1,43,Mahdia,,35.503843,11.062875,communes_budget;communes_building_permits;communes_building_values_1939;communes_loans_caisse;communes_property;communes_slaughter_dues;communes_terraces;ind1931_t7annex_communes_1921_1931
 commune,Mahdia,Sousse,,Mahdia,Sousse,,,exact,1,43,Mahdia,,35.503843,11.062875,cens1926_communes
-commune,Marsa (La),,,Marsa (La),,,,exact,1,46,La Marsa,,36.894009,10.312697,communes_budget;communes_building_permits;communes_building_values_1939;communes_property;communes_terraces;ind1931_t7annex_communes_1921_1931
+commune,Marsa (La),,,Marsa (La),,,,exact,1,46,La Marsa,,36.894009,10.312697,communes_budget;communes_building_permits;communes_building_values_1939;communes_property;communes_slaughter_dues;communes_terraces;ind1931_t7annex_communes_1921_1931
 commune,Marsa (La),,Tunis-Banlieue,Marsa (La),Tunis,Tunis-Banlieue,,exact,1,46,La Marsa,,36.894009,10.312697,ind1931_t7_communes
 commune,Marsa (La),Tunis,,Marsa (La),Tunis,,,exact,1,46,La Marsa,,36.894009,10.312697,cens1926_communes
 commune,Mateur,Bizerte,,Mateur,Bizerte,,,exact,1,50,Mateur,,37.038887,9.664764,cens1926_communes
 commune,Mateur,,Mateur,Mateur,Bizerte,Mateur,,exact,1,50,Mateur,,37.038887,9.664764,ind1931_t7_communes
-commune,Mateur,,,Mateur,,,,exact,1,50,Mateur,,37.038887,9.664764,communes_budget;communes_building_permits;communes_building_values_1939;communes_loans_caisse;communes_property;communes_terraces;ind1931_t7annex_communes_1921_1931
-commune,Maxula-Radès,,,Maxula-Radès,,,,exact,1,51,Maxula-Rades,,36.771457,10.280813,communes_budget;communes_building_permits;communes_property;communes_terraces;ind1931_t7annex_communes_1921_1931
+commune,Mateur,,,Mateur,,,,exact,1,50,Mateur,,37.038887,9.664764,communes_budget;communes_building_permits;communes_building_values_1939;communes_loans_caisse;communes_property;communes_slaughter_dues;communes_terraces;ind1931_t7annex_communes_1921_1931
+commune,Maxula-Radès,,,Maxula-Radès,,,,exact,1,51,Maxula-Rades,,36.771457,10.280813,communes_budget;communes_building_permits;communes_property;communes_slaughter_dues;communes_terraces;ind1931_t7annex_communes_1921_1931
 commune,Maxula-Radès,,Tunis-Banlieue,Maxula-Radès,Tunis,Tunis-Banlieue,,exact,1,51,Maxula-Rades,,36.771457,10.280813,ind1931_t7_communes
 commune,Maxula-Radès,Tunis,,Maxula-Radès,Tunis,,,exact,1,51,Maxula-Rades,,36.771457,10.280813,cens1926_communes
 commune,Medjez-El-Bab,,Medjez-El-Bab,Medjez-El-Bab,Medjez-el-Bab,Medjez-el-Bab,,exact,1,52,Medjez-El-Bab,,36.647829,9.612908,ind1931_t7_communes
 commune,Medjez-El-Bab,,,Medjez-El-Bab,,,,exact,1,52,Medjez-El-Bab,,36.647829,9.612908,ind1931_t7annex_communes_1921_1931
 commune,Medjez-el-Bab,Medjez-el-Bab,,Medjez-el-Bab,Medjez-el-Bab,,,exact,1,52,Medjez-El-Bab,,36.647829,9.612908,cens1926_communes
-commune,Medjez-el-Bab,,,Medjez-el-Bab,,,,exact,1,52,Medjez-El-Bab,,36.647829,9.612908,communes_budget;communes_building_permits;communes_property;communes_terraces
+commune,Medjez-el-Bab,,,Medjez-el-Bab,,,,exact,1,52,Medjez-El-Bab,,36.647829,9.612908,communes_budget;communes_building_permits;communes_property;communes_slaughter_dues;communes_terraces
 commune,Menzel-Bou-Zelfa,Grombalia,,Menzel-Bou-Zelfa,Grombalia,,,exact,1,998,Menzel-Bou-Zelfa,,36.683053,10.58443,cens1926_communes
 commune,Menzel-Bou-Zelfa,,,Menzel-Bou-Zelfa,,,,exact,1,998,Menzel-Bou-Zelfa,,36.683053,10.58443,communes_building_values_1939;ind1931_t7annex_communes_1921_1931
 commune,Menzel-Bou-Zelfa,,Soliman,Menzel-Bou-Zelfa,Grombalia,Soliman,,exact,1,998,Menzel-Bou-Zelfa,,36.683053,10.58443,ind1931_t7_communes
 commune,Menzel-Temime,Grombalia,,Menzel-Temime,Grombalia,,,exact,1,860,Menzel-Temime,,36.78,10.98853,cens1926_communes
 commune,Menzel-Temime,,Nabeul,Menzel-Temime,Grombalia,Nabeul,,exact,1,860,Menzel-Temime,,36.78,10.98853,ind1931_t7_communes
-commune,Menzel-Temime,,,Menzel-Temime,,,,exact,1,860,Menzel-Temime,,36.78,10.98853,communes_budget;communes_building_permits;communes_building_values_1939;communes_property;communes_terraces;ind1931_t7annex_communes_1921_1931
-commune,Menzel-bou-Zelfa,,,Menzel-bou-Zelfa,,,,exact,1,998,Menzel-Bou-Zelfa,,36.683053,10.58443,communes_budget;communes_building_permits;communes_property;communes_terraces
+commune,Menzel-Temime,,,Menzel-Temime,,,,exact,1,860,Menzel-Temime,,36.78,10.98853,communes_budget;communes_building_permits;communes_building_values_1939;communes_property;communes_slaughter_dues;communes_terraces;ind1931_t7annex_communes_1921_1931
+commune,Menzel-bou-Zelfa,,,Menzel-bou-Zelfa,,,,exact,1,998,Menzel-Bou-Zelfa,,36.683053,10.58443,communes_budget;communes_building_permits;communes_property;communes_slaughter_dues;communes_terraces
 commune,Menzel-bou-Zelfa (3),,,Menzel-bou-Zelfa,,,,qualifier_stripped,1,998,Menzel-Bou-Zelfa,,36.683053,10.58443,communes_building_permits;communes_terraces
 commune,Moknine,,Monastir,Moknine,Sousse,Monastir,,exact,1,59,Moknine,,35.62915752625,10.8997464194273,ind1931_t7_communes
-commune,Moknine,,,Moknine,,,,exact,1,59,Moknine,,35.62915752625,10.8997464194273,communes_budget;communes_building_permits;communes_building_values_1939;communes_property;communes_terraces;ind1931_t7annex_communes_1921_1931
+commune,Moknine,,,Moknine,,,,exact,1,59,Moknine,,35.62915752625,10.8997464194273,communes_budget;communes_building_permits;communes_building_values_1939;communes_property;communes_slaughter_dues;communes_terraces;ind1931_t7annex_communes_1921_1931
 commune,Moknine,Sousse,,Moknine,Sousse,,,exact,1,59,Moknine,,35.62915752625,10.8997464194273,cens1926_communes
-commune,Monastir,,,Monastir,,,,exact,1,60,Monastir,,35.7693905804844,10.8195665940049,communes_budget;communes_building_permits;communes_building_values_1939;communes_loans_caisse;communes_property;communes_terraces;ind1931_t7_communes;ind1931_t7annex_communes_1921_1931
+commune,Monastir,,,Monastir,,,,exact,1,60,Monastir,,35.7693905804844,10.8195665940049,communes_budget;communes_building_permits;communes_building_values_1939;communes_loans_caisse;communes_property;communes_slaughter_dues;communes_terraces;ind1931_t7_communes;ind1931_t7annex_communes_1921_1931
 commune,Monastir,Sousse,,Monastir,Sousse,,,exact,1,60,Monastir,,35.7693905804844,10.8195665940049,cens1926_communes
 commune,Monastir (4),,,Monastir,,,,qualifier_stripped,1,60,Monastir,,35.7693905804844,10.8195665940049,communes_building_permits;communes_terraces
 commune,Monastir (5),,,Monastir,,,,qualifier_stripped,1,60,Monastir,,35.7693905804844,10.8195665940049,communes_building_permits;communes_terraces
-commune,Médenine,,,Médenine,,,,exact,1,903,Medenine,,33.34,10.49,communes_budget;communes_building_permits;communes_loans_caisse;communes_property;communes_terraces;ind1931_t7annex_communes_1921_1931
+commune,Médenine,,,Médenine,,,,exact,1,903,Medenine,,33.34,10.49,communes_budget;communes_building_permits;communes_loans_caisse;communes_property;communes_slaughter_dues;communes_terraces;ind1931_t7annex_communes_1921_1931
 commune,Médenine,,Ouerghemma,Médenine,Territoires militaires du Sud,Ouerghemma,,exact,1,903,Medenine,,33.34,10.49,ind1931_t7_communes
 commune,Médenine,Territoires militaires,,Médenine,Territoires militaires du Sud,,,exact,1,903,Medenine,,33.34,10.49,cens1926_communes
 commune,Nabeul,Grombalia,,Nabeul,Grombalia,,,exact,1,63,Nabeul,,36.4512808841432,10.735593849038,cens1926_communes
 commune,Nabeul,,Nabeul,Nabeul,Grombalia,Nabeul,,exact,1,63,Nabeul,,36.4512808841432,10.735593849038,ind1931_t7_communes
-commune,Nabeul,,,Nabeul,,,,exact,1,63,Nabeul,,36.4512808841432,10.735593849038,communes_budget;communes_building_permits;communes_building_values_1939;communes_loans_caisse;communes_property;communes_terraces;ind1931_t7annex_communes_1921_1931
+commune,Nabeul,,,Nabeul,,,,exact,1,63,Nabeul,,36.4512808841432,10.735593849038,communes_budget;communes_building_permits;communes_building_values_1939;communes_loans_caisse;communes_property;communes_slaughter_dues;communes_terraces;ind1931_t7annex_communes_1921_1931
 commune,Nefta,,Djerid,Nefta,Tozeur,Djerid,,exact,1,181,Nefta,,33.871243,7.879161,ind1931_t7_communes
-commune,Nefta,,,Nefta,,,,exact,1,181,Nefta,,33.871243,7.879161,communes_budget;communes_building_permits;communes_building_values_1939;communes_property;communes_terraces;ind1931_t7annex_communes_1921_1931
+commune,Nefta,,,Nefta,,,,exact,1,181,Nefta,,33.871243,7.879161,communes_budget;communes_building_permits;communes_building_values_1939;communes_property;communes_slaughter_dues;communes_terraces;ind1931_t7annex_communes_1921_1931
 commune,Nefta,Tozeur,,Nefta,Tozeur,,,exact,1,181,Nefta,,33.871243,7.879161,cens1926_communes
 commune,Philippe-Thomas,Gafsa,,Philippe-Thomas,Gafsa,,,none,0,,,,,,cens1926_communes
 commune,Philippe-Thomas,,Gafsa,Philippe-Thomas,Gafsa,Gafsa,,none,0,,,,,,ind1931_t7_communes
-commune,Philippe-Thomas,,,Philippe-Thomas,,,,none,0,,,,,,communes_budget;communes_building_permits;communes_property;communes_terraces;ind1931_t7annex_communes_1921_1931
+commune,Philippe-Thomas,,,Philippe-Thomas,,,,none,0,,,,,,communes_budget;communes_building_permits;communes_property;communes_slaughter_dues;communes_terraces;ind1931_t7annex_communes_1921_1931
 commune,Pêcherie ((La),,,Pêcherie ((La),,,,exact,1,435,La Pêcherie,,37.256652,9.837251,communes_budget
 commune,Pêcherie (La),Bizerte,,Pêcherie (La),Bizerte,,,exact,1,435,La Pêcherie,,37.256652,9.837251,cens1926_communes
-commune,Pêcherie (La),,,Pêcherie (La),,,,exact,1,435,La Pêcherie,,37.256652,9.837251,communes_budget;communes_building_permits;communes_property;communes_terraces
-commune,Saint-Germain,,,Saint-Germain,,,,exact,1,72,Saint-Germain,,36.74594,10.3078,communes_budget;communes_building_permits;communes_property;communes_terraces;ind1931_t7annex_communes_1921_1931
+commune,Pêcherie (La),,,Pêcherie (La),,,,exact,1,435,La Pêcherie,,37.256652,9.837251,communes_budget;communes_building_permits;communes_property;communes_slaughter_dues;communes_terraces
+commune,Saint-Germain,,,Saint-Germain,,,,exact,1,72,Saint-Germain,,36.74594,10.3078,communes_budget;communes_building_permits;communes_loans_caisse;communes_property;communes_slaughter_dues;communes_terraces;ind1931_t7annex_communes_1921_1931
 commune,Saint-Germain,,Tunis-Banlieue,Saint-Germain,Tunis,Tunis-Banlieue,,exact,1,72,Saint-Germain,,36.74594,10.3078,ind1931_t7_communes
 commune,Saint-Germain,Tunis,,Saint-Germain,Tunis,,,exact,1,72,Saint-Germain,,36.74594,10.3078,cens1926_communes
 commune,Sbeitla,,,Sbeitla,,,,exact,1,665,Sbeitla,,35.2293172832342,9.12985405406912,communes_budget
 commune,Sbeïtla,,Madjeurs,Sbeïtla,Thala,Madjeurs,,exact,1,665,Sbeitla,,35.2293172832342,9.12985405406912,ind1931_t7_communes
 commune,Sbeïtla,,,Sbeïtla,,,,exact,1,665,Sbeitla,,35.2293172832342,9.12985405406912,communes_budget;communes_building_permits;communes_property;communes_terraces;ind1931_t7annex_communes_1921_1931
-commune,Sfax,,,Sfax,,,,exact,1,80,Sfax,,34.73309867816,10.7583704515768,communes_budget;communes_building_permits;communes_building_values_1939;communes_loans_caisse;communes_property;communes_terraces;ind1931_t7annex_communes_1921_1931
+commune,Sfax,,,Sfax,,,,exact,1,80,Sfax,,34.73309867816,10.7583704515768,communes_budget;communes_building_permits;communes_building_values_1939;communes_loans_caisse;communes_property;communes_slaughter_dues;communes_terraces;ind1931_t7annex_communes_1921_1931
 commune,Sfax,,Sfax,Sfax,Sfax,Sfax,,exact,1,80,Sfax,,34.73309867816,10.7583704515768,ind1931_t7_communes
 commune,Sfax,Sfax,,Sfax,Sfax,,,exact,1,80,Sfax,,34.73309867816,10.7583704515768,cens1926_communes
 commune,Sidi-Bou-Saïd,,,Sidi-Bou-Saïd,,,,exact,1,84,Sidi-Bou-Said,,36.870357,10.34204,ind1931_t7annex_communes_1921_1931
 commune,Sidi-Bou-Saïd,,Tunis-Banlieue,Sidi-Bou-Saïd,Tunis,Tunis-Banlieue,,exact,1,84,Sidi-Bou-Said,,36.870357,10.34204,ind1931_t7_communes
-commune,Sidi-bou-Saïd,,,Sidi-bou-Saïd,,,,exact,1,84,Sidi-Bou-Said,,36.870357,10.34204,communes_budget;communes_building_permits;communes_property;communes_terraces
+commune,Sidi-bou-Saïd,,,Sidi-bou-Saïd,,,,exact,1,84,Sidi-Bou-Said,,36.870357,10.34204,communes_budget;communes_building_permits;communes_loans_caisse;communes_property;communes_slaughter_dues;communes_terraces
 commune,Sidi-bou-Saïd,Tunis,,Sidi-bou-Saïd,Tunis,,,exact,1,84,Sidi-Bou-Said,,36.870357,10.34204,cens1926_communes
 commune,Soliman,Grombalia,,Soliman,Grombalia,,,exact,1,997,Soliman,,36.7,10.49,cens1926_communes
-commune,Soliman,,,Soliman,,,,exact,1,997,Soliman,,36.7,10.49,communes_budget;communes_building_permits;communes_property;communes_terraces;ind1931_t7annex_communes_1921_1931
+commune,Soliman,,,Soliman,,,,exact,1,997,Soliman,,36.7,10.49,communes_budget;communes_building_permits;communes_property;communes_slaughter_dues;communes_terraces;ind1931_t7annex_communes_1921_1931
 commune,Soliman,,Soliman,Soliman,Grombalia,Soliman,,exact,1,997,Soliman,,36.7,10.49,ind1931_t7_communes
 commune,Soliman (1),,,Soliman,,,,qualifier_stripped,1,997,Soliman,,36.7,10.49,communes_budget
 commune,Soliman (4),,,Soliman,,,,qualifier_stripped,1,997,Soliman,,36.7,10.49,communes_building_permits;communes_terraces
@@ -1033,42 +1033,42 @@ commune,Souk-El-Arba,,,Souk-El-Arba,,,,exact,1,87,Souk El-Arba (Jendouba),,36.49
 commune,Souk-El-Arba,,Souk-El-Arba,Souk-El-Arba,Souk-el-Arba,Souk-el-Arba,,exact,1,87,Souk El-Arba (Jendouba),,36.4969326358885,8.77643419432405,ind1931_t7_communes
 commune,Souk-El-Khemis,,,Souk-El-Khemis,,,,exact,1,88,Souk El-Khemis (Bou Salem),,36.6075297328957,8.96956890839965,ind1931_t7annex_communes_1921_1931
 commune,Souk-El-Khemis,,Souk-El-Khemis,Souk-El-Khemis,Souk-el-Arba,Souk-el-Khemis,,exact,1,88,Souk El-Khemis (Bou Salem),,36.6075297328957,8.96956890839965,ind1931_t7_communes
-commune,Souk-el-Arba,,,Souk-el-Arba,,,,exact,1,87,Souk El-Arba (Jendouba),,36.4969326358885,8.77643419432405,communes_budget;communes_building_permits;communes_loans_caisse;communes_property;communes_terraces
+commune,Souk-el-Arba,,,Souk-el-Arba,,,,exact,1,87,Souk El-Arba (Jendouba),,36.4969326358885,8.77643419432405,communes_budget;communes_building_permits;communes_loans_caisse;communes_property;communes_slaughter_dues;communes_terraces
 commune,Souk-el-Arba,Souk-el-Arba,,Souk-el-Arba,Souk-el-Arba,,,exact,1,87,Souk El-Arba (Jendouba),,36.4969326358885,8.77643419432405,cens1926_communes
-commune,Souk-el-Khemis,,,Souk-el-Khemis,,,,exact,1,88,Souk El-Khemis (Bou Salem),,36.6075297328957,8.96956890839965,communes_budget;communes_building_permits;communes_loans_caisse;communes_property;communes_terraces
+commune,Souk-el-Khemis,,,Souk-el-Khemis,,,,exact,1,88,Souk El-Khemis (Bou Salem),,36.6075297328957,8.96956890839965,communes_budget;communes_building_permits;communes_loans_caisse;communes_property;communes_slaughter_dues;communes_terraces
 commune,Souk-el-Khemis,Souk-el-Arba,,Souk-el-Khemis,Souk-el-Arba,,,exact,1,88,Souk El-Khemis (Bou Salem),,36.6075297328957,8.96956890839965,cens1926_communes
-commune,Sousse,,,Sousse,,,,exact,1,89,Sousse,,35.8246122656788,10.6351825862153,communes_budget;communes_building_permits;communes_building_values_1939;communes_loans_caisse;communes_property;communes_terraces;ind1931_t7annex_communes_1921_1931
+commune,Sousse,,,Sousse,,,,exact,1,89,Sousse,,35.8246122656788,10.6351825862153,communes_budget;communes_building_permits;communes_building_values_1939;communes_loans_caisse;communes_property;communes_slaughter_dues;communes_terraces;ind1931_t7annex_communes_1921_1931
 commune,Sousse,,Sousse,Sousse,Sousse,Sousse,,exact,1,89,Sousse,,35.8246122656788,10.6351825862153,ind1931_t7_communes
 commune,Sousse,Sousse,,Sousse,Sousse,,,exact,1,89,Sousse,,35.8246122656788,10.6351825862153,cens1926_communes
 commune,Syndicat des Communes de la Banlieue Nord de Tunis,,,Syndicat des Communes de la Banlieue Nord de Tunis,,,,none,0,,,,,,communes_budget;communes_property
 commune,Tabarka,,Aïn-Draham,Tabarka,Tabarka,Aïn-Draham,,exact,1,287,Tabarka,,36.9501862203016,8.75421451089274,ind1931_t7_communes
-commune,Tabarka,,,Tabarka,,,,exact,1,287,Tabarka,,36.9501862203016,8.75421451089274,communes_budget;communes_building_permits;communes_property;communes_terraces;ind1931_t7annex_communes_1921_1931
+commune,Tabarka,,,Tabarka,,,,exact,1,287,Tabarka,,36.9501862203016,8.75421451089274,communes_budget;communes_building_permits;communes_loans_caisse;communes_property;communes_slaughter_dues;communes_terraces;ind1931_t7annex_communes_1921_1931
 commune,Tabarka,Tabarka,,Tabarka,Tabarka,,,exact,1,287,Tabarka,,36.9501862203016,8.75421451089274,cens1926_communes
 commune,Tabarka (5),,,Tabarka,,,,qualifier_stripped,1,287,Tabarka,,36.9501862203016,8.75421451089274,communes_building_permits;communes_terraces
 commune,Tabarka (6),,,Tabarka,,,,qualifier_stripped,1,287,Tabarka,,36.9501862203016,8.75421451089274,communes_building_permits;communes_terraces
 commune,Tatahouine,,,Tatahouine,,,,none,0,,,,,,communes_budget;communes_building_permits;communes_property
-commune,Tebourba,,,Tebourba,,,,exact,1,1146,Tebourba,,36.84,9.85,communes_budget;communes_building_permits;communes_property;communes_terraces
+commune,Tebourba,,,Tebourba,,,,exact,1,1146,Tebourba,,36.84,9.85,communes_budget;communes_building_permits;communes_property;communes_slaughter_dues;communes_terraces
 commune,Teboursouk,,,Teboursouk,,,,exact,1,92,Téboursouk,,36.4578701666472,9.24907540240675,communes_budget;communes_property
 commune,Thala,,Fraichiches,Thala,Thala,Fraichiches,,exact,1,93,Thala,,35.583106,8.666934,ind1931_t7_communes
-commune,Thala,,,Thala,,,,exact,1,93,Thala,,35.583106,8.666934,communes_budget;communes_building_permits;communes_property;communes_terraces;ind1931_t7annex_communes_1921_1931
+commune,Thala,,,Thala,,,,exact,1,93,Thala,,35.583106,8.666934,communes_budget;communes_building_permits;communes_property;communes_slaughter_dues;communes_terraces;ind1931_t7annex_communes_1921_1931
 commune,Thala,Thala,,Thala,Thala,,,exact,1,93,Thala,,35.583106,8.666934,cens1926_communes
 commune,Tozeur,,Djerid,Tozeur,Tozeur,Djerid,,exact,1,96,Tozeur,,33.918534,8.122933,ind1931_t7_communes
-commune,Tozeur,,,Tozeur,,,,exact,1,96,Tozeur,,33.918534,8.122933,communes_budget;communes_building_permits;communes_building_values_1939;communes_property;communes_terraces;ind1931_t7annex_communes_1921_1931
+commune,Tozeur,,,Tozeur,,,,exact,1,96,Tozeur,,33.918534,8.122933,communes_budget;communes_building_permits;communes_building_values_1939;communes_property;communes_slaughter_dues;communes_terraces;ind1931_t7annex_communes_1921_1931
 commune,Tozeur,Tozeur,,Tozeur,Tozeur,,,exact,1,96,Tozeur,,33.918534,8.122933,cens1926_communes
-commune,Tunis,,,Tunis,,,,exact,1,325,Tunis,,36.799257,10.176146,communes_budget;communes_building_permits;communes_building_values_1939;communes_gas_tunis;communes_loans_caisse;communes_loans_tunis_bonds;communes_property;communes_terraces;ind1931_t7annex_communes_1921_1931
+commune,Tunis,,,Tunis,,,,exact,1,325,Tunis,,36.799257,10.176146,communes_budget;communes_building_permits;communes_building_values_1939;communes_gas_tunis;communes_loans_caisse;communes_loans_tunis_bonds;communes_property;communes_slaughter_dues;communes_terraces;ind1931_t7annex_communes_1921_1931
 commune,Tunis,,Tunis,Tunis,Tunis,Tunis-Ville,,exact,1,325,Tunis,,36.799257,10.176146,ind1931_t7_communes
 commune,Tunis,Tunis,,Tunis,Tunis,,,exact,1,325,Tunis,,36.799257,10.176146,cens1926_communes
 commune,Tunis (7),,,Tunis,,,,qualifier_stripped,1,325,Tunis,,36.799257,10.176146,communes_building_permits;communes_terraces
 commune,Tébourba,,,Tébourba,,,,exact,1,1146,Tebourba,,36.84,9.85,communes_building_permits;communes_loans_caisse;communes_terraces;ind1931_t7annex_communes_1921_1931
 commune,Tébourba,,Tunis-Banlieue,Tébourba,Tunis,Tunis-Banlieue,,exact,1,1146,Tebourba,,36.84,9.85,ind1931_t7_communes
 commune,Tébourba,Tunis,,Tébourba,Tunis,,,exact,1,1146,Tebourba,,36.84,9.85,cens1926_communes
-commune,Téboursouk,,,Téboursouk,,,,exact,1,92,Téboursouk,,36.4578701666472,9.24907540240675,communes_building_permits;communes_building_values_1939;communes_terraces;ind1931_t7annex_communes_1921_1931
+commune,Téboursouk,,,Téboursouk,,,,exact,1,92,Téboursouk,,36.4578701666472,9.24907540240675,communes_building_permits;communes_building_values_1939;communes_loans_caisse;communes_slaughter_dues;communes_terraces;ind1931_t7annex_communes_1921_1931
 commune,Téboursouk,,Téboursouk,Téboursouk,Téboursouk,Téboursouk,,exact,1,92,Téboursouk,,36.4578701666472,9.24907540240675,ind1931_t7_communes
 commune,Téboursouk,Téboursouk,,Téboursouk,Téboursouk,,,exact,1,92,Téboursouk,,36.4578701666472,9.24907540240675,cens1926_communes
-commune,Zaghouan,,,Zaghouan,,,,exact,1,101,Zaghouan,,36.4031395193389,10.1420536107131,communes_budget;communes_building_permits;communes_property;communes_terraces;ind1931_t7annex_communes_1921_1931
+commune,Zaghouan,,,Zaghouan,,,,exact,1,101,Zaghouan,,36.4031395193389,10.1420536107131,communes_budget;communes_building_permits;communes_property;communes_slaughter_dues;communes_terraces;ind1931_t7annex_communes_1921_1931
 commune,Zaghouan,,Zaghouan,Zaghouan,Zaghouan,Zaghouan,,exact,1,101,Zaghouan,,36.4031395193389,10.1420536107131,ind1931_t7_communes
 commune,Zaghouan,Zaghouan,,Zaghouan,Zaghouan,,,exact,1,101,Zaghouan,,36.4031395193389,10.1420536107131,cens1926_communes
-commune,Zarzis,,,Zarzis,,,,exact,1,102,Zarzis,,33.5033032662621,11.1109307269972,communes_budget;communes_building_permits;communes_building_values_1939;communes_property;communes_terraces;ind1931_t7annex_communes_1921_1931
+commune,Zarzis,,,Zarzis,,,,exact,1,102,Zarzis,,33.5033032662621,11.1109307269972,communes_budget;communes_building_permits;communes_building_values_1939;communes_property;communes_slaughter_dues;communes_terraces;ind1931_t7annex_communes_1921_1931
 commune,Zarzis,,Ouerghemma,Zarzis,Territoires militaires du Sud,Ouerghemma,,exact,1,102,Zarzis,,33.5033032662621,11.1109307269972,ind1931_t7_communes
 commune,Zarzis,Territoires militaires,,Zarzis,Territoires militaires du Sud,,,exact,1,102,Zarzis,,33.5033032662621,11.1109307269972,cens1926_communes
 commune,Zarzis (6),,,Zarzis,,,,qualifier_stripped,1,102,Zarzis,,33.5033032662621,11.1109307269972,communes_building_permits;communes_terraces
