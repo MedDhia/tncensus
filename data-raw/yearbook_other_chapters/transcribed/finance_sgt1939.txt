@@ -1,0 +1,61 @@
+# Finances chapter (chapitre IX), sgt1939. Format: see yb_tables.py. Every cell read on native-resolution crops of
+# the page images (OCR not used for values).
+
+# BUDGET ANNUEL (1936-1938). a) Recettes réalisées ("nomenclature des budgets de 1936 à 1938"): a new, detailed
+# list of ordinary resources by tax, with a printed "Total du Titre Ier" and "Total du Titre II" (stored as
+# checks only, labels TotalI / TotalII) and the Total général. No Titre III line. Single page f94 (p. 88).
+@receipts39 view=94 page=88 kind=actual
+img: all
+cols: 1936 1937 1938
+r_income | 7585428.02 13784030.53 18520242.09
+r_land_unbuilt | 13053245.56 24997541.48 22775325.59
+r_land_built | 933169.61 1312162.18 1281434.23
+r_patents | 13069572.16 16324253.20 23210338.46
+r_wages | 0 1087598.18 2430969.57
+r_securities | 8748342.10 11524780.96 15055616.10
+r_assimilated | 4725945.89 6778714.08 11226270.66
+r_stamp | 12763893.86 14658307.98 15996941.22
+r_registration | 40309851.81 44148711.83 56922862.59
+r_customs | 69030234.01 128350888.55 159422368.35
+r_consumption | 124250637.56 147615415.61 163894165.83
+r_other_indirect | 24000671.75 41613106.56 39384481.82
+r_monopolies | 125010822.19 133986663.95 157291545.67
+r_posts | 28864952.66 33315453.75 39152857.75
+r_industrial | 6506769.84 8880858.59 8767309.70
+r_domain | 11892253.45 16600472.98 16534882.66
+r_misc | 35438736.87 39802965.34 43733638.99
+TotalI | 526184527.34 684781925.75 795601251.28
+loans | 3090000 22509220 52475835
+misc_exc | 73274723.25 95623837.61 140153079.64
+TotalII | 76364723.25 118133057.61 192628914.64
+Total | 602549250.59 802914983.36 988230165.92
+
+# BUDGET ANNUEL (1936-1938). b) Dépenses : droits constatés définitivement liquidés ("nomenclature de 1938":
+# III is the Office des Postes et des Télégraphes; the Direction de l'Intérieur and the Administration tunisienne
+# are printed as "Mémoire" lines, with figures for 1936 only). Single page f95 (p. 89). Codes as in sgt1935, plus
+# o_adm / x_adm (Mémoire. Administration tunisienne).
+@expenditure view=95 page=89 kind=actual
+img: all
+cols: 1936 1937 1938
+o_fin | 261089583.47 309317640.28 351244220.20
+o_sec | 23482333.22 128140888.16 108594927.54
+o_post | 37239644.32 41684530.47 48237243.73
+o_agr | 26852832.13 28270432.06 29676533.90
+o_edu | 59927851.94 66815496.29 75918704.89
+o_army | 3638098.52 4145543.73 4879392.10
+o_pw | 66173175.42 72914112.39 90928125.78
+o_just | 9664653.83 10846271.76 12907349.78
+o_int | 28265213.90 0 0
+o_adm | 29015790.71 0 0
+x_fin | 19760984.28 13623693.98 60392993.45
+x_sec | 12130225.56 17465929.20 14861420.89
+x_post | 6812825.49 13121109.61 14185623.15
+x_agr | 23503432.33 22027432.08 25583332.81
+x_edu | 1281832.33 1209307.50 7707988.18
+x_army | 1600080.75 2141169.68 10336034.77
+x_pw | 27531039.19 36510929.43 79591218.66
+x_just | 7134 85424.20 300.50
+x_int | 2401946.27 0 0
+x_adm | 43806.27 0 0
+closed | 89345590.75 89474817.24 129566412.23
+Total | 728768074.68 857794728.06 1064611822.56

@@ -1,0 +1,45 @@
+# Finances chapter (chapitre IX), sgt1936. Format: see yb_tables.py. Every cell read on native-resolution crops of
+# the page images (OCR not used for values).
+
+# BUDGET ANNUEL (1933-1935). a) Recettes réalisées ("nomenclature des budgets de 1933 à 1935"). Single page f95
+# (p. 84). 1935 Chapitre II: the first digit is a damaged 2 (OCR "366.301.563"); 266.301.563 23 is what the
+# printed total requires.
+@receipts view=95 page=84 kind=actual
+img: all
+cols: 1933 1934 1935
+ch1 | 78981603.91 72624383.67 72707212.42
+ch2 | 250766461.83 239069541.93 266301563.23!
+ch3 | 169215546.95 164355896.10 165522779.29
+ch4 | 8949768.92 9005442.60 11068809.76
+ch5 | 32318531.77 31491008.34 46503759.28
+loans | 203148655 22840320.52 1678000
+misc_exc | 84307580.95 95712584.39 83536074.27
+closed | 0 0 0
+Total | 827688149.33 635099177.55 647318198.25
+
+# BUDGET ANNUEL (1933-1935). b) Dépenses : droits constatés définitivement liquidés ("nomenclature de 1935":
+# Chapitre IV is now Direction des Affaires Économiques). Single page f96 (p. 85). Codes as in sgt1935.
+@expenditure view=96 page=85 kind=actual
+img: all
+cols: 1933 1934 1935
+o_fin | 246731214.01 249315007.25 264928771.13
+o_sec | 0 47782595 56216308.05
+o_int | 72041816.46 37176064.18 28108066.71
+o_agr | 52011980.38 35581095.06 27304205.59
+o_edu | 69239522.40 67752453.73 61764218.16
+o_army | 3819322 3676680.97 3298622.34
+o_pw | 82995919.79 62795278.81 60986415.66
+o_just | 11299886.65 11034416.31 10225766.18
+o_post | 44643487.94 42701806.79 38640518.97
+o_unf | 0 0 0
+x_fin | 142996955.40 29348122.85 15062717.45
+x_sec | 0 2364110.83 261924
+x_int | 2407352.13 3122660.25 1992631.82
+x_agr | 25939468.44 11171966.20 32267324.44
+x_edu | 2573834.86 1710677.14 425027.48
+x_army | 6004926.74 8549663.91 8557123.88
+x_pw | 22547571.60 41491172.83 35681624.54
+x_just | 3132.53 0 0
+x_post | 7320940.48 5048408.08 8316855.08
+closed | 76368573.42 60150500.26 68210570.36
+Total | 868945905.23 720772680.45 722248691.84

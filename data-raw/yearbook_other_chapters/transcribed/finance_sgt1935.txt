@@ -1,0 +1,47 @@
+# Finances chapter (chapitre X), sgt1935. Format: see yb_tables.py. Every cell read on native-resolution crops of
+# the page images (OCR not used for values).
+
+# BUDGET ANNUEL (1932-1934). a) Recettes réalisées ("nomenclature des budgets de 1932 à 1934"). Single page f129
+# (p. 109). Column heads: 1932 (9 mois), 1933 (12 mois), 1934 (12 mois). No line for the Conseils de Région.
+@receipts view=129 page=109 kind=actual
+img: all
+cols: 1932 1933 1934
+ch1 | 78766805.61 78981603.91 72624383.67
+ch2 | 200160993.95 250766461.83 239069541.93
+ch3 | 138090241.88 169215546.95 164355896.10
+ch4 | 9950894.11 8949768.92 9005442.60
+ch5 | 35080474.24 32318531.77 31491008.34
+loans | 4436060 203148655 22840320.52
+misc_exc | 78833327.43 84307580.95 95712584.39
+closed | 0 0 0
+Total | 545318797.22 827688149.33 635099177.55
+
+# BUDGET ANNUEL (1932-1934). b) Dépenses : droits constatés définitivement liquidés ("nomenclature de 1932": new
+# chapter order, Secrétariat général du Gouvernement tunisien II, Justice tunisienne VIII, Office des Postes IX,
+# Dépenses imprévues X; no outillage économique). Single page f130 (p. 110). Codes: o_/x_ = titre I / II, then
+# the service (fin, sec, int, agr, edu, army, pw, just, post, unf). In the two-line labels of exceptional IV and V,
+# 1932 is printed on the first line and 1933 on the second (order unambiguous).
+@expenditure view=130 page=110 kind=actual
+img: all
+cols: 1932 1933 1934
+o_fin | 164287262.63 246731214.01 249315007.25
+o_sec | 0 0 47782595
+o_int | 52081613.68 72041816.46 37176064.18
+o_agr | 37999089.37 52011980.38 35581095.06
+o_edu | 51799072.17 69239522.40 67752453.73
+o_army | 2862788.94 3819322 3676680.97
+o_pw | 77772649.90 82995919.79 62795278.81
+o_just | 8470069.16 11299886.65 11034416.31
+o_post | 33156310.96 44643487.94 42701806.79
+o_unf | 0 0 0
+x_fin | 14235953.06 142996955.40 29348122.85
+x_sec | 0 0 2364110.83
+x_int | 2986096.26 2407352.13 3122660.25
+x_agr | 32032640.17 25939468.44 11171966.20
+x_edu | 917094.57 2573834.86 1710677.14
+x_army | 7741400.44 6004926.74 8549663.91
+x_pw | 25889137.91 22547571.60 41491172.83
+x_just | 17991.14 3132.53 0
+x_post | 8031268.08 7320940.48 5048408.08
+closed | 67809975.14 76368573.42 60150500.26
+Total | 588090413.58 868945905.23 720772680.45

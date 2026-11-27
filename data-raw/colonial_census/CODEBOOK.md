@@ -244,6 +244,8 @@ Every table is tidy: one row per printed cell. Printed subtotals and totals are 
 | [`publicworks_ores`](#publicworks_ores) | ores | by edition | 251 | mixed | Zinc, lead and mixed ores (from 1936 mercury): mines conceded, tonnage, value and average prices |
 | [`publicworks_iron_ore`](#publicworks_iron_ore) | iron_ore | by edition | 54 | mixed | Iron ore: tonnage and value carried (mine to quay) |
 | [`publicworks_other_transport`](#publicworks_other_transport) | airport;other_transport;vehicles | by edition | 47 | mixed | Registered motor vehicles, other public transport operators and Tunis airport traffic (sgt1939) |
+| [`finance_budget_receipts`](#finance_budget_receipts) | receipts;receipts39 | by edition | 224 | francs | Annual budget of the Regency: realised receipts by budget chapter (exercices 1915-1938) |
+| [`finance_budget_expenditure`](#finance_budget_expenditure) | expenditure | by edition | 425 | francs | Annual budget of the Regency: expenditure as finally settled, by service (exercices 1915-1938) |
 
 ### eur1906_t1_circonscription_nationality
 
@@ -10814,3 +10816,168 @@ Source `sgt`, table airport;other_transport;vehicles, printed pages by edition. 
 | `kg` |  | 9 |
 | `thousand_francs` |  | 6 |
 | `thousands` |  | 6 |
+
+### finance_budget_receipts
+
+**Budget annuel. a) Recettes réalisées**  
+*Annual budget of the Regency: realised receipts by budget chapter (exercices 1915-1938)*
+
+Source `sgt`, table receipts;receipts39, printed pages by edition. 224 rows. Value type: francs. Flags: (empty) 223, ocr_corrected 1. Notes and validation: [`../yearbook_other_chapters/csv/finance_budget_receipts.md`](../yearbook_other_chapters/csv/finance_budget_receipts.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `exercice_months` | Coded dimension. |
+| `basis` | Coded dimension. |
+| `basis_fr` | Printed French label for `basis`. |
+| `part` | Coded dimension. |
+| `part_fr` | Printed French label for `part`. |
+| `item` | Coded dimension. |
+| `item_fr` | Printed French label for `item`. |
+| `nomenclature_fr` | Place or label as printed (9 distinct values). |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`exercice_months`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `12` |  | 216 |
+| `9` |  | 8 |
+
+`basis`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `actual` | Recettes réalisées | 224 |
+
+`part`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `closed` | Titre III (Troisième partie) | 19 |
+| `exceptional` | Titre II (Deuxième partie). Recettes sur ressources exceptionnelles / Dépenses sur ressources exceptionnelles ou spéciales | 59 |
+| `ordinary` | Titre premier (Première partie). Ressources ordinaires / Dépenses sur ressources ordinaires | 146 |
+
+`item`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `assimilated_taxes` | Taxes assimilées aux Contributions directes : poids et mesures, visite des pharmacies, véhicules, etc. | 3 |
+| `business_profits_patents` | Impôts sur les bénéfices commerciaux et industriels : 1° Patentes, bénéfices de guerre, redevance des mines | 3 |
+| `closed_exercises` | Recettes affectées aux dépenses des exercices clos et périmés | 19 |
+| `consumption_duties` | Droits de consommation | 3 |
+| `customs_duties` | Droits de douane et droits maritimes | 3 |
+| `direct_taxes` | Chapitre Ier. — Impôts directs et taxes assimilées | 19 |
+| `general_income_tax` | Impôt général sur les divers revenus : taxe personnelle et contribution personnelle d'Etat | 3 |
+| `indirect_taxes` | Chapitre II. — Impôts et revenus indirects | 19 |
+| `industrial_enterprises` | Produit d'exploitations industrielles | 3 |
+| `land_tax_built` | Impôts fonciers et sur les revenus d'immeubles : 2° Propriété bâtie : taxe locative des immeubles | 3 |
+| `land_tax_unbuilt` | Impôts fonciers et sur les revenus d'immeubles : 1° Propriété non bâtie (canouns, mradjas, khodors, achours, vigne et bétail) | 3 |
+| `loan_funds` | Fonds d'emprunt | 22 |
+| `miscellaneous` | Chapitre V. — Produits divers / Produits divers | 22 |
+| `miscellaneous_receipts` | Recettes diverses | 22 |
+| `monopolies` | Produit des Monopoles | 3 |
+| `monopolies_state_enterprises` | Chapitre III. — Produits des Monopoles et exploitations industrielles de l'Etat | 19 |
+| `other_indirect_taxes` | Autres contributions indirectes | 3 |
+| `posts` | Produit des Postes | 3 |
+| `regional_councils` | Recettes à la disposition des Conseils de Région | 15 |
+| `registration_duties` | Droits d'enregistrement et de chancellerie | 3 |
+| `securities_income` | Impôt sur les revenus des valeurs mobilières, rentes d'enzel, etc. | 3 |
+| `stamp_duties` | Droits de timbre | 3 |
+| `state_domain` | Chapitre IV. — Produit du Domaine de l'Etat / Produit du Domaine | 22 |
+| `wages_salaries` | Impôts sur les bénéfices commerciaux et industriels : 2° Impôt sur les traitements et salaires | 3 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `francs` |  | 224 |
+
+### finance_budget_expenditure
+
+**Budget annuel. b) Dépenses : droits constatés définitivement liquidés lors des règlements des budgets des exercices**  
+*Annual budget of the Regency: expenditure as finally settled, by service (exercices 1915-1938)*
+
+Source `sgt`, table expenditure, printed pages by edition. 425 rows. Value type: francs. Flags: (empty) 425. Notes and validation: [`../yearbook_other_chapters/csv/finance_budget_expenditure.md`](../yearbook_other_chapters/csv/finance_budget_expenditure.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `exercice_months` | Coded dimension. |
+| `basis` | Coded dimension. |
+| `basis_fr` | Printed French label for `basis`. |
+| `part` | Coded dimension. |
+| `part_fr` | Printed French label for `part`. |
+| `item` | Coded dimension. |
+| `item_fr` | Printed French label for `item`. |
+| `nomenclature_fr` | Place or label as printed (7 distinct values). |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`exercice_months`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `12` |  | 405 |
+| `9` |  | 20 |
+
+`basis`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `actual` | Dépenses : droits constatés définitivement liquidés lors des règlements des budgets des exercices | 425 |
+
+`part`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `closed` | Titre III (Troisième partie) | 22 |
+| `exceptional` | Titre II (Deuxième partie). Recettes sur ressources exceptionnelles / Dépenses sur ressources exceptionnelles ou spéciales | 186 |
+| `ordinary` | Titre premier (Première partie). Ressources ordinaires / Dépenses sur ressources ordinaires | 217 |
+
+`item`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `closed_exercises` | Dépenses des exercices clos et périmés | 22 |
+| `exceptional_agriculture_economy` | Chapitre IV. — Direction des Affaires Économiques / Chapitre IV. — Direction générale de l'Agriculture, du Commerce et de la Colonisation | 22 |
+| `exceptional_army` | Chapitre VI. — Armée tunisienne | 22 |
+| `exceptional_education_fine_arts` | Chapitre V. — Direction de l'Instruction publique et des Beaux-Arts / Chapitre V. — Direction générale de l'Instruction publique et des Beaux-Arts | 22 |
+| `exceptional_finance` | Chapitre Ier. — Direction des Finances / Chapitre Ier. — Direction générale des Finances | 22 |
+| `exceptional_general_secretariat` | Chapitre II. — Secrétariat général du Gouvernement tunisien | 7 |
+| `exceptional_interior` | Chapitre III. — Direction de l'Intérieur / Chapitre III. — Direction générale de l'Intérieur / Mémoire. — Direction de l'Intérieur | 22 |
+| `exceptional_justice` | Chapitre VIII. — Direction de la Justice / Chapitre VIII. — Justice tunisienne | 22 |
+| `exceptional_posts_telegraphs` | Chapitre II. — Office des Postes et des Télégraphes / Chapitre III. — Office des Postes et des Télégraphes / Chapitre IX. — Office des Postes et des Télégraphes | 22 |
+| `exceptional_public_works` | Chapitre VII. — Direction des Travaux Publics / Chapitre VII. — Direction générale des Travaux Publics | 22 |
+| `exceptional_tunisian_administration` | Mémoire. — Administration tunisienne | 3 |
+| `ordinary_agriculture_economy` | Chapitre IV. — Direction des Affaires Économiques / Chapitre IV. — Direction générale de l'Agriculture, du Commerce et de la Colonisation | 22 |
+| `ordinary_army` | Chapitre VI. — Armée tunisienne | 22 |
+| `ordinary_economic_equipment` | Chapitre X. — Dépenses d'outillage économique | 12 |
+| `ordinary_education_fine_arts` | Chapitre V. — Direction de l'Instruction publique et des Beaux-Arts / Chapitre V. — Direction générale de l'Instruction publique et des Beaux-Arts | 22 |
+| `ordinary_finance` | Chapitre Ier. — Direction des Finances / Chapitre Ier. — Direction générale des Finances | 22 |
+| `ordinary_general_secretariat` | Chapitre II. — Secrétariat général du Gouvernement tunisien | 7 |
+| `ordinary_interior` | Chapitre III. — Direction de l'Intérieur / Chapitre III. — Direction générale de l'Intérieur / Mémoire. — Direction de l'Intérieur | 22 |
+| `ordinary_justice` | Chapitre VIII. — Direction de la Justice / Chapitre VIII. — Justice tunisienne | 22 |
+| `ordinary_posts_telegraphs` | Chapitre II. — Office des Postes et des Télégraphes / Chapitre III. — Office des Postes et des Télégraphes / Chapitre IX. — Office des Postes et des Télégraphes | 22 |
+| `ordinary_public_works` | Chapitre VII. — Direction des Travaux Publics / Chapitre VII. — Direction générale des Travaux Publics | 22 |
+| `ordinary_tunisian_administration` | Mémoire. — Administration tunisienne | 3 |
+| `ordinary_unforeseen` | Chapitre IX. — Dépenses imprévues / Chapitre X. — Dépenses imprévues | 19 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `francs` |  | 425 |
