@@ -21,7 +21,8 @@ from decimal import Decimal
 
 from pathlib import Path as _Path
 sys.path.insert(0, str(_Path(__file__).resolve().parent))  # shared helper yb_tables.py
-from yb_tables import (COMMON, EDITIONS, ORDER, OUT, TR, Checks, coverage_lines, parse, ssum, where, write_csv,
+from yb_tables import (COMMON, EDITIONS, ORDER, OUT, TR, Checks, check_col_totals, coverage_lines, is_total, parse,
+                       ssum, where, write_csv,
                        write_notes, write_validation)
 
 CHAPTER = "Finances"
@@ -211,6 +212,328 @@ def chk_budget(sec):
                    ssum(r["cells"][c].value for r in dl(sec)), row(sec, "Total")[c].value)
 
 
+# ----------------------------------------------------------------- dette tunisienne
+
+DEBT_ACC = {"ch_cap": ("charges", "Charges", "capital", "Capital"),
+            "ch_int": ("charges", "Charges", "interest", "Intérêts"),
+            "pay_cap": ("payments", "Paiements ou conversions consommés depuis l'échéance jusqu'à la date de la "
+                                    "prescription au profit de l'Etat", "capital", "Capital"),
+            "pay_int": ("payments", "Paiements ou conversions consommés depuis l'échéance jusqu'à la date de la "
+                                    "prescription au profit de l'Etat", "interest", "Intérêts")}
+DEBT_ITEM = {
+    "cert1870": "coupon_certificates_pre1870", "d5_1880": "debt_5pct_1880", "d4_1884": "perpetual_4pct_1884",
+    "d35_1889": "redeemable_3_5pct_1889", "d3_1892": "redeemable_3pct_1892", "d3_1902": "redeemable_3pct_1902_1907",
+    "d35_1903": "redeemable_3_5pct_1903", "d4_1912": "redeemable_4pct_1912", "d_1920": "loan_1920",
+    "d_1932": "loan_1932", "d_1934": "loan_1934", "d_1937": "loan_1937_1938",
+    "banque_algerie": "banque_algerie_advance",
+    "rail_loans": "railway_loan_charges", "road_loans": "road_network_loan_charges",
+    "mortgage_credit": "agricultural_mortgage_credit", "consolidation": "consolidation_expenditure",
+    "regional_communal": "regional_communal_expenditure", "archeveche": "carthage_archbishopric_subsidy",
+    "t_bizerte": "bizerte_fisheries_buyback", "t_medjerda": "medjerda_lines_guarantee",
+    "t_tgm": "tgm_railway_buyback", "t_rail_deficit": "railway_operating_deficit",
+    "t_military": "metropole_military_contribution", "t_postal": "postal_office_telephone_advances",
+    "t_cheminots_1925": "railwaymen_allowance_1925", "t_rail_reserve": "railway_reserve_fund_reconstitution",
+    "t_rail_past_deficits": "railway_past_deficits_settlement", "t_cheminots_mobilised": "mobilised_railwaymen_pay",
+    "t_rail_reserve_payment": "railway_reserve_fund_payment", "t_work_accidents": "work_accident_annuities",
+    "t_enzel": "enzel_annuities", "t_transport_tax": "rail_transport_tax_surplus",
+    "t_other": "other_temporary_charges",
+}
+DEBT_GROUP_FR = "Charges temporaires diverses incombant au budget beylical"
+BAL_ROWS = {"due_prescribed": ("due_prescribed", "Décomposition des restes à payer : échus, prescrits"),
+            "due_cancelled": ("due_cancelled", "Décomposition des restes à payer : échus, annulés (sgt1939 only)"),
+            "due_not_prescribed": ("due_not_prescribed", "Décomposition des restes à payer : échus, non prescrits"),
+            "not_due": ("not_due", "Décomposition des restes à payer : non échus")}
+DEBT_CHECK_ROWS = {"Totaux", "Totaux2", "A_reporter", "Report"}
+
+
+# cells whose printed value is identified as the faulty one by a failed check (flag total_mismatch; value kept)
+FLAGS = {("sgt1925", "debt", "cert1870", "pay_cap"): "total_mismatch",
+         ("sgt1927", "debt_balance", "due_not_prescribed", "cap"): "total_mismatch",
+         ("sgt1927", "debt_balance", "due_not_prescribed", "int"): "total_mismatch",
+         ("sgt1928", "debt_balance", "due_not_prescribed", "cap"): "total_mismatch",
+         ("sgt1928", "debt_balance", "due_not_prescribed", "int"): "total_mismatch",
+         ("sgt1924", "patente", "Ouerghemma", "c6"): "total_mismatch",
+         ("sgt1925", "patente", "1re Région ; Béja ; Béja", "c1"): "total_mismatch",
+         ("sgt1925", "patente", "1re Région ; Tabarka ; Aïn-Rraham", "c1"): "total_mismatch",
+         ("sgt1925", "patente", "4me Région ; Kairouan ; Djelass", "c2"): "total_mismatch",
+         ("sgt1928", "patente", "Bizerte ; Bizerte ; Bizerte", "c3"): "total_mismatch",
+         ("sgt1929", "patente", "Le Kef ; Le Kef ; Le Kef", "c34"): "total_mismatch",
+         ("sgt1929", "patente", "Territoires militaire du Sud ;  ; Ouerghemma", "c50"): "total_mismatch",
+         ("sgt1930", "patente", "Sousse ; Sousse ; Monastir", "c34"): "total_mismatch",
+         ("sgt1930", "taxe", "5me Région ; Sfax ; La Skhira", "fr"): "total_mismatch"}
+
+
+def with_flag(rec, sec, code, col):
+    f = FLAGS.get((sec["ed"], sec["table"], code, col))
+    if f:
+        rec["flag"] = f
+    return rec
+
+
+def split_label(label):
+    code, _, fr = label.partition(" = ")
+    return code.strip(), fr.strip()
+
+
+def debt_rows(sec):
+    return [r for r in sec["rows"] if "cells" in r and r["label"].split(" = ")[0] not in DEBT_CHECK_ROWS]
+
+
+def cells_debt(sec):
+    out = []
+    for r in debt_rows(sec):
+        code, fr = split_label(r["label"])
+        tmp = code.startswith("t_")
+        for c in sec["cols"]:
+            acc, acc_fr, comp, comp_fr = DEBT_ACC[c]
+            out.append(with_flag(mk(sec, r["cells"][c], int(sec["year"]), period_fr=sec["period"],
+                                  group="temporary_charges" if tmp else "debt",
+                                  group_fr=DEBT_GROUP_FR if tmp else "", item=DEBT_ITEM[code], item_fr=fr,
+                                  account=acc, account_fr=acc_fr, component=comp, component_fr=comp_fr,
+                                  unit="francs"), sec, code, c))
+    return out
+
+
+def cells_debt_balance(sec):
+    out = []
+    for r in sec["rows"]:
+        if "cells" not in r or r["label"] not in BAL_ROWS:
+            continue
+        st, st_fr = BAL_ROWS[r["label"]]
+        for c, comp, comp_fr in (("cap", "capital", "Capital"), ("int", "interest", "Intérêts")):
+            out.append(with_flag(mk(sec, r["cells"][c], int(sec["year"]), period_fr=sec["period"], status=st,
+                                  status_fr=st_fr, component=comp, component_fr=comp_fr, unit="francs"),
+                               sec, r["label"], c))
+    return out
+
+
+def chk_debt(secs):
+    """Operations: Totaux = lines (with A reporter / Report across the two pages of sgt1930); the sums printed
+    under the braces = capital + intérêts. Balance: Charges and Conversions et payements = Totaux of a); Reste à
+    payer = Charges - Conversions; Total égal à celui ci-dessus = décomposition = Reste à payer; brace sums."""
+    o, ob = "finance_public_debt", "finance_public_debt_balance"
+    tot = {}
+    for sec in [s for s in secs if s["table"] == "debt"]:
+        carried = row(sec, "Report")
+        if carried is not None:
+            prev = tot.get(sec["ed"])
+            for c in sec["cols"]:
+                CHK.eq(o, f"{where(sec)} {c}: Report = A reporter of the previous page", prev[c].value,
+                       carried[c].value)
+        for t in ("A_reporter", "Totaux"):
+            tr = row(sec, t)
+            if tr is None:
+                continue
+            for c in sec["cols"]:
+                parts = [r["cells"][c].value for r in debt_rows(sec)] + ([carried[c].value] if carried else [])
+                CHK.eq(o, f"{where(sec)} {c}: {t} = lines" + (" + Report" if carried else ""), ssum(parts),
+                       tr[c].value)
+            tot[sec["ed"]] = tr
+        t2 = row(sec, "Totaux2")
+        if t2 is not None:
+            tt = row(sec, "Totaux")
+            CHK.eq(o, f"{where(sec)} charges: capital + intérêts (brace)", tt["ch_cap"].value + tt["ch_int"].value,
+                   t2["ch_cap"].value)
+            CHK.eq(o, f"{where(sec)} paiements: capital + intérêts (brace)",
+                   tt["pay_cap"].value + tt["pay_int"].value, t2["pay_cap"].value)
+    for sec in [s for s in secs if s["table"] == "debt_balance"]:
+        tt = tot[sec["ed"]]
+        g = {lab: row(sec, lab) for lab in ("charges", "payments", "remaining", "remaining_both", "Total",
+                                            "total_both")}
+        for c, a, b in (("cap", "ch_cap", "pay_cap"), ("int", "ch_int", "pay_int")):
+            CHK.eq(ob, f"{where(sec)} {c}: Charges = Totaux of a)", tt[a].value, g["charges"][c].value)
+            CHK.eq(ob, f"{where(sec)} {c}: Conversions et payements = Totaux of a)", tt[b].value,
+                   g["payments"][c].value)
+            CHK.eq(ob, f"{where(sec)} {c}: Reste à payer = Charges - Conversions et payements",
+                   g["charges"][c].value - g["payments"][c].value, g["remaining"][c].value)
+            CHK.eq(ob, f"{where(sec)} {c}: Total égal à celui ci-dessus = décomposition",
+                   ssum(row(sec, k)[c].value for k in BAL_ROWS if row(sec, k) is not None), g["Total"][c].value)
+            CHK.eq(ob, f"{where(sec)} {c}: Total égal à celui ci-dessus = Reste à payer", g["remaining"][c].value,
+                   g["Total"][c].value)
+        for lab, src in (("remaining_both", "remaining"), ("total_both", "Total")):
+            CHK.eq(ob, f"{where(sec)} {lab}: capital + intérêts (brace)",
+                   g[src]["cap"].value + g[src]["int"].value, g[lab]["cap"].value)
+
+
+# ----------------------------------------------------------------- droit de patente
+
+# class: (lower bound, upper bound, bénéfice moyen), francs, as printed in the column heads. Scale A (sgt1922-sgt1928):
+# 15 classes, a 16th from sgt1927; scale B (sgt1929 on): 51 classes, brackets of 100.000 fr. from the 11th.
+PAT_A = {1: (0, 1000, 500), 2: (1001, 2000, 1500), 3: (2001, 5000, 3500), 4: (5001, 10000, 7500),
+         5: (10001, 20000, 15000), 6: (20001, 30000, 25000), 7: (30001, 50000, 40000),
+         8: (50001, 75000, 62500), 9: (75001, 100000, 87500), 10: (100001, 200000, 150000),
+         11: (200001, 500000, 350000), 12: (500001, 1000000, 750000), 13: (1000001, 2000000, 1500000),
+         14: (2000001, 3000000, 2500000), 15: (3000001, 4000000, 3500000), 16: (4000001, 5000000, 4500000)}
+PAT_B = {k: PAT_A[k] if k <= 10 else ((k - 9) * 100000 + 1, (k - 8) * 100000, (k - 9) * 100000 + 50000)
+         for k in range(1, 54)}
+SCALE_B = {"sgt1929", "sgt1930", "sgt1935", "sgt1936", "sgt1939"}
+
+
+def pat_scale(ed):
+    return PAT_B if ed in SCALE_B else PAT_A
+
+
+PAT_CHECK = {"n", "montant"}
+
+
+def fr_num(x):
+    return f"{x:,}".replace(",", ".")
+
+
+def pat_class_fr(k, ed):
+    lo, hi, m = pat_scale(ed)[k]
+    return (f"{k}{'re' if k == 1 else 'e'} classe : bénéfice de {fr_num(lo)} à {fr_num(hi)} fr., bénéfice moyen "
+            f"{fr_num(m)} fr.")
+
+
+def geo(label):
+    """Row label 'région ; contrôle civil ; caïdat' (sgt1925 on) or 'caïdat' (sgt1922-sgt1924)."""
+    parts = [x.strip() for x in label.split(" ; ")]
+    if len(parts) == 1:
+        return {"region": "", "controle_civil": "", "caidat": parts[0]}
+    return {"region": parts[0], "controle_civil": parts[1], "caidat": parts[2]}
+
+
+def pat_rows(secs, ed):
+    """Merge the pages of one printing: {label: {col: (Cell, sec)}} in printed order."""
+    rows = {}
+    for sec in secs:
+        if sec["ed"] != ed:
+            continue
+        for r in sec["rows"]:
+            if "cells" in r:
+                d = rows.setdefault(r["label"], {})
+                for c, cell in r["cells"].items():
+                    d[c] = (cell, sec)
+    return rows
+
+
+DERIVED = set()
+
+
+def derive_patente(secs):
+    """A class cell left '?' (digits hidden in the binding) = Nombre de patentables - the other classes of its row
+    (flag derived_from_totals). Runs before the checks, so derived cells only enter the Totaux and Montant checks."""
+    ps = [s for s in secs if s["table"] == "patente"]
+    for ed in ORDER:
+        for l, d in pat_rows(ps, ed).items():
+            miss = [c for c, (cell, _) in d.items() if cell.value is None and c not in PAT_CHECK]
+            if len(miss) == 1 and "n" in d and d["n"][0].value is not None:
+                cell = d[miss[0]][0]
+                cell.value = d["n"][0].value - ssum(x.value for c, (x, _) in d.items()
+                                                    if c not in PAT_CHECK and c != miss[0])
+                cell.flag = "derived_from_totals"
+                DERIVED.add(id(cell))
+
+
+def cells_patente(sec):
+    out = []
+    for r in sec["rows"]:
+        if "cells" not in r or is_total(r["label"]) or r["label"].startswith("Sous-total"):
+            continue
+        g = geo(r["label"])
+        for c, cell in r["cells"].items():
+            if c in PAT_CHECK:
+                continue
+            k = int(c[1:])
+            out.append(with_flag(mk(sec, cell, int(sec["year"]), profits_year=int(sec.get("profits", 0)) or None,
+                                    **g, profit_class=k, profit_class_fr=pat_class_fr(k, sec["ed"]),
+                                    mean_profit=pat_scale(sec["ed"])[k][2]), sec, r["label"], c))
+    return out
+
+
+def chk_patente(secs):
+    """Nombre = sum of the classes (skipped for rows with a derived cell); Montant = sum of count x bénéfice moyen;
+    Totaux = sum of the caïdats."""
+    o = "finance_patente"
+    ps = [s for s in secs if s["table"] == "patente"]
+    for ed in ORDER:
+        rows = pat_rows(ps, ed)
+        if not rows:
+            continue
+        cls = sorted({int(c[1:]) for d in rows.values() for c in d if c not in PAT_CHECK})
+        data = {l: d for l, d in rows.items() if not is_total(l) and not l.startswith("Sous-total")}
+        for l, d in rows.items():
+            w = f"{ed} {l}"
+            if "n" in d and not any(id(x) in DERIVED for x, _ in d.values()):
+                CHK.eq(o, f"{w}: Nombre de patentables = sum of the classes",
+                       ssum(d[f"c{k}"][0].value for k in cls), d["n"][0].value)
+            if "montant" in d:
+                CHK.eq(o, f"{w}: Montant du bénéfice moyen = sum of count x bénéfice moyen",
+                       ssum(d[f"c{k}"][0].value * pat_scale(ed)[k][2] for k in cls), d["montant"][0].value)
+        tot = [l for l in rows if is_total(l)]
+        for t in tot:
+            for c in rows[t]:
+                CHK.eq(o, f"{ed} {t} {c}: Totaux = sum of the caïdats",
+                       ssum(d[c][0].value for d in data.values()), rows[t][c][0].value)
+
+
+PATC_M = {"n": ("taxpayers", "Nombre de patentables", "taxpayers"),
+          "montant": ("mean_profit_total", "Montant du bénéfice moyen par caïdat", "francs")}
+
+
+def cells_patente_caidat(sec):
+    out = []
+    for r in sec["rows"]:
+        if "cells" not in r or is_total(r["label"]):
+            continue
+        for c, (m, mfr, u) in PATC_M.items():
+            out.append(mk(sec, r["cells"][c], int(sec["year"]), profits_year=int(sec["profits"]), **geo(r["label"]),
+                          measure=m, measure_fr=mfr, unit=u))
+    return out
+
+
+def chk_patente_caidat(secs):
+    o = "finance_patente_caidat"
+    for sec in [s for s in secs if s["table"] == "patente_caidat"]:
+        check_col_totals(CHK, o, sec)
+
+
+# ----------------------------------------------------------------- taxe personnelle
+
+TAXE_NAT = {"fr": ("french", "Français"), "it": ("italian", "Italiens"), "uk": ("british_maltese", "Anglais et Maltais"),
+            "es": ("spanish", "Espagnols"), "gr": ("greek", "Grecs"), "oth": ("other_european", "Autres Européens"),
+            "tun": ("tunisian", "Sujets tunisiens")}
+TAXE_EUR = ["fr", "it", "uk", "es", "gr", "oth"]
+
+
+def cells_taxe(sec):
+    out = []
+    for r in sec["rows"]:
+        if "cells" not in r or is_total(r["label"]):
+            continue
+        for c, cell in r["cells"].items():
+            if c not in TAXE_NAT or cell.flag == "not_applicable":
+                continue          # '-': nothing printed in that cell for that line (bracketed caïdats)
+            nat, nat_fr = TAXE_NAT[c]
+            out.append(with_flag(mk(sec, cell, int(sec["year"]), **geo(r["label"]), nationality=nat,
+                                    nationality_fr=nat_fr), sec, r["label"], c))
+    return out
+
+
+def chk_taxe(secs):
+    """Total des Européens = the six European columns; Total = Européens + Sujets tunisiens (for bracketed caïdats:
+    over the lines of the bracket); Totaux = sum of the lines; sous-totaux de région/contrôle where printed."""
+    o = "finance_taxe_personnelle"
+    for sec in [s for s in secs if s["table"] == "taxe"]:
+        rows = [r for r in sec["rows"] if "cells" in r]
+        for r in rows:
+            c = r["cells"]
+            if c["eur"].value is not None and all(c[k].value is not None for k in TAXE_EUR):
+                CHK.eq(o, f"{where(sec)} {r['label']}: Total des Européens = six nationalities",
+                       ssum(c[k].value for k in TAXE_EUR), c["eur"].value)
+            if c["tot"].value is not None:
+                grp = [r] + ([x for x in rows if x["label"] in r["label"].split(", ")] if ", " in r["label"] else [])
+                CHK.eq(o, f"{where(sec)} {r['label']}: Total = Européens + Sujets tunisiens",
+                       ssum(x["cells"][k].value for x in grp for k in ("eur", "tun")
+                            if x["cells"][k].value is not None), c["tot"].value)
+        data = [r for r in rows if not is_total(r["label"]) and not r["label"].startswith("Sous-total")]
+        for t in [r for r in rows if is_total(r["label"])]:
+            for k in sec["cols"]:
+                CHK.eq(o, f"{where(sec)} {t['label']} {k}: Totaux = sum of the lines",
+                       ssum(x["cells"][k].value for x in data if x["cells"][k].value is not None), t["cells"][k].value)
+
+
 # ----------------------------------------------------------------- selection (rule 4)
 
 def select(recs, key):
@@ -327,79 +650,318 @@ TABLES = {
                "All figures are actual results; the printed Total général is a check, not stored."]),
 }
 
+# ----------------------------------------------------------------- tables after the budget
+
+FLAGDOC = ("empty, or `ocr_corrected` (image reading differs from the Gallica OCR), `total_mismatch` (printed value "
+           "kept; identified by a failed check as the faulty cell, see Validation), `illegible` (value NA), "
+           "`not_applicable` (nothing printed, value NA), `derived_from_totals` (digits hidden in the binding; value = "
+           "the printed row total minus the other cells of the row, see the notes)")
+RULE5 = ("Printed once per edition, each printing for its own period (cumulative to a later year, or another "
+         "tax year): every edition is kept (SPEC_ADDENDUM rule 5); `census` is the edition, `year` the year the "
+         "printing refers to.")
+DOC5 = {"flag": FLAGDOC, "census": "edition (source code; every edition printing the table is kept, rule 5)"}
+
+DOC.update({
+    "period_fr": "period covered, as printed in the title (cumulative operations since 1884)",
+    "group": "`temporary_charges` for the lines printed under \"Charges temporaires diverses incombant au budget "
+             "beylical\" (a brace up to sgt1930, a heading in sgt1935), `debt` otherwise",
+    "group_fr": "printed group heading (empty for the debt lines proper)",
+    "account": "`charges` (charges: amounts due since the origin) or `payments` (paiements ou conversions "
+               "consommés depuis l'échéance jusqu'à la date de la prescription au profit de l'Etat)",
+    "account_fr": "printed column-group heading",
+    "component": "`capital` or `interest` (intérêts)",
+    "component_fr": "printed column heading",
+    "status": "décomposition des restes à payer: `due_prescribed` (échus, prescrits), `due_not_prescribed` "
+              "(échus, non prescrits), `due_cancelled` (échus, annulés: sgt1939 only), `not_due` (non échus)",
+    "status_fr": "printed line label",
+})
+
+RULE4_DEBT = ("Each printing gives the operations cumulated from 1884 to a year named in its title (1921, 1923, "
+              "1924, 1924, 1925, 1927, 1934, 1935, 1938): one series by that year, each year from the **latest** "
+              "edition printing it (SPEC_ADDENDUM rule 4; `census` = that edition). Only 1924 is printed twice "
+              "(sgt1927 and sgt1928, same standing type): sgt1928 is stored and the sgt1927 printing, read "
+              "independently on its own image, is compared below.")
+DOC4 = {"flag": FLAGDOC, "census": "edition the value is taken from (the latest edition printing that year; 1924: sgt1928, "
+                  "sgt1927 compared)",
+        "year": "last year of the cumulative period (\"de 1884 à <year>\" in the title)"}
+
+DEBT_PARAS = [
+    "Printed sgt1925-sgt1939 (not in sgt1922-sgt1924, whose Finances chapter opens with the taxe personnelle). "
+    "sgt1925: \"Tableau récapitulatif et balance des opérations auxquelles a donné lieu le service de la dette "
+    "tunisienne de 1884 à 1921\" (one page); sgt1926-sgt1935: \"a) Opérations auxquelles a donné lieu le service de "
+    "la dette tunisienne de 1884 à <year>\"; sgt1936-sgt1939: \"Opérations relatives au service de la dette "
+    "tunisienne de 1884 à <year>\". sgt1930 spreads the table over two pages (A reporter / Report).",
+    "One row per printed cell: debt or charge line x account (charges; paiements ou conversions) x component "
+    "(capital; intérêts). The lines change across editions: new loans (1920, 1932, 1934, 1937-1938), new charges "
+    "under the brace \"Charges temporaires diverses incombant au budget beylical\" up to sgt1930, and from sgt1935 a "
+    "regrouping (railway loan charges, road network loans, agricultural mortgage credit, State participation in "
+    "consolidation and in regional and communal expenditure, subsidy to the Archbishopric of Carthage; the remaining "
+    "temporary charges as \"Avances à l'Office Postal\" and \"Autres charges temporaires diverses\", sgt1939 "
+    "\"Autres charges temporaires diverses incombant au budget beylical\" alone). `item` codes are stable where the "
+    "printed line is the same; regrouped lines get new codes. The printed Totaux, the A reporter / Report lines "
+    "(sgt1930) and the sums printed under the braces (charges capital + intérêts; paiements capital + intérêts) are "
+    "checks, not stored. Part b) (balance) is in `finance_public_debt_balance`.",
+]
+DEBT_FAILS = (
+    "Failed checks, each re-read on zoomed native-resolution crops (printed errors): sgt1925, paiements capital: the "
+    "lines sum to 518.887.615 13 against the printed Totaux 521.887.985 13 (3.000.370 more). The Certificats de "
+    "coupons line is printed 6.884.838 70 here and 9.884.838 70 in every later edition: the 3.000.000 is that cell "
+    "(flagged `total_mismatch`, printed value kept); the remaining 370 cannot be placed. sgt1929, charges intérêts: "
+    "the lines sum to 353.693.320 69 (also printed in the balance), the Totaux line prints 353.693.320 62 (zoomed), "
+    "and the brace sum 1.465.949.248 51 follows the 62; a misprinted total, no cell flagged. sgt1936, charges "
+    "capital: the lines sum to 2.108.586.561 67, the Totaux (and the balance) print 2.107.586.561 67 (1.000.000 "
+    "less); every line re-read, no cell can be identified.")
+BAL_PARAS = [
+    "Printed below (sgt1925-sgt1930) or on the page after (sgt1935-sgt1939) the operations table: Charges and "
+    "Conversions et payements (the Totaux of the operations table), Reste à payer, its décomposition (échus: "
+    "prescrits, non prescrits, and in sgt1939 annulés; non échus) and \"Total égal à celui ci-dessus\", in capital "
+    "and intérêts, with the capital + intérêts sums under braces. Only the décomposition is stored (it is the only "
+    "information not in `finance_public_debt`); the other lines are checks.",
+]
+BAL_FAILS = (
+    "Failed checks, each re-read on zoomed native-resolution crops (printed errors): sgt1925, the brace sum under "
+    "the Total égal à celui ci-dessus is printed 416.138.289 18 for 461.138.289 18 (printed correctly under Reste à "
+    "payer; transposed digits). sgt1927 and sgt1928 (same standing type): the décomposition sums to 489.407.045 58 "
+    "(capital) and 54.918.534 87 (intérêts), printed so in the Total line, whereas Reste à payer is 526.835.694 33 "
+    "and 17.489.886 12; the brace sums agree (544.325.580 45). The difference, 37.428.648 75, moves between the "
+    "capital and intérêts of the échus non prescrits line (6.548.197 02 and 54.687.225 55; 43.976.845 77 and "
+    "17.258.576 80 would balance): both cells flagged `total_mismatch`, printed values kept. sgt1929: the balance "
+    "prints Charges intérêts 353.693.320 69, the operations Totaux 353.693.320 62 (see `finance_public_debt`). "
+    "sgt1935: the balance prints Conversions et payements capital 1.036.109.389 14 against 1.056.109.389 14 in the "
+    "operations table (whose lines give 1.056...), and Reste à payer 967.634.759 follows the 1.036 figure; the "
+    "décomposition sums to the printed Reste à payer, so the stored cells are consistent with the balance but "
+    "20.000.000 short of the operations table; no cell identified. sgt1936: the capital décomposition sums to "
+    "969.423.244 85, the Reste à payer and Total print 969.432.244 85 (9.000; transposed digits somewhere in the "
+    "décomposition or the total), no cell identified.")
+
+TABLES.update({
+    "finance_public_debt": dict(
+        secs=["debt"], cells=cells_debt, key=["year", "item", "account", "component"], select=select,
+        fails=DEBT_FAILS,
+        dims=["period_fr", "group", "group_fr", "item", "item_fr", "account", "account_fr", "component",
+              "component_fr", "unit"],
+        doc=dict(DOC4,
+                 item="debt or charge line code (English), stable across editions",
+                 item_fr="printed line label",
+                 value="printed amount (» = 0), francs with centimes, cumulative since 1884"),
+        title_fr="Dette tunisienne. a) Opérations auxquelles a donné lieu le service de la dette tunisienne "
+                 "depuis 1884",
+        title_en="Tunisian public debt: cumulative charges and payments (capital, interest) by loan and charge, "
+                 "since 1884",
+        unit="Unit: francs (centimes kept); value_type: francs.",
+        rule=RULE4_DEBT, paras=DEBT_PARAS),
+    "finance_public_debt_balance": dict(
+        secs=["debt_balance"], cells=cells_debt_balance, key=["year", "status", "component"], select=select,
+        fails=BAL_FAILS,
+        dims=["period_fr", "status", "status_fr", "component", "component_fr", "unit"],
+        doc=dict(DOC4, value="printed amount (» = 0), francs with centimes"),
+        title_fr="Dette tunisienne. b) Balance des opérations",
+        title_en="Tunisian public debt: balance of operations since 1884, breakdown of the amounts remaining to "
+                 "be paid",
+        unit="Unit: francs (centimes kept); value_type: francs.",
+        rule=RULE4_DEBT, paras=BAL_PARAS),
+})
+
+DOC.update({
+    "nationality": "", "nationality_fr": "",
+    "measure": "what `value` counts", "measure_fr": "printed column head",
+    "profits_year": "year of the profits taxed (\"bénéfices de <year>\"), when the title prints it; empty otherwise",
+    "region": "région as printed (sgt1925 on; \"Territoires militaires du Sud\" for the southern caïdats); empty "
+              "when the table lists caïdats only",
+    "controle_civil": "contrôle civil as printed (sgt1925 on); empty when the table lists caïdats only",
+    "caidat": "caïdat as printed",
+    "profit_class": "class of profit (1 to 15)",
+    "profit_class_fr": "printed column head: class, bracket of profit and bénéfice moyen",
+    "mean_profit": "bénéfice moyen of the class (francs), as printed in the column head",
+})
+PAT_PARAS = [
+    "Printed in every edition sgt1922-sgt1930 as a two-page spread (sgt1922-sgt1924 with the right-hand page "
+    "scanned sideways; sgt1929 and sgt1930 on a folding plate, f259 and f793). Rows: caïdats (sgt1922-sgt1924, 25 "
+    "to 33 caïdats, labels as printed, e.g. \"Kef (le)-Tadjerouine\", \"Tunis et Banlieue\"); from sgt1925 by région "
+    "(1re-5me Région and Territoires militaires du Sud; from sgt1928 named by the chef-lieu de région, Bizerte, Tunis, "
+    "Le Kef, Sousse, Sfax), contrôle civil and caïdat. The tax year is printed from sgt1926 (\"Bénéfices de l'année "
+    "1925 — Imposés en 1926\", ...); sgt1922-sgt1925 print none (`year` = edition year, `profits_year` empty).",
+    "Columns: one per class of profit, with its bracket and bénéfice moyen. Scale A (sgt1922-sgt1928): 15 classes "
+    "(1re: 0 à 1.000 fr., moyen 500 ... 15e: 3.000.001 à 4.000.000, moyen 3.500.000), a 16th (4.000.001 à 5.000.000, "
+    "moyen 4.500.000) from sgt1927. Scale B (sgt1929, sgt1930): classes 1-10 as before, then brackets of 100.000 fr. "
+    "(11e: 200.001 à 300.000, moyen 250.000 ... 51e: 4.200.001 à 4.300.000, moyen 4.250.000); sgt1930 prints the 1st to "
+    "50th class and a last column headed \"53e classe\" (4.400.001 à 4.500.000, moyen 4.450.000). `profit_class` and "
+    "`mean_profit` follow the printed head, so the same class number means a different bracket in the two scales. "
+    "Every printed cell is stored, » as 0 (most cells of the wide scale are 0).",
+    "sgt1927: the 4th class column is printed against the gutter and the last digit is hidden in the binding for "
+    "L'Arad, Hemmama, Gafsa, Djerid, Djerba, Ouerghema and the Totaux; these cells are derived as Nombre de "
+    "patentables minus the other classes of the row (flag `derived_from_totals`); the derived values agree with the "
+    "visible leading digits, the Montant of each row and the column Totaux. The Nombre check is not counted for "
+    "these rows.",
+    "Not stored (checks only): Nombre de patentables (row total), the Totaux line, and the Montant du bénéfice moyen "
+    "par caïdat (sum over the classes of count x bénéfice moyen; left empty on the sgt1930 plate). From sgt1935 the "
+    "table prints only these two columns per caïdat: see `finance_patente_caidat`.",
+]
+PAT_FAILS = (
+    "Failed checks, each re-read on zoomed native-resolution crops (printed values kept). Every class column agrees "
+    "with its printed Totaux except where a class cell is identified as faulty (flag `total_mismatch`): sgt1924 "
+    "Ouerghemma 6th class printed » (the Nombre 590, the Montant 980.000 and the column Totaux 191 all require 1); "
+    "sgt1925 Béja 1st class 433 (the Nombre 964 and, with Aïn-Rraham, the Totaux 15.953 require 443), Aïn-Rraham "
+    "1st class 133 (the Nombre 255 and the Montant 531.000 require 113), Djelass 2nd class 233 (the Nombre 933, the "
+    "Montant 1.156.000 and the Totaux 11.819 require 238); sgt1928 Bizerte 3rd class 217 (the Nombre 1.617, the "
+    "Montant 7.632.500 and the Totaux 6.160 require 257); sgt1929 Le Kef 6 in the 34th class and Ouerghemma 7 in the "
+    "50th class, sgt1930 Monastir 5 in the 34th class: isolated figures in otherwise empty columns, excluded by the "
+    "Nombre, the Montant and the Totaux (stray type on the standing plate). The other failures are misprinted "
+    "check figures, no stored cell involved: the Montant du bénéfice moyen of sgt1922 Gafsa (474.500; the classes "
+    "give 710.500, which the Totaux montant 88.928.500 requires); sgt1923 Béja (+90.000), Monastir (-50.000), Tunis "
+    "(-3.634.000) and the Totaux line (89.453.000, the sum of the printed Montants, against 93.047.000 from the "
+    "classes, whose column totals all agree); sgt1925 Béja printed \"2.466\" (and the Totaux montant 133.429.000, "
+    "which no reading of the Montant column reproduces); sgt1926 Souk-el-Arba (-3.000), Tunis banlieue (-473.000), "
+    "Tadjérouine (-1.000), Mahdia (+500), La Skira (-170.000), Djebéniana (+256.500), L'Arad (-150.000) and the Totaux "
+    "line; sgt1928 Souassi (291.000 for 291.500, and the Totaux montant by 500); sgt1930 Zlass Nombre printed 230 "
+    "for 220 (the classes and the Totaux Nombre 36.560 require 220).")
+TABLES["finance_patente"] = dict(
+    secs=["patente"], cells=cells_patente, key=["census", "year", "caidat", "profit_class"], select=select_all,
+    fails=PAT_FAILS,
+    dims=["profits_year", "region", "controle_civil", "caidat", "profit_class", "profit_class_fr", "mean_profit"],
+    doc=dict(DOC5, year="tax year (\"imposés en <year>\"; sgt1922-sgt1925 print no year: the edition year)",
+             value="number of taxpayers (assujettis) in the class"),
+    title_fr="Droit de patente. Etat des assujettis au droit de patente",
+    title_en="Business licence tax (droit de patente): taxpayers by caïdat and class of profit",
+    unit="Unit: number of taxpayers (assujettis); value_type: count.",
+    rule=RULE5, paras=PAT_PARAS)
+
+TAXE_PARAS = [
+    "Printed in every edition sgt1922-sgt1930 (not from sgt1935): one page in sgt1922-sgt1924 (\"Etat des "
+    "contribuables imposés à la taxe personnelle\", caïdats only), a two-page spread from sgt1925 (by région, "
+    "contrôle civil and caïdat; \"soumis à\" from sgt1926). No year is printed: `year` is the edition year. The list "
+    "of caïdats changes (Djerba from sgt1923, Djebeniana from sgt1927, Tatahouine from sgt1928; sgt1922-sgt1924 "
+    "bracket Ouled-Aoun and Ouled-Ayar, with the European columns and the Total printed once for both and the Sujets "
+    "tunisiens separately: stored as caïdat \"Ouled-Aoun, Ouled-Ayar\" for the European nationalities and under each "
+    "caïdat for the Tunisians).",
+    "Columns stored: Français, Italiens, Anglais et Maltais, Espagnols, Grecs, Autres Européens, Sujets tunisiens. "
+    "Total des Européens, Total and the Totaux line are checks, not stored.",
+]
+TAXE_FAILS = (
+    "Failed checks, each re-read on zoomed native-resolution crops. sgt1930 La Skhira: Français printed 49 (legible "
+    "on both sides of the gutter), the Total des Européens 56, the Total 7.667 and the Totaux of the Français column "
+    "(24.490) all require 40: the Français cell is flagged `total_mismatch` (printed value kept). Misprinted check "
+    "figures, no stored cell involved: sgt1925 Total of Zaghouan printed 11.166 for 11.156 and of L'Arad 18.504 for "
+    "18.514 (the two errors cancel in the Totaux); sgt1929 Total of Sfax printed 26.350 for 26.530 (the Totaux "
+    "623.943 is right).")
+TABLES["finance_taxe_personnelle"] = dict(
+    secs=["taxe"], cells=cells_taxe, key=["census", "year", "caidat", "nationality"], select=select_all,
+    fails=TAXE_FAILS,
+    dims=["region", "controle_civil", "caidat", "nationality", "nationality_fr"],
+    doc=dict(DOC5, year="year of the roll (no year printed: the edition year)",
+             caidat="caïdat as printed; two caïdats joined by \", \" = a figure printed once for both (bracket)",
+             nationality="nationality of the taxpayers: `french`, `italian`, `british_maltese` (Anglais et "
+                         "Maltais), `spanish`, `greek`, `other_european`, `tunisian` (sujets tunisiens)",
+             nationality_fr="printed column head", value="number of taxpayers (contribuables imposés)"),
+    title_fr="Taxe personnelle. Etat des contribuables imposés à la taxe personnelle",
+    title_en="Personal tax (taxe personnelle): taxpayers by caïdat and nationality",
+    unit="Unit: number of taxpayers (contribuables imposés); value_type: count.",
+    rule=RULE5, paras=TAXE_PARAS)
+
+TABLES["finance_patente_caidat"] = dict(
+    secs=["patente_caidat"], cells=cells_patente_caidat, key=["census", "year", "caidat", "measure"],
+    select=select_all,
+    dims=["profits_year", "region", "controle_civil", "caidat", "measure", "measure_fr", "unit"],
+    doc=dict(DOC5, year="tax year (\"imposés en <year>\")",
+             region="chef-lieu de région as printed, or \"Territoires Militaires du Sud\"",
+             caidat="caïdat as printed; \"Souk-el-Khemis, Souk-el-Arba\" = the two caïdats bracketed with one "
+                    "figure",
+             measure="`taxpayers` (nombre de patentables) or `mean_profit_total` (montant du bénéfice moyen par "
+                     "caïdat: the sum of the bénéfices moyens of the classes of the caïdat's taxpayers)",
+             measure_fr="printed column head", value="printed value (» = 0)"),
+    title_fr="Droit de patente. Etat des assujettis au droit de patente (nombre et montant du bénéfice moyen par "
+             "caïdat)",
+    title_en="Business licence tax (droit de patente): number of taxpayers and total mean profit by caïdat",
+    unit="Units: `taxpayers` count, `mean_profit_total` francs; value_type: mixed (count and francs).",
+    rule=RULE5,
+    paras=["Printed in sgt1935, sgt1936 and sgt1939 (bénéfices de 1934, 1935 and 1938, imposés en 1935, 1936 and "
+           "1939), one page each: the classes of profit are no longer printed, only the Nombre de patentables and "
+           "the Montant du bénéfice moyen par caïdat, by chef-lieu de région, contrôle civil and caïdat. Earlier "
+           "editions print the same two columns next to the classes (`finance_patente`); they are not stored "
+           "there because they are sums of the stored class cells. The Totaux line is a check, not stored."])
+
+GROUP_CHECKS = [chk_debt, chk_patente, chk_patente_caidat, chk_taxe]
+
+
 SURVEY = {
     "sgt1922": "f185 chapter X title (Finances); f186 blank; f187 taxe personnelle (contribuables imposés by caïdat "
-               "and nationality); f188-f211 achour: superficies ensemencées by caïdat and yield class, for blé, "
+               "and nationality) [transcribed]; f188-f211 achour: superficies ensemencées by caïdat and yield class, for blé, "
                "orge, avoine, fèves, pois chiches, maïs, sorgho, lin, each in three tables a) européens, b) "
                "indigènes, c) récapitulation (one page each); f212|f213 canoun des dattiers a) relevé par caïdat du "
                "nombre d'arbres d'après leur âge au 1er novembre 1922; f214|f215 b) répartition des arbres "
                "imposables par catégorie du tarif (degla, communs); f216|f217 canoun des oliviers a) relevé par "
                "caïdat d'après l'âge; f218|f219 b) répartition par catégorie du tarif; f220|f221 c) répartition "
                "entre européens et indigènes (arbres, articles de matrice, comptes individuels); f222|f223 droit de "
-               "patente (état des assujettis by class of profit); f224|f225 taxe sur le bétail a) rôles européens "
+               "patente (état des assujettis by class of profit) [transcribed]; f224|f225 taxe sur le bétail a) rôles européens "
                "(by caïdat and species, imposables / non imposables); f226|f227 b) rôles indigènes; f228|f229 c) "
                "récapitulation; f230 blank. f231 = chapter XI Agriculture.",
-    "sgt1923": "f675 title; f676 blank; f677 taxe personnelle; f678-f701 achour (8 crops x a/b/c); f702|f703 canoun "
+    "sgt1923": "f675 title; f676 blank; f677 taxe personnelle [transcribed]; f678-f701 achour (8 crops x a/b/c); f702|f703 canoun "
                "dattiers a) (1923); f704|f705 b); f706|f707 canoun oliviers a); f708 blank (verso); f709 b) "
-               "(second page); f710|f711 c); f712|f713 droit de patente; f714|f715 bétail a); f716|f717 b); "
+               "(second page); f710|f711 c); f712|f713 droit de patente [transcribed]; f714|f715 bétail a); f716|f717 b); "
                "f718|f719 c); f720 blank. f721 = chapter XI.",
-    "sgt1924": "f1171 title; f1172 blank; f1173 taxe personnelle; f1174-f1197 achour (8 crops x a/b/c); f1198|f1199 "
+    "sgt1924": "f1171 title; f1172 blank; f1173 taxe personnelle [transcribed]; f1174-f1197 achour (8 crops x a/b/c); f1198|f1199 "
                "canoun dattiers a) (1924); f1200|f1201 b); f1202|f1203 canoun oliviers a); f1204|f1205 b); "
-               "f1206|f1207 c); f1208|f1209 droit de patente; f1210|f1211 bétail a); f1212|f1213 b); f1214|f1215 "
+               "f1206|f1207 c); f1208|f1209 droit de patente [transcribed]; f1210|f1211 bétail a); f1212|f1213 b); f1214|f1215 "
                "c); f1216 blank. f1217 = chapter XI.",
     "sgt1925": "f211 title; f212|f213 budget annuel (1915-1924) a) recettes réalisées [transcribed]; f214|f215 b) "
-               "dépenses [transcribed]; f216 dette tunisienne (récapitulatif et balance des opérations 1884-1921); "
-               "f217 blank; f218|f219 taxe personnelle (by région, contrôle civil, caïdat and nationality); "
+               "dépenses [transcribed]; f216 dette tunisienne (récapitulatif et balance des opérations 1884-1921) "
+               "[transcribed]; "
+               "f217 blank; f218|f219 taxe personnelle (by région, contrôle civil, caïdat and nationality) [transcribed]; "
                "f220-f267 achour, 8 crops x a) européens, b) indigènes, c) récapitulation, each a two-page spread "
                "(by région / contrôle civil / caïdat); f268|f269 canoun dattiers a) (1924); f270|f271 b); f272|f273 "
-               "canoun oliviers a) (1925); f274|f275 b); f276|f277 c); f278|f279 droit de patente; f280|f281 "
+               "canoun oliviers a) (1925); f274|f275 b); f276|f277 c); f278|f279 droit de patente [transcribed]; f280|f281 "
                "bétail a) européens; f282|f283 b) indigènes; f284|f285 c) récapitulation; f286 blank. f287 = "
                "chapter XI.",
     "sgt1926": "f767 title; f768|f769 budget (1916-1925) a) [transcribed]; f770|f771 b) [transcribed]; f772 dette "
-               "tunisienne a) opérations 1884-1923 (b) balance); f773 blank; f774|f775 taxe personnelle; f776-f783 "
+               "tunisienne a) opérations 1884-1923 (b) balance) [transcribed]; f773 blank; f774|f775 taxe personnelle [transcribed]; f776-f783 "
                "achour, one page per crop (a) blé ... h) lin), européens and indigènes in one table; f784|f785 canoun "
                "dattiers a); f786|f787 b); f788|f789 canoun oliviers a) (1926); f790|f791 b); f792|f793 c); "
-               "f794|f795 droit de patente (bénéfices de 1925, imposés en 1926); f796|f797 bétail a); f798|f799 b); "
+               "f794|f795 droit de patente (bénéfices de 1925, imposés en 1926) [transcribed]; f796|f797 bétail a); f798|f799 b); "
                "f800|f801 c); f802 blank. f803 = chapter XI.",
     "sgt1927": "f229 title; f230|f231 budget (1917-1926) a) [transcribed]; f232|f233 b) [transcribed]; f234 dette "
-               "tunisienne (1884-1924); f235 blank; f236|f237 taxe personnelle; f238-f245 achour (one page per "
+               "tunisienne (1884-1924) [transcribed]; f235 blank; f236|f237 taxe personnelle [transcribed]; f238-f245 achour (one page per "
                "crop); f246|f247 canoun dattiers a) (1927); f248|f249 b); f250|f251 canoun oliviers a); f252|f253 "
-               "b); f254|f255 c); f256|f257 droit de patente (1926 / 1927); f258 blank. f259 = chapter XI. No "
+               "b); f254|f255 c); f256|f257 droit de patente (1926 / 1927) [transcribed]; f258 blank. f259 = chapter XI. No "
                "taxe sur le bétail from this edition.",
     "sgt1928": "f753 title; f754|f755 budget (1918-1927) a) [transcribed]; f756|f757 b) [transcribed]; f758 dette "
-               "(1884-1924); f759 blank; f760|f761 taxe personnelle; f762-f769 achour; f770|f771 canoun dattiers "
+               "(1884-1924, same figures as sgt1927) [transcribed]; f759 blank; f760|f761 taxe personnelle [transcribed]; f762-f769 achour; f770|f771 canoun dattiers "
                "a) (1928); f772|f773 b); f774|f775 canoun oliviers a); f776|f777 b); f778|f779 c); f780|f781 droit "
-               "de patente (1927 / 1928); f782 blank. f783 = chapter XI.",
+               "de patente (1927 / 1928) [transcribed]; f782 blank. f783 = chapter XI.",
     "sgt1929": "f231 title; f232|f233 budget (1919-1928) a) [transcribed]; f234|f235 b) [transcribed]; f236 dette "
-               "(1884-1925); f237 blank; f238|f239 taxe personnelle; f240-f247 achour; f248|f249 canoun dattiers "
+               "(1884-1925) [transcribed]; f237 blank; f238|f239 taxe personnelle [transcribed]; f240-f247 achour; f248|f249 canoun dattiers "
                "a) (1929); f250|f251 b) (the f251 OCR also shows an européens / indigènes heading, to be checked on the image); f252|f253 canoun oliviers a); f254|f255 b); "
-               "f256|f257 c); f258 blank; f259 droit de patente on a folding plate (1928 / 1929); f260 back of the "
+               "f256|f257 c); f258 blank; f259 droit de patente on a folding plate (1928 / 1929) [transcribed]; f260 back of the "
                "plate. f261 = chapter XI.",
     "sgt1930": "f765 title; f766|f767 budget (1920-1929) a) [transcribed]; f768|f769 b) [transcribed]; f770|f771 "
-               "dette (1884-1927, two pages); f772|f773 taxe personnelle; f774-f781 achour; f782|f783 canoun "
+               "dette (1884-1927, two pages) [transcribed]; f772|f773 taxe personnelle [transcribed]; f774-f781 achour; f782|f783 canoun "
                "dattiers a) (1930); f784|f785 b); f786|f787 canoun oliviers a); f788|f789 b); f790|f791 c); f792 "
-               "and f793 droit de patente (folding plate, 1929 / 1930); f794 blank. f795 = chapter XI.",
+               "and f793 droit de patente (folding plate f793, 1929 / 1930; f792 is the blank back of the plate) [transcribed]; f794 blank. f795 = chapter XI.",
     "sgt1935": "f127 chapter X title; f128 blank; f129 budget annuel (1932-1934) a) recettes réalisées "
-               "[transcribed]; f130 b) dépenses [transcribed]; f131 dette tunisienne a) opérations 1884-1934; f132 "
-               "b) balance des opérations; f133 achour (1935), superficies ensemencées par les Européens et les "
+               "[transcribed]; f130 b) dépenses [transcribed]; f131 dette tunisienne a) opérations 1884-1934 [transcribed]; f132 "
+               "b) balance des opérations [transcribed]; f133 achour (1935), superficies ensemencées par les Européens et les "
                "Tunisiens (all crops in one table); f134|f135 canoun des dattiers (1935); f136|f137 canoun des "
                "oliviers (1935); f138 droit de patente (bénéfices de 1934, imposés en 1935), by région, contrôle "
-               "and caïdat. f139 = chapter XI.",
+               "and caïdat [transcribed]. f139 = chapter XI.",
     "sgt1936": "f94 chapter IX title; f95 budget annuel (1933-1935) a) [transcribed]; f96 b) [transcribed]; f97 dette "
-               "tunisienne (opérations 1884-1935); f98 balance des opérations; f99 droit de patente (1935 / 1936). "
+               "tunisienne (opérations 1884-1935) [transcribed]; f98 balance des opérations [transcribed]; f99 droit de patente (1935 / 1936) [transcribed]. "
                "f100 = chapter X Agriculture.",
     "sgt1939": "f93 chapter IX title; f94 budget annuel (1936-1938) a) [transcribed]; f95 b) [transcribed]; f96 dette "
-               "tunisienne (1884-1938); f97 balance des opérations; f98 droit de patente (1938 / 1939). f99 = "
+               "tunisienne (1884-1938) [transcribed]; f97 balance des opérations [transcribed]; f98 droit de patente (1938 / 1939) [transcribed]. f99 = "
                "chapter X Agriculture.",
 }
 
 NOT_DONE = (
-    "Transcribed so far: the two budget tables (finance_budget_receipts, finance_budget_expenditure), every "
-    "printing (sgt1925-sgt1939), every cell read on native-resolution crops of the page images. Not yet "
-    "transcribed (see the survey above for views): dette tunisienne (sgt1925-sgt1939), taxe personnelle "
-    "(sgt1922-sgt1930), achour (sgt1922-sgt1935), canoun des dattiers and des oliviers (sgt1922-sgt1935), droit de "
-    "patente (sgt1922-sgt1939), taxe sur le bétail (sgt1922-sgt1926). The chapter reprints neither the public "
-    "assistance / health budgets nor the communal budgets.")
+    "Transcribed, every printing, every cell read on native-resolution crops of the page images (OCR used only as a "
+    "cross-check, flag `ocr_corrected`): the two budget tables (finance_budget_receipts, finance_budget_expenditure, "
+    "sgt1925-sgt1939); the dette tunisienne (finance_public_debt, finance_public_debt_balance, sgt1925-sgt1939; not "
+    "printed in sgt1922-sgt1924, whose chapters f185-f230, f675-f720 and f1171-f1216 open with the taxe "
+    "personnelle); the droit de patente by class of profit (finance_patente, sgt1922-sgt1930; the folding plates "
+    "sgt1929 f259 and sgt1930 f793 read in vertical strips) and by caïdat (finance_patente_caidat, sgt1935, sgt1936, "
+    "sgt1939); the taxe personnelle (finance_taxe_personnelle, sgt1922-sgt1930). Not yet transcribed (see the survey "
+    "above for views): taxe sur le bétail (sgt1922-sgt1926: a) rôles européens, b) rôles indigènes, c) "
+    "récapitulation, each a two-page spread by caïdat x 7 species x jeunes non imposables / imposables / total), "
+    "achour (sgt1922-sgt1935), canoun des dattiers and des oliviers (sgt1922-sgt1935). The chapter reprints neither "
+    "the public assistance / health budgets nor the communal budgets.")
 
 
 def write_survey():
@@ -431,6 +993,9 @@ def build(write=True):
     for s in secs:
         if s["table"] in ("receipts", "receipts39", "expenditure"):
             chk_budget(s)
+    derive_patente(secs)
+    for f in GROUP_CHECKS:
+        f(secs)
     res = {}
     for out, spec in TABLES.items():
         ss = [s for s in secs if s["table"] in spec["secs"]]
@@ -450,10 +1015,10 @@ def build(write=True):
         if write:
             cols = COMMON + spec["dims"] + ["value", "flag"]
             write_csv(out, cols, kept)
-            expl = [BUDGET_FAILS] if CHK.fail[out] else []
+            expl = [spec.get("fails", BUDGET_FAILS)] if CHK.fail[out] else []
             paras = list(spec.get("paras", [])) + expl + [
                 "Survey of the whole chapter in every edition: `finance_survey.md`."]
-            write_notes(out, CHAPTER, SCRIPT, kept, cols, {c: DOC[c] for c in cols}, spec["title_fr"],
+            write_notes(out, CHAPTER, SCRIPT, kept, cols, {c: spec.get("doc", {}).get(c, DOC[c]) for c in cols}, spec["title_fr"],
                         spec["title_en"], paras, CHK.n[out], CHK.fail[out], n, diffs, coverage_lines(ss),
                         spec["rule"], spec["unit"])
     if write:

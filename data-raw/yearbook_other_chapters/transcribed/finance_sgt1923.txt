@@ -1,0 +1,103 @@
+# Finances chapter (chapitre X), sgt1923. Format: see yb_tables.py. Every cell read on native-resolution crops of the
+# page images; '!' = the Gallica OCR differs from the image reading (cross-check).
+
+# DROIT DE PATENTE. Etat des assujettis au droit de patente. Spread f712 (p. 210) | f713 (p. 211, scanned
+# sideways). Layout as in sgt1922 (see finance_sgt1922.txt); the 6th class column is printed across the gutter.
+@patente view=712 page=210 year=1923
+img: all
+cols: n c1 c2 c3 c4 c5 c6
+Aïn-Draham | 168 88! 37 32 9 1 0
+L'Arad | 2029 1479 421 85 36 7 1
+Béja | 876 462 280 94 31 6 2
+Bizerte | 1458 882 318 154 72 21 5
+Cap-Bon | 2310 1759 454 78! 16 3 0
+Djérid | 492 323 141 24 4 0 0
+Fraichiches-Majeurs | 428 228 135! 48 16 1 0
+Gafsa | 537 279 147 86 20 3 1
+Hammama | 171 121 29 19 1 1 0
+Kairouan-Djelass | 1947 1076 681 157 28 5 0
+Kef (le)-Tadjerouine | 1119 732 249 93 25 20 0
+Mateur | 470 306 91 35 28 8 0
+Medjez-el-Bab | 214 130 53 24 6 0 0
+Mahdia et Souassis | 2146 1572 472 84 11 3 1
+Monastir | 1381 1115 224 32 5 2 1
+Nefzaoua | 495 451 30 13 1 0 0
+Ouled-Aoun-Ouled-Ayar | 201 150 30 18 3 0 0
+Ouerghemma | 969 695 195 69 9 1 0
+Sfax | 3628 2349 932 215 72 33 14
+La Skhira | 10 8 2 0 0 0 0
+Souk-el-Arba | 781 495 195 64 23! 2 0
+Téboursouk | 638 439 153 37 8 0 1
+Zaghouan | 353 259 69 18 7 0 0
+Sousse | 2938 1186 1305! 306 93 32 6
+Tunis | 9805 4340 2537 1500 697 313 147
+Totaux | 35564 20924 9180 3285 1221 462 179
+
+@patente view=713 page=211 year=1923
+img: all
+cols: c7 c8 c9 c10 c11 c12 c13 c14 c15 montant
+Aïn-Draham | 1 0 0 0 0 0 0 0 0 334000
+L'Arad | 0 0 0 0 0 0 0 0 0 2068500
+Béja | 0 0 0 1 0 0 0 0 0 1592500
+Bizerte | 3 0 0 2 0 0 1 0 0 4357000
+Cap-Bon | 0 0 0 0 0 0 0 0 0 1998500
+Djérid | 0 0 0 0 0 0 0 0 0 487000
+Fraichiches-Majeurs | 0 0 0 0 0 0 0 0 0 619500
+Gafsa | 1 0 0 0 0 0 0 0 0 921000
+Hammama | 0 0 0 0 0 0 0 0 0 193000
+Kairouan-Djelass | 0 0 0 0 0 0 0 0 0 2394000
+Kef (le)-Tadjerouine | 0 0 0 0 0 0 0 0 0 1552500
+Mateur | 1 0 1 0 0 0 0 0 0 869500
+Medjez-el-Bab | 0 1 0 0 0 0 0 0 0 336000
+Mahdia et Souassis | 1 0 1 1 0 0 0 0 0 2218000
+Monastir | 1 0 0 1 0 0 0 0 0 1238000
+Nefzaoua | 0 0 0 0 0 0 0 0 0 323500
+Ouled-Aoun-Ouled-Ayar | 0 0 0 0 0 0 0 0 0 205500
+Ouerghemma | 0 0 0 0 0 0 0 0 0 964000
+Sfax | 7 3 2 1 0 0 0 0 0 5502500
+La Skhira | 0 0 0 0 0 0 0 0 0 7000
+Souk-el-Arba | 0 0 1 1 0 0 0 0 0 1204000
+Téboursouk | 0 0 0 0 0 0 0 0 0 663500
+Zaghouan | 0 0 0 0 0 0 0 0 0 348500
+Sousse | 3 3 1 1 1 0 1 0 0 7344000
+Tunis | 114 52! 35 40 24 5 1 0 0 51711500
+Totaux | 132 59 41 48 25 5 3 0 0 89453000
+
+# TAXE PERSONNELLE. Etat des contribuables imposés à la taxe personnelle. f677 (p. 175). Layout as in sgt1922 (see
+# finance_sgt1922.txt), with Djerba added.
+@taxe view=677 page=175 year=1923
+img: all
+cols: fr it uk es gr oth eur tun tot
+Aïn-Draham | 302 279 9 10 1 2 603 8417 9020
+L'Arad | 168! 86 51 2 0 3 310 17401 17711
+Béja | 369 394 21 1 6 9 800 16214 17014
+Bizerte | 2202 1100 116 6 3 21 3448 16142 19590
+Cap-Bon | 414 938 45 15 6 4 1422 28462 29884
+Djérid | 68 7 0 0 0 1 76 9340 9416
+Fraichiches-Majeurs | 149 81 9 0 0 0 239 25078 25317
+Gafsa | 610 577 24 5 3 49 1268 11093 12361
+Hammama | 85 201 12 1 3 1 303 15491 15794
+Kairouan | 126 58 14 2 6 5 211 14780 14991
+Djelass | 72 75 19 1 0 2 169 18465 18634
+Kef | 266 350 18 1 2 8 645 14668! 15313
+Tadjerouine | 184 660 19 6 3 5 877 11976 12853
+Matmata | 0 0 0 0 0 0 0 5658 5658
+Mateur | 227 572 16 5 1 2 823 13732 14555
+Medjez-el-Bab | 455 217 16 2 2 39 731 9360 10091
+Mahdia | 67 60 27 0 0 2 156 15446 15602
+Souassi | 0 0 0 0 0 0 0 9683 9683
+Monastir | 81 43 48 6 1 7 186 17927 18113
+Nefzaoua | 3 0 0 0 0 0 3 8933 8936
+Ouled-Aoun, Ouled-Ayar | 43 21 2 0 0 0 66 - 14890
+Ouled-Aoun | - - - - - - - 6684 -
+Ouled-Ayar | - - - - - - - 8140 -
+Ouerghemma | 71 22 44 0 5 0 142 29766 29908
+Sfax | 841 771 367 17 111 31 2138 31682 33820
+La Skhira | 10 4 1 0 0 0 15 5097 5112
+Souk-el-Arba | 373 561 29 3 1 6 973 23998! 24971
+Téboursouk | 354 192 14 2 2 26 590 10761 11351
+Zaghouan | 351 361 19 1 2 5 739 7889 8628
+Sousse | 794 1028 369 18 3 23 2235 26960 29195
+Tunis et Banlieue | 8464 13906 2297 74 88 268 25097 39624 64721
+Djerba | 88 18 106 2 12 0 226 10994 11220
+Totaux | 17237 22582 3712 180 261 519 44491 489861 534352

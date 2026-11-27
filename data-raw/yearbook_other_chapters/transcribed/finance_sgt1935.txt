@@ -45,3 +45,88 @@ x_just | 17991.14 3132.53 0
 x_post | 8031268.08 7320940.48 5048408.08
 closed | 67809975.14 76368573.42 60150500.26
 Total | 588090413.58 868945905.23 720772680.45
+
+# DETTE TUNISIENNE. a) Opérations auxquelles a donné lieu le service de la dette tunisienne de 1884 à 1934. f131
+# (p. 111); b) Balance des opérations, f132 (p. 112). Every cell read on native-resolution crops. Format as in
+# finance_sgt1925.txt. The two 't_' lines follow the heading "Charges temporaires diverses incombant au budget
+# beylical :". The last digit of the intérêts on f132 is cut by the binding; read on a zoomed crop (49, 94, 43).
+@debt view=131 page=111 year=1934 period="1884 à 1934"
+img: all
+cols: ch_cap ch_int pay_cap pay_int
+cert1870 = Certificats de coupons, arriérés antérieurs à 1870 | 10171756.20 0 9884838.70 0
+d5_1880 = Dettes 5 % 1880 | 125000000 437578.20 124965500 325942
+d4_1884 = Dettes perpétuelles 4 % 1884 | 157688000 29793570.72 157685000 29792321.93
+d35_1889 = Dettes amortissables 3 ½ % 1889 | 174407500 20369842.93 174380447.46 20366510.45
+d3_1892 = d° 3 % 1892 | 198193000 235689227.90 28463148.75 228908561.05
+d3_1902 = d° 3 % 1902-1907 | 137252500 103058800.30 15119240 97389602.80
+d35_1903 = d° 3 ½ % 1903 | 17658000 7878010.16 15180956.25 7112102.24
+d4_1912 = d° 4 % 1912 | 90500000! 63088379.48 5395028.60 61194625.20
+d_1920 = d° 1920 | 183729847.55 88077313.20 3519277.05 79566439.77
+d_1932 = d° 1932 | 187816754.35 16576740 3188288.80 4030560!
+d_1934 = d° 1934 | 63464000 1586600 0 0
+banque_algerie = Avance de la Banque de l'Algérie | 27100000 0 7100000 0
+rail_loans = Charges d'emprunts et charges diverses afférentes aux chemins de fer | 434707827.30 9741764 408151233.05 9204421.22
+road_loans = Charges d'emprunt pour extension et modernisation du réseau routier | 116723661 11188510.35 25131259.21 9284490.52
+mortgage_credit = Développement du crédit hypothécaire agricole | 21224066.18 0 14313687.03 0
+regional_communal = Participation de l'Etat aux dépenses régionales et communales | 16296152.30 0 16127861.58 0
+archeveche = Subvention à l'Archevêché de Carthage | 1800000 0 1650000 0
+t_postal = Avances à l'Office Postal pour l'établissement de circuits téléphoniques | 45201638.11 1620394.24 32747968.16 1321930.58
+t_other = Autres charges temporaires diverses | 14809445.15 1325136.73 13105654.50 373620.02
+Totaux | 2023744148.14 590431868.21 1056109389.14 548871127.78
+Totaux2 | 2614176016.35 - 1604980516.92 -
+
+@debt_balance view=132 page=112 year=1934 period="1884 à 1934"
+img: all
+cols: cap int
+charges | 2023744148.14 590431868.21
+payments | 1036109389.14 548871127.78
+remaining | 967634759 41560740.43
+remaining_both | 1009195499.43 -
+due_prescribed | 1001408.10 1009828.49
+due_not_prescribed | 50430543.58 40550911.94
+not_due | 916202807.32 0
+Total | 967634759 41560740.43
+total_both | 1009195499.43 -
+
+# DROIT DE PATENTE. Etat des assujettis au droit de patente (Bénéfices de l'année 1934 — Imposés en 1935). f138
+# (p. 118). From this edition only two columns per caïdat: Nombre de patentables and Montant du bénéfice moyen par
+# caïdat (no classes). Row label: chef-lieu de région ; contrôle civil ; caïdat. Souk-el-Khemis and Souk-el-Arba are
+# bracketed together with one figure (stored under the caïdat "Souk-el-Khemis, Souk-el-Arba").
+@patente_caidat view=138 page=118 year=1935 profits=1934
+img: all
+cols: n montant
+Bizerte ; Béja ; Béja | 428 1465000
+Bizerte ; Bizerte ; Bizerte | 1636 22259500
+Bizerte ; Bizerte ; Mateur | 449 995500
+Bizerte ; Tabarka ; Aïn-Draham | 171 559000
+Bizerte ; Souk-el-Arba ; Souk-el-Khemis, Souk-el-Arba | 787 1995000
+Tunis ; Tunis ; Tunis-Ville et sa banlieue | 11183 142741500
+Tunis ; Zaghouan ; Zaghouan | 301! 726500!
+Tunis ; Grombalia ; Cap-Bon | 1626 2545500
+Le Kef ; Téboursouk ; Téboursouk | 203 427000
+Le Kef ; Le Kef ; Le Kef | 601 1504000
+Le Kef ; Le Kef ; Tadjerouine | 161 295500
+Le Kef ; Maktar ; Ouled-Ayar | 152 181000
+Le Kef ; Maktar ; Ouled-Aoun | 176 344500
+Le Kef ; Medjez-el-Bab ; Medjez-el-Bab | 250 518500
+Sousse ; Sousse ; Souassi | 45 73500
+Sousse ; Sousse ; Madhia | 360 743000!
+Sousse ; Sousse ; Monastir | 384 742000!
+Sousse ; Sousse ; Sousse | 1290 9014500
+Sousse ; Kairouan ; Kairouan | 337 1057000!
+Sousse ; Kairouan ; Zlass | 76 153500
+Sousse ; Thala ; Fraichiches | 263 473000!
+Sousse ; Thala ; Madjeurs | 150 194500
+Sfax ; Sfax ; Sfax | 3435 10336000
+Sfax ; Sfax ; La Skira | 14 9000
+Sfax ; Sfax ; Djebeniana | 99 104500
+Sfax ; Gabès ; L'Arad | 497! 1286500!
+Sfax ; Gafsa ; Hammama | 322 481000
+Sfax ; Gafsa ; Gafsa | 461 1285000
+Sfax ; Tozeur ; Djerid | 254 435500
+Sfax ; Djerba ; Djerba | 495 734000
+Territoires Militaires du Sud ;  ; Nefzaoua | 154 254000
+Territoires Militaires du Sud ;  ; Ouerghemma | 380 748000
+Territoires Militaires du Sud ;  ; Tatahouine | 205 258500
+Territoires Militaires du Sud ;  ; Matmata | 119 107500
+Totaux | 27464 205048500

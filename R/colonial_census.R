@@ -10,7 +10,7 @@
 #' censuses, whose own volumes are not on Gallica, and give yearly vital
 #' statistics, expulsions, naturalisations, foreigners' movements,
 #' recruitment, hospital activity, the mortality of Tunis, school
-#' enrolment, municipal budgets, court cases, the prison population, land registration, postal traffic, railways, mining and the state budget. Each
+#' enrolment, municipal budgets, court cases, the prison population, land registration, postal traffic, railways, mining, the state budget, the public debt and taxpayers. Each
 #' table can be loaded with \code{\link{load_colonial_census}}.
 #'
 #' @return A \code{data.frame} with one row per table and columns

@@ -39,7 +39,7 @@ Notes:
 | 1 | Communes: **done** (`extract_communes.py`, all tables, surveyed page by page) |
 | 2 | Justice: **done** (`extract_justice.py`; hearing-schedule text pages not transcribed). Prisons: **done** (`extract_prisons.py`, 9 tables, survey in `csv/prisons_survey.md`). Property: **done** (`extract_property.py`, 13 tables, survey in `csv/property_survey.md`) |
 | 3 | Posts: **done** (`extract_posts.py`, 6 tables, survey in `csv/posts_survey.md`; exchange-rate pages to do). Public works: **done** (`extract_publicworks.py`, 12 tables, survey in `csv/publicworks_survey.md`) |
-| 4 | Finances: budget receipts and expenditure **done** (`extract_finance.py`); debt, patente, taxe personnelle, achour, canoun, livestock tax in progress (views in `csv/finance_survey.md`) |
+| 4 | Finances: budget, public debt, patente and taxe personnelle **done** (`extract_finance.py`); livestock tax, achour, canoun to do (views in `csv/finance_survey.md`) |
 | 5 | Agriculture |
 | 6 | Colonisation, economic institutions, labour, research institutions |
 | 7–10 | Commerce and navigation, by edition groups (1922–24, 1925–27, 1928–30, 1935–39) |

@@ -1,0 +1,120 @@
+# Finances chapter (chapitre X), sgt1924. Format: see yb_tables.py. Every cell read on native-resolution crops of the
+# page images; '!' = the Gallica OCR differs from the image reading (cross-check).
+
+# DROIT DE PATENTE. Etat des assujettis au droit de patente. Spread f1208 (p. 218) | f1209 (p. 219, scanned
+# sideways). Layout as in sgt1922 (see finance_sgt1922.txt), 33 caïdats; the 6th class column is printed across the
+# gutter and visible on both views.
+@patente view=1208 page=218 year=1924
+img: all
+cols: n c1 c2 c3 c4 c5 c6
+Aïn-Draham | 202 103 51 31 9 4 4
+L'Arad | 1006 496 396 81 25 4 3
+Béja | 739 296 248 143 41 7 0
+Bizerte | 1643 733 533 248 86 28 9
+Cap-Bon | 2572 1294 1000 251 22 3 1
+Djérid | 531 260 196 70 5 0 0
+Fraichiches | 542 189 199 134 18 2 0
+Majeurs | 238 141 60 32 5 0 0
+Gafsa | 581 175 187 185 21 9 3
+Hammama | 271 155 69 33 13 1 0
+Zlass | 863 552 226 74 8 3 0
+Kairouan | 1595 733 615 197 38 12 0
+Kef | 1253 447 557 202 32 15 0
+Tadjerouine | 612 216 241 116 34 5 0
+Mateur | 563 246 157 131 14 10 2
+Medjez-el-Bab | 531 256 212 52 9 1 0
+Mahdia | 1521 934 438 131 11 4 1
+Souassi | 355 295 52 7 1 0 0
+Monastir | 2930 1887 810 216 14 1 0
+Nefzaoua | 150 72 26 52 0 0 0
+Ouled-Aoun | 174 97 52 21 3 1 0
+Ouled-Ayar | 399 244 96 57 2 0 0
+Ouerghemma | 590 216 249 116 7 1 0
+Sfax | 3147 1156 1428 408 75 52 13
+La Skhira | 155 59 76 20 0 0 0
+Souk-el-Arba | 939 356 382 168 27 4 1
+Téboursouk | 301 129 117 43 9 2 0
+Zaghouan | 324 132 120 67 4 0 0
+Sousse | 2684 1028 1089 413 94 27 9
+Tunis et Banlieue | 10092 3506 2995 2008 700 351 143
+Djerba | 1115 616 418 64 11 4 1
+Matmata | 426 360 49 17 0 0 0
+Foum-Tatahouine | 253 124 77 45 7 0 0
+Totaux | 39297 17503 13421 5833 1345 551 191
+
+@patente view=1209 page=219 year=1924
+img: all
+cols: c7 c8 c9 c10 c11 c12 c13 c14 c15 montant
+Aïn-Draham | 0 0 0 0 0 0 0 0 0 464000
+L'Arad | 1 0 0 0 0 0 0 0 0 1488000
+Béja | 1 0 1 0 2 0 0 0 0 2260500
+Bizerte | 3 0 1 0 1 0 0 1 0 6381500
+Cap-Bon | 1 0 0 0 0 0 0 0 0 3300500
+Djérid | 0 0 0 0 0 0 0 0 0 706500
+Fraichiches | 0 0 0 0 0 0 0 0 0 1027000
+Majeurs | 0 0 0 0 0 0 0 0 0 310000
+Gafsa | 1 0 0 0 0 0 0 0 0 1423000
+Hammama | 0 0 0 0 0 0 0 0 0 409000
+Zlass | 0 0 0 0 0 0 0 0 0 979000
+Kairouan | 0 0 0 0 0 0 0 0 0 2443500
+Kef | 0 0 0 0 0 0 0 0 0 2231000
+Tadjerouine | 0 0 0 0 0 0 0 0 0 1205500
+Mateur | 0 0 2 1 0 0 0 0 0 1447000
+Medjez-el-Bab | 0 1 0 0 0 0 0 0 0 773000
+Mahdia | 0 0 1 0 1 0 0 0 0 2187500
+Souassi | 0 0 0 0 0 0 0 0 0 257500
+Monastir | 1 1 0 0 0 0 0 0 0 3137000
+Nefzaoua | 0 0 0 0 0 0 0 0 0 257000
+Ouled-Aoun | 0 0 0 0 0 0 0 0 0 237500
+Ouled-Ayar | 0 0 0 0 0 0 0 0 0 480500
+Ouerghemma | 0 0 0 0 0 0 0 0 0 980000
+Sfax | 7 3 3 1 1 0 0 0 0 7045500
+La Skhira | 0 0 0 0 0 0 0 0 0 213500
+Souk-el-Arba | 1 0 0 0 0 0 0 0 0 1666500
+Téboursouk | 1 0 0 0 0 0 0 0 0 528000
+Zaghouan | 1 0 0 0 0 0 0 0 0 550500
+Sousse | 12 4 3 2 3 0 0 0 0 7270500
+Tunis et Banlieue | 150 54! 52 59 60 10 3 1 0 85638500
+Djerba | 1 0 0 0 0 0 0 0 0 1366500
+Matmata | 0 0 0 0 0 0 0 0 0 313000
+Foum-Tatahouine | 0 0 0 0 0 0 0 0 0 387500
+Totaux | 181 63 63 63 68 10 3 2 0 139366000
+
+# TAXE PERSONNELLE. Etat des contribuables imposés à la taxe personnelle. f1173 (p. 183). Layout as in sgt1923 (see
+# finance_sgt1922.txt for the columns and the Ouled-Aoun / Ouled-Ayar bracket).
+@taxe view=1173 page=183 year=1924
+img: all
+cols: fr it uk es gr oth eur tun tot
+Aïn-Draham | 279 253 8 6 1 2 549 9525 10074
+L'Arad | 151 80! 64 2 0 9 306 18963 19269
+Béja | 366 350 20 2 7 14 759 18180 18939
+Bizerte | 2130 1076 111 8 3 14 3342 16653 19995
+Cap-Bon | 350 927 32 13 3 10 1335 31712 33047
+Djérid | 69 4 0 0 0 0 73 10525 10598
+Fraichiches-Majeurs | 122 61 7 0 0 0 190 28109 28299
+Gafsa | 594 676 28 4 14 66 1382 13091 14473
+Hammama | 49 95 2 0 11 1 158 15710 15868
+Kairouan | 119 45 13 1 4 2 184 16725 16909
+Djelass | 63 79 21 0 0 10 173 20938 21111
+Kef | 266 351 11 1 0 15 644 17635 18279
+Tadjerouine | 191 802 14 5 2 6 1020 13814 14834
+Matmata | 0 0 0 0 0 0 0 6279 6279
+Mateur | 284! 556 12 3 1 4 860 15043 15903
+Medjez-el-Bab | 494 184 16 1 1 32 728 10833 11561
+Mahdia | 81 66 23 0 0 3 173 16819 16992
+Souassi | 0 0 0 0 0 0 0 10713 10713
+Monastir | 78 34 41! 7 0 0 160 19597 19757
+Nefzaoua | 5 0 0 0 0 0 5 9467 9472
+Ouled-Aoun, Ouled-Ayar | 54 40 3 0 0 0 97 - 17156
+Ouled-Aoun | - - - - - - - 7700 -
+Ouled-Ayar | - - - - - - - 9359 -
+Ouerghemma | 68 21 43 0 2 6 140 30694 30834
+Sfax | 882 817 383 14 98 53 2247 35313 37560
+La Skhira | 4 3 1 0 0 0 8 5670 5678
+Souk-el-Arba | 324 382 16 2 2 6 732 24297 25029
+Téboursouk | 309 159 12 1 2 16 499 11473 11972
+Zaghouan | 362 378 13 0 2 9 764 9751 10515
+Sousse | 803 904 357 15 3 37 2119 29451! 31570
+Tunis et Banlieue | 8470! 13295 2225! 69 81 351 24491 44283 68774
+Djerba | 64 17 104 2 11 0 198 13063 13261
+Totaux | 17031 21655 3580 156 248 666 43336 541385 584721

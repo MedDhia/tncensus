@@ -78,3 +78,162 @@ x7 | 6157683.13 14023271.30 29945942.63 25430925.99 22387475.69 26434380.09 3551
 x8 | 0 0 0 0 0 24981.15 0
 closed | 19490359.97 43174281.72 57112293.86 79973254.36 79652696.10 70498545.63 47163431.19
 Total | 173380268.13 247894268.84 323893637.49 358708699.43 316939974.19 336624389.76 338302717.78
+
+# DETTE TUNISIENNE. a) Opérations auxquelles a donné lieu le service de la dette tunisienne de 1884 à 1923. f772
+# (p. 208). Every cell read on native-resolution crops. Format as in finance_sgt1925.txt.
+@debt view=772 page=208 year=1923 period="1884 à 1923"
+img: all
+cols: ch_cap ch_int pay_cap pay_int
+cert1870 = Certificats de coupons, arriérés antérieurs à 1870 | 10171756.20! 0 9884838.70 0
+d5_1880 = Dettes 5 % 1880 | 125000000 437578.20 124965500! 325942!
+d4_1884 = Dettes perpétuelles 4 % 1884 | 157688000 29793570.72! 157685000 29792321.93
+d35_1889 = Dettes amortissables 3 ½ % 1889 | 174407500 20369842.93! 174380447.46 20366510.45
+d3_1892 = d° 3 % 1892 | 198193000 178156262.90 17073471.25! 171052506.05
+d3_1902 = d° 3 % 1902-1907 | 137252500 61694942.80! 6933650 55729780.30
+d35_1903 = d° 3 ½ % 1903 | 17658000 6863955.16! 14834973.75! 6085998.49
+d4_1912 = d° 4 % 1912 | 90500000 19794331.28! 1900489.17 17761404.02
+d_1920 = d° 1920 | 40000000 2622275.67! 27228.78 1359622.13
+banque_algerie = Avance de la Banque de l'Algérie | 4000000 0 0 0
+t_bizerte = Annuité de rachat des pêcheries de Bizerte | 448000 0 448000 0
+t_medjerda = Part de la Tunisie dans la garantie des lignes de la Medjerda | 14055895.15 0 12804076.38 0
+t_tgm = Annuité de rachat du chemin de fer Tunis-Goulette-Marsa | 5096690.40 0 4778147.25! 0
+t_rail_deficit = Déficit de l'exploitation des chemins de fer | 57812495.72 0 4168563.52! 0
+t_military = Contribution de la Tunisie aux dépenses militaires de la Métropole | 120000 0 120000 0
+t_postal = Avances à l'Office Postal pour l'établissement de circuits téléphoniques | 6885373.01 136140.04 1479952.88! 73640.17
+Totaux | 1039289210.48 319868899.70 531484339.14 302547725.54
+Totaux2 | 1359158110.18 - 834032064.68 -
+
+# b) Balance des opérations (same page).
+@debt_balance view=772 page=208 year=1923 period="1884 à 1923"
+img: all
+cols: cap int
+charges | 1039289210.48 319868899.70
+payments | 531484339.14 302547725.54
+remaining | 507804871.34 17321174.16
+remaining_both | 525126045.50 -
+due_prescribed | 414730.04 224663.07
+due_not_prescribed | 59293786.81! 17096511.09
+not_due | 448096354.49 0
+Total | 507804871.34 17321174.16
+total_both | 525126045.50 -
+
+# DROIT DE PATENTE. Etat des assujettis au droit de patente (Bénéfices de l'année 1925 — Imposés en 1926). Spread
+# f794 (p. 230) | f795 (p. 231). Layout as in sgt1925 (see finance_sgt1925.txt); class 3 printed across the gutter.
+@patente view=794 page=230 year=1926 profits=1925
+img: all
+cols: n c1 c2 c3
+1re Région ; Béja ; Béja | 1194 528! 310 290
+1re Région ; Bizerte ; Bizerte | 1696 755 492 302
+1re Région ; Bizerte ; Mateur | 627 325 129 139
+1re Région ; Tabarka ; Aïn-Draham | 166 88 43 28
+1re Région ; Souk-el-Arba ; Souk-el-Khemis | 263 112 100 36
+1re Région ; Souk-el-Arba ; Souk-el-Arba | 745 342 235! 143
+2me Région ; Tunis ; Banlieue | 10517 3140 3332 2031
+2me Région ; Zaghouan ; Zaghouan | 327 115 138 66
+2me Région ; Grombalia ; Cap Bon | 3127 1597 1159 320!
+3me Région ; Téboursouk ; Téboursouk | 371 161 141 59
+3me Région ; Le Kef ; Le Kef | 1031 523 301 163
+3me Région ; Le Kef ; Tadjérouine | 358 188 97 62
+3me Région ; Mactar ; Oulad Ayar | 136 88 34 14
+3me Région ; Mactar ; Oulad Aoun | 130 68 27 32
+3me Région ; Medjez-el-Bab ; Medjez-el-Bab | 460 214 153 76
+4me Région ; Sousse ; Souassi | 241 182 40 18!
+4me Région ; Sousse ; Mahdia | 1257 613 483 143
+4me Région ; Sousse ; Monastir | 2042 1103 671 258
+4me Région ; Sousse ; Sousse | 2724 983 915 574!
+4me Région ; Kairouan ; Kairouan | 1039 465 367 154
+4me Région ; Kairouan ; Djelass | 653 390 159 83
+4me Région ; Thala ; Fraichiches | 214 124 44 43
+4me Région ; Thala ; Madjeurs | 272 113 91 66
+5me Région ; Sfax ; Sfax | 2892 1185 1120 386
+5me Région ; Sfax ; La Skira | 123 51 14 31
+5me Région ; Sfax ; Djebéniana | 337 153 153 31
+5me Région ; Gabès ; L'Arad | 854 345 323 151
+5me Région ; Gafsa ; Hemmama | 244 100 102 32
+5me Région ; Gafsa ; Gafsa | 544 180! 167 132
+5me Région ; Tozeur ; Djerid | 876 360 323 164
+5me Région ; Djerba ; Djerba | 1093 673 323 81
+Territoires militaires du Sud ;  ; Nefzaoua | 162 86 17 59
+Territoires militaires du Sud ;  ; Ouerghema | 705 233 230 212
+Territoires militaires du Sud ;  ; Tataouine | 275 154 52 68
+Territoires militaires du Sud ;  ; Matmata | 522 386 120 16
+Totaux | 38217 16123 12405 6463
+
+@patente view=795 page=231 year=1926 profits=1925
+img: all
+cols: c4 c5 c6 c7 c8 c9 c10 c11 c12 c13 c14 c15 montant
+1re Région ; Béja ; Béja | 33 20 6 5 0 0 2 0 0 0 0 0 2941500
+1re Région ; Bizerte ; Bizerte | 97 34 6 4 3 2 0 0 0 1 0 0 5582500
+1re Région ; Bizerte ; Mateur | 16 11 3 1 1 0 1 1 0 0 0 0 1805000
+1re Région ; Tabarka ; Aïn-Draham | 5 2 0 0 0 0 0 0 0 0 0 0 274000
+1re Région ; Souk-el-Arba ; Souk-el-Khemis | 13 1 1 0 0 0 0 0 0 0 0 0 469500
+1re Région ; Souk-el-Arba ; Souk-el-Arba | 20 2 0 1 0 1 0 1 0 0 0 0 1678500
+2me Région ; Tunis ; Banlieue | 982! 397 192 139 76 61 81 57 20 7 2 0 109571000
+2me Région ; Zaghouan ; Zaghouan | 7 0 0 0 1 0 0 0 0 0 0 0 610500
+2me Région ; Grombalia ; Cap Bon | 36 11 3 1 0 0 0 0 0 0 0 0 4207000
+3me Région ; Téboursouk ; Téboursouk | 6 3 0 0 1 0 0 0 0 0 0 0 651000
+3me Région ; Le Kef ; Le Kef | 27 16 1 0 0 0 0 0 0 0 0 0 1751000
+3me Région ; Le Kef ; Tadjérouine | 9 2 0 0 0 0 0 0 0 0 0 0 553000
+3me Région ; Mactar ; Oulad Ayar | 0 0 0 0 0 0 0 0 0 0 0 0 144000
+3me Région ; Mactar ; Oulad Aoun | 2 1 0 0 0 0 0 0 0 0 0 0 216500
+3me Région ; Medjez-el-Bab ; Medjez-el-Bab | 12 4 0 0 0 0 1 0 0 0 0 0 902500
+4me Région ; Sousse ; Souassi | 1 0 0 0 0 0 0 0 0 0 0 0 221500
+4me Région ; Sousse ; Mahdia | 13 1 1 0 0 2 1 0 0 0 0 0 1994500
+4me Région ; Sousse ; Monastir | 5 5 0 0 0 0 0 0 0 0 0 0 2573500
+4me Région ; Sousse ; Sousse | 166 40 19 11 6 5 4 1 0 0 0 0 8395500
+4me Région ; Kairouan ; Kairouan | 41 12 0 0 0 0 0 0 0 0 0 0 1809500
+4me Région ; Kairouan ; Djelass | 16 5 0 0 0 0 0 0 0 0 0 0 919000
+4me Région ; Thala ; Fraichiches | 3 0 0 0 0 0 0 0 0 0 0 0 301000
+4me Région ; Thala ; Madjeurs | 1 1 0 0 0 0 0 0 0 0 0 0 446500
+5me Région ; Sfax ; Sfax | 123 36 17 11 5 2 6 1 0 0 0 0 7688500
+5me Région ; Sfax ; La Skira | 27 0 0 0 0 0 0 0 0 0 0 0 187500
+5me Région ; Sfax ; Djebéniana | 0 0 0 0 0 0 0 0 0 0 0 0 671000
+5me Région ; Gabès ; L'Arad | 26! 5 3 0 1 0 0 0 0 0 0 0 1443000
+5me Région ; Gafsa ; Hemmama | 9 1 0 0 0 0 0 0 0 0 0 0 397500
+5me Région ; Gafsa ; Gafsa | 47 14 2 2 0 0 0 0 0 0 0 0 1495000
+5me Région ; Tozeur ; Djerid | 23 3 3 0 0 0 0 0 0 0 0 0 1531000
+5me Région ; Djerba ; Djerba | 8 5 1 2 0 0 0 0 0 0 0 0 1344500
+Territoires militaires du Sud ;  ; Nefzaoua | 0 0 0 0 0 0 0 0 0 0 0 0 275000
+Territoires militaires du Sud ;  ; Ouerghema | 21 6 2 1 0 0 0 0 0 0 0 0 1541000
+Territoires militaires du Sud ;  ; Tataouine | 1 0 0 0 0 0 0 0 0 0 0 0 400500
+Territoires militaires du Sud ;  ; Matmata | 0 0 0 0 0 0 0 0 0 0 0 0 429000
+Totaux | 1796 638 260 178 94 73 96 61 20 8 2 0 165422000
+
+# TAXE PERSONNELLE. Etat des contribuables soumis à la taxe personnelle. Spread f774 (p. 210: Régions, Chefs-lieux,
+# Contrôles civils, Caïdats, Français) | f775 (p. 211: Italiens ... Total). Layout as in sgt1925. Light impression;
+# Oulad Ayar Italiens printed with a damaged 3 ("38", which the Total des Européens 87 requires).
+@taxe view=774 page=210 year=1926
+img: all
+cols: fr it uk es gr oth eur tun tot
+1re Région ; Béja ; Béja | 425 441! 18 3 7 14 908 18168! 19076
+1re Région ; Bizerte ; Bizerte | 2221 1323! 103 15 7 71 3740 16509! 20249
+1re Région ; Bizerte ; Mateur | 282! 601 14 8 1 11 917 15039 15956
+1re Région ; Tabarka ; Aïn-Draham | 272 216! 4 3 1 7 503 9598 10101
+1re Région ; Souk-el-Arba ; Souk-el-Arba | 361 355! 17 2 1 7 743 22901 23644
+2me Région ; Tunis ; Banlieue | 10662 14074 2083 67! 76 625! 27587 45726! 73313
+2me Région ; Zaghouan ; Zaghouan | 428 423! 18 1 0 15 885 10575 11460
+2me Région ; Grombalia ; Cap Bon | 370 972! 33 13 6! 18 1412 27480 28892
+3me Région ; Téboursouk ; Téboursouk | 333 151 8 1 2 36 531 11859 12390
+3me Région ; Le Kef ; Le Kef | 276 410 18 1 0 17 722 18115 18837
+3me Région ; Le Kef ; Tadjerouine | 186 849! 25 6! 4 15 1085 14387 15472
+3me Région ; Mactar ; Oulad Ayar | 42 38 3 1 0 3 87 9694! 9781
+3me Région ; Mactar ; Oulad Aoun | 16 11 0 0 0 4 31 7862 7893
+3me Région ; Medjez-el-Bab ; Medjez-el-Bab | 505 255 13 2 2 18 795 11114 11909
+4me Région ; Sousse ; Souassi | 4 0 0 0 0 1 5 10850 10855
+4me Région ; Sousse ; Mahdia | 78! 52 24 0 0 2 156 16492 16648
+4me Région ; Sousse ; Monastir | 73 37 31 6! 0 1 148 20293 20441
+4me Région ; Sousse ; Sousse | 889 944 323 14 14 27 2211 29230 31441
+4me Région ; Kairouan ; Kairouan | 149 38 17 3 4 10 221 16917 17138
+4me Région ; Kairouan ; Djelass | 84 100 29 4 0 11 228 21289 21517
+4me Région ; Thala ; Fraichiches-Majeurs | 148 97 10 2 0 5 262 29132 29394
+5me Région ; Sfax ; La Skhira | 9! 2 1 0 0 0 12 7549! 7561
+5me Région ; Sfax ; Sfax | 976 792 354 14 93 56! 2285 35064 37349
+5me Région ; Gabès ; L'Arad | 177 97 52 2 0 5 333 19681! 20014
+5me Région ; Gafsa ; Hemmama | 50 104! 3 0 12 0 169 16156! 16325
+5me Région ; Gafsa ; Gafsa | 581 458! 32 5 8 52 1136 12589 13725
+5me Région ; Tozeur ; Djerid | 66 4 2 0 0 1 73 10835 10908
+5me Région ; Djerba ; Djerba | 76 14 102 2 12 1 207 12532 12739
+Territoires militaires du Sud ;  ; Nefzaoua | 8 2 0 0 0 0 10 9315 9325
+Territoires militaires du Sud ;  ; Ouerghema | 63! 25 41 0 3 4 136 32005 32141
+Territoires militaires du Sud ;  ; Matmata | 0 0 0 0 0 0 0 6123 6123
+Totaux | 19810 22885 3378 175 253 1037 47538 545079 592617

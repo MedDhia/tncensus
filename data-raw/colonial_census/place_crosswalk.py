@@ -61,7 +61,7 @@ CONTROLE = {
     "Téboursouk": "Téboursouk", "Teboursouk": "Téboursouk", "Annexe de Teboursouk": "Téboursouk",
     "Thala": "Thala", "Contrôle de Thala": "Thala",
     "Tozeur": "Tozeur", "Annexe de Tozeur": "Tozeur",
-    "Tunis": "Tunis", "Contrôle de Tunis": "Tunis",
+    "Tunis": "Tunis", "Contrôle de Tunis": "Tunis", "Tunis-Ville et banlieue": "Tunis",
     "Zaghouan": "Zaghouan",
     # The southern military territories: "Territoire(s) du Sud" until the
     # early 1920s, "Territoires militaires" afterwards; the 1931 census volume

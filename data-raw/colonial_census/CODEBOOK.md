@@ -246,6 +246,11 @@ Every table is tidy: one row per printed cell. Printed subtotals and totals are 
 | [`publicworks_other_transport`](#publicworks_other_transport) | airport;other_transport;vehicles | by edition | 47 | mixed | Registered motor vehicles, other public transport operators and Tunis airport traffic (sgt1939) |
 | [`finance_budget_receipts`](#finance_budget_receipts) | receipts;receipts39 | by edition | 224 | francs | Annual budget of the Regency: realised receipts by budget chapter (exercices 1915-1938) |
 | [`finance_budget_expenditure`](#finance_budget_expenditure) | expenditure | by edition | 425 | francs | Annual budget of the Regency: expenditure as finally settled, by service (exercices 1915-1938) |
+| [`finance_public_debt`](#finance_public_debt) | debt | by edition | 580 | francs | Tunisian public debt: cumulative charges and payments (capital, interest) by loan and charge, since 1884 |
+| [`finance_public_debt_balance`](#finance_public_debt_balance) | debt_balance | by edition | 50 | francs | Tunisian public debt: balance of operations since 1884, breakdown of the amounts remaining to be paid |
+| [`finance_patente`](#finance_patente) | patente | by edition | 6,985 | count | Business licence tax (droit de patente): taxpayers by caïdat and class of profit |
+| [`finance_patente_caidat`](#finance_patente_caidat) | patente_caidat | by edition | 204 | mixed | Business licence tax (droit de patente): number of taxpayers and total mean profit by caïdat |
+| [`finance_taxe_personnelle`](#finance_taxe_personnelle) | taxe | by edition | 1,977 | count | Personal tax (taxe personnelle): taxpayers by caïdat and nationality |
 
 ### eur1906_t1_circonscription_nationality
 
@@ -10981,3 +10986,421 @@ Source `sgt`, table expenditure, printed pages by edition. 425 rows. Value type:
 | Code | Printed label | N |
 |---|---|---:|
 | `francs` |  | 425 |
+
+### finance_public_debt
+
+**Dette tunisienne. a) Opérations auxquelles a donné lieu le service de la dette tunisienne depuis 1884**  
+*Tunisian public debt: cumulative charges and payments (capital, interest) by loan and charge, since 1884*
+
+Source `sgt`, table debt, printed pages by edition. 580 rows. Value type: francs. Flags: (empty) 542, ocr_corrected 37, total_mismatch 1. Notes and validation: [`../yearbook_other_chapters/csv/finance_public_debt.md`](../yearbook_other_chapters/csv/finance_public_debt.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `period_fr` | Place or label as printed (8 distinct values). |
+| `group` | Coded dimension. |
+| `group_fr` | Printed French label for `group`. |
+| `item` | Coded dimension. |
+| `item_fr` | Printed French label for `item`. |
+| `account` | Coded dimension. |
+| `account_fr` | Printed French label for `account`. |
+| `component` | Coded dimension. |
+| `component_fr` | Printed French label for `component`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`group`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `debt` |  | 412 |
+| `temporary_charges` | Charges temporaires diverses incombant au budget beylical | 168 |
+
+`item`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `agricultural_mortgage_credit` | Développement du crédit hypothécaire agricole | 12 |
+| `banque_algerie_advance` | Avance de la Banque de l'Algérie | 32 |
+| `bizerte_fisheries_buyback` | Annuité de rachat des pêcheries de Bizerte | 20 |
+| `carthage_archbishopric_subsidy` | Subvention à l'Archevêché de Carthage | 12 |
+| `consolidation_expenditure` | Participation de l'Etat aux dépenses de consolidation | 8 |
+| `coupon_certificates_pre1870` | Certificats de coupons, arriérés antérieurs à 1870 | 32 |
+| `debt_5pct_1880` | Dettes 5 % 1880 | 32 |
+| `enzel_annuities` | Arrérages et rachat de rentes d'enzel | 4 |
+| `loan_1920` | d° 1920 | 28 |
+| `loan_1932` | d° 1932 | 12 |
+| `loan_1934` | d° 1934 | 12 |
+| `loan_1937_1938` | d° 1937-1938 | 4 |
+| `medjerda_lines_guarantee` | Part de la Tunisie dans la garantie des lignes de la Medjerda | 20 |
+| `metropole_military_contribution` | Contribution de la Tunisie aux dépenses militaires de la Métropole | 16 |
+| `mobilised_railwaymen_pay` | Rappel de solde aux cheminots mobilisés | 4 |
+| `other_temporary_charges` | Autres charges temporaires diverses / Autres charges temporaires diverses incombant au budget beylical | 12 |
+| `perpetual_4pct_1884` | Dettes perpétuelles 4 % 1884 | 32 |
+| `postal_office_telephone_advances` | Avances à l'Office Postal pour l'établissement de circuits téléphoniques | 28 |
+| `rail_transport_tax_surplus` | Excédent de recettes réalisé au titre « Impôt sur le prix des transports par chemin de fer » | 4 |
+| `railway_loan_charges` | Charges d'emprunts et charges diverses afférentes aux chemins de fer | 12 |
+| `railway_operating_deficit` | Déficit de l'exploitation des chemins de fer | 20 |
+| `railway_past_deficits_settlement` | Apurement des déficits de l'exploitation au cours des exercices antérieurs | 4 |
+| `railway_reserve_fund_payment` | Versement du fonds de réserve des chemins de fer pour les insuffisances de prévisions des déficits et travaux complémentaires divers sur le réseau ferré | 4 |
+| `railway_reserve_fund_reconstitution` | Reconstitution du fonds de réserve des chemins de fer | 4 |
+| `railwaymen_allowance_1925` | Solde de l'allocation de 250 francs payée aux cheminots pour l'année 1925 | 4 |
+| `redeemable_3_5pct_1889` | Dettes amortissables 3 ½ % 1889 | 32 |
+| `redeemable_3_5pct_1903` | d° 3 ½ % 1903 | 32 |
+| `redeemable_3pct_1892` | d° 3 % 1892 | 32 |
+| `redeemable_3pct_1902_1907` | d° 3 % 1902-1907 | 32 |
+| `redeemable_4pct_1912` | d° 4 % 1912 | 32 |
+| `regional_communal_expenditure` | Participation de l'Etat aux dépenses régionales et communales | 12 |
+| `road_network_loan_charges` | Charges d'emprunt pour extension et modernisation du réseau routier | 12 |
+| `tgm_railway_buyback` | Annuité de rachat du chemin de fer Tunis-Goulette-Marsa | 20 |
+| `work_accident_annuities` | Accidents du travail : paiements de rentes viagères | 4 |
+
+`account`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `charges` | Charges | 290 |
+| `payments` | Paiements ou conversions consommés depuis l'échéance jusqu'à la date de la prescription au profit de l'Etat | 290 |
+
+`component`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `capital` | Capital | 290 |
+| `interest` | Intérêts | 290 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `francs` |  | 580 |
+
+### finance_public_debt_balance
+
+**Dette tunisienne. b) Balance des opérations**  
+*Tunisian public debt: balance of operations since 1884, breakdown of the amounts remaining to be paid*
+
+Source `sgt`, table debt_balance, printed pages by edition. 50 rows. Value type: francs. Flags: (empty) 43, ocr_corrected 5, total_mismatch 2. Notes and validation: [`../yearbook_other_chapters/csv/finance_public_debt_balance.md`](../yearbook_other_chapters/csv/finance_public_debt_balance.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `period_fr` | Place or label as printed (8 distinct values). |
+| `status` | Coded dimension. |
+| `status_fr` | Printed French label for `status`. |
+| `component` | Coded dimension. |
+| `component_fr` | Printed French label for `component`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`status`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `due_cancelled` | Décomposition des restes à payer : échus, annulés (sgt1939 only) | 2 |
+| `due_not_prescribed` | Décomposition des restes à payer : échus, non prescrits | 16 |
+| `due_prescribed` | Décomposition des restes à payer : échus, prescrits | 16 |
+| `not_due` | Décomposition des restes à payer : non échus | 16 |
+
+`component`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `capital` | Capital | 25 |
+| `interest` | Intérêts | 25 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `francs` |  | 50 |
+
+### finance_patente
+
+**Droit de patente. Etat des assujettis au droit de patente**  
+*Business licence tax (droit de patente): taxpayers by caïdat and class of profit*
+
+Source `sgt`, table patente, printed pages by edition. 6,985 rows. Value type: count. Flags: (empty) 6,922, ocr_corrected 49, total_mismatch 8, derived_from_totals 6. Notes and validation: [`../yearbook_other_chapters/csv/finance_patente.md`](../yearbook_other_chapters/csv/finance_patente.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `profits_year` | Coded dimension. |
+| `region` | Coded dimension. |
+| `controle_civil` | Place or label as printed (20 distinct values). |
+| `caidat` | Place or label as printed (60 distinct values). |
+| `profit_class` | Coded dimension. |
+| `profit_class_fr` | Printed French label for `profit_class`. |
+| `mean_profit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`profits_year`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `(empty)` |  | 1,770 |
+| `1925` |  | 525 |
+| `1926` |  | 560 |
+| `1927` |  | 560 |
+| `1928` |  | 1,785 |
+| `1929` |  | 1,785 |
+
+`region`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `(empty)` |  | 1,245 |
+| `1re Région` |  | 276 |
+| `2me Région` |  | 138 |
+| `3me Région` |  | 276 |
+| `4me Région` |  | 368 |
+| `5me Région` |  | 368 |
+| `Bizerte` |  | 708 |
+| `Le Kef` |  | 708 |
+| `Sfax` |  | 944 |
+| `Sousse` |  | 944 |
+| `Territoires Militaires du Sud` |  | 204 |
+| `Territoires militaire du Sud` |  | 204 |
+| `Territoires militaires du Sud` |  | 248 |
+| `Tunis` |  | 354 |
+
+`profit_class`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `1` | 1re classe : bénéfice de 0 à 1.000 fr., bénéfice moyen 500 fr. | 293 |
+| `10` | 10e classe : bénéfice de 100.001 à 200.000 fr., bénéfice moyen 150.000 fr. | 293 |
+| `11` | 11e classe : bénéfice de 200.001 à 300.000 fr., bénéfice moyen 250.000 fr. / 11e classe : bénéfice de 200.001 à 500.000 fr., bénéfice moyen 350.000 fr. | 293 |
+| `12` | 12e classe : bénéfice de 300.001 à 400.000 fr., bénéfice moyen 350.000 fr. / 12e classe : bénéfice de 500.001 à 1.000.000 fr., bénéfice moyen 750.000 fr. | 293 |
+| `13` | 13e classe : bénéfice de 1.000.001 à 2.000.000 fr., bénéfice moyen 1.500.000 fr. / 13e classe : bénéfice de 400.001 à 500.000 fr., bénéfice moyen 450.000 fr. | 293 |
+| `14` | 14e classe : bénéfice de 2.000.001 à 3.000.000 fr., bénéfice moyen 2.500.000 fr. / 14e classe : bénéfice de 500.001 à 600.000 fr., bénéfice moyen 550.000 fr. | 293 |
+| `15` | 15e classe : bénéfice de 3.000.001 à 4.000.000 fr., bénéfice moyen 3.500.000 fr. / 15e classe : bénéfice de 600.001 à 700.000 fr., bénéfice moyen 650.000 fr. | 293 |
+| `16` | 16e classe : bénéfice de 4.000.001 à 5.000.000 fr., bénéfice moyen 4.500.000 fr. / 16e classe : bénéfice de 700.001 à 800.000 fr., bénéfice moyen 750.000 fr. | 140 |
+| `17` | 17e classe : bénéfice de 800.001 à 900.000 fr., bénéfice moyen 850.000 fr. | 70 |
+| `18` | 18e classe : bénéfice de 900.001 à 1.000.000 fr., bénéfice moyen 950.000 fr. | 70 |
+| `19` | 19e classe : bénéfice de 1.000.001 à 1.100.000 fr., bénéfice moyen 1.050.000 fr. | 70 |
+| `2` | 2e classe : bénéfice de 1.001 à 2.000 fr., bénéfice moyen 1.500 fr. | 293 |
+| `20` | 20e classe : bénéfice de 1.100.001 à 1.200.000 fr., bénéfice moyen 1.150.000 fr. | 70 |
+| `21` | 21e classe : bénéfice de 1.200.001 à 1.300.000 fr., bénéfice moyen 1.250.000 fr. | 70 |
+| `22` | 22e classe : bénéfice de 1.300.001 à 1.400.000 fr., bénéfice moyen 1.350.000 fr. | 70 |
+| `23` | 23e classe : bénéfice de 1.400.001 à 1.500.000 fr., bénéfice moyen 1.450.000 fr. | 70 |
+| `24` | 24e classe : bénéfice de 1.500.001 à 1.600.000 fr., bénéfice moyen 1.550.000 fr. | 70 |
+| `25` | 25e classe : bénéfice de 1.600.001 à 1.700.000 fr., bénéfice moyen 1.650.000 fr. | 70 |
+| `26` | 26e classe : bénéfice de 1.700.001 à 1.800.000 fr., bénéfice moyen 1.750.000 fr. | 70 |
+| `27` | 27e classe : bénéfice de 1.800.001 à 1.900.000 fr., bénéfice moyen 1.850.000 fr. | 70 |
+| `28` | 28e classe : bénéfice de 1.900.001 à 2.000.000 fr., bénéfice moyen 1.950.000 fr. | 70 |
+| `29` | 29e classe : bénéfice de 2.000.001 à 2.100.000 fr., bénéfice moyen 2.050.000 fr. | 70 |
+| `3` | 3e classe : bénéfice de 2.001 à 5.000 fr., bénéfice moyen 3.500 fr. | 293 |
+| `30` | 30e classe : bénéfice de 2.100.001 à 2.200.000 fr., bénéfice moyen 2.150.000 fr. | 70 |
+| `31` | 31e classe : bénéfice de 2.200.001 à 2.300.000 fr., bénéfice moyen 2.250.000 fr. | 70 |
+| `32` | 32e classe : bénéfice de 2.300.001 à 2.400.000 fr., bénéfice moyen 2.350.000 fr. | 70 |
+| `33` | 33e classe : bénéfice de 2.400.001 à 2.500.000 fr., bénéfice moyen 2.450.000 fr. | 70 |
+| `34` | 34e classe : bénéfice de 2.500.001 à 2.600.000 fr., bénéfice moyen 2.550.000 fr. | 70 |
+| `35` | 35e classe : bénéfice de 2.600.001 à 2.700.000 fr., bénéfice moyen 2.650.000 fr. | 70 |
+| `36` | 36e classe : bénéfice de 2.700.001 à 2.800.000 fr., bénéfice moyen 2.750.000 fr. | 70 |
+| `37` | 37e classe : bénéfice de 2.800.001 à 2.900.000 fr., bénéfice moyen 2.850.000 fr. | 70 |
+| `38` | 38e classe : bénéfice de 2.900.001 à 3.000.000 fr., bénéfice moyen 2.950.000 fr. | 70 |
+| `39` | 39e classe : bénéfice de 3.000.001 à 3.100.000 fr., bénéfice moyen 3.050.000 fr. | 70 |
+| `4` | 4e classe : bénéfice de 5.001 à 10.000 fr., bénéfice moyen 7.500 fr. | 293 |
+| `40` | 40e classe : bénéfice de 3.100.001 à 3.200.000 fr., bénéfice moyen 3.150.000 fr. | 70 |
+| `41` | 41e classe : bénéfice de 3.200.001 à 3.300.000 fr., bénéfice moyen 3.250.000 fr. | 70 |
+| `42` | 42e classe : bénéfice de 3.300.001 à 3.400.000 fr., bénéfice moyen 3.350.000 fr. | 70 |
+| `43` | 43e classe : bénéfice de 3.400.001 à 3.500.000 fr., bénéfice moyen 3.450.000 fr. | 70 |
+| `44` | 44e classe : bénéfice de 3.500.001 à 3.600.000 fr., bénéfice moyen 3.550.000 fr. | 70 |
+| `45` | 45e classe : bénéfice de 3.600.001 à 3.700.000 fr., bénéfice moyen 3.650.000 fr. | 70 |
+| `46` | 46e classe : bénéfice de 3.700.001 à 3.800.000 fr., bénéfice moyen 3.750.000 fr. | 70 |
+| `47` | 47e classe : bénéfice de 3.800.001 à 3.900.000 fr., bénéfice moyen 3.850.000 fr. | 70 |
+| `48` | 48e classe : bénéfice de 3.900.001 à 4.000.000 fr., bénéfice moyen 3.950.000 fr. | 70 |
+| `49` | 49e classe : bénéfice de 4.000.001 à 4.100.000 fr., bénéfice moyen 4.050.000 fr. | 70 |
+| `5` | 5e classe : bénéfice de 10.001 à 20.000 fr., bénéfice moyen 15.000 fr. | 293 |
+| `50` | 50e classe : bénéfice de 4.100.001 à 4.200.000 fr., bénéfice moyen 4.150.000 fr. | 70 |
+| `51` | 51e classe : bénéfice de 4.200.001 à 4.300.000 fr., bénéfice moyen 4.250.000 fr. | 35 |
+| `53` | 53e classe : bénéfice de 4.400.001 à 4.500.000 fr., bénéfice moyen 4.450.000 fr. | 35 |
+| `6` | 6e classe : bénéfice de 20.001 à 30.000 fr., bénéfice moyen 25.000 fr. | 293 |
+| `7` | 7e classe : bénéfice de 30.001 à 50.000 fr., bénéfice moyen 40.000 fr. | 293 |
+| `8` | 8e classe : bénéfice de 50.001 à 75.000 fr., bénéfice moyen 62.500 fr. | 293 |
+| `9` | 9e classe : bénéfice de 75.001 à 100.000 fr., bénéfice moyen 87.500 fr. | 293 |
+
+`mean_profit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `1050000` |  | 70 |
+| `1150000` |  | 70 |
+| `1250000` |  | 70 |
+| `1350000` |  | 70 |
+| `1450000` |  | 70 |
+| `1500` |  | 293 |
+| `15000` |  | 293 |
+| `150000` |  | 293 |
+| `1500000` |  | 223 |
+| `1550000` |  | 70 |
+| `1650000` |  | 70 |
+| `1750000` |  | 70 |
+| `1850000` |  | 70 |
+| `1950000` |  | 70 |
+| `2050000` |  | 70 |
+| `2150000` |  | 70 |
+| `2250000` |  | 70 |
+| `2350000` |  | 70 |
+| `2450000` |  | 70 |
+| `25000` |  | 293 |
+| `250000` |  | 70 |
+| `2500000` |  | 223 |
+| `2550000` |  | 70 |
+| `2650000` |  | 70 |
+| `2750000` |  | 70 |
+| `2850000` |  | 70 |
+| `2950000` |  | 70 |
+| `3050000` |  | 70 |
+| `3150000` |  | 70 |
+| `3250000` |  | 70 |
+| `3350000` |  | 70 |
+| `3450000` |  | 70 |
+| `3500` |  | 293 |
+| `350000` |  | 293 |
+| `3500000` |  | 223 |
+| `3550000` |  | 70 |
+| `3650000` |  | 70 |
+| `3750000` |  | 70 |
+| `3850000` |  | 70 |
+| `3950000` |  | 70 |
+| `40000` |  | 293 |
+| `4050000` |  | 70 |
+| `4150000` |  | 70 |
+| `4250000` |  | 35 |
+| `4450000` |  | 35 |
+| `450000` |  | 70 |
+| `4500000` |  | 70 |
+| `500` |  | 293 |
+| `550000` |  | 70 |
+| `62500` |  | 293 |
+| `650000` |  | 70 |
+| `7500` |  | 293 |
+| `750000` |  | 293 |
+| `850000` |  | 70 |
+| `87500` |  | 293 |
+| `950000` |  | 70 |
+
+### finance_patente_caidat
+
+**Droit de patente. Etat des assujettis au droit de patente (nombre et montant du bénéfice moyen par caïdat)**  
+*Business licence tax (droit de patente): number of taxpayers and total mean profit by caïdat*
+
+Source `sgt`, table patente_caidat, printed pages by edition. 204 rows. Value type: mixed. Flags: (empty) 181, ocr_corrected 23. Notes and validation: [`../yearbook_other_chapters/csv/finance_patente_caidat.md`](../yearbook_other_chapters/csv/finance_patente_caidat.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `profits_year` | Coded dimension. |
+| `region` | Coded dimension. |
+| `controle_civil` | Place or label as printed (19 distinct values). |
+| `caidat` | Place or label as printed (37 distinct values). |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`profits_year`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `1934` |  | 68 |
+| `1935` |  | 68 |
+| `1938` |  | 68 |
+
+`region`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `Bizerte` |  | 30 |
+| `Le Kef` |  | 36 |
+| `Sfax` |  | 48 |
+| `Sousse` |  | 48 |
+| `Territoires Militaires du Sud` |  | 24 |
+| `Tunis` |  | 18 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `mean_profit_total` | Montant du bénéfice moyen par caïdat | 102 |
+| `taxpayers` | Nombre de patentables | 102 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `francs` |  | 102 |
+| `taxpayers` |  | 102 |
+
+### finance_taxe_personnelle
+
+**Taxe personnelle. Etat des contribuables imposés à la taxe personnelle**  
+*Personal tax (taxe personnelle): taxpayers by caïdat and nationality*
+
+Source `sgt`, table taxe, printed pages by edition. 1,977 rows. Value type: count. Flags: (empty) 1,897, ocr_corrected 79, total_mismatch 1. Notes and validation: [`../yearbook_other_chapters/csv/finance_taxe_personnelle.md`](../yearbook_other_chapters/csv/finance_taxe_personnelle.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `region` | Coded dimension. |
+| `controle_civil` | Place or label as printed (20 distinct values). |
+| `caidat` | Place or label as printed (42 distinct values). |
+| `nationality` | Coded dimension. |
+| `nationality_fr` | Printed French label for `nationality`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`region`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `(empty)` |  | 626 |
+| `1re Région` |  | 210 |
+| `2me Région` |  | 126 |
+| `3me Région` |  | 252 |
+| `4me Région` |  | 294 |
+| `5me Région` |  | 322 |
+| `Territoires militaires du Sud` |  | 147 |
+
+`nationality`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `british_maltese` | Anglais et Maltais | 282 |
+| `french` | Français | 282 |
+| `greek` | Grecs | 282 |
+| `italian` | Italiens | 282 |
+| `other_european` | Autres Européens | 282 |
+| `spanish` | Espagnols | 282 |
+| `tunisian` | Sujets tunisiens | 285 |
