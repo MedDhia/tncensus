@@ -223,3 +223,4 @@ finance_public_debt_balance,sgt,debt_balance,Dette tunisienne. b) Balance des op
 finance_patente,sgt,patente,Droit de patente. Etat des assujettis au droit de patente,Business licence tax (droit de patente): taxpayers by caïdat and class of profit,by edition,count
 finance_patente_caidat,sgt,patente_caidat,Droit de patente. Etat des assujettis au droit de patente (nombre et montant du bénéfice moyen par caïdat),Business licence tax (droit de patente): number of taxpayers and total mean profit by caïdat,by edition,mixed
 finance_taxe_personnelle,sgt,taxe,Taxe personnelle. Etat des contribuables imposés à la taxe personnelle,Personal tax (taxe personnelle): taxpayers by caïdat and nationality,by edition,count
+finance_taxe_betail,sgt,betail,Taxe sur le bétail. Nombre d'animaux de chaque espèce,"Livestock tax (taxe sur le bétail): animals on the rolls by caïdat and species, young exempt and taxable, European and indigenous rolls",by edition,count

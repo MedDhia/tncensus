@@ -880,7 +880,219 @@ TABLES["finance_patente_caidat"] = dict(
            "editions print the same two columns next to the classes (`finance_patente`); they are not stored "
            "there because they are sums of the stored class cells. The Totaux line is a check, not stored."])
 
-GROUP_CHECKS = [chk_debt, chk_patente, chk_patente_caidat, chk_taxe]
+# ----------------------------------------------------------------- taxe sur le bétail
+
+BET_SPECIES = [("ch", "horse", "Chevaline"), ("ca", "camel", "Cameline"), ("bo", "cattle", "Bovine"),
+               ("mu", "mule", "Mulassière"), ("po", "pig", "Porcine"), ("as", "donkey", "Asine"),
+               ("cp", "goat", "Caprine"), ("ov", "sheep", "Ovine")]
+BET_AGE = {"j": ("young_exempt", "Jeunes non imposables"), "i": ("taxable", "Imposables")}
+BET_ROLL = {"european": "a) Rôles européens", "indigenous": "b) Rôles indigènes"}
+# récapitulation lines that add up differently named lines of a) and b) (default: the same label in both rolls)
+BET_RECAP_MAP = {
+    "sgt1922": {"L'Arad et Djerba": {"european": ["L'Arad et Djerba"], "indigenous": ["Gabès", "Djerba"]},
+                "Majeurs": {"european": ["Madjeurs"], "indigenous": ["Madjeurs"]},
+                "Hammama": {"european": ["Hemmama"], "indigenous": ["Hammama"]},
+                "Djérid": {"european": ["Djerid"], "indigenous": ["Djerid"]}},
+    "sgt1923": {"L'Arad": {"european": ["L'Arad"], "indigenous": ["Gabès"]},
+                "Majeurs": {"european": ["Madjeurs"], "indigenous": ["Madjeurs"]},
+                "Hammama": {"european": ["Hemmama"], "indigenous": ["Hammama"]},
+                "Djérid": {"european": ["Djerid"], "indigenous": ["Djerid"]}},
+    "sgt1925": {"3me Région ; Téboursouk ; Téboursouk": {"european": ["3me Région ; Teboursouk ; Téboursouk"],
+                                                         "indigenous": ["3me Région ; Téboursouk ; Téboursouk"]}},
+}
+BET_RECAP_MAP["sgt1924"] = BET_RECAP_MAP["sgt1923"]
+BET_RECAP_MAP["sgt1926"] = BET_RECAP_MAP["sgt1925"]
+# sgt1925 a), f281: the porcine-to-ovine cells of Banlieue and Zaghouan repeat those of Cap-Bon - Nabeul and
+# Cap-Bon - Soliman printed below them. Derived from the récapitulation: jeunes = c) - b), total = c) - b),
+# imposables = total - jeunes (flag derived_from_totals). Banlieue ovine cannot be derived (the récapitulation line is
+# itself inconsistent): printed values kept, flagged total_mismatch.
+BET_DERIVE = {("sgt1925", "2me Région ; Tunis ; Banlieue"): ["po", "as", "cp"],
+              ("sgt1925", "2me Région ; Zaghouan ; Zaghouan"): ["po", "as", "cp", "ov"]}
+# cells identified as faulty by the row Total and the column Totaux (and the récapitulation): printed value kept
+BET_FLAGS = {
+    ("sgt1922", "european", "Bizerte", "ovj"), ("sgt1922", "indigenous", "Ouerghemma", "cpi"),
+    ("sgt1923", "indigenous", "Ouerghemma", "cai"),
+    ("sgt1925", "european", "1re Région ; Tabarka ; Aïn-Draham", "boi"),
+    ("sgt1925", "european", "3me Région ; Medjez-el-Bab ; Medjez-el-Bab", "cpi"),
+    ("sgt1925", "european", "2me Région ; Tunis ; Banlieue", "ovj"),
+    ("sgt1925", "european", "2me Région ; Tunis ; Banlieue", "ovi"),
+    ("sgt1925", "indigenous", "1re Région ; Bizerte ; Mateur", "cpi"),
+    ("sgt1925", "indigenous", "1re Région ; Souk-el-Arba ; Souk-el-Khemis", "ovj"),
+    ("sgt1925", "indigenous", "2me Région ; Tunis ; Banlieue", "boj"),
+    ("sgt1925", "indigenous", "2me Région ; Tunis ; Banlieue", "cpi"),
+    ("sgt1925", "indigenous", "3me Région ; Mactar ; Oulad Aoun", "boi"),
+    ("sgt1925", "indigenous", "4me Région ; Sousse ; Souassi", "ovj"),
+    ("sgt1925", "indigenous", "4me Région ; Kairouan ; Kairouan", "cai"),
+    ("sgt1925", "indigenous", "Territoires militaires du Sud ;  ; Matmata", "caj"),
+    ("sgt1925", "indigenous", "Territoires militaires du Sud ;  ; Matmata", "cpj"),
+    ("sgt1926", "european", "3me Région ; Mactar ; Oulad Ayar", "chj"),
+    ("sgt1926", "european", "1re Région ; Béja ; Béja", "poi"),
+}
+
+
+BET_PARAS = [
+    "Printed in sgt1922-sgt1926 only (no taxe sur le bétail from sgt1927), as three two-page spreads: a) Rôles "
+    "européens, b) Rôles indigènes, c) Récapitulation, each \"Nombre d'animaux de chaque espèce\" by caïdat (sgt1922-"
+    "sgt1924, 31 or 32 lines; sgt1925, sgt1926 by région, contrôle civil and caïdat, 36 lines) for eight species "
+    "(chevaline, cameline, bovine, mulassière, porcine, asine, caprine, ovine), each in Jeunes non imposables, "
+    "Imposables and Total. No year is printed: `year` is the edition year. sgt1922-sgt1924 add an Observations column, "
+    "filled only in b): \"L'impôt est dû pour les porcins à partir du 1er janvier qui suit le sevrage et pour les "
+    "animaux des autres espèces, à partir du 1er janvier qui suit le commencement de la perte des dents de lait\" "
+    "(the tax is due for pigs from the 1 January after weaning, for the other species from the 1 January after the "
+    "first milk teeth are lost).",
+    "Stored: a) and b), Jeunes non imposables and Imposables, every printed line. Not stored (checks only): the "
+    "species Total columns, the Totaux line, and c) the Récapitulation, which is a) + b) cell by cell and carries "
+    "nothing that the two rolls do not (it groups some lines differently: sgt1922 \"L'Arad et Djerba\" = a) L'Arad "
+    "et Djerba + b) Gabès and Djerba; sgt1923, sgt1924 \"L'Arad\" = a) L'Arad + b) Gabès; its labels Majeurs, "
+    "Hammama, Djérid are the Madjeurs, Hemmama/Hammama, Djerid of the rolls). The two rolls of one edition do not "
+    "always print the same lines (sgt1922 a) L'Arad et Djerba, b) Gabès and Djerba; b) Gabès where a) prints "
+    "L'Arad in sgt1923, sgt1924) and spell some caïdats differently (Hemmama / Hammama; sgt1925, sgt1926 contrôle "
+    "\"Teboursouk\" in a), \"Téboursouk\" in b)): `caidat` keeps the label printed in each roll. sgt1925, sgt1926: "
+    "the caïdat Cap-Bon (contrôle civil of Grombalia) is printed as a brace over two lines, Nabeul and Soliman, "
+    "stored as \"Cap-Bon - Nabeul\" and \"Cap-Bon - Soliman\".",
+    "The mulassière Total of sgt1922 and sgt1923 is printed in the gutter and cut on both views of the spread; it is "
+    "a check column only (left '?', the Jeunes + Imposables = Total check is skipped there; its Totaux are legible). "
+    "The bold figures of the Totaux lines (1 and 4 alike) were read with the column sums.",
+    "sgt1925 a), f281: the porcine, asine, caprine and ovine cells of Banlieue and Zaghouan are printed identical, "
+    "figure for figure, to those of Cap-Bon - Nabeul and Cap-Bon - Soliman two lines below (a line pair set twice); "
+    "the column Totaux and the Récapitulation do not include them. These cells are derived as c) Récapitulation - b) "
+    "Rôles indigènes (Jeunes and Total; Imposables = Total - Jeunes; flag `derived_from_totals`): Banlieue porcine "
+    "904 / 1.831, asine 25 / 350, caprine 709 / 3.312; Zaghouan porcine 114 / 143, asine 15 / 98, caprine 326 / 953, "
+    "ovine 702 / 1.928; with them the a) column Totaux of porcine, asine and caprine agree. Banlieue ovine cannot be "
+    "derived (the Récapitulation line prints 11.918 + 34.793 = 45.715, which does not add up; the a) Totaux point to "
+    "about 2.503 + 5.425 = 7.929): the printed 156 and 328 are kept, flagged `total_mismatch`.",
+    "Image reading: every cell of a), b) and c) of every edition read on native-resolution crops of the page images "
+    "(whole rows in strips, every failing check re-read zoomed). The Gallica OCR served only to draft the grids of "
+    "sgt1922 and sgt1923; no cell is flagged `ocr_corrected` (no token-by-token OCR comparison was made).",
+]
+BET_FAILS = (
+    "Every failure was re-read on zoomed native-resolution crops. Stored cells identified as faulty (printed value "
+    "kept, flag `total_mismatch`; the row Total, the column Totaux and the Récapitulation all point to the same cell): "
+    "sgt1922 a) Bizerte ovine jeunes 1.614 (1.644), b) Ouerghemma caprine imposables 26.756 (26.576); sgt1923 b) "
+    "Ouerghemma cameline imposables 1.735 (17.735); sgt1925 a) Aïn-Draham bovine imposables 4.122 (422), Medjez-el-"
+    "Bab caprine imposables 822 (1.822), Banlieue ovine jeunes and imposables (see above); sgt1925 b) Mateur caprine "
+    "imposables 1.855 (18.555), Banlieue bovine jeunes 2.003 (2.300) and caprine imposables 17.100 (17.110), Oulad "
+    "Aoun bovine imposables 1.382 (10.382), Kairouan cameline imposables 5.006 (5.600), Matmata cameline jeunes 92 "
+    "(62) and caprine jeunes 2.005 (2.500), Souk-el-Khemis ovine jeunes 5.772 (5.752), Souassi ovine jeunes 11.625 "
+    "(11.626); sgt1926 a) Oulad Ayar chevaline jeunes 43 (13), Béja porcine imposables 2.697 (2.607). The other "
+    "failures involve check figures only: misprinted species Totals (sgt1922 a) Banlieue caprine 3.528, Bizerte caprine "
+    "141; sgt1924 a) Gafsa ovine 334, b) Nefzaoua caprine 30.223; sgt1925 b) Zaghouan cameline 1.576, Sousse "
+    "mulassière 2.363, Ourghemma asine 3.938, Madjeurs ovine 62.125; sgt1926 a) Mateur chevaline 797, Djelass bovine 408), misprinted Totaux (sgt1922 a) caprine total and "
+    "ovine jeunes follow the faulty cells; sgt1924 a) bovine imposables 44.150 for 41.150; sgt1925 a) mulassière total "
+    "107.665 for 10.765, ovine total 70.713; the sgt1925 b) Totaux are right once the faulty cells and Totals are "
+    "corrected), the Totaux of a) ovine in sgt1925 (the Banlieue line), and misprints of the "
+    "Récapitulation itself (sgt1922 Monastir chevaline jeunes 55, Sousse cameline total 5.683, Kairouan chevaline "
+    "imposables 2.204, Béja ovine imposables 35.611; sgt1923 L'Arad porcine total 2, Souassi ovine imposables 47.694, "
+    "Téboursouk ovine imposables 12.782, and the Totaux line, where asine total 167.421 and caprine jeunes 123.034 are printed in each "
+    "other's column; sgt1924 none beyond those following a) and b); sgt1925 Souk-el-Arba bovine jeunes 2.197, Nabeul "
+    "chevaline total 3.563, Téboursouk cameline imposables 147, Tadjérouine bovine total 6.121, Mahdia cameline jeunes "
+    "304, Djebéniana bovine imposables 1.498, caprine jeunes 183 and total 2.317, Aïn-Draham porcine total 4.007, "
+    "Fraichiches asine imposables 311, Zaghouan mulassière total 1.670, Madjeurs ovine jeunes 20.171, Banlieue ovine, "
+    "and Totaux lines following these; sgt1925 c) Totaux mulassière 33.016 = 10.765 + 22.251, i.e. the correct sum, "
+    "against the misprinted a) Totaux). Where a Récapitulation cell differs from a) + b) because a stored cell is "
+    "faulty, it confirms the corrected figure given above in every case.")
+
+
+def bet_rows(secs):
+    """{(edition, roll): {label: {col: Cell}}}, the two pages of a spread merged, in printed order."""
+    out = {}
+    for s in secs:
+        if s["table"] != "betail":
+            continue
+        d = out.setdefault((s["ed"], s["roll"]), {})
+        for r in s["rows"]:
+            if "cells" in r:
+                d.setdefault(r["label"], {}).update(r["cells"])
+    return out
+
+
+def derive_betail(secs):
+    rows = bet_rows(secs)
+    for (ed, lab), sps in BET_DERIVE.items():
+        e, n, c = rows[(ed, "european")][lab], rows[(ed, "indigenous")][lab], rows[(ed, "recap")][lab]
+        for sp in sps:
+            j = c[sp + "j"].value - n[sp + "j"].value
+            t = c[sp + "t"].value - n[sp + "t"].value
+            for k, v in (("j", j), ("i", t - j), ("t", t)):
+                e[sp + k].value, e[sp + k].flag = v, "derived_from_totals"
+    for ed, roll, lab, col in BET_FLAGS:
+        rows[(ed, roll)][lab][col].flag = "total_mismatch"
+
+
+def cells_betail(sec):
+    out = []
+    if sec["roll"] == "recap":
+        return out
+    for r in sec["rows"]:
+        if "cells" not in r or is_total(r["label"]):
+            continue
+        for c, cell in r["cells"].items():
+            if c[2] == "t":
+                continue
+            sp = [x for x in BET_SPECIES if x[0] == c[:2]][0]
+            age, age_fr = BET_AGE[c[2]]
+            out.append(mk(sec, cell, int(sec["year"]), **geo(r["label"]), roll=sec["roll"],
+                          roll_fr=BET_ROLL[sec["roll"]], species=sp[1], species_fr=sp[2], age_class=age,
+                          age_class_fr=age_fr))
+    return out
+
+
+def chk_betail(secs):
+    """Jeunes + Imposables = Total (every species, every line, a), b) and c)); Totaux = sum of the lines (every
+    column); c) Récapitulation = a) + b), cell by cell."""
+    o = "finance_taxe_betail"
+    rows = bet_rows(secs)
+    for (ed, roll), d in rows.items():
+        w = f"{ed} {roll}"
+        for lab, c in d.items():
+            for sp, _, fr in BET_SPECIES:
+                CHK.eq(o, f"{w} {lab} {fr}: Jeunes + Imposables = Total",
+                       ssum([c[sp + "j"].value, c[sp + "i"].value]), c[sp + "t"].value)
+        data = [l for l in d if not is_total(l)]
+        for col, cell in d["Totaux"].items():
+            CHK.eq(o, f"{w} Totaux {col}: sum of the lines", ssum(d[l][col].value for l in data), cell.value)
+        if roll != "recap":
+            continue
+        mp = BET_RECAP_MAP.get(ed, {})
+        for lab in d:
+            src = mp.get(lab, {"european": [lab], "indigenous": [lab]})
+            for col, cell in d[lab].items():
+                parts = [rows[(ed, r)][l][col].value for r in ("european", "indigenous") for l in src[r]]
+                CHK.eq(o, f"{w} {lab} {col}: Récapitulation = a) + b)", ssum(parts), cell.value)
+
+
+DOC.update({k: "" for k in ("roll", "roll_fr", "species", "species_fr", "age_class", "age_class_fr")})
+TABLES["finance_taxe_betail"] = dict(
+    secs=["betail"], cells=cells_betail, key=["census", "year", "roll", "caidat", "species", "age_class"],
+    select=select_all, fails=BET_FAILS,
+    dims=["region", "controle_civil", "caidat", "roll", "roll_fr", "species", "species_fr", "age_class",
+          "age_class_fr"],
+    doc=dict(DOC5, year="year of the rolls (no year printed: the edition year)",
+             flag="empty, or `total_mismatch` (printed value kept; identified by the row Total, the column Totaux and "
+                  "the Récapitulation as the faulty cell), `derived_from_totals` (sgt1925 a) Banlieue and Zaghouan: "
+                  "value = c) Récapitulation - b), see the notes)",
+             region="région as printed (sgt1925, sgt1926: 1re-5me Région, Territoires militaires du Sud); empty in "
+                    "sgt1922-sgt1924, which list caïdats only",
+             controle_civil="contrôle civil as printed (sgt1925, sgt1926; empty for the Territoires militaires du "
+                            "Sud and in sgt1922-sgt1924)",
+             caidat="caïdat as printed in that roll (the two rolls of one edition do not always use the same lines: "
+                    "see the notes); \"Cap-Bon - Nabeul\" and \"Cap-Bon - Soliman\" = the two lines printed under the "
+                    "brace of the caïdat Cap-Bon (contrôle civil of Grombalia, sgt1925, sgt1926)",
+             roll="`european` (a) Rôles européens) or `indigenous` (b) Rôles indigènes)",
+             roll_fr="printed table heading",
+             species="`horse` (chevaline), `camel` (cameline), `cattle` (bovine), `mule` (mulassière), `pig` "
+                     "(porcine), `donkey` (asine), `goat` (caprine), `sheep` (ovine)",
+             species_fr="printed column-group heading",
+             age_class="`young_exempt` (jeunes non imposables) or `taxable` (imposables)",
+             age_class_fr="printed column heading",
+             value="number of animals on the rolls"),
+    title_fr="Taxe sur le bétail. Nombre d'animaux de chaque espèce",
+    title_en="Livestock tax (taxe sur le bétail): animals on the rolls by caïdat and species, young exempt and "
+             "taxable, European and indigenous rolls",
+    unit="Unit: number of animals (head); value_type: count.",
+    rule=RULE5, paras=BET_PARAS)
+
+GROUP_CHECKS = [chk_debt, chk_patente, chk_patente_caidat, chk_taxe, chk_betail]
 
 
 SURVEY = {
@@ -889,20 +1101,21 @@ SURVEY = {
                "orge, avoine, fèves, pois chiches, maïs, sorgho, lin, each in three tables a) européens, b) "
                "indigènes, c) récapitulation (one page each); f212|f213 canoun des dattiers a) relevé par caïdat du "
                "nombre d'arbres d'après leur âge au 1er novembre 1922; f214|f215 b) répartition des arbres "
-               "imposables par catégorie du tarif (degla, communs); f216|f217 canoun des oliviers a) relevé par "
+               "imposables par catégorie du tarif (degla, communs), and below it c) répartition des dattiers entre européens et "
+               "indigènes (checked on the image); f216|f217 canoun des oliviers a) relevé par "
                "caïdat d'après l'âge; f218|f219 b) répartition par catégorie du tarif; f220|f221 c) répartition "
                "entre européens et indigènes (arbres, articles de matrice, comptes individuels); f222|f223 droit de "
                "patente (état des assujettis by class of profit) [transcribed]; f224|f225 taxe sur le bétail a) rôles européens "
-               "(by caïdat and species, imposables / non imposables); f226|f227 b) rôles indigènes; f228|f229 c) "
-               "récapitulation; f230 blank. f231 = chapter XI Agriculture.",
+               "(by caïdat and species, imposables / non imposables) [transcribed]; f226|f227 b) rôles indigènes [transcribed]; "
+               "f228|f229 c) récapitulation [transcribed, check only]; f230 blank. f231 = chapter XI Agriculture.",
     "sgt1923": "f675 title; f676 blank; f677 taxe personnelle [transcribed]; f678-f701 achour (8 crops x a/b/c); f702|f703 canoun "
                "dattiers a) (1923); f704|f705 b); f706|f707 canoun oliviers a); f708 blank (verso); f709 b) "
-               "(second page); f710|f711 c); f712|f713 droit de patente [transcribed]; f714|f715 bétail a); f716|f717 b); "
-               "f718|f719 c); f720 blank. f721 = chapter XI.",
+               "(second page); f710|f711 c); f712|f713 droit de patente [transcribed]; f714|f715 bétail a) [transcribed]; f716|f717 b) "
+               "[transcribed]; f718|f719 c) [transcribed, check only]; f720 blank. f721 = chapter XI.",
     "sgt1924": "f1171 title; f1172 blank; f1173 taxe personnelle [transcribed]; f1174-f1197 achour (8 crops x a/b/c); f1198|f1199 "
                "canoun dattiers a) (1924); f1200|f1201 b); f1202|f1203 canoun oliviers a); f1204|f1205 b); "
-               "f1206|f1207 c); f1208|f1209 droit de patente [transcribed]; f1210|f1211 bétail a); f1212|f1213 b); f1214|f1215 "
-               "c); f1216 blank. f1217 = chapter XI.",
+               "f1206|f1207 c); f1208|f1209 droit de patente [transcribed]; f1210|f1211 bétail a) [transcribed]; f1212|f1213 b) "
+               "[transcribed]; f1214|f1215 c) [transcribed, check only]; f1216 blank. f1217 = chapter XI.",
     "sgt1925": "f211 title; f212|f213 budget annuel (1915-1924) a) recettes réalisées [transcribed]; f214|f215 b) "
                "dépenses [transcribed]; f216 dette tunisienne (récapitulatif et balance des opérations 1884-1921) "
                "[transcribed]; "
@@ -910,14 +1123,15 @@ SURVEY = {
                "f220-f267 achour, 8 crops x a) européens, b) indigènes, c) récapitulation, each a two-page spread "
                "(by région / contrôle civil / caïdat); f268|f269 canoun dattiers a) (1924); f270|f271 b); f272|f273 "
                "canoun oliviers a) (1925); f274|f275 b); f276|f277 c); f278|f279 droit de patente [transcribed]; f280|f281 "
-               "bétail a) européens; f282|f283 b) indigènes; f284|f285 c) récapitulation; f286 blank. f287 = "
+               "bétail a) européens [transcribed]; f282|f283 b) indigènes [transcribed]; f284|f285 c) récapitulation "
+               "[transcribed, check only]; f286 blank. f287 = "
                "chapter XI.",
     "sgt1926": "f767 title; f768|f769 budget (1916-1925) a) [transcribed]; f770|f771 b) [transcribed]; f772 dette "
                "tunisienne a) opérations 1884-1923 (b) balance) [transcribed]; f773 blank; f774|f775 taxe personnelle [transcribed]; f776-f783 "
                "achour, one page per crop (a) blé ... h) lin), européens and indigènes in one table; f784|f785 canoun "
                "dattiers a); f786|f787 b); f788|f789 canoun oliviers a) (1926); f790|f791 b); f792|f793 c); "
-               "f794|f795 droit de patente (bénéfices de 1925, imposés en 1926) [transcribed]; f796|f797 bétail a); f798|f799 b); "
-               "f800|f801 c); f802 blank. f803 = chapter XI.",
+               "f794|f795 droit de patente (bénéfices de 1925, imposés en 1926) [transcribed]; f796|f797 bétail a) [transcribed]; f798|f799 b) "
+               "[transcribed]; f800|f801 c) [transcribed, check only]; f802 blank. f803 = chapter XI.",
     "sgt1927": "f229 title; f230|f231 budget (1917-1926) a) [transcribed]; f232|f233 b) [transcribed]; f234 dette "
                "tunisienne (1884-1924) [transcribed]; f235 blank; f236|f237 taxe personnelle [transcribed]; f238-f245 achour (one page per "
                "crop); f246|f247 canoun dattiers a) (1927); f248|f249 b); f250|f251 canoun oliviers a); f252|f253 "
@@ -929,7 +1143,7 @@ SURVEY = {
                "de patente (1927 / 1928) [transcribed]; f782 blank. f783 = chapter XI.",
     "sgt1929": "f231 title; f232|f233 budget (1919-1928) a) [transcribed]; f234|f235 b) [transcribed]; f236 dette "
                "(1884-1925) [transcribed]; f237 blank; f238|f239 taxe personnelle [transcribed]; f240-f247 achour; f248|f249 canoun dattiers "
-               "a) (1929); f250|f251 b) (the f251 OCR also shows an européens / indigènes heading, to be checked on the image); f252|f253 canoun oliviers a); f254|f255 b); "
+               "a) (1929); f250|f251 b) (upper half) and c) répartition des dattiers entre européens et indigènes (lower half; checked on the image); f252|f253 canoun oliviers a); f254|f255 b); "
                "f256|f257 c); f258 blank; f259 droit de patente on a folding plate (1928 / 1929) [transcribed]; f260 back of the "
                "plate. f261 = chapter XI.",
     "sgt1930": "f765 title; f766|f767 budget (1920-1929) a) [transcribed]; f768|f769 b) [transcribed]; f770|f771 "
@@ -957,10 +1171,10 @@ NOT_DONE = (
     "printed in sgt1922-sgt1924, whose chapters f185-f230, f675-f720 and f1171-f1216 open with the taxe "
     "personnelle); the droit de patente by class of profit (finance_patente, sgt1922-sgt1930; the folding plates "
     "sgt1929 f259 and sgt1930 f793 read in vertical strips) and by caïdat (finance_patente_caidat, sgt1935, sgt1936, "
-    "sgt1939); the taxe personnelle (finance_taxe_personnelle, sgt1922-sgt1930). Not yet transcribed (see the survey "
-    "above for views): taxe sur le bétail (sgt1922-sgt1926: a) rôles européens, b) rôles indigènes, c) "
-    "récapitulation, each a two-page spread by caïdat x 7 species x jeunes non imposables / imposables / total), "
-    "achour (sgt1922-sgt1935), canoun des dattiers and des oliviers (sgt1922-sgt1935). The chapter reprints neither "
+    "sgt1939); the taxe personnelle (finance_taxe_personnelle, sgt1922-sgt1930); the taxe sur le bétail "
+    "(finance_taxe_betail, sgt1922-sgt1926: a) rôles européens and b) rôles indigènes stored, c) récapitulation "
+    "read in full as a check). Not yet transcribed (see the survey above for views): achour (sgt1922-sgt1935), "
+    "canoun des dattiers and des oliviers (sgt1922-sgt1935). The chapter reprints neither "
     "the public assistance / health budgets nor the communal budgets.")
 
 
@@ -994,6 +1208,7 @@ def build(write=True):
         if s["table"] in ("receipts", "receipts39", "expenditure"):
             chk_budget(s)
     derive_patente(secs)
+    derive_betail(secs)
     for f in GROUP_CHECKS:
         f(secs)
     res = {}

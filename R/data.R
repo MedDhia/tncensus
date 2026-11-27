@@ -603,7 +603,7 @@
 #' e.g. \code{locality} and \code{controle_civil}, or \code{cheikhat} and
 #' \code{caidat}.
 #'
-#' @format A \code{data.frame} with 2,444 rows and 16 columns:
+#' @format A \code{data.frame} with 2,450 rows and 16 columns:
 #' \describe{
 #'   \item{level}{Column the name appears in: \code{"controle_civil"},
 #'     \code{"annexe"}, \code{"caidat"}, \code{"commune"}, \code{"cheikhat"}

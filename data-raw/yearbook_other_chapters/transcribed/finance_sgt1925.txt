@@ -247,3 +247,261 @@ Territoires militaires du Sud ;  ; Nefzaoua | 8 0 0 0 0 0 8 9402 9410
 Territoires militaires du Sud ;  ; Ouerghema | 72 20 37 0 3 6 138 30992 31130
 Territoires militaires du Sud ;  ; Matmata | 0 0 0 0 0 0 0 6144 6144
 Totaux | 18754 21970 3448 164 251 891 45478 540988 586466
+
+
+# TAXE SUR LE BETAIL. a) Rôles européens, spread f280 (p. 256: Régions, Chefs-lieux de régions, Contrôles civils,
+# Caïdats; chevaline, cameline, bovine) | f281 (p. 257: mulassière, porcine, asine, caprine, ovine; no Observations
+# column). The bovine Total is printed against the gutter, its last digit partly in the binding (read on both views).
+# civil ; caïdat, as printed. Grombalia: the caïdat "Cap-Bon" is printed with a brace over two lines, Nabeul and
+# Soliman, stored as caïdats "Cap-Bon - Nabeul" and "Cap-Bon - Soliman". On f281 the porcine-to-ovine cells of these
+# two lines repeat, figure for figure, those of Banlieue and Zaghouan above them (as printed; see the notes).
+@betail view=280 page=256 year=1925 roll=european
+img: all
+cols: chj chi cht caj cai cat boj boi bot
+1re Région ; Béja ; Béja | 73 421 494 0 18 18 898 4453 5351
+1re Région ; Bizerte ; Bizerte | 53 569 622 3 14 17 412 2267 2679
+1re Région ; Bizerte ; Mateur | 57 526 583 0 2 2 828 5188 6016
+1re Région ; Tabarka ; Aïn-Draham | 10 111 121 0 0 0 194 4122 616
+1re Région ; Souk-el-Arba ; Souk-el-Arba | 13 101 114 0 0 0 134 762 896
+1re Région ; Souk-el-Arba ; Souk-el-Khemis | 15 212 227 0 0 0 284 1214 1498
+2me Région ; Tunis ; Banlieue | 180 2900 3080 0 10 10 1770 8986 10756
+2me Région ; Zaghouan ; Zaghouan | 91 552 643 1 1 2 748 4164 4912
+2me Région ; Grombalia ; Cap-Bon - Nabeul | 17 141 158 0 10 10 157 836 993
+2me Région ; Grombalia ; Cap-Bon - Soliman | 27 418 445 0 12 12 402 2041 2443
+3me Région ; Teboursouk ; Téboursouk | 22 158 180 0 6 6 430 1865 2295
+3me Région ; Le Kef ; Le Kef | 43 213 256 0 0 0 246 1226 1472
+3me Région ; Le Kef ; Tadjérouine | 4 109 113 0 0 0 53 182 235
+3me Région ; Mactar ; Oulad Ayar | 12 39 51 0 0 0 59 216 275
+3me Région ; Mactar ; Oulad Aoun | 0 17 17 0 0 0 21 70 91
+3me Région ; Medjez-el-Bab ; Medjez-el-Bab | 127 700 827 0 3 3 1015 5741 6756
+4me Région ; Sousse ; Souassi | 1 3 4 0 0 0 0 1 1
+4me Région ; Sousse ; Mahdia | 2 20 22 0 6 6 9 14 23
+4me Région ; Sousse ; Monastir | 0 14 14 0 5 5 4 23 27
+4me Région ; Sousse ; Sousse | 11 251 262 0 4 4 116 725 841
+4me Région ; Kairouan ; Kairouan | 20 69 89 0 7 7 167 534 701
+4me Région ; Kairouan ; Djelass | 16 65 81 2 33 35 149 362 511
+4me Région ; Thala ; Fraichiches | 3 32 35 0 0 0 54 118 172
+4me Région ; Thala ; Madjeurs | 3 13 16 0 12 12 14 53 67
+5me Région ; Sfax ; Sfax | 15 172 187 3 49 52 23 102 125
+5me Région ; Sfax ; La Skira | 8 73 81 0 11 11 2 2 4
+5me Région ; Sfax ; Djebéniana | 0 7 7 0 1 1 0 0 0
+5me Région ; Gabès ; L'Arad | 0 19 19 0 2 2 2 2 4
+5me Région ; Gafsa ; Hemmama | 38 62 100 0 3 3 0 0 0
+5me Région ; Gafsa ; Gafsa | 2 102 104 0 4 4 1 1 2
+5me Région ; Tozeur ; Djerid | 0 11 11 0 1 1 3 2 5
+5me Région ; Djerba ; Djerba | 0 6 6 0 2 2 0 0 0
+Territoires militaires du Sud ;  ; Nefzaoua | 0 1 1 0 0 0 0 0 0
+Territoires militaires du Sud ;  ; Ourghemma | 17 49 66 0 61 61 0 6 6
+Territoires militaires du Sud ;  ; Tataouine | 0 1 1 0 0 0 0 0 0
+Territoires militaires du Sud ;  ; Matmata | 0 0 0 0 0 0 0 0 0
+Totaux | 880 8157 9037 9 277 286 8195 41578 49773
+
+@betail view=281 page=257 year=1925 roll=european
+img: all
+cols: muj mui mut poj poi pot asj asi ast cpj cpi cpt ovj ovi ovt
+1re Région ; Béja ; Béja | 49 511 560 1192 1837 3029 25 135 160 124 439 563 949 3632 4581
+1re Région ; Bizerte ; Bizerte | 16 546 562 202 753 955 3 114 117 128 887 1015 1652 4410 6062
+1re Région ; Bizerte ; Mateur | 24 674 698 1764 1623 3387 18 135 153 372 1479 1851 1658 3720 5378
+1re Région ; Tabarka ; Aïn-Draham | 5 40 45 1858 2841 4699 3 31 34 246 440 686 6 23 29
+1re Région ; Souk-el-Arba ; Souk-el-Arba | 4 110 114 307 511 818 7 42 49 114 401 515 198 383 581
+1re Région ; Souk-el-Arba ; Souk-el-Khemis | 5 450 455 318 488 806 2 30 32 0 39 39 805 837 1642
+2me Région ; Tunis ; Banlieue | 72 3009 3081 98 174 272 23 96 119 331 709 1040 156 328 484
+2me Région ; Zaghouan ; Zaghouan | 25 993 1018 9 102 111 6 101 107 132 749 881 151 1100 1251
+2me Région ; Grombalia ; Cap-Bon - Nabeul | 3 91 94 98 174 272 23 96 119 331 709 1040 156 328 484
+2me Région ; Grombalia ; Cap-Bon - Soliman | 15 710 725 9 102 111 6 101 107 132 749 881 151 1100 1251
+3me Région ; Teboursouk ; Téboursouk | 4 364 368 306 495 801 20 60 80 527 854 1381 261 811 1072
+3me Région ; Le Kef ; Le Kef | 6 146 152 58 89 147 30 156 186 299 969 1268 660 4853 5513
+3me Région ; Le Kef ; Tadjérouine | 0 83 83 15 187 202 2 47 49 41 179 220 372 950 1322
+3me Région ; Mactar ; Oulad Ayar | 7 26 33 30 12 42 1 10 11 8 8 16 60 163 223
+3me Région ; Mactar ; Oulad Aoun | 0 17 17 0 1 1 6 13 19 0 0 0 15 20 35
+3me Région ; Medjez-el-Bab ; Medjez-el-Bab | 52 1416 1468 588 478 1066 36 130 166 685 822 2507 2049 3567 5616
+4me Région ; Sousse ; Souassi | 0 6 6 0 0 0 0 0 0 0 0 0 0 0 0
+4me Région ; Sousse ; Mahdia | 0 26 26 0 0 0 3 10 13 5 7 12 69 307 376
+4me Région ; Sousse ; Monastir | 0 15 15 0 0 0 0 8 8 2 4 6 85 363 448
+4me Région ; Sousse ; Sousse | 11 234 245 25 82 107 4 48 52 5 315 320 757 1579 2336
+4me Région ; Kairouan ; Kairouan | 5 83 88 24 40 64 0 5 5 42 164 206 1368 3117 4485
+4me Région ; Kairouan ; Djelass | 0 64 64 70 49 119 2 25 27 218 510 728 752 1403 2155
+4me Région ; Thala ; Fraichiches | 1 7 8 0 0 0 0 6 6 1 13 14 1 37 38
+4me Région ; Thala ; Madjeurs | 0 11 11 5 8 13 0 5 5 8 12 20 263 1950 2213
+5me Région ; Sfax ; Sfax | 8 286 294 0 48 48 6 28 34 243 630 873 2543 5918 8461
+5me Région ; Sfax ; La Skira | 12 180 192 0 0 0 12 25 37 153 562 715 1222 2105 3327
+5me Région ; Sfax ; Djebéniana | 0 13 13 0 0 0 0 0 0 0 0 0 0 20 20
+5me Région ; Gabès ; L'Arad | 0 23 23 0 0 0 1 7 8 0 0 0 82 420 502
+5me Région ; Gafsa ; Hemmama | 13 22 35 0 0 0 5 13 18 23 144 167 276 711 987
+5me Région ; Gafsa ; Gafsa | 0 231 231 7 1 8 2 51 53 6 126 132 0 252 252
+5me Région ; Tozeur ; Djerid | 0 5 5 0 0 0 0 28 28 0 3 3 1 0 1
+5me Région ; Djerba ; Djerba | 0 6 6 0 0 0 0 2 2 0 4 4 0 1 1
+Territoires militaires du Sud ;  ; Nefzaoua | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Territoires militaires du Sud ;  ; Ourghemma | 0 30 30 0 16 16 0 10 10 2 115 117 30 733 763
+Territoires militaires du Sud ;  ; Tataouine | 0 0 0 0 0 0 0 0 0 2 4 6 0 0 0
+Territoires militaires du Sud ;  ; Matmata | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Totaux | 337 10428 107665 7894 11809 19703 257 1819 2076 4752 15853 20605 19646 51066 70713
+
+# b) Rôles indigènes, spread f282 (p. 258) | f283 (p. 259), layout as in a); bovine Total legible on both views.
+@betail view=282 page=258 year=1925 roll=indigenous
+img: all
+cols: chj chi cht caj cai cat boj boi bot
+1re Région ; Béja ; Béja | 243 3576 3819 7 75 82 3089 19118 22207
+1re Région ; Bizerte ; Bizerte | 206 2288 2494 28 218 246 3306 16269 19575
+1re Région ; Bizerte ; Mateur | 103 3749 3852 8 393 401 3606 18762 22368
+1re Région ; Tabarka ; Aïn-Draham | 27 1584 1611 0 16 16 1768 13890 15658
+1re Région ; Souk-el-Arba ; Souk-el-Arba | 132 3170 3302 11 168 179 2053 15403 17456
+1re Région ; Souk-el-Arba ; Souk-el-Khemis | 163 1506 1669 0 9 9 1525 7347 8872
+2me Région ; Tunis ; Banlieue | 73 3762 3835 11 275 286 2003 19617 21917
+2me Région ; Zaghouan ; Zaghouan | 134 2496 2630 98 1476 1576 2424 12325 14749
+2me Région ; Grombalia ; Cap-Bon - Nabeul | 244 2161 2405 135 2748 2883 5787 22558 28345
+2me Région ; Grombalia ; Cap-Bon - Soliman | 36 975 1011 12 514 526 1939 10798 12737
+3me Région ; Téboursouk ; Téboursouk | 62 2010 2072 17 140 157 1557 10162 11719
+3me Région ; Le Kef ; Le Kef | 448 4807 5255 42 464 506 7203 14980 22183
+3me Région ; Le Kef ; Tadjérouine | 237 3474 3711 18 197 215 1334 5152 6486
+3me Région ; Mactar ; Oulad Ayar | 20 1688 1708 0 1310 1310 308 6920 7228
+3me Région ; Mactar ; Oulad Aoun | 159 2389 2548 6 146 152 1410 1382 11792
+3me Région ; Medjez-el-Bab ; Medjez-el-Bab | 35 3144 3179 6 329 335 1170 15541 16711
+4me Région ; Sousse ; Souassi | 209 663 872 1664 5774 7438 2004 3118 5122
+4me Région ; Sousse ; Mahdia | 25 689 714 314 5585 5899 950 4307 5257
+4me Région ; Sousse ; Monastir | 12 627 639 188 4547 4735 640 3975 4615
+4me Région ; Sousse ; Sousse | 92 1682 1774 443 6773 7216 2242 7998 10240
+4me Région ; Kairouan ; Kairouan | 223 2086 2309 518 5006 6118 2393 7047 9440
+4me Région ; Kairouan ; Djelass | 88 2433 2521 307 7225 7532 1740 8481 10221
+4me Région ; Thala ; Fraichiches | 226 1761 1987 142 2904 3046 719 2131 2850
+4me Région ; Thala ; Madjeurs | 212 1839 2051 72 2915 2987 923 3615 4538
+5me Région ; Sfax ; Sfax | 12 615 627 33 5266 5299 17 137 154
+5me Région ; Sfax ; La Skira | 8 594 602 122 4851 4973 5 96 101
+5me Région ; Sfax ; Djebéniana | 15 671 686 219 5688 5907 230 1488 1718
+5me Région ; Gabès ; L'Arad | 13 684 697 117 3216 3333 42 245 287
+5me Région ; Gafsa ; Hemmama | 33 903 936 228 6380 6608 407 1753 2160
+5me Région ; Gafsa ; Gafsa | 8 341 349 554 5908 6462 42 416 458
+5me Région ; Tozeur ; Djerid | 4 109 113 20 1122 1142 60 329 389
+5me Région ; Djerba ; Djerba | 0 48 48 14 3002 3016 25 460 485
+Territoires militaires du Sud ;  ; Nefzaoua | 9 193 202 1008 3253 4261 12 41 53
+Territoires militaires du Sud ;  ; Ourghemma | 31 707 738 733 10441 11174 6 394 400
+Territoires militaires du Sud ;  ; Tataouine | 37 313 350 1413 6638 8051 25 206 231
+Territoires militaires du Sud ;  ; Matmata | 2 101 103 92 3281 3343 134 1018 1152
+Totaux | 3581 59838 63419 8570 108847 117417 53395 266479 319874
+
+@betail view=283 page=259 year=1925 roll=indigenous
+img: all
+cols: muj mui mut poj poi pot asj asi ast cpj cpi cpt ovj ovi ovt
+1re Région ; Béja ; Béja | 30 429 459 0 0 0 110 2280 2390 5496 12582 18078 12095 25616 37711
+1re Région ; Bizerte ; Bizerte | 7 794 801 0 0 0 138 3087 3225 4694 10600 15294 6636 17484 24120
+1re Région ; Bizerte ; Mateur | 6 386 392 0 3 3 33 1408 1441 9094 1855 27649 12906 31111 44017
+1re Région ; Tabarka ; Aïn-Draham | 0 354 354 0 1 1 31 1078 1109 9649 21817 31466 4634 10508 15142
+1re Région ; Souk-el-Arba ; Souk-el-Arba | 22 1034 1056 0 0 0 78 2791 2869 8136 17028 25164 7679 16610 24289
+1re Région ; Souk-el-Arba ; Souk-el-Khemis | 15 328 343 0 0 0 160 1600 1760 3715 6025 9740 5772 10773 16525
+2me Région ; Tunis ; Banlieue | 3 2158 2161 0 0 0 100 4060 4160 6011 17100 23121 9414 29372 38786
+2me Région ; Zaghouan ; Zaghouan | 5 649 654 0 0 0 88 3047 3135 14263 30257 44520 5647 17035 22682
+2me Région ; Grombalia ; Cap-Bon - Nabeul | 14 916 930 0 0 0 515 7399 7914 17984 41700 59684 12563 27941 40504
+2me Région ; Grombalia ; Cap-Bon - Soliman | 2 420 422 0 0 0 93 2589 2682 5881 12025 17906 3005 8719 11724
+3me Région ; Téboursouk ; Téboursouk | 3 990 993 0 0 0 45 2637 2682 10303 17537 27840 7227 14201 21428
+3me Région ; Le Kef ; Le Kef | 43 1292 1335 0 0 0 379 5053 5432 18312 29568 47880 19472 36114 55586
+3me Région ; Le Kef ; Tadjérouine | 35 815 850 0 0 0 187 3439 3626 6840 11848 18688 21086 36816 57902
+3me Région ; Mactar ; Oulad Ayar | 0 365 365 0 0 0 20 2820 2840 6802 14684 21486 10020 24285 34305
+3me Région ; Mactar ; Oulad Aoun | 0 943 943 0 0 0 133 3250 3383 7340 13302 20642 7373 22572 29945
+3me Région ; Medjez-el-Bab ; Medjez-el-Bab | 0 1193 1193 0 0 0 29 5032 5061 19898 39564 59462 7822 18056 25878
+4me Région ; Sousse ; Souassi | 2 59 61 0 0 0 894 3544 4438 2552 5445 7997 11625 38255 49881
+4me Région ; Sousse ; Mahdia | 6 633 639 0 0 0 178 3822 4000 466 1375 1841 7965 29776 37741
+4me Région ; Sousse ; Monastir | 26 1374 1400 0 0 0 214 4082 4296 166 547 713 7502 23420 30922
+4me Région ; Sousse ; Sousse | 10 2359 2363 0 0 0 320 5484 5804 2891 10627 13518 17548 51187 68735
+4me Région ; Kairouan ; Kairouan | 4 474 478 0 0 0 164 2849 3013 6883 16887 23770 14667 45620 60287
+4me Région ; Kairouan ; Djelass | 5 217 222 0 0 0 85 3852 3937 14100 33212 47312 21884 70766 92650
+4me Région ; Thala ; Fraichiches | 57 236 293 0 0 0 191 3005 3196 14218 24839 39057 22694 42600 65294
+4me Région ; Thala ; Madjeurs | 47 239 286 0 0 0 107 3299 3406 10604 20181 30785 19913 42213 62125
+5me Région ; Sfax ; Sfax | 5 1284 1289 0 0 0 22 2864 2886 563 2834 3397 2294 18259 20553
+5me Région ; Sfax ; La Skira | 0 100 100 0 0 0 18 1868 1886 1901 6968 8869 5442 23368 28810
+5me Région ; Sfax ; Djebéniana | 2 132 134 0 0 0 55 2181 2236 483 1830 2313 4442 18181 22623
+5me Région ; Gabès ; L'Arad | 0 710 710 0 0 0 83 4208 4291 4535 10858 15393 4886 11868 16754
+5me Région ; Gafsa ; Hemmama | 0 12 12 0 0 0 102 3102 3204 7944 21633 29577 17356 65885 83241
+5me Région ; Gafsa ; Gafsa | 0 81 81 0 0 0 17 1794 1811 3614 11708 15322 5149 17159 22308
+5me Région ; Tozeur ; Djerid | 0 129 129 0 0 0 7 2068 2075 1012 5013 6025 619 3478 4097
+5me Région ; Djerba ; Djerba | 0 219 219 0 0 0 29 2586 2615 120 837 957 701 4914 5615
+Territoires militaires du Sud ;  ; Nefzaoua | 0 12 12 0 0 0 20 1197 1217 7297 18161 25458 4807 9912 14719
+Territoires militaires du Sud ;  ; Ourghemma | 0 15 15 0 0 0 80 3868 3938 6072 27432 33504 6085 26367 32452
+Territoires militaires du Sud ;  ; Tataouine | 0 36 36 0 0 0 79 2716 2795 8361 28201 36562 5672 17461 23133
+Territoires militaires du Sud ;  ; Matmata | 1 514 515 0 0 0 44 1659 1703 2005 16300 18800 2479 13010 15489
+Totaux | 350 21901 22251 0 4 4 4848 111618 116466 250700 579090 829790 337062 920912 1257974
+
+# c) Récapitulation, spread f284 (p. 260) | f285 (p. 261): check (a) + b)), not stored; every cell read on the image.
+# The mulassière Total of the left page / bovine Total are legible here. Its Banlieue and Zaghouan porcine-to-ovine
+# cells are not a) + b) as printed: they are the source of the derived a) cells (see extract_finance.py).
+
+@betail view=284 page=260 year=1925 roll=recap
+img: all
+cols: chj chi cht caj cai cat boj boi bot muj mui
+1re Région ; Béja ; Béja | 316 3997 4313 7 93 100 3987 23571 27558 79 940
+1re Région ; Bizerte ; Bizerte | 259 2857 3116 31 232 263 3718 18536 22254 23 1340
+1re Région ; Bizerte ; Mateur | 160 4275 4435 8 395 403 4434 23950 28384 30 1060
+1re Région ; Tabarka ; Aïn-Draham | 37 1695 1732 0 16 16 1962 14312 16274 5 394
+1re Région ; Souk-el-Arba ; Souk-el-Arba | 145 3271 3416 11 168 179 2197 16165 18352 26 1144
+1re Région ; Souk-el-Arba ; Souk-el-Khemis | 178 1718 1896 0 9 9 1809 8561 10370 20 778
+2me Région ; Tunis ; Banlieue | 253 6662 6915 11 285 296 4070 28603 32673 75 5167
+2me Région ; Zaghouan ; Zaghouan | 225 3048 3273 99 1477 1576 3172 16489 19661 30 1642
+2me Région ; Grombalia ; Cap-Bon - Nabeul | 261 2302 3563 135 2758 2893 5944 23394 29338 17 1007
+2me Région ; Grombalia ; Cap-Bon - Soliman | 63 1393 1456 12 526 538 2341 12839 15180 17 1130
+3me Région ; Téboursouk ; Téboursouk | 84 2168 2252 17 147 163 1987 12027 14014 7 1354
+3me Région ; Le Kef ; Le Kef | 491 5020 5511 42 464 506 7449 16206 23655 49 1438
+3me Région ; Le Kef ; Tadjérouine | 241 3583 3824 18 197 215 1387 5334 6121 35 898
+3me Région ; Mactar ; Oulad Ayar | 32 1727 1759 0 1310 1310 367 7136 7503 7 391
+3me Région ; Mactar ; Oulad Aoun | 159 2406 2565 6 146 152 1431 10452 11883 0 960
+3me Région ; Medjez-el-Bab ; Medjez-el-Bab | 162 3844 4006 6 332 338 2185 21282 23467 52 2609
+4me Région ; Sousse ; Souassi | 210 666 876 1664 5774 7438 2004 3119 5123 2 65
+4me Région ; Sousse ; Mahdia | 27 709 736 304 5591 5905 959 4321 5280 6 659
+4me Région ; Sousse ; Monastir | 12 641 653 188 4552 4740 644 3998 4642 26 1389
+4me Région ; Sousse ; Sousse | 103 1933 2036 443 6777 7220 2358 8723 11081 21 2593
+4me Région ; Kairouan ; Kairouan | 243 2155 2398 518 5607 6125 2560 7581 10141 9 557
+4me Région ; Kairouan ; Djelass | 104 2498 2602 309 7258 7567 1889 8843 10732 5 281
+4me Région ; Thala ; Fraichiches | 229 1793 2022 142 2904 3046 773 2249 3022 58 243
+4me Région ; Thala ; Madjeurs | 215 1852 2067 72 2927 2999 937 3668 4605 47 250
+5me Région ; Sfax ; Sfax | 27 787 814 36 5315 5351 40 239 279 13 1570
+5me Région ; Sfax ; La Skira | 16 667 683 122 4862 4984 7 98 105 12 280
+5me Région ; Sfax ; Djebéniana | 15 678 693 219 5689 5908 230 1498 1718 2 145
+5me Région ; Gabès ; L'Arad | 13 703 716 117 3218 3335 44 247 291 0 733
+5me Région ; Gafsa ; Hemmama | 71 965 1036 228 6383 6611 407 1753 2160 13 34
+5me Région ; Gafsa ; Gafsa | 10 443 453 554 5912 6466 43 417 460 0 312
+5me Région ; Tozeur ; Djerid | 4 120 124 20 1123 1143 63 331 394 0 134
+5me Région ; Djerba ; Djerba | 0 54 54 14 3004 3018 25 460 485 0 225
+Territoires militaires du Sud ;  ; Nefzaoua | 9 194 203 1008 3253 4261 12 41 53 0 12
+Territoires militaires du Sud ;  ; Ourghemma | 48 756 804 733 10502 11235 6 400 406 0 45
+Territoires militaires du Sud ;  ; Tataouine | 37 314 351 1413 6638 8051 25 206 231 0 36
+Territoires militaires du Sud ;  ; Matmata | 2 101 103 62 3281 3343 134 1018 1152 1 514
+Totaux | 4461 67995 72456 8570 109124 117703 61590 308057 369647 687 32329
+
+@betail view=285 page=261 year=1925 roll=recap
+img: all
+cols: mut poj poi pot asj asi ast cpj cpi cpt ovj ovi ovt
+1re Région ; Béja ; Béja | 1019 1192 1837 3029 135 2415 2550 5620 13021 18641 13044 29248 42292
+1re Région ; Bizerte ; Bizerte | 1363 202 753 955 141 3201 3342 4822 11487 16309 8288 21894 30182
+1re Région ; Bizerte ; Mateur | 1090 1764 1626 3390 51 1543 1594 9466 20034 29500 14564 34831 49395
+1re Région ; Tabarka ; Aïn-Draham | 399 1858 2842 4007 34 1109 1143 9895 22257 32152 4640 10531 15171
+1re Région ; Souk-el-Arba ; Souk-el-Arba | 1170 307 511 818 85 2833 2918 8250 17429 25679 7877 16993 24870
+1re Région ; Souk-el-Arba ; Souk-el-Khemis | 798 318 488 806 162 1630 1792 3715 6064 9779 6557 11610 18167
+2me Région ; Tunis ; Banlieue | 5242 904 1831 2735 125 4410 4535 6720 20422 27142 11918 34793 45715
+2me Région ; Zaghouan ; Zaghouan | 1670 114 143 257 103 3145 3248 14589 31210 45799 6349 18963 25312
+2me Région ; Grombalia ; Cap-Bon - Nabeul | 1024 98 174 272 538 7495 8033 18315 42409 60724 12719 28269 40988
+2me Région ; Grombalia ; Cap-Bon - Soliman | 1147 9 102 111 99 2690 2789 6013 12774 18787 3156 9819 12975
+3me Région ; Téboursouk ; Téboursouk | 1361 306 495 801 65 2697 2762 10830 18391 29221 7488 15012 22500
+3me Région ; Le Kef ; Le Kef | 1487 58 89 147 409 5209 5618 18611 30537 49148 20132 40967 61099
+3me Région ; Le Kef ; Tadjérouine | 933 15 187 202 189 3486 3675 6881 12027 18908 21458 37766 59224
+3me Région ; Mactar ; Oulad Ayar | 398 30 12 42 21 2830 2851 6810 14692 21502 10080 24448 34528
+3me Région ; Mactar ; Oulad Aoun | 960 0 1 1 139 3263 3402 7340 13302 20642 7388 22592 29980
+3me Région ; Medjez-el-Bab ; Medjez-el-Bab | 2661 588 478 1066 65 5162 5227 20583 41386 61969 9871 21623 31494
+4me Région ; Sousse ; Souassi | 67 0 0 0 894 3544 4438 2552 5445 7997 11626 38255 49881
+4me Région ; Sousse ; Mahdia | 665 0 0 0 181 3832 4013 471 1382 1853 8034 30083 38117
+4me Région ; Sousse ; Monastir | 1415 0 0 0 214 4090 4304 168 551 719 7587 23783 31370
+4me Région ; Sousse ; Sousse | 2614 25 82 107 324 5532 5856 2896 10942 13838 18305 52766 71071
+4me Région ; Kairouan ; Kairouan | 566 24 40 64 164 2854 3018 6925 17051 23976 16035 48737 64772
+4me Région ; Kairouan ; Djelass | 286 70 49 119 87 3877 3964 14318 33722 48040 22636 72169 94805
+4me Région ; Thala ; Fraichiches | 301 0 0 0 191 311 3202 14219 24852 39071 22695 42637 65332
+4me Région ; Thala ; Madjeurs | 297 5 8 13 107 3304 3411 10612 20193 30805 20171 44163 64339
+5me Région ; Sfax ; Sfax | 1583 0 48 48 28 2892 2920 806 3464 4270 4837 24177 29014
+5me Région ; Sfax ; La Skira | 292 0 0 0 30 1893 1923 2054 7530 9584 6664 25473 32137
+5me Région ; Sfax ; Djebéniana | 147 0 0 0 55 2181 2236 183 1830 2317 4442 18201 22643
+5me Région ; Gabès ; L'Arad | 733 0 0 0 84 4215 4299 4535 10858 15393 4968 12288 17256
+5me Région ; Gafsa ; Hemmama | 47 0 0 0 107 3115 3222 7967 21777 29744 17632 66596 84228
+5me Région ; Gafsa ; Gafsa | 312 7 1 8 19 1845 1864 3620 11834 15454 5149 17411 22560
+5me Région ; Tozeur ; Djerid | 134 0 0 0 7 2096 2103 1012 5016 6028 620 3478 4098
+5me Région ; Djerba ; Djerba | 225 0 0 0 29 2588 2617 120 841 961 701 4915 5616
+Territoires militaires du Sud ;  ; Nefzaoua | 12 0 0 0 20 1197 1217 7297 18161 25458 4807 9912 14719
+Territoires militaires du Sud ;  ; Ourghemma | 45 0 16 16 80 3878 3958 6074 27547 33621 6115 27100 33215
+Territoires militaires du Sud ;  ; Tataouine | 36 0 0 0 79 2716 2795 8363 28205 36568 5672 17461 23133
+Territoires militaires du Sud ;  ; Matmata | 515 0 0 0 44 1659 1703 2005 16300 18800 2479 13010 15489
+Totaux | 33016 7894 11813 19707 5105 113437 118542 255452 594943 850395 356709 971978 1328687

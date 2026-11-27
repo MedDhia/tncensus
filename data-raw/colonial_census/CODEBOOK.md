@@ -251,6 +251,7 @@ Every table is tidy: one row per printed cell. Printed subtotals and totals are 
 | [`finance_patente`](#finance_patente) | patente | by edition | 6,985 | count | Business licence tax (droit de patente): taxpayers by caïdat and class of profit |
 | [`finance_patente_caidat`](#finance_patente_caidat) | patente_caidat | by edition | 204 | mixed | Business licence tax (droit de patente): number of taxpayers and total mean profit by caïdat |
 | [`finance_taxe_personnelle`](#finance_taxe_personnelle) | taxe | by edition | 1,977 | count | Personal tax (taxe personnelle): taxpayers by caïdat and nationality |
+| [`finance_taxe_betail`](#finance_taxe_betail) | betail | by edition | 5,360 | count | Livestock tax (taxe sur le bétail): animals on the rolls by caïdat and species, young exempt and taxable, European and indigenous rolls |
 
 ### eur1906_t1_circonscription_nationality
 
@@ -11404,3 +11405,69 @@ Source `sgt`, table taxe, printed pages by edition. 1,977 rows. Value type: coun
 | `other_european` | Autres Européens | 282 |
 | `spanish` | Espagnols | 282 |
 | `tunisian` | Sujets tunisiens | 285 |
+
+### finance_taxe_betail
+
+**Taxe sur le bétail. Nombre d'animaux de chaque espèce**  
+*Livestock tax (taxe sur le bétail): animals on the rolls by caïdat and species, young exempt and taxable, European and indigenous rolls*
+
+Source `sgt`, table betail, printed pages by edition. 5,360 rows. Value type: count. Flags: (empty) 5,328, total_mismatch 18, derived_from_totals 14. Notes and validation: [`../yearbook_other_chapters/csv/finance_taxe_betail.md`](../yearbook_other_chapters/csv/finance_taxe_betail.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `region` | Coded dimension. |
+| `controle_civil` | Place or label as printed (20 distinct values). |
+| `caidat` | Place or label as printed (47 distinct values). |
+| `roll` | Coded dimension. |
+| `roll_fr` | Printed French label for `roll`. |
+| `species` | Coded dimension. |
+| `species_fr` | Printed French label for `species`. |
+| `age_class` | Coded dimension. |
+| `age_class_fr` | Printed French label for `age_class`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`region`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `(empty)` |  | 3,056 |
+| `1re Région` |  | 384 |
+| `2me Région` |  | 256 |
+| `3me Région` |  | 384 |
+| `4me Région` |  | 512 |
+| `5me Région` |  | 512 |
+| `Territoires militaires du Sud` |  | 256 |
+
+`roll`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `european` | a) Rôles européens | 2,672 |
+| `indigenous` | b) Rôles indigènes | 2,688 |
+
+`species`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `camel` | Cameline | 670 |
+| `cattle` | Bovine | 670 |
+| `donkey` | Asine | 670 |
+| `goat` | Caprine | 670 |
+| `horse` | Chevaline | 670 |
+| `mule` | Mulassière | 670 |
+| `pig` | Porcine | 670 |
+| `sheep` | Ovine | 670 |
+
+`age_class`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `taxable` | Imposables | 2,680 |
+| `young_exempt` | Jeunes non imposables | 2,680 |
