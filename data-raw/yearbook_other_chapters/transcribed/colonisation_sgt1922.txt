@@ -1,0 +1,124 @@
+# Statistique générale de la Tunisie 1922, chapter XIII Colonisation (views f437-f456, bpt6k9105649x).
+# Format: yb_tables.py. Labels with ';;' carry text fields (split by extract_colonisation.py).
+
+# Fonds de colonisation. Achats réalisés (1900-1922). f450 (p. 426): years, dotations (origine ;; montant),
+# recettes annuelles; f451 (p. 427): dépenses annuelles, superficie des immeubles acquis (hect.), observations.
+# Columns: dot = dotation montant (fr.), rec = recettes annuelles (fr. c.), dep = dépenses annuelles (fr. c.),
+# ha = superficie acquise (hectares). Printed TOTAL: 13.000.000 / 24.865.246,53 / 38.867.034,51 / 139.715;
+# dotations + recettes = 37.865.246,53; dépenses carried down 38.867.034,51.
+@fund view=450 page=426 view2=451 page2=427
+img: all
+cols: dot rec dep ha
+1900 ;; Dotation initiale (1) | 1500000 296173.51 556390.34 3878
+1901 ;; » | 0 398804.07 1129485.01 9966
+1902 ;; » | 0 551303.19 558390.13 2477
+1903 ;; » | 0 537417.98 601280.41 3570
+1904 ;; Prélèvement sur le fonds des excédents disponibles (2) | 800000 527966.26 1201048.08 8805
+1905 ;; — (3) et avances de la Banque de l'Algérie (4) | 700000 646876.50 1167439.09 4787
+1906 ;; » | 0 733145.43 560500.25 3718
+1907 ;; Dotation; fonds d'emprunt (5) | 400000 873037.16 1998832.70 9986
+1908 ;; — — (6) | 4100000 690585.20 1523077.01 10832
+1909 ;; » | 0 817745.28 1156757.76 5829
+1910 ;; » | 0 1044756.02 3365542.32 16243
+1911 ;; » | 0 1303284.60 384993.32 517
+1912 ;; » | 0 950234.86 541984.98 4711
+1913 ;; » | 0 1090513.85 1177160.06 8248
+1914 ;; » | 0 522290.70 2402914.15 16756
+1915 ;; » | 0 610802.65 501977.44 633
+1916 ;; » | 0 683330.08 175555.48 106
+1917 ;; » | 0 970515.91 1156130.86 2750
+1918 ;; » | 0 1879135.20 939343.06 1492
+1919 ;; » | 0 1851105.59 1586486.61 6390
+1920 ;; » | 0 2567847.98 1852159.15 10504
+1921 ;; » | 0 3934674.51 4163061.72 4629
+1922 ;; » (7) | 5500000 1378700 10166533.58 2888
+TOTAL | 13000000 24865246.53 38867034.51 139715
+grand | 37865246.53 - 38867034.51 -
+
+# VENTES AVEC OBLIGATION D'INSTALLATION (1913-1922). a) Propriétés livrées à la colonisation.
+# Spreads f438|f439 (pp. 414-415), f440|f441 (pp. 416-417), f442|f443 (pp. 418-419). Left page: années, nom
+# de la propriété, nature de l'immeuble ou du lotissement ('—' = ditto), situation; right page: contrôle civil,
+# superficie totale (h. a.), nombre de lots créés / réservés ou disponibles / vendus, observations. Left and right
+# lines matched in order within each year bracket (counts agree). No totals printed.
+# Label: year ;; name ;; nature ;; situation ;; contrôle civil ;; observation
+@install22 view=438 page=414 view2=439 page2=415
+img: all
+cols: area created reserved sold
+1913 ;; Aïn-Lanjas ;; lotissement de culture ;; à 8 km. S. O. d'El-Akhouat ;; Téboursouk ;; | 567 2 0 2
+1913 ;; Bonne-Terre ;; — ;; à 5 km. S. de la gare d'Oued-Zarga ;; Medjez-el-Bab ;; | 456 2 0 2
+1913 ;; Douz ;; lotissement urbain ;; caïdat des Ouerghemma ;; Extrême-Sud ;; | 4 80 43 37
+1913 ;; Massicault ;; lotissement de culture ;; à 30 km. O. de Tunis ;; Tunis ;; | 643 4 0 4
+1913 ;; Mehirig ;; lotissement urbain ;; gare de Djelida ;; Medjez-el-Bab ;; | 0.29 2 0 2
+1913 ;; Mutuelleville ;; lotissement suburbain ;; au Belvédère, près Tunis ;; Tunis ;; | 15.65 200 6 194
+1913 ;; Regina Averso et Benedetto Franceville (1) ;; — ;; près l'Hôpital du Belvédère ;; Tunis ;; (1) Propriété livrée à une Société d'habitations à bon marché. | 7.80 1 0 1
+1914 ;; Alem (El) (2) ;; lotissement de culture ;; à 17 km. N. de Kairouan ;; Kairouan ;; (2) Propriété cédée à une Société poursuivant un but de colonisation. | 8091 1 0 1
+1914 ;; Bézazia-Kebira (2) ;; — ;; au pont de la Medjerda (Route de Tunis à Bizerte) ;; Bizerte ;; (2) Propriété cédée à une Société poursuivant un but de colonisation. | 521 1 0 1
+1914 ;; Brige (El) Essaïs ;; — ;; à 6 km. N. E. de la gare de Ksar-Mezouar ;; Bizerte ;; | 244 2 0 2
+1914 ;; Degraak (Ed) ;; — ;; à 15 km. S. de Souk-el-Khemis ;; Souk-el-Arba ;; | 85 1 0 1
+1914 ;; Gliàà II (El) ;; lotissement suburbain ;; à 22 km. N. de Béja ;; Béja ;; | 9 1 0 1
+1914 ;; Guengla (suburbain) ;; — ;; à 1 km. de la gare de Tindja ;; Bizerte ;; | 436 26 0 26
+1914 ;; Kachebet-Chabane ;; lotissement de culture ;; à 2 km. N. d'El-Aroussa ;; Medjez-el-Bab ;; | 925 9 0 9
+1914 ;; Mongil-Radès ;; lotissement suburbain ;; à Radès ;; Tunis ;; | 23 135 17 118
+1914 ;; Sria ;; lotissement de culture ;; à 25 km. O. de Mateur ;; Bizerte ;; | 1560 4 0 4
+1914 ;; Theriaka-Etat II ;; — ;; à 10 km. S. de Medjez-el-Bab ;; Medjez-el-Bab ;; | 1364 3 0 3
+1914 ;; Tadjerouine ;; lotissement urbain ;; à Tadjerouine ;; Le Kef ;; | 3.50 32 24 8
+1914 ;; Thuburnic ;; lotissement de culture ;; à 12 km. N. de Ghardimaou ;; Souk-el-Arba ;; | 151 1 0 1
+1915 ;; Ameziane-Etat ;; lotissement de culture ;; près de Souk-el-Arba ;; Souk-el-Arba ;; | 71 1 0 1
+1915 ;; Bou-Thadi ;; lotissement suburbain ;; à 65 km. N. O. de Sfax ;; Sfax ;; | 48 78 12 66
+1915 ;; Djilma ;; lotissement urbain ;; station de Djilma ;; Thala ;; | 16 18 7 11
+1915 ;; Kalaa-Matmata ;; — ;; caïdat de Matmata ;; Extrême-Sud ;; | 8 39 0 39
+1915 ;; Sbeïtla ;; lotissement suburbain ;; station de Sbeïtla ;; Thala ;; | 80 12 0 12
+1915 ;; Zouitinat (Ez) ;; — ;; à 10 km. de Béja ;; Béja ;; | 26 1 0 1
+@install22 view=440 page=416 view2=441 page2=417
+img: all
+cols: area created reserved sold
+1916 ;; Cheguaguif-Sebaa-Aouinat ;; lotissement de culture ;; à 11 km. E. de Mateur ;; Bizerte ;; | 137 1 0 1
+1916 ;; Guengla ;; lotissement suburbain ;; à 1 km. de Tindja ;; Bizerte ;; | 12 15 0 15
+1916 ;; Maagen-bel-Abbès ;; lotissement urbain ;; station de Maagen-bel-Abbès ;; Thala ;; | 20 20 18 2
+1916 ;; Plateau du Meridj ;; lotissement suburbain ;; à 7 km. E. d'Aïn-Draham ;; Tabarka ;; | 1.20 3 1 2
+1916 ;; Sbeïtla ;; lotissement suburbain ;; centre de Sbeïtla ;; Thala ;; | 12.72 33 0 33
+1916 ;; Guengla ;; lotissement urbain ;; à 1 km. de Tindja ;; Bizerte ;; | 15 87 77 10
+1917 ;; Col des Ruines ;; lotissement urbain ;; à proximité d'Aïn-Draham ;; Tabarka ;; | 7 7 0 7
+1918 ;; Kheniguet Ed-Dehan ;; lotissement de culture ;; à 25 km. S. de Medjez-el-Bab ;; Medjez-el-Bab ;; | 1264 9 0 9
+1919 ;; Gafour-Etat ;; lotissement de culture ;; à 15 km. S. E. de Gafour ;; Téboursouk ;; | 354 2 0 2
+1919 ;; Khouiridja ;; — ;; à 14 km. S. de Medjez-el-Bab ;; Medjez-el-Bab ;; | 1124 4 0 4
+1919 ;; Lagrenée ;; — ;; au centre de Chaouat ;; Tunis ;; | 1880 13 0 13
+1919 ;; Revoil ;; — ;; à 2 km. E. de Sidi-Tabet ;; Tunis ;; | 2300 14 0 14
+1919 ;; Zriba ;; — ;; à 6 km. S. E. de Zaghouan ;; Zaghouan ;; | 11719 39 0 39
+1919 ;; Khlédia ;; — ;; à 10 km. S. E. de Tunis ;; Tunis ;; | 628 6 0 6
+1919 ;; Khlédia-Srira ;; lotissement suburbain ;; à 10 km. S. E. de Tunis ;; Tunis ;; | 347 17 0 17
+1919 ;; Piste du génie ;; lotissement urbain ;; Aïn-Draham ;; Tabarka ;; Installations estivales. | 4.40 15 8 7
+1919 ;; Chabet-Aïn-Morra ;; — ;; Aïn-Draham ;; Tabarka ;; Installations estivales. | 0.71 4 0 4
+1919 ;; Bellevue-la Marsa ;; — ;; La Marsa (près Tunis) ;; Tunis ;; | 1.39 15 2 13
+1920 ;; El-Hadjerine Mabtouha ;; lotissement de culture ;; Entre Protville et Sidi-Athman, à 1.500 m. de cette gare ;; Bizerte ;; | 1835 18 0 18
+1920 ;; El-Azib-Etat I ;; — ;; à 12 km. au sud de Bizerte ;; Bizerte ;; | 113.92 6 0 6
+1920 ;; El-Amri Salines ;; — ;; à la station des Salines ;; Le Kef ;; | 189 3 0 3
+1920 ;; Bou-Arada Aroussa ;; — ;; à proximité des gares de Bou-Arada-Aroussa ;; Medjez-el-Bab ;; | 6000 41 1 40
+1920 ;; Djeradou ;; — ;; à 10 km. S. O. de Bou-Ficha ;; Sousse ;; | 6390 31 3 28
+1920 ;; Lagrenée ;; — ;; au centre de Chaouat ;; Tunis ;; | 376 11 0 11
+1920 ;; Revoil ;; — ;; à 2 km. E. de Sidi-Tabet ;; Tunis ;; Colonisation assistée. | 783 13 0 13
+1920 ;; Zriba ;; — ;; à 6 km. S. E. de Zaghouan ;; Zaghouan ;; Colonisation assistée. | 618 10 2 8
+1920 ;; Sidi-Mechri ;; lotissement suburbain ;; à 15 km. de la gare de Tamera ;; Bizerte ;; Installation estivale. | 5.94 46 28 18
+1920 ;; Guengla ;; — ;; à 1 km. de Tindja ;; Bizerte ;; | 9.41 40 0 40
+1920 ;; Zriba ;; — ;; à 6 km. S. E. de Zaghouan ;; Zaghouan ;; Lotissements jardins et cultures maraîchères. | 33.50 40 30 10
+1920 ;; Béja-Sidi-Fredj ;; lotissement urbain ;; au centre de Béja ;; Béja ;; | 15 17 10 7
+1920 ;; Bordj-Khodja ;; — ;; sur la route de Sidi-Tabet à Tunis ;; Tunis ;; | 10.19 19 17 2
+1920 ;; Revoil ;; — ;; à 2 km. E. de Sidi-Tabet ;; Tunis ;; | 2.42 24 23 1
+@install22 view=442 page=418 view2=443 page2=419
+img: all
+cols: area created reserved sold
+1921 ;; Attar-Sefiane et Essouni ;; lotissement de culture ;; à 13 km. au S. O. de Tunis ;; Tunis ;; | 1206 20 1 19
+1921 ;; Bir-M'Cherga ;; — ;; à 32 km. de Tunis ;; Zaghouan ;; | 257 2 0 2
+1921 ;; Khang-Mourou ;; — ;; à 16 km. S. O. de Medjez-el-Bab ;; Medjez-el-Bab ;; En cours d'attribution au 1er janvier 1923. | 2132 14 0 0
+1921 ;; Saouaf-Djebibina ;; — ;; S. E. de Zaghouan N. O. d'Enfidaville ;; Zaghouan ;; En cours d'attribution au 1er janvier 1923. | 19000 89 0 0
+1922 ;; Attar ;; lotissement de culture ;; à 13 km. S. O. de Tunis ;; Tunis ;; | 489.50 5 0 5
+1922 ;; Sidi-Tabet ;; — ;; à 21 km. de Tunis ;; Tunis ;; | 613.05 14 0 14
+1922 ;; Mengoub et Drijat ;; — ;; à 6 km. de Massicault ;; Tunis ;; | 1830 14 0 14
+1922 ;; Kheniguet-Magra ;; — ;; à 4 km. de Pont-du-Fahs ;; Zaghouan ;; En cours d'attribution au 1er janvier 1923. | 865 7 - -
+1922 ;; Guedal-El-Beylik ;; — ;; à 9 km. de Pont-du-Fahs ;; Zaghouan ;; En cours d'attribution au 1er janvier 1923. | 777 8 - -
+1922 ;; Dhomda ;; — ;; à 9 km. de Pont-du-Fahs ;; Zaghouan ;; En cours d'attribution au 1er janvier 1923. | 1599 9 - -
+1922 ;; Bou-Ficha ;; — ;; au centre de Bou-Ficha ;; Sousse ;; En cours d'attribution au 1er janvier 1923. | 1107 12 - -
+1922 ;; Le Goubellat ;; — ;; à 20 km. Sud de Medjez-el-Bab ;; Medjez-el-Bab ;; En cours d'attribution au 1er janvier 1923. | 1050 9 - -
+1922 ;; Kachebet-Chabane ;; — ;; à 5 km. N. d'El-Aroussa ;; Medjez-el-Bab ;; En cours d'attribution au 1er janvier 1923. | 2268 7 - -
+1922 ;; Lagrenée-Chaouat ;; lotissement urbain ;; au Centre de Chaouat ;; Tunis ;; | 2.72 31 3 0
+1922 ;; Klédia ;; — ;; à 20 km. S. E. de Tunis ;; Tunis ;; | 4.32 35 9 4

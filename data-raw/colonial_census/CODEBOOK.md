@@ -252,6 +252,14 @@ Every table is tidy: one row per printed cell. Printed subtotals and totals are 
 | [`finance_patente_caidat`](#finance_patente_caidat) | patente_caidat | by edition | 204 | mixed | Business licence tax (droit de patente): number of taxpayers and total mean profit by caïdat |
 | [`finance_taxe_personnelle`](#finance_taxe_personnelle) | taxe | by edition | 1,977 | count | Personal tax (taxe personnelle): taxpayers by caïdat and nationality |
 | [`finance_taxe_betail`](#finance_taxe_betail) | betail | by edition | 5,360 | count | Livestock tax (taxe sur le bétail): animals on the rolls by caïdat and species, young exempt and taxable, European and indigenous rolls |
+| [`colonisation_installation_lots`](#colonisation_installation_lots) | install;install22;install35 | by edition | 4,591 | mixed | Sales with an obligation of personal settlement: lotissements delivered to colonisation, by year, with area and number of lots |
+| [`colonisation_planting_lots`](#colonisation_planting_lots) | planting | by edition | 124 | mixed | Land for planting sold with an obligation of settlement in the Regency: lotissements by year, area and number of lots |
+| [`colonisation_urban_lots`](#colonisation_urban_lots) | urban | by edition | 368 | mixed | Urban, industrial and summer-residence lotissements: by year, area and number of lots |
+| [`colonisation_lotissements_summary`](#colonisation_lotissements_summary) | recap_plant;recap_rural | by edition | 185 | mixed | Lotissements delivered to colonisation: area by origin of the land and number of lots, before and after a cut-off year |
+| [`colonisation_indigenous_settlement`](#colonisation_indigenous_settlement) | fixation;fixation_old;fixation_years | by edition | 87 | mixed | Settlement of Tunisians on the land: families settled and land allotted (cumulative from 1920), and allotments by year (sgt1939) |
+| [`colonisation_indigenous_sales`](#colonisation_indigenous_sales) | sales | by edition | 57 | mixed | Definitive sales to Tunisian allottees who fulfilled their development obligations, by year |
+| [`colonisation_regrouping_1935`](#colonisation_regrouping_1935) | regroup;reinstall | by edition | 204 | mixed | Regrouping of colonisation lotissements at 31 December 1935: lots taken back, settlers reinstalled, and reinstallations on properties bought by the Domaine |
+| [`colonisation_fund`](#colonisation_fund) | fund | by edition | 116 | mixed | Colonisation fund: endowments, annual receipts and expenditure, and area of the properties bought (1900-1928) |
 
 ### eur1906_t1_circonscription_nationality
 
@@ -11471,3 +11479,491 @@ Source `sgt`, table betail, printed pages by edition. 5,360 rows. Value type: co
 |---|---|---:|
 | `taxable` | Imposables | 2,680 |
 | `young_exempt` | Jeunes non imposables | 2,680 |
+
+### colonisation_installation_lots
+
+**Ventes avec obligation d'installation personnelle (propriétés livrées à la colonisation)**  
+*Sales with an obligation of personal settlement: lotissements delivered to colonisation, by year, with area and number of lots*
+
+Source `sgt`, table install;install22;install35, printed pages by edition. 4,591 rows. Value type: mixed. Flags: (empty) 4,543, reprint_corrected 34, not_applicable 12, total_mismatch 1, derived_from_totals 1. Notes and validation: [`../yearbook_other_chapters/csv/colonisation_installation_lots.md`](../yearbook_other_chapters/csv/colonisation_installation_lots.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `scheme` | Coded dimension. |
+| `scheme_fr` | Printed French label for `scheme`. |
+| `property_fr` | Place or label as printed (230 distinct values). |
+| `origin_fr` | Place or label as printed (4 distinct values). |
+| `nature_fr` | Place or label as printed (3 distinct values). |
+| `situation_fr` | Place or label as printed (228 distinct values). |
+| `controle_civil` | Place or label as printed (20 distinct values). |
+| `observation_fr` | Place or label as printed (19 distinct values). |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`scheme`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `installation` | Ventes avec obligation d'installation : a) Propriétés livrées à la colonisation / a) Ventes avec obligation d'installation personnelle | 4,591 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `area` | Superficie du lotissement | 958 |
+| `lots_artisan` | Nombre de lots d'artisans | 759 |
+| `lots_created` | Nombre de lots créés | 147 |
+| `lots_market_garden` | Nombre de lots maraîchers | 811 |
+| `lots_reserved_or_available` | Nombre de lots réservés ou disponibles | 147 |
+| `lots_rural` | Nombre de lots ruraux | 811 |
+| `lots_sold` | Nombre de lots vendus | 147 |
+| `lots_suburban` | Nombre de lots suburbains | 811 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `count` |  | 3,633 |
+| `hectares` |  | 958 |
+
+### colonisation_planting_lots
+
+**Terres à planter (Ventes avec obligation d'installation dans la Régence)**  
+*Land for planting sold with an obligation of settlement in the Regency: lotissements by year, area and number of lots*
+
+Source `sgt`, table planting, printed pages by edition. 124 rows. Value type: mixed. Flags: (empty) 124. Notes and validation: [`../yearbook_other_chapters/csv/colonisation_planting_lots.md`](../yearbook_other_chapters/csv/colonisation_planting_lots.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `year_label` | Coded dimension. |
+| `scheme` | Coded dimension. |
+| `scheme_fr` | Printed French label for `scheme`. |
+| `property_fr` | Place or label as printed (9 distinct values). |
+| `situation_fr` | Place or label as printed (9 distinct values). |
+| `controle_civil` | Place or label as printed (5 distinct values). |
+| `observation_fr` | Place or label as printed (1 distinct values). |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`year_label`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `1920-21` |  | 48 |
+| `1921` |  | 8 |
+| `1924` |  | 14 |
+| `1925` |  | 4 |
+| `1926` |  | 2 |
+| `1926-27` |  | 20 |
+| `1928` |  | 8 |
+| `1929` |  | 4 |
+| `1930` |  | 4 |
+| `1931` |  | 2 |
+| `1932` |  | 4 |
+| `1933` |  | 2 |
+| `1934` |  | 2 |
+| `1935` |  | 2 |
+
+`scheme`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `planting` | b) Terres à planter (Ventes avec obligation d'installation dans la Régence) | 124 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `area` | Superficie du lotissement | 62 |
+| `lots` | Nombre de lots | 62 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `count` |  | 62 |
+| `hectares` |  | 62 |
+
+### colonisation_urban_lots
+
+**Lotissements urbains, industriels ou d'estivage**  
+*Urban, industrial and summer-residence lotissements: by year, area and number of lots*
+
+Source `sgt`, table urban, printed pages by edition. 368 rows. Value type: mixed. Flags: (empty) 368. Notes and validation: [`../yearbook_other_chapters/csv/colonisation_urban_lots.md`](../yearbook_other_chapters/csv/colonisation_urban_lots.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `scheme` | Coded dimension. |
+| `scheme_fr` | Printed French label for `scheme`. |
+| `property_fr` | Place or label as printed (43 distinct values). |
+| `situation_fr` | Place or label as printed (42 distinct values). |
+| `controle_civil` | Place or label as printed (14 distinct values). |
+| `observation_fr` | Place or label as printed (8 distinct values). |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`scheme`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `urban_industrial_summer` | c) Lotissements urbains, industriels ou d'estivage | 368 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `area` | Superficie du lotissement | 184 |
+| `lots` | Nombre de lots | 184 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `count` |  | 184 |
+| `hectares` |  | 184 |
+
+### colonisation_lotissements_summary
+
+**Lotissements. a) Lotissements ruraux livrés à la Colonisation ; b) Lotissements de terres à planter**  
+*Lotissements delivered to colonisation: area by origin of the land and number of lots, before and after a cut-off year*
+
+Source `sgt`, table recap_plant;recap_rural, printed pages by edition. 185 rows. Value type: mixed. Flags: (empty) 185. Notes and validation: [`../yearbook_other_chapters/csv/colonisation_lotissements_summary.md`](../yearbook_other_chapters/csv/colonisation_lotissements_summary.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `lotissement` | Coded dimension. |
+| `lotissement_fr` | Printed French label for `lotissement`. |
+| `period` | Coded dimension. |
+| `period_fr` | Printed French label for `period`. |
+| `origin` | Coded dimension. |
+| `origin_fr` | Printed French label for `origin`. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`lotissement`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `planting` | b) Lotissements de terres à planter | 80 |
+| `rural` | a) Lotissements ruraux livrés à la Colonisation | 105 |
+
+`period`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `before_1918` | Antérieure à 1918 | 36 |
+| `before_1919` | Antérieure à 1919 | 9 |
+| `before_1920` | Antérieure à 1920 | 9 |
+| `before_1921` | Antérieure à 1921 | 9 |
+| `before_1926` | Antérieure à 1926 | 9 |
+| `before_1927` | Antérieure à 1927 | 9 |
+| `before_1929` | Antérieure à 1929 | 9 |
+| `from_1918` | Postérieure à 1918 | 36 |
+| `from_1919` | Postérieure à 1919 | 9 |
+| `from_1920` | Depuis 1920 | 9 |
+| `from_1921` | Depuis 1921 | 9 |
+| `from_1926` | Depuis 1926 | 9 |
+| `from_1927` | Depuis 1927 | 9 |
+| `from_1929` | Depuis 1929 | 9 |
+| `resettlement_purchases_memo` | Achats pour recasements (pour mémoire) | 5 |
+
+`origin`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `(empty)` |  | 62 |
+| `domaines` | Domaines | 41 |
+| `habous` | Habous publics et privés | 41 |
+| `purchase_fund` | Achat sur le fonds de colonisation | 21 |
+| `sialine_lands` | Terres sialines | 20 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `area` | Origine du lotissement (superficie) | 123 |
+| `lots` | Nombre de lots | 20 |
+| `lots_rural` | Nombre de lots : ruraux | 21 |
+| `lots_small_farming` | Nombre de lots : petite culture | 21 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `count` |  | 62 |
+| `hectares` |  | 123 |
+
+### colonisation_indigenous_settlement
+
+**Fixation au sol des indigènes (Lotissements tunisiens)**  
+*Settlement of Tunisians on the land: families settled and land allotted (cumulative from 1920), and allotments by year (sgt1939)*
+
+Source `sgt`, table fixation;fixation_old;fixation_years, printed pages by edition. 87 rows. Value type: mixed. Flags: (empty) 87. Notes and validation: [`../yearbook_other_chapters/csv/colonisation_indigenous_settlement.md`](../yearbook_other_chapters/csv/colonisation_indigenous_settlement.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `year_label` | Coded dimension. |
+| `item` | Coded dimension. |
+| `item_fr` | Printed French label for `item`. |
+| `observation_fr` | Place or label as printed (3 distinct values). |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`year_label`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `1920` |  | 3 |
+| `1920 à 1925` |  | 3 |
+| `1920 à 1926` |  | 3 |
+| `1920 à 1927` |  | 3 |
+| `1920 à 1928` |  | 3 |
+| `1920 à 1929` |  | 3 |
+| `1921` |  | 3 |
+| `1922` |  | 3 |
+| `1923` |  | 3 |
+| `1924` |  | 3 |
+| `1925` |  | 3 |
+| `1926` |  | 3 |
+| `1927` |  | 3 |
+| `1928` |  | 3 |
+| `1929` |  | 3 |
+| `1930` |  | 3 |
+| `1931` |  | 3 |
+| `1932` |  | 3 |
+| `1933` |  | 3 |
+| `1934` |  | 3 |
+| `1935` |  | 3 |
+| `1936` |  | 3 |
+| `1937` |  | 3 |
+| `1938` |  | 3 |
+| `1939` |  | 3 |
+| `Lotissements créés de 1920 à 1929` |  | 3 |
+| `Lotissements créés de 1920 à 1935` |  | 3 |
+| `Lotissements créés de 1920 à 1936` |  | 3 |
+| `Lotissements de Gammouda créés en 1930` |  | 3 |
+
+`item`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `allotments_of_year` | Fixation des Tunisiens au sol (année) | 60 |
+| `cumulative` | Lotissements créés de 1920 à 1929 / Lotissements créés de 1920 à 1935 / Lotissements créés de 1920 à 1936 / Lotissements de Gammouda créés en 1930 / Période de 1920 à 1925 / Période de 1920 à 1926 / Période de 1920 à 1927 / Période de 1920 à 1928 / Période de 1920 à 1929 | 27 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `allotments` | Nombre d'attributions | 24 |
+| `area` | Superficie | 24 |
+| `families_settled` | Nombre de familles installées | 5 |
+| `land_cultivation_allotted` | Terres de culture (de plantation et de cultures) attribuées | 5 |
+| `land_grazing` | Terres de parcours | 5 |
+| `lots` | Nombre de lots | 24 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `count` |  | 53 |
+| `hectares` |  | 34 |
+
+### colonisation_indigenous_sales
+
+**Ventes définitives consenties aux attributaires ayant rempli leurs obligations de mise en valeur**  
+*Definitive sales to Tunisian allottees who fulfilled their development obligations, by year*
+
+Source `sgt`, table sales, printed pages by edition. 57 rows. Value type: mixed. Flags: (empty) 57. Notes and validation: [`../yearbook_other_chapters/csv/colonisation_indigenous_sales.md`](../yearbook_other_chapters/csv/colonisation_indigenous_sales.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `year_label` | Coded dimension. |
+| `item` | Coded dimension. |
+| `item_fr` | Printed French label for `item`. |
+| `observation_fr` | Place or label as printed (0 distinct values). |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`year_label`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `1920 à 1923` |  | 3 |
+| `1920 à 1925` |  | 3 |
+| `1920 à 1926` |  | 3 |
+| `1924` |  | 3 |
+| `1925` |  | 3 |
+| `1926` |  | 3 |
+| `1927` |  | 3 |
+| `1928` |  | 3 |
+| `1929` |  | 3 |
+| `1930` |  | 3 |
+| `1931` |  | 3 |
+| `1932` |  | 3 |
+| `1933` |  | 3 |
+| `1934` |  | 3 |
+| `1935` |  | 3 |
+| `1936` |  | 3 |
+| `1937` |  | 3 |
+| `1938` |  | 3 |
+| `1939` |  | 3 |
+
+`item`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `definitive_sales` | Ventes définitives consenties aux attributaires | 57 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `sales_proposed` | Ventes proposées aux attributaires | 19 |
+| `sales_realised` | Ventes réalisées : nombre | 19 |
+| `sales_realised_area` | Ventes réalisées : superficie | 19 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `count` |  | 38 |
+| `hectares` |  | 19 |
+
+### colonisation_regrouping_1935
+
+**Opérations de regroupement réalisées au 31 décembre 1935 ; Réinstallations effectuées sur des propriétés achetées par le Domaine**  
+*Regrouping of colonisation lotissements at 31 December 1935: lots taken back, settlers reinstalled, and reinstallations on properties bought by the Domaine*
+
+Source `sgt`, table regroup;reinstall, printed pages by edition. 204 rows. Value type: mixed. Flags: (empty) 204. Notes and validation: [`../yearbook_other_chapters/csv/colonisation_regrouping_1935.md`](../yearbook_other_chapters/csv/colonisation_regrouping_1935.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `operation` | Coded dimension. |
+| `operation_fr` | Printed French label for `operation`. |
+| `lotissement_fr` | Place or label as printed (62 distinct values). |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`operation`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `regrouping` | Opérations de regroupement réalisées au 31 décembre 1935 | 123 |
+| `reinstallation_domain_purchases` | Réinstallations effectuées sur des propriétés achetées par le Domaine | 81 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `area` | Superficie | 20 |
+| `difference` | Différence | 62 |
+| `lots_taken_back` | Nombre de lots repris | 61 |
+| `settlers_reinstalled` | Colons réinstallés | 61 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `count` |  | 184 |
+| `hectares` |  | 20 |
+
+### colonisation_fund
+
+**Fonds de colonisation. Achats réalisés**  
+*Colonisation fund: endowments, annual receipts and expenditure, and area of the properties bought (1900-1928)*
+
+Source `sgt`, table fund, printed pages by edition. 116 rows. Value type: mixed. Flags: (empty) 116. Notes and validation: [`../yearbook_other_chapters/csv/colonisation_fund.md`](../yearbook_other_chapters/csv/colonisation_fund.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `endowment_origin_fr` | Place or label as printed (11 distinct values). |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `area_acquired` | Superficie des immeubles acquis sur le fonds de colonisation (en hectares) | 29 |
+| `endowment` | Dotations : montant | 29 |
+| `expenditure` | Dépenses annuelles | 29 |
+| `receipts` | Recettes annuelles | 29 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `francs` |  | 87 |
+| `hectares` |  | 29 |

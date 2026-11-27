@@ -1,0 +1,141 @@
+# Statistique générale de la Tunisie 1936, chapter XIII Colonisation (views f172-f187, bpt6k91056547).
+# Format: yb_tables.py. Labels with ';;' carry text fields (split by extract_colonisation.py).
+
+# a) Ventes avec obligation d'installation personnelle (1927-1936). Spreads f173|f174 (pp. 162-163),
+# f175|f176 (pp. 164-165), f177|f178 (pp. 166-167). The 1926 lines of sgt1935 are dropped; superficie printed in
+# full (ares legible). 1927-1930 figures as sgt1935 except: new lotissements listed for 1930-1932 although sgt1935
+# printed 1931-1935 Néant. Year labels: sgt1936 prints "1931" and "1932" one under the other beside Louisville and
+# Henchir-el-Henna inside one bracket; the years are assigned as sgt1939 (same lines) sets them: 1930 down to
+# Menchari, 1931 Oued-Begra, 1932 Louisville to Ksar-Tyr. No line for 1936.
+# Djedeïda (1930): printed » in all four lot columns with 4 in TOTAUX (sgt1930/1935/1939: 4 maraîchers); the
+# column totals (maraîchers 10, totaux 517) leave those 4 out. Propriété Tiret: ares '6?' with a broken second
+# digit, read 66 (sgt1939 prints 199,66). TOTAUX superficie printed 49.611,84: the lines give 50.611,84
+# (printed error in the thousands).
+# Label: year ;; name ;; origin ;; situation ;; contrôle ;; observation
+@install35 view=173 page=162 view2=174 page2=163
+img: all
+cols: area rural market suburban artisan total
+1927 ;; Aïn-Kerma ;; A. 500, D. 892 ;; 10 km. S. E. de Sakiet Sidi Youssef. ;; Kef ;;  | 1392 8 0 0 0 8
+1927 ;; Briouik ;; A. ;; 9 km. O. Testour. ;; Medjez ;;  | 383 3 0 0 0 3
+1927 ;; Djebel-Hafer ;; D. ;; 10 km. N. E Ghardimaou. ;; Souk-el-Arba ;;  | 690 4 0 0 0 4
+1927 ;; El-Aroussia ;; A. ;; 5 km. N. O. de l'Ariana. ;; Tunis ;;  | 143.50 2 0 0 0 2
+1927 ;; Oued-Melah ;; D. ;; 11 km. N. Souk-el-Arba. ;; Souk-el-Arba ;;  | 817 7 0 0 0 7
+1927 ;; Rebaa-Siliana ;; D. ;; près des centres de Maktar et de la Siliana. ;; Maktar ;;  | 243.10 2 0 0 0 2
+1927 ;; Mesratya ;; A. ;; à 29 km. de Tunis. ;; Grombalia ;;  | 365.80 12 0 0 0 12
+1927 ;; Djebel-Mansour-II ;; D. ;; à 17 km. de Pont-du-Fahs. ;; Zaghouan ;; Extension du lotissement mis en vente en 1926. 73 lots mis en vente en 1927, 24 lots repris par l'Administration pour agrandissement. | 9812 49 0 0 0 49
+1927 ;; Fedjet-Khemakhem ;; D. ;; près Massicault. ;; Tunis ;;  | 183 1 0 0 0 1
+1927 ;; El-Azib ;; A. ;; 12 km. de Bizerte. ;; Bizerte ;;  | 8.22 1 0 0 0 1
+1927 ;; Djebel-Aziz ;; D. ;; près Bir-M'Cherga ;; Zaghouan ;;  | 98.50 1 0 0 0 1
+1927 ;; Souk-el-Khemis ;; D. ;; Chïaïa. ;; Souk-el-Arba ;;  | 140 1 0 0 0 1
+1927 ;; Bir-bou-Rekba ;; D. ;; près du centre du même nom. ;; Grombalia ;;  | 120 1 0 0 0 1
+1927 ;; Massouges-Rebaa-Siliana ;; D. ;; près du centre de la Siliana. ;; Maktar ;;  | 220 4 0 0 0 4
+1927 ;; Ard-Mzali ;; D. ;; Menzel Temime. ;; Grombalia ;;  | 58.57 1 0 0 0 1
+1927 ;; Fouchana ;; A. ;; près de ce centre. ;; Tunis ;;  | 70.50 1 0 0 0 1
+1927 ;; Zaghouan ;; D. ;; près de Zaghouan. ;; Zaghouan ;;  | 0.65 0 0 1 0 1
+1927 ;; Mornaghia ;; A. ;; La Mornaghia. ;; Tunis ;;  | 9.53 0 0 1 0 1
+1927 ;; Guengla ;; A. ;; près de Ferryville. ;; Bizerte ;;  | 11.98 0 0 14 0 14
+1927 ;; La Soukra ;; A. ;; à 10 km. de Tunis. ;; Tunis ;;  | 82.57 0 0 17 0 17
+reporter | 14849.92 98 0 33 0 131
+@install35 view=175 page=164 view2=176 page2=165
+img: all
+cols: area rural market suburban artisan total
+report | 14849.92 98 0 33 0 131
+1928 ;; Bordj-el-Amri ;; A. ;; à 27 kilom. de Tunis. ;; Tunis ;;  | 3163.80 44 0 0 0 44
+1928 ;; El-Mahrine ;; A. ;; à 35 kilom. de Tunis. ;; Tunis ;;  | 1718.65 18 0 0 0 18
+1928 ;; Djebel-el-Aïrech ;; D. ;; 8 kilom. au nord Souk-el-Arba. ;; Souk-el-Arba ;;  | 2149 10 0 0 0 10
+1928 ;; Henchir-Chouichia, Aïn-el-Merdja ;; D. ;; 18 kilom. N.-O. Souk-el-Arba. ;; Souk-el-Arba ;;  | 924.50 7 0 0 0 7
+1928 ;; Djebel-Mansour I, II, Bathen-Zraïb ;; D. ;; 17 km. de Pont-de-Fahs. ;; Zaghouan ;;  | 1850 11 0 0 0 11
+1928 ;; Ghardimaou-Est ;; D. ;; 600 m. du centre de Ghardimaou. ;; Souk-el-Arba ;;  | 1990 10 0 0 0 10
+1928 ;; Massicault ;; A. ;; au sud de la route de Tunis au Kef. ;; Tunis ;;  | 283.20 3 0 0 0 3
+1928 ;; Goubellat ;; A. ;; 8 km. à l'ouest village Goubellat. ;; Medjez-el-Bab ;;  | 847.40 7 0 0 0 7
+1928 ;; Enchir-Kholdjane ;; A. ;; 6 kilom. au N.-O. Mateur. ;; Bizerte ;;  | 804.47 3 0 0 0 3
+1928 ;; Enchir-Briouik ;; A. ;; 10 kilom. Testour. ;; Téboursouk ;;  | 492.50 5 0 0 0 5
+1929 ;; Mezougha ;; A. ;; 20 kilom. de Testour. ;; Medjez-el-Bab ;;  | 1607.70 13 0 0 0 13
+1929 ;; Bir-bou-Rekba ;; D. ;; près de la station du chemin de fer. ;; Grombalia ;;  | 34 1 0 0 0 1
+1929 ;; El-Zerifate ;; A. ;; à 6 kilom. de la Mornaghia ;; Tunis ;;  | 216.70 3 0 0 0 3
+1929 ;; Amila ;; A. ;; à 13 kilom. de Bizerte. ;; Bizerte ;;  | 500.30 4 0 0 0 4
+1929 ;; Le Sers ;; A. ;; 5 kilom. gare du ch. de fer ;; Le Kef ;;  | 147.87 1 0 0 0 1
+1929 ;; Ksar-Tyr ;; A. ;; à 40 km. de Tunis sur la route de Medjez. ;; Medjez-el-Bab ;;  | 567 5 0 0 0 5
+1929 ;; Bou-Rebia ;; A. ;; près de la station de ch. de fer. ;; Tunis ;;  | 760.10 7 0 0 0 7
+1929 ;; Djedeïda-Béjaoua ;; A. ;; entre les centres de Oued Ellil et Djedeïda. ;; Tunis ;;  | 2743.55 118 10 0 0 128
+1929 ;; Plaine Smitt ;; A. ;; à 8 km. de Menzel-bou-Zelfa ;; Grombalia ;;  | 244 4 0 0 0 4
+1929 ;; Ghardimaou ;; D. ;; à 1 km. de ce centre. ;; Souk-el-Arba ;;  | 198 1 0 0 0 1
+reporter | 36092.66 373 10 33 0 416
+@install35 view=177 page=166 view2=178 page2=167 mismatch=Djedeïda:market
+img: all
+cols: area rural market suburban artisan total
+report | 36092.66 373 10 33 0 416
+1930 ;; Valjoua ;; A. ;; à 3 km. gare de Cheylus. ;; Tunis ;;  | 659.15 5 0 0 0 5
+1930 ;; Faouar ;; A. ;; à 5 km. du centre de Medjez-el-Bab. ;; Medjez-el-Bab ;;  | 462 3 0 0 0 3
+1930 ;; Oued-Zarga ;; A. ;; à 4 km. au sud du village de Oued-Zarga. ;; Medjez-el-Bab ;;  | 718.50 4 0 0 0 4
+1930 ;; Plaine Smitt ;; H. ;; à 8 km. de Menzel-bou-Zelfa. ;; Grombalia ;;  | 266.60 2 0 0 0 2
+1930 ;; Amila ;; A. ;; à 13 km. de Bizerte. ;; Bizerte ;;  | 30.30 1 0 0 0 1
+1930 ;; Bou-M'Kila ;; D. ;; sud ouest de Mateur. ;; Bizerte ;;  | 96.72 1 0 0 0 1
+1930 ;; Djebel-Chaïra ;; D. ;; nord de Béja. ;; Béja ;;  | 270 1 0 0 0 1
+1930 ;; Djedeïda ;; A. ;; près centre de Djédeïda. ;; Tunis ;;  | 22.25 0 0 0 0 4
+1930 ;; Sainte-Marie-du-Zit ;; A. ;; près de Segermès. ;; Zaghouan ;;  | 283.40 2 0 0 0 2
+1930 ;; Djebel-Rihane-Ettrifa ;; A. ;; près du Goubellat. ;; Medjez-el-Bab ;;  | 659 3 0 0 0 3
+1930 ;; Bathen-Zaïb ;; A. ;; près de El-Aroussa. ;; Medjez-el-Bab ;;  | 687.20 3 0 0 0 3
+1930 ;; El-Bathan ;; A. ;; sud village d'El-Bathan. ;; Tunis ;;  | 807.99 7 0 0 0 7
+1930 ;; Schuiggui ;; A. ;; au nord de Tébourba. ;; Tunis ;;  | 1963.04 30 0 0 0 30
+1930 ;; Beaucastel ;; A. ;; près d'Aïn-el-Asker. ;; Zaghouan ;;  | 867.75 6 0 0 0 6
+1930 ;; Aïn-Terguellach ;; A. ;; près de Mateur. ;; Bizerte ;;  | 737.10 4 0 0 0 4
+1930 ;; Bou-Slim ;; A. ;; près de Zaghouan. ;; Zaghouan ;;  | 427.50 3 0 0 0 3
+1930 ;; Propriété Auboire ;; A. ;; près de Bordj-Toum. ;; Tunis ;;  | 1407 6 0 0 0 6
+1930 ;; Propriété Vitte ;; A. ;; près de Zaghouan. ;; Zaghouan ;;  | 251.67 2 0 0 0 2
+1930 ;; Propriété Tiret ;; A. ;; région du Goubellat. ;; Medjez-el-Bab ;;  | 199.66 2 0 0 0 2
+1930 ;; Enfida ;; A. ;; région d'Enfidaville. ;; Sousse ;;  | 936 1 0 0 0 1
+1930 ;; Kef-Rira ;; A. ;; région du Kef. ;; Le Kef ;;  | 143.03 1 0 0 0 1
+1930 ;; Menchari ;; A. ;; région du Goubellat. ;; Medjez-el-Bab ;;  | 117.54 1 0 0 0 1
+1931 ;; Oued-Begra ;; A. ;; à 17 km. de Mateur. ;; Bizerte ;;  | 148.13 1 0 0 0 1
+1932 ;; Louisville ;; A. ;; près de Bir-M'Cherga. ;; Tunis ;;  | 118.53 1 0 0 0 1
+1932 ;; Henchir-el-Henna ;; A. ;; près d'El-Alia. ;; Bizerte ;;  | 182.18 1 0 0 0 1
+1932 ;; Menzel-René-Mateur ;; A. ;; région de Mateur. ;; Bizerte ;;  | 131.87 1 0 0 0 1
+1932 ;; Bir-Magra ;; A. ;; région de Pont-du-Fahs. ;; Zaghouan ;;  | 381.03 1 0 0 0 1
+1932 ;; Aïn-Forna ;; A. ;; à 7 km. au nord de Robâa. ;; Maktar ;;  | 249 1 0 0 0 1
+1932 ;; El-Afareg ;; A. ;; près de Béja. ;; Béja ;;  | 267.40 2 0 0 0 2
+1932 ;; Le Krib (Domaine des Pins) ;; A. ;; près du Krib. ;; Téboursouk ;;  | 305.70 2 0 0 0 2
+1932 ;; Khanguet-el-Hadj ;; A. ;; région de Grombalia. ;; Grombalia ;;  | 211.10 1 0 0 0 1
+1932 ;; El-Khelak ;; A. ;; Région de Téboursouk. ;; Téboursouk ;;  | 270.84 1 0 0 0 1
+1932 ;; Ksar-Tyr ;; A. ;; à 40 km. de Tunis sur la route de Medjez. ;; Medjez-el-Bab ;;  | 240 1 0 0 0 1
+1933 ;; Néant ;;  ;;  ;;  ;;  | 0 0 0 0 0 0
+1934 ;; Néant ;;  ;;  ;;  ;;  | 0 0 0 0 0 0
+1935 ;; Néant ;;  ;;  ;;  ;;  | 0 0 0 0 0 0
+Totaux | 49611.84 474 10 33 0 517
+
+# LOTISSEMENTS (recapitulation). a) Lotissements ruraux livrés à la Colonisation: f179 (p. 168); b)
+# Lotissements de terres à planter: f179 (p. 168). Periods as printed (Antérieure à 1927 / Depuis 1927); the TOTAUX
+# column and line are checks.
+@recap_rural view=179 page=168 split=1927
+img: all
+cols: dom hab ach tot rural small lotstot
+Antérieure à 1927 | 102370.35 20251 94557.68 217179.03 1482 505 1987
+Depuis 1927 | 19693.04 266.60 30752.20 50711.84 474 47 521
+Totaux | 122063.39 20517.60 125309.88 267890.87 1956 552 2508
+@recap_plant view=179 page=168 split=1927
+img: all
+cols: dom hab sial tot lots
+Antérieure à 1927 | 46500 0 113000 159500 125
+Depuis 1927 | 34654 9405 0 44059 62
+Totaux | 81154 9405 113000 203559 187
+
+# FIXATION AU SOL DES INDIGÈNES, Période de 1920 à 1936; Ventes définitives ... de 1920 à 1936. f180 (p. 169).
+@fixation view=180 page=169 period="1920 à 1936"
+img: all
+cols: attrib lots area
+Lotissements créés de 1920 à 1936 | 7734 13788 162757
+@sales view=180 page=169
+img: all
+cols: proposed sold area
+1920 à 1926 | 246 168 3343.55
+1927 | 79 107 2254.40
+1928 | 217 90 1689.20
+1929 | 236 160 3342.60
+1930 | 272 254 5805.83
+1931 | 515 167 5591.82
+1932 | 221 215 3962.78
+1933 | 106 106 2054.07
+1934 | 259 23 830.89
+1935 | 128 89 1638.72
+1936 | 169 26 624.75
+Totaux | 2452 1405 31138.61

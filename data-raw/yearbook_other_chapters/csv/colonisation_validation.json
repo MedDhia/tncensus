@@ -1,0 +1,339 @@
+{
+ "colonisation_installation_lots": {
+  "rows": 4591,
+  "checks": 1240,
+  "failed": [
+   "sgt1922 p.418 (f442) install22 Khang-Mourou: créés = réservés ou disponibles + vendus: cells give 0, printed 14 (difference 14)",
+   "sgt1922 p.418 (f442) install22 Saouaf-Djebibina: créés = réservés ou disponibles + vendus: cells give 0, printed 89 (difference 89)",
+   "sgt1922 p.418 (f442) install22 Lagrenée-Chaouat: créés = réservés ou disponibles + vendus: cells give 3, printed 31 (difference 28)",
+   "sgt1922 p.418 (f442) install22 Klédia: créés = réservés ou disponibles + vendus: cells give 13, printed 35 (difference 22)",
+   "sgt1923 p.430 (f932) install22 Klédia: créés = réservés ou disponibles + vendus: cells give 13, printed 35 (difference 22)",
+   "sgt1923 p.430 (f932) install22 Ousseltia: créés = réservés ou disponibles + vendus: cells give 0, printed 64 (difference 64)",
+   "sgt1923 p.430 (f932) install22 Bou-Ficha: créés = réservés ou disponibles + vendus: cells give 0, printed 66 (difference 66)",
+   "sgt1923 p.430 (f932) install22 De Carnières: créés = réservés ou disponibles + vendus: cells give 0, printed 20 (difference 20)",
+   "sgt1923 p.430 (f932) install22 Lynx: créés = réservés ou disponibles + vendus: cells give 0, printed 34 (difference 34)",
+   "sgt1926 p.448 (f1012) install area: Reports = previous page's A reporter: cells give 64861.32, printed 64861.22 (difference -0.10)",
+   "sgt1927 p.446 (f474) install area: Reports = previous page's A reporter: cells give 64861.32, printed 64861.22 (difference -0.10)",
+   "sgt1928 p.454 (f1006) install total: Totaux = report + lines: cells give 1083, printed 1191 (difference 108)",
+   "sgt1936 p.166 (f177) install35 Djedeïda: TOTAUX = sum of the lot types: cells give 0, printed 4 (difference 4)",
+   "sgt1936 p.166 (f177) install35 area: Totaux = report + lines: cells give 50611.84, printed 49611.84 (difference -1000.00)",
+   "sgt1936 p.166 (f177) install35 total: Totaux = report + lines: cells give 521, printed 517 (difference -4)",
+   "sgt1939 p.146 (f152) install35 area: Totaux = report + lines: cells give 21674.91, printed 20674.91 (difference -1000.00)"
+  ],
+  "overlap_compared": 0,
+  "overlap_diffs": [],
+  "flagged": [
+   "sgt1922 1922 Kheniguet-Magra / lots_reserved_or_available = None (not_applicable)",
+   "sgt1922 1922 Kheniguet-Magra / lots_sold = None (not_applicable)",
+   "sgt1922 1922 Guedal-El-Beylik / lots_reserved_or_available = None (not_applicable)",
+   "sgt1922 1922 Guedal-El-Beylik / lots_sold = None (not_applicable)",
+   "sgt1922 1922 Dhomda / lots_reserved_or_available = None (not_applicable)",
+   "sgt1922 1922 Dhomda / lots_sold = None (not_applicable)",
+   "sgt1922 1922 Bou-Ficha / lots_reserved_or_available = None (not_applicable)",
+   "sgt1922 1922 Bou-Ficha / lots_sold = None (not_applicable)",
+   "sgt1922 1922 Le Goubellat / lots_reserved_or_available = None (not_applicable)",
+   "sgt1922 1922 Le Goubellat / lots_sold = None (not_applicable)",
+   "sgt1922 1922 Kachebet-Chabane / lots_reserved_or_available = None (not_applicable)",
+   "sgt1922 1922 Kachebet-Chabane / lots_sold = None (not_applicable)",
+   "sgt1935 1928 Bordj El-Amri / area = 3163.80 (reprint_corrected)",
+   "sgt1935 1928 El-Mahrine / area = 1718.65 (reprint_corrected)",
+   "sgt1935 1928 Djebel El-Aïrech / area = 2149 (reprint_corrected)",
+   "sgt1935 1928 Henchir Chouichia, Aïn El-Merdja / area = 924.50 (reprint_corrected)",
+   "sgt1935 1928 Djebel Mansour I, II, Bathen Zraïb / area = 1850 (reprint_corrected)",
+   "sgt1935 1928 Ghardimaou-Est / area = 1990 (reprint_corrected)",
+   "sgt1935 1928 Massicault / area = 283.20 (reprint_corrected)",
+   "sgt1935 1928 Goubellat / area = 847.40 (reprint_corrected)",
+   "sgt1935 1928 Enchir Kholjane / area = 804.47 (reprint_corrected)",
+   "sgt1935 1928 Enchir Briouik / area = 492.50 (reprint_corrected)",
+   "sgt1935 1929 Mezougha / area = 1607.70 (reprint_corrected)",
+   "sgt1935 1929 Bir-bou-Rekba / area = 34 (reprint_corrected)",
+   "sgt1935 1929 El-Zerifate / area = 216.70 (reprint_corrected)",
+   "sgt1935 1929 Amila / area = 500.30 (reprint_corrected)",
+   "sgt1935 1929 Le Sers / area = 147.87 (reprint_corrected)",
+   "sgt1935 1929 Ksar-Tyr / area = 567 (reprint_corrected)",
+   "sgt1935 1929 Bou-Rebia / area = 760.10 (reprint_corrected)",
+   "sgt1935 1929 Djedeïda-Béjaoua / area = 2743.55 (reprint_corrected)",
+   "sgt1935 1929 Plaine Smitt / area = 244 (reprint_corrected)",
+   "sgt1935 1929 Ghardimaou / area = 198 (reprint_corrected)",
+   "sgt1935 1930 Valjoua / area = 659.15 (reprint_corrected)",
+   "sgt1935 1930 Faouar / area = 462 (reprint_corrected)",
+   "sgt1935 1930 Oued Zarga / area = 718.50 (reprint_corrected)",
+   "sgt1935 1930 Plaine Smitt / area = 266.60 (reprint_corrected)",
+   "sgt1935 1930 Amila / area = 30.30 (reprint_corrected)",
+   "sgt1935 1930 Bou-M'Kila / area = 96.72 (reprint_corrected)",
+   "sgt1935 1930 Djebel Chaïra / area = 270 (reprint_corrected)",
+   "sgt1935 1930 Djedeïda / area = 22.25 (reprint_corrected)",
+   "sgt1935 1930 Sainte-Marie du Zit / area = 283.40 (reprint_corrected)",
+   "sgt1935 1930 Djebel Rihane-Ettrifa / area = 659 (reprint_corrected)",
+   "sgt1935 1930 Bathen-Zaïb / area = 687.20 (reprint_corrected)",
+   "sgt1935 1930 El-Bathan / area = 807.99 (reprint_corrected)",
+   "sgt1935 1930 Schuiggui / area = 1963.04 (reprint_corrected)",
+   "sgt1935 1930 Beaucastel / area = 867.75 (reprint_corrected)",
+   "sgt1936 1930 Djedeïda / lots_market_garden = 0 (total_mismatch)",
+   "sgt1939 1939 Transvaal / area = 0.90 (derived_from_totals)"
+  ],
+  "editions": [
+   "sgt1922",
+   "sgt1923",
+   "sgt1924",
+   "sgt1925",
+   "sgt1926",
+   "sgt1927",
+   "sgt1928",
+   "sgt1929",
+   "sgt1930",
+   "sgt1935",
+   "sgt1936",
+   "sgt1939"
+  ]
+ },
+ "colonisation_planting_lots": {
+  "rows": 124,
+  "checks": 16,
+  "failed": [],
+  "overlap_compared": 0,
+  "overlap_diffs": [],
+  "flagged": [],
+  "editions": [
+   "sgt1924",
+   "sgt1925",
+   "sgt1926",
+   "sgt1927",
+   "sgt1928",
+   "sgt1929",
+   "sgt1930",
+   "sgt1935"
+  ]
+ },
+ "colonisation_urban_lots": {
+  "rows": 368,
+  "checks": 16,
+  "failed": [
+   "sgt1935 p.282 (f302) urban area: Totaux = report + lines: cells give 130.90, printed 160.18 (difference 29.28)",
+   "sgt1935 p.282 (f302) urban lots: Totaux = report + lines: cells give 1143, printed 1344 (difference 201)"
+  ],
+  "overlap_compared": 0,
+  "overlap_diffs": [],
+  "flagged": [],
+  "editions": [
+   "sgt1924",
+   "sgt1925",
+   "sgt1926",
+   "sgt1927",
+   "sgt1928",
+   "sgt1929",
+   "sgt1930",
+   "sgt1935"
+  ]
+ },
+ "colonisation_lotissements_summary": {
+  "rows": 185,
+  "checks": 212,
+  "failed": [
+   "sgt1928 p.460 (f1012) recap_rural Antérieure à 1919: TOTAUX (area) = sum of origins: cells give 107571.20, printed 107531.20 (difference -40.00)",
+   "sgt1928 p.460 (f1012) recap_rural Antérieure à 1919: TOTAUX (lots) = ruraux + petite culture: cells give 1081, printed 1072 (difference -9)",
+   "sgt1928 p.460 (f1012) recap_rural Postérieure à 1919: TOTAUX (area) = sum of origins: cells give 147690.09, printed 147750.90 (difference 60.81)",
+   "sgt1928 p.460 (f1012) recap_rural Postérieure à 1919: TOTAUX (lots) = ruraux + petite culture: cells give 1131, printed 1200 (difference 69)",
+   "sgt1928 p.460 (f1012) recap_rural Totaux: TOTAUX (area) = sum of origins: cells give 255281.29, printed 255282.10 (difference 0.81)",
+   "sgt1928 p.460 (f1012) recap_rural hab: Totaux = the two periods: cells give 20288, printed 20308 (difference 20)",
+   "sgt1928 p.460 (f1012) recap_rural rural: Totaux = the two periods: cells give 1674, printed 1734 (difference 60)",
+   "sgt1928 p.461 (f1013) recap_plant Antérieure à 1919: TOTAUX (area) = sum of origins: cells give 128500, printed 140079 (difference 11579)",
+   "sgt1928 p.461 (f1013) recap_plant Postérieure à 1919: TOTAUX (area) = sum of origins: cells give 53605, printed 42036 (difference -11569)",
+   "sgt1928 p.461 (f1013) recap_plant Totaux: TOTAUX (area) = sum of origins: cells give 182105, printed 182115 (difference 10)",
+   "sgt1930 p.468 (f1026) recap_rural Antérieure à 1921: TOTAUX (area) = sum of origins: cells give 143233.20, printed 142233.20 (difference -1000.00)",
+   "sgt1930 p.468 (f1026) recap_rural Depuis 1921: TOTAUX (area) = sum of origins: cells give 117832.40, printed 117832.39 (difference -0.01)",
+   "sgt1930 p.468 (f1026) recap_rural Totaux: TOTAUX (area) = sum of origins: cells give 261095.59, printed 24065.59 (difference -237030.00)",
+   "sgt1930 p.468 (f1026) recap_rural hab: Totaux = the two periods: cells give 20818.60, printed 20848.60 (difference 30.00)",
+   "sgt1930 p.468 (f1026) recap_rural ach: Totaux = the two periods: cells give 150392.06, printed 150392.05 (difference -0.01)",
+   "sgt1930 p.468 (f1026) recap_rural tot: Totaux = the two periods: cells give 260065.59, printed 24065.59 (difference -236000.00)"
+  ],
+  "overlap_compared": 0,
+  "overlap_diffs": [],
+  "flagged": [],
+  "editions": [
+   "sgt1924",
+   "sgt1925",
+   "sgt1926",
+   "sgt1927",
+   "sgt1928",
+   "sgt1929",
+   "sgt1930",
+   "sgt1935",
+   "sgt1936",
+   "sgt1939"
+  ]
+ },
+ "colonisation_indigenous_settlement": {
+  "rows": 87,
+  "checks": 6,
+  "failed": [],
+  "overlap_compared": 0,
+  "overlap_diffs": [],
+  "flagged": [],
+  "editions": [
+   "sgt1925",
+   "sgt1926",
+   "sgt1927",
+   "sgt1928",
+   "sgt1929",
+   "sgt1930",
+   "sgt1935",
+   "sgt1936",
+   "sgt1939"
+  ]
+ },
+ "colonisation_indigenous_sales": {
+  "rows": 57,
+  "checks": 12,
+  "failed": [
+   "sgt1935 p.286 (f306) sales proposed: Totaux = sum of the lines: cells give 2279, printed 2283 (difference 4)",
+   "sgt1936 p.169 (f180) sales proposed: Totaux = sum of the lines: cells give 2448, printed 2452 (difference 4)",
+   "sgt1939 p.149 (f155) sales area: Totaux = sum of the lines: cells give 35175.41, printed 35175.31 (difference -0.10)"
+  ],
+  "overlap_compared": 75,
+  "overlap_diffs": [],
+  "flagged": [],
+  "editions": [
+   "sgt1930",
+   "sgt1935",
+   "sgt1936",
+   "sgt1939"
+  ]
+ },
+ "colonisation_regrouping_1935": {
+  "rows": 204,
+  "checks": 56,
+  "failed": [
+   "sgt1935 p.279 (f299) reinstall area: Totaux = sum: cells give 6725.28, printed 6825.28 (difference 100.00)"
+  ],
+  "overlap_compared": 0,
+  "overlap_diffs": [],
+  "flagged": [],
+  "editions": [
+   "sgt1935"
+  ]
+ },
+ "colonisation_fund": {
+  "rows": 116,
+  "checks": 35,
+  "failed": [
+   "sgt1922 p.426 (f450) fund rec: TOTAL = sum of the years: cells give 24860246.53, printed 24865246.53 (difference 5000.00)",
+   "sgt1922 p.426 (f450) fund dep: TOTAL = sum of the years: cells give 38867043.51, printed 38867034.51 (difference -9.00)",
+   "sgt1927 p.458 (f486) fund dep: TOTAL = sum of the years: cells give 65881548.53, printed 65881547.53 (difference -1.00)",
+   "sgt1928 p.462 (f1014) fund dep: TOTAL = sum of the years: cells give 93069401.15, printed 93069400.25 (difference -0.90)"
+  ],
+  "overlap_compared": 612,
+  "overlap_diffs": [],
+  "flagged": [],
+  "editions": [
+   "sgt1922",
+   "sgt1923",
+   "sgt1924",
+   "sgt1925",
+   "sgt1926",
+   "sgt1927",
+   "sgt1928"
+  ]
+ },
+ "_chapter_views": {
+  "sgt1922": [
+   437,
+   456
+  ],
+  "sgt1923": [
+   927,
+   946
+  ],
+  "sgt1924": [
+   1431,
+   1444
+  ],
+  "sgt1925": [
+   499,
+   512
+  ],
+  "sgt1926": [
+   1009,
+   1024
+  ],
+  "sgt1927": [
+   471,
+   488
+  ],
+  "sgt1928": [
+   999,
+   1016
+  ],
+  "sgt1929": [
+   477,
+   492
+  ],
+  "sgt1930": [
+   1013,
+   1028
+  ],
+  "sgt1935": [
+   291,
+   306
+  ],
+  "sgt1936": [
+   172,
+   181
+  ],
+  "sgt1939": [
+   151,
+   156
+  ]
+ },
+ "_survey": {
+  "sgt1922": "f437 chapter XIII title; f438|f439 to f442|f443 Ventes avec obligation d'installation a) propriétés livrées à la colonisation (1913-1922), f442|f443 lower half b) récapitulation (1893-1922: patrimoine domanial / achats sur le fonds de colonisation; lots de colonisation, suburbains, urbains); f444|f445 c) répartition par contrôle civil des lots vendus de 1893 à 1922; f446|f447 Ventes avec obligation de planter a) autorisations de planter (1913-1922); f448|f449 ventes définitives (1913-1922); f450|f451 b) récapitulation et répartition par contrôle civil (1893-1922) and Fonds de colonisation (1900-1922); f452 Habous: cessions par substitution aux droits du domaine a) 1913-1922, b) par contrôle civil (1899-1922); f453 (rotated) cessions à enzel a) 1913-1922; f454|f455 b) répartition par contrôle civil (1886-1922); f456 blank. f457 = chapter XIV.",
+  "sgt1923": "f927 title; f928-f933 a) propriétés livrées (1914-1923) and superficie totale des terres livrées (1893-1923); f934|f935 répartition par contrôle civil; f936-f939 obligation de planter; f940|f941 récapitulation par contrôle civil and Fonds de colonisation (1900-1923); f942-f945 Habous (substitutions, enzel); f946 blank. f947 = chapter XIV.",
+  "sgt1924": "f1431 title; f1432-f1435 a) Ventes avec obligation d'installation personnelle (1914-1924); f1436|f1437 b) Terres à planter (1914-1924); f1438|f1439 c) Lotissements urbains, industriels ou d'estivage (1914-1924); f1440 a) lotissements ruraux livrés à la colonisation (recap.), f1441 b) terres à planter (recap.); f1442|f1443 Fonds de colonisation (1900-1924); f1444 blank. f1445 = chapter XIV.",
+  "sgt1925": "f499 title; f500-f503 a) (1916-1925); f504|f505 b); f506|f507 c); f508-f509 recap.; f510|f511 fonds; f512 Fixation au sol des indigènes (1920-1925). f513 = chapter Travail.",
+  "sgt1926": "f1009 title; f1010-f1015 a) (1917-1926); f1016|f1017 b); f1018|f1019 c); f1020-f1021 recap.; f1022|f1023 fonds; f1024 fixation (1920-1926). f1025 = chapter XIV.",
+  "sgt1927": "f471 title; f472-f479 a) (1918-1927); f480|f481 b); f482|f483 c); f484-f485 recap.; f486|f487 fonds; f488 fixation (1920-1927). f489 = chapter XIV.",
+  "sgt1928": "f999 title; f1000-f1007 a) (1919-1928); f1008|f1009 b); f1010|f1011 c); f1012-f1013 recap.; f1014|f1015 fonds (1900-1928); f1016 fixation (1920-1928). f1017 = chapter XIV.",
+  "sgt1929": "f477 title; f478-f485 a) (1920-1929); f486|f487 b); f488|f489 c); f490-f491 recap.; f492 fixation (1920-1929); no colonisation fund from this edition. f493 = chapter XIV.",
+  "sgt1930": "f1013 title; f1014-f1021 a) (1921-1930); f1022|f1023 b); f1024|f1025 c); f1026-f1027 recap.; f1028 fixation a) and b) ventes définitives. f1029 = chapter XIV.",
+  "sgt1935": "f291 chapter XIV title; f292-f297 a) (1926-1935); f298|f299 opérations de regroupement au 31 décembre 1935 and réinstallations sur des propriétés achetées par le Domaine; f300|f301 b) (1926-1935); f302|f303 c) (1926-1935); f304-f305 recap.; f306 fixation a) and b). f307 = chapter XV.",
+  "sgt1936": "f172 chapter XIII title; f173-f178 a) (1927-1936); f179 recap. a) and b); f180 fixation and ventes définitives; f181 blank; f182 = chapter XIV Mutualité agricole (so the colonisation chapter is f172-f181, not f172-f187 as CHAPTERS.md had it). No b) or c) lists.",
+  "sgt1939": "f151 chapter XIII title; f152|f153 Ventes avec obligation d'installation personnelle (1929-1939); f154 recap. a) and b); f155 Lotissements tunisiens: fixation by year 1920-1939 and ventes définitives; f156 blank. f157 = next chapter."
+ },
+ "_not_transcribed": "Transcribed: every table from sgt1924 on (installation, planting and urban lists, recapitulation, colonisation fund, fixation au sol / lotissements tunisiens) and, for sgt1922-sgt1923, the installation list a) and the colonisation fund. NOT transcribed (sgt1922-sgt1923 only, old layout): b) récapitulation and c) répartition par contrôle civil des lots vendus (f442-f445, f932-f935); ventes avec obligation de planter (autorisations, ventes définitives, récapitulation par contrôle civil: f446-f451, f936-f941); Habous: cessions par substitution and cessions à enzel (f452-f455, f942-f945).",
+ "_filled": [
+  "sgt1935 f294 1928 Bordj El-Amri: area 3163.80 from sgt1930",
+  "sgt1935 f294 1928 El-Mahrine: area 1718.65 from sgt1930",
+  "sgt1935 f294 1928 Djebel El-Aïrech: area 2149 from sgt1930",
+  "sgt1935 f294 1928 Henchir Chouichia, Aïn El-Merdja: area 924.50 from sgt1930",
+  "sgt1935 f294 1928 Djebel Mansour I, II, Bathen Zraïb: area 1850 from sgt1930",
+  "sgt1935 f294 1928 Ghardimaou-Est: area 1990 from sgt1930",
+  "sgt1935 f294 1928 Massicault: area 283.20 from sgt1930",
+  "sgt1935 f294 1928 Goubellat: area 847.40 from sgt1930",
+  "sgt1935 f294 1928 Enchir Kholjane: area 804.47 from sgt1930",
+  "sgt1935 f294 1928 Enchir Briouik: area 492.50 from sgt1930",
+  "sgt1935 f294 1929 Mezougha: area 1607.70 from sgt1930",
+  "sgt1935 f294 1929 Bir-bou-Rekba: area 34 from sgt1930",
+  "sgt1935 f294 1929 El-Zerifate: area 216.70 from sgt1930",
+  "sgt1935 f294 1929 Amila: area 500.30 from sgt1930",
+  "sgt1935 f294 1929 Le Sers: area 147.87 from sgt1930",
+  "sgt1935 f294 1929 Ksar-Tyr: area 567 from sgt1930",
+  "sgt1935 f294 1929 Bou-Rebia: area 760.10 from sgt1930",
+  "sgt1935 f294 1929 Djedeïda-Béjaoua: area 2743.55 from sgt1930",
+  "sgt1935 f294 1929 Plaine Smitt: area 244 from sgt1930",
+  "sgt1935 f294 1929 Ghardimaou: area 198 from sgt1930",
+  "sgt1935 f296 1930 Valjoua: area 659.15 from sgt1930",
+  "sgt1935 f296 1930 Faouar: area 462 from sgt1930",
+  "sgt1935 f296 1930 Oued Zarga: area 718.50 from sgt1930",
+  "sgt1935 f296 1930 Plaine Smitt: area 266.60 from sgt1930",
+  "sgt1935 f296 1930 Amila: area 30.30 from sgt1930",
+  "sgt1935 f296 1930 Bou-M'Kila: area 96.72 from sgt1930",
+  "sgt1935 f296 1930 Djebel Chaïra: area 270 from sgt1930",
+  "sgt1935 f296 1930 Djedeïda: area 22.25 from sgt1930",
+  "sgt1935 f296 1930 Sainte-Marie du Zit: area 283.40 from sgt1930",
+  "sgt1935 f296 1930 Djebel Rihane-Ettrifa: area 659 from sgt1930",
+  "sgt1935 f296 1930 Bathen-Zaïb: area 687.20 from sgt1930",
+  "sgt1935 f296 1930 El-Bathan: area 807.99 from sgt1930",
+  "sgt1935 f296 1930 Schuiggui: area 1963.04 from sgt1930",
+  "sgt1935 f296 1930 Beaucastel: area 867.75 from sgt1930"
+ ]
+}

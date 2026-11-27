@@ -23,8 +23,8 @@ of a range on the page before relying on it.**
 | Agriculture (`agriculture_`) | 231–280 | 721–770 | 1217–1274 | 287–342 | 803–852 | 259–314 | 783–842 | 261–320 | 795–856 | 139–154 | 100–145 | 99–114 |
 | Teaching and research institutions (`research_`) | – | – | – | – | – | – | – | – | – | 155–184 | ? | 115–122 |
 | Commerce and navigation (`commerce_`) | 281–436 | 771–926 | 1275–1430 | 343–498 | 853–1008 | 315–470 | 843–998 | 321–476 | 857–1012 | 185–290 | 146–171 | 123–150 |
-| Colonisation (`colonisation_`) | 437–456 | 927–946 | 1431–1444 | 499–512 | 1009–1024 | 471–488 | 999–1016 | 477–492 | 1013–1028 | 291–306 | 172–187 | 151–156 |
-| Economic institutions / mutual credit (`mutuality_`) | 457–502 | 947–990 | 1445–1471 | – | 1025–1036 | 489–500 | 1017–1030 | 493–508 | 1029–1044 | 307–318 | ? | 157–162 |
+| Colonisation (`colonisation_`) | 437–456 | 927–946 | 1431–1444 | 499–512 | 1009–1024 | 471–488 | 999–1016 | 477–492 | 1013–1028 | 291–306 | 172–181 | 151–156 |
+| Economic institutions / mutual credit (`mutuality_`) | 457–502 | 947–990 | 1445–1471 | – | 1025–1036 | 489–500 | 1017–1030 | 493–508 | 1029–1044 | 307–318 | 182–? | 157–162 |
 | Labour and social welfare (`labour_`) | – | – | – | 513–564 | 1037–1061 | 501–552 | 1031–1057 | 509–558 | 1045–1071 | 319–340 | 188–212 | 163–190 |
 
 Notes:
@@ -41,7 +41,7 @@ Notes:
 | 3 | Posts: **done** (`extract_posts.py`, 6 tables, survey in `csv/posts_survey.md`; exchange-rate pages to do). Public works: **done** (`extract_publicworks.py`, 12 tables, survey in `csv/publicworks_survey.md`) |
 | 4 | Finances: budget, public debt, patente, taxe personnelle and livestock tax **done** (`extract_finance.py`); achour, canoun to do (views in `csv/finance_survey.md`) |
 | 5 | Agriculture |
-| 6 | Colonisation, economic institutions, labour, research institutions |
+| 6 | Colonisation: 8 tables **done** (`extract_colonisation.py`; sgt1922–1923 old-layout recapitulations, planting sales, habous/enzel cessions to do). Economic institutions, labour, research institutions: to do |
 | 7–10 | Commerce and navigation, by edition groups (1922–24, 1925–27, 1928–30, 1935–39) |
 
 Output: `csv/<prefix><topic>.csv` with notes `.md` files; transcriptions in

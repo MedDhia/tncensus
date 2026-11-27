@@ -1,0 +1,180 @@
+# Statistique générale de la Tunisie 1925, chapter XIII Colonisation.
+# Format: yb_tables.py. Labels with ';;' carry text fields (split by extract_colonisation.py).
+
+# Fonds de colonisation. Achats réalisés: f510 (p. 486) years, dotations (origine, montant), recettes
+# annuelles; f511 (p. 487) dépenses annuelles, superficie acquise (hectares), observations (decrees and
+# the 1920 loan tranches, as in sgt1922).
+@fund view=510 page=486 view2=511 page2=487
+img: all
+cols: dot rec dep ha
+1900 ;; Dotation initiale (1) | 1500000 296173.51 556390.34 3878
+1901 ;; » | 0 398804.07 1129485.01 9966
+1902 ;; » | 0 551303.19 558390.13 2477
+1903 ;; » | 0 537417.98 601280.41 3570
+1904 ;; Prélèvement sur le fonds des excédents disponibles (2) | 800000 527966.26 1201048.08 8805
+1905 ;; — (3) et avances de la Banque de l'Algérie (4) | 700000 646876.50 1167439.09 4787
+1906 ;; » | 0 733145.43 560500.25 3718
+1907 ;; Dotation; fonds d'emprunt (5) | 400000 873037.16 1998832.70 9986
+1908 ;; — — (6) | 4100000 690585.20 1523077.01 10832
+1909 ;; » | 0 817745.28 1156757.76 5829
+1910 ;; » | 0 1044756.02 3365542.32 16243
+1911 ;; » | 0 1303284.60 384993.32 517
+1912 ;; » | 0 950234.86 541984.98 4711
+1913 ;; » | 0 1090513.85 1177160.06 8248
+1914 ;; » | 0 522290.70 2402914.15 16756
+1915 ;; » | 0 610802.65 501977.44 633
+1916 ;; » | 0 683330.08 175555.48 106
+1917 ;; » | 0 970515.91 1156130.86 2750
+1918 ;; » | 0 1879135.20 939343.06 1492
+1919 ;; » | 0 1851105.59 1586486.61 6390
+1920 ;; » | 0 2567847.98 1852159.15 10504
+1921 ;; » | 0 3934674.51 4163061.72 4629
+1922 ;; » (7) | 5500000 1378700 10166533.58 2888
+1923 ;; » | 0 1589890.25 2368000 1999
+1924 ;; » (8) | 14500000 2121296.41 5614888.80 5245
+1925 ;; » | 0 2865139.62 2449494.41 4471
+TOTAL | 27500000 31436572.81 49299426.72 151430
+grand | 58936572.81 - - -
+
+# a) Ventes avec obligation d'installation personnelle (1916-1925). Spreads f500|f501 (pp. 476-477) and
+# f502|f503 (pp. 478-479); layout as sgt1924. 1916-1923 lines: same text and figures as sgt1924 (each re-read on
+# this printing's images). Aïn-Zress area printed '2 172' with the thousands point not inked: 2.172 ha (the
+# Totaux 95.131,67 needs 2.172; OCR '2 172'). Bulla-Régia printed '.74' (stray dot): 74 ha.
+# Label: year ;; name ;; situation ;; contrôle ;; observation
+@install view=500 page=476 view2=501 page2=477
+img: all
+cols: area rural market suburban artisan total
+1916 ;; Cheguaguif Sebaa Aouinat ;; à 11 kil. E. de Mateur. ;; Bizerte ;; | 137 1 0 0 0 1
+1916 ;; Guengla ;; à 1 kil. de Tindja. ;; Bizerte ;; | 12 0 0 15 0 15
+1916 ;; Plateau du Meridj ;; à 7 kil. E. d'Aïn-Draham. ;; Tabarka ;; | 1.20 0 0 3 0 3
+1918 ;; Kheniguet Ed-Dehan ;; à 25 kil. de Medjez. ;; Medjez-el-Bab ;; | 1264 9 0 0 0 9
+1919 ;; Gafour-Etat ;; à 15 kil. S.-E. de Gafour. ;; Téboursouk ;; | 354 2 0 0 0 2
+1919 ;; Khouiridja ;; à 14 kil. de Medjez. ;; Medjez-el-Bab ;; | 1124 5 0 0 0 5
+1919 ;; Lagrenée ;; au centre de Chaouat. ;; Tunis ;; | 2256 19 0 0 0 19
+1919 ;; Revoil ;; à 2 kil. de Sidi-Tabet. ;; Tunis ;; | 3083 24 0 0 0 24
+1919 ;; Zriba ;; à 6 kil. S.-E. de Zaghouan. ;; Zaghouan ;; | 10543 46 0 0 0 46
+1919 ;; Khlédia ;; à 10 kil. S.-E. de Tunis. ;; Tunis ;; | 982 0 23 0 0 23
+1920 ;; El-Hadjerine-Mabtouha ;; entre Protville et S.-Athman ;; Bizerte ;; | 2145 24 0 0 0 24
+1920 ;; El-Azib Etat I ;; à 12 kil. S. de Bizerte. ;; Bizerte ;; | 113 0 6 0 0 6
+1920 ;; El-Amri Salines ;; station des Salines. ;; Le Kef ;; | 189 2 0 0 0 2
+1920 ;; Bou-Arada-el-Aroussa ;; entre Bou-Arada et El-Aroussa. ;; Medjez-el-Bab ;; | 6216 48 0 0 0 48
+1920 ;; Djeradou ;; à 10 kil. S.-O. de Bou-Ficha ;; Sousse ;; | 6390 29 0 0 0 29
+1920 ;; Zriba ;; à 6 kil. S.-E. de Zaghouan. ;; Zaghouan ;; | 20 0 0 0 4 4
+1920 ;; Khebar-Labiod ;; à 25 kil. de Tébourba. ;; Bizerte ;; | 1023 4 0 0 0 4
+1921 ;; Attar-Sefiane et Essoumi ;; à 13 kil. S.-O. de Tunis. ;; Tunis ;; | 1206 19 0 0 0 19
+1921 ;; Bir-Mcherga ;; à 32 kil. de Tunis. ;; Zaghouan ;; | 257 2 0 0 0 2
+1921 ;; Khang-Mourou ;; à 16 kil. S. O. de Medjez. ;; Medjez-el-Bab ;; | 2132 8 0 0 0 8
+1921 ;; Saouaf-Djebibina ;; N.-O. d'Enfidaville. ;; Zaghouan ;; | 14205 46 0 0 0 46
+1922 ;; Attar ;; à 13 kil. S.-O. de Tunis. ;; Tunis ;; | 489.50 5 0 0 0 5
+1922 ;; Sidi-Tabet ;; à 21 kil. de Tunis. ;; Tunis ;; | 613.05 14 0 0 0 14
+1922 ;; Mèngoub-ed-Drijat ;; à 6 kil. de Massicault. ;; Tunis ;; | 1830 15 0 0 0 15
+1922 ;; Kheniguet-Magra ;; à 4 kil. de Pont-du-Fahs. ;; Zaghouan ;; | 965 6 0 0 0 6
+1922 ;; Guedal-el-Beylik ;; à 9 kil. de Pont-du-Fahs. ;; Zaghouan ;; | 877 8 0 0 0 8
+1922 ;; Dhomda ;; à 9 kil. de Pont-du-Fahs. ;; Zaghouan ;; | 1699 9 0 0 0 9
+1922 ;; Bou-Ficha ;; au centre de Bou-Ficha. ;; Sousse ;; | 1107 11 0 0 0 11
+1922 ;; Le Goubellat ;; à 20 kil. de Medjez. ;; Medjez-el-Bab ;; | 1050 9 0 0 0 9
+1922 ;; Kachebet-Chaabane ;; à 5 kil. d'El-Aroussa. ;; Medjez-el-Bab ;; | 2720 7 0 0 0 7
+1922 ;; De Carnières ;; entre Protville et S.-Athman ;; Bizerte ;; | 5.27 0 0 0 1 1
+1922 ;; Chaouat ;; au centre de Chaouat. ;; Tunis ;; | 3.50 0 0 0 1 1
+reporter | 65011.52 372 29 18 6 425
+@install view=502 page=478 view2=503 page2=479
+img: all
+cols: area rural market suburban artisan total
+report | 65011.52 372 29 18 6 425
+1923 ;; Ousseltia ;; à 20 kil. au N. de Pichon. ;; Kairouan ;; | 13607 64 0 0 0 64
+1923 ;; La Sebala ;; à 15 kil. au N. de Tunis. ;; Tunis ;; | 883 9 0 0 0 9
+1923 ;; Merira ;; à 10 kil. au S. de Tunis. ;; Tunis ;; | 983 22 0 0 0 22
+1923 ;; Souilhia ;; à 51 kil. de Tunis, près de Bordj-Toum. ;; Tunis ;; | 630 6 0 0 0 6
+1923 ;; Menzel-Yahia-el-Kebira ;; à 5 kil. N.-E. de Menzel-Temime. ;; Grombalia ;; | 392 4 0 0 0 4
+1923 ;; Sbikha ;; à 45 kil. de Pont-du-Fahs. ;; Kairouan ;; | 3035 12 0 0 0 12
+1923 ;; Bou-Ficha ;; au centre de Bou-Ficha. ;; Sousse ;; | 21.27 0 0 0 3 3
+1923 ;; Fejjet-Khemakhem ;; près Massicault. ;; Tunis ;; | 17 0 0 0 1 1
+1923 ;; Segermès ;; à 11 kil. de Bou-Ficha. ;; Zaghouan ;; | 12.88 0 0 0 1 1
+1923 ;; El-Ferik ;; près Le Kef. ;; Le Kef ;; | 255 1 0 0 0 1
+1923 ;; El-Kechachia ;; à 4 kil. de Medjez. ;; Medjez-el-Bab ;; | 23 1 0 0 0 1
+1923 ;; Henchir Soltane ;; près Tunis. ;; Tunis ;; | 262 3 0 0 0 3
+1925 ;; Chougafa ;; à 3 kil. de Chaouat ;; Tunis ;; | 489 5 0 0 0 5
+1925 ;; Djebbas ;; à 5 kil. de Pont-du-Fahs ;; Zaghouan ;; | 245 2 0 0 0 2
+1925 ;; Massouges (La Siliana) ;; Près Le Sers. ;; Maktar ;; | 849 6 0 0 0 6
+1925 ;; Ousseltia ;; à 20 kil. de Pichon. ;; Kairouan ;; Extension de l'ancien lotissement. | 1412 7 0 0 0 7
+1925 ;; Ksar-Soudane ;; à 48 kil. de Tunis. ;; Zaghouan ;; | 1365 11 0 0 0 11
+1925 ;; Mornag-Etat ;; Près de La Laverie. ;; Tunis ;; | 269 3 0 0 0 3
+1925 ;; Souar ;; à 28 kil. de Pont-du-Fahs. ;; Zaghouan ;; | 590 4 0 0 0 4
+1925 ;; Djouggar ;; à 15 kil. de Pont-du-Fahs. ;; Zaghouan ;; | 235 1 0 0 0 1
+1925 ;; Gafour et El-Aksab ;; à 4 kil. de Gafour. ;; Téboursouk ;; | 1802 12 0 0 0 12
+1925 ;; Aïn-Zress ;; à 8 kil. du Djouggar. ;; Zaghouan ;; | 2172 6 0 0 0 6
+1925 ;; Kouba-Kebira ;; à 8 kil. de Menzel-bou-Zelfa. ;; Grombalia ;; | 126 5 0 0 0 5
+1925 ;; Bulla-Régia ;; Près de Souk-el-Arba. ;; Souk-el-Arba ;; | 74 1 0 0 0 1
+1925 ;; Mégrine ;; Près de Tunis. ;; Tunis ;; | 346 0 0 118 0 118
+1925 ;; Guengla ;; à 1 kil. Gare de Tindja. ;; Bizerte ;; | 25 0 21 0 0 21
+Totaux | 95131.67 557 50 136 11 754
+
+# b) Terres à planter (Ventes avec obligation d'installation dans la Régence) (1916-1925). Spread f504|f505
+# (pp. 480-481): left page années, nom, situation, contrôle; right page superficie (h. a.), nombre de lots,
+# observations. Years as printed (bracket '1920-21', '1926-27'); lines printed » throughout stored as 0.
+# Label: year ;; name ;; situation ;; contrôle ;; observation
+@planting view=504 page=480 view2=505 page2=481
+img: all
+cols: area lots
+1920-21 ;; Maknassy ;; Au centre de Maknassy. ;; Gafsa ;;  | 8500 8
+1920-21 ;; Sened ;; Situé le long de la voie ferrée de Sfax à Gafsa. ;; Gafsa ;; | 4000 4
+1920-21 ;; Graïba ;; Au nord de la voie ferrée de Sfax à Gafsa. ;; Sfax ;; | 3500 6
+1920-21 ;; Bou-Thadi ;; A 60 kilom. N.-O. de Sfax. ;; Sfax ;; | 8500 12
+1924 ;; Sidi-Ali (Cherahil) ;; A 11 kilom. de Pavillier. ;; Kairouan ;; | 6500 11
+1925 ;; » ;; » ;; » ;; | 0 0
+Totaux | 31000 41
+
+# c) Lotissements urbains, industriels ou d'estivage (1916-1925). Spread f506|f507 (pp. 482-483): left
+# page années, nom, situation, contrôle; right page superficie (h. a.), nombre de lots, observations. Lines printed
+# » (lotissements suppressed) stored as 0.
+# Label: year ;; name ;; situation ;; contrôle ;; observation
+@urban view=506 page=482 view2=507 page2=483
+img: all
+cols: area lots
+1916 ;; Maagen-bel-Abbès ;; station de Maagen-bel-Abbès. ;; Thala ;; Chantiers d'alfa | 20 20
+1916 ;; Guengla ;; à 1 kilom. de Tindja. ;; Bizerte ;;  | 15 87
+1916 ;; Sbeïtla ;; centre de Sbeïtla. ;; Thala ;;  | 12.72 33
+1917 ;; Col des Ruines ;; à proximité d'Aïn-Draham. ;; Tabarka ;; Lotissement supprimé par suite de la création d'un nouveau lotissement vendu en 1924. | 0 0
+1919 ;; Piste du génie ;; à Aïn-Draham. ;; Tabarka ;; Lotissements supprimés par suite de la création d'un nouveau lotissement vendu en 1924. | 0 0
+1919 ;; Chabet Aïn-Morra ;; à Aïn-Draham. ;; Tabarka ;; Lotissements supprimés par suite de la création d'un nouveau lotissement vendu en 1924. | 0 0
+1919 ;; Bellevue-La Marsa ;; La Marsa (près Tunis). ;; Tunis ;; Installations estivales. | 1.39 15
+1920 ;; Sidi-Mecheri ;; à 15 kilom. de Tamera. ;; Bizerte ;; Installations estivales. | 5.94 46
+1920 ;; Guengla ;; à 1 kilom. de Tindja. ;; Bizerte ;;  | 9.41 40
+1920 ;; Béja-Sidi-Fredj ;; au centre de Béja. ;; Béja ;;  | 15 17
+1920 ;; Bordj-Koudja ;; sur la route de Sidi-Tabet à Tunis ;; Tunis ;;  | 10.19 19
+1920 ;; Revoil ;; à 2 kilom. E. de Sidi-Tabet. ;; Tunis ;; Lotissement supprimé et reporté au village de Sidi-Tabet, année 1923. | 0 0
+1922 ;; Lagrenée-Chaouat ;; au centre de Chaouat. ;; Tunis ;;  | 2.72 31
+1922 ;; Klédia ;; à 20 kilom. S.-E. de Tunis. ;; Tunis ;;  | 4.32 35
+1923 ;; Bou-Ficha ;; au centre de Bou-Ficha. ;; Sousse ;;  | 21.27 62
+1923 ;; De Carnières ;; à 35 kil. N. de Tunis. ;; Tunis ;;  | 3.15 17
+1923 ;; Sidi-Tabet ;; à 21 kilom N.-O. de Tunis ;; Tunis ;;  | 3.35 35
+1923 ;; Lynx ;; à Franceville, près Tunis. ;; Tunis ;; Propriété livrée à une Société d'H. B. M. | 1.47 34
+1924 ;; Ségermès ;; à 11 kilom. de Bou-Ficha. ;; Zaghouan ;;  | 5.54 26
+1924 ;; Aïn-Draham ;; à 1 kilom. du village d'Aïn-Draham. ;; Tabarka ;; Lotissement estival. | 16 38
+1925 ;; Belvédère-Cité-Jardin ;; près de Tunis, route de l'Ariana. ;; Tunis ;;  | 5.13 79
+1925 ;; Saouaf ;; N.-O. d'Enfidaville. ;; Zaghouan ;;  | 7.50 25
+1925 ;; Ousseltia ;; à 20 Kil. de Pichon. ;; Kairouan ;;  | 16.65 97
+Totaux | 176.75 756
+
+# LOTISSEMENTS (recapitulation). a) Lotissements ruraux livrés à la Colonisation: f508 (p. 484); b)
+# Lotissements de terres à planter: f509 (p. 485). Periods as printed (Antérieure à 1918 / Postérieure à 1918); the TOTAUX
+# column and line are checks.
+@recap_rural view=508 page=484 split=1918
+img: all
+cols: dom hab ach tot rural small lotstot
+Antérieure à 1918 | 26396.20 19205 61930 107531.20 837 235 1072
+Postérieure à 1918 | 30104 1023 63854.47 94981.47 556 179 735
+Totaux | 56500.20 20228 125784.47 202512.67 1393 414 1807
+@recap_plant view=509 page=485 split=1918
+img: all
+cols: dom hab sial tot lots
+Antérieure à 1918 | 15500 0 113000 128500 84
+Postérieure à 1918 | 31000 0 0 31000 41
+Totaux | 46500 0 113000 159500 125
+
+# FIXATION AU SOL DES INDIGÈNES. Période de 1920 à 1925. f512 (p. 488). One line: nombre de familles installées,
+# terres de culture attribuées (hectares), terres de parcours (hectares), observations.
+@fixation_old view=512 page=488 period="1920 à 1925"
+img: all
+cols: families cultivated grazing
+1920 à 1925 ;; Les terres de culture font l'objet de contrats de location avec promesse de vente. La vente est consentie lorsque les conditions de mise en valeur des lots attribués sont réalisées. | 3710 124140 74000

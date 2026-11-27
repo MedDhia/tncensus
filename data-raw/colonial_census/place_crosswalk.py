@@ -53,9 +53,10 @@ CONTROLE = {
     "Le Kef": "Le Kef", "Kef (Le)": "Le Kef", "Kef": "Le Kef", "Contrôle du Kef": "Le Kef",
     "Maktar": "Maktar", "Mactar": "Maktar", "Contrôle de Mactar": "Maktar",
     "Medjez-el-Bab": "Medjez-el-Bab", "Medjez-El-Bab": "Medjez-el-Bab",
+    "Medjez": "Medjez-el-Bab", "Mdejez-el-Bab": "Medjez-el-Bab",
     "Annexe de Medjez-el-Bab": "Medjez-el-Bab",
     "Sfax": "Sfax", "Contrôle de Sfax": "Sfax",
-    "Souk-el-Arba": "Souk-el-Arba", "Souk-El-Arba": "Souk-el-Arba", "Contrôle de Souk-el-Arba": "Souk-el-Arba",
+    "Souk-el-Arba": "Souk-el-Arba", "Souk-El-Arba": "Souk-el-Arba", "Souk el Arba": "Souk-el-Arba", "Contrôle de Souk-el-Arba": "Souk-el-Arba",
     "Sousse": "Sousse", "Contrôle de Sousse": "Sousse",
     "Tabarka": "Tabarka", "Tabarca": "Tabarka", "Annexe de Tabarca": "Tabarka",
     "Téboursouk": "Téboursouk", "Teboursouk": "Téboursouk", "Annexe de Teboursouk": "Téboursouk",
@@ -74,6 +75,7 @@ CONTROLE = {
     "Cercle militaire de Tatahouine": "Territoires militaires du Sud",
     "Cercles de Médenine, Ben-Gardane et Zarzis": "Territoires militaires du Sud",
     "Territoire Militaire (Medenine)": "Territoires militaires du Sud",
+    "Extrême-Sud": "Territoires militaires du Sud",
     # 1906 Table G groups two districts in one row.
     "Béja et Medjez-el-Bab": "Béja et Medjez-el-Bab", "Gafsa et Tozeur": "Gafsa et Tozeur",
     "Ensemble du territoire (printed)": "Tunisie (total)",
@@ -156,8 +158,8 @@ def collect():
             cai = None if cai is None or cai != cai else cai
             for lvl in cols:
                 v = r[lvl]
-                if v is None or v != v or str(v).startswith("TOTAL"):
-                    continue   # empty, or a printed-total marker, not a place
+                if v is None or v != v or str(v).startswith("TOTAL") or v == "»":
+                    continue   # empty, a printed-total marker, or » ("néant" line), not a place
                 key = (lvl, v, ctl if lvl in ("commune", "cheikhat", "locality", "annexe") else None,
                        cai if lvl in ("commune", "cheikhat", "locality") else None)
                 seen[key].add(f.stem)

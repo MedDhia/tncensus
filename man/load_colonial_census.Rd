@@ -44,7 +44,7 @@ A tidy \code{data.frame} with one row per cell of the printed
 Loads one table transcribed from the 1906 census of the European civilian
 population of Tunisia, the 1931 census of the indigenous population, or the
 \emph{Démographie}, health, public-instruction, communes, justice,
-prisons, land-registration, posts, public-works and finance chapters of the
+prisons, land-registration, posts, public-works, finance and colonisation chapters of the
 \emph{Statistique générale de la Tunisie} yearbooks (1922--1939), as
 digitized on Gallica.
 }
