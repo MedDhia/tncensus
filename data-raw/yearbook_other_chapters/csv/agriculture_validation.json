@@ -1,0 +1,1327 @@
+{
+ "agriculture_land": {
+  "rows": 348,
+  "checks": 264,
+  "failed": [
+   "sgt1922 p.209 (f233) land_c forest: % = hectares / total: cells give 12.11, printed 11.1 (difference -1.01)",
+   "sgt1922 p.209 (f233) land_c rangeland: % = hectares / total: cells give 51.22, printed 52.4 (difference 1.18)",
+   "sgt1922 p.209 (f233) land_d hectares: parts vs total: cells give 2920000, printed 2820000 (difference -100000)",
+   "sgt1922 p.209 (f233) land_d fallow: % = hectares / total: cells give 69.05, printed 65.5 (difference -3.55)",
+   "sgt1923 p.221 (f723) land_c %: parts vs 100: cells give 108.3, printed 100 (difference -8.3)",
+   "sgt1923 p.221 (f723) land_c rangeland: % = hectares / total: cells give 50.94, printed 59.4 (difference 8.46)",
+   "sgt1923 p.221 (f723) land_d hectares: parts vs total: cells give 2820000, printed 2840000 (difference 20000)",
+   "sgt1923 p.221 (f723) land_d %: parts vs 100: cells give 99.3, printed 100 (difference 0.7)",
+   "sgt1925 p.265 (f289) land_d hectares: parts vs total: cells give 2844820, printed 2845000 (difference 180)",
+   "sgt1927 p.233 (f261) land_d hectares: parts vs total: cells give 2913001, printed 2913000 (difference -1)",
+   "sgt1927 p.233 (f261) land_d cereals: % = hectares / total: cells give 33.31, printed 32.3 (difference -1.01)",
+   "sgt1927 p.233 (f261) land_d fodder: % = hectares / total: cells give 1.03, printed 9.2 (difference 8.17)",
+   "sgt1927 p.233 (f261) land_d food_plants: % = hectares / total: cells give 1.36, printed 3.2 (difference 1.84)",
+   "sgt1927 p.233 (f261) land_d industrial_plants: % = hectares / total: cells give 0.16, printed 2.16 (difference 2.00)",
+   "sgt1927 p.233 (f261) land_d other_products: % = hectares / total: cells give 4.12, printed 3.1 (difference -1.02)",
+   "sgt1927 p.233 (f261) land_d fallow: % = hectares / total: cells give 60.02, printed 50.1 (difference -9.92)",
+   "sgt1928 p.233 (f785) land_b % of the total line: cells give 0, printed 100 (difference 100)",
+   "sgt1928 p.233 (f785) land_c %: parts vs 100: cells give 99.7, printed 100 (difference 0.3)",
+   "sgt1928 p.233 (f785) land_c arable: % = hectares / total: cells give 32.61, printed 32.4 (difference -0.21)",
+   "sgt1929 p.235 (f263) land_b % of the total line: cells give 0, printed 100 (difference 100)",
+   "sgt1930 p.239 (f797) land_d %: parts vs 100: cells give 99.0, printed 100 (difference 1.0)",
+   "sgt1930 p.239 (f797) land_d fallow: % = hectares / total: cells give 47.94, printed 47 (difference -0.94)",
+   "sgt1935 p.121 (f141) land_d %: parts vs 100: cells give 99.73, printed 100 (difference 0.27)",
+   "sgt1935 p.121 (f141) land_d fallow: % = hectares / total: cells give 46.19, printed 45.9 (difference -0.29)",
+   "sgt1936 p.91 (f102) land_d hectares: parts vs total: cells give 2834000, printed 2934000 (difference 100000)",
+   "sgt1936 p.91 (f102) land_d fallow: % = hectares / total: cells give 60.36, printed 63.77 (difference 3.41)"
+  ],
+  "overlap_compared": 0,
+  "overlap_diffs": [],
+  "flagged": [
+   "sgt1922 1922 d / fallow_grazed / area = 1947136 (total_mismatch)",
+   "sgt1923 1923 c / rangeland_uncultivated / percent = 59.4 (total_mismatch)",
+   "sgt1927 1927 d / artificial_meadows_fodder / percent = 9.2 (total_mismatch)",
+   "sgt1936 1936 b / productive / area = 9000000 (derived_from_totals)",
+   "sgt1936 1936 d / fallow_grazed / area = 1770898 (total_mismatch)"
+  ],
+  "editions": [
+   "sgt1922",
+   "sgt1923",
+   "sgt1924",
+   "sgt1925",
+   "sgt1926",
+   "sgt1927",
+   "sgt1928",
+   "sgt1929",
+   "sgt1930",
+   "sgt1935",
+   "sgt1936",
+   "sgt1939"
+  ]
+ },
+ "agriculture_crops": {
+  "rows": 1492,
+  "checks": 1658,
+  "failed": [
+   "sgt1922 p.210 (f234) crops_a oats_yield 1915: yield = production / area: cells give 10.67, printed 8.0 (difference -2.67)",
+   "sgt1922 p.210 (f234) crops_a oats_yield 1916: yield = production / area: cells give 5.43, printed 4.6 (difference -0.83)",
+   "sgt1922 p.210 (f234) crops_a maize_yield 1913: yield = production / area: cells give 3.00, printed 2 (difference -1.00)",
+   "sgt1922 p.211 (f235) crops_a soft_yield 1921: yield = production / area: cells give 9.19, printed 9.9 (difference 0.71)",
+   "sgt1922 p.213 (f237) crops_b potatoes_yield 1920: yield = production / area: cells give 33.90, printed 36 (difference 2.10)",
+   "sgt1923 p.222 (f724) crops_a oats_yield 1915: yield = production / area: cells give 10.67, printed 8.0 (difference -2.67)",
+   "sgt1923 p.222 (f724) crops_a oats_yield 1916: yield = production / area: cells give 5.43, printed 4.6 (difference -0.83)",
+   "sgt1923 p.223 (f725) crops_a soft_yield 1921: yield = production / area: cells give 9.19, printed 9.9 (difference 0.71)",
+   "sgt1923 p.223 (f725) crops_a maize_yield 1923: yield = production / area: cells give 3.34, printed 3.9 (difference 0.56)",
+   "sgt1923 p.225 (f727) crops_b potatoes_yield 1920: yield = production / area: cells give 33.90, printed 36 (difference 2.10)",
+   "sgt1924 p.230 (f1220) crops_a oats_yield 1915: yield = production / area: cells give 10.67, printed 8.0 (difference -2.67)",
+   "sgt1924 p.230 (f1220) crops_a oats_yield 1916: yield = production / area: cells give 5.43, printed 4.6 (difference -0.83)",
+   "sgt1924 p.231 (f1221) crops_a durum_yield 1924: yield = production / area: cells give 5.63, printed 2.4 (difference -3.23)",
+   "sgt1924 p.231 (f1221) crops_a soft_yield 1921: yield = production / area: cells give 9.19, printed 9.9 (difference 0.71)",
+   "sgt1924 p.231 (f1221) crops_a maize_yield 1923: yield = production / area: cells give 3.34, printed 3.9 (difference 0.56)",
+   "sgt1924 p.233 (f1223) crops_b potatoes_yield 1920: yield = production / area: cells give 33.90, printed 36 (difference 2.10)",
+   "sgt1925 p.266 (f290) crops_a barley_yield 1916: yield = production / area: cells give 2.94, printed 4 (difference 1.06)",
+   "sgt1925 p.267 (f291) crops_a durum_yield 1921: yield = production / area: cells give 5.76, printed 5 (difference -0.76)",
+   "sgt1925 p.267 (f291) crops_a durum_yield 1925: yield = production / area: cells give 16.95, printed 6.6 (difference -10.35)",
+   "sgt1925 p.267 (f291) crops_a barley_yield 1921: yield = production / area: cells give 8.39, printed 7.8 (difference -0.59)",
+   "sgt1925 p.267 (f291) crops_a barley_yield 1924: yield = production / area: cells give 3.19, printed 3.4 (difference 0.21)",
+   "sgt1925 p.268 (f292) crops_a soft_yield 1920: yield = production / area: cells give 2.79, printed 3 (difference 0.21)",
+   "sgt1925 p.268 (f292) crops_a barley_yield 1919: yield = production / area: cells give 1.61, printed 1.8 (difference 0.19)",
+   "sgt1925 p.269 (f293) crops_a durum_yield 1923: yield = production / area: cells give 2.01, printed 1.2 (difference -0.81)",
+   "sgt1925 p.269 (f293) crops_a oats_yield 1922: yield = production / area: cells give 1.02, printed 0.1 (difference -0.92)",
+   "sgt1925 p.270 (f294) crops_b potatoes_yield 1920: yield = production / area: cells give 33.90, printed 36 (difference 2.10)",
+   "sgt1926 p.244 (f808) crops_b potatoes_yield 1920: yield = production / area: cells give 33.90, printed 36 (difference 2.10)",
+   "sgt1927 p.236 (f264) crops_b potatoes_yield 1920: yield = production / area: cells give 33.90, printed 36 (difference 2.10)",
+   "sgt1928 p.236 (f788) crops_b potatoes_yield 1920: yield = production / area: cells give 33.90, printed 36 (difference 2.10)",
+   "sgt1929 p.238 (f266) crops_b potatoes_yield 1920: yield = production / area: cells give 33.90, printed 36 (difference 2.10)",
+   "sgt1922 p.211 (f235) crops_a durum_area: average 1913-1922: cells give 524861.40, printed 514858 (difference -10003.40)",
+   "sgt1922 p.211 (f235) crops_a durum_prod: average 1918-1922: cells give 1623420.00, printed 1663420 (difference 40000.00)",
+   "sgt1922 p.211 (f235) crops_a durum_prod: average 1913-1922: cells give 1614710.00, printed 1634710 (difference 20000.00)",
+   "sgt1922 p.211 (f235) crops_a barley_prod: average 1913-1917: cells give 1564000.00, printed 1782000 (difference 218000.00)",
+   "sgt1922 p.211 (f235) crops_a oats_area: average 1913-1917: cells give 56610.20, printed 56210 (difference -400.20)",
+   "sgt1922 p.213 (f237) crops_b beans_area: average 1913-1917: cells give 14440.00, printed 14400 (difference -40.00)",
+   "sgt1922 p.213 (f237) crops_b beans_prod: average 1913-1917: cells give 72200.00, printed 72600 (difference 400.00)",
+   "sgt1922 p.213 (f237) crops_b beans_prod: average 1913-1922: cells give 92500.00, printed 92700 (difference 200.00)",
+   "sgt1922 p.213 (f237) crops_c flax_prod: average 1918-1922: cells give 10700.00, printed 11160 (difference 460.00)",
+   "sgt1922 p.215 (f239) crops_d olive_bearing: average 1918-1922: cells give 8470674.80, printed 8670674 (difference 199999.20)",
+   "sgt1922 p.215 (f239) crops_d olive_bearing: average 1913-1922: cells give 8055359.90, printed 8155359 (difference 99999.10)",
+   "sgt1922 p.215 (f239) crops_d olive_pomace: average 1913-1917: cells give 36447.60, printed 20160 (difference -16287.60)",
+   "sgt1922 p.215 (f239) crops_d olive_pomace: average 1913-1922: cells give 38073.80, printed 29930 (difference -8143.80)",
+   "sgt1923 p.223 (f725) crops_a barley_area: average 1914-1918: cells give 463473.40, printed 475473 (difference 11999.60)",
+   "sgt1923 p.223 (f725) crops_a barley_area: average 1914-1923: cells give 442473.40, printed 448473 (difference 5999.60)",
+   "sgt1923 p.225 (f727) crops_b potatoes_prod: average 1919-1923: cells give 40500.00, printed 40400 (difference -100.00)",
+   "sgt1923 p.227 (f729) crops_d otherdates_trees: average 1919-1923: cells give 974859.20, printed 774859 (difference -200000.20)",
+   "sgt1923 p.227 (f729) crops_d otherdates_prod: average 1919-1923: cells give 357200.00, printed 377200 (difference 20000.00)",
+   "sgt1923 p.227 (f729) crops_d otherdates_prod: average 1914-1923: cells give 306962.00, printed 316962 (difference 10000.00)",
+   "sgt1924 p.231 (f1221) crops_a durum_prod: average 1920-1924: cells give 1734700.00, printed 1474700 (difference -260000.00)",
+   "sgt1924 p.231 (f1221) crops_a durum_prod: average 1915-1924: cells give 1802710.00, printed 1672710 (difference -130000.00)",
+   "sgt1924 p.231 (f1221) crops_a maize_area: average 1920-1924: cells give 14662.00, printed 16652 (difference 1990.00)",
+   "sgt1924 p.231 (f1221) crops_a maize_area: average 1915-1924: cells give 16407.10, printed 17402 (difference 994.90)",
+   "sgt1924 p.233 (f1223) crops_b chickpeas_prod: average 1920-1924: cells give 16540.00, printed 16500 (difference -40.00)",
+   "sgt1924 p.235 (f1225) crops_d almond_prod: average 1915-1919: cells give 20960.00, printed 20900 (difference -60.00)",
+   "sgt1924 p.235 (f1225) crops_d degla_prod: average 1920-1924: cells give 15460.00, printed 15400 (difference -60.00)",
+   "sgt1924 p.235 (f1225) crops_d degla_prod: average 1915-1924: cells give 13830.00, printed 13800 (difference -30.00)",
+   "sgt1925 p.267 (f291) crops_a durum_area: average 1916-1920: cells give 297950.00, printed 293950 (difference -4000.00)",
+   "sgt1925 p.267 (f291) crops_a durum_area: average 1921-1925: cells give 278577.80, printed 318577 (difference 39999.20)",
+   "sgt1925 p.267 (f291) crops_a durum_area: average 1916-1925: cells give 288263.90, printed 306263 (difference 17999.10)",
+   "sgt1925 p.267 (f291) crops_a maize_prod: average 1916-1920: cells give 54462.00, printed 54862 (difference 400.00)",
+   "sgt1925 p.267 (f291) crops_a maize_prod: average 1916-1925: cells give 53022.00, printed 53222 (difference 200.00)",
+   "sgt1925 p.271 (f295) crops_b chickpeas_area: average 1916-1920: cells give 5577.40, printed 5977 (difference 399.60)",
+   "sgt1925 p.271 (f295) crops_b chickpeas_area: average 1916-1925: cells give 5104.40, printed 5304 (difference 199.60)",
+   "sgt1925 p.271 (f295) crops_c flax_prod: average 1921-1925: cells give 7740.00, printed 7540 (difference -200.00)",
+   "sgt1925 p.271 (f295) crops_c flax_prod: average 1916-1925: cells give 9130.00, printed 9020 (difference -110.00)",
+   "sgt1925 p.271 (f295) crops_c tobacco_prod: average 1921-1925: cells give 4167.00, printed 3987 (difference -180.00)",
+   "sgt1925 p.271 (f295) crops_c tobacco_prod: average 1916-1925: cells give 3212.10, printed 3122.2 (difference -89.90)",
+   "sgt1925 p.273 (f297) crops_d carob_trees: average 1921-1925: cells give 20540.00, printed 20400 (difference -140.00)",
+   "sgt1925 p.273 (f297) crops_d carob_trees: average 1916-1925: cells give 20270.00, printed 20200 (difference -70.00)",
+   "sgt1925 p.273 (f297) crops_d carob_prod: average 1916-1920: cells give 10460.00, printed 10200 (difference -260.00)",
+   "sgt1925 p.273 (f297) crops_d carob_prod: average 1916-1925: cells give 14730.00, printed 14600 (difference -130.00)",
+   "sgt1925 p.273 (f297) crops_d almond_prod: average 1916-1920: cells give 23520.00, printed 20300 (difference -3220.00)",
+   "sgt1925 p.273 (f297) crops_d almond_prod: average 1921-1925: cells give 20300.00, printed 23520 (difference 3220.00)",
+   "sgt1925 p.273 (f297) crops_d degla_prod: average 1916-1920: cells give 13600.00, printed 15600 (difference 2000.00)",
+   "sgt1925 p.273 (f297) crops_d degla_prod: average 1916-1925: cells give 14830.00, printed 15830 (difference 1000.00)",
+   "sgt1925 p.273 (f297) crops_d otherdates_prod: average 1916-1925: cells give 348300.00, printed 345800 (difference -2500.00)",
+   "sgt1925 p.273 (f297) crops_d orange_prod: average 1921-1925: cells give 14320.00, printed 14800 (difference 480.00)",
+   "sgt1925 p.273 (f297) crops_d orange_prod: average 1916-1925: cells give 13960.00, printed 14200 (difference 240.00)",
+   "sgt1925 p.273 (f297) crops_d lemon_trees: average 1916-1920: cells give 50500.00, printed 50120 (difference -380.00)",
+   "sgt1925 p.273 (f297) crops_d lemon_trees: average 1916-1925: cells give 51250.00, printed 51060 (difference -190.00)",
+   "sgt1926 p.243 (f807) crops_a durum_prod: average 1917-1926: cells give 1855650.00, printed 1885650 (difference 30000.00)",
+   "sgt1926 p.245 (f809) crops_b potatoes_prod: average 1922-1926: cells give 41480.00, printed 43480 (difference 2000.00)",
+   "sgt1926 p.245 (f809) crops_b potatoes_prod: average 1917-1926: cells give 40990.00, printed 41990 (difference 1000.00)",
+   "sgt1926 p.247 (f811) crops_d olive_trees: average 1917-1921: cells give 12153890.40, printed 12193890 (difference 39999.60)",
+   "sgt1926 p.247 (f811) crops_d olive_pomace: average 1922-1926: cells give 32600.00, printed 32200 (difference -400.00)",
+   "sgt1926 p.247 (f811) crops_d olive_pomace: average 1917-1926: cells give 36150.00, printed 35950 (difference -200.00)",
+   "sgt1927 p.235 (f263) crops_a soft_area: average 1918-1922: cells give 47893.20, printed 239466 (difference 191572.80)",
+   "sgt1927 p.235 (f263) crops_a barley_area: average 1918-1927: cells give 440408.00, printed 420408 (difference -20000.00)",
+   "sgt1927 p.235 (f263) crops_a oats_area: average 1918-1922: cells give 59947.00, printed 603347 (difference 543400.00)",
+   "sgt1927 p.235 (f263) crops_a oats_area: average 1923-1927: cells give 42326.60, printed 37561 (difference -4765.60)",
+   "sgt1927 p.235 (f263) crops_a oats_area: average 1918-1927: cells give 51136.80, printed 51336 (difference 199.20)",
+   "sgt1927 p.237 (f265) crops_b chickpeas_area: average 1918-1922: cells give 5580.60, printed 5460 (difference -120.60)",
+   "sgt1927 p.237 (f265) crops_b chickpeas_area: average 1918-1927: cells give 5619.20, printed 5559 (difference -60.20)",
+   "sgt1927 p.237 (f265) crops_c flax_area: average 1918-1927: cells give 2620.70, printed 1685 (difference -935.70)",
+   "sgt1927 p.237 (f265) crops_c tobacco_prod: average 1923-1927: cells give 4410.80, printed 4510 (difference 99.20)",
+   "sgt1927 p.239 (f267) crops_d vine_grapes: average 1918-1922: cells give 47800.00, printed 48200 (difference 400.00)",
+   "sgt1927 p.239 (f267) crops_d vine_grapes: average 1918-1927: cells give 50900.00, printed 51100 (difference 200.00)",
+   "sgt1927 p.239 (f267) crops_d olive_trees: average 1923-1927: cells give 15861830.20, printed 1586183 (difference -14275647.20)",
+   "sgt1927 p.239 (f267) crops_d degla_trees: average 1923-1927: cells give 65834.20, printed 62834 (difference -3000.20)",
+   "sgt1927 p.239 (f267) crops_d degla_trees: average 1918-1927: cells give 62185.00, printed 60685 (difference -1500.00)",
+   "sgt1928 p.235 (f787) crops_a durum_prod: average 1919-1928: cells give 1882350.00, printed 1860350 (difference -22000.00)",
+   "sgt1928 p.235 (f787) crops_a barley_area: average 1919-1928: cells give 442064.50, printed 432064 (difference -10000.50)",
+   "sgt1928 p.235 (f787) crops_a maize_area: average 1924-1928: cells give 17470.20, printed 17670 (difference 199.80)",
+   "sgt1928 p.235 (f787) crops_a maize_area: average 1919-1928: cells give 16257.30, printed 16157 (difference -100.30)",
+   "sgt1928 p.237 (f789) crops_b chickpeas_area: average 1924-1928: cells give 6046.80, printed 6246 (difference 199.20)",
+   "sgt1928 p.237 (f789) crops_b chickpeas_area: average 1919-1928: cells give 5588.50, printed 5688 (difference 99.50)",
+   "sgt1928 p.237 (f789) crops_b potatoes_area: average 1924-1928: cells give 1070.00, printed 1050 (difference -20.00)",
+   "sgt1928 p.237 (f789) crops_b potatoes_area: average 1919-1928: cells give 1033.00, printed 1023 (difference -10.00)",
+   "sgt1928 p.237 (f789) crops_b potatoes_prod: average 1924-1928: cells give 40480.00, printed 40880 (difference 400.00)",
+   "sgt1928 p.237 (f789) crops_c flax_area: average 1924-1928: cells give 2550.20, printed 2556 (difference 5.80)",
+   "sgt1928 p.237 (f789) crops_c tobacco_area: average 1919-1923: cells give 303.80, printed 803 (difference 499.20)",
+   "sgt1928 p.237 (f789) crops_c tobacco_prod: average 1919-1923: cells give 3469.00, printed 3669 (difference 200.00)",
+   "sgt1928 p.239 (f791) crops_d orange_trees: average 1924-1928: cells give 67960.00, printed 69960 (difference 2000.00)",
+   "sgt1928 p.239 (f791) crops_d orange_trees: average 1919-1928: cells give 66720.00, printed 67720 (difference 1000.00)",
+   "sgt1929 p.241 (f269) crops_d orange_prod: average 1925-1929: cells give 14340.00, printed 12340 (difference -2000.00)",
+   "sgt1929 p.241 (f269) crops_d orange_prod: average 1920-1929: cells give 14310.00, printed 13310 (difference -1000.00)",
+   "sgt1929 p.241 (f269) crops_d lemon_prod: average 1925-1929: cells give 8300.00, printed 8100 (difference -200.00)",
+   "sgt1930 p.241 (f799) crops_a durum_area: average 1926-1930: cells give 649848.20, printed 651448 (difference 1599.80)",
+   "sgt1930 p.245 (f803) crops_d orange_trees: average 1926-1930: cells give 61509.80, printed 75709 (difference 14199.20)",
+   "sgt1930 p.245 (f803) crops_d orange_trees: average 1921-1930: cells give 64324.90, printed 71424 (difference 7099.10)"
+  ],
+  "overlap_compared": 3288,
+  "overlap_diffs": [
+   [
+    [
+     1919,
+     "tunisia",
+     "durum_wheat",
+     "area"
+    ],
+    "sgt1922",
+    "514861",
+    "sgt1928",
+    "513110"
+   ],
+   [
+    [
+     1919,
+     "tunisia",
+     "durum_wheat",
+     "area"
+    ],
+    "sgt1923",
+    "514861",
+    "sgt1928",
+    "513110"
+   ],
+   [
+    [
+     1919,
+     "tunisia",
+     "durum_wheat",
+     "area"
+    ],
+    "sgt1924",
+    "514861",
+    "sgt1928",
+    "513110"
+   ],
+   [
+    [
+     1920,
+     "tunisia",
+     "durum_wheat",
+     "area"
+    ],
+    "sgt1922",
+    "481766",
+    "sgt1929",
+    "481786"
+   ],
+   [
+    [
+     1920,
+     "tunisia",
+     "durum_wheat",
+     "area"
+    ],
+    "sgt1923",
+    "481766",
+    "sgt1929",
+    "481786"
+   ],
+   [
+    [
+     1920,
+     "tunisia",
+     "durum_wheat",
+     "area"
+    ],
+    "sgt1924",
+    "481766",
+    "sgt1929",
+    "481786"
+   ],
+   [
+    [
+     1921,
+     "tunisia",
+     "durum_wheat",
+     "area"
+    ],
+    "sgt1922",
+    "566609",
+    "sgt1930",
+    "570031"
+   ],
+   [
+    [
+     1921,
+     "tunisia",
+     "durum_wheat",
+     "area"
+    ],
+    "sgt1923",
+    "566609",
+    "sgt1930",
+    "570031"
+   ],
+   [
+    [
+     1921,
+     "tunisia",
+     "durum_wheat",
+     "area"
+    ],
+    "sgt1924",
+    "566609",
+    "sgt1930",
+    "570031"
+   ],
+   [
+    [
+     1918,
+     "tunisia",
+     "durum_wheat",
+     "production"
+    ],
+    "sgt1922",
+    "2693600",
+    "sgt1927",
+    "2693000"
+   ],
+   [
+    [
+     1918,
+     "tunisia",
+     "durum_wheat",
+     "production"
+    ],
+    "sgt1923",
+    "2693600",
+    "sgt1927",
+    "2693000"
+   ],
+   [
+    [
+     1918,
+     "tunisia",
+     "durum_wheat",
+     "production"
+    ],
+    "sgt1924",
+    "2693600",
+    "sgt1927",
+    "2693000"
+   ],
+   [
+    [
+     1921,
+     "tunisia",
+     "barley",
+     "area"
+    ],
+    "sgt1922",
+    "497046",
+    "sgt1930",
+    "497828"
+   ],
+   [
+    [
+     1921,
+     "tunisia",
+     "barley",
+     "area"
+    ],
+    "sgt1923",
+    "497046",
+    "sgt1930",
+    "497828"
+   ],
+   [
+    [
+     1921,
+     "tunisia",
+     "barley",
+     "area"
+    ],
+    "sgt1924",
+    "497046",
+    "sgt1930",
+    "497828"
+   ],
+   [
+    [
+     1921,
+     "tunisia",
+     "oats",
+     "area"
+    ],
+    "sgt1922",
+    "64146",
+    "sgt1930",
+    "66646"
+   ],
+   [
+    [
+     1921,
+     "tunisia",
+     "oats",
+     "area"
+    ],
+    "sgt1923",
+    "64146",
+    "sgt1930",
+    "66646"
+   ],
+   [
+    [
+     1921,
+     "tunisia",
+     "oats",
+     "area"
+    ],
+    "sgt1924",
+    "64146",
+    "sgt1930",
+    "66646"
+   ],
+   [
+    [
+     1921,
+     "tunisia",
+     "maize_sorghum",
+     "area"
+    ],
+    "sgt1922",
+    "22161",
+    "sgt1930",
+    "22177"
+   ],
+   [
+    [
+     1921,
+     "tunisia",
+     "maize_sorghum",
+     "area"
+    ],
+    "sgt1923",
+    "22161",
+    "sgt1930",
+    "22177"
+   ],
+   [
+    [
+     1921,
+     "tunisia",
+     "maize_sorghum",
+     "area"
+    ],
+    "sgt1924",
+    "22161",
+    "sgt1930",
+    "22177"
+   ],
+   [
+    [
+     1921,
+     "tunisia",
+     "broad_beans",
+     "area"
+    ],
+    "sgt1922",
+    "23477",
+    "sgt1930",
+    "23513"
+   ],
+   [
+    [
+     1921,
+     "tunisia",
+     "broad_beans",
+     "area"
+    ],
+    "sgt1923",
+    "23477",
+    "sgt1930",
+    "23513"
+   ],
+   [
+    [
+     1921,
+     "tunisia",
+     "broad_beans",
+     "area"
+    ],
+    "sgt1924",
+    "23477",
+    "sgt1930",
+    "23513"
+   ],
+   [
+    [
+     1921,
+     "tunisia",
+     "broad_beans",
+     "area"
+    ],
+    "sgt1925",
+    "23477",
+    "sgt1930",
+    "23513"
+   ],
+   [
+    [
+     1921,
+     "tunisia",
+     "chickpeas",
+     "area"
+    ],
+    "sgt1922",
+    "6954",
+    "sgt1930",
+    "6980"
+   ],
+   [
+    [
+     1921,
+     "tunisia",
+     "chickpeas",
+     "area"
+    ],
+    "sgt1923",
+    "6954",
+    "sgt1930",
+    "6980"
+   ],
+   [
+    [
+     1921,
+     "tunisia",
+     "chickpeas",
+     "area"
+    ],
+    "sgt1924",
+    "6954",
+    "sgt1930",
+    "6980"
+   ],
+   [
+    [
+     1921,
+     "tunisia",
+     "chickpeas",
+     "area"
+    ],
+    "sgt1925",
+    "6954",
+    "sgt1930",
+    "6980"
+   ],
+   [
+    [
+     1921,
+     "tunisia",
+     "flax",
+     "area"
+    ],
+    "sgt1922",
+    "3715",
+    "sgt1930",
+    "3730"
+   ],
+   [
+    [
+     1921,
+     "tunisia",
+     "flax",
+     "area"
+    ],
+    "sgt1923",
+    "3715",
+    "sgt1930",
+    "3730"
+   ],
+   [
+    [
+     1921,
+     "tunisia",
+     "flax",
+     "area"
+    ],
+    "sgt1924",
+    "3715",
+    "sgt1930",
+    "3730"
+   ],
+   [
+    [
+     1921,
+     "tunisia",
+     "flax",
+     "area"
+    ],
+    "sgt1925",
+    "3715",
+    "sgt1930",
+    "3730"
+   ],
+   [
+    [
+     1922,
+     "tunisia",
+     "flax",
+     "area"
+    ],
+    "sgt1922",
+    "1939",
+    "sgt1930",
+    "1962"
+   ],
+   [
+    [
+     1922,
+     "tunisia",
+     "flax",
+     "area"
+    ],
+    "sgt1923",
+    "1939",
+    "sgt1930",
+    "1962"
+   ],
+   [
+    [
+     1922,
+     "tunisia",
+     "flax",
+     "area"
+    ],
+    "sgt1924",
+    "1939",
+    "sgt1930",
+    "1962"
+   ],
+   [
+    [
+     1922,
+     "tunisia",
+     "flax",
+     "area"
+    ],
+    "sgt1925",
+    "1939",
+    "sgt1930",
+    "1962"
+   ],
+   [
+    [
+     1923,
+     "tunisia",
+     "durum_wheat",
+     "area"
+    ],
+    "sgt1923",
+    "598977",
+    "sgt1930",
+    "598997"
+   ],
+   [
+    [
+     1923,
+     "tunisia",
+     "durum_wheat",
+     "area"
+    ],
+    "sgt1924",
+    "598977",
+    "sgt1930",
+    "598997"
+   ],
+   [
+    [
+     1924,
+     "tunisia",
+     "durum_wheat",
+     "area"
+    ],
+    "sgt1924",
+    "417607",
+    "sgt1930",
+    "433139"
+   ],
+   [
+    [
+     1924,
+     "tunisia",
+     "durum_wheat",
+     "production"
+    ],
+    "sgt1924",
+    "2350000",
+    "sgt1930",
+    "1040000"
+   ],
+   [
+    [
+     1924,
+     "tunisia",
+     "soft_wheat",
+     "production"
+    ],
+    "sgt1924",
+    "360000",
+    "sgt1930",
+    "360140"
+   ],
+   [
+    [
+     1924,
+     "tunisia",
+     "maize_sorghum",
+     "area"
+    ],
+    "sgt1924",
+    "16465",
+    "sgt1930",
+    "16645"
+   ],
+   [
+    [
+     1925,
+     "tunisia",
+     "vine",
+     "area"
+    ],
+    "sgt1925",
+    "30213",
+    "sgt1930",
+    "27986"
+   ],
+   [
+    [
+     1925,
+     "tunisia",
+     "dates_other",
+     "trees"
+    ],
+    "sgt1925",
+    "1030473",
+    "sgt1930",
+    "1138283"
+   ],
+   [
+    [
+     1927,
+     "tunisia",
+     "durum_wheat",
+     "production"
+    ],
+    "sgt1927",
+    "1800000",
+    "sgt1930",
+    "1760000"
+   ],
+   [
+    [
+     1927,
+     "tunisia",
+     "soft_wheat",
+     "production"
+    ],
+    "sgt1927",
+    "450000",
+    "sgt1930",
+    "440000"
+   ],
+   [
+    [
+     1927,
+     "tunisia",
+     "barley",
+     "production"
+    ],
+    "sgt1927",
+    "900800",
+    "sgt1930",
+    "895000"
+   ],
+   [
+    [
+     1928,
+     "tunisia",
+     "durum_wheat",
+     "production"
+    ],
+    "sgt1928",
+    "2850000",
+    "sgt1930",
+    "3230000"
+   ],
+   [
+    [
+     1928,
+     "tunisia",
+     "soft_wheat",
+     "production"
+    ],
+    "sgt1928",
+    "450000",
+    "sgt1930",
+    "500000"
+   ],
+   [
+    [
+     1928,
+     "tunisia",
+     "barley",
+     "production"
+    ],
+    "sgt1928",
+    "2750000",
+    "sgt1930",
+    "2700000"
+   ],
+   [
+    [
+     1928,
+     "tunisia",
+     "oats",
+     "production"
+    ],
+    "sgt1928",
+    "325000",
+    "sgt1930",
+    "445000"
+   ],
+   [
+    [
+     1928,
+     "tunisia",
+     "maize_sorghum",
+     "production"
+    ],
+    "sgt1928",
+    "68000",
+    "sgt1930",
+    "65000"
+   ],
+   [
+    [
+     1935,
+     "tunisia",
+     "olive",
+     "trees_bearing"
+    ],
+    "sgt1935",
+    "11581001",
+    "sgt1936",
+    "12581001"
+   ],
+   [
+    [
+     1935,
+     "tunisia",
+     "dates_other",
+     "trees"
+    ],
+    "sgt1935",
+    "1285304",
+    "sgt1936",
+    "1284789"
+   ]
+  ],
+  "flagged": [
+   "sgt1925 1925 north / durum_wheat / area = 129774 (total_mismatch)",
+   "sgt1930 1925 tunisia / dates_other / production = 352000 (derived_from_totals)",
+   "sgt1930 1930 tunisia / orange / trees = 19000 (total_mismatch)",
+   "sgt1939 1938 tunisia / pear / trees = None (illegible)"
+  ],
+  "editions": [
+   "sgt1922",
+   "sgt1923",
+   "sgt1924",
+   "sgt1925",
+   "sgt1926",
+   "sgt1927",
+   "sgt1928",
+   "sgt1929",
+   "sgt1930",
+   "sgt1935",
+   "sgt1936",
+   "sgt1939"
+  ]
+ },
+ "agriculture_cereal_zones": {
+  "rows": 504,
+  "checks": 705,
+  "failed": [
+   "sgt1926 p.248 (f812) zones soft_CS_yield 1920: yield = production / area: cells give 2.79, printed 3 (difference 0.21)",
+   "sgt1926 p.248 (f812) zones barley_CS_yield 1919: yield = production / area: cells give 1.61, printed 1.8 (difference 0.19)",
+   "sgt1926 p.249 (f813) zones durum_CS_yield 1923: yield = production / area: cells give 2.01, printed 1.2 (difference -0.81)",
+   "sgt1926 p.249 (f813) zones barley_N_yield 1921: yield = production / area: cells give 8.39, printed 7.8 (difference -0.59)",
+   "sgt1926 p.249 (f813) zones barley_N_yield 1924: yield = production / area: cells give 3.19, printed 3.4 (difference 0.21)",
+   "sgt1926 p.249 (f813) zones oats_CS_yield 1922: yield = production / area: cells give 1.02, printed 0.1 (difference -0.92)",
+   "sgt1927 p.240 (f268) zones soft_CS_yield 1920: yield = production / area: cells give 2.79, printed 3 (difference 0.21)",
+   "sgt1927 p.240 (f268) zones barley_N_yield 1921: yield = production / area: cells give 8.39, printed 7.8 (difference -0.59)",
+   "sgt1927 p.240 (f268) zones barley_CS_yield 1919: yield = production / area: cells give 1.61, printed 1.8 (difference 0.19)",
+   "sgt1927 p.241 (f269) zones durum_CS_yield 1923: yield = production / area: cells give 2.01, printed 1.2 (difference -0.81)",
+   "sgt1927 p.241 (f269) zones soft_CS_yield 1927: yield = production / area: cells give 4.50, printed 4.0 (difference -0.50)",
+   "sgt1927 p.241 (f269) zones barley_N_yield 1924: yield = production / area: cells give 3.19, printed 3.4 (difference 0.21)",
+   "sgt1927 p.241 (f269) zones oats_CS_yield 1922: yield = production / area: cells give 1.02, printed 0.1 (difference -0.92)",
+   "sgt1927 p.241 (f269) zones oats_CS_yield 1927: yield = production / area: cells give 1.70, printed 1.0 (difference -0.70)",
+   "sgt1928 p.240 (f792) zones soft_CS_yield 1920: yield = production / area: cells give 2.79, printed 3 (difference 0.21)",
+   "sgt1928 p.240 (f792) zones barley_N_yield 1921: yield = production / area: cells give 8.39, printed 7.8 (difference -0.59)",
+   "sgt1928 p.240 (f792) zones barley_CS_yield 1919: yield = production / area: cells give 1.61, printed 1.8 (difference 0.19)",
+   "sgt1928 p.240 (f792) zones oats_CS_yield 1922: yield = production / area: cells give 1.02, printed 0.1 (difference -0.92)",
+   "sgt1928 p.241 (f793) zones durum_CS_yield 1923: yield = production / area: cells give 2.01, printed 1.2 (difference -0.81)",
+   "sgt1928 p.241 (f793) zones barley_N_yield 1924: yield = production / area: cells give 3.19, printed 3.4 (difference 0.21)",
+   "sgt1928 p.241 (f793) zones oats_CS_yield 1927: yield = production / area: cells give 1.70, printed 1.0 (difference -0.70)",
+   "sgt1929 p.242 (f270) zones soft_CS_yield 1920: yield = production / area: cells give 2.79, printed 3 (difference 0.21)",
+   "sgt1929 p.242 (f270) zones barley_N_yield 1921: yield = production / area: cells give 8.39, printed 7.8 (difference -0.59)",
+   "sgt1929 p.243 (f271) zones barley_N_yield 1924: yield = production / area: cells give 3.19, printed 3.4 (difference 0.21)",
+   "sgt1929 p.243 (f271) zones oats_CS_yield 1927: yield = production / area: cells give 1.70, printed 1.0 (difference -0.70)",
+   "sgt1930 p.246 (f804) zones barley_N_yield 1921: yield = production / area: cells give 8.39, printed 7.8 (difference -0.59)",
+   "sgt1930 p.246 (f804) zones barley_N_yield 1924: yield = production / area: cells give 3.19, printed 3.4 (difference 0.21)",
+   "sgt1930 p.247 (f805) zones barley_N_yield 1930: yield = production / area: cells give 2.06, printed 5 (difference 2.94)",
+   "sgt1930 p.247 (f805) zones oats_CS_yield 1927: yield = production / area: cells give 1.70, printed 1.0 (difference -0.70)",
+   "sgt1935 p.125 (f145) zones durum_N_yield 1933: yield = production / area: cells give 3.75, printed 3.5 (difference -0.25)",
+   "sgt1936 p.95 (f106) zones barley_N_yield 1935: yield = production / area: cells give 2.00, printed 6 (difference 4.00)",
+   "sgt1939 p.99 (f105) zones durum_N_yield 1937: yield = production / area: cells give 7.39, printed 6.8 (difference -0.59)",
+   "sgt1939 p.99 (f105) zones soft_CS_yield 1939: yield = production / area: cells give 5.56, printed 8.5 (difference 2.94)",
+   "sgt1927 p.241 (f269) zones durum_CS_area: average 1923-1927: cells give 213550.40, printed 215550 (difference 1999.60)",
+   "sgt1927 p.241 (f269) zones durum_CS_area: average 1918-1927: cells give 214122.30, printed 215122 (difference 999.70)",
+   "sgt1927 p.241 (f269) zones soft_N_area: average 1918-1922: cells give 47403.20, printed 474032 (difference 426628.80)",
+   "sgt1927 p.241 (f269) zones soft_N_prod: average 1923-1927: cells give 497540.00, printed 459540 (difference -38000.00)",
+   "sgt1927 p.241 (f269) zones soft_CS_prod: average 1923-1927: cells give 4488.00, printed 4468 (difference -20.00)",
+   "sgt1927 p.241 (f269) zones barley_N_area: average 1923-1927: cells give 174891.40, printed 154770 (difference -20121.40)",
+   "sgt1927 p.241 (f269) zones barley_N_area: average 1918-1927: cells give 170972.10, printed 160911 (difference -10061.10)",
+   "sgt1927 p.241 (f269) zones barley_N_prod: average 1918-1922: cells give 845000.00, printed 841000 (difference -4000.00)",
+   "sgt1927 p.241 (f269) zones barley_N_prod: average 1918-1927: cells give 855230.00, printed 853230 (difference -2000.00)",
+   "sgt1927 p.241 (f269) zones barley_CS_area: average 1918-1922: cells give 271197.80, printed 251197 (difference -20000.80)",
+   "sgt1927 p.241 (f269) zones barley_CS_area: average 1923-1927: cells give 267674.80, printed 247674 (difference -20000.80)",
+   "sgt1927 p.241 (f269) zones barley_CS_area: average 1918-1927: cells give 269436.30, printed 249436 (difference -20000.30)",
+   "sgt1927 p.241 (f269) zones barley_CS_prod: average 1918-1927: cells give 633770.00, printed 663770 (difference 30000.00)",
+   "sgt1927 p.241 (f269) zones oats_N_area: average 1918-1922: cells give 54028.00, printed 53222 (difference -806.00)",
+   "sgt1927 p.241 (f269) zones oats_N_area: average 1923-1927: cells give 39436.60, printed 39272 (difference -164.60)",
+   "sgt1927 p.241 (f269) zones oats_N_area: average 1918-1927: cells give 46732.30, printed 46247 (difference -485.30)",
+   "sgt1928 p.241 (f793) zones durum_N_area: average 1919-1928: cells give 332310.90, printed 331310 (difference -1000.90)",
+   "sgt1928 p.241 (f793) zones durum_CS_area: average 1919-1923: cells give 213757.80, printed 213157 (difference -600.80)",
+   "sgt1928 p.241 (f793) zones soft_N_area: average 1919-1923: cells give 46502.00, printed 53102 (difference 6600.00)",
+   "sgt1928 p.241 (f793) zones soft_N_area: average 1919-1928: cells give 54119.90, printed 57419 (difference 3299.10)",
+   "sgt1928 p.241 (f793) zones soft_CS_prod: average 1919-1923: cells give 1998.00, printed 2038 (difference 40.00)",
+   "sgt1928 p.241 (f793) zones barley_N_area: average 1924-1928: cells give 184029.20, printed 185031 (difference 1001.80)",
+   "sgt1929 p.243 (f271) zones oats_N_prod: average 1920-1929: cells give 318890.00, printed 310890 (difference -8000.00)",
+   "sgt1930 p.247 (f805) zones barley_N_prod: average 1926-1930: cells give 976460.00, printed 1076460 (difference 100000.00)",
+   "sgt1930 p.247 (f805) zones barley_N_prod: average 1921-1930: cells give 904730.00, printed 954730 (difference 50000.00)",
+   "sgt1930 p.247 (f805) zones barley_CS_prod: average 1926-1930: cells give 756540.00, printed 766540 (difference 10000.00)",
+   "sgt1930 p.247 (f805) zones barley_CS_prod: average 1921-1930: cells give 706770.00, printed 711770 (difference 5000.00)"
+  ],
+  "overlap_compared": 909,
+  "overlap_diffs": [
+   [
+    [
+     1923,
+     "centre_south",
+     "durum_wheat",
+     "yield_per_hectare"
+    ],
+    "sgt1926",
+    "1.2",
+    "sgt1930",
+    "2"
+   ],
+   [
+    [
+     1923,
+     "centre_south",
+     "durum_wheat",
+     "yield_per_hectare"
+    ],
+    "sgt1927",
+    "1.2",
+    "sgt1930",
+    "2"
+   ],
+   [
+    [
+     1923,
+     "centre_south",
+     "durum_wheat",
+     "yield_per_hectare"
+    ],
+    "sgt1928",
+    "1.2",
+    "sgt1930",
+    "2"
+   ],
+   [
+    [
+     1922,
+     "centre_south",
+     "oats",
+     "yield_per_hectare"
+    ],
+    "sgt1926",
+    "0.1",
+    "sgt1930",
+    "1"
+   ],
+   [
+    [
+     1922,
+     "centre_south",
+     "oats",
+     "yield_per_hectare"
+    ],
+    "sgt1927",
+    "0.1",
+    "sgt1930",
+    "1"
+   ],
+   [
+    [
+     1922,
+     "centre_south",
+     "oats",
+     "yield_per_hectare"
+    ],
+    "sgt1928",
+    "0.1",
+    "sgt1930",
+    "1"
+   ],
+   [
+    [
+     1927,
+     "north",
+     "durum_wheat",
+     "production"
+    ],
+    "sgt1927",
+    "1699000",
+    "sgt1930",
+    "1660000"
+   ],
+   [
+    [
+     1927,
+     "north",
+     "durum_wheat",
+     "yield_per_hectare"
+    ],
+    "sgt1927",
+    "4.5",
+    "sgt1930",
+    "4.4"
+   ],
+   [
+    [
+     1927,
+     "centre_south",
+     "durum_wheat",
+     "production"
+    ],
+    "sgt1927",
+    "101000",
+    "sgt1930",
+    "100000"
+   ],
+   [
+    [
+     1927,
+     "north",
+     "soft_wheat",
+     "production"
+    ],
+    "sgt1927",
+    "441000",
+    "sgt1930",
+    "432000"
+   ],
+   [
+    [
+     1927,
+     "north",
+     "soft_wheat",
+     "yield_per_hectare"
+    ],
+    "sgt1927",
+    "7.8",
+    "sgt1930",
+    "7.7"
+   ],
+   [
+    [
+     1927,
+     "centre_south",
+     "soft_wheat",
+     "production"
+    ],
+    "sgt1927",
+    "9000",
+    "sgt1930",
+    "8000"
+   ],
+   [
+    [
+     1927,
+     "north",
+     "barley",
+     "production"
+    ],
+    "sgt1927",
+    "717300",
+    "sgt1930",
+    "712300"
+   ],
+   [
+    [
+     1928,
+     "north",
+     "durum_wheat",
+     "production"
+    ],
+    "sgt1928",
+    "1886000",
+    "sgt1930",
+    "2230000"
+   ],
+   [
+    [
+     1928,
+     "north",
+     "durum_wheat",
+     "yield_per_hectare"
+    ],
+    "sgt1928",
+    "4.4",
+    "sgt1930",
+    "5.2"
+   ],
+   [
+    [
+     1928,
+     "centre_south",
+     "durum_wheat",
+     "production"
+    ],
+    "sgt1928",
+    "964000",
+    "sgt1930",
+    "1000000"
+   ],
+   [
+    [
+     1928,
+     "centre_south",
+     "durum_wheat",
+     "yield_per_hectare"
+    ],
+    "sgt1928",
+    "2.9",
+    "sgt1930",
+    "3"
+   ],
+   [
+    [
+     1928,
+     "north",
+     "soft_wheat",
+     "production"
+    ],
+    "sgt1928",
+    "437000",
+    "sgt1930",
+    "485000"
+   ],
+   [
+    [
+     1928,
+     "north",
+     "soft_wheat",
+     "yield_per_hectare"
+    ],
+    "sgt1928",
+    "6.9",
+    "sgt1930",
+    "7.6"
+   ],
+   [
+    [
+     1928,
+     "centre_south",
+     "soft_wheat",
+     "production"
+    ],
+    "sgt1928",
+    "13000",
+    "sgt1930",
+    "15000"
+   ],
+   [
+    [
+     1928,
+     "centre_south",
+     "soft_wheat",
+     "yield_per_hectare"
+    ],
+    "sgt1928",
+    "5.0",
+    "sgt1930",
+    "5.7"
+   ],
+   [
+    [
+     1928,
+     "north",
+     "barley",
+     "production"
+    ],
+    "sgt1928",
+    "1360000",
+    "sgt1930",
+    "1320000"
+   ],
+   [
+    [
+     1928,
+     "north",
+     "barley",
+     "yield_per_hectare"
+    ],
+    "sgt1928",
+    "6.8",
+    "sgt1930",
+    "6.5"
+   ],
+   [
+    [
+     1928,
+     "centre_south",
+     "barley",
+     "production"
+    ],
+    "sgt1928",
+    "1390000",
+    "sgt1930",
+    "1330000"
+   ],
+   [
+    [
+     1928,
+     "centre_south",
+     "barley",
+     "production"
+    ],
+    "sgt1929",
+    "1380000",
+    "sgt1930",
+    "1330000"
+   ],
+   [
+    [
+     1935,
+     "north",
+     "barley",
+     "area"
+    ],
+    "sgt1935",
+    "150000",
+    "sgt1936",
+    "450000"
+   ]
+  ],
+  "flagged": [
+   "sgt1930 1930 north / barley / production = 350000 (total_mismatch)",
+   "sgt1935 1935 north / barley / area = 150000 (reprint_corrected)"
+  ],
+  "editions": [
+   "sgt1926",
+   "sgt1927",
+   "sgt1928",
+   "sgt1929",
+   "sgt1930",
+   "sgt1935",
+   "sgt1936",
+   "sgt1939"
+  ]
+ },
+ "_chapter_views": {
+  "sgt1922": [
+   231,
+   280
+  ],
+  "sgt1923": [
+   721,
+   770
+  ],
+  "sgt1924": [
+   1217,
+   1274
+  ],
+  "sgt1925": [
+   287,
+   342
+  ],
+  "sgt1926": [
+   803,
+   852
+  ],
+  "sgt1927": [
+   259,
+   314
+  ],
+  "sgt1928": [
+   783,
+   842
+  ],
+  "sgt1929": [
+   261,
+   320
+  ],
+  "sgt1930": [
+   795,
+   856
+  ],
+  "sgt1935": [
+   139,
+   154
+  ],
+  "sgt1936": [
+   100,
+   115
+  ],
+  "sgt1939": [
+   99,
+   114
+  ]
+ },
+ "_survey": {
+  "sgt1922": "f231 chapter XI title (Agriculture); f232 blank; f233 Superficie a)-d) [transcribed]; f234|f235 Productions végétales, cultures diverses, superficie et production (1913-1922) a) céréales [transcribed]; f236|f237 b) autres plantes alimentaires, c) plantes industrielles [transcribed]; f238|f239 d) plantes arbustives [transcribed]; f240|f241 Principales cultures, rendement et répartition a) blé (1914-1922; surfaces ensemencées, imposées, non imposées, by yield class, européennes / indigènes); f242|f243 b) orge; f244|f245 c) avoine; f246|f247 d)-f) (fèves, maïs, sorgho); f248|f249 g) pois chiches (h) lin); f250|f251 i) vigne, répartition des viticulteurs par contrôle et par nationalité; f252 j) oliviers, répartition par caïdat; f253 Forêts a) superficie des terrains domaniaux boisés, délimitations (1903-1922); f254 b) produits forestiers (adjudications); f255-f259 Météorologie a) relevé pluviométrique de l'année agricole 1921-1922 (pluies par saison, by station); f260-f269 b) relevé pluviométrique de l'année solaire (mm and days per month, by station); f270|f271 c) données climatologiques 1922 par région; f272|f273 d) statistique thermométrique 1911-1920; f274 École coloniale d'agriculture a) lieu d'origine des élèves (1898-1922); f275 b) promotions; f276 c) effectif par année scolaire; f277 Service botanique a) essais de variétés nouvelles (1912-1922); f278 b) vente de semences pédigrées (1910-1922); f279 c) ventes d'arbres et de plantes (1917-1922); f280 blank. f281 = chapter XII Commerce et navigation.",
+  "sgt1923": "f721 title; f722 blank; f723 Superficie [transcribed]; f724|f725, f726|f727, f728|f729 cultures diverses 1914-1923 [transcribed]; f730|f731 principales cultures a) blé (1915-1923); f732|f733 b) orge; f734|f735 c) avoine (1918-1923); f736|f737 e) sorgho...; f738|f739 g) pois chiches (1919-1923); f740|f741 i) vigne par contrôle et nationalité; f742 l) oliviers par caïdat; f743 forêts a) (1903-1923); f744 b) produits forestiers; f745-f749 météorologie a) année agricole 1922-1923; f750-f759 b) année solaire; f760|f761 c) données climatologiques 1923; f762-f764 d) pluviométrie agricole 1900-1901 à 1919-1920 (moyennes par période quinquennale); f765-f767 école coloniale a)-c) (1898-1923); f768-f770 service botanique a)-c). f771 = chapter XII.",
+  "sgt1924": "f1217 title; f1218 blank; f1219 Superficie [transcribed]; f1220-f1225 cultures diverses 1915-1924 [transcribed]; f1226-f1241 principales cultures a) blé ... (eight two-page spreads, 1915/1918/1919-1924; f1240 without OCR); f1242|f1243 i) vigne par contrôle et nationalité; f1244 j) oliviers par caïdat; f1245 forêts a) (1903-1924); f1246 b); f1247-f1251 météorologie a) 1923-1924; f1252-f1263 b) année solaire; f1264|f1265 c); f1266-f1268 d) moyennes pluviométriques 1911-1920; f1269-f1271 école coloniale a)-c); f1272-f1274 service botanique a)-c). f1275 = chapter XII.",
+  "sgt1925": "f287 title; f288 blank; f289 Superficie [transcribed]; f290|f291 cultures diverses a) céréales 1° Tunisie septentrionale et Hauts plateaux [transcribed]; f292|f293 2° Tunisie centrale et méridionale [transcribed]; f294|f295 b), c) [transcribed]; f296|f297 d) [transcribed]; f298|f299 principales cultures a) blé (1921-1925); f300|f301 by zone (Tunisie septentrionale / centrale et méridionale); f302|f303 c) avoine...; f304|f305 i) vigne par régions et nationalité; f306 oliviers par régions; f307 forêts a) (1903-1925); f308 b); f309-f315 météorologie a) 1924-1925; f316-f329 b) année solaire; f330|f331 c); f332-f334 pluviométrie agricole 1900-1901 à 1924-1925; f335-f337 Institutions d'enseignement et de recherches: école coloniale a)-c); f338-f340 service botanique a)-c); f341 laboratoire de chimie, analyses effectuées; f342 blank. f343 = chapter XII.",
+  "sgt1926": "f803 title; f804 blank; f805 Superficie [transcribed]; f806-f811 cultures diverses 1917-1926 [transcribed]; f812|f813 principales cultures a) céréales, rendement par zone (Nord, Centre et Sud, 1917-1926); f814|f815 b) céréales, répartition de la superficie entre européens et indigènes; f816 d) oliviers par régions; f817 forêts a) (1903-1926); f818 b); f819-f825 météorologie a) 1925-1926; f826-f839 b); f840|f841 c); f842-f845 d) températures moyennes et extrêmes 1901-1925; f846-f848 école coloniale a)-c); f849|f850 service botanique a) semences, b) arbres; f851 laboratoire de chimie; f852 blank. f853 = chapter XII.",
+  "sgt1927": "f259 title; f260 blank; f261 Superficie [transcribed]; f262-f267 cultures diverses 1918-1927 [transcribed]; f268|f269 principales cultures a) rendement par zone (1918-1927); f270|f271 b) répartition européens / indigènes; f272|f273 d) oliviers par régions; f274-f279 Animaux a) nombre d'animaux de chaque espèce des européens, b) des indigènes, c) total (by contrôle civil); f280 forêts a); f281 b); f282-f287 météorologie a) 1926-1927; f288-f303 b); f304|f305 c); f306|f307 d) 1901-1925; f308-f310 école coloniale; f311|f312 service botanique; f313 laboratoire de chimie; f314 blank. f315 = chapter XII.",
+  "sgt1928": "f783 title; f784 blank; f785 Superficie [transcribed]; f786-f791 cultures diverses 1919-1928 [transcribed; f787, f789 without OCR]; f792|f793 principales cultures a) rendement par zone; f794|f795 b) répartition; f796|f797 d) oliviers par régions; f798-f803 animaux a)-c); f804 forêts a); f805 b); f806-f812 météorologie a) 1927-1928; f813-f829 b); f830|f831 c); f832-f835 humidité relative 1901-1925; f836-f838 école coloniale; f839|f840 service botanique; f841 laboratoire de chimie; f842 blank. f843 = chapter XII.",
+  "sgt1929": "f261 title; f262 blank; f263 Superficie [transcribed]; f264-f269 cultures diverses 1920-1929 [transcribed]; f270|f271 principales cultures a); f272|f273 b); f274|f275 d) oliviers par régions; f276-f281 animaux a)-c); f282 forêts a); f283 b); f284-f290 météorologie a) 1928-1929; f291-f309 b); f310|f311 c) (année 1929); f312 station centrale de la Manoubia (année 1929); f313-f315 école coloniale; f316|f317 service botanique; f318 laboratoire de chimie (Tunis); f319 (Sfax); f320 blank. f321 = chapter XII.",
+  "sgt1930": "f795 title; f796 blank; f797 Superficie [transcribed]; f798-f803 cultures diverses 1921-1930 [transcribed]; f804|f805 principales cultures a); f806|f807 b); f808|f809 d) oliviers par régions; f810-f815 animaux a)-c); f816 forêts a); f817 b); f818-f825 météorologie a) 1929-1930; f826-f843 b) année 1930; f844|f845 c); f846-f849 pluies moyennes 1926-1930 et 1901-1930; f850-f852 école coloniale; f853|f854 service botanique; f855 laboratoire de chimie (Tunis); f856 (Sfax). f857 = chapter XII.",
+  "sgt1935": "f139 chapter XI title; f140 blank; f141 Superficie [transcribed]; f142 cultures diverses a) (1933-1935) [transcribed]; f143 b), c) [transcribed]; f144 d) [transcribed]; f145 principales cultures a) rendement par zone (1933-1935); f146|f147 b) répartition européens / indigènes; f148|f149 d) oliviers par régions; f150|f151 animaux, nombre total (européens et tunisiens) by contrôle; f152 blank?; f153 forêts a) superficie et modifications du domaine soumis au régime forestier; f154 blank. f155 = chapter XII Institutions d'enseignement et de recherches (with the school, the laboratories and the meteorology: research_ chapter).",
+  "sgt1936": "f100 chapter X title; f101 blank; f102 Superficie [transcribed]; f103-f105 cultures diverses (1934-1936) [transcribed]; f106 rendement par zone; f107|f108 répartition européens / indigènes; f109|f110 oliviers par régions; f111|f112 dattiers, relevé par caïdat du nombre d'arbres d'après leur âge au 1er novembre 1936; f113|f114 animaux jeunes et imposables (rôle de 1936) by contrôle; f115 forêts, consistance du domaine soumis au régime forestier. f116 = chapter XI Institutions d'enseignement et de recherches (Institut Pasteur, Institut Arloing, école coloniale, service botanique, laboratoires, f123-f144 relevé pluviométrique 1936); f146 = chapter XII Commerce. The range 100-145 of CHAPTERS.md is 100-115 for Agriculture.",
+  "sgt1939": "f99 chapter X title; f100 Superficie [transcribed]; f101 céréales (1937-1939) [transcribed]; f102 autres plantes alimentaires, plantes industrielles [transcribed]; f103|f104 cultures arbustives et fruitières [transcribed]; f105 rendement par zone; f106|f107 répartition européens / indigènes; f108|f109 oliviers par régions; f110|f111 dattiers par caïdat; f112|f113 animaux (rôle de 1939?); f114 forêts, consistance du domaine soumis au régime forestier. f115 = chapter XI Institutions d'enseignement et de recherches."
+ },
+ "_not_transcribed": "Transcribed (every printing, every cell read on native-resolution crops): Superficie (agriculture_land) and Cultures diverses (agriculture_crops), all 12 editions; cereal yields by zone (agriculture_cereal_zones, sgt1926-sgt1939). NOT YET TRANSCRIBED (views in the survey above): principales cultures of sgt1922-sgt1925 (by tax class / yield class, européennes and indigènes, sgt1925 by zone) and the répartition de la superficie entre européens et indigènes (sgt1926-sgt1939); vigne by contrôle and nationality (sgt1922-sgt1925); oliviers by caïdat / région (all editions); animaux by contrôle (sgt1927-sgt1939); dattiers by caïdat (sgt1936, sgt1939); forêts a) and b) (all editions); météorologie (sgt1922-sgt1930); école coloniale d'agriculture, service botanique, laboratoires de chimie (sgt1922-sgt1930)."
+}

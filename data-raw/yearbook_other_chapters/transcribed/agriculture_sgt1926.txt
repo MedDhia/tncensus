@@ -1,0 +1,234 @@
+# Agriculture chapter (chapitre XI), sgt1926 (volume bpt6k9105650k, views 803-852). Format: see yb_tables.py.
+# Every cell read on native-resolution crops of the page images (Gallica OCR used only to locate the lines).
+# Row codes are decoded in extract_agriculture.py.
+
+# SUPERFICIE. a) Superficie territoriale; b) Répartition en superficie productive et improductive; c) Répartition de
+# la superficie productive; d) Répartition de la superficie labourable. f805 (p. 241).
+@land_a view=805 page=241 year=1926
+img: all
+cols: value
+area_km2 | 125180
+inhabitants | 2093939
+density | 16.72
+
+@land_b view=805 page=241 year=1926
+img: all
+cols: ha pct
+productive | 9000000 72.00
+unproductive | 3500000 28.00
+Total | 12500000 100
+
+@land_c view=805 page=241 year=1926
+img: all
+cols: ha pct
+arable | 2859100 31.8
+meadows | 100000 1.1
+tree_crops | 392000 4.3
+forest | 1073900 11.9
+rangeland | 4575000 50.9
+Total | 9000000 100
+
+@land_d view=805 page=241 year=1926
+img: all
+cols: ha pct
+cereals | 1371220 48
+fodder | 30000 1
+food_plants | 47230 1.65
+industrial_plants | 4500 0.15
+other_products | 120000 4.2
+fallow | 1286150 45
+Total | 2859100 100
+
+# PRODUCTIONS VÉGÉTALES. CULTURES DIVERSES : SUPERFICIE ET PRODUCTION (1917-1926). Spreads f806|f807 (a, whole
+# Tunisia again; surface and production only - footnote (1): the yield of the cereals varies too much from one
+# zone to another (Nord, Centre et Sud) for an overall average; it is given per zone in the next table),
+# f808|f809 (b, c), f810|f811 (d). Left page 1917-1921 (1921 next to the binding), right page 1922-1926 and
+# MOYENNE DES ANNÉES 1917-1921, 1922-1926, 1917-1926 (m columns, checks only). Faint printing, read on zoomed
+# crops (broken 0s print as ")": 1923 maïs production "6).000" = 60.000). Asterisks: provisional (1926, and
+# some averages of d). The 1924 column is printed in bold.
+@crops_a view=806 page=242 years=1917-1921
+img: all
+cols: 1917 1918 1919 1920 1921
+durum_area | 555075 593642 513110 481786 570031
+durum_prod | 1650000 2693000 1450000 1075000 2098500
+soft_area | 30717 55466 55000 52000 37000
+soft_prod | 340000 557000 450000 348000 340000
+barley_area | 478849 573738 447735 375100 497828
+barley_prod | 1700000 2850000 1200000 570000 2500000
+oats_area | 61803 65515 55777 60760 66646
+oats_prod | 580000 620000 450000 215000 600000
+maize_area | 18800 14500 18361 10145 22177
+maize_prod | 90000 78000 65000 28000 90000
+
+@crops_a view=807 page=243 years=1922-1926
+img: all
+cols: 1922 1923 1924 1925 1926 m1917_1921 m1922_1926 m1917_1926
+durum_area | 393910 598997 433139 589677 671668 542729 537478 540103
+durum_prod | 800000 2350000 1040000 2500000 2900000 1793300 1918000 1885650
+soft_area | 40000 51000 51429 68000 73000 46036 56685 51361
+soft_prod | 200000 350000 360140 700000 650000 407000 452028 429514
+barley_area | 296849 490637 301758 503830 570305 474650 432675 453662
+barley_prod | 400000 2500000 550000 1500000 1920000 1764000 1374000 1569000
+oats_area | 51037 49644 46743 40733 38491 62100 45329 53714
+oats_prod | 140000 400000 230000 400000 310000 493000 296000 394500
+maize_area | 6565 17974 16645 22648 17756 16796 16317 16556
+maize_prod | 8000 60000 52000 57000 32000 70200 41800 56000
+
+@crops_b view=808 page=244 years=1917-1921
+img: all
+cols: 1917 1918 1919 1920 1921
+beans_area | 17700 17900 28484 22440 23513
+beans_prod | 115000 200000 107000 68000 141000
+beans_yield | 6.4 11.1 3.7 3.0 6.0
+chickpeas_area | 4600 5986 6439 6862 6980
+chickpeas_prod | 20000 30000 25000 20000 35000
+chickpeas_yield | 4.3 5.0 3.8 2.9 5
+potatoes_area | 500 1000 750 1180 1000
+potatoes_prod | 25000 60000 37500 40000 40000
+potatoes_yield | 50 60 50 36 40
+
+@crops_b view=809 page=245 years=1922-1926
+img: all
+cols: 1922 1923 1924 1925 1926 m1917_1921 m1922_1926 m1917_1926
+beans_area | 22403 24834 28710 39584 39846 22007 31075 26541
+beans_prod | 48000 300000 215000 400000 260000 126200 244600 185400
+beans_yield | 2.1 12.0 7.5 10.1 6.5 5.7 7.8 6.9
+chickpeas_area | 1636 3734 4651 6182 6384 6173 4517 5345
+chickpeas_prod | 2000 15000 10700 32200 28000 26000 17580 21790
+chickpeas_yield | 1.2 4.0 2.3 5.2 4.3 4.2 3.8 4
+potatoes_area | 1050 1000 1050 1100 1000 886 1040 963
+potatoes_prod | 45000 40000 38400 44000 40000 40500 43480 41990
+potatoes_yield | 42 40 36.5 40 40 45.8 41.8 43.6
+
+@crops_c view=808 page=244 years=1917-1921
+img: all
+cols: 1917 1918 1919 1920 1921
+flax_area | 2200 2200 3262 3366 3730
+flax_prod | 12000 14000 14000 8500 15000
+flax_yield | 5.4 6.3 4.3 2.5 4.0
+tobacco_area | 109 186 237 254 371
+tobacco_prod | 1710 2195 2850 3044 4851
+tobacco_yield | 15.6 11.8 12.0 11.9 13.0
+
+@crops_c view=809 page=245 years=1922-1926
+img: all
+cols: 1922 1923 1924 1925 1926 m1917_1921 m1922_1926 m1917_1926
+flax_area | 1962 1747 2126 2605 2720 2951 2232 2592
+flax_prod | 2000 6900 4300 10500 9500 12700 6640 9670
+flax_yield | 1.0 3.9 2.0 4 3.5 4.3 2.9 3.7
+tobacco_area | 278 379 344 443 343 231 357 294
+tobacco_prod | 3273 3327 3884 5500 3914 2930 3979 3455
+tobacco_yield | 11.7 8.7 11.2 12.4 11.4 12.6 11.1 11.7
+
+# d) Footnotes: (1) Le vignoble musulman, planté en cépages de table, couvre environ 2.200 ha; scattered in many
+# small plots, it is not counted and is not in this table. (2) The yield is computed from the production of the
+# vineyard more than 3 years old. (3) [en production] Oliviers de 15 ans et plus. (4) Pieds imposables (Dégla and,
+# from this edition, Autres). The 1925 autres dattiers production is printed with a broken first digit (":52.000"):
+# 352.000 from the printed 1922-1926 average 351.600 (and sgt1925 prints 352.000).
+@crops_d view=810 page=246 years=1917-1921
+img: all
+cols: 1917 1918 1919 1920 1921
+vine_area | 21309 22608 23246 23414 23621
+vine_wine | 432200 608106 444157 498148 283509
+vine_grapes | 42000 51000 46000 50000 40000
+vine_yield | 20.2 26.8 19.1 21.2 12.0
+olive_trees | 11730924 11711278 11907007 12008043 13412200
+olive_bearing | 7623941 7605485 8138732 8137181 8432502
+olive_oil | 150000 390000 165000 450000 340000
+olive_pomace | 20000 50000 20500 60000 48000
+carob_trees | 20000 20000 20000 20000 20300
+carob_prod | 9000 12000 12000 8000 17000
+almond_trees | 200000 210000 214000 216000 216500
+almond_prod | 26000 22000 27600 24000 35000
+degla_trees | 52375 52371 60097 60097 60057
+degla_prod | 12000 15000 14000 15000 16000
+otherdates_trees | 982285 982076 975055 975035 975017
+otherdates_prod | 410000 385000 350000 335000 415000
+orange_trees | 61000 61000 63000 64500 66000
+orange_prod | 14000 13500 14500 14000 15200
+lemon_trees | 50000 50000 51000 51500 52000
+lemon_prod | 11000 12000 12500 11000 13000
+
+@crops_d view=811 page=247 years=1922-1926
+img: all
+cols: 1922 1923 1924 1925 1926 m1917_1921 m1922_1926 m1917_1926
+vine_area | 23706 26895 28086 27986 27396 22839 26814 24826
+vine_wine | 618000 781381 839035 918853 736839 453224 778821 616022
+vine_grapes | 52000 58000 60000 60000 54000 45800 56800 51300
+vine_yield | 26.3 33.0 35.5 38.8 27.4 19.8 32.2 26
+olive_trees | 15109295 15260037 15654347 16060037 16181744 12193890 15653092 13923491
+olive_bearing | 10039474 10039474 10056049 10061401 10592012 7987568 10157682 9072625
+olive_oil | 180000 220000 220000 340000 400000 299000 272000 285500
+olive_pomace | 20000 35000 34000 36000 38000 39700 32200 35950
+carob_trees | 20500 20600 20600 20700 20700 20060 20620 20340
+carob_prod | 8000 19000 23000 28000 9000 11600 17400 14500
+almond_trees | 220000 221000 221000 225000 225000 211300 222400 216850
+almond_prod | 16000 19000 13000 18500 19000 26920 17100 22010
+degla_trees | 60057 60049 60049 69701 69693 56999 63909 60454
+degla_prod | 15500 14000 16800 18000 10000 14400 14860 14630
+otherdates_trees | 974987 974202 974128 1138283 1138071 977893 1039934 1008914
+otherdates_prod | 340000 346000 340000 352000 380000 379000 351600 365300
+orange_trees | 66900 67000 67800 68000 68000 63100 67540 65320
+orange_prod | 13800 14400 14000 14200 11500 14240 13580 13910
+lemon_trees | 52000 52000 52000 52000 52500 50900 52100 51500
+lemon_prod | 11000 10500 10000 10000 9000 11900 10100 11000
+
+# PRINCIPALES CULTURES : RENDEMENT ET RÉPARTITION (1917-1926). a) Céréales (blé dur, tendre, orge, avoine) -
+# Rendement par zone (Nord, Centre et Sud). Spread f812|f813: left page 1917-1920, right page 1921-1926 and
+# MOYENNE DES ANNÉES 1917-1921, 1922-1926, 1917-1926 (m columns, checks only). Rows: <crop>_<zone>_<measure>,
+# zone N = Nord, CS = Centre et Sud. Faint print; every cell read on zoomed crops.
+@zones view=812 page=248 years=1917-1920
+img: all
+cols: 1917 1918 1919 1920
+durum_N_area | 309617 303368 278339 291126
+durum_N_prod | 1150000 1673000 1100000 995000
+durum_N_yield | 3.6 5.5 3.9 3.4
+durum_CS_area | 245458 290274 234771 190660
+durum_CS_prod | 500000 1020000 350000 80000
+durum_CS_yield | 2 3.5 1.5 0.4
+soft_N_area | 30237 54906 54500 51520
+soft_N_prod | 336000 551950 448000 346660
+soft_N_yield | 11.1 10 8.1 6.7
+soft_CS_area | 480 560 500 480
+soft_CS_prod | 4000 5050 2000 1340
+soft_CS_yield | 8.3 9 4 3
+barley_N_area | 186897 193006 180537 155475
+barley_N_prod | 880000 1325000 770000 475000
+barley_N_yield | 4.7 6.8 4.2 3
+barley_CS_area | 291952 380732 267197 219626
+barley_CS_prod | 820000 1525000 430000 95000
+barley_CS_yield | 2.8 4 1.8 0.4
+oats_N_area | 57803 56263 50315 55876
+oats_N_prod | 552000 546000 425400 214500
+oats_N_yield | 9.5 9.7 8.4 3.8
+oats_CS_area | 4000 9252 5461 4884
+oats_CS_prod | 28000 74000 24600 500
+oats_CS_yield | 7 8 4.5 0.1
+
+@zones view=813 page=249 years=1921-1926
+img: all
+cols: 1921 1922 1923 1924 1925 1926 m1917_1921 m1922_1926 m1917_1926
+durum_N_area | 305396 300778 313405 334581 329674 370921 297569 329871 313720
+durum_N_prod | 1303000 775500 1775000 1030000 2200000 2342000 1244200 1624500 1434350
+durum_N_yield | 4.2 2.5 5.6 3 6.6 6.3 4.2 4.8 4.5
+durum_CS_area | 264634 93132 285592 98558 260003 300747 245159 207606 226382
+durum_CS_prod | 795000 24500 575000 10000 300000 558000 549000 293500 421250
+durum_CS_yield | 3 0.2 1.2 0.1 1.1 1.8 2.2 1.4 1.8
+soft_N_area | 36550 39540 50400 50749 67040 71900 45542 55925 50734
+soft_N_prod | 336850 199500 347000 360000 695200 644500 403892 449240 426566
+soft_N_yield | 9.4 5 6.8 7 10.3 8.9 8.8 8 8.4
+soft_CS_area | 450 460 600 680 960 1100 494 760 627
+soft_CS_prod | 3150 500 3000 140 4800 5500 3108 2788 2948
+soft_CS_yield | 7 1 5 0.2 5 5 6.3 3.6 4.7
+barley_N_area | 155031 151215 153772 163234 178841 207589 174189 170930 172559
+barley_N_prod | 1300000 355000 1090000 520000 900000 1100000 950000 793000 871500
+barley_N_yield | 7.8 2.3 7 3.4 5 5.3 5.4 4.6 5
+barley_CS_area | 342799 145635 336865 138526 324989 362716 300461 261746 280903
+barley_CS_prod | 1200000 45000 1410000 30000 600000 820000 814000 581000 697500
+barley_CS_yield | 3.6 0.3 4.2 0.2 1.8 2.2 2.7 2.2 2.4
+oats_N_area | 59392 48294 46624 44516 36837 34359 55929 42126 49027
+oats_N_prod | 549200 137200 380000 229000 394000 298000 457420 287640 372530
+oats_N_yield | 9.6 2.8 8.1 5.1 10.7 8.6 8.1 6.8 7.5
+oats_CS_area | 7254 2743 3020 2227 3896 4132 6170 3203 4686
+oats_CS_prod | 50800 2800 20000 1000 6000 12000 35580 8360 21970
+oats_CS_yield | 7 0.1 6.6 0.4 1.5 2.9 5.7 2.6 4.6

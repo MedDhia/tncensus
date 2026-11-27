@@ -1,0 +1,188 @@
+# Agriculture chapter (chapitre XI), sgt1922 (volume bpt6k9105649x, views 231-280). Format: see yb_tables.py.
+# Every cell read on native-resolution crops of the page images (Gallica OCR used only to locate the lines).
+# Row codes are decoded in extract_agriculture.py.
+
+# SUPERFICIE. a) Superficie territoriale; b) Répartition en superficie productive et improductive; c) Répartition de
+# la superficie productive; d) Répartition de la superficie labourable. f233 (p. 209).
+@land_a view=233 page=209 year=1922
+img: all
+cols: value
+area_km2 | 125130
+inhabitants | 2093939
+density | 16.72
+
+@land_b view=233 page=209 year=1922
+img: all
+cols: ha pct
+productive | 9000000 72.00
+unproductive | 3500000 28.0
+Total | 12500000 100
+
+@land_c view=233 page=209 year=1922
+img: all
+cols: ha pct
+arable | 2820000 31.3
+meadows | 100000 1.1
+tree_crops | 380000 4.1
+forest | 1090000 11.1
+rangeland | 4610000 52.4
+Total | 9000000 100
+
+# d) the jachères cell is printed 1.947.136 (confirmed on a zoomed crop): the parts then sum to 2.920.000, not the
+# printed 2.820.000, and the printed 65,5 % fits 1.847.136.
+@land_d view=233 page=209 year=1922
+img: all
+cols: ha pct
+cereals | 788364 27.9
+fodder | 30000 1.1
+food_plants | 30500 1.1
+industrial_plants | 4000 0.1
+other_products | 120000 4.3
+fallow | 1947136 65.5
+Total | 2820000 100
+
+# PRODUCTIONS VÉGÉTALES. CULTURES DIVERSES ; SUPERFICIE ET PRODUCTION (1913-1922). Spreads f234|f235, f236|f237,
+# f238|f239: the left page prints 1913-1917, the right page 1918-1922 and the averages 1913-1917, 1918-1922,
+# 1913-1922 (columns m..., used as checks only). The 1917 column runs into the binding: read on zoomed crops of both
+# halves of the spread (stored on the left page). Asterisks mark provisional figures (all in 1922).
+# a) Céréales. 1913-1915: blé dur and blé tendre printed as one bracketed figure (wheat_*).
+@crops_a view=234 page=210 years=1913-1917
+img: all
+cols: 1913 1914 1915 1916 1917
+wheat_area | 614616 405965 547641 - -
+wheat_prod | 2220000 600000 2250000 - -
+wheat_yield | 3.6 1.4 4.1 - -
+durum_area | - - - 574529 555075
+durum_prod | - - - 1310000 1650000
+durum_yield | - - - 2.2 2.9
+soft_area | - - - 25500 30717
+soft_prod | - - - 190000 340000
+soft_yield | - - - 7.4 11
+barley_area | 556434 318679 447195 498906 478849
+barley_prod | 2050000 700000 2300000 1070000 1700000
+barley_yield | 3.7 2.1 5.1 2.1 3.5
+oats_area | 55000 40000 60000 66248 61803
+oats_prod | 524000 149000 640000 360000 580000
+oats_yield | 9.5 3.7 8.0 4.6 9.3
+maize_area | 10000 18000 23000 16100 18800
+maize_prod | 30000 20000 70000 33000 90000
+maize_yield | 2 1.1 3.0 2.1 4.7
+
+@crops_a view=235 page=211 years=1918-1922
+img: all
+cols: 1918 1919 1920 1921 1922 m1913_1917 m1918_1922 m1913_1922
+durum_area | 593642 514861 481766 566609 393910 539559 510157 514858
+durum_prod | 2693600 1450000 1075000 2098500 800000 1606000 1663420 1634710
+durum_yield | 4.5 2.8 2.2 3.7 2.0 2.8 3.2 3.1
+soft_area | 55466 55000 52000 37000 40000 - 47893 -
+soft_prod | 557000 450000 348000 340000 200000 - 379000 -
+soft_yield | 10 8.1 6.6 9.9 5 - 7.9 -
+barley_area | 573738 447735 375100 497046 296849 460012 438093 449153
+barley_prod | 2850000 1200000 570000 2500000 400000 1782000 1504000 1534000
+barley_yield | 4.9 2.6 1.5 5.0 1.3 3.3 3.0 3.1
+oats_area | 65515 55777 60760 64146 51037 56210 59447 58028
+oats_prod | 620000 450000 215000 600000 140000 450600 405000 427800
+oats_yield | 9.4 8.0 3.5 9.3 2.7 7.0 6.5 6.8
+maize_area | 14500 18361 10145 22161 6565 17180 14346 15763
+maize_prod | 78000 65000 28000 90000 8000 48600 53800 51200
+maize_yield | 5.3 3.5 2.7 4 1.2 2.5 3.3 2.9
+
+# b) Autres plantes alimentaires (fèves, pois chiches, pommes de terre); c) Plantes industrielles (lin, tabac).
+# Averages printed » where a crop has no figures for part of the period ('-' here). 1917 cut by the binding:
+# pommes de terre surface "50.", tabac surface "10." and production "1.71." are illegible (later editions print 1917).
+@crops_b view=236 page=212 years=1913-1917
+img: all
+cols: 1913 1914 1915 1916 1917
+beans_area | 14500 11500 12500 16000 17700
+beans_prod | 92000 29000 67000 58000 115000
+beans_yield | 6.3 2.5 5.3 3.6 6.4
+chickpeas_area | 0 0 0 4000 4600
+chickpeas_prod | 0 0 0 18000 20000
+chickpeas_yield | 0 0 0 4.5 4.3
+potatoes_area | 0 0 0 450 ?
+potatoes_prod | 0 0 0 22000 25000
+potatoes_yield | 0 0 0 48 50
+
+@crops_b view=237 page=213 years=1918-1922
+img: all
+cols: 1918 1919 1920 1921 1922 m1913_1917 m1918_1922 m1913_1922
+beans_area | 17900 28484 22440 23477 22403 14400 22940 18690
+beans_prod | 200000 107000 68000 141000 48000 72600 112800 92700
+beans_yield | 11.1 3.7 3.0 6 2.1 3.0 5.1 4.1
+chickpeas_area | 5986 6439 6862 6954 1636 - 5575 -
+chickpeas_prod | 30000 25000 20000 35000 2000 - 22400 -
+chickpeas_yield | 5.00 3.8 2.9 5 1.2 - 3.5 -
+potatoes_area | 1000 750 1180 1000 1050 - 996 -
+potatoes_prod | 60000 37500 40000 40000 45000 - 44500 -
+potatoes_yield | 60 50 36 40 42 - 45.600 -
+
+@crops_c view=236 page=212 years=1913-1917
+img: all
+cols: 1913 1914 1915 1916 1917
+flax_area | - - - 2000 2200
+flax_prod | 19900 5700 14100 4100 12000
+flax_yield | - - - 2.05 5.4
+tobacco_area | 101 120 127 112 ?
+tobacco_prod | 1190 1707 1714 1487 ?
+tobacco_yield | 11.8 14.2 13.4 13.2 15.6
+
+@crops_c view=237 page=213 years=1918-1922
+img: all
+cols: 1918 1919 1920 1921 1922 m1913_1917 m1918_1922 m1913_1922
+flax_area | 2200 3262 3366 3715 1939 - 2896 -
+flax_prod | 14000 14000 8500 15000 2000 - 11160 -
+flax_yield | 6.3 4.3 2.5 4.0 1.0 - 3.6 -
+tobacco_area | 186 237 254 371 278 113.80 265.40 189.50
+tobacco_prod | 2195 2850 3044 4851 3273 1561 3242 2402
+tobacco_yield | 11.8 12.0 11.9 13.0 11.7 13.06 12.0 12.8
+
+# d) Plantes arbustives (vigne, oliviers, caroubiers, amandiers, dattiers, orangers, citronniers). Dattiers: Dégla
+# pieds (1) = pieds imposables. The 1917 orge surface ends in a blurred digit, read 9 (the printed average 460.012
+# needs 478.846-478.850).
+@crops_d view=238 page=214 years=1913-1917
+img: all
+cols: 1913 1914 1915 1916 1917
+vine_area | 17942 17500 19166 20666 21309
+vine_wine | 300000 200000 125000 450000 432200
+vine_grapes | 0 0 0 0 42000
+vine_yield | 16.6 11.4 6.5 21.7 20.2
+olive_trees | 11722599 11756073 11774237 11750910 11730924
+olive_bearing | 7621567 7649253 7663301 7642163 7623941
+olive_oil | 284838 146176 178507 554480 150000
+olive_pomace | 55810 5730 25698 75000 20000
+carob_trees | 0 0 0 20000 20000
+carob_prod | 0 0 0 11300 9000
+almond_trees | 0 0 0 200000 200000
+almond_prod | 9800 2700 11200 18000 26000
+degla_trees | 52375 52375 52376 52376 52375
+degla_prod | 11346 8023 8000 12000 12000
+otherdates_trees | 982465 982465 982428 982315 982285
+otherdates_prod | 360018 139320 139300 210000 410000
+orange_trees | 0 0 0 61000 61000
+orange_prod | 0 0 0 12000 14000
+lemon_trees | 0 0 0 50000 50000
+lemon_prod | 0 0 0 12000 11000
+
+@crops_d view=239 page=215 years=1918-1922
+img: all
+cols: 1918 1919 1920 1921 1922 m1913_1917 m1918_1922 m1913_1922
+vine_area | 22608 23246 23414 23621 23706 19316 23319 21317
+vine_wine | 608106 444157 498148 283509 618000 301440 490384 395912
+vine_grapes | 51000 46000 50000 40000 52000 - 47800 -
+vine_yield | 26.8 19.1 21.2 12.0 26.3 15.28 21.02 18.57
+olive_trees | 11711278 11907007 12008043 13412200 15109295 11746948 12829564 12287256
+olive_bearing | 7605485 8138732 8137181 8432502 10039474 7640045 8670674 8155359
+olive_oil | 390000 165000 450000 340000 180000 262800 305000 283900
+olive_pomace | 50000 20500 60000 48000 20000 20160 39700 29930
+carob_trees | 20000 20000 20000 20300 20500 - 20160 -
+carob_prod | 12000 12000 8000 17000 8000 - 11400 -
+almond_trees | 210000 214000 216000 216500 220000 - 215300 -
+almond_prod | 22000 27600 24000 35000 16000 13540 24920 19230
+degla_trees | 52371 60097 60097 60057 60057 52376 58535 55455
+degla_prod | 15000 14000 15000 16000 15500 10274 15100 12687
+otherdates_trees | 982076 975055 975035 975017 974987 982391 976434 979412
+otherdates_prod | 385000 350000 335000 415000 340000 251727 365000 308363
+orange_trees | 61000 63000 64500 66000 66900 - 64200 -
+orange_prod | 13500 14500 14000 15200 13800 - 14200 -
+lemon_trees | 50000 51000 51500 52000 52000 - 51200 -
+lemon_prod | 12000 12500 11000 13000 11000 - 11900 -

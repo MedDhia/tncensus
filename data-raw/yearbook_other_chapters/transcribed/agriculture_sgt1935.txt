@@ -1,0 +1,138 @@
+# Agriculture chapter (chapitre XI), sgt1935 (volume bpt6k9105653t, views 139-154). Format: see yb_tables.py.
+# Every cell read on native-resolution crops of the page images (Gallica OCR used only to locate the lines).
+# Row codes are decoded in extract_agriculture.py.
+
+# SUPERFICIE. a) Superficie territoriale; b) Répartition en superficie productive et improductive; c) Répartition de
+# la superficie productive; d) Répartition de la superficie labourable. f141 (p. 121).
+@land_a view=141 page=121 year=1935
+img: all
+cols: value
+area_km2 | 125180
+inhabitants | 2410692
+density | 16.72
+
+@land_b view=141 page=121 year=1935
+img: all
+cols: ha pct
+productive | 9000000 72.00
+unproductive | 3500000 28.00
+Total | 12500000 100
+
+@land_c view=141 page=121 year=1935
+img: all
+cols: ha pct
+arable | 2934000 32.6
+meadows | 100000 1.1
+tree_crops | 400000 4.4
+forest | 1016000 11.28
+rangeland | 4550000 50.5
+Total | 9000000 100
+
+@land_d view=141 page=121 year=1935
+img: all
+cols: ha pct
+cereals | 1412600 48.1
+fodder | 35000 1.2
+food_plants | 30300 1.1
+industrial_plants | 902 0.03
+other_products | 100000 3.4
+fallow | 1355198 45.9
+Total | 2934000 100
+
+# CULTURES DIVERSES : SUPERFICIE ET PRODUCTION (1933-1935). One page per sub-table: f142 a) (surface and
+# production; footnote (1): yields per zone, page 252 [sic]), f143 b) and c), f144 d). Columns 1933, 1934, 1935 and
+# MOYENNE DES ANNÉES 1931-1935, 1926-1935 (m columns, checks only: 1931-1932 are not printed in any edition, so
+# the averages cannot be checked against the years). d): the vine yield is printed for 1933-1934 only ('-' =
+# nothing printed); footnotes (1) arrachage de 2.800 ha effectué en 1935-36 non déduit; vignoble musulman ~4.000
+# ha not counted; (2) oliviers de 15 ans et plus; (3) pieds imposables. The 1935 fèves surface carries an
+# asterisk.
+@crops_a view=142 page=122 years=1933-1935
+img: all
+cols: 1933 1934 1935 m1931_1935 m1926_1935
+durum_area | 600000 668000 680000 705200 677524
+durum_prod | 1700000 2000000 3000000 2560000 2537000
+soft_area | 110000 120000 140000 112000 90100
+soft_prod | 800000 1750000 1600000 1280000 969000
+barley_area | 375000 482000 550000 562400 501000
+barley_prod | 1600000 1500000 3100000 2280000 2061500
+oats_area | 20700 35500 25000 26240 35196
+oats_prod | 100000 200000 180000 218000 286000
+maize_area | 18000 25700 17000 18376 18007
+maize_prod | 60000 70000 60000 59000 54200
+
+@crops_b view=143 page=123 years=1933-1935
+img: all
+cols: 1933 1934 1935 m1931_1935 m1926_1935
+beans_area | 29000 22000 22500 30430 33773
+beans_prod | 250000 175000 220000 255000 275500
+beans_yield | 8.6 7.9 9.8 8.3 8.1
+chickpeas_area | 4200 6300 5284 5184 5536
+chickpeas_prod | 23000 33000 30000 27100 25500
+chickpeas_yield | 5.4 5.2 5.6 5.2 4.6
+potatoes_area | 2000 2000 2200 2040 1740
+potatoes_prod | 60000 60000 65000 59000 56500
+potatoes_yield | 30 30 29.5 28.9 32.4
+
+@crops_c view=143 page=123 years=1933-1935
+img: all
+cols: 1933 1934 1935 m1931_1935 m1926_1935
+flax_area | 500 400 350 1300 1903
+flax_prod | 3000 2000 1800 6100 2155
+flax_yield | 6 5 5.1 4.7 4.2
+tobacco_area | 392 502 436 506 481
+tobacco_prod | 5105 6497 5951 6230 5598
+tobacco_yield | 13 12.9 13.6 12.3 11.6
+
+@crops_d view=144 page=124 years=1933-1935
+img: all
+cols: 1933 1934 1935 m1931_1935 m1926_1935
+vine_area | 50606 50183 44593 47796 40039
+vine_wine | 1420000 1700000 1700000 1448400 1161852
+vine_grapes | 55000 60000 65000 59000 57100
+vine_yield | 35.6 35.8 - - -
+olive_trees | 17122604 17154114 17144421 16986245 16632171
+olive_bearing | 12609764 12698429 11581001 12118964 11673718
+olive_oil | 600000 550000 600000 523000 447500
+olive_pomace | 60000 55000 60000 53000 43800
+carob_trees | 21000 21000 21000 21000 20970
+carob_prod | 16000 16000 16000 15900 15160
+almond_trees | 700000 700000 700000 700000 551100
+almond_prod | 20000 18000 22000 19600 17630
+degla_trees | 79255 79179 79255 78231 75407
+degla_prod | 30000 5000 30000 19000 15700
+otherdates_trees | 1285304 1284789 1285304 1267838 1213868
+otherdates_prod | 260000 60000 360000 206000 270800
+orange_trees | 85000 85000 85000 85000 51250
+orange_prod | 25000 20000 22000 25400 21450
+lemon_trees | 52000 52000 52000 52000 52200
+lemon_prod | 6000 6000 6000 6600 7250
+
+# PRINCIPALES CULTURES : RENDEMENT ET RÉPARTITION (1933-1935). a) Céréales - Rendement par zone (Nord, Centre et
+# Sud). f145 (p. 125): 1933, 1934, 1935 and MOYENNE DES ANNÉES 1931-1935, 1926-1935 (not checkable).
+@zones view=145 page=125 years=1933-1935
+img: all
+cols: 1933 1934 1935 m1931_1935 m1926_1935
+durum_N_area | 400000 362000 330000 389600 395422
+durum_N_prod | 1500000 1700000 1800000 1898000 1969900
+durum_N_yield | 3.5 4.6 5.4 4.8 4.9
+durum_CS_area | 200000 306000 350000 311600 281939
+durum_CS_prod | 200000 300000 1200000 662000 567100
+durum_CS_yield | 1 0.9 3.4 2.1 2
+soft_N_area | 100000 110000 130000 103000 83440
+soft_N_prod | 760000 1700000 1540000 1270000 947650
+soft_N_yield | 7.6 15.4 11.8 12.3 11.3
+soft_CS_area | 10000 10000 10000 9000 5620
+soft_CS_prod | 40000 50000 60000 50000 31350
+soft_CS_yield | 4 5 6 5.5 5.5
+barley_N_area | 140250 145000 150000 156050 173232
+barley_N_prod | 655000 620000 900000 853400 914930
+barley_N_yield | 4.6 4.2 6 5.4 5.2
+barley_CS_area | 234750 337000 390000 344350 326797
+barley_CS_prod | 945000 880000 2200000 1426600 1096570
+barley_CS_yield | 4 2.6 5.6 4.1 3.3
+oats_N_area | 19000 31500 21900 23060 31669
+oats_N_prod | 93000 185000 165500 206980 260990
+oats_N_yield | 4.9 5.8 7.6 8.9 8.2
+oats_CS_area | 1700 3500 3100 3080 3478
+oats_CS_prod | 7000 15000 15000 11120 13060
+oats_CS_yield | 4.1 4.3 4.8 3.6 3.7

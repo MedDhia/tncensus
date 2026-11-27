@@ -260,6 +260,9 @@ Every table is tidy: one row per printed cell. Printed subtotals and totals are 
 | [`colonisation_indigenous_sales`](#colonisation_indigenous_sales) | sales | by edition | 57 | mixed | Definitive sales to Tunisian allottees who fulfilled their development obligations, by year |
 | [`colonisation_regrouping_1935`](#colonisation_regrouping_1935) | regroup;reinstall | by edition | 204 | mixed | Regrouping of colonisation lotissements at 31 December 1935: lots taken back, settlers reinstalled, and reinstallations on properties bought by the Domaine |
 | [`colonisation_fund`](#colonisation_fund) | fund | by edition | 116 | mixed | Colonisation fund: endowments, annual receipts and expenditure, and area of the properties bought (1900-1928) |
+| [`agriculture_land`](#agriculture_land) | land_a;land_b;land_c;land_d | by edition | 348 | mixed | Land area: territorial area and population density; productive and unproductive area; use of the productive area; use of the arable area |
+| [`agriculture_crops`](#agriculture_crops) | crops_a;crops_b;crops_c;crops_d | by edition | 1,492 | mixed | Crop production: area, production and yield of cereals, other food plants, industrial plants and tree crops |
+| [`agriculture_cereal_zones`](#agriculture_cereal_zones) | zones | by edition | 504 | mixed | Cereals (durum and soft wheat, barley, oats): area, production and yield per hectare by zone |
 
 ### eur1906_t1_circonscription_nationality
 
@@ -11967,3 +11970,238 @@ Source `sgt`, table fund, printed pages by edition. 116 rows. Value type: mixed.
 |---|---|---:|
 | `francs` |  | 87 |
 | `hectares` |  | 29 |
+
+### agriculture_land
+
+**Superficie : superficie territoriale ; répartition en superficie productive et improductive ; répartition de la superficie productive ; répartition de la superficie labourable**  
+*Land area: territorial area and population density; productive and unproductive area; use of the productive area; use of the arable area*
+
+Source `sgt`, table land_a;land_b;land_c;land_d, printed pages by edition. 348 rows. Value type: mixed. Flags: (empty) 343, total_mismatch 4, derived_from_totals 1. Notes and validation: [`../yearbook_other_chapters/csv/agriculture_land.md`](../yearbook_other_chapters/csv/agriculture_land.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `part` | Coded dimension. |
+| `part_fr` | Printed French label for `part`. |
+| `item` | Coded dimension. |
+| `item_fr` | Printed French label for `item`. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`part`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `a` | Superficie territoriale | 36 |
+| `b` | Répartition en superficie productive et improductive | 48 |
+| `c` | Répartition de la superficie productive | 120 |
+| `d` | Répartition de la superficie labourable | 144 |
+
+`item`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `arable_land` | Terres labourables | 24 |
+| `artificial_meadows_fodder` | Prairies artificielles et autres cultures fourragères | 24 |
+| `cereals` | Céréales | 24 |
+| `density` | Densité de la population par kilomètre carré | 12 |
+| `fallow_grazed` | Jachères champs pâturés | 24 |
+| `food_plants` | Plantes alimentaires | 24 |
+| `industrial_plants` | Plantes industrielles | 24 |
+| `inhabitants` | Habitants | 12 |
+| `natural_meadows_pasture` | Prairies naturelles et pâturages | 24 |
+| `other_products` | Productions diverses | 24 |
+| `productive` | Superficie productive cultivée et non cultivée | 24 |
+| `rangeland_uncultivated` | Terres de parcours et terres non cultivées productives | 24 |
+| `territorial_area` | Superficie territoriale | 12 |
+| `tree_and_shrub_crops` | Cultures arborescentes et arbustives | 24 |
+| `unproductive` | Superficie improductive | 24 |
+| `woods_forests` | Bois et forêts | 24 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `area` | Hectares | 156 |
+| `percent` | % de la superficie labourable / % de la superficie productive / % de la superficie territoriale | 156 |
+| `value` |  | 36 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `hectares` |  | 156 |
+| `km2` |  | 12 |
+| `percent` |  | 156 |
+| `persons` |  | 12 |
+| `persons_per_km2` |  | 12 |
+
+### agriculture_crops
+
+**Productions végétales. Cultures diverses ; superficie et production**  
+*Crop production: area, production and yield of cereals, other food plants, industrial plants and tree crops*
+
+Source `sgt`, table crops_a;crops_b;crops_c;crops_d, printed pages by edition. 1,492 rows. Value type: mixed. Flags: (empty) 1,488, total_mismatch 2, derived_from_totals 1, illegible 1. Notes and validation: [`../yearbook_other_chapters/csv/agriculture_crops.md`](../yearbook_other_chapters/csv/agriculture_crops.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `zone` | Coded dimension. |
+| `zone_fr` | Printed French label for `zone`. |
+| `crop_group` | Coded dimension. |
+| `crop_group_fr` | Printed French label for `crop_group`. |
+| `crop` | Coded dimension. |
+| `crop_fr` | Printed French label for `crop`. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`zone`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `centre_south` | Tunisie centrale et méridionale (4e et 5e Régions et Territoires militaires) | 150 |
+| `north` | Tunisie septentrionale et Hauts plateaux (1re, 2e et 3e Régions) | 150 |
+| `tunisia` | Tunisie (ensemble) | 1,192 |
+
+`crop_group`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `a` | Céréales | 601 |
+| `b` | Autres plantes alimentaires | 214 |
+| `c` | Plantes industrielles | 136 |
+| `d` | Plantes arbustives | 541 |
+
+`crop`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `almond` | Amandiers | 49 |
+| `apple` | Pommiers | 4 |
+| `apricot` | Abricotiers | 4 |
+| `barley` | Orge | 122 |
+| `broad_beans` | Fèves | 71 |
+| `carob` | Caroubiers | 47 |
+| `chickpeas` | Pois chiches | 65 |
+| `dates_degla` | Dattiers Dégla | 55 |
+| `dates_other` | Dattiers autres / Dattiers communes | 55 |
+| `durum_wheat` | Blé dur | 113 |
+| `fig` | Figuiers | 4 |
+| `flax` | Lin | 65 |
+| `lemon` | Citronniers | 51 |
+| `maize_sorghum` | Maïs et sorgho | 122 |
+| `mandarin` | Mandariniers | 7 |
+| `oats` | Avoine | 122 |
+| `olive` | Oliviers | 102 |
+| `orange` | Orangers | 51 |
+| `peach` | Pêchers | 4 |
+| `pear` | Poiriers | 4 |
+| `peas_chickpeas` | Pois et pois chiches | 6 |
+| `plum` | Pruniers | 4 |
+| `pomegranate` | Grenadiers | 4 |
+| `potatoes` | Pommes de terre | 72 |
+| `quince` | Cognassiers | 4 |
+| `soft_wheat` | Blé tendre | 113 |
+| `tobacco` | Tabac | 71 |
+| `vine` | Vigne | 92 |
+| `wheat` | Blé dur et blé tendre (accolade) | 9 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `area` | Surface | 399 |
+| `olive_oil_production` | Production en huile d'olive | 25 |
+| `pomace_oil_production` | Production en huile de grignons | 25 |
+| `production` | Production | 485 |
+| `table_grape_production` | Production : raisins de table | 22 |
+| `trees` | Nombre (pieds) / Nombre total (pieds) | 163 |
+| `trees_bearing` | En production (pieds) | 34 |
+| `trees_taxable` | Nombre imposable (pieds) / Pieds (1) : pieds imposables | 28 |
+| `trees_young` | Nombre : jeunes (pieds) | 6 |
+| `wine_production` | Production : vin | 25 |
+| `yield_per_hectare` | Rendement à l'hectare / Rendement à l'hectare (en vin) | 280 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `hectares` |  | 399 |
+| `hectolitres` |  | 25 |
+| `hectolitres_per_hectare` |  | 20 |
+| `quintals` |  | 557 |
+| `quintals_per_hectare` |  | 260 |
+| `trees` |  | 231 |
+
+### agriculture_cereal_zones
+
+**Principales cultures : rendement et répartition. a) Céréales (blé dur, tendre, orge, avoine) - Rendement par zone (Nord, Centre et Sud)**  
+*Cereals (durum and soft wheat, barley, oats): area, production and yield per hectare by zone*
+
+Source `sgt`, table zones, printed pages by edition. 504 rows. Value type: mixed. Flags: (empty) 502, total_mismatch 1, reprint_corrected 1. Notes and validation: [`../yearbook_other_chapters/csv/agriculture_cereal_zones.md`](../yearbook_other_chapters/csv/agriculture_cereal_zones.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `zone` | Coded dimension. |
+| `zone_fr` | Printed French label for `zone`. |
+| `crop` | Coded dimension. |
+| `crop_fr` | Printed French label for `crop`. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`zone`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `centre_south` | Centre et Sud | 252 |
+| `north` | Nord | 252 |
+
+`crop`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `barley` | Orge | 126 |
+| `durum_wheat` | Blé dur | 126 |
+| `oats` | Avoine | 126 |
+| `soft_wheat` | Blé tendre | 126 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `area` | Surface | 168 |
+| `production` | Production | 168 |
+| `yield_per_hectare` | Rendement à l'hectare | 168 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `hectares` |  | 168 |
+| `quintals` |  | 168 |
+| `quintals_per_hectare` |  | 168 |
