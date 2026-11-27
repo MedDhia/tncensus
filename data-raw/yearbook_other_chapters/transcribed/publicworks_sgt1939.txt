@@ -1,0 +1,274 @@
+
+@mines_exports view=90 page=84 
+img: all
+cols: mines value
+1930 | 46 88000000
+1931 | 42 38120000
+1932 | 34 13000000
+1933 | 4 11200000
+1934 | 9 20030000
+1935 | 14 16850000
+1936 | 17 27600000
+1937 | 26 86400000
+1938 | 38 116870000
+1939 | 35 80000000
+# Exploitations minières (1939). Plomb, Zinc, Mercure, Fluorine bracketed for concessions, workers, days.
+
+@mines_detail view=90 page=84 year=1939
+img: all
+cols: conc_n conc_ha expl_n expl_ha workers days prod_t value
+Fer | 9 10712 7 8278 2217 560329 764732 84000000
+Plomb-Zinc-Mercure-Fluorine | 49 43254 28 26548 4384 1127350 - -
+Plomb | - - - - - - 28240 36000000
+Zinc | - - - - - - 903 450000
+Mercure | - - - - - - 1983 300000
+Fluorine | - - - - - - 2541 1000000
+Lignites | 0 0 0 0 480 96200 2026 2000000
+Totaux | - - - - - - - 123750000
+
+@phosphates view=91 page=85 years=1935-1939
+img: all
+cols: t fr
+1935 | 1494000 104600000
+1936 | 1672000 117000000
+1937 | 1866000 205000000
+1938 | 1604000 216000000
+1939 | 1812400 272000000
+
+@phosphate_works view=91 page=85 years=1935-1939
+img: all
+cols: state private workers days prod_t value
+1935 | 7 1 4570 1150000 1500000 105000000
+1936 | 7 1 4450 1050000 1488000 105000000
+1937 | 7 1 5480 1498000 1771000 194800000
+1938 | 7 1 5816 1617416 2034000 274600000
+1939 | 7 1 5288 1421289 1627912 244180000
+# Ores (1930-1939): the same shifted columns (lines 1930-1934); 1931 mixtes a stray mark ('?'); mercury
+# columns from 1933 as in sgt1936. (1) Cours moyen de la Livre : 89 fr. 14.
+
+@ores view=92 page=86 years=1930-1932 shift=mines,t_zinc,t_mixed,v_zinc,v_mixed shift_to=1934
+img: all
+cols: mines t_zinc t_lead t_mixed value_total v_zinc v_lead v_mixed p_zinc p_lead
+1930 | 60 10000 27500 0 22000000 4000000 21500000 0 18.06 17.82
+1931 | 58 1800 24143 ? 11120000 500000 11000000 0 1415 1480
+1932 | 50 660 11200 0 3000000 120000 3000000 0 1098 1054
+
+@ores view=92 page=86 years=1933-1939 shift=mines,t_zinc,v_zinc shift_to=1934
+img: all
+cols: mines t_zinc t_lead t_mercury value_total v_zinc v_lead v_mercury p_zinc p_lead
+1933 | 51 0 5800 - 1200000 0 1200000 - 983 1311
+1934 | 52 0 6610 - 1000000 0 1000000 - 1046 835
+1935 | 52 400 7972 - 3060000 60000 3060000 - 1040 1045
+1936 | 52 2885 16700 2481 12825000 1150000 11600000 75000 1242 1476
+1937 | 52 2176 19375 867 20107000 1067000 19000000 40000 2783 2682
+1938 | 52 1412 31525 9315 32377000 353000 31426000 598000 2569 2361
+1939 | 50 903 28240 1983 36750000 450000 36000000 300000 2946 2987
+
+@iron_ore view=92 page=86 years=1930-1939
+img: all
+cols: t fr
+1930 | 807000 64000000
+1931 | 443000 27000000
+1932 | 215000 10500000
+1933 | 331000 13500000
+1934 | 512000 20000000
+1935 | 487000 16600000
+1936 | 788000 29500000
+1937 | 955460 81214000
+1938 | 797935 99750000
+1939 | 699284 76920000
+# a) Cie Fermière (1935-1939), f84|f85: voie normale 1935 in the gutter of f84 (illegible, '?'), 1936 in the
+# gutter of f85 (leading digit cut on six lines, '?'), 1937-1939; voie étroite 1935-1939. 1939 normal gauge:
+# produit moyen d'un voyageur printed 13, recette par km de train 25.
+
+@rail view=84 page=78 company=bone_guelma network=normal_gauge
+img: all
+cols: 1935
+len_km | ?
+rec_day | ?
+rec_gv | ?
+rec_pv | ?
+rec_total | ?
+rec_km | ?
+pass_n | ?
+pass_prod | ?
+pass_km | -
+pass_avg | ?
+goods_t | ?
+goods_prod | ?
+goods_avg | ?
+train_km | ?
+rec_train_km | ?
+
+@rail view=85 page=79 company=bone_guelma network=normal_gauge
+img: all
+cols: 1936 1937 1938 1939
+len_km | 508 508 508 508
+rec_day | 24990 36735 40422 85735
+rec_gv | ? 5627312 7266030 16233636
+rec_pv | ? 7780822 10773038 15059723
+rec_total | ? 13408134 18039068 31293359
+rec_km | 18180 26421 35546 61663
+pass_n | 707872 817033 876090 920231
+pass_prod | ? 5235995 6615584 11965561
+pass_km | - - - -
+pass_avg | 5.87 6.40 7.55 13
+goods_t | 330208 453975 437683 477791
+goods_prod | ? 7617856 10643063 14961501
+goods_avg | 13.74 16.78 24.32 31.31
+train_km | ? 1217341 1225952 1251841
+rec_train_km | 9.02 11.01 14.71 25
+
+@rail view=85 page=79 company=bone_guelma network=narrow_gauge
+img: all
+cols: 1935 1936 1937 1938 1939
+len_km | 1102 1102 1102 1102 1102
+rec_day | 107383 110061 162426 199449 273886
+rec_gv | 8131493 7344704 8926081 12485358 27623802
+rec_pv | 31063208 32937793 50359368 60313382 72344505
+rec_total | 39194701 40282497 59285449 72798740 99968307
+rec_km | 35560 36547 53788 66049 90715
+pass_n | 2378758 2285533 2499081 2697743 2459140
+pass_prod | 7270439 6591687 7911322 10921612 19075009
+pass_km | - - - - -
+pass_avg | 3.06 2.88 3.16 4.04 7.76
+goods_t | 1291000 1539660 1888351 1715904 1811420
+goods_prod | 30923503 32742965 50125704 60150708 72200460
+goods_avg | 23.95 21.27 26.54 35.05 39.80
+train_km | 2956056 3245466 3551390 3645447 3478456
+rec_train_km | 13.26 12.41 16.69 19.97 28.72
+# b) Compagnie Sfax-Gafsa (1935-1939), f86|f87; footnotes as in sgt1935, (3) les embranchements miniers sont
+# exploités aux frais, risques et périls de la Compagnie. Metlaoui-Tozeur: 1936 cut by the binding of f86 ('?'),
+# 1937 in the gutter of f87 with the leading digits of most cells cut ('?'). Mining branches 1938-1939 print a
+# tonnage of 9.128 / 13.320 and products per tonne 18,82 / 18,33 (as printed). Sfax-Gafsa 1937 receipt per
+# train-km printed 51,196; Graïba-Gabès 1937 8,366.
+
+@rail view=86 page=80 company=gafsa network=sfax_gafsa_metlaoui
+img: all
+cols: 1935 1936 1937 1938 1939
+len_km | 256 256 256 256 256
+rec_day | 78929 78561 101834 114157 139767
+rec_gv | 983059 891898 1259969 1744496 6585266
+rec_pv | 27826239 27861564 35909358 39922811 44429910
+rec_total | 28809298 28753462 37169327 41667307 51015176
+rec_km | 112536 112318 145193 162763 199278
+rec_train_km | 48.12 47.05 51.196 59.90 70.12
+pass_n | 89226 88229 120960 149691 276702
+pass_prod | 810329 742026 1037136 1427953 3413961
+pass_avg | 9.08 8.41 8.57 9.54 12.34
+goods_t | 1163232 1180079 1460292 1491323 1623857
+goods_prod | 27612766 27715459 35683390 39638583 43933786
+goods_avg | 23.74 23.49 24.44 26.58 27.06
+train_km | 598680 611073 726020 695506 727533
+
+@rail view=86 page=80 company=gafsa network=metlaoui_tozeur
+img: all
+cols: 1935 1936
+len_km | 54 ?
+rec_day | 896 ?
+rec_gv | 151011 ?
+rec_pv | 176100 ?
+rec_total | 327111 ?
+rec_km | 6057 ?
+rec_train_km | 8.04 ?
+pass_n | 25389 ?
+pass_prod | 136259 ?
+pass_avg | 5.37 ?
+goods_t | 10754 ?
+goods_prod | 171741 ?
+goods_avg | 15.97 ?
+train_km | 40662 ?
+
+@rail view=87 page=81 company=gafsa network=metlaoui_tozeur
+img: all
+cols: 1937 1938 1939
+len_km | 54 54 54
+rec_day | 1489 1449 1865
+rec_gv | ? 267573 336865
+rec_pv | ? 261391 343872
+rec_total | ? 528964 680737
+rec_km | ? 9796 12606
+rec_train_km | ? 12.94 16.89
+pass_n | ? 41472 39116
+pass_prod | ? 249633 298170
+pass_avg | 5.61 6.02 7.62
+goods_t | ? 12789 17321
+goods_prod | ? 255475 335468
+goods_avg | 17.32 19.98 19.37
+train_km | ? 40878 40284
+
+@rail view=87 page=81 company=gafsa network=graiba_gabes
+img: all
+cols: 1935 1936 1937 1938 1939
+len_km | 82 82 82 82 82
+rec_day | 1317 1349 2426 5317 19150
+rec_gv | 332163 322163 483715 1059342 4280783
+rec_pv | 148714 171610 401953 881418 2709294
+rec_total | 480877 493773 885668 1940760 6990078
+rec_km | 5864 6021 10800 23668 85244
+rec_train_km | 4.54 4.64 8.366 10.82 26.26
+pass_n | 30895 32642 43400 74967 173851
+pass_prod | 260966 263034 375029 811928 2085090
+pass_avg | 8.45 8.06 8.64 10.83 11.99
+goods_t | 7806 8526 21813 41658 102043
+goods_prod | 131671 143467 346749 776820 2456337
+goods_avg | 16.87 16.83 15.90 18.65 24.56
+train_km | 105696 106294 105861 179360 266178
+
+@rail view=87 page=81 company=gafsa network=mining_branches
+img: all
+cols: 1935 1936 1937 1938 1939
+len_km | 63 63 63 65 65
+rec_day | 652 671 1032 997 2198
+rec_gv | 122667 112328 205208 186497 547073
+rec_pv | 115291 133410 171591 177244 255203
+rec_total | 237958 245738 376799 363741 802276
+rec_km | 3777 3900 5797 5596 12342
+rec_train_km | 2.84 2.92 3.935 3.527 7.276
+pass_n | 21119 20084 32251 27193 39732
+pass_prod | 109122 100627 179117 167550 277792
+pass_avg | 5.17 5.01 5.55 6.16 6.99
+goods_t | 777695 727171 870752 9128 13320
+goods_prod | 111391 127916 167639 171788 244121
+goods_avg | 0.14 0.18 0.19 18.82 18.33
+train_km | 83762 83890 95763 103112 110268
+# c) Résultats financiers, Compagnie Fermière (1935-1939), f88; (1) as in sgt1936.
+
+@fin_convention view=88 page=82 
+img: all
+cols: profit deficit remuneration tr_works tr_control tr_interest tr_total
+1935 | 0 55916689 1285394 960122 480061 3558700 4998823
+1936 | 0 56659887 1300149 1007693 503847 3530579 5042119
+1937 | 0 62651017 1321701 1466271 733136 3648617 5848024
+1938 | 0 72656510 921959 1827676 913838 3922931 6664445
+1939 | 0 53794568 1347730 2635970 600000 4215474 7451444
+# Nombre total des voitures automobiles immatriculées (au 31 décembre 1936-1939), f88; TOTAL used as check.
+
+@vehicles view=88 page=82 
+img: all
+cols: 1936 1937 1938 1939
+cars | 21807 23142 24727 25975
+buses | 281 285 296 300
+lorries | 3040 3155 3323 3554
+motorcycles | 3384 3941 4126 4285
+Total | 28962 30523 32472 34114
+transfers | 6598 6274 7051 6000
+# Autres transports publics (1938-1939), f89: thousands of passengers and thousands of francs of receipts.
+# Note under the table: figures can no longer be given for the Tunisienne Automobile Transports (autonomous
+# since the end of the Convention tripartite, 1 January 1938).
+
+@other_transport view=89 page=83 
+img: all
+cols: tgm.pass tgm.rec sahel.pass sahel.rec doglione.pass doglione.rec
+1938 | 7505 7290 1081 6564 21 162
+1939 | 7428 7722 786 5898 14 110
+# Mouvement du port aérien de Tunis, bases de Tunis-Carthage et d'El-Aouina, transports publics (1937-1939), f89.
+
+@airport view=89 page=83 
+img: all
+cols: 1937 1938 1939
+passengers | 10755 10384 11382
+mail_kg | 18080 21634 64148
+goods_kg | 29686 17121 84779
+baggage_kg | 145522 143527 160332
+movements | 1980 2330 2529

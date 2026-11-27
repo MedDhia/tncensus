@@ -232,6 +232,18 @@ Every table is tidy: one row per printed cell. Printed subtotals and totals are 
 | [`posts_money_orders_italy`](#posts_money_orders_italy) | mo_italy | by edition | 168 | mixed | Money orders sent from Tunisia to Italy, by month |
 | [`posts_money_orders_summary`](#posts_money_orders_summary) | mo_summary | by edition | 152 | mixed | Money orders issued in Tunisia for France and Italy, and issued in France and Italy for Tunisia |
 | [`posts_savings_accounts`](#posts_savings_accounts) | savings | by edition | 191 | mixed | National savings bank (Caisse nationale d'épargne): accounts opened by depositor group, deposits, withdrawals and depositors' balance |
+| [`publicworks_railways`](#publicworks_railways) | rail | by edition | 2,494 | mixed | Railways: operating results by network and line (length, receipts, passengers, goods, train-km) |
+| [`publicworks_railway_finance`](#publicworks_railway_finance) | fin_convention;fin_medjerdah;fin_unguaranteed | by edition | 200 | francs | Railways: financial results (guaranteed Medjerdah line, unguaranteed lines, whole network under the Convention of 22 June 1922) |
+| [`publicworks_roads`](#publicworks_roads) | roads | by edition | 58 | mixed | Roads and tracks: cumulative length built and cumulative expenditure |
+| [`publicworks_hydraulics`](#publicworks_hydraulics) | irrigation;sanitation;water;wells | by edition | 134 | mixed | Hydraulic works: drinking water supply, agricultural hydraulics, artesian wells and sanitation (cumulative flows and expenditure) |
+| [`publicworks_mining_permits`](#publicworks_mining_permits) | permits | by edition | 54 | count | Mining: prospecting permits requested, granted and current |
+| [`publicworks_mines_exports`](#publicworks_mines_exports) | mines_exports | by edition | 54 | mixed | Mining: number of mines worked and value of the ore exported (fob Tunis) |
+| [`publicworks_mines_detail`](#publicworks_mines_detail) | mines_detail | by edition | 516 | mixed | Mining: concessions, mines worked, workers, working days, production and value by mineral |
+| [`publicworks_phosphates`](#publicworks_phosphates) | phosphates | by edition | 54 | mixed | Calcium phosphates: tonnage and value carried (mine to quay) |
+| [`publicworks_phosphate_works`](#publicworks_phosphate_works) | phosphate_works | by edition | 132 | mixed | Calcium phosphates: workings on state and private land, workers, working days, production, value |
+| [`publicworks_ores`](#publicworks_ores) | ores | by edition | 251 | mixed | Zinc, lead and mixed ores (from 1936 mercury): mines conceded, tonnage, value and average prices |
+| [`publicworks_iron_ore`](#publicworks_iron_ore) | iron_ore | by edition | 54 | mixed | Iron ore: tonnage and value carried (mine to quay) |
+| [`publicworks_other_transport`](#publicworks_other_transport) | airport;other_transport;vehicles | by edition | 47 | mixed | Registered motor vehicles, other public transport operators and Tunis airport traffic (sgt1939) |
 
 ### eur1906_t1_circonscription_nationality
 
@@ -10216,3 +10228,589 @@ Source `sgt`, table savings, printed pages by edition. 191 rows. Value type: mix
 |---|---|---:|
 | `count` |  | 110 |
 | `francs` |  | 81 |
+
+### publicworks_railways
+
+**Voies ferrées. Résultats comparés de l'exploitation des réseaux (Bône-Guelma / Compagnie Fermière, Compagnie de Gafsa / Sfax-Gafsa, Tunis-Goulette-Marsa)**  
+*Railways: operating results by network and line (length, receipts, passengers, goods, train-km)*
+
+Source `sgt`, table rail, printed pages by edition. 2,494 rows. Value type: mixed. Flags: (empty) 2,317, not_applicable 164, illegible 13. Notes and validation: [`../yearbook_other_chapters/csv/publicworks_railways.md`](../yearbook_other_chapters/csv/publicworks_railways.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `company` | Coded dimension. |
+| `company_fr` | Printed French label for `company`. |
+| `network` | Coded dimension. |
+| `network_fr` | Printed French label for `network`. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`company`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `bone_guelma` | Compagnie Bône-Guelma / Compagnie Fermière des Chemins de fer tunisiens | 810 |
+| `gafsa` | Compagnie des phosphates et du chemin de fer de Gafsa / Compagnie Sfax-Gafsa | 1,392 |
+| `tgm` | Chemins de fer électriques Tunis-Goulette-Marsa | 292 |
+
+`network`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `djedeida_bizerte` | Ligne de Djedeida à Bizerte et embranchements | 72 |
+| `graiba_gabes` | Ligne de Graïba à Gabès (voie étroite) | 348 |
+| `medjerdah` | Réseau de la Medjerdah | 90 |
+| `metlaoui_tozeur` | Ligne de Metlaoui à Tozeur (voie étroite) | 348 |
+| `mining_branches` | Embranchements miniers | 348 |
+| `narrow_gauge` | Réseau à voie étroite | 360 |
+| `normal_gauge` | Réseau à voie normale | 288 |
+| `sfax_gafsa_metlaoui` | Ligne de Sfax à Gafsa et à Metlaoui (voie étroite) | 348 |
+| `tunis_goulette_marsa` | Ligne de Tunis-Goulette-Marsa | 292 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `average_length_worked` | Longueur moyenne exploitée | 155 |
+| `goods_average_haul` | Parcours moyen d'une tonne | 75 |
+| `goods_receipts` | Trafic en marchandises : produit total | 155 |
+| `goods_tariff_per_km` | Tarif kilométrique moyen (marchandises) | 75 |
+| `goods_tonnes` | Nombre de tonnes transportées (Petite Vitesse) | 155 |
+| `passenger_average_journey` | Parcours moyen d'un voyageur | 99 |
+| `passenger_receipts` | Trafic en voyageurs : produit total | 155 |
+| `passenger_tariff_per_km` | Tarif kilométrique moyen (voyageurs) | 75 |
+| `passengers` | Nombre de voyageurs transportés | 155 |
+| `receipts_fast_goods_passengers` | Recettes de la Grande Vitesse | 155 |
+| `receipts_per_day` | Recettes moyennes par jour | 155 |
+| `receipts_per_km_year` | Recette totale par kilomètre et par an | 155 |
+| `receipts_per_passenger` | Produit moyen d'un voyageur | 155 |
+| `receipts_per_tonne` | Produit moyen d'une tonne | 155 |
+| `receipts_per_train_km` | Recette par kilomètre de train | 155 |
+| `receipts_slow_goods` | Recettes de la Petite Vitesse | 155 |
+| `receipts_total` | Recette totale | 155 |
+| `train_km` | Parcours des trains | 155 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `count` |  | 155 |
+| `francs` |  | 1,700 |
+| `km` |  | 484 |
+| `tonnes` |  | 155 |
+
+### publicworks_railway_finance
+
+**Voies ferrées. Résultats financiers de l'exploitation du réseau (Bône-Guelma / Compagnie Fermière des Chemins de fer tunisiens)**  
+*Railways: financial results (guaranteed Medjerdah line, unguaranteed lines, whole network under the Convention of 22 June 1922)*
+
+Source `sgt`, table fin_convention;fin_medjerdah;fin_unguaranteed, printed pages by edition. 200 rows. Value type: francs. Flags: (empty) 200. Notes and validation: [`../yearbook_other_chapters/csv/publicworks_railway_finance.md`](../yearbook_other_chapters/csv/publicworks_railway_finance.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `scheme` | Coded dimension. |
+| `scheme_fr` | Printed French label for `scheme`. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`scheme`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `medjerdah_guaranteed` | c) Ligne de la Medjerdah | 45 |
+| `unguaranteed_lines` | d) Lignes non garanties | 36 |
+| `whole_network_convention_1922` | Ensemble du réseau, sous le régime institué par la Convention du 22 juin 1922 | 119 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `annual_receipts` | Recettes annuelles | 9 |
+| `annual_shortfall` | Insuffisances annuelles | 9 |
+| `company_remuneration` | Rémunération de la Compagnie | 17 |
+| `french_government_subsidy` | Subvention du Gouvernement français | 9 |
+| `operating_deficit` | Déficit de l'exploitation | 17 |
+| `operating_profit` | Bénéfice d'exploitation | 17 |
+| `reserve_fund_31_dec` | Montant du fonds de réserve au 31 décembre de chaque année | 9 |
+| `reserve_fund_payment` | Versements annuels au fonds de réserve de 750.000 fr. | 9 |
+| `surplus_cumulative` | Total des excédents versés | 9 |
+| `surplus_djedeida_bizerte` | Djedeida à Bizerte et embranchements | 9 |
+| `surplus_narrow_gauge` | Réseau à voie étroite | 9 |
+| `surplus_total` | Totaux annuels | 9 |
+| `treasury_complementary_works` | Versements au Trésor pour travaux complémentaires | 17 |
+| `treasury_control_costs` | Versements au Trésor pour frais de contrôle | 17 |
+| `treasury_financial_charges` | Versements au Trésor pour intérêts des charges financières | 17 |
+| `treasury_total` | Versements au Trésor : totaux | 17 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `francs` |  | 200 |
+
+### publicworks_roads
+
+**Routes et pistes. Longueurs construites et dépenses faites cumulées**  
+*Roads and tracks: cumulative length built and cumulative expenditure*
+
+Source `sgt`, table roads, printed pages by edition. 58 rows. Value type: mixed. Flags: (empty) 58. Notes and validation: [`../yearbook_other_chapters/csv/publicworks_roads.md`](../yearbook_other_chapters/csv/publicworks_roads.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `work` | Coded dimension. |
+| `work_fr` | Printed French label for `work`. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`work`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `roads` | Routes | 46 |
+| `tracks` | Pistes | 12 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `expenditure_cumulative` | Dépenses cumulées | 35 |
+| `length_built_cumulative` | Longueurs cumulées construites | 23 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `francs` |  | 35 |
+| `km` |  | 23 |
+
+### publicworks_hydraulics
+
+**Travaux hydrauliques. Alimentation en eau potable, hydraulique agricole, forages artésiens, assainissement**  
+*Hydraulic works: drinking water supply, agricultural hydraulics, artesian wells and sanitation (cumulative flows and expenditure)*
+
+Source `sgt`, table irrigation;sanitation;water;wells, printed pages by edition. 134 rows. Value type: mixed. Flags: (empty) 134. Notes and validation: [`../yearbook_other_chapters/csv/publicworks_hydraulics.md`](../yearbook_other_chapters/csv/publicworks_hydraulics.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `work` | Coded dimension. |
+| `work_fr` | Printed French label for `work`. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`work`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `agricultural_hydraulics` | b) Aménagement d'hydraulique agricole | 32 |
+| `artesian_wells` | Forages artésiens | 47 |
+| `drinking_water` | a) Alimentation en eau potable des centres habités | 32 |
+| `sanitation` | Installation d'assainissement des centres habités | 23 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `daily_flow_cumulative` | Débits moyens journaliers cumulés (mètres cubes) | 16 |
+| `daily_volume_cumulative` | Volume utilisable des eaux d'irrigation permanente (m3 journaliers) | 16 |
+| `expenditure_cumulative` | Dépenses cumulées | 79 |
+| `flow` | Débit en litres par seconde | 23 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `francs` |  | 79 |
+| `litres_per_second` |  | 23 |
+| `m3_per_day` |  | 32 |
+
+### publicworks_mining_permits
+
+**Industrie minière. Mines : a) Permis de recherches demandés, délivrés et en cours**  
+*Mining: prospecting permits requested, granted and current*
+
+Source `sgt`, table permits, printed pages by edition. 54 rows. Value type: count. Flags: (empty) 54. Notes and validation: [`../yearbook_other_chapters/csv/publicworks_mining_permits.md`](../yearbook_other_chapters/csv/publicworks_mining_permits.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `current` | Permis en cours | 18 |
+| `granted` | Permis délivrés | 18 |
+| `requested` | Permis demandés | 18 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `count` |  | 54 |
+
+### publicworks_mines_exports
+
+**Industrie minière. Mines exploitées et valeur globale des produits exportés**  
+*Mining: number of mines worked and value of the ore exported (fob Tunis)*
+
+Source `sgt`, table mines_exports, printed pages by edition. 54 rows. Value type: mixed. Flags: (empty) 54. Notes and validation: [`../yearbook_other_chapters/csv/publicworks_mines_exports.md`](../yearbook_other_chapters/csv/publicworks_mines_exports.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `export_value` | Valeur du minerai exporté au cours du marché fob Tunis | 27 |
+| `mines_worked` | Nombre de mines exploitées | 27 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `count` |  | 27 |
+| `francs` |  | 27 |
+
+### publicworks_mines_detail
+
+**Industrie minière. Renseignements généraux sur les mines (Exploitations minières)**  
+*Mining: concessions, mines worked, workers, working days, production and value by mineral*
+
+Source `sgt`, table mines_detail, printed pages by edition. 516 rows. Value type: mixed. Flags: (empty) 516. Notes and validation: [`../yearbook_other_chapters/csv/publicworks_mines_detail.md`](../yearbook_other_chapters/csv/publicworks_mines_detail.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `mineral` | Coded dimension. |
+| `mineral_fr` | Printed French label for `mineral`. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`mineral`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `copper` | Cuivre | 64 |
+| `fluorite` | Fluorine | 2 |
+| `iron` | Fer | 96 |
+| `lead` | Plomb | 22 |
+| `lead_zinc` | Plomb-Zinc | 62 |
+| `lead_zinc_mercury` | Plomb-Zinc-Mercure | 6 |
+| `lead_zinc_mercury_fluorite` | Plomb-Zinc-Mercure-Fluorine | 6 |
+| `lignite` | Lignites | 96 |
+| `manganese` | Manganèse | 80 |
+| `mercury` | Mercure | 4 |
+| `mixed` | Mixtes | 56 |
+| `zinc` | Zinc | 22 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `concessions_area` | Mines concédées : superficie | 61 |
+| `concessions_number` | Mines concédées : nombre | 61 |
+| `production` | Production | 75 |
+| `value` | Valeur | 75 |
+| `worked_area` | Mines exploitées : superficie | 61 |
+| `worked_number` | Mines exploitées : nombre | 61 |
+| `workers` | Ouvriers | 61 |
+| `working_days` | Journées de travail | 61 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `count` |  | 244 |
+| `francs` |  | 75 |
+| `hectares` |  | 122 |
+| `kg` |  | 2 |
+| `tonnes` |  | 73 |
+
+### publicworks_phosphates
+
+**Phosphates de chaux. a) Tonnage et valeur des produits transportés (mine à quai)**  
+*Calcium phosphates: tonnage and value carried (mine to quay)*
+
+Source `sgt`, table phosphates, printed pages by edition. 54 rows. Value type: mixed. Flags: (empty) 54. Notes and validation: [`../yearbook_other_chapters/csv/publicworks_phosphates.md`](../yearbook_other_chapters/csv/publicworks_phosphates.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `tonnage` | Tonnage | 27 |
+| `value` | Valeur | 27 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `francs` |  | 27 |
+| `tonnes` |  | 27 |
+
+### publicworks_phosphate_works
+
+**Phosphates de chaux. b) Renseignements généraux sur les exploitations de phosphates**  
+*Calcium phosphates: workings on state and private land, workers, working days, production, value*
+
+Source `sgt`, table phosphate_works, printed pages by edition. 132 rows. Value type: mixed. Flags: (empty) 132. Notes and validation: [`../yearbook_other_chapters/csv/publicworks_phosphate_works.md`](../yearbook_other_chapters/csv/publicworks_phosphate_works.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `production` | Production | 22 |
+| `value` | Valeur | 22 |
+| `workers` | Ouvriers | 22 |
+| `working_days` | Journées de travail | 22 |
+| `workings_private_land` | Exploitations en terrains privés | 22 |
+| `workings_state_land` | Exploitations en terrains domaniaux | 22 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `count` |  | 88 |
+| `francs` |  | 22 |
+| `tonnes` |  | 22 |
+
+### publicworks_ores
+
+**Minerais. a) Tonnage et valeur des minerais transportés (mine à quai)**  
+*Zinc, lead and mixed ores (from 1936 mercury): mines conceded, tonnage, value and average prices*
+
+Source `sgt`, table ores, printed pages by edition. 251 rows. Value type: mixed. Flags: (empty) 236, row_realigned 15. Notes and validation: [`../yearbook_other_chapters/csv/publicworks_ores.md`](../yearbook_other_chapters/csv/publicworks_ores.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `ore` | Coded dimension. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`ore`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `(empty)` |  | 53 |
+| `lead` |  | 77 |
+| `mercury` |  | 8 |
+| `mixed` |  | 38 |
+| `zinc` |  | 75 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `average_price` | Cours moyens : plomb / Cours moyens : zinc | 46 |
+| `mines_conceded` | Nombre des mines concédées | 26 |
+| `tonnage` | Tonnage : mercure (en kilogs) / Tonnage : mixtes / Tonnage : plomb / Tonnage : zinc | 76 |
+| `value` | Valeur des minerais : mercure / Valeur des minerais : mixtes / Valeur des minerais : plomb / Valeur des minerais : zinc | 76 |
+| `value_total` | Valeur totale au port d'embarquement (en francs) | 27 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `count` |  | 26 |
+| `francs` |  | 103 |
+| `francs_per_tonne` |  | 18 |
+| `kg` |  | 4 |
+| `pounds_sterling_per_tonne` |  | 28 |
+| `tonnes` |  | 72 |
+
+### publicworks_iron_ore
+
+**Minerais. b) Tonnage et valeur des minerais de fer transportés (mine à quai)**  
+*Iron ore: tonnage and value carried (mine to quay)*
+
+Source `sgt`, table iron_ore, printed pages by edition. 54 rows. Value type: mixed. Flags: (empty) 54. Notes and validation: [`../yearbook_other_chapters/csv/publicworks_iron_ore.md`](../yearbook_other_chapters/csv/publicworks_iron_ore.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `tonnage` | Tonnage | 27 |
+| `value` | Valeur | 27 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `francs` |  | 27 |
+| `tonnes` |  | 27 |
+
+### publicworks_other_transport
+
+**Voitures automobiles immatriculées ; Autres transports publics ; Mouvement du port aérien de Tunis**  
+*Registered motor vehicles, other public transport operators and Tunis airport traffic (sgt1939)*
+
+Source `sgt`, table airport;other_transport;vehicles, printed pages by edition. 47 rows. Value type: mixed. Flags: (empty) 47. Notes and validation: [`../yearbook_other_chapters/csv/publicworks_other_transport.md`](../yearbook_other_chapters/csv/publicworks_other_transport.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `item` | Coded dimension. |
+| `item_fr` | Printed French label for `item`. |
+| `category` | Coded dimension. |
+| `category_fr` | Printed French label for `category`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`item`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `doglione` | Entreprise Doglione et Doucet | 4 |
+| `registered_vehicles` | Nombre total des voitures automobiles immatriculées | 16 |
+| `sahel` | Société tunisienne des transports automobiles du Sahel | 4 |
+| `tgm` | Compagnie des Tramways de Tunis, réseau T.G.M. | 4 |
+| `transfers` | Mutations | 4 |
+| `tunis_airport` | Mouvement du port aérien de Tunis (Tunis-Carthage et El-Aouina), transports publics | 15 |
+
+`category`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `baggage` | Bagages | 3 |
+| `buses` | Autobus | 4 |
+| `cars` | Voitures de tourismes, taxis, voitures de louage | 4 |
+| `departures_arrivals` | Nombre de départs et d'arrivées | 3 |
+| `goods` | Marchandises | 3 |
+| `lorries` | Camions, camionnettes et voitures commerciales | 4 |
+| `mail` | Poste | 3 |
+| `motorcycles` | Motocyclettes | 4 |
+| `passengers` | Nombre de passagers | 3 |
+| `passengers_thousands` | Nombre de milliers de voyageurs | 6 |
+| `receipts_thousand_francs` | Recettes en milliers de francs | 6 |
+| `transfers` | Mutations de véhicules immatriculés | 4 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `count` |  | 26 |
+| `kg` |  | 9 |
+| `thousand_francs` |  | 6 |
+| `thousands` |  | 6 |
