@@ -599,6 +599,32 @@
   "value_type": "count",
   "illegible_printings_skipped": 6
  },
+ "commerce_oil_wine_balance": {
+  "rows": 156,
+  "checks": 240,
+  "failed": [
+   "sgt1923 olive_oil balance: printed average 1913-1914/1917-1918 = mean of the campaigns: cells give -126.8, printed -128 (difference -1.2)",
+   "sgt1923 olive_oil import: printed average 1913-1914/1917-1918 = mean of the campaigns: cells give 2.4, printed 1 (difference -1.4)",
+   "sgt1923 olive_oil import: printed average 1913-1914/1922-1923 = mean of the campaigns: cells give 1.2, printed 0 (difference -1.2)",
+   "sgt1922 olive_oil 1919: production + campaign = remaining: cells give 145, printed 135 (difference -10)",
+   "sgt1922 wine 1916: production + campaign = remaining: cells give 238, printed 288 (difference 50)",
+   "sgt1923 olive_oil 1919: production + campaign = remaining: cells give 145, printed 135 (difference -10)",
+   "sgt1923 wine 1916: production + campaign = remaining: cells give 238, printed 288 (difference 50)",
+   "sgt1924 olive_oil 1919: production + campaign = remaining: cells give 145, printed 135 (difference -10)",
+   "sgt1924 wine 1916: production + campaign = remaining: cells give 238, printed 288 (difference 50)",
+   "sgt1922 wine: average consumption 1912-1921 = mean of the b) remaining column, in hectolitres: cells give 226000, printed 218800 (difference -7200)"
+  ],
+  "overlap_compared": 216,
+  "overlap_diffs": [],
+  "flagged": [],
+  "editions": [
+   "sgt1922",
+   "sgt1923",
+   "sgt1924"
+  ],
+  "value_type": "count",
+  "illegible_printings_skipped": 0
+ },
  "_chapter_views": {
   "sgt1922": [
    281,

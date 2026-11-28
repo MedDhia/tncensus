@@ -29,7 +29,7 @@ years (1913-1922, 1914-1923, 1915-1924), so every yearly series falls under SPEC
 | 404-407 | Consommation: animals slaughtered by commune (boeufs/vaches, veaux, moutons, chèvres, porcs, chameaux, autres), one year | ~500 | `commerce_slaughter_by_commune` |
 | 408-409 | Céréales: a) importation/exportation by campaign 1912-13 to 1921-22 with balance (7 products), 10 campaigns + 3 averages | ~260 | `commerce_cereals_balance` (**done**) |
 | 410-411 | Céréales: b) stocks (production, commercial campaign, seed, consumption) 1913-1921; c) consommation moyenne 1912-1921 | ~100 | `commerce_cereals_stocks` (**done**) |
-| 412-415 | same for olive oil (huile d'olive) and wine (vins) | ~150 | `commerce_oil_wine_balance` |
+| 412-415 | same for olive oil (huile d'olive) and wine (vins) | ~150 | `commerce_oil_wine_balance` (**done**) |
 | 416-421 | Mercuriales: monthly prices at Tunis (meat by cut, hides, wool, eggs, cereals, pulses, olive oil ...), minimum/maximum/average | ~2500 | `commerce_prices` |
 | 422-424 | Magasins généraux: mouvement des marchandises, Tunis and Sousse (existing, entries, exits, remaining; quantity and value) | ~400 | `commerce_bonded_warehouses` |
 | 425-426 | Poids et mesures: vérification by circonscription, and c) résultats généraux 1913-1922 | ~300 | `commerce_weights_measures` |
@@ -63,7 +63,8 @@ consumption / prices / warehouses / weights pages.
 | `commerce_slaughter_by_commune` | **done**, sgt1922-1924, 1298 rows | f404-407, f894-897, f1398-1401, every cell read on native-resolution crops (img: all), each printing independently; 21 failed checks (printed totals), explained in the notes; sgt1924 Tunis/Tozeur bœufs realigned |
 | `commerce_cereals_balance` | **done**, sgt1922-1924, 252 rows | f408-409, f898-899, f1402-1403, every cell read on native-resolution crops (img: all), each printing independently; gutter cells `?` (sgt1922 1915-16 maize, sgt1923 1916-17 all lines, sgt1923 flour export 1914-15 ink blot); 4 balances `total_mismatch` (located by the printed averages), 1 `row_realigned` |
 | `commerce_cereals_stocks` | **done**, sgt1922-1924, 258 rows | f410-411, f900-901, f1404-1405, every cell read on native-resolution crops (img: all), each printing typed separately; sgt1923 prints harvest 1922 as "1923" (misprint); 6 failed identities (oats 1916, 1919 in each edition) and 1 failed average (sgt1923 maize, flagged `total_mismatch`), explained in the notes |
-| all others listed above | to do (next: f412-427, then f298-403) | – |
+| `commerce_oil_wine_balance` | **done**, sgt1922-1924, 156 rows | f412-415, f902-905, f1406-1409, every cell read on native-resolution crops (img: all), each printing typed separately; 10 failed checks (oil 1919 and wine 1916 remaining, in each edition; sgt1922 wine c) total; three sgt1923 oil averages), explained in the notes |
+| all others listed above | to do (next: f416-427, then f298-403) | – |
 
 ## Image reading
 

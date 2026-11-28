@@ -338,6 +338,7 @@ Every table is tidy: one row per printed cell. Printed subtotals and totals are 
 | [`commerce_cereals_stocks`](#commerce_cereals_stocks) | cereals_consumption;cereals_stocks | by edition | 258 | mixed | Cereals: available stocks and average consumption |
 | [`meteo_rainfall_monthly`](#meteo_rainfall_monthly) | rainfall_solar_year | by edition | 8,328 | millimetres | Rainfall record: total rainfall in millimetres by station and month (solar year) |
 | [`meteo_rain_days`](#meteo_rain_days) | rainfall_solar_year | by edition | 8,328 | count | Rainfall record: number of rainy days by station and month (solar year) |
+| [`commerce_oil_wine_balance`](#commerce_oil_wine_balance) | oil_wine_consumption;oil_wine_stocks;oil_wine_trade | by edition | 156 | mixed | Olive oil and wine: imports and exports by commercial campaign, available stocks and average consumption |
 
 ### eur1906_t1_circonscription_nationality
 
@@ -17236,3 +17237,90 @@ Source `sgt`, table rainfall_solar_year, printed pages by edition. 8,328 rows. V
 | `days_not_observed` |  | 76 |
 | `incomplete` |  | 45 |
 | `no_observation` |  | 691 |
+
+### commerce_oil_wine_balance
+
+**Huile d'olive ; Vins : a) Importation et exportation par campagne commerciale ; b) Stoks disponibles ; c) Consommation moyenne**  
+*Olive oil and wine: imports and exports by commercial campaign, available stocks and average consumption*
+
+Source `sgt`, table oil_wine_consumption;oil_wine_stocks;oil_wine_trade, printed pages by edition. 156 rows. Value type: mixed. Flags: (empty) 156. Notes and validation: [`../yearbook_other_chapters/csv/commerce_oil_wine_balance.md`](../yearbook_other_chapters/csv/commerce_oil_wine_balance.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `period` | Coded dimension. |
+| `product` | Coded dimension. |
+| `product_fr` | Printed French label for `product`. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`period`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `1912` |  | 6 |
+| `1912-1913` |  | 6 |
+| `1912-1921` |  | 4 |
+| `1913` |  | 6 |
+| `1913-1914` |  | 6 |
+| `1913-1922` |  | 4 |
+| `1914` |  | 6 |
+| `1914-1915` |  | 6 |
+| `1914-1923` |  | 4 |
+| `1915` |  | 6 |
+| `1915-1916` |  | 6 |
+| `1916` |  | 6 |
+| `1916-1917` |  | 6 |
+| `1917` |  | 6 |
+| `1917-1918` |  | 6 |
+| `1918` |  | 6 |
+| `1918-1919` |  | 6 |
+| `1919` |  | 6 |
+| `1919-1920` |  | 6 |
+| `1920` |  | 6 |
+| `1920-1921` |  | 6 |
+| `1921` |  | 6 |
+| `1921-1922` |  | 6 |
+| `1922` |  | 6 |
+| `1922-1923` |  | 6 |
+| `1923` |  | 6 |
+| `1923-1924` |  | 6 |
+
+`product`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `olive_oil` | Huile d'olive | 78 |
+| `wine` | Vins | 78 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `avg_consumption_per_capita` | Consommation moyenne par habitant | 6 |
+| `avg_consumption_total` | Consommation moyenne totale | 6 |
+| `balance` | Balance | 24 |
+| `campaign` | Campagne commerciale consécutive | 24 |
+| `export` | Exportation | 24 |
+| `import` | Importation | 24 |
+| `production` | Production | 24 |
+| `remaining` | Quantités restant dans le pays | 24 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `hectolitres` |  | 3 |
+| `kilograms` |  | 3 |
+| `kilograms_per_inhabitant` |  | 3 |
+| `litres_per_inhabitant` |  | 3 |
+| `thousand_hectolitres` |  | 72 |
+| `thousand_quintals` |  | 72 |

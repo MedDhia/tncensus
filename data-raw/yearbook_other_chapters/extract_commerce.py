@@ -1576,6 +1576,141 @@ def build_cereals_stocks(secs, write):
     return res
 
 
+# ----------------------------------------------------------------- Huile d'olive et vins : a) b) c)
+
+T_OW = "commerce_oil_wine_balance"
+OW_PRODUCT = {"olive_oil": "Huile d'olive", "wine": "Vins"}
+OW_MEASURE = {"import": "Importation", "export": "Exportation", "balance": "Balance",
+              "production": "Production", "campaign": "Campagne commerciale consécutive",
+              "remaining": "Quantités restant dans le pays",
+              "avg_consumption_total": "Consommation moyenne totale",
+              "avg_consumption_per_capita": "Consommation moyenne par habitant"}
+OW_UNIT = {("olive_oil", "ab"): "thousand_quintals", ("wine", "ab"): "thousand_hectolitres",
+           ("olive_oil", "total"): "kilograms", ("wine", "total"): "hectolitres",
+           ("olive_oil", "per_capita"): "kilograms_per_inhabitant", ("wine", "per_capita"): "litres_per_inhabitant"}
+OW_DOC = {
+    "census": "edition the value is taken from (a, b: latest edition printing the campaign or harvest, rule 4; "
+              "c: each edition prints its own ten-year average)",
+    "table_id": "`oil_wine_trade` (a) Importation et exportation par campagne commerciale), `oil_wine_stocks` "
+                "(b) Stoks disponibles) or `oil_wine_consumption` (c) Consommation moyenne)",
+    "gallica_ark": "Gallica volume ark", "source_page": "printed page number", "gallica_view": "Gallica view (fNNNN)",
+    "year": "a: first year of the campaign; b: harvest year; c: last year of the averaging period",
+    "period": "a: commercial campaign (e.g. `1912-1913`); b: harvest year (Récolte); c: averaging period as printed",
+    "product": "`olive_oil` or `wine`", "product_fr": "line heading as printed",
+    "measure": "`import`, `export`, `balance` (a); `production`, `campaign`, `remaining` (b); "
+               "`avg_consumption_total`, `avg_consumption_per_capita` (c)",
+    "measure_fr": "line or column heading as printed",
+    "unit": "`thousand_quintals` (oil a, b), `thousand_hectolitres` (wine a, b), `kilograms`, `hectolitres`, "
+            "`kilograms_per_inhabitant`, `litres_per_inhabitant` (c), as printed",
+    "value": "as printed; balance and campaign signed (+ = excess of imports, - = excess of exports)",
+    "flag": "always empty in this table",
+}
+
+
+def build_oil_wine(secs, write):
+    recs, used, a, b, avgs = [], [], {}, {}, {}
+    for s in secs:
+        if not s["table"].startswith("oil_wine_"):
+            continue
+        used.append(s)
+        ed, prod, tab = s["ed"], s["product"], s["table"]
+        for r in s["rows"]:
+            for c, cell in r["cells"].items():
+                if tab == "oil_wine_trade":
+                    if c.startswith("avg"):
+                        avgs[(ed, prod, r["label"], c)] = cell.value
+                        continue
+                    m, period, year, unit = r["label"], c, int(c[:4]), OW_UNIT[(prod, "ab")]
+                    a[(ed, prod, m, year)] = cell.value
+                elif tab == "oil_wine_stocks":
+                    m, period, year, unit = c, r["label"], int(r["label"]), OW_UNIT[(prod, "ab")]
+                    b[(ed, prod, m, year)] = cell.value
+                else:
+                    m, period, year, unit = "avg_consumption_" + c, s["period"], int(s["period"][5:]), OW_UNIT[(prod, c)]
+                recs.append({"census": ed, "table_id": tab, "gallica_ark": s["ark"], "source_page": s["page"],
+                             "gallica_view": s["view"], "year": year, "period": period, "product": prod,
+                             "product_fr": OW_PRODUCT[prod], "measure": m, "measure_fr": OW_MEASURE[m],
+                             "unit": unit, "value": cell.value, "flag": cell.flag})
+    for (ed, prod, m, y), v in sorted(a.items()):
+        if m == "balance":
+            CHK.eq(T_OW, f"{ed} {prod} {y}-{y + 1}: balance = import - export",
+                   a[(ed, prod, "import", y)] - a[(ed, prod, "export", y)], v)
+    for (ed, prod, m, c), printed in sorted(avgs.items()):
+        y0, y1 = int(c[3:7]) - 1, int(c[8:12]) - 1
+        vals = [a[(ed, prod, m, y)] for y in range(y0, y1 + 1)]
+        CHK.eq(T_OW, f"{ed} {prod} {m}: printed average {y0}-{y0 + 1}/{y1}-{y1 + 1} = mean of the campaigns",
+               sum(vals) / len(vals), printed, tol=Decimal(1))
+    for (ed, prod, m, y), v in sorted(b.items()):
+        if m == "remaining":
+            CHK.eq(T_OW, f"{ed} {prod} {y}: production + campaign = remaining",
+                   b[(ed, prod, "production", y)] + b[(ed, prod, "campaign", y)], v)
+        if m == "campaign" and (ed, prod, "balance", y) in a:
+            CHK.eq(T_OW, f"{ed} {prod} {y}: b) campaign = a) balance {y}-{y + 1}", a[(ed, prod, "balance", y)], v)
+    for r in recs:
+        if r["measure"] == "avg_consumption_total":
+            y0, y1 = int(r["period"][:4]), int(r["period"][5:])
+            vals = [b[(r["census"], r["product"], "remaining", y)] for y in range(y0, y1 + 1)]
+            mult = 100000 if r["product"] == "olive_oil" else 1000
+            CHK.eq(T_OW, f"{r['census']} {r['product']}: average consumption {r['period']} = mean of the b) "
+                   f"remaining column, in {r['unit']}", sum(vals) * mult / len(vals), r["value"])
+    kept, compared, diffs, n_ill = select_legible(recs, ["table_id", "product", "period", "measure"])
+    kept.sort(key=lambda r: (list(OW_PRODUCT).index(r["product"]),
+                             ["oil_wine_trade", "oil_wine_stocks", "oil_wine_consumption"].index(r["table_id"]),
+                             r["year"], list(OW_MEASURE).index(r["measure"])))
+    fails = CHK.fail[T_OW]
+    flagged = [f"{r['census']} {r['period']} {r['product']} {r['measure']} {r['flag']}" for r in kept if r["flag"]]
+    res = dict(rows=len(kept), checks=CHK.n[T_OW], failed=list(fails), overlap_compared=compared,
+               overlap_diffs=[list(d) for d in diffs], flagged=flagged, editions=EDITIONS_DONE, value_type="count",
+               illegible_printings_skipped=n_ill)
+    if write:
+        cols = COMMON + ["period", "product", "product_fr", "measure", "measure_fr", "unit", "value", "flag"]
+        paras = [
+            "Olive oil and wine: imports and exports by commercial campaign, stocks available after each harvest, "
+            "and average consumption. Printed titles: *Huile d'olive (1)* and *Vins*, each with *a) Importation et "
+            "exportation par campagne commerciale*, *b) Stoks disponibles* and *c) Consommation moyenne des années "
+            "1912 à 1921* (sgt1922; sgt1923 1913 à 1922, sgt1924 1914 à 1923). Footnotes (translated): olive oil "
+            "(1) not including oils and *grignons* (pomace); wine a) (1) exports include those of the Navy; the "
+            "sign + indicates the excess of imports over exports, the sign -, the excess of exports over imports; "
+            "olive oil b) (1) the harvest considered is the one beginning at the end of the year and continuing "
+            "into the first months of the next; wine c) (2) Muslims and Jews not included (per capita figure).",
+            "a) and b) are printed in thousands of quintals (oil) and thousands of hectolitres (wine); the balance "
+            "line (a) and the campaign column (b) are stored signed as printed and also used as checks (balance = "
+            "import - export; production + campaign = remaining; b) campaign of harvest Y = a) balance of campaign "
+            "Y-(Y+1)). The c) totals are checked against the mean of the b) *remaining* column of the same edition "
+            "(1.000 quintals = 100.000 kg; 1.000 hl = 1.000 hl). The three printed averages of a) (*Moyenne des "
+            "années*) were transcribed as checks (tolerance 1) and are not stored. Printed » = 0. sgt1922 prints "
+            "the oil per capita figure as *7,046* (kilograms, decimal comma); sgt1923 and sgt1924 print 7.",
+            "Explanation of the failed checks (cells re-read on native-resolution crops of f412-415, f902-905 and "
+            "f1406-1409; each line typed separately from its own edition's images). Olive oil 1919: production 165, "
+            "campaign - 20, remaining printed 135 (165 - 20 = 145), identically in all three editions; the campaign "
+            "agrees with a) (1919-1920 export 20) and the printed c) totals (14.590.000, 14.530.000, 14.680.000 kg) "
+            "agree with the remaining column as printed (135), so the production figure (or the remaining figure "
+            "from which consumption was computed) is misprinted; the table does not decide which, nothing flagged. "
+            "Wine 1916: production 450, campaign - 212, remaining printed 288 (450 - 212 = 238), in all three "
+            "editions; sgt1923 and sgt1924 c) totals agree with 288, so the same remark applies. sgt1922 wine c) "
+            "total printed 218.800 hl while the ten remaining figures 1912-1921 average 226.000 (221.000 with 238 "
+            "for 1916): not explained by any single cell, kept as printed. Failed average checks (three, all "
+            "sgt1923 olive oil): the import average 1913-14/1917-18 is printed 1 and the ten-campaign import "
+            "average 0, while the campaigns (1, 6, 4, 1, », all re-read, and printed identically in sgt1922 and "
+            "sgt1924) average 2,4 and 1,2; the balance average 1913-14/1917-18 (printed - 128) equals the printed "
+            "export average 129 minus that import average 1, so the printer averaged a different import figure; the "
+            "yearly cells stand. No figure is flagged since averages are not stored.",
+            "Survey of the whole chapter: `commerce_survey.md`.",
+        ]
+        write_csv(T_OW, cols, kept)
+        write_notes(T_OW, CHAPTER, SCRIPT, kept, cols, OW_DOC,
+                    "Huile d'olive ; Vins : a) Importation et exportation par campagne commerciale ; b) Stoks "
+                    "disponibles ; c) Consommation moyenne",
+                    "Olive oil and wine: imports and exports by commercial campaign, available stocks and average "
+                    "consumption", paras, CHK.n[T_OW], fails, compared, diffs, coverage_lines(used),
+                    "Selection (SPEC_ADDENDUM rule 4): a) and b) each edition prints the last ten campaigns or "
+                    "harvests; each is stored once, from the latest edition printing it; every other printing is "
+                    "compared and differences listed below. c) each edition prints a different ten-year average; "
+                    "all three are stored.",
+                    "Units as printed (see `unit`); value_type: count (quantity).")
+    return res
+
+
 def build(write):
     secs = []
     for ed in EDITIONS_DONE:
@@ -1620,6 +1755,7 @@ def build(write):
     res[T_SLA] = build_slaughter(secs, write)
     res[T_CER] = build_cereals(secs, write)
     res[T_CST] = build_cereals_stocks(secs, write)
+    res[T_OW] = build_oil_wine(secs, write)
     if write:
         cols = COMMON + DIMS + ["value", "flag"]
         write_csv(T, cols, kept)

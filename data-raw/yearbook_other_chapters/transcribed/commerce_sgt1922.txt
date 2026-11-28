@@ -894,3 +894,73 @@ cols: total per_capita
 wheat | 1636600 77
 barley | 806600 -
 maize | 215600 -
+
+# ---- Huile d'olive (1) / Vins : a) Importation et exportation par campagne commerciale, b) Stoks disponibles,
+# c) Consommation moyenne. Typed from the native-resolution images of this edition only. Balance and campaign
+# signed as printed (+ = excess of imports). Averages (Moyenne des années) transcribed as checks, not stored.
+# Oil a)/b) in 1.000 quintaux, c) total kilogr., per capita kilogr. (printed with a decimal comma in sgt1922);
+# wine a)/b) in 1.000 hectolitres, c) total hectolitres, per capita litres (Musulmans et Israélites non compris).
+@oil_wine_trade view=412 page=388 product=olive_oil
+img: all
+cols: 1912-1913 1913-1914 1914-1915 1915-1916
+import | 1 1 6 4
+export | 112 143 93 73
+balance | -111 -142 -87 -69
+@oil_wine_trade view=413 page=389 product=olive_oil
+img: all
+cols: 1916-1917 1917-1918 1918-1919 1919-1920 1920-1921 1921-1922 avg1913_1917 avg1918_1922 avg1913_1922
+import | 1 0 0 0 0 0 3 0 1
+export | 204 133 203 20 197 185 125 148 137
+balance | -203 -133 -203 -20 -197 -185 -122 -148 -136
+@oil_wine_stocks view=412 page=388 product=olive_oil
+img: all
+cols: production campaign remaining
+1912 | 160 -111 49
+1913 | 285 -142 143
+1914 | 146 -87 59
+1915 | 179 -69 110
+1916 | 554 -203 351
+@oil_wine_stocks view=413 page=389 product=olive_oil
+img: all
+cols: production campaign remaining
+1917 | 150 -133 17
+1918 | 390 -203 187
+1919 | 165 -20 135
+1920 | 450 -197 253
+1921 | 340 -185 155
+@oil_wine_consumption view=413 page=389 product=olive_oil period=1912-1921
+img: all
+cols: total per_capita
+olive_oil | 14590000 7.046
+@oil_wine_trade view=414 page=390 product=wine
+img: all
+cols: 1912-1913 1913-1914 1914-1915 1915-1916
+import | 2 1 0 1
+export | 135 107 29 83
+balance | -133 -106 -29 -82
+@oil_wine_trade view=415 page=391 product=wine
+img: all
+cols: 1916-1917 1917-1918 1918-1919 1919-1920 1920-1921 1921-1922 avg1913_1917 avg1918_1922 avg1913_1922
+import | 0 0 0 0 0 0 1 0 0
+export | 212 188 206 152 127 185 113 171 143
+balance | -212 -188 -206 -152 -127 -185 -112 -171 -143
+@oil_wine_stocks view=414 page=390 product=wine
+img: all
+cols: production campaign remaining
+1912 | 290 -133 157
+1913 | 300 -106 194
+1914 | 200 -29 171
+1915 | 125 -82 43
+1916 | 450 -212 288
+@oil_wine_stocks view=415 page=391 product=wine
+img: all
+cols: production campaign remaining
+1917 | 432 -188 244
+1918 | 608 -206 402
+1919 | 444 -152 292
+1920 | 498 -127 371
+1921 | 283 -185 98
+@oil_wine_consumption view=415 page=391 product=wine period=1912-1921
+img: all
+cols: total per_capita
+wine | 218800 146
