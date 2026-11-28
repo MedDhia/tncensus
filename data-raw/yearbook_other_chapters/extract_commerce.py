@@ -2068,6 +2068,383 @@ WH_PARAS = [
     "Survey of the whole chapter: `commerce_survey.md`.",
 ]
 
+# ----------------------------------------------------------------- Poids et mesures : a) b) c)
+
+T_WM = "commerce_weights_measures"
+WM_PLACE = {"tunis_1_2": "1re et 2e Tunis", "tunis_1_2_3": "1re, 2e et 3e Tunis", "tunis_city": "Tunis (ville)",
+            "tunis_1": "1re Tunis", "tunis_2": "2e Tunis", "tunis_3": "3e Tunis", "bizerte": "Bizerte",
+            "sousse": "Sousse", "sfax": "Sfax", "all": "Ensemble (résultats généraux)"}
+_PRES = "Nombre d'instruments présentés : "
+_VER = "Vérification première, nombre d'instruments vérifiés : "
+# column code -> (measure_fr in a)/b), measure_fr in c), unit)
+WM_MEASURE = {
+    "makers_mark": ("Nombre de fabricants ou ajusteurs ayant déposé leur marque", None, "makers"),
+    "makers_active": ("Nombre de fabricants ou ajusteurs ayant exercé leur profession en {y}", None, "makers"),
+    "made_tunisia": (_PRES + "Fabriqués en Tunisie", _VER + "Fabriqués en Tunisie", "instruments"),
+    "renovated": (_PRES + "Remis à neuf", _VER + "Remis à neuf", "instruments"),
+    "imported": (_PRES + "Importés", _VER + "Importés", "instruments"),
+    "admitted": ("Nombre d'instruments : Admis", None, "instruments"),
+    "refused": ("Nombre d'instruments : Refusés", None, "instruments"),
+    "subjects": ("Nombre d'assujettis exercés", "Nombre d'assujettis exercés", "persons"),
+    "taxes": ("Montant des taxes", "Montant des taxes perçues", "francs"),
+    "stamp": ("Droit de timbre", "Droit de timbre", "francs"),
+    "civil": ("Nombre d'établissements publics vérifiés gratuitement : Civils",
+              "Nombre d'établissements publics vérifiés gratuitement : Civils", "establishments"),
+    "military": ("Nombre d'établissements publics vérifiés gratuitement : Militaires",
+                 "Nombre d'établissements publics vérifiés gratuitement : Militaires", "establishments"),
+    "adjusted": ("Nombre d'instruments défectueux : Rajustés", "Nombre d'instruments reconnus défectueux : Rajustés",
+                 "instruments"),
+    "withdrawn": ("Nombre d'instruments défectueux : Mis hors service",
+                  "Nombre d'instruments reconnus défectueux : Mis hors service", "instruments"),
+    "reports": ("Nombre de procès-verbaux dressés", "Nombre de procès-verbaux dressés", "reports"),
+}
+# cells found misprinted (column total and line identity both fail; the other cells agree); kept, flagged
+WM_MISPRINTS = {
+    ("sgt1922", "weights_a", "tunis_1_2", "admitted"): "printed 13.073; the column total 21.021 and the line "
+    "(10.466 + 3.018 + 103 - 411) give 13.176",
+    ("sgt1923", "weights_a", "tunis_1_2", "renovated"): "printed 1.423; the column total 9.667 and the line "
+    "(16.001 + 308 - 12.454 - 1.432) give 2.423",
+}
+WM_DOC = dict(DOC, census="edition the value is taken from (a), b): the edition's reference year; c): rule 4)",
+              table_id="`weights_a` (a) Vérification première des instruments), `weights_b` (b) Vérification "
+                       "périodique), `weights_c` (c) Résultats généraux, ten years)",
+              year="year of the verification",
+              circonscription="verification district code; `all` for the c) country totals",
+              circonscription_fr="as printed (Tunis 1re/2e, and 3e from 1924, bracketed in a))",
+              measure="column code (see measure_fr)", measure_fr="column heading as printed",
+              unit="`makers`, `instruments`, `persons` (assujettis), `establishments`, `reports` (procès-verbaux) "
+                   "or `francs`",
+              value="as printed (» stored as 0; francs with centimes)",
+              flag="empty or `total_mismatch` (misprinted cell, see notes)")
+WM_PARAS = [
+    "Three tables per edition: a) Vérification première des instruments (makers who deposited their mark and "
+    "who practised in the year, instruments presented: made in Tunisia, renovated, imported; instruments admitted "
+    "and refused) and b) Vérification périodique (persons subject to verification, amount of fees and stamp duty "
+    "in francs, public establishments verified free of charge, defective instruments adjusted or taken out of "
+    "service, reports drawn up), both by circonscription for the edition's reference year; c) Résultats "
+    "généraux, the country totals of both for the last ten years. In a) the Tunis circonscriptions are bracketed "
+    "into one line (1re and 2e; 1re, 2e and 3e in sgt1924, which adds a 3e Tunis to b)). The a) heading reads "
+    "'exercé leur profession en 1921' in sgt1922 (1923 and 1924 in the later editions), stored as printed. "
+    "Footnote (1) to Importés: weights and measures that passed the first verification in France are exempt in "
+    "Tunisia. The TOTAUX lines are checks only; c) for the reference year repeats the a) and b) TOTAUX "
+    "(compared, stored once in each table as printed).",
+    "Checks: column totals (TOTAUX) of a) and b); in a) on every line made + renovated + imported = admitted + "
+    "refused; c) reference year = TOTAUX of a) (instruments presented) and b). Explanation of the failed checks "
+    "(re-read on native-resolution crops; printed values kept and flagged `total_mismatch`): sgt1922 a) 1re-2e "
+    "Tunis admitted printed 13.073 (column admitted sums to 20.918 against TOTAUX 21.021, and the line is short by "
+    "the same 103); sgt1923 a) 1re-2e Tunis renovated printed 1.423 (column sums to 8.667 against TOTAUX 9.667, "
+    "the line short by the same 1.000). The TOTAUX and c) agree with the corrected values. sgt1924 b) Rajustés: "
+    "the seven lines sum to 22.005, TOTAUX (and c) 1924) 22.004; every cell re-read on a zoomed crop, the misprint "
+    "cannot be located, nothing flagged.",
+    "Survey of the whole chapter: `commerce_survey.md`.",
+]
+
+
+def build_weights(secs, write):
+    recs, used, tot = [], [], {}
+    for s in secs:
+        if not s["table"].startswith("weights_"):
+            continue
+        used.append(s)
+        ed, tid = s["ed"], s["table"]
+        if tid in ("weights_a", "weights_b"):
+            check_col_totals(CHK, T_WM, s)
+            if tid == "weights_a":
+                check_row(CHK, T_WM, s, "admitted", ["made_tunisia", "renovated", "imported", "-refused"])
+        for r in s["rows"]:
+            lab = r["label"]
+            if lab == "Totaux":
+                tot.update({(ed, c): x.value for c, x in r["cells"].items()})
+                continue
+            year, place = (int(lab), "all") if tid == "weights_c" else (int(ed[3:]), lab)
+            for c, cell in r["cells"].items():
+                ab, cc, unit = WM_MEASURE[c]
+                m_fr = (cc if tid == "weights_c" else ab).format(y=s.get("active_year"))
+                if tid == "weights_c" and year == int(ed[3:]):
+                    CHK.eq(T_WM, f"{where(s)} {year} {c}: c) = TOTAUX of a)/b) ({ed})", tot.get((ed, c)), cell.value)
+                flag = cell.flag or ("total_mismatch" if (ed, tid, lab, c) in WM_MISPRINTS else "")
+                recs.append({"census": ed, "table_id": tid, "gallica_ark": s["ark"], "source_page": s["page"],
+                             "gallica_view": s["view"], "year": year, "circonscription": place,
+                             "circonscription_fr": WM_PLACE[place], "measure": c, "measure_fr": m_fr,
+                             "unit": unit, "value": cell.value, "flag": flag})
+    kept, compared, diffs = select_latest(recs, ["table_id", "year", "circonscription", "measure"])
+    order = list(WM_MEASURE)
+    places = list(WM_PLACE)
+    kept.sort(key=lambda r: (r["table_id"], r["year"], places.index(r["circonscription"]), order.index(r["measure"])))
+    fails = CHK.fail[T_WM]
+    flagged = [f"{r['census']} {r['table_id']} {r['circonscription']} {r['measure']} {r['flag']}"
+               for r in kept if r["flag"]]
+    res = dict(rows=len(kept), checks=CHK.n[T_WM], failed=list(fails), overlap_compared=compared,
+               overlap_diffs=[list(d) for d in diffs], flagged=flagged, editions=EDITIONS_DONE,
+               value_type="mixed (counts; fees in francs)")
+    if write:
+        cols = COMMON + ["circonscription", "circonscription_fr", "measure", "measure_fr", "unit", "value", "flag"]
+        write_csv(T_WM, cols, kept)
+        write_notes(T_WM, CHAPTER, SCRIPT, kept, cols, WM_DOC, "Poids et mesures",
+                    "Weights and measures: first and periodic verification of instruments", WM_PARAS,
+                    CHK.n[T_WM], fails, compared, diffs, coverage_lines(used),
+                    "Selection: a) and b) print the edition's reference year only (all stored). c) prints the last "
+                    "ten years (SPEC_ADDENDUM rule 4): each year stored once, from the latest edition printing it; "
+                    "every other printing compared cell by cell.",
+                    "Units: counts as printed (see `unit`); fees and stamp duty in francs with centimes; never "
+                    "converted. value_type: mixed.")
+    return res
+
+# ----------------------------------------------------------------- Laboratoire de chimie : analyses effectuées
+
+T_CHEM = "commerce_chemistry_lab"
+CH_SAMPLE = {
+    "alcohol": "Alcools", "denatured": "Alcools dénaturés et composants", "alcohol_denat": "Alcools et dénaturants",
+    "beets": "Betteraves", "coffee_tea": "Cafés et thés", "limestone": "Calcaire, chaux, ciments et mortiers",
+    "cereals": "Céréales et graines diverses", "glues": "Colles, gélatines, clarifiants", "fuels": "Combustibles",
+    "tomato": "Conserves de tomates", "colours": "Couleurs",
+    "marine_insurance": "Divers pour expertises assurances maritimes", "waters": "Eaux", "fertilisers": "Engrais",
+    "spices": "Epices", "flours": "Farines et farineux alimentaires", "tars": "Goudrons, huiles de goudrons, résines",
+    "grignons": "Grignons, huiles de grignons", "oil_linseed": "Huiles : de lin", "oil_mineral": "Huiles : minérales",
+    "oil_olive": "Huiles : d'olive", "oil_other": "Huiles : autres", "oil_essential": "Huiles : essentielles",
+    "milk": "Laits", "milk_condensed": "Laits condensés", "milk_all": "Laits et laits condensés",
+    "lyes": "Lessives", "ores": "Minerais et métaux", "musts": "Moûts mutés", "olives": "Olives",
+    "perfumery": "Parfumerie et extraits alcooliques", "petroleum": "Pétroles, mazouts", "phosphates": "Phosphates",
+    "prod_food": "Produits : alimentaires divers", "prod_chem": "Produits : chimiques",
+    "prod_pharma": "Produits : pharmaceutiques", "prod_pharmacy": "Produits : divers pour pharmacies",
+    "prod_other": "Produits : divers autres", "soaps": "Savons", "salts": "Sels",
+    "bran": "Sons, aliments pour le bétail", "spirits": "Spiritueux et liqueurs",
+    "sulphur": "Soufres, produits anticryptogamiques", "sugars": "Sucres, miels, confiseries, confitures",
+    "earths": "Terres", "textiles": "Tissus, textiles, bonneterie", "urines": "Urines analyses médicales",
+    "wines": "Vins, boissons alcooliques", "vinegars": "Vinaigres",
+}
+# designations printed differently in the later editions
+CH_SAMPLE_ED = {
+    ("sgt1923", "tars"): "Goudrons, huiles de goudron", ("sgt1924", "tars"): "Goudrons, huiles de goudron",
+    ("sgt1923", "prod_chem"): "Produits : chimiques divers", ("sgt1924", "prod_chem"): "Produits : chimiques divers",
+    ("sgt1923", "salts"): "Sel marin", ("sgt1924", "salts"): "Sel marin",
+    ("sgt1923", "urines"): "Urines, analyses médicales", ("sgt1924", "urines"): "Urines, analyses médicales",
+    ("sgt1924", "fertilisers"): "Engrais, phosphates", ("sgt1924", "petroleum"): "Pétroles, mazouts, essences",
+    ("sgt1924", "prod_other"): "Produits : divers autres pour herboristes",
+}
+CH_SERVICE = {"customs": "Douanes (échantillons reconnus)", "fraud_good": "Répression des fraudes : Bons",
+              "fraud_suspect": "Répression des fraudes : Suspects", "excise": "Contributions",
+              "other_admin": "Autres administrations", "studies": "Études et recherches",
+              "public": "Analyses payantes pour le public"}
+# cells located by a failing line total and a failing column total of the same size; printed value kept, flagged
+CH_MISPRINTS = {
+    ("sgt1922", "marine_insurance", "public"): "printed », line TOTAL 216; the public column is short by 216 + 20",
+    ("sgt1922", "urines", "public"): "printed 5; line TOTAL 51 and the public column need 25",
+    ("sgt1923", "alcohol_denat", "customs"): "printed 55; line TOTAL 54 and the customs column need 53",
+    ("sgt1924", "prod_other", "fraud_good"): "printed 55; line TOTAL 126 and the Bons column need 5",
+}
+CH_DOC = dict(DOC, census="edition (each edition prints one year)",
+              table_id="`chemistry` (Laboratoire de chimie, analyses effectuées)",
+              year="edition reference year (the table prints no year; assumed to be the edition's year)",
+              sample="row code (see sample_fr)", sample_fr="nature des échantillons as printed (sub-lines of the "
+              "Huiles and Produits brackets prefixed with the bracket heading)",
+              service="`customs`, `fraud_good`, `fraud_suspect`, `excise`, `other_admin`, `studies`, `public`",
+              service_fr="service column heading as printed",
+              measure="`analyses`", measure_fr="analyses effectuées", unit="`analyses`",
+              value="number of analyses as printed (» stored as 0)",
+              flag="empty or `total_mismatch` (misprinted cell, see notes)")
+CH_PARAS = [
+    "Analyses made by the chemistry laboratory, by nature of the sample (rows) and requesting service (columns): "
+    "customs (samples examined), fraud repression (samples found good / suspect), Contributions (headed "
+    "*Contributions diverses* in sgt1922 and *Contributions indirectes* in sgt1923; the column is absent in "
+    "sgt1924), other administrations, studies and research, paid analyses for the public. The line totals "
+    "(TOTAUX par catégories) and the column totals (TOTAUX par service) are checks only, not stored. The list of "
+    "samples changes between editions (sgt1922 prints alcohols and denatured alcohols, milk and condensed milk "
+    "separately and essential oils; sgt1923 adds beets, cereals, glues; sgt1924 merges fertilisers and "
+    "phosphates and adds products for pharmacies); every line printed is stored, with its designation as printed. "
+    "No year is printed in the heading; the year stored is the edition's reference year.",
+    "Explanation of the failed checks (all cells re-read on zoomed native-resolution crops; printed values kept): "
+    + "; ".join(f"{e} {r} {c}: {n}" for (e, r, c), n in CH_MISPRINTS.items()) + " (these four flagged "
+    "`total_mismatch`). sgt1922: the customs column sums to 1.878 against TOTAUX 1.879 and the line totals sum to "
+    "5.007 against 5.008; every line agrees with its total "
+    "apart from the two above, so the one-unit difference cannot be located (not flagged). sgt1924: the grand "
+    "total is printed 5.255; the corrected columns and the line totals give 5.265 (the grand total is not stored).",
+    "Survey of the whole chapter: `commerce_survey.md`.",
+]
+
+
+def build_chemistry(secs, write):
+    recs, used = [], []
+    for s in secs:
+        if s["table"] != "chemistry":
+            continue
+        used.append(s)
+        ed = s["ed"]
+        svc = [c for c in s["cols"] if c != "total"]
+        check_col_totals(CHK, T_CHEM, s)
+        check_row(CHK, T_CHEM, s, "total", svc)
+        for r in s["rows"]:
+            lab = r["label"]
+            if lab == "Totaux":
+                continue
+            for c in svc:
+                cell = r["cells"][c]
+                s_fr = s["contrib"] if c == "excise" else CH_SERVICE[c]
+                recs.append({"census": ed, "table_id": "chemistry", "gallica_ark": s["ark"], "source_page": s["page"],
+                             "gallica_view": s["view"], "year": int(ed[3:]), "sample": lab,
+                             "sample_fr": CH_SAMPLE_ED.get((ed, lab), CH_SAMPLE[lab]), "service": c,
+                             "service_fr": s_fr, "measure": "analyses", "measure_fr": "analyses effectuées",
+                             "unit": "analyses", "value": cell.value,
+                             "flag": cell.flag or ("total_mismatch" if (ed, lab, c) in CH_MISPRINTS else "")})
+    kept, compared, diffs = select_latest(recs, ["year", "sample", "service"])
+    smp, sv = list(CH_SAMPLE), list(CH_SERVICE)
+    kept.sort(key=lambda r: (r["year"], smp.index(r["sample"]), sv.index(r["service"])))
+    fails = CHK.fail[T_CHEM]
+    flagged = [f"{r['census']} {r['sample']} {r['service']} {r['flag']}" for r in kept if r["flag"]]
+    res = dict(rows=len(kept), checks=CHK.n[T_CHEM], failed=list(fails), overlap_compared=compared,
+               overlap_diffs=[list(d) for d in diffs], flagged=flagged, editions=EDITIONS_DONE, value_type="counts")
+    if write:
+        cols = COMMON + ["sample", "sample_fr", "service", "service_fr", "measure", "measure_fr", "unit", "value",
+                         "flag"]
+        write_csv(T_CHEM, cols, kept)
+        write_notes(T_CHEM, CHAPTER, SCRIPT, kept, cols, CH_DOC, "Laboratoire de chimie : analyses effectuées",
+                    "Chemistry laboratory: analyses made, by nature of sample and service", CH_PARAS,
+                    CHK.n[T_CHEM], fails, compared, diffs, coverage_lines(used),
+                    "Selection: each edition prints a single year; no overlap, all stored.",
+                    "Unit: number of analyses. value_type: counts.")
+    return res
+
+
+# ----------------------------------------------------------------- relations commerciales avec les principaux pays
+
+T_CP = "commerce_country_products"
+CP_COUNTRIES = ["france", "algeria", "england", "italy", "usa", "belgium"]
+CP_MEASURE = {"quantity": "quantité", "value": "valeur"}
+
+
+def cp_slug(label):
+    import unicodedata
+    t = unicodedata.normalize("NFKD", label).encode("ascii", "ignore").decode().lower()
+    t = "".join(ch if ch.isalnum() else "_" for ch in t)
+    return "_".join(w for w in t.split("_") if w)[:60]
+
+
+def build_country_products(secs, write):
+    recs, used = [], []
+    cty_tot = {}
+    for s in secs:
+        if s["table"] == "by_country":
+            for lab, cs in rows_of(s).items():
+                for c in s["cols"]:
+                    if not c.startswith("A"):
+                        cty_tot[(s["ed"], lab, c)] = cs[c].value
+    units, order = {}, {}
+    vals = defaultdict(dict)    # (ed, country, flow, year) -> {product: value}
+    totals = {}
+    for s in secs:
+        if s["table"] != "country_products":
+            continue
+        used.append(s)
+        ed, k, f, m = s["ed"], s["country"], s["flow"], s["measure"]
+        for r in s["rows"]:
+            lab = r["label"]
+            if lab == "TOTAUX":
+                for c in s["cols"]:
+                    totals[(ed, k, f, c)] = (r["cells"][c].value, s)
+                continue
+            prod_fr, unit = (lab.split(";") + [None])[:2]
+            if m == "quantity":
+                units[(ed, k, f, prod_fr)] = unit
+            order.setdefault((k, f, prod_fr), len(order))
+            for c in s["cols"]:
+                cell = r["cells"][c]
+                if m == "value":
+                    vals[(ed, k, f, c)][prod_fr] = cell.value
+                recs.append({"census": ed, "table_id": "country_products", "gallica_ark": s["ark"],
+                             "source_page": s["page"], "gallica_view": s["view"], "year": int(c),
+                             "country": COUNTRY[k][0], "country_fr": COUNTRY[k][1], "country_code": k,
+                             "flow": f, "flow_fr": FLOW[f], "product": cp_slug(prod_fr), "product_fr": prod_fr,
+                             "measure": m, "measure_fr": CP_MEASURE[m],
+                             "unit": unit if m == "quantity" else "francs", "value": cell.value,
+                             "flag": cell.flag})
+    for r in recs:
+        if r["measure"] == "value":
+            continue
+    for (ed, k, f, c), (tot, s) in sorted(totals.items()):
+        CHK.eq(T_CP, f"{where(s)} {k} {f} {c}: sum of product values = TOTAUX",
+               ssum(vals[(ed, k, f, c)].values()), tot)
+        CHK.eq(T_CP, f"{where(s)} {k} {f} {c}: TOTAUX = commerce_trade_by_country (same edition)",
+               tot, cty_tot.get((ed, f"{k}.{f}", c)))
+    key = ["year", "country_code", "flow", "product_fr", "measure"]
+    kept, compared, diffs, n_ill = select_legible(recs, key)
+    kept.sort(key=lambda r: (r["year"], CP_COUNTRIES.index(r["country_code"]), r["flow"],
+                             order[(r["country_code"], r["flow"], r["product_fr"])], r["measure"]))
+    fails = CHK.fail[T_CP]
+    flagged = [f"{r['census']} {r['year']} {r['country_code']} {r['flow']} {r['product']} {r['measure']} {r['flag']}"
+               for r in kept if r["flag"]]
+    res = dict(rows=len(kept), checks=CHK.n[T_CP], failed=list(fails), overlap_compared=compared,
+               overlap_diffs=[list(d) for d in diffs], flagged=flagged, editions=sorted({s["ed"] for s in used}),
+               value_type="quantities as printed and francs", illegible_printings_not_compared=n_ill,
+               done=CP_DONE)
+    if write:
+        cols = COMMON + CP_DIMS + ["value", "flag"]
+        write_csv(T_CP, cols, kept)
+        write_notes(T_CP, CHAPTER, SCRIPT, kept, cols, CP_DOC,
+                    "Relations commerciales avec les principaux pays de provenance et de destination",
+                    "Trade with the principal countries of provenance and destination, by product "
+                    "(quantity and value)",
+                    CP_PARAS + ["Survey of the whole chapter: `commerce_survey.md`."],
+                    CHK.n[T_CP], fails, compared, diffs, coverage_lines(used),
+                    RULE4.replace("from the latest edition printing it", "from the latest edition printing it "
+                                  "legibly"),
+                    "Units: quantities in the unit printed in the UNITÉ column (Tête, Kilo, Quint = quintal "
+                    "métrique, Hect/Hecto = hectolitre, Pièce, Paire, Gr = gramme), never converted; values in "
+                    "francs. value_type: quantities and francs.")
+    return res
+
+
+CP_DONE = "sgt1922 France importations and exportations (f298-305)"
+CP_DIMS = ["country", "country_fr", "country_code", "flow", "flow_fr", "product", "product_fr", "measure",
+           "measure_fr", "unit"]
+CP_DOC = dict(DOC, table_id="`country_products` (Relations commerciales avec les principaux pays, by country)",
+              census="edition the value is taken from: the latest edition printing that year legibly (rule 4)",
+              year="calendar year of the trade",
+              country="country of provenance (imports) or destination (exports), English",
+              country_fr="country as printed in the heading of the table",
+              country_code="short code (as in `commerce_trade_by_country`)",
+              product="code derived from the printed line (ASCII slug of `product_fr`)",
+              product_fr="line as printed (ditto marks of the line heading expanded); no nomenclature number is "
+                         "printed in these tables",
+              measure="`quantity` or `value`", measure_fr="quantité / valeur",
+              unit="unit as printed in the UNITÉ column (its ditto marks resolved), `francs` for values",
+              value="as printed; » stored as 0",
+              flag="empty or `illegible` (see notes)")
+CP_PARAS = [
+    "Each country occupies two spreads per flow: the even view prints the product lines (grouped under Animaux et "
+    "produits animaux, Produits végétaux, Produits minéraux, Fabrications; the group headings are not stored), "
+    "the UNITÉ column and the quantities for ten years; the odd view the values in francs for the same lines and, "
+    "at the end of each flow, a TOTAUX line of the values. TOTAUX is not stored: it is checked against the sum "
+    "of the product values and against the country line of `commerce_trade_by_country` (same edition). No "
+    "quantity total is printed (units differ). No nomenclature number is printed, so no `product_no` column is "
+    "given; `product` is a code derived from the printed line.",
+    "Gutter. The quantity of the last year of each edition lies against the binding: its right-hand digits are "
+    "hidden on both facing views (the last digit of a value such as 291.00- is lost), so every last-year "
+    "quantity is typed `?` (flag `illegible`) except where » is printed. The value columns are legible.",
+    "sgt1922 France importations: the 1913 column adds to TOTAUX exactly; the other years leave residuals "
+    "(sum of lines minus TOTAUX: 1914 -500, 1915 +50, 1916 -20.100, 1917 -55, 1918 -10.210, 1919 -33.600, 1920 "
+    "+9.890.402, 1921 +87.295). Every value of the 1915-1917 and 1920-1921 columns was re-read on zoomed "
+    "native-resolution crops and stands as transcribed, and the Gallica OCR shows no competing reading, so "
+    "the residuals are in the printed table; nothing is flagged. The 1922 value of *Espèces médicinales* has "
+    "a broken first digit (?58.567) and is typed `?`; the 1922 TOTAUX leaves 3.568.667 for it, which no "
+    "reading of the visible digits gives, so it is not derived. Every TOTAUX equals the France import line of "
+    "`commerce_trade_by_country`. *Eaux minérales* 1919 prints 254.188 hl against 293.368 francs (unit value far "
+    "below the other years) and *Tissus de soie* 1920 426 quintals against 9.707.195 francs: printed values "
+    "kept, not flagged (no check covers quantities).",
+    "sgt1922 France exportations: TOTAUX is reprinted unchanged by sgt1923 and sgt1924 (Gallica OCR of f795 and "
+    "f1299) but differs from the France export line of `commerce_trade_by_country` in 1915 (62.782.418 against "
+    "62.182.418), 1916 (51.904.159 against 51.994.059) and 1919 (120.932.134 against 129.932.134), so the two "
+    "tables of the same edition disagree in print. The product values match TOTAUX in 1922 exactly and in 1917 "
+    "within 2 francs; the other years leave residuals (sum of lines minus TOTAUX: 1913 +59.997, 1914 +1.754.372, "
+    "1915 -499.909, 1916 +10.215.526, 1918 -50.590, 1919 +14.432.181, 1920 -358.000). The 1913-1916 and 1919 "
+    "columns of f303 and f305 were re-read on zoomed native-resolution crops and stand as transcribed; most of "
+    "the f305 values are confirmed by the later printings' OCR (not used for values). *Vins ordinaires* 1916 "
+    "(11.403.490 francs for 46.779 hl, against 1.783.850 for 59.461 hl in 1915) would explain 10.000.000 of the "
+    "1916 residual if read 1.403.490, but it is printed so in all three editions' OCR and is not flagged; no "
+    "single cell explains the other residuals. *Vins de liqueur* 1921: the second digit is broken (3.?60), typed "
+    "`?`; TOTAUX implies about 3.360 (residual of 1 franc), not derived. *Poissons frais* 1913-1915 print the same "
+    "figure as quantity (kilo) and value.",
+]
+
 
 def build(write):
     secs = []
@@ -2116,6 +2493,9 @@ def build(write):
     res[T_OW] = build_oil_wine(secs, write)
     res[T_PRI] = build_prices(secs, write)
     res[T_WH] = build_warehouses(secs, write)
+    res[T_WM] = build_weights(secs, write)
+    res[T_CHEM] = build_chemistry(secs, write)
+    res[T_CP] = build_country_products(secs, write)
     if write:
         cols = COMMON + DIMS + ["value", "flag"]
         write_csv(T, cols, kept)

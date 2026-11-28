@@ -1257,3 +1257,81 @@ wool | 51.54 19975 82.47 42120 134.01 62095 134.01 62095 0 0
 esparto_goods | 0 72630 0 0 0 0 0 0 0 72630
 almonds | 1223.75 254833 220.25 440.50 1444 298883 1218.06 251436 225.94 47447
 misc | 0 29557 0 152802 0 182359 0 61816 0 120543
+# ---------------------------------------------------------------- Poids et mesures (f1419-1420)
+@weights_a view=1419 page=429 active_year=1924
+img: all
+cols: makers_mark makers_active made_tunisia renovated imported admitted refused
+tunis_1_2_3 | 24 8 11085 1591 5206 12850 5032
+bizerte | 1 1 0 363 0 217 146
+sousse | 3 3 0 4474 96 3994 576
+sfax | 3 1 0 2304 0 2210 94
+Totaux | 31 13 11085 8732 5302 19271 5848
+@weights_b view=1419 page=429
+img: all
+cols: subjects taxes stamp civil military adjusted withdrawn reports
+tunis_city | 13709 70764.10 767.95 57 17 7457 876 6
+tunis_1 | 3403 20298.55 214.95 83 13 2296 168 50
+tunis_2 | 2482 15127.05 146.75 36 6 789 59 30
+tunis_3 | 2253 12589.20 127.40 38 2 721 36 24
+bizerte | 4797 31455.95 316.70 105 112 2674 232 44
+sousse | 11129 49273.55 590.30 76 17 5236 1246 139
+sfax | 9026 50523.85 566.30 122 37 2832 323 104
+Totaux | 46799 250032.25 2730.35 517 204 22004 2940 397
+@weights_c view=1420 page=430
+img: all
+cols: made_tunisia renovated imported subjects taxes stamp civil military adjusted withdrawn reports
+1915 | 11632 7508 156 34193 68915.50 1041.70 608 193 12732 2197 120
+1916 | 11927 6586 22 34772 69725.50 1056.15 622 196 12919 1982 96
+1917 | 3792 7351 473 33981 69473.80 1043.75 627 202 12430 1491 119
+1918 | 2286 10043 376 33626 68095.10 1036.50 626 191 13647 1058 188
+1919 | 3260 14597 16 36462 72695.55 1119.00 646 212 19147 1179 225
+1920 | 9237 9406 1809 38762 201158.55 2201.15 502 188 19632 1348 391
+1921 | 9840 11670 176 41192 213806.50 3344.85 500 192 19597 1711 303
+1922 | 10466 11369 691 42893 223530.90 2424.25 507 196 18866 1792 316
+1923 | 12454 9667 1449 44430 236628.75 2564.95 500 197 19778 2971 320
+1924 | 11085 8732 5302 46799 250032.25 2730.35 517 204 22004 2940 397
+# ---------------------------------------------------------------- Laboratoire de chimie (f1421)
+@chemistry view=1421 page=431
+img: all
+cols: customs fraud_good fraud_suspect other_admin studies public total
+alcohol_denat | 40 0 0 0 0 0 40
+coffee_tea | 0 29 11 0 0 0 40
+limestone | 1 0 0 0 0 10 11
+cereals | 0 18 10 0 10 3 41
+fuels | 0 0 0 0 0 35 35
+tomato | 18 3 8 0 0 17 46
+colours | 86 1 0 0 0 13 100
+marine_insurance | 0 0 0 0 0 485 485
+waters | 0 0 0 90 66 70 226
+fertilisers | 3 0 0 1 0 31 35
+flours | 10 20 3 3 0 14 50
+tars | 22 0 0 0 0 5 27
+grignons | 12 0 0 1 38 79 130
+oil_linseed | 34 0 0 0 0 1 35
+oil_mineral | 14 0 0 0 7 43 64
+oil_olive | 422 30 4 1 50 30 537
+oil_other | 12 0 0 0 0 0 12
+milk_all | 0 69 70 11 26 10 186
+lyes | 14 0 0 0 0 0 14
+ores | 14 0 0 0 1 147 162
+musts | 4 1 0 3 2 128 138
+olives | 0 0 0 0 67 0 67
+perfumery | 17 0 0 0 0 1 18
+petroleum | 75 3 0 1 0 29 108
+prod_food | 21 17 10 0 7 6 61
+prod_chem | 33 0 0 4 0 15 52
+prod_pharma | 5 0 0 0 0 7 12
+prod_pharmacy | 0 0 0 0 198 0 198
+prod_other | 94 55 2 1 3 21 126
+soaps | 1 0 0 18 0 10 29
+salts | 2 0 0 0 0 6 8
+bran | 217 1 0 0 0 17 235
+sulphur | 1 0 0 0 4 16 21
+spirits | 68 0 1 10 0 5 84
+sugars | 220 12 4 0 0 8 244
+earths | 0 0 0 118 0 95 213
+textiles | 15 0 0 0 0 17 32
+urines | 0 0 0 22 6 24 52
+wines | 94 90 11 0 297 789 1281
+vinegars | 8 1 1 0 0 0 10
+Totaux | 1577 300 135 284 782 2187 5255

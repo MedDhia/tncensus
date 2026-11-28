@@ -32,8 +32,8 @@ years (1913-1922, 1914-1923, 1915-1924), so every yearly series falls under SPEC
 | 412-415 | same for olive oil (huile d'olive) and wine (vins) | ~150 | `commerce_oil_wine_balance` (**done**) |
 | 416-421 | Mercuriales: monthly prices at Tunis (meat by cut, hides, wool, eggs, cereals, pulses, olive oil ...), minimum/maximum/average | ~2500 | `commerce_prices` |
 | 422-424 | Magasins généraux: mouvement des marchandises, Tunis and Sousse (existing, entries, exits, remaining; quantity and value) | ~400 | `commerce_bonded_warehouses` |
-| 425-426 | Poids et mesures: vérification by circonscription, and c) résultats généraux 1913-1922 | ~300 | `commerce_weights_measures` |
-| 427 | Laboratoire de chimie: analyses by nature of sample and service | ~300 | `commerce_chemistry_lab` |
+| 425-426 | Poids et mesures: vérification by circonscription, and c) résultats généraux 1913-1922 | ~300 | `commerce_weights_measures` (**done**) |
+| 427 | Laboratoire de chimie: analyses by nature of sample and service | ~300 | `commerce_chemistry_lab` (**done**) |
 | 428-429 | Navigation: a) mouvement des navires par port (21 ports): entries / exits / combined: ships, tonnage, goods, passengers, livestock | ~350 | `commerce_navigation_by_port` |
 | 430-431 | b) by flag (pavillon; steam/sail), same measures | ~400 | `commerce_navigation_by_flag` |
 | 432 | c) sur le littoral: ships, goods (tonnes), passengers, entries and exits, 1913-1922 | ~60 | `commerce_navigation_yearly` |
@@ -66,7 +66,10 @@ consumption / prices / warehouses / weights pages.
 | `commerce_oil_wine_balance` | **done**, sgt1922-1924, 156 rows | f412-415, f902-905, f1406-1409, every cell read on native-resolution crops (img: all), each printing typed separately; 10 failed checks (oil 1919 and wine 1916 remaining, in each edition; sgt1922 wine c) total; three sgt1923 oil averages), explained in the notes |
 | `commerce_prices` | **done**, sgt1922-1924, 4032 rows | f416-421, f906-911, f1410-1415, every cell read on native-resolution crops (img: all), each printing typed separately; content differs by edition (sgt1922 only: live veal, eggs, chickpeas, wine per hl); 15 gutter cells `illegible` (sgt1923); 11 failed min <= avg <= max checks, explained in the notes; 2 cells with the hundreds digit missing flagged `total_mismatch` |
 | `commerce_bonded_warehouses` | **done**, sgt1922-1924, 1040 rows | f422-424, f912-914, f1416-1418, every cell read on native-resolution crops (img: all), each printing typed separately from its own images; TOTAL column and TOTAUX checks only; 62 failed checks (misprints and the sgt1923 Sousse TOTAL omitting the stock), explained in the notes; 6 cells flagged `total_mismatch` |
-| all others listed above | to do (next: f425-427, then f298-403) | – |
+| `commerce_weights_measures` | **done**, sgt1922-1924, 368 rows | f425-426, f915-916, f1419-1420, every cell read on native-resolution crops (img: all), each printing typed separately from its own images; c) 1913-1924 by rule 4 (198 cells compared, no differences); 5 failed checks, 2 cells flagged `total_mismatch`, explained in the notes |
+| `commerce_chemistry_lab` | **done**, sgt1922-1924, 842 rows | f427, f917, f1421, every cell read on native-resolution crops (img: all), each printing typed separately; sample list and service columns differ by edition (no Contributions column in sgt1924); 11 failed checks, 4 cells flagged `total_mismatch`, explained in the notes |
+| `commerce_country_products` | **in progress**: sgt1922 France (import + export) done, 2740 rows; next sgt1922 Algérie f306-309, then Angleterre, Italie, États-Unis, Belgique, then sgt1923 (f788-815) and sgt1924 (f1292-1319) | sgt1922 f298-305, every cell read on native-resolution crops (img: all); 1922 quantities in the gutter typed `?`; 19 failed TOTAUX checks explained in the notes |
+| all others listed above | to do (next: rest of f298-325 `commerce_country_products`, then f326-403) | – |
 
 ## Image reading
 
@@ -90,3 +93,5 @@ transcribed as check columns (not stored). OCR not used.
 `commerce_customs_duties` and `commerce_export_duties`: every cell of every printing (sgt1922 f294-297, sgt1923 f784-787, sgt1924 f1288-1291) read on native-resolution crops, each printing typed from its own image; the printed averages were read only to try to locate failing totals (not stored). OCR not used.
 
 `commerce_prices`: every cell of every printing (sgt1922 f416-421, sgt1923 f906-911, sgt1924 f1410-1415) read on native-resolution crops, each printing typed from its own images; gutter columns read on both facing pages; Gallica OCR used only as a cross-check.
+
+`commerce_weights_measures` and `commerce_chemistry_lab`: every cell of every printing (sgt1922 f425-427, sgt1923 f915-917, sgt1924 f1419-1421) read on native-resolution crops, each printing typed from its own images; cells behind failing checks re-read on zoomed crops. OCR not used.
