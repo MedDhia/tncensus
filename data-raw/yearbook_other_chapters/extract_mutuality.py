@@ -341,6 +341,111 @@ def chk_office(sec):
 CHECKS.update({"office_resources": chk_office, "office_operations": chk_office})
 
 
+# ----------------------------------------------------------------- sociétés de prévoyance (rule 4)
+
+PREV_M = {
+    "seed": ("loans_seed", "Montant des prêts : prêts de semences"),
+    "chep": ("loans_livestock", "Montant des prêts : prêts de cheptel"),
+    "sulph": ("loans_sulphur_copper_sulphate", "Montant des prêts : prêts de soufre et de sulfate de cuivre"),
+    "camp": ("loans_campaign", "Montant des prêts : prêts de campagne"),
+    "subs": ("loans_subsistence", "Montant des prêts : prêts de subsistance"),
+    "mort": ("loans_mortgage", "Montant des prêts : prêts hypothécaires"),
+    "gage": ("loans_pledge", "Montant des prêts : prêts sur gages"),
+    "adv": ("advances_branches", "Montant des prêts : avances aux filiales"),
+    "total": ("loans_total", "Montant des prêts : total"),
+    "cancel": ("loans_cancelled", "Annulation : prêts de subsistance"),
+    "r_seed": ("recoveries_seed", "Montant des recouvrements faits sur les prêts : prêts de semences"),
+    "r_chep": ("recoveries_livestock", "Montant des recouvrements faits sur les prêts : prêts de cheptel"),
+    "r_sulph": ("recoveries_sulphur_copper_sulphate",
+                "Montant des recouvrements faits sur les prêts : prêts de soufre et de sulfate de cuivre"),
+    "r_camp": ("recoveries_campaign", "Montant des recouvrements faits sur les prêts : prêts de campagne"),
+    "r_subs": ("recoveries_subsistence", "Montant des recouvrements faits sur les prêts : prêts de subsistance"),
+    "r_mort": ("recoveries_mortgage", "Montant des recouvrements faits sur les prêts : prêts hypothécaires"),
+    "r_gage": ("recoveries_pledge", "Montant des recouvrements faits sur les prêts : prêts sur gages"),
+    "r_adv": ("recoveries_advances_branches", "Montant des recouvrements faits sur les prêts : avances aux filiales"),
+    "r_total": ("recoveries_total", "Montant des recouvrements faits sur les prêts : total"),
+    "outstanding": ("loans_outstanding", "Reste à recouvrer sur les prêts"),
+}
+PREV_LOANS = ["seed", "chep", "sulph", "camp", "subs", "mort", "gage", "adv"]
+# cells whose printed value disagrees with the printed row total and the other printings (confirmed on crops),
+# and the one cell derived from the printed TOTAUX
+PREV_FLAGS = {
+    ("sgt1922", 1916, "seed"): "total_mismatch", ("sgt1923", 1916, "seed"): "total_mismatch",
+    ("sgt1925", 1924, "r_total"): "total_mismatch", ("sgt1935", 1934, "r_total"): "total_mismatch",
+    ("sgt1936", 1927, "r_sulph"): "total_mismatch", ("sgt1936", 1928, "r_seed"): "total_mismatch",
+    ("sgt1936", 1928, "r_total"): "total_mismatch", ("sgt1936", 1929, "r_total"): "total_mismatch",
+    ("sgt1936", 1932, "total"): "total_mismatch", ("sgt1936", 1932, "r_seed"): "total_mismatch",
+    ("sgt1936", 1932, "r_camp"): "total_mismatch", ("sgt1936", 1934, "total"): "total_mismatch",
+    ("sgt1936", 1934, "r_total"): "total_mismatch", ("sgt1936", 1935, "total"): "total_mismatch",
+    ("sgt1936", 1936, "r_gage"): "total_mismatch",
+    ("sgt1936", 1936, "cancel"): "total_mismatch", ("sgt1939", 1936, "cancel"): "derived_from_totals",
+}
+# TOTAUX that include a line the edition no longer prints: (edition, line) of the earlier printing
+PREV_TOT_EXTRA = {"sgt1923": ("sgt1922", "1913"), "sgt1930": ("sgt1929", "1920")}
+PREV_LINES = {}
+
+
+def chk_prev(sec):
+    out = "mutuality_provident_societies"
+    c = sec["cols"]
+    loans = [x for x in PREV_LOANS if x in c]
+    for r in lines(sec):
+        v = r["cells"]
+        PREV_LINES[(sec["ed"], r["label"])] = {k: v[k].value for k in c}
+        for tot, parts in (("total", loans), ("r_total", ["r_" + x for x in loans])):
+            vals = [v[x].value for x in parts + [tot]]
+            if None not in vals:
+                CHK.eq(out, f"{where(sec)} {r['label']}: {tot} = sum of the types", ssum(vals[:-1]), vals[-1])
+        if None not in (v["total"].value, v["cancel"].value, v["diff"].value):
+            CHK.eq(out, f"{where(sec)} {r['label']}: différence = total - annulation",
+                   v["total"].value - v["cancel"].value, v["diff"].value)
+    t = row(sec, "TOTAUX")
+    extra = PREV_LINES.get(PREV_TOT_EXTRA.get(sec["ed"]), {})
+    for k in c:
+        vals = [r["cells"][k].value for r in lines(sec) if r["cells"][k].flag != "not_applicable"]
+        if t[k].value is None or None in vals:
+            continue
+        CHK.eq(out, f"{where(sec)} {k}: TOTAUX = sum of the lines" + (
+            f" + the {PREV_TOT_EXTRA[sec['ed']][1]} line of {PREV_TOT_EXTRA[sec['ed']][0]}" if extra else ""),
+            ssum(vals) + (extra.get(k) or 0), t[k].value)
+
+
+CHECKS.update({"prev": chk_prev})
+
+
+def prev_post(kept, recs, key):
+    """A kept (latest) cell that is illegible or a confirmed misprint (total_mismatch) takes the latest earlier
+    printing of the same cell, flagged reprint_corrected (SPEC_ADDENDUM rule 6); without one it stays as printed."""
+    out = []
+    for k in kept:
+        if k["flag"] in ("illegible", "total_mismatch"):
+            alt = [r for r in recs if all(r.get(x) == k.get(x) for x in key) and r["value"] is not None
+                   and ORDER.index(r["census"]) < ORDER.index(k["census"])]
+            if alt:
+                alt.sort(key=lambda r: ORDER.index(r["census"]))
+                k = dict(alt[-1], flag="reprint_corrected")
+        out.append(k)
+    return out
+
+
+def cells_prev(sec):
+    out = []
+    for r in lines(sec):
+        y = int(r["label"])
+        for c in sec["cols"]:
+            if c == "diff":
+                continue
+            cell = r["cells"][c]
+            if c == "outstanding" and cell.flag == "not_applicable":
+                continue                    # braced figure typed on the last line it covers
+            m, mfr = PREV_M[c]
+            if c == "cancel" and sec["ed"] in ("sgt1936", "sgt1939"):
+                mfr = "Annulation : prêts de semences et de subsistance"
+            flag = PREV_FLAGS.get((sec["ed"], y, c), cell.flag)
+            out.append(dict(base(sec, y), measure=m, measure_fr=mfr, unit="francs", value=cell.value, flag=flag))
+    return out
+
+
 # ----------------------------------------------------------------- documentation
 
 DOC = {
@@ -502,6 +607,47 @@ TABLES.update({
                "sgt1939 prints *néant* for the motoculture State advances 1937-1939 (stored 0). No totals printed."]),
 })
 
+TABLES["mutuality_provident_societies"] = dict(
+    secs=["prev"], cells=cells_prev, key=["year", "measure"], post=prev_post,
+    dims=["measure", "measure_fr", "unit"],
+    doc={"flag": "empty, or `total_mismatch` (printed cell contradicted by its printed row total and by the other "
+                 "printings, kept as printed), `illegible`, `reprint_corrected` (illegible in the edition kept: value "
+                 "of the latest earlier printing), `derived_from_totals` (sgt1939 1936 annulation: second centime "
+                 "digit in the binding, = printed TOTAUX minus the other lines)"},
+    title_fr="Sociétés indigènes (tunisiennes) de prévoyance. Opérations",
+    title_en="Indigenous (Tunisian) provident societies: loans by type, loans cancelled, recoveries by type and "
+             "loans outstanding, by year (1913-1939)",
+    unit="Units: francs (centimes as decimals); suggested value_type: francs.",
+    paras=[
+        "Printed in every edition (two-page spread) for the ten years before it: sgt1922 1913-1922, sgt1923 1914-1923, "
+        "sgt1924 1914-1924, sgt1925 1916-1925 ... sgt1930 1921-1930 (title 1920-1930), sgt1935 1926-1935, sgt1936 "
+        "1927-1936, sgt1939 1930-1939. *Sociétés indigènes de prévoyance* up to sgt1930, *sociétés tunisiennes de "
+        "prévoyance* from sgt1935.",
+        "Columns: montant des prêts by type (semences; campagne from sgt1923; subsistance; hypothécaires; sur gages from "
+        "sgt1935; cheptel and soufre et sulfate de cuivre from sgt1936; avances aux filiales) and total; annulation of "
+        "prêts de subsistance (sgt1936-sgt1939: prêts de semences et de subsistance, same code `loans_cancelled`, "
+        "`measure_fr` of the edition kept; footnote on 1936: of which 15.307.447,46 for seed loans); différence (= total "
+        "minus annulation: a printed check column, not stored); montant des recouvrements by the same types and total; "
+        "reste à recouvrer sur les prêts. A type not printed by an edition has no rows for its years from that edition.",
+        "Reste à recouvrer: sgt1922-sgt1924 print it per line except a single figure 488.536,84 braced against "
+        "1914-1919; sgt1925-sgt1939 print a single figure braced against every line (= the TOTAUX). Each braced figure "
+        "is stored on the last year it covers (it is a balance at that date): `loans_outstanding` therefore exists for "
+        "1913, 1919-1924 (sgt1922-sgt1924) and for 1925, 1926, 1927, 1928, 1929, 1930, 1935, 1936 and 1939 (one per "
+        "edition).",
+        "Printed row totals (total, total des recouvrements, différence) and the TOTAUX lines are checks only. The "
+        "TOTAUX of sgt1923 include the 1913 line (printed only in sgt1922) and those of sgt1930 the 1920 line (title "
+        "1920-1930, last printed in sgt1929); they are checked with those lines.",
+        "The sgt1936 spread is badly printed (broken and misplaced type, solid black slugs where » is expected, typed "
+        "0); several of its cells contradict the row totals and every other printing (see the failed checks). Where such "
+        "a cell is the latest printing (1928 recouvrements de semences 31.012.273,27 and total 31.504.741,66, 1929 "
+        "recouvrements total 24.476.247,63) or is illegible (1928 prêts de semences), the sgt1935 printing is stored "
+        "with flag `reprint_corrected` (32.012.273,27, 34.504.741,66, 24.807.247,63, 44.240.438,47; each makes the "
+        "row add up). Its 1927 recouvrements de soufre, printed 91.661,95 (the campagne figure repeated; the row total "
+        "and the TOTAUX 5.348,50 imply »), has no other printing and is kept with flag `total_mismatch`. "
+        "The différence column of sgt1935-sgt1939 runs into the binding (not typed). sgt1935 prints 1929 recouvrements "
+        "de semences 21.173.131,91 and de subsistance 2.127.895,34 (sgt1929-sgt1930: 21.173.131,19 and 2.127.896,06; "
+        "both pairs give the printed total), followed by sgt1936; the later printing is kept."])
+
 FAIL_NOTES = {
     "mutuality_office_credit_agricole": "sgt1929 1928 operations: totaux 9.291.171 for 1.664.800 + 7.262.371 = "
         "8.927.171 (zoomed 2x on f495); sgt1930 and sgt1935 print the court terme 7.626.371, which gives the printed "
@@ -521,6 +667,26 @@ FAIL_NOTES = {
         "for lines giving 378.063,45. sgt1925 reprints sgt1924's loan TOTAUX, which include the 1915 line it no "
         "longer prints (each difference equals the sgt1924 1915 figure).",
 }
+
+FAIL_NOTES["mutuality_provident_societies"] = (
+    "sgt1922 and sgt1923 print the 1916 seed loans 1.570.483,20 (sgt1924 and later 1.570.483,26, which makes the "
+    "printed row total and the TOTAUX add up; flagged `total_mismatch` in those printings). sgt1925: 1924 recouvrements "
+    "total printed 3.206.471,45 for types giving 2.706.471,45 (sgt1926 and later print 2.706.471,45; flagged), and its "
+    "TOTAUX of the seed and subsistence loans are 600 and 80.000 above the lines (the TOTAUX of the total column agrees "
+    "with the lines, so the two column TOTAUX are misprinted). sgt1928: TOTAUX avances aux filiales 0,02 below the "
+    "lines. sgt1929: TOTAUX recouvrements total 146.926.197,45, 1.000 above the lines and above the sum of its own "
+    "TOTAUX by type. sgt1930: TOTAUX recouvrements avances aux filiales 4.060.222,65 and total 164.402.074,23 for lines "
+    "(with the 1920 line of sgt1929) giving 4.063.222,65 and 154.402.074,23 (one digit misprinted in each). sgt1935: "
+    "1934 recouvrements total 10.537.603,17 for types giving ,16 (sgt1939 ,16; flagged), TOTAUX of the total 0,03 and "
+    "of the recouvrements de subsistance 0,01 off. sgt1936 (badly printed page): the row failures are its misprints "
+    "listed above (1927 soufre, 1928 and 1932 recouvrements de semences, 1932 recouvrements de campagne 19.683,95 for "
+    "19.683,11, 1932 total 32.738.151,54, 1934 total 32.765.588,31 and recouvrements total 10.527.603,16, 1935 total "
+    "10.980.031,30, 1936 recouvrements sur gages 2.440.267,11 for 2.440.267,91; each flagged `total_mismatch` in "
+    "sgt1936, the other printings agree with the row totals); its TOTAUX are computed on the correct figures (r_seed "
+    "10.000.000 and r_sulph 91.661,95 off because of the misprinted lines; annulation 91.333,64 off because the 1936 "
+    "line is printed 22.454.379,58 where sgt1939 and the TOTAUX give 22.545.713,2x, a digit transposition); its "
+    "TOTAUX of the avances aux filiales (30,00), recouvrements de subsistance (51,00) and hypothécaires (0,30) are off "
+    "by amounts no line explains (misprinted TOTAUX).")
 
 CHAPTER_VIEWS = {
     "sgt1922": (457, 466), "sgt1923": (947, 956), "sgt1924": (1445, 1454), "sgt1925": (513, 524),
@@ -592,11 +758,12 @@ NOT_DONE = ("Transcribed: crédit mutuel agricole (every edition), coopérative 
             "read on 0.75-0.85 whole-half crops of both pages of each spread, binding columns and doubtful figures "
             "zoomed at 1.2-3x; sgt1925 and sgt1926 re-typed in full from 3-4-column native crops; Gallica OCR used as a "
             "cross-check only, `ocr_corrected` only where the OCR token at the cell was checked and reads otherwise), "
-            "Office public de crédit agricole indigène (sgt1929 f495, sgt1930 f1031, sgt1935 f310). "
-            "NOT yet transcribed: sociétés "
-            "indigènes / tunisiennes de prévoyance (sgt1922 f464|f465, sgt1923 f954|f955, sgt1924 f1452|f1453, "
-            "sgt1925 f522|f523, sgt1926 f1030|f1031, sgt1927 f494|f495, sgt1928 f1022|f1023, sgt1929 f500|f501, "
-            "sgt1930 f1036|f1037, sgt1935 f316|f317, sgt1936 f185|f186, sgt1939 f160|f161); bilans of the Banque populaire "
+            "Office public de crédit agricole indigène (sgt1929 f495, sgt1930 f1031, sgt1935 f310), "
+            "sociétés indigènes / tunisiennes de prévoyance (sgt1922 f464|f465, sgt1923 f954|f955, sgt1924 "
+            "f1452|f1453, sgt1925 f522|f523, sgt1926 f1030|f1031, sgt1927 f494|f495, sgt1928 f1022|f1023, sgt1929 "
+            "f500|f501, sgt1930 f1036|f1037, sgt1935 f316|f317, sgt1936 f185|f186, sgt1939 f160|f161; every cell "
+            "read on 0.6x whole-page and 0.75-1.5x native crops of each page). "
+            "NOT yet transcribed: bilans of the Banque populaire "
             "française, Coopérative tunisienne de crédit and sociétés coopératives de consommation (sgt1926 "
             "f1032-f1035, sgt1927 f496-f499, sgt1928 f1024-f1029, sgt1929 f502-f507, sgt1930 f1038-f1043); labour "
             "tables of sgt1922-sgt1924 (accidents du travail a) victims by profession and nationality, b), c) "

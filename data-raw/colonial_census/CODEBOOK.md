@@ -304,6 +304,7 @@ Every table is tidy: one row per printed cell. Printed subtotals and totals are 
 | [`commerce_trade_by_origin_group`](#commerce_trade_by_origin_group) | general_d | by edition | 192 | francs | General information: products by country group of provenance and destination (value in francs) |
 | [`agriculture_dates`](#agriculture_dates) | dates | by edition | 528 | count | Date palms (canoun) by caïdat and age, degla and common, at 1 November |
 | [`agriculture_animals`](#agriculture_animals) | animals | by edition | 4,336 | count | Livestock by species, contrôle civil and caïdat (European-owned, indigenous-owned, total) |
+| [`mutuality_provident_societies`](#mutuality_provident_societies) | prev | by edition | 445 | francs | Indigenous (Tunisian) provident societies: loans by type, loans cancelled, recoveries by type and loans outstanding, by year (1913-1939) |
 
 ### eur1906_t1_circonscription_nationality
 
@@ -14763,3 +14764,55 @@ Source `sgt`, table animals, printed pages by edition. 4,336 rows. Value type: c
 | Code | Printed label | N |
 |---|---|---:|
 | `head` |  | 4,336 |
+
+### mutuality_provident_societies
+
+**Sociétés indigènes (tunisiennes) de prévoyance. Opérations**  
+*Indigenous (Tunisian) provident societies: loans by type, loans cancelled, recoveries by type and loans outstanding, by year (1913-1939)*
+
+Source `sgt`, table prev, printed pages by edition. 445 rows. Value type: francs. Flags: (empty) 439, reprint_corrected 4, total_mismatch 1, derived_from_totals 1. Notes and validation: [`../yearbook_other_chapters/csv/mutuality_provident_societies.md`](../yearbook_other_chapters/csv/mutuality_provident_societies.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `advances_branches` | Montant des prêts : avances aux filiales | 27 |
+| `loans_campaign` | Montant des prêts : prêts de campagne | 26 |
+| `loans_cancelled` | Annulation : prêts de semences et de subsistance / Annulation : prêts de subsistance | 27 |
+| `loans_livestock` | Montant des prêts : prêts de cheptel | 13 |
+| `loans_mortgage` | Montant des prêts : prêts hypothécaires | 27 |
+| `loans_outstanding` | Reste à recouvrer sur les prêts | 16 |
+| `loans_pledge` | Montant des prêts : prêts sur gages | 14 |
+| `loans_seed` | Montant des prêts : prêts de semences | 27 |
+| `loans_subsistence` | Montant des prêts : prêts de subsistance | 27 |
+| `loans_sulphur_copper_sulphate` | Montant des prêts : prêts de soufre et de sulfate de cuivre | 13 |
+| `loans_total` | Montant des prêts : total | 27 |
+| `recoveries_advances_branches` | Montant des recouvrements faits sur les prêts : avances aux filiales | 27 |
+| `recoveries_campaign` | Montant des recouvrements faits sur les prêts : prêts de campagne | 26 |
+| `recoveries_livestock` | Montant des recouvrements faits sur les prêts : prêts de cheptel | 13 |
+| `recoveries_mortgage` | Montant des recouvrements faits sur les prêts : prêts hypothécaires | 27 |
+| `recoveries_pledge` | Montant des recouvrements faits sur les prêts : prêts sur gages | 14 |
+| `recoveries_seed` | Montant des recouvrements faits sur les prêts : prêts de semences | 27 |
+| `recoveries_subsistence` | Montant des recouvrements faits sur les prêts : prêts de subsistance | 27 |
+| `recoveries_sulphur_copper_sulphate` | Montant des recouvrements faits sur les prêts : prêts de soufre et de sulfate de cuivre | 13 |
+| `recoveries_total` | Montant des recouvrements faits sur les prêts : total | 27 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `francs` |  | 445 |
