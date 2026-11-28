@@ -65,7 +65,8 @@ consumption / prices / warehouses / weights pages.
 | `commerce_cereals_stocks` | **done**, sgt1922-1924, 258 rows | f410-411, f900-901, f1404-1405, every cell read on native-resolution crops (img: all), each printing typed separately; sgt1923 prints harvest 1922 as "1923" (misprint); 6 failed identities (oats 1916, 1919 in each edition) and 1 failed average (sgt1923 maize, flagged `total_mismatch`), explained in the notes |
 | `commerce_oil_wine_balance` | **done**, sgt1922-1924, 156 rows | f412-415, f902-905, f1406-1409, every cell read on native-resolution crops (img: all), each printing typed separately; 10 failed checks (oil 1919 and wine 1916 remaining, in each edition; sgt1922 wine c) total; three sgt1923 oil averages), explained in the notes |
 | `commerce_prices` | **done**, sgt1922-1924, 4032 rows | f416-421, f906-911, f1410-1415, every cell read on native-resolution crops (img: all), each printing typed separately; content differs by edition (sgt1922 only: live veal, eggs, chickpeas, wine per hl); 15 gutter cells `illegible` (sgt1923); 11 failed min <= avg <= max checks, explained in the notes; 2 cells with the hundreds digit missing flagged `total_mismatch` |
-| all others listed above | to do (next: f422-427, then f298-403) | – |
+| `commerce_bonded_warehouses` | **done**, sgt1922-1924, 1040 rows | f422-424, f912-914, f1416-1418, every cell read on native-resolution crops (img: all), each printing typed separately from its own images; TOTAL column and TOTAUX checks only; 62 failed checks (misprints and the sgt1923 Sousse TOTAL omitting the stock), explained in the notes; 6 cells flagged `total_mismatch` |
+| all others listed above | to do (next: f425-427, then f298-403) | – |
 
 ## Image reading
 

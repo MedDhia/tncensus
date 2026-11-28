@@ -1901,6 +1901,173 @@ def build_prices(secs, write):
                     "Unit: francs (with centimes) per unit as printed (see `unit`). value_type: francs.")
     return res
 
+T_WH = "commerce_bonded_warehouses"
+WH_PORT = {"tunis": ("a", "Magasins de Tunis"), "sousse": ("b", "Magasins de Sousse"), "sfax": ("c", "Magasins de Sfax")}
+WH_KIND = {"general": "Magasins généraux", "bonded": "Entrepôt réel"}
+WH_PRODUCT = {
+    "misc": "Marchandises diverses", "spirits": "Liqueurs et spiritueux", "food": "Produits alimentaires",
+    "colonial": "Denrées coloniales", "dates": "Dattes", "machines": "Machines", "hides": "Cuirs et peaux",
+    "chemicals": "Produits chimiques", "cereals": "Céréales et grains", "wool": "Laines", "paper": "Papier",
+    "oils": "Huiles", "textiles": "Tissus et cotonnades", "soap": "Savons", "coffee_tea": "Café et thé",
+    "drugs": "Drogueries", "scourtins": "Scourtins", "metals": "Métaux", "casks": "Futailles",
+    "sacks": "Sacs vides", "candles": "Bougies", "wine": "Vins", "mineral_oil": "Huile minérale", "sugar": "Sucre",
+    "tea": "Thé", "olive_oil": "Huiles d'olive", "sponges": "Eponges", "pulses": "Légumes secs",
+    "flour": "Farines et semoules", "esparto_goods": "Sparteries", "almonds": "Amandes"}
+# designations printed differently by port
+WH_PRODUCT_PORT = {("sousse", "cereals"): "Céréales", ("sousse", "textiles"): "Tissus",
+                   ("sousse", "misc"): "Articles divers", ("sfax", "cereals"): "Céréales",
+                   ("sfax", "textiles"): "Tissus", ("sfax", "coffee_tea"): "Café et thé",
+                   ("sfax", "misc"): "Articles divers"}
+# Sousse: unit column as printed (dittos resolved to the unit above); Articles divers print no quantity
+WH_UNIT_SOUSSE = {"cereals": "kilo", "oils": "kilo", "wool": "kilo", "soap": "kilo", "textiles": "pièces",
+                  "coffee_tea": "kilo", "drugs": "kilo", "scourtins": "douzaines", "metals": "kilo",
+                  "casks": "pièces", "candles": "caisses", "wine": "hectolitres", "misc": "",
+                  "mineral_oil": "kilo", "sugar": "kilo", "tea": "kilo"}
+WH_UNIT_SOUSSE_KIND = {("general", "sacks"): "pièces", ("bonded", "sacks"): "balles"}
+WH_MEASURE = {"existing": "Existant en magasin au 1er janvier", "entries": "Entrées pendant l'année",
+              "exits": "Sorties pendant l'année", "remaining": "Restant en magasin au 1er janvier (année suivante)"}
+WH_QV = {"q": ("quantity", "Quantités"), "v": ("value", "Valeur")}
+# Cells found misprinted on the crops (the failing identity is located by the other cells); kept, flagged.
+WH_MISPRINTS = {
+    ("sgt1922", "sousse", "general", "coffee_tea", "entries.v"),
+    ("sgt1922", "sousse", "general", "wine", "remaining.q"),
+    ("sgt1922", "sousse", "bonded", "cereals", "remaining.q"),
+    ("sgt1924", "tunis", "general", "cereals", "existing.v"),
+    ("sgt1924", "tunis", "general", "food", "exits.q"),
+    ("sgt1924", "sfax", "general", "almonds", "entries.v"),
+}
+WH_DOC = dict(DOC, census="edition (each edition prints one year, its reference year)",
+              table_id="`warehouses_a` (Tunis), `warehouses_b` (Sousse), `warehouses_c` (Sfax)",
+              year="year of the movement (entries and exits during that year)",
+              port="`tunis`, `sousse`, `sfax`", port_fr="sub-table heading as printed",
+              warehouse="`general` (Magasins généraux) or `bonded` (Entrepôt réel, Sousse only)",
+              warehouse_fr="as printed", product="row code (see product_fr)", product_fr="désignation as printed",
+              measure="`existing_quantity`, `existing_value` (stock on 1 January), `entries_*`, `exits_*` (during "
+                      "the year), `remaining_*` (stock on 1 January of the next year)",
+              measure_fr="column heading as printed", unit="quantity: `quintaux` (Tunis, Sfax) or the Sousse unit "
+                      "column as printed (`kilo`, `pièces`, `douzaines`, `caisses`, `hectolitres`, `balles`; empty "
+                      "for Articles divers, printed without quantity); value: `francs`",
+              value="as printed (» stored as 0; Sfax quantities with centièmes)",
+              flag="empty or `total_mismatch` (misprinted cell, see notes)")
+
+
+def build_warehouses(secs, write):
+    recs, used, stock = [], [], {}
+    for s in secs:
+        if s["table"] != "warehouses":
+            continue
+        used.append(s)
+        ed, port, kind = s["ed"], s["port"], s["warehouse"]
+        year = int(ed[3:])
+        sub, port_fr = WH_PORT[port]
+        if port == "tunis":
+            check_col_totals(CHK, T_WH, s)
+        for r in s["rows"]:
+            c = {k: x.value for k, x in r["cells"].items()}
+            lab = r["label"]
+            for qv in "qv":
+                CHK.eq(T_WH, f"{where(s)} {lab}: total.{qv} = existing + entries",
+                       ssum([c[f"existing.{qv}"], c[f"entries.{qv}"]]), c[f"total.{qv}"])
+                CHK.eq(T_WH, f"{where(s)} {lab}: remaining.{qv} = total - exits",
+                       c[f"total.{qv}"] - c[f"exits.{qv}"], c[f"remaining.{qv}"])
+            if lab == "Totaux":
+                continue
+            for qv in "qv":
+                stock[(year, port, kind, lab, "existing", qv)] = (c[f"existing.{qv}"], f"{ed} f{s['view']}")
+                stock[(year, port, kind, lab, "remaining", qv)] = (c[f"remaining.{qv}"], f"{ed} f{s['view']}")
+            for col, cell in r["cells"].items():
+                m, qv = col.split(".")
+                if m == "total":
+                    continue
+                if qv == "v":
+                    unit = "francs"
+                elif port == "sousse":
+                    unit = WH_UNIT_SOUSSE_KIND.get((kind, lab), WH_UNIT_SOUSSE.get(lab))
+                else:
+                    unit = "quintaux"
+                flag = cell.flag or ("total_mismatch" if (ed, port, kind, lab, col) in WH_MISPRINTS else "")
+                recs.append({"census": ed, "table_id": f"warehouses_{sub}", "gallica_ark": s["ark"],
+                             "source_page": s["page"], "gallica_view": s["view"], "year": year, "port": port,
+                             "port_fr": port_fr, "warehouse": kind, "warehouse_fr": WH_KIND[kind], "product": lab,
+                             "product_fr": WH_PRODUCT_PORT.get((port, lab), WH_PRODUCT[lab]),
+                             "measure": f"{m}_{WH_QV[qv][0]}", "measure_fr": f"{WH_MEASURE[m]} : {WH_QV[qv][1]}",
+                             "unit": unit, "value": cell.value, "flag": flag})
+    # stock continuity: remaining on 1 January of year y+1 (edition y) = existing on 1 January (edition y+1)
+    for (y, port, kind, lab, m, qv), (val, src) in sorted(stock.items()):
+        nxt = stock.get((y + 1, port, kind, lab, "existing", qv))
+        if m == "remaining" and nxt is not None:
+            CHK.eq(T_WH, f"{port} {kind} {lab} {qv}: existing 1 Jan {y + 1} ({nxt[1]}) = remaining ({src})",
+                   val, nxt[0])
+    kept, compared, diffs = select_latest(recs, ["year", "port", "warehouse", "product", "measure"])
+    order = list(WH_PRODUCT)
+    kept.sort(key=lambda r: (r["year"], list(WH_PORT).index(r["port"]), list(WH_KIND).index(r["warehouse"]),
+                             [x["product"] for x in recs if x["census"] == r["census"] and x["port"] == r["port"]
+                              and x["warehouse"] == r["warehouse"]].index(r["product"]),
+                             list(WH_MEASURE).index(r["measure"].split("_")[0]), r["measure"]))
+    fails = CHK.fail[T_WH]
+    flagged = [f"{r['census']} {r['port']} {r['warehouse']} {r['product']} {r['measure']} {r['flag']}"
+               for r in kept if r["flag"]]
+    res = dict(rows=len(kept), checks=CHK.n[T_WH], failed=list(fails), overlap_compared=compared,
+               overlap_diffs=[list(d) for d in diffs], flagged=flagged, editions=EDITIONS_DONE,
+               value_type="mixed (quantities in the printed units; values in francs)")
+    if write:
+        cols = COMMON + ["port", "port_fr", "warehouse", "warehouse_fr", "product", "product_fr", "measure",
+                         "measure_fr", "unit", "value", "flag"]
+        write_csv(T_WH, cols, kept)
+        write_notes(T_WH, CHAPTER, SCRIPT, kept, cols, WH_DOC,
+                    "Magasins généraux : mouvement des marchandises",
+                    "General (bonded) warehouses: movement of goods at Tunis, Sousse and Sfax", WH_PARAS,
+                    CHK.n[T_WH], fails, compared, diffs, coverage_lines(used),
+                    "Selection: each edition prints a single year (its reference year); no overlap, all stored. "
+                    "The opening stock of each year is compared with the closing stock printed the year before "
+                    "(check only).",
+                    "Units: quantities as printed (quintaux at Tunis and Sfax; the unit column at Sousse), values in "
+                    "francs; never converted. The TOTAL column (existing + entries) and the Tunis TOTAUX line are "
+                    "checks only, not stored. value_type: mixed.")
+    return res
+
+
+WH_PARAS = [
+    "Three sub-tables per edition: a) Magasins de Tunis, b) Magasins de Sousse (Magasins généraux and Entrepôt "
+    "réel), c) Magasins de Sfax. For each line the printed columns are the stock on 1 January, entries and exits "
+    "during the year, the TOTAL (stock + entries) and the stock remaining on 1 January of the next year, each as "
+    "quantity and value. Product lists differ between editions (Sousse adds Entrepôt réel scourtins, huile minérale "
+    "and thé in 1923; prints no Articles divers in 1924); every line printed is stored. At Sfax several lines print "
+    "» for the quantity but a value (goods counted only in francs); » is stored as 0 as printed.",
+    "Explanation of the failed checks (every cell involved re-read on a native-resolution crop; printed values "
+    "kept). The TOTAL column is not stored, so a misprint located there needs no flag. "
+    "sgt1922 Tunis: céréales TOTAL value 11.573.105 (stock + entries and the TOTAUX line give 11.573.015). "
+    "sgt1922 Sousse: céréales quantities (TOTAL 3.706.640 for 3.706.040; remaining 189.000) cannot be reconciled "
+    "to one cell, not flagged; laines and savons remaining values 22.202 and 57.285 (32.199 and 58.275 by "
+    "difference) are reprinted unchanged as the 1923 opening stock, not flagged; café et thé entries value "
+    "532.048 (88.557 - 35.353 = 53.204, an extra digit; flagged) and TOTAL quantity 17.738 for 17.733; métaux "
+    "TOTAL value 11.640 for 41.640, and the remaining value 31.790 agrees with neither; futailles remaining 84 / "
+    "13.689 for 74 / 24.688 (reprinted in 1923); vins remaining 16 hl for 558 - 442 = 116 (flagged); Articles "
+    "divers TOTAL value 120.937 for 123.937; Entrepôt réel céréales remaining 6.277 for 3.710.100 - 3.082.400 = "
+    "627.700 kg (flagged; apparently quintaux, reprinted as the 1923 opening stock). "
+    "sgt1922 Sfax: café et thé TOTAL 368.40 q for 300 + 88.40 = 388.40 (exits + remaining = 388.40). "
+    "sgt1923 Sousse: the TOTAL column omits the opening stock on every line without entries (café et thé, "
+    "métaux, futailles, vins, Articles divers, Entrepôt réel céréales: TOTAL printed », exits equal to the stock), "
+    "and the Entrepôt réel céréales stock 6.277 / 961.222 francs is neither taken out nor carried over; céréales, "
+    "huiles, laines and savons TOTAL values do not equal stock + entries (céréales entries value 2.183.160 against "
+    "TOTAL 229.656 and exits 128.380; the value columns of that line are mutually inconsistent and no cell can be "
+    "located); céréales remaining quantity 260.020 for 280.020. Not flagged. "
+    "sgt1923 Sfax: sucre 3.92 + 10209 = 10212.92, printed 10.213 (rounded); sucre remaining value 102.000 for "
+    "2.655.320 - 2.653.320 = 2.000 (102.000 reprinted as the 1924 opening stock; the exits value is probably "
+    "misprinted), not flagged. "
+    "sgt1924 Tunis: céréales opening-stock value 341.723 (sgt1923 closing 3.111.723; the TOTAL 6.080.643 and the "
+    "TOTAUX line need 3.111.723; leading digits dropped; flagged); produits chimiques TOTAL value 126.696 for "
+    "162.696 (transposed digits; the remaining 116.926 agrees with 162.696 - 45.770); produits alimentaires exits "
+    "5.079 q (the exits TOTAUX and the remaining 820 need 5.075; flagged). "
+    "sgt1924 Sousse: tissus TOTAL value 70.000 for 7.000, and the remaining 2.250 does not equal 7.000 - 3.750. "
+    "sgt1924 Sfax: céréales remaining value 292.040 for 297.040; amandes entries value printed 440.50 (thousands "
+    "point misplaced; 298.883 - 254.833 = 44.050; flagged); sparteries TOTAL and exits printed » although the "
+    "stock 72.630 francs is carried to the remaining. "
+    "Opening-stock continuity: Sfax huiles d'olive 1924 opening 2.133 q against 8.133 closing in sgt1923 (each "
+    "printing internally consistent); Sfax tissus 56.186 against 56.181 francs; Tunis céréales (misprint above).",
+    "Survey of the whole chapter: `commerce_survey.md`.",
+]
+
 
 def build(write):
     secs = []
@@ -1948,6 +2115,7 @@ def build(write):
     res[T_CST] = build_cereals_stocks(secs, write)
     res[T_OW] = build_oil_wine(secs, write)
     res[T_PRI] = build_prices(secs, write)
+    res[T_WH] = build_warehouses(secs, write)
     if write:
         cols = COMMON + DIMS + ["value", "flag"]
         write_csv(T, cols, kept)

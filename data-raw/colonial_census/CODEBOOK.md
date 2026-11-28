@@ -341,6 +341,7 @@ Every table is tidy: one row per printed cell. Printed subtotals and totals are 
 | [`commerce_oil_wine_balance`](#commerce_oil_wine_balance) | oil_wine_consumption;oil_wine_stocks;oil_wine_trade | by edition | 156 | mixed | Olive oil and wine: imports and exports by commercial campaign, available stocks and average consumption |
 | [`meteo_rainfall_season`](#meteo_rainfall_season) | rainfall_agricultural_year | by edition | 1,292 | millimetres | Rainfall of the agricultural year: total rainfall by season and station |
 | [`commerce_prices`](#commerce_prices) | prices_animal_products;prices_cereals;prices_live;prices_oils;prices_retail;prices_wine | by edition | 4,032 | francs | Market prices (mercuriales): monthly minimum, maximum and average prices |
+| [`commerce_bonded_warehouses`](#commerce_bonded_warehouses) | warehouses_a;warehouses_b;warehouses_c | by edition | 1,040 | mixed | General (bonded) warehouses: movement of goods at Tunis, Sousse and Sfax |
 
 ### eur1906_t1_circonscription_nationality
 
@@ -17545,3 +17546,108 @@ Source `sgt`, table prices_animal_products;prices_cereals;prices_live;prices_oil
 | `francs_per_kilogram` |  | 1,296 |
 | `francs_per_piece` |  | 216 |
 | `francs_per_quintal` |  | 2,196 |
+
+### commerce_bonded_warehouses
+
+**Magasins généraux : mouvement des marchandises**  
+*General (bonded) warehouses: movement of goods at Tunis, Sousse and Sfax*
+
+Source `sgt`, table warehouses_a;warehouses_b;warehouses_c, printed pages by edition. 1,040 rows. Value type: mixed. Flags: (empty) 1,034, total_mismatch 6. Notes and validation: [`../yearbook_other_chapters/csv/commerce_bonded_warehouses.md`](../yearbook_other_chapters/csv/commerce_bonded_warehouses.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `port` | Coded dimension. |
+| `port_fr` | Printed French label for `port`. |
+| `warehouse` | Coded dimension. |
+| `warehouse_fr` | Printed French label for `warehouse`. |
+| `product` | Coded dimension. |
+| `product_fr` | Printed French label for `product`. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`port`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `sfax` | Magasins de Sfax | 288 |
+| `sousse` | Magasins de Sousse | 440 |
+| `tunis` | Magasins de Tunis | 312 |
+
+`warehouse`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `bonded` | Entrepôt réel | 112 |
+| `general` | Magasins généraux | 928 |
+
+`product`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `almonds` | Amandes | 24 |
+| `candles` | Bougies | 24 |
+| `casks` | Futailles | 24 |
+| `cereals` | Céréales / Céréales et grains | 96 |
+| `chemicals` | Produits chimiques | 24 |
+| `coffee_tea` | Café et thé | 48 |
+| `colonial` | Denrées coloniales | 24 |
+| `dates` | Dattes | 24 |
+| `drugs` | Drogueries | 24 |
+| `esparto_goods` | Sparteries | 24 |
+| `flour` | Farines et semoules | 24 |
+| `food` | Produits alimentaires | 24 |
+| `hides` | Cuirs et peaux | 24 |
+| `machines` | Machines | 24 |
+| `metals` | Métaux | 24 |
+| `mineral_oil` | Huile minérale | 16 |
+| `misc` | Articles divers / Marchandises diverses | 64 |
+| `oils` | Huiles | 48 |
+| `olive_oil` | Huiles d'olive | 24 |
+| `paper` | Papier | 24 |
+| `pulses` | Légumes secs | 24 |
+| `sacks` | Sacs vides | 40 |
+| `scourtins` | Scourtins | 40 |
+| `soap` | Savons | 24 |
+| `spirits` | Liqueurs et spiritueux | 24 |
+| `sponges` | Eponges | 24 |
+| `sugar` | Sucre | 48 |
+| `tea` | Thé | 16 |
+| `textiles` | Tissus / Tissus et cotonnades | 72 |
+| `wine` | Vins | 24 |
+| `wool` | Laines | 72 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `entries_quantity` | Entrées pendant l'année : Quantités | 130 |
+| `entries_value` | Entrées pendant l'année : Valeur | 130 |
+| `existing_quantity` | Existant en magasin au 1er janvier : Quantités | 130 |
+| `existing_value` | Existant en magasin au 1er janvier : Valeur | 130 |
+| `exits_quantity` | Sorties pendant l'année : Quantités | 130 |
+| `exits_value` | Sorties pendant l'année : Valeur | 130 |
+| `remaining_quantity` | Restant en magasin au 1er janvier (année suivante) : Quantités | 130 |
+| `remaining_value` | Restant en magasin au 1er janvier (année suivante) : Valeur | 130 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `(empty)` |  | 8 |
+| `balles` |  | 8 |
+| `caisses` |  | 12 |
+| `douzaines` |  | 20 |
+| `francs` |  | 520 |
+| `hectolitres` |  | 12 |
+| `kilo` |  | 124 |
+| `pièces` |  | 36 |
+| `quintaux` |  | 300 |
