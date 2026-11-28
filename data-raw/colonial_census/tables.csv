@@ -300,3 +300,8 @@ mutuality_balance_sheets,sgt,bilan;pl,Banques populaires : bilans de la Banque p
 labour_early_accidents_nationality,sgt,acc_nat,Accidents du travail. a) Répartition d'après la nationalité des victimes,"Industrial accidents by occupation and nationality of the victim, sgt1922-sgt1924",by edition,count
 labour_early_accidents_outcome,sgt,acc_sev,Accidents du travail. b) Répartition d'après la gravité,"Industrial accidents by occupation and outcome (deaths, incapacity over / under one month), sgt1922-sgt1924",by edition,count
 labour_early_accidents_causes,sgt,acc_cause,Accidents du travail. c) Causes matérielles des accidents par catégorie professionnelle,"Industrial accidents by occupation and material cause, sgt1922-sgt1924",by edition,count
+commerce_navigation_by_port,sgt,navigation_a,"Navigation : mouvement des navires, a) par port","Navigation: movement of ships, by port",by edition,mixed
+commerce_navigation_by_flag,sgt,navigation_b,"Navigation : mouvement des navires, b) par pavillons","Navigation: movement of ships, by flag",by edition,mixed
+commerce_navigation_yearly,sgt,navigation_c,Navigation : c) sur le littoral ; marchandises et passagers,"Navigation: shipping on the coast, goods and passengers, by year",by edition,mixed
+commerce_cabotage,sgt,navigation_d,Navigation : d) cabotage ; mouvement par port d'expédition et de destination,"Navigation: coastal trade, by port of dispatch and destination",by edition,mixed
+commerce_fisheries,sgt,fisheries,Pêches maritimes par nationalité et par genre de pêche,"Sea fisheries, by nationality and type of fishing",by edition,mixed

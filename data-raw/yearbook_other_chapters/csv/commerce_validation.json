@@ -318,6 +318,130 @@
   "value_type": "francs",
   "illegible_printings_not_compared": 20
  },
+ "commerce_navigation_by_port": {
+  "rows": 630,
+  "checks": 373,
+  "failed": [
+   "sgt1922 S.tonnage: sum of lines = Totaux: cells give 3227897, printed 3207897 (difference -20000)",
+   "sgt1922 Tunis-Goulette tonnage: entries + exits = combined: cells give 2906962, printed 2886962 (difference -20000)",
+   "sgt1923 S.goods: sum of lines = Totaux: cells give 3626901, printed 3626904 (difference 3)",
+   "sgt1923 Tabarka goods: entries + exits = combined: cells give 11065, printed 11068 (difference 3)",
+   "sgt1924 S.tonnage: sum of lines = Totaux: cells give 2881106, printed 3481106 (difference 600000)",
+   "sgt1924 Sfax tonnage: entries + exits = combined: cells give 1308499, printed 1908499 (difference 600000)",
+   "sgt1924 E.passengers: sum of lines = Totaux: cells give 63316, printed 68316 (difference 5000)",
+   "sgt1924 Bizerte passengers: entries + exits = combined: cells give 11796, printed 16796 (difference 5000)"
+  ],
+  "overlap_compared": 0,
+  "overlap_diffs": [],
+  "flagged": [
+   "sgt1922 Tunis-Goulette exits tonnage",
+   "sgt1923 Tabarka exits goods",
+   "sgt1924 Sfax exits tonnage",
+   "sgt1924 Bizerte entries passengers"
+  ],
+  "editions": [
+   "sgt1922",
+   "sgt1923",
+   "sgt1924"
+  ],
+  "value_type": "count"
+ },
+ "commerce_navigation_by_flag": {
+  "rows": 980,
+  "checks": 594,
+  "failed": [
+   "sgt1922 E.ships: sum of lines = Totaux: cells give 9062, printed 9092 (difference 30)",
+   "sgt1922 Totaux ships: entries + exits = combined: cells give 18068, printed 18038 (difference -30)",
+   "sgt1922 E.tonnage: sum of lines = Totaux: cells give 3225861, printed 3223861 (difference -2000)",
+   "sgt1922 S.tonnage: sum of lines = Totaux: cells give 3197897, printed 3207897 (difference 10000)",
+   "sgt1922 Italien.mixtes tonnage: entries + exits = combined: cells give 15068, printed 13068 (difference -2000)",
+   "sgt1922 Yougo-Slave.vapeurs tonnage: entries + exits = combined: cells give 124987, printed 134987 (difference 10000)",
+   "sgt1922 S.goods: sum of lines = Totaux: cells give 3015898, printed 3015888 (difference -10)",
+   "sgt1922 Suédois.vapeurs goods: entries + exits = combined: cells give 26927, printed 26923 (difference -4)",
+   "sgt1922 Japonais.vapeurs goods: entries + exits = combined: cells give 14726, printed 14720 (difference -6)",
+   "sgt1922 S.passengers: sum of lines = Totaux: cells give 63359, printed 68349 (difference 4990)",
+   "sgt1922 Italien.voiliers passengers: entries + exits = combined: cells give 1179, printed 1169 (difference -10)",
+   "sgt1922 Tunisien.voiliers passengers: entries + exits = combined: cells give 12036, printed 17036 (difference 5000)",
+   "sgt1922 E.ships: TOTAUX by flag = TOTAUX by port: cells give 9062, printed 9092 (difference 30)",
+   "sgt1924 R.tonnage: sum of lines = Totaux: cells give 7973863, printed 6973863 (difference -1000000)",
+   "sgt1924 Français.vapeurs tonnage: entries + exits = combined: cells give 2818475, printed 3818475 (difference 1000000)"
+  ],
+  "overlap_compared": 0,
+  "overlap_diffs": [],
+  "flagged": [
+   "sgt1922 italy sail exits passengers",
+   "sgt1922 italy mixed entries tonnage",
+   "sgt1922 yugoslavia steam exits tonnage",
+   "sgt1922 tunisia sail exits passengers",
+   "sgt1922 sweden steam exits goods",
+   "sgt1922 japan steam exits goods"
+  ],
+  "editions": [
+   "sgt1922",
+   "sgt1923",
+   "sgt1924"
+  ],
+  "value_type": "count"
+ },
+ "commerce_navigation_yearly": {
+  "rows": 72,
+  "checks": 17,
+  "failed": [
+   "sgt1923 p.420 (f922) nav_yearly 1923 S.goods = TOTAUX of a) par port: cells give 3626904, printed 3616904 (difference -10000)"
+  ],
+  "overlap_compared": 108,
+  "overlap_diffs": [
+   [
+    [
+     1923,
+     "exits",
+     "goods"
+    ],
+    "sgt1923",
+    "3616904",
+    "sgt1924",
+    "3626904"
+   ]
+  ],
+  "flagged": [],
+  "editions": [
+   "sgt1922",
+   "sgt1923",
+   "sgt1924"
+  ],
+  "value_type": "count"
+ },
+ "commerce_cabotage": {
+  "rows": 150,
+  "checks": 6,
+  "failed": [],
+  "overlap_compared": 0,
+  "overlap_diffs": [],
+  "flagged": [],
+  "editions": [
+   "sgt1922",
+   "sgt1923",
+   "sgt1924"
+  ],
+  "value_type": "quintaux"
+ },
+ "commerce_fisheries": {
+  "rows": 252,
+  "checks": 113,
+  "failed": [],
+  "overlap_compared": 0,
+  "overlap_diffs": [],
+  "flagged": [
+   "sgt1922 Pêches en mer et dans les lacs catch_value",
+   "sgt1922 Thonaires catch_value"
+  ],
+  "editions": [
+   "sgt1922",
+   "sgt1923",
+   "sgt1924"
+  ],
+  "value_type": "count"
+ },
  "_chapter_views": {
   "sgt1922": [
    281,

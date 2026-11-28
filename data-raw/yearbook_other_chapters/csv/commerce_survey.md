@@ -54,7 +54,12 @@ consumption / prices / warehouses / weights pages.
 | `commerce_trade_by_country` | **done**, sgt1922-1924, 696 rows | f290-293, f780-783, f1284-1287, every cell read on native-resolution crops (img: all), each printing independently; gutter cells `?` (sgt1922 1916 most lines, sgt1923 1917 f782 6 lines and 1918 larger values), stored from the latest legible printing |
 | `commerce_customs_duties` | **done**, sgt1922-1924, 420 rows | f294-295, f784-785, f1288-1289, every cell read on native-resolution crops (img: all), each printing independently; gutter cells `?` (sgt1922 1917: 3 lines + TOTAL, 1916 one line + TOTAL; sgt1923 1918: 29 lines + TOTAL) |
 | `commerce_export_duties` | **done**, sgt1922-1924, 452 rows | f296-297, f786-787, f1290-1291, every cell read on native-resolution crops (img: all); sgt1924 prints 40 lines (26 earlier); gutter cells `?` (sgt1922 1916 TOTAL; sgt1923 1917 all non-zero lines, 1918 five lines + TOTAL) |
-| all others listed above | to do (next: navigation f428-435) | – |
+| `commerce_navigation_by_port` | **done**, sgt1922-1924, 630 rows | f428-429, f918-919, f1422-1423, every cell read on native-resolution crops (img: all), each printing independently; 4 misprinted cells flagged `total_mismatch` |
+| `commerce_navigation_by_flag` | **done**, sgt1922-1924, 980 rows | f430-431, f920-921, f1424-1425, every cell read on native-resolution crops (img: all); 6 sgt1922 cells flagged `total_mismatch` |
+| `commerce_navigation_yearly` | **done**, 1913-1924, 72 rows | f432, f922, f1426, every cell read on native-resolution crops (img: all); one overlap difference (1923 exits goods, sgt1923 misprint) |
+| `commerce_cabotage` | **done**, sgt1922-1924, 150 rows | f433, f923, f1427, every cell read on native-resolution crops (img: all) |
+| `commerce_fisheries` | **done**, sgt1922-1924, 252 rows | f434-435, f924-925, f1428-1429, every cell read on native-resolution crops (img: all); Greek crews in the gutter |
+| all others listed above | to do (next: f404-427, then f298-403) | – |
 
 ## Image reading
 

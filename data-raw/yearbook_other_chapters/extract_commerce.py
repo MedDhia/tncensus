@@ -21,7 +21,7 @@ from decimal import Decimal
 from pathlib import Path as _Path
 
 sys.path.insert(0, str(_Path(__file__).resolve().parent))  # shared helper yb_tables.py
-from yb_tables import (COMMON, EDITIONS, ORDER, OUT, TR, Checks, coverage_lines, parse, select_latest, ssum, where,
+from yb_tables import (COMMON, check_col_totals, check_row, EDITIONS, ORDER, OUT, TR, Checks, coverage_lines, parse, select_latest, ssum, where,
                        write_csv, write_notes, write_validation)
 
 CHAPTER = "Commerce et navigation"
@@ -836,6 +836,386 @@ def build_export(secs, write):
     return res
 
 
+# ----------------------------------------------------------------- Navigation, mouvement des navires
+
+MOVEMENT = {"E": ("entries", "Entrées"), "S": ("exits", "Sorties")}
+NAV_MEASURE = {"ships": ("Nombre de navires", "ships"), "tonnage": ("Tonneaux de jauge", "tons register"),
+               "goods": ("Tonnes de marchandises", "tonnes"), "passengers": ("Passagers", "persons"),
+               "livestock": ("Têtes de bétail", "head")}
+T_PORT = "commerce_navigation_by_port"
+# cells checked on the crops and found misprinted (row and column checks both point to them): flagged
+NAV_MISPRINTS = {
+    ("sgt1922", "Tunis-Goulette", "S.tonnage"): "printed 1.454.848; entries + exits = combined and the column "
+    "TOTAUX both give 1.434.848",
+    ("sgt1923", "Tabarka", "S.goods"): "printed 9.550; the combined line and the column TOTAUX both give 9.553",
+    ("sgt1924", "Sfax", "S.tonnage"): "printed 353.802; the combined line and the column TOTAUX both give 953.802",
+    ("sgt1924", "Bizerte", "E.passengers"): "printed 3.303; the combined line and the column TOTAUX both give "
+    "8.303",
+}
+NAV_DOC = dict(DOC, census="edition (each edition prints one year, its reference year)",
+               table_id="`navigation_a` (Mouvement des navires, a) Par port)",
+               year="year of the movement (not printed in the heading; the reference year of the edition, "
+                    "confirmed by c) sur le littoral)",
+               port="port as printed", movement="`entries` or `exits`", movement_fr="as printed",
+               measure="`ships`, `tonnage`, `goods`, `passengers`, `livestock`", measure_fr="column as printed",
+               unit="`ships`, `tons register` (tonneaux de jauge), `tonnes`, `persons`, `head`",
+               value="as printed (» stored as 0)", flag="empty or `total_mismatch` (see notes)")
+
+
+def nav_matrix(secs, table, ed):
+    M = defaultdict(dict)
+    used = []
+    for s in secs:
+        if s["table"] == table and s["ed"] == ed:
+            used.append(s)
+            for r in s["rows"]:
+                for c, cell in r["cells"].items():
+                    M[r["label"]][c] = (cell, s)
+    return M, used
+
+
+def nav_checks(topic, M, ed, label_of=lambda l: l, total="Totaux"):
+    lines = [l for l in M if l != total]
+    for m in NAV_MEASURE:
+        for mv in ("E", "S", "R"):
+            c = f"{mv}.{m}"
+            if c in M[total]:
+                CHK.eq(topic, f"{ed} {c}: sum of lines = {total}", ssum(M[l][c][0].value for l in lines),
+                       M[total][c][0].value)
+        for l in M:
+            if f"R.{m}" in M[l]:
+                CHK.eq(topic, f"{ed} {label_of(l)} {m}: entries + exits = combined",
+                       ssum([M[l][f"E.{m}"][0].value, M[l][f"S.{m}"][0].value]), M[l][f"R.{m}"][0].value)
+
+
+def nav_records(M, ed, table_id, dims_of, total="Totaux"):
+    out = []
+    for l, cs in M.items():
+        if l == total:
+            continue
+        for c, (cell, s) in cs.items():
+            mv, m = c.split(".")
+            if mv == "R":
+                continue
+            flag = cell.flag or ("total_mismatch" if (ed, l, c) in NAV_MISPRINTS else "")
+            out.append(dict({"census": ed, "table_id": table_id, "gallica_ark": s["ark"], "source_page": s["page"],
+                             "gallica_view": s["view"], "year": int(s["year"])}, **dims_of(l),
+                            movement=MOVEMENT[mv][0], movement_fr=MOVEMENT[mv][1], measure=m,
+                            measure_fr=NAV_MEASURE[m][0], unit=NAV_MEASURE[m][1], value=cell.value, flag=flag))
+    return out
+
+
+def build_nav_port(secs, write):
+    recs, used = [], []
+    for ed in EDITIONS_DONE:
+        M, u = nav_matrix(secs, "nav_port", ed)
+        used += u
+        nav_checks(T_PORT, M, ed)
+        recs += nav_records(M, ed, "navigation_a", lambda l: {"port": l})
+    kept, compared, diffs = select_latest(recs, ["year", "port", "movement", "measure"])
+    fails = CHK.fail[T_PORT]
+    flagged = [f"{r['census']} {r['port']} {r['movement']} {r['measure']}" for r in kept if r["flag"]]
+    res = dict(rows=len(kept), checks=CHK.n[T_PORT], failed=list(fails), overlap_compared=compared,
+               overlap_diffs=[list(d) for d in diffs], flagged=flagged, editions=EDITIONS_DONE, value_type="count")
+    if write:
+        cols = COMMON + ["port", "movement", "movement_fr", "measure", "measure_fr", "unit", "value", "flag"]
+        paras = [
+            "Movement of ships by port (21 ports, printed in order of importance, which changes from one edition "
+            "to the next): ships, register tonnage, tonnes of goods, passengers and head of livestock, entries and "
+            "exits. The printed *Entrées et sorties réunies* block and the TOTAUX line are not stored; they were "
+            "used as checks (entries + exits = combined on every line and measure; lines = TOTAUX).",
+            "Year: the heading prints no year. Each edition prints the movement of its reference year (sgt1922: "
+            "1922, sgt1923: 1923, sgt1924: 1924); the TOTAUX of entries agree with the yearly series c) *sur le "
+            "littoral* of the same edition (see `commerce_navigation_yearly`). The editions do not overlap.",
+            "Gutter: the entries livestock column (Têtes de bétail) lies against the binding on the left page "
+            "(repeated, cut, at the edge of the right page in sgt1923 and sgt1924); every cell was read on the "
+            "crop and equals combined minus exits. sgt1922: the exits ships TOTAUX is partly hidden (`?` in the "
+            "transcription; check only).",
+            "Explanation of the failed checks (each cell re-read on a zoomed native-resolution crop; in every case "
+            "the line check and the column check fail by the same amount, which locates the misprint, flagged "
+            "`total_mismatch`): "
+            + "; ".join(f"{e} {l} {c}: {n}" for (e, l, c), n in NAV_MISPRINTS.items()) + ".",
+            "Survey of the whole chapter: `commerce_survey.md`.",
+        ]
+        write_csv(T_PORT, cols, kept)
+        write_notes(T_PORT, CHAPTER, SCRIPT, kept, cols, NAV_DOC, "Navigation : mouvement des navires, a) par port",
+                    "Navigation: movement of ships, by port", paras, CHK.n[T_PORT], fails, compared, diffs,
+                    coverage_lines(used), "Selection: each edition prints a single year; no overlap.",
+                    "Units: as printed (ships, tonneaux de jauge, tonnes, passengers, head). value_type: count.")
+    return res
+
+
+T_FLAG = "commerce_navigation_by_flag"
+SHIP_FLAG = {"Français": "france", "Italien": "italy", "Anglais": "united_kingdom", "Espagnol": "spain",
+             "Yougo-Slave": "yugoslavia", "Grec": "greece", "Danois": "denmark", "Norvégien": "norway",
+             "Tunisien": "tunisia", "Hollandais": "netherlands", "Américain": "united_states", "Belge": "belgium",
+             "Portugais": "portugal", "Allemand": "germany", "Suédois": "sweden", "Russe": "russia",
+             "Japonais": "japan", "Péruvien": "peru", "Egyptien": "egypt", "Marocain": "morocco",
+             "Dantzikois": "danzig", "Esthonien": "estonia", "Roumain": "romania", "Canadien": "canada",
+             "Finlandais": "finland", "Bulgare": "bulgaria", "Turc": "turkey", "Panama": "panama",
+             "Argentin": "argentina", "Persan": "persia"}
+PROPULSION = {"vapeurs": "steam", "voiliers": "sail", "mixtes": "mixed"}
+FLAG_MISPRINTS = {
+    ("sgt1922", "Italien.mixtes", "E.tonnage"): "printed 8.534; combined - exits and the column TOTAUX give 6.534",
+    ("sgt1922", "Italien.voiliers", "S.passengers"): "printed 667; combined - entries gives 657 (column TOTAUX "
+    "agrees with the next two corrections)",
+    ("sgt1922", "Tunisien.voiliers", "S.passengers"): "printed 3.452; combined - entries gives 8.452 (with the "
+    "previous cell the column TOTAUX 68.349 is reached)",
+    ("sgt1922", "Yougo-Slave.vapeurs", "S.tonnage"): "printed 58.216; combined - entries and the column TOTAUX "
+    "give 68.216",
+    ("sgt1922", "Suédois.vapeurs", "S.goods"): "printed 14.184; combined - entries gives 14.180",
+    ("sgt1922", "Japonais.vapeurs", "S.goods"): "printed 14.726; combined - entries gives 14.720 (with the "
+    "previous cell the column TOTAUX 3.015.888 is reached)",
+}
+NAV_MISPRINTS.update(FLAG_MISPRINTS)
+FLAG_DOC = dict(NAV_DOC, table_id="`navigation_b` (Mouvement des navires, b) Par pavillons)",
+                ship_flag="flag (nationality) of the ships, English code", ship_flag_fr="pavillon as printed",
+                propulsion="`steam`, `sail`, `mixed`", propulsion_fr="vapeurs, voiliers, mixtes (as printed)")
+
+
+def build_nav_flag(secs, write):
+    recs, used = [], []
+
+    def dims(l):
+        f, p = l.split(".")
+        return {"ship_flag": SHIP_FLAG[f], "ship_flag_fr": f, "propulsion": PROPULSION[p], "propulsion_fr": p}
+    for ed in EDITIONS_DONE:
+        M, u = nav_matrix(secs, "nav_flag", ed)
+        used += u
+        nav_checks(T_FLAG, M, ed)
+        recs += nav_records(M, ed, "navigation_b", dims)
+        # the two tables a) and b) share their TOTAUX
+        P, _ = nav_matrix(secs, "nav_port", ed)
+        for c in M["Totaux"]:
+            if c in P["Totaux"]:
+                CHK.eq(T_FLAG, f"{ed} {c}: TOTAUX by flag = TOTAUX by port", P["Totaux"][c][0].value,
+                       M["Totaux"][c][0].value)
+    kept, compared, diffs = select_latest(recs, ["year", "ship_flag", "propulsion", "movement", "measure"])
+    fails = CHK.fail[T_FLAG]
+    flagged = [f"{r['census']} {r['ship_flag']} {r['propulsion']} {r['movement']} {r['measure']}"
+               for r in kept if r["flag"]]
+    res = dict(rows=len(kept), checks=CHK.n[T_FLAG], failed=list(fails), overlap_compared=compared,
+               overlap_diffs=[list(d) for d in diffs], flagged=flagged, editions=EDITIONS_DONE, value_type="count")
+    if write:
+        cols = COMMON + ["ship_flag", "ship_flag_fr", "propulsion", "propulsion_fr", "movement", "movement_fr",
+                         "measure", "measure_fr", "unit", "value", "flag"]
+        paras = [
+            "Movement of ships by flag (pavillon, in order of importance) and propulsion (vapeurs = steam, "
+            "voiliers = sail, mixtes = mixed): ships, register tonnage, tonnes of goods, passengers, head of "
+            "livestock, entries and exits. Only the flag / propulsion lines printed are stored (27 lines in "
+            "sgt1922, 35 in sgt1923, 36 in sgt1924; a line printed with » throughout, e.g. Canadien entries 1924, "
+            "is stored as 0). The *Entrées et sorties réunies* block and the TOTAUX are checks only; the TOTAUX "
+            "are also compared with those of a) par port.",
+            "Year: not printed; the reference year of each edition (1922, 1923, 1924), as for a) par port. No "
+            "overlap between editions.",
+            "Gutter: the entries livestock column lies against the binding; every cell read on the crop and equal "
+            "to combined minus exits.",
+            "Explanation of the failed checks (every cell re-read on a zoomed native-resolution crop): "
+            "(i) sgt1922 prints 9.092 as the entries ships TOTAUX, against 9.062 for the sum of the lines, the "
+            "TOTAUX of a) par port and combined (18.038) - exits (8.976): a misprinted total (not stored). "
+            "(ii) sgt1924 prints 3.818.475 as the combined tonnage of French steamers, for 2.818.475 = entries + "
+            "exits, and the combined TOTAUX agrees with 2.818.475: a misprint in the combined block (not stored). "
+            "(iii) the remaining failures locate six misprinted sgt1922 cells, flagged `total_mismatch`: "
+            + "; ".join(f"{l} {c}: {n}" for (e, l, c), n in FLAG_MISPRINTS.items()) + ".",
+            "Survey of the whole chapter: `commerce_survey.md`.",
+        ]
+        write_csv(T_FLAG, cols, kept)
+        write_notes(T_FLAG, CHAPTER, SCRIPT, kept, cols, FLAG_DOC,
+                    "Navigation : mouvement des navires, b) par pavillons",
+                    "Navigation: movement of ships, by flag", paras, CHK.n[T_FLAG], fails, compared, diffs,
+                    coverage_lines(used), "Selection: each edition prints a single year; no overlap.",
+                    "Units: as printed (ships, tonneaux de jauge, tonnes, passengers, head). value_type: count.")
+    return res
+
+
+T_YR = "commerce_navigation_yearly"
+YR_MEASURE = {"ships": ("Navires", "ships"), "goods": ("Marchandises (Tonnes)", "tonnes"),
+              "passengers": ("Passagers", "persons")}
+YR_DOC = dict(NAV_DOC, census=CAT_DOC["census"],
+              table_id="`navigation_c` (Mouvement des navires, c) Sur le littoral ; marchandises et passagers)",
+              year="calendar year of the movement", measure="`ships`, `goods`, `passengers`",
+              unit="`ships`, `tonnes`, `persons`", value="as printed", flag="empty")
+
+
+def build_nav_yearly(secs, write):
+    recs, used = [], []
+    for s in secs:
+        if s["table"] != "nav_yearly":
+            continue
+        used.append(s)
+        P, _ = nav_matrix(secs, "nav_port", s["ed"])
+        ref = s["years"].split("-")[1]
+        for r in s["rows"]:
+            for c, cell in r["cells"].items():
+                mv, m = c.split(".")
+                if r["label"] == ref:
+                    CHK.eq(T_YR, f"{where(s)} {ref} {c} = TOTAUX of a) par port", P["Totaux"][c][0].value,
+                           cell.value)
+                recs.append({"census": s["ed"], "table_id": "navigation_c", "gallica_ark": s["ark"],
+                             "source_page": s["page"], "gallica_view": s["view"], "year": int(r["label"]),
+                             "movement": MOVEMENT[mv][0], "movement_fr": MOVEMENT[mv][1], "measure": m,
+                             "measure_fr": YR_MEASURE[m][0], "unit": YR_MEASURE[m][1], "value": cell.value,
+                             "flag": cell.flag})
+    kept, compared, diffs = select_latest(recs, ["year", "movement", "measure"])
+    kept.sort(key=lambda r: (r["year"], r["movement"], list(YR_MEASURE).index(r["measure"])))
+    fails = CHK.fail[T_YR]
+    res = dict(rows=len(kept), checks=CHK.n[T_YR], failed=list(fails), overlap_compared=compared,
+               overlap_diffs=[list(d) for d in diffs], flagged=[], editions=EDITIONS_DONE, value_type="count")
+    if write:
+        cols = COMMON + ["movement", "movement_fr", "measure", "measure_fr", "unit", "value", "flag"]
+        paras = [
+            "Shipping on the Tunisian coast (all ports together), entries and exits: ships, tonnes of goods, "
+            "passengers, by calendar year. The last year of each edition was checked against the TOTAUX of a) "
+            "*par port* of the same edition (ships, goods and passengers, entries and exits).",
+            "Explanation of the failed check and of the overlap difference: sgt1923 prints the 1923 exits of goods "
+            "as 3.616.904 tonnes, while its own a) par port and b) par pavillons TOTAUX give 3.626.904; sgt1924 "
+            "reprints the year as 3.626.904, which is the value stored (rule 4). Both printings re-read on "
+            "native-resolution crops of f922 and f1426.",
+            "Survey of the whole chapter: `commerce_survey.md`.",
+        ]
+        write_csv(T_YR, cols, kept)
+        write_notes(T_YR, CHAPTER, SCRIPT, kept, cols, YR_DOC,
+                    "Navigation : c) sur le littoral ; marchandises et passagers",
+                    "Navigation: shipping on the coast, goods and passengers, by year", paras, CHK.n[T_YR], fails,
+                    compared, diffs, coverage_lines(used), RULE4.replace("1915-1924", "1915-1924; every cell "
+                    "1915-1923 printed by two or three editions"),
+                    "Units: ships, tonnes, passengers, as printed. value_type: count.")
+    return res
+
+
+T_CAB = "commerce_cabotage"
+CAB_DIR = {"dispatch": ("d'expédition", "port of dispatch"), "destination": ("de destination",
+                                                                             "port of destination")}
+CAB_DOC = dict(NAV_DOC, table_id="`navigation_d` (d) Cabotage ; mouvement par port d'expédition et de destination)",
+               port="port as printed (*Ports non occupés* = unstaffed ports, as printed)",
+               direction="`dispatch` (port d'expédition) or `destination` (port de destination)",
+               direction_fr="as printed", measure="`cargo_weight`", measure_fr="poids des cargaisons",
+               unit="`quintaux` (quintaux métriques, 100 kg; not converted)", value="as printed (» stored as 0)",
+               flag="empty")
+
+
+def build_cabotage(secs, write):
+    recs, used = [], []
+    for s in secs:
+        if s["table"] != "cabotage":
+            continue
+        used.append(s)
+        check_col_totals(CHK, T_CAB, s)
+        for r in s["rows"]:
+            if r["label"] == "Totaux":
+                continue
+            for c, cell in r["cells"].items():
+                recs.append({"census": s["ed"], "table_id": "navigation_d", "gallica_ark": s["ark"],
+                             "source_page": s["page"], "gallica_view": s["view"], "year": int(s["year"]),
+                             "port": r["label"], "direction": c, "direction_fr": CAB_DIR[c][0],
+                             "measure": "cargo_weight", "measure_fr": "poids des cargaisons",
+                             "unit": "quintaux", "value": cell.value, "flag": cell.flag})
+    kept, compared, diffs = select_latest(recs, ["year", "port", "direction"])
+    fails = CHK.fail[T_CAB]
+    res = dict(rows=len(kept), checks=CHK.n[T_CAB], failed=list(fails), overlap_compared=compared,
+               overlap_diffs=[list(d) for d in diffs], flagged=[], editions=EDITIONS_DONE, value_type="quintaux")
+    if write:
+        cols = COMMON + ["port", "direction", "direction_fr", "measure", "measure_fr", "unit", "value", "flag"]
+        paras = [
+            "Coastal trade (cabotage): weight of cargoes by port of dispatch and by port of destination, 25 ports "
+            "(the same list in the three editions), quintaux métriques. Each cargo is counted once at each end, "
+            "so the two TOTAUX are equal; TOTAUX not stored (checked against the lines).",
+            "Year: not printed; the reference year of each edition (1922, 1923, 1924), as for a) par port. No "
+            "overlap between editions.",
+            "Survey of the whole chapter: `commerce_survey.md`.",
+        ]
+        write_csv(T_CAB, cols, kept)
+        write_notes(T_CAB, CHAPTER, SCRIPT, kept, cols, CAB_DOC,
+                    "Navigation : d) cabotage ; mouvement par port d'expédition et de destination",
+                    "Navigation: coastal trade, by port of dispatch and destination", paras, CHK.n[T_CAB], fails,
+                    compared, diffs, coverage_lines(used), "Selection: each edition prints a single year; no "
+                    "overlap.", "Unit: quintaux métriques (100 kg), as printed, not converted. value_type: "
+                    "quintaux.")
+    return res
+
+T_FISH = "commerce_fisheries"
+FISH_NAT = {"TN": ("tunisia", "Tunisiens"), "IT": ("italy", "Italiens"), "FR": ("france", "Français"),
+            "GR": ("greece", "Grecs"), "AM": ("anglo_maltese", "Anglo-Maltais")}
+FISH_MEASURE = {"ships": ("Navires", "boats"), "tonnage": ("Jauge", "tons register"),
+                "crew": ("Équipages", "persons"), "foot": ("Pêcheurs à pied", "persons"),
+                "kg": ("Produit de la pêche en kilogrammes", "kg"), "francs": ("Produit de la pêche en francs", "francs")}
+FISH_DOC = dict(NAV_DOC, table_id="`fisheries` (Pêches maritimes par nationalité et par genre de pêche)",
+                fishing_type_fr="genre de pêche as printed",
+                ship_flag="nationality of the boats (`tunisia`, `italy`, `france`, `greece`, `anglo_maltese`); "
+                          "`all` for foot fishers and the catch, printed for all nationalities together",
+                ship_flag_fr="as printed (empty for `all`)",
+                measure="`boats`, `tonnage`, `crew`, `foot_fishers`, `catch_weight`, `catch_value`",
+                measure_fr="column as printed", unit="`boats`, `tons register`, `persons`, `kg`, `francs`",
+                value="as printed (» stored as 0; empty when the francs were not yet received)",
+                flag="empty or `not_applicable` (value not yet received, footnote)")
+FISH_KEY = {"ships": "boats", "tonnage": "tonnage", "crew": "crew", "foot": "foot_fishers", "kg": "catch_weight",
+            "francs": "catch_value"}
+
+
+def build_fisheries(secs, write):
+    recs, used = [], []
+    for s in secs:
+        if s["table"] != "fisheries":
+            continue
+        used.append(s)
+        check_col_totals(CHK, T_FISH, s)
+        for m in ("ships", "tonnage", "crew"):
+            check_row(CHK, T_FISH, s, f"R.{m}", [f"{n}.{m}" for n in FISH_NAT])
+        for r in s["rows"]:
+            if r["label"] == "Totaux":
+                continue
+            for c, cell in r["cells"].items():
+                if c.startswith("R."):
+                    continue
+                if "." in c:
+                    n, m = c.split(".")
+                    fl, flfr = FISH_NAT[n]
+                else:
+                    m, fl, flfr = c, "all", ""
+                recs.append({"census": s["ed"], "table_id": "fisheries", "gallica_ark": s["ark"],
+                             "source_page": s["page"], "gallica_view": s["view"], "year": int(s["year"]),
+                             "fishing_type_fr": r["label"], "ship_flag": fl, "ship_flag_fr": flfr,
+                             "measure": FISH_KEY[m], "measure_fr": FISH_MEASURE[m][0], "unit": FISH_MEASURE[m][1],
+                             "value": cell.value, "flag": cell.flag})
+    kept, compared, diffs = select_latest(recs, ["year", "fishing_type_fr", "ship_flag", "measure"])
+    fails = CHK.fail[T_FISH]
+    flagged = [f"{r['census']} {r['fishing_type_fr']} {r['measure']}" for r in kept if r["flag"]]
+    res = dict(rows=len(kept), checks=CHK.n[T_FISH], failed=list(fails), overlap_compared=compared,
+               overlap_diffs=[list(d) for d in diffs], flagged=flagged, editions=EDITIONS_DONE, value_type="count")
+    if write:
+        cols = COMMON + ["fishing_type_fr", "ship_flag", "ship_flag_fr", "measure", "measure_fr", "unit", "value",
+                         "flag"]
+        paras = [
+            "Sea fisheries by type of fishing and nationality of the boats: boats, register tonnage and crews for "
+            "Tunisian, Italian, French, Greek and Anglo-Maltese boats; foot fishers (pêcheurs à pied) and the "
+            "catch in kilograms and francs, printed for all nationalities together (`ship_flag` = `all`). The "
+            "*Récapitulation* columns and the TOTAUX line are not stored; they were used as checks (nationalities "
+            "= récapitulation on every line; lines = TOTAUX).",
+            "Types of fishing as printed: sgt1922 prints four lines (Sardines, Anchois, Allaches; Pêches en mer et "
+            "dans les lacs; Éponges; Thonaires); sgt1923 and sgt1924 split sea and lake fishing (printed *Pêche en "
+            "mer* and *— dans les lacs*, typed *Pêche dans les lacs*). No English translation is attempted.",
+            "Year: not printed; the reference year of each edition (1922, 1923, 1924), as for the navigation "
+            "tables. No overlap between editions.",
+            "Missing values: sgt1922 prints `(1)` for the francs of sea/lake fishing, of the thonaires and of the "
+            "total, with the footnote *Au moment de mettre sous presse ces renseignements ne nous sont pas encore "
+            "parvenus*: stored empty with `not_applicable`. sgt1923 prints » » for the catch of *Pêche en mer* "
+            "(stored 0 as printed, though evidently not reported). sgt1924: the kg of *Pêche en mer* carries the "
+            "footnote *A l'exception des ports de : Hammamet, Monastir, Mahdia*.",
+            "Gutter: the Greek crews column lies against the binding on the left page; every cell was read on the "
+            "native-resolution crop (cut digits repeated at the edge of the right page) and equals the "
+            "récapitulation minus the other nationalities.",
+            "Survey of the whole chapter: `commerce_survey.md`.",
+        ]
+        write_csv(T_FISH, cols, kept)
+        write_notes(T_FISH, CHAPTER, SCRIPT, kept, cols, FISH_DOC,
+                    "Pêches maritimes par nationalité et par genre de pêche",
+                    "Sea fisheries, by nationality and type of fishing", paras, CHK.n[T_FISH], fails, compared,
+                    diffs, coverage_lines(used), "Selection: each edition prints a single year; no overlap.",
+                    "Units: boats, tonneaux de jauge, persons, kg, francs, as printed. value_type: count "
+                    "(catch in kg and francs).")
+    return res
+
+
 def build(write):
     secs = []
     for ed in EDITIONS_DONE:
@@ -872,6 +1252,11 @@ def build(write):
     res[T_CTY] = build_country(secs, write)
     res[T_CUS] = build_customs(secs, write)
     res[T_EXP] = build_export(secs, write)
+    res[T_PORT] = build_nav_port(secs, write)
+    res[T_FLAG] = build_nav_flag(secs, write)
+    res[T_YR] = build_nav_yearly(secs, write)
+    res[T_CAB] = build_cabotage(secs, write)
+    res[T_FISH] = build_fisheries(secs, write)
     if write:
         cols = COMMON + DIMS + ["value", "flag"]
         write_csv(T, cols, kept)

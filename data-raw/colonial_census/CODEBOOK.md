@@ -328,6 +328,11 @@ Every table is tidy: one row per printed cell. Printed subtotals and totals are 
 | [`labour_early_accidents_nationality`](#labour_early_accidents_nationality) | acc_nat | by edition | 156 | count | Industrial accidents by occupation and nationality of the victim, sgt1922-sgt1924 |
 | [`labour_early_accidents_outcome`](#labour_early_accidents_outcome) | acc_sev | by edition | 117 | count | Industrial accidents by occupation and outcome (deaths, incapacity over / under one month), sgt1922-sgt1924 |
 | [`labour_early_accidents_causes`](#labour_early_accidents_causes) | acc_cause | by edition | 585 | count | Industrial accidents by occupation and material cause, sgt1922-sgt1924 |
+| [`commerce_navigation_by_port`](#commerce_navigation_by_port) | navigation_a | by edition | 630 | mixed | Navigation: movement of ships, by port |
+| [`commerce_navigation_by_flag`](#commerce_navigation_by_flag) | navigation_b | by edition | 980 | mixed | Navigation: movement of ships, by flag |
+| [`commerce_navigation_yearly`](#commerce_navigation_yearly) | navigation_c | by edition | 72 | mixed | Navigation: shipping on the coast, goods and passengers, by year |
+| [`commerce_cabotage`](#commerce_cabotage) | navigation_d | by edition | 150 | mixed | Navigation: coastal trade, by port of dispatch and destination |
+| [`commerce_fisheries`](#commerce_fisheries) | fisheries | by edition | 252 | mixed | Sea fisheries, by nationality and type of fishing |
 
 ### eur1906_t1_circonscription_nationality
 
@@ -16476,3 +16481,352 @@ Source `sgt`, table acc_cause, printed pages by edition. 585 rows. Value type: c
 | `traction` | Traction - Accidents occasionnés par les animaux | 39 |
 | `unknown` | Causes inconnues | 39 |
 | `worker_fall` | Chute de l'ouvrier d'une échelle, etc. | 39 |
+
+### commerce_navigation_by_port
+
+**Navigation : mouvement des navires, a) par port**  
+*Navigation: movement of ships, by port*
+
+Source `sgt`, table navigation_a, printed pages by edition. 630 rows. Value type: mixed. Flags: (empty) 626, total_mismatch 4. Notes and validation: [`../yearbook_other_chapters/csv/commerce_navigation_by_port.md`](../yearbook_other_chapters/csv/commerce_navigation_by_port.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `port` | Coded dimension. |
+| `movement` | Coded dimension. |
+| `movement_fr` | Printed French label for `movement`. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`port`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `Adjim` |  | 30 |
+| `Aghir` |  | 30 |
+| `Bizerte` |  | 30 |
+| `El-Kantara` |  | 30 |
+| `Gabès` |  | 30 |
+| `Hammamet` |  | 30 |
+| `Houmt-Souk` |  | 30 |
+| `Kerkennah` |  | 30 |
+| `Kélibia` |  | 30 |
+| `La Chebba` |  | 30 |
+| `La Galite` |  | 30 |
+| `La Skira` |  | 30 |
+| `Mehdia` |  | 30 |
+| `Monastir` |  | 30 |
+| `Nabeul` |  | 30 |
+| `Sfax` |  | 30 |
+| `Sidi-Daoud` |  | 30 |
+| `Sousse` |  | 30 |
+| `Tabarka` |  | 30 |
+| `Tunis-Goulette` |  | 30 |
+| `Zarzis` |  | 30 |
+
+`movement`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `entries` | Entrées | 315 |
+| `exits` | Sorties | 315 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `goods` | Tonnes de marchandises | 126 |
+| `livestock` | Têtes de bétail | 126 |
+| `passengers` | Passagers | 126 |
+| `ships` | Nombre de navires | 126 |
+| `tonnage` | Tonneaux de jauge | 126 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `head` |  | 126 |
+| `persons` |  | 126 |
+| `ships` |  | 126 |
+| `tonnes` |  | 126 |
+| `tons register` |  | 126 |
+
+### commerce_navigation_by_flag
+
+**Navigation : mouvement des navires, b) par pavillons**  
+*Navigation: movement of ships, by flag*
+
+Source `sgt`, table navigation_b, printed pages by edition. 980 rows. Value type: mixed. Flags: (empty) 974, total_mismatch 6. Notes and validation: [`../yearbook_other_chapters/csv/commerce_navigation_by_flag.md`](../yearbook_other_chapters/csv/commerce_navigation_by_flag.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `ship_flag` | Coded dimension. |
+| `ship_flag_fr` | Printed French label for `ship_flag`. |
+| `propulsion` | Coded dimension. |
+| `propulsion_fr` | Printed French label for `propulsion`. |
+| `movement` | Coded dimension. |
+| `movement_fr` | Printed French label for `movement`. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`ship_flag`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `argentina` | Argentin | 10 |
+| `belgium` | Belge | 30 |
+| `bulgaria` | Bulgare | 10 |
+| `canada` | Canadien | 20 |
+| `danzig` | Dantzikois | 20 |
+| `denmark` | Danois | 30 |
+| `egypt` | Egyptien | 30 |
+| `estonia` | Esthonien | 20 |
+| `finland` | Finlandais | 10 |
+| `france` | Français | 70 |
+| `germany` | Allemand | 30 |
+| `greece` | Grec | 70 |
+| `italy` | Italien | 90 |
+| `japan` | Japonais | 20 |
+| `morocco` | Marocain | 20 |
+| `netherlands` | Hollandais | 40 |
+| `norway` | Norvégien | 30 |
+| `panama` | Panama | 10 |
+| `persia` | Persan | 10 |
+| `peru` | Péruvien | 10 |
+| `portugal` | Portugais | 40 |
+| `romania` | Roumain | 20 |
+| `russia` | Russe | 20 |
+| `spain` | Espagnol | 50 |
+| `sweden` | Suédois | 40 |
+| `tunisia` | Tunisien | 60 |
+| `turkey` | Turc | 10 |
+| `united_kingdom` | Anglais | 70 |
+| `united_states` | Américain | 30 |
+| `yugoslavia` | Yougo-Slave | 60 |
+
+`propulsion`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `mixed` | mixtes | 80 |
+| `sail` | voiliers | 220 |
+| `steam` | vapeurs | 680 |
+
+`movement`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `entries` | Entrées | 490 |
+| `exits` | Sorties | 490 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `goods` | Tonnes de marchandises | 196 |
+| `livestock` | Têtes de bétail | 196 |
+| `passengers` | Passagers | 196 |
+| `ships` | Nombre de navires | 196 |
+| `tonnage` | Tonneaux de jauge | 196 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `head` |  | 196 |
+| `persons` |  | 196 |
+| `ships` |  | 196 |
+| `tonnes` |  | 196 |
+| `tons register` |  | 196 |
+
+### commerce_navigation_yearly
+
+**Navigation : c) sur le littoral ; marchandises et passagers**  
+*Navigation: shipping on the coast, goods and passengers, by year*
+
+Source `sgt`, table navigation_c, printed pages by edition. 72 rows. Value type: mixed. Flags: (empty) 72. Notes and validation: [`../yearbook_other_chapters/csv/commerce_navigation_yearly.md`](../yearbook_other_chapters/csv/commerce_navigation_yearly.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `movement` | Coded dimension. |
+| `movement_fr` | Printed French label for `movement`. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`movement`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `entries` | Entrées | 36 |
+| `exits` | Sorties | 36 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `goods` | Marchandises (Tonnes) | 24 |
+| `passengers` | Passagers | 24 |
+| `ships` | Navires | 24 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `persons` |  | 24 |
+| `ships` |  | 24 |
+| `tonnes` |  | 24 |
+
+### commerce_cabotage
+
+**Navigation : d) cabotage ; mouvement par port d'expédition et de destination**  
+*Navigation: coastal trade, by port of dispatch and destination*
+
+Source `sgt`, table navigation_d, printed pages by edition. 150 rows. Value type: mixed. Flags: (empty) 150. Notes and validation: [`../yearbook_other_chapters/csv/commerce_cabotage.md`](../yearbook_other_chapters/csv/commerce_cabotage.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `port` | Coded dimension. |
+| `direction` | Coded dimension. |
+| `direction_fr` | Printed French label for `direction`. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`port`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `Adjim` |  | 6 |
+| `Aghir` |  | 6 |
+| `Bizerte` |  | 6 |
+| `El-Biban` |  | 6 |
+| `El-Kantara` |  | 6 |
+| `Gabès` |  | 6 |
+| `Hammamet` |  | 6 |
+| `Houmt-Souk` |  | 6 |
+| `Kélibia` |  | 6 |
+| `La Chebba` |  | 6 |
+| `La Galite` |  | 6 |
+| `La Goulette` |  | 6 |
+| `La Skira` |  | 6 |
+| `Marsa-Ksiba` |  | 6 |
+| `Mehdia` |  | 6 |
+| `Monastir` |  | 6 |
+| `Nabeul` |  | 6 |
+| `Porto-Farina` |  | 6 |
+| `Ports non occupés` |  | 6 |
+| `Sfax` |  | 6 |
+| `Sidi-Daoud` |  | 6 |
+| `Sousse` |  | 6 |
+| `Tabarka` |  | 6 |
+| `Tunis` |  | 6 |
+| `Zarzis` |  | 6 |
+
+`direction`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `destination` | de destination | 75 |
+| `dispatch` | d'expédition | 75 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `cargo_weight` | poids des cargaisons | 150 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `quintaux` |  | 150 |
+
+### commerce_fisheries
+
+**Pêches maritimes par nationalité et par genre de pêche**  
+*Sea fisheries, by nationality and type of fishing*
+
+Source `sgt`, table fisheries, printed pages by edition. 252 rows. Value type: mixed. Flags: (empty) 250, not_applicable 2. Notes and validation: [`../yearbook_other_chapters/csv/commerce_fisheries.md`](../yearbook_other_chapters/csv/commerce_fisheries.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `fishing_type_fr` | Place or label as printed (6 distinct values). |
+| `ship_flag` | Coded dimension. |
+| `ship_flag_fr` | Printed French label for `ship_flag`. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`ship_flag`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `all` |  | 42 |
+| `anglo_maltese` | Anglo-Maltais | 42 |
+| `france` | Français | 42 |
+| `greece` | Grecs | 42 |
+| `italy` | Italiens | 42 |
+| `tunisia` | Tunisiens | 42 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `boats` | Navires | 70 |
+| `catch_value` | Produit de la pêche en francs | 14 |
+| `catch_weight` | Produit de la pêche en kilogrammes | 14 |
+| `crew` | Équipages | 70 |
+| `foot_fishers` | Pêcheurs à pied | 14 |
+| `tonnage` | Jauge | 70 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `boats` |  | 70 |
+| `francs` |  | 14 |
+| `kg` |  | 14 |
+| `persons` |  | 84 |
+| `tons register` |  | 70 |

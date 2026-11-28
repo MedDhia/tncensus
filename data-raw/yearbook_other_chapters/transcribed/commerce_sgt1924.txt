@@ -548,3 +548,204 @@ parcels_sponges | 18615.88 20532.03 26861.78 24345.92 20197.82 16190.79
 parcels_olive_oil | 39603.73 1607.89 12479.47 7992.38 6322.35 5117.36
 horse_tax | 18375 2975 7300 16025 13325 12800
 Total | 1855858.29 975354.75 3009913.62 3412803.27 2038183.07 2056675.96
+
+# ---- Navigation. Mouvement des navires, a) Par port. One year, not printed in the heading: the reference year
+# of the edition (1924). Columns as in commerce_sgt1922.txt. E.livestock at the gutter edge of f1422 (repeated,
+# cut, at the edge of f1423); each cell read and equal to R - S.
+@nav_port view=1422 page=432 year=1924
+img: all
+cols: E.ships E.tonnage E.goods E.passengers E.livestock
+Sfax | 2286 954697 157121 4503 1556
+Tunis-Goulette | 2007 1583023 392182 47346 1228
+Sousse | 771 324794 43132 238 0
+Bizerte | 412 449218 150978 3303 0
+Monastir | 161 12694 1285 38 0
+Gabès | 787 36356 18961 897 19
+Houmt-Souk | 850 42804 15656 3943 323
+Mehdia | 351 17974 2732 149 1
+Adjim | 568 8733 6964 690 181
+Tabarka | 126 30636 3192 0 0
+Zarzis | 420 15391 4019 859 31
+Kélibia | 172 3003 589 107 0
+Sidi-Daoud | 194 3326 1990 333 0
+Aghir | 326 2742 1343 542 765
+La Chebba | 203 2136 1087 61 0
+Nabeul | 81 718 131 20 0
+Kerkennah | 329 2748 674 37 8
+Hammamet | 98 696 128 10 10
+El-Kantara | 67 572 33 10 14
+La Galite | 34 355 39 131 0
+La Skira | 24 141 75 99 8
+Totaux | 10267 3492757 802311 68316 4144
+
+@nav_port view=1423 page=433 year=1924
+img: all
+cols: S.ships S.tonnage S.goods S.passengers S.livestock R.ships R.tonnage R.goods R.passengers R.livestock
+Sfax | 2259 353802 1807310 4125 315 4545 1908499 1964431 8628 1871
+Tunis-Goulette | 1972 1575383 1399943 48310 27534 3979 3158406 1792125 95656 28762
+Sousse | 765 324831 323786 204 15 1536 649625 366918 442 15
+Bizerte | 407 446450 191340 8493 142 819 895668 342318 16796 142
+Monastir | 160 12676 25013 52 3 321 25370 26298 90 3
+Gabès | 790 36374 5758 1038 99 1577 72730 24719 1935 118
+Houmt-Souk | 850 43064 6033 3986 569 1700 85868 21689 7929 892
+Mehdia | 353 17983 12224 138 7 704 35957 14956 287 8
+Adjim | 554 8286 4576 749 98 1122 17019 11540 1439 279
+Tabarka | 126 30636 8112 2 0 252 61272 11304 2 0
+Zarzis | 420 15373 2366 1011 526 840 30764 6385 1870 557
+Kélibia | 171 2983 5450 139 0 343 5986 6039 246 0
+Sidi-Daoud | 194 3326 3175 569 0 388 6652 5165 902 0
+Aghir | 333 2775 569 994 75 659 5517 1912 1536 840
+La Chebba | 204 2138 698 101 3 407 4274 1785 162 3
+Nabeul | 80 700 771 11 0 161 1418 902 31 0
+Kerkennah | 323 2714 173 10 0 652 5462 847 47 8
+Hammamet | 92 660 320 35 0 190 1356 448 45 10
+El-Kantara | 63 482 212 28 0 130 1054 245 38 14
+La Galite | 31 329 98 125 0 65 684 137 256 0
+La Skira | 24 141 6 67 0 48 282 81 166 8
+Totaux | 10171 3481106 3797933 70187 29386 20438 6973863 4600244 138503 33530
+
+# ---- Navigation. b) Par pavillons, year 1924 (see a). Row label = <pavillon as printed>.<vapeurs|voiliers|mixtes>.
+# E.livestock at the gutter edge of f1424 (repeated, cut, on f1425); each cell read and equal to R - S.
+@nav_flag view=1424 page=434 year=1924
+img: all
+cols: E.ships E.tonnage E.goods E.passengers E.livestock
+Français.vapeurs | 1282 1411845 424415 41335 301
+Français.voiliers | 72 2073 1297 5 0
+Italien.vapeurs | 706 697306 53977 8940 810
+Italien.voiliers | 1518 95335 78366 810 0
+Italien.mixtes | 18 19650 729 0 0
+Anglais.vapeurs | 268 480366 52028 4248 117
+Anglais.mixtes | 2 198 0 0 0
+Espagnol.vapeurs | 93 149666 9353 0 0
+Grec.vapeurs | 60 109769 24138 0 0
+Grec.voiliers | 9 226 421 0 0
+Yougo-Slave.vapeurs | 41 66401 5317 0 0
+Yougo-Slave.voiliers | 4 974 763 0 0
+Yougo-Slave.mixtes | 3 741 707 0 0
+Hollandais.vapeurs | 44 75251 2 462 0
+Hollandais.voiliers | 3 471 380 0 0
+Tunisien.vapeurs | 190 36959 6063 488 0
+Tunisien.voiliers | 5754 75523 53555 11478 2916
+Belge.vapeurs | 42 63400 16017 3 0
+Suédois.vapeurs | 40 39596 11438 0 0
+Suédois.voiliers | 1 465 0 0 0
+Danois.vapeurs | 47 46407 16775 0 0
+Portugais.vapeurs | 9 18353 0 0 0
+Norvégien.vapeurs | 19 24553 5355 109 0
+Américain.vapeurs | 9 30176 31653 0 0
+Allemand.vapeurs | 13 15595 340 6 0
+Dantzikois.vapeurs | 5 7680 0 0 0
+Roumain.vapeurs | 5 7807 8495 0 0
+Finlandais.vapeurs | 2 3337 0 0 0
+Bulgare.vapeurs | 2 2434 727 0 0
+Canadien.vapeurs | 0 0 0 0 0
+Esthonien.voiliers | 1 1690 0 0 0
+Turc.vapeurs | 1 489 0 0 0
+Panama.vapeurs | 1 7459 0 425 0
+Argentin.vapeurs | 1 229 0 7 0
+Egyptien.vapeurs | 1 262 0 0 0
+Persan.vapeurs | 1 71 0 0 0
+Totaux | 10267 3492757 802311 68316 4144
+
+@nav_flag view=1425 page=435 year=1924
+img: all
+cols: S.ships S.tonnage S.goods S.passengers S.livestock R.ships R.tonnage R.goods R.passengers R.livestock
+Français.vapeurs | 1277 1406630 1057011 43511 14003 2559 3818475 1481426 84846 14304
+Français.voiliers | 74 2336 2174 14 0 146 4409 3471 19 0
+Italien.vapeurs | 711 690507 811809 8177 1808 1417 1387813 865786 17117 2618
+Italien.voiliers | 1480 93960 108893 856 7 2998 189295 187259 1666 7
+Italien.mixtes | 17 18568 26051 0 0 35 38218 26780 0 0
+Anglais.vapeurs | 267 478919 639498 4129 11549 535 959285 691526 8377 11666
+Anglais.mixtes | 2 198 122 0 0 4 396 122 0 0
+Espagnol.vapeurs | 92 147944 310393 0 0 185 297610 319746 0 0
+Grec.vapeurs | 61 111393 170964 4 0 121 221162 195102 4 0
+Grec.voiliers | 8 40 0 0 0 17 266 421 0 0
+Yougo-Slave.vapeurs | 42 67905 133611 0 0 83 134306 138928 0 0
+Yougo-Slave.voiliers | 4 974 422 0 0 8 1948 1185 0 0
+Yougo-Slave.mixtes | 3 741 1425 0 0 6 1482 2132 0 0
+Hollandais.vapeurs | 45 76768 131218 458 0 89 152019 131220 920 0
+Hollandais.voiliers | 3 471 121 0 0 6 942 501 0 0
+Tunisien.vapeurs | 185 36204 8192 603 315 375 73163 14255 1091 315
+Tunisien.voiliers | 5699 74360 52617 11850 1704 11453 149883 106172 23328 4620
+Belge.vapeurs | 43 64912 90768 0 0 85 128312 106785 3 0
+Suédois.vapeurs | 38 39276 54975 0 0 78 78872 66413 0 0
+Suédois.voiliers | 1 465 880 0 0 2 930 880 0 0
+Danois.vapeurs | 49 47115 50339 2 0 96 93522 67114 2 0
+Portugais.vapeurs | 9 18353 46223 0 0 18 36706 46223 0 0
+Norvégien.vapeurs | 19 24553 39903 109 0 38 49106 45258 218 0
+Américain.vapeurs | 9 30176 6000 0 0 18 60352 37653 0 0
+Allemand.vapeurs | 13 15595 28258 1 0 26 31190 28598 7 0
+Dantzikois.vapeurs | 4 6431 11790 0 0 9 14111 11790 0 0
+Roumain.vapeurs | 5 7807 0 1 0 10 15614 8495 1 0
+Finlandais.vapeurs | 2 3337 6721 0 0 4 6674 6721 0 0
+Bulgare.vapeurs | 2 2434 2550 0 0 4 4868 3277 0 0
+Canadien.vapeurs | 1 2534 2500 0 0 1 2534 2500 0 0
+Esthonien.voiliers | 1 1690 2475 0 0 2 3380 2475 0 0
+Turc.vapeurs | 1 489 30 0 0 2 978 30 0 0
+Panama.vapeurs | 1 7459 0 465 0 2 14918 0 890 0
+Argentin.vapeurs | 1 229 0 7 0 2 458 0 14 0
+Egyptien.vapeurs | 1 262 0 0 0 2 524 0 0 0
+Persan.vapeurs | 1 71 0 0 0 2 142 0 0 0
+Totaux | 10171 3481106 3797933 70187 29386 20438 6973863 4600244 138503 33530
+
+# ---- Navigation. c) Sur le littoral ; marchandises et passagers (1915-1924). Columns as in commerce_sgt1922.txt.
+@nav_yearly view=1426 page=436 years=1915-1924
+img: all
+cols: E.ships E.goods E.passengers S.ships S.goods S.passengers
+1915 | 10126 408408 56727 10088 1780274 68713
+1916 | 10681 343754 61891 10460 1821592 75816
+1917 | 8300 205247 53187 8267 1433613 55939
+1918 | 7382 217750 32615 7289 1673724 38503
+1919 | 8615 340624 88373 8471 1841414 67083
+1920 | 8428 562850 78860 8333 2260819 68546
+1921 | 9817 46468 69562 9725 2268160 76357
+1922 | 9062 664177 73513 8976 3015888 68349
+1923 | 9622 710323 66859 9537 3626904 70109
+1924 | 10267 802311 68316 10171 3797933 70187
+
+# ---- Navigation. d) Cabotage (year 1924, not printed). Quintaux métriques.
+@cabotage view=1427 page=437 year=1924
+img: all
+cols: dispatch destination
+Tabarka | 4743 2709
+Bizerte | 23715 7631
+Tunis | 698983 215722
+La Goulette | 95849 247753
+Sidi-Daoud | 21030 15672
+Kélibia | 52284 5336
+Nabeul | 4491 995
+Hammamet | 1070 723
+Sousse | 92685 77686
+Monastir | 17554 7093
+Mehdia | 13110 10854
+La Chebba | 5337 3411
+Sfax | 188424 373930
+La Skira | 147 728
+Gabès | 55033 156838
+Houmt-Souk | 49951 115914
+Aghir | 5684 12168
+Adjim | 37618 59873
+El-Kantara | 738 291
+Zarzis | 22180 34105
+El-Biban | 0 0
+Marsa-Ksiba | 4185 34876
+Ports non occupés | 28378 39417
+La Galite | 882 346
+Porto-Farina | 0 0
+Totaux | 1424071 1424071
+
+# ---- Pêches maritimes par nationalité et par genre de pêche (year 1924, not printed). f1428|f1429.
+# Pêche en mer kg carries footnote (1) "A l'exception des ports de : Hammamet, Monastir, Mahdia".
+@fisheries view=1428 page=438 year=1924
+img: all
+# Columns: <nat>.ships = Navires, <nat>.tonnage = Jauge, <nat>.crew = Équipages; nat TN Tunisiens, IT Italiens,
+# FR Français, GR Grecs, AM Anglo-Maltais; foot = Pêcheurs à pied; R.* = Récapitulation (check only);
+# kg = Produit de la pêche en kilogrammes, francs = en francs. GR.crew lies in the gutter of the left page and is cut
+# (right digits repeated at the edge of the right page); read on the crop and equal to R.crew minus the other lines.
+cols: TN.ships TN.tonnage TN.crew IT.ships IT.tonnage IT.crew FR.ships FR.tonnage FR.crew GR.ships GR.tonnage GR.crew AM.ships AM.tonnage AM.crew foot R.ships R.tonnage R.crew kg francs
+Sardines, Anchois, Allaches | 14 21 48 105 266 527 12 25 57 0 0 0 1 1 5 0 132 313 637 658800 448500
+Pêche en mer | 2068 3642 7535 378 1249 1490 41 76 142 3 4 9 59 68 158 214 2549 5039 9334 2887400 6232000
+Pêche dans les lacs | 44 72 74 7 3 60 1 2 0 0 0 0 0 0 7 0 52 77 141 634000 2437500
+Éponges | 507 694 1712 369 2653 1135 0 0 0 8 35 163 1 17 5 0 885 3399 3015 113430 5744300
+Thonaires | 0 0 222 84 981 452 0 0 0 0 0 0 0 0 4 414 84 981 678 1163510 3615000
+Totaux | 2633 4429 9591 943 5152 3664 54 103 199 11 39 172 61 86 179 628 3702 9809 13805 5457140 18477300
