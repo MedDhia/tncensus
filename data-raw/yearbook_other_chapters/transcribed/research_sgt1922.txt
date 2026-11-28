@@ -1,0 +1,203 @@
+# Institutions printed at the end of the Agriculture chapter (chapitre XI), sgt1922 (volume bpt6k9105649x): École
+# coloniale d'agriculture f274-f276, Service botanique f277-f279 (f280 blank; f281 = chapter XII Commerce et
+# navigation); Météorologie f255-f273. Format: see yb_tables.py and extract_research.py. Every cell read on
+# native-resolution crops of the page images.
+
+# ÉCOLE COLONIALE D'AGRICULTURE. a) Lieu d'origine des élèves entrés à l'École (1898-1922). f274 (p. 250). Footnote
+# (1) on 1919: École fermée durant la guerre 1914-1918.
+@school_origin view=274 page=250 years=1898-1922
+img: all
+cols: france tunisia algeria colonies abroad total
+1898 | 26 4 1 0 2 33
+1899 | 30 1 1 0 1 33
+1900 | 32 2 6 0 0 40
+1901 | 24 2 4 2 0 32
+1902 | 28 1 2 0 0 31
+1903 | 25 0 0 0 2 27
+1904 | 26 1 5 1 0 33
+1905 | 18 0 2 1 0 21
+1906 | 16 0 0 1 1 18
+1907 | 12 0 0 1 4 15
+1908 | 8 3 2 1 2 16
+1909 | 30 2 3 1 4 40
+1910 | 29 2 0 1 0 32
+1911 | 33 6 1 4 1 45
+1912 | 20 5 2 3 8 38
+1913 | 34 7 4 2 3 50
+1919 | 50 15 2 0 0 67
+1920 | 46 15 2 0 1 64
+1921 | 50 11 2 3 0 66
+1922 | 46 7 1 0 4 58
+Totaux | 583 84 40 21 31 759
+
+# b) Promotions (1898-1922). f275 (p. 251). Footnotes (1) études interrompues par la guerre; (2) promotion en cours
+# d'études: a » carrying the mark (2) is stored '-' (NA, not_applicable); figures carrying it are kept.
+@school_promotions view=275 page=251 year=1922
+img: all
+cols: year1 year2 dipl_eng dipl_school certificate
+1 1898-1900 | 33 33 22 8 1
+2 1899-1901 | 33 26 14 10 0
+3 1900-1902 | 40 31 18 10 3
+4 1901-1903 | 32 24 17 5 1
+5 1902-1904 | 31 20 8 9 0
+6 1903-1905 | 27 18 13 5 0
+7 1904-1906 | 33 27 11 10 6
+8 1905-1907 | 21 21 14 4 2
+9 1906-1908 | 18 14 9 2 1
+10 1907-1909 | 15 14 11 3 0
+11 1908-1910 | 16 16 10 6 0
+12 1909-1911 | 40 39 28 8 2
+13 1910-1912 | 32 30 12 43 3
+14 1911-1913 | 45 40 27 9 1
+15 1912-1914 | 38 33 19 13 0
+16 1914-1920 | 50 16 16 0 0
+17 1919-1921 | 67 47 31 16 0
+18 1920-1922 | 64 49 35 12 1
+19 1921-1923 | 66 56 - 0 0
+20 1922-1924 | 58 - 0 0 0
+Totaux | 759 554 315 143 21
+
+# c) Effectif par année scolaire (1898-1922). f276 (p. 252).
+@school_enrolment view=276 page=252 year=1922
+img: all
+cols: year1 year2 auditors total
+1898-1899 | 33 0 15 48
+1899-1900 | 33 33 6 72
+1900-1901 | 40 26 6 72
+1901-1902 | 32 31 7 70
+1902-1903 | 31 24 9 64
+1903-1904 | 27 20 4 51
+1904-1905 | 33 18 5 56
+1905-1906 | 21 27 1 49
+1906-1907 | 18 21 1 40
+1907-1908 | 15 14 2 31
+1908-1909 | 16 14 0 30
+1909-1910 | 40 16 1 57
+1910-1911 | 32 39 7 78
+1911-1912 | 45 30 6 81
+1912-1913 | 38 40 2 80
+1913-1914 | 50 33 12 95
+1919-1920 | 67 16 28 111
+1920-1921 | 64 47 16 127
+1921-1922 | 66 49 8 123
+1922-1923 | 58 56 12 126
+Totaux | 759 554 148 1461
+
+# SERVICE BOTANIQUE. a) Nature et nombre des essais de variétés nouvelles (1912-1922). f277 (p. 253). Columns: Total
+# antérieur (trials before 1912-13; stored, season "antérieur à 1912-13"), seasons 1912-13 .. 1921-22 (column code =
+# the year the season ends), Total général (check only). Cotonniers 1912-13: first digit faint (";6"), 56 fits the
+# column total 211.
+@bot_trials view=277 page=253 section=agricole first=1912-13
+img: all
+cols: prior 1913 1914 1915 1916 1917 1918 1919 1920 1921 1922 total
+Blés durs | 832 10 10 20 0 18 0 14 33 0 56 993
+Blés tendres | 367 52 31 11 0 28 6 8 18 9 108 638
+Orges | 490 57 62 0 0 0 2 0 9 0 38 658
+Avoines | 80 36 17 0 0 0 1 9 41 0 42 226
+Sorghos | 0 0 0 0 0 0 0 0 1 7 4 12
+Plantes fourragères | 396 0 17 576 0 0 0 0 0 7 40 1036
+Plantes industrielles | 0 0 0 0 0 0 0 0 0 38 0 38
+Plantes médicinales | 0 0 0 0 0 0 0 0 0 27 20 47
+Cotonniers | 18 56 6 0 0 0 0 0 0 0 0 80
+Totaux | 2183 211 143 607 0 46 9 31 102 88 308 3728
+
+@bot_trials view=277 page=253 section=horticole first=1912-13
+img: all
+cols: prior 1913 1914 1915 1916 1917 1918 1919 1920 1921 1922 total
+Introductions de graines | 5353 127 3109 6 4 86 10 5 55 119 128 9002
+Introductions de plantes | 630 41 6 0 0 0 0 0 0 0 0 677
+Totaux | 5983 168 3115 6 4 86 10 5 55 119 128 9679
+
+# b) Vente de semences de variétés pédigrées (1910-1922). f278 (p. 254). Kilogrammes. Columns 1910-17 (seven seasons
+# in one column, stored as printed), 1917-18 .. 1921-22 (code = year the season ends), Total par variété (check).
+# Groups printed as headings; Totaux lines per group (check).
+@bot_seedsales view=278 page=254 group="Blés durs"
+img: all
+cols: 1910-17 1918 1919 1920 1921 1922 total
+Adjini | 1150 200 800 490 200 200 3040
+Agili pubescent | 450 0 0 0 0 0 450
+Aouedj | 600 0 0 0 0 0 600
+Azizi | 1055 300 0 0 0 0 1355
+Biskri glabre | 550 100 750 700 500 750 3350
+Blé 24 | 4800 0 0 0 0 0 4800
+Derbessi | 4300 200 300 250 0 0 5050
+Hamira | 7450 790 1100 400 340 300 10320
+Jenah Khelifa | 515 700 500 200 225 400 2540
+Mahmoudi | 13575 2750 1500 1300 1450 1500 22075
+Médéa | 1650 150 600 100 350 500 3350
+Mekki | 650 400 750 500 475 600 3375
+Réalforte | 350 0 0 0 0 0 350
+Sbéi | 2125 700 800 450 950 800 5825
+Souri | 6180 1390 1900 1350 930 1200 12950
+Taganrock | 470 0 0 0 0 0 470
+Totaux | 45870 7680 9000 5740 5420 6250 -
+
+@bot_seedsales view=278 page=254 group="Blés tendres"
+img: all
+cols: 1910-17 1918 1919 1920 1921 1922 total
+Allora | 2290 0 0 0 0 0 2290
+Comelack | 0 0 0 0 50 0 50
+Mahon | 19850 6800 12600 3000 0 1900 44150
+Richelle hâtive | 19902 6300 10500 3800 5400 1800 44702
+Richelle tardive | 2740 0 0 0 0 0 2740
+Vi King | 0 0 0 100 50 0 150
+King Fan | 0 0 0 100 50 0 150
+Totaux | 44782 13100 23100 7000 5550 3700 -
+
+@bot_seedsales view=278 page=254 group="Orges"
+img: all
+cols: 1910-17 1918 1919 1920 1921 1922 total
+Escourgeons | 68450 10500 5200 3900 50 22 88122
+Orges de brasserie | 3300 0 0 0 0 0 3300
+Totaux | 71750 10500 5200 3900 50 22 -
+
+@bot_seedsales view=278 page=254 group="Avoines"
+img: all
+cols: 1910-17 1918 1919 1920 1921 1922 total
+Crême | 24750 800 8300 3900 12000 3100 52850
+Rousse | 17425 500 5000 3000 0 0 25925
+Totaux | 42175 1300 13300 6900 12000 3100 -
+
+# c) Ventes d'arbres et de plantes diverses (1917-1922). f279 (p. 255). Seasons 1917-18 .. 1921-22, plants (p) and
+# greffons (g).
+@bot_trees view=279 page=255 seasons=1917-18,1918-19,1919-20,1920-21,1921-22
+img: all
+cols: 1918p 1918g 1919p 1919g 1920p 1920g 1921p 1921g 1922p 1922g
+Abricotier | 442 190 331 20 549 15 634 0 62 0
+Amandier | 1416 404 868 150 1634 60 1106 0 873 0
+Brugnon | 155 0 0 30 0 0 0 0 0 0
+Caroubier | 1818 20 737 0 454 34 1131 0 371 10
+Cédratier | 0 10 0 0 0 0 0 0 0 0
+Citronnier | 0 0 0 4 0 0 0 0 0 0
+Cognassier | 44 0 242 0 207 0 96 0 8 0
+Figuier | 265 6 454 0 754 0 722 0 647 0
+Grenadier | 182 25 457 0 345 0 106 0 5 0
+Mandarinier | 0 0 0 10 0 0 0 0 0 0
+Néflier | 107 0 0 0 30 0 551 0 475 0
+Olivier | 0 0 0 1150 0 450 0 0 0 0
+Oranger | 0 15 0 56 0 160 0 0 0 0
+Pêcher | 350 80 158 20 171 0 137 0 202 0
+Pistachier | 0 0 0 0 0 85 0 0 0 50
+Poirier | 893 24 820 14 894 20 1085 0 1445 0
+Pommier | 978 180 847 100 1082 70 1006 0 529 0
+Prunier | 389 94 330 38 280 0 190 0 6 0
+Total | 7039 1048 5244 1592 6400 894 6764 0 4183 60
+
+@bot_trees_cum view=279 page=255 group=fruit
+img: all
+cols: plants grafts
+Livraisons de 1917-1918 à 1921-1922 | 29630 3594
+Livraisons antérieures (de 1893 à 1917-1918) | 312178 179453
+Total général | 341808 183047
+
+@bot_trees_other view=279 page=255 seasons=1917-18,1918-19,1919-20,1920-21,1921-22
+img: all
+cols: 1918p 1919p 1920p 1921p 1922p
+64 espèces ou variétés | 47209 56583 55810 71279 61289
+
+@bot_trees_cum view=279 page=255 group=other
+img: all
+cols: plants
+Livraisons de 1917-1918 à 1921-1922 | 292170
+Livraisons antérieures (de 1893 à 1917-1918) | 1940688
+Total général | 2232858

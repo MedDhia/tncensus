@@ -310,6 +310,17 @@ Every table is tidy: one row per printed cell. Printed subtotals and totals are 
 | [`agriculture_forest_products`](#agriculture_forest_products) | forest_b | by edition | 455 | mixed | Forests: forest products sold, by adjudication or private sale (wood, tan bark, pit props, poles, cork) |
 | [`agriculture_forest_revenue`](#agriculture_forest_revenue) | forest_c | by edition | 101 | mixed | Forests: money yield of forest products, by product (1922-1923) or by sale (1924-1939), in francs |
 | [`agriculture_forest_offences_fires`](#agriculture_forest_offences_fires) | forest_de | by edition | 29 | mixed | Forests: offences reported to the courts; forest fires (reports, area burnt, damage) |
+| [`research_arloing_analyses`](#research_arloing_analyses) | arloing | by edition | 285 | count | Institut Arloing (veterinary bacteriology): diagnostic analyses by animal group and disease, chemical and wool analyses, auto-vaccines |
+| [`research_botanical_seed_sales`](#research_botanical_seed_sales) | bot_seedsales | by edition | 715 | count | Botanical service: sales of pedigree seed, by variety and season (kilogrammes) |
+| [`research_botanical_seeds`](#research_botanical_seeds) | bot_seeds | by edition | 90 | mixed | Botanical and agronomic service: pedigree seed produced, controlled pedigree seed crops, wheat and flour analyses |
+| [`research_botanical_trees`](#research_botanical_trees) | bot_trees;bot_trees_other | by edition | 666 | count | Botanical and agronomic service: sales of fruit trees (plants and grafts) and other plants, by species and season |
+| [`research_botanical_trials`](#research_botanical_trials) | bot_trials | by edition | 187 | count | Botanical service: number of trials of new varieties, by nature of the plants and season |
+| [`research_chemistry_lab`](#research_chemistry_lab) | chemlab | by edition | 2,718 | count | Chemistry laboratories (Tunis, Sfax): analyses made, by nature of the sample and requesting service |
+| [`research_pasteur_activity`](#research_pasteur_activity) | pasteur_work | by edition | 224 | mixed | Institut Pasteur of Tunis: work of the institute (rabies treatments, analyses, vaccines and sera distributed, veterinary service) |
+| [`research_pasteur_budget`](#research_pasteur_budget) | pasteur_budget | by edition | 20 | francs | Institut Pasteur of Tunis: budget (receipts and expenditure) |
+| [`research_school_enrolment`](#research_school_enrolment) | school_enrolment | by edition | 99 | count | Colonial school of agriculture: enrolment by school year (regular students in first and second year, auditors) |
+| [`research_school_origin`](#research_school_origin) | school_origin | by edition | 190 | count | Colonial school of agriculture (Tunis): students entering the school, by place of origin |
+| [`research_school_promotions`](#research_school_promotions) | school_promotions | by edition | 165 | count | Colonial school of agriculture: regular students and diplomas by promotion |
 
 ### eur1906_t1_circonscription_nationality
 
@@ -15154,3 +15165,778 @@ Source `sgt`, table forest_de, printed pages by edition. 29 rows. Value type: mi
 | `count` |  | 12 |
 | `francs` |  | 6 |
 | `hectares` |  | 6 |
+
+### research_arloing_analyses
+
+**Institut Arloing. Analyses microbiologiques en vue des diagnostics**  
+*Institut Arloing (veterinary bacteriology): diagnostic analyses by animal group and disease, chemical and wool analyses, auto-vaccines*
+
+Source `sgt`, table arloing, printed pages by edition. 285 rows. Value type: count. Flags: (empty) 285. Notes and validation: [`../yearbook_other_chapters/csv/research_arloing_analyses.md`](../yearbook_other_chapters/csv/research_arloing_analyses.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `group` | Coded dimension. |
+| `group_fr` | Printed French label for `group`. |
+| `item` | Text (136 distinct values). |
+| `item_fr` | Printed French label for `item`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`group`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `analyses_chimiques` | Analyses chimiques | 3 |
+| `analyses_de_laines` | Analyses de laines | 1 |
+| `auto_vaccins_prepares_a_l_institut_arloing_pour_l_experimentation` | Auto-vaccins préparés à l'Institut Arloing pour l'expérimentation | 7 |
+| `auto_vaccins_prepares_pour_l_experimentation` | Auto-vaccins préparés pour l'expérimentation | 6 |
+| `autos_vaccins_prepares_a_l_institut_arloing_pour_l_experimentation` | Autos-vaccins préparés à l'Institut Arloing pour l'expérimentation | 7 |
+| `maladie_des_porcins` | Maladie des porcins | 3 |
+| `maladies_des_bovides` | Maladies des bovidés | 51 |
+| `maladies_des_camelides` | Maladies des camelidés | 2 |
+| `maladies_des_chiens_et_des_chats` | Maladies des chiens et des chats | 26 |
+| `maladies_des_equides` | Maladies des équidés | 30 |
+| `maladies_des_lapins` | Maladies des lapins | 7 |
+| `maladies_des_lapins_et_des_cobayes` | Maladies des lapins et des cobayes | 16 |
+| `maladies_des_ovins_et_des_caprins` | Maladies des ovins et des caprins | 60 |
+| `maladies_des_porcins` | Maladies des porcins | 14 |
+| `maladies_des_volailles` | Maladies des volailles | 50 |
+| `maladies_diverses` | Maladies diverses | 2 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `analyses` |  | 265 |
+| `doses` |  | 20 |
+
+### research_botanical_seed_sales
+
+**Service botanique. b) Vente de semences de variétés pédigrées**  
+*Botanical service: sales of pedigree seed, by variety and season (kilogrammes)*
+
+Source `sgt`, table bot_seedsales, printed pages by edition. 715 rows. Value type: count. Flags: (empty) 702, total_mismatch 13. Notes and validation: [`../yearbook_other_chapters/csv/research_botanical_seed_sales.md`](../yearbook_other_chapters/csv/research_botanical_seed_sales.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `crop_group` | Coded dimension. |
+| `season` | Coded dimension. |
+| `variety` | Coded dimension. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`crop_group`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `Avoines` |  | 117 |
+| `Blés durs` |  | 334 |
+| `Blés tendres` |  | 220 |
+| `Orges` |  | 44 |
+
+`season`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `1910-17` |  | 27 |
+| `1910-18` |  | 27 |
+| `1910-19` |  | 28 |
+| `1910-20` |  | 30 |
+| `1910-21` |  | 31 |
+| `1910-22` |  | 31 |
+| `1910-23` |  | 31 |
+| `1910-24` |  | 32 |
+| `1910-25` |  | 31 |
+| `1917-18` |  | 27 |
+| `1918-19` |  | 35 |
+| `1919-20` |  | 37 |
+| `1920-21` |  | 40 |
+| `1921-22` |  | 42 |
+| `1922-23` |  | 36 |
+| `1923-24` |  | 34 |
+| `1924-25` |  | 33 |
+| `1925-26` |  | 33 |
+| `1926-27` |  | 33 |
+| `1927-28` |  | 33 |
+| `1928-29` |  | 33 |
+| `1929-30` |  | 31 |
+
+`variety`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `Adjini` |  | 22 |
+| `Agili` |  | 20 |
+| `Agili pubescent` |  | 6 |
+| `Allora` |  | 6 |
+| `Aouedj` |  | 6 |
+| `Autres variétés` |  | 40 |
+| `Azizi` |  | 22 |
+| `Barletta` |  | 20 |
+| `Biskri glabre` |  | 22 |
+| `Blé 24` |  | 6 |
+| `Comeback` |  | 18 |
+| `Comelack` |  | 8 |
+| `Coura` |  | 8 |
+| `Crême` |  | 21 |
+| `Crêmes` |  | 6 |
+| `Derbessi` |  | 22 |
+| `Escourgeons` |  | 22 |
+| `Florence` |  | 16 |
+| `Hamira` |  | 22 |
+| `Huguenot` |  | 18 |
+| `Irakié` |  | 14 |
+| `Italie` |  | 6 |
+| `Jenah Khelifa` |  | 10 |
+| `Jenah Rhetifa` |  | 16 |
+| `King Fan` |  | 20 |
+| `Mahmoudi` |  | 22 |
+| `Mahon` |  | 22 |
+| `Medjerdah` |  | 20 |
+| `Mekki` |  | 22 |
+| `Médéa` |  | 22 |
+| `Orges de brasserie` |  | 22 |
+| `Pusa Florence` |  | 6 |
+| `Richelle hâtive` |  | 22 |
+| `Richelle tardive` |  | 22 |
+| `Rousse` |  | 20 |
+| `Russe` |  | 8 |
+| `Réalforte` |  | 6 |
+| `Sbéi` |  | 22 |
+| `Souri` |  | 22 |
+| `Taganrock` |  | 6 |
+| `Vi King` |  | 20 |
+| `de Laconie` |  | 14 |
+| `de Perse` |  | 20 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `kilogrammes` |  | 715 |
+
+### research_botanical_seeds
+
+**Service botanique et agronomique. a) Semences pédigrées produites par le Service**  
+*Botanical and agronomic service: pedigree seed produced, controlled pedigree seed crops, wheat and flour analyses*
+
+Source `sgt`, table bot_seeds, printed pages by edition. 90 rows. Value type: mixed. Flags: (empty) 90. Notes and validation: [`../yearbook_other_chapters/csv/research_botanical_seeds.md`](../yearbook_other_chapters/csv/research_botanical_seeds.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `part` | Coded dimension. |
+| `part_fr` | Printed French label for `part`. |
+| `item` | Coded dimension. |
+| `item_fr` | Printed French label for `item`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`part`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `analyses` | Analyses de la qualité des blés et farines | 9 |
+| `controlled` | Cultures pédigrées pour semences soumises au contrôle | 36 |
+| `seeds` | Semences pédigrées produites par le Service | 45 |
+
+`item`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `analyses_pour_le_public` | Analyses pour le public | 9 |
+| `avoines` | Avoines / Avoines (quintaux) | 9 |
+| `bles_durs` | Blés durs / Blés durs (Ha.) / Blés durs (hectares) / Blés durs (quintaux) | 18 |
+| `bles_tendres_boulangers` | Blés tendres boulangers / Blés tendres boulangers (Ha.) / Blés tendres boulangers (hectares) / Blés tendres boulangers (quintaux) | 18 |
+| `bles_tendres_de_force` | Blés tendres de force / Blés tendres de force (Ha.) / Blés tendres de force (hectares) / Blés tendres de force (quintaux) | 18 |
+| `nombre_de_producteurs` | Nombre de producteurs | 9 |
+| `orges` | Orges / Orges (quintaux) | 9 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `analyses` |  | 9 |
+| `hectares` |  | 27 |
+| `producers` |  | 9 |
+| `quintals` |  | 45 |
+
+### research_botanical_trees
+
+**Service botanique et agronomique. b) Ventes d'arbres et de plantes diverses**  
+*Botanical and agronomic service: sales of fruit trees (plants and grafts) and other plants, by species and season*
+
+Source `sgt`, table bot_trees;bot_trees_other, printed pages by edition. 666 rows. Value type: count. Flags: (empty) 665, reprint_corrected 1. Notes and validation: [`../yearbook_other_chapters/csv/research_botanical_trees.md`](../yearbook_other_chapters/csv/research_botanical_trees.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `group` | Coded dimension. |
+| `group_fr` | Printed French label for `group`. |
+| `season` | Coded dimension. |
+| `species` | Coded dimension. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`group`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `fruit` | Arbres fruitiers | 648 |
+| `other` | Arbres, arbustes et plantes diverses | 18 |
+
+`season`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `1917-18` |  | 37 |
+| `1918-19` |  | 37 |
+| `1919-20` |  | 37 |
+| `1920-21` |  | 37 |
+| `1921-22` |  | 37 |
+| `1922-23` |  | 37 |
+| `1923-24` |  | 37 |
+| `1924-25` |  | 37 |
+| `1925-26` |  | 37 |
+| `1926-27` |  | 37 |
+| `1927-28` |  | 37 |
+| `1928-29` |  | 37 |
+| `1929-30` |  | 37 |
+| `1930-31` |  | 37 |
+| `1931-32` |  | 37 |
+| `1932-33` |  | 37 |
+| `1933-34` |  | 37 |
+| `1934-35` |  | 37 |
+
+`species`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `43 espèces ou variétés` |  | 1 |
+| `45 espèces ou variétés` |  | 5 |
+| `48 espèces ou variétés` |  | 3 |
+| `50 espèces ou variétés` |  | 5 |
+| `64 espèces ou variétés` |  | 3 |
+| `66 espèces ou variétés` |  | 1 |
+| `Abricotier` |  | 36 |
+| `Amandier` |  | 36 |
+| `Brugnon` |  | 36 |
+| `Caroubier` |  | 36 |
+| `Citronnier` |  | 36 |
+| `Cognassier` |  | 36 |
+| `Cédratier` |  | 36 |
+| `Figuier` |  | 36 |
+| `Grenadier` |  | 36 |
+| `Mandarinier` |  | 36 |
+| `Néflier` |  | 36 |
+| `Olivier` |  | 36 |
+| `Oranger` |  | 36 |
+| `Pistachier` |  | 36 |
+| `Poirier` |  | 36 |
+| `Pommier` |  | 36 |
+| `Prunier` |  | 36 |
+| `Pêcher` |  | 36 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `grafts` | Greffons | 324 |
+| `plants` | Plants | 342 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `count` |  | 666 |
+
+### research_botanical_trials
+
+**Service botanique. a) Nature et nombre des essais de variétés nouvelles**  
+*Botanical service: number of trials of new varieties, by nature of the plants and season*
+
+Source `sgt`, table bot_trials, printed pages by edition. 187 rows. Value type: count. Flags: (empty) 187. Notes and validation: [`../yearbook_other_chapters/csv/research_botanical_trials.md`](../yearbook_other_chapters/csv/research_botanical_trials.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `section` | Coded dimension. |
+| `section_fr` | Printed French label for `section`. |
+| `season` | Coded dimension. |
+| `plant` | Coded dimension. |
+| `plant_fr` | Printed French label for `plant`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`section`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `agricole` | Section agricole | 153 |
+| `horticole` | Section horticole | 34 |
+
+`season`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `1912-13` |  | 11 |
+| `1913-14` |  | 11 |
+| `1914-15` |  | 11 |
+| `1915-16` |  | 11 |
+| `1916-17` |  | 11 |
+| `1917-18` |  | 11 |
+| `1918-19` |  | 11 |
+| `1919-20` |  | 11 |
+| `1920-21` |  | 11 |
+| `1921-22` |  | 11 |
+| `1922-23` |  | 11 |
+| `1923-24` |  | 11 |
+| `1924-25` |  | 11 |
+| `Total antérieur (avant 1912-13)` |  | 11 |
+| `Total antérieur (avant 1913-14)` |  | 11 |
+| `Total antérieur (avant 1914-15)` |  | 11 |
+| `Total antérieur (avant 1915-16)` |  | 11 |
+
+`plant`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `avoines` | Avoines | 17 |
+| `bles_durs` | Blés durs | 17 |
+| `bles_tendres` | Blés tendres | 17 |
+| `cotonniers` | Cotonniers | 17 |
+| `introductions_de_graines` | Introductions de graines | 17 |
+| `introductions_de_plantes` | Introductions de plantes | 17 |
+| `orges` | Orges | 17 |
+| `plantes_fourrageres` | Plantes fourragères | 17 |
+| `plantes_industrielles` | Plantes industrielles | 17 |
+| `plantes_medicinales` | Plantes médicinales | 17 |
+| `sorghos` | Sorghos | 17 |
+
+### research_chemistry_lab
+
+**Laboratoire de chimie. Analyses effectuées**  
+*Chemistry laboratories (Tunis, Sfax): analyses made, by nature of the sample and requesting service*
+
+Source `sgt`, table chemlab, printed pages by edition. 2,718 rows. Value type: count. Flags: (empty) 2,697, row_realigned 16, total_mismatch 4, derived_from_totals 1. Notes and validation: [`../yearbook_other_chapters/csv/research_chemistry_lab.md`](../yearbook_other_chapters/csv/research_chemistry_lab.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `laboratory` | Coded dimension. |
+| `sample` | Text (81 distinct values). |
+| `sample_fr` | Printed French label for `sample`. |
+| `service` | Coded dimension. |
+| `service_fr` | Printed French label for `service`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`laboratory`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `Sfax` |  | 570 |
+| `Tunis` |  | 2,148 |
+
+`service`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `customs` | Douanes | 427 |
+| `fraud_repression_good` | Répression des fraudes : échantillons reconnus bons | 427 |
+| `fraud_repression_suspect` | Répression des fraudes : échantillons reconnus suspects | 427 |
+| `indirect_taxes_good` | Contributions indirectes : échantillons reconnus bons | 78 |
+| `indirect_taxes_suspect` | Contributions indirectes : échantillons reconnus suspects | 78 |
+| `other_administrations` | Autres administrations | 427 |
+| `paid_public` | Analyses payantes pour le public | 427 |
+| `studies_research` | Études et recherches | 427 |
+
+### research_pasteur_activity
+
+**Institut Pasteur. b) Travaux de l'Institut ; c) Service vétérinaire**  
+*Institut Pasteur of Tunis: work of the institute (rabies treatments, analyses, vaccines and sera distributed, veterinary service)*
+
+Source `sgt`, table pasteur_work, printed pages by edition. 224 rows. Value type: mixed. Flags: (empty) 221, illegible 2, not_applicable 1. Notes and validation: [`../yearbook_other_chapters/csv/research_pasteur_activity.md`](../yearbook_other_chapters/csv/research_pasteur_activity.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `service` | Coded dimension. |
+| `service_fr` | Printed French label for `service`. |
+| `item` | Text (97 distinct values). |
+| `item_fr` | Printed French label for `item`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`service`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `centre_vaccinogene` | Centre vaccinogène | 3 |
+| `produits_divers_non_prepares_a_l_institut` | Produits divers non préparés à l'Institut | 53 |
+| `service_antirabique` | Service antirabique | 6 |
+| `service_des_analyses` | Service des analyses | 42 |
+| `service_des_analyses_medicales` | Service des analyses médicales | 21 |
+| `service_des_fermentations` | Service des fermentations | 3 |
+| `service_des_vaccins_microbiens` | Service des vaccins microbiens | 32 |
+| `service_veterinaire` | Service vétérinaire | 64 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `ampoules` |  | 9 |
+| `analyses` |  | 63 |
+| `cc` |  | 10 |
+| `count` |  | 15 |
+| `doses` |  | 53 |
+| `flacons` |  | 54 |
+| `litres` |  | 3 |
+| `persons` |  | 6 |
+| `samples` |  | 3 |
+| `tubes` |  | 8 |
+
+### research_pasteur_budget
+
+**Institut Pasteur. a) Budget**  
+*Institut Pasteur of Tunis: budget (receipts and expenditure)*
+
+Source `sgt`, table pasteur_budget, printed pages by edition. 20 rows. Value type: francs. Flags: (empty) 20. Notes and validation: [`../yearbook_other_chapters/csv/research_pasteur_budget.md`](../yearbook_other_chapters/csv/research_pasteur_budget.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `side` | Coded dimension. |
+| `side_fr` | Printed French label for `side`. |
+| `item` | Coded dimension. |
+| `item_fr` | Printed French label for `item`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`side`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `expenditure` | Dépenses | 7 |
+| `receipts` | Recettes | 13 |
+
+`item`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `dons_legs_et_subventions_municipalites` | Dons, legs et subventions (Municipalités) | 1 |
+| `fonctionnement_des_services` | Fonctionnement des Services | 3 |
+| `personnel` | Personnel | 1 |
+| `personnel_et_personnel_subalterne` | Personnel et personnel subalterne | 2 |
+| `personnel_subalterne` | Personnel subalterne | 1 |
+| `receites_veterinaires` | Receites vétérinaires | 1 |
+| `recettes_exceptionnelles` | Recettes exceptionnelles | 2 |
+| `subventions_de_l_etat` | Subventions de l'Etat | 3 |
+| `subventions_particulieres` | Subventions particulières | 2 |
+| `vente_de_produits_veterinaires` | Vente de produits vétérinaires | 1 |
+| `ventes_de_produits_medicaux` | Ventes de produits médicaux | 3 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `francs` |  | 20 |
+
+### research_school_enrolment
+
+**École coloniale d'agriculture. c) Effectif par année scolaire**  
+*Colonial school of agriculture: enrolment by school year (regular students in first and second year, auditors)*
+
+Source `sgt`, table school_enrolment, printed pages by edition. 99 rows. Value type: count. Flags: (empty) 99. Notes and validation: [`../yearbook_other_chapters/csv/research_school_enrolment.md`](../yearbook_other_chapters/csv/research_school_enrolment.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `school_year` | Coded dimension. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`school_year`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `1898-1899` |  | 3 |
+| `1899-1900` |  | 3 |
+| `1900-1901` |  | 3 |
+| `1901-1902` |  | 3 |
+| `1902-1903` |  | 3 |
+| `1903-1904` |  | 3 |
+| `1904-1905` |  | 3 |
+| `1905-1906` |  | 3 |
+| `1906-1907` |  | 3 |
+| `1907-1908` |  | 3 |
+| `1908-1909` |  | 3 |
+| `1909-1910` |  | 3 |
+| `1910-1911` |  | 3 |
+| `1911-1912` |  | 3 |
+| `1912-1913` |  | 3 |
+| `1913-1914` |  | 3 |
+| `1919-1920` |  | 3 |
+| `1920-1921` |  | 3 |
+| `1921-1922` |  | 3 |
+| `1922-1923` |  | 3 |
+| `1923-1924` |  | 3 |
+| `1924-1925` |  | 3 |
+| `1925-1926` |  | 3 |
+| `1926-1927` |  | 3 |
+| `1927-1928` |  | 3 |
+| `1928-1929` |  | 3 |
+| `1929-1930` |  | 3 |
+| `1930-1931` |  | 3 |
+| `1931-1932` |  | 3 |
+| `1932-1933` |  | 3 |
+| `1933-1934` |  | 3 |
+| `1934-1935` |  | 3 |
+| `1935-1936` |  | 3 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `auditors` | Auditeurs libres | 33 |
+| `regular_students_year1` | Élèves réguliers en 1re année | 33 |
+| `regular_students_year2` | Élèves réguliers en 2e année | 33 |
+
+### research_school_origin
+
+**École coloniale d'agriculture. a) Lieu d'origine des élèves entrés à l'École**  
+*Colonial school of agriculture (Tunis): students entering the school, by place of origin*
+
+Source `sgt`, table school_origin, printed pages by edition. 190 rows. Value type: count. Flags: (empty) 188, derived_from_totals 1, total_mismatch 1. Notes and validation: [`../yearbook_other_chapters/csv/research_school_origin.md`](../yearbook_other_chapters/csv/research_school_origin.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `period` | Coded dimension. |
+| `origin` | Coded dimension. |
+| `origin_fr` | Printed French label for `origin`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`period`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `1898` |  | 5 |
+| `1899` |  | 5 |
+| `1899 à 1913` |  | 5 |
+| `1900` |  | 5 |
+| `1901` |  | 5 |
+| `1902` |  | 5 |
+| `1903` |  | 5 |
+| `1904` |  | 5 |
+| `1905` |  | 5 |
+| `1906` |  | 5 |
+| `1907` |  | 5 |
+| `1908` |  | 5 |
+| `1909` |  | 5 |
+| `1910` |  | 5 |
+| `1911` |  | 5 |
+| `1912` |  | 5 |
+| `1913` |  | 5 |
+| `1919` |  | 5 |
+| `1920` |  | 5 |
+| `1921` |  | 5 |
+| `1922` |  | 5 |
+| `1923` |  | 5 |
+| `1924` |  | 5 |
+| `1925` |  | 5 |
+| `1926` |  | 5 |
+| `1927` |  | 5 |
+| `1928` |  | 5 |
+| `1929` |  | 5 |
+| `1930` |  | 5 |
+| `1931` |  | 5 |
+| `1932` |  | 5 |
+| `1933` |  | 5 |
+| `1934` |  | 5 |
+| `1935` |  | 5 |
+| `1936` |  | 5 |
+| `1937` |  | 5 |
+| `1938` |  | 5 |
+| `1939` |  | 5 |
+
+`origin`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `abroad` | Étranger | 38 |
+| `algeria` | Algérie | 38 |
+| `colonies` | Colonies | 38 |
+| `france` | France | 38 |
+| `tunisia` | Tunisie | 38 |
+
+### research_school_promotions
+
+**École coloniale d'agriculture. b) Promotions**  
+*Colonial school of agriculture: regular students and diplomas by promotion*
+
+Source `sgt`, table school_promotions, printed pages by edition. 165 rows. Value type: count. Flags: (empty) 162, not_applicable 2, total_mismatch 1. Notes and validation: [`../yearbook_other_chapters/csv/research_school_promotions.md`](../yearbook_other_chapters/csv/research_school_promotions.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `promotion` | Coded dimension. |
+| `promotion_years` | Coded dimension. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`promotion`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `1` |  | 5 |
+| `10` |  | 5 |
+| `11` |  | 5 |
+| `12` |  | 5 |
+| `13` |  | 5 |
+| `14` |  | 5 |
+| `15` |  | 5 |
+| `16` |  | 5 |
+| `17` |  | 5 |
+| `18` |  | 5 |
+| `19` |  | 5 |
+| `2` |  | 5 |
+| `20` |  | 5 |
+| `21` |  | 5 |
+| `22` |  | 5 |
+| `23` |  | 5 |
+| `24` |  | 5 |
+| `25` |  | 5 |
+| `26` |  | 5 |
+| `27` |  | 5 |
+| `28` |  | 5 |
+| `29` |  | 5 |
+| `3` |  | 5 |
+| `30` |  | 5 |
+| `31` |  | 5 |
+| `32` |  | 5 |
+| `33` |  | 5 |
+| `4` |  | 5 |
+| `5` |  | 5 |
+| `6` |  | 5 |
+| `7` |  | 5 |
+| `8` |  | 5 |
+| `9` |  | 5 |
+
+`promotion_years`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `1898-1900` |  | 5 |
+| `1899-1901` |  | 5 |
+| `1900-1902` |  | 5 |
+| `1901-1903` |  | 5 |
+| `1902-1904` |  | 5 |
+| `1903-1905` |  | 5 |
+| `1904-1906` |  | 5 |
+| `1905-1907` |  | 5 |
+| `1906-1908` |  | 5 |
+| `1907-1909` |  | 5 |
+| `1908-1910` |  | 5 |
+| `1909-1911` |  | 5 |
+| `1910-1912` |  | 5 |
+| `1911-1913` |  | 5 |
+| `1912-1914` |  | 5 |
+| `1914-1920` |  | 5 |
+| `1919-1921` |  | 5 |
+| `1920-1922` |  | 5 |
+| `1921-1923` |  | 5 |
+| `1922-1924` |  | 5 |
+| `1923-1925` |  | 5 |
+| `1924-1926` |  | 5 |
+| `1925-1927` |  | 5 |
+| `1926-1928` |  | 5 |
+| `1927-1929` |  | 5 |
+| `1928-1930` |  | 5 |
+| `1929-1931` |  | 5 |
+| `1930-1932` |  | 5 |
+| `1931-1933` |  | 5 |
+| `1932-1934` |  | 5 |
+| `1933-1935` |  | 5 |
+| `1934-1936` |  | 5 |
+| `1935-1937` |  | 5 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `certificate_of_studies` | Élèves diplômés : certificat d'études | 33 |
+| `diploma_engineer` | Élèves diplômés : diplôme d'ingénieur | 33 |
+| `diploma_school` | Élèves diplômés : diplôme de l'École | 33 |
+| `regular_students_year1` | Élèves réguliers pendant la 1re année d'études | 33 |
+| `regular_students_year2` | Élèves réguliers pendant la 2e année d'études | 33 |
