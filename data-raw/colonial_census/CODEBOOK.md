@@ -292,6 +292,11 @@ Every table is tidy: one row per printed cell. Printed subtotals and totals are 
 | [`labour_placement`](#labour_placement) | placement | by edition | 480 | count | French Placement Office in Tunisia: job applications, offers and placements by occupation |
 | [`labour_cost_of_living`](#labour_cost_of_living) | col | by edition | 201 | rate | Cost-of-living index numbers for French, Italian and indigenous working families (July 1914 = 100) |
 | [`labour_immigration_visas`](#labour_immigration_visas) | visa_trade;visas | by edition | 19 | count | Immigrant workers: labour contracts visaed in 1939 (renewals, transfers, new immigrants) and new immigrants by trade and nationality |
+| [`posts_exchange_rates`](#posts_exchange_rates) | c | by edition | 3,795 | rate | Exchange rates applied to international money orders, by country and date |
+| [`agriculture_yield_classes`](#agriculture_yield_classes) | classes;surfaces;zclasses | by edition | 1,904 | mixed | Main crops: sown, taxed and untaxed areas, and taxed area by yield class (hectolitres per hectare), European and indigenous farmers |
+| [`agriculture_cereal_farmers`](#agriculture_cereal_farmers) | split | by edition | 132 | hectares | Cereals (durum and soft wheat, barley, oats): sown area of European and indigenous farmers |
+| [`agriculture_vine`](#agriculture_vine) | vine | by edition | 638 | mixed | Vineyards: number of vine growers and vineyard area by contrôle civil and nationality |
+| [`agriculture_olive`](#agriculture_olive) | olive | by edition | 1,234 | count | Olive trees by caïdat (unproductive and wild, young untaxed, taxed) |
 
 ### eur1906_t1_circonscription_nationality
 
@@ -13902,3 +13907,358 @@ Source `sgt`, table visa_trade;visas, printed pages by edition. 19 rows. Value t
 | `italian` | Italiens | 4 |
 | `other` | Autres nationalités | 4 |
 | `swiss` | Suisses | 4 |
+
+### posts_exchange_rates
+
+**Taxe de change (mandats-poste internationaux)**  
+*Exchange rates applied to international money orders, by country and date*
+
+Source `sgt`, table c, printed pages by edition. 3,795 rows. Value type: rate. Flags: (empty) 3,791, reprint_corrected 2, not_applicable 2. Notes and validation: [`../yearbook_other_chapters/csv/posts_exchange_rates.md`](../yearbook_other_chapters/csv/posts_exchange_rates.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `date_from` | Text (1489 distinct values). |
+| `date_to` | Text (1485 distinct values). |
+| `period_fr` | Place or label as printed (1489 distinct values). |
+| `country` | Coded dimension. |
+| `country_fr` | Printed French label for `country`. |
+| `money_order_fr` | Place or label as printed (1 distinct values). |
+| `par_fr` | Place or label as printed (4 distinct values). |
+| `unit` | Coded dimension. |
+| `unit_fr` | Printed French label for `unit`. |
+| `value` | The printed figure. |
+| `value_type` | Coded dimension. |
+| `flag` | Data-quality flag; see the legend at the top. |
+| `note_fr` | Place or label as printed (3 distinct values). |
+
+`country`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `denmark` | Danemark | 427 |
+| `greece` | Grèce | 135 |
+| `netherlands` | Pays-Bas | 430 |
+| `norway` | Norvège | 437 |
+| `sweden` | Suède | 458 |
+| `switzerland` | Suisse | 513 |
+| `united_kingdom` | Grande-Bretagne | 906 |
+| `united_states` | États-Unis d'Amérique | 489 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `change_pct` | Change % (fr.) | 565 |
+| `fr_per_dollar` | Francs (pour 1 dollar) | 489 |
+| `fr_per_drachma` | Change % (fr.) : cours normal, 1 dr. = (francs pour 1 drachme) | 83 |
+| `fr_per_florin` | Francs (pour 1 florin) | 430 |
+| `fr_per_krone` | Francs (pour 1 couronne) | 1,322 |
+| `fr_per_pound` | Francs (pour 1 £) | 906 |
+
+`value_type`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `rate` |  | 3,795 |
+
+### agriculture_yield_classes
+
+**Principales cultures ; rendement et répartition (surfaces ensemencées, imposées et non imposées ; nombre d'hectares ayant produit 1 à 6 hectolitres et au-dessus ; cultures européennes ou indigènes)**  
+*Main crops: sown, taxed and untaxed areas, and taxed area by yield class (hectolitres per hectare), European and indigenous farmers*
+
+Source `sgt`, table classes;surfaces;zclasses, printed pages by edition. 1,904 rows. Value type: mixed. Flags: (empty) 1,873, total_mismatch 25, reprint_corrected 4, ocr_corrected 2. Notes and validation: [`../yearbook_other_chapters/csv/agriculture_yield_classes.md`](../yearbook_other_chapters/csv/agriculture_yield_classes.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `crop_year_fr` | Place or label as printed (10 distinct values). |
+| `zone` | Coded dimension. |
+| `zone_fr` | Printed French label for `zone`. |
+| `crop` | Coded dimension. |
+| `crop_fr` | Printed French label for `crop`. |
+| `subtable` | Coded dimension. |
+| `farmers` | Coded dimension. |
+| `farmers_fr` | Printed French label for `farmers`. |
+| `area_class` | Coded dimension. |
+| `area_class_fr` | Printed French label for `area_class`. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`zone`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `centre_south` | Tunisie centrale et méridionale (4e et 5e Régions et Territoires militaires) | 150 |
+| `north` | Tunisie septentrionale et Hauts plateaux (1re, 2e et 3e Régions) | 150 |
+| `tunisia` | Tunisie (ensemble) | 1,604 |
+
+`crop`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `barley` | Orge | 384 |
+| `broad_beans` | Fèves | 168 |
+| `chickpeas` | Pois chiches | 168 |
+| `flax` | Lin | 168 |
+| `maize` | Maïs | 168 |
+| `oats` | Avoine | 296 |
+| `sorghum` | Sorgho | 168 |
+| `wheat` | Blé | 384 |
+
+`subtable`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `surfaces` |  | 296 |
+| `yield_classes` |  | 1,608 |
+
+`farmers`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `all` |  | 236 |
+| `european` | Européens / Européenss | 834 |
+| `indigenous` | Indigènes / Indigèness | 834 |
+
+`area_class`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `sown` | Surfaces ensemencées | 119 |
+| `taxed` | Surfaces imposées (d'un rendement supérieur à 1 hectolitre) | 59 |
+| `untaxed_low_yield` | Surfaces non imposées (d'un rendement inférieur à 1 hectolitre) | 59 |
+| `untaxed_new_land` | Surfaces non imposées (ensemencées sur terres nouvellement défrichées) | 59 |
+| `yield_0_5_hl` | 0 à 5 hectol. | 120 |
+| `yield_1_hl` | 1 hectolitre | 228 |
+| `yield_2_hl` | 2 hectolitres | 228 |
+| `yield_3_hl` | 3 hectolitres | 228 |
+| `yield_4_hl` | 4 hectolitres | 228 |
+| `yield_5_hl` | 5 hectolitres | 228 |
+| `yield_6_hl_plus` | 6 hectolitres et au-dessus | 348 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `area` | Nombre d'hectares ayant produit / Nombre d'hectares ayant produit (h. a.) / Surfaces (h. a.) / Surfaces ensemencées | 1,100 |
+| `percent_of_sown_area` | Rapport avec les surfaces ensemencées (%) | 120 |
+| `ratio_to_line_total` | Rapport avec les surfaces ensemencées / Rapport avec les surfaces imposées | 684 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `hectares` |  | 1,100 |
+| `percent` |  | 120 |
+| `ratio` |  | 684 |
+
+### agriculture_cereal_farmers
+
+**Principales cultures. Céréales (blé dur, tendre, orge, avoine). Répartition de la superficie entre européens et indigènes**  
+*Cereals (durum and soft wheat, barley, oats): sown area of European and indigenous farmers*
+
+Source `sgt`, table split, printed pages by edition. 132 rows. Value type: hectares. Flags: (empty) 131, derived_from_totals 1. Notes and validation: [`../yearbook_other_chapters/csv/agriculture_cereal_farmers.md`](../yearbook_other_chapters/csv/agriculture_cereal_farmers.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `crop` | Coded dimension. |
+| `crop_fr` | Printed French label for `crop`. |
+| `farmers` | Coded dimension. |
+| `farmers_fr` | Printed French label for `farmers`. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`crop`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `barley` | Orge | 42 |
+| `durum_wheat` | Blé dur | 6 |
+| `oats` | Avoine | 42 |
+| `soft_wheat` | Blé tendre | 6 |
+| `wheat` | Blé dur et blé tendre | 36 |
+
+`farmers`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `european` | Européennes / Européens | 66 |
+| `indigenous` | Indigènes | 66 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `area` | Surface | 132 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `hectares` |  | 132 |
+
+### agriculture_vine
+
+**Vigne. Répartition des viticulteurs par contrôle (sgt1925 : par régions) et par nationalité**  
+*Vineyards: number of vine growers and vineyard area by contrôle civil and nationality*
+
+Source `sgt`, table vine, printed pages by edition. 638 rows. Value type: mixed. Flags: (empty) 636, total_mismatch 2. Notes and validation: [`../yearbook_other_chapters/csv/agriculture_vine.md`](../yearbook_other_chapters/csv/agriculture_vine.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `region` | Coded dimension. |
+| `chef_lieu` | Coded dimension. |
+| `controle_civil` | Place or label as printed (22 distinct values). |
+| `nationality` | Coded dimension. |
+| `nationality_fr` | Printed French label for `nationality`. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`region`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `(empty)` |  | 468 |
+| `1re Région` |  | 40 |
+| `2me Région` |  | 30 |
+| `3me Région` |  | 40 |
+| `4me Région` |  | 30 |
+| `5me Région` |  | 30 |
+
+`chef_lieu`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `(empty)` |  | 468 |
+| `Bizerte` |  | 40 |
+| `Le Kef` |  | 40 |
+| `Sfax` |  | 30 |
+| `Sousse` |  | 30 |
+| `Tunis` |  | 30 |
+
+`nationality`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `anglo_maltese` | Anglo-Maltais | 142 |
+| `french` | Français | 142 |
+| `italian` | Italiens | 142 |
+| `other_european` | Autres Européens | 142 |
+| `tunisian` | Tunisiens | 70 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `area` | Superficie (hect. a.) | 319 |
+| `growers` | Nombre | 319 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `growers` |  | 319 |
+| `hectares` |  | 319 |
+
+### agriculture_olive
+
+**Oliviers. Répartition par caïdat (à partir de sgt1925 : par régions)**  
+*Olive trees by caïdat (unproductive and wild, young untaxed, taxed)*
+
+Source `sgt`, table olive, printed pages by edition. 1,234 rows. Value type: count. Flags: (empty) 1,196, not_applicable 20, total_mismatch 17, derived_from_totals 1. Notes and validation: [`../yearbook_other_chapters/csv/agriculture_olive.md`](../yearbook_other_chapters/csv/agriculture_olive.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `region` | Coded dimension. |
+| `chef_lieu` | Coded dimension. |
+| `controle_civil` | Place or label as printed (19 distinct values). |
+| `caidat` | Place or label as printed (53 distinct values). |
+| `tree_class` | Coded dimension. |
+| `tree_class_fr` | Printed French label for `tree_class`. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`region`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `(empty)` |  | 270 |
+| `1re Région` |  | 166 |
+| `2me Région` |  | 108 |
+| `3me Région` |  | 162 |
+| `4me Région` |  | 219 |
+| `5me Région` |  | 206 |
+| `Territoires Militaires du Sud` |  | 103 |
+
+`chef_lieu`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `(empty)` |  | 373 |
+| `Bizerte` |  | 166 |
+| `Le Kef` |  | 162 |
+| `Sfax` |  | 206 |
+| `Sousse` |  | 219 |
+| `Tunis` |  | 108 |
+
+`tree_class`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `taxed` | Oliviers imposés | 409 |
+| `total` | Total | 7 |
+| `unproductive_and_wild` | Oliviers improductifs et oléastres | 409 |
+| `young_untaxed` | Jeunes oliviers non imposés | 409 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `trees` | Nombre d'arbres | 1,234 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `trees` |  | 1,234 |

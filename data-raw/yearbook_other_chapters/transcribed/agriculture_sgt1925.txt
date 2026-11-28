@@ -218,3 +218,168 @@ orange_trees | 66000 66900 67000 67800 68000 62100 67140 64620
 orange_prod | 15200 13800 14400 14000 14200 13600 14800 14200
 lemon_trees | 52000 52000 52000 52000 52000 50120 52000 51060
 lemon_prod | 13000 11000 10500 10000 10000 11700 10900 11300
+
+# PRINCIPALES CULTURES ; RENDEMENT ET RÉPARTITION (1921-1925). New layout: one spread per crop (f298|f299 a) Blé,
+# f300|f301 b) Orge, f302|f303 c) Avoine), left page Tunisie septentrionale et Hauts Plateaux (1re, 2e et 3e
+# Régions), right page Tunisie centrale et méridionale (4e et 5e Régions et Territoires militaires). Columns:
+# SURFACES ENSEMENCÉES; NOMBRE D'HECTARES ayant produit de 0 à 5 hectol. (h05) and its RAPPORT avec les surfaces
+# ensemencées (p05, printed in %); NOMBRE D'HECTARES ayant produit 6 hectolitres et au-dessus (h6) and RAPPORT
+# (p6). Lines: year (harvest year as printed) x Européennes / Indigènes; no totals. Whole hectares. Every cell
+# read on native-resolution crops of the page images (Gallica OCR not used).
+@zclasses view=298 page=274 crop=wheat zone=north
+img: all
+cols: sown h05 p05 h6 p6
+1921_eur | 74525 1851 2.48 72674 97.52
+1921_ind | 266727 59583 22 207144 78
+1922_eur | 84701 34788 41.07 49913 58.93
+1922_ind | 255017 214017 83.96 41144 16.04
+1923_eur | 98013 3892 3.97 94121 96.03
+1923_ind | 265794 78186 29.43 187608 70.57
+1924_eur | 100612 13385 13.31 87227 86.69
+1924_ind | 294821 204215 69.26 90606 30.74
+1925_eur | 105856 3896 3.68 101960 96.32
+1925_ind | 290858 115006 39.54 175582 60.46
+
+@zclasses view=299 page=275 crop=wheat zone=centre_south
+img: all
+cols: sown h05 p05 h6 p6
+1921_eur | 5178 1500 29 3678 71
+1921_ind | 259866 85389 32.85 174477 67.15
+1922_eur | 2399 1963 81.82 436 18.18
+1922_ind | 91189 88334 96.86 2855 13.14
+1923_eur | 4287 1449 33.79 2838 66.21
+1923_ind | 281899 137647 48.82 144252 51.18
+1924_eur | 3541 2213 62.47 1328 37.53
+1924_ind | 85594 83652 97.73 1942 2.27
+1925_eur | 5592 3645 65.18 1947 34.82
+1925_ind | 255371 236332 92.54 19039 7.46
+
+@zclasses view=300 page=276 crop=barley zone=north
+img: all
+cols: sown h05 p05 h6 p6
+1921_eur | 11571 772 6.67 10799 93.33
+1921_ind | 143460 8415 6.25 135045 93.75
+1922_eur | 11387 5879 51.62 5508 48.38
+1922_ind | 139828 114143 81.63 25685 18.37
+1923_eur | 14550 833 5.73 13717 94.27
+1923_ind | 139222 23219 16.68 116003 83.32
+1924_eur | 14941 2593 17.35 12348 82.65
+1924_ind | 148293 78555 52.97 69728 47.03
+1925_eur | 17873 1071 5.99 16802 94.01
+1925_ind | 160968 46539 28.91 114429 71.09
+
+@zclasses view=301 page=277 crop=barley zone=centre_south
+img: all
+cols: sown h05 p05 h6 p6
+1921_eur | 6210 596 9.59 5254 90.41
+1921_ind | 336589 105394 31.31 231195 68.69
+1922_eur | 2904 2796 96.28 108 3.72
+1922_ind | 142731 138298 96.89 4433 3.11
+1923_eur | 6634 2903 43.75 3731 56.25
+1923_ind | 330231 118192 35.79 212039 64.21
+1924_eur | 4513 3060 67.80 1453 32.20
+1924_ind | 134015 126613 95.22 7402 4.78
+1925_eur | 8112 5867 72.32 2245 27.68
+1925_ind | 316877 252731 79.75 64146 20.25
+
+@zclasses view=302 page=278 crop=oats zone=north
+img: all
+cols: sown h05 p05 h6 p6
+1921_eur | 39883 858 2.15 39025 97.85
+1921_ind | 19509 193 0.98 19316 99.02
+1922_eur | 31256 17126 54.79 14130 45.21
+1922_ind | 17038 14938 87.67 2100 22.33
+1923_eur | 30435 1210 3.97 29225 96.03
+1923_ind | 16189 1325 8.18 14864 91.82
+1924_eur | 25744 4045 15.75 21699 84.25
+1924_ind | 18771 7293 38.85 11478 61.15
+1925_eur | 20795 1489 7.11 19306 92.89
+1925_ind | 17067 2664 15.60 14603 84.40
+
+@zclasses view=303 page=279 crop=oats zone=centre_south
+img: all
+cols: sown h05 p05 h6 p6
+1921_eur | 3376 285 8.44 3091 91.56
+1921_ind | 3878 1038 26.76 2840 73.24
+1922_eur | 1700 1390 81.76 310 18.24
+1922_ind | 1043 1039 99.61 4 0.39
+1923_eur | 1473 471 31.97 1002 68.03
+1923_ind | 1547 194 12.54 1353 87.46
+1924_eur | 1227 835 68.01 392 31.99
+1924_ind | 1000 820 82.00 180 18.00
+1925_eur | 1942 1347 69.36 595 30.64
+1925_ind | 1929 1372 71.12 557 28.88
+
+# i) Vigne. Répartition des viticulteurs par régions et par nationalité, f304|f305: lines by région, chef-lieu de
+# région and contrôle civil (label = région / chef-lieu / contrôle). Columns as in sgt1924 (Français, Italiens,
+# Anglo-Maltais, Autres Européens, Tunisiens, TOTAUX). Footnote: the European vineyard covers 27.986 ha; the
+# indigenous vineyard, scattered in small plots over the Regency, is estimated at about 2.227 ha; the total
+# Tunisian vineyard at 30.213 ha. Every cell read on native-resolution crops (gutter on both pages).
+@vine view=304 page=280 geo=region
+img: all
+cols: fr_n fr_ha it_n it_ha am_n am_ha ae_n ae_ha tn_n tn_ha tot_n tot_ha
+1re Région/Bizerte/Béja | 13 109.95 4 4.80 0 0 0 0 3 1 20 115.75
+1re Région/Bizerte/Bizerte | 123 696.60 162 477.10 0 0 0 0 9 32.35 294 1206.05
+1re Région/Bizerte/Souk-el-Arba | 7 55.85 1 1 0 0 0 0 4 3.10 12 59.95
+1re Région/Bizerte/Tabarka | 22 61.80 12 15.55 0 0 0 0 12 4.90 46 82.25
+2me Région/Tunis/Tunis | 451 6800.90 969 7962.90 4 245.40 7 176.35 91 263.40 1522 15448.95
+2me Région/Tunis/Zaghouan | 64 330.55 58 400.85 0 0 0 0 7 17.60 129 749
+2me Région/Tunis/Grombalia | 71 2333.90 457 5359.25 2 427 3 94.25 40 155.80 573 8370.20
+3me Région/Le Kef/Le Kef | 4 5.30 18 19.85 0 0 0 0 11 10.60 33 35.75
+3me Région/Le Kef/Téboursouk | 12 25 1 2.20 0 0 2 54.50 3 4.25 18 85.95
+3me Région/Le Kef/Maktar | 3 1.75 0 0 0 0 0 0 0 0 3 1.75
+3me Région/Le Kef/Medjez-el-Bab | 46 387.20 1 7.40 0 0 0 0 1 0.50 48 395.10
+4me Région/Sousse/Sousse | 78 443.75 63 438.80 0 0 0 0 49 141.70 190 1024.25
+4me Région/Sousse/Kairouan | 3 0.65 0 0 0 0 0 0 0 0 3 0.65
+4me Région/Sousse/Thala | 1 19 0 0 0 0 0 0 0 0 1 19
+5me Région/Sfax/Sfax | 17 287.75 7 7.05 0 0 0 0 4 24.40 28 319.20
+5me Région/Sfax/Gabès-Zarzis | 8 54.50 0 0 1 1 2 4 3 3.70 14 63.20
+5me Région/Sfax/Djerba | 5 9.15 0 0 2 0.30 0 0 0 0 7 9.45
+TOTAUX | 928 11623.60 1753 14696.75 9 673.70 14 329.10 237 663.30 2811 27986.45
+
+# Oliviers. Répartition par régions, f306. Lines: région / chef-lieu de région / contrôle civil / caïdat (label
+# parts separated by " / "; "Cap-Bon > Nabeul" = caïdat bracketed under Cap-Bon). Columns as before (oliviers
+# improductifs et oléastres; jeunes oliviers non imposés; oliviers imposés; total). Aïn-Draham: "Non recensés"
+# across the four columns ('-'). Djerba (1): classes "»" and total 412.728; footnote (1): the olive trees of
+# Djerba, not subject to the canoun tax, are not counted by category ('-' for the classes, total stored). Every
+# cell read on native-resolution crops. Under Cap-Bon this edition prints Nabeul first with the figures printed
+# for Soliman in sgt1922-sgt1924 (and Soliman second with Nabeul's): names kept as printed.
+@olive view=306 page=282 geo=4
+img: all
+cols: unprod young taxed total
+1re Région / Bizerte / Béja / Béja | 1359 2420 12946 16725
+1re Région / Bizerte / Bizerte / Bizerte | 14262 26851 425992 467105
+1re Région / Bizerte / Bizerte / Mateur | 102448 19691 18750 140889
+1re Région / Bizerte / Tabarka / Aïn-Draham | - - - -
+1re Région / Bizerte / Souk-el-Arba / Souk-el-Arba | 47727 37966 9191 94884
+1re Région / Bizerte / Souk-el-Arba / Souk-el-Khemis | 1247 3574 3434 8255
+2me Région / Tunis / Tunis / Banlieue de Tunis | 53858 64521 804542 922921
+2me Région / Tunis / Zaghouan / Zaghouan | 7448 8311 83008 98767
+2me Région / Tunis / Grombalia / Cap-Bon > Nabeul | 72898 38069 1157941 1268908
+2me Région / Tunis / Grombalia / Cap-Bon > Soliman | 8477 170263 377466 556206
+3me Région / Le Kef / Téboursouk / Téboursouk | 860 9404 53487 63751
+3me Région / Le Kef / Le Kef / Le Kef | 24505 4783 29996 59284
+3me Région / Le Kef / Le Kef / Tadjerouine | 903 758 1511 3172
+3me Région / Le Kef / Maktar / Oulad Ayar | 8760 6498 33084 48342
+3me Région / Le Kef / Maktar / Oulad Aoun | 18581 9446 23031 51088
+3me Région / Le Kef / Medjez-el-Bab / Medjez-el-Bab | 5397 13346 36967 55710
+4me Région / Sousse / Sousse / Souassi | 767 276966 58193 335926
+4me Région / Sousse / Sousse / Mahdia | 57611 635642 865261 1558514
+4me Région / Sousse / Sousse / Monastir | 39921 702468 1520459 2262848
+4me Région / Sousse / Sousse / Sousse | 55737 669794 1378974 2104505
+4me Région / Sousse / Kairouan / Kairouan | 11074 49228 15115 75417
+4me Région / Sousse / Kairouan / Djelass | 121604 215167 75949 412720
+4me Région / Sousse / Thala / Fraichiches | 118 11863 2754 14735
+4me Région / Sousse / Thala / Majeurs | 494 15172 1938 17604
+5me Région / Sfax / Sfax / Sfax | 21964 1013777 1141617 2177358
+5me Région / Sfax / Sfax / La Skhira | 284 497729 80189 578202
+5me Région / Sfax / Sfax / Djebéniane | 19095 642508 476961 1138564
+5me Région / Sfax / Gabès / Arad | 956 82658 52898 136512
+5me Région / Sfax / Gafsa / Hammama | 551 84103 6981 91635
+5me Région / Sfax / Gafsa / Gafsa | 2938 40303 134988 178229
+5me Région / Sfax / Tozeur / Djerid | 1704 12896 21481 36081
+5me Région / Sfax / Djerba / Djerba (1) | - - - 412728
+Territoires Militaires du Sud /  /  / Nefzaoua | 195 23651 9636 33482
+Territoires Militaires du Sud /  /  / Ouerghemma | 7937 407157 149210 564304
+Territoires Militaires du Sud /  /  / Tataouine | 1968 32781 39947 74696
+TOTAUX | 713648 5829764 9103897 16060037

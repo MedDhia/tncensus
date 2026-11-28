@@ -163,3 +163,68 @@ oats_N_yield | 7.7 7.6 8.5 7.7 7.6
 oats_CS_area | 2500 1000 2000 3300 2870
 oats_CS_prod | 13000 1200 10000 8120 9100
 oats_CS_yield | 5.2 1.2 5 2.2 3.1
+
+# Céréales (blé dur, blé tendre, orge, avoine). Répartition de la superficie entre européens et indigènes
+# (1937-1939), upper half of f106|f107: line headings on f106 (surface en hectares), figures on f107 (1937, 1938,
+# 1939, MOYENNE DES ANNÉES 1935-1939 and 1930-1939: checks only). Blé dur and blé tendre are now separate lines
+# (footnote (1): the discrimination of soft wheat was made only from 1937); their averages are those of 1937-1939
+# (footnote (2)) and their 1930-1939 average is not printed (» : '-'). The soft-wheat line heading reads
+# "Européens". Every cell read on native-resolution crops.
+@split view=107 page=101
+img: all
+cols: 1937 1938 1939 m1937_1939 m1930_1939
+durum_eur | 65000 61700 70000 65566 -
+durum_ind | 755000 452300 675000 627433 -
+soft_eur | 115000 122500 128000 121666 -
+soft_ind | 38000 37500 41000 37666 -
+
+@split view=107 page=101
+img: all
+cols: 1937 1938 1939 m1935_1939 m1930_1939
+barley_eur | 25000 21700 37500 25840 21908
+barley_ind | 595000 284300 578500 450560 455142
+oats_eur | 21600 23600 21400 18660 16943
+oats_ind | 15400 16400 20600 15140 15598
+
+# d) Oliviers. Répartition par régions, f108|f109 (geography on f108, figures on f109). New caïdat Djemmal
+# (bracket placement ambiguous between the Sousse and Kairouan contrôles: stored under Sousse); La Skhira and
+# Djerba no longer printed. Every cell read on native-resolution crops.
+@olive view=109 page=103 geo=4
+img: all
+cols: unprod young taxed total
+1re Région / Bizerte / Béja / Béja | 1545 22330 13637 37512
+1re Région / Bizerte / Bizerte / Bizerte | 14283 44625 441621 500529
+1re Région / Bizerte / Bizerte / Mateur | 100310 53325 28486 182121
+1re Région / Bizerte / Tabarka / Aïn-Draham | 1521 20688 9612 31821
+1re Région / Bizerte / Souk-el-Arba / Souk-el-Arba | 51847 118258 35316 205421
+1re Région / Bizerte / Souk-el-Arba / Souk-el-Khemis | 1526 39087 6551 47164
+2me Région / Tunis / Tunis / Banlieue de Tunis | 50513 197206 850530 1098249
+2me Région / Tunis / Zaghouan / Zaghouan | 7174 137475 88289 232938
+2me Région / Tunis / Grombalia / Cap-Bon > Nabeul | 8641 392021 463336 863998
+2me Région / Tunis / Grombalia / Cap-Bon > Soliman | 72463 211866 1151720 1436049
+3me Région / Le Kef / Téboursouk / Téboursouk | 6333 46056 60087 112476
+3me Région / Le Kef / Le Kef / Le Kef | 24497 10277 31254 66028
+3me Région / Le Kef / Le Kef / Tadjerouine | 867 3943 1684 6494
+3me Région / Le Kef / Maktar / Oulad Ayar | 10677 18158 37164 65999
+3me Région / Le Kef / Maktar / Oulad Aoun | 19018 27078 29962 76058
+3me Région / Le Kef / Medjez-el-Bab / Medjez-el-Bab | 10607 74061 47409 132077
+4me Région / Sousse / Sousse / Souassi | 938 182146 187494 370578
+4me Région / Sousse / Sousse / Mahdia | 59168 350442 1275096 1684706
+4me Région / Sousse / Sousse / Monastir | 24692 252724 1017686 1295102
+4me Région / Sousse / Sousse / Sousse | 55843 465508 1695327 2216678
+4me Région / Sousse / Sousse / Djemmal | 20720 582022 900849 1503591
+4me Région / Sousse / Kairouan / Kairouan | 9314 196114 49235 254663
+4me Région / Sousse / Kairouan / Djelass | 120256 75144 117847 313247
+4me Région / Sousse / Thala / Thala | 186 7967 1988 10141
+4me Région / Sousse / Thala / Sbeïtla | 701 49335 15667 65703
+5me Région / Sfax / Sfax / Sfax | 26011 987032 2091968 3105011
+5me Région / Sfax / Sfax / Djebeniana | 30222 545224 880120 1455566
+5me Région / Sfax / Gabès / Arad | 1316 42195 96614 140125
+5me Région / Sfax / Gafsa / Hammama | 2008 224488 27273 253769
+5me Région / Sfax / Gafsa / Gafsa | 3100 100453 157250 260803
+5me Région / Sfax / Tozeur / Djerid | 1548 7111 29217 37876
+Territoires Militaires du Sud /  /  / Nefzaoua | 333 14274 21645 36252
+Territoires Militaires du Sud /  /  / Matmata | 3916 27318 129236 160470
+Territoires Militaires du Sud /  /  / Ouerghemma | 6913 198651 380359 585923
+Territoires Militaires du Sud /  /  / Tatahouine | 2609 7487 65173 75269
+TOTAUX | 751616 5732089 12436702 18920407

@@ -137,3 +137,61 @@ oats_N_yield | 5.8 7.6 4.5 7.2 7.9
 oats_CS_area | 3500 3100 2900 2860 3355
 oats_CS_prod | 15000 15000 1400 9400 12000
 oats_CS_yield | 4.3 4.8 0.4 2.3 3.5
+
+# Céréales (blé dur, blé tendre, orge, avoine). Répartition de la superficie entre européens et indigènes
+# (1934-1936), upper half of f107|f108: line headings on f107 ("surface en hectares"), figures on f108 (1934,
+# 1935, 1936 and the averages 1931-1935, 1926-1935 reprinted unchanged from sgt1935: checks only). Every cell
+# read on native-resolution crops.
+@split view=108 page=97
+img: all
+cols: 1934 1935 1936 m1931_1935 m1926_1935
+wheat_eur | 168000 158000 98800 172500 154654
+wheat_ind | 620000 662000 395200 645000 612969
+barley_eur | 16500 20000 25000 17500 21411
+barley_ind | 465500 520000 275000 483200 478569
+oats_eur | 21300 12700 14000 13040 17870
+oats_ind | 14200 12300 11000 13200 17323
+
+# d) Oliviers. Répartition par régions, f109|f110 (geography on f109, figures on f110). Read cell by cell on
+# native-resolution crops of this printing (typed from this page): every figure equals sgt1935 (same count
+# reprinted). Spellings of this edition: Djebeniana, Tatahouine.
+@olive view=110 page=99 geo=4
+img: all
+cols: unprod young taxed total
+1re Région / Bizerte / Béja / Béja | 1356 1961 13070 16387
+1re Région / Bizerte / Bizerte / Bizerte | 14203 24787 437394 476384
+1re Région / Bizerte / Bizerte / Mateur | 82912 52768 25975 161655
+1re Région / Bizerte / Tabarka / Aïn-Draham | 1358 14481 2894 18733
+1re Région / Bizerte / Souk-el-Arba / Souk-el-Arba | 43153 70690 26941 140784
+1re Région / Bizerte / Souk-el-Arba / Souk-el-Khemis | 1345 15602 5984 22931
+2me Région / Tunis / Tunis / Banlieue de Tunis | 50761 60785 829206 940752
+2me Région / Tunis / Zaghouan / Zaghouan | 7167 35127 86260 128554
+2me Région / Tunis / Grombalia / Cap-Bon > Nabeul | 8419 129285 428224 565928
+2me Région / Tunis / Grombalia / Cap-Bon > Soliman | 72104 35569 1153183 1261856
+3me Région / Le Kef / Téboursouk / Téboursouk | 4797 30905 56218 91920
+3me Région / Le Kef / Le Kef / Le Kef | 24497 9875 30501 64873
+3me Région / Le Kef / Le Kef / Tadjerouine | 861 3897 1663 6421
+3me Région / Le Kef / Maktar / Oulad Ayar | 8653 5946 35028 49627
+3me Région / Le Kef / Maktar / Oulad Aoun | 20722 8901 25904 55527
+3me Région / Le Kef / Medjez-el-Bab / Medjez-el-Bab | 5295 25262 45070 75627
+4me Région / Sousse / Sousse / Souassi | 861 236942 127386 365189
+4me Région / Sousse / Sousse / Mahdia | 59145 494575 1074134 1627863
+4me Région / Sousse / Sousse / Monastir | 40739 505170 1767974 2313885
+4me Région / Sousse / Sousse / Sousse | 55844 565640 1566887 2188371
+4me Région / Sousse / Kairouan / Kairouan | 12455 57324 26757 96536
+4me Région / Sousse / Kairouan / Djelass | 115794 218452 107379 441625
+4me Région / Sousse / Thala / Thala | 55 3232 1384 4671
+4me Région / Sousse / Thala / Sbeitla | 693 21832 10111 32736
+5me Région / Sfax / Sfax / Sfax | 24427 535370 1673602 2233399
+5me Région / Sfax / Sfax / Djebeniana | 27120 446756 786519 1260395
+5me Région / Sfax / Sfax / La Skhira | 1411 586370 219910 807691
+5me Région / Sfax / Gabès / Arad | 1272 56417 77068 134757
+5me Région / Sfax / Gafsa / Hammama | 630 97990 16590 115130
+5me Région / Sfax / Gafsa / Gafsa | 3098 52326 135009 190433
+5me Région / Sfax / Tozeur / Djerid | 1541 10017 21329 32887
+5me Région / Sfax / Djerba / Djerba | 48836 33363 301801 384000
+Territoires Militaires du Sud /  /  / Nefzaoua | 322 17356 17617 35295
+Territoires Militaires du Sud /  /  / Matmata | 3920 41035 115454 160409
+Territoires Militaires du Sud /  /  / Ouerghemma | 6820 284022 276466 567308
+Territoires Militaires du Sud /  /  / Tatahouine | 2617 18167 54100 74884
+TOTAUX | 755203 4808217 11581001 17144421

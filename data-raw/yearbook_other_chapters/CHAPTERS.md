@@ -38,9 +38,9 @@ Notes:
 |---|---|
 | 1 | Communes: **done** (`extract_communes.py`, all tables, surveyed page by page) |
 | 2 | Justice: **done** (`extract_justice.py`; hearing-schedule text pages not transcribed). Prisons: **done** (`extract_prisons.py`, 9 tables, survey in `csv/prisons_survey.md`). Property: **done** (`extract_property.py`, 13 tables, survey in `csv/property_survey.md`) |
-| 3 | Posts: **done** (`extract_posts.py`, 6 tables, survey in `csv/posts_survey.md`; exchange-rate pages to do). Public works: **done** (`extract_publicworks.py`, 12 tables, survey in `csv/publicworks_survey.md`) |
+| 3 | Posts: **done** (`extract_posts.py`, 6 tables; exchange rates in `extract_posts_exchange.py`). Public works: **done** (`extract_publicworks.py`, 12 tables, survey in `csv/publicworks_survey.md`) |
 | 4 | Finances: budget, public debt, patente, taxe personnelle and livestock tax **done** (`extract_finance.py`); achour **done** (`extract_finance_achour.py`); canoun **done** (`extract_finance_canoun.py`). Finances complete (views in `csv/finance_survey.md`) |
-| 5 | Agriculture: land, crops, cereal zones **done** (`extract_agriculture.py`); tax-class tables, vines, olives, dates, livestock, forests to do (views in `csv/agriculture_survey.md`); the 1922–1930 meteorology and école coloniale / botanique / laboratory pages go to `research_` |
+| 5 | Agriculture: land, crops, cereal zones, yield classes, cereal farmers, vines, olives **done** (`extract_agriculture.py`); dates, livestock, forests to do (views in `csv/agriculture_survey.md`); the 1922–1930 meteorology and école coloniale / botanique / laboratory pages go to `research_` |
 | 6 | Colonisation: **done** (`extract_colonisation.py`, 16 tables). Economic institutions: credit and central cooperative **done** (`extract_mutuality.py`; sgt1925 tables are at f518–523 inside the labour chapter); insurance, provident societies, Office de crédit indigène, bank balance sheets, early labour tables (sgt1922–1924) to do. Labour: **done** (`extract_labour.py`, 11 tables plus the text-only `labour_collective_agreements`). Research institutions: in progress |
 | 7–10 | Commerce and navigation, by edition groups (1922–24, 1925–27, 1928–30, 1935–39) |
 
