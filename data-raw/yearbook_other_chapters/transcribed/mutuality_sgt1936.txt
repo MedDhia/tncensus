@@ -1,0 +1,47 @@
+# Statistique générale de la Tunisie, mutuality / economic institutions chapter, edition sgt1936. Format: yb_tables.py.
+
+# Crédit mutuel agricole (1927-1936; sgt1936, sgt1939 print no years in the title), f183 (p. 172). Caisses locales françaises et indigènes: one table, caisses locales (nombre de caisses, nombre d'adhérents français et tunisiens) and effets escomptés (nombre, montant). No split French / indigenous caisses. 1930 and 1932 effets number printed ».
+@credit_local view=183 page=172
+img: all
+cols: fr_caisses fr_members bills amount
+1927 | 64 3950 7437 68295411.28
+1928 | 67 4600 6379 83287370.75
+1929 | 71 4700 7355 84016933.05
+1930 | 70 5003 0 87530195.45
+1931 | 71 5003 3695 53276841
+1932 | 68 2964 0 25684792.06
+1933 | 64 2884 2743 30586537.70
+1934 | 68 3152 3730 43248447
+1935 | 68 2719 1850 18980475
+1936 | 66 2210 3732 35743933
+
+# Coopérative centrale des agriculteurs de Tunisie (1926-1936) and Coopérative de motoculture de Tunisie, f184 (p. 173). New layout: capital social versé, avances de l'Etat (statutaires, exceptionnelles; motoculture: one column), montant des marchandises (du matériel) acheté(es) en commun et livré(es) aux coopérateurs; situation au 31 décembre. No totals.
+@coop_central view=184 page=173
+img: all
+cols: capital adv_statutory adv_exceptional goods
+1926 | 169620 323450 1291787.65 7000000
+1927 | 204520 799900 791787.65 7750000
+1928 | 238170 799900 523666.50 7000000
+1929 | 276130 799900 523666.50 7100000
+1930 | 279610 799900 423666.50 6600000
+1931 | 278860 799900 323666.50 7087335
+1932 | 294100 799900 323666.50 9230764
+1933 | 296000 799900 323666.50 13200000
+1934 | 311424 799900 173666.50 8562968
+1935 | 1000000 799900 173666.50 3605150
+1936 | 1017740 1780000 173666.50 6400979
+@coop_moto view=184 page=173
+img: all
+cols: capital advances goods
+1926 | 195500 323500 3500000
+1927 | 203000 536500 5000000
+1928 | 223000 517650 9800000
+1929 | 242000 498800 11000000
+1930 | 270000 479950 10500000
+1931 | 276250 709100 10156289
+1932 | 280250 477250 8679148
+1933 | 277000 458400 6200000
+1934 | 281250 439550 5529122
+1935 | 386000 285700 4932908
+1936 | 393250 18850 5437605
+

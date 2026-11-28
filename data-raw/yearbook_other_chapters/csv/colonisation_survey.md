@@ -20,7 +20,7 @@ Chapter *Colonisation* (XIII; XIV in sgt1935). First and last views confirmed on
 ## Views per edition
 
 - **sgt1922**: f437 chapter XIII title; f438|f439 to f442|f443 Ventes avec obligation d'installation a) propriétés livrées à la colonisation (1913-1922), f442|f443 lower half b) récapitulation (1893-1922: patrimoine domanial / achats sur le fonds de colonisation; lots de colonisation, suburbains, urbains); f444|f445 c) répartition par contrôle civil des lots vendus de 1893 à 1922; f446|f447 Ventes avec obligation de planter a) autorisations de planter (1913-1922); f448|f449 ventes définitives (1913-1922); f450|f451 b) récapitulation et répartition par contrôle civil (1893-1922) and Fonds de colonisation (1900-1922); f452 Habous: cessions par substitution aux droits du domaine a) 1913-1922, b) par contrôle civil (1899-1922); f453 (rotated) cessions à enzel a) 1913-1922; f454|f455 b) répartition par contrôle civil (1886-1922); f456 blank. f457 = chapter XIV.
-- **sgt1923**: f927 title; f928-f933 a) propriétés livrées (1914-1923) and superficie totale des terres livrées (1893-1923); f934|f935 répartition par contrôle civil; f936-f939 obligation de planter; f940|f941 récapitulation par contrôle civil and Fonds de colonisation (1900-1923); f942-f945 Habous (substitutions, enzel); f946 blank. f947 = chapter XIV.
+- **sgt1923**: f927 title; f928-f933 a) propriétés livrées (1914-1923) and, f932|f933 lower half, superficie totale des terres livrées (1893-1923); f934|f935 c) répartition par contrôle civil (1893-1923); f936|f937 obligation de planter: autorisations (1913-1923; title says 1914-1923); f938|f939 ventes définitives (1914-1923); f940|f941 récapitulation par contrôle civil (1893-1923) and Fonds de colonisation (1900-1923); f942 Habous substitutions a) 1914-1923 and b) 1899-1923; f943 (sideways) cessions à enzel a) 1914-1923; f944|f945 b) 1886-1923 (upright); f946 blank. f947 = chapter XIV.
 - **sgt1924**: f1431 title; f1432-f1435 a) Ventes avec obligation d'installation personnelle (1914-1924); f1436|f1437 b) Terres à planter (1914-1924); f1438|f1439 c) Lotissements urbains, industriels ou d'estivage (1914-1924); f1440 a) lotissements ruraux livrés à la colonisation (recap.), f1441 b) terres à planter (recap.); f1442|f1443 Fonds de colonisation (1900-1924); f1444 blank. f1445 = chapter XIV.
 - **sgt1925**: f499 title; f500-f503 a) (1916-1925); f504|f505 b); f506|f507 c); f508-f509 recap.; f510|f511 fonds; f512 Fixation au sol des indigènes (1920-1925). f513 = chapter Travail.
 - **sgt1926**: f1009 title; f1010-f1015 a) (1917-1926); f1016|f1017 b); f1018|f1019 c); f1020-f1021 recap.; f1022|f1023 fonds; f1024 fixation (1920-1926). f1025 = chapter XIV.
@@ -44,8 +44,16 @@ Chapter *Colonisation* (XIII; XIV in sgt1935). First and last views confirmed on
 | `colonisation_indigenous_sales` | sales | sgt1930, sgt1935, sgt1936, sgt1939 |
 | `colonisation_regrouping_1935` | regroup, reinstall | sgt1935 |
 | `colonisation_fund` | fund | sgt1922, sgt1923, sgt1924, sgt1925, sgt1926, sgt1927, sgt1928 |
+| `colonisation_lands_delivered_summary` | recap22, recap23 | sgt1922, sgt1923 |
+| `colonisation_lots_sold_by_controle` | soldcc | sgt1922, sgt1923 |
+| `colonisation_planting_concessions` | plant_auth, plant_sale | sgt1922, sgt1923 |
+| `colonisation_planting_by_controle` | plant_cc | sgt1922, sgt1923 |
+| `colonisation_habous_substitutions` | hab_sub | sgt1922, sgt1923 |
+| `colonisation_habous_substitutions_by_controle` | hab_sub_cc | sgt1922, sgt1923 |
+| `colonisation_habous_enzel` | enzel | sgt1922, sgt1923 |
+| `colonisation_habous_enzel_by_controle` | enzel_cc | sgt1922, sgt1923 |
 
 ## Coverage
 
-Transcribed: every table from sgt1924 on (installation, planting and urban lists, recapitulation, colonisation fund, fixation au sol / lotissements tunisiens) and, for sgt1922-sgt1923, the installation list a) and the colonisation fund. NOT transcribed (sgt1922-sgt1923 only, old layout): b) récapitulation and c) répartition par contrôle civil des lots vendus (f442-f445, f932-f935); ventes avec obligation de planter (autorisations, ventes définitives, récapitulation par contrôle civil: f446-f451, f936-f941); Habous: cessions par substitution and cessions à enzel (f452-f455, f942-f945).
+Every table of the chapter is transcribed in every edition. sgt1922-sgt1923 old-layout tables (second pass): b) récapitulation / superficie totale des terres livrées (f442|f443, f932|f933) -> colonisation_lands_delivered_summary; c) répartition par contrôle civil des lots vendus (f444|f445, f934|f935) -> colonisation_lots_sold_by_controle; ventes avec obligation de planter, autorisations and ventes définitives (f446-f449, f936-f939) -> colonisation_planting_concessions, récapitulation par contrôle civil (f450|f451, f940|f941 upper halves) -> colonisation_planting_by_controle; Habous substitutions (f452, f942) -> colonisation_habous_substitutions and _by_controle; cessions à enzel (f453-f455, f943-f945; f453 and f455 printed sideways, f945 upright) -> colonisation_habous_enzel and _by_controle.
 

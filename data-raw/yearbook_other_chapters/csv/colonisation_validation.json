@@ -235,6 +235,126 @@
    "sgt1928"
   ]
  },
+ "colonisation_lands_delivered_summary": {
+  "rows": 30,
+  "checks": 20,
+  "failed": [],
+  "overlap_compared": 0,
+  "overlap_diffs": [],
+  "flagged": [],
+  "editions": [
+   "sgt1922",
+   "sgt1923"
+  ]
+ },
+ "colonisation_lots_sold_by_controle": {
+  "rows": 240,
+  "checks": 100,
+  "failed": [
+   "sgt1923 p.432 (f934) soldcc Thala: tot_ha = cult_ha + sub_ha + urb_ha: cells give 1445.89, printed 1446.89 (difference 1.00)",
+   "sgt1923 p.432 (f934) soldcc tot_ha: TOTAL = sum of the lines: cells give 177732.87, printed 177731.87 (difference -1.00)"
+  ],
+  "overlap_compared": 0,
+  "overlap_diffs": [],
+  "flagged": [],
+  "editions": [
+   "sgt1922",
+   "sgt1923"
+  ]
+ },
+ "colonisation_planting_concessions": {
+  "rows": 360,
+  "checks": 226,
+  "failed": [
+   "sgt1922 p.424 (f448) plant_sale 1917 / Terres sialines / Sfax: tot_ha = fr_ha + eu_ha + ind_ha: cells give 6637, printed 6037 (difference -600)",
+   "sgt1923 p.436 (f938) plant_sale 1917 / Terres sialines / Sfax: tot_ha = fr_ha + eu_ha + ind_ha: cells give 6637, printed 6037 (difference -600)"
+  ],
+  "overlap_compared": 318,
+  "overlap_diffs": [],
+  "flagged": [
+   "sgt1923 1917 1917 / Maknassy / Gafsa / french / area = 99 (row_realigned)"
+  ],
+  "editions": [
+   "sgt1922",
+   "sgt1923"
+  ]
+ },
+ "colonisation_planting_by_controle": {
+  "rows": 144,
+  "checks": 88,
+  "failed": [
+   "sgt1922 p.426 (f450) plant_cc TOTAL: s_tot_ha = s_fr_ha + s_eu_ha + s_ind_ha: cells give 142654, printed 142694 (difference 40)",
+   "sgt1922 p.426 (f450) plant_cc s_ind_ha: TOTAL = sum of the lines: cells give 47103, printed 47063 (difference -40)",
+   "sgt1923 p.438 (f940) plant_cc TOTAL: s_tot_ha = s_fr_ha + s_eu_ha + s_ind_ha: cells give 142654, printed 142694 (difference 40)",
+   "sgt1923 p.438 (f940) plant_cc s_ind_ha: TOTAL = sum of the lines: cells give 47103, printed 47063 (difference -40)"
+  ],
+  "overlap_compared": 0,
+  "overlap_diffs": [],
+  "flagged": [],
+  "editions": [
+   "sgt1922",
+   "sgt1923"
+  ]
+ },
+ "colonisation_habous_substitutions": {
+  "rows": 88,
+  "checks": 40,
+  "failed": [
+   "sgt1922 p.428 (f452) hab_sub 1920: s_tot = s_land + s_build: cells give 48388, printed 0 (difference -48388)",
+   "sgt1923 p.440 (f942) hab_sub 1920: s_tot = s_land + s_build: cells give 48388, printed 0 (difference -48388)"
+  ],
+  "overlap_compared": 72,
+  "overlap_diffs": [],
+  "flagged": [],
+  "editions": [
+   "sgt1922",
+   "sgt1923"
+  ]
+ },
+ "colonisation_habous_substitutions_by_controle": {
+  "rows": 144,
+  "checks": 60,
+  "failed": [
+   "sgt1922 p.428 (f452) hab_sub_cc Grombalia: c_tot = c_land + c_build: cells give 158610, printed 168610 (difference 10000)",
+   "sgt1922 p.428 (f452) hab_sub_cc c_tot: TOTAL = sum of the lines: cells give 1970463, printed 1960463 (difference -10000)",
+   "sgt1923 p.440 (f942) hab_sub_cc Grombalia: c_tot = c_land + c_build: cells give 158610, printed 168610 (difference 10000)",
+   "sgt1923 p.440 (f942) hab_sub_cc c_tot: TOTAL = sum of the lines: cells give 1970463, printed 1960463 (difference -10000)"
+  ],
+  "overlap_compared": 0,
+  "overlap_diffs": [],
+  "flagged": [],
+  "editions": [
+   "sgt1922",
+   "sgt1923"
+  ]
+ },
+ "colonisation_habous_enzel": {
+  "rows": 132,
+  "checks": 60,
+  "failed": [
+   "sgt1922 p.429 (f453) enzel 1918: tot_n = fpub_n + fpriv_n + opub_n + opriv_n: cells give 17, printed 14 (difference -3)",
+   "sgt1923 p.441 (f943) enzel 1918: tot_n = fpub_n + fpriv_n + opub_n + opriv_n: cells give 17, printed 14 (difference -3)"
+  ],
+  "overlap_compared": 108,
+  "overlap_diffs": [],
+  "flagged": [],
+  "editions": [
+   "sgt1922",
+   "sgt1923"
+  ]
+ },
+ "colonisation_habous_enzel_by_controle": {
+  "rows": 456,
+  "checks": 150,
+  "failed": [],
+  "overlap_compared": 0,
+  "overlap_diffs": [],
+  "flagged": [],
+  "editions": [
+   "sgt1922",
+   "sgt1923"
+  ]
+ },
  "_chapter_views": {
   "sgt1922": [
    437,
@@ -287,7 +407,7 @@
  },
  "_survey": {
   "sgt1922": "f437 chapter XIII title; f438|f439 to f442|f443 Ventes avec obligation d'installation a) propriétés livrées à la colonisation (1913-1922), f442|f443 lower half b) récapitulation (1893-1922: patrimoine domanial / achats sur le fonds de colonisation; lots de colonisation, suburbains, urbains); f444|f445 c) répartition par contrôle civil des lots vendus de 1893 à 1922; f446|f447 Ventes avec obligation de planter a) autorisations de planter (1913-1922); f448|f449 ventes définitives (1913-1922); f450|f451 b) récapitulation et répartition par contrôle civil (1893-1922) and Fonds de colonisation (1900-1922); f452 Habous: cessions par substitution aux droits du domaine a) 1913-1922, b) par contrôle civil (1899-1922); f453 (rotated) cessions à enzel a) 1913-1922; f454|f455 b) répartition par contrôle civil (1886-1922); f456 blank. f457 = chapter XIV.",
-  "sgt1923": "f927 title; f928-f933 a) propriétés livrées (1914-1923) and superficie totale des terres livrées (1893-1923); f934|f935 répartition par contrôle civil; f936-f939 obligation de planter; f940|f941 récapitulation par contrôle civil and Fonds de colonisation (1900-1923); f942-f945 Habous (substitutions, enzel); f946 blank. f947 = chapter XIV.",
+  "sgt1923": "f927 title; f928-f933 a) propriétés livrées (1914-1923) and, f932|f933 lower half, superficie totale des terres livrées (1893-1923); f934|f935 c) répartition par contrôle civil (1893-1923); f936|f937 obligation de planter: autorisations (1913-1923; title says 1914-1923); f938|f939 ventes définitives (1914-1923); f940|f941 récapitulation par contrôle civil (1893-1923) and Fonds de colonisation (1900-1923); f942 Habous substitutions a) 1914-1923 and b) 1899-1923; f943 (sideways) cessions à enzel a) 1914-1923; f944|f945 b) 1886-1923 (upright); f946 blank. f947 = chapter XIV.",
   "sgt1924": "f1431 title; f1432-f1435 a) Ventes avec obligation d'installation personnelle (1914-1924); f1436|f1437 b) Terres à planter (1914-1924); f1438|f1439 c) Lotissements urbains, industriels ou d'estivage (1914-1924); f1440 a) lotissements ruraux livrés à la colonisation (recap.), f1441 b) terres à planter (recap.); f1442|f1443 Fonds de colonisation (1900-1924); f1444 blank. f1445 = chapter XIV.",
   "sgt1925": "f499 title; f500-f503 a) (1916-1925); f504|f505 b); f506|f507 c); f508-f509 recap.; f510|f511 fonds; f512 Fixation au sol des indigènes (1920-1925). f513 = chapter Travail.",
   "sgt1926": "f1009 title; f1010-f1015 a) (1917-1926); f1016|f1017 b); f1018|f1019 c); f1020-f1021 recap.; f1022|f1023 fonds; f1024 fixation (1920-1926). f1025 = chapter XIV.",
@@ -299,7 +419,7 @@
   "sgt1936": "f172 chapter XIII title; f173-f178 a) (1927-1936); f179 recap. a) and b); f180 fixation and ventes définitives; f181 blank; f182 = chapter XIV Mutualité agricole (so the colonisation chapter is f172-f181, not f172-f187 as CHAPTERS.md had it). No b) or c) lists.",
   "sgt1939": "f151 chapter XIII title; f152|f153 Ventes avec obligation d'installation personnelle (1929-1939); f154 recap. a) and b); f155 Lotissements tunisiens: fixation by year 1920-1939 and ventes définitives; f156 blank. f157 = next chapter."
  },
- "_not_transcribed": "Transcribed: every table from sgt1924 on (installation, planting and urban lists, recapitulation, colonisation fund, fixation au sol / lotissements tunisiens) and, for sgt1922-sgt1923, the installation list a) and the colonisation fund. NOT transcribed (sgt1922-sgt1923 only, old layout): b) récapitulation and c) répartition par contrôle civil des lots vendus (f442-f445, f932-f935); ventes avec obligation de planter (autorisations, ventes définitives, récapitulation par contrôle civil: f446-f451, f936-f941); Habous: cessions par substitution and cessions à enzel (f452-f455, f942-f945).",
+ "_not_transcribed": "Every table of the chapter is transcribed in every edition. sgt1922-sgt1923 old-layout tables (second pass): b) récapitulation / superficie totale des terres livrées (f442|f443, f932|f933) -> colonisation_lands_delivered_summary; c) répartition par contrôle civil des lots vendus (f444|f445, f934|f935) -> colonisation_lots_sold_by_controle; ventes avec obligation de planter, autorisations and ventes définitives (f446-f449, f936-f939) -> colonisation_planting_concessions, récapitulation par contrôle civil (f450|f451, f940|f941 upper halves) -> colonisation_planting_by_controle; Habous substitutions (f452, f942) -> colonisation_habous_substitutions and _by_controle; cessions à enzel (f453-f455, f943-f945; f453 and f455 printed sideways, f945 upright) -> colonisation_habous_enzel and _by_controle.",
  "_filled": [
   "sgt1935 f294 1928 Bordj El-Amri: area 3163.80 from sgt1930",
   "sgt1935 f294 1928 El-Mahrine: area 1718.65 from sgt1930",

@@ -5,7 +5,7 @@
 \alias{colonial_place_crosswalk}
 \title{Place-Name Crosswalk for the Colonial Census and Yearbook Tables}
 \format{
-A \code{data.frame} with 2,454 rows and 16 columns:
+A \code{data.frame} with 2,463 rows and 16 columns:
 \describe{
   \item{level}{Column the name appears in: \code{"controle_civil"},
     \code{"annexe"}, \code{"caidat"}, \code{"commune"}, \code{"cheikhat"}

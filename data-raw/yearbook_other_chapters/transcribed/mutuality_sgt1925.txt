@@ -1,0 +1,60 @@
+# Statistique générale de la Tunisie, mutuality / economic institutions chapter, edition sgt1925. Format: yb_tables.py.
+
+# Crédit mutuel agricole (1916-1925), f518 (p. 494). a) Caisses locales françaises et indigènes: Caisses françaises / Caisses indigènes (nombre de caisses, nombre d'adhérents); b) Effets escomptés (nombre, montant fr. c.).
+@credit_caisses view=518 page=494
+img: all
+cols: fr_caisses fr_members ind_caisses ind_members
+1916 | 24 548 40 1470
+1917 | 24 536 40 1464
+1918 | 24 517 38 1429
+1919 | 24 514 38 1429
+1920 | 24 508 38 1429
+1921 | 37 668 38 1429
+1922 | 40 735 38 1429
+1923 | 47 2250 38 952
+1924 | 49 2946 38 952
+1925 | 57 3496 34 850
+@credit_bills view=518 page=494
+img: all
+cols: bills amount
+1916 | 968 1127997.65
+1917 | 81 186916.35
+1918 | 256 328950
+1919 | 107 279840.50
+1920 | 12 23320.30
+1921 | 459 2355656.60
+1922 | 2510 13552423.85
+1923 | 5720 26010703.85
+1924 | 5284 31529289.40
+1925 | 5505 33188515.45
+
+# Coopérative centrale des agriculteurs (1916-1925), f519 (p. 495).
+# The TOTAUX line of b) repeats sgt1924's loan totals (they include the 1915 line no longer printed); marchandises total cell empty. No TOTAUX in a).
+@coop_parts view=519 page=495
+img: all
+cols: p50 sums
+1916 | 10 500
+1917 | 0 0
+1918 | 0 0
+1919 | 0 0
+1920 | 0 0
+1921 | 61 3050
+1922 | 65 3250
+1923 | 74 3700
+1924 | 215 10750
+1925 | 379 18950
+@coop_business view=519 page=495
+img: all
+cols: goods seeds labour spring harvest fertiliser tractors loans_total outstanding
+1916 | 574769.75 1024508.60 408430.75 106217.40 202434.70 0 0 1741591.45 13759.75
+1917 | 808768.45 968488.60 177001.30 128207 350454 109291.55 0 1733442.45 966.10
+1918 | 1889092.17 653870.35 82826 116050 441438.20 6931 0 1301115.55 3407
+1919 | 1494406.11 625854.55 82310 93734.35 329770 272240.40 0 1403909.30 39956.15
+1920 | 2840290 69710 5850 0 0 35360 1061102.85 1172022.85 305544.40
+1921 | 2461269.75 91127.60 0 0 0 0 0 91127.60 0
+1922 | 4266075.62 0 0 0 0 0 175331.45 175331.45 0
+1923 | 6942374.25 0 0 0 0 0 0 0 0
+1924 | 5277892.85 0 0 0 0 0 0 0 0
+1925 | 6290270.05 0 0 0 0 0 0 0 0
+TOTAUX | - 3515011.15 922453.90 556483.75 1599609.50 423822.95 1236434.30 8253815.55 378063.45
+

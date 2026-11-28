@@ -405,6 +405,283 @@ def fill_check(secs):
                     raise ValueError(f"fill value not printed by {s['fill']}: {where(s)} {r['label']} {c.raw}")
 
 
+# ----------------------------------------------------------------- old-layout tables (sgt1922-sgt1923, second pass)
+
+LOT_TYPE = {"culture": ("culture", "Lots de culture"), "suburban": ("suburban", "Lots suburbains"),
+            "urban": ("urban_industrial", "Lots urbains ou industriels")}
+LAND_ORIGIN = {"domanial": ("state_domain", "Patrimoine domanial"),
+               "fund": ("purchase_fund", "Achats sur le fonds de colonisation"),
+               "all": ("all", "")}
+RECAP_OLD_M = {"area": ("area", "Superficie totale", "hectares"),
+               "created": ("lots_created", "Nombre de lots créés", "count"),
+               "reserved": ("lots_reserved_or_available", "Nombre de lots réservés ou disponibles en cours de vente",
+                            "count"),
+               "sold": ("lots_sold", "Nombre de lots vendus", "count")}
+NAT = {"fr": ("french", "Français"), "eu": ("other_european", "Autres Européens"), "ind": ("indigenous", "Indigènes")}
+PLANT_OP = {"plant_auth": ("planting_authorisation", "Autorisations de planter"),
+            "plant_sale": ("definitive_sale", "Ventes définitives"),
+            "a": ("planting_authorisation", "Autorisations de planter"), "s": ("definitive_sale", "Ventes définitives")}
+PLANT_M = {("planting_authorisation", "n"): ("concessions", "Nombre de concessions délivrées", "count"),
+           ("planting_authorisation", "ha"): ("area", "Superficies concédées (en hectares)", "hectares"),
+           ("definitive_sale", "n"): ("sales", "Nombre de ventes", "count"),
+           ("definitive_sale", "ha"): ("area", "Superficies vendues (en hectares)", "hectares")}
+CLAUSE = {"s": ("without_colonisation_clause", "Substitutions consenties sans clause de colonisation"),
+          "c": ("with_colonisation_clause", "Substitutions consenties avec clause de colonisation")}
+SUB_M = {"n": ("properties_ceded", "Nombre d'immeubles cédés", "count"),
+         "ha": ("area", "Superficie globale (en hectares)", "hectares"),
+         "land": ("land_value", "Valeur foncière des immeubles", "francs"),
+         "build": ("buildings_value", "Valeur des constructions édifiées", "francs")}
+BUYER = {"f": ("french", "Français"), "o": ("other_european_and_indigenous", "Autres Européens et indigènes")}
+HABOUS = {"pub": ("public", "Habous publics"), "priv": ("private", "Habous privés")}
+ENZ_M = {"n": ("cessions", "Nombre de cessions consenties", "count"),
+         "rent": ("enzel_rent", "Montant global des rentes d'enzel", "francs"),
+         "cap": ("capital", "Montant global du capital", "francs")}
+
+
+def where_printed(sec, col):
+    """(view, page) of the page that prints a column of an old-layout spread (None, None = the section's view)"""
+    t = sec["table"]
+    if not sec.get("view2"):
+        return None, None
+    left = {"soldcc": ("cult_n", "cult_ha"), "plant_cc": tuple(f"a_{n}_{m}" for n in NAT for m in ("n", "ha")),
+            "enzel_cc": tuple(f"f{h}_{m}" for h in HABOUS for m in ENZ_M)}.get(t, ())
+    if col in left:
+        return None, None
+    return int(sec["view2"]), int(sec["page2"])
+
+
+def period_of(sec):
+    return sec.get("years", "")
+
+
+def cells_old_recap(sec):
+    out = []
+    for r in sec["rows"]:
+        if "cells" not in r or r["label"].startswith("TOTAL"):
+            continue
+        org, lt = split(r["label"])
+        for c in sec["cols"]:
+            m, mfr, unit = RECAP_OLD_M[c]
+            cell = r["cells"][c]
+            out.append(dict(base(sec, ED_YEAR[sec["ed"]], *where_printed(sec, c)), period_fr=period_of(sec),
+                            origin=LAND_ORIGIN[org][0],
+                            origin_fr=LAND_ORIGIN[org][1], lot_type=LOT_TYPE[lt][0], lot_type_fr=LOT_TYPE[lt][1],
+                            measure=m, measure_fr=mfr, unit=unit, value=cell.value, flag=cell.flag))
+    return out
+
+
+def chk_old_recap(sec):
+    out = "colonisation_lands_delivered_summary"
+    acc, groups = [], {}
+    for r in sec["rows"]:
+        if "cells" not in r:
+            continue
+        c = r["cells"]
+        org, lt = split(r["label"])
+        if org == "TOTAL":
+            if lt == "general":
+                parts = list(groups.values()) if groups else [x["cells"] for x in acc]
+                for k in sec["cols"]:
+                    CHK.eq(out, f"{where(sec)} {k}: TOTAL GÉNÉRAL = sum", ssum(x[k].value for x in parts),
+                           c[k].value)
+            else:
+                for k in sec["cols"]:
+                    CHK.eq(out, f"{where(sec)} {k}: TOTAL {lt} = sum of its lines",
+                           ssum(x["cells"][k].value for x in acc), c[k].value)
+                groups[lt] = c
+                acc = []
+            continue
+        acc.append(r)
+        if "reserved" in c:
+            CHK.eq(out, f"{where(sec)} {r['label']}: créés = réservés ou disponibles + vendus",
+                   c["reserved"].value + c["sold"].value, c["created"].value)
+
+
+def cells_soldcc(sec):
+    out = []
+    for r in sec["rows"]:
+        if "cells" not in r or r["label"] == "TOTAL":
+            continue
+        for c in sec["cols"]:
+            if c.startswith("tot"):
+                continue
+            kind, meas = c.split("_")
+            lt = {"cult": "culture", "sub": "suburban", "urb": "urban"}[kind]
+            m = ("lots_sold", "Nombre de lots vendus", "count") if meas == "n" else ("area", "Superficie", "hectares")
+            cell = r["cells"][c]
+            out.append(dict(base(sec, ED_YEAR[sec["ed"]], *where_printed(sec, c)), period_fr=period_of(sec),
+                            controle_civil=r["label"], lot_type=LOT_TYPE[lt][0], lot_type_fr=LOT_TYPE[lt][1] if lt != "urban" else
+                            "Lots urbains et industriels", measure=m[0], measure_fr=m[1], unit=m[2],
+                            value=cell.value, flag=cell.flag))
+    return out
+
+
+def row_totals(sec, out, groups):
+    """groups: {total column: [part columns]} checked on every line (data and TOTAL)"""
+    for r in sec["rows"]:
+        if "cells" not in r:
+            continue
+        c = r["cells"]
+        for t, parts in groups.items():
+            CHK.eq(out, f"{where(sec)} {r['label'].replace(' ;; ', ' / ')}: {t} = {' + '.join(parts)}",
+                   ssum(c[p].value for p in parts), c[t].value)
+
+
+def col_totals(sec, out):
+    t = row(sec, "TOTAL")
+    lines = [r for r in sec["rows"] if "cells" in r and r["label"] != "TOTAL"]
+    for k in sec["cols"]:
+        CHK.eq(out, f"{where(sec)} {k}: TOTAL = sum of the lines", ssum(r["cells"][k].value for r in lines),
+               t[k].value)
+
+
+def cells_plant_list(sec):
+    out = []
+    op, opfr = PLANT_OP[sec["table"]]
+    realign = {x.split(":")[0]: x.split(":")[1] for x in sec.get("realign", "").split(",") if x}
+    last_cc = ""
+    for r in sec["rows"]:
+        if "cells" not in r:
+            continue
+        year, prop, cc = split(r["label"])
+        note = ""
+        if cc in ("—", "-"):
+            cc = last_cc
+        if prop == "»":
+            prop, cc, note = "", "", "néant"
+        last_cc = cc
+        for c in sec["cols"]:
+            if c.startswith("tot"):
+                continue
+            nat, meas = c.split("_")
+            m, mfr, unit = PLANT_M[(op, meas)]
+            cell = r["cells"][c]
+            flag = cell.flag
+            if realign.get(f"{year};;{prop}") == c:
+                flag = "row_realigned"
+            out.append(dict(base(sec, int(year), *where_printed(sec, c)), operation=op, operation_fr=opfr, property_fr=prop,
+                            controle_civil=cc, note_fr=note, nationality=NAT[nat][0], nationality_fr=NAT[nat][1],
+                            measure=m, measure_fr=mfr, unit=unit, value=cell.value, flag=flag))
+    return out
+
+
+def cells_plant_cc(sec):
+    out = []
+    for r in sec["rows"]:
+        if "cells" not in r or r["label"] == "TOTAL":
+            continue
+        for c in sec["cols"]:
+            o, nat, meas = c.split("_")
+            if nat == "tot":
+                continue
+            op, opfr = PLANT_OP[o]
+            m, mfr, unit = PLANT_M[(op, meas)]
+            cell = r["cells"][c]
+            out.append(dict(base(sec, ED_YEAR[sec["ed"]], *where_printed(sec, c)), period_fr=period_of(sec),
+                            controle_civil=r["label"], operation=op, operation_fr=opfr, nationality=NAT[nat][0], nationality_fr=NAT[nat][1],
+                            measure=m, measure_fr=mfr, unit=unit, value=cell.value, flag=cell.flag))
+    return out
+
+
+def cells_hab_sub(sec):
+    out = []
+    by_cc = sec["table"].endswith("_cc")
+    for r in sec["rows"]:
+        if "cells" not in r or r["label"] == "TOTAL":
+            continue
+        for c in sec["cols"]:
+            cl, meas = c.split("_")
+            if meas == "tot":
+                continue
+            m, mfr, unit = SUB_M[meas]
+            cell = r["cells"][c]
+            d = dict(base(sec, ED_YEAR[sec["ed"]] if by_cc else int(r["label"])), clause=CLAUSE[cl][0],
+                     clause_fr=CLAUSE[cl][1], measure=m, measure_fr=mfr, unit=unit, value=cell.value, flag=cell.flag)
+            if by_cc:
+                d.update(period_fr=period_of(sec), controle_civil=r["label"])
+            out.append(d)
+    return out
+
+
+def cells_enzel(sec):
+    out = []
+    by_cc = sec["table"].endswith("_cc")
+    for r in sec["rows"]:
+        if "cells" not in r or r["label"] == "TOTAL":
+            continue
+        for c in sec["cols"]:
+            grp, meas = c.split("_")
+            if grp == "tot":
+                continue
+            b, h = grp[0], grp[1:]
+            m, mfr, unit = ENZ_M[meas]
+            cell = r["cells"][c]
+            d = dict(base(sec, ED_YEAR[sec["ed"]] if by_cc else int(r["label"]), *where_printed(sec, c)), buyer=BUYER[b][0],
+                     buyer_fr=BUYER[b][1], habous=HABOUS[h][0], habous_fr=HABOUS[h][1], measure=m, measure_fr=mfr,
+                     unit=unit, value=cell.value, flag=cell.flag)
+            if by_cc:
+                d.update(period_fr=period_of(sec), controle_civil=r["label"])
+            out.append(d)
+    return out
+
+
+def chk_old(sec):
+    t = sec["table"]
+    if t in ("recap22", "recap23"):
+        chk_old_recap(sec)
+    elif t == "soldcc":
+        out = "colonisation_lots_sold_by_controle"
+        row_totals(sec, out, {"tot_n": ["cult_n", "sub_n", "urb_n"], "tot_ha": ["cult_ha", "sub_ha", "urb_ha"]})
+        col_totals(sec, out)
+    elif t in ("plant_auth", "plant_sale"):
+        row_totals(sec, "colonisation_planting_concessions", {"tot_n": ["fr_n", "eu_n", "ind_n"],
+                                                               "tot_ha": ["fr_ha", "eu_ha", "ind_ha"]})
+    elif t == "plant_cc":
+        out = "colonisation_planting_by_controle"
+        row_totals(sec, out, {f"{o}_tot_{m}": [f"{o}_{n}_{m}" for n in NAT] for o in "as" for m in ("n", "ha")})
+        col_totals(sec, out)
+    elif t in ("hab_sub", "hab_sub_cc"):
+        out = "colonisation_habous_substitutions" + ("_by_controle" if t.endswith("_cc") else "")
+        row_totals(sec, out, {f"{c}_tot": [f"{c}_land", f"{c}_build"] for c in CLAUSE})
+        if t.endswith("_cc"):
+            col_totals(sec, out)
+    elif t in ("enzel", "enzel_cc"):
+        out = "colonisation_habous_enzel" + ("_by_controle" if t.endswith("_cc") else "")
+        row_totals(sec, out, {f"tot_{m}": [f"{b}{h}_{m}" for b in BUYER for h in HABOUS] for m in ENZ_M})
+        if t.endswith("_cc"):
+            col_totals(sec, out)
+
+
+OLD_SECS = ("recap22", "recap23", "soldcc", "plant_auth", "plant_sale", "plant_cc", "hab_sub", "hab_sub_cc",
+            "enzel", "enzel_cc")
+
+DOC_OLD = {
+    "year": "year of the figures (yearly lists) or the edition year (cumulative recapitulations: state at the "
+            "edition date, period in `period_fr`)",
+    "period_fr": "period covered by the cumulative recapitulation, as printed in the title (e.g. `1893-1922`)",
+    "origin": "origin of the land: `state_domain` (patrimoine domanial), `purchase_fund` (achats sur le fonds de "
+              "colonisation), `all` (sgt1923: no split printed)",
+    "origin_fr": "printed origin heading (empty for `all`)",
+    "lot_type": "`culture` (lots de culture / de colonisation), `suburban`, `urban_industrial`",
+    "lot_type_fr": "printed lot type",
+    "controle_civil": "contrôle civil as printed (`Territ. milit.` = territoires militaires; a ditto '—' is "
+                      "resolved to the line above; empty for a néant line)",
+    "operation": "`planting_authorisation` (autorisations de planter) or `definitive_sale` (ventes définitives)",
+    "operation_fr": "printed table heading",
+    "property_fr": "nom de la propriété ou désignation des régions, as printed (`Extrême-Sud : Telmine` for the "
+                   "braced 1919 line; empty for a néant line)",
+    "note_fr": "`néant` when the year is printed with » in every cell",
+    "nationality": "`french`, `other_european`, `indigenous` (concessionaires / buyers)",
+    "nationality_fr": "printed column heading",
+    "clause": "`without_colonisation_clause` / `with_colonisation_clause`",
+    "clause_fr": "printed column heading",
+    "buyer": "`french` or `other_european_and_indigenous` (printed groups)",
+    "buyer_fr": "printed column heading",
+    "habous": "`public` or `private` habous",
+    "habous_fr": "printed column heading",
+    "flag": "empty, or `row_realigned` (printed on the neighbouring line, stored on its own line)",
+}
+
 # ----------------------------------------------------------------- tables
 
 DOC = {
@@ -577,7 +854,147 @@ TABLES = {
                "(checked). sgt1922 prints the dépenses total twice."]),
 }
 
+OLD_PARA = ("Old layout printed only in sgt1922 and sgt1923 (chapter XIII); from sgt1924 the chapter is "
+            "reorganised (installation / planting / urban lists, recapitulation by origin of the land) and this "
+            "table is no longer printed. Printed total lines and total columns are checks only (not stored); » = 0.")
+
+TABLES.update({
+    "colonisation_lands_delivered_summary": dict(
+        secs=["recap22", "recap23"], cells=cells_old_recap, rule5=True,
+        key=["origin", "lot_type", "measure"],
+        dims=["period_fr", "origin", "origin_fr", "lot_type", "lot_type_fr", "measure", "measure_fr", "unit"],
+        title_fr="Ventes avec obligation d'installation : b) Récapitulation (1893-1922) ; Superficie totale des "
+                 "terres livrées à la colonisation de 1893 à 1923",
+        title_en="Lands delivered to colonisation since 1893: area and lots by type of lot (and, in sgt1922, by "
+                 "origin of the land)",
+        unit="Units: hectares (area, printed h. a.) and number of lots (`unit`); suggested value_type: mixed.",
+        paras=[OLD_PARA, "sgt1922 (f442|f443, lower half): Patrimoine domanial and Achats sur le fonds de "
+               "colonisation, each with lots de culture / suburbains / urbains ou industriels, and superficie "
+               "totale, lots créés, réservés ou disponibles en cours de vente, vendus; the TOTAL of each origin and "
+               "the TOTAL GÉNÉRAL are checks, and créés = réservés + vendus is checked on every line. sgt1923 "
+               "(f932|f933) prints a shorter table: lots créés and superficie totale only, by lot type, all "
+               "origins together (`origin` = `all`). Not the same table as `colonisation_lotissements_summary` "
+               "(sgt1924-sgt1939: by origin domaines / habous / achat / terres sialines and two periods), which "
+               "replaces it: kept as a separate file because the categories do not match."],
+        doc=DOC_OLD),
+    "colonisation_lots_sold_by_controle": dict(
+        secs=["soldcc"], cells=cells_soldcc, rule5=True, key=["controle_civil", "lot_type", "measure"],
+        dims=["period_fr", "controle_civil", "lot_type", "lot_type_fr", "measure", "measure_fr", "unit"],
+        title_fr="Ventes avec obligation d'installation : c) Répartition par contrôle civil des lots vendus de 1893 "
+                 "à 1922 (1923)",
+        title_en="Colonisation lots sold since 1893, by contrôle civil and type of lot: number and area",
+        unit="Units: number of lots and hectares (`unit`); suggested value_type: mixed.",
+        paras=[OLD_PARA, "f444|f445 (sgt1922) and f934|f935 (sgt1923), cumulative from 1893 to the edition year "
+               "(`year` = edition year). Lots de culture areas are printed to the hectare (» in the ares column) "
+               "except a few sgt1923 lines. The TOTAL columns (lots, area) are checked on every line and the TOTAL "
+               "GÉNÉRAL line on every column. The sgt1923 totals equal the lots créés of its summary table."],
+        doc=DOC_OLD),
+    "colonisation_planting_concessions": dict(
+        secs=["plant_auth", "plant_sale"], cells=cells_plant_list,
+        key=["operation", "year", "property_fr", "controle_civil", "nationality", "measure"],
+        dims=["operation", "operation_fr", "property_fr", "controle_civil", "note_fr", "nationality",
+              "nationality_fr", "measure", "measure_fr", "unit"],
+        title_fr="Ventes avec obligation de planter. a) Propriétés livrées à la colonisation (autorisations de "
+                 "planter ; ventes définitives)",
+        title_en="Sales with an obligation to plant: planting authorisations and definitive sales by year, region "
+                 "and nationality of the beneficiaries (1913-1923)",
+        unit="Units: number of concessions / sales and hectares (`unit`); suggested value_type: mixed.",
+        paras=[OLD_PARA, "Autorisations de planter (sgt1922 f446|f447, 1913-1922; sgt1923 f936|f937, 1913-1923) "
+               "and ventes définitives (sgt1922 f448|f449, 1913-1922; sgt1923 f938|f939, 1914-1923), by année de "
+               "la concession / de la vente, nom de la propriété ou désignation des régions, contrôle civil, and "
+               "Français / autres Européens / indigènes (number, hectares). The TOTAL columns are checked on every "
+               "line. Years printed » in every cell are kept as rows with value 0, empty property and `note_fr` = "
+               "`néant`.",
+               "Relation to `colonisation_planting_lots`: not the same table. That file (sgt1924-sgt1935, *b) "
+               "Terres à planter*) lists lotissements of land to plant by year with area and number of lots; this "
+               "one lists authorisations and definitive sales of the old *obligation de planter* regime (mostly "
+               "terres sialines of Sfax and the South) by nationality, which the later editions no longer print. "
+               "It is therefore a new file rather than an extension.",
+               "Row realignment: in both editions the Français area 99 ha of the 1917 Maknassy sale is printed one "
+               "line down, on the Sbeïtla line (Maknassy: 1 sale, area », total 1 sale / 99 ha; Sbeïtla: "
+               "Français », 99; indigènes 1 / 8 ha; total 1 / 8 ha); it is stored on the Maknassy line, flag "
+               "`row_realigned`."],
+        doc=DOC_OLD),
+    "colonisation_planting_by_controle": dict(
+        secs=["plant_cc"], cells=cells_plant_cc, rule5=True,
+        key=["controle_civil", "operation", "nationality", "measure"],
+        dims=["period_fr", "controle_civil", "operation", "operation_fr", "nationality", "nationality_fr", "measure",
+              "measure_fr", "unit"],
+        title_fr="Ventes avec obligation de planter. b) Récapitulation et répartition par contrôle civil",
+        title_en="Sales with an obligation to plant: planting authorisations and definitive sales since 1893, by "
+                 "contrôle civil and nationality",
+        unit="Units: number and hectares (`unit`); suggested value_type: mixed.",
+        paras=[OLD_PARA, "sgt1922 f450|f451 (1893-1922) and sgt1923 f940|f941 (1893-1923, upper halves). sgt1923 "
+               "reprints every sgt1922 figure unchanged although its yearly list adds 1923 sales (Terres sialines, "
+               "Maknassy, Sbeïtla, Extrême-Sud): the recapitulation was not updated. The authorisations TOTAL "
+               "count column runs into the gutter (check only; legible digits agree with the line sums)."],
+        doc=DOC_OLD),
+    "colonisation_habous_substitutions": dict(
+        secs=["hab_sub"], cells=cells_hab_sub, key=["year", "clause", "measure"],
+        dims=["clause", "clause_fr", "measure", "measure_fr", "unit"],
+        title_fr="Habous. Cessions par substitution aux droits du domaine. a) Propriétés cédées",
+        title_en="Habous: properties ceded by substitution for the rights of the Domaine, by year, with and "
+                 "without a colonisation clause",
+        unit="Units: count, hectares and francs (`unit`); suggested value_type: mixed.",
+        paras=[OLD_PARA, "sgt1922 f452 (1913-1922), sgt1923 f942 (1914-1923). The printed valeur globale des "
+               "immeubles (= valeur foncière + valeur des constructions) is a check only. 1920 sans clause: 3 "
+               "properties, 532 ha, valeur foncière 48.388 fr. but valeur globale printed » in both editions."],
+        doc=DOC_OLD),
+    "colonisation_habous_substitutions_by_controle": dict(
+        secs=["hab_sub_cc"], cells=cells_hab_sub, rule5=True, key=["controle_civil", "clause", "measure"],
+        dims=["period_fr", "controle_civil", "clause", "clause_fr", "measure", "measure_fr", "unit"],
+        title_fr="Habous. Cessions par substitution aux droits du domaine. b) Récapitulation et répartition par "
+                 "contrôle civil",
+        title_en="Habous: properties ceded by substitution since 1899, by contrôle civil, with and without a "
+                 "colonisation clause",
+        unit="Units: count, hectares and francs (`unit`); suggested value_type: mixed.",
+        paras=[OLD_PARA, "sgt1922 f452 (1899-1922) and sgt1923 f942 (1899-1923), identical figures. Valeur "
+               "globale is a check only."],
+        doc=DOC_OLD),
+    "colonisation_habous_enzel": dict(
+        secs=["enzel"], cells=cells_enzel, key=["year", "buyer", "habous", "measure"],
+        dims=["buyer", "buyer_fr", "habous", "habous_fr", "measure", "measure_fr", "unit"],
+        title_fr="Habous. Autres cessions (cessions à enzel). a) Propriétés cédées",
+        title_en="Habous: other cessions (perpetual leases à enzel) by year, by group of beneficiaries and kind of "
+                 "habous",
+        unit="Units: count and francs (`unit`); suggested value_type: mixed.",
+        paras=[OLD_PARA, "sgt1922 f453 (1913-1922), sgt1923 f943 (1914-1923), both printed sideways (rotated for "
+               "reading). Français / autres Européens et indigènes × habous publics / privés: nombre de cessions, "
+               "montant global des rentes d'enzel, montant global du capital. The total général columns (habous "
+               "publics et privés) are checks only."],
+        doc=DOC_OLD),
+    "colonisation_habous_enzel_by_controle": dict(
+        secs=["enzel_cc"], cells=cells_enzel, rule5=True, key=["controle_civil", "buyer", "habous", "measure"],
+        dims=["period_fr", "controle_civil", "buyer", "buyer_fr", "habous", "habous_fr", "measure", "measure_fr",
+              "unit"],
+        title_fr="Habous. Autres cessions (cessions à enzel). b) Récapitulation et répartition par contrôle civil",
+        title_en="Habous: cessions à enzel since 1886, by contrôle civil, group of beneficiaries and kind of habous",
+        unit="Units: count and francs (`unit`); suggested value_type: mixed.",
+        paras=[OLD_PARA, "sgt1922 f454|f455 (1886-1922; f455 printed sideways) and sgt1923 f944|f945 "
+               "(1886-1923). sgt1923 adds the 1923 cessions to Tunis and to the totals; the 1923 Français cession "
+               "and the autres Européens et indigènes cessions of 1923 are all counted in Tunis. The Français "
+               "habous privés capital column and the autres Européens habous publics count column run into the "
+               "gutter but are legible on the crops."],
+        doc=DOC_OLD),
+})
+
 FAIL_NOTES = {
+    "colonisation_lots_sold_by_controle": "sgt1923 Thala prints the line TOTAL area 1.446,89 for 1.353 + 82,23 + "
+        "10,66 = 1.445,89; the column totals agree with the lines, so the faulty figure is the printed line total "
+        "(check only, not stored; sgt1922's Thala line adds up).",
+    "colonisation_planting_concessions": "1917 Terres sialines (Sfax) ventes définitives: Français 6.313 ha + "
+        "indigènes 324 ha = 6.637 ha, printed TOTAL 6.037 ha in both editions (zoomed crops); the faulty cell "
+        "(a Français area 5.713 or the total) cannot be identified, so nothing is flagged.",
+    "colonisation_planting_by_controle": "Ventes définitives, indigènes, superficie: the TOTAL line prints 47.063 "
+        "ha for lines summing to 47.103 (both editions); every line adds up to its printed total and the printed "
+        "grand total 142.694 equals the sum of the lines, so the faulty figure is the printed column total 47.063.",
+    "colonisation_habous_substitutions": "1920 sans clause de colonisation: valeur globale printed » for valeur "
+        "foncière 48.388 and constructions » (both editions; the valeur globale column is a check only).",
+    "colonisation_habous_substitutions_by_controle": "Grombalia avec clause: valeur globale printed 168.610 for "
+        "142.610 + 16.000 = 158.610 (both editions, zoomed crop); the printed column total 1.960.463 agrees with "
+        "158.610, so the faulty figure is the printed line total (check only).",
+    "colonisation_habous_enzel": "1918: total général nombre de cessions printed 14 for 4 + 1 + 8 + 4 = 17 (both "
+        "editions; the rent and capital totals add up). The faulty cell cannot be identified; nothing is flagged.",
     "colonisation_installation_lots": "créés = réservés + vendus fails on lines \"en cours d'attribution\" "
         "(lots created, none yet reserved or sold: » printed) and on sgt1922-sgt1923 Klédia (35 created, 9 + 4) and "
         "sgt1922 Lagrenée-Chaouat (31, 3 + 0). sgt1926-sgt1927 print \"Reports 64.861,22\" for the 64.861,32 "
@@ -621,10 +1038,12 @@ SURVEY = {
                "f452 Habous: cessions par substitution aux droits du domaine a) 1913-1922, b) par contrôle civil "
                "(1899-1922); f453 (rotated) cessions à enzel a) 1913-1922; f454|f455 b) répartition par contrôle "
                "civil (1886-1922); f456 blank. f457 = chapter XIV.",
-    "sgt1923": "f927 title; f928-f933 a) propriétés livrées (1914-1923) and superficie totale des terres livrées "
-               "(1893-1923); f934|f935 répartition par contrôle civil; f936-f939 obligation de planter; f940|f941 "
-               "récapitulation par contrôle civil and Fonds de colonisation (1900-1923); f942-f945 Habous "
-               "(substitutions, enzel); f946 blank. f947 = chapter XIV.",
+    "sgt1923": "f927 title; f928-f933 a) propriétés livrées (1914-1923) and, f932|f933 lower half, superficie "
+               "totale des terres livrées (1893-1923); f934|f935 c) répartition par contrôle civil (1893-1923); "
+               "f936|f937 obligation de planter: autorisations (1913-1923; title says 1914-1923); f938|f939 ventes "
+               "définitives (1914-1923); f940|f941 récapitulation par contrôle civil (1893-1923) and Fonds de "
+               "colonisation (1900-1923); f942 Habous substitutions a) 1914-1923 and b) 1899-1923; f943 (sideways) "
+               "cessions à enzel a) 1914-1923; f944|f945 b) 1886-1923 (upright); f946 blank. f947 = chapter XIV.",
     "sgt1924": "f1431 title; f1432-f1435 a) Ventes avec obligation d'installation personnelle (1914-1924); f1436|f1437 "
                "b) Terres à planter (1914-1924); f1438|f1439 c) Lotissements urbains, industriels ou d'estivage "
                "(1914-1924); f1440 a) lotissements ruraux livrés à la colonisation (recap.), f1441 b) terres à "
@@ -653,12 +1072,15 @@ SURVEY = {
                "définitives; f156 blank. f157 = next chapter.",
 }
 
-NOT_DONE = ("Transcribed: every table from sgt1924 on (installation, planting and urban lists, recapitulation, "
-            "colonisation fund, fixation au sol / lotissements tunisiens) and, for sgt1922-sgt1923, the "
-            "installation list a) and the colonisation fund. NOT transcribed (sgt1922-sgt1923 only, old layout): "
-            "b) récapitulation and c) répartition par contrôle civil des lots vendus (f442-f445, f932-f935); "
-            "ventes avec obligation de planter (autorisations, ventes définitives, récapitulation par contrôle civil: "
-            "f446-f451, f936-f941); Habous: cessions par substitution and cessions à enzel (f452-f455, f942-f945).")
+NOT_DONE = ("Every table of the chapter is transcribed in every edition. sgt1922-sgt1923 old-layout tables (second "
+            "pass): b) récapitulation / superficie totale des terres livrées (f442|f443, f932|f933) -> "
+            "colonisation_lands_delivered_summary; c) répartition par contrôle civil des lots vendus (f444|f445, "
+            "f934|f935) -> colonisation_lots_sold_by_controle; ventes avec obligation de planter, autorisations and "
+            "ventes définitives (f446-f449, f936-f939) -> colonisation_planting_concessions, récapitulation par "
+            "contrôle civil (f450|f451, f940|f941 upper halves) -> colonisation_planting_by_controle; Habous "
+            "substitutions (f452, f942) -> colonisation_habous_substitutions and _by_controle; cessions à enzel "
+            "(f453-f455, f943-f945; f453 and f455 printed sideways, f945 upright) -> colonisation_habous_enzel and "
+            "_by_controle.")
 
 
 def write_survey():
@@ -699,6 +1121,8 @@ def build(write=True):
             chk_fixation(s, "colonisation_indigenous_sales")
         elif s["table"] in ("fixation", "fixation_years"):
             chk_fixation(s, "colonisation_indigenous_settlement")
+        elif s["table"] in OLD_SECS:
+            chk_old(s)
     fill_check(secs)
     res = {}
     for out, spec in TABLES.items():
@@ -727,7 +1151,7 @@ def build(write=True):
                         "kept. " + FAIL_NOTES.get(out, "")]
             paras = list(spec.get("paras", [])) + expl + [
                 "Survey of the whole chapter in every edition: `colonisation_survey.md`."]
-            write_notes(out, CHAPTER, SCRIPT, kept, cols, {c: DOC[c] for c in cols}, spec["title_fr"],
+            write_notes(out, CHAPTER, SCRIPT, kept, cols, {c: spec.get("doc", {}).get(c) or DOC[c] for c in cols}, spec["title_fr"],
                         spec["title_en"], paras, CHK.n[out], CHK.fail[out], n, diffs, coverage_lines(ss),
                         RULE5 if spec.get("rule5") else RULE4, spec["unit"])
     if write:

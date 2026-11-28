@@ -264,6 +264,23 @@ Every table is tidy: one row per printed cell. Printed subtotals and totals are 
 | [`agriculture_crops`](#agriculture_crops) | crops_a;crops_b;crops_c;crops_d | by edition | 1,492 | mixed | Crop production: area, production and yield of cereals, other food plants, industrial plants and tree crops |
 | [`agriculture_cereal_zones`](#agriculture_cereal_zones) | zones | by edition | 504 | mixed | Cereals (durum and soft wheat, barley, oats): area, production and yield per hectare by zone |
 | [`finance_achour`](#finance_achour) | achour_a;achour_b;achour_nat;achour_roll | by edition | 20,808 | hectares | Achour (tithe on cereals): areas sown by caïdat, crop, roll (Europeans / indigenous) and yield class |
+| [`finance_canoun_dattiers_age`](#finance_canoun_dattiers_age) | dattiers_age | by edition | 2,244 | count | Tax on date palms (canoun des dattiers): trees by caïdat, kind and age |
+| [`finance_canoun_dattiers_tariff`](#finance_canoun_dattiers_tariff) | dattiers_tariff | by edition | 405 | count | Tax on date palms (canoun des dattiers): taxable trees by caïdat and tariff |
+| [`finance_canoun_dattiers_roll`](#finance_canoun_dattiers_roll) | dattiers_roll | by edition | 540 | mixed | Tax on date palms (canoun des dattiers): trees taxed and not taxed on the European and indigenous rolls, articles and individual accounts |
+| [`finance_canoun_oliviers_age`](#finance_canoun_oliviers_age) | oliviers_age | by edition | 7,058 | count | Tax on olive trees (canoun des oliviers): trees by caïdat and age |
+| [`finance_canoun_oliviers_tariff`](#finance_canoun_oliviers_tariff) | oliviers_tariff | by edition | 3,272 | count | Tax on olive trees (canoun des oliviers): taxable trees by caïdat and tariff |
+| [`finance_canoun_oliviers_roll`](#finance_canoun_oliviers_roll) | oliviers_roll | by edition | 2,336 | mixed | Tax on olive trees (canoun des oliviers): trees taxed and not taxed on the European and indigenous rolls, articles and individual accounts |
+| [`colonisation_lands_delivered_summary`](#colonisation_lands_delivered_summary) | recap22;recap23 | by edition | 30 | mixed | Lands delivered to colonisation since 1893: area and lots by type of lot (and, in sgt1922, by origin of the land) |
+| [`colonisation_lots_sold_by_controle`](#colonisation_lots_sold_by_controle) | soldcc | by edition | 240 | mixed | Colonisation lots sold since 1893, by contrôle civil and type of lot: number and area |
+| [`colonisation_planting_concessions`](#colonisation_planting_concessions) | plant_auth;plant_sale | by edition | 360 | mixed | Sales with an obligation to plant: planting authorisations and definitive sales by year, region and nationality of the beneficiaries (1913-1923) |
+| [`colonisation_planting_by_controle`](#colonisation_planting_by_controle) | plant_cc | by edition | 144 | mixed | Sales with an obligation to plant: planting authorisations and definitive sales since 1893, by contrôle civil and nationality |
+| [`colonisation_habous_substitutions`](#colonisation_habous_substitutions) | hab_sub | by edition | 88 | mixed | Habous: properties ceded by substitution for the rights of the Domaine, by year, with and without a colonisation clause |
+| [`colonisation_habous_substitutions_by_controle`](#colonisation_habous_substitutions_by_controle) | hab_sub_cc | by edition | 144 | mixed | Habous: properties ceded by substitution since 1899, by contrôle civil, with and without a colonisation clause |
+| [`colonisation_habous_enzel`](#colonisation_habous_enzel) | enzel | by edition | 132 | mixed | Habous: other cessions (perpetual leases à enzel) by year, by group of beneficiaries and kind of habous |
+| [`colonisation_habous_enzel_by_controle`](#colonisation_habous_enzel_by_controle) | enzel_cc | by edition | 456 | mixed | Habous: cessions à enzel since 1886, by contrôle civil, group of beneficiaries and kind of habous |
+| [`mutuality_credit_caisses`](#mutuality_credit_caisses) | credit_bills;credit_caisses;credit_local | by edition | 144 | mixed | Agricultural mutual credit: local credit banks (caisses) and members, French and indigenous, and bills discounted, by year (1913-1939) |
+| [`mutuality_coop_central_shares_business`](#mutuality_coop_central_shares_business) | coop_business;coop_parts | by edition | 197 | mixed | Central cooperative of farmers: shares subscribed, goods delivered and loans by type, by year (1913-1929) |
+| [`mutuality_coop_central_capital`](#mutuality_coop_central_capital) | coop_central;coop_moto | by edition | 133 | francs | Central cooperative of farmers and motor-cultivation cooperative of Tunisia: paid-up capital, State advances and goods bought in common and delivered, by year (1921-1939) |
 
 ### eur1906_t1_circonscription_nationality
 
@@ -12299,3 +12316,966 @@ Source `sgt`, table achour_a;achour_b;achour_nat;achour_roll, printed pages by e
 | Code | Printed label | N |
 |---|---|---:|
 | `hectares` |  | 20,808 |
+
+### finance_canoun_dattiers_age
+
+**Canoun des dattiers. a) Relevé par caïdat du nombre d'arbres d'après leur âge**  
+*Tax on date palms (canoun des dattiers): trees by caïdat, kind and age*
+
+Source `sgt`, table dattiers_age, printed pages by edition. 2,244 rows. Value type: count. Flags: (empty) 2,242, total_mismatch 2. Notes and validation: [`../yearbook_other_chapters/csv/finance_canoun_dattiers_age.md`](../yearbook_other_chapters/csv/finance_canoun_dattiers_age.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `region` | Coded dimension. |
+| `controle_civil` | Place or label as printed (0 distinct values). |
+| `caidat` | Place or label as printed (8 distinct values). |
+| `tree_kind` | Coded dimension. |
+| `tree_kind_fr` | Printed French label for `tree_kind`. |
+| `age_class` | Coded dimension. |
+| `age_class_fr` | Printed French label for `age_class`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`region`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `(empty)` |  | 660 |
+| `5e Région` |  | 924 |
+| `Territoires militaires` |  | 660 |
+
+`tree_kind`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `common` | Dattiers communs | 1,122 |
+| `degla` | Dattiers degla | 1,122 |
+
+`age_class`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `age_01` | 1 an | 102 |
+| `age_02` | 2 ans | 102 |
+| `age_03` | 3 ans | 102 |
+| `age_04` | 4 ans | 102 |
+| `age_05` | 5 ans | 102 |
+| `age_06` | 6 ans | 102 |
+| `age_07` | 7 ans | 102 |
+| `age_08` | 8 ans | 102 |
+| `age_09` | 9 ans | 102 |
+| `age_10` | 10 ans | 102 |
+| `age_11` | 11 ans | 102 |
+| `age_12` | 12 ans | 102 |
+| `age_13` | 13 ans | 102 |
+| `age_14` | 14 ans | 102 |
+| `age_15` | 15 ans | 102 |
+| `age_16` | 16 ans | 102 |
+| `age_17` | 17 ans | 102 |
+| `age_18` | 18 ans | 102 |
+| `age_19` | 19 ans | 102 |
+| `male` | Mâles | 102 |
+| `taxable_20_plus` | 20 ans imposables | 102 |
+| `under_1` | Moins d'un an | 102 |
+
+### finance_canoun_dattiers_tariff
+
+**Canoun des dattiers. b) Répartition des arbres imposables par catégorie du tarif**  
+*Tax on date palms (canoun des dattiers): taxable trees by caïdat and tariff*
+
+Source `sgt`, table dattiers_tariff, printed pages by edition. 405 rows. Value type: count. Flags: (empty) 405. Notes and validation: [`../yearbook_other_chapters/csv/finance_canoun_dattiers_tariff.md`](../yearbook_other_chapters/csv/finance_canoun_dattiers_tariff.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `region` | Coded dimension. |
+| `controle_civil` | Place or label as printed (0 distinct values). |
+| `caidat` | Place or label as printed (7 distinct values). |
+| `tree_kind` | Coded dimension. |
+| `tree_kind_fr` | Printed French label for `tree_kind`. |
+| `tariff` | Coded dimension. |
+| `tariff_fr` | Printed French label for `tariff`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`region`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `(empty)` |  | 135 |
+| `5e Région` |  | 162 |
+| `Territoires militaires` |  | 108 |
+
+`tree_kind`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `common` | Dattiers communs | 225 |
+| `degla` | Dattiers degla | 180 |
+
+`tariff`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `0.15` | à 0,15 | 20 |
+| `0.1875` | à 0,1875 | 15 |
+| `0.328125` | à 0,328125 | 10 |
+| `0.40` | à 0,40 | 20 |
+| `0.50` | à 0,50 | 15 |
+| `0.75` | à 0,75 | 20 |
+| `0.875` | à 0,875 | 10 |
+| `0.9375` | à 0,9375 | 15 |
+| `1.00` | à 1,00 | 20 |
+| `1.20` | à 1,20 | 20 |
+| `1.25` | à 1,25 | 15 |
+| `1.40` | à 1,40 | 20 |
+| `1.50` | à 1,50 | 15 |
+| `1.640625` | à 1,640625 | 10 |
+| `1.75` | à 1,75 | 15 |
+| `1.80` | à 1,80 | 20 |
+| `2.00` | à 2 fr. | 20 |
+| `2.1875` | à 2,1875 | 10 |
+| `2.25` | à 2,25 | 15 |
+| `2.40` | à 2,40 | 20 |
+| `2.50` | à 2,50 | 15 |
+| `2.625` | à 2,625 | 10 |
+| `3.00` | à 3,00 | 15 |
+| `3.012` | à 3,012 | 5 |
+| `3.0625` | à 3,0625 | 5 |
+| `3.9375` | à 3,9375 | 10 |
+| `4.375` | à 4,375 | 10 |
+| `5.25` | à 5,25 | 10 |
+
+### finance_canoun_dattiers_roll
+
+**Canoun des dattiers. c) Répartition des dattiers entre les européens et les indigènes**  
+*Tax on date palms (canoun des dattiers): trees taxed and not taxed on the European and indigenous rolls, articles and individual accounts*
+
+Source `sgt`, table dattiers_roll, printed pages by edition. 540 rows. Value type: mixed. Flags: (empty) 538, total_mismatch 2. Notes and validation: [`../yearbook_other_chapters/csv/finance_canoun_dattiers_roll.md`](../yearbook_other_chapters/csv/finance_canoun_dattiers_roll.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `region` | Coded dimension. |
+| `controle_civil` | Place or label as printed (0 distinct values). |
+| `caidat` | Place or label as printed (7 distinct values). |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `tree_kind` | Coded dimension. |
+| `tree_kind_fr` | Printed French label for `tree_kind`. |
+| `roll` | Coded dimension. |
+| `roll_fr` | Printed French label for `roll`. |
+| `status` | Coded dimension. |
+| `status_fr` | Printed French label for `status`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`region`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `(empty)` |  | 180 |
+| `5e Région` |  | 216 |
+| `Territoires militaires` |  | 144 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `accounts` | Nombre de comptes individuels | 90 |
+| `articles` | Nombre d'articles de matrice | 90 |
+| `trees` | Nombre d'arbres | 360 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `accounts` |  | 90 |
+| `articles` |  | 90 |
+| `trees` |  | 360 |
+
+`tree_kind`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `(empty)` |  | 180 |
+| `common` | Dattiers communs | 180 |
+| `degla` | Dattiers degla | 180 |
+
+`roll`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `european` | Européens | 270 |
+| `indigenous` | Indigènes | 270 |
+
+`status`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `(empty)` |  | 180 |
+| `not_taxed` | Non imposés | 180 |
+| `taxed` | Imposés | 180 |
+
+### finance_canoun_oliviers_age
+
+**Canoun des oliviers. a) Relevé par caïdat du nombre d'arbres d'après leur âge**  
+*Tax on olive trees (canoun des oliviers): trees by caïdat and age*
+
+Source `sgt`, table oliviers_age, printed pages by edition. 7,058 rows. Value type: count. Flags: (empty) 6,997, row_realigned 45, total_mismatch 16. Notes and validation: [`../yearbook_other_chapters/csv/finance_canoun_oliviers_age.md`](../yearbook_other_chapters/csv/finance_canoun_oliviers_age.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `region` | Coded dimension. |
+| `controle_civil` | Place or label as printed (18 distinct values). |
+| `caidat` | Place or label as printed (44 distinct values). |
+| `age_class` | Coded dimension. |
+| `age_class_fr` | Printed French label for `age_class`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`region`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `(empty)` |  | 1,980 |
+| `1re Région (Bizerte)` |  | 814 |
+| `2me Région (Tunis)` |  | 600 |
+| `3me Région (Le Kef)` |  | 900 |
+| `4me Région (Sousse)` |  | 1,200 |
+| `5me Région (Sfax)` |  | 1,050 |
+| `Territoires militaires du Sud` |  | 514 |
+
+`age_class`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `age_01` | 1 an | 327 |
+| `age_02` | 2 ans | 327 |
+| `age_03` | 3 ans | 327 |
+| `age_04` | 4 ans | 327 |
+| `age_05` | 5 ans | 327 |
+| `age_06` | 6 ans | 327 |
+| `age_07` | 7 ans | 327 |
+| `age_08` | 8 ans | 327 |
+| `age_09` | 9 ans | 327 |
+| `age_10` | 10 ans | 327 |
+| `age_11` | 11 ans | 327 |
+| `age_12` | 12 ans | 327 |
+| `age_13` | 13 ans | 327 |
+| `age_14` | 14 ans | 327 |
+| `age_15` | 15 ans | 327 |
+| `age_16` | 16 ans | 327 |
+| `age_17` | 17 ans | 327 |
+| `age_18` | 18 ans | 327 |
+| `age_19` | 19 ans | 327 |
+| `taxable_20_plus` | 20 ans imposables | 327 |
+| `under_1` | Moins d'un an | 191 |
+| `wild` | Arbres sauvages | 327 |
+
+### finance_canoun_oliviers_tariff
+
+**Canoun des oliviers. b) Répartition des arbres imposables par catégorie du tarif**  
+*Tax on olive trees (canoun des oliviers): taxable trees by caïdat and tariff*
+
+Source `sgt`, table oliviers_tariff, printed pages by edition. 3,272 rows. Value type: count. Flags: (empty) 3,234, row_realigned 23, total_mismatch 14, derived_from_totals 1. Notes and validation: [`../yearbook_other_chapters/csv/finance_canoun_oliviers_tariff.md`](../yearbook_other_chapters/csv/finance_canoun_oliviers_tariff.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `region` | Coded dimension. |
+| `controle_civil` | Place or label as printed (18 distinct values). |
+| `caidat` | Place or label as printed (42 distinct values). |
+| `tariff` | Coded dimension. |
+| `tariff_fr` | Printed French label for `tariff`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`region`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `(empty)` |  | 1,050 |
+| `1re Région (Bizerte)` |  | 352 |
+| `2me Région (Tunis)` |  | 264 |
+| `3me Région (Le Kef)` |  | 396 |
+| `4me Région (Sousse)` |  | 528 |
+| `5me Région (Sfax)` |  | 462 |
+| `Territoires militaires du Sud` |  | 220 |
+
+`tariff`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `0.05` | 0,05 | 292 |
+| `0.10` | 0,10 | 292 |
+| `0.15` | 0,15 | 222 |
+| `0.20` | 0,20 | 222 |
+| `0.25` | 0,25 | 292 |
+| `0.30` | 0,30 | 222 |
+| `0.35` | 0,35 | 30 |
+| `0.40` | 0,40 | 222 |
+| `0.45` | 0,45 | 30 |
+| `0.50` | 0,50 | 292 |
+| `0.75` | 0,75 | 292 |
+| `1.00` | 1,00 | 292 |
+| `1.25` | 1,25 | 70 |
+| `1.50` | 1,50 | 70 |
+| `1.75` | 1,75 | 70 |
+| `2.00` | 2,00 | 70 |
+| `former_tithe_proportional` | Anciens pays à dîme. Impôt proportionnel au revenu global | 292 |
+
+### finance_canoun_oliviers_roll
+
+**Canoun des oliviers. c) Répartition entre les européens et les indigènes**  
+*Tax on olive trees (canoun des oliviers): trees taxed and not taxed on the European and indigenous rolls, articles and individual accounts*
+
+Source `sgt`, table oliviers_roll, printed pages by edition. 2,336 rows. Value type: mixed. Flags: (empty) 2,314, total_mismatch 14, row_realigned 8. Notes and validation: [`../yearbook_other_chapters/csv/finance_canoun_oliviers_roll.md`](../yearbook_other_chapters/csv/finance_canoun_oliviers_roll.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `region` | Coded dimension. |
+| `controle_civil` | Place or label as printed (18 distinct values). |
+| `caidat` | Place or label as printed (42 distinct values). |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `roll` | Coded dimension. |
+| `roll_fr` | Printed French label for `roll`. |
+| `status` | Coded dimension. |
+| `status_fr` | Printed French label for `status`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`region`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `(empty)` |  | 720 |
+| `1re Région (Bizerte)` |  | 256 |
+| `2me Région (Tunis)` |  | 192 |
+| `3me Région (Le Kef)` |  | 288 |
+| `4me Région (Sousse)` |  | 384 |
+| `5me Région (Sfax)` |  | 336 |
+| `Territoires militaires du Sud` |  | 160 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `accounts` | Nombre de comptes individuels | 584 |
+| `articles` | Nombre d'articles de matrice | 584 |
+| `trees` | Nombre d'arbres | 1,168 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `accounts` |  | 584 |
+| `articles` |  | 584 |
+| `trees` |  | 1,168 |
+
+`roll`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `european` | Européens | 1,168 |
+| `indigenous` | Indigènes | 1,168 |
+
+`status`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `(empty)` |  | 1,168 |
+| `not_taxed` | Non imposés | 584 |
+| `taxed` | Imposés | 584 |
+
+### colonisation_lands_delivered_summary
+
+**Ventes avec obligation d'installation : b) Récapitulation (1893-1922) ; Superficie totale des terres livrées à la colonisation de 1893 à 1923**  
+*Lands delivered to colonisation since 1893: area and lots by type of lot (and, in sgt1922, by origin of the land)*
+
+Source `sgt`, table recap22;recap23, printed pages by edition. 30 rows. Value type: mixed. Flags: (empty) 30. Notes and validation: [`../yearbook_other_chapters/csv/colonisation_lands_delivered_summary.md`](../yearbook_other_chapters/csv/colonisation_lands_delivered_summary.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `period_fr` | Place or label as printed (2 distinct values). |
+| `origin` | Coded dimension. |
+| `origin_fr` | Printed French label for `origin`. |
+| `lot_type` | Coded dimension. |
+| `lot_type_fr` | Printed French label for `lot_type`. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`origin`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `all` |  | 6 |
+| `purchase_fund` | Achats sur le fonds de colonisation | 12 |
+| `state_domain` | Patrimoine domanial | 12 |
+
+`lot_type`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `culture` | Lots de culture | 10 |
+| `suburban` | Lots suburbains | 10 |
+| `urban_industrial` | Lots urbains ou industriels | 10 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `area` | Superficie totale | 9 |
+| `lots_created` | Nombre de lots créés | 9 |
+| `lots_reserved_or_available` | Nombre de lots réservés ou disponibles en cours de vente | 6 |
+| `lots_sold` | Nombre de lots vendus | 6 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `count` |  | 21 |
+| `hectares` |  | 9 |
+
+### colonisation_lots_sold_by_controle
+
+**Ventes avec obligation d'installation : c) Répartition par contrôle civil des lots vendus de 1893 à 1922 (1923)**  
+*Colonisation lots sold since 1893, by contrôle civil and type of lot: number and area*
+
+Source `sgt`, table soldcc, printed pages by edition. 240 rows. Value type: mixed. Flags: (empty) 240. Notes and validation: [`../yearbook_other_chapters/csv/colonisation_lots_sold_by_controle.md`](../yearbook_other_chapters/csv/colonisation_lots_sold_by_controle.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `period_fr` | Place or label as printed (2 distinct values). |
+| `controle_civil` | Place or label as printed (20 distinct values). |
+| `lot_type` | Coded dimension. |
+| `lot_type_fr` | Printed French label for `lot_type`. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`lot_type`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `culture` | Lots de culture | 80 |
+| `suburban` | Lots suburbains | 80 |
+| `urban_industrial` | Lots urbains et industriels | 80 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `area` | Superficie | 120 |
+| `lots_sold` | Nombre de lots vendus | 120 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `count` |  | 120 |
+| `hectares` |  | 120 |
+
+### colonisation_planting_concessions
+
+**Ventes avec obligation de planter. a) Propriétés livrées à la colonisation (autorisations de planter ; ventes définitives)**  
+*Sales with an obligation to plant: planting authorisations and definitive sales by year, region and nationality of the beneficiaries (1913-1923)*
+
+Source `sgt`, table plant_auth;plant_sale, printed pages by edition. 360 rows. Value type: mixed. Flags: (empty) 359, row_realigned 1. Notes and validation: [`../yearbook_other_chapters/csv/colonisation_planting_concessions.md`](../yearbook_other_chapters/csv/colonisation_planting_concessions.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `operation` | Coded dimension. |
+| `operation_fr` | Printed French label for `operation`. |
+| `property_fr` | Place or label as printed (14 distinct values). |
+| `controle_civil` | Place or label as printed (6 distinct values). |
+| `note_fr` | Place or label as printed (1 distinct values). |
+| `nationality` | Coded dimension. |
+| `nationality_fr` | Printed French label for `nationality`. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`operation`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `definitive_sale` | Ventes définitives | 168 |
+| `planting_authorisation` | Autorisations de planter | 192 |
+
+`nationality`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `french` | Français | 120 |
+| `indigenous` | Indigènes | 120 |
+| `other_european` | Autres Européens | 120 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `area` | Superficies concédées (en hectares) / Superficies vendues (en hectares) | 180 |
+| `concessions` | Nombre de concessions délivrées | 96 |
+| `sales` | Nombre de ventes | 84 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `count` |  | 180 |
+| `hectares` |  | 180 |
+
+### colonisation_planting_by_controle
+
+**Ventes avec obligation de planter. b) Récapitulation et répartition par contrôle civil**  
+*Sales with an obligation to plant: planting authorisations and definitive sales since 1893, by contrôle civil and nationality*
+
+Source `sgt`, table plant_cc, printed pages by edition. 144 rows. Value type: mixed. Flags: (empty) 144. Notes and validation: [`../yearbook_other_chapters/csv/colonisation_planting_by_controle.md`](../yearbook_other_chapters/csv/colonisation_planting_by_controle.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `period_fr` | Place or label as printed (2 distinct values). |
+| `controle_civil` | Place or label as printed (6 distinct values). |
+| `operation` | Coded dimension. |
+| `operation_fr` | Printed French label for `operation`. |
+| `nationality` | Coded dimension. |
+| `nationality_fr` | Printed French label for `nationality`. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`operation`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `definitive_sale` | Ventes définitives | 72 |
+| `planting_authorisation` | Autorisations de planter | 72 |
+
+`nationality`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `french` | Français | 48 |
+| `indigenous` | Indigènes | 48 |
+| `other_european` | Autres Européens | 48 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `area` | Superficies concédées (en hectares) / Superficies vendues (en hectares) | 72 |
+| `concessions` | Nombre de concessions délivrées | 36 |
+| `sales` | Nombre de ventes | 36 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `count` |  | 72 |
+| `hectares` |  | 72 |
+
+### colonisation_habous_substitutions
+
+**Habous. Cessions par substitution aux droits du domaine. a) Propriétés cédées**  
+*Habous: properties ceded by substitution for the rights of the Domaine, by year, with and without a colonisation clause*
+
+Source `sgt`, table hab_sub, printed pages by edition. 88 rows. Value type: mixed. Flags: (empty) 88. Notes and validation: [`../yearbook_other_chapters/csv/colonisation_habous_substitutions.md`](../yearbook_other_chapters/csv/colonisation_habous_substitutions.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `clause` | Coded dimension. |
+| `clause_fr` | Printed French label for `clause`. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`clause`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `with_colonisation_clause` | Substitutions consenties avec clause de colonisation | 44 |
+| `without_colonisation_clause` | Substitutions consenties sans clause de colonisation | 44 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `area` | Superficie globale (en hectares) | 22 |
+| `buildings_value` | Valeur des constructions édifiées | 22 |
+| `land_value` | Valeur foncière des immeubles | 22 |
+| `properties_ceded` | Nombre d'immeubles cédés | 22 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `count` |  | 22 |
+| `francs` |  | 44 |
+| `hectares` |  | 22 |
+
+### colonisation_habous_substitutions_by_controle
+
+**Habous. Cessions par substitution aux droits du domaine. b) Récapitulation et répartition par contrôle civil**  
+*Habous: properties ceded by substitution since 1899, by contrôle civil, with and without a colonisation clause*
+
+Source `sgt`, table hab_sub_cc, printed pages by edition. 144 rows. Value type: mixed. Flags: (empty) 144. Notes and validation: [`../yearbook_other_chapters/csv/colonisation_habous_substitutions_by_controle.md`](../yearbook_other_chapters/csv/colonisation_habous_substitutions_by_controle.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `period_fr` | Place or label as printed (2 distinct values). |
+| `controle_civil` | Place or label as printed (9 distinct values). |
+| `clause` | Coded dimension. |
+| `clause_fr` | Printed French label for `clause`. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`clause`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `with_colonisation_clause` | Substitutions consenties avec clause de colonisation | 72 |
+| `without_colonisation_clause` | Substitutions consenties sans clause de colonisation | 72 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `area` | Superficie globale (en hectares) | 36 |
+| `buildings_value` | Valeur des constructions édifiées | 36 |
+| `land_value` | Valeur foncière des immeubles | 36 |
+| `properties_ceded` | Nombre d'immeubles cédés | 36 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `count` |  | 36 |
+| `francs` |  | 72 |
+| `hectares` |  | 36 |
+
+### colonisation_habous_enzel
+
+**Habous. Autres cessions (cessions à enzel). a) Propriétés cédées**  
+*Habous: other cessions (perpetual leases à enzel) by year, by group of beneficiaries and kind of habous*
+
+Source `sgt`, table enzel, printed pages by edition. 132 rows. Value type: mixed. Flags: (empty) 132. Notes and validation: [`../yearbook_other_chapters/csv/colonisation_habous_enzel.md`](../yearbook_other_chapters/csv/colonisation_habous_enzel.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `buyer` | Coded dimension. |
+| `buyer_fr` | Printed French label for `buyer`. |
+| `habous` | Coded dimension. |
+| `habous_fr` | Printed French label for `habous`. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`buyer`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `french` | Français | 66 |
+| `other_european_and_indigenous` | Autres Européens et indigènes | 66 |
+
+`habous`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `private` | Habous privés | 66 |
+| `public` | Habous publics | 66 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `capital` | Montant global du capital | 44 |
+| `cessions` | Nombre de cessions consenties | 44 |
+| `enzel_rent` | Montant global des rentes d'enzel | 44 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `count` |  | 44 |
+| `francs` |  | 88 |
+
+### colonisation_habous_enzel_by_controle
+
+**Habous. Autres cessions (cessions à enzel). b) Récapitulation et répartition par contrôle civil**  
+*Habous: cessions à enzel since 1886, by contrôle civil, group of beneficiaries and kind of habous*
+
+Source `sgt`, table enzel_cc, printed pages by edition. 456 rows. Value type: mixed. Flags: (empty) 456. Notes and validation: [`../yearbook_other_chapters/csv/colonisation_habous_enzel_by_controle.md`](../yearbook_other_chapters/csv/colonisation_habous_enzel_by_controle.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `period_fr` | Place or label as printed (2 distinct values). |
+| `controle_civil` | Place or label as printed (19 distinct values). |
+| `buyer` | Coded dimension. |
+| `buyer_fr` | Printed French label for `buyer`. |
+| `habous` | Coded dimension. |
+| `habous_fr` | Printed French label for `habous`. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`buyer`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `french` | Français | 228 |
+| `other_european_and_indigenous` | Autres Européens et indigènes | 228 |
+
+`habous`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `private` | Habous privés | 228 |
+| `public` | Habous publics | 228 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `capital` | Montant global du capital | 152 |
+| `cessions` | Nombre de cessions consenties | 152 |
+| `enzel_rent` | Montant global des rentes d'enzel | 152 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `count` |  | 152 |
+| `francs` |  | 304 |
+
+### mutuality_credit_caisses
+
+**Crédit mutuel agricole. a) Caisses locales françaises et indigènes ; b) Effets escomptés**  
+*Agricultural mutual credit: local credit banks (caisses) and members, French and indigenous, and bills discounted, by year (1913-1939)*
+
+Source `sgt`, table credit_bills;credit_caisses;credit_local, printed pages by edition. 144 rows. Value type: mixed. Flags: (empty) 144. Notes and validation: [`../yearbook_other_chapters/csv/mutuality_credit_caisses.md`](../yearbook_other_chapters/csv/mutuality_credit_caisses.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `caisse_group` | Coded dimension. |
+| `caisse_group_fr` | Printed French label for `caisse_group`. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`caisse_group`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `all` |  | 54 |
+| `french` | Caisses françaises / Caisses françaises et mixtes / Caisses locales | 54 |
+| `indigenous` | Anciennes caisses indigènes / Caisses indigènes | 36 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `bills_discounted` | Effets escomptés (nombre) | 27 |
+| `bills_discounted_amount` | Effets escomptés (montant) | 27 |
+| `local_caisses` | Nombre de caisses | 45 |
+| `members` | Nombre d'adhérents / Nombre d'adhérents français et indigènes / Nombre d'adhérents français et tunisiens | 45 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `count` |  | 117 |
+| `francs` |  | 27 |
+
+### mutuality_coop_central_shares_business
+
+**Coopérative centrale des agriculteurs. a) Nombre de parts souscrites ; b) Affaires traitées**  
+*Central cooperative of farmers: shares subscribed, goods delivered and loans by type, by year (1913-1929)*
+
+Source `sgt`, table coop_business;coop_parts, printed pages by edition. 197 rows. Value type: mixed. Flags: (empty) 197. Notes and validation: [`../yearbook_other_chapters/csv/mutuality_coop_central_shares_business.md`](../yearbook_other_chapters/csv/mutuality_coop_central_shares_business.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `goods_delivered` | Opérations commerciales : montant des marchandises livrées | 17 |
+| `loans_fertiliser` | Prêts d'engrais | 17 |
+| `loans_harvest` | Prêts de récolte | 17 |
+| `loans_labour` | Prêts de main-d'oeuvre | 17 |
+| `loans_outstanding` | Prêts restant à rembourser | 17 |
+| `loans_seed` | Prêts de semences | 17 |
+| `loans_spring_work` | Prêts de travaux de printemps | 17 |
+| `loans_total` | Montant total des prêts | 17 |
+| `loans_tractors` | Prêts de tracteurs | 17 |
+| `shares_20fr` | Nombre de parts à 20 fr. | 10 |
+| `shares_50fr` | Nombre de parts à 50 fr. | 17 |
+| `shares_amount` | Sommes | 17 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `count` |  | 27 |
+| `francs` |  | 170 |
+
+### mutuality_coop_central_capital
+
+**Coopérative centrale des agriculteurs de Tunisie ; Coopérative de motoculture de Tunisie**  
+*Central cooperative of farmers and motor-cultivation cooperative of Tunisia: paid-up capital, State advances and goods bought in common and delivered, by year (1921-1939)*
+
+Source `sgt`, table coop_central;coop_moto, printed pages by edition. 133 rows. Value type: francs. Flags: (empty) 133. Notes and validation: [`../yearbook_other_chapters/csv/mutuality_coop_central_capital.md`](../yearbook_other_chapters/csv/mutuality_coop_central_capital.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `institution_fr` | Place or label as printed (2 distinct values). |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `capital_paid` | Capital social versé (situation au 31 décembre) | 38 |
+| `goods_bought_delivered` | Montant des marchandises (du matériel) acheté(es) en commun et livré(es) aux coopérateurs | 38 |
+| `state_advances` | Avances de l'Etat (situation au 31 décembre) | 19 |
+| `state_advances_exceptional` | Avances de l'Etat (situation au 31 décembre) : exceptionnelles | 19 |
+| `state_advances_statutory` | Avances de l'Etat (situation au 31 décembre) : statutaires | 19 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `francs` |  | 133 |

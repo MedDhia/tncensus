@@ -1,0 +1,59 @@
+# Statistique générale de la Tunisie, mutuality / economic institutions chapter, edition sgt1927. Format: yb_tables.py.
+
+# Crédit mutuel agricole (1918-1927), f490 (p. 462). a) Caisses locales françaises et indigènes: Caisses françaises / Caisses indigènes (nombre de caisses, nombre d'adhérents); b) Effets escomptés (nombre, montant fr. c.).
+@credit_caisses view=490 page=462
+img: all
+cols: fr_caisses fr_members ind_caisses ind_members
+1918 | 24 517 38 1429
+1919 | 24 514 38 1429
+1920 | 24 508 38 1429
+1921 | 37 668 38 1429
+1922 | 40 735 38 1429
+1923 | 47 2250 38 952
+1924 | 49 2946 38 952
+1925 | 57 3496 34 850
+1926 | 57 3723 34 850
+1927 | 64 3950 34 850
+@credit_bills view=490 page=462
+img: all
+cols: bills amount
+1918 | 256 328950
+1919 | 107 279840.50
+1920 | 12 23320.30
+1921 | 459 2355656.60
+1922 | 2510 13552423.85
+1923 | 5720 26010703.85
+1924 | 5284 31529289.40
+1925 | 5505 33188515.45
+1926 | 6043 30541110.20
+1927 | 7437 68295411.28
+
+# Coopérative centrale des agriculteurs (1918-1927), f491 (p. 463).
+# No TOTAUX lines printed.
+@coop_parts view=491 page=463
+img: all
+cols: p50 sums
+1918 | 0 0
+1919 | 0 0
+1920 | 0 0
+1921 | 61 3050
+1922 | 65 3250
+1923 | 74 3700
+1924 | 215 10750
+1925 | 379 18950
+1926 | 921 46050
+1927 | 698 34900
+@coop_business view=491 page=463
+img: all
+cols: goods seeds labour spring harvest fertiliser tractors loans_total outstanding
+1918 | 1889092.17 653870.35 82826 116050 441438.20 6931 0 1301115.55 3407
+1919 | 1494406.11 625854.55 82310 93734.35 329770 272240.40 0 1403909.30 39956.15
+1920 | 2840290 69710 5850 0 0 35360 1061102.85 1172022.85 305544.40
+1921 | 2461269.75 91127.60 0 0 0 0 0 91127.60 0
+1922 | 4266075.62 0 0 0 0 0 175331.45 175331.45 0
+1923 | 6942374.25 0 0 0 0 0 0 0 0
+1924 | 5277892.85 0 0 0 0 0 0 0 0
+1925 | 6290270.05 0 0 0 0 0 0 0 0
+1926 | 7014150.70 0 0 0 0 0 0 0 0
+1927 | 7775000 0 0 0 0 0 0 0 0
+

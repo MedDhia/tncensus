@@ -1,0 +1,63 @@
+# Statistique générale de la Tunisie, mutuality / economic institutions chapter, edition sgt1922. Format: yb_tables.py.
+
+# Crédit mutuel agricole (1913-1922), f460 (p. 436). a) Caisses locales françaises et indigènes: Caisses françaises / Caisses indigènes (nombre de caisses, nombre d'adhérents); b) Effets escomptés (nombre, montant fr. c.).
+# sgt1922 prints each figure one year earlier than sgt1923-sgt1930 (e.g. 37 caisses / 668 adhérents for 1920, later 1921) and 1921 = 1922 (40 / 735); effets 1922 2.511 / 13.465.233,15 printed by no other edition.
+@credit_caisses view=460 page=436
+img: all
+cols: fr_caisses fr_members ind_caisses ind_members
+1913 | 24 556 27 849
+1914 | 24 565 41 1483
+1915 | 24 548 40 1470
+1916 | 24 536 40 1464
+1917 | 24 517 38 1429
+1918 | 24 514 38 1429
+1919 | 24 508 38 1429
+1920 | 37 668 38 1429
+1921 | 40 735 38 1429
+1922 | 40 735 38 1429
+@credit_bills view=460 page=436
+img: all
+cols: bills amount
+1913 | 4131 5141876.90
+1914 | 4119 4728235.29
+1915 | 968 1127997.65
+1916 | 81 186916.35
+1917 | 256 328950
+1918 | 107 279840.50
+1919 | 12 23320.30
+1920 | 459 2355656.60
+1921 | 2510 13552423.85
+1922 | 2511 13465233.15
+
+# Coopérative centrale des agriculteurs (1913-1922), f461 (p. 437).
+# a) Nombre de parts souscrites: parts à 20 fr. (» in every line and in TOTAUX), parts à 50 fr., sommes; TOTAUX 1.332 / 66.600.
+# b) Affaires traitées: opérations commerciales (montant des marchandises livrées) and prêts divers (heading misprinted 'PRÊTS DIVERS 6914-1921'): semences, main-d'oeuvre, travaux de printemps, récolte, engrais, tracteurs, montant total, prêts restant à rembourser. 1913 loans printed » (total and restant printed as a dot-like »).
+@coop_parts view=461 page=437
+img: all
+cols: p20 p50 sums
+1913 | 0 945 47250
+1914 | 0 240 12000
+1915 | 0 5 250
+1916 | 0 6 300
+1917 | 0 8 400
+1918 | 0 20 1000
+1919 | 0 21 1050
+1920 | 0 10 500
+1921 | 0 12 600
+1922 | 0 65 3250
+TOTAUX | 0 1332 66600
+@coop_business view=461 page=437
+img: all
+cols: goods seeds labour spring harvest fertiliser tractors loans_total outstanding
+1913 | 793294.05 0 0 0 0 0 0 0 0
+1914 | 408012.85 880558.10 332794.45 0 0 0 0 1213382.55 0
+1915 | 472348.65 81451.45 166035.85 112275 275512.60 0 0 635274.90 14430.05
+1916 | 1020837.20 1024508.60 408430.75 106217.40 202434.70 0 0 1741591.45 13759.75
+1917 | 847599.15 968488.60 177001.30 128207 350454 109291.55 0 1733442.45 966.10
+1918 | 1889092.17 653870.35 82826 116050 441438.20 6931 0 1301115.55 3407
+1919 | 1492456.11 625854.55 82310 93734.35 329770 272240.40 0 1403909.30 39956.15
+1920 | 2982705.30 69710 5850 0 0 35360 1061102.85 1172022.85 305544.40
+1921 | 2397469.25 91127.60 0 0 0 0 0 91127.60 0
+1922 | 3109047.17 0 0 0 0 0 175331.45 175331.45 0
+TOTAUX | 15512861.90 4395569.25 1255248.35 556483.85 1599609.50 423822.95 1236434.30 9467198.10 378063.45
+

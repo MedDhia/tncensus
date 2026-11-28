@@ -24,7 +24,7 @@ of a range on the page before relying on it.**
 | Teaching and research institutions (`research_`) | – | – | – | – | – | – | – | – | – | 155–184 | 116–145 | 115–122 |
 | Commerce and navigation (`commerce_`) | 281–436 | 771–926 | 1275–1430 | 343–498 | 853–1008 | 315–470 | 843–998 | 321–476 | 857–1012 | 185–290 | 146–171 | 123–150 |
 | Colonisation (`colonisation_`) | 437–456 | 927–946 | 1431–1444 | 499–512 | 1009–1024 | 471–488 | 999–1016 | 477–492 | 1013–1028 | 291–306 | 172–181 | 151–156 |
-| Economic institutions / mutual credit (`mutuality_`) | 457–502 | 947–990 | 1445–1471 | – | 1025–1036 | 489–500 | 1017–1030 | 493–508 | 1029–1044 | 307–318 | 182–? | 157–162 |
+| Economic institutions / mutual credit (`mutuality_`) | 457–466 | 947–956 | 1445–1454 | 518–523 | 1025–1036 | 489–500 | 1017–1030 | 493–508 | 1029–1044 | 307–318 | 182–187 | 157–162 |
 | Labour and social welfare (`labour_`) | – | – | – | 513–564 | 1037–1061 | 501–552 | 1031–1057 | 509–558 | 1045–1071 | 319–340 | 188–212 | 163–190 |
 
 Notes:
@@ -39,9 +39,9 @@ Notes:
 | 1 | Communes: **done** (`extract_communes.py`, all tables, surveyed page by page) |
 | 2 | Justice: **done** (`extract_justice.py`; hearing-schedule text pages not transcribed). Prisons: **done** (`extract_prisons.py`, 9 tables, survey in `csv/prisons_survey.md`). Property: **done** (`extract_property.py`, 13 tables, survey in `csv/property_survey.md`) |
 | 3 | Posts: **done** (`extract_posts.py`, 6 tables, survey in `csv/posts_survey.md`; exchange-rate pages to do). Public works: **done** (`extract_publicworks.py`, 12 tables, survey in `csv/publicworks_survey.md`) |
-| 4 | Finances: budget, public debt, patente, taxe personnelle and livestock tax **done** (`extract_finance.py`); achour **done** (`extract_finance_achour.py`); canoun in progress (views in `csv/finance_survey.md`) |
+| 4 | Finances: budget, public debt, patente, taxe personnelle and livestock tax **done** (`extract_finance.py`); achour **done** (`extract_finance_achour.py`); canoun **done** (`extract_finance_canoun.py`). Finances complete (views in `csv/finance_survey.md`) |
 | 5 | Agriculture: land, crops, cereal zones **done** (`extract_agriculture.py`); tax-class tables, vines, olives, dates, livestock, forests to do (views in `csv/agriculture_survey.md`); the 1922–1930 meteorology and école coloniale / botanique / laboratory pages go to `research_` |
-| 6 | Colonisation: 8 tables **done** (`extract_colonisation.py`; sgt1922–1923 old-layout recapitulations, planting sales, habous/enzel cessions to do). Economic institutions, labour, research institutions: to do |
+| 6 | Colonisation: **done** (`extract_colonisation.py`, 16 tables). Economic institutions: credit and central cooperative **done** (`extract_mutuality.py`; sgt1925 tables are at f518–523 inside the labour chapter); insurance, provident societies, Office de crédit indigène, bank balance sheets, early labour tables (sgt1922–1924) to do. Labour, research institutions: in progress |
 | 7–10 | Commerce and navigation, by edition groups (1922–24, 1925–27, 1928–30, 1935–39) |
 
 Output: `csv/<prefix><topic>.csv` with notes `.md` files; transcriptions in

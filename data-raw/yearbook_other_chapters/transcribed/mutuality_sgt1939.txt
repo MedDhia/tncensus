@@ -1,0 +1,50 @@
+# Statistique générale de la Tunisie, mutuality / economic institutions chapter, edition sgt1939. Format: yb_tables.py.
+
+# Crédit mutuel agricole (1929-1939; sgt1936, sgt1939 print no years in the title), f158 (p. 152). Caisses locales françaises et indigènes: one table, caisses locales (nombre de caisses, nombre d'adhérents français et tunisiens) and effets escomptés (nombre, montant). No split French / indigenous caisses. 1930 and 1932 effets number printed ».
+# 1937 adhérents printed 584 (zoomed crop; 1.604 in 1938).
+@credit_local view=158 page=152
+img: all
+cols: fr_caisses fr_members bills amount
+1929 | 71 4700 7355 84016933.05
+1930 | 70 5003 0 87530195.45
+1931 | 71 5003 3695 53276841
+1932 | 68 2964 0 25684792.06
+1933 | 64 2884 2743 30586537.70
+1934 | 68 3152 3730 43248447
+1935 | 68 2719 1850 18980475
+1936 | 66 2210 3732 35743933
+1937 | 64 584 1582 18211713
+1938 | 64 1604 1197 22603706.43
+1939 | 68 1449 858 12493247.48
+
+# Coopérative centrale des agriculteurs de Tunisie (1929-1939) and Coopérative de motoculture de Tunisie, f159 (p. 153). New layout: capital social versé, avances de l'Etat (statutaires, exceptionnelles; motoculture: one column), montant des marchandises (du matériel) acheté(es) en commun et livré(es) aux coopérateurs; situation au 31 décembre. No totals.
+# Motoculture avances de l'Etat 1937-1939 printed 'néant' (stored 0).
+@coop_central view=159 page=153
+img: all
+cols: capital adv_statutory adv_exceptional goods
+1929 | 276130 799900 523666.50 7100000
+1930 | 279610 799900 423666.50 6600000
+1931 | 278860 799900 323666.50 7087335
+1932 | 294100 799900 323666.50 9230764
+1933 | 296000 799900 323666.50 13200000
+1934 | 311424 799900 173666.50 8562968
+1935 | 1000000 799900 173666.50 3605150
+1936 | 1017740 1780000 173666.50 6400979
+1937 | 1301085 3160000 173666.50 7779190
+1938 | 3622495 4840000 173666.50 10000000
+1939 | 3739215 4655000 173666.50 10562893
+@coop_moto view=159 page=153
+img: all
+cols: capital advances goods
+1929 | 242000 498800 11000000
+1930 | 270000 479950 10500000
+1931 | 276250 709100 10156289
+1932 | 280250 477250 8679148
+1933 | 277000 458400 6200000
+1934 | 281250 439550 5529122
+1935 | 386000 285700 4932908
+1936 | 393250 18850 5437605
+1937 | 403500 0 7074147
+1938 | 411500 0 8200000
+1939 | 417250 0 7802154
+
