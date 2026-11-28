@@ -297,6 +297,13 @@ Every table is tidy: one row per printed cell. Printed subtotals and totals are 
 | [`agriculture_cereal_farmers`](#agriculture_cereal_farmers) | split | by edition | 132 | hectares | Cereals (durum and soft wheat, barley, oats): sown area of European and indigenous farmers |
 | [`agriculture_vine`](#agriculture_vine) | vine | by edition | 638 | mixed | Vineyards: number of vine growers and vineyard area by contrôle civil and nationality |
 | [`agriculture_olive`](#agriculture_olive) | olive | by edition | 1,234 | count | Olive trees by caïdat (unproductive and wild, young untaxed, taxed) |
+| [`mutuality_insurance`](#mutuality_insurance) | ins_accident;ins_accident_work;ins_fire;ins_hail;ins_hail_constitution | by edition | 1,080 | mixed | Agricultural mutual insurance: policies, insured values, contributions, subsidies, claims and costs by level of the mutual system (local caisses, regional caisse, reinsurers), fire, hail and accident branches, by year (1913-1935) |
+| [`mutuality_office_credit_agricole`](#mutuality_office_credit_agricole) | office_operations;office_resources | by edition | 58 | francs | Public office for indigenous agricultural credit: resources (endowments, subsidies, loans, sales of State land) and operations (medium- and short-term credit), by year (1925-1934) |
+| [`commerce_trade_by_class`](#commerce_trade_by_class) | general_b | by edition | 96 | francs | General information: imports and exports by class of products (value in francs) |
+| [`commerce_trade_by_category`](#commerce_trade_by_category) | general_c | by edition | 768 | francs | General information: imports and exports by category of products (value in francs) |
+| [`commerce_trade_by_origin_group`](#commerce_trade_by_origin_group) | general_d | by edition | 192 | francs | General information: products by country group of provenance and destination (value in francs) |
+| [`agriculture_dates`](#agriculture_dates) | dates | by edition | 528 | count | Date palms (canoun) by caïdat and age, degla and common, at 1 November |
+| [`agriculture_animals`](#agriculture_animals) | animals | by edition | 4,336 | count | Livestock by species, contrôle civil and caïdat (European-owned, indigenous-owned, total) |
 
 ### eur1906_t1_circonscription_nationality
 
@@ -14262,3 +14269,497 @@ Source `sgt`, table olive, printed pages by edition. 1,234 rows. Value type: cou
 | Code | Printed label | N |
 |---|---|---:|
 | `trees` |  | 1,234 |
+
+### mutuality_insurance
+
+**Assurances mutuelles agricoles. a) Incendie ; b) Grêle ; c) et d) Accidents**  
+*Agricultural mutual insurance: policies, insured values, contributions, subsidies, claims and costs by level of the mutual system (local caisses, regional caisse, reinsurers), fire, hail and accident branches, by year (1913-1935)*
+
+Source `sgt`, table ins_accident;ins_accident_work;ins_fire;ins_hail;ins_hail_constitution, printed pages by edition. 1,080 rows. Value type: mixed. Flags: (empty) 1,033, ocr_corrected 17, not_applicable 14, illegible 11, reprint_corrected 5. Notes and validation: [`../yearbook_other_chapters/csv/mutuality_insurance.md`](../yearbook_other_chapters/csv/mutuality_insurance.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `branch` | Coded dimension. |
+| `branch_fr` | Printed French label for `branch`. |
+| `regional_caisse` | Coded dimension. |
+| `regional_caisse_fr` | Printed French label for `regional_caisse`. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`branch`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `accident_common_law` | c) Accidents [de dr]oit commun | 72 |
+| `accident_work` | d) Accident[...] (title lost in the binding) | 72 |
+| `fire` | a) Incendie | 467 |
+| `hail` | b) Grêle | 469 |
+
+`regional_caisse`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `(empty)` |  | 780 |
+| `tunis` | Tunis-Réassurances (b) | 150 |
+| `tunis_est` | Tunis-Est-Réassurances (a) | 150 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `claims` | Nombre de sinistres / Sinistres : nombre / Sinistres et frais de sinistres : nombre | 64 |
+| `contributions_central` | Cotisations versées : caisse centrale / Répartition des cotisations versées : réassureurs | 64 |
+| `contributions_local` | Cotisations versées : caisses locales / Répartition des cotisations versées : caisses locales | 64 |
+| `contributions_regional` | Cotisations versées : caisse régionale / Répartition des cotisations versées : caisse régionale | 64 |
+| `costs_central` | Autres frais : caisse centrale / Répartition des frais de sinistre : réassureurs | 36 |
+| `costs_local` | Autres frais : caisses locales / Répartition des frais de sinistre : caisses locales | 36 |
+| `costs_regional` | Autres frais : caisse régionale / Répartition des frais de sinistre : caisse régionale | 36 |
+| `costs_regional_constitution` | Autres frais : caisse régionale, (1) frais de constitution | 1 |
+| `deficit_local_caisses` | Autres frais : déficit des caisses locales / Déficit des caisses locales | 52 |
+| `general_costs_rebates_local` | Frais généraux divers et ristournes aux assurés : caisse locale | 34 |
+| `general_costs_rebates_regional` | Frais généraux divers et ristournes aux assurés : caisse régionale | 34 |
+| `indemnities_central` | Indemnités payées : caisse centrale / Sinistres et frais de sinistres, répartition des sommes payées : réassureurs / Sinistres, répartition des indemnités payées : réassureurs | 64 |
+| `indemnities_local` | Indemnités payées : caisses locales / Sinistres et frais de sinistres, répartition des sommes payées : caisses locales / Sinistres, répartition des indemnités payées : caisses locales | 64 |
+| `indemnities_regional` | Indemnités payées : caisse régionale / Sinistres et frais de sinistres, répartition des sommes payées : caisse régionale / Sinistres, répartition des indemnités payées : caisse régionale | 64 |
+| `insured_value` | Valeurs assurées | 64 |
+| `misc_receipts_local` | Recettes diverses et ristournes : caisse locale | 34 |
+| `misc_receipts_regional` | Recettes diverses et ristournes : caisse régionale | 34 |
+| `policies` | Nombre de polices | 64 |
+| `rebates_insured` | Ristournes aux assurés | 38 |
+| `receipts_extra_rebates` | Recettes supplémentaires et ristournes | 20 |
+| `subsidies_central` | Subventions : caisse centrale | 20 |
+| `subsidies_local` | Subventions : caisses locales | 64 |
+| `subsidies_regional` | Subventions : caisse régionale | 64 |
+| `subsidies_regional_constitution` | Subventions : caisse régionale, (1) frais de constitution | 1 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `count` |  | 128 |
+| `francs` |  | 952 |
+
+### mutuality_office_credit_agricole
+
+**Office public de crédit agricole indigène. Ressources ; Opérations de l'Office**  
+*Public office for indigenous agricultural credit: resources (endowments, subsidies, loans, sales of State land) and operations (medium- and short-term credit), by year (1925-1934)*
+
+Source `sgt`, table office_operations;office_resources, printed pages by edition. 58 rows. Value type: francs. Flags: (empty) 58. Notes and validation: [`../yearbook_other_chapters/csv/mutuality_office_credit_agricole.md`](../yearbook_other_chapters/csv/mutuality_office_credit_agricole.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `endowments` | Ressources : dotations | 10 |
+| `loans` | Ressources : emprunts | 10 |
+| `operations_medium_term` | Opérations de l'Office : moyen terme | 9 |
+| `operations_short_term` | Opérations de l'Office : court terme | 9 |
+| `state_land_sales` | Ressources : vente de terres domaniales aux agriculteurs indigènes fixés au sol | 10 |
+| `subsidies` | Ressources : subventions | 10 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `francs` |  | 58 |
+
+### commerce_trade_by_class
+
+**Renseignements généraux : résumé des importations et des exportations par classe de produits (valeur en francs)**  
+*General information: imports and exports by class of products (value in francs)*
+
+Source `sgt`, table general_b, printed pages by edition. 96 rows. Value type: francs. Flags: (empty) 95, total_mismatch 1. Notes and validation: [`../yearbook_other_chapters/csv/commerce_trade_by_class.md`](../yearbook_other_chapters/csv/commerce_trade_by_class.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `product_class` | Coded dimension. |
+| `product_class_fr` | Printed French label for `product_class`. |
+| `flow` | Coded dimension. |
+| `flow_fr` | Printed French label for `flow`. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`product_class`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `animal` | Matières animales | 24 |
+| `manufactures` | Fabrications | 24 |
+| `mineral` | Matières minérales | 24 |
+| `vegetal` | Matières végétales | 24 |
+
+`flow`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `export` | Exportation | 48 |
+| `import` | Importation | 48 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `value` | valeur | 96 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `francs` |  | 96 |
+
+### commerce_trade_by_category
+
+**Renseignements généraux : résumé des importations et des exportations par catégorie de produits (valeur en francs)**  
+*General information: imports and exports by category of products (value in francs)*
+
+Source `sgt`, table general_c, printed pages by edition. 768 rows. Value type: francs. Flags: (empty) 764, total_mismatch 4. Notes and validation: [`../yearbook_other_chapters/csv/commerce_trade_by_category.md`](../yearbook_other_chapters/csv/commerce_trade_by_category.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `product_class` | Coded dimension. |
+| `product_class_fr` | Printed French label for `product_class`. |
+| `product_category` | Coded dimension. |
+| `product_category_fr` | Printed French label for `product_category`. |
+| `flow` | Coded dimension. |
+| `flow_fr` | Printed French label for `flow`. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`product_class`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `animal` | Matières animales | 120 |
+| `manufactures` | Fabrications | 360 |
+| `mineral` | Matières minérales | 48 |
+| `vegetal` | Matières végétales | 240 |
+
+`product_category`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `animal_medicinal` | Substances animales propres à la médecine et à la parfumerie | 24 |
+| `animal_products` | Produits et dépouilles d'animaux | 24 |
+| `arms` | Armes, poudres et munitions | 24 |
+| `basketry` | Ouvrages de sparterie et de vannerie | 24 |
+| `beverages` | Boissons | 24 |
+| `chemicals` | Produits chimiques | 24 |
+| `colonial_goods` | Denrées coloniales de consommation | 24 |
+| `colours` | Couleurs | 24 |
+| `compositions` | Compositions diverses | 24 |
+| `dyes_tannins` | Teintures et tanins | 24 |
+| `fabrics` | Tissus | 24 |
+| `farinaceous_foods` | Farineux alimentaires | 24 |
+| `fibres` | Filaments, tiges et fruits à ouvrer | 24 |
+| `fisheries` | Pêches | 24 |
+| `fruits_seeds` | Fruits et graines | 24 |
+| `furniture` | Meubles et ouvrages en bois | 24 |
+| `hard_materials` | Matières dures à tailler | 24 |
+| `leather_goods` | Peaux et pelleteries ouvrées | 24 |
+| `live_animals` | Animaux vivants | 24 |
+| `medicinal_plants` | Espèces médicinales | 24 |
+| `metal_goods` | Ouvrages en métaux | 24 |
+| `metals` | Métaux | 24 |
+| `misc_goods` | Ouvrages en matières diverses | 24 |
+| `musical_instruments` | Instruments de musique | 24 |
+| `oils_saps` | Huiles et sucs végétaux | 24 |
+| `paper` | Papier et ses applications | 24 |
+| `pottery_glass` | Poteries, verres et cristaux | 24 |
+| `prepared_dyes` | Teintures préparées | 24 |
+| `stones_fuels` | Marbres, pierres, terres et combustibles minéraux | 24 |
+| `vegetal_misc` | Produits et déchets divers | 24 |
+| `wood` | Bois | 24 |
+| `yarns` | Fils | 24 |
+
+`flow`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `export` | Exportation | 384 |
+| `import` | Importation | 384 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `value` | valeur | 768 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `francs` |  | 768 |
+
+### commerce_trade_by_origin_group
+
+**Renseignements généraux : classement des produits par pays de provenance et de destination (valeur en francs)**  
+*General information: products by country group of provenance and destination (value in francs)*
+
+Source `sgt`, table general_d, printed pages by edition. 192 rows. Value type: francs. Flags: (empty) 186, total_mismatch 6. Notes and validation: [`../yearbook_other_chapters/csv/commerce_trade_by_origin_group.md`](../yearbook_other_chapters/csv/commerce_trade_by_origin_group.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `product_class` | Coded dimension. |
+| `product_class_fr` | Printed French label for `product_class`. |
+| `origin_group` | Coded dimension. |
+| `origin_group_fr` | Printed French label for `origin_group`. |
+| `flow` | Coded dimension. |
+| `flow_fr` | Printed French label for `flow`. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`product_class`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `animal` | Matières animales | 48 |
+| `manufactures` | Fabrications | 48 |
+| `mineral` | Matières minérales | 48 |
+| `vegetal` | Matières végétales | 48 |
+
+`origin_group`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `foreign_colonies` | de l'Étranger et des Colonies françaises | 96 |
+| `france_algeria` | de France et d'Algérie | 96 |
+
+`flow`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `export` | Exportation | 96 |
+| `import` | Importation | 96 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `value` | valeur | 192 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `francs` |  | 192 |
+
+### agriculture_dates
+
+**Canoun des dattiers. Relevé par caïdat du nombre d'arbres d'après leur âge au 1er novembre**  
+*Date palms (canoun) by caïdat and age, degla and common, at 1 November*
+
+Source `sgt`, table dates, printed pages by edition. 528 rows. Value type: count. Flags: (empty) 523, total_mismatch 4, derived_from_totals 1. Notes and validation: [`../yearbook_other_chapters/csv/agriculture_dates.md`](../yearbook_other_chapters/csv/agriculture_dates.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `region` | Coded dimension. |
+| `chef_lieu` | Coded dimension. |
+| `controle_civil` | Place or label as printed (0 distinct values). |
+| `caidat` | Place or label as printed (6 distinct values). |
+| `date_type` | Coded dimension. |
+| `date_type_fr` | Printed French label for `date_type`. |
+| `age_class` | Coded dimension. |
+| `age_class_fr` | Printed French label for `age_class`. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`region`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `(empty)` |  | 528 |
+
+`chef_lieu`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `(empty)` |  | 528 |
+
+`date_type`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `common` | Dattiers communs | 264 |
+| `deglet_nour` | Dattiers degla | 264 |
+
+`age_class`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `age_1` | 1 an | 24 |
+| `age_10` | 10 ans | 24 |
+| `age_11` | 11 ans | 24 |
+| `age_12` | 12 ans | 24 |
+| `age_13` | 13 ans | 24 |
+| `age_14` | 14 ans | 24 |
+| `age_15` | 15 ans | 24 |
+| `age_16` | 16 ans | 24 |
+| `age_17` | 17 ans | 24 |
+| `age_18` | 18 ans | 24 |
+| `age_19` | 19 ans | 24 |
+| `age_2` | 2 ans | 24 |
+| `age_3` | 3 ans | 24 |
+| `age_4` | 4 ans | 24 |
+| `age_5` | 5 ans | 24 |
+| `age_6` | 6 ans | 24 |
+| `age_7` | 7 ans | 24 |
+| `age_8` | 8 ans | 24 |
+| `age_9` | 9 ans | 24 |
+| `male` | Mâles | 24 |
+| `taxable_20` | Imposables 20 ans | 24 |
+| `under_1` | Moins d'un an | 24 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `trees` | Nombre d'arbres | 528 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `trees` |  | 528 |
+
+### agriculture_animals
+
+**Animaux. Nombre d'animaux de chaque espèce (possédés par des européens, des indigènes ; total), par contrôle civil et caïdat**  
+*Livestock by species, contrôle civil and caïdat (European-owned, indigenous-owned, total)*
+
+Source `sgt`, table animals, printed pages by edition. 4,336 rows. Value type: count. Flags: (empty) 4,318, total_mismatch 13, illegible 3, derived_from_totals 2. Notes and validation: [`../yearbook_other_chapters/csv/agriculture_animals.md`](../yearbook_other_chapters/csv/agriculture_animals.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `region` | Coded dimension. |
+| `chef_lieu` | Coded dimension. |
+| `controle_civil` | Place or label as printed (20 distinct values). |
+| `caidat` | Place or label as printed (44 distinct values). |
+| `owner` | Coded dimension. |
+| `owner_fr` | Printed French label for `owner`. |
+| `animal` | Coded dimension. |
+| `animal_fr` | Printed French label for `animal`. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`region`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `1re Région` |  | 720 |
+| `2me Région` |  | 504 |
+| `3me Région` |  | 720 |
+| `4me Région` |  | 968 |
+| `5me Région` |  | 952 |
+| `Territoires militaires du Sud` |  | 472 |
+
+`chef_lieu`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `(empty)` |  | 472 |
+| `Bizerte` |  | 720 |
+| `Le Kef` |  | 720 |
+| `Sfax` |  | 952 |
+| `Sousse` |  | 968 |
+| `Tunis` |  | 504 |
+
+`owner`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `european` | Possédés par des européens | 1,152 |
+| `indigenous` | Possédés par des indigènes | 1,152 |
+| `total` | Nombre total (européens et indigènes / tunisiens) | 2,032 |
+
+`animal`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `camels` | Chameaux | 542 |
+| `cattle` | Bovins | 542 |
+| `donkeys` | Anes | 542 |
+| `goats` | Chèvres | 542 |
+| `horses` | Chevaux | 542 |
+| `mules` | Mulets | 542 |
+| `pigs` | Porcs | 542 |
+| `sheep` | Moutons | 542 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `head` | Nombre d'animaux | 4,336 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `head` |  | 4,336 |

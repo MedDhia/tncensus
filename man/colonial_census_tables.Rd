@@ -25,7 +25,7 @@ Returns an index of the tables transcribed from publications digitized on
 Gallica (BnF): the 1906 census of the European civilian population of
 Tunisia, the 1931 census of the indigenous (Muslim and Jewish) population,
 and the \emph{Démographie}, health, public-instruction, communes, justice,
-prisons, land-registration, posts, public-works, finance, colonisation, agriculture, mutual-credit and labour chapters of the
+prisons, land-registration, posts, public-works, finance, colonisation, agriculture, mutual-credit, labour and commerce chapters of the
 \emph{Statistique générale de la Tunisie} yearbooks (editions 1922--1930, 1935, 1936 and
 1939). The yearbooks reprint tables from the 1921, 1926, 1931 and 1936
 censuses, whose own volumes are not on Gallica, and give yearly vital

@@ -45,3 +45,98 @@ cols: capital advances goods
 1934 | 281250 439550 5529122
 1935 | 386000 285700 4932908
 
+
+# Assurances mutuelles agricoles (1925-1935; lines 1926-1935), spreads f312|f313 (pp. 292|293: a) Incendie, b) Grêle)
+# and f314|f315 (pp. 294|295: c) Accidents [de dr]oit commun, d) Accidents [...] — both titles partly lost in the
+# binding; d) has a column 'Sinistre infirmité permanente et mort' printed as text, 'Entièrement à la charge des
+# réassureurs', not stored). New layout: nombre de polices, valeurs assurées, répartition des cotisations versées
+# (caisses locales, caisse régionale, réassureurs), subventions (caisses locales, caisse régionale), sinistres et
+# frais de sinistres (nombre; répartition des sommes payées: caisses locales, caisse régionale, réassureurs), déficit
+# des caisses locales (a, b only), ristournes aux assurés (blank, not printed, for 1926-1932). From 1933 two lines per
+# year: (1) 'Le 1er janvier 1933, l'ancienne Caisse Régionale « Tunis-Assurances » a été scindée en deux nouvelles
+# Caisses Régionales « Tunis-Est-Réassurances » (a) et « Tunis-Réassurances » (b)'. Labels 'YYYY a' / 'YYYY b'.
+# The réassureurs cotisations column of a) and b) runs into the binding: its second cents digit is hidden on both
+# page edges for most lines ('?'; a) 1931 21 and b) 1926-1933 b legible). a) 1931: every column of the left page
+# printed » except réassureurs 1.393.482,21. b) 1933 a) réassureurs printed 375.000 with no cents.
+# Read on 0.75-0.8 whole-half crops, binding columns zoomed at 1.5-2x.
+@ins_fire view=312 page=292 rview=313 rpage=293 split=subsidy_local
+img: all
+cols: policies insured contrib_local contrib_regional contrib_central subsidy_local subsidy_regional claims indemn_local indemn_regional indemn_central deficit_local rebates
+1926 | 1688 199201242 97369.93 389480.50 ? 0 25000 38 69392.15 277568.72 346960.87 7264.05 -
+1927 | 2026 240604659 104221.14 416884.59 ? 0 25000 46 42962.69 171850.80 214813.49 0 -
+1928 | 2686 330619510 29247.20 263215.84 ? 0 25000 75 17235.41 155297.30 964168.12 0 -
+1929 | 2967 343963051 36382.91 327446.25 ? 0 25000 57 12941.47 116473.32 669518.53 0 -
+1930 | 3042 482471980 35633.70 320703.31 ? 0 25000 73 21194.19 190747.73 776170.80 0 -
+1931 | 0 0 0 0 1393482.21 0 0 46 17474.28 100883.12 326777.71 0 -
+1932 | 2636 342579423 78550.24 378476.01 ? 0 0 19 11748.33 58901.04 146576 0 -
+1933 a | 1250 122000000 31791.24 126615.38 ? 0 0 15 5725.19 23936.31 38009.11 0 70200
+1933 b | 1262 162335726.16 21207.07 190864.30 ? 0 0 17 3480.57 31325.19 65735.85 0 39748.26
+1934 a | 2215 136711624.95 35320.53 141282.17 ? 0 0 18 11536.65 46146.68 107057.46 0 65390.29
+1934 b | 1329 183141114.16 22435.43 201918.89 ? 0 0 13 3785.22 34067.08 97314.48 0 67955.65
+1935 a | 1149 108729441 27340.87 109363.49 ? 0 0 0 2417.13 9668.64 19019 0 59650.32
+1935 b | 1295 148745156 19437.70 174939.31 ? 0 0 9 1178.55 10607.08 32694.76 0 68275.90
+@ins_hail view=312 page=292 rview=313 rpage=293 split=subsidy_local
+img: all
+cols: policies insured contrib_local contrib_regional contrib_central subsidy_local subsidy_regional claims indemn_local indemn_regional indemn_central deficit_local rebates
+1926 | 566 91734691 67375.65 269512.63 336888.28 0 25000 28 21870.68 87482.74 109353.43 0 -
+1927 | 580 91678302 64412.82 257698.51 322111.67 0 25000 60 118697.61 474790.47 593488.07 60372.80 -
+1928 | 934 167428532 17211.67 152148.66 1046708.57! 0 25000 46 6639.15 59752.44 153526.96 0 -
+1929 | 1098! 165396990 20496.49 184468.47 1021825.51! 0 25000 97 17566.32 158096.96 753445.32 0 -
+1930 | 1055 147167163 18437.77 165939.95 896189.53 0 25000 38 6003.07 54027.70 282844.58 0 -
+1931 | 1060 181393667 43020 268697.55 1027897.50 0 0 77 57552.38 407419.35 2320087.32 19037.25 -
+1932 | 1019! 169557025 53838.42 277380.06 1038387.87 0 0 47 23956.97 190801.34 664375.94 0 -
+1933 a | 600 58000000 30907.06 122000.30 375000 0 0 124 89887.75 319201.40 952701.11 18538.29 0
+1933 b | 511 84582375.29 16516.19 148645.71 484567.03 0 0 85 31352.32 282170.94 1309357.90 0 14478.76
+1934 a | 956 710396.97 34612.25 138449.03 ? 0 0 89 45186.12 180744.56 644993.12 12524.63 0
+1934 b | 585 105351658.18 17286.16 155575.45 ? 0 0 102 35177.29 316595.61 1162573.31 0 4011.60
+1935 a | 652 47510555 30195.60 120782.45 ? 0 0 0 21079.68 84318.85 193895.33 0 0
+1935 b | 577 71484982 16207.65 145868.87! ? 0 0 28 9688.08 87192.85 231350.17 0 21709.30
+@ins_accident view=314 page=294 rview=315 rpage=295 split=subsidy_local
+img: all
+cols: policies insured contrib_local contrib_regional contrib_central subsidy_local subsidy_regional claims indemn_local indemn_regional indemn_central rebates
+1933 a | 53 0 19155.70 76622.80 95778.49 0 0 53 1778.35 8781.91 8891.77 30000
+1933 b | 702 0 7242.50 65179.80 72422 0 0 28 104.42 939.78 1044.20 5740.39
+1934 a | 1009 0 19182.68 76730.76 95913.44 0 0 113 10887.70 43550.80 54438.45 20018.21
+1934 b | 728 60522610 7988.03 71892.32 79880.35 0 0 24 994.48 8950.42 9944.85 8777.50
+1935 a | 871 0 18371.07 73484.27 91855.36 0 0 0 435.63 1742.52 2178.15 13552.16
+1935 b | 758 65427290 8484.37 76359.33 84843.70 0 0 20 2338.33 21045.07 23383.40 9197.85
+@ins_accident_work view=314 page=294 rview=315 rpage=295 split=subsidy_local
+img: all
+cols: policies insured contrib_local contrib_regional contrib_central subsidy_local subsidy_regional claims indemn_local indemn_regional indemn_central rebates
+1933 a | 120 0 3539.90 32330.52 108836.79 0 0 0 1436.88 12932.04 13368.93 0
+1933 b | 179 0 3299.74 29697.66 98992.21! 0 0 128 1552.35 13971.42 15523.78 0
+1934 a | 403 0 7707.68 30830.71 118448.84 0 0 133 1970.56 17731.19 19705.40 0
+1934 b | 181 8576081.45 3533.96 31805.70 106168.63 0 0 158 1065.28 9587.62 10652.90 0
+1935 a | 257 0 6869.66 27478.67 105762.44 0 0 0 616.43 16215.94 16823.28 0
+1935 b | 211 11119265.25 3771.29 33941.63 113288.37 0 0 206 1340.75 12066.75 13407.50 0
+
+
+# Office public de crédit agricole indigène, f310 (p. 290). Ressources au 31 décembre 1934 (lines 1926-1934; the
+# TOTAUX line also includes the 1925 line printed in sgt1929-sgt1930 but not here); Opérations de l'Office
+# (1926-1934); footnote (1) on 1934: l'Office public de crédit agricole indigène a été dissous par décret du 21 février
+# 1934 (1934 operations printed », stored 0 as printed). Every cell read on native-resolution crops of f310.
+@office_resources view=310 page=290
+img: all
+cols: endowments subsidies loans land_sales total
+1926 | 400000 100000 0 0 500000
+1927 | 2400000 1600000 0 0 4000000
+1928 | 6000000 985000 0 253584.80 7238584.80
+1929 | 0 4985000 0 215715.38 5200715.38
+1930 | 0 4985000 25000000 0 29985000
+1931 | 0 7246250 12500000 348136.33 20094386.33
+1932 | 0 4500000 956305.95 324750.45 5781056.40
+1933 | 0 6000000 0 234130.95 6234130.95
+1934 | 0 6000000 0 0 6000000
+TOTAUX | 11500000 36461250 38456305.95 1376317.91 87793873.86
+@office_operations view=310 page=290
+img: all
+cols: medium_term short_term total
+1926 | 600700 215600 816300
+1927 | 1479800 4546050 6025850
+1928 | 1664800 7626371 9291171
+1929 | 1097300 14617955 15715255
+1930 | 2584300 37304220 39888520
+1931 | 1084200 52698805 53783005
+1932 | 1316400 54740039 56056439
+1933 | 7250 48759766 48767016
+1934 | 0 0 0

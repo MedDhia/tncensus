@@ -1,0 +1,175 @@
+{
+ "commerce_trade_by_class": {
+  "rows": 96,
+  "checks": 210,
+  "failed": [
+   "sgt1922 p.258 (f282) by_class 1915: vegetal Total = import + export: cells give 91423545, printed 91463545 (difference 40000)",
+   "sgt1922 p.258 (f282) by_class 1915: manufactures Total = import + export: cells give 54008633, printed 53968433 (difference -40200)",
+   "sgt1922 p.258 (f282) by_class 1915: sum of classes, import = a) Mouvement global import: cells give 107246704, printed 107246504 (difference -200)",
+   "sgt1923 p.270 (f772) by_class 1915: vegetal Total = import + export: cells give 91423545, printed 91463545 (difference 40000)",
+   "sgt1923 p.270 (f772) by_class 1915: manufactures Total = import + export: cells give 54008633, printed 53968433 (difference -40200)",
+   "sgt1923 p.270 (f772) by_class 1915: sum of classes, import = a) Mouvement global import: cells give 107246704, printed 107246504 (difference -200)",
+   "sgt1924 p.286 (f1276) by_class 1915: vegetal Total = import + export: cells give 91423545, printed 91463545 (difference 40000)",
+   "sgt1924 p.286 (f1276) by_class 1915: manufactures Total = import + export: cells give 54008633, printed 53968433 (difference -40200)",
+   "sgt1924 p.286 (f1276) by_class 1915: sum of classes, import = a) Mouvement global import: cells give 107246704, printed 107246504 (difference -200)",
+   "sgt1924 p.287 (f1277) by_class 1924: sum of classes, import = a) Mouvement global import: cells give 929943922, printed 927943882 (difference -2000040)",
+   "sgt1924 p.287 (f1277) by_class 1924: sum of classes, export = a) Mouvement global export: cells give 582452535, printed 582353545 (difference -98990)"
+  ],
+  "overlap_compared": 144,
+  "overlap_diffs": [],
+  "flagged": [
+   "sgt1924 1915 manufactures import"
+  ],
+  "editions": [
+   "sgt1922",
+   "sgt1923",
+   "sgt1924"
+  ],
+  "value_type": "francs"
+ },
+ "commerce_trade_by_category": {
+  "rows": 768,
+  "checks": 274,
+  "failed": [
+   "sgt1922 p.262 (f286) by_category 1913: sum of categories, export = TOTAUX export: cells give 178663305, printed 178663605 (difference 300)",
+   "sgt1922 p.262 (f286) by_category 1913: categories of class manufactures, export = b) class line: cells give 12717415, printed 12717715 (difference 300)",
+   "sgt1922 p.262 (f286) by_category 1915: categories of class manufactures, import = b) class line: cells give 45087412, printed 45087612 (difference 200)",
+   "sgt1922 p.262 (f286) by_category 1916: sum of categories, export = TOTAUX export: cells give 118830946, printed 118794946 (difference -36000)",
+   "sgt1922 p.262 (f286) by_category 1916: categories of class manufactures, export = b) class line: cells give 11672288, printed 11636288 (difference -36000)",
+   "sgt1922 p.263 (f287) by_category 1918: sum of categories, import = TOTAUX import: cells give 208442588, printed 207442588 (difference -1000000)",
+   "sgt1922 p.263 (f287) by_category 1918: categories of class vegetal, import = b) class line: cells give 53569271, printed 52569271 (difference -1000000)",
+   "sgt1922 p.263 (f287) by_category 1918: sum of categories, export = TOTAUX export: cells give 129554206, printed 129548206 (difference -6000)",
+   "sgt1922 p.263 (f287) by_category 1918: categories of class manufactures, export = b) class line: cells give 17350214, printed 17344214 (difference -6000)",
+   "sgt1922 p.263 (f287) by_category 1919: sum of categories, export = TOTAUX export: cells give 202019871, printed 202028871 (difference 9000)",
+   "sgt1922 p.263 (f287) by_category 1919: categories of class vegetal, export = b) class line: cells give 122514705, printed 122523705 (difference 9000)",
+   "sgt1923 p.274 (f776) by_category 1915: categories of class manufactures, import = b) class line: cells give 45087412, printed 45087612 (difference 200)",
+   "sgt1923 p.274 (f776) by_category 1916: sum of categories, export = TOTAUX export: cells give 118830946, printed 118794946 (difference -36000)",
+   "sgt1923 p.274 (f776) by_category 1916: categories of class manufactures, export = b) class line: cells give 11672288, printed 11636288 (difference -36000)",
+   "sgt1923 p.275 (f777) by_category 1919: sum of categories, export = TOTAUX export: cells give 202019871, printed 202028871 (difference 9000)",
+   "sgt1923 p.275 (f777) by_category 1919: categories of class vegetal, export = b) class line: cells give 122514705, printed 122523705 (difference 9000)",
+   "sgt1923 p.275 (f777) by_category 1923: sum of categories, import = TOTAUX import: cells give 817457220, printed 817459220 (difference 2000)",
+   "sgt1923 p.275 (f777) by_category 1923: categories of class animal, import = b) class line: cells give 46245152, printed 46247152 (difference 2000)",
+   "sgt1924 p.290 (f1280) by_category 1915: categories of class manufactures, import = b) class line: cells give 45087412, printed 45087612 (difference 200)",
+   "sgt1924 p.290 (f1280) by_category 1916: sum of categories, export = TOTAUX export: cells give 118830946, printed 118794946 (difference -36000)",
+   "sgt1924 p.290 (f1280) by_category 1916: categories of class manufactures, export = b) class line: cells give 11672288, printed 11636288 (difference -36000)",
+   "sgt1924 p.291 (f1281) by_category 1923: sum of categories, import = TOTAUX import: cells give 817457220, printed 817459220 (difference 2000)",
+   "sgt1924 p.291 (f1281) by_category 1923: categories of class animal, import = b) class line: cells give 46245152, printed 46247152 (difference 2000)",
+   "sgt1924 p.291 (f1281) by_category 1924: sum of categories, import = TOTAUX import: cells give 927943822, printed 927943882 (difference 60)",
+   "sgt1924 p.291 (f1281) by_category 1924: categories of class manufactures, import = b) class line: cells give 604302406, printed 606302506 (difference 2000100)",
+   "sgt1924 p.291 (f1281) by_category 1924: sum of categories, export = TOTAUX export: cells give 582343545, printed 582353545 (difference 10000)",
+   "sgt1924 p.291 (f1281) by_category 1924: categories of class animal, export = b) class line: cells give 54347670, printed 54347560 (difference -110)",
+   "sgt1924 p.291 (f1281) by_category 1924: categories of class manufactures, export = b) class line: cells give 44630178, printed 44739278 (difference 109100)"
+  ],
+  "overlap_compared": 1051,
+  "overlap_diffs": [],
+  "flagged": [
+   "sgt1924 1916 pottery_glass export",
+   "sgt1922 1918 beverages import",
+   "sgt1923 1918 yarns export",
+   "sgt1923 1919 vegetal_misc export"
+  ],
+  "editions": [
+   "sgt1922",
+   "sgt1923",
+   "sgt1924"
+  ],
+  "value_type": "francs",
+  "illegible_printings_not_compared": 101
+ },
+ "commerce_trade_by_origin_group": {
+  "rows": 192,
+  "checks": 406,
+  "failed": [
+   "sgt1922 p.264 (f288) by_origin_group 1915.E: classes, import = Récapitulation: cells give 45614812, printed 45614612 (difference -200)",
+   "sgt1922 p.265 (f289) by_origin_group 1918.F: classes, import = Récapitulation: cells give 74609140, printed 75609140 (difference 1000000)",
+   "sgt1922 p.265 (f289) by_origin_group 1918.E: classes, import = Récapitulation: cells give 131560448, printed 131833448 (difference 273000)",
+   "sgt1922 p.265 (f289) by_origin_group 1918: animal import, France-Algérie + Étranger = b) class line: cells give 7033067, printed 8036067 (difference 1003000)",
+   "sgt1922 p.265 (f289) by_origin_group 1918: mineral import, France-Algérie + Étranger = b) class line: cells give 34285833, printed 34285831 (difference -2)",
+   "sgt1922 p.265 (f289) by_origin_group 1918: manufactures import, France-Algérie + Étranger = b) class line: cells give 112281417, printed 112551419 (difference 270002)",
+   "sgt1923 p.276 (f778) by_origin_group 1915.E: classes, import = Récapitulation: cells give 45614812, printed 45614612 (difference -200)",
+   "sgt1923 p.276 (f778) by_origin_group 1918.F: classes, import = Récapitulation: cells give 74609140, printed 75609140 (difference 1000000)",
+   "sgt1923 p.276 (f778) by_origin_group 1918.E: classes, import = Récapitulation: cells give 131560448, printed 131833448 (difference 273000)",
+   "sgt1923 p.276 (f778) by_origin_group 1918.E: Récapitulation import + export = Total: cells give 171239679, printed 171239697 (difference 18)",
+   "sgt1923 p.276 (f778) by_origin_group 1918: animal import, France-Algérie + Étranger = b) class line: cells give 7033067, printed 8036067 (difference 1003000)",
+   "sgt1923 p.276 (f778) by_origin_group 1918: mineral import, France-Algérie + Étranger = b) class line: cells give 34285833, printed 34285831 (difference -2)",
+   "sgt1923 p.276 (f778) by_origin_group 1918: manufactures import, France-Algérie + Étranger = b) class line: cells give 112281417, printed 112551419 (difference 270002)",
+   "sgt1923 p.277 (f779) by_origin_group 1920.F: classes, import = Récapitulation: cells give 329178447, printed 328746447 (difference -432000)",
+   "sgt1923 p.277 (f779) by_origin_group 1923.F: classes, import = Récapitulation: cells give 572476490, printed 578476490 (difference 6000000)",
+   "sgt1923 p.277 (f779) by_origin_group 1923.E: classes, import = Récapitulation: cells give 238982820, printed 238982730 (difference -90)",
+   "sgt1923 p.277 (f779) by_origin_group 1920: manufactures import, France-Algérie + Étranger = b) class line: cells give 401492263, printed 401060263 (difference -432000)",
+   "sgt1923 p.277 (f779) by_origin_group 1923: manufactures import, France-Algérie + Étranger = b) class line: cells give 547637534, printed 553637444 (difference 5999910)",
+   "sgt1924 p.292 (f1282) by_origin_group 1915.E: classes, import = Récapitulation: cells give 45614812, printed 45614612 (difference -200)",
+   "sgt1924 p.292 (f1282) by_origin_group 1918.F: classes, import = Récapitulation: cells give 74609140, printed 75609140 (difference 1000000)",
+   "sgt1924 p.292 (f1282) by_origin_group 1918.E: classes, import = Récapitulation: cells give 131560448, printed 131833448 (difference 273000)",
+   "sgt1924 p.292 (f1282) by_origin_group 1918.E: Récapitulation import + export = Total: cells give 171239679, printed 171239697 (difference 18)",
+   "sgt1924 p.292 (f1282) by_origin_group 1918: animal import, France-Algérie + Étranger = b) class line: cells give 7033067, printed 8036067 (difference 1003000)",
+   "sgt1924 p.292 (f1282) by_origin_group 1918: mineral import, France-Algérie + Étranger = b) class line: cells give 34285833, printed 34285831 (difference -2)",
+   "sgt1924 p.292 (f1282) by_origin_group 1918: manufactures import, France-Algérie + Étranger = b) class line: cells give 112281417, printed 112551419 (difference 270002)",
+   "sgt1924 p.293 (f1283) by_origin_group 1920.F: classes, import = Récapitulation: cells give 329178447, printed 328746447 (difference -432000)",
+   "sgt1924 p.293 (f1283) by_origin_group 1923.F: classes, import = Récapitulation: cells give 572476490, printed 578476490 (difference 6000000)",
+   "sgt1924 p.293 (f1283) by_origin_group 1923.E: classes, import = Récapitulation: cells give 238982820, printed 238982730 (difference -90)",
+   "sgt1924 p.293 (f1283) by_origin_group 1924.F: classes, import = Récapitulation: cells give 676369197, printed 676369187 (difference -10)",
+   "sgt1924 p.293 (f1283) by_origin_group 1924.F: Récapitulation import + export = Total: cells give 970410547, printed 970408547 (difference -2000)",
+   "sgt1924 p.293 (f1283) by_origin_group 1924.E: classes, import = Récapitulation: cells give 251774605, printed 251574695 (difference -199910)",
+   "sgt1924 p.293 (f1283) by_origin_group 1924.E: classes, export = Récapitulation: cells give 288312181, printed 288312185 (difference 4)",
+   "sgt1924 p.293 (f1283) by_origin_group 1920: manufactures import, France-Algérie + Étranger = b) class line: cells give 401492263, printed 401060263 (difference -432000)",
+   "sgt1924 p.293 (f1283) by_origin_group 1923: manufactures import, France-Algérie + Étranger = b) class line: cells give 547637534, printed 553637444 (difference 5999910)",
+   "sgt1924 p.293 (f1283) by_origin_group 1924: animal import, France-Algérie + Étranger = b) class line: cells give 39641922, printed 39541922 (difference -100000)",
+   "sgt1924 p.293 (f1283) by_origin_group 1924: animal export, France-Algérie + Étranger = b) class line: cells give 54347670, printed 54347560 (difference -110)",
+   "sgt1924 p.293 (f1283) by_origin_group 1924: vegetal import, France-Algérie + Étranger = b) class line: cells give 190896469, printed 190796469 (difference -100000)",
+   "sgt1924 p.293 (f1283) by_origin_group 1924: vegetal export, France-Algérie + Étranger = b) class line: cells give 225896478, printed 225896482 (difference 4)",
+   "sgt1924 p.293 (f1283) by_origin_group 1924: manufactures import, France-Algérie + Étranger = b) class line: cells give 604302386, printed 606302506 (difference 2000120)",
+   "sgt1924 p.293 (f1283) by_origin_group 1924: manufactures export, France-Algérie + Étranger = b) class line: cells give 44640178, printed 44739278 (difference 99100)"
+  ],
+  "overlap_compared": 279,
+  "overlap_diffs": [
+   [
+    [
+     1920,
+     "manufactures",
+     "france_algeria",
+     "import"
+    ],
+    "sgt1922",
+    "241075431",
+    "sgt1924",
+    "241507431"
+   ]
+  ],
+  "flagged": [
+   "sgt1924 1915 manufactures foreign_colonies import",
+   "sgt1924 1918 animal france_algeria import",
+   "sgt1924 1918 manufactures foreign_colonies import",
+   "sgt1924 1920 manufactures france_algeria import",
+   "sgt1924 1923 manufactures foreign_colonies import",
+   "sgt1924 1923 manufactures france_algeria import"
+  ],
+  "editions": [
+   "sgt1922",
+   "sgt1923",
+   "sgt1924"
+  ],
+  "value_type": "francs",
+  "illegible_printings_not_compared": 9
+ },
+ "_chapter_views": {
+  "sgt1922": [
+   281,
+   436
+  ],
+  "sgt1923": [
+   771,
+   926
+  ],
+  "sgt1924": [
+   1275,
+   1430
+  ]
+ },
+ "_editions_done": [
+  "sgt1922",
+  "sgt1923",
+  "sgt1924"
+ ],
+ "_remaining": "see commerce_survey.md, section 'Work plan and status'"
+}

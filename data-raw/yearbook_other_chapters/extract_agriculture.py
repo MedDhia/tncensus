@@ -102,6 +102,23 @@ FLAGS = {
     ("sgt1927", "olive", "4me Région / Sousse / Sousse / Mahdia", "taxed"): "total_mismatch",
     ("sgt1927", "olive", "4me Région / Sousse / Sousse / Sousse", "young"): "total_mismatch",
     ("sgt1927", "olive", "5me Région / Sfax / Tozeur / Djerid", "taxed"): "total_mismatch",
+    ("sgt1936", "dates:common", "Gafsa", "a16"): "total_mismatch",
+    ("sgt1939", "dates:degla", "Gafsa", "a4"): "total_mismatch",
+    ("sgt1939", "dates:degla", "Nefzaoua", "a9"): "total_mismatch",
+    ("sgt1939", "dates:common", "Gabès", "a19"): "total_mismatch",
+    ("sgt1927", "animals:european", "1re Région / Bizerte / Béja / Béja", "horses"): "total_mismatch",
+    ("sgt1927", "animals:total", "Territoires militaires du Sud /  /  / Ouerghemma", "horses"): "total_mismatch",
+    ("sgt1928", "animals:european", "2me Région / Tunis / Grombalia / Cap-Bon > Soliman", "sheep"): "total_mismatch",
+    ("sgt1928", "animals:total", "1re Région / Bizerte / Béja / Béja", "sheep"): "total_mismatch",
+    ("sgt1928", "animals:total", "4me Région / Sousse / Thala / Fraichiches", "mules"): "total_mismatch",
+    ("sgt1929", "animals:indigenous", "2me Région / Tunis / Grombalia / Cap-Bon > Nabeul", "cattle"): "total_mismatch",
+    ("sgt1929", "animals:indigenous", "5me Région / Sfax / Gabès / L'Aradh", "goats"): "total_mismatch",
+    ("sgt1929", "animals:total", "3me Région / Le Kef / Mactar / Oulad Ayar", "camels"): "total_mismatch",
+    ("sgt1929", "animals:total", "2me Région / Tunis / Tunis / Banlieue", "mules"): "total_mismatch",
+    ("sgt1929", "animals:total", "3me Région / Le Kef / Téboursouk / Téboursouk", "mules"): "total_mismatch",
+    ("sgt1929", "animals:total", "Territoires militaires du Sud /  /  / Ouerghemma", "goats"): "total_mismatch",
+    ("sgt1930", "animals:total", "5me Région / Sfax / Sfax / Djebéniana", "camels"): "total_mismatch",
+    ("sgt1930", "animals:total", "Territoires militaires du Sud /  /  / Tatahouine", "mules"): "total_mismatch",
 }
 
 
@@ -685,6 +702,117 @@ def chk_olive(sec):
         CHK.eq(out, f"{where(sec)} {c}: lines vs TOTAUX", ssum(val(r, c) or Decimal(0) for r in rows), tot[c].value)
 
 
+# ----------------------------------------------------------------- dattiers by caïdat (canoun des dattiers)
+
+DATE_KIND = {"degla": ("deglet_nour", "Dattiers degla"), "common": ("common", "Dattiers communs")}
+DATE_AGE = {"m": ("male", "Mâles"), "a0": ("under_1", "Moins d'un an"),
+            **{f"a{k}": (f"age_{k}", f"{k} an" + ("s" if k > 1 else "")) for k in range(1, 20)},
+            "taxed": ("taxable_20", "Imposables 20 ans")}
+# hidden digit in the binding gutter, solved from the line's TOTAL des jeunes (column TOTAUX agrees)
+DATES_DERIVED = {("sgt1939", "common", "Tozeur", "a9"): Decimal(23241)}
+
+
+def cells_dates(sec):
+    out = []
+    k, kfr = DATE_KIND[sec["crop"]]
+    for r in sec["rows"]:
+        if r["label"] == "TOTAUX":
+            continue
+        for c in sec["cols"]:
+            if c in ("young", "total"):
+                continue
+            cell = r["cells"][c]
+            v, fl = cell.value, flag_of(sec, r["label"], c, cell)
+            if (sec["ed"], sec["crop"], r["label"], c) in DATES_DERIVED:
+                v, fl = DATES_DERIVED[(sec["ed"], sec["crop"], r["label"], c)], "derived_from_totals"
+            a, afr = DATE_AGE[c]
+            out.append(dict(base(sec, int(sec["ed"][3:])), region="", chef_lieu="", controle_civil="",
+                            caidat=r["label"], date_type=k, date_type_fr=kfr, age_class=a, age_class_fr=afr,
+                            measure="trees", measure_fr="Nombre d'arbres", unit="trees", value=v, flag=fl))
+    return out
+
+
+def chk_dates(sec):
+    out = "agriculture_dates"
+    val = lambda r, c: DATES_DERIVED.get((sec["ed"], sec["crop"], r["label"], c), r["cells"][c].value)
+    ages = [f"a{k}" for k in range(20)]
+    rows = [r for r in sec["rows"] if r["label"] != "TOTAUX"]
+    tot = row(sec, "TOTAUX")
+    for c in sec["cols"]:
+        vals = [val(r, c) for r in rows]
+        if any(x is None for x in vals):
+            continue
+        CHK.eq(out, f"{where(sec)} {sec['crop']} {c}: lines vs TOTAUX", ssum(vals), tot[c].value)
+    for r in sec["rows"]:
+        vals = [val(r, c) for c in ages]
+        if all(x is not None for x in vals):
+            CHK.eq(out, f"{where(sec)} {sec['crop']} {r['label']}: ages vs TOTAL des jeunes", ssum(vals),
+                   r["cells"]["young"].value)
+        CHK.eq(out, f"{where(sec)} {sec['crop']} {r['label']}: mâles + jeunes + imposables vs TOTAL",
+               ssum([r["cells"]["m"].value, r["cells"]["young"].value, r["cells"]["taxed"].value]),
+               r["cells"]["total"].value)
+
+
+# ----------------------------------------------------------------- animaux by contrôle civil / caïdat
+
+ANIMAL = {"horses": ("horses", "Chevaux"), "camels": ("camels", "Chameaux"), "cattle": ("cattle", "Bovins"),
+          "mules": ("mules", "Mulets"), "pigs": ("pigs", "Porcs"), "donkeys": ("donkeys", "Anes"),
+          "goats": ("goats", "Chèvres"), "sheep": ("sheep", "Moutons")}
+OWNER = {"european": ("european", "Possédés par des européens"),
+         "indigenous": ("indigenous", "Possédés par des indigènes"),
+         "total": ("total", "Nombre total (européens et indigènes / tunisiens)")}
+# blotted digit solved from européens + indigènes (sgt1928, sgt1929 total porcs Madjeurs "1?")
+ANIMALS_DERIVED = {("sgt1928", "total", "4me Région / Sousse / Thala / Madjeurs", "pigs"): Decimal(16),
+                   ("sgt1929", "total", "4me Région / Sousse / Thala / Madjeurs", "pigs"): Decimal(16)}
+
+
+def cells_animals(sec):
+    out = []
+    o, ofr = OWNER[sec["owner"]]
+    for r in sec["rows"]:
+        if r["label"] == "TOTAUX":
+            continue
+        for c in sec["cols"]:
+            cell = r["cells"][c]
+            v, fl = cell.value, FLAGS.get((sec["ed"], "animals:" + sec["owner"], r["label"], c), cell.flag)
+            k = (sec["ed"], sec["owner"], r["label"], c)
+            if k in ANIMALS_DERIVED:
+                v, fl = ANIMALS_DERIVED[k], "derived_from_totals"
+            a, afr = ANIMAL[c]
+            out.append(dict(base(sec, int(sec["ed"][3:])), **olive_geo(sec, r["label"]), owner=o, owner_fr=ofr,
+                            animal=a, animal_fr=afr, measure="head", measure_fr="Nombre d'animaux",
+                            unit="head", value=v, flag=fl))
+    return out
+
+
+def chk_animals_all(secs):
+    out = "agriculture_animals"
+    for sec in secs:
+        val = lambda r, c: ANIMALS_DERIVED.get((sec["ed"], sec["owner"], r["label"], c), r["cells"][c].value)
+        rows = [r for r in sec["rows"] if r["label"] != "TOTAUX"]
+        tot = row(sec, "TOTAUX")
+        for c in sec["cols"]:
+            vals = [val(r, c) for r in rows]
+            if any(x is None for x in vals):
+                continue
+            CHK.eq(out, f"{where(sec)} {sec['owner']} {c}: lines vs TOTAUX", ssum(vals), tot[c].value)
+    by = defaultdict(dict)
+    for sec in secs:
+        by[sec["ed"]][sec["owner"]] = sec
+    for ed, d in by.items():
+        if not {"european", "indigenous", "total"} <= set(d):
+            continue
+        e, i, t = d["european"], d["indigenous"], d["total"]
+        for re_, ri, rt in zip(e["rows"], i["rows"], t["rows"]):
+            assert re_["label"] == ri["label"] == rt["label"], (ed, re_["label"])
+            for c in t["cols"]:
+                tv = ANIMALS_DERIVED.get((ed, "total", rt["label"], c), rt["cells"][c].value)
+                if tv is None:
+                    continue
+                CHK.eq(out, f"{where(t)} {rt['label']} {c}: européens + indigènes vs total",
+                       ssum([re_["cells"][c].value, ri["cells"][c].value]), tv)
+
+
 # ----------------------------------------------------------------- tables
 
 DOC = {
@@ -1013,6 +1141,84 @@ TABLES["agriculture_olive"] = dict(
               "sgt1935 recur identically in sgt1936.")
 
 
+TABLES["agriculture_dates"] = dict(
+    secs=["dates"], cells=cells_dates, key=["census", "caidat", "date_type", "age_class"], rule5=True,
+    dims=["region", "chef_lieu", "controle_civil", "caidat", "date_type", "date_type_fr", "age_class",
+          "age_class_fr", "measure", "measure_fr", "unit"],
+    doc=dict(year="edition year (count at 1 November of that year, as printed)",
+             region="empty (not printed)", chef_lieu="empty (not printed)", controle_civil="empty (not printed)",
+             caidat="caïdat as printed (two bracketed groups of three, without a group name)",
+             date_type="`deglet_nour` (dattiers degla) or `common` (dattiers communs)",
+             date_type_fr="printed sub-heading",
+             age_class="`male` (mâles), `under_1` (moins d'un an), `age_1`..`age_19` (young trees by age), "
+                       "`taxable_20` (imposables, 20 ans)",
+             age_class_fr="printed column heading", measure="`trees`", measure_fr="printed heading",
+             unit="`trees`", flag="empty, or `derived_from_totals`, `total_mismatch`"),
+    title_fr="Canoun des dattiers. Relevé par caïdat du nombre d'arbres d'après leur âge au 1er novembre",
+    title_en="Date palms (canoun) by caïdat and age, degla and common, at 1 November",
+    unit="Units: trees (`unit`); value_type: count.",
+    paras=["Printed in sgt1936 (at 1 November 1936, f111|f112) and sgt1939 (at 1 November 1939, f110|f111), for "
+           "the six caïdats of the south (Gabès, Gafsa, Tozeur; Nefzaoua, Ouerghemma, Matmata). The columns TOTAL "
+           "des jeunes (col. 23) and TOTAL des colonnes 2, 23 et 24 (col. 25) and the TOTAUX lines are checks "
+           "only.",
+           "sgt1939: the 9 ans and 10 ans columns run into the binding gutter; they were read on zoomed crops of "
+           "both views. Communs Tozeur 9 ans \"23.24?\" (last digit hidden) = 23.241 from its TOTAL des jeunes "
+           "(`derived_from_totals`; the column TOTAUX 32.678 agrees). The age columns move by three years between "
+           "the two editions (e.g. 1936 11 ans = 1939 14 ans), as expected."],
+    fail_note="Flagged `total_mismatch` where one cell explains both its line (TOTAL des jeunes) and its column "
+              "(TOTAUX) check: sgt1936 communs Gafsa 16 ans 5.582 (both checks 3.000 over: 2.582); sgt1939 degla "
+              "Gafsa 4 ans 8 (both 20 short: 28); sgt1939 degla Nefzaoua 9 ans 465 (both 10 short: 475; printed "
+              "at the gutter); sgt1939 communs Gabès 19 ans 100.356 (both 180 short: 100.536). sgt1939 degla Tozeur "
+              "TOTAL 196.261 is a misprinted line total (0 + 113.496 + 83.465 = 196.961; the TOTAUX 216.693 "
+              "agrees with 196.961).")
+
+
+TABLES["agriculture_animals"] = dict(
+    secs=["animals"], cells=cells_animals,
+    key=["census", "region", "controle_civil", "caidat", "owner", "animal"], rule5=True,
+    dims=["region", "chef_lieu", "controle_civil", "caidat", "owner", "owner_fr", "animal", "animal_fr", "measure",
+          "measure_fr", "unit"],
+    doc=dict(year="edition year (sgt1936 and sgt1939 print \"rôle de 1936\" / \"rôle de 1939\"; no date printed "
+                  "in sgt1927-sgt1935)",
+             region="région as printed, or \"Territoires militaires du Sud\"",
+             chef_lieu="chef-lieu de région as printed; empty for the Territoires militaires",
+             controle_civil="contrôle civil as printed; empty for the Territoires militaires",
+             caidat="caïdat as printed; \"Cap-Bon > Nabeul\" = caïdat printed under the Cap-Bon bracket",
+             owner="`european`, `indigenous` (sgt1927-sgt1930 sub-tables a and b) or `total` (sub-table c; the only "
+                   "table in sgt1935-sgt1939)",
+             owner_fr="printed sub-table title", animal="species code (English)", animal_fr="printed column heading",
+             measure="`head`", measure_fr="printed heading", unit="`head`",
+             flag="empty, or `illegible`, `derived_from_totals`, `total_mismatch`"),
+    title_fr="Animaux. Nombre d'animaux de chaque espèce (possédés par des européens, des indigènes ; total), par "
+             "contrôle civil et caïdat",
+    title_en="Livestock by species, contrôle civil and caïdat (European-owned, indigenous-owned, total)",
+    unit="Units: head of livestock (`unit`); value_type: count.",
+    paras=["sgt1927-sgt1930 print three sub-tables (a) possédés par des européens, b) par des indigènes, c) total), "
+           "sgt1935 only the total (européens et tunisiens), sgt1936 and sgt1939 the total of the animaux jeunes et "
+           "imposables of the rôle de 1936 / rôle de 1939 (printed). Species: chevaux, chameaux, bovins, mulets, "
+           "porcs, ânes, chèvres, moutons. Geography as in `agriculture_olive` (région / chef-lieu / contrôle civil "
+           "/ caïdat); Tunis-Ville is printed from sgt1935; sgt1935 prints Médenine-Tatahouine as one caïdat; "
+           "sgt1939 adds Djemmal and drops La Skhira. The TOTAUX lines are checks only.",
+           "Rule 5: each edition kept. Some sgt1928 and sgt1929 cells are identical (the European sub-table is "
+           "almost a reprint of the previous year), as printed."],
+    fail_note="Flagged `total_mismatch` where one cell explains both its column (TOTAUX) and its row (européens "
+              "+ indigènes = total) check: sgt1927 européens chevaux Béja (634, both 50 short), total chevaux "
+              "Ouerghemma (310 for 910); sgt1928 européens moutons Soliman (665, both 6 over), total moutons Béja "
+              "(14.518 for 74.521), total mulets Fraichiches (985 for 685); sgt1929 indigènes bovins Nabeul (36.065, "
+              "both 800 short), indigènes chèvres L'Aradh (29.106, both 600 short), total chameaux Oulad Ayar (1.380 "
+              "for 1.580), total mulets Banlieue (5.395 for 5.305) and Téboursouk (4.997 for 1.997), total chèvres "
+              "Ouerghemma (37.900 for 73.900); sgt1930 total chameaux Djebéniana (9.084 for 8.084), total mulets "
+              "Tatahouine (50 for 60). Not identifiable (cell kept unflagged): sgt1927 total chevaux TOTAUX includes "
+              "the Béja difference; sgt1928 differences of 1-6 units (Bizerte and Kairouan chameaux, Medjez-el-Bab "
+              "moutons, total moutons TOTAUX 3 over after Béja); sgt1929 chevaux Tatahouine / Matmata (1 moved "
+              "between the two lines); sgt1930 Sfax / La Skhira chèvres (570 moved between the two lines, column "
+              "total right), ânes TOTAUX (20 over); sgt1935 chevaux TOTAUX 3 short; sgt1936 moutons TOTAUX 3.532.388 "
+              "for the lines' 3.611.388 (no line identifiable; every cell re-read); sgt1939 chameaux TOTAUX 10 "
+              "over. Checks with an illegible cell are skipped (sgt1935 chèvres Téboursouk \"27.31\" and Kairouan "
+              "\"46.92?\": the column TOTAUX implies 74.357 for the two; sgt1939 chevaux Nabeul \"3.63?\", "
+              "TOTAUX implies 3.638).")
+
+
 SURVEY = {
     "sgt1922": "f231 chapter XI title (Agriculture); f232 blank; f233 Superficie a)-d) [transcribed]; f234|f235 "
                "Productions végétales, cultures diverses, superficie et production (1913-1922) a) céréales "
@@ -1090,7 +1296,7 @@ SURVEY = {
                "(1933-1935) [transcribed]; f143 b), c) [transcribed]; f144 d) [transcribed]; f145 principales "
                "cultures a) rendement par zone (1933-1935); f146|f147 b) répartition européens / indigènes; "
                "f148|f149 d) oliviers par régions; f150|f151 animaux, nombre total (européens et tunisiens) by "
-               "contrôle; f152 blank?; f153 forêts a) superficie et modifications du domaine soumis au régime "
+               "contrôle; f152 blank (confirmed on the image); f153 forêts a) superficie et modifications du domaine soumis au régime "
                "forestier; f154 blank. f155 = chapter XII Institutions d'enseignement et de recherches (with the "
                "school, the laboratories and the meteorology: research_ chapter).",
     "sgt1936": "f100 chapter X title; f101 blank; f102 Superficie [transcribed]; f103-f105 cultures diverses "
@@ -1104,7 +1310,7 @@ SURVEY = {
     "sgt1939": "f99 chapter X title; f100 Superficie [transcribed]; f101 céréales (1937-1939) [transcribed]; f102 "
                "autres plantes alimentaires, plantes industrielles [transcribed]; f103|f104 cultures arbustives et "
                "fruitières [transcribed]; f105 rendement par zone; f106|f107 répartition européens / indigènes; "
-               "f108|f109 oliviers par régions; f110|f111 dattiers par caïdat; f112|f113 animaux (rôle de 1939?); "
+               "f108|f109 oliviers par régions; f110|f111 dattiers par caïdat; f112|f113 animaux jeunes et imposables (rôle de 1939, printed) by contrôle; "
                "f114 forêts, consistance du domaine soumis au régime forestier. f115 = chapter XI Institutions "
                "d'enseignement et de recherches.",
 }
@@ -1112,11 +1318,11 @@ NOT_DONE = ("Transcribed (every printing, every cell read on native-resolution c
             "Cultures diverses (agriculture_crops), cereal yields by zone (agriculture_cereal_zones), principales "
             "cultures by yield class sgt1922-sgt1925 (agriculture_yield_classes), répartition européens / indigènes "
             "sgt1926-sgt1939 (agriculture_cereal_farmers), vigne by contrôle and nationality sgt1922-sgt1925 "
-            "(agriculture_vine), oliviers by caïdat / région, all editions (agriculture_olive). NOT YET TRANSCRIBED "
-            "(views in the survey above): dattiers by caïdat (sgt1936 f111-112, sgt1939 f110-111); animaux by "
-            "contrôle (sgt1927-sgt1939); forêts a) and b) (all editions; sgt1935 f152 to check). Météorologie, école "
-            "coloniale d'agriculture, service botanique and laboratoires de chimie belong to the research_ "
-            "extraction.")
+            "(agriculture_vine), oliviers by caïdat / région, all editions (agriculture_olive), dattiers by caïdat "
+            "and age sgt1936 and sgt1939 (agriculture_dates), animaux by contrôle and caïdat sgt1927-sgt1939 "
+            "(agriculture_animals). NOT YET TRANSCRIBED (views in the survey above): forêts a) and b) (all "
+            "editions; sgt1935 f152 confirmed blank). Météorologie, école coloniale d'agriculture, service botanique and "
+            "laboratoires de chimie belong to the research_ extraction.")
 
 
 # Latest printing misprinted: keep the cell of an earlier edition (flag reprint_corrected). key -> edition kept.
@@ -1166,9 +1372,11 @@ def write_survey():
     (OUT / f"{PREFIX}_survey.md").write_text("\n".join(L) + "\n")
 
 
-CHECKERS = {"land": chk_land, "crops": chk_crops, "zones": chk_zones, "vine": chk_vine, "olive": chk_olive}
+CHECKERS = {"land": chk_land, "crops": chk_crops, "zones": chk_zones, "vine": chk_vine, "olive": chk_olive,
+            "dates": chk_dates}
 ALL_CHECKERS = {"agriculture_crops": chk_crops_all, "agriculture_cereal_zones": chk_zones_all,
-                "agriculture_yield_classes": chk_yc_all, "agriculture_cereal_farmers": chk_split_all}
+                "agriculture_yield_classes": chk_yc_all, "agriculture_cereal_farmers": chk_split_all,
+                "agriculture_animals": chk_animals_all}
 
 
 def build(write=True):

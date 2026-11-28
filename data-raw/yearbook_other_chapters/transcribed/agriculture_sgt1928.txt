@@ -294,3 +294,126 @@ Territoires Militaires du Sud /  /  / Nefzaoua | 195 23615 9672 33482
 Territoires Militaires du Sud /  /  / Ouerghemma | 7934 407157 149145 564236
 Territoires Militaires du Sud /  /  / Tataouine | 1968 32781 39947 74696
 TOTAUX | 766276 5342866 10208771 16317983
+
+# Animaux a)-c) européens, indigènes, total (f798-f803). Total porcs Madjeurs printed with a blot over the last
+# digit ('1?'; stored illegible; 16 from européens 16 + indigènes 0, see ANIMALS_DERIVED).
+@animals view=798 page=246 geo=4 owner=european
+img: all
+cols: horses camels cattle mules pigs donkeys goats sheep
+1re Région / Bizerte / Béja / Béja | 665 2 5553 626 1366 153 1016 7759
+1re Région / Bizerte / Bizerte / Bizerte | 645 19 2311 550 789 106 577 9212
+1re Région / Bizerte / Bizerte / Mateur | 853 4 5744 789 1638 234 1581 4526
+1re Région / Bizerte / Tabarka / Aïn-Draham | 116 0 842 50 4111 78 498 214
+1re Région / Bizerte / Souk-el-Arba / Souk-el-Arba | 117 0 1122 109 555 64 1005 1131
+1re Région / Bizerte / Souk-el-Arba / Souk-el-Khemis | 172 1 1288 378 611 27 100 1806
+2me Région / Tunis / Tunis / Banlieue | 3690 8 11110 3315 1839 470 3062 6730
+2me Région / Tunis / Zaghouan / Zaghouan | 797 6 6846 1113 95 178 4510 4030
+2me Région / Tunis / Grombalia / Cap-Bon > Nabeul | 185 5 1161 130 51 140 479 665
+2me Région / Tunis / Grombalia / Cap-Bon > Soliman | 506 12 2699 852 42 91 1471 2553
+3me Région / Le Kef / Téboursouk / Téboursouk | 193 0 2343 429 550 108 1942 1842
+3me Région / Le Kef / Le Kef / Le Kef | 286 0 1680 212 44 174 2093 3779
+3me Région / Le Kef / Le Kef / Tadjerouine | 114 17 367 82 108 59 370 2758
+3me Région / Le Kef / Mactar / Oulad Ayar | 43 1 218 39 70 12 382 992
+3me Région / Le Kef / Mactar / Oulad Aoun | 16 0 136 38 23 22 25 107
+3me Région / Le Kef / Medjez-el-Bab / Medjez-el-Bab | 869 0 8207 1507 364 204 3469 6247
+4me Région / Sousse / Sousse / Souassi | 3 1 0 0 0 0 0 0
+4me Région / Sousse / Sousse / Mahdia | 11 2 34 19 0 17 91 451
+4me Région / Sousse / Sousse / Monastir | 22 3 48 46 0 6 3 225
+4me Région / Sousse / Sousse / Sousse | 247 4 785 236 54 47 735 3440
+4me Région / Sousse / Kairouan / Kairouan | 94 32 1002 76 48 11 325 8259
+4me Région / Sousse / Kairouan / Djelass | 99 27 575 63 157 48 3521 8669
+4me Région / Sousse / Thala / Fraichiches | 12 0 18 5 5 2 57 318
+4me Région / Sousse / Thala / Madjeurs | 75 21 349 33 16 29 522 6666
+5me Région / Sfax / Sfax / Sfax | 176 46 132 382 136 42 1011 10782
+5me Région / Sfax / Sfax / La Skhira | 74 9 18 165 4 23 1141 3593
+5me Région / Sfax / Sfax / Djebéniana | 57 5 0 48 0 1 0 0
+5me Région / Sfax / Gabès / L'Aradh | 24 5 4 24 101 13 272 991
+5me Région / Sfax / Gafsa / Hammama | 106 8 7 34 2 7 72 2474
+5me Région / Sfax / Gafsa / Gafsa | 85 1 11 225 0 46 184 657
+5me Région / Sfax / Tozeur / Djerid | 8 1 13 3 0 25 13 1348
+5me Région / Sfax / Djerba / Djerba | 0 0 0 0 0 0 0 0
+Territoires militaires du Sud /  /  / Nefzaoua | 3 0 0 2 0 5 1 521
+Territoires militaires du Sud /  /  / Ouerghemma | 46 70 7 26 0 12 129 818
+Territoires militaires du Sud /  /  / Tatahouine | 0 0 0 0 0 0 0 0
+Territoires militaires du Sud /  /  / Matmata | 0 0 0 0 0 0 0 0
+TOTAUX | 10409 310 54630 11606 12779 2454 30657 103557
+@animals view=800 page=248 geo=4 owner=indigenous
+img: all
+cols: horses camels cattle mules pigs donkeys goats sheep
+1re Région / Bizerte / Béja / Béja | 5894 79 38009 864 0 3948 30821 66762
+1re Région / Bizerte / Bizerte / Bizerte | 2898 319 20594 1006 0 3758 15035 30524
+1re Région / Bizerte / Bizerte / Mateur | 6238 529 39006 755 4 2776 46008 63567
+1re Région / Bizerte / Tabarka / Aïn-Draham | 2037 5 23190 432 0 1592 41345 20817
+1re Région / Bizerte / Souk-el-Arba / Souk-el-Arba | 4329 434 31475 1613 0 4787 50879 43879
+1re Région / Bizerte / Souk-el-Arba / Souk-el-Khemis | 2235 8 14043 498 0 2558 11059 24930
+2me Région / Tunis / Tunis / Banlieue | 4856 427 25482 2056 1 5188 27218 50365
+2me Région / Tunis / Zaghouan / Zaghouan | 3153 1784 17206 896 0 3956 51052 35805
+2me Région / Tunis / Grombalia / Cap-Bon > Nabeul | 3427 3631 37023 1026 0 9845 77936 60387
+2me Région / Tunis / Grombalia / Cap-Bon > Soliman | 1274 577 15974 506 0 3342 24944 12254
+3me Région / Le Kef / Téboursouk / Téboursouk | 2764 244 18186 1646 0 3999 41155 34986
+3me Région / Le Kef / Le Kef / Le Kef | 5686 472 23120 1703 0 6568 61239 77701
+3me Région / Le Kef / Le Kef / Tadjerouine | 4681 547 10831 1282 0 5987 43989 127248
+3me Région / Le Kef / Mactar / Oulad Ayar | 1949 1901 10238 402 1 4188 47429 64401
+3me Région / Le Kef / Mactar / Oulad Aoun | 2790 401 13847 1214 0 4176 36791 55800
+3me Région / Le Kef / Medjez-el-Bab / Medjez-el-Bab | 4021 400 23099 1729 0 6615 73991 38935
+4me Région / Sousse / Sousse / Souassi | 1231 9014 5229 80 0 6034 11738 73522
+4me Région / Sousse / Sousse / Mahdia | 921 7323 4762 770 0 5481 2048 57008
+4me Région / Sousse / Sousse / Monastir | 864 5834 5507 1547 0 5619 935 45551
+4me Région / Sousse / Sousse / Sousse | 2293 9735 10949 3174 0 7598 14231 104737
+4me Région / Sousse / Kairouan / Kairouan | 2090 7234 9883 610 0 3771 33741 77326
+4me Région / Sousse / Kairouan / Djelass | 2179 9126 11348 259 0 5277 77901 120156
+4me Région / Sousse / Thala / Fraichiches | 3061 2078 5915 680 0 4803 65327 115695
+4me Région / Sousse / Thala / Madjeurs | 1677 7160 5937 283 0 5950 113280 173530
+5me Région / Sfax / Sfax / Sfax | 816 7342 273 1805 0 4211 5797 30232
+5me Région / Sfax / Sfax / La Skhira | 398 6073 122 89 0 2359 16643 36573
+5me Région / Sfax / Sfax / Djebéniana | 1071 7920 2726 196 0 3842 2539 36942
+5me Région / Sfax / Gabès / L'Aradh | 653 4376 306 567 0 5088 20574 21130
+5me Région / Sfax / Gafsa / Hammama | 404 7432 1881 12 0 3470 46271 112422
+5me Région / Sfax / Gafsa / Gafsa | 201 8089 819 70 0 2409 42153 54358
+5me Région / Sfax / Tozeur / Djerid | 78 1385 319 101 0 2351 9071 6733
+5me Région / Sfax / Djerba / Djerba | 68 3139 496 277 0 2594 1812 10891
+Territoires militaires du Sud /  /  / Nefzaoua | 145 4605 64 9 0 1404 36136 24765
+Territoires militaires du Sud /  /  / Ouerghemma | 909 17831 524 31 0 5942 75919 87650
+Territoires militaires du Sud /  /  / Tatahouine | 449 11087 221 51 0 4177 82464 56604
+Territoires militaires du Sud /  /  / Matmata | 41 2917 886 398 0 1313 20003 15077
+TOTAUX | 77781 151458 429490 28637 6 156976 1359474 2069263
+@animals view=802 page=250 geo=4 owner=total
+img: all
+cols: horses camels cattle mules pigs donkeys goats sheep
+1re Région / Bizerte / Béja / Béja | 6559 81 43562 1490 1366 4101 31837 14518
+1re Région / Bizerte / Bizerte / Bizerte | 3543 339 22905 1556 789 3864 15612 39736
+1re Région / Bizerte / Bizerte / Mateur | 7091 533 44750 1544 1642 3010 47589 68093
+1re Région / Bizerte / Tabarka / Aïn-Draham | 2153 5 24032 482 4111 1670 41843 21031
+1re Région / Bizerte / Souk-el-Arba / Souk-el-Arba | 4446 434 32597 1722 555 4851 51884 45010
+1re Région / Bizerte / Souk-el-Arba / Souk-el-Khemis | 2407 9 15331 876 611 2585 11159 26736
+2me Région / Tunis / Tunis / Banlieue | 8546 435 36592 5371 1840 5658 30280 57095
+2me Région / Tunis / Zaghouan / Zaghouan | 3950 1790 24052 2009 95 4134 55562 39835
+2me Région / Tunis / Grombalia / Cap-Bon > Nabeul | 3612 3636 38184 1156 51 9985 78415 61052
+2me Région / Tunis / Grombalia / Cap-Bon > Soliman | 1780 589 18673 1358 42 3433 26415 14801
+3me Région / Le Kef / Téboursouk / Téboursouk | 2957 244 20529 2075 550 4107 43097 36828
+3me Région / Le Kef / Le Kef / Le Kef | 5972 472 24800 1915 44 6742 63332 81480
+3me Région / Le Kef / Le Kef / Tadjerouine | 4795 564 11198 1364 108 6046 44359 130006
+3me Région / Le Kef / Mactar / Oulad Ayar | 1992 1902 10456 441 71 4200 47811 65393
+3me Région / Le Kef / Mactar / Oulad Aoun | 2806 401 13983 1252 23 4198 36816 55907
+3me Région / Le Kef / Medjez-el-Bab / Medjez-el-Bab | 4890 400 31306 3236 364 6819 77460 45179
+4me Région / Sousse / Sousse / Souassi | 1234 9015 5229 80 0 6034 11738 73522
+4me Région / Sousse / Sousse / Mahdia | 932 7325 4796 789 0 5498 2139 57459
+4me Région / Sousse / Sousse / Monastir | 886 5837 5555 1593 0 5625 938 45776
+4me Région / Sousse / Sousse / Sousse | 2540 9739 11734 3410 54 7645 14966 108177
+4me Région / Sousse / Kairouan / Kairouan | 2184 7265 10885 686 48 3782 34066 85585
+4me Région / Sousse / Kairouan / Djelass | 2278 9153 11923 322 157 5325 81422 128825
+4me Région / Sousse / Thala / Fraichiches | 3073 2078 5933 985 5 4805 65384 116013
+4me Région / Sousse / Thala / Madjeurs | 1752 7181 6286 316 ? 5979 113802 180196
+5me Région / Sfax / Sfax / Sfax | 992 7388 405 2187 136 4253 6808 41014
+5me Région / Sfax / Sfax / La Skhira | 472 6082 140 254 4 2382 17784 40166
+5me Région / Sfax / Sfax / Djebéniana | 1128 7925 2726 244 0 3843 2539 36942
+5me Région / Sfax / Gabès / L'Aradh | 677 4381 310 591 101 5101 20846 22121
+5me Région / Sfax / Gafsa / Hammama | 510 7440 1888 46 2 3477 46343 114896
+5me Région / Sfax / Gafsa / Gafsa | 286 8090 830 295 0 2455 42337 55015
+5me Région / Sfax / Tozeur / Djerid | 86 1386 332 104 0 2376 9084 8081
+5me Région / Sfax / Djerba / Djerba | 68 3139 496 277 0 2594 1812 10891
+Territoires militaires du Sud /  /  / Nefzaoua | 148 4605 64 11 0 1409 36137 25286
+Territoires militaires du Sud /  /  / Ouerghemma | 955 17901 531 57 0 5954 76048 88468
+Territoires militaires du Sud /  /  / Tatahouine | 449 11087 221 51 0 4177 82464 56604
+Territoires militaires du Sud /  /  / Matmata | 41 2917 886 398 0 1313 20003 15077
+TOTAUX | 88190 151768 484120 40243 12785 159430 1390131 2172820

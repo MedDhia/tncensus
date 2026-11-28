@@ -168,6 +168,179 @@ COOP_ORG = {"coop_central": ("coopérative_centrale", "Coopérative centrale des
             "coop_moto": ("coopérative_motoculture", "Coopérative de motoculture de Tunisie")}
 
 
+# ----------------------------------------------------------------- assurances mutuelles agricoles (rule 4)
+
+# measure code -> (unit, heading sgt1922, heading sgt1923-sgt1930, heading sgt1935)
+INS_M = {
+    "policies": ("policies", "count", "Nombre de polices", "Nombre de polices", "Nombre de polices"),
+    "insured": ("insured_value", "francs", "Valeurs assurées", "Valeurs assurées", "Valeurs assurées"),
+    "contrib_local": ("contributions_local", "francs", "Cotisations versées : caisses locales",
+                      "Répartition des cotisations versées : caisses locales",
+                      "Répartition des cotisations versées : caisses locales"),
+    "contrib_regional": ("contributions_regional", "francs", "Cotisations versées : caisse régionale",
+                         "Répartition des cotisations versées : caisse régionale",
+                         "Répartition des cotisations versées : caisse régionale"),
+    "contrib_central": ("contributions_central", "francs", "Cotisations versées : caisse centrale",
+                        "Répartition des cotisations versées : réassureurs",
+                        "Répartition des cotisations versées : réassureurs"),
+    "subsidy_local": ("subsidies_local", "francs", "Subventions : caisses locales", "Subventions : caisses locales",
+                      "Subventions : caisses locales"),
+    "subsidy_regional": ("subsidies_regional", "francs", "Subventions : caisse régionale",
+                         "Subventions : caisse régionale", "Subventions : caisse régionale"),
+    "subsidy_central": ("subsidies_central", "francs", "Subventions : caisse centrale", None, None),
+    "receipts_extra": ("receipts_extra_rebates", "francs", "Recettes supplémentaires et ristournes", None, None),
+    "misc_local": ("misc_receipts_local", "francs", None, "Recettes diverses et ristournes : caisse locale", None),
+    "misc_regional": ("misc_receipts_regional", "francs", None, "Recettes diverses et ristournes : caisse régionale",
+                      None),
+    "claims": ("claims", "count", "Nombre de sinistres", "Sinistres : nombre",
+               "Sinistres et frais de sinistres : nombre"),
+    "indemn_local": ("indemnities_local", "francs", "Indemnités payées : caisses locales",
+                     "Sinistres, répartition des indemnités payées : caisses locales",
+                     "Sinistres et frais de sinistres, répartition des sommes payées : caisses locales"),
+    "indemn_regional": ("indemnities_regional", "francs", "Indemnités payées : caisse régionale",
+                        "Sinistres, répartition des indemnités payées : caisse régionale",
+                        "Sinistres et frais de sinistres, répartition des sommes payées : caisse régionale"),
+    "indemn_central": ("indemnities_central", "francs", "Indemnités payées : caisse centrale",
+                       "Sinistres, répartition des indemnités payées : réassureurs",
+                       "Sinistres et frais de sinistres, répartition des sommes payées : réassureurs"),
+    "costs_local": ("costs_local", "francs", "Autres frais : caisses locales",
+                    "Répartition des frais de sinistre : caisses locales", None),
+    "costs_regional": ("costs_regional", "francs", "Autres frais : caisse régionale",
+                       "Répartition des frais de sinistre : caisse régionale", None),
+    "costs_central": ("costs_central", "francs", "Autres frais : caisse centrale",
+                      "Répartition des frais de sinistre : réassureurs", None),
+    "deficit_local": ("deficit_local_caisses", "francs", "Autres frais : déficit des caisses locales",
+                      "Déficit des caisses locales", "Déficit des caisses locales"),
+    "gen_local": ("general_costs_rebates_local", "francs", None,
+                  "Frais généraux divers et ristournes aux assurés : caisse locale", None),
+    "gen_regional": ("general_costs_rebates_regional", "francs", None,
+                     "Frais généraux divers et ristournes aux assurés : caisse régionale", None),
+    "rebates": ("rebates_insured", "francs", None, None, "Ristournes aux assurés"),
+}
+INS_CONST_M = {
+    "subsidy_regional": ("subsidies_regional_constitution", "francs",
+                         "Subventions : caisse régionale, (1) frais de constitution"),
+    "costs_regional": ("costs_regional_constitution", "francs",
+                       "Autres frais : caisse régionale, (1) frais de constitution"),
+}
+INS_BRANCH = {"ins_fire": ("fire", "a) Incendie"), "ins_hail": ("hail", "b) Grêle"),
+              "ins_hail_constitution": ("hail", "b) Grêle"),
+              "ins_accident": ("accident_common_law", "c) Accidents [de dr]oit commun"),
+              "ins_accident_work": ("accident_work", "d) Accident[...] (title lost in the binding)")}
+INS_REGION = {"": ("", ""), "a": ("tunis_est", "Tunis-Est-Réassurances (a)"),
+              "b": ("tunis", "Tunis-Réassurances (b)")}
+INS_RECEIPTS = ["contrib_local", "contrib_regional", "contrib_central", "subsidy_local", "subsidy_regional",
+                "subsidy_central", "receipts_extra"]
+INS_EXPEND = ["indemn_local", "indemn_regional", "indemn_central", "costs_local", "costs_regional", "costs_central",
+              "deficit_local"]
+
+
+def cells_insurance(sec):
+    out = []
+    right = sec["cols"][sec["cols"].index(sec["split"]):] if sec.get("split") else []
+    b, bfr = INS_BRANCH[sec["table"]]
+    lay = 0 if sec["ed"] == "sgt1922" else 2 if sec["ed"] == "sgt1935" else 1
+    for r in sec["rows"]:
+        if "cells" not in r:
+            continue
+        y, _, reg = r["label"].partition(" ")
+        rg, rgfr = INS_REGION[reg]
+        for c in sec["cols"]:
+            if c in ("receipts_total", "expend_total"):      # printed row totals (sgt1922): checks only
+                continue
+            if sec["table"] == "ins_hail_constitution":
+                m, unit, mfr = INS_CONST_M[c]
+            else:
+                m, unit = INS_M[c][:2]
+                mfr = INS_M[c][2 + lay]
+            cell = r["cells"][c]
+            rv = c in right
+            out.append(dict(base(sec, int(y), int(sec["rview"]) if rv else None, int(sec["rpage"]) if rv else None),
+                            branch=b, branch_fr=bfr, regional_caisse=rg, regional_caisse_fr=rgfr, measure=m,
+                            measure_fr=mfr, unit=unit, value=cell.value, flag=cell.flag))
+    return out
+
+
+def chk_insurance(sec):
+    out = "mutuality_insurance"
+    cols = sec["cols"]
+    g = {}
+    if "receipts_total" in cols:
+        g["receipts_total"] = [c for c in INS_RECEIPTS if c in cols]
+    if "expend_total" in cols:
+        g["expend_total"] = [c for c in INS_EXPEND if c in cols]
+    row_totals(sec, out, g)
+
+
+def fill_illegible(kept, recs, key):
+    """A kept (latest) cell that is illegible in its printing takes the latest legible earlier printing, flagged
+    reprint_corrected (sgt1935: cents hidden in the binding)."""
+    out = []
+    for k in kept:
+        if k["flag"] == "illegible":
+            alt = [r for r in recs if all(r.get(x) == k.get(x) for x in key) and r["value"] is not None]
+            if alt:
+                alt.sort(key=lambda r: ORDER.index(r["census"]))
+                k = dict(alt[-1], flag="reprint_corrected")
+        out.append(k)
+    return out
+
+
+CHECKS.update({"ins_fire": chk_insurance, "ins_hail": chk_insurance})
+
+
+# ----------------------------------------------------------------- office public de crédit agricole indigène (rule 4)
+
+OFFICE_M = {
+    "office_resources": {
+        "endowments": ("endowments", "Ressources : dotations"),
+        "subsidies": ("subsidies", "Ressources : subventions"),
+        "loans": ("loans", "Ressources : emprunts"),
+        "land_sales": ("state_land_sales", "Ressources : vente de terres domaniales aux agriculteurs indigènes fixés "
+                                           "au sol"),
+    },
+    "office_operations": {
+        "medium_term": ("operations_medium_term", "Opérations de l'Office : moyen terme"),
+        "short_term": ("operations_short_term", "Opérations de l'Office : court terme"),
+    },
+}
+OFFICE_1925 = {}
+
+
+def cells_office(sec):
+    out = []
+    for r in lines(sec):
+        for c in sec["cols"]:
+            if c == "total":                    # printed row totals: checks only
+                continue
+            m, mfr = OFFICE_M[sec["table"]][c]
+            if c == "land_sales" and sec["ed"] == "sgt1929":
+                mfr = "Ressources : vente des terres domaniales"
+            cell = r["cells"][c]
+            out.append(dict(base(sec, int(r["label"])), measure=m, measure_fr=mfr, unit="francs", value=cell.value,
+                            flag=cell.flag))
+    return out
+
+
+def chk_office(sec):
+    out = "mutuality_office_credit_agricole"
+    parts = [c for c in sec["cols"] if c != "total"]
+    row_totals(sec, out, {"total": parts})
+    t = row(sec, "TOTAUX")
+    if t is None:
+        return
+    if sec["ed"] == "sgt1930":
+        OFFICE_1925.update({c: v.value for c, v in row(sec, "1925").items()})
+    add = OFFICE_1925 if row(sec, "1925") is None else {}       # sgt1935 TOTAUX include the 1925 line
+    for k in sec["cols"]:
+        got = ssum(r["cells"][k].value for r in lines(sec)) + add.get(k, 0)
+        CHK.eq(out, f"{where(sec)} {k}: TOTAUX = sum of the lines" + (" + 1925 line of sgt1930" if add else ""),
+               got, t[k].value)
+
+
+CHECKS.update({"office_resources": chk_office, "office_operations": chk_office})
+
+
 # ----------------------------------------------------------------- documentation
 
 DOC = {
@@ -187,6 +360,13 @@ DOC = {
     "caisse_group_fr": "printed column heading of the edition kept",
     "institution_fr": "named institution as printed (Coopérative centrale des agriculteurs de Tunisie; Coopérative "
                       "de motoculture de Tunisie)",
+    "branch": "insurance branch: `fire` (a) incendie), `hail` (b) grêle), `accident_common_law` (c) accidents de "
+              "droit commun, sgt1935), `accident_work` (d), sgt1935: title lost in the binding, the table has a column "
+              "on permanent infirmity and death, so presumably accidents du travail)",
+    "branch_fr": "printed sub-table heading",
+    "regional_caisse": "empty before 1933; from 1933 (sgt1935) the regional caisse « Tunis-Assurances » is split into "
+                       "`tunis_est` (Tunis-Est-Réassurances, line a) and `tunis` (Tunis-Réassurances, line b)",
+    "regional_caisse_fr": "printed name of the regional caisse (from the footnote)",
     "value": "printed value (» = 0)",
     "flag": "empty, or `illegible`, `not_applicable`, `total_mismatch`, `ocr_corrected`",
 }
@@ -223,6 +403,76 @@ TABLES = {
 }
 
 TABLES.update({
+    "mutuality_insurance": dict(
+        secs=["ins_fire", "ins_hail", "ins_hail_constitution", "ins_accident", "ins_accident_work"],
+        cells=cells_insurance, key=["year", "branch", "regional_caisse", "measure"], post=fill_illegible,
+        doc={"flag": "empty, or `ocr_corrected` (the Gallica OCR token at that cell was checked against the image "
+                     "and reads otherwise; cells the OCR simply misses or splits are not flagged), `illegible`, "
+                     "`not_applicable` (ristournes column not printed), `reprint_corrected` (see below)"},
+        dims=["branch", "branch_fr", "regional_caisse", "regional_caisse_fr", "measure", "measure_fr", "unit"],
+        title_fr="Assurances mutuelles agricoles. a) Incendie ; b) Grêle ; c) et d) Accidents",
+        title_en="Agricultural mutual insurance: policies, insured values, contributions, subsidies, claims and "
+                 "costs by level of the mutual system (local caisses, regional caisse, reinsurers), fire, hail and "
+                 "accident branches, by year (1913-1935)",
+        unit="Units: count (policies, claims) and francs (everything else; centimes as decimals); suggested "
+             "value_type: mixed.",
+        paras=[
+            "Printed in sgt1922-sgt1930 and sgt1935 (two-page spreads; not printed in sgt1936 or sgt1939) for the ten "
+            "years before the edition: sgt1922 1913-1922 ... sgt1930 1921-1930, sgt1935 1926-1935. a) incendie and "
+            "b) grêle in every edition; sgt1935 adds c) accidents de droit commun and d) a second accident table "
+            "(title lost in the binding) for 1933-1935. `source_page`/`gallica_view` give the page of the spread "
+            "each cell is printed on.",
+            "Three layouts, harmonised on one set of measure codes (`measure_fr` = heading of the edition kept). "
+            "sgt1922: cotisations versées and subventions by caisses locales / caisse régionale / caisse centrale, "
+            "recettes supplémentaires et ristournes, total des recettes; nombre de sinistres, indemnités payées (three "
+            "levels), autres frais (three levels and déficit des caisses locales), total des dépenses. sgt1923-sgt1930: "
+            "the caisse centrale columns are headed *réassureurs* (same figures, so the same codes `*_central`); the "
+            "subventions keep two levels; recettes diverses et ristournes split caisse locale / caisse régionale "
+            "(`misc_receipts_*`; sgt1922's single column equals the régionale one, kept under its own code "
+            "`receipts_extra_rebates`); the autres frais become frais de sinistre (`costs_*`, same figures as sgt1922's "
+            "autres frais) and frais généraux divers et ristournes aux assurés (`general_costs_rebates_*`); no totals. "
+            "sgt1935: sinistres et frais de sinistres, répartition des sommes payées (stored as `indemnities_*`: for "
+            "1926-1930 they equal the indemnités payées of sgt1926-sgt1930), déficit des caisses locales and "
+            "ristournes aux assurés (`rebates_insured`; blank for 1926-1932, stored NA `not_applicable`); no frais de "
+            "sinistre or frais généraux columns, so those measures stop in 1930.",
+            "sgt1922's total des recettes and total des dépenses columns are printed row totals: they are not stored, "
+            "only checked (below). sgt1922-sgt1924 print a footnote (1) *frais de constitution* 8.150,20 above the "
+            "first b) grêle line, in the subventions / caisse régionale and the autres frais / caisse régionale "
+            "columns, not included in the totals; stored as year 1913 (the first year of the series) with measures "
+            "`subsidies_regional_constitution` and `costs_regional_constitution`.",
+            "sgt1935, a) 1931: every left-page column except the réassureurs cotisations (1.393.482,21) is printed », "
+            "stored 0 as printed (evidently not reported). The réassureurs cotisations column of a) and b) in sgt1935 "
+            "runs into the binding and the second centime digit is hidden on both page edges for most lines: those "
+            "cells are `illegible`; for 1926-1930 the value of the latest earlier printing (sgt1930) is stored with "
+            "flag `reprint_corrected` (its legible digits agree), for 1932-1935 NA. b) 1921 subventions caisses "
+            "locales is printed '.600' in sgt1923-sgt1930 (2.600 in sgt1922): stored 600 as printed. a) 1923 "
+            "cotisations caisses locales is printed 4.483.963 » in sgt1923-sgt1929 and corrected to 44.839,63 in "
+            "sgt1930 (kept). The same subvention locale a) 1919 is printed 883 in every edition (833 the years "
+            "around it).",
+            "Overlap differences below the sgt1923-sgt1930 printings are few: sgt1922 prints the a) 1918 déficit des "
+            "caisses locales 150,43 on its 1918 line, sgt1923 and later on 1919 (stored 1919 from sgt1930); sgt1926 "
+            "prints the b) 1918 recettes diverses caisse régionale 2.428,31 (2.128,31 in every other printing; "
+            "confirmed on a 4x crop of f1028, stored from sgt1927).",
+            "sgt1925 and sgt1926 were re-typed in full from their own native-resolution images (f520|521, "
+            "f1028|1029); every other printing was read independently on its own image."]),
+    "mutuality_office_credit_agricole": dict(
+        secs=["office_resources", "office_operations"], cells=cells_office, key=["year", "measure"],
+        dims=["measure", "measure_fr", "unit"],
+        title_fr="Office public de crédit agricole indigène. Ressources ; Opérations de l'Office",
+        title_en="Public office for indigenous agricultural credit: resources (endowments, subsidies, loans, sales "
+                 "of State land) and operations (medium- and short-term credit), by year (1925-1934)",
+        unit="Units: francs (centimes as decimals); suggested value_type: francs.",
+        paras=["Printed in sgt1929 (f495: ressources 1925-1929, opérations 1926-1929), sgt1930 (f1031: ressources au "
+               "31 décembre 1930, 1925-1930, with a new emprunts column; opérations 1926-1930) and sgt1935 (f310: "
+               "ressources au 31 décembre 1934, lines 1926-1934; opérations 1926-1934). Not printed in sgt1936 or "
+               "sgt1939: a footnote to the sgt1935 1934 line says the Office was dissolved by decree of 21 February "
+               "1934 (1934 operations printed », stored 0 as printed). sgt1929 has no emprunts column (no loans "
+               "before 1930 in the later printings). Printed row totals (totaux) and TOTAUX lines are checks only; "
+               "the sgt1935 TOTAUX include the 1925 line, which sgt1935 does not print (checked with the sgt1930 "
+               "1925 line).",
+               "The court terme operations of 1928 are printed 7.262.371 in sgt1929 and 7.626.371 in sgt1930 and "
+               "sgt1935 (whose row total 9.291.171, printed in all three, agrees with 1.664.800 + 7.626.371): an "
+               "evident transposition in sgt1929; the latest printing is kept."]),
     "mutuality_coop_central_shares_business": dict(
         secs=["coop_parts", "coop_business"], cells=measure_cells(COOP_M), key=["year", "measure"],
         dims=["measure", "measure_fr", "unit"],
@@ -253,6 +503,15 @@ TABLES.update({
 })
 
 FAIL_NOTES = {
+    "mutuality_office_credit_agricole": "sgt1929 1928 operations: totaux 9.291.171 for 1.664.800 + 7.262.371 = "
+        "8.927.171 (zoomed 2x on f495); sgt1930 and sgt1935 print the court terme 7.626.371, which gives the printed "
+        "total (digits 26/62 transposed in sgt1929; sgt1930 kept).",
+    "mutuality_insurance": "sgt1922 a) incendie: the total des recettes exceeds the seven receipt columns by 2.010,40 "
+        "(1913), 3.167,40 (1914), 5.865,53 (1915) and 6.630,10 (1916), by 6,00 in 1918, and falls short by 49,91 in 1919 "
+        "(the subvention locale is printed 883, not 833) and by 0,70 in 1922; b) grêle: the total des recettes falls "
+        "short of the lines by 20,00 (1915) and 60,00 (1920), and the 1922 total des dépenses 80.930,06 is 3.999,90 above "
+        "its lines. Every cell of these lines was re-read on zoomed crops (1.2-1.5x); the 1913-1916 differences look "
+        "like receipts not shown in any column. No later edition prints totals, so they cannot be cross-checked.",
     "mutuality_coop_central_shares_business": "sgt1922 and sgt1923 print the 1914 montant total des prêts 1.213.382,55 "
         "for 880.558,10 + 332.794,45 = 1.213.352,55 (zoomed crops of both printings; sgt1924 and later no longer print "
         "1914), and the TOTAUX of the loan columns follow it (9.467.198,10); their travaux de printemps total "
@@ -313,8 +572,9 @@ SURVEY = {
                "Maison Française »; f1044 blank. f1045 = chapter XV.",
     "sgt1935": "f307 chapter XV *Mutualité agricole*; f308 blank; f309 crédit mutuel (1926-1935, one table); f310 "
                "Office public de crédit agricole indigène (ressources au 31 décembre 1934); f311 coopérative "
-               "centrale and motoculture (1925-1935); f312|f313 assurances mutuelles agricoles a) incendie "
-               "(1925-1935); f314|f315 c) accidents (from 1933); f316|f317 sociétés tunisiennes de prévoyance "
+               "centrale and motoculture (1925-1935); f312|f313 assurances mutuelles agricoles (1925-1935 title, "
+               "lines 1926-1935) a) incendie, b) grêle; f314|f315 c) accidents [de dr]oit commun and d) accident[...] "
+               "(titles partly in the binding; 1933-1935); f316|f317 sociétés tunisiennes de prévoyance "
                "(1926-1935); f318 blank. f319 = chapter XVI Travail.",
     "sgt1936": "f182 chapter XIV *Mutualité agricole*; f183 crédit mutuel (1927-1936); f184 coopérative centrale and "
                "motoculture (1926-1936); f185|f186 sociétés tunisiennes de prévoyance (1927-1936); f187 blank; f188 "
@@ -326,13 +586,17 @@ SURVEY = {
 
 NOT_DONE = ("Transcribed: crédit mutuel agricole (every edition), coopérative centrale des agriculteurs (parts and "
             "affaires traitées sgt1922-sgt1929; capital, avances and goods with the coopérative de motoculture "
-            "sgt1930-sgt1939). NOT yet transcribed: assurances mutuelles agricoles (sgt1922 f462|f463, sgt1923 "
-            "f952|f953, sgt1924 f1450|f1451, sgt1925 f520|f521, sgt1926 f1028|f1029, sgt1927 f492|f493, sgt1928 "
-            "f1020|f1021, sgt1929 f498|f499, sgt1930 f1034|f1035, sgt1935 f312-f315 incl. accidents); sociétés "
+            "sgt1930-sgt1939), assurances mutuelles agricoles (sgt1922 f462|f463, sgt1923 f952|f953, sgt1924 "
+            "f1450|f1451, sgt1925 f520|f521, sgt1926 f1028|f1029, sgt1927 f492|f493, sgt1928 f1020|f1021, sgt1929 "
+            "f498|f499, sgt1930 f1034|f1035, sgt1935 f312|f313 and f314|f315 with c) and d) accidents; every cell "
+            "read on 0.75-0.85 whole-half crops of both pages of each spread, binding columns and doubtful figures "
+            "zoomed at 1.2-3x; sgt1925 and sgt1926 re-typed in full from 3-4-column native crops; Gallica OCR used as a "
+            "cross-check only, `ocr_corrected` only where the OCR token at the cell was checked and reads otherwise), "
+            "Office public de crédit agricole indigène (sgt1929 f495, sgt1930 f1031, sgt1935 f310). "
+            "NOT yet transcribed: sociétés "
             "indigènes / tunisiennes de prévoyance (sgt1922 f464|f465, sgt1923 f954|f955, sgt1924 f1452|f1453, "
             "sgt1925 f522|f523, sgt1926 f1030|f1031, sgt1927 f494|f495, sgt1928 f1022|f1023, sgt1929 f500|f501, "
-            "sgt1930 f1036|f1037, sgt1935 f316|f317, sgt1936 f185|f186, sgt1939 f160|f161); Office public de crédit "
-            "agricole indigène (sgt1929 f495, sgt1930 f1031, sgt1935 f310); bilans of the Banque populaire "
+            "sgt1930 f1036|f1037, sgt1935 f316|f317, sgt1936 f185|f186, sgt1939 f160|f161); bilans of the Banque populaire "
             "française, Coopérative tunisienne de crédit and sociétés coopératives de consommation (sgt1926 "
             "f1032-f1035, sgt1927 f496-f499, sgt1928 f1024-f1029, sgt1929 f502-f507, sgt1930 f1038-f1043); labour "
             "tables of sgt1922-sgt1924 (accidents du travail a) victims by profession and nationality, b), c) "
@@ -381,6 +645,8 @@ def build(write=True):
             kept, n, diffs = recs, 0, []
         else:
             kept, n, diffs = select_latest(recs, spec["key"])
+            if spec.get("post"):
+                kept = spec["post"](kept, recs, spec["key"])
         order = {id(r): i for i, r in enumerate(recs)}
         kept.sort(key=lambda r: (ORDER.index(r["census"]) if spec.get("rule5") else 0, r["year"] or 0,
                                  order.get(id(r), 0)))

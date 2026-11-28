@@ -228,3 +228,72 @@ Territoires Militaires du Sud /  /  / Matmata | 3916 27318 129236 160470
 Territoires Militaires du Sud /  /  / Ouerghemma | 6913 198651 380359 585923
 Territoires Militaires du Sud /  /  / Tatahouine | 2609 7487 65173 75269
 TOTAUX | 751616 5732089 12436702 18920407
+
+# Canoun des dattiers: relevé par caïdat du nombre d'arbres d'après leur âge au 1er novembre 1939 (f110|f111).
+# The 9 ans and 10 ans columns run into the binding gutter (read on zoomed crops of both views); degla
+# Tozeur 9 ans 15.432 partly in the gutter; communs Tozeur 9 ans 23.24? solved from its TOTAL des jeunes.
+@dates view=110 page=104 crop=degla
+img: all
+cols: m a0 a1 a2 a3 a4 a5 a6 a7 a8 a9 a10 a11 a12 a13 a14 a15 a16 a17 a18 a19 young taxed total
+Gabès | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Gafsa | 0 0 0 0 0 8 0 0 0 0 26 0 0 0 0 144 0 0 0 0 389 587 1738 2325
+Tozeur | 0 0 0 0 0 16540 0 20 0 0 15432 0 11 0 0 59935 0 1 0 0 21557 113496 83465 196261
+Nefzaoua | 0 0 4 0 0 0 108 28 2 0 465 0 0 0 0 6250 0 0 0 0 4440 11307 6100 17407
+Ouerghemma | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Matmata | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+TOTAUX | 0 0 4 0 0 16568 108 48 2 0 15933 0 11 0 0 66329 0 1 0 0 26386 125390 91303 216693
+@dates view=110 page=104 crop=common
+img: all
+cols: m a0 a1 a2 a3 a4 a5 a6 a7 a8 a9 a10 a11 a12 a13 a14 a15 a16 a17 a18 a19 young taxed total
+Gabès | 54605 0 0 0 0 617 774 0 0 0 553 196 88 0 0 291530 0 0 0 0 100356 394294 432582 881481
+Gafsa | 7271 0 0 0 0 158 0 0 0 0 1475 0 0 0 0 3208 0 0 0 0 2616 7457 58890 73618
+Tozeur | 90255 0 0 0 0 35004 0 93 0 0 23241 0 168 0 0 95333 0 186 0 0 40570 194595 475181 760031
+Nefzaoua | 92416 0 30 220 0 0 128 86 452 0 258 0 0 0 0 71473 0 0 0 0 76886 149533 306996 548945
+Ouerghemma | 7832 0 0 0 0 21 0 0 0 0 7151 0 0 0 0 61310 0 0 0 0 27445 95927 96771 200530
+Matmata | 2846 0 0 0 0 5 0 0 0 0 0 0 11889 0 0 0 0 5865 0 0 0 17759 44534 65139
+TOTAUX | 255225 0 30 220 0 35805 902 179 452 0 32678 196 12145 0 0 522854 0 6051 0 0 248053 859565 1414954 2529744
+
+# Animaux: nombre total des animaux jeunes et imposables (européens et tunisiens), rôle de 1939 (printed "Rôle de
+# 1939", f112|f113). The CHEVAUX column runs into the binding gutter (zoomed crops of both views): Nabeul "3.63?"
+# has its last digit hidden (stored illegible; the column TOTAUX gives 3.638).
+@animals view=112 page=106 geo=4 owner=total role=1939
+img: all
+cols: horses camels cattle mules pigs donkeys goats sheep
+1re Région / Bizerte / Béja / Béja | 6598 97 44312 1916 2681 3607 39672 75377
+1re Région / Bizerte / Bizerte / Bizerte | 3870 380 26666 2313 1253 2795 21440 51236
+1re Région / Bizerte / Bizerte / Mateur | 8110 711 54726 2358 1652 3617 78485 105394
+1re Région / Bizerte / Tabarka / Aïn-Draham | 2476 5 23116 862 2770 1476 49200 19389
+1re Région / Bizerte / Souk-el-Arba / Souk-el-Arba | 5228 115 31093 2559 732 5200 50700 42323
+1re Région / Bizerte / Souk-el-Arba / Souk-el-Khemis | 2506 61 14797 1032 673 2587 14669 30966
+2me Région / Tunis / Tunis / Banlieue de Tunis | 5531 856 33859 6170 1049 3806 23281 84269
+2me Région / Tunis / Tunis / Tunis-Ville | 1555 21 442 694 408 156 814 1390
+2me Région / Tunis / Zaghouan / Zaghouan | 3412 1619 18569 2483 332 2839 77555 69907
+2me Région / Tunis / Grombalia / Cap-Bon > Nabeul | ? 3519 42744 1745 334 7319 65395 85516
+2me Région / Tunis / Grombalia / Cap-Bon > Soliman | 1386 556 15193 2291 243 2448 23462 17220
+3me Région / Le Kef / Téboursouk / Téboursouk | 2715 220 19909 2825 748 3503 36983 49374
+3me Région / Le Kef / Le Kef / Le Kef | 6916 273 29125 3603 176 7149 78700 105298
+3me Région / Le Kef / Le Kef / Tadjerouine | 6224 363 11646 1934 18 4878 37776 117097
+3me Région / Le Kef / Maktar / Oulad Ayar | 1834 1190 10369 633 2 2636 32167 51892
+3me Région / Le Kef / Maktar / Oulad Aoun | 2401 233 14247 1527 12 2784 30471 52378
+3me Région / Le Kef / Medjez-el-Bab / Medjez-el-Bab | 3962 170 22692 3818 1230 4757 44790 52855
+4me Région / Sousse / Sousse / Souassi | 1146 5631 2082 193 0 3729 11202 65017
+4me Région / Sousse / Sousse / Mahdia | 861 5751 4780 861 0 4075 3678 82569
+4me Région / Sousse / Sousse / Monastir | 217 1822 1541 1051 0 1363 603 17342
+4me Région / Sousse / Sousse / Djemmal | 217 2644 965 623 0 1638 723 25823
+4me Région / Sousse / Sousse / Sousse | 1623 6154 6480 3405 16 3669 10730 89220
+4me Région / Sousse / Kairouan / Kairouan | 3665 11615 13273 989 42 4754 32234 188210
+4me Région / Sousse / Kairouan / Djelass | 1889 6938 13112 676 146 3428 81401 156599
+4me Région / Sousse / Thala / Thala | 3539 1441 5673 854 0 3123 31062 77038
+4me Région / Sousse / Thala / Sbeïtla | 3415 11480 8655 762 0 6822 110001 249070
+5me Région / Sfax / Sfax / Sfax | 1766 14005 662 2758 223 4848 40930 127720
+5me Région / Sfax / Sfax / Djebeniana | 844 5268 1656 460 0 2640 4386 61492
+5me Région / Sfax / Gabès / L'Aradh | 988 4854 106 1543 200 3873 30353 29284
+5me Région / Sfax / Gafsa / Hammama | 1691 12583 3809 232 0 5899 72362 235383
+5me Région / Sfax / Gafsa / Gafsa | 713 11867 887 524 60 3630 61945 116828
+5me Région / Sfax / Tozeur / Djerid | 135 1542 443 193 0 1904 12996 12143
+5me Région / Sfax / Djerba / Djerba | 57 2759 174 488 0 1716 2897 8880
+Territoires militaires du Sud /  /  / Nefzaoua | 206 6890 100 45 0 1487 41434 25135
+Territoires militaires du Sud /  /  / Ouerghema | 809 14304 188 205 0 5399 55359 53992
+Territoires militaires du Sud /  /  / Tatahouine | 339 11844 141 142 0 4077 78973 39710
+Territoires militaires du Sud /  /  / Matmata | 47 2435 311 803 0 888 17998 13745
+TOTAUX | 92529 152226 478543 55570 15000 130519 1406827 2687081

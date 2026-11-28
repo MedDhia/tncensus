@@ -407,6 +407,424 @@
    "sgt1939"
   ]
  },
+ "mutuality_insurance": {
+  "rows": 1080,
+  "checks": 40,
+  "failed": [
+   "sgt1922 p.438 (f462) ins_fire 1913: receipts_total = contrib_local + contrib_regional + contrib_central + subsidy_local + subsidy_regional + subsidy_central + receipts_extra: cells give 66560.29, printed 68570.69 (difference 2010.40)",
+   "sgt1922 p.438 (f462) ins_fire 1914: receipts_total = contrib_local + contrib_regional + contrib_central + subsidy_local + subsidy_regional + subsidy_central + receipts_extra: cells give 64977.94, printed 68145.34 (difference 3167.40)",
+   "sgt1922 p.438 (f462) ins_fire 1915: receipts_total = contrib_local + contrib_regional + contrib_central + subsidy_local + subsidy_regional + subsidy_central + receipts_extra: cells give 141227.08, printed 147092.61 (difference 5865.53)",
+   "sgt1922 p.438 (f462) ins_fire 1916: receipts_total = contrib_local + contrib_regional + contrib_central + subsidy_local + subsidy_regional + subsidy_central + receipts_extra: cells give 101247.86, printed 107877.96 (difference 6630.10)",
+   "sgt1922 p.438 (f462) ins_fire 1918: receipts_total = contrib_local + contrib_regional + contrib_central + subsidy_local + subsidy_regional + subsidy_central + receipts_extra: cells give 224520.19, printed 224526.19 (difference 6.00)",
+   "sgt1922 p.438 (f462) ins_fire 1919: receipts_total = contrib_local + contrib_regional + contrib_central + subsidy_local + subsidy_regional + subsidy_central + receipts_extra: cells give 231109.16, printed 231059.25 (difference -49.91)",
+   "sgt1922 p.438 (f462) ins_fire 1922: receipts_total = contrib_local + contrib_regional + contrib_central + subsidy_local + subsidy_regional + subsidy_central + receipts_extra: cells give 386656.46, printed 386655.76 (difference -0.70)",
+   "sgt1922 p.438 (f462) ins_hail 1915: receipts_total = contrib_local + contrib_regional + contrib_central + subsidy_local + subsidy_regional + subsidy_central + receipts_extra: cells give 94384.96, printed 94364.96 (difference -20.00)",
+   "sgt1922 p.438 (f462) ins_hail 1920: receipts_total = contrib_local + contrib_regional + contrib_central + subsidy_local + subsidy_regional + subsidy_central + receipts_extra: cells give 352452.22, printed 352392.22 (difference -60.00)",
+   "sgt1922 p.438 (f462) ins_hail 1922: expend_total = indemn_local + indemn_regional + indemn_central + costs_local + costs_regional + costs_central + deficit_local: cells give 76930.16, printed 80930.06 (difference 3999.90)"
+  ],
+  "overlap_compared": 2788,
+  "overlap_diffs": [
+   [
+    [
+     1918,
+     "fire",
+     "",
+     "deficit_local_caisses"
+    ],
+    "sgt1922",
+    "150.43",
+    "sgt1927",
+    "0"
+   ],
+   [
+    [
+     1919,
+     "fire",
+     "",
+     "deficit_local_caisses"
+    ],
+    "sgt1922",
+    "0",
+    "sgt1928",
+    "150.43"
+   ],
+   [
+    [
+     1921,
+     "hail",
+     "",
+     "subsidies_local"
+    ],
+    "sgt1922",
+    "2600",
+    "sgt1930",
+    "600"
+   ],
+   [
+    [
+     1923,
+     "fire",
+     "",
+     "contributions_local"
+    ],
+    "sgt1923",
+    "4483963",
+    "sgt1930",
+    "44839.63"
+   ],
+   [
+    [
+     1923,
+     "fire",
+     "",
+     "contributions_local"
+    ],
+    "sgt1924",
+    "4483963",
+    "sgt1930",
+    "44839.63"
+   ],
+   [
+    [
+     1923,
+     "fire",
+     "",
+     "contributions_local"
+    ],
+    "sgt1925",
+    "4483963",
+    "sgt1930",
+    "44839.63"
+   ],
+   [
+    [
+     1923,
+     "fire",
+     "",
+     "contributions_local"
+    ],
+    "sgt1926",
+    "4483963",
+    "sgt1930",
+    "44839.63"
+   ],
+   [
+    [
+     1923,
+     "fire",
+     "",
+     "contributions_local"
+    ],
+    "sgt1927",
+    "4483963",
+    "sgt1930",
+    "44839.63"
+   ],
+   [
+    [
+     1923,
+     "fire",
+     "",
+     "contributions_local"
+    ],
+    "sgt1928",
+    "4483963",
+    "sgt1930",
+    "44839.63"
+   ],
+   [
+    [
+     1923,
+     "fire",
+     "",
+     "contributions_local"
+    ],
+    "sgt1929",
+    "4483963",
+    "sgt1930",
+    "44839.63"
+   ],
+   [
+    [
+     1918,
+     "hail",
+     "",
+     "misc_receipts_regional"
+    ],
+    "sgt1926",
+    "2428.31",
+    "sgt1927",
+    "2128.31"
+   ],
+   [
+    [
+     1926,
+     "fire",
+     "",
+     "contributions_central"
+    ],
+    "sgt1926",
+    "486850.43",
+    "sgt1935",
+    null
+   ],
+   [
+    [
+     1926,
+     "fire",
+     "",
+     "contributions_central"
+    ],
+    "sgt1927",
+    "486850.43",
+    "sgt1935",
+    null
+   ],
+   [
+    [
+     1926,
+     "fire",
+     "",
+     "contributions_central"
+    ],
+    "sgt1928",
+    "486850.43",
+    "sgt1935",
+    null
+   ],
+   [
+    [
+     1926,
+     "fire",
+     "",
+     "contributions_central"
+    ],
+    "sgt1929",
+    "486850.43",
+    "sgt1935",
+    null
+   ],
+   [
+    [
+     1926,
+     "fire",
+     "",
+     "contributions_central"
+    ],
+    "sgt1930",
+    "486850.43",
+    "sgt1935",
+    null
+   ],
+   [
+    [
+     1927,
+     "fire",
+     "",
+     "contributions_central"
+    ],
+    "sgt1927",
+    "521105.73",
+    "sgt1935",
+    null
+   ],
+   [
+    [
+     1927,
+     "fire",
+     "",
+     "contributions_central"
+    ],
+    "sgt1928",
+    "521105.73",
+    "sgt1935",
+    null
+   ],
+   [
+    [
+     1927,
+     "fire",
+     "",
+     "contributions_central"
+    ],
+    "sgt1929",
+    "521105.73",
+    "sgt1935",
+    null
+   ],
+   [
+    [
+     1927,
+     "fire",
+     "",
+     "contributions_central"
+    ],
+    "sgt1930",
+    "521105.73",
+    "sgt1935",
+    null
+   ],
+   [
+    [
+     1928,
+     "fire",
+     "",
+     "contributions_central"
+    ],
+    "sgt1928",
+    "1296977.47",
+    "sgt1935",
+    null
+   ],
+   [
+    [
+     1928,
+     "fire",
+     "",
+     "contributions_central"
+    ],
+    "sgt1929",
+    "1296977.47",
+    "sgt1935",
+    null
+   ],
+   [
+    [
+     1928,
+     "fire",
+     "",
+     "contributions_central"
+    ],
+    "sgt1930",
+    "1296977.47",
+    "sgt1935",
+    null
+   ],
+   [
+    [
+     1929,
+     "fire",
+     "",
+     "contributions_central"
+    ],
+    "sgt1929",
+    "1429555.84",
+    "sgt1935",
+    null
+   ],
+   [
+    [
+     1929,
+     "fire",
+     "",
+     "contributions_central"
+    ],
+    "sgt1930",
+    "1429555.84",
+    "sgt1935",
+    null
+   ],
+   [
+    [
+     1930,
+     "fire",
+     "",
+     "contributions_central"
+    ],
+    "sgt1930",
+    "1262094.27",
+    "sgt1935",
+    null
+   ]
+  ],
+  "flagged": [
+   "sgt1923 1914 fire /  / misc_receipts_regional = 6094.65 (ocr_corrected)",
+   "sgt1923 1914 hail /  / misc_receipts_regional = 132.23 (ocr_corrected)",
+   "sgt1926 1917 fire /  / insured_value = 23231069 (ocr_corrected)",
+   "sgt1926 1917 fire /  / misc_receipts_regional = 4368.37 (ocr_corrected)",
+   "sgt1928 1919 fire /  / indemnities_regional = 2098.58 (ocr_corrected)",
+   "sgt1930 1924 fire /  / contributions_regional = 182566.76 (ocr_corrected)",
+   "sgt1930 1924 hail /  / costs_local = 285.93 (ocr_corrected)",
+   "sgt1930 1924 hail /  / general_costs_rebates_regional = 26988.60 (ocr_corrected)",
+   "sgt1930 1926 fire /  / contributions_central = 486850.43 (reprint_corrected)",
+   "sgt1930 1926 fire /  / general_costs_rebates_regional = 48404.94 (ocr_corrected)",
+   "sgt1935 1926 fire /  / rebates_insured = None (not_applicable)",
+   "sgt1935 1926 hail /  / rebates_insured = None (not_applicable)",
+   "sgt1930 1927 fire /  / contributions_central = 521105.73 (reprint_corrected)",
+   "sgt1935 1927 fire /  / rebates_insured = None (not_applicable)",
+   "sgt1935 1927 hail /  / rebates_insured = None (not_applicable)",
+   "sgt1930 1928 fire /  / contributions_central = 1296977.47 (reprint_corrected)",
+   "sgt1930 1928 hail /  / general_costs_rebates_regional = 86036.41 (ocr_corrected)",
+   "sgt1935 1928 fire /  / rebates_insured = None (not_applicable)",
+   "sgt1935 1928 hail /  / contributions_central = 1046708.57 (ocr_corrected)",
+   "sgt1935 1928 hail /  / rebates_insured = None (not_applicable)",
+   "sgt1930 1929 fire /  / contributions_central = 1429555.84 (reprint_corrected)",
+   "sgt1935 1929 fire /  / rebates_insured = None (not_applicable)",
+   "sgt1935 1929 hail /  / policies = 1098 (ocr_corrected)",
+   "sgt1935 1929 hail /  / contributions_central = 1021825.51 (ocr_corrected)",
+   "sgt1935 1929 hail /  / rebates_insured = None (not_applicable)",
+   "sgt1930 1930 fire /  / contributions_central = 1262094.27 (reprint_corrected)",
+   "sgt1930 1930 fire /  / costs_regional = 15192.19 (ocr_corrected)",
+   "sgt1935 1930 fire /  / rebates_insured = None (not_applicable)",
+   "sgt1935 1930 hail /  / rebates_insured = None (not_applicable)",
+   "sgt1935 1931 fire /  / rebates_insured = None (not_applicable)",
+   "sgt1935 1931 hail /  / rebates_insured = None (not_applicable)",
+   "sgt1935 1932 fire /  / contributions_central = None (illegible)",
+   "sgt1935 1932 fire /  / rebates_insured = None (not_applicable)",
+   "sgt1935 1932 hail /  / policies = 1019 (ocr_corrected)",
+   "sgt1935 1932 hail /  / rebates_insured = None (not_applicable)",
+   "sgt1935 1933 fire / tunis_est / contributions_central = None (illegible)",
+   "sgt1935 1933 fire / tunis / contributions_central = None (illegible)",
+   "sgt1935 1933 accident_work / tunis / contributions_central = 98992.21 (ocr_corrected)",
+   "sgt1935 1934 fire / tunis_est / contributions_central = None (illegible)",
+   "sgt1935 1934 fire / tunis / contributions_central = None (illegible)",
+   "sgt1935 1934 hail / tunis_est / contributions_central = None (illegible)",
+   "sgt1935 1934 hail / tunis / contributions_central = None (illegible)",
+   "sgt1935 1935 fire / tunis_est / contributions_central = None (illegible)",
+   "sgt1935 1935 fire / tunis / contributions_central = None (illegible)",
+   "sgt1935 1935 hail / tunis_est / contributions_central = None (illegible)",
+   "sgt1935 1935 hail / tunis / contributions_regional = 145868.87 (ocr_corrected)",
+   "sgt1935 1935 hail / tunis / contributions_central = None (illegible)"
+  ],
+  "editions": [
+   "sgt1922",
+   "sgt1923",
+   "sgt1924",
+   "sgt1925",
+   "sgt1926",
+   "sgt1927",
+   "sgt1928",
+   "sgt1929",
+   "sgt1930",
+   "sgt1935"
+  ]
+ },
+ "mutuality_office_credit_agricole": {
+  "rows": 58,
+  "checks": 55,
+  "failed": [
+   "sgt1929 p.467 (f495) office_operations 1928: total = medium_term + short_term: cells give 8927171, printed 9291171 (difference 364000)"
+  ],
+  "overlap_compared": 53,
+  "overlap_diffs": [
+   [
+    [
+     1928,
+     "operations_short_term"
+    ],
+    "sgt1929",
+    "7262371",
+    "sgt1935",
+    "7626371"
+   ]
+  ],
+  "flagged": [],
+  "editions": [
+   "sgt1929",
+   "sgt1930",
+   "sgt1935"
+  ]
+ },
  "mutuality_coop_central_shares_business": {
   "rows": 197,
   "checks": 124,
@@ -906,9 +1324,9 @@
   "sgt1928": "f1017 title; f1018 crédit mutuel (1919-1928); f1019 coopérative centrale; f1020|f1021 assurances; f1022|f1023 prévoyance; f1024|f1025 bilan de la Banque populaire française au 31 décembre 1928; f1026|f1027 b) bilan de la Coopérative tunisienne de crédit; f1028|f1029 bilan de la Société coopérative de consommation « La Maison Française »; f1030 blank. f1031 = chapter XV.",
   "sgt1929": "f493 title; f494 crédit mutuel (1920-1929); f495 Office public de crédit agricole indigène, ressources (1925-1929) and operations; f496 coopérative centrale (1920-1929); f497 blank; f498|f499 assurances; f500|f501 prévoyance; f502|f503 bilan Banque populaire 1929; f504|f505 coopérative tunisienne de crédit; f506|f507 « La Maison Française »; f508 blank. f509 = chapter XV.",
   "sgt1930": "f1029 title; f1030 crédit mutuel (1921-1930); f1031 Office public de crédit agricole indigène; f1032 Coopérative centrale des agriculteurs de Tunisie and Coopérative de motoculture (1921-1930, new layout); f1033 blank; f1034|f1035 assurances (1921-1930); f1036|f1037 prévoyance (1920-1930); f1038|f1039 Banque populaire 1930; f1040|f1041 coopérative tunisienne de crédit; f1042|f1043 « La Maison Française »; f1044 blank. f1045 = chapter XV.",
-  "sgt1935": "f307 chapter XV *Mutualité agricole*; f308 blank; f309 crédit mutuel (1926-1935, one table); f310 Office public de crédit agricole indigène (ressources au 31 décembre 1934); f311 coopérative centrale and motoculture (1925-1935); f312|f313 assurances mutuelles agricoles a) incendie (1925-1935); f314|f315 c) accidents (from 1933); f316|f317 sociétés tunisiennes de prévoyance (1926-1935); f318 blank. f319 = chapter XVI Travail.",
+  "sgt1935": "f307 chapter XV *Mutualité agricole*; f308 blank; f309 crédit mutuel (1926-1935, one table); f310 Office public de crédit agricole indigène (ressources au 31 décembre 1934); f311 coopérative centrale and motoculture (1925-1935); f312|f313 assurances mutuelles agricoles (1925-1935 title, lines 1926-1935) a) incendie, b) grêle; f314|f315 c) accidents [de dr]oit commun and d) accident[...] (titles partly in the binding; 1933-1935); f316|f317 sociétés tunisiennes de prévoyance (1926-1935); f318 blank. f319 = chapter XVI Travail.",
   "sgt1936": "f182 chapter XIV *Mutualité agricole*; f183 crédit mutuel (1927-1936); f184 coopérative centrale and motoculture (1926-1936); f185|f186 sociétés tunisiennes de prévoyance (1927-1936); f187 blank; f188 = chapter XV *Travail et prévoyance sociale*. So the chapter ends at f187.",
   "sgt1939": "f157 chapter XIV *Mutualité agricole*; f158 crédit mutuel (1929-1939); f159 coopérative centrale and motoculture (1929-1939); f160|f161 sociétés tunisiennes de prévoyance; f162 blank; f163 = chapter XV."
  },
- "_not_transcribed": "Transcribed: crédit mutuel agricole (every edition), coopérative centrale des agriculteurs (parts and affaires traitées sgt1922-sgt1929; capital, avances and goods with the coopérative de motoculture sgt1930-sgt1939). NOT yet transcribed: assurances mutuelles agricoles (sgt1922 f462|f463, sgt1923 f952|f953, sgt1924 f1450|f1451, sgt1925 f520|f521, sgt1926 f1028|f1029, sgt1927 f492|f493, sgt1928 f1020|f1021, sgt1929 f498|f499, sgt1930 f1034|f1035, sgt1935 f312-f315 incl. accidents); sociétés indigènes / tunisiennes de prévoyance (sgt1922 f464|f465, sgt1923 f954|f955, sgt1924 f1452|f1453, sgt1925 f522|f523, sgt1926 f1030|f1031, sgt1927 f494|f495, sgt1928 f1022|f1023, sgt1929 f500|f501, sgt1930 f1036|f1037, sgt1935 f316|f317, sgt1936 f185|f186, sgt1939 f160|f161); Office public de crédit agricole indigène (sgt1929 f495, sgt1930 f1031, sgt1935 f310); bilans of the Banque populaire française, Coopérative tunisienne de crédit and sociétés coopératives de consommation (sgt1926 f1032-f1035, sgt1927 f496-f499, sgt1928 f1024-f1029, sgt1929 f502-f507, sgt1930 f1038-f1043); labour tables of sgt1922-sgt1924 (accidents du travail a) victims by profession and nationality, b), c) causes matérielles by profession: sgt1922 f459-f460, sgt1923 f949-f951, sgt1924 f1447-f1449), to be stored as labour_early_*."
+ "_not_transcribed": "Transcribed: crédit mutuel agricole (every edition), coopérative centrale des agriculteurs (parts and affaires traitées sgt1922-sgt1929; capital, avances and goods with the coopérative de motoculture sgt1930-sgt1939), assurances mutuelles agricoles (sgt1922 f462|f463, sgt1923 f952|f953, sgt1924 f1450|f1451, sgt1925 f520|f521, sgt1926 f1028|f1029, sgt1927 f492|f493, sgt1928 f1020|f1021, sgt1929 f498|f499, sgt1930 f1034|f1035, sgt1935 f312|f313 and f314|f315 with c) and d) accidents; every cell read on 0.75-0.85 whole-half crops of both pages of each spread, binding columns and doubtful figures zoomed at 1.2-3x; sgt1925 and sgt1926 re-typed in full from 3-4-column native crops; Gallica OCR used as a cross-check only, `ocr_corrected` only where the OCR token at the cell was checked and reads otherwise), Office public de crédit agricole indigène (sgt1929 f495, sgt1930 f1031, sgt1935 f310). NOT yet transcribed: sociétés indigènes / tunisiennes de prévoyance (sgt1922 f464|f465, sgt1923 f954|f955, sgt1924 f1452|f1453, sgt1925 f522|f523, sgt1926 f1030|f1031, sgt1927 f494|f495, sgt1928 f1022|f1023, sgt1929 f500|f501, sgt1930 f1036|f1037, sgt1935 f316|f317, sgt1936 f185|f186, sgt1939 f160|f161); bilans of the Banque populaire française, Coopérative tunisienne de crédit and sociétés coopératives de consommation (sgt1926 f1032-f1035, sgt1927 f496-f499, sgt1928 f1024-f1029, sgt1929 f502-f507, sgt1930 f1038-f1043); labour tables of sgt1922-sgt1924 (accidents du travail a) victims by profession and nationality, b), c) causes matérielles by profession: sgt1922 f459-f460, sgt1923 f949-f951, sgt1924 f1447-f1449), to be stored as labour_early_*."
 }

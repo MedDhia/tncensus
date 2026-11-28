@@ -60,3 +60,43 @@ cols: goods seeds labour spring harvest fertiliser tractors loans_total outstand
 1923 | 4797481.15 0 0 0 0 0 0 0 0
 TOTAUX | 19237049 4395569.25 1255248.35 556483.85 1599609.50 423822.95 1236434.30 9467198.10 1103297.55
 
+
+# Assurances mutuelles agricoles (1914-1923), spread f952|f953 (pp. 450|451). a) Incendie, b) Grêle. New layout (kept
+# to sgt1935): left page nombre de polices, valeurs assurées, répartition des cotisations versées (caisses locales,
+# caisse régionale, réassureurs), subventions (caisses locales, caisse régionale), recettes diverses et ristournes
+# (caisse locale, caisse régionale; cents in the binding, also read on the strip repeated at the left edge of f953).
+# Right page: sinistres (nombre; répartition des indemnités payées: caisses locales, caisse régionale, réassureurs),
+# répartition des frais de sinistre (caisses locales, caisse régionale, réassureurs), déficit des caisses locales,
+# frais généraux divers et ristournes aux assurés (caisse locale, caisse régionale). No totals printed.
+# Read on 0.85 whole-half crops of both pages; binding column zoomed at 2x.
+@ins_fire view=952 page=450 rview=953 rpage=451 split=claims
+img: all
+cols: policies insured contrib_local contrib_regional contrib_central subsidy_local subsidy_regional misc_local misc_regional claims indemn_local indemn_regional indemn_central costs_local costs_regional costs_central deficit_local gen_local gen_regional
+1914 | 384 7875699 198.03 365.56 52319.70 1000 2000 0 6094.65! 6 85.77 171.55 25746.34 2182.35 3862.50 0 0 0 0
+1915 | 509 16324743 659.57 1246.73 120053.85 833.10 1666.90 0 14266.93! 6 272.07 644.15 40435.10 3773.80 5273.26 0 0 0 0
+1916 | 563 14817284 775.87 1551.75 80885.31 834.65 1665.35 0 13034.93! 17 556.40 1163.14 34234.56 2161.64 5107.27 0 0 0 0
+1917 | 652 23231069 911.64! 1823.30 116415.73 833 1667 0 4368.37! 16 536.17 1072.34 61229.02 2667.92 4851.15 0 0 0 0
+1918 | 754 40871907 970.03 1963.18 208746.15 833.33 1666.67 0 7840.83! 10 526.67 1053.28 123995.54 7235.12 6532.31 0 0 0 0
+1919 | 740 41777790 1933.20 3866.59 206499.80 883 1667 0 13759.57! 24 1049.21 2098.58 69192.02 9383.50 10468.54 0 150.43 0 0
+1920 | 833 56992723 3571.30 7166.51! 266987.18 3333 6667 0 10517.70! 14 1851.20 3702.40 109494.25 14040.07 13779.83 2167.95 0 0 0
+1921 | 1140 78824053 7243.05 14486.12 375836.22 3333 6667 0 16826.42 0 13922.09 27843.85 325553.83 20569.88 12588.99 0 0 0 0
+1922 | 1128 67386247 15087.88 30174.44 248815.36 3333 31667 0 57578.78 21 4747.65 9495.29 90803.95 1056.13 22231.92 0 0 0 0
+1923 | 1332 97751061 4483963 183140.69 227971.32 5000 20000 8229.22 28961.56 14 28238.24 116755.41 146194.26 1217.15 4865.73 6085.58 0 24119.41 22602.37
+# 1921 b) subventions caisses locales printed '.600' (the thousands digit not printed; 2.600 in sgt1922 and later).
+@ins_hail view=952 page=450 rview=953 rpage=451 split=claims
+img: all
+cols: policies insured contrib_local contrib_regional contrib_central subsidy_local subsidy_regional misc_local misc_regional claims indemn_local indemn_regional indemn_central costs_local costs_regional costs_central deficit_local gen_local gen_regional
+1914 | 154 3253261 2640.06 11241.12 13881.04 1400 5600 0 132.23! 4 1769.26 11390.39 13846.33 1607.62 4925.55 0 1113.68 0 0
+1915 | 254 10538211 7928.87 31715.92 39664.78 1500 6000 0 75.39! 64 32340.12 129330.69 163035.67 3514.63 6018.38 0 26697.30 0 0
+1916 | 215 6187325 3812.87 15251.28 32146.58 1400 5600 0 1095.64! 9 1286.82 5197.32 6851.39 1350.74 5161.29 0 0 0 0
+1917 | 243 8672916 4745.46 18981.84 47744.05 1400 5600 0 1724.42! 5 450.22 1800.85 5300.91 1559.08 5369.20 0 168.92 0 0
+1918 | 327 21167932 6811.87 32293.55 143369.04 1400 5600 0 2128.31! 42 11252.77 45011.01 194248.24 7804.86 9510.56 0 10838.16 0 0
+1919 | 331! 20199860 10346.68 26712.65 134886.92 1400 5600 0 2276.52! 17 2017.44 8069.75 47071.70 8417.20 17205.26 0 0 0 0
+1920 | 342 30963842 10077.56 40070.28 264117.09! 2600 10400 0 3187.29! 7 446.10 1784.44 7852.06 16389.19 15193.09 434.61 0 0 0
+1921 | 518 47828184 15325.87 61363.21 370287.32 600 10400 0 1447.48 40 22343.76 89374.94 464531.25 23752.41 46926.12 0 13519.08 0 0
+1922 | 478 29016341 13121.29 52485.65 211655.75 2600 12400 0 42522.27 18 3484.50 13948.08 35102.77 332.32 24062.49 0 0 0 0
+1923 | 668 56933140 59631.02 238524.62 298155.64 5000 20000 16382.01 45415.97! 27 17425.62 69702.51 87128.14 563.48 2290.66 2854.05 0 31637.66 53855.25
+@ins_hail_constitution view=952 page=450 rview=953 rpage=451 split=costs_regional
+img: all
+cols: subsidy_regional costs_regional
+1913 | 8150.20 8150.20
