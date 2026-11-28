@@ -472,6 +472,370 @@ def build_origin(secs, by_class, write):
     return res
 
 
+# ----------------------------------------------------------------- e) relations commerciales par pays
+
+T_CTY = "commerce_trade_by_country"
+# row code -> (English name, name as printed)
+COUNTRY = {
+    "france": ("France", "France"), "algeria": ("Algeria", "Algérie"), "england": ("England", "Angleterre"),
+    "italy": ("Italy", "Italie"), "tripoli": ("Tripoli (Libya)", "Tripoli"), "spain": ("Spain", "Espagne"),
+    "malta": ("Malta", "Malte"), "usa": ("United States", "Etats-Unis (Amérique)"), "egypt": ("Egypt", "Egypte"),
+    "morocco": ("Morocco", "Maroc"), "greece": ("Greece", "Grèce"), "portugal": ("Portugal", "Portugal"),
+    "switzerland": ("Switzerland", "Suisse"), "brazil": ("Brazil", "Brésil"), "china": ("China", "Chine"),
+    "india": ("India: British settlements", "Indes : Comptoirs Anglais"), "netherlands": ("Netherlands", "Hollande"),
+    "bulgaria": ("Bulgaria", "Bulgarie"), "sweden": ("Sweden", "Suède"), "norway": ("Norway", "Norvège"),
+    "austria": ("Austria", "Autriche"), "germany": ("Germany", "Allemagne"), "russia": ("Russia", "Russie"),
+    "turkey": ("Turkey", "Turquie"), "denmark": ("Denmark", "Danemark"), "belgium": ("Belgium", "Belgique"),
+    "japan": ("Japan", "Japon"), "romania": ("Romania", "Roumanie"), "other": ("Other countries", "Autres pays"),
+}
+
+
+def build_country(secs, write):
+    recs, used = [], []
+    avg_fail = []
+    for ed in EDITIONS_DONE:
+        es = [s for s in secs if s["table"] == "by_country" and s["ed"] == ed]
+        if not es:
+            continue
+        cells, wh = defaultdict(dict), {}
+        for s in es:
+            used.append(s)
+            for lab, cs in rows_of(s).items():
+                for c in s["cols"]:
+                    cells[c][lab] = cs[c].value
+                    wh[c] = where(s)
+                    if c.startswith("A") or lab.startswith("Total"):
+                        continue
+                    k, f = lab.split(".")
+                    cell = cs[c]
+                    recs.append({"census": ed, "table_id": "general_e", "gallica_ark": s["ark"],
+                                 "source_page": s["page"], "gallica_view": s["view"], "year": int(c),
+                                 "country": COUNTRY[k][0], "country_fr": COUNTRY[k][1], "country_code": k,
+                                 "flow": f, "flow_fr": FLOW[f], "measure": "value", "measure_fr": "valeur",
+                                 "unit": "francs", "value": cell.value,
+                                 "flag": cell.flag or ("total_mismatch" if (ed, lab, c) in CTY_MISPRINTS else "")})
+        years = [c for c in cells if not c.startswith("A")]
+        for c in sorted(years):
+            for f in FLOW:
+                CHK.eq(T_CTY, f"{wh[c]} {c}: sum of countries, {f} = TOTAUX {f}",
+                       ssum(cells[c][f"{k}.{f}"] for k in COUNTRY), cells[c][f"Total.{f}"])
+        for c in sorted(c for c in cells if c.startswith("A")):
+            y0, y1 = map(int, c[1:].split("-"))
+            for lab in cells[c]:
+                vals = [cells[str(y)].get(lab) for y in range(y0, y1 + 1)]
+                tot = ssum(vals)
+                n0 = len(CHK.fail[T_CTY])
+                CHK.eq(T_CTY, f"{wh[c]} average {y0}-{y1} {lab}: printed average x {y1 - y0 + 1} = sum of years",
+                       tot, None if cells[c][lab] is None else cells[c][lab] * (y1 - y0 + 1),
+                       tol=Decimal(y1 - y0 + 1))
+                if len(CHK.fail[T_CTY]) > n0:
+                    avg_fail.append((ed, y0, y1, lab))
+    key = ["year", "country_code", "flow"]
+    kept, compared, diffs, n_ill = select_legible(recs, key)
+    order = list(COUNTRY)
+    kept.sort(key=lambda r: (r["year"], order.index(r["country_code"]), r["flow"]))
+    # an average failure is 'corroborated' when every year of its window was printed identically by every
+    # edition that printed it legibly (two or three independent printings, each read on its own image)
+    printed = defaultdict(set)
+    for r in recs:
+        if r["value"] is not None:
+            printed[(r["year"], r["country_code"], r["flow"])].add(r["value"])
+    fails = CHK.fail[T_CTY]
+    flagged = [f"{r['census']} {r['year']} {r['country_code']} {r['flow']}" for r in kept if r["flag"]]
+    res = dict(rows=len(kept), checks=CHK.n[T_CTY], failed=list(fails), overlap_compared=compared,
+               overlap_diffs=[list(d) for d in diffs], flagged=flagged, editions=EDITIONS_DONE,
+               value_type="francs", illegible_printings_not_compared=n_ill)
+    if write:
+        cols = COMMON + CTY_DIMS + ["value", "flag"]
+        write_csv(T_CTY, cols, kept)
+        write_notes(T_CTY, CHAPTER, SCRIPT, kept, cols, CTY_DOC,
+                    "Renseignements généraux : résumé des relations commerciales avec les différents pays "
+                    "(valeur en francs)",
+                    "General information: trade with the different countries (value in francs)",
+                    CTY_PARAS + ["Survey of the whole chapter: `commerce_survey.md`."],
+                    CHK.n[T_CTY], fails, compared, diffs, coverage_lines(used),
+                    RULE4.replace("from the latest edition printing it", "from the latest edition printing it "
+                                  "legibly"),
+                    "Unit: francs (current values; see the valuation footnote in `commerce_trade_by_class`). "
+                    "value_type: francs.")
+    return res
+
+
+CTY_DIMS = ["country", "country_fr", "country_code", "flow", "flow_fr", "measure", "measure_fr", "unit"]
+CTY_DOC = dict(DOC, table_id="`general_e` (Renseignements généraux, e) Résumé des relations commerciales avec les "
+                             "différents pays)",
+               census=CAT_DOC["census"],
+               country="country of provenance (imports) or destination (exports), English",
+               country_fr="country as printed",
+               country_code="short code of the country line (`other` = Autres pays)",
+               flag="empty or `total_mismatch` (see notes)")
+# Misprints located by two independent printed averages and the TOTAUX gap; printed value kept, flagged.
+CTY_MISPRINTS = {("sgt1924", "tripoli.export", "1924"), ("sgt1924", "egypt.import", "1924")}
+CTY_PARAS = [
+    "The table prints, for 28 named countries and *Autres pays*, the value of imports from and exports to each "
+    "country for the last ten years, then (odd view) three printed averages (*Moyenne des années*: two five-year "
+    "and one ten-year) and a TOTAUX line per flow. Averages and TOTAUX are not stored; they were used as checks "
+    "(sum of countries = TOTAUX; printed average x number of years = sum of the cells, tolerance one franc per "
+    "year for rounding). The TOTAUX agree with the TOTAUX of table c) (`commerce_trade_by_category`) wherever both are legible. "
+    "Printed » is stored as 0. Country names are those printed; *Tripoli* is Ottoman, then Italian Tripolitania; "
+    "*Indes : Comptoirs Anglais* = British India.",
+    "Gutter. The fourth year of each even view lies against the binding. sgt1922: the 1916 column loses its "
+    "last digit on most lines (`?`; f290 legible on 10 lines, f292 only on lines printed »), and on f293 the "
+    "1917 export TOTAUX loses a middle digit. sgt1923: the 1917 column of f782 loses the last digit on 6 lines "
+    "(`?`), and the 1918 column (f781, f783) loses leading digits on the larger values (`?`, a value kept only "
+    "when its first digit is wholly visible). sgt1924 is legible throughout. A year is stored from the latest "
+    "edition printing it legibly; illegible printings are not compared. sgt1922 f293 `other` export 1921: the "
+    "last digit is damaged type (3 or 5), transcribed `?`; sgt1923 and sgt1924 print 6.910.483.",
+    "Every overlapping cell agrees between the editions (each printing typed from its own image). The TOTAUX "
+    "failures are therefore in the printed table itself and recur in every edition printing the year: "
+    "1918 import (sum of countries 430 below TOTAUX), 1919 export (600.002 below), 1920 import (667.684 below), "
+    "1921 import (300 below), 1922 import (687.602 below) and export (618.940 above), 1923 import (2.999.990 "
+    "above) and export (498 above). Every cell of those columns was re-read on native-resolution crops; the "
+    "printed averages locate no single cell consistently (for 1923 the sgt1923 1919-1923 averages of `usa`, "
+    "`egypt` and `turkey` import would explain the 3 million, but the sgt1924 1920-1924 averages agree with the "
+    "printed 1923 cells), so nothing is flagged. sgt1922 1917 export: the TOTAUX is in the gutter (`?`); sgt1923 "
+    "and sgt1924 print 125.672.079 and the check passes there.",
+    "1924 (sgt1924 only): the countries exceed TOTAUX import by 906 and fall 23.736 short of TOTAUX export. "
+    "Both printed averages containing 1924 (1920-1924 and 1915-1924) imply 10.121.094 for `tripoli` export "
+    "(printed 10.101.094, re-read on a zoomed crop) and 401 less than the printed 1.364.829 for `egypt` import; "
+    "both corrections go in the direction of the TOTAUX gap, so these two cells are flagged `total_mismatch` "
+    "(printed value kept). The residuals (3.736 export, 505 import) are not located. sgt1925 reprints 1924.",
+    "Failed average checks (averages are not stored and were never used to change a cell). Every year of every "
+    "failing average window is printed identically by two or three editions, except the 1924 cells discussed "
+    "above, so the failures are misprinted or miscomputed averages: (i) round-number slips in one average only "
+    "(e.g. sgt1922 `algeria` export 1913-1922, 1.000.000; sgt1923 `turkey` export 1914-1923, 300.000, `russia` "
+    "export 1919-1923, 20.000; sgt1924 `usa` import 1915-1919, 10.000.000, `france` export 1915-1924, 50.000.000, "
+    "`belgium` export 1915-1924, 7.000.000, `morocco` export, `india` and `romania` import 1920-1924 and "
+    "1915-1924, 500.000; TOTAUX import 1915-1919 and 1915-1924, 5.000.000); (ii) small differences of a few "
+    "francs to a few thousand francs (rounding or copying slips); (iii) averages computed on a different "
+    "state of the figures: sgt1922 `switzerland` export 1918-1922 and 1913-1922 omit the 1922 value (308.315, "
+    "confirmed by sgt1923-1924 and the sgt1923 1919-1923 average), `china` export omits 1921 (32); sgt1924 "
+    "`usa` export 1920-1924 and 1915-1924 omit 1924 (7.187.353); sgt1924 `bulgaria` import 1920-1924 repeats "
+    "the sgt1923 1919-1923 average (172.237) and `russia` export prints the 1915-1919 average (27.432) in the "
+    "1920-1924 column. (iv) sgt1922 `algeria` import 1918-1922 and 1913-1922 both imply 11.560.684 for 1918 "
+    "(printed 11.650.684 in sgt1922 and sgt1924, a possible transposition), but correcting it would widen the "
+    "1918 TOTAUX gap, so the cell is not flagged.",
+]
+
+
+# ----------------------------------------------------------------- f) droits de douane perçus (importation)
+
+T_CUS = "commerce_customs_duties"
+# row code -> (product class, line as printed); the c) categories, with Denrées coloniales split into Sucres /
+# Autres, Poteries / Verres et cristaux and Meubles / Ouvrages en bois printed on separate lines
+DUTY_ROWS = dict(
+    [(k, v) for k, v in CATEGORY.items() if list(CATEGORY).index(k) < list(CATEGORY).index("colonial_goods")]
+    + [("colonial_sugar", ("vegetal", "Denrées coloniales de consommation : Sucres")),
+       ("colonial_other", ("vegetal", "Denrées coloniales de consommation : Autres"))]
+    + [(k, v) for k, v in CATEGORY.items()
+       if list(CATEGORY).index("colonial_goods") < list(CATEGORY).index(k) < list(CATEGORY).index("pottery_glass")]
+    + [("pottery", ("manufactures", "Poteries")), ("glass", ("manufactures", "Verres et cristaux"))]
+    + [(k, v) for k, v in CATEGORY.items()
+       if list(CATEGORY).index("pottery_glass") < list(CATEGORY).index(k) < list(CATEGORY).index("furniture")]
+    + [("furniture", ("manufactures", "Meubles")), ("wood_goods", ("manufactures", "Ouvrages en bois"))]
+    + [(k, v) for k, v in CATEGORY.items() if list(CATEGORY).index(k) > list(CATEGORY).index("furniture")])
+DUTY_ROWS["paper"] = ("manufactures", "Papiers et ses applications")
+# reprint differences judged on the totals: the later printing is the corrected one
+CUS_REPRINT = {("1923", "live_animals"): "sgt1923 prints 33.773, sgt1924 23.773"}
+CUS_DIMS = ["product_class", "product_class_fr", "product_category", "product_category_fr", "measure", "measure_fr",
+            "unit"]
+CUS_DOC = dict(DOC, table_id="`general_f` (Renseignements généraux, f) Droits de douane perçus, importation)",
+               census=CAT_DOC["census"],
+               year="calendar year in which the duties were collected",
+               product_category="code of the line (customs nomenclature category; see notes)",
+               product_category_fr="line as printed",
+               measure="`import_duties`", measure_fr="droits de douane perçus (importation)",
+               value="duties collected, francs with centimes, as printed",
+               flag="empty, `reprint_corrected` (see notes)")
+
+
+def build_customs(secs, write):
+    recs, used = [], []
+    for s in secs:
+        if s["table"] != "customs_duties":
+            continue
+        used.append(s)
+        R = rows_of(s)
+        for c in s["cols"]:
+            CHK.eq(T_CUS, f"{where(s)} {c}: sum of lines = TOTAL", ssum(R[k][c].value for k in DUTY_ROWS),
+                   R["Total"][c].value)
+            for k, (cl, fr) in DUTY_ROWS.items():
+                cell = R[k][c]
+                recs.append({"census": s["ed"], "table_id": "general_f", "gallica_ark": s["ark"],
+                             "source_page": s["page"], "gallica_view": s["view"], "year": int(c),
+                             "product_class": cl, "product_class_fr": PRODUCT_CLASS[cl], "product_category": k,
+                             "product_category_fr": fr, "measure": "import_duties",
+                             "measure_fr": "droits de douane perçus (importation)", "unit": "francs",
+                             "value": cell.value, "flag": cell.flag})
+    kept, compared, diffs, n_ill = select_legible(recs, ["year", "product_category"])
+    for r in kept:
+        if (str(r["year"]), r["product_category"]) in CUS_REPRINT and not r["flag"]:
+            r["flag"] = "reprint_corrected"
+    order = list(DUTY_ROWS)
+    kept.sort(key=lambda r: (r["year"], order.index(r["product_category"])))
+    fails = CHK.fail[T_CUS]
+    flagged = [f"{r['census']} {r['year']} {r['product_category']}" for r in kept if r["flag"]]
+    res = dict(rows=len(kept), checks=CHK.n[T_CUS], failed=list(fails), overlap_compared=compared,
+               overlap_diffs=[list(d) for d in diffs], flagged=flagged, editions=EDITIONS_DONE,
+               value_type="francs", illegible_printings_not_compared=n_ill)
+    if write:
+        cols = COMMON + CUS_DIMS + ["value", "flag"]
+        write_csv(T_CUS, cols, kept)
+        paras = [
+            "Import duties collected (droits de douane perçus, importation) by line of the customs nomenclature: "
+            "the 32 categories of table c) (`commerce_trade_by_category`), with *Denrées coloniales* split into "
+            "Sucres and Autres, *Poteries* and *Verres et cristaux*, *Meubles* and *Ouvrages en bois* printed "
+            "on separate lines (35 lines). Francs with centimes; printed » stored as 0. The printed TOTAL and the "
+            "three averages (*Moyenne des années*) are not stored; the TOTAL was used as a check (sum of lines). "
+            "Total duties by year = sum of the stored rows.",
+            "Gutter: sgt1922 f295, the 1917 column loses its leading digits on Sucres, Autres, Tissus and the "
+            "TOTAL, and on f294 the last digit of the 1916 TOTAL and of *Produits et déchets divers* (`?`); "
+            "sgt1923 f785, the 1918 column is cut on every line except six short values (`?`). A year is stored "
+            f"from the latest edition printing it legibly ({n_ill} illegible printed cells, not compared). "
+            "sgt1924 prints every year legibly.",
+            "Reprint difference: 1923 *Animaux vivants*, sgt1923 prints 33.773 and sgt1924 23.773 (both read on "
+            "zoomed crops); the sgt1924 figure reduces the 1923 TOTAL gap and is stored (flag "
+            "`reprint_corrected`).",
+            "Explanation of the failed checks (every cell of the failing columns re-read on native-resolution "
+            "crops; the same figures in every edition printing the year): 1918, the lines sum to 20.00 less than "
+            "the TOTAL (6.181.022,80; sgt1922 and sgt1924); 1922, 0.06 less than the TOTAL (17.637.371,81; all "
+            "three editions); neither is located. 1923: sgt1923 lines exceed the TOTAL (24.371.783,13) by "
+            "19.005, sgt1924 (with Animaux vivants 23.773) by 9.005. The sgt1924 1920-1924 printed averages agree "
+            "with the printed 1923 lines (within rounding) and the TOTAL average equals the mean of the printed "
+            "TOTALs, so the residual 9.005 cannot be assigned to a line; nothing flagged.",
+            "Survey of the whole chapter: `commerce_survey.md`.",
+        ]
+        write_notes(T_CUS, CHAPTER, SCRIPT, kept, cols, CUS_DOC,
+                    "Renseignements généraux : droits de douane perçus (importation)",
+                    "General information: import duties collected, by category of products",
+                    paras, CHK.n[T_CUS], fails, compared, diffs, coverage_lines(used),
+                    RULE4.replace("from the latest edition printing it", "from the latest edition printing it "
+                                  "legibly"),
+                    "Unit: francs with centimes (current values). value_type: francs.")
+    return res
+
+
+# ----------------------------------------------------------------- droits de sortie perçus (exportation)
+
+T_EXP = "commerce_export_duties"
+# row code -> (group as printed or '', line as printed); sgt1924-only lines marked in EXPORT_NEW_1924
+EXPORT_ROWS = {
+    "horses": ("Bêtes de somme exportées à destination de l'étranger", "Chevaux et juments"),
+    "foals": ("Bêtes de somme exportées à destination de l'étranger", "Poulains et pouliches"),
+    "mules": ("Bêtes de somme exportées à destination de l'étranger", "Mules et mulets"),
+    "donkeys": ("Bêtes de somme exportées à destination de l'étranger", "Anes, ânesses et ânons"),
+    "camels": ("Bêtes de somme exportées à destination de l'étranger", "Animaux de l'espèce caméline"),
+    "hides_large": ("Peaux brutes", "grandes"),
+    "hides_sheep": ("Peaux brutes", "de moutons et d'agneaux"),
+    "hides_goat": ("Peaux brutes", "de chèvres et de chevreaux"),
+    "poultry": ("", "Volailles et pigeons vivants"),
+    "salted_meat": ("", "Viandes salées"),
+    "canned_meat": ("", "Conserves de viandes en boîte"),
+    "eggs": ("", "Œufs de volailles"),
+    "butter_cheese": ("", "Beurres et fromages"),
+    "condensed_milk": ("", "Lait concentré pur"),
+    "octopus": ("", "Poulpes"),
+    "fresh_fish": ("", "Poissons frais autres que le thon et la boutargue"),
+    "sponges_washed": ("Eponges", "lavées"),
+    "sponges_unwashed": ("Eponges", "non lavées"),
+    "potatoes": ("", "Pommes de terre"),
+    "dried_pulses": ("", "Légumes secs"),
+    "fruit_fresh": ("Fruits de table", "frais"),
+    "fruit_dried": ("Fruits de table", "secs"),
+    "olives_fresh": ("", "Olives fraîches"),
+    "condensed_milk_sweet": ("", "Lait concentré sucré"),
+    "olive_oil": ("Huiles", "d'olive"),
+    "pomace_oil": ("Huiles", "de grignons"),
+    "charcoal": ("", "Charbon de bois"),
+    "common_wood": ("", "Autres bois communs"),
+    "alfa": ("", "Alfa brut"),
+    "vegetables_fresh": ("", "Légumes frais"),
+    "fodder": ("", "Fourrages"),
+    "pomace": ("", "Grignons"),
+    "rags": ("", "Chiffons"),
+    "cellulose_pulp": ("", "Pâtes de cellulose (pâtes d'alfa et de diss)"),
+    "lead_ore": ("", "Minerai de plomb"),
+    "lead_metal": ("", "Plomb (métal)"),
+    "basketry": ("", "Ouvrages de sparterie (alfa travaillé)"),
+    "parcels_sponges": ("Colis postaux", "Eponges"),
+    "parcels_olive_oil": ("Colis postaux", "Huiles d'olive"),
+    "horse_tax": ("", "Taxes de sortie sur les jeunes chevaux"),
+}
+EXPORT_LABEL_ED = {("sgt1924", "butter_cheese"): "Beurre, fromages et graisses"}
+EXP_DIMS = ["product_group_fr", "product", "product_fr", "measure", "measure_fr", "unit"]
+EXP_DOC = dict(DOC, table_id="`export_duties` (Droits de sortie perçus, exportation)",
+               census=CAT_DOC["census"],
+               year="calendar year in which the duties were collected",
+               product_group_fr="group heading as printed (empty when the line stands alone)",
+               product="code of the line", product_fr="line as printed (in the edition the value is taken from)",
+               measure="`export_duties`", measure_fr="droits de sortie perçus (exportation)",
+               value="duties collected, francs with centimes, as printed", flag="empty")
+
+
+def build_export(secs, write):
+    recs, used = [], []
+    for s in secs:
+        if s["table"] != "export_duties":
+            continue
+        used.append(s)
+        R = rows_of(s)
+        lines = [k for k in R if k != "Total"]
+        for c in s["cols"]:
+            CHK.eq(T_EXP, f"{where(s)} {c}: sum of lines = TOTAL", ssum(R[k][c].value for k in lines),
+                   R["Total"][c].value)
+            for k in lines:
+                g, fr = EXPORT_ROWS[k]
+                cell = R[k][c]
+                recs.append({"census": s["ed"], "table_id": "export_duties", "gallica_ark": s["ark"],
+                             "source_page": s["page"], "gallica_view": s["view"], "year": int(c),
+                             "product_group_fr": g, "product": k,
+                             "product_fr": EXPORT_LABEL_ED.get((s["ed"], k), fr), "measure": "export_duties",
+                             "measure_fr": "droits de sortie perçus (exportation)", "unit": "francs",
+                             "value": cell.value, "flag": cell.flag})
+    kept, compared, diffs, n_ill = select_legible(recs, ["year", "product"])
+    order = list(EXPORT_ROWS)
+    kept.sort(key=lambda r: (r["year"], order.index(r["product"])))
+    fails = CHK.fail[T_EXP]
+    flagged = [f"{r['census']} {r['year']} {r['product']}" for r in kept if r["flag"]]
+    res = dict(rows=len(kept), checks=CHK.n[T_EXP], failed=list(fails), overlap_compared=compared,
+               overlap_diffs=[list(d) for d in diffs], flagged=flagged, editions=EDITIONS_DONE,
+               value_type="francs", illegible_printings_not_compared=n_ill)
+    if write:
+        cols = COMMON + EXP_DIMS + ["value", "flag"]
+        write_csv(T_EXP, cols, kept)
+        paras = [
+            "Export duties collected (droits de sortie perçus, exportation) by product line, including the "
+            "duties on parcel post (Colis postaux) and the exit tax on young horses. Francs with centimes; "
+            "printed » stored as 0. The TOTAL and the three averages (*Moyenne des années*) are not stored; the "
+            "TOTAL was used as a check. Total export duties by year = sum of the stored rows.",
+            "Lines: sgt1922 and sgt1923 print 26 lines; sgt1924 prints 40, adding 14 lines (poultry, salted and "
+            "canned meat, eggs, condensed milk pure and sweetened, potatoes, pulses, fresh and dried fruit, "
+            "charcoal, other common wood, fresh vegetables, fodder) that are » in every year before 1924, and "
+            "renames *Beurres et fromages* to *Beurre, fromages et graisses*. Under rule 4 every year 1915-1924 "
+            "comes from sgt1924, so the added lines carry 0 (as printed) for 1915-1923; 1913 and 1914 have only "
+            "the 26 lines (the added lines are absent, not zero). The animal lines refer to the decrees of 12 June "
+            "and 28 August 1920 (duties on beasts of burden exported to foreign countries).",
+            "Gutter: sgt1922 f296, the last digits of the 1916 TOTAL (`?`); sgt1923 f786, the 1917 column loses "
+            "its centimes on every non-zero line (`?`), and f787 the 1918 column loses leading digits on five "
+            f"lines and the TOTAL (`?`). Illegible printings ({n_ill} cells) are not compared; sgt1924 is legible "
+            "throughout.",
+            "Explanation of the failed checks (cells re-read on native-resolution crops; the same figures in every "
+            "edition printing the year): 1918, the lines exceed the TOTAL (707.645,24) by 0,05; 1922, they fall "
+            "3,00 short of the TOTAL (3.412.803,27); neither is located. 1924 (sgt1924 only): the lines sum to "
+            "2.056.475,22 against a TOTAL of 2.056.675,96 (200,74 short); the printed 1920-1924 averages are "
+            "themselves inconsistent on several lines (e.g. camels, large hides, dried fruit, fodder) and do not "
+            "locate the gap; nothing flagged. sgt1925 reprints 1924.",
+            "Survey of the whole chapter: `commerce_survey.md`.",
+        ]
+        write_notes(T_EXP, CHAPTER, SCRIPT, kept, cols, EXP_DOC, "Droits de sortie perçus (exportation)",
+                    "Export duties collected, by product", paras, CHK.n[T_EXP], fails, compared, diffs,
+                    coverage_lines(used),
+                    RULE4.replace("from the latest edition printing it", "from the latest edition printing it "
+                                  "legibly"),
+                    "Unit: francs with centimes (current values). value_type: francs.")
+    return res
+
+
 def build(write):
     secs = []
     for ed in EDITIONS_DONE:
@@ -505,6 +869,9 @@ def build(write):
                    value_type="francs")}
     res[T_CAT] = build_category(secs, by_class, write)
     res[T_ORG] = build_origin(secs, by_class, write)
+    res[T_CTY] = build_country(secs, write)
+    res[T_CUS] = build_customs(secs, write)
+    res[T_EXP] = build_export(secs, write)
     if write:
         cols = COMMON + DIMS + ["value", "flag"]
         write_csv(T, cols, kept)

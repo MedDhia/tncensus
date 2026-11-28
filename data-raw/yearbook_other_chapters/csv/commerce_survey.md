@@ -17,8 +17,8 @@ years (1913-1922, 1914-1923, 1915-1924), so every yearly series falls under SPEC
 | 284-287 | c) Résumé des importations et des exportations par catégorie de produits (valeur en francs): ~31 nomenclature categories x import/export, 10 years + 3 five-year averages | ~800 | `commerce_trade_by_category` (**done**) |
 | 288-289 | d) Classement des produits par pays de provenance et de destination: by class, France et Algérie vs l'Étranger et colonies françaises, import/export, 10 years | ~400 | `commerce_trade_by_origin_group` (**done**) |
 | 290-293 | e) Résumé des relations commerciales avec les différents pays (valeur en francs): ~35 countries x import/export, 10 years + 3 averages | ~900 | `commerce_trade_by_country` |
-| 294-295 | f) Droits (de douane) perçus, by product category, 10 years + averages, francs with centimes | ~450 | `commerce_customs_duties` |
-| 296-297 | droits de sortie: export duties by product (animals, hides, olive oil, alfa, sponges, colis postaux, taxes ...), 10 years + averages | ~350 | `commerce_export_duties` |
+| 294-295 | f) Droits (de douane) perçus, by product category, 10 years + averages, francs with centimes | ~450 | `commerce_customs_duties` (**done**) |
+| 296-297 | droits de sortie: export duties by product (animals, hides, olive oil, alfa, sponges, colis postaux, taxes ...), 10 years + averages | ~350 | `commerce_export_duties` (**done**) |
 | 298-305 | Relations commerciales avec les principaux pays (1913-1922): FRANCE, a) importations, b) exportations, quantity (with unit column) and value by product line, 10 years | ~2400 | `commerce_country_products` |
 | 306-309 | same, ALGÉRIE | ~1500 | idem |
 | 310-313 | same, ANGLETERRE | ~1000 | idem |
@@ -51,7 +51,10 @@ consumption / prices / warehouses / weights pages.
 | `commerce_trade_by_class` | **done**, sgt1922-1924, 96 rows | f282-283, f772-773, f1276-1277, every cell read on native-resolution crops (img: all) |
 | `commerce_trade_by_category` | **done**, sgt1922-1924, 768 rows | f284-287, f774-777, f1278-1281, every cell read on native-resolution crops (img: all); gutter cells `?` (sgt1923 1918: 21 lines; sgt1924 1918: all lines, 1919: 11 lines), stored from the latest legible printing |
 | `commerce_trade_by_origin_group` | **done**, sgt1922-1924, 192 rows | f288-289, f778-779, f1282-1283, every cell read on native-resolution crops (img: all); gutter cells `?` (sgt1922 1918 France-Algérie: mineral export, TOTAL; sgt1923 1919 France-Algérie: all lines) |
-| all others listed above | to do (next: `commerce_trade_by_country` f290-293) | – |
+| `commerce_trade_by_country` | **done**, sgt1922-1924, 696 rows | f290-293, f780-783, f1284-1287, every cell read on native-resolution crops (img: all), each printing independently; gutter cells `?` (sgt1922 1916 most lines, sgt1923 1917 f782 6 lines and 1918 larger values), stored from the latest legible printing |
+| `commerce_customs_duties` | **done**, sgt1922-1924, 420 rows | f294-295, f784-785, f1288-1289, every cell read on native-resolution crops (img: all), each printing independently; gutter cells `?` (sgt1922 1917: 3 lines + TOTAL, 1916 one line + TOTAL; sgt1923 1918: 29 lines + TOTAL) |
+| `commerce_export_duties` | **done**, sgt1922-1924, 452 rows | f296-297, f786-787, f1290-1291, every cell read on native-resolution crops (img: all); sgt1924 prints 40 lines (26 earlier); gutter cells `?` (sgt1922 1916 TOTAL; sgt1923 1917 all non-zero lines, 1918 five lines + TOTAL) |
+| all others listed above | to do (next: navigation f428-435) | – |
 
 ## Image reading
 
@@ -67,3 +70,9 @@ without reference to the sgt1922 transcription; differences only in gutter legib
 
 `commerce_trade_by_origin_group`: every cell of every printing (sgt1922 f288|f289, sgt1923 f778|f779,
 sgt1924 f1282|f1283) read on native-resolution crops, each printing independently; OCR not used.
+
+`commerce_trade_by_country`: every cell of every printing (sgt1922 f290-293, sgt1923 f780-783, sgt1924
+f1284-1287) read on native-resolution crops, each printing typed from its own image; the printed averages were
+transcribed as check columns (not stored). OCR not used.
+
+`commerce_customs_duties` and `commerce_export_duties`: every cell of every printing (sgt1922 f294-297, sgt1923 f784-787, sgt1924 f1288-1291) read on native-resolution crops, each printing typed from its own image; the printed averages were read only to try to locate failing totals (not stored). OCR not used.

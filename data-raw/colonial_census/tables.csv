@@ -293,3 +293,6 @@ research_pasteur_budget,sgt,pasteur_budget,Institut Pasteur. a) Budget,Institut 
 research_school_enrolment,sgt,school_enrolment,École coloniale d'agriculture. c) Effectif par année scolaire,"Colonial school of agriculture: enrolment by school year (regular students in first and second year, auditors)",by edition,count
 research_school_origin,sgt,school_origin,École coloniale d'agriculture. a) Lieu d'origine des élèves entrés à l'École,"Colonial school of agriculture (Tunis): students entering the school, by place of origin",by edition,count
 research_school_promotions,sgt,school_promotions,École coloniale d'agriculture. b) Promotions,Colonial school of agriculture: regular students and diplomas by promotion,by edition,count
+commerce_trade_by_country,sgt,general_e,Renseignements généraux : résumé des relations commerciales avec les différents pays (valeur en francs),General information: trade with the different countries (value in francs),by edition,francs
+commerce_customs_duties,sgt,general_f,Renseignements généraux : droits de douane perçus (importation),"General information: import duties collected, by category of products",by edition,francs
+commerce_export_duties,sgt,export_duties,Droits de sortie perçus (exportation),"Export duties collected, by product",by edition,francs

@@ -321,6 +321,9 @@ Every table is tidy: one row per printed cell. Printed subtotals and totals are 
 | [`research_school_enrolment`](#research_school_enrolment) | school_enrolment | by edition | 99 | count | Colonial school of agriculture: enrolment by school year (regular students in first and second year, auditors) |
 | [`research_school_origin`](#research_school_origin) | school_origin | by edition | 190 | count | Colonial school of agriculture (Tunis): students entering the school, by place of origin |
 | [`research_school_promotions`](#research_school_promotions) | school_promotions | by edition | 165 | count | Colonial school of agriculture: regular students and diplomas by promotion |
+| [`commerce_trade_by_country`](#commerce_trade_by_country) | general_e | by edition | 696 | francs | General information: trade with the different countries (value in francs) |
+| [`commerce_customs_duties`](#commerce_customs_duties) | general_f | by edition | 420 | francs | General information: import duties collected, by category of products |
+| [`commerce_export_duties`](#commerce_export_duties) | export_duties | by edition | 452 | francs | Export duties collected, by product |
 
 ### eur1906_t1_circonscription_nationality
 
@@ -15940,3 +15943,283 @@ Source `sgt`, table school_promotions, printed pages by edition. 165 rows. Value
 | `diploma_school` | Élèves diplômés : diplôme de l'École | 33 |
 | `regular_students_year1` | Élèves réguliers pendant la 1re année d'études | 33 |
 | `regular_students_year2` | Élèves réguliers pendant la 2e année d'études | 33 |
+
+### commerce_trade_by_country
+
+**Renseignements généraux : résumé des relations commerciales avec les différents pays (valeur en francs)**  
+*General information: trade with the different countries (value in francs)*
+
+Source `sgt`, table general_e, printed pages by edition. 696 rows. Value type: francs. Flags: (empty) 694, total_mismatch 2. Notes and validation: [`../yearbook_other_chapters/csv/commerce_trade_by_country.md`](../yearbook_other_chapters/csv/commerce_trade_by_country.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `country` | Coded dimension. |
+| `country_fr` | Printed French label for `country`. |
+| `country_code` | Coded dimension. |
+| `flow` | Coded dimension. |
+| `flow_fr` | Printed French label for `flow`. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`country`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `Algeria` | Algérie | 24 |
+| `Austria` | Autriche | 24 |
+| `Belgium` | Belgique | 24 |
+| `Brazil` | Brésil | 24 |
+| `Bulgaria` | Bulgarie | 24 |
+| `China` | Chine | 24 |
+| `Denmark` | Danemark | 24 |
+| `Egypt` | Egypte | 24 |
+| `England` | Angleterre | 24 |
+| `France` | France | 24 |
+| `Germany` | Allemagne | 24 |
+| `Greece` | Grèce | 24 |
+| `India: British settlements` | Indes : Comptoirs Anglais | 24 |
+| `Italy` | Italie | 24 |
+| `Japan` | Japon | 24 |
+| `Malta` | Malte | 24 |
+| `Morocco` | Maroc | 24 |
+| `Netherlands` | Hollande | 24 |
+| `Norway` | Norvège | 24 |
+| `Other countries` | Autres pays | 24 |
+| `Portugal` | Portugal | 24 |
+| `Romania` | Roumanie | 24 |
+| `Russia` | Russie | 24 |
+| `Spain` | Espagne | 24 |
+| `Sweden` | Suède | 24 |
+| `Switzerland` | Suisse | 24 |
+| `Tripoli (Libya)` | Tripoli | 24 |
+| `Turkey` | Turquie | 24 |
+| `United States` | Etats-Unis (Amérique) | 24 |
+
+`country_code`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `algeria` |  | 24 |
+| `austria` |  | 24 |
+| `belgium` |  | 24 |
+| `brazil` |  | 24 |
+| `bulgaria` |  | 24 |
+| `china` |  | 24 |
+| `denmark` |  | 24 |
+| `egypt` |  | 24 |
+| `england` |  | 24 |
+| `france` |  | 24 |
+| `germany` |  | 24 |
+| `greece` |  | 24 |
+| `india` |  | 24 |
+| `italy` |  | 24 |
+| `japan` |  | 24 |
+| `malta` |  | 24 |
+| `morocco` |  | 24 |
+| `netherlands` |  | 24 |
+| `norway` |  | 24 |
+| `other` |  | 24 |
+| `portugal` |  | 24 |
+| `romania` |  | 24 |
+| `russia` |  | 24 |
+| `spain` |  | 24 |
+| `sweden` |  | 24 |
+| `switzerland` |  | 24 |
+| `tripoli` |  | 24 |
+| `turkey` |  | 24 |
+| `usa` |  | 24 |
+
+`flow`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `export` | Exportation | 348 |
+| `import` | Importation | 348 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `value` | valeur | 696 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `francs` |  | 696 |
+
+### commerce_customs_duties
+
+**Renseignements généraux : droits de douane perçus (importation)**  
+*General information: import duties collected, by category of products*
+
+Source `sgt`, table general_f, printed pages by edition. 420 rows. Value type: francs. Flags: (empty) 419, reprint_corrected 1. Notes and validation: [`../yearbook_other_chapters/csv/commerce_customs_duties.md`](../yearbook_other_chapters/csv/commerce_customs_duties.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `product_class` | Coded dimension. |
+| `product_class_fr` | Printed French label for `product_class`. |
+| `product_category` | Coded dimension. |
+| `product_category_fr` | Printed French label for `product_category`. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`product_class`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `animal` | Matières animales | 60 |
+| `manufactures` | Fabrications | 204 |
+| `mineral` | Matières minérales | 24 |
+| `vegetal` | Matières végétales | 132 |
+
+`product_category`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `animal_medicinal` | Substances animales propres à la médecine et à la parfumerie | 12 |
+| `animal_products` | Produits et dépouilles d'animaux | 12 |
+| `arms` | Armes, poudres et munitions | 12 |
+| `basketry` | Ouvrages de sparterie et de vannerie | 12 |
+| `beverages` | Boissons | 12 |
+| `chemicals` | Produits chimiques | 12 |
+| `colonial_other` | Denrées coloniales de consommation : Autres | 12 |
+| `colonial_sugar` | Denrées coloniales de consommation : Sucres | 12 |
+| `colours` | Couleurs | 12 |
+| `compositions` | Compositions diverses | 12 |
+| `dyes_tannins` | Teintures et tanins | 12 |
+| `fabrics` | Tissus | 12 |
+| `farinaceous_foods` | Farineux alimentaires | 12 |
+| `fibres` | Filaments, tiges et fruits à ouvrer | 12 |
+| `fisheries` | Pêches | 12 |
+| `fruits_seeds` | Fruits et graines | 12 |
+| `furniture` | Meubles | 12 |
+| `glass` | Verres et cristaux | 12 |
+| `hard_materials` | Matières dures à tailler | 12 |
+| `leather_goods` | Peaux et pelleteries ouvrées | 12 |
+| `live_animals` | Animaux vivants | 12 |
+| `medicinal_plants` | Espèces médicinales | 12 |
+| `metal_goods` | Ouvrages en métaux | 12 |
+| `metals` | Métaux | 12 |
+| `misc_goods` | Ouvrages en matières diverses | 12 |
+| `musical_instruments` | Instruments de musique | 12 |
+| `oils_saps` | Huiles et sucs végétaux | 12 |
+| `paper` | Papiers et ses applications | 12 |
+| `pottery` | Poteries | 12 |
+| `prepared_dyes` | Teintures préparées | 12 |
+| `stones_fuels` | Marbres, pierres, terres et combustibles minéraux | 12 |
+| `vegetal_misc` | Produits et déchets divers | 12 |
+| `wood` | Bois | 12 |
+| `wood_goods` | Ouvrages en bois | 12 |
+| `yarns` | Fils | 12 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `import_duties` | droits de douane perçus (importation) | 420 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `francs` |  | 420 |
+
+### commerce_export_duties
+
+**Droits de sortie perçus (exportation)**  
+*Export duties collected, by product*
+
+Source `sgt`, table export_duties, printed pages by edition. 452 rows. Value type: francs. Flags: (empty) 452. Notes and validation: [`../yearbook_other_chapters/csv/commerce_export_duties.md`](../yearbook_other_chapters/csv/commerce_export_duties.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `product_group_fr` | Place or label as printed (6 distinct values). |
+| `product` | Coded dimension. |
+| `product_fr` | Printed French label for `product`. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`product`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `alfa` | Alfa brut | 12 |
+| `basketry` | Ouvrages de sparterie (alfa travaillé) | 12 |
+| `butter_cheese` | Beurre, fromages et graisses / Beurres et fromages | 12 |
+| `camels` | Animaux de l'espèce caméline | 12 |
+| `canned_meat` | Conserves de viandes en boîte | 10 |
+| `cellulose_pulp` | Pâtes de cellulose (pâtes d'alfa et de diss) | 12 |
+| `charcoal` | Charbon de bois | 10 |
+| `common_wood` | Autres bois communs | 10 |
+| `condensed_milk` | Lait concentré pur | 10 |
+| `condensed_milk_sweet` | Lait concentré sucré | 10 |
+| `donkeys` | Anes, ânesses et ânons | 12 |
+| `dried_pulses` | Légumes secs | 10 |
+| `eggs` | Œufs de volailles | 10 |
+| `foals` | Poulains et pouliches | 12 |
+| `fodder` | Fourrages | 10 |
+| `fresh_fish` | Poissons frais autres que le thon et la boutargue | 12 |
+| `fruit_dried` | secs | 10 |
+| `fruit_fresh` | frais | 10 |
+| `hides_goat` | de chèvres et de chevreaux | 12 |
+| `hides_large` | grandes | 12 |
+| `hides_sheep` | de moutons et d'agneaux | 12 |
+| `horse_tax` | Taxes de sortie sur les jeunes chevaux | 12 |
+| `horses` | Chevaux et juments | 12 |
+| `lead_metal` | Plomb (métal) | 12 |
+| `lead_ore` | Minerai de plomb | 12 |
+| `mules` | Mules et mulets | 12 |
+| `octopus` | Poulpes | 12 |
+| `olive_oil` | d'olive | 12 |
+| `olives_fresh` | Olives fraîches | 12 |
+| `parcels_olive_oil` | Huiles d'olive | 12 |
+| `parcels_sponges` | Eponges | 12 |
+| `pomace` | Grignons | 12 |
+| `pomace_oil` | de grignons | 12 |
+| `potatoes` | Pommes de terre | 10 |
+| `poultry` | Volailles et pigeons vivants | 10 |
+| `rags` | Chiffons | 12 |
+| `salted_meat` | Viandes salées | 10 |
+| `sponges_unwashed` | non lavées | 12 |
+| `sponges_washed` | lavées | 12 |
+| `vegetables_fresh` | Légumes frais | 10 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `export_duties` | droits de sortie perçus (exportation) | 452 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `francs` |  | 452 |
