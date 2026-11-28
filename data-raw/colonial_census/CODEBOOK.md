@@ -336,12 +336,16 @@ Every table is tidy: one row per printed cell. Printed subtotals and totals are 
 | [`commerce_slaughter_by_commune`](#commerce_slaughter_by_commune) | slaughter | by edition | 1,298 | count | Consumption: animals slaughtered, by commune |
 | [`commerce_cereals_balance`](#commerce_cereals_balance) | cereals | by edition | 252 | mixed | Cereals: imports and exports by commercial campaign |
 | [`commerce_cereals_stocks`](#commerce_cereals_stocks) | cereals_consumption;cereals_stocks | by edition | 258 | mixed | Cereals: available stocks and average consumption |
-| [`meteo_rainfall_monthly`](#meteo_rainfall_monthly) | rainfall_solar_year | by edition | 8,328 | millimetres | Rainfall record: total rainfall in millimetres by station and month (solar year) |
-| [`meteo_rain_days`](#meteo_rain_days) | rainfall_solar_year | by edition | 8,328 | count | Rainfall record: number of rainy days by station and month (solar year) |
+| [`meteo_rainfall_monthly`](#meteo_rainfall_monthly) | rainfall_solar_year | by edition | 15,984 | millimetres | Rainfall record: total rainfall in millimetres by station and month (solar year) |
+| [`meteo_rain_days`](#meteo_rain_days) | rainfall_solar_year | by edition | 15,984 | count | Rainfall record: number of rainy days by station and month (solar year) |
 | [`commerce_oil_wine_balance`](#commerce_oil_wine_balance) | oil_wine_consumption;oil_wine_stocks;oil_wine_trade | by edition | 156 | mixed | Olive oil and wine: imports and exports by commercial campaign, available stocks and average consumption |
-| [`meteo_rainfall_season`](#meteo_rainfall_season) | rainfall_agricultural_year | by edition | 1,292 | millimetres | Rainfall of the agricultural year: total rainfall by season and station |
+| [`meteo_rainfall_season`](#meteo_rainfall_season) | rainfall_agricultural_year | by edition | 2,477 | millimetres | Rainfall of the agricultural year: total rainfall by season and station |
 | [`commerce_prices`](#commerce_prices) | prices_animal_products;prices_cereals;prices_live;prices_oils;prices_retail;prices_wine | by edition | 4,032 | francs | Market prices (mercuriales): monthly minimum, maximum and average prices |
 | [`commerce_bonded_warehouses`](#commerce_bonded_warehouses) | warehouses_a;warehouses_b;warehouses_c | by edition | 1,040 | mixed | General (bonded) warehouses: movement of goods at Tunis, Sousse and Sfax |
+| [`meteo_climate`](#meteo_climate) | climate_essentials | by edition | 1,403 | mixed | Essential climatological data of the main Tunisian regions: rainfall, temperatures and winds by station |
+| [`meteo_means`](#meteo_means) | rainfall_means | by edition | 1,360 | millimetres | Mean monthly, seasonal and annual rainfall by station and period |
+| [`commerce_weights_measures`](#commerce_weights_measures) | weights_a;weights_b;weights_c | by edition | 368 | mixed | Weights and measures: first and periodic verification of instruments |
+| [`commerce_chemistry_lab`](#commerce_chemistry_lab) | chemistry | by edition | 842 | count | Chemistry laboratory: analyses made, by nature of sample and service |
 
 ### eur1906_t1_circonscription_nationality
 
@@ -17042,7 +17046,7 @@ Source `sgt`, table cereals_consumption;cereals_stocks, printed pages by edition
 **Relevé pluviométrique : hauteur totale de pluie en millimètres et dixièmes, par station et par mois**  
 *Rainfall record: total rainfall in millimetres by station and month (solar year)*
 
-Source `sgt`, table rainfall_solar_year, printed pages by edition. 8,328 rows. Value type: millimetres. Flags: (empty) 7,529, not_applicable 692, derived_from_totals 87, illegible 20. Notes and validation: [`../yearbook_other_chapters/csv/meteo_rainfall_monthly.md`](../yearbook_other_chapters/csv/meteo_rainfall_monthly.md).
+Source `sgt`, table rainfall_solar_year, printed pages by edition. 15,984 rows. Value type: millimetres. Flags: (empty) 14,237, not_applicable 1,625, derived_from_totals 99, illegible 23. Notes and validation: [`../yearbook_other_chapters/csv/meteo_rainfall_monthly.md`](../yearbook_other_chapters/csv/meteo_rainfall_monthly.md).
 
 | Column | Description |
 |---|---|
@@ -17054,7 +17058,7 @@ Source `sgt`, table rainfall_solar_year, printed pages by edition. 8,328 rows. V
 | `year` | Year the figure refers to. |
 | `region` | Coded dimension. |
 | `controle` | Coded dimension. |
-| `station` | Text (497 distinct values). |
+| `station` | Text (660 distinct values). |
 | `month` | Coded dimension. |
 | `month_fr` | Printed French label for `month`. |
 | `measure` | Coded dimension. |
@@ -17068,83 +17072,84 @@ Source `sgt`, table rainfall_solar_year, printed pages by edition. 8,328 rows. V
 
 | Code | Printed label | N |
 |---|---|---:|
-| `Haute Vallée de la Medjerdah` |  | 1,572 |
-| `Tunisie de l'Est ou Sahel` |  | 1,044 |
-| `Tunisie du Centre (Hautes Plaines)` |  | 1,296 |
-| `Tunisie du Centre (Région Est intermédiaire entre les Hautes Plaines et le Sahel)` |  | 564 |
-| `Tunisie du Nord` |  | 612 |
-| `Tunisie du Nord-Est` |  | 2,496 |
-| `Tunisie du Sud` |  | 744 |
+| `Haute Vallée de la Medjerdah` |  | 2,700 |
+| `Tunisie de l'Est ou Sahel` |  | 2,148 |
+| `Tunisie de l'Extrême-Sud` |  | 324 |
+| `Tunisie du Centre (Hautes Plaines)` |  | 2,448 |
+| `Tunisie du Centre (Région Est intermédiaire entre les Hautes Plaines et le Sahel)` |  | 1,116 |
+| `Tunisie du Nord` |  | 1,176 |
+| `Tunisie du Nord-Est` |  | 5,040 |
+| `Tunisie du Sud` |  | 1,032 |
 
 `controle`:
 
 | Code | Printed label | N |
 |---|---|---:|
-| `Contrôle de Bizerte` |  | 312 |
-| `Contrôle de Béja` |  | 204 |
-| `Contrôle de Djerba` |  | 24 |
-| `Contrôle de Gabès` |  | 72 |
-| `Contrôle de Gafsa` |  | 252 |
-| `Contrôle de Grombalia` |  | 492 |
-| `Contrôle de Kairouan` |  | 564 |
-| `Contrôle de Mactar` |  | 192 |
-| `Contrôle de Medjez-el-Bab` |  | 1,080 |
-| `Contrôle de Sfax` |  | 552 |
-| `Contrôle de Souk-el-Arba` |  | 180 |
-| `Contrôle de Sousse` |  | 492 |
-| `Contrôle de Tabarka` |  | 96 |
-| `Contrôle de Thala` |  | 312 |
-| `Contrôle de Tozeur` |  | 84 |
-| `Contrôle de Tunis` |  | 1,164 |
-| `Contrôle de Téboursouk` |  | 312 |
-| `Contrôle de Zaghouan` |  | 840 |
-| `Contrôle du Kef` |  | 792 |
-| `Territoires militaires` |  | 312 |
+| `Contrôle de Bizerte` |  | 624 |
+| `Contrôle de Béja` |  | 360 |
+| `Contrôle de Djerba` |  | 48 |
+| `Contrôle de Gabès` |  | 132 |
+| `Contrôle de Gafsa` |  | 456 |
+| `Contrôle de Grombalia` |  | 888 |
+| `Contrôle de Kairouan` |  | 1,116 |
+| `Contrôle de Mactar` |  | 372 |
+| `Contrôle de Medjez-el-Bab` |  | 1,752 |
+| `Contrôle de Sfax` |  | 1,056 |
+| `Contrôle de Souk-el-Arba` |  | 432 |
+| `Contrôle de Sousse` |  | 1,092 |
+| `Contrôle de Tabarka` |  | 192 |
+| `Contrôle de Thala` |  | 600 |
+| `Contrôle de Tozeur` |  | 132 |
+| `Contrôle de Tunis` |  | 2,436 |
+| `Contrôle de Téboursouk` |  | 516 |
+| `Contrôle de Zaghouan` |  | 1,716 |
+| `Contrôle du Kef` |  | 1,476 |
+| `Territoires militaires` |  | 588 |
 
 `month`:
 
 | Code | Printed label | N |
 |---|---|---:|
-| `april` | Avril | 694 |
-| `august` | Août | 694 |
-| `december` | Décembre | 694 |
-| `february` | Février | 694 |
-| `january` | Janvier | 694 |
-| `july` | Juillet | 694 |
-| `june` | Juin | 694 |
-| `march` | Mars | 694 |
-| `may` | Mai | 694 |
-| `november` | Novembre | 694 |
-| `october` | Octobre | 694 |
-| `september` | Septembre | 694 |
+| `april` | Avril | 1,332 |
+| `august` | Août | 1,332 |
+| `december` | Décembre | 1,332 |
+| `february` | Février | 1,332 |
+| `january` | Janvier | 1,332 |
+| `july` | Juillet | 1,332 |
+| `june` | Juin | 1,332 |
+| `march` | Mars | 1,332 |
+| `may` | Mai | 1,332 |
+| `november` | Novembre | 1,332 |
+| `october` | Octobre | 1,332 |
+| `september` | Septembre | 1,332 |
 
 `measure`:
 
 | Code | Printed label | N |
 |---|---|---:|
-| `rainfall` | Hauteur totale en millimètres et dixièmes | 8,328 |
+| `rainfall` | Hauteur totale en millimètres et dixièmes | 15,984 |
 
 `unit`:
 
 | Code | Printed label | N |
 |---|---|---:|
-| `mm` |  | 8,328 |
+| `mm` |  | 15,984 |
 
 `obs`:
 
 | Code | Printed label | N |
 |---|---|---:|
-| `(empty)` |  | 7,294 |
-| `incomplete` |  | 30 |
-| `no_observation` |  | 692 |
-| `traces` |  | 312 |
+| `(empty)` |  | 13,842 |
+| `incomplete` |  | 31 |
+| `no_observation` |  | 1,625 |
+| `traces` |  | 486 |
 
 ### meteo_rain_days
 
 **Relevé pluviométrique : nombre de jours de pluie, par station et par mois**  
 *Rainfall record: number of rainy days by station and month (solar year)*
 
-Source `sgt`, table rainfall_solar_year, printed pages by edition. 8,328 rows. Value type: count. Flags: (empty) 7,498, not_applicable 812, total_mismatch 18. Notes and validation: [`../yearbook_other_chapters/csv/meteo_rain_days.md`](../yearbook_other_chapters/csv/meteo_rain_days.md).
+Source `sgt`, table rainfall_solar_year, printed pages by edition. 15,984 rows. Value type: count. Flags: (empty) 14,139, not_applicable 1,827, total_mismatch 18. Notes and validation: [`../yearbook_other_chapters/csv/meteo_rain_days.md`](../yearbook_other_chapters/csv/meteo_rain_days.md).
 
 | Column | Description |
 |---|---|
@@ -17156,7 +17161,7 @@ Source `sgt`, table rainfall_solar_year, printed pages by edition. 8,328 rows. V
 | `year` | Year the figure refers to. |
 | `region` | Coded dimension. |
 | `controle` | Coded dimension. |
-| `station` | Text (497 distinct values). |
+| `station` | Text (660 distinct values). |
 | `month` | Coded dimension. |
 | `month_fr` | Printed French label for `month`. |
 | `measure` | Coded dimension. |
@@ -17170,76 +17175,77 @@ Source `sgt`, table rainfall_solar_year, printed pages by edition. 8,328 rows. V
 
 | Code | Printed label | N |
 |---|---|---:|
-| `Haute Vallée de la Medjerdah` |  | 1,572 |
-| `Tunisie de l'Est ou Sahel` |  | 1,044 |
-| `Tunisie du Centre (Hautes Plaines)` |  | 1,296 |
-| `Tunisie du Centre (Région Est intermédiaire entre les Hautes Plaines et le Sahel)` |  | 564 |
-| `Tunisie du Nord` |  | 612 |
-| `Tunisie du Nord-Est` |  | 2,496 |
-| `Tunisie du Sud` |  | 744 |
+| `Haute Vallée de la Medjerdah` |  | 2,700 |
+| `Tunisie de l'Est ou Sahel` |  | 2,148 |
+| `Tunisie de l'Extrême-Sud` |  | 324 |
+| `Tunisie du Centre (Hautes Plaines)` |  | 2,448 |
+| `Tunisie du Centre (Région Est intermédiaire entre les Hautes Plaines et le Sahel)` |  | 1,116 |
+| `Tunisie du Nord` |  | 1,176 |
+| `Tunisie du Nord-Est` |  | 5,040 |
+| `Tunisie du Sud` |  | 1,032 |
 
 `controle`:
 
 | Code | Printed label | N |
 |---|---|---:|
-| `Contrôle de Bizerte` |  | 312 |
-| `Contrôle de Béja` |  | 204 |
-| `Contrôle de Djerba` |  | 24 |
-| `Contrôle de Gabès` |  | 72 |
-| `Contrôle de Gafsa` |  | 252 |
-| `Contrôle de Grombalia` |  | 492 |
-| `Contrôle de Kairouan` |  | 564 |
-| `Contrôle de Mactar` |  | 192 |
-| `Contrôle de Medjez-el-Bab` |  | 1,080 |
-| `Contrôle de Sfax` |  | 552 |
-| `Contrôle de Souk-el-Arba` |  | 180 |
-| `Contrôle de Sousse` |  | 492 |
-| `Contrôle de Tabarka` |  | 96 |
-| `Contrôle de Thala` |  | 312 |
-| `Contrôle de Tozeur` |  | 84 |
-| `Contrôle de Tunis` |  | 1,164 |
-| `Contrôle de Téboursouk` |  | 312 |
-| `Contrôle de Zaghouan` |  | 840 |
-| `Contrôle du Kef` |  | 792 |
-| `Territoires militaires` |  | 312 |
+| `Contrôle de Bizerte` |  | 624 |
+| `Contrôle de Béja` |  | 360 |
+| `Contrôle de Djerba` |  | 48 |
+| `Contrôle de Gabès` |  | 132 |
+| `Contrôle de Gafsa` |  | 456 |
+| `Contrôle de Grombalia` |  | 888 |
+| `Contrôle de Kairouan` |  | 1,116 |
+| `Contrôle de Mactar` |  | 372 |
+| `Contrôle de Medjez-el-Bab` |  | 1,752 |
+| `Contrôle de Sfax` |  | 1,056 |
+| `Contrôle de Souk-el-Arba` |  | 432 |
+| `Contrôle de Sousse` |  | 1,092 |
+| `Contrôle de Tabarka` |  | 192 |
+| `Contrôle de Thala` |  | 600 |
+| `Contrôle de Tozeur` |  | 132 |
+| `Contrôle de Tunis` |  | 2,436 |
+| `Contrôle de Téboursouk` |  | 516 |
+| `Contrôle de Zaghouan` |  | 1,716 |
+| `Contrôle du Kef` |  | 1,476 |
+| `Territoires militaires` |  | 588 |
 
 `month`:
 
 | Code | Printed label | N |
 |---|---|---:|
-| `april` | Avril | 694 |
-| `august` | Août | 694 |
-| `december` | Décembre | 694 |
-| `february` | Février | 694 |
-| `january` | Janvier | 694 |
-| `july` | Juillet | 694 |
-| `june` | Juin | 694 |
-| `march` | Mars | 694 |
-| `may` | Mai | 694 |
-| `november` | Novembre | 694 |
-| `october` | Octobre | 694 |
-| `september` | Septembre | 694 |
+| `april` | Avril | 1,332 |
+| `august` | Août | 1,332 |
+| `december` | Décembre | 1,332 |
+| `february` | Février | 1,332 |
+| `january` | Janvier | 1,332 |
+| `july` | Juillet | 1,332 |
+| `june` | Juin | 1,332 |
+| `march` | Mars | 1,332 |
+| `may` | Mai | 1,332 |
+| `november` | Novembre | 1,332 |
+| `october` | Octobre | 1,332 |
+| `september` | Septembre | 1,332 |
 
 `measure`:
 
 | Code | Printed label | N |
 |---|---|---:|
-| `rain_days` | Nombre de jours | 8,328 |
+| `rain_days` | Nombre de jours | 15,984 |
 
 `unit`:
 
 | Code | Printed label | N |
 |---|---|---:|
-| `days` |  | 8,328 |
+| `days` |  | 15,984 |
 
 `obs`:
 
 | Code | Printed label | N |
 |---|---|---:|
-| `(empty)` |  | 7,516 |
-| `days_not_observed` |  | 76 |
-| `incomplete` |  | 45 |
-| `no_observation` |  | 691 |
+| `(empty)` |  | 14,156 |
+| `days_not_observed` |  | 121 |
+| `incomplete` |  | 85 |
+| `no_observation` |  | 1,622 |
 
 ### commerce_oil_wine_balance
 
@@ -17333,7 +17339,7 @@ Source `sgt`, table oil_wine_consumption;oil_wine_stocks;oil_wine_trade, printed
 **Relevé pluviométrique de l'année agricole : pluies totales par saison et pour l'année**  
 *Rainfall of the agricultural year: total rainfall by season and station*
 
-Source `sgt`, table rainfall_agricultural_year, printed pages by edition. 1,292 rows. Value type: millimetres. Flags: (empty) 1,114, not_applicable 177, total_mismatch 1. Notes and validation: [`../yearbook_other_chapters/csv/meteo_rainfall_season.md`](../yearbook_other_chapters/csv/meteo_rainfall_season.md).
+Source `sgt`, table rainfall_agricultural_year, printed pages by edition. 2,477 rows. Value type: millimetres. Flags: (empty) 2,138, not_applicable 336, derived_from_totals 2, total_mismatch 1. Notes and validation: [`../yearbook_other_chapters/csv/meteo_rainfall_season.md`](../yearbook_other_chapters/csv/meteo_rainfall_season.md).
 
 | Column | Description |
 |---|---|
@@ -17345,7 +17351,7 @@ Source `sgt`, table rainfall_agricultural_year, printed pages by edition. 1,292 
 | `year` | Year the figure refers to. |
 | `region` | Coded dimension. |
 | `controle` | Coded dimension. |
-| `station` | Text (313 distinct values). |
+| `station` | Text (348 distinct values). |
 | `period` | Coded dimension. |
 | `season` | Coded dimension. |
 | `season_fr` | Printed French label for `season`. |
@@ -17360,67 +17366,68 @@ Source `sgt`, table rainfall_agricultural_year, printed pages by edition. 1,292 
 
 | Code | Printed label | N |
 |---|---|---:|
-| `Arad` |  | 31 |
-| `Extrême Sud` |  | 18 |
-| `Golfe de Tunis` |  | 197 |
-| `Hautes Plaines Tunisiennes` |  | 195 |
-| `Kroumirie` |  | 36 |
-| `Mogods` |  | 67 |
-| `Nefzaoua` |  | 5 |
-| `Région de Dakla` |  | 128 |
-| `Région de Gabès` |  | 5 |
-| `Région de Gafsa` |  | 29 |
-| `Région de Kairouan` |  | 105 |
-| `Région de Metlaoui et Djerid` |  | 18 |
-| `Région de Sfax` |  | 77 |
-| `Région de Sousse` |  | 42 |
-| `Région de l'Enfida` |  | 89 |
-| `Région de l'Oued Miliane` |  | 165 |
-| `Vallée Basse de la Medjerdah` |  | 85 |
+| `Arad` |  | 66 |
+| `Extrême Sud` |  | 31 |
+| `Golfe de Tunis` |  | 362 |
+| `Hautes Plaines Tunisiennes` |  | 358 |
+| `Kroumirie` |  | 88 |
+| `Mogods` |  | 130 |
+| `Nefzaoua` |  | 10 |
+| `Région de Dakla` |  | 241 |
+| `Région de Gabès` |  | 19 |
+| `Région de Gafsa` |  | 54 |
+| `Région de Kairouan` |  | 198 |
+| `Région de Metlaoui et Djerid` |  | 32 |
+| `Région de Sfax` |  | 142 |
+| `Région de Sousse` |  | 84 |
+| `Région de l'Enfida` |  | 186 |
+| `Région de l'Oued Miliane` |  | 310 |
+| `Vallée Basse de la Medjerdah` |  | 166 |
 
 `controle`:
 
 | Code | Printed label | N |
 |---|---|---:|
-| `(empty)` |  | 1,292 |
+| `(empty)` |  | 2,477 |
 
 `period`:
 
 | Code | Printed label | N |
 |---|---|---:|
-| `1901-1925` |  | 40 |
+| `1901-1925` |  | 81 |
+| `1928-1929` |  | 1,144 |
 | `1929-1930` |  | 1,252 |
 
 `season`:
 
 | Code | Printed label | N |
 |---|---|---:|
-| `autumn` | Automne | 313 |
-| `spring` | Printemps | 313 |
-| `summer` | Eté | 313 |
-| `winter` | Hiver | 313 |
-| `year` | Année | 40 |
+| `autumn` | Automne | 599 |
+| `spring` | Printemps | 599 |
+| `summer` | Eté | 599 |
+| `winter` | Hiver | 599 |
+| `year` | Année | 81 |
 
 `measure`:
 
 | Code | Printed label | N |
 |---|---|---:|
-| `rainfall` | Relevé des pluies totales par saison et pour l'année | 1,252 |
-| `rainfall_mean` | Relevé des pluies totales par saison et pour l'année | 40 |
+| `rainfall` | Relevé des pluies totales par saison et pour l'année | 2,396 |
+| `rainfall_mean` | Relevé des pluies totales par saison et pour l'année | 81 |
 
 `unit`:
 
 | Code | Printed label | N |
 |---|---|---:|
-| `mm` |  | 1,292 |
+| `mm` |  | 2,477 |
 
 `obs`:
 
 | Code | Printed label | N |
 |---|---|---:|
-| `(empty)` |  | 1,106 |
-| `no_observation` |  | 177 |
-| `traces` |  | 9 |
+| `(empty)` |  | 2,129 |
+| `no_observation` |  | 336 |
+| `traces` |  | 12 |
 
 ### commerce_prices
 
@@ -17651,3 +17658,426 @@ Source `sgt`, table warehouses_a;warehouses_b;warehouses_c, printed pages by edi
 | `kilo` |  | 124 |
 | `pièces` |  | 36 |
 | `quintaux` |  | 300 |
+
+### meteo_climate
+
+**Données climatologiques essentielles fournies par les principales régions tunisiennes**  
+*Essential climatological data of the main Tunisian regions: rainfall, temperatures and winds by station*
+
+Source `sgt`, table climate_essentials, printed pages by edition. 1,403 rows. Value type: mixed. Flags: (empty) 1,330, not_applicable 70, illegible 1, row_realigned 1, derived_from_totals 1. Notes and validation: [`../yearbook_other_chapters/csv/meteo_climate.md`](../yearbook_other_chapters/csv/meteo_climate.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `region` | Coded dimension. |
+| `station` | Coded dimension. |
+| `note_fr` | Place or label as printed (7 distinct values). |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `date_fr` | Place or label as printed (13 distinct values). |
+| `text_fr` | Place or label as printed (9 distinct values). |
+| `value` | The printed figure. |
+| `obs` | Coded dimension. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`region`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `Extrême Sud` |  | 138 |
+| `Région Centrale` |  | 230 |
+| `Région des Oasis` |  | 368 |
+| `Région du Nord` |  | 207 |
+| `Région du Nord-Est` |  | 230 |
+| `Sahara` |  | 46 |
+| `Sahel` |  | 184 |
+
+`station`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `Aïn-Draham` |  | 46 |
+| `Ben-Gardane` |  | 46 |
+| `Bizerte (Carouba)` |  | 46 |
+| `Bou-Thadi` |  | 23 |
+| `Béja` |  | 23 |
+| `Djerba` |  | 46 |
+| `Fort Saint` |  | 46 |
+| `Gabès` |  | 46 |
+| `Gafsa` |  | 46 |
+| `Grombalia` |  | 46 |
+| `Kairouan` |  | 46 |
+| `Kébili` |  | 46 |
+| `Kélibia` |  | 46 |
+| `La Fauconnerie` |  | 23 |
+| `Le Kef` |  | 46 |
+| `Le Thibar` |  | 46 |
+| `Mactar` |  | 46 |
+| `Matmata` |  | 46 |
+| `Medjez-el-Bab` |  | 46 |
+| `Metlaoui` |  | 46 |
+| `Médenine` |  | 46 |
+| `Nabeul` |  | 46 |
+| `Sfax` |  | 46 |
+| `Souk-el-Arba` |  | 46 |
+| `Sousse` |  | 46 |
+| `Tabarca` |  | 23 |
+| `Tabarka` |  | 23 |
+| `Tatahouine` |  | 46 |
+| `Thala` |  | 46 |
+| `Tozeur` |  | 46 |
+| `Tunis (Manoubia)` |  | 46 |
+| `Zaghouan` |  | 46 |
+| `Zarzis` |  | 46 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `calm_days` | Nombre de jours au cours de l'année pendant lesquels le vent dominant a été : Calme | 61 |
+| `dominant_wind` | Vent dominant | 61 |
+| `rain_days` | Pluies : nombre de jours | 61 |
+| `rainfall` | Pluies : millimètres | 61 |
+| `temp_absolute_max` | Température extrême annuelle : maxima | 61 |
+| `temp_absolute_min` | Température extrême annuelle : minima | 61 |
+| `temp_annual_mean` | Température moyenne annuelle : moyenne | 61 |
+| `temp_annual_mean_max` | Température moyenne annuelle : maxima | 61 |
+| `temp_annual_mean_min` | Température moyenne annuelle : minima | 61 |
+| `temp_coldest_month_max` | Température moyenne du mois le plus froid : maxima | 61 |
+| `temp_coldest_month_mean` | Température moyenne du mois le plus froid : moyenne | 61 |
+| `temp_coldest_month_min` | Température moyenne du mois le plus froid : minima | 61 |
+| `temp_hottest_month_max` | Température moyenne du mois le plus chaud : maxima | 61 |
+| `temp_hottest_month_mean` | Température moyenne du mois le plus chaud : moyenne | 61 |
+| `temp_hottest_month_min` | Température moyenne du mois le plus chaud : minima | 61 |
+| `wind_days_e` | Nombre de jours au cours de l'année pendant lesquels le vent dominant a été : E | 61 |
+| `wind_days_n` | Nombre de jours au cours de l'année pendant lesquels le vent dominant a été : N | 61 |
+| `wind_days_ne` | Nombre de jours au cours de l'année pendant lesquels le vent dominant a été : NE | 61 |
+| `wind_days_nw` | Nombre de jours au cours de l'année pendant lesquels le vent dominant a été : NW | 61 |
+| `wind_days_s` | Nombre de jours au cours de l'année pendant lesquels le vent dominant a été : S | 61 |
+| `wind_days_se` | Nombre de jours au cours de l'année pendant lesquels le vent dominant a été : SE | 61 |
+| `wind_days_sw` | Nombre de jours au cours de l'année pendant lesquels le vent dominant a été : SW | 61 |
+| `wind_days_w` | Nombre de jours au cours de l'année pendant lesquels le vent dominant a été : W | 61 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `days` |  | 610 |
+| `degC` |  | 671 |
+| `direction` |  | 61 |
+| `mm` |  | 61 |
+
+`obs`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `(empty)` |  | 1,393 |
+| `no_observation` |  | 9 |
+| `traces` |  | 1 |
+
+### meteo_means
+
+**Pluies moyennes mensuelles, par saison et annuelles**  
+*Mean monthly, seasonal and annual rainfall by station and period*
+
+Source `sgt`, table rainfall_means, printed pages by edition. 1,360 rows. Value type: millimetres. Flags: (empty) 1,354, not_applicable 5, derived_from_totals 1. Notes and validation: [`../yearbook_other_chapters/csv/meteo_means.md`](../yearbook_other_chapters/csv/meteo_means.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `station` | Coded dimension. |
+| `period` | Coded dimension. |
+| `level` | Coded dimension. |
+| `month` | Coded dimension. |
+| `month_fr` | Printed French label for `month`. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `obs` | Coded dimension. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`station`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `Aïn-Draham` |  | 34 |
+| `Aïn-el-Asker` |  | 34 |
+| `Ben-Gardane` |  | 34 |
+| `Bizerte` |  | 34 |
+| `Bordj Chakir` |  | 34 |
+| `Béja` |  | 34 |
+| `Chouigui` |  | 34 |
+| `Djebel Djouggar` |  | 34 |
+| `Djerba` |  | 34 |
+| `El-Djem` |  | 34 |
+| `El-Feïdja` |  | 34 |
+| `Enfidaville` |  | 34 |
+| `Gabès` |  | 34 |
+| `Gafsa` |  | 34 |
+| `Grombalia` |  | 34 |
+| `Kairouan` |  | 34 |
+| `Kébili` |  | 34 |
+| `Kélibia` |  | 34 |
+| `Le Kef` |  | 34 |
+| `Le Thibar` |  | 34 |
+| `Mabtouha (St-Victor)` |  | 34 |
+| `Mactar` |  | 34 |
+| `Matmata` |  | 34 |
+| `Medjez-el-Bab` |  | 34 |
+| `Metlaoui` |  | 34 |
+| `Moghrane` |  | 34 |
+| `Médenine` |  | 34 |
+| `Saadiah du Bargou` |  | 34 |
+| `Sfax` |  | 34 |
+| `Soliman` |  | 34 |
+| `Souk-el-Arba` |  | 34 |
+| `Sousse` |  | 34 |
+| `Tabarka` |  | 34 |
+| `Tatahouine` |  | 34 |
+| `Thala` |  | 34 |
+| `Tozeur` |  | 34 |
+| `Tunis` |  | 34 |
+| `Téboursouk` |  | 34 |
+| `Zaghouan` |  | 34 |
+| `Zaouem` |  | 34 |
+
+`period`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `1901-1930` |  | 680 |
+| `1926-1930` |  | 680 |
+
+`level`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `month` |  | 960 |
+| `season` |  | 320 |
+| `year` |  | 80 |
+
+`month`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `april` | Avril | 80 |
+| `august` | Août | 80 |
+| `autumn` | Automne | 80 |
+| `december` | Décembre | 80 |
+| `february` | Février | 80 |
+| `january` | Janvier | 80 |
+| `july` | Juillet | 80 |
+| `june` | Juin | 80 |
+| `march` | Mars | 80 |
+| `may` | Mai | 80 |
+| `november` | Novembre | 80 |
+| `october` | Octobre | 80 |
+| `september` | Septembre | 80 |
+| `spring` | Printemps | 80 |
+| `summer` | Eté | 80 |
+| `winter` | Hiver | 80 |
+| `year` | Année | 80 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `rainfall_mean` | Pluies moyennes mensuelles, par saison et annuelles | 1,360 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `mm` |  | 1,360 |
+
+`obs`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `(empty)` |  | 1,339 |
+| `no_observation` |  | 5 |
+| `traces` |  | 16 |
+
+### commerce_weights_measures
+
+**Poids et mesures**  
+*Weights and measures: first and periodic verification of instruments*
+
+Source `sgt`, table weights_a;weights_b;weights_c, printed pages by edition. 368 rows. Value type: mixed. Flags: (empty) 366, total_mismatch 2. Notes and validation: [`../yearbook_other_chapters/csv/commerce_weights_measures.md`](../yearbook_other_chapters/csv/commerce_weights_measures.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `circonscription` | Coded dimension. |
+| `circonscription_fr` | Printed French label for `circonscription`. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`circonscription`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `all` | Ensemble (résultats généraux) | 132 |
+| `bizerte` | Bizerte | 45 |
+| `sfax` | Sfax | 45 |
+| `sousse` | Sousse | 45 |
+| `tunis_1` | 1re Tunis | 24 |
+| `tunis_1_2` | 1re et 2e Tunis | 14 |
+| `tunis_1_2_3` | 1re, 2e et 3e Tunis | 7 |
+| `tunis_2` | 2e Tunis | 24 |
+| `tunis_3` | 3e Tunis | 8 |
+| `tunis_city` | Tunis (ville) | 24 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `adjusted` | Nombre d'instruments défectueux : Rajustés / Nombre d'instruments reconnus défectueux : Rajustés | 31 |
+| `admitted` | Nombre d'instruments : Admis | 12 |
+| `civil` | Nombre d'établissements publics vérifiés gratuitement : Civils | 31 |
+| `imported` | Nombre d'instruments présentés : Importés / Vérification première, nombre d'instruments vérifiés : Importés | 24 |
+| `made_tunisia` | Nombre d'instruments présentés : Fabriqués en Tunisie / Vérification première, nombre d'instruments vérifiés : Fabriqués en Tunisie | 24 |
+| `makers_active` | Nombre de fabricants ou ajusteurs ayant exercé leur profession en 1921 / Nombre de fabricants ou ajusteurs ayant exercé leur profession en 1923 / Nombre de fabricants ou ajusteurs ayant exercé leur profession en 1924 | 12 |
+| `makers_mark` | Nombre de fabricants ou ajusteurs ayant déposé leur marque | 12 |
+| `military` | Nombre d'établissements publics vérifiés gratuitement : Militaires | 31 |
+| `refused` | Nombre d'instruments : Refusés | 12 |
+| `renovated` | Nombre d'instruments présentés : Remis à neuf / Vérification première, nombre d'instruments vérifiés : Remis à neuf | 24 |
+| `reports` | Nombre de procès-verbaux dressés | 31 |
+| `stamp` | Droit de timbre | 31 |
+| `subjects` | Nombre d'assujettis exercés | 31 |
+| `taxes` | Montant des taxes / Montant des taxes perçues | 31 |
+| `withdrawn` | Nombre d'instruments défectueux : Mis hors service / Nombre d'instruments reconnus défectueux : Mis hors service | 31 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `establishments` |  | 62 |
+| `francs` |  | 62 |
+| `instruments` |  | 158 |
+| `makers` |  | 24 |
+| `persons` |  | 31 |
+| `reports` |  | 31 |
+
+### commerce_chemistry_lab
+
+**Laboratoire de chimie : analyses effectuées**  
+*Chemistry laboratory: analyses made, by nature of sample and service*
+
+Source `sgt`, table chemistry, printed pages by edition. 842 rows. Value type: count. Flags: (empty) 838, total_mismatch 4. Notes and validation: [`../yearbook_other_chapters/csv/commerce_chemistry_lab.md`](../yearbook_other_chapters/csv/commerce_chemistry_lab.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `sample` | Coded dimension. |
+| `sample_fr` | Printed French label for `sample`. |
+| `service` | Coded dimension. |
+| `service_fr` | Printed French label for `service`. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`sample`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `alcohol` | Alcools | 7 |
+| `alcohol_denat` | Alcools et dénaturants | 13 |
+| `beets` | Betteraves | 7 |
+| `bran` | Sons, aliments pour le bétail | 20 |
+| `cereals` | Céréales et graines diverses | 13 |
+| `coffee_tea` | Cafés et thés | 20 |
+| `colours` | Couleurs | 20 |
+| `denatured` | Alcools dénaturés et composants | 7 |
+| `earths` | Terres | 20 |
+| `fertilisers` | Engrais / Engrais, phosphates | 20 |
+| `flours` | Farines et farineux alimentaires | 20 |
+| `fuels` | Combustibles | 20 |
+| `glues` | Colles, gélatines, clarifiants | 7 |
+| `grignons` | Grignons, huiles de grignons | 20 |
+| `limestone` | Calcaire, chaux, ciments et mortiers | 20 |
+| `lyes` | Lessives | 20 |
+| `marine_insurance` | Divers pour expertises assurances maritimes | 20 |
+| `milk` | Laits | 7 |
+| `milk_all` | Laits et laits condensés | 13 |
+| `milk_condensed` | Laits condensés | 7 |
+| `musts` | Moûts mutés | 20 |
+| `oil_essential` | Huiles : essentielles | 7 |
+| `oil_linseed` | Huiles : de lin | 20 |
+| `oil_mineral` | Huiles : minérales | 20 |
+| `oil_olive` | Huiles : d'olive | 20 |
+| `oil_other` | Huiles : autres | 20 |
+| `olives` | Olives | 20 |
+| `ores` | Minerais et métaux | 20 |
+| `perfumery` | Parfumerie et extraits alcooliques | 20 |
+| `petroleum` | Pétroles, mazouts / Pétroles, mazouts, essences | 20 |
+| `phosphates` | Phosphates | 14 |
+| `prod_chem` | Produits : chimiques / Produits : chimiques divers | 20 |
+| `prod_food` | Produits : alimentaires divers | 20 |
+| `prod_other` | Produits : divers autres / Produits : divers autres pour herboristes | 20 |
+| `prod_pharma` | Produits : pharmaceutiques | 20 |
+| `prod_pharmacy` | Produits : divers pour pharmacies | 6 |
+| `salts` | Sel marin / Sels | 20 |
+| `soaps` | Savons | 20 |
+| `spices` | Epices | 14 |
+| `spirits` | Spiritueux et liqueurs | 20 |
+| `sugars` | Sucres, miels, confiseries, confitures | 20 |
+| `sulphur` | Soufres, produits anticryptogamiques | 20 |
+| `tars` | Goudrons, huiles de goudron / Goudrons, huiles de goudrons, résines | 20 |
+| `textiles` | Tissus, textiles, bonneterie | 20 |
+| `tomato` | Conserves de tomates | 20 |
+| `urines` | Urines analyses médicales / Urines, analyses médicales | 20 |
+| `vinegars` | Vinaigres | 20 |
+| `waters` | Eaux | 20 |
+| `wines` | Vins, boissons alcooliques | 20 |
+
+`service`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `customs` | Douanes (échantillons reconnus) | 126 |
+| `excise` | Contributions diverses / Contributions indirectes | 86 |
+| `fraud_good` | Répression des fraudes : Bons | 126 |
+| `fraud_suspect` | Répression des fraudes : Suspects | 126 |
+| `other_admin` | Autres administrations | 126 |
+| `public` | Analyses payantes pour le public | 126 |
+| `studies` | Études et recherches | 126 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `analyses` | analyses effectuées | 842 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `analyses` |  | 842 |

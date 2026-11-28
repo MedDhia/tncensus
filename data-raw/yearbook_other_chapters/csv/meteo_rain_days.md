@@ -2,15 +2,15 @@
 
 *Rainfall record: number of rainy days by station and month (solar year).*
 
-Source: *Statistique générale de la Tunisie*, *Météorologie*, editions sgt1935, sgt1936. Source gallica.bnf.fr / Ministère des Affaires étrangères.
+Source: *Statistique générale de la Tunisie*, *Météorologie*, editions sgt1929, sgt1930, sgt1935, sgt1936. Source gallica.bnf.fr / Ministère des Affaires étrangères.
 
-Pages and views: sgt1935 p. 147, f167; sgt1935 p. 149, f169; sgt1935 p. 151, f171; sgt1935 p. 153, f173; sgt1935 p. 155, f175; sgt1935 p. 157, f177; sgt1935 p. 159, f179; sgt1935 p. 161, f181; sgt1935 p. 163, f183; sgt1936 p. 113, f124; sgt1936 p. 115, f126; sgt1936 p. 117, f128; sgt1936 p. 119, f130; sgt1936 p. 121, f132; sgt1936 p. 123, f134; sgt1936 p. 125, f136; sgt1936 p. 127, f138; sgt1936 p. 129, f140; sgt1936 p. 131, f142; sgt1936 p. 133, f144.
+Pages and views: sgt1929 p. 265, f293; sgt1929 p. 267, f295; sgt1929 p. 269, f297; sgt1929 p. 271, f299; sgt1929 p. 273, f301; sgt1929 p. 275, f303; sgt1929 p. 277, f305; sgt1929 p. 279, f307; sgt1929 p. 281, f309; sgt1930 p. 269, f827; sgt1930 p. 271, f829; sgt1930 p. 273, f831; sgt1930 p. 275, f833; sgt1930 p. 277, f835; sgt1930 p. 279, f837; sgt1930 p. 281, f839; sgt1930 p. 283, f841; sgt1930 p. 285, f843; sgt1935 p. 147, f167; sgt1935 p. 149, f169; sgt1935 p. 151, f171; sgt1935 p. 153, f173; sgt1935 p. 155, f175; sgt1935 p. 157, f177; sgt1935 p. 159, f179; sgt1935 p. 161, f181; sgt1935 p. 163, f183; sgt1936 p. 113, f124; sgt1936 p. 115, f126; sgt1936 p. 117, f128; sgt1936 p. 119, f130; sgt1936 p. 121, f132; sgt1936 p. 123, f134; sgt1936 p. 125, f136; sgt1936 p. 127, f138; sgt1936 p. 129, f140; sgt1936 p. 131, f142; sgt1936 p. 133, f144.
 
 Transcriptions: `../transcribed/meteo_<edition>.txt`; rebuild with `python3 -I data-raw/yearbook_other_chapters/extract_meteo.py build`.
 
-Rows: 8328 (one per station, month and edition). The printed annual totals (*Année*) are checks, not rows. Each solar year is printed in one edition only, so no overlap selection is needed (SPEC_ADDENDUM rule 4 would apply to any year printed twice).
+Rows: 15984 (one per station, month and edition). The printed annual totals (*Année*) are checks, not rows. Each solar year is printed in one edition only, so no overlap selection is needed (SPEC_ADDENDUM rule 4 would apply to any year printed twice).
 
-Partial coverage: Transcribed: sgt1936 f123-f144 (complete), sgt1935 f166-f183 (complete) and sgt1930 part a) f818-f825 (complete). NOT YET TRANSCRIBED: sgt1930 parts b) f826-f843, c) f844-f845 and d) f846-f849; every Météorologie page of sgt1929 (f284-f312), sgt1928 (f806-f835), sgt1927 (f282-f307), sgt1926 (f819-f845), sgt1925 (f309-f334), sgt1924 (f1247-f1268), sgt1923 (f745-f764) and sgt1922 (f255-f273). Tables meteo_climate and meteo_means are designed but have no rows yet.
+Partial coverage: Transcribed: sgt1936 f123-f144 (complete), sgt1935 f166-f183 (complete), sgt1930 f818-f849 (parts a)-d), complete) and sgt1929 f284-f311 (parts a)-c)). NOT YET TRANSCRIBED: sgt1929 f312 (Manoubia rainfall by wind direction and month: fits no existing meteo_ table, would need a table of its own); every Météorologie page of sgt1928 (f806-f835), sgt1927 (f282-f307), sgt1926 (f819-f845), sgt1925 (f309-f334), sgt1924 (f1247-f1268), sgt1923 (f745-f764) and sgt1922 (f255-f273). meteo_climate holds sgt1929-sgt1930; meteo_means holds sgt1930 only.
 
 ## Columns
 
@@ -34,10 +34,12 @@ Partial coverage: Transcribed: sgt1936 f123-f144 (complete), sgt1935 f166-f183 (
 
 ## Validation
 
-- Annual total = sum of the twelve months, for every line whose twelve months are all observed and whose annual total is printed: 505 checks; passed 464; failed 41.
+- Annual total = sum of the twelve months, for every line whose twelve months are all observed and whose annual total is printed: 928 checks; passed 885; failed 43.
 
 Failed checks (printed values kept; each re-read on a native-resolution crop):
 
+  - sgt1929 p.270 (f298) La Forestière days: months vs Année: cells give 91, printed 81 (difference -10)
+  - sgt1929 p.274 (f302) Sbeïtla (Henchir-Touille) days: months vs Année: cells give 90, printed 60 (difference -30)
   - sgt1935 p.148 (f168) Djebel Oust days: months vs Année: cells give 96, printed 101 (difference 5)
   - sgt1935 p.152 (f172) Sidi bou Becker days: months vs Année: cells give 91, printed 93 (difference 2)
   - sgt1935 p.156 (f176) Le Sers (gare) days: months vs Année: cells give 60, printed 58 (difference -2)
@@ -80,10 +82,10 @@ Failed checks (printed values kept; each re-read on a native-resolution crop):
   - sgt1936 p.126 (f137) Sbeïtla-Nord days: months vs Année: cells give 42, printed 40 (difference -2)
   - sgt1936 p.128 (f139) El-Djem days: months vs Année: cells give 68, printed 74 (difference 6)
 
-sgt1936 p. 113 (f124): the Mai column is printed as an exact copy of the Avril column on every line of the page, which explains all eighteen failures on that page (Mai cells flagged `total_mismatch`; the true May values are not recoverable from the annual total alone with certainty, so the printed values are kept). Every other failure below was re-read month by month on zoomed native-resolution crops; the printed values are kept and the misprinted cell cannot be identified unless stated: sgt1936 p. 115 Henchir-French, Radès; p. 117 Fedjet-Khemakhem, Dridjat, Djebel-Oust, Menzel-bou-Zelfa, Beni-Aïech, Bir-bou-Rekba; p. 121 Mell-Rechga; p. 123 Testour-Briouik; p. 123 Ksar-bou-Kriss (Ouled-Zaïr), Henchir-Sidi-bou-Goussa, Henchir-el-Bey and Sidi-bou-Rouis (Gare): the four days-Année cells at the foot of the page are printed out of line (the month sums 57, 54, 92, 40 match the printed 40/55/92/55 only after shifting), a misprint in the totals, so no row is flagged; p. 125 Lorbeuss (Gare); p. 127 Sbeïtla (Henchir-Touille), Sbeïtla-Nord; p. 129 El-Djem. sgt1935 p. 149 Djebel Oust (96 vs 101), p. 153 Sidi bou Becker (91 vs 93), p. 157 Le Sers (gare) (60 vs 58), Tadjerouine (Aïn-Zouagha) (68 vs 73) and Mactar (68 vs 78): every month re-read on zoomed crops; printed inconsistencies.
+sgt1936 p. 113 (f124): the Mai column is printed as an exact copy of the Avril column on every line of the page, which explains all eighteen failures on that page (Mai cells flagged `total_mismatch`; the true May values are not recoverable from the annual total alone with certainty, so the printed values are kept). Every other failure below was re-read month by month on zoomed native-resolution crops; the printed values are kept and the misprinted cell cannot be identified unless stated: sgt1936 p. 115 Henchir-French, Radès; p. 117 Fedjet-Khemakhem, Dridjat, Djebel-Oust, Menzel-bou-Zelfa, Beni-Aïech, Bir-bou-Rekba; p. 121 Mell-Rechga; p. 123 Testour-Briouik; p. 123 Ksar-bou-Kriss (Ouled-Zaïr), Henchir-Sidi-bou-Goussa, Henchir-el-Bey and Sidi-bou-Rouis (Gare): the four days-Année cells at the foot of the page are printed out of line (the month sums 57, 54, 92, 40 match the printed 40/55/92/55 only after shifting), a misprint in the totals, so no row is flagged; p. 125 Lorbeuss (Gare); p. 127 Sbeïtla (Henchir-Touille), Sbeïtla-Nord; p. 129 El-Djem. sgt1935 p. 149 Djebel Oust (96 vs 101), p. 153 Sidi bou Becker (91 vs 93), p. 157 Le Sers (gare) (60 vs 58), Tadjerouine (Aïn-Zouagha) (68 vs 73) and Mactar (68 vs 78): every month re-read on zoomed crops; printed inconsistencies. sgt1929 (every cell re-read on zoomed crops, printed values kept): p. 270-271 La Forestière (months 91, Total printed 81); p. 274-275 Sbeïtla (Henchir-Touille) (months 90, Total printed 60, likely 90 misprinted).
 
-- Flags: not_applicable: 812, total_mismatch: 18.
-- Observation signs: days_not_observed: 76, incomplete: 45, no_observation: 691.
+- Flags: not_applicable: 1827, total_mismatch: 18.
+- Observation signs: days_not_observed: 121, incomplete: 85, no_observation: 1622.
 
 ## Image versus OCR
 

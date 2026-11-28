@@ -1,8 +1,13 @@
 {
  "meteo_rainfall_season": {
-  "rows": 1292,
-  "checks": 212,
+  "rows": 2477,
+  "checks": 405,
   "failed": [
+   "sgt1929 p.261 (f289) El-Alem (Henriville): seasons vs Année 1928-1929: cells give 508.0, printed 507.5 (difference -0.5)",
+   "sgt1929 p.261 (f289) Mahédia: seasons vs Année 1928-1929: cells give 447.5, printed 447.3 (difference -0.2)",
+   "sgt1929 p.262 (f290) Bordj-Lacroix: seasons vs Année 1928-1929: cells give 233.4, printed 233.7 (difference 0.3)",
+   "sgt1929 p.262 (f290) Maknassy (Saint-Félix): seasons vs Année 1928-1929: cells give 301.7, printed 305.7 (difference 4.0)",
+   "sgt1929 p.262 (f290) Gabès: seasons vs Année 1928-1929: cells give 118.9, printed 119.5 (difference 0.6)",
    "sgt1930 p.260 (f818) Aïn-Sebaâ: seasons vs Année 1929-1930: cells give 1152.6, printed 1152.0 (difference -0.6)",
    "sgt1930 p.262 (f820) Menzel-Temime: seasons vs Année 1929-1930: cells give 516.0, printed 410.3 (difference -105.7)",
    "sgt1930 p.263 (f821) Le Kef I: seasons vs Année 1929-1930: cells give 510.9, printed 511.1 (difference 0.2)",
@@ -11,17 +16,27 @@
    "sgt1930 p.265 (f823) Kundar: seasons vs Année 1929-1930: cells give 311.0, printed 311.9 (difference 0.9)"
   ],
   "editions": [
+   "sgt1929",
    "sgt1930"
   ],
-  "flagged": 1,
-  "not_applicable": 177,
+  "flagged": 3,
+  "not_applicable": 336,
   "overlap_compared": 0,
   "overlap_diffs": []
  },
  "meteo_rainfall_monthly": {
-  "rows": 8328,
-  "checks": 527,
+  "rows": 15984,
+  "checks": 964,
   "failed": [
+   "sgt1929 p.266 (f294) Saint-Cyprien mm: months vs Année: cells give 417.7, printed 417.6 (difference -0.1)",
+   "sgt1929 p.270 (f298) Dhomda II mm: months vs Année: cells give 533.0, printed 533.1 (difference 0.1)",
+   "sgt1929 p.270 (f298) Sidi bou Becker mm: months vs Année: cells give 531.2, printed 541.2 (difference 10.0)",
+   "sgt1929 p.272 (f300) Aïn-Tounga mm: months vs Année: cells give 531.0, printed 524.0 (difference -7.0)",
+   "sgt1930 p.268 (f826) Bizerte Carouba mm: months vs Année: cells give 753.0, printed 753.2 (difference 0.2)",
+   "sgt1930 p.268 (f826) De Carnières (Saint-Antoine) mm: months vs Année: cells give 445.3, printed 444.3 (difference -1.0)",
+   "sgt1930 p.270 (f828) El-Aouina mm: months vs Année: cells give 372.2, printed 362.2 (difference -10.0)",
+   "sgt1930 p.282 (f840) Sousse mm: months vs Année: cells give 237.2, printed 232.2 (difference -5.0)",
+   "sgt1930 p.282 (f840) Maknassy (gare) mm: months vs Année: cells give 153.4, printed 371.4 (difference 218.0)",
    "sgt1935 p.146 (f166) Mateur mm: months vs Année: cells give 516.5, printed 516.1 (difference -0.4)",
    "sgt1935 p.152 (f172) El-Akhouat (gare) mm: months vs Année: cells give 349.1, printed 348.9 (difference -0.2)",
    "sgt1935 p.154 (f174) El-Aroussa (Fme-Alsacienne) mm: months vs Année: cells give 434.9, printed 437.9 (difference 3.0)",
@@ -52,18 +67,22 @@
    "sgt1936 p.132 (f143) Tatahouine mm: months vs Année: cells give 167.8, printed 193.7 (difference 25.9)"
   ],
   "editions": [
+   "sgt1929",
+   "sgt1930",
    "sgt1935",
    "sgt1936"
   ],
-  "flagged": 107,
-  "not_applicable": 692,
+  "flagged": 122,
+  "not_applicable": 1625,
   "overlap_compared": 0,
   "overlap_diffs": []
  },
  "meteo_rain_days": {
-  "rows": 8328,
-  "checks": 505,
+  "rows": 15984,
+  "checks": 928,
   "failed": [
+   "sgt1929 p.270 (f298) La Forestière days: months vs Année: cells give 91, printed 81 (difference -10)",
+   "sgt1929 p.274 (f302) Sbeïtla (Henchir-Touille) days: months vs Année: cells give 90, printed 60 (difference -30)",
    "sgt1935 p.148 (f168) Djebel Oust days: months vs Année: cells give 96, printed 101 (difference 5)",
    "sgt1935 p.152 (f172) Sidi bou Becker days: months vs Année: cells give 91, printed 93 (difference 2)",
    "sgt1935 p.156 (f176) Le Sers (gare) days: months vs Année: cells give 60, printed 58 (difference -2)",
@@ -107,11 +126,58 @@
    "sgt1936 p.128 (f139) El-Djem days: months vs Année: cells give 68, printed 74 (difference 6)"
   ],
   "editions": [
+   "sgt1929",
+   "sgt1930",
    "sgt1935",
    "sgt1936"
   ],
   "flagged": 18,
-  "not_applicable": 812,
+  "not_applicable": 1827,
+  "overlap_compared": 0,
+  "overlap_diffs": []
+ },
+ "meteo_climate": {
+  "rows": 1403,
+  "checks": 299,
+  "failed": [
+   "sgt1929 p.282 (f310) Souk-el-Arba: hottest month moyenne vs (maxima + minima) / 2: cells give 29.8, printed 28.6 (difference -1.2)",
+   "sgt1929 p.282 (f310) Bizerte (Carouba): hottest month moyenne vs (maxima + minima) / 2: cells give 26.2, printed 25.5 (difference -0.7)",
+   "sgt1929 p.282 (f310) Bizerte (Carouba): coldest month moyenne vs (maxima + minima) / 2: cells give 8.85, printed 9.2 (difference 0.35)",
+   "sgt1929 p.282 (f310) Tunis (Manoubia): hottest month moyenne vs (maxima + minima) / 2: cells give 25.85, printed 25.5 (difference -0.35)",
+   "sgt1929 p.282 (f310) Grombalia: hottest month moyenne vs (maxima + minima) / 2: cells give 26.3, printed 25.6 (difference -0.7)",
+   "sgt1929 p.282 (f310) Medjez-el-Bab: hottest month moyenne vs (maxima + minima) / 2: cells give 27.55, printed 27.1 (difference -0.45)",
+   "sgt1929 p.282 (f310) Medjez-el-Bab: coldest month moyenne vs (maxima + minima) / 2: cells give 8.15, printed 8.5 (difference 0.35)",
+   "sgt1929 p.282 (f310) Thala: hottest month moyenne vs (maxima + minima) / 2: cells give 25.1, printed 24.7 (difference -0.4)",
+   "sgt1929 p.282 (f310) Kairouan: hottest month moyenne vs (maxima + minima) / 2: cells give 27.95, printed 27.6 (difference -0.35)",
+   "sgt1929 p.282 (f310) Sousse: hottest month moyenne vs (maxima + minima) / 2: cells give 25.15, printed 24.8 (difference -0.35)",
+   "sgt1929 p.282 (f310) Bou-Thadi: hottest month moyenne vs (maxima + minima) / 2: cells give 28.55, printed 28.1 (difference -0.45)",
+   "sgt1929 p.282 (f310) Zarzis: hottest month moyenne vs (maxima + minima) / 2: cells give 29.45, printed 28.9 (difference -0.55)",
+   "sgt1929 p.282 (f310) Kébili: hottest month moyenne vs (maxima + minima) / 2: cells give 34.2, printed 33.7 (difference -0.5)",
+   "sgt1929 p.282 (f310) Fort Saint: coldest month moyenne vs (maxima + minima) / 2: cells give 6.5, printed 7.5 (difference 1.0)",
+   "sgt1930 p.286 (f844) Béja: coldest month moyenne vs (maxima + minima) / 2: cells give 9.35, printed 10.3 (difference 0.95)",
+   "sgt1930 p.286 (f844) Djerba: vent dominant printed W, most days E"
+  ],
+  "editions": [
+   "sgt1929",
+   "sgt1930"
+  ],
+  "flagged": 3,
+  "not_applicable": 70,
+  "overlap_compared": 0,
+  "overlap_diffs": []
+ },
+ "meteo_means": {
+  "rows": 1360,
+  "checks": 395,
+  "failed": [
+   "sgt1930 p.288 (f846) Mabtouha (St-Victor) 1926-1930: months vs win: cells give 239, printed 199 (difference -40)",
+   "sgt1930 p.290 (f848) Sousse 1926-1930: months vs aut: cells give 104, printed 106 (difference 2)"
+  ],
+  "editions": [
+   "sgt1930"
+  ],
+  "flagged": 1,
+  "not_applicable": 5,
   "overlap_compared": 0,
   "overlap_diffs": []
  },
@@ -131,8 +197,8 @@
  "_survey": {
   "sgt1936": "f116-f122 research institutions (extract_research.py). f123-f144 *Relevé pluviométrique - année 1936*, eleven two-page spreads (left page: stations and mm January-September; right page: mm October-December, Année, then nombre de jours January-December, Année), stations grouped by region and contrôle; N.B. signes conventionnels: — pas d'observation, × nombre de jours non observés, O.I. observations incomplètes; \"gttes\" = gouttes. Only part b) (solar year) is printed. f145 blank.",
   "sgt1935": "f165 (p. 145) Laboratoire de chimie (Sfax), analyses 1935 (not meteorology). f166-f183 *b) Relevé pluviométrique de l'année 1935*, nine two-page spreads (left page: stations and mm January-November, December in the binding gutter; right page: Total mm, then nombre de jours January-December, Total), same signes conventionnels as sgt1936; only part b) printed. The binding gutter hides the decimals of the November column on most spreads (cells derived from the annual total, flagged `derived_from_totals`). f184 blank.",
-  "sgt1930": "Météorologie at the end of chapter XI Agriculture, printed pages 260-291. f818-f825 (p. 260-267) *a) Relevé pluviométrique de l'année agricole (1929-1930)*, one table per page: Automne, Hiver, Printemps, Eté, Année 1929-30, Année 1901-1925 (p. 266 head misprinted \"1901-1905\"), stations grouped by natural region (Kroumirie ... Extrême Sud), no contrôle headings; transcribed (meteo_rainfall_season). f826-f843 (p. 268-285) *b) Relevé pluviométrique de l'année 1930*, nine two-page spreads (left page: stations and Millimètres de pluie by month; right page: the rest of the mm and Total, then Nombre de jours by month and Total; the exact split column is to be confirmed when transcribing), key \"Signes conventionnels : — pas d'observation; × ...\" across the top of the spread; NOT YET TRANSCRIBED. f844|f845 (p. 286-287) *c) Données climatologiques essentielles fournies par les principales régions tunisiennes (année 1930)*, one spread: localités grouped by region, Pluies (millimètres, nombre de jours), Température moyenne du mois le plus chaud / le plus froid (moyennes, maxima, minima), Température absolue (maxima, minima, with dates), nombre de jours au cours de l'année pendant lesquels le vent a soufflé de N, NE, E, SE, S, SW, W, NW, calme, vent dominant; footnotes (1)-(3) on missing months; NOT YET TRANSCRIBED. f846-f849 (p. 288-291) *Pluies moyennes mensuelles, par saison et annuelles pour les périodes : 1926-1930 et 1901-1930*, two lines (1926-1930, 1901-1930) per station (Tabarka ... Tatahouine), columns Septembre-Août, Automne, Hiver, Printemps, Eté, Année; NOT YET TRANSCRIBED (means only: meteo_means).",
-  "sgt1929": "f284-f312 Météorologie, parts a)-d) (views per part not yet surveyed page by page).",
+  "sgt1930": "Météorologie at the end of chapter XI Agriculture, printed pages 260-291. f818-f825 (p. 260-267) *a) Relevé pluviométrique de l'année agricole (1929-1930)*, one table per page: Automne, Hiver, Printemps, Eté, Année 1929-30, Année 1901-1925 (p. 266 head misprinted \"1901-1905\"), stations grouped by natural region (Kroumirie ... Extrême Sud), no contrôle headings; transcribed (meteo_rainfall_season). f826-f843 (p. 268-285) *b) Relevé pluviométrique de l'année 1930*, nine two-page spreads (left page: stations and Millimètres de pluie January-November; right page: December and Total, then Nombre de jours January-December and Total), key \"Signes conventionnels : — pas d'observation; × le nombre de jours manque; O gouttes; O. I. observations incomplètes\" across the top of the spread; transcribed (meteo_rainfall_monthly, meteo_rain_days). f844|f845 (p. 286-287) *c) Données climatologiques essentielles fournies par les principales régions tunisiennes (année 1930)*, one spread: localités grouped by region, Pluies (millimètres, nombre de jours), Température moyenne du mois le plus chaud / le plus froid (moyennes, maxima, minima), Température absolue (maxima, minima, with dates), nombre de jours au cours de l'année pendant lesquels le vent a soufflé de N, NE, E, SE, S, SW, W, NW, calme, vent dominant; footnotes (1)-(5) on missing months; transcribed (meteo_climate, meteo_sgt1930_cd.txt). f846-f849 (p. 288-291) *Pluies moyennes mensuelles, par saison et annuelles pour les périodes : 1926-1930 et 1901-1930*, two lines (1926-1930, 1901-1930) per station (Tabarka ... Tatahouine), columns Septembre-Août, Automne, Hiver, Printemps, Eté, Année, 39 stations; transcribed (means only: meteo_means, meteo_sgt1930_cd.txt).",
+  "sgt1929": "Météorologie at the end of the Agriculture chapter, printed pages 256-284 (same volume and ark as sgt1930). f284-f290 (p. 256-262) *a) Relevé pluviométrique de l'année agricole (1928-1929)*, one table per page: Automne, Hiver, Printemps, Eté, Année 1928-29, Année 1901-1925; the station groups are separated by blank lines only (no region headings printed: the sgt1930 region names are supplied); transcribed (meteo_rainfall_season). f291 blank. f292-f309 (p. 264-281) *b) Relevé pluviométrique* of 1929, nine two-page spreads (left page: stations and mm January-November, November at the binding gutter; right page: December, Total, Nombre de jours January-December, Total), key \"— pas d'observation; × le nombre de jours manque; O gouttes; O. I. observations incomplètes\" (a bare \"0\" in a mm column = gouttes); transcribed (meteo_rainfall_monthly, meteo_rain_days). f310|f311 (p. 282-283) *c) Données climatologiques essentielles fournies par les principales régions tunisiennes (année 1929)*, one spread, same columns as sgt1930, 30 localités, footnotes (1)-(2); transcribed (meteo_climate, meteo_sgt1929_cd.txt). f312 (p. 284) *Station centrale de la Manoubia de Tunis, année 1929*: rainfall by wind direction and month, frequency of rainy winds, dominant wind on rainy days (fits no meteo_ table; not transcribed). No part d) (means) is printed.",
   "sgt1928": "f806-f835 Météorologie, parts a)-d) (views per part not yet surveyed page by page).",
   "sgt1927": "f282-f287 a) relevé pluviométrique de l'année agricole 1926-1927; f288-f303 b) année solaire 1927 (mm | jours spreads); f304|f305 c) données climatologiques essentielles 1927; f306|f307 d) période 1901-1925, pluies moyennes mensuelles, saisonnières et annuelles (année agricole à partir de septembre).",
   "sgt1926": "f819-f825 a) année agricole 1925-1926; f826-f839 b) année solaire 1926; f840|f841 c) données climatologiques essentielles 1926; f842-f845 d) températures moyennes et extrêmes mensuelles, saisonnières et annuelles 1901-1925.",
@@ -141,5 +207,5 @@
   "sgt1923": "f745-f749 a) année agricole 1922-1923 (with the 1901-1910 normal); f750-f759 b) année solaire 1923; f760|f761 c) données climatologiques essentielles 1923; f762-f764 d) pluviométrie agricole 1900-1901 à 1919-1920 (five-year means).",
   "sgt1922": "f255-f259 a) année agricole 1921-1922; f260-f269 b) année solaire 1922; f270|f271 c) données climatologiques 1922; f272|f273 d) statistique thermométrique 1911-1920."
  },
- "_remaining": "Transcribed: sgt1936 f123-f144 (complete), sgt1935 f166-f183 (complete) and sgt1930 part a) f818-f825 (complete). NOT YET TRANSCRIBED: sgt1930 parts b) f826-f843, c) f844-f845 and d) f846-f849; every Météorologie page of sgt1929 (f284-f312), sgt1928 (f806-f835), sgt1927 (f282-f307), sgt1926 (f819-f845), sgt1925 (f309-f334), sgt1924 (f1247-f1268), sgt1923 (f745-f764) and sgt1922 (f255-f273). Tables meteo_climate and meteo_means are designed but have no rows yet."
+ "_remaining": "Transcribed: sgt1936 f123-f144 (complete), sgt1935 f166-f183 (complete), sgt1930 f818-f849 (parts a)-d), complete) and sgt1929 f284-f311 (parts a)-c)). NOT YET TRANSCRIBED: sgt1929 f312 (Manoubia rainfall by wind direction and month: fits no existing meteo_ table, would need a table of its own); every Météorologie page of sgt1928 (f806-f835), sgt1927 (f282-f307), sgt1926 (f819-f845), sgt1925 (f309-f334), sgt1924 (f1247-f1268), sgt1923 (f745-f764) and sgt1922 (f255-f273). meteo_climate holds sgt1929-sgt1930; meteo_means holds sgt1930 only."
 }

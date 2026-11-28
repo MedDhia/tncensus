@@ -1,0 +1,67 @@
+# sgt1929 (bpt6k9105652d), "Météorologie" (end of the Agriculture chapter), part c): f310|f311 (p. 282|283).
+# Every cell typed from native-resolution crops (hires.py page(ark, view)); no OCR used.
+# Printed key of sgt1929 (head of part b): "— pas d'observation; × le nombre de jours manque; O gouttes;
+# O. I. observations incomplètes". Tokens as in meteo_sgt1930_cd.txt: number; g = gouttes (traces: 0);
+# - = "—" (nothing printed); ? = illegible; text cells: '_' stands for a space.
+#
+# c) "Données climatologiques essentielles fournies par les principales régions tunisiennes (année 1929)",
+# one spread f310|f311 (p. 282|283); split=8: Pluies and Température moyenne du mois le plus chaud / le plus
+# froid on p. 282, the rest on p. 283. Same columns as sgt1930 part c). Negative values printed "— 2.0"
+# typed -2.0. Region names are printed vertically beside brackets: Région du Nord, Région du Nord-Est,
+# Région Centrale, Sahel, Région des Oasis, Extrême Sud; "Sahara : Fort Saint" on one line.
+# Footnotes as printed: (1) Manque les minima du mois de juillet. (2) Manque les maxima de décembre.
+# Tabarca is printed "Tabarca" (sgt1930: Tabarka); typed as printed. The p. 282 temperatures of Tabarca and
+# p. 283 annual means of Tabarca are printed with a degree sign as decimal mark ("32°4") and typed 32.4.
+# Tabarca, Température moyenne annuelle, moyenne: printed "18°" with no decimal digit (zoomed crop): typed ?.
+# Ben-Gardane: the right-hand page prints no extrême maxima on its line; "42.0 Août" stands alone one line
+# lower (in the blank gap before Gafsa), every other line of the block has its own maximum: typed on the
+# Ben-Gardane line (flagged row_realigned in extract_meteo.py).
+# Ben-Gardane, mois le plus froid minima: a short dash-like mark precedes "3.6"; read 3.6 (positive), as
+# (14.4 + 3.6) / 2 = 9.0 = the printed moyenne.
+# Bou-Thadi extrême maxima date printed "Juil.A" (Juillet-Août, as printed). Tatahouine hottest-month
+# minima "22.5" has a stray mark before it. Fort Saint Pluies millimètres printed "0" (gouttes, key) with
+# 18 rainy days: typed g.
+@climate view=310 page=282 year=1929 split=8
+img: all
+cols: mm days hmax hmin hmean cmax cmin cmean amax amaxd amin amind ymax ymin ymean wN wNE wE wSE wS wSW wW wNW wcalm wdom
+region: Région du Nord
+Tabarca | 1169.6 126 32.4 21.9 26.9 13.4 7.2 10.3 45.0 Août 3.0 Fév. 23.0 14.6 ? 38 30 49 19 164 44 6 15 0 S
+Aïn-Draham | 1975.0 133 30.6 19.4 25.0 7.2 1.6 4.4 40.7 Juil. -2.0 Fév. 18.3 10.5 14.4 24 14 18 50 38 42 39 140 0 NW
+Souk-el-Arba | 490.9 95 40.1 19.5 28.6 12.9 2.2 7.6 50.0 Juil. -3.0 J._F. 25.2 9.7 17.5 40 17 6 3 9 11 55 35 189 W
+Bizerte (Carouba) | 754.1 109 31.6 20.8 25.5 12.6 5.1 9.2 44.7 Juil. 1.0 Fév. 22.1 12.9 17.5 18 71 16 28 9 20 48 142 13 NW
+region: Région du Nord-Est
+Tunis (Manoubia) | 397.7 137 31.5 20.2 25.5 11.8 4.9 8.4 44.0 Juil. 0.4 Fév. 21.6 12.4 17.0 22 78 53 31 6 27 36 107 5 NW
+Grombalia | 439.1 67 31.9 20.7 25.6 12.6 4.3 8.5 42.5 Juil. -1.0 Fév. 21.9 12.7 17.3 46 2 23 18 47 8 212 3 6 W
+Kélibia | 498.0 62 32.9 21.7 27.3 13.1 6.2 9.8 37.0 Juil. 2.0 F._D. 23.0 13.9 18.4 55 7 11 16 70 21 73 112 0 NW
+Nabeul (1) | 414.9 59 30.7 21.1 25.9 13.5 4.7 9.1 35.8 Juil. 0.4 Fév. 22.3 12.1 17.2 31 4 21 11 50 13 125 62 48 W
+Zaghouan | 583.7 93 35.1 21.6 28.1 10.8 5.6 8.2 46.0 Juil. 1.0 Fév. 21.9 13.7 17.8 0 0 89 14 9 3 220 29 1 W
+region: Région Centrale
+Medjez-el-Bab | 397.0 75 36.3 18.8 27.1 13.6 2.7 8.5 45.0 Juil. 0.0 J._F. 24.3 10.8 17.5 5 22 61 49 0 31 102 39 0 W
+Le Thibar | 696.4 121 36.2 20.6 28.4 10.7 4.1 7.4 46.0 Juil. 0.0 Fév. 22.7 12.1 17.4 58 29 112 4 21 13 79 49 0 E
+Le Kef | 693.1 121 33.5 18.3 25.9 9.8 2.0 5.9 41.4 Juil. -1.6 Fév. 20.8 10.0 15.4 63 14 25 14 18 20 66 71 7 NW
+Mactar | 754.5 97 30.0 18.0 24.0 5.8 -1.1 2.4 37.0 Juil. -5.5 Fév. 17.2 8.4 12.8 28 9 2 7 12 70 109 128 0 NW
+Thala | 601.9 85 30.8 19.4 24.7 7.8 -0.9 3.7 39.0 Août -5.0 F._D. 19.7 8.1 13.9 36 8 8 15 92 27 80 31 0 S
+region: Sahel
+Kairouan | 321.9 82 36.1 19.8 27.6 14.5 2.2 8.3 44.2 Juil. -1.8 Déc. 24.6 11.2 17.9 92 67 23 51 32 23 39 35 2 N
+Sousse | 362.0 59 28.1 22.2 24.8 12.1 5.3 8.7 35.0 Juil. 2.0 Fév. 20.2 13.7 16.9 43 12 9 10 21 48 40 94 78 NW
+Bou-Thadi | 381.1 62 37.5 19.6 28.1 14.6 3.4 9.0 43.0 Juil.A 0.0 J._D. 25.5 11.5 18.5 66 84 4 51 26 43 6 54 0 NE
+Sfax (2) | 256.9 27 29.1 22.5 25.8 13.9 4.9 9.4 34.0 Avril 2.0 J._D. 22.3 13.8 18.3 30 36 49 76 34 53 40 47 0 SE
+region: Région des Oasis
+Gabès | 107.2 31 30.6 23.2 26.9 13.9 6.1 10.0 42.0 Juil. 1.6 Fév. 22.5 14.6 18.5 11 84 28 26 6 74 55 40 34 NE
+Djerba | 150.7 54 33.1 23.1 28.1 14.8 6.8 10.8 42.0 Août 3.0 Jan. 24.4 15.4 19.9 37 46 101 29 17 20 65 50 0 E
+Zarzis | 171.4 39 36.4 22.5 28.9 16.4 4.2 10.5 46.0 Juin 1.0 J._F. 26.9 13.5 20.2 127 44 47 6 8 8 19 105 1 N
+Ben-Gardane | 115.3 33 36.2 20.6 28.4 14.4 3.6 9.0 42.0 Août -1.0 Déc. 26.4 12.0 19.2 140 39 46 9 8 22 47 50 4 N
+Gafsa | 221.5 45 35.6 22.6 29.1 11.6 2.8 7.2 43.6 Juil. -2.0 Fév. 23.6 12.6 18.1 177 34 34 0 45 1 1 7 11 N
+Metlaoui | 168.0 43 37.4 23.8 30.6 12.4 3.9 8.1 46.0 Juil. -3.0 Déc. 25.0 14.0 19.5 30 22 73 5 14 20 189 11 1 W
+Tozeur | 83.8 28 39.4 24.4 31.7 13.5 3.5 8.5 54.0 Juil. 0.0 Fév. 27.2 14.6 20.9 13 65 32 3 0 0 37 0 198 NE
+Kébili | 93.5 21 44.4 24.0 33.7 13.7 3.9 8.8 49.0 Août 0.0 Déc. 28.7 13.4 21.0 3 118 1 6 1 8 1 2 194 NE
+region: Extrême Sud
+Matmata | 327.7 52 32.7 23.0 27.7 10.5 5.7 8.1 42.0 Août 2.0 Déc. 21.8 14.3 18.0 47 76 64 23 46 71 17 21 0 NE
+Médenine | 147.0 51 38.0 24.0 31.0 16.7 7.8 12.2 48.0 Août 3.0 Déc. 27.2 15.6 21.4 36 24 59 9 35 13 150 23 16 W
+Tatahouine | 103.4 46 37.1 22.5 29.8 14.1 5.9 10.0 49.0 Août 2.0 Jan. 25.4 13.6 19.5 61 56 44 19 16 72 53 44 0 SW
+region: Sahara
+Fort Saint | g 18 38.8 21.5 30.1 14.2 -1.2 7.5 44.6 Août -7.0 Déc. 27.5 11.3 19.4 59 51 68 24 26 38 59 31 9 E
+#
+# f312 (p. 284) "Station centrale de la Manoubia de Tunis, année 1929" (rainfall by wind direction and month,
+# frequency of rainy winds, dominant wind on rainy days): fits no existing meteo_ table; not transcribed
+# (listed in REMAINING).

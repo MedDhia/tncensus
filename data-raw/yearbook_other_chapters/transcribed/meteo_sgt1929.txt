@@ -1,0 +1,792 @@
+# sgt1929 (bpt6k9105652d) f284-f312: "Météorologie" (end of the Agriculture chapter), printed pages 256-284.
+# Survey:
+#   a) "Relevé pluviométrique de l'année agricole (1928-1929)", f284-f290 (p. 256-262), one table per page:
+#      Automne, Hiver, Printemps, Eté, Année 1928-29, Année 1901-1925 (normal). TRANSCRIBED below (@season).
+#   f291: blank page (p. 263 not printed / blank verso).
+#   b) "Relevé pluviométrique" de l'année 1929 (solar year), nine two-page spreads f292|f293 ... f308|f309
+#      (p. 264-281): left page stations + Millimètres de pluie Janvier-Novembre, right page Décembre, Total,
+#      then Nombre de jours Janvier-Décembre, Total (split=11). TRANSCRIBED below (@rain).
+#   c) "Données climatologiques essentielles fournies par les principales régions tunisiennes (année 1929)",
+#      f310|f311 (p. 282-283), one spread. NOT TRANSCRIBED.
+#   f312 (p. 284): "Station centrale de la Manoubia de Tunis, année 1929": rainfall by wind direction and month,
+#      frequency of rainy winds, dominant wind on rainy days. NOT TRANSCRIBED.
+#   d) no table of means (pluies moyennes) is printed in sgt1929 within f284-f312.
+# Every cell typed from native-resolution crops (hires.py page(ark, view)); no OCR (tesseract not available).
+# Tokens as in meteo_sgt1936.txt: number; g = "gttes"/"gouttes" (traces, 0); - = "—" pas d'observation;
+# oi = "O.I." alone; 11.0oi = value printed with "O.I."; x = "×" (sgt1929 key: nombre de jours non observés);
+# ? = illegible; trailing d = derived from the printed total.
+#
+# Part a) prints NO region headings in sgt1929: the station groups are only separated by blank lines. The
+# region: lines below are the natural-region names printed for the same groups in sgt1930 part a), supplied
+# for consistency (not printed in sgt1929).
+
+@season view=284 page=256 year=1929 split=6
+img: all
+cols: aut win spr sum yr nor
+region: Kroumirie
+Tabarka | 364.7 493.1 260.7 65.4 1183.9 988
+Aïn-Sebaâ | - 506.9 334.8 66.6 - -
+Aïn Draham | 605.0 934.0 550.0 113.0 2202.0 1578
+Le Meridj | - - 464.6 - - -
+El-Feïdja | - 1365.7 176.6 33.8 - 1188
+Ghardimaou | - 203.7 208.2 - - -
+La Forestière | 282.7 393.0 297.4 26.1 999.2 -
+Oued Meliz | 197.5 205.5 236.9 - - -
+Bulla Régia | 162.0 266.5 178.0 20.0 626.5 -
+Souk-el-Arba | 149.0 196.7 166.9 28.7 541.3 436
+Fernana | 262.7 570.9 284.8 - - -
+Les Meknas | 354.0 400.0 282.5 - - -
+region: Mogods
+Sidi-Méchir-Tamera | - - 145.2 13.2 - -
+El-Guetma | 344.2 517.9 199.5 23.5 1085.1 -
+Henchir-Sria | 301.0 394.4 215.3 79.7 990.4 -
+Sedjenane (Gare) | 363.2 462.7 200.2 76.2 1102.3 -
+Oum-el-Aguareb | 244.6 326.3 191.7 31.3 793.9 -
+Béja | 252.7 299.7 191.2 15.1 758.7 621
+Aïn-Essid | 215.7 356.2 243.8 10.0 825.7 -
+Le Munchar | 206.5 242.5 176.4 16.2 641.6 -
+Guermanez | - 289.6 221.1 30.1 - -
+Eddekila | 164.5 186.0 231.9 18.9 601.3 -
+# Goussat-el-Bey: second "s" damaged in print ("Gou*sat").
+Goussat-el-Bey | 159.7 210.7 272.9 2.0 645.3 -
+Chuiggui | - 174.6 230.1 - - 459
+Tindja | 151.6 292.9 139.4 14.0 597.9 -
+Bizerte (Carouba) | 225.2 389.2 147.1 19.8 781.3 595
+Bizerte (Port) | 164.3 492.4 246.8 12.2 915.7 -
+region: Vallée Basse de la Medjerdah
+Utique I | 132.4 209.7 126.3 6.8 475.2 -
+Mabtouha | 107.5 183.8 172.5 - - 479
+El-Oggaline (Aïn-Rhelal) | 128.6 253.8 180.9 19.4 582.7 -
+Selma | 147.9 185.7 172.9 7.8 514.3 -
+De Carnières (Saint-Antoine) | 146.0 169.8 149.2 9.8 474.8 -
+De Carnières (A.S.I.H.) | 148.3 173.5 148.7 - - -
+Chougafa | 150.4 155.0 167.0 5.5 477.9 -
+
+@season view=285 page=257 year=1929 split=6
+img: all
+cols: aut win spr sum yr nor
+# no heading at the top of p. 257: continues the Vallée Basse de la Medjerdah group
+region: Vallée Basse de la Medjerdah
+Chaouat | 168.9 156.5 180.0 - - -
+Bordj Hadida | 184.7 176.6 175.5 5.5 542.3 -
+Sidi-Tabet | 130.0 173.8 158.8 13.1 475.7 -
+Djedeïda | 194.8 154.0 160.2 31.0 540.0 -
+Attar | - 189.2 198.1 17.6 - -
+El-Attar (Ferme Sainte-Anne) | 154.6 175.1 180.3 - - -
+Es-Souni | 164.1 176.2 164.6 25.7 530.6 -
+Tébourba | - 244.5 275.0 - - -
+El-Hattermine | 149.4 131.7 168.5 35.1 484.7 -
+Bordj-Touta I | 159.0 160.3 252.0 - - -
+Bordj-Toum | 161.8 151.5 236.8 6.5 556.6 -
+Bordj-Toum (Saint Henri) | 185.0 207.8 231.4 3.7 627.9 -
+Bordj-Toum (Henchir-el-Bey) | - 148.0 166.6 12.6 - -
+region: Golfe de Tunis
+Henchir-French | 165.4 142.7 194.1 39.4 541.6 -
+El-Hafsia | 147.5 125.3 185.2 30.9 488.9 -
+Massicault | 123.7 139.2 175.2 - - -
+Dridjat | 168.6 158.0 238.2 15.7 580.5 -
+Poincaré | 127.0 125.1 207.6 - - -
+Mengoub | 141.5 143.0 198.1 22.9 505.5 -
+Fedjet-Kemaken | 166.6 147.0 224.9 25.0 563.5 -
+Khlédia | 138.9 160.2 151.8 - - -
+Bordj-Chakir | 164.3 177.3 193.8 8.2 543.6 425
+Dom. de la Foy (Cebala du Mornag) | 172.4 220.1 237.3 21.3 651.1 -
+Saint Cyprien | 136.6 162.5 160.2 19.2 478.5 -
+M'Rira | 117.6 169.5 179.5 9.0 475.6 -
+Fouchana | 124.1 177.4 190.5 18.3 510.3 -
+Sedjoumi | - 166.4 170.5 6.8 - -
+Clos des Arcades | 131.0 179.3 218.8 36.5 565.6 -
+Ecole Coloniale d'Agriculture | 187.0 175.7 166.3 13.8 542.8 -
+Service Botanique | 226.8 193.5 165.9 17.0 603.2 -
+El-Ariana | 202.0 168.7 100.5 5.6 476.8 -
+La Soukra | 242.9 165.1 127.6 12.4 548.0 -
+Salammbô | - 196.1 117.6 20.6 - -
+El-Aouïna | 154.5 156.6 114.3 8.4 433.8 -
+Tunis (La Manoubia) | 168.2 170.2 169.5 15.8 523.7 405
+Tunis (Usine Elévatoire) | 165.9 169.7 158.1 14.2 507.9 -
+Tunis (Avenue Gambetta) | 171.4 169.2 159.3 15.4 515.3 -
+Aïn-Kettan | - 329.6 203.9 44.4 - -
+La Laverie (Douïmsi) | 151.6 264.2 324.8 57.7 798.3 -
+Kélibia | 178.0 239.0 130.0 11.0 558.0 394
+Menzel-Temime | 190.9 210.6 114.8 35.6 551.9 -
+
+@season view=286 page=258 year=1929 split=6
+img: all
+cols: aut win spr sum yr nor
+# no heading at the top of p. 258: continues the Golfe de Tunis group (Cap Bon stations)
+region: Golfe de Tunis
+Korbous | - - 160.6 22.0 - -
+M'Raïssa | - - - 16.8 - -
+Oued-el-Abid | 254.8 313.5 185.6 15.0 768.9 -
+Soltane | 171.3 203.8 141.6 20.9 537.6 -
+Fondouk-Djedid | 143.1 207.5 130.3 36.5 517.4 -
+Soliman | 146.0 253.2 121.2 30.0 550.4 471
+Kouba-Kbira | 181.7 166.0 167.5 15.9 531.1 -
+Grombalia | 150.2 248.1 147.0 29.5 574.8 499
+Aïn-Tébornok | 164.2 242.5 193.2 26.6 626.5 -
+Bir-bou-Rekba | 132.9 130.0 114.6 - - -
+Hammamet | - 97.5 - - - -
+Nabeul | 141.9 95.8 123.7 4.6 366.0 -
+region: Région de Dakla
+Bir-el-Akhdar | 164.4 115.1 188.0 55.2 522.7 -
+Medjez-el-Bab | 182.5 150.5 157.0 37.0 527.0 418
+Sidi-Abdallah (Ksar Tyr) | - 129.3 199.6 39.1 - -
+Montarnaud I | 161.4 139.7 216.4 44.7 562.2 -
+Montarnaud II | - 96.0 206.2 40.3 - -
+Melah-Rechga | 211.1 189.1 220.8 7.2 628.2 -
+Ech-Cheriffa | - - - 9.4 - -
+Bordj-Sidi-Sabah | 244.9 188.7 184.2 - - -
+Beauce Tunisienne | 197.5 226.3 189.5 34.1 647.4 -
+Aïn-Tounga | 218.5 203.5 208.5 50.0 680.5 -
+Téboursouk | 210.4 291.8 303.5 33.8 839.5 526
+Testour (Briouik) | 207.4 259.4 227.1 20.8 714.7 -
+Le Thibar | 221.5 226.6 324.3 31.0 803.4 652
+Zaouem | 201.0 234.0 216.0 19.0 670.0 460
+La Merdja | - - - - - 504
+Aïn-Garsa | 204.5 235.8 233.4 74.4 748.1 -
+El-Akhouat | - - 182.6 36.0 - -
+Gafour (Ecole) | - 143.7 236.4 - - -
+Gafour (supérieur) | 201.8 125.1 205.4 64.5 596.8 -
+Gafour (Saint-Guy) | - 122.8 212.8 59.2 - -
+Sidi-Ayed | - 111.5 198.1 29.6 - -
+Khalled | 295.0 225.5 350.5 61.0 932.0 -
+El-Aroussa (Aïn-Sid) | 190.0 134.1 - - - -
+El-Aroussa (Domaine) | 164.9 124.9 203.8 64.3 557.9 -
+El-Aroussa (Djelida) | 181.1 129.1 169.4 51.9 531.5 -
+Er-Remil-Etat | - - 223.5 - - -
+Bir-el-Bey | 208.0 145.2 171.4 47.0 571.6 -
+region: Hautes Plaines Tunisiennes
+Bahara (Henchir-el-Meya) | 172.1 193.9 272.3 - - -
+Sidi-el-Faci | 212.4 132.8 171.2 61.1 577.5 -
+
+@season view=287 page=259 year=1929 split=6
+img: all
+cols: aut win spr sum yr nor
+# no heading at the top of p. 259: continues the Hautes Plaines Tunisiennes group
+region: Hautes Plaines Tunisiennes
+Lorbeuss I (Les Romarins) | 151.4 120.0 198.2 94.3 563.9 -
+Lorbeuss II (Gare) | 151.8 121.1 191.2 91.3 555.4 -
+Lorbeuss III (Gauthra) | - - - 88.3 - -
+Salines de Lorbeuss | 194.0 136.3 248.3 79.3 657.9 -
+Bou-Djerida (Zafrane) | 191.6 170.1 303.8 - - -
+Le Kef I | 206.6 214.3 247.7 93.5 762.1 496
+Le Kef II (Aurore) | - - 264.8 48.4 - -
+Le Kef III (Sainte-Marie) | - - 265.8 23.7 - -
+Charèmes | 149.0 140.0 206.8 90.4 586.2 -
+Le Sers | 117.7 124.5 154.8 50.8 447.8 -
+Le Vieux Sers (Souk-el-Tléta) | - - - 43.5 - -
+Aïn-el-Bida | 118.8 201.9 264.4 - - -
+Sakiet Mine | 193.0 183.9 223.4 78.9 679.2 -
+Coucha | 196.1 133.5 205.0 87.0 621.6 -
+Aïn-Kerma | 168.3 221.6 173.6 64.8 628.3 -
+Tadjerouine (Feuille) | - 61.0 - - - -
+Tadjerouine (Aïn-Zouagha) | 153.5 92.7 164.2 71.0 481.4 -
+Rebiba | - 109.3 206.0 - - -
+Kalâa-Djerda | 104.7 57.7 136.2 62.2 360.8 -
+Le Ksour | - 127.0 221.0 55.0 - -
+Ebba-Ksour | 109.7 122.8 202.9 45.5 480.9 -
+Ben Arar | 126.1 143.0 205.0 72.9 547.0 -
+Henchir-Brouich (Bir Hassen) | 182.3 142.0 189.8 61.3 575.4 -
+Henchir-Medjet-es-Soltane | 144.0 263.7 308.5 50.5 766.7 -
+Mactar | 220.2 234.0 298.7 123.7 876.6 470
+Ousseltia (Baher-Chira) | - 119.1 273.1 55.0 - -
+Ousseltia (Oued-bou-Jedra) | 264.7 87.6 414.4 95.7 862.4 -
+Sainte Madeleine d'Ousseltia | 182.0 93.8 358.2 37.7 671.7 -
+Rohia | 99.8 70.5 188.2 - - -
+Bou-Habel | 124.0 117.2 217.5 - - -
+Thala | 167.9 111.9 280.2 78.3 638.3 448
+Le Chambi | - 31.0 161.5 83.5 - -
+Kasserine | 176.5 29.3 197.5 211.9 615.2 -
+Sbeïtla I | 111.1 44.3 184.0 73.8 413.2 -
+Sbeïtla II (Henchir-el-Aoudar) | 107.8 49.6 233.4 89.0 479.8 -
+Sbeïtla III (Henchir-Touille) | 110.8 40.3 188.9 107.1 447.1 -
+Djilma | - 58.0 - - - -
+Fériana | 130.0 55.1 97.2 63.5 345.8 -
+region: Région de l'Oued Miliane
+Aïn-el-Asker (Henchir-bou-Farda) | 159.7 170.0 159.0 9.7 498.4 443
+Djebel Oust | 130.8 - - - - -
+Smindja (Depienne) | 158.7 174.0 177.3 94.4 604.4 -
+Moghrane | 196.0 198.0 205.0 128.0 727.0 504
+Zaghouan (Ville) | 226.0 164.8 216.3 144.3 751.4 506
+
+@season view=288 page=260 year=1929 split=6
+img: all
+cols: aut win spr sum yr nor
+# no heading at the top of p. 260: continues the Région de l'Oued Miliane group
+region: Région de l'Oued Miliane
+Zaghouan (Contrôle) | 220.4 176.6 217.0 141.9 755.9 -
+Val-Saint-Pierre | 232.5 161.4 239.2 101.4 734.5 -
+Bou-Remada | 235.0 145.7 226.8 99.0 706.5 -
+Goubellat | 193.3 - - - - -
+Djebel-Rihane | 246.9 212.9 212.4 44.8 717.0 -
+Kheniguet le Goubellat (Beau Vallon) | - 119.6 169.5 14.5 - -
+Kheniguet ed Deham | 190.9 150.6 170.2 52.7 564.4 -
+Sidi-Attia | 204.1 159.9 170.2 35.5 569.7 -
+Griffat-Soltane | 235.1 142.3 222.2 62.0 661.6 -
+Domaine La Fauvette | 234.0 126.7 182.5 48.5 591.7 -
+Foreston les lilas (Guedal-el-Beylik) | 260.3 150.4 214.7 - - -
+Thibika | 288.5 134.9 196.4 22.8 642.6 -
+Tarf-ech-Chena | 226.1 153.3 246.2 75.1 700.7 -
+Mechtah-Cheik-Amar | 218.0 - 195.6 37.9 - -
+Djebel-Mansour I (Ksar-bou-Kriss) | - - 256.0 34.0 - -
+Djebel-Mansour II (Sainte Gilberte) | 275.9 236.7 285.7 - - -
+Djebel-Mansour III (Henchir-Aouéli) | 208.9 208.5 251.0 49.0 717.4 -
+Djebel-Mansour IV (Saint-Auguste) | 239.5 184.1 - 43.6 - -
+Djebel-Mansour V (Oum-el-Abouab) | 224.7 192.6 273.0 77.8 768.1 -
+Djebel-Mansour (Dne du Fortin) | - - 268.7 78.9 - -
+Sidi-bou-Becker | 277.0 165.3 259.1 59.1 760.5 -
+Dhomda I | 215.9 140.0 271.5 76.6 704.0 -
+# Dhomda II: middle digit of Eté damaged ("12?.4"); typed from the Année (663.1 - 542.7 = 120.4)
+Dhomda II (Le Boisy) | 220.0 144.0 178.7 120.4d 663.1 -
+Djebel-Djouggar | 270.9 134.6 250.5 62.1 718.1 508
+Henchir-Souar | - 235.0 196.3 - - -
+Bou-Arada | - 169.5 207.3 60.1 - -
+Bou-Arada (Plaine) | - 157.6 218.0 77.0 - -
+Oued-Remil | 153.8 110.4 218.4 41.2 523.8 -
+Oued-Dridja | 174.1 160.7 257.4 86.7 678.9 -
+Saadia du Bargou | 259.4 226.6 304.8 95.5 886.3 544
+region: Région de l'Enfida
+Sainte Marie du Zit I | 137.3 146.9 143.2 45.2 472.6 -
+Sainte Marie du Zit II (Bir-Hamadet) | 169.6 186.5 211.1 - - -
+Beni-Deraj | 191.1 144.1 188.6 44.4 568.2 -
+Bou-Ficha | 150.5 88.2 186.7 30.9 456.3 -
+Zériba (Aïn-Saboun) | 207.9 170.7 197.3 86.0 661.9 -
+Zériba (Frais Vallon) | 197.6 146.1 218.6 57.6 619.9 -
+Zériba | 197.5 141.5 181.9 66.5 587.4 -
+Djeradou Nord | 185.9 121.9 190.6 48.6 547.0 -
+Djeradou Sud | 173.1 148.3 230.2 56.5 608.1 -
+Val Suzon | 152.6 163.1 226.4 33.3 575.4 -
+Aïn-Battaria | 233.2 133.2 314.6 56.4 737.4 -
+Segermès | 164.8 156.2 204.8 60.3 586.1 -
+Saouaf (Grandes Gouttes) | - - 389.3 - - -
+
+@season view=289 page=261 year=1929 split=6
+img: all
+cols: aut win spr sum yr nor
+# no heading at the top of p. 261: continues the Région de l'Enfida group
+region: Région de l'Enfida
+Saouaf (Henchir-Zeguidane) | 193.1 93.2 233.5 39.5 559.3 -
+Saouaf (Aïn-Zectoun) | 102.3 129.6 271.4 92.4 595.7 -
+Saouaf (Sainte-Cécile) | 153.7 118.7 300.2 75.2 647.8 -
+Loukanda I | - - 234.6 63.4 - -
+Loukanda II | 283.8 192.7 279.7 - - -
+El-Kley | 103.0 83.5 171.0 52.0 409.5 -
+Djebibina | 197.7 66.3 200.5 - - -
+Sainte Maurice de Djebibina | - - - - - -
+Henchir-Kasbatt | 236.8 133.9 178.9 26.5 576.1 -
+Enfidaville | 125.5 108.6 188.8 90.9 513.8 360
+Kundar | 138.9 59.3 151.2 18.0 367.4 -
+region: Région de Kairouan
+Besserour | 146.2 56.7 228.3 44.8 476.0 -
+# El-Alem (Henriville): seasons add to 508.0, Année printed 507.5 (every digit clear on a zoomed crop): printed inconsistency.
+El-Alem (Henriville) | 153.8 56.2 238.2 59.8 507.5 -
+Sbikha (Henchir Nedjema) | 127.7 57.9 217.7 27.8 431.1 -
+Kairouan | 175.6 53.3 189.4 18.3 436.6 290
+Saadia (Aïn Soltane) | 80.5 31.5 133.9 15.2 261.1 -
+Aïn-Koudiat | 220.0 88.0 446.0 55.5 809.5 -
+Sbikha-es-Sbatt | 158.4 65.4 243.9 37.5 505.2 -
+Sbikha | 152.4 59.1 244.2 46.0 501.7 -
+Sbikha (Henchir Aierah Nord) | 226.0 79.5 226.4 8.0 539.9 -
+Sbikha Est | 170.2 46.5 226.3 12.0 455.0 -
+Djebel-Trozza | 130.8 - - - - -
+Hadjeb-el-Aïoun I | - - 186.0 105.0 - -
+Hadjeb-el-Aïoun II | 175.1 31.3 185.1 66.5 458.0 -
+El-Haouareb I | - 55.7 313.9 9.9 - -
+El-Haouareb II | - 46.1 - - - -
+El-Haouareb III | - 55.0 269.5 6.0 - -
+Sidi-Amor-el-Kenani (Zafrane) | 95.0 102.5 145.7 50.5 393.7 -
+Sidi-Saad I | - - 241.9 44.5 - -
+Sidi-Saad II | - - - 58.3 - -
+Sidi-Mansour | 208.8 45.9 212.7 75.6 543.0 -
+Bou-Thadi I | 103.5 129.2 136.9 73.5 443.1 -
+Bou-Thadi II (Cesarée) | 80.8 98.5 119.7 87.9 386.9 -
+La Fauconnerie | 106.7 87.9 110.9 - - -
+region: Région de Sousse
+Sidi-bou-Ali | 69.0 69.0 117.0 24.5 279.5 -
+Akouda | 120.0 89.1 125.6 7.6 342.3 -
+Sousse | - 60.2 75.1 5.8 - 320
+Monastir | - 66.7 131.0 9.5 - -
+# Téboulba: first digit of Printemps damaged ("?6.6"); typed from the Année (399.3 - 302.7 = 96.6)
+Téboulba (Bonne Veine) | 136.0 151.0 96.6d 15.7 399.3 -
+Sidi-el-Hani | - 72.7 87.9 - - -
+# Mahédia: seasons add to 447.5, Année printed 447.3 (every digit clear on a zoomed crop): printed inconsistency.
+Mahédia | 196.7 181.7 55.5 13.6 447.3 -
+Ksour-Essaf | 137.6 159.6 79.4 13.7 390.3 -
+Salakta | 245.0 172.4 67.2 1.5 486.1 -
+El-Djem | 78.5 - 100.5 24.5 - 255
+
+@season view=290 page=262 year=1929 split=6
+img: all
+cols: aut win spr sum yr nor
+# p. 262 groups (unheaded) matched to the sgt1930 regions; Matmata is printed in the Gabès group here
+# (in sgt1930 it heads Extrême Sud).
+region: Région de Sfax
+La Provence Limaya | 88.5 88.0 105.6 66.7 348.8 -
+El-Mouassat (Sfax) | - 74.2 57.1 49.0 - -
+Achichina (Sfax) | - 69.5 81.0 - - -
+Sfax (Port) | 67.4 72.1 86.9 50.3 276.7 211
+Sfax (Réservoirs) | 51.5 62.0 82.0 16.5 212.0 -
+La Forestière de Sfax | 62.2 92.0 85.5 36.0 275.7 -
+Mirabaud | 78.2 65.2 47.9 30.2 221.5 -
+Molinos | 58.5 62.5 66.0 26.7 213.7 -
+De Nervo | 68.6 57.4 56.9 33.0 215.9 -
+Saint-Michel | 53.7 64.1 70.0 36.1 223.9 -
+Dolfus | 62.0 60.2 56.9 31.2 210.3 -
+Chahal (Ferme Salavy) | 69.0 55.7 43.0 17.5 185.2 -
+Chahal (Ferme Roux) | 46.5 57.2 64.5 27.2 195.4 -
+Ben Nessim | 66.2 75.2 93.7 63.5 298.6 -
+Laurans | 73.0 64.9 68.5 30.0 236.4 -
+# Bordj-Lacroix: seasons add to 233.4, Année printed 233.7 (every digit clear on a zoomed crop): printed inconsistency.
+Bordj-Lacroix | 63.8 72.5 68.1 29.0 233.7 -
+region: Région de Gafsa
+Maknassy (Gare) | 79.2 110.7 118.1 73.0 381.0 -
+# Maknassy (Saint-Félix): seasons add to 301.7, Année printed 305.7 (every digit clear on a zoomed crop): printed inconsistency.
+Maknassy (Saint-Félix) | 56.1 73.7 98.6 73.3 305.7 -
+Maknassy (Domaine des 2 gazelles) | 64.3 105.2 128.8 58.4 356.7 -
+Sened | 76.7 - - - - -
+Zannouch | 86.4 96.9 - - - -
+Gafsa | 71.5 52.5 103.3 16.4 243.7 151
+region: Région de Metlaoui et Djerid
+Redeyef | 17.4 27.3 50.3 49.0 144.0 -
+Métlaoui | 29.2 35.4 62.7 31.7 159.0 126
+Tozeur | 7.0 42.3 35.0 3.5 87.8 98
+region: Région de Gabès
+Saint-Michel du Sud | 76.6 101.1 75.0 17.5 270.2 -
+# Gabès: seasons add to 118.9, Année printed 119.5 (every digit clear on a zoomed crop): printed inconsistency.
+Gabès | 45.2 36.0 35.7 2.0 119.5 193
+Matmata | 38.5 187.0 112.5 71.0 409.0 241
+region: Arad
+Djerba | 73.5 132.8 26.0 12.7 245.0 224
+Zarzis | 109.7 117.8 21.3 1.8 250.6 -
+Société Sidi-Chemmak | 45.7 - - - - -
+Médenine | 20.2 91.0 38.0 5.0 154.2 122
+Ben-Gardane | 52.0 89.0 10.0 2.5 153.5 193
+Sidi-Toui | - - - 4.3 - -
+Meched-Salah | - - - 0.0 - -
+Allouet-el-Gouna | - - - 7.0 - -
+region: Nefzaoua
+Kébili | 22.1 33.0 29.0 2.0 86.1 100
+region: Extrême Sud
+Tatahouine | 16.4 58.7 20.8 g 95.9 136
+Dehibat | 11.0 108.0 21.0 3.0 143.0 -
+Fort-Saint | - 25.0 g g - -
+
+# b) "Relevé pluviométrique" (année 1929), f292|f293 ... f308|f309 (p. 264-281). Left page: stations and
+# Millimètres de pluie Janvier-Novembre (Novembre at the binding gutter); right page: Décembre, Total, then
+# Nombre de jours Janvier-Décembre, Total. Printed key across the spread: "Signes conventionnels : — pas
+# d'observation; × le nombre de jours manque; O gouttes; O. I. observations incomplètes." So in sgt1929 a bare
+# "0"/"O" printed without decimal in a millimetre column means gouttes (typed g), while "0.0" is typed 0.0;
+# in the days columns "0" is a count of zero days.
+@rain view=292 page=264 year=1929 split=11
+img: all
+cols: m01 m02 m03 m04 m05 m06 m07 m08 m09 m10 m11 m12 myr d01 d02 d03 d04 d05 d06 d07 d08 d09 d10 d11 d12 dyr
+region: Tunisie du Nord
+controle: Contrôle de Bizerte
+Bizerte Carouba | 118.7 116.0 100.3 9.5 37.3 g 0.0 19.8 50.3 61.8 146.3 94.1 754.1 17 20 9 5 6 1 0 7 9 9 14 12 109
+Bizerte (Port) | 80.9 149.5 210.3 8.6 27.9 0.0 0.0 12.2 50.5 61.3 129.3 126.2 856.7 14 21 14 7 9 0 0 5 7 7 14 12 110
+Tindja | 82.2 125.3 89.0 3.4 47.0 0.0 0.0 14.0 18.0 29.9 70.6 95.3 574.7 9 17 10 2 5 0 0 5 9 10 8 8 83
+Mateur | - - - - - - 0.0 3.5 6.0 30.2 51.1 85.8 - - - - - - - 0 1 2 7 6 11 -
+El Oggaline (Aïn Rhélal) | 62.5 69.5 99.5 11.2 70.2 1.4 0.0 18.0 46.1 27.0 65.2 86.7 557.3 12 17 11 5 8 1 0 2 5 7 9 7 84
+Mabtouha (Saint-Victor) | 39.9 55.6 128.6 6.9 37.0 - - - - - 40.9 48.4 - 13 18 10 3 5 - - - - - 13 8 -
+Sedjenane (Gare) | 123.4 128.6 117.8 32.5 49.9 10.8 0.0 65.4 62.4 64.9 134.4 141.3 931.4 13 11 12 9 4 1 0 6 7 6 10 8 87
+Henchir Sria | 117.6 128.9 142.2 8.3 64.8 3.2 0.0 76.5 45.4 85.9 86.2 138.2 897.2 17 22 10 6 10 3 0 7 10 14 15 16 130
+Sidi-Mechir-Tamera | 8.5oi 137.1 87.1 5.2 52.9 9.3 0.0 3.9 31.8 115.7 131.2 139.2 - 9oi 17 11 4 7 2 0 5 6 9 11 12 -
+El-Guetma | 141.1 155.0 118.0 29.0 52.5 4.5 0.0 19.0 42.0 82.0 120.0 164.2 927.3 19 17 12 10 6 4 0 6 7 10 16 16 123
+Utique I | 34.6 88.7 92.2 9.3 24.8 3.0 0.0 3.8 8.7 20.0 36.3 50.2 - 11 19 10 3 6 5 0 2 oi 5 9 9 -
+Utique II | - 74.9 69.2 - - - - - - - - - - - 9 7 - - - - - - - - - -
+Selma | 51.8 59.8 118.8 10.5 43.6 1.1 0.0 6.7 30.2 27.6 56.8 57.6 464.5 14 21 11 7 8 2 0 2 5 11 13 12 106
+controle: Contrôle de Béja
+Béja | 62.0 114.2 128.2 14.5 48.5 5.9 0.0 9.2 20.7 56.9 50.3 87.4 597.8 14 21 11 4 6 5 0 2 6 7 8 11 95
+Oum el Aguareb | 70.9 132.7 127.6 13.2 50.9 2.1 0.0 29.2 23.3 27.4 59.0 111.4 647.7 13 17 10 4 8 1 0 3 7 9 10 13 95
+Domaine Aïn-Essid | 64.6 123.5 133.8 15.9 94.1 0.0 0.0 10.0 47.0 37.8 48.1 100.2 675.0 11 14 9 2 7 0 0 2 7 2 6 7 67
+Le Munchar | 46.9 95.9 104.5 14.7 57.2 9.8 g 6.4 16.2 31.7 65.6 68.1 517.0 14 19 10 9 10 4 2 5 5 6 9 10 103
+Guermanez | 68.7 124.2 150.8 13.3 57.0 0.0 0.0 30.1 13.8 27.6 52.1 120.6 658.2 14 18 8 4 6 0 0 4 2 5 8 9 78
+Beauce Tunisienne | 34.6 114.6 133.8 14.9 40.8 12.6 0.0 21.5 21.8 8.6 68.0 49.5 520.7 9 17 8 5 5 3 0 5 4 2 8 6 72
+controle: Contrôle de Tabarka
+# Tabarka, Aïn-Sebâa, Aïn-Draham: the decimal of Novembre is lost in the binding gutter ("179.", "142.", "188.");
+# typed as the printed Total minus the other months (integer part agrees).
+Les Meknas | 178.0 95.0 110.0 13.5 159.0 - 0.0 - - - - - - 7 6 6 3 7 - 0 - - - - - -
+Tabarka | 166.5 153.5 133.7 26.0 101.0 5.1 0.0 60.3 61.8 136.1 179.5d 146.1 1169.6 17 22 12 6 7 4 0 8 10 13 14 13 126
+Aïn-Sebâa | 145.4 159.9 167.8 40.5 126.5 2.2 0.0 64.4 88.5 166.5 142.5d 154.0 1258.2 13 18 10 6 7 3 0 8 10 9 12 14 110
+Aïn-Draham | 254.0 321.0 231.0 43.0 276.0 4.0 g 109.0 71.0 286.0 188.0d 192.0 1975.0 16 19 12 8 10 7 1 9 11 14 15 11 133
+Le Meridj | - 298.4 174.2 43.1 247.3 5.0 - - - - - - - - oi 12 12 9 2 - - - - - - -
+
+@rain view=294 page=266 year=1929 split=11
+img: all
+cols: m01 m02 m03 m04 m05 m06 m07 m08 m09 m10 m11 m12 myr d01 d02 d03 d04 d05 d06 d07 d08 d09 d10 d11 d12 dyr
+region: Tunisie du Nord-Est
+controle: Contrôle de Tunis
+De Carnières A. S. I. H. | 30.6 50.4 113.8 11.6 23.3 9.1 - - 6.0 5.0 63.3 47.0 - 12 15 13 7 6 3 - - 2 10 10 7 -
+De Carnières (Saint-Antoine) | 31.8 48.7 116.9 14.1 18.2 6.4 0.0 3.4 12.9 21.0 58.4 47.0 378.8 12 18 9 2 3 3 0 4 6 4 8 8 77
+Sidi-Tabet | 39.0 56.2 124.3 7.7 26.8 6.7 0.0 6.4 10.7 35.2 52.9 53.4 419.3 14 20 9 3 5 4 0 4 3 4 8 10 84
+Bordj-Hadida | 37.2 60.8 119.8 10.2 45.5 1.5 0.5 3.5 23.6 8.1 48.8 50.9 410.4 16 24 17 8 8 3 1 5 9 11 17 12 131
+Goussat-el-Bey | 59.0 73.7 149.6 17.5 105.8 2.0 0.0 g 19.1 13.8 29.0 83.5 553.0 14 17 11 6 7 2 0 1 3 2 3 7 73
+Chouigui | 39.8 60.9 151.6 7.0 71.5 - - - - 18.4 52.1 87.7 - 6 6 8 2 2 - - - - 9 10 8 -
+Chaouat | 36.9 53.6 130.6 12.6 36.8 6.3 g 6.3 - 29.7 36.5 54.8 - 13 21 8 5 7 4 1 oi - 7 8 8 -
+Chougafa | 41.5 55.8 122.0 7.6 37.4 5.5 0.0 g - - 3.0 44.0 - 14 15 13 4 6 5 0 4 - - oi 9 -
+Eddekila | 49.7 71.3 148.8 16.5 66.6 6.0 0.0 12.9 6.0 22.0 33.8 74.5 508.1 14 19 11 5 5 1 0 2 1 2 6 10 76
+Bordj Touta I | 47.0 52.3 157.4 23.1 71.5 11.0 - - - 17.2 - 72.3 - 8 10 9 4 5 1 - - - 1 - 6 -
+Bordj Toum | 39.4 65.0 149.4 22.3 65.1 2.5 0.0 4.0 19.3 35.8 46.7 89.0 538.5 12 15 8 4 8 2 0 1 3 8 6 7 74
+Bordj Toum (St-Henri) | 44.8 87.4 146.7 21.2 63.5 0.0 0.0 3.7 22.2 42.4 38.6 86.9 557.4 13 14 7 3 6 0 0 2 2 7 6 8 68
+Bordj Toum (Hr El Bey) | 24.5 58.6 106.0 17.1 43.5 2.0 0.0 10.6 10.0 5.2 74.0 51.5 403.0 7 18 12 10 6 5 0 4 5 8 10 7 92
+Tebourba | 125.0 90.0 191.0 19.0 65.0 20.0 - - - 4.6 51.7 66.9 - 6 8 7 4 4 1 - - - 4 8 7 -
+El-Hattermine | 29.6 43.6 107.0 8.1 53.4 19.4 1.0 14.7 19.0 27.1 34.2 45.3 402.4 11 15 9 3 9 3 1 6 3 4 8 5 77
+Djedeïda | 33.9 53.0 90.4 12.8 57.0 22.6 2.3 6.1 2.5 26.7 39.2 62.2 408.7 13 19 11 9 7 4 1 6 2 13 12 10 107
+Sedjoumi | 37.0 63.9 116.8 12.4 41.3 4.0 0.0 2.8 16.2 44.7 28.9 50.9 - 12 17 8 3 5 2 0 2 x 7 6 10 -
+M'Rira | 46.8 58.3 105.3 19.5 54.7 9.0 g 0.0 0.0 12.6 38.0 39.2 383.4 8 16 9 3 4 1 1 0 0 2 4 5 53
+Fouchana | 38.2 53.0 118.2 18.0 54.3 16.3 1.0 1.0 9.6 16.2 37.3 48.9 412.0 12 21 13 5 5 2 1 1 3 5 6 7 81
+El-Hafsia | 34.3 41.1 101.0 16.8 67.4 29.3 0.2 1.4 18.5 30.3 40.1 58.6 439.0 11 14 7 4 8 2 1 1 1 4 9 9 71
+Massicault | 35.0 51.6 111.5 18.2 45.5 16.8 0.0 - - 22.1 29.4 54.0 - 9 15 9 4 5 3 0 - - 4 5 8 -
+Poincaré | 29.5 38.1 135.6 20.0 52.0 - - - - - 49.3 42.8 - 7 12 9 x 4 - - - - - 5 5 -
+Henchir French | 34.3 55.7 117.4 18.1 58.6 31.7 0.0 7.7 20.5 23.7 37.9 56.3 461.9 10 16 8 4 6 3 0 3 2 4 5 9 70
+Service Botanique | 49.1 57.6 118.8 12.0 35.1 15.7 0.0 1.3 24.6 22.3 50.2 55.1 441.8 15 22 12 9 7 5 0 8 7 7 14 10 116
+Ecole Coloniale d'Agricult. | 39.5 54.7 121.3 8.6 36.4 11.8 0.0 2.0 22.0 21.2 46.1 50.6 414.2 10 16 11 3 7 3 0 5 7 8 9 10 89
+Ariana | 37.2 48.5 - 10.0 32.0 - - - - 35.0 32.0 38.0 - 14 19 - 8 5 - - - - 8 6 5 -
+El-Ariana | 42.6 49.9 88.6 3.0 8.9 4.6 0.0 1.0 5.0 25.3 48.0 52.0 - 13 13 11 7 5 2 0 3 3 5 x x -
+La Soukra | 40.2 49.5 79.9 18.2 29.5 10.1 0.0 2.3 16.3 32.4 28.7 44.4 351.5 12 15 7 5 9 2 0 2 5 7 10 10 84
+Salammbô S. O. S. | 43.0 61.2 62.2 11.0 44.4 15.6 0.0 5.0 8.7 43.9 33.1 41.7 369.8 11 17 12 3 4 1 0 1 4 6 6 10 75
+El-Aouïna | 44.2 33.6 59.4 1.7 53.2 8.2 0.0 0.2 16.3 35.8 22.6 31.5 306.7 15 20 9 7 6 2 0 2 6 10 12 11 100
+Clos des Arcades | 54.7 50.1 154.3 10.4 54.1 36.5 0.0 0.0 12.0 36.5 55.4 80.0 544.0 9 12 9 1 6 2 0 0 2 4 6 6 57
+Tunis (Manoubia) | 31.5 54.4 123.2 10.3 36.0 15.4 g 0.4 9.9 41.2 28.1 47.3 397.7 18 21 13 11 11 4 1 9 11 11 18 9 137
+Tunis (Usine élévatoire) | 25.1 59.4 111.8 5.5 40.8 14.1 0.0 0.1 11.5 29.0 35.3 68.2 400.8 10 18 12 1 5 2 0 1 6 6 8 9 78
+Tunis (Avenue Gambetta) | 23.6 59.7 111.7 5.9 41.7 15.2 0.0 0.2 20.5 30.9 39.5 69.7 418.6 10 18 12 1 5 1 0 1 6 6 8 9 77
+Bordj Chakir | 27.0 62.8 133.8 15.3 44.7 4.4 0.7 3.1 16.7 39.8 31.4 47.6 427.3 13 17 11 4 7 2 1 1 4 4 6 6 76
+Attar | 33.5 67.3 125.1 15.0 58.0 14.3 3.3 g 24.0 36.9 36.2 44.0 457.6 9 14 10 3 6 2 1 2 3 6 6 7 69
+El Attar (Ste-Anne) | 27.0 63.0 105.3 28.5 46.5 - - - - - - - - 4 10 8 3 3 - - - - - - - -
+Es Souni | 38.5 50.6 90.0 12.5 62.1 18.7 7.0 0.0 25.0 12.7 37.5 53.4 408.0 15 16 9 3 7 1 1 0 2 1 6 6 67
+Cébala du Mornag | 60.1 56.5 180.9 9.2 47.2 17.3 0.0 4.0 26.8 33.5 32.6 44.2 512.3 13 15 9 2 4 3 0 1 3 5 2 7 64
+La Laverie (Douïmsi) | 64.3 58.5 242.6 14.8 67.4 30.0 1.0 26.7 28.5 15.5 47.8 60.4 657.5 10 10 8 4 4 4 1 2 3 3 5 5 59
+# Saint-Cyprien: months add to 417.7, Total printed 417.6 (re-read on zoomed crops): printed inconsistency.
+Saint-Cyprien | 26.1 53.6 104.8 13.9 41.6 17.7 g 1.5 31.7 35.2 45.8 45.8 417.6 10 8 8 3 8 3 1 2 7 5 7 7 69
+Fedjet Kemaken | 31.6 52.0 128.7 22.8 73.4 15.9 3.5 5.6 30.8 21.7 38.3 58.6 482.9 12 17 12 7 10 3 1 7 8 4 8 12 101
+Drijat | 34.1 51.9 166.3 16.3 55.6 11.7 g 4.0 16.2 16.9 37.2 50.4 460.6 11 16 9 7 9 5 1 9 4 10 9 10 100
+
+@rain view=296 page=268 year=1929 split=11
+img: all
+cols: m01 m02 m03 m04 m05 m06 m07 m08 m09 m10 m11 m12 myr d01 d02 d03 d04 d05 d06 d07 d08 d09 d10 d11 d12 dyr
+# no heading at the top of p. 268: continues Tunisie du Nord-Est, Contrôle de Tunis
+region: Tunisie du Nord-Est
+controle: Contrôle de Tunis
+Mengoub | 32.3 48.6 125.4 15.7 57.0 16.9 0.0 6.0 13.9 20.0 37.3 51.0 - 9 12 9 2 7 3 0 3 3 3 5 oi -
+Khlédia | 39.2 46.6 87.3 8.4 56.1 15.1 - - 13.2 31.8 39.5 - - 13 15 12 9 7 oi - - 3 8 8 - -
+Oudna (Gare) | - - - - - - - - - - 64.0 73.0 - - - - - - - - - - - 4 3 -
+Bou er Rebia | - - - - - - - - - 12.0 39.2 38.8 - - - - - - - - - - 4 6 9 -
+Aïn El Asker (Hr Boufarda) | 30.7 45.0 96.2 12.4 50.4 5.7 0.0 4.0 7.8 11.0 40.1 39.4 342.7 12 17 9 4 6 2 0 2 3 2 2 3 62
+Djebel Oust | 51.4 - - - - - - - - - - - - 9 - - - - - - - - - - - -
+controle: Contrôle de Grombalia
+Soliman | 50.1 72.8 75.5 7.9 37.8 15.1 0.0 14.9 16.1 42.0 55.0 45.3 432.5 10 16 11 5 6 2 0 3 4 6 7 9 79
+Fondouk-Djedid | 55.9 69.5 74.9 10.4 45.0 15.0 0.0 21.5 13.5 39.7 34.8 47.6 427.8 10 16 10 6 7 4 0 6 6 7 6 5 83
+Grombalia | 47.4 65.7 88.4 10.2 48.4 19.0 0.0 10.5 24.3 23.5 43.7 58.0 439.1 12 14 9 4 5 1 0 3 6 6 3 4 67
+Kouba-Kbira | 17.1 63.3 123.3 13.1 31.1 6.9 0.0 9.0 24.7 14.9 75.6 56.3 435.3 2 10 6 2 3 1 0 1 2 2 5 3 37
+Kélibia | 37.0 31.0 93.0 15.0 22.0 11.0 0.0 0.0 20.0 111.0 96.0 62.0 498.0 10 8 10 3 4 1 0 0 4 6 7 9 62
+# Korbous: the Octobre millimetre cell is printed as a small "×" (a sign the key defines for days only); typed ?.
+Korbous | - 65.4 112.5 8.1 40.0 4.0 0.0 18.0 35.0 ? - 108.0 - - 14 12 9 5 2 0 6 1 7 - 6 -
+M'Raïssa | - - - - 24.1 7.8 g 9.0 7.5 47.5 48.2 39.5 - - - - - oi 3 1 5 5 11 8 7 -
+Oued el Abid | 49.2 82.9 147.4 7.0 31.2 10.2 0.0 4.8 5.0 57.3 67.7 60.7 - 8 17 9 2 4 1 0 x 1 x x x -
+Henchir Lebna | - - - - - - - - - 37.0 55.5 43.9 - - - - - - - - - - 4 3 7 -
+Menzel-Temime | 27.0 42.8 77.2 13.6 24.0 9.6 0.0 26.0 5.0 48.4 101.4 55.0 430.0 10 16 11 7 6 2 0 7 5 12 8 11 95
+Soltane | 60.8 52.2 76.6 9.5 55.5 10.6 0.0 10.3 25.0 26.0 47.6 38.3 412.4 13 17 10 2 6 2 0 5 5 6 5 5 76
+Aïn Kettan | 108.4 82.4 129.8 10.3 63.8 23.4 0.0 21.0 17.2 56.5 53.2 69.5 635.5 14 17 12 6 5 2 0 4 6 8 9 12 95
+Aïn Tébornok | 56.2 78.5 130.6 10.7 51.9 10.6 g 16.0 49.3 30.5 47.5 101.1 582.9 8 12 10 7 7 4 1 9 6 7 8 7 86
+Bir-bou-Rekba | 29.7 47.0 70.3 29.5 14.8 4.6 - 5.4 62.2 14.7 25.3 36.2 - 5 10 4 3 4 3 - 3 2 3 2 5 -
+Nabeul | 18.4 24.6 75.0 30.8 17.9 4.6 0.0 0.0 63.5 18.5 135.5 26.1 414.9 7 10 10 4 4 2 0 0 5 6 6 5 59
+Hammamet | 17.5 50.0 100.0 - 10.0 - - - - - - 56.0 - 2 8 2 - 1 - - - - - - 3 -
+controle: Contrôle de Zaghouan
+# Beni Deraj, Val Saint-Pierre: decimal of Novembre lost in the gutter ("36.", "42"); typed as Total minus the
+# other months (integer part agrees).
+Smindja (Depienne) | 38.5 42.3 114.9 9.3 53.1 47.4 13.4 33.6 13.1 22.1 46.4 33.8 467.9 8 13 9 5 5 5 1 5 8 9 6 9 83
+Moghrane | 46.0 54.0 133.0 15.0 57.0 62.0 1.0 65.0 32.0 22.0 48.0 34.0 569.0 10 13 11 4 7 5 1 4 4 4 2 5 70
+Zaghouan (ville) | 34.1 54.7 144.6 15.7 56.0 83.6 g 60.7 28.0 29.6 39.5 29.5 576.0 11 19 12 4 7 5 1 5 5 6 4 8 87
+Zaghouan (contrôle) | 32.1 56.5 146.7 16.6 53.7 81.4 g 60.5 30.2 24.7 48.5 32.8 583.7 9 17 12 5 7 6 1 6 7 7 8 8 93
+Sainte-Marie-du-Zit | 30.7 40.6 83.8 15.0 44.4 34.7 5.0 5.5 27.2 8.9 24.4 27.4 347.6 11 14 9 4 5 3 1 3 4 3 2 6 65
+Ste-Marie-du-Zit (B.-Hamadet) | 56.5 48.7 148.0 18.0 45.1 - - - - - - - - 9 13 11 4 5 - - - - - - - -
+Ségermès | 37.0 57.1 119.0 31.3 54.5 29.6 0.0 30.7 - - - - - 10 19 11 3 5 5 0 6 - - - - -
+Djeradou Nord | 32.0 39.4 115.1 15.5 60.0 16.6 0.0 32.0 92.2 12.0 32.2 29.2 476.2 5 6 7 1 3 3 0 x 1 x 2 1 -
+Djeradou Sud | 30.0 67.7 144.0 44.2 42.0 35.5 0.0 21.0 135.0 2.5 43.5 14.3 579.7 8 12 8 4 6 2 0 1 1 1 3 4 50
+Beni Deraj | 28.7 50.7 127.8 15.5 45.3 32.9 4.5 7.0 28.6 10.9 36.0d 32.0 419.9 5 9 9 3 6 3 1 3 3 3 2 3 50
+Val Saint-Pierre | 34.8 51.9 177.9 10.0 51.3 24.4 0.0 77.0 18.0 31.0 42.6d 28.3 547.2 8 12 5 2 6 3 0 x x 3 1 4 -
+# Tarf ech Chena, Thibica (La Maltournée), Loukanda I, Zeriba: decimal of Novembre lost in the gutter; typed as
+# Total minus the other months (integer part agrees). Thibica (Gare): Novembre printed "36." with the decimal
+# lost and no Total to derive it from: typed ?.
+Tarf ech Chena | 29.9 85.5 182.7 12.6 50.9 28.7 0.0 46.4 15.0 22.0 33.7d 20.1 527.5 9 21 10 4 7 5 0 3 1 9 8 7 84
+Thibica (Gare) | - - - - - - - - - - ? 28.3 - - - - - - - - - - - 3 7 -
+Thibica (La Maltournée) | 40.2 47.2 136.4 11.5 48.5 22.8 0.0 0.0 48.0 23.8 31.0d 25.8 435.2 10 14 10 3 6 4 0 0 x 6 2 4 -
+Loukanda I | 38.5 27.0 159.5 20.0 55.1 43.4 0.0 20.0 41.0 30.7 32.3d 15.0 482.5 3 4 7 1 3 4 0 1 2 4 1 3 33
+Loukanda II | 64.1 51.0 194.8 29.5 55.4 - g - - - - - - 8 6 8 4 7 - 2 - - - - - -
+Zeriba | 26.0 44.0 135.5 15.7 30.7 40.0 0.0 26.5 82.0 7.0 38.4d 22.5 468.3 4 12 8 2 5 1 0 2 4 1 2 4 45
+
+@rain view=298 page=270 year=1929 split=11
+img: all
+cols: m01 m02 m03 m04 m05 m06 m07 m08 m09 m10 m11 m12 myr d01 d02 d03 d04 d05 d06 d07 d08 d09 d10 d11 d12 dyr
+# no heading at the top of p. 270: continues Tunisie du Nord-Est, Contrôle de Zaghouan
+region: Tunisie du Nord-Est
+controle: Contrôle de Zaghouan
+Aïn-Zeriba (Frais Vallon) | 20.3 58.4 159.9 22.0 36.7 18.3 1.5 37.8 90.4 12.1 41.2 18.5 517.1 14 20 15 9 10 7 1 7 8 12 7 7 117
+Zeriba (Aïn-Saboun) | 34.1 54.3 146.3 14.8 36.2 44.5 0.0 41.5 64.2 20.6 38.4 23.1 518.0 8 13 9 5 5 3 0 5 3 3 2 4 60
+Mechtah-Cheik-Amar | - 24.8 131.5 14.6 49.5 29.9 3.0 5.0 28.9 34.5 42.0 39.8 - - oi 8 3 5 6 1 4 5 7 10 9 -
+Henchir-Kasbatt | 23.8 38.6 106.9 7.2 64.8 14.5 0.0 12.0 25.3 18.5 26.3 34.2 372.1 8 15 5 2 4 2 0 1 4 2 3 1 47
+Djebel-Mansour (Aïn-Bouria) | - - 232.5 11.0 12.5 19.0 0.0 15.0 23.9 23.9 29.4 13.4 - - - oi 3 3 3 0 1 3 4 2 4 -
+Djebel-Mansour (Ste-Gilberte) | 44.7 101.4 220.2 21.2 44.3 - 35.0 g 14.0 50.2 34.9 37.2 - 13 16 11 6 5 - 2 4 2 5 5 10 -
+Djebel-Mansour (H. Aouéli) | 44.0 89.0 196.0 16.5 38.5 33.0 6.0 10.0 13.0 41.5 28.0 26.0 541.5 11 16 9 3 6 5 1 3 2 5 4 5 70
+Dj.-Mansour (O.-el-Abouab) | 29.4 82.1 194.7 25.0 53.3 29.6 25.2 23.0 42.2 24.5 30.0 27.5 586.5 5 8 7 3 4 3 1 2 2 3 2 4 44
+Djebel-Mansour (St-Auguste) | 30.5 82.8 186.1 23.4 21.0 12.0 13.6 18.0 56.0 21.5 24.0 19.7 - 6 12 oi 3 3 1 1 1 1 2 1 3 -
+Dj. Mansour (Dne du Fortin) | - 68.0 197.6 23.7 47.4 46.1 25.0 7.8 55.0 40.4 10.6 9.3 - - 14 6 4 4 2 1 3 4 8 2 2 -
+Dhomda I | 24.7 50.8 215.1 16.1 40.3 31.4 5.2 40.0 24.2 21.3 33.2 29.5 531.8 4 6 5 2 3 2 1 2 1 2 3 4 35
+# Dhomda II: months add to 533.0, Total printed 533.1 (re-read on zoomed crops): printed inconsistency.
+Dhomda II | 32.4 52.1 126.5 10.2 42.0 60.2 7.0 53.2 40.0 42.4 33.6 33.4 533.1 7 9 8 5 6 7 1 4 6 5 2 4 64
+Domaine de La Fauvette | 29.5 23.0 143.5 14.0 25.0 22.5 6.0 20.0 41.0 30.7 32.3 16.0 403.5 3 4 5 2 3 1 1 1 1 4 1 3 29
+Griffat Soltane | 34.0 50.0 137.7 6.0 78.5 39.0 21.0 2.0 22.0 32.0 29.5 62.1 513.8 4 17 8 4 7 4 2 1 1 5 3 7 63
+# Sidi bou Becker: months add to 531.2, Total printed 541.2 (re-read on zoomed crops): printed inconsistency (one digit off by 10).
+Sidi bou Becker | 27.5 68.8 211.5 14.1 33.5 24.9 g 24.2 54.5 26.2 22.5 23.5 541.2 9 14 9 9 5 5 1 7 3 4 1 7 74
+Bou Remada | 40.2 37.7 170.7 16.4 39.7 21.9 0.0 77.1 18.2 33.7 45.8 35.8 537.2 14 21 10 7 5 2 0 3 1 7 6 13 89
+Djebel-Djouggar | 20.6 44.4 174.2 23.4 52.9 27.8 6.3 28.0 25.5 38.1 29.1 27.3 497.6 2 4 6 5 5 4 2 3 1 4 2 6 44
+Djebibina | 11.2 31.2 124.6 46.0 29.9 4.5 g 8.0 30.5 4.3 33.1 7.4 - 2 7 6 4 5 4 2 oi 4 3 4 5 -
+Saint-Maurice-de-Djebibina | - - - - - - 8.3 33.9 32.4 20.7 45.5 38.5 - - - - - - - 2 5 2 4 2 4 -
+region: Haute Vallée de la Medjerdah
+controle: Contrôle de Souk-el-Arba
+Fernana | 121.7 232.9 108.6 15.0 124.8 - - - - - - - - 13 24 10 3 5 - - - - - - - -
+Oued-Meliz | 31.1 97.8 134.8 10.1 92.0 8.5 - - - - - - - 9 18 8 5 5 1 - - - - - - -
+El-Feïdja | 353.8 663.2 23.8 7.3 145.5 6.6 g 27.2 27.0 119.5 79.5 60.0 - 12 25 6 5 14 7 3 3 8 10 5 oi -
+Ghardimaou | 27.1 112.1 149.6 0.0 58.6 8.2 7.5 - - - 18.5 - - 11 13 10 0 8 2 2 - - - 6 - -
+# La Forestière: rainy days add to 91, Total printed 81 (re-read on zoomed crops): printed inconsistency.
+La Forestière | 41.3 186.8 227.2 0.0 70.2 12.8 0.5 12.8 25.8 75.6 63.0 92.7 808.7 8 14 9 0 9 4 1 9 7 5 12 13 81
+Bulla-Régia | 34.0 77.0 87.0 14.0 77.0 20.0 0.0 0.0 5.0 88.0 36.0 32.0 470.0 8 15 8 5 4 2 0 0 1 7 11 8 69
+Souk-el-Arba | 32.6 88.0 98.5 10.4 58.0 11.0 10.2 7.5 18.5 77.7 32.4 46.1 490.9 13 21 11 6 5 3 3 5 7 6 7 8 95
+Melah-Rechga | 34.9 89.0 140.5 5.6 74.7 7.2 0.0 0.0 12.0 50.4 54.3 56.2 524.8 5 9 9 1 7 1 0 0 4 4 6 7 53
+Sidi-Smaïl (Gare) | - - - - - - - - - - - 42.0 - - - - - - - - - - - - 7 -
+Zaouem | 46.0 96.0 102.0 13.0 101.0 6.0 g 13.0 23.0 57.0 56.0 44.0 557.0 14 19 10 7 7 2 1 5 4 11 11 12 103
+Le Thibar | 50.2 78.5 218.2 7.3 98.8 24.5 g 6.5 19.5 79.4 56.0 57.5 696.4 15 24 12 6 8 6 1 4 9 12 11 13 121
+controle: Contrôle de Téboursouk
+Téboursouk | 43.0 143.3 204.3 20.1 79.1 30.8 g 3.0 42.8 55.2 32.9 39.9 694.4 11 20 10 7 7 4 2 2 7 9 10 11 100
+Khalled | 28.5 108.5 240.5 23.0 87.0 56.0 2.0 3.0 12.0 77.0 53.0 40.5 731.0 9 17 10 5 5 3 1 1 3 5 8 8 75
+Gafour (école) | 16.7 61.7 159.6 6.7 70.1 34.4 - - - 50.7 28.5 27.0 - 5 11 10 4 5 6 - - - 7 8 6 -
+Gafour supérieur | 26.1 52.6 135.2 8.4 61.8 60.2 g 4.3 31.8 44.6 34.6 15.3 474.9 7 19 10 6 7 6 4 4 5 5 7 6 86
+Gafour (Saint-Guy) | 23.0 52.4 143.8 7.3 61.7 50.3 0.0 8.9 41.6 44.7 35.5 15.0 484.2 6 11 7 6 6 6 0 3 3 7 7 4 66
+Sidi-el-Faci | 19.1 59.9 107.7 8.9 54.6 57.1 2.0 2.0 15.3 40.0 48.4 18.0 433.0 4 10 9 3 8 7 1 4 7 5 8 4 70
+El-Akhouat | - 65.8 94.1 30.5 58.0 32.0 g 4.0 18.0 46.0 34.0 16.0 - - 13 11 4 4 4 1 1 3 4 4 6 -
+
+@rain view=300 page=272 year=1929 split=11
+img: all
+cols: m01 m02 m03 m04 m05 m06 m07 m08 m09 m10 m11 m12 myr d01 d02 d03 d04 d05 d06 d07 d08 d09 d10 d11 d12 dyr
+region: Haute Vallée de la Medjerdah
+controle: Contrôle de Medjez-el-Bab
+Dar Keskiss | - - - - - - - - 12.1 31.1 40.5 57.4 - - - - - - - - - 4 9 11 11 -
+Er-Remil Etat | 10.0 56.7 181.0 3.5 39.0 - - 1.0 21.4 34.5 29.0 25.6 - 2 10 8 1 3 - - 1 2 4 3 5 -
+Sidi-Abdallah (Ksar-Tyr) | 28.6 47.4 130.3 15.0 54.3 27.8 0.0 11.3 11.9 28.0 37.7 43.3 435.6 8 16 7 4 6 5 0 3 4 10 9 12 84
+Bir El Akhdar | 27.7 44.3 124.8 16.7 46.5 40.5 0.0 14.7 7.5 20.0 27.7 36.2 406.6 7 12 8 3 6 4 0 3 2 1 4 5 55
+Bou-Arada | 28.1 82.7 126.3 14.6 66.4 23.6 0.0 36.5 26.0 22.2 29.5 21.8 477.7 9 15 8 4 3 4 0 5 1 5 4 6 64
+Bou-Arada (Plaine) | 28.6 76.5 118.8 15.4 83.8 33.0 1.0 43.0 21.0 24.4 26.5 22.3 494.3 11 19 12 10 7 5 2 6 1 5 10 9 97
+Medjez-el-Bab | 31.5 52.0 102.0 17.0 38.0 27.0 g 10.0 9.0 16.5 48.0 46.0 397.0 11 13 7 5 3 3 1 7 2 5 9 9 75
+Montarnaud I | 26.8 52.8 141.3 17.9 57.2 26.2 0.0 18.5 27.4 6.8 53.2 40.7 468.8 6 14 8 4 7 3 0 4 4 2 7 7 66
+Montarnaud II | 24.6 31.4 140.8 18.5 46.9 21.5 0.0 18.8 27.2 7.2 44.9 31.9 413.7 5 9 5 3 5 3 0 4 4 2 5 8 53
+Briouik (Testour) | 49.3 116.6 156.5 11.8 58.8 20.0 0.0 0.8 33.0 53.7 41.6 52.8 594.9 12 15 10 6 7 3 0 3 6 6 7 8 83
+Henchir-Brouich | 28.7 49.1 109.4 11.2 69.2 56.4 g 4.9 21.9 24.1 35.4 43.2 453.5 13 19 12 9 11 7 1 9 6 13 12 12 124
+Le Goubellat | - - - - - - - - 26.0 24.5 - - - - - - - - - - - 2 4 - - -
+Ech-Cheriffa | - - - - - 9.4 0.0 g 16.0 32.2 33.6 40.7 - - - - - - 5 0 1 2 6 5 7 -
+Bordj-Sidi-Sabah | 42.0 69.7 112.5 25.0 46.7 - - 14.0 18.4 27.0 38.3 65.8 - 9 12 7 4 5 - - 2 3 4 5 8 -
+Sidi-Attia | 26.5 58.3 117.7 4.0 48.5 32.0 0.0 3.5 16.0 26.0 29.5 26.5 388.5 11 9 7 1 6 3 0 2 2 4 4 4 53
+# Aïn-Tounga: months add to 531.0, Total printed 524.0 (every cell re-read on zoomed crops): printed inconsistency.
+Aïn-Tounga | 30.0 117.0 146.0 6.5 56.0 50.0 g 0.0 5.5 52.0 39.5 28.5 524.0 10 15 8 2 7 4 2 0 4 4 7 3 66
+Kheniguet (Le Goubellat) | 18.6 54.1 98.1 7.5 63.9 0.8 0.0 13.7 17.8 26.4 34.7 36.8 372.4 5 11 6 2 4 2 0 3 3 4 3 7 50
+Kheniguet-ed-Deham | 23.2 58.7 101.1 13.7 55.4 39.7 0.0 13.0 13.3 29.0 33.2 33.5 413.8 7 13 7 4 8 3 0 4 3 6 7 8 70
+Djebel Rihane | 43.3 101.7 152.1 10.6 49.7 36.0 0.0 8.8 19.0 23.0 31.0 32.6 507.8 11 10 10 3 6 4 0 2 2 4 3 4 59
+El Aroussa (Domaine) | 17.6 71.0 102.3 7.0 94.5 54.1 0.0 10.2 27.0 47.3 32.2 18.0 481.2 6 13 8 2 6 5 0 2 3 4 4 4 57
+Djelida (Gare) | - - - - - - - - - 22.3 28.0 6.0 - - - - - - - - - - 3 3 1 -
+El-Aroussa (Djelida) | 30.2 61.9 93.0 12.3 64.1 35.5 0.0 16.4 23.3 24.5 40.5 25.4 427.1 12 25 9 7 9 5 0 9 6 6 6 6 100
+El Aroussa (Aïn Sid) | 20.0 71.6 136.2 12.0 - 32.0 0.0 - - 23.2 47.5 16.8 - 5 15 9 3 - 4 0 - - 3 5 4 -
+Sidi-Ayed | 16.8 56.0 124.6 11.0 62.5 29.6 0.0 0.0 39.2 38.0 18.3 18.7 414.7 3 8 8 2 4 2 0 0 2 2 1 4 36
+Oued Remil | 28.5 62.9 150.7 5.5 62.2 41.2 0.0 0.0 27.6 31.5 25.6 19.0 454.7 3 10 10 1 5 5 0 0 2 4 3 6 49
+Aïn-Garsa | 44.6 84.9 114.5 14.5 104.4 44.9 25.5 4.0 41.0 54.6 35.8 56.6 625.3 10 9 10 4 6 4 1 1 2 3 6 8 64
+region: Tunisie du Centre (Hautes Plaines)
+controle: Contrôle du Kef
+# Le Kef: Février printed "86." (decimal not printed); typed from the Total (693.1 - other months = 86.2).
+# Le Sers (gare): Janvier printed "24." (decimal not printed), no Total: typed ?.
+Sidi-bou-Rouïss | - - - - - - - - - 12.6 24.6 26.8 - - - - - - - - - - 2 3 2 -
+Le Kef | 50.5 86.2d 159.9 20.1 67.7 70.2 16.1 7.2 24.9 84.3 58.0 48.0 693.1 12 16 14 6 9 7 7 8 12 10 11 9 121
+Le Kef II (Aurore) | - 12.7 161.9 18.4 84.5 31.8 10.6 6.0 30.6 62.0 40.7 36.5 - - oi 9 5 7 5 7 6 4 4 5 4 -
+Le Kef III (Ste-Marie) | - - 163.2 20.1 82.5 17.1 3.4 3.2 - 68.0 79.7 35.5 - - - 9 4 7 4 1 5 - 4 7 6 -
+Le Kef IV (Heliopolis) | - - - - - - - - 22.3 57.2 35.3 31.6 - - - - - - - - - 3 5 8 9 -
+Lorbeuss (gare) | 13.5 65.5 115.0 11.8 64.4 57.8 11.1 22.4 36.0 49.3 43.5 32.9 523.2 6 15 10 3 7 7 3 4 4 4 9 6 78
+Lorbeuss III | - - - - 68.4 69.2 9.2 9.9 38.0 56.9 44.0 32.3 - - - - - 6 5 5 3 4 5 6 4 -
+Salines de Lorbeuss | 35.5 65.7 129.8 16.7 101.8 39.1 7.9 32.3 27.7 56.7 36.3 32.7 582.2 6 19 14 3 6 5 6 5 6 12 7 10 99
+Les Salines (Gare) | - - - - - - - - - - - 10.0 - - - - - - - - - - - - oi -
+Lorbeuss les Romarins | 16.8 64.6 116.4 10.3 71.5 76.8 10.8 6.7 35.5 47.0 37.0 29.0 522.4 5 12 8 3 6 5 3 2 2 3 3 4 56
+Le Sers (gare) | ? 60.0 78.8 23.6 52.4 23.4 3.3 24.1 - 52.7 28.0 28.6 - 18 20 15 4 6 7 5 4 - 3 9 9 -
+Le Vieux Sers (Souk-el-Tleta) | - - - - 89.5 30.9 8.1 4.5 40.6 51.6 42.1 25.7 - - - - - 6 6 2 4 5 5 7 5 -
+Zafrane (Bou-Djerida) | 18.4 94.0 172.4 17.7 113.7 66.2 - - - - 58.6 46.4 - 4 13 9 4 4 5 - - - - 10 6 -
+Bahara (Henchir El-Meya) | 36.7 80.8 180.7 14.0 77.6 46.6 - - 30.0 87.0 34.7 28.0 - 4 7 10 3 6 2 - - oi 5 5 oi -
+
+@rain view=302 page=274 year=1929 split=11
+img: all
+cols: m01 m02 m03 m04 m05 m06 m07 m08 m09 m10 m11 m12 myr d01 d02 d03 d04 d05 d06 d07 d08 d09 d10 d11 d12 dyr
+# no heading at the top of p. 274: continues Tunisie du Centre (Hautes Plaines), Contrôle du Kef
+region: Tunisie du Centre (Hautes Plaines)
+controle: Contrôle du Kef
+# Charemes: Juillet rainy days printed as a small "×" (typed x).
+Ben-Arar | 30.0 68.9 124.6 12.0 68.4 39.0 13.6 20.3 31.7 63.8 44.5 30.8 547.6 8 14 11 5 7 4 3 3 4 10 7 6 82
+Charemes | 16.0 52.0 104.1 16.6 86.1 75.5 11.9 3.0 0.0 45.5 53.4 34.0 498.1 2 9 9 2 5 5 x x 0 4 4 x -
+Le Ksour | 32.0 57.0 142.0 3.0 76.0 40.0 0.0 15.0 6.0 48.0 9.0 22.0 450.0 5 10 6 1 4 3 0 x 1 2 2 x -
+Ebba-Ksour | 24.5 68.7 115.2 16.6 71.1 18.7 13.9 12.9 19.1 40.1 35.0 19.0 454.8 8 16 12 7 6 5 5 4 5 4 5 5 82
+Sakiet-Mine | 23.0 111.6 112.1 25.3 86.0 46.4 24.6 7.9 43.8 40.2 49.1 50.3 620.3 6 15 13 4 7 4 1 2 6 3 10 9 80
+Coucha | 11.4 78.1 99.9 23.0 82.1 45.7 34.8 6.5 42.0 38.5 35.8 37.4 535.2 3 11 12 4 7 4 1 3 5 3 8 4 65
+Aïn-Kerma | 20.7 120.6 97.6 13.4 62.6 23.3 31.5 10.0 42.8 27.9 42.3 36.6 529.3 6 16 9 5 8 5 2 1 6 4 9 8 79
+Tadjerouine (A.-Zouagha) | 17.2 61.2 100.7 3.0 60.5 59.0 12.0 0.0 19.0 24.0 40.0 13.0 409.6 6 19 13 3 9 6 6 0 2 3 7 6 80
+Tadjerouine (Feuille) | 16.5 29.5 107.0 - - - - - - - - - - 5 7 9 - - - - - - - - - -
+Rebiba | 23.7 79.0 130.0 15.0 61.0 20.0 0.0 - 31.0 42.0 38.0 21.0 - 9 15 8 3 5 3 0 - oi 4 6 5 -
+Aïn-Mesria | - - - - - - - - - - - 17.4 - - - - - - - - - - - - 3 -
+Majouba | - - - - - - - - - - 2.3 19.3 - - - - - - - - - - - oi 5 -
+Djerissa | - - - - - - - - - 22.0 33.5 10.9 - - - - - - - - - - 1 4 3 -
+controle: Contrôle de Mactar
+Saadiah-du-Bargou | 30.7 103.1 217.6 33.0 53.8 26.5 31.4 37.6 54.6 28.5 31.6 54.0 702.4 8 13 10 4 6 5 3 2 6 3 2 6 68
+Oued-Dridja | 23.8 66.1 166.4 56.2 34.8 24.2 17.0 45.5 27.7 18.6 31.9 14.3 526.5 10 19 11 8 11 7 3 10 9 9 5 8 110
+Henchir Medjet-es-Soltane | 32.0 128.7 214.0 26.0 68.5 33.5 10.0 7.0 33.0 53.7 37.0 55.0 698.4 5 15 12 4 6 6 5 3 4 6 5 7 78
+Aïn-el-Bida | 46.3 79.8 182.2 17.7 64.5 28.0 - 0.0 0.0 11.3 8.3 14.2 - 7 10 8 2 4 5 - 0 0 1 1 5 -
+Mactar | 34.0 109.2 171.4 34.6 92.7 74.3 0.0 49.4 44.0 59.4 41.5 44.0 754.5 11 15 11 9 8 8 0 7 6 5 9 8 97
+Souk-el-Djemâa | - - - - - - - - - 72.3 46.4 32.9 - - - - - - - - - - 10 9 9 -
+Rohia | 15.0 50.0 81.2 42.5 64.5 46.5 - 15.0 6.5 26.3 30.0 7.0 - 3 13 9 4 5 7 - 1 1 3 5 2 -
+controle: Contrôle de Thala
+Kalaa-Djerda | 20.3 34.9 67.6 14.0 54.6 37.3 7.4 17.5 28.0 24.6 24.0 12.1 342.3 6 5 7 3 6 2 3 4 5 2 3 5 51
+Thala | 40.3 47.6 160.9 50.5 68.8 55.3 g 23.0 44.4 30.5 59.9 20.7 601.9 7 14 16 8 4 6 1 3 11 3 7 5 85
+Bou Habel | 23.7 58.0 128.0 28.5 61.0 56.0 - 30.9 18.0 32.0 43.0 29.8 - 5 10 12 3 2 5 - 2 3 1 6 5 -
+Sbeïtla I | 0.0 41.7 114.3 15.9 53.8 41.8 0.0 32.0 42.1 10.3 33.9 8.8 394.6 0 7 8 3 5 6 0 6 4 1 4 2 46
+Sbeïtla (Henchir-Aouadar) | 1.8 40.2 166.8 22.4 44.2 50.3 g 38.7 57.0 16.7 35.8 0.8 474.7 6 9 7 6 7 9 3 6 4 4 3 1 65
+# Sbeïtla (Henchir-Touille): rainy days add to 90, Total printed 60 (every cell clear on a zoomed crop): printed inconsistency (Total likely 90 misprinted).
+Sbeïtla (Henchir-Touille) | 1.4 32.8 92.9 31.5 64.5 73.2 g 33.9 85.4 12.4 29.8 1.5 459.3 5 13 11 7 8 13 5 9 6 3 7 3 60
+Kasserine | 0.5 23.0 101.3 28.2 68.0 74.1 51.5 86.3 56.9 29.0 - - - 1 3 4 3 5 6 6 4 4 2 - - -
+Djilma | 2.0 34.0 125.0 22.0 - - - - - - - - - 2 4 5 5 - - - - - - - - -
+Telepte | - - - - - - - - - - 31.0 g - - - - - - - - - - - 3 1 -
+Feriana | 8.7 30.4 36.0 34.2 27.0 47.5 g 16.0 47.8 18.0 25.2 1.6 292.4 6 12 12 6 8 14 1 7 11 4 6 2 89
+Le Chambi | 4.0 20.0 80.0 42.0 39.5 63.5 0.0 20.0 28.0 21.5 21.0 4.5 344.0 1 1 5 4 3 5 0 2 2 x 2 2 -
+region: Tunisie du Centre (Région Est intermédiaire entre les Hautes Plaines et le Sahel)
+controle: Contrôle de Kairouan
+Sbikha | 13.0 34.1 139.2 40.5 64.5 28.2 12.2 5.6 56.0 7.7 28.8 4.3 434.1 4 6 8 5 5 5 1 1 4 2 2 5 48
+Ste-Madeleine-d'Ousseltia | 15.8 45.8 260.6 55.5 42.1 16.6 5.0 16.1 42.0 22.9 29.6 10.5 562.5 11 17 15 11 9 7 4 15 10 11 8 9 127
+Ousseltia (Baher-Chira) | 5.5 80.5 171.8 55.5 45.8 44.0 g 11.0 41.8 34.5 31.7 16.9 539.0 2 8 5 3 6 4 1 2 3 4 2 4 44
+Ousseltia (Oued-bou-Jedra) | 8.5 50.7 290.4 66.0 58.0 66.0 16.5 13.2 28.6 22.0 37.8 6.5 664.2 3 12 10 5 6 6 3 10 7 4 6 7 79
+
+@rain view=304 page=276 year=1929 split=11
+img: all
+cols: m01 m02 m03 m04 m05 m06 m07 m08 m09 m10 m11 m12 myr d01 d02 d03 d04 d05 d06 d07 d08 d09 d10 d11 d12 dyr
+# no heading at the top of p. 276: continues Tunisie du Centre (Région Est ...), Contrôle de Kairouan
+region: Tunisie du Centre (Région Est intermédiaire entre les Hautes Plaines et le Sahel)
+controle: Contrôle de Kairouan
+# Aïn-Koudiat: first digit of Septembre damaged ("?0.0"); typed from the Total (666.5 - other months = 40.0).
+Besserour | 10.5 32.2 109.5 59.5 59.3 27.8 17.0 0.0 61.0 9.0 29.0 0.0 414.8 2 5 3 4 5 3 1 0 3 2 2 0 30
+El-Alem (Henriville) | 11.8 27.2 141.3 41.1 55.8 37.6 11.5 10.2 46.7 8.2 33.0 6.2 430.6 3 6 10 5 6 3 1 4 4 4 3 5 54
+Saadiah (Aïn Soltane) | 6.8 14.1 74.6 24.3 35.0 9.0 0.0 6.2 74.4 3.5 25.9 3.1 276.9 6 2 8 4 6 5 0 3 6 2 3 5 50
+Sbikha-es-Sbatt | 17.6 28.4 165.2 52.9 25.8 33.9 2.6 1.0 36.9 10.3 22.5 4.9 402.0 7 4 7 6 7 5 1 9 3 4 4 5 62
+Hr Aieriah (Sbikha Nord) | 17.8 48.7 137.0 46.5 42.9 0.0 0.0 8.0 45.2 11.4 18.0 4.5 380.0 6 5 3 3 4 0 0 2 2 5 1 2 33
+Sbikha Henchir Nedjema | 11.7 33.4 139.2 47.0 31.5 17.2 6.0 4.6 35.8 7.6 31.0 1.7 366.7 3 6 6 6 4 4 1 1 1 2 2 1 37
+Sbikha Est | 16.8 18.7 139.0 42.1 45.2 6.0 0.0 6.0 95.0 5.0 30.0 4.0 407.8 4 4 5 5 5 1 0 1 3 1 3 2 34
+Kairouan | 11.5 17.9 102.5 41.0 45.9 18.3 0.0 g 35.7 2.4 42.4 4.3 321.9 9 11 13 7 6 2 0 5 8 7 6 8 82
+Aïn-Koudiat | 4.0 59.0 361.0 52.0 33.0 52.0 3.5 0.0 40.0d 20.0 36.0 6.0 666.5 2 8 7 5 3 4 2 0 1 1 2 2 37
+Sidi-Amor-El-Kenani | 10.0 30.5 98.4 22.6 24.7 45.5 5.0 0.0 40.0 - - - - 2 11 12 6 3 4 1 0 4 - - - -
+El-Haouareb I | 0.0 28.4 196.1 36.9 80.9 9.9 g 0.0 33.3 10.6 38.9 4.8 439.8 0 5 6 5 4 2 4 0 2 1 3 2 34
+El-Haouareb II | g 23.9 151.7 4.0 - - - - - 11.0 52.0 - - 1 7 7 2 - - - - - 1 3 - -
+El-Haouareb III | 0.0 30.5 166.0 27.5 76.0 6.0 0.0 0.0 25.5 0.0 7.0 4.5 343.0 0 4 6 4 4 1 0 0 1 0 1 1 22
+Sidi-Mansour | 0.0 24.9 116.6 12.1 84.0 75.6 0.0 0.0 36.0 4.4 37.2 5.2 396.0 0 5 5 3 4 6 0 0 2 1 3 1 30
+Pavillier | - - - - - - - - - - 10.5 8.5 - - - - - - - - - - - 1 3 -
+Sidi-Saad I | 4.7 29.7 165.1 22.8 54.0 33.5 10.5 0.5 46.5 10.0 55.7 12.0 445.0 6 11 11 6 8 8 3 8 3 1 3 4 72
+Sidi-Saad II | - - - 13.6 42.2 42.8 0.0 15.5 - - - - - - - - 5 4 7 0 4 - - - - -
+Hadjeb-el-Aïoun I | 0.0 32.0 148.0 10.0 28.0 31.0 24.0 50.0 26.0 15.0 22.0 0.0 386.0 0 4 6 1 2 2 1 3 2 1 1 0 23
+Hadjeb-el-Aïoun II | 1.7 21.6 132.5 16.0 36.6 25.6 0.0 40.9 29.4 21.1 30.0 1.9 357.3 1 3 6 3 4 2 0 3 1 1 4 1 29
+region: Tunisie de l'Est ou Sahel
+controle: Contrôle de Sousse
+Bir-el-Bey | 23.5 76.7 104.1 12.5 54.8 47.0 0.0 0.0 12.0 37.0 29.0 24.5 421.1 5 13 9 3 5 5 0 0 1 5 3 4 53
+Sidi-el-Hani | 14.5 23.2 77.0 2.1 8.8 - g g 37.0 1.0 35.0 5.0 - 11 21 15 6 3 - 1 5 4 6 3 10 -
+Val Suzon | 28.3 71.1 175.9 30.9 19.6 12.6 0.0 20.7 91.2 0.0 37.2 - - 4 8 8 2 2 2 0 3 2 0 2 - -
+Aïn-Battaria | 15.2 58.0 233.0 45.0 36.6 14.5 g 41.9 132.6 8.6 48.7 15.3 649.4 5 11 9 5 5 3 1 7 8 1 2 5 62
+Bou-Ficha | 18.2 30.9 99.5 43.7 43.5 19.7 0.0 11.2 113.0 0.0 25.7 28.3 433.7 4 5 7 4 3 3 0 3 4 0 4 2 39
+Guedal-el-Beylick (Foreston les Lilas) | 42.0 43.0 164.9 13.8 36.0 56.2 - - - - - - - 11 14 9 5 5 4 - - - - - - -
+Saouaf (Gdes gouttes) | 21.3 60.8 292.8 51.9 44.6 - - - - - - - - 4 6 8 4 7 - - - - - - - -
+El-Kley | 12.0 37.0 104.5 26.7 39.8 30.0 0.0 22.0 115.0 3.9 16.5 30.2 437.6 4 6 6 3 4 2 0 1 1 2 2 4 35
+Saouaf (Henchir Zeguidane) | 14.1 48.4 141.1 53.6 38.8 20.7 0.0 18.8 76.0 12.1 36.9 12.1 472.6 8 10 7 5 6 4 0 4 4 5 3 6 62
+Saouaf (Henchir Zectoun) | 15.7 50.0 198.5 28.1 44.8 41.9 3.5 47.0 80.1 18.6 15.5 24.5 - 8 13 11 6 9 7 1 6 6 6 oi oi -
+Saouaf (Ste-Cécile) | 15.9 60.2 206.0 53.0 41.2 19.7 0.0 55.5 69.0 g 37.6 13.5 571.6 2 4 4 3 3 5 0 4 2 x 2 3 -
+Enfidaville | 15.1 58.0 116.9 35.9 36.0 15.9 0.0 75.0 135.4 9.8 25.9 10.5 534.4 7 9 9 4 5 5 0 5 7 4 3 4 62
+Kundar | 10.8 27.0 82.5 23.7 45.0 13.0 0.0 5.0 71.0 6.5 53.5 3.5 341.5 2 3 4 2 3 3 0 1 2 2 2 1 25
+Henchir Souar | 85.0 76.8 133.3 7.9 55.1 32.7 7.8 - 36.0 31.4 88.2 29.1 - 5 6 7 2 9 3 2 - 2 4 3 4 -
+Menzel Dar-bel-Ouar | - - - - - - - - 140.0 16.5 30.4 8.0 - - - - - - - - - 1 3 3 3 -
+Sidi-bou-Ali | 5.0 31.0 72.0 26.0 19.0 0.0 0.0 24.5 139.5 10.0 34.5 6.0 367.5 1 3 8 2 3 0 0 3 3 4 4 1 32
+Akouda | 30.8 25.3 64.9 28.8 31.9 5.1 0.0 2.5 120.5 14.4 42.8 21.5 388.5 6 7 7 4 5 3 0 2 5 4 4 5 52
+Oued-Laya | - - - - - - - - - - 12.0 8.0 - - - - - - - - - - - 1 1 -
+Sousse | 15.9 21.0 45.4 11.7 18.0 4.5 g 1.3 181.1 19.4 34.4 9.3 362.0 9 7 8 6 4 4 1 2 6 4 3 5 59
+Kroussiah Sahali | - - - - - - - - - - - 6.4 - - - - - - - - - - - - 7 -
+Monastir | 19.0 28.7 90.0 22.0 19.0 7.0 0.0 2.5 116.1 22.5 68.5 8.0 403.3 3 5 7 2 3 2 0 2 4 5 5 3 41
+
+@rain view=306 page=278 year=1929 split=11
+img: all
+cols: m01 m02 m03 m04 m05 m06 m07 m08 m09 m10 m11 m12 myr d01 d02 d03 d04 d05 d06 d07 d08 d09 d10 d11 d12 dyr
+# no heading at the top of p. 278: continues Tunisie de l'Est ou Sahel, Contrôle de Sousse
+region: Tunisie de l'Est ou Sahel
+controle: Contrôle de Sousse
+# Ksour-Essaf: second digit of Septembre damaged ("13?.2"); the Total gives 139.2 (typed with d).
+Téboulba (Bonne Veine) | 50.0 31.0 62.0 19.8 14.8 12.5 0.0 3.2 148.1 16.9 42.2 8.2 408.7 5 6 6 3 4 1 0 2 6 4 2 2 41
+Mahdia | 30.0 42.0 41.0 6.5 8.0 13.0 0.0 0.6 114.0 18.0 25.5 14.5 313.1 8 9 6 3 2 3 0 2 6 3 3 4 49
+Ksour-Essaf | 31.1 33.5 61.4 8.0 10.0 13.7 0.0 0.0 139.2d 22.5 22.2 12.0 353.6 3 4 5 1 2 2 0 0 7 3 3 3 33
+Salakta | 42.0 39.0 50.5 8.2 8.5 0.0 0.0 1.5 125.8 25.3 18.0 7.5 326.3 5 4 5 3 3 0 0 3 4 4 4 4 39
+El-Djem | - - 80.0 8.5 12.0 23.5 0.0 1.0 40.0 11.5 29.0 14.0 - - - 6 3 4 6 0 1 5 4 5 2 -
+controle: Contrôle de Sfax
+Sfax (Port) | 10.1 28.6 81.3 1.0 4.6 49.8 0.0 0.5 53.2 5.1 17.4 5.3 256.9 4 4 5 1 2 2 0 1 3 1 2 2 27
+Sfax (Réservoirs) | 13.5 30.5 79.0 g 3.0 16.0 0.5 g 77.0 5.0 8.0 6.5 239.0 6 9 8 2 2 2 1 3 2 2 4 2 43
+Sfax (Achichina) | 5.1 49.1 80.6 0.0 0.4 8.7 - - 44.7 11.5 10.1 1.2 - 1 7 5 0 2 4 - - oi 6 3 3 -
+La Forestière de Sfax | 8.4 43.4 70.0 2.5 13.0 30.0 0.0 6.0 54.0 8.0 20.0 19.0 274.3 3 6 5 1 2 3 0 1 2 2 2 3 30
+La Provence (Limaya) | 4.3 46.7 89.8 5.8 10.0 59.8 0.0 6.9 45.1 1.2 23.5 9.5 302.6 4 13 11 6 4 6 0 6 8 3 4 8 73
+Bou-Thadi I | 10.3 70.1 116.6 4.8 15.5 42.2 0.0 31.3 41.6 3.0 35.5 10.2 381.1 7 8 7 5 2 5 0 7 6 7 4 4 62
+Bou-Thadi II (Césarée) | 18.0 49.5 107.7 0.0 12.0 65.0 0.0 22.9 27.5 g 24.0 8.5 335.1 1 4 5 0 1 1 0 4 3 1 2 2 24
+Bou-Thadi III (Sur Côte) | - - - - - - - - 40.9 0.0 29.6 7.0 - - - - - - - - - 2 0 2 2 -
+La Fauconnerie | 5.9 45.3 88.4 5.2 17.3 63.4 - 13.1 46.6 4.2 24.0 9.3 - 9 13 12 5 3 4 - 3 6 2 4 5 -
+# Ben-Nessim Avril ("3·3") and Molinos Avril ("2:0") have a damaged decimal point; read 3.3 and 2.0 (Totals agree).
+Chahal (Salavy) | 8.0 27.7 40.0 0.0 3.0 17.5 0.0 0.0 22.5 0.0 23.5 4.5 146.7 3 4 5 0 2 1 0 0 1 0 3 1 20
+Dolfus | 5.0 35.1 49.0 1.9 6.0 26.5 0.0 4.7 27.5 g 11.2 4.7 171.6 4 7 6 2 2 2 0 2 2 4 3 2 36
+Saint-Michel | 7.7 34.2 63.8 3.0 3.2 27.5 2.6 6.0 30.4 g 11.7 5.1 195.2 5 7 6 2 2 4 1 2 3 2 5 3 42
+De Nervo | 6.0 31.1 54.9 0.5 1.5 29.0 0.0 4.0 29.0 0.0 16.0 6.6 178.6 2 3 4 1 1 2 0 2 3 0 2 2 22
+Ben-Nessim | 0.0 39.2 79.9 3.3 10.5 60.0 0.0 3.5 36.3 2.8 15.4 4.5 255.4 0 6 6 3 3 4 0 3 4 1 2 2 34
+Molinos | 3.7 30.4 57.0 2.0 7.0 25.2 0.0 1.5 28.0 0.0 19.5 4.0 178.3 2 7 9 2 2 4 0 1 3 0 2 1 33
+Bordj-Lacroix | 8.5 39.7 60.2 4.9 3.0 25.6 0.0 3.7 35.3 1.6 10.6 6.5 199.6 7 9 8 2 3 6 0 3 5 5 3 3 54
+Mirabaud | 5.7 26.9 46.2 0.0 1.7 25.3 0.0 4.9 49.8 0.0 26.8 0.0 187.3 2 2 3 0 1 4 0 2 3 0 2 0 19
+Laurans | 5.7 31.4 61.9 3.1 3.5 25.4 0.0 4.6 39.2 3.5 18.5 9.5 206.3 4 8 4 2 3 4 0 2 3 4 2 3 39
+Chahal (Ferme Roux) | 8.1 29.0 53.0 5.4 6.1 22.5 g 4.7 44.1 1.7 10.8 4.0 189.4 4 9 8 2 4 4 1 3 4 4 3 3 49
+El Mouassat | 7.5 40.3 54.3 1.3 1.5 35.0 0.0 14.0 38.5 3.5 21.1 8.0 225.0 6 8 8 3 1 2 0 3 3 3 3 3 43
+Maharès | - - - - - - - - - - 21.5 2.0 - - - - - - - - - - - 5 3 -
+region: Tunisie du Sud
+controle: Contrôle de Gafsa
+Maknassy (gare) | 11.7 54.0 118.1 0.0 0.0 49.0 0.0 24.0 65.3 18.3 31.0 g 371.4 3 4 5 0 0 2 0 2 3 1 2 1 23
+Maknassy (St-Félix) | 12.4 32.6 90.5 0.3 7.8 49.8 0.0 27.5 53.2 17.2 34.6 g 325.9 5 7 6 2 4 4 0 5 6 1 2 1 43
+
+@rain view=308 page=280 year=1929 split=11
+img: all
+cols: m01 m02 m03 m04 m05 m06 m07 m08 m09 m10 m11 m12 myr d01 d02 d03 d04 d05 d06 d07 d08 d09 d10 d11 d12 dyr
+# no heading at the top of p. 280: continues Tunisie du Sud, Contrôle de Gafsa
+region: Tunisie du Sud
+controle: Contrôle de Gafsa
+Maknassy (Dome des deux gazelles) | 12.2 44.0 122.8 0.0 6.0 36.5 g 21.9 87.7 26.3 37.3 0.0 394.7 7 9 6 0 6 7 1 5 9 2 4 0 56
+Sened | 14.7 - - g 8.5 38.2 g 21.2 63.3 13.3 40.5 1.3 - 8 - - oi 3 5 1 oi 9 5 6 5 -
+Zannouch | 25.0 26.5 119.7 4.0 - - - - 67.0 24.0 - - - 7 3 6 1 - - - - 1 1 - - -
+Gafsa | 10.3 18.5 78.2 4.2 20.9 14.5 g 1.9 25.5 13.1 31.6 2.8 221.5 4 4 8 4 5 6 1 3 4 2 3 1 45
+Gafsa (Gare) | - - - - - - 0.0 0.0 29.4 8.9 29.7 1.8 - - - - - - - 0 0 5 3 2 2 -
+Tabeditt | - - - - - - - - g 0.0 6.0 0.0 - - - - - - - - - 1 0 2 0 -
+Metlaoui | 9.6 9.3 45.4 5.4 11.9 29.4 0.0 2.3 21.5 5.1 26.2 1.9 168.0 3 4 5 2 4 7 0 6 2 5 3 2 43
+controle: Contrôle de Djerba
+Djerba | 17.5 32.8 25.0 0.5 0.5 12.2 0.0 0.5 27.0 11.5 21.5 1.7 150.7 7 10 8 3 4 2 0 3 5 5 4 3 54
+controle: Contrôle de Gabès
+St-Michel du Sud I | 19.3 49.9 68.3 g 6.7 5.2 0.0 12.3 29.9 9.6 30.2 1.3 232.7 5 5 7 1 2 2 0 2 4 2 3 2 35
+Gabès | 11.2 9.9 33.3 0.7 2.0 2.0 0.0 0.0 29.0 5.4 13.7 0.0 107.2 3 4 10 1 2 2 0 0 5 2 2 0 31
+region: Tunisie de l'Extrême-Sud
+controle: Contrôle de Tozeur
+Redeyef | 9.0 5.8 26.8 7.0 16.5 27.0 g 22.0 13.8 7.5 17.3 14.8 167.5 5 4 5 3 7 9 1 4 8 7 4 5 62
+Tozeur | 6.6 1.2 24.0 1.0 10.0 3.5 0.0 0.0 15.0 2.5 20.0 g 83.8 2 5 5 1 3 2 0 0 1 5 3 1 28
+controle: Territoires militaires
+Zarzis | 35.5 24.3 19.8 1.0 0.5 1.8 0.0 0.0 20.0 11.5 52.0 5.0 171.4 6 8 8 2 1 2 0 0 2 4 3 3 39
+Ben-Gardane | 46.9 20.7 6.0 2.0 2.0 2.5 0.0 g 21.2 g 13.0 1.0 115.3 7 6 4 1 1 2 0 1 3 3 3 2 33
+Allouet-el-Gouna | - - - 0.0 4.2 7.0 0.0 0.0 3.9 1.2 13.2 0.0 - - - - 0 1 2 0 0 2 1 3 0 -
+Sidi-Toui | - - - - 0.0 4.3 0.0 0.0 15.7 0.9 16.3 1.0 - - - - - 0 1 0 0 3 1 3 2 -
+Meched Salah | - - - - - 0.0 0.0 0.0 6.2 0.0 3.0 0.0 - - - - - - 0 0 0 2 0 2 0 -
+Kébili | 4.0 13.0 19.0 0.0 10.0 2.0 g g 7.0 4.0 34.5 g 93.5 1 3 4 0 2 1 1 2 1 2 3 1 21
+Matmata | 15.0 78.7 95.0 17.5 g 57.0 0.0 14.0 16.5 12.0 21.0 1.0 327.7 4 7 11 3 1 3 0 2 6 6 6 3 52
+Médenine | 14.0 32.0 36.0 2.0 g 5.0 0.0 g 29.0 5.0 24.0 g 147.0 4 7 8 2 3 4 0 1 8 6 6 2 51
+Tataouine | 19.2 17.0 20.8 g g g g 0.0 14.7 6.1 24.4 1.2 103.4 6 7 8 2 3 2 1 0 3 5 7 2 46
+Dehibat | 21.0 30.0 21.0 0.0 g 3.0 0.0 0.0 3.0 0.0 4.0 0.0 82.0 2 3 5 0 1 1 0 0 2 0 1 0 15
+# Fort Saint: every month printed "0" (gouttes, with rainy days) except Janvier, Août and Décembre "0.0"; Total
+# printed "0".
+Fort Saint | 0.0 g g g g g g 0.0 g g g 0.0 0 0 4 4 2 2 1 1 0 1 1 2 0 18

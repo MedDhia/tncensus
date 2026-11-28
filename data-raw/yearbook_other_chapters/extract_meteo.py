@@ -13,6 +13,7 @@ Source of truth: transcribed/meteo_<edition>.txt. Format (after yb_tables.py):
     img: all                       every cell read on native-resolution crops
     cols: m01 .. m12 myr d01 .. d12 dyr
     region: <text>                 region heading as printed (applies to the station lines below)
+    station: <text>                station heading (part d: the lines below are periods of that station)
     controle: <text>               contrôle heading as printed
     <station> | v1 v2 ...          one printed line
 
@@ -24,6 +25,9 @@ obs = days_not_observed); '?' = illegible (NA, illegible); trailing '!' = ocr_co
 typed as the printed Année minus the other months (flag derived_from_totals; its annual check is then
 not independent).
 Printed annual totals (Année) are checks, not rows.
+Text columns (TEXT_COLS: dates of the absolute temperatures, vent dominant) keep the typed token, '_' = space,
+'-' = nothing printed.
+Every transcribed/meteo_<edition>*.txt file is read (e.g. meteo_sgt1930.txt then meteo_sgt1930_cd.txt).
 """
 import re
 import sys
@@ -72,8 +76,22 @@ class Cell:
         return self.raw
 
 
+TEXT_COLS = {"amaxd", "amind", "wdom"}
+
+
+class Text:
+    __slots__ = ("raw", "value", "flag", "obs")
+
+    def __init__(self, raw):
+        self.raw, self.flag, self.obs = raw, "", ""
+        self.value = None if raw == "-" else raw.replace("_", " ")
+
+    def __repr__(self):
+        return self.raw
+
+
 def parse(path, ed):
-    secs, cur, region, controle = [], None, "", ""
+    secs, cur, region, controle, station = [], None, "", "", ""
     for n, line in enumerate(path.read_text().splitlines(), 1):
         line = line.rstrip()
         if not line.strip() or line.lstrip().startswith("#"):
@@ -97,16 +115,20 @@ def parse(path, ed):
         if line.startswith("region:"):
             region, controle = line[7:].strip(), ""
             continue
+        if line.startswith("station:"):
+            station = line[8:].strip()
+            continue
         if line.startswith("controle:"):
             controle = line[9:].strip()
             continue
         label, vals = line.rsplit("|", 1)
-        cells = [Cell(x) for x in vals.split()]
-        if len(cells) != len(cur["cols"]):
-            raise ValueError(f"{path.name}:{n} row {label!r}: {len(cells)} values for {len(cur['cols'])} columns")
         if cur["cols"] is None:
             raise ValueError(f"{path.name}:{n}: no cols: line")
-        cur["rows"].append({"label": label.strip(), "region": region, "controle": controle,
+        cells = [(Text if col in TEXT_COLS else Cell)(x) for col, x in zip(cur["cols"], vals.split())]
+        if len(vals.split()) != len(cur["cols"]):
+            raise ValueError(f"{path.name}:{n} row {label!r}: {len(vals.split())} values for {len(cur['cols'])} "
+                             "columns")
+        cur["rows"].append({"label": label.strip(), "region": region, "controle": controle, "station": station,
                             "cells": dict(zip(cur["cols"], cells)), "line": n})
     return secs
 
@@ -125,14 +147,41 @@ FLAGS = {("sgt1936", st, "d05"): "total_mismatch" for st in (
 # sgt1930 p.262 (f820) Menzel-Temime: Printemps printed 172.6, identical to Hiver; the printed Année 410.3 implies
 # 66.9 (confirmed on a zoomed crop): the Printemps cell repeats the Hiver cell, kept as printed and flagged.
 FLAGS[("sgt1930", "Menzel-Temime", "spr")] = "total_mismatch"
+# sgt1929 p.283 (f311) Ben-Gardane: the extrême maxima "42.0 Août" is printed alone one line below the station's
+# line (in the blank gap before Gafsa); typed on the Ben-Gardane line.
+FLAGS[("sgt1929", "Ben-Gardane", "amax")] = "row_realigned"
 FAIL_NOTES = {
+    "meteo_climate": "Both failures re-read on zoomed native-resolution crops; printed values kept. sgt1930 p. 286 "
+                     "Béja, mois le plus froid: maxima 14.6, minima 4.1, moyenne 10.3, every digit clear (the "
+                     "midpoint is 9.35; misprinted cell not identifiable). p. 287 Djerba: wind days N 41, NE 31, "
+                     "E 108, SE 44, S 27, SW 32, W 44, NW 38, calm 0, vent dominant printed W (E has the most "
+                     "days): printed as such. sgt1929 p. 282 (f310), every cell re-read on native-resolution "
+                     "crops, printed values kept: the hottest-month moyenne is printed 0.35-0.7 below the "
+                     "midpoint of maxima and minima at Bizerte (Carouba), Tunis (Manoubia), Grombalia, "
+                     "Medjez-el-Bab, Thala, Kairouan, Sousse, Bou-Thadi, Zarzis and Kébili, and 1.2 below at "
+                     "Souk-el-Arba (40.1 / 19.5 / 28.6, every digit clear); the coldest-month moyenne is 0.35 "
+                     "above the midpoint at Bizerte (Carouba) and Medjez-el-Bab. In sgt1929 the printed moyenne "
+                     "is evidently computed from the daily means, not the midpoint, so these are not misprints. "
+                     "Fort Saint coldest month: maxima 14.2, minima printed \"— 1.2\" (dash as at Mactar and "
+                     "Thala, typed -1.2), moyenne 7.5: the midpoint is 6.5 (7.7 if the dash were a stray mark); "
+                     "kept as printed.",
+    "meteo_means": "Both failures re-read on zoomed native-resolution crops; printed values kept. sgt1930 p. 288 "
+                   "Mabtouha (St-Victor) 1926-1930: Décembre 84, Janvier 113, Février 42 give 239, Hiver printed "
+                   "199, and the printed Année 423 = 110 + 199 + 111 + 3 agrees with the Hiver: one of the three "
+                   "month cells is misprinted (likely Janvier 113 for 73), not identifiable with certainty. p. 290 "
+                   "Sousse 1926-1930: Septembre 64, Octobre 15, Novembre 25 give 104, Automne printed 106 (the "
+                   "Année 257 agrees with 106): a printed inconsistency beyond rounding.",
     "meteo_rainfall_season": "Every failure was re-read on a zoomed native-resolution crop of the line; printed "
                              "values kept. sgt1930 p. 262 Menzel-Temime: Printemps (172.6) is printed identical "
                              "to Hiver, the Année implies 66.9, so the Printemps cell is flagged `total_mismatch`. "
                              "p. 265 Djebel-Mansour (Sainte-Gilberte) (540.8 vs 510.8, a difference of exactly "
                              "30: one digit misprinted, cell not identifiable). Small differences (p. 260 "
                              "Aïn-Sebaâ -0.6, p. 263 Le Kef I +0.2, p. 265 Sainte Maurice de Djebibina +0.1, "
-                             "Kundar +0.9): printed inconsistencies, every digit clear.",
+                             "Kundar +0.9): printed inconsistencies, every digit clear. sgt1929 (every digit "
+                             "clear on a zoomed crop, printed inconsistencies): p. 261 El-Alem (Henriville) "
+                             "(seasons 508.0, Année 507.5), Mahédia (447.5 vs 447.3); p. 262 Bordj-Lacroix "
+                             "(233.4 vs 233.7), Maknassy (Saint-Félix) (301.7 vs 305.7), Gabès (118.9 vs "
+                             "119.5).",
     "meteo_rain_days": "sgt1936 p. 113 (f124): the Mai column is printed as an exact copy of the Avril column on "
                        "every line of the page, which explains all eighteen failures on that page (Mai cells "
                        "flagged `total_mismatch`; the true May values are not recoverable from the annual total "
@@ -147,7 +196,10 @@ FAIL_NOTES = {
                        "totals, so no row is flagged; p. 125 Lorbeuss (Gare); p. 127 Sbeïtla (Henchir-Touille), "
                        "Sbeïtla-Nord; p. 129 El-Djem. sgt1935 p. 149 Djebel Oust (96 vs 101), p. 153 Sidi bou "
                        "Becker (91 vs 93), p. 157 Le Sers (gare) (60 vs 58), Tadjerouine (Aïn-Zouagha) (68 vs 73) "
-                       "and Mactar (68 vs 78): every month re-read on zoomed crops; printed inconsistencies.",
+                       "and Mactar (68 vs 78): every month re-read on zoomed crops; printed inconsistencies. sgt1929 (every "
+                       "cell re-read on zoomed crops, printed values kept): p. 270-271 La Forestière (months 91, "
+                       "Total printed 81); p. 274-275 Sbeïtla (Henchir-Touille) (months 90, Total printed 60, "
+                       "likely 90 misprinted).",
     "meteo_rainfall_monthly": "Every failure was re-read on zoomed native-resolution crops of both pages; printed "
                               "values kept; misprint cell not identifiable unless stated. sgt1936: p. 112-113 "
                               "Aïn-bou-Rass (Captage); p. 116-117 Saint-Cyprien, Mengoub; p. 118-119 Zaghouan "
@@ -165,7 +217,16 @@ FAIL_NOTES = {
                               "misprint by 99); p. 162 Roderiebourg (Novembre printed \"4.0\" at the gutter, possibly "
                               "a lost leading digit; not derived because the fragment is complete as printed). "
                               "sgt1935 cells flagged `derived_from_totals` (Novembre lost in the binding gutter, typed "
-                              "as Année minus the other months) cannot fail their check by construction.",
+                              "as Année minus the other months) cannot fail their check by construction. sgt1930 (cells re-read on "
+                              "zoomed crops, printed values kept): p. 268-269 Bizerte Carouba (months 753.0, "
+                              "Total 753.2; Juillet printed \"4 7\" read 4.7; part c) also prints 753.2), De "
+                              "Carnières (Saint-Antoine) (445.3 vs 444.3); p. 270-271 El-Aouina (372.2 vs 362.2, "
+                              "Total misprint by 10); p. 282-283 Sousse (237.2 vs 232.2: part c) prints 237.2, so "
+                              "the part b) Total is the misprint), Maknassy (gare) (153.4 vs 371.4: every month "
+                              "clear; the Total is not a plausible sum of the line, misprinted). sgt1929 (re-read "
+                              "on zoomed crops, printed inconsistencies): p. 266-267 Saint-Cyprien (417.7 vs "
+                              "417.6); p. 270-271 Dhomda II (533.0 vs 533.1), Sidi bou Becker (531.2 vs 541.2, one "
+                              "digit off by 10); p. 272-273 Aïn-Tounga (531.0 vs 524.0).",
 }
 
 
@@ -231,6 +292,114 @@ def season_cells(sec):
     return out
 
 
+# c) Données climatologiques essentielles: column -> (measure, measure_fr, unit, date column)
+CLIMATE = [
+    ("mm", "rainfall", "Pluies : millimètres", "mm", None),
+    ("days", "rain_days", "Pluies : nombre de jours", "days", None),
+    ("hmax", "temp_hottest_month_max", "Température moyenne du mois le plus chaud : maxima", "degC", None),
+    ("hmin", "temp_hottest_month_min", "Température moyenne du mois le plus chaud : minima", "degC", None),
+    ("hmean", "temp_hottest_month_mean", "Température moyenne du mois le plus chaud : moyenne", "degC", None),
+    ("cmax", "temp_coldest_month_max", "Température moyenne du mois le plus froid : maxima", "degC", None),
+    ("cmin", "temp_coldest_month_min", "Température moyenne du mois le plus froid : minima", "degC", None),
+    ("cmean", "temp_coldest_month_mean", "Température moyenne du mois le plus froid : moyenne", "degC", None),
+    ("amax", "temp_absolute_max", "Température extrême annuelle : maxima", "degC", "amaxd"),
+    ("amin", "temp_absolute_min", "Température extrême annuelle : minima", "degC", "amind"),
+    ("ymax", "temp_annual_mean_max", "Température moyenne annuelle : maxima", "degC", None),
+    ("ymin", "temp_annual_mean_min", "Température moyenne annuelle : minima", "degC", None),
+    ("ymean", "temp_annual_mean", "Température moyenne annuelle : moyenne", "degC", None),
+] + [(f"w{d}", f"wind_days_{d.lower()}", f"Nombre de jours au cours de l'année pendant lesquels le vent dominant "
+      f"a été : {d}", "days", None) for d in ("N", "NE", "E", "SE", "S", "SW", "W", "NW")] + [
+    ("wcalm", "calm_days", "Nombre de jours au cours de l'année pendant lesquels le vent dominant a été : Calme",
+     "days", None)]
+WINDS = ["wN", "wNE", "wE", "wSE", "wS", "wSW", "wW", "wNW"]
+FOOTNOTES = {
+    ("sgt1930", "1"): "Manque les maxima de janvier.",
+    ("sgt1930", "2"): "Manque les minima de décembre.",
+    ("sgt1930", "3"): "Manque les maxima de janvier et février.",
+    ("sgt1930", "4"): "Manque les maxima de mai.",
+    ("sgt1930", "5"): "Manque les maxima de juillet, août, octobre; les minima d'octobre.",
+    ("sgt1929", "1"): "Manque les minima du mois de juillet.",
+    ("sgt1929", "2"): "Manque les maxima de décembre.",
+}
+
+
+def climate_cells(sec):
+    """c) One row per station and measure; the vent dominant is a text row (value NA, direction in text_fr).
+    Checks: moyenne = (maxima + minima) / 2 (tolerance 0.3: the printed moyenne is computed from the daily
+    observations and is only close to the midpoint); the wind days add to at most the days of the year
+    (they add to 365 at only some stations: days without observation are not counted); the vent dominant is the direction with the most days (calm aside)."""
+    out, t = [], "meteo_climate"
+    ndays = Decimal(366 if sec["year"] % 4 == 0 else 365)
+    for r in sec["rows"]:
+        c = r["cells"]
+        m = re.match(r"^(.*?)\s*\((\d)\)$", r["label"])
+        station, note = (m.group(1), FOOTNOTES[(sec["ed"], m.group(2))]) if m else (r["label"], "")
+        for mx, mn, me, what in (("hmax", "hmin", "hmean", "hottest month"), ("cmax", "cmin", "cmean",
+                                 "coldest month"), ("ymax", "ymin", "ymean", "annual mean")):
+            if c[me].flag != "derived_from_totals" and c[mx].value is not None and c[mn].value is not None:
+                CHK.eq(t, f"{where(sec, r)}: {what} moyenne vs (maxima + minima) / 2", (c[mx].value + c[mn].value)
+                       / 2, c[me].value, Decimal("0.3"))
+        tot = ssum(c[w].value for w in WINDS + ["wcalm"])
+        if tot is not None:   # days without a wind observation are simply not counted: at most the year
+            CHK.n[t] += 1
+            if tot > ndays:
+                CHK.fail[t].append(f"{where(sec, r)}: wind days add to {tot}, more than the {ndays} days of the year")
+        if c["wdom"].value and all(c[w].value is not None for w in WINDS):
+            top = max(c[w].value for w in WINDS)
+            got = " - ".join(w[1:] for w in WINDS if c[w].value == top)
+            CHK.n[t] += 1
+            if set(got.split(" - ")) != set(c["wdom"].value.split(" - ")):
+                CHK.fail[t].append(f"{where(sec, r)}: vent dominant printed {c['wdom'].value}, most days {got}")
+        base = {"census": sec["ed"], "table_id": "climate_essentials", "gallica_ark": sec["ark"], "year": sec["year"],
+                "region": r["region"], "station": station, "note_fr": note}
+        for col, meas, mfr, unit, dcol in CLIMATE:
+            cell = c[col]
+            left = sec["cols"].index(col) < sec["split"]
+            date = c[dcol].value if dcol else None
+            out.append(dict(base, source_page=sec["page"] + (not left), gallica_view=sec["view"] + (not left),
+                            measure=meas, measure_fr=mfr, unit=unit, value=cell.value, date_fr=date or "",
+                            text_fr="", obs=cell.obs, flag=FLAGS.get((sec["ed"], r["label"], col), cell.flag)))
+        w = c["wdom"]
+        out.append(dict(base, source_page=sec["page"] + 1, gallica_view=sec["view"] + 1, measure="dominant_wind",
+                        measure_fr="Vent dominant", unit="direction", value=None, date_fr="", text_fr=w.value or "",
+                        obs="" if w.value else "no_observation", flag="not_applicable"))
+    return out
+
+
+MEANS_COLS = [(f"m{i:02d}", MONTHS[i - 1], MONTHS_FR[i - 1], "month") for i in (9, 10, 11, 12, 1, 2, 3, 4, 5, 6, 7, 8)]
+MEANS_COLS += [(k, en, fr, "season") for k, en, fr in SEASONS] + [("yr", "year", "Année", "year")]
+SEASON_MONTHS = {"aut": ("m09", "m10", "m11"), "win": ("m12", "m01", "m02"), "spr": ("m03", "m04", "m05"),
+                 "sum": ("m06", "m07", "m08")}
+
+
+def means_cells(sec):
+    """d) Mean rainfall (whole mm) by month, season and year for a period; every printed cell is a row (the
+    printed seasons and year are means in their own right, not totals of rows). Checks (rounding tolerance):
+    each season = its three months (1 mm), Année = the four seasons (2 mm)."""
+    out, t = [], "meteo_means"
+    for r in sec["rows"]:
+        c = r["cells"]
+        ok = lambda ks: all(c[k].obs in ("", "traces") and c[k].flag not in ("illegible", "derived_from_totals")
+                            for k in ks)
+        for s, ms in SEASON_MONTHS.items():
+            if ok(ms + (s,)):
+                CHK.eq(t, f"{sec['ed']} p.{sec['page']} (f{sec['view']}) {r['station']} {r['label']}: months vs "
+                       f"{s}", ssum(c[m].value for m in ms), c[s].value, Decimal(1))
+        if ok(tuple(SEASON_MONTHS) + ("yr",)):
+            CHK.eq(t, f"{sec['ed']} p.{sec['page']} (f{sec['view']}) {r['station']} {r['label']}: seasons vs "
+                   f"Année", ssum(c[s].value for s in SEASON_MONTHS), c["yr"].value, Decimal(2))
+        for col, en, fr, level in MEANS_COLS:
+            cell = c[col]
+            out.append({"census": sec["ed"], "table_id": "rainfall_means", "gallica_ark": sec["ark"],
+                        "source_page": sec["page"], "gallica_view": sec["view"], "year": None,
+                        "station": r["station"], "period": r["label"], "level": level, "month": en,
+                        "month_fr": fr, "measure": "rainfall_mean",
+                        "measure_fr": "Pluies moyennes mensuelles, par saison et annuelles", "unit": "mm",
+                        "value": cell.value, "obs": cell.obs,
+                        "flag": FLAGS.get((sec["ed"], r["station"], r["label"], col), cell.flag)})
+    return out
+
+
 DOC = {
     "census": "Source edition (`sgt1936` = *Statistique générale de la Tunisie*, 1936 edition).",
     "table_id": "`rainfall_solar_year` = *Relevé pluviométrique, année (solaire)*.",
@@ -274,14 +443,14 @@ TABLES = {
                    "are printed and whose Année is printed",
         doc={"table_id": "`rainfall_agricultural_year` = *a) Relevé pluviométrique de l'année agricole*.",
              "source_page": "Printed page number (one page per table).",
-             "year": "Year in which the agricultural year (September-August) ends (1929-1930 = 1930); NA for "
+             "year": "Year in which the agricultural year (September-August) ends (1928-1929 = 1929, 1929-1930 = 1930); NA for "
                      "the normals.",
-             "region": "Natural-region heading as printed in part a) (e.g. `Kroumirie`, `Mogods`, `Golfe de "
+             "region": "Natural-region heading as printed in sgt1930 part a) (sgt1929 prints no headings in part a): the sgt1930 names are supplied for the same groups) (e.g. `Kroumirie`, `Mogods`, `Golfe de "
                        "Tunis`, `Région de Dakla`), without roman numerals, in title case with accents restored "
                        "as in the solar-year tables. The part a) regions differ from the part b) regions.",
              "controle": "Empty (part a) has no contrôle headings).",
              "station": "Rain-gauge station exactly as printed.",
-             "period": "`1929-1930` for the observations of the agricultural year; `1901-1925` for the printed "
+             "period": "`1928-1929` / `1929-1930` for the observations of the agricultural year; `1901-1925` for the printed "
                        "normal annual rainfall.",
              "season": "`autumn`, `winter`, `spring`, `summer`, or `year` (normal annual rainfall).",
              "season_fr": "Column heading as printed.",
@@ -291,13 +460,84 @@ TABLES = {
              "unit": "`mm` (millimètres, one decimal).",
              "value": "Value as printed; NA when nothing was printed (`—`).",
              "obs": "`traces` (\"gouttes\": value 0); `no_observation` (\"—\", value NA). Empty otherwise.",
-             "flag": "Empty, `not_applicable` (dash printed: see `obs`), `illegible`."}),
+             "flag": "Empty, `not_applicable` (dash printed: see `obs`), `illegible`, `derived_from_totals` "
+                     "(sgt1929: damaged digit typed as the printed Année minus the other seasons), "
+                     "`total_mismatch` (sgt1930 Menzel-Temime Printemps)."}),
     "meteo_rainfall_monthly": dict(
         title_fr="Relevé pluviométrique : hauteur totale de pluie en millimètres et dixièmes, par station et par mois",
         title_en="Rainfall record: total rainfall in millimetres by station and month (solar year)", idx=0),
     "meteo_rain_days": dict(
         title_fr="Relevé pluviométrique : nombre de jours de pluie, par station et par mois",
         title_en="Rainfall record: number of rainy days by station and month (solar year)", idx=1),
+    "meteo_climate": dict(
+        title_fr="Données climatologiques essentielles fournies par les principales régions tunisiennes",
+        title_en="Essential climatological data of the main Tunisian regions: rainfall, temperatures and winds "
+                 "by station", idx=3,
+        dims=["region", "station", "note_fr", "measure", "measure_fr", "unit", "date_fr", "text_fr"],
+        rows_text="(one per station and measure: rainfall and rainy days of the year; maxima, minima and "
+                  "moyenne of the hottest and of the coldest month; absolute (extrême annuelle) maxima and minima "
+                  "with their dates; annual mean maxima, minima and moyenne; days of the year by dominant wind "
+                  "direction N ... NW and calm; plus one `dominant_wind` row per station). The dominant wind "
+                  "(*vent dominant*) is a direction, not a number: its row has `value` NA, flag "
+                  "`not_applicable`, and the printed direction in `text_fr` (e.g. `NW`, `SE - SW`).",
+        check_text="moyenne = (maxima + minima) / 2 within 0.3 degree (an approximate identity: at 0.1 degree "
+                   "eleven sgt1930 cells differ by 0.15-0.3, so the printed moyenne is not exactly the midpoint; in sgt1929 the hottest-month moyenne is printed systematically below the midpoint), for the hottest month, the coldest month "
+                   "and the annual mean, where both are printed; wind days N ... NW + calm at most the days of "
+                   "the year (sgt1930: they add to exactly 365 at only 17 of the 31 stations: days without observation are "
+                   "not counted, so equality is not an identity); printed vent dominant = direction(s) with the most days (calm aside)",
+        doc={"table_id": "`climate_essentials` = *c) Données climatologiques essentielles fournies par les "
+                         "principales régions tunisiennes*.",
+             "source_page": "Printed page of the cell (rainfall and the hottest / coldest month on the left "
+                            "page, the rest on the right page).",
+             "year": "Calendar year of the observations.",
+             "region": "Region heading as printed (vertical, without accents in print: `REGION DES OASIS`), "
+                       "typed with accents restored (`Région du Nord`, `Région du Nord-Est`, `Région Centrale`, "
+                       "`Sahel`, `Région des Oasis`, `Extrême Sud`, `Sahara`).",
+             "station": "Localité as printed, without its footnote marker.",
+             "note_fr": "Footnote of the station as printed (missing months), empty otherwise.",
+             "measure": "`rainfall`, `rain_days`, `temp_hottest_month_max|min|mean`, "
+                        "`temp_coldest_month_max|min|mean`, `temp_absolute_max|min`, `temp_annual_mean_max|min`, "
+                        "`temp_annual_mean`, `wind_days_n` ... `wind_days_nw`, `calm_days`, `dominant_wind`.",
+             "measure_fr": "Column heading as printed (group : column).",
+             "unit": "`mm`, `days`, `degC` (degrees Celsius, one decimal) or `direction`.",
+             "date_fr": "For `temp_absolute_max|min`: month(s) of the extreme as printed (`Juil.`, `J. F.` = "
+                        "janvier and février, `J. D.` = janvier and décembre); empty otherwise.",
+             "text_fr": "For `dominant_wind`: the printed direction; empty otherwise.",
+             "value": "Value as printed; NA when a dash is printed and for `dominant_wind`.",
+             "obs": "`no_observation` (\"—\" printed, value NA); `traces` (sgt1929 Fort Saint rainfall "
+                    "printed \"0\" = gouttes, value 0). Empty otherwise.",
+             "flag": "Empty, `not_applicable` (dash printed, or the text row `dominant_wind`), "
+                     "`derived_from_totals` (sgt1930 Fort Saint coldest-month moyenne: decimal smudged, "
+                     "typed (maxima + minima) / 2), `illegible` (sgt1929 Tabarca annual moyenne printed \"18°\" "
+                     "without its decimal), `row_realigned` (sgt1929 Ben-Gardane extrême maxima, printed one "
+                     "line low)."}),
+    "meteo_means": dict(
+        title_fr="Pluies moyennes mensuelles, par saison et annuelles",
+        title_en="Mean monthly, seasonal and annual rainfall by station and period", idx=4,
+        dims=["station", "period", "level", "month", "month_fr", "measure", "measure_fr", "unit"],
+        rows_text="(one per station, period and printed column: twelve months September-August, four seasons, "
+                  "the year). These retrospective means exist only as means (the yearly values behind them are "
+                  "not printed in the same edition), so every printed cell is stored, the seasons and the year "
+                  "included; `year` is NA.",
+        check_text="each season = sum of its three months within 1 mm and the Année = sum of the four seasons "
+                   "within 2 mm (the means are printed rounded to whole millimetres), where every cell is printed",
+        doc={"table_id": "`rainfall_means` = *d) Pluies moyennes mensuelles, par saison et annuelles pour les "
+                         "périodes : 1926-1930 et 1901-1930*.",
+             "source_page": "Printed page number (one page per table).",
+             "year": "NA (means of a period: see `period`).",
+             "station": "Station heading as printed.",
+             "period": "Period of the mean as printed (`1926-1930`, `1901-1930`).",
+             "level": "`month`, `season` or `year`.",
+             "month": "Month (English), season (`autumn` = September-November, `winter`, `spring`, `summer`) or "
+                      "`year` (agricultural year September-August).",
+             "month_fr": "Column heading as printed.",
+             "measure": "`rainfall_mean` (mean rainfall over the period).",
+             "measure_fr": "Table heading as printed.",
+             "unit": "`mm` (whole millimetres).",
+             "value": "Mean as printed; 0 for \"gttes\"; NA when a dash is printed.",
+             "obs": "`traces` (\"gttes\", gouttes: value 0); `no_observation` (\"—\", value NA).",
+             "flag": "Empty, `not_applicable` (dash printed), `derived_from_totals` (sgt1930 p. 290 Sfax "
+                     "1926-1930 Hiver, broken type, typed as the sum of its three months)."}),
 }
 
 SURVEY = {
@@ -318,20 +558,36 @@ SURVEY = {
                "Printemps, Eté, Année 1929-30, Année 1901-1925 (p. 266 head misprinted \"1901-1905\"), stations "
                "grouped by natural region (Kroumirie ... Extrême Sud), no contrôle headings; transcribed "
                "(meteo_rainfall_season). f826-f843 (p. 268-285) *b) Relevé pluviométrique de l'année 1930*, nine "
-               "two-page spreads (left page: stations and Millimètres de pluie by month; right page: the rest of "
-               "the mm and Total, then Nombre de jours by month and Total; the exact split column is to be "
-               "confirmed when transcribing), key \"Signes conventionnels : — pas d'observation; × ...\" across "
-               "the top of the spread; NOT YET TRANSCRIBED. f844|f845 (p. 286-287) *c) Données climatologiques "
+               "two-page spreads (left page: stations and Millimètres de pluie January-November; right page: "
+               "December and Total, then Nombre de jours January-December and Total), key \"Signes "
+               "conventionnels : — pas d'observation; × le nombre de jours manque; O gouttes; O. I. observations "
+               "incomplètes\" across the top of the spread; transcribed (meteo_rainfall_monthly, "
+               "meteo_rain_days). f844|f845 (p. 286-287) *c) Données climatologiques "
                "essentielles fournies par les principales régions tunisiennes (année 1930)*, one spread: localités "
                "grouped by region, Pluies (millimètres, nombre de jours), Température moyenne du mois le plus chaud "
                "/ le plus froid (moyennes, maxima, minima), Température absolue (maxima, minima, with dates), "
                "nombre de jours au cours de l'année pendant lesquels le vent a soufflé de N, NE, E, SE, S, SW, W, "
-               "NW, calme, vent dominant; footnotes (1)-(3) on missing months; NOT YET TRANSCRIBED. f846-f849 "
+               "NW, calme, vent dominant; footnotes (1)-(5) on missing months; transcribed (meteo_climate, "
+               "meteo_sgt1930_cd.txt). f846-f849 "
                "(p. 288-291) *Pluies moyennes mensuelles, par saison et annuelles pour les périodes : 1926-1930 et "
                "1901-1930*, two lines (1926-1930, 1901-1930) per station (Tabarka ... Tatahouine), columns "
-               "Septembre-Août, Automne, Hiver, Printemps, Eté, Année; NOT YET TRANSCRIBED (means only: "
-               "meteo_means).",
-    "sgt1929": "f284-f312 Météorologie, parts a)-d) (views per part not yet surveyed page by page).",
+               "Septembre-Août, Automne, Hiver, Printemps, Eté, Année, 39 stations; transcribed (means only: "
+               "meteo_means, meteo_sgt1930_cd.txt).",
+    "sgt1929": "Météorologie at the end of the Agriculture chapter, printed pages 256-284 (same volume and ark "
+               "as sgt1930). f284-f290 (p. 256-262) *a) Relevé pluviométrique de l'année agricole (1928-1929)*, "
+               "one table per page: Automne, Hiver, Printemps, Eté, Année 1928-29, Année 1901-1925; the station "
+               "groups are separated by blank lines only (no region headings printed: the sgt1930 region names "
+               "are supplied); transcribed (meteo_rainfall_season). f291 blank. f292-f309 (p. 264-281) *b) "
+               "Relevé pluviométrique* of 1929, nine two-page spreads (left page: stations and mm "
+               "January-November, November at the binding gutter; right page: December, Total, Nombre de jours "
+               "January-December, Total), key \"— pas d'observation; × le nombre de jours manque; O gouttes; "
+               "O. I. observations incomplètes\" (a bare \"0\" in a mm column = gouttes); transcribed "
+               "(meteo_rainfall_monthly, meteo_rain_days). f310|f311 (p. 282-283) *c) Données climatologiques "
+               "essentielles fournies par les principales régions tunisiennes (année 1929)*, one spread, same "
+               "columns as sgt1930, 30 localités, footnotes (1)-(2); transcribed (meteo_climate, "
+               "meteo_sgt1929_cd.txt). f312 (p. 284) *Station centrale de la Manoubia de Tunis, année 1929*: "
+               "rainfall by wind direction and month, frequency of rainy winds, dominant wind on rainy days (fits "
+               "no meteo_ table; not transcribed). No part d) (means) is printed.",
     "sgt1928": "f806-f835 Météorologie, parts a)-d) (views per part not yet surveyed page by page).",
     "sgt1927": "f282-f287 a) relevé pluviométrique de l'année agricole 1926-1927; f288-f303 b) année solaire 1927 "
                "(mm | jours spreads); f304|f305 c) données climatologiques essentielles 1927; f306|f307 d) période "
@@ -370,8 +626,7 @@ PLANNED = [
 def build(write=True):
     secs = []
     for ed in ORDER:
-        p = TR / f"{PREFIX}_{ed}.txt"
-        if p.exists():
+        for p in sorted(TR.glob(f"{PREFIX}_{ed}.txt")) + sorted(TR.glob(f"{PREFIX}_{ed}_*.txt")):
             secs += parse(p, ed)
     recs = {k: [] for k in TABLES}
     for s in secs:
@@ -381,6 +636,10 @@ def build(write=True):
             mm, d = rain_cells(s)
             recs["meteo_rainfall_monthly"] += mm
             recs["meteo_rain_days"] += d
+        if s["table"] == "climate":
+            recs["meteo_climate"] += climate_cells(s)
+        if s["table"] == "means":
+            recs["meteo_means"] += means_cells(s)
     res = {}
     for out, spec in TABLES.items():
         rows = recs[out]
@@ -401,11 +660,12 @@ def build(write=True):
     return res
 
 
-REMAINING = ("Transcribed: sgt1936 f123-f144 (complete), sgt1935 f166-f183 (complete) and sgt1930 part a) "
-             "f818-f825 (complete). NOT YET TRANSCRIBED: sgt1930 parts b) f826-f843, c) f844-f845 and d) "
-             "f846-f849; every Météorologie page of sgt1929 (f284-f312), sgt1928 (f806-f835), sgt1927 "
-             "(f282-f307), sgt1926 (f819-f845), sgt1925 (f309-f334), sgt1924 (f1247-f1268), sgt1923 (f745-f764) and "
-             "sgt1922 (f255-f273). Tables meteo_climate and meteo_means are designed but have no rows yet.")
+REMAINING = ("Transcribed: sgt1936 f123-f144 (complete), sgt1935 f166-f183 (complete), sgt1930 f818-f849 "
+             "(parts a)-d), complete) and sgt1929 f284-f311 (parts a)-c)). NOT YET TRANSCRIBED: sgt1929 f312 "
+             "(Manoubia rainfall by wind direction and month: fits no existing meteo_ table, would need a table "
+             "of its own); every Météorologie page of sgt1928 (f806-f835), sgt1927 (f282-f307), sgt1926 "
+             "(f819-f845), sgt1925 (f309-f334), sgt1924 (f1247-f1268), sgt1923 (f745-f764) and sgt1922 "
+             "(f255-f273). meteo_climate holds sgt1929-sgt1930; meteo_means holds sgt1930 only.")
 
 
 def write_md(out, spec, rows, cols, eds, fails):
