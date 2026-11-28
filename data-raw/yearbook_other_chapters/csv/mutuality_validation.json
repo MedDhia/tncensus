@@ -1946,6 +1946,75 @@
    "sgt1939"
   ]
  },
+ "mutuality_balance_sheets": {
+  "rows": 365,
+  "checks": 117,
+  "failed": [
+   "sgt1928 p.472 (f1024) bilan [bpf assets] 2 — Comptes-courant (Avances en cours): printed sum = solde précédent + entries: cells give 13710908.43, printed 13710898.43 (difference -10.00)",
+   "sgt1928 p.473 (f1025) bilan [bpf liabilities] TOTAL = sum of the items: cells give 9241999.35, printed 9241999.30 (difference -0.05)",
+   "sgt1928 p.476 (f1028) bilan [mf assets] subtotal Valeurs immobilisées = its lines: cells give 956977.66, printed 967961.94 (difference 10984.28)",
+   "sgt1928 p.476 (f1028) bilan [mf assets] TOTAL = sum of the items: cells give 1303600.92, printed 1314585.20 (difference 10984.28)",
+   "sgt1929 p.475 (f503) bilan [bpf liabilities] TOTAL = sum of the items: cells give 12404466.46, printed 12404456.46 (difference -10.00)",
+   "sgt1929 p.477 (f505) bilan [ctc liabilities] TOTAL = sum of the items: cells give 6436403.15, printed 6438403.15 (difference 2000.00)",
+   "sgt1929 p.478 (f506) bilan [mf assets] subtotal Valeurs immobilisées = its lines: cells give 990488.49, printed 1038953.09 (difference 48464.60)",
+   "sgt1929 p.478 (f506) bilan [mf assets] TOTAL = sum of the items: cells give 1279564.75, printed 1328029.35 (difference 48464.60)",
+   "sgt1930 p.482 (f1040) bilan [ctc assets] TOTAL = sum of the items: cells give 8058412.30, printed 8138412.30 (difference 80000.00)",
+   "sgt1930 p.483 (f1041) bilan [ctc liabilities] TOTAL = sum of the items: cells give 8138403.30, printed 8138412.30 (difference 9.00)",
+   "sgt1930 p.484 (f1042) bilan [mf assets] subtotal Valeurs immobilisées = its lines: cells give 990488.49, printed 1038953.09 (difference 48464.60)",
+   "sgt1930 p.484 (f1042) bilan [mf assets] TOTAL = sum of the items: cells give 1279564.75, printed 1328029.35 (difference 48464.60)"
+  ],
+  "overlap_compared": 0,
+  "overlap_diffs": [],
+  "flagged": [
+   "sgt1928 1928 2 — Comptes-courant (Avances en cours) : Solde de l'Exercice précédent = 565731.84 (total_mismatch)"
+  ],
+  "editions": [
+   "sgt1926",
+   "sgt1927",
+   "sgt1928",
+   "sgt1929",
+   "sgt1930"
+  ]
+ },
+ "labour_early_accidents_nationality": {
+  "rows": 156,
+  "checks": 57,
+  "failed": [],
+  "overlap_compared": 0,
+  "overlap_diffs": [],
+  "flagged": [],
+  "editions": [
+   "sgt1922",
+   "sgt1923",
+   "sgt1924"
+  ]
+ },
+ "labour_early_accidents_outcome": {
+  "rows": 117,
+  "checks": 96,
+  "failed": [],
+  "overlap_compared": 0,
+  "overlap_diffs": [],
+  "flagged": [],
+  "editions": [
+   "sgt1922",
+   "sgt1923",
+   "sgt1924"
+  ]
+ },
+ "labour_early_accidents_causes": {
+  "rows": 585,
+  "checks": 132,
+  "failed": [],
+  "overlap_compared": 0,
+  "overlap_diffs": [],
+  "flagged": [],
+  "editions": [
+   "sgt1922",
+   "sgt1923",
+   "sgt1924"
+  ]
+ },
  "_chapter_views": {
   "sgt1922": [
    457,

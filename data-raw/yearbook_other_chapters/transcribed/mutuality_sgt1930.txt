@@ -126,3 +126,125 @@ cols: seed camp subs mort adv total cancel diff r_seed r_camp r_subs r_mort r_ad
 1929 | 8302601.48 703958 0 3689282.47 343989 13039830.95 457617.18 12582213.77 21173131.19 445669.49 2127896.06 674104.50 386446.39 24807247.63 -
 1930 | 4422059.81 243050 67480 5780983.75 838660 11352233.56 149150.37 11203083.19 5446084.61 379861.29 478037.16 780904.26 391989.46 7476876.78 45757282.96
 TOTAUX | 148865470.35 2020436.60 27920738.21 18027700.04 5471221.11 202305566.31 2146209.12 200159357.19 129647689.17 1819345.34 14763140.18 4108676.89 4060222.65 164402074.23 45757282.96
+
+# ---------------------------------------------------------------- bilans (banques populaires, coopérative de consommation)
+# f1038|f1039 (p. 480|481) BANQUES POPULAIRES. a) Bilan de la Banque Populaire Française de Tunisie au 31 décembre 1930
+# and Comptes des Profits et Pertes; f1040|f1041 (p. 482|483) b) Bilan de la Coopérative tunisienne de crédit au 31
+# décembre 1930; f1042|f1043 (p. 484|485) SOCIETES COOPERATIVES DE CONSOMMATION. Bilan de la Société coopérative dite
+# « La Maison Française » (no date printed): every figure and label is the same as in the sgt1929 printing (the same
+# balance reprinted), typed from this edition's own image. Format as in sgt1926. Every cell read on native crops
+# (0.5-0.7x; the Coopérative tunisienne columns at 1x).
+# Coopérative tunisienne: actif lines give 8.058.412,30 for the printed TOTAL 8.138.412,30 (80.000 short; only three
+# actif lines are printed); passif lines give 8.138.403,30 (9,00 short). « La Maison Française »: the same Valeurs
+# immobilisées failure as in sgt1929.
+@bilan view=1038 page=480 inst=bpf date="31 décembre 1930" side=assets
+img: all
+cols: value
+Caisses et Banques | 3555111.39
+Comptes-courants | 1674477.64
+Correspondants | 451968.70
+Effets à l'encaissement | 652841.55
+Effets à recevoir | 6954665.27
+Participations à diverses Sociétés | 150000
+Avances sur fonds spécial | 142777.87
+Avances aux artisans | 284109.30
+Fonds d'Etat | 511800
+Titres et marchandises | 1116012.15
+Crédits par acceptations | 50000
+Agence de Béja | 83828.55
+Caisse de secours | 10000
+Mobilier | 4
+Compte d'ordre | 9948.16
+TOTAL | 15647544.58
+@bilan view=1039 page=481 inst=bpf date="31 décembre 1930" side=liabilities
+img: all
+cols: value
+Capital | 1300000
+Avances de l'Etat | 5400000
+Fonds spécial (avances de l'Etat) | 96000
+Crédit à l'artisanat | 208970.50
+Réserve légale | 169436.80
+Réserve spéciale | 97392.97
+Bénéfices reportés | 229746.18
+Provisions pour amortissement divers | 170960.17
+Dividendes des exercices précédents restant à payer | 32611
+Comptes de dépôts à vue à 4 % | 5675217.75
+Comptes d'encaissement | 839750.35
+Titres et marchandises en garantie | 656716.70
+Titres remis en dépôts | 459295.45
+Actionnaires | 2500
+Caisse de prévoyance du personnel | 13656.74
+Acceptations | 50000
+Réescompte de portefeuille | 48225.05
+Profits et pertes | 197064.92
+TOTAL | 15647544.58
+@pl view=1038 page=480 inst=bpf date="31 décembre 1930" side=debit
+img: all
+cols: value
+Frais généraux | 324515.02
+Caisses prévoyance et secours | 17588.37
+Crédit à l'artisanat-réserve | 8970.50
+Réescompte du portefeuille | 48225.05
+Bénéfices de l'exercice | 197064.92
+TOTAL | 596363.86
+@pl view=1039 page=481 inst=bpf date="31 décembre 1930" side=credit
+img: all
+cols: value
+Intérêts et commissions | 596363.86
+TOTAL | 596363.86
+@bilan view=1040 page=482 inst=ctc date="31 décembre 1930" side=assets
+img: all
+cols: value
+Caisse et Banques | 461533.05
+Portefeuille | 7096474.80
+Comptes débiteurs | 500404.45
+TOTAL | 8138412.30
+@bilan view=1041 page=483 inst=ctc date="31 décembre 1930" side=liabilities
+img: all
+cols: value
+Capital | 1000000
+Fonds de réserves | 917713.35
+Profits et pertes | 298683.30
+Trésor | 5040000
+Comptes courants créditeurs | 570800.95
+Créditeurs | 311205.70
+TOTAL | 8138412.30
+@bilan view=1042 page=484 inst=mf date="" side=assets
+img: all
+cols: value
+Valeurs disponibles court terme : Caisse, espèces en caisse | 6904
+Valeurs disponibles court terme : Caisse d'épargne, espèces déposées | 150.26
+Valeurs disponibles court terme : Office Postal, solde virements | 1819.79
+Valeurs disponibles court terme : Effets à recevoir, effets en portefeuille | 102.50
+Valeurs disponibles court terme : Marchandises, stock en magasin | 100224.80
+SUBTOTAL Valeurs disponibles court terme | 109201.35
+Valeurs disponibles long terme : Comptes Courants, soldes débiteurs | 91379.27
+SUBTOTAL Valeurs disponibles long terme | 91379.27
+Valeurs immobilisées : Débiteurs douteux, clients en litiges | 67122.20
+Valeurs immobilisées : Immeubles, valeur en 1927 | 900000
+Valeurs immobilisées : Mobilier et matériel, frais de 1er établissement et d'amélioration | 11284.28
+Valeurs immobilisées : Fédération des Coopératives de France, solde en compte | 511.61
+Valeurs immobilisées : Titres et valeurs, titres déposés à la Banque Populaire française | 7200
+Valeurs immobilisées : Frais généraux anticipés, frais divers, avances | 4370.40
+SUBTOTAL Valeurs immobilisées | 1038953.09
+Compte de résultat : Résultat d'inventaire, solde débiteur | 88495.64
+SUBTOTAL Compte de résultat | 88495.64
+TOTAL | 1328029.35
+@bilan view=1043 page=485 inst=mf date="" side=liabilities
+img: all
+cols: value
+Valeurs exigibles court terme : Fournisseurs, soldes créditeurs | 121458.05
+Valeurs exigibles court terme : Comptes Courants, soldes créditeurs | 20000
+Valeurs exigibles court terme : Banquier, solde créditeur | 58528.70
+SUBTOTAL Valeurs exigibles court terme | 199986.75
+Valeurs exigibles long terme : Cautionnements | 399500
+Valeurs exigibles long terme : Créance de l'Etat | 16327.35
+SUBTOTAL Valeurs exigibles long terme | 415827.35
+Compte du capital : Actions libérées | 183498.10
+SUBTOTAL Compte du capital | 183498.10
+Réserves : Réserve sur débiteurs douteux | 29141.25
+Réserves : Réserve légale | 4239.66
+SUBTOTAL Réserves | 33380.91
+Compte d'ordre : Redressement valeur immeuble | 495336.24
+SUBTOTAL Compte d'ordre | 495336.24
+TOTAL | 1328029.35

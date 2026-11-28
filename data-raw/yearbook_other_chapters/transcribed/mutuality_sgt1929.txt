@@ -124,3 +124,127 @@ cols: seed camp subs mort adv total cancel diff r_seed r_camp r_subs r_mort r_ad
 1928 | 44240438.47 13200 5260515.82 1962269.24 405288.24 51881711.77 117755.42 51763956.35 32012273.27 39458.62 1517885.82 404870.02 530253.93 34504741.66 -
 1929 | 8302601.48 703958 0 3689282.47 343989 13039830.95 457617.18 12582213.77 21173131.19 445669.49 2127896.06 674104.50 386446.39 24807247.63 42030076.55
 TOTAUX | 144443410.54 1777386.60 27853258.21 12246716.29 4632561.11 190953332.75 1997058.75 188956274.00 124201604.56 1439484.05 14285103.02 3327772.63 3671233.19 146926197.45 42030076.55
+
+# ---------------------------------------------------------------- bilans (banques populaires, coopérative de consommation)
+# f502|f503 (p. 474|475) BANQUES POPULAIRES. a) Bilan de la Banque Populaire Française de Tunisie au 31 décembre 1929
+# (actif / passif) and Comptes des Profits et Pertes (débit f502, crédit f503); f504|f505 (p. 476|477) b) Bilan de la
+# Coopérative tunisienne de crédit au 31 décembre 1929; f506|f507 (p. 478|479) SOCIETES COOPERATIVES DE CONSOMMATION.
+# Bilan de la Société coopérative dite « La Maison Française » (no date printed). Format as in sgt1926. Every cell
+# read on native crops (0.5-0.7x; the BPF actif column, next to the binding, and every failed check at 1-1.2x).
+# Coopérative tunisienne: the passif lines (re-read at 1x) give 6.436.403,15, 2.000 below the printed TOTAL 6.438.403,15
+# (= the actif). « La Maison Française », Valeurs immobilisées: printed group figure 1.038.953,09 for six lines giving
+# 990.488,49 (48.464,60 short; no blank line this time); the side total agrees with the group figure. Valeurs
+# exigibles long terme: Cautionnements 399.500 and Créance de l'Etat 16.327,35 (sgt1928: Créance 399.500,
+# Cautionnements 11.627,35): the two labels look swapped, stored as printed.
+@bilan view=502 page=474 inst=bpf date="31 décembre 1929" side=assets
+img: all
+cols: value
+Caisses et Banques | 3004141.33
+Participations | 75000
+Comptes-courants | 1181281.65
+Correspondants | 255567.20
+Effets à l'encaissement | 707949
+Effets à recevoir | 5579297.94
+Avances sur fonds spécial | 156983.54
+Avances aux artisans | 134744.15
+Fonds d'Etat | 523600
+Titres et marchandises | 735887.65
+Crédits par acceptations | 50000
+Mobilier | 4
+TOTAL | 12404456.46
+@bilan view=503 page=475 inst=bpf date="31 décembre 1929" side=liabilities
+img: all
+cols: value
+Capital | 1100000
+Avances de l'Etat | 3600000
+Fonds de prévoyance | 150000
+Fonds spécial | 96000
+Réserve légale | 132143.95
+Réserve spéciale | 76600.12
+Bénéfices reportés | 188160.50
+Augmentation de capital | 9600
+Dividendes à payer | 28219
+Comptes de dépôts | 5040455.04
+Comptes d'encaissement | 802643.85
+Titres et marchandises en garantie | 333966.70
+Titres en dépôt | 401920.95
+Crédit artisanal | 150000
+Caisse de prévoyance | 6539.62
+Effets à payer | 11731.45
+Acceptations | 50000
+Réescompte de portefeuille | 36444.75
+Compte d'ordre | 3576.30
+Profits et pertes | 186464.23
+TOTAL | 12404456.46
+@pl view=502 page=474 inst=bpf date="31 décembre 1929" side=debit
+img: all
+cols: value
+Frais généraux | 258196.65
+Caisse de prévoyance | 11493.42
+Réescompte du portefeuille | 36444.75
+Bénéfices de l'exercice | 186464.23
+TOTAL | 492599.05
+@pl view=503 page=475 inst=bpf date="31 décembre 1929" side=credit
+img: all
+cols: value
+Intérêts et commissions | 492599.05
+TOTAL | 492599.05
+@bilan view=504 page=476 inst=ctc date="31 décembre 1929" side=assets
+img: all
+cols: value
+Caisse et Banques | 306990.30
+Portefeuille | 5804875.50
+Correspondants | 40677.65
+Artisanat | 44905
+Frais d'installation et mobilier | 40954.70
+Actionnaires | 200000
+TOTAL | 6438403.15
+@bilan view=505 page=477 inst=ctc date="31 décembre 1929" side=liabilities
+img: all
+cols: value
+Capital | 700000
+Effets à payer (Trésor) | 4140000
+Comptes-courants | 364023.65
+Réserves | 249202.55
+Profits et pertes | 839913.15
+Intérêts à payer | 143263.80
+TOTAL | 6438403.15
+@bilan view=506 page=478 inst=mf date="" side=assets
+img: all
+cols: value
+Valeurs disponibles court terme : Caisse, espèces en caisse | 6904
+Valeurs disponibles court terme : Caisse d'épargne, espèces déposées | 150.26
+Valeurs disponibles court terme : Office Postal, solde virements | 1819.79
+Valeurs disponibles court terme : Effets à recevoir, effets en portefeuille | 102.50
+Valeurs disponibles court terme : Marchandises, stock en magasin | 100224.80
+SUBTOTAL Valeurs disponibles court terme | 109201.35
+Valeurs disponibles long terme : Comptes Courants, soldes débiteurs | 91379.27
+SUBTOTAL Valeurs disponibles long terme | 91379.27
+Valeurs immobilisées : Débiteurs douteux, clients en litiges | 67122.20
+Valeurs immobilisées : Immeubles, valeur en 1927 | 900000
+Valeurs immobilisées : Mobilier et matériel, frais de 1er établissement et d'amélioration | 11284.28
+Valeurs immobilisées : Fédération des Coopératives de France, solde en compte | 511.61
+Valeurs immobilisées : Titres et valeurs, titres déposés à la Banque Populaire française | 7200
+Valeurs immobilisées : Frais généraux anticipés, frais divers, avances | 4370.40
+SUBTOTAL Valeurs immobilisées | 1038953.09
+Compte de résultat : Résultat d'inventaire, solde débiteur | 88495.64
+SUBTOTAL Compte de résultat | 88495.64
+TOTAL | 1328029.35
+@bilan view=507 page=479 inst=mf date="" side=liabilities
+img: all
+cols: value
+Valeurs exigibles court terme : Fournisseurs, soldes créditeurs | 121458.05
+Valeurs exigibles court terme : Comptes Courants, soldes créditeurs | 20000
+Valeurs exigibles court terme : Banquier, solde créditeur | 58528.70
+SUBTOTAL Valeurs exigibles court terme | 199986.75
+Valeurs exigibles long terme : Cautionnements | 399500
+Valeurs exigibles long terme : Créance de l'Etat | 16327.35
+SUBTOTAL Valeurs exigibles long terme | 415827.35
+Compte du capital : Actions libérées | 183498.10
+SUBTOTAL Compte du capital | 183498.10
+Réserves : Réserve sur débiteurs douteux | 29141.25
+Réserves : Réserve légale | 4239.66
+SUBTOTAL Réserves | 33380.91
+Compte d'ordre : Redressement valeur immeuble | 495336.24
+SUBTOTAL Compte d'ordre | 495336.24
+TOTAL | 1328029.35

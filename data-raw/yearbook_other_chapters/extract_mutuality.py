@@ -789,6 +789,394 @@ def write_survey():
     (OUT / "mutuality_survey.md").write_text("\n".join(L) + "\n")
 
 
+# ----------------------------------------------------------------- bilans (rule 5: one balance per edition)
+
+INST = {"bpf": ("banque_populaire_francaise", "Banque populaire française de Tunisie"),
+        "ctc": ("cooperative_tunisienne_credit", "Coopérative tunisienne de crédit"),
+        "mf": ("maison_francaise", None)}
+MF_FR = {"sgt1926": "« Maison Française »", "sgt1927": "« Société coopérative de consommation »",
+         "sgt1928": "Société coopérative dite « La Maison Française »",
+         "sgt1929": "Société coopérative dite « La Maison Française »",
+         "sgt1930": "Société coopérative dite « La Maison Française »"}
+STATEMENT = {"bilan": "balance_sheet", "pl": "profit_loss"}
+PLACES = (("la goulette", "la_goulette"), ("franceville", "franceville"), ("tunis", "tunis"))
+# (pattern searched in the lower-cased label, code); first match wins. Patterns on the full label (with headings).
+ITEM_RULES = [
+    (r"solde de l.exercice précédent", "@_opening_balance"), (r"avances sonsenties|remis en 1928|escomptés en 1928|"
+                                                             r"reçu en dépôt", "@_entries_year"),
+    (r"remboursements effectués|encaissés en 1928|payé en 1928", "@_exits_year"),
+    (r"^2 — comptes-courant", "current_accounts"), (r"^3 — correspondants", "correspondents"),
+    (r"^4 — effets à l.encaissement", "bills_for_collection"), (r"^5 — effets à recevoir", "bills_receivable"),
+    (r"comptes de dépôts", "deposits"),
+    (r"redressement valeur immeuble", "property_value_adjustment"),
+    (r"compte du capital, résultats", "capital_account_inventory_result"),
+    (r"résultat d.inventaire", "inventory_result"),
+    (r"actions libéré|capital souscrit en circulation", "share_capital_paid"),
+    (r"augmentation de capital", "capital_increase"), (r"^capital", "capital"),
+    (r"caisses? et banques|caisse et banques", "cash_banks"),
+    (r"caisse d.epargne|caisse d.épargne", "savings_bank"), (r"office postal", "postal_account"),
+    (r"banque, solde créditeur|banquier, solde créditeur", "bank_overdraft"), (r"banquier", "banker"),
+    (r"caisse, espèces|espèces en caisse|réalisables : caisse$", "cash"),
+    (r"caisses prévoyance et secours", "provident_relief_funds"), (r"caisse de secours", "relief_fund"),
+    (r"caisse de prévoyance", "staff_provident_fund"),
+    (r"titres en dépôt à la", "securities_deposited"),
+    (r"titres et marchandises en garantie", "securities_goods_pledged"),
+    (r"titres et marchandises", "securities_goods"), (r"titres et valeurs", "securities"),
+    (r"titres (remis )?en garantie", "securities_pledged"), (r"titres (remis )?en dépôt", "securities_deposited"),
+    (r"comptes courants et clients de passage", "current_accounts_occasional_customers"),
+    (r"clients de passage", "occasional_customers"),
+    (r"comptes courants créditeurs", "creditor_current_accounts"),
+    (r"comptes courants, avances|comptes courants : avances|comptes courants, soldes créditeurs",
+     "current_account_advances"),
+    (r"soldes débiteurs|clients débiteurs|débiteurs divers", "debtors"),
+    (r"débiteurs douteux", "doubtful_debtors"), (r"comptes débiteurs", "debtor_accounts"),
+    (r"comptes?[- ]courants?", "current_accounts"), (r"correspondants", "correspondents"),
+    (r"effets escomptés", "bills_discounted"), (r"effets à l.encaissement", "bills_for_collection"),
+    (r"effets à recevoir", "bills_receivable"),
+    (r"effets à payer au trésor|effets à payer \(trésor\)", "bills_payable_treasury"),
+    (r"effets à payer", "bills_payable"), (r"factures à payer", "invoices_payable"),
+    (r"notes à payer", "notes_payable"),
+    (r"bons du trésor \(amort", "treasury_bonds_redemption"), (r"bons du trésor", "treasury_bonds"),
+    (r"trésor et sociétés? de prévoyance", "treasury_provident_societies"), (r"^trésor$", "treasury"),
+    (r"mobiliers et frais d.installation|frais d.installation et mobilier", "furniture_installation"),
+    (r"mobilier et matériel|matériel de magasin : matériel", "furniture_equipment"), (r"^mobilier$", "furniture"),
+    (r"frais de première installation|frais de premier établissement", "setup_costs"),
+    (r"agence de sousse", "branch_sousse_setup_costs"), (r"agence de béja", "branch_beja"),
+    (r"comptes? d.ordre", "suspense_accounts"),
+    (r"participation", "participations"), (r"avances de l.etat", "state_advances"),
+    (r"fonds de prévoyance", "provident_fund"), (r"fonds spécial", "special_fund"),
+    (r"avances sur fonds spécial", "special_fund_advances"),
+    (r"réserves? légale", "legal_reserve"), (r"réserve spéciale", "special_reserve"),
+    (r"réserve sur débiteurs douteux", "reserve_doubtful_debtors"), (r"réserves|fonds de réserves", "reserves"),
+    (r"bénéfices reportés", "retained_profits"), (r"profits et pertes", "profit_loss_balance"),
+    (r"dividendes", "dividends_payable"), (r"comptes d.encaissements?", "collection_accounts"),
+    (r"réescompte et intérêts à payer", "rediscount_interest_payable"), (r"réescompte", "rediscount"),
+    (r"intérêts à payer", "interest_payable"), (r"intérêts et commissions", "interest_commissions"),
+    (r"crédit à l.artisanat-réserve", "artisan_credit_reserve"),
+    (r"crédit à l.artisanat : prêts|avances aux artisans|^artisanat", "loans_artisans"),
+    (r"crédit artisanal|crédit de l.artisanat|crédit à l.artisanat", "artisan_credit_fund"),
+    (r"fonds d.etat", "government_securities"), (r"crédits par acceptations", "acceptance_credits"),
+    (r"acceptations", "acceptances"), (r"actionnaires", "shareholders"),
+    (r"provisions pour amortissement", "depreciation_provisions"),
+    (r"frais généraux anticipés", "prepaid_expenses"), (r"fournitures de bureau", "office_supplies"),
+    (r"loyer anticipé", "prepaid_rent"), (r"frais généraux", "general_expenses"),
+    (r"bénéfices? nets?|bénéfices de l.exercice|solde ou bénéfice net", "net_profit"),
+    (r"portefeuille", "portfolio"), (r"créditeurs$", "creditors"),
+    (r"achats|stock", "stock"), (r"immeuble à tunis|immeubles|valeur actuelle immeuble", "building"),
+    (r"travaux neufs", "building_works"), (r"frais d.achats? d.immeubles?|frais d.achat immeuble",
+                                           "building_purchase_costs"),
+    (r"fédération des coopératives", "federation_cooperatives"),
+    (r"litiges maritimes", "maritime_claims"), (r"litiges à recouvrer", "claims_recoverable"),
+    (r"divers manquants", "goods_shortfalls"), (r"créance de l.etat", "state_claim"),
+    (r"cautionnements", "guarantees"), (r"créanciers divers|fournisseurs", "suppliers_creditors"),
+]
+
+
+def item_code(label):
+    import re
+    low = label.lower()
+    for pat, code in ITEM_RULES:
+        if re.search(pat, low):
+            if code.startswith("@"):
+                parent = label.split(" : ")[0]
+                return item_code(parent) + code[1:]
+            break
+    else:
+        raise KeyError(f"no item code for {label!r}")
+    leaf = low.split(" : ")[-1]
+    if code in ("stock", "guarantees", "setup_costs", "furniture_equipment", "debtors"):
+        for p, c in PLACES:
+            if p in leaf:
+                return f"{code}_{c}"
+    return code
+
+
+BAL_FLAGS = {("sgt1928", "bpf", "assets", "2 — Comptes-courant (Avances en cours) : Solde de l'Exercice précédent"):
+             "total_mismatch"}
+BAL_SIDES = {}
+
+
+def chk_bilan(sec):
+    out = "mutuality_balance_sheets"
+    w = f"{where(sec)} [{sec['inst']} {sec['side']}]"
+    rows = [r for r in sec["rows"] if "cells" in r]
+    items = [r for r in rows if r["label"] != "TOTAL" and not r["label"].startswith(("SUBTOTAL ", "DSUM ", "DETAIL "))]
+    val = {id(r): r["cells"]["value"].value for r in rows}
+    for i, r in enumerate(rows):
+        lab = r["label"]
+        if lab.startswith("SUBTOTAL "):
+            g = lab[9:] + " : "
+            CHK.eq(out, f"{w} subtotal {lab[9:]} = its lines", ssum(val[id(x)] for x in items
+                                                                     if x["label"].startswith(g)), val[id(r)])
+        elif lab.startswith("DSUM "):
+            j, parts = i - 1, []
+            while j >= 0 and rows[j]["label"].startswith("DETAIL "):
+                parts.append(val[id(rows[j])])
+                j -= 1
+            CHK.eq(out, f"{w} {lab[5:]}: printed sum = solde précédent + entries", ssum(parts), val[id(r)])
+            nxt, bal = rows[i + 1], rows[i + 2]
+            CHK.eq(out, f"{w} {lab[5:]}: balance = printed sum - exits", val[id(r)] - val[id(nxt)], val[id(bal)])
+        elif lab == "TOTAL":
+            CHK.eq(out, f"{w} TOTAL = sum of the items", ssum(val[id(x)] for x in items), val[id(r)])
+            BAL_SIDES[(sec["ed"], sec["inst"], sec["table"], sec["side"])] = val[id(r)]
+    if sec["table"] == "pl" and sec["side"] == "debit":
+        BAL_SIDES[(sec["ed"], sec["inst"], "net_profit")] = val[id(items[-1])]
+    if sec["table"] == "bilan" and sec["inst"] == "bpf" and sec["side"] == "liabilities":
+        BAL_SIDES[(sec["ed"], sec["inst"], "pp")] = [val[id(x)] for x in items
+                                                     if x["label"].lower().startswith("profits et pertes")][0]
+
+
+def chk_bilan_sides():
+    out = "mutuality_balance_sheets"
+    for (ed, inst, tab, side), v in list(BAL_SIDES.items()) if False else []:
+        pass
+    keys = sorted({(k[0], k[1], k[2]) for k in BAL_SIDES if len(k) == 4}, key=lambda k: (ORDER.index(k[0]), k[1:]))
+    for ed, inst, tab in keys:
+        a, b = (("assets", "liabilities") if tab == "bilan" else ("debit", "credit"))
+        CHK.eq(out, f"{ed} {inst} {'bilan' if tab == 'bilan' else 'profits et pertes'}: {a} total = {b} total",
+               BAL_SIDES[(ed, inst, tab, a)], BAL_SIDES[(ed, inst, tab, b)])
+        if tab == "pl":
+            CHK.eq(out, f"{ed} {inst}: bénéfice net (profits et pertes) = profits et pertes (bilan passif)",
+                   BAL_SIDES[(ed, inst, "net_profit")], BAL_SIDES[(ed, inst, "pp")])
+
+
+CHECKS.update({"bilan": chk_bilan, "pl": chk_bilan})
+
+
+def cells_bilan(sec):
+    out, n = [], 0
+    code, ifr = INST[sec["inst"]]
+    ifr = ifr or MF_FR[sec["ed"]]
+    date = sec.get("date", "")
+    year = int(date[-4:]) if date else int(sec["ed"][3:])
+    for r in sec["rows"]:
+        lab = r.get("label", "")
+        if "cells" not in r or lab == "TOTAL" or lab.startswith(("SUBTOTAL ", "DSUM ")):
+            continue
+        n += 1
+        detail = lab.startswith("DETAIL ")
+        lab = lab.removeprefix("DETAIL ")
+        cell = r["cells"]["value"]
+        out.append(dict(base(sec, year), institution=code, institution_fr=ifr, date_fr=date,
+                        statement=STATEMENT[sec["table"]], side=sec["side"], line_no=n,
+                        line_type="detail" if detail else "item", item=item_code(lab), item_fr=lab,
+                        unit="francs", value=cell.value,
+                        flag=BAL_FLAGS.get((sec["ed"], sec["inst"], sec["side"], lab), cell.flag)))
+    return out
+
+
+# ----------------------------------------------------------------- labour_early_* (accidents du travail, sgt1922-sgt1924)
+
+ACC_CAT = {"Alimentation": "food", "Métallurgie": "metallurgy", "Tabac, Services d'Etat": "tobacco_state_services",
+           "Electricité, Eau, Gaz": "electricity_water_gas", "Mines et Carrières": "mines_quarries",
+           "Transports : transport": "transport_operations", "Transports : ateliers": "transport_workshops",
+           "Construction": "construction", "Manutention": "handling", "Chaux et Ciment": "lime_cement",
+           "Industrie du bois": "wood_industry", "Agriculture": "agriculture", "Autres": "other"}
+ACC_NAT = {"french": "Français", "italian": "Italiens", "indigenous": "Indigènes", "foreign": "Etrangers"}
+ACC_SEV = {"dead": ("dead", "Morts"), "inc_more1m": ("incapacity_over_1_month", "Incapacités de plus d'un mois"),
+           "inc_less1m": ("incapacity_under_1_month", "Incapacités de moins d'un mois")}
+ACC_CAUSE = {
+    "motors": ("machine_motors", "Moteurs"), "transmission": ("machine_transmission", "Transmission"),
+    "machines": ("machine_tools_looms", "Machines outils, Métiers"),
+    "lifting": ("lifting", "Ascenseurs, Grues, Appareils de levage"),
+    "autoclaves": ("autoclaves", "Autoclaves, Chaudières à vapeur"), "explosives": ("explosives", "Explosifs"),
+    "hot_matter": ("hot_matter", "Matières incandescentes, brûlantes, corrosives"),
+    "falling_objects": ("falling_objects", "Eboulements, chute d'objets, etc."),
+    "worker_fall": ("worker_fall", "Chute de l'ouvrier d'une échelle, etc."),
+    "handling": ("handling", "Manutention de fardeaux"),
+    "traction": ("traction", "Traction - Accidents occasionnés par les animaux"),
+    "hand_tools": ("hand_tools", "Outils à main : scies, hâches, marteaux"),
+    "miscellaneous": ("miscellaneous", "Causes diverses"), "unknown": ("unknown", "Causes inconnues"),
+    "footwear": ("footwear", "Défaut de chaussures")}
+ACC_TOT = defaultdict(dict)
+
+
+def acc_rows(sec):
+    return [r for r in sec["rows"] if "cells" in r and r["label"] != "Totaux"]
+
+
+def chk_acc(sec):
+    out = {"acc_nat": "labour_early_accidents_nationality", "acc_sev": "labour_early_accidents_outcome",
+           "acc_cause": "labour_early_accidents_causes"}[sec["table"]]
+    parts = sec["cols"][:-1]
+    for r in sec["rows"]:
+        if "cells" in r:
+            c = r["cells"]
+            CHK.eq(out, f"{where(sec)} {r['label']}: total = sum of the columns", ssum(c[p].value for p in parts),
+                   c["total"].value)
+    t = row(sec, "Totaux")
+    for k in sec["cols"]:
+        CHK.eq(out, f"{where(sec)} {k}: Totaux = sum of the lines", ssum(r["cells"][k].value for r in acc_rows(sec)),
+               t[k].value)
+    ACC_TOT[sec["ed"]][sec["table"]] = {r["label"]: r["cells"]["total"].value for r in sec["rows"] if "cells" in r}
+    if len(ACC_TOT[sec["ed"]]) == 3:
+        a = ACC_TOT[sec["ed"]]
+        for lab, v in a["acc_nat"].items():
+            for t2 in ("acc_sev", "acc_cause"):
+                o2 = {"acc_sev": "labour_early_accidents_outcome", "acc_cause": "labour_early_accidents_causes"}[t2]
+                CHK.eq(o2, f"{sec['ed']} {lab}: total of {t2} = total of acc_nat", a[t2][lab], v)
+
+
+CHECKS.update({"acc_nat": chk_acc, "acc_sev": chk_acc, "acc_cause": chk_acc})
+
+
+def page_of(sec, col):
+    if sec.get("split") and sec["cols"].index(col) >= sec["cols"].index(sec["split"]):
+        return int(sec["page2"]), int(sec["view2"])
+    return sec["page"], sec["view"]
+
+
+def cells_acc(sec):
+    out = []
+    y = int(sec["ed"][3:])
+    for r in acc_rows(sec):
+        for c in sec["cols"]:
+            if c == "total":
+                continue
+            p, v = page_of(sec, c)
+            d = dict(base(sec, y, v, p), category=ACC_CAT[r["label"]], category_fr=r["label"])
+            if sec["table"] == "acc_nat":
+                d.update(nationality=c, nationality_fr=ACC_NAT[c])
+            elif sec["table"] == "acc_sev":
+                d.update(outcome=ACC_SEV[c][0], outcome_fr=ACC_SEV[c][1])
+            else:
+                d.update(cause=ACC_CAUSE[c][0], cause_fr=ACC_CAUSE[c][1])
+            cell = r["cells"][c]
+            d.update(value=cell.value, flag=cell.flag)
+            out.append(d)
+    return out
+
+
+ACC_PARA = ("Printed in the chapter *Institutions économiques et sociales* (XIV) of sgt1922-sgt1924 before the labour "
+            "tables moved to the chapter *Travail et prévoyance sociale* (extracted by `extract_labour.py` as "
+            "`labour_accidents_*` from sgt1925). No year in the titles: `year` = edition year (the same convention as "
+            "`labour_accidents_*`). The 13 printed 'professions' are exactly those of sgt1925-sgt1926 and carry the "
+            "same `category` codes (Transports split into transport / ateliers); row totals (Totaux column) and the "
+            "Totaux line are checks only, as is the agreement of each profession's total across tables a), b) and c) "
+            "(it holds in every edition). Chaux et Ciment is printed » in every column of sgt1923.")
+EARLY = {
+    "labour_early_accidents_nationality": dict(
+        secs=["acc_nat"], dims=["category", "category_fr", "nationality", "nationality_fr"],
+        title_fr="Accidents du travail. a) Répartition d'après la nationalité des victimes",
+        title_en="Industrial accidents by occupation and nationality of the victim, sgt1922-sgt1924",
+        paras=[ACC_PARA, "Same columns and codes as `labour_accidents_nationality` (sgt1925-sgt1926 layout: Français, "
+               "Italiens, Indigènes, Etrangers); the two files can be stacked."]),
+    "labour_early_accidents_outcome": dict(
+        secs=["acc_sev"], dims=["category", "category_fr", "outcome", "outcome_fr"],
+        title_fr="Accidents du travail. b) Répartition d'après la gravité",
+        title_en="Industrial accidents by occupation and outcome (deaths, incapacity over / under one month), "
+                 "sgt1922-sgt1924",
+        paras=[ACC_PARA, "Same columns and codes as `labour_accidents_outcome` in its sgt1925-sgt1926 layout (morts, "
+               "incapacités de plus d'un mois, de moins d'un mois); from sgt1927 that table uses other outcome "
+               "categories (incapacité permanente / temporaire, suites inconnues), which do not line up with these."]),
+    "labour_early_accidents_causes": dict(
+        secs=["acc_cause"], dims=["category", "category_fr", "cause", "cause_fr"],
+        title_fr="Accidents du travail. c) Causes matérielles des accidents par catégorie professionnelle",
+        title_en="Industrial accidents by occupation and material cause, sgt1922-sgt1924",
+        paras=[ACC_PARA, "Two-page spread in each edition (`source_page`/`gallica_view` = page of each cell; the "
+               "split falls after Matières incandescentes, which sgt1922 and sgt1923 repeat on the left edge of the "
+               "right-hand page with the same figures). The 15 causes and their codes are those of "
+               "`labour_accidents_causes` for sgt1925-sgt1926 (moteurs ... défaut de chaussures); sgt1927 and later "
+               "use a different list."]),
+}
+EARLY_DOC = {
+    "category": "occupational category (English code, same as `labour_accidents_*` sgt1925-sgt1926)",
+    "category_fr": "profession as printed", "nationality": "nationality of the victim (English code)",
+    "nationality_fr": "printed heading", "outcome": "outcome of the accident (English code)",
+    "outcome_fr": "printed heading", "cause": "material cause (English code)", "cause_fr": "printed heading",
+    "value": "printed value (» = 0)", "flag": "empty (no cell flagged)", "year": "edition year (no year printed)",
+    "census": "edition (each edition kept)",
+}
+
+BAL_DOC = {
+    "census": "edition (each edition kept)",
+    "year": "year of the balance date (« La Maison Française » sgt1928-sgt1930, no date printed: edition year)",
+    "institution": "`banque_populaire_francaise`, `cooperative_tunisienne_credit`, `maison_francaise` (the "
+                   "consumers' cooperative « La Maison Française », called « Société coopérative de consommation » in "
+                   "sgt1927)",
+    "institution_fr": "institution as named in the title",
+    "date_fr": "balance date as printed (empty: not printed)",
+    "statement": "`balance_sheet` (bilan) or `profit_loss` (compte de profits et pertes, Banque populaire only)",
+    "side": "`assets` (actif) / `liabilities` (passif); `debit` / `credit` for the profit and loss account",
+    "line_no": "order of the line within its side as printed (subtotals and totals not counted)",
+    "line_type": "`item` (a line of the side; the items add up to the side total) or `detail` (sgt1928 Banque "
+                 "populaire: movements printed in a brace inside an item: balance of the previous year, entries, "
+                 "exits; not part of the side total)",
+    "item": "English code of the line (shared by equivalent lines of different editions; place suffixes "
+            "_tunis/_la_goulette/_franceville for the branches of « La Maison Française »)",
+    "item_fr": "label as printed; nested headings joined with ' : ' (ditto dashes written out)",
+    "unit": "francs", "value": "printed value (» = 0; centimes as decimals)",
+    "flag": "empty or `total_mismatch` (printed cell contradicted by the printed sum it enters)",
+}
+BAL_SPEC = dict(
+    secs=["bilan", "pl"],
+    dims=["institution", "institution_fr", "date_fr", "statement", "side", "line_no", "line_type", "item", "item_fr",
+          "unit"],
+    title_fr="Banques populaires : bilans de la Banque populaire française de Tunisie (et compte de profits et "
+             "pertes) et de la Coopérative tunisienne de crédit ; Sociétés coopératives de consommation : bilan de "
+             "« La Maison Française »",
+    title_en="Balance sheets of the Banque populaire française de Tunisie (with its profit and loss account), the "
+             "Coopérative tunisienne de crédit and the consumers' cooperative « La Maison Française », sgt1926-sgt1930",
+    paras=[
+        "Printed at the end of the chapter *Mutualité agricole et commerciale* in sgt1926-sgt1930 (not before; not in "
+        "sgt1935 or later). One balance per institution and edition (SPEC_ADDENDUM rule 5), stored line by line in "
+        "printed order with `side` and `statement`. Banque populaire française: balance at 31 December of the edition "
+        "year and its compte de profits et pertes. Coopérative tunisienne de crédit: balance at 31 December. « La "
+        "Maison Française »: balance at 11 April 1926 (exercice 1925-1926), at 24 April 1927 (exercice 1926-1927), "
+        "then without a date in sgt1928-sgt1930; sgt1930 reprints the sgt1929 balance unchanged (both kept, as "
+        "printed in each edition).",
+        "Group figures printed in an outer column (« La Maison Française »: valeurs réalisables, disponibles, "
+        "immobilisées ...; Banque populaire 1928 réserves) and the side totals are checks, not rows. Checks: each "
+        "group figure = its lines; each side total = its items; assets = liabilities and debit = credit; the "
+        "Banque populaire bénéfice net (profit and loss) = profits et pertes (liabilities); for the sgt1928 brace "
+        "movements, printed sum = previous balance + entries and balance = printed sum - exits.",
+        "Item codes are translations of the printed lines; labels change between editions (e.g. Effets escomptés "
+        "1926 / Effets à recevoir 1927-1930 are both `bills_*` codes as printed), so codes follow the label, not a "
+        "harmonised chart of accounts. The asset line « Résultat d'inventaire » of « La Maison Française » "
+        "(1928-1930) is a loss; its liability « Solde ou bénéfice net » (1926) a profit."],
+)
+BAL_FAIL = (
+    "sgt1928 Banque populaire, comptes-courant: the solde de l'exercice précédent is printed 565.731,84 (2.5x crop), "
+    "10 more than the printed sum 13.710.898,43 minus the avances 13.145.176,59 and than the comptes courants "
+    "565.721,84 of the sgt1927 balance: flagged `total_mismatch`. « La Maison Française », valeurs immobilisées: "
+    "sgt1928 group figure 967.961,94 for four lines giving 956.977,66 (10.984,28 short; a blank line stands between "
+    "Mobilier et Matériel and Titres et Valeurs, an item evidently dropped); sgt1929 and its reprint sgt1930 "
+    "1.038.953,09 for six lines giving 990.488,49 (48.464,60 short, no line identifiable); in all three the group "
+    "figure gives the side total. Coopérative tunisienne de crédit: sgt1929 passif lines give 6.436.403,15 for the "
+    "printed total 6.438.403,15 (2.000 short; the actif adds up); sgt1930 actif lines give 8.058.412,30 (only three "
+    "lines printed: 80.000 short) and passif lines 8.138.403,30 (9,00 short) for the printed totals 8.138.412,30. "
+    "Banque populaire passif totals: sgt1928 printed 9.241.999,30 for items giving 9.241.999,35 (0,05; the actif "
+    "total 9.241.999,30 equals it) and sgt1929 printed 12.404.456,46 for items giving 12.404.466,46 (10,00; equal to "
+    "the printed actif total); every item re-read on the crop. "
+    "None of these can be assigned to one cell, so no flag.")
+
+
+def build_extra(secs, res, write):
+    chk_bilan_sides()
+    groups = [("mutuality_balance_sheets", BAL_SPEC, cells_bilan, BAL_DOC, BAL_FAIL,
+               "Unit: francs (centimes as decimals); suggested value_type: francs.")]
+    groups += [(o, sp, cells_acc, EARLY_DOC, "", "Unit: accidents; suggested value_type: count.")
+               for o, sp in EARLY.items()]
+    for out, spec, fn, doc, fail, unit in groups:
+        ss = [s for s in secs if s["table"] in spec["secs"]]
+        spec["_eds"] = [e for e in ORDER if any(s["ed"] == e for s in ss)]
+        kept = []
+        for s in ss:
+            kept += fn(s)
+        flagged = [f"{r['census']} {r['year']} {r.get('item_fr', r.get('category_fr'))} = {r['value']} ({r['flag']})"
+                   for r in kept if r["flag"]]
+        res[out] = dict(rows=len(kept), checks=CHK.n[out], failed=list(CHK.fail[out]), overlap_compared=0,
+                        overlap_diffs=[], flagged=flagged, editions=spec["_eds"])
+        if write:
+            cols = COMMON + spec["dims"] + ["value", "flag"]
+            write_csv(out, cols, kept)
+            expl = (["Every failed check below was re-read on a native-resolution crop: the printed values are kept. "
+                     + fail] if CHK.fail[out] else [])
+            paras = spec["paras"] + expl + ["Survey of the whole chapter in every edition: `mutuality_survey.md`."]
+            write_notes(out, CHAPTER, SCRIPT, kept, cols, {c: doc.get(c) or DOC[c] for c in cols}, spec["title_fr"],
+                        spec["title_en"], paras, CHK.n[out], CHK.fail[out], 0, [], coverage_lines(ss),
+                        RULE5, unit)
+
 
 
 def build(write=True):
@@ -833,6 +1221,7 @@ def build(write=True):
             write_notes(out, CHAPTER, SCRIPT, kept, cols, {c: spec.get("doc", {}).get(c) or DOC[c] for c in cols},
                         spec["title_fr"], spec["title_en"], paras, CHK.n[out], CHK.fail[out], n, diffs,
                         coverage_lines(ss), RULE5 if spec.get("rule5") else RULE4, spec["unit"])
+    build_extra(secs, res, write)
     if write:
         write_validation(OUT / f"{PREFIX}_validation.json", dict(res, _chapter_views=CHAPTER_VIEWS, _survey=SURVEY,
                                                                  _not_transcribed=NOT_DONE))

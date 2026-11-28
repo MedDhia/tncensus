@@ -102,3 +102,128 @@ cols: seed camp subs mort adv total cancel diff r_seed r_camp r_subs r_mort r_ad
 1926 | 13569478.97 25540 98854.10 925257.90 165159.60 14784290.57 112972.88 14671317.69 24665653.24 24628.09 2471325.89 634271.25 237999.89 28033878.36 -
 1927 | 7194402.63 122050 0 301363.60 497855 8115671.23 161049.65 7954621.58 2640471.36 91661.95 480885.37 595071.31 323250.13 4131340.12 36132211.33
 TOTAUX | 92904254.76 1060228.60 22808899.99 6596375.98 4941407.83 128311167.16 1429297.75 126881869.41 73234669.67 954355.94 10779996.50 2495328.09 3285307.90 90749658.10 36132211.33
+
+# ---------------------------------------------------------------- bilans (banques populaires, coopérative de consommation)
+# f496 (p. 468) BANQUES POPULAIRES. a) Bilan de la Banque populaire française de Tunisie au 31 décembre 1927 and its
+# Compte de Profits et Pertes; b) Bilan de la Coopérative tunisienne de Crédit au 31 décembre 1927. f497 blank.
+# f498|f499 (p. 470|471) Bilan au 24 avril 1927 de la « Société coopérative de consommation », exercice 1926-1927
+# (the « Maison Française » of sgt1926 and sgt1928; actif f498, passif f499; the 2 of 24 under an ink blot).
+# Format as in sgt1926 (nested headings joined with ' : '; ditto dashes '— à La Goulette' expanded to the full label;
+# SUBTOTAL = group figure printed in an outer column, TOTAL = total of the side; checks only). Every cell read on native
+# crops (0.75-0.85x; Effets à payer 74.241,10, partly hidden by the fold, at 2x).
+@bilan view=496 page=468 inst=bpf date="31 décembre 1927" side=assets
+img: all
+cols: value
+Caisse et banques | 2406323.14
+Comptes courants | 565721.84
+Correspondants | 165170.05
+Effets à recevoir | 2935551.35
+Effets à l'encaissement | 636085.85
+Participation | 12500
+Mobilier | 3
+Titres et marchandises | 523670
+Comptes d'ordre | 601
+TOTAL | 7245626.23
+@bilan view=496 page=468 inst=bpf date="31 décembre 1927" side=liabilities
+img: all
+cols: value
+Capital | 750000
+Effets à payer au Trésor | 2400000
+Fonds de Prévoyance | 150000
+Fonds spécial | 96000
+Réserve légale | 65034.65
+Réserve spéciale | 34240.85
+Bénéfices reportés | 102722.46
+Profits et pertes | 157347.69
+Dividendes à payer | 22044
+Comptes de dépôts | 2048819.03
+Comptes d'encaissement | 817846.85
+Titres en garantie | 310525
+Titres en dépôt | 213145
+Effets à payer | 6580.70
+Réescompte portefeuille | 21320
+Crédit artisanal | 50000
+TOTAL | 7245626.23
+@pl view=496 page=468 inst=bpf date="31 décembre 1927" side=debit
+img: all
+cols: value
+Frais généraux | 173118.99
+Réescompte portefeuille | 21320
+Bénéfice net | 157347.69
+TOTAL | 351786.68
+@pl view=496 page=468 inst=bpf date="31 décembre 1927" side=credit
+img: all
+cols: value
+Intérêts et commissions | 351786.68
+TOTAL | 351786.68
+@bilan view=496 page=468 inst=ctc date="31 décembre 1927" side=assets
+img: all
+cols: value
+Caisses et Banques | 610378.10
+Portefeuille | 3963508.35
+Comptes courants | 670921.95
+Correspondants | 122938.35
+Mobiliers et frais d'installation | 42056.15
+TOTAL | 5409802.90
+@bilan view=496 page=468 inst=ctc date="31 décembre 1927" side=liabilities
+img: all
+cols: value
+Capital | 500000
+Profits et pertes | 456067.85
+Réserves | 133803.45
+Trésor et Société de Prévoyance | 4160000
+Réescompte et intérêts à payer | 77733.65
+Clients de passage | 42197.95
+Crédit artisanal | 40000
+TOTAL | 5409802.90
+@bilan view=498 page=470 inst=mf date="24 avril 1927" side=assets
+img: all
+cols: value
+Valeurs disponibles court terme : Espèces en Caisse | 26603.25
+Valeurs disponibles court terme : Caisse d'Epargne, espèces en dépôt | 139.94
+Valeurs disponibles court terme : Office Postal, virement des débiteurs en dépôt | 69.74
+Valeurs disponibles court terme : Achats : Stock à Tunis | 130451.70
+Valeurs disponibles court terme : Achats : Stock à La Goulette | 18562.85
+Valeurs disponibles court terme : Achats : Stock à Franceville | 5798.45
+SUBTOTAL Valeurs disponibles court terme : Achats | 154813
+SUBTOTAL Valeurs disponibles court terme | 181625.93
+Valeurs disponibles long terme : Titres en dépôt à la B. I. F. de Crédit | 2200
+Valeurs disponibles long terme : Comptes courants : Soldes débiteurs clients | 84027.50
+Valeurs disponibles long terme : Comptes courants : Soldes débiteurs clients La Goulette | 1088.95
+Valeurs disponibles long terme : Comptes courants : Soldes débiteurs clients Franceville | 17950.05
+SUBTOTAL Valeurs disponibles long terme : Comptes courants | 103066.50
+SUBTOTAL Valeurs disponibles long terme | 105266.50
+Immeuble : Valeur actuelle immeuble Tunis | 900000
+Valeurs immobilisées : Frais d'achat immeuble | 21581.60
+Valeurs immobilisées : Travaux neufs immeuble | 28019.40
+Valeurs immobilisées : Mobilier et Matériel : Tunis | 21216.30
+Valeurs immobilisées : Mobilier et Matériel : La Goulette | 9641.25
+Valeurs immobilisées : Mobilier et Matériel : Franceville | 1601.45
+SUBTOTAL Valeurs immobilisées : Mobilier et Matériel | 32459
+Valeurs immobilisées : Frais de premier établissement | 12045.28
+Valeurs immobilisées : Fédération des Coopératives de France | 150.61
+Valeurs immobilisées : Frais généraux : Fournitures de bureau | 2841.55
+Valeurs immobilisées : Frais généraux : Loyer anticipé (Franceville) | 208.34
+Valeurs immobilisées : Marchandises en litiges : Divers manquants constatés | 808.55
+SUBTOTAL Valeurs immobilisées | 98114.33
+Compte du capital, résultats d'inventaire | 28318.70
+TOTAL | 1313325.46
+@bilan view=499 page=471 inst=mf date="24 avril 1927" side=liabilities
+img: all
+cols: value
+Valeurs exigibles court terme : Banque, solde créditeur | 88005
+Valeurs exigibles long terme : Créance de l'Etat | 199500
+Valeurs exigibles long terme : Comptes courants : Avances | 10000
+Valeurs exigibles long terme : Comptes courants : Avances | 5000
+SUBTOTAL Valeurs exigibles long terme : Comptes courants | 15000
+Valeurs exigibles long terme : Attente : Factures à payer | 46499.70
+Valeurs exigibles long terme : Attente : Effets à payer | 74241.10
+SUBTOTAL Valeurs exigibles long terme : Attente | 120740.80
+SUBTOTAL Valeurs exigibles long terme | 335240.80
+Cautionnements : Succursale de La Goulette | 2000
+Cautionnements : Succursale de Franceville | 1400
+SUBTOTAL Cautionnements | 3400
+Compte du capital : Capital souscrit en circulation | 182440
+Réserves : Réserve légale | 4239.66
+Compte d'ordre : Immeuble, redressement valeur immeuble | 700000
+TOTAL | 1313325.46

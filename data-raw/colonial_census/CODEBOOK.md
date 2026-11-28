@@ -324,6 +324,10 @@ Every table is tidy: one row per printed cell. Printed subtotals and totals are 
 | [`commerce_trade_by_country`](#commerce_trade_by_country) | general_e | by edition | 696 | francs | General information: trade with the different countries (value in francs) |
 | [`commerce_customs_duties`](#commerce_customs_duties) | general_f | by edition | 420 | francs | General information: import duties collected, by category of products |
 | [`commerce_export_duties`](#commerce_export_duties) | export_duties | by edition | 452 | francs | Export duties collected, by product |
+| [`mutuality_balance_sheets`](#mutuality_balance_sheets) | bilan;pl | by edition | 365 | francs | Balance sheets of the Banque populaire française de Tunisie (with its profit and loss account), the Coopérative tunisienne de crédit and the consumers' cooperative « La Maison Française », sgt1926-sgt1930 |
+| [`labour_early_accidents_nationality`](#labour_early_accidents_nationality) | acc_nat | by edition | 156 | count | Industrial accidents by occupation and nationality of the victim, sgt1922-sgt1924 |
+| [`labour_early_accidents_outcome`](#labour_early_accidents_outcome) | acc_sev | by edition | 117 | count | Industrial accidents by occupation and outcome (deaths, incapacity over / under one month), sgt1922-sgt1924 |
+| [`labour_early_accidents_causes`](#labour_early_accidents_causes) | acc_cause | by edition | 585 | count | Industrial accidents by occupation and material cause, sgt1922-sgt1924 |
 
 ### eur1906_t1_circonscription_nationality
 
@@ -16223,3 +16227,252 @@ Source `sgt`, table export_duties, printed pages by edition. 452 rows. Value typ
 | Code | Printed label | N |
 |---|---|---:|
 | `francs` |  | 452 |
+
+### mutuality_balance_sheets
+
+**Banques populaires : bilans de la Banque populaire française de Tunisie (et compte de profits et pertes) et de la Coopérative tunisienne de crédit ; Sociétés coopératives de consommation : bilan de « La Maison Française »**  
+*Balance sheets of the Banque populaire française de Tunisie (with its profit and loss account), the Coopérative tunisienne de crédit and the consumers' cooperative « La Maison Française », sgt1926-sgt1930*
+
+Source `sgt`, table bilan;pl, printed pages by edition. 365 rows. Value type: francs. Flags: (empty) 364, total_mismatch 1. Notes and validation: [`../yearbook_other_chapters/csv/mutuality_balance_sheets.md`](../yearbook_other_chapters/csv/mutuality_balance_sheets.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `institution` | Coded dimension. |
+| `institution_fr` | Printed French label for `institution`. |
+| `date_fr` | Place or label as printed (8 distinct values). |
+| `statement` | Coded dimension. |
+| `side` | Coded dimension. |
+| `line_no` | Coded dimension. |
+| `line_type` | Coded dimension. |
+| `item` | Text (114 distinct values). |
+| `item_fr` | Printed French label for `item`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`institution`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `banque_populaire_francaise` | Banque populaire française de Tunisie | 181 |
+| `cooperative_tunisienne_credit` | Coopérative tunisienne de crédit | 56 |
+| `maison_francaise` | Société coopérative dite « La Maison Française » / « Maison Française » / « Société coopérative de consommation » | 128 |
+
+`statement`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `balance_sheet` |  | 342 |
+| `profit_loss` |  | 23 |
+
+`side`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `assets` |  | 173 |
+| `credit` |  | 5 |
+| `debit` |  | 18 |
+| `liabilities` |  | 169 |
+
+`line_no`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `1` |  | 40 |
+| `10` |  | 15 |
+| `11` |  | 14 |
+| `12` |  | 13 |
+| `13` |  | 12 |
+| `14` |  | 10 |
+| `15` |  | 9 |
+| `16` |  | 8 |
+| `17` |  | 6 |
+| `18` |  | 6 |
+| `19` |  | 5 |
+| `2` |  | 35 |
+| `20` |  | 4 |
+| `21` |  | 3 |
+| `22` |  | 2 |
+| `3` |  | 35 |
+| `4` |  | 31 |
+| `5` |  | 30 |
+| `6` |  | 27 |
+| `7` |  | 21 |
+| `8` |  | 20 |
+| `9` |  | 19 |
+
+`line_type`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `detail` |  | 12 |
+| `item` |  | 353 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `francs` |  | 365 |
+
+### labour_early_accidents_nationality
+
+**Accidents du travail. a) Répartition d'après la nationalité des victimes**  
+*Industrial accidents by occupation and nationality of the victim, sgt1922-sgt1924*
+
+Source `sgt`, table acc_nat, printed pages by edition. 156 rows. Value type: count. Flags: (empty) 156. Notes and validation: [`../yearbook_other_chapters/csv/labour_early_accidents_nationality.md`](../yearbook_other_chapters/csv/labour_early_accidents_nationality.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `category` | Coded dimension. |
+| `category_fr` | Printed French label for `category`. |
+| `nationality` | Coded dimension. |
+| `nationality_fr` | Printed French label for `nationality`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`category`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `agriculture` | Agriculture | 12 |
+| `construction` | Construction | 12 |
+| `electricity_water_gas` | Electricité, Eau, Gaz | 12 |
+| `food` | Alimentation | 12 |
+| `handling` | Manutention | 12 |
+| `lime_cement` | Chaux et Ciment | 12 |
+| `metallurgy` | Métallurgie | 12 |
+| `mines_quarries` | Mines et Carrières | 12 |
+| `other` | Autres | 12 |
+| `tobacco_state_services` | Tabac, Services d'Etat | 12 |
+| `transport_operations` | Transports : transport | 12 |
+| `transport_workshops` | Transports : ateliers | 12 |
+| `wood_industry` | Industrie du bois | 12 |
+
+`nationality`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `foreign` | Etrangers | 39 |
+| `french` | Français | 39 |
+| `indigenous` | Indigènes | 39 |
+| `italian` | Italiens | 39 |
+
+### labour_early_accidents_outcome
+
+**Accidents du travail. b) Répartition d'après la gravité**  
+*Industrial accidents by occupation and outcome (deaths, incapacity over / under one month), sgt1922-sgt1924*
+
+Source `sgt`, table acc_sev, printed pages by edition. 117 rows. Value type: count. Flags: (empty) 117. Notes and validation: [`../yearbook_other_chapters/csv/labour_early_accidents_outcome.md`](../yearbook_other_chapters/csv/labour_early_accidents_outcome.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `category` | Coded dimension. |
+| `category_fr` | Printed French label for `category`. |
+| `outcome` | Coded dimension. |
+| `outcome_fr` | Printed French label for `outcome`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`category`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `agriculture` | Agriculture | 9 |
+| `construction` | Construction | 9 |
+| `electricity_water_gas` | Electricité, Eau, Gaz | 9 |
+| `food` | Alimentation | 9 |
+| `handling` | Manutention | 9 |
+| `lime_cement` | Chaux et Ciment | 9 |
+| `metallurgy` | Métallurgie | 9 |
+| `mines_quarries` | Mines et Carrières | 9 |
+| `other` | Autres | 9 |
+| `tobacco_state_services` | Tabac, Services d'Etat | 9 |
+| `transport_operations` | Transports : transport | 9 |
+| `transport_workshops` | Transports : ateliers | 9 |
+| `wood_industry` | Industrie du bois | 9 |
+
+`outcome`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `dead` | Morts | 39 |
+| `incapacity_over_1_month` | Incapacités de plus d'un mois | 39 |
+| `incapacity_under_1_month` | Incapacités de moins d'un mois | 39 |
+
+### labour_early_accidents_causes
+
+**Accidents du travail. c) Causes matérielles des accidents par catégorie professionnelle**  
+*Industrial accidents by occupation and material cause, sgt1922-sgt1924*
+
+Source `sgt`, table acc_cause, printed pages by edition. 585 rows. Value type: count. Flags: (empty) 585. Notes and validation: [`../yearbook_other_chapters/csv/labour_early_accidents_causes.md`](../yearbook_other_chapters/csv/labour_early_accidents_causes.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `category` | Coded dimension. |
+| `category_fr` | Printed French label for `category`. |
+| `cause` | Coded dimension. |
+| `cause_fr` | Printed French label for `cause`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`category`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `agriculture` | Agriculture | 45 |
+| `construction` | Construction | 45 |
+| `electricity_water_gas` | Electricité, Eau, Gaz | 45 |
+| `food` | Alimentation | 45 |
+| `handling` | Manutention | 45 |
+| `lime_cement` | Chaux et Ciment | 45 |
+| `metallurgy` | Métallurgie | 45 |
+| `mines_quarries` | Mines et Carrières | 45 |
+| `other` | Autres | 45 |
+| `tobacco_state_services` | Tabac, Services d'Etat | 45 |
+| `transport_operations` | Transports : transport | 45 |
+| `transport_workshops` | Transports : ateliers | 45 |
+| `wood_industry` | Industrie du bois | 45 |
+
+`cause`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `autoclaves` | Autoclaves, Chaudières à vapeur | 39 |
+| `explosives` | Explosifs | 39 |
+| `falling_objects` | Eboulements, chute d'objets, etc. | 39 |
+| `footwear` | Défaut de chaussures | 39 |
+| `hand_tools` | Outils à main : scies, hâches, marteaux | 39 |
+| `handling` | Manutention de fardeaux | 39 |
+| `hot_matter` | Matières incandescentes, brûlantes, corrosives | 39 |
+| `lifting` | Ascenseurs, Grues, Appareils de levage | 39 |
+| `machine_motors` | Moteurs | 39 |
+| `machine_tools_looms` | Machines outils, Métiers | 39 |
+| `machine_transmission` | Transmission | 39 |
+| `miscellaneous` | Causes diverses | 39 |
+| `traction` | Traction - Accidents occasionnés par les animaux | 39 |
+| `unknown` | Causes inconnues | 39 |
+| `worker_fall` | Chute de l'ouvrier d'une échelle, etc. | 39 |

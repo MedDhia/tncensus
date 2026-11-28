@@ -102,3 +102,149 @@ cols: seed camp subs mort adv total cancel diff r_seed r_camp r_subs r_mort r_ad
 1927 | 7194402.63 122050 0 301363.60 497855 8115671.23 161049.65 7954621.58 2640471.36 91661.95 480885.37 595071.31 323250.13 4131340.12 -
 1928 | 44240438.47 13200 5260515.82 1962269.24 405288.24 51881711.77 117755.42 51763956.35 32012273.27 39458.62 1517885.82 404870.02 530253.93 34504741.66 53568767.60
 TOTAUX | 136604744.97 1073428.60 27853258.21 8558523.57 4449077.36 178539032.73 1542395.22 176996637.51 103707095.76 993814.56 12225446.97 2819887.10 ? 123427869.91 53568767.60
+
+# ---------------------------------------------------------------- bilans (banques populaires, coopérative de consommation)
+# f1024|f1025 (p. 472|473) BANQUES POPULAIRES. a) Bilan de la Banque Populaire Française de Tunisie au 31 Décembre 1928
+# (actif f1024, passif f1025) and Comptes des Profits et Pertes (débit f1024, crédit f1025); f1026|f1027 (p. 474|475)
+# b) Bilan de la Coopérative tunisienne de crédit au 31 décembre 1928 (actif / passif; footnote (1) to Actionnaires:
+# « Emission de 1928 souscrite et non versée »); f1028|f1029 (p. 476|477) SOCIETES COOPERATIVES DE CONSOMMATION. Bilan
+# de la Société coopérative dite « La Maison Française » (no date printed; actif / passif).
+# New in this edition: the BPF items 2, 4, 5 and the comptes de dépôts are printed with their movements in a brace
+# (solde de l'exercice précédent + entries = printed sum; minus exits = balance). DETAIL lines are those movements
+# (stored, line_type detail, not part of the side total); DSUM is the printed intermediate sum (check only); the item
+# line after them is the balance (checked = DSUM - the last DETAIL). Numbers 1-7 printed before the BPF actif items are
+# kept in the labels. Every cell read on native crops (0.55-0.7x; doubtful figures at 1.2-2.5x).
+# Comptes-courant, Solde de l'Exercice précédent printed 565.731,84 (confirmed at 2.5x): the printed sum 13.710.898,43
+# and the balance 565.721,84 printed in sgt1927 (Comptes courants) give 565.721,84 (flagged in the script).
+# « La Maison Française », Valeurs immobilisées: the printed group figure 967.961,94 exceeds its four lines (956.977,66)
+# by 10.984,28; a blank line stands between Mobilier et Matériel and Titres et Valeurs (an item evidently dropped);
+# the side total agrees with the group figure.
+@bilan view=1024 page=472 inst=bpf date="31 Décembre 1928" side=assets
+img: all
+cols: value
+1 — Caisse et banques | 3487849.86
+DETAIL 2 — Comptes-courant (Avances en cours) : Solde de l'Exercice précédent | 565731.84
+DETAIL 2 — Comptes-courant (Avances en cours) : Avances sonsenties en 1928 | 13145176.59
+DSUM 2 — Comptes-courant (Avances en cours) | 13710898.43
+DETAIL 2 — Comptes-courant (Avances en cours) : Remboursements effectués en 1928 | 13213533.03
+2 — Comptes-courant (Avances en cours) : Solde se répartissant entre 110 personnes | 497365.40
+3 — Correspondants (Effets remis pour l'encaissement à la Poste et aux Banques | 195912.95
+DETAIL 4 — Effets à l'encaissement : Solde de l'exercice précédent | 636085.85
+DETAIL 4 — Effets à l'encaissement : Remis en 1928 | 3429355.19
+DSUM 4 — Effets à l'encaissement | 4065441.04
+DETAIL 4 — Effets à l'encaissement : Encaissés en 1928 | 3749397.44
+4 — Effets à l'encaissement : En portefeuille | 316043.60
+DETAIL 5 — Effets à recevoir : Solde de l'Exercice précédent | 2935551.35
+DETAIL 5 — Effets à recevoir : Escomptés en 1928 à 288 sociétaires au taux moyen de 8 % | 16874405.72
+DSUM 5 — Effets à recevoir | 19809957.07
+DETAIL 5 — Effets à recevoir : Encaissés en 1928 | 16376672.62
+5 — Effets à recevoir : En portefeuille | 3433284.45
+6 — Participation au Crédit hôtelier et à la Société du Palais consulaire | 75000
+7 — Avances sur Fonds spécial — Avances consenties à des sociétaires victimes de circonstances malheureuses | 185382.89
+Crédit à l'artisanat : Prêts consentis à 15 petis artisans | 95225.25
+Fonds d'Etat — (Titres de rente des Etats Français et Tunisiens) | 466700
+Titres et marchandises | 478708.30
+Mobilier | 3
+Agence de Sousse — Frais d'installation en cours de cette Agence | 9908.70
+Compte d'Ordre | 614.90
+TOTAL | 9241999.30
+@bilan view=1025 page=473 inst=bpf date="31 Décembre 1928" side=liabilities
+img: all
+cols: value
+Capital divisé en 9.000 actions de 100 fr. souscrites par 531 personnes ou sociétés | 900000
+Avances de l'Etat | 3000000
+Fonds de Prévoyance — Dotation de l'Etat à la création de la banque | 150000
+Dotation de l'Etat — Fonds spécial | 96000
+Crédit de l'Artisanat — Subventions de l'Etat pour prêts aux petits artisans années 1927 et 1929 (années cumulées) | 100000
+Réserves : Réserves légale | 96504.20
+Réserves : Réserve spéciale pour faire face au remboursement des avances de l'Etat | 54460.40
+SUBTOTAL Réserves | 150964.60
+Bénéfices reportés | 143881.05
+Effets à payer | 22315.05
+Dividendes des exercices précédents restant à payer | 25173
+DETAIL Comptes de dépôts à vue à 4 % : Solde de l'Exercice précédent | 2048819.03
+DETAIL Comptes de dépôts à vue à 4 % : Reçu en dépôt en 1928 | 15940018.78
+DSUM Comptes de dépôts à vue à 4 % | 17988837.81
+DETAIL Comptes de dépôts à vue à 4 % : Payé en 1928 | 14448750.79
+Comptes de dépôts à vue à 4 % : Solde de répartissant entre 503 déposants | 3540087.02
+Comptes d'encaissement | 432462.25
+Titres remis en garantie | 202500
+Titres remis en dépôt | 276208.30
+Actionnaires | 3200
+Caisse de Prévoyance du Personnel | 1738.94
+Réescompte du Portefeuille | 19270.50
+Profits et Pertes | 178198.64
+TOTAL | 9241999.30
+@pl view=1024 page=472 inst=bpf date="31 Décembre 1928" side=debit
+img: all
+cols: value
+Frais généraux | 210778.77
+Réescompte du Portefeuille | 19270.50
+Bénéfices nets | 178198.64
+TOTAL | 408247.91
+@pl view=1025 page=473 inst=bpf date="31 Décembre 1928" side=credit
+img: all
+cols: value
+Intérêts et commissions | 408247.91
+TOTAL | 408247.91
+@bilan view=1026 page=474 inst=ctc date="31 décembre 1928" side=assets
+img: all
+cols: value
+Caisses et banques | 419117.05
+Portefeuille | 5561967.70
+Correspondants | 88562.65
+Actionnaires (1) | 200000
+Artisanat (avances faites à l') | 86327.20
+Mobiliers et frais d'installation | 43860.35
+TOTAL | 6399834.95
+@bilan view=1027 page=475 inst=ctc date="31 décembre 1928" side=liabilities
+img: all
+cols: value
+Capital | 700000
+Profits et pertes | 716320.95
+Réserves | 202516.75
+Trésor et Sociétés de Prévoyance | 4160000
+Réescompte et intérêts à payer | 143523
+Comptes courants et clients de passage | 477474.25
+TOTAL | 6399834.95
+@bilan view=1028 page=476 inst=mf date="" side=assets
+img: all
+cols: value
+Valeurs disponibles court terme : Caisse, espèces en caisse | 19050.95
+Valeurs disponibles court terme : Caisse d'Epargne, espèces déposées | 145.19
+Valeurs disponibles court terme : Office Postal, solde au compte courant | 50.69
+Valeurs disponibles court terme : Banquier, en dépôt | 13309.07
+Valeurs disponibles court terme : Effets à recevoir, en portefeuille | 102.50
+Valeurs disponibles court terme : Achats, stock en magasin | 141400
+SUBTOTAL Valeurs disponibles court terme | 174058.40
+Valeurs disponibles long terme : Comptes Courants, clients débiteurs | 98229.60
+Valeurs disponibles long terme : Débiteurs Douteux | 67122.20
+Valeurs disponibles long terme : Litiges Maritimes, manquants à recouvrer | 109
+SUBTOTAL Valeurs disponibles long terme | 165460.80
+Valeurs immobilisées : Immeubles | 900000
+Valeurs immobilisées : Mobilier et Matériel | 49327.05
+Valeurs immobilisées : Titres et Valeurs | 7200
+Valeurs immobilisées : Fédération des Coopératives France | 450.61
+SUBTOTAL Valeurs immobilisées | 967961.94
+Compte de résultat : Résultat d'Inventaire, solde ou déficit net | 7104.06
+SUBTOTAL Compte de résultat | 7104.06
+TOTAL | 1314585.20
+@bilan view=1029 page=477 inst=mf date="" side=liabilities
+img: all
+cols: value
+Valeurs exigibles court terme : Fournisseurs, soldes créditeurs | 160711.90
+Valeurs exigibles court terme : Notes à Payer | 490.70
+Valeurs exigibles court terme : Comptes Courants, Avances | 27860
+Valeurs exigibles court terme : Comptes Courants, Avances | 480
+SUBTOTAL Valeurs exigibles court terme | 189542.60
+Valeurs exigibles long terme : Créance de l'Etat | 399500
+Valeurs exigibles long terme : Cautionnements | 11627.35
+SUBTOTAL Valeurs exigibles long terme | 411127.35
+Compte du capital : Actions libérées | 185198.10
+SUBTOTAL Compte du capital | 185198.10
+Compte d'ordre : Redressement valeur Immeuble | 495336.24
+SUBTOTAL Compte d'ordre | 495336.24
+Réserves : Réserve légale | 4239.66
+Réserves : Réserve sur débiteurs douteux | 29141.25
+SUBTOTAL Réserves | 33380.91
+TOTAL | 1314585.20

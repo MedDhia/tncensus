@@ -105,3 +105,116 @@ cols: seed camp subs mort adv total cancel diff r_seed r_camp r_subs r_mort r_ad
 1925 | 29779643.23 167142 6629818.12 1050292.81 335844.10 37962740.26 613693.99 37349046.27 11033675.79 150709.84 409509.36 312748.74 373546.84 12280190.57 -
 1926 | 13569478.97 25540 98854.10 925257.90 165159.60 14784290.57 112972.88 14671317.69 24665653.24 24628.09 2471325.89 634271.25 237999.89 28033878.36 30261711.73
 TOTAUX | 85937719.37 938178.60 23024787.74 6304767.58 4493683.43 120699136.72 1268370.80 119430765.92 72885905.48 862693.99 10347120.36 2082796.23 2990538.13 89169054.19 30261711.73
+
+# ---------------------------------------------------------------- bilans (banques populaires, coopérative de consommation)
+# f1032 (p. 468) BANQUES POPULAIRES. a) Bilan de la Banque populaire française de Tunisie au 31 décembre 1926 (actif /
+# passif) and its Compte de Profits et Pertes (débit / crédit); b) Bilan de la Coopérative tunisienne de Crédit au 31
+# décembre 1926. f1033 blank. f1034|f1035 (p. 470|471) Bilan au 11 avril 1926 de la « Maison Française », exercice
+# 1925-1926 (actif f1034, passif f1035). Labels as printed; nested headings joined with ' : '. SUBTOTAL lines are the
+# group figures printed in the outer column (checks only); TOTAL = printed total of the side (check only).
+# Every cell read on native crops (0.75-0.85x; doubtful digits at 3x: Trésor et Société de Prévoyance 2.216.000).
+@bilan view=1032 page=468 inst=bpf date="31 décembre 1926" side=assets
+img: all
+cols: value
+Caisse et Banques | 403204.50
+Comptes-courants | 573670.06
+Correspondants | 108862.20
+Effets escomptés | 2373570.02
+Effets à l'encaissement | 363194.35
+Bons du Trésor | 40000
+Mobilier | 2
+Titres et marchandises | 426950
+Comptes d'ordre | 693.50
+TOTAL | 4290146.63
+@bilan view=1032 page=468 inst=bpf date="31 décembre 1926" side=liabilities
+img: all
+cols: value
+Capital | 600000
+Avances de l'Etat | 1000000
+Fonds de prévoyance | 150000
+Fonds spécial | 96000
+Réserve légale | 43748.30
+Réserve spéciale | 21954.50
+Bénéfices reportés | 65863.44
+Bons du Trésor (Amort.) | 20000
+Dividendes à payer | 21278.35
+Comptes de dépôts | 1277242.97
+Comptes d'encaissements | 442008.95
+Titres en garantie | 303860
+Titres en dépôt | 123090
+Réescompte portefeuille | 17025.80
+Comptes d'ordre | 1642.60
+Profits et pertes | 106431.72
+TOTAL | 4290146.63
+@pl view=1032 page=468 inst=bpf date="31 décembre 1926" side=debit
+img: all
+cols: value
+Frais généraux | 116856.51
+Réescompte | 17025.80
+Bénéfice net | 106431.72
+TOTAL | 240314.03
+@pl view=1032 page=468 inst=bpf date="31 décembre 1926" side=credit
+img: all
+cols: value
+Intérêts et commissions | 240314.03
+TOTAL | 240314.03
+@bilan view=1032 page=468 inst=ctc date="31 décembre 1926" side=assets
+img: all
+cols: value
+Caisses et Banques | 127628.77
+Portefeuille | 2473525.10
+Comptes courants | 526024.65
+Correspondants | 46447.25
+Mobiliers et frais d'installation | 45801.56
+TOTAL | 3219427.33
+@bilan view=1032 page=468 inst=ctc date="31 décembre 1926" side=liabilities
+img: all
+cols: value
+Capital | 500000
+Profits et pertes | 289017.29
+Réserves | 92104.05
+Trésor et Société de Prévoyance | 2216000
+Réescompte et intérêts à payer | 81581.39
+Clients de passage | 40724.60
+TOTAL | 3219427.33
+@bilan view=1034 page=470 inst=mf date="11 avril 1926" side=assets
+img: all
+cols: value
+Valeurs réalisables : Caisse | 13008.20
+Valeurs réalisables : Banquier | 9709.70
+Valeurs réalisables : Caisse d'Epargne | 123.29
+Valeurs réalisables : Office Postal | 592.17
+Valeurs réalisables : Effets à recevoir | 1008.40
+SUBTOTAL Valeurs réalisables | 24441.76
+Valeurs en portefeuille : Titres en dépôt à la Banque | 2740
+Valeurs immobilisées : Immeuble à Tunis | 200000
+Valeurs immobilisées : Travaux neufs | 28019.40
+Valeurs immobilisées : Frais d'achats d'immeubles | 21581.60
+SUBTOTAL Valeurs immobilisées | 249601
+Matériel de magasin : Frais de première installation : Tunis | 7944.98
+Matériel de magasin : Frais de première installation : La Goulette | 4100.30
+SUBTOTAL Matériel de magasin : Frais de première installation | 12045.28
+Matériel de magasin : Matériel de magasin : Tunis | 19609.70
+Matériel de magasin : Matériel de magasin : La Goulette | 9630.95
+Matériel de magasin : Matériel de magasin : Franceville | 1277.75
+SUBTOTAL Matériel de magasin : Matériel de magasin | 30518.40
+Comptes courants : Débiteurs divers | 68628.56
+Inventaires : Stocks en magasin : Tunis | 102884.85
+Inventaires : Stocks en magasin : Franceville | 7956.75
+Inventaires : Stocks en magasin : La Goulette | 11900
+SUBTOTAL Inventaires : Stocks en magasin | 122741.60
+Compte d'attente : Litiges à recouvrer | 3933.45
+TOTAL | 514650.05
+@bilan view=1035 page=471 inst=mf date="11 avril 1926" side=liabilities
+img: all
+cols: value
+Capital Actions libéré | 183150
+Créance de l'Etat | 199500
+Cautionnements gérants : Tunis | 7000
+Cautionnements gérants : Franceville | 300
+Cautionnements gérants : La Goulette | 1800
+SUBTOTAL Cautionnements gérants | 9100
+Réserve légale | 3313.56
+Comptes fournisseurs : Créanciers divers | 101064
+Solde ou bénéfice net | 18522.49
+TOTAL | 514650.05

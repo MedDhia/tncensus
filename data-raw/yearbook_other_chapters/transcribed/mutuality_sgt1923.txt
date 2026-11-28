@@ -116,3 +116,66 @@ cols: seed camp subs mort adv total cancel diff r_seed r_camp r_subs r_mort r_ad
 1922 | 3143548.80 0 0 859241.48 663348.95 4666139.23 10676 4655463.23 1975440.91 0 5442.73 112424.25 709089.51 2802397.40 1853065.83
 1923 | 19024251.65 627411.60 0 2617278.74 877229.50 23146171.49 0 23146171.49 15915723.27 547605.66 2402.27 144189.09 368217.21 16978137.50 6168033.99
 TOTAUX | 50254432.30 627411.60 573940.58 5231749.01 3652842.11 60340375.60 18410.30 60321965.30 42516207.03 547605.66 313815.23 1081491.21 2370606.49 46829725.62 13492239.68
+
+# ---------------------------------------------------------------- labour tables printed in this chapter (labour_early_*)
+# Accidents du travail, f949 (p. 447) a) Répartition d'après la nationalité des victimes, b) Répartition d'après la
+# gravité; f950|f951 (p. 448|449) c) Causes matérielles par catégorie professionnelle (spread, upper half; split after
+# Matières incandescentes, repeated on the left edge of f951 with the same figures). No year in the titles: year =
+# edition year. Chaux et Ciment printed » in every column of a), b) and c). Every cell read on native crops (0.8-1x;
+# gutter columns at 2.5x). f951 Transports ateliers / causes inconnues: a smudge where » stands (the row adds up with 0).
+@acc_nat view=949 page=447
+img: all
+cols: french italian indigenous foreign total
+check: total = french + italian + indigenous + foreign
+Alimentation | 22 174 225 23 444
+Métallurgie | 86 448 117 58 709
+Tabac, Services d'Etat | 57 17 97 3 174
+Electricité, Eau, Gaz | 6 25 10 4 45
+Mines et Carrières | 12 349 3168 9 3538
+Transports : transport | 170 99 291 15 575
+Transports : ateliers | 286 178 143 43 650
+Construction | 17 324 276 31 648
+Manutention | 13 132 640 22 807
+Chaux et Ciment | 0 0 0 0 0
+Industrie du bois | 8 153 67 26 254
+Agriculture | 36 50 266 11 363
+Autres | 21 154 209 28 412
+Totaux | 734 2103 5509 273 8619
+
+@acc_sev view=949 page=447
+img: all
+cols: dead inc_more1m inc_less1m total
+check: total = dead + inc_more1m + inc_less1m
+Alimentation | 3 9 432 444
+Métallurgie | 0 4 705 709
+Tabac, Services d'Etat | 0 1 173 174
+Electricité, Eau, Gaz | 0 0 45 45
+Mines et Carrières | 39 110 3389 3538
+Transports : transport | 5 39 531 575
+Transports : ateliers | 1 17 632 650
+Construction | 2 15 631 648
+Manutention | 0 6 801 807
+Chaux et Ciment | 0 0 0 0
+Industrie du bois | 0 1 253 254
+Agriculture | 4 11 348 363
+Autres | 0 3 409 412
+Totaux | 54 216 8349 8619
+
+@acc_cause view=950 page=448 view2=951 page2=449 split=falling_objects
+img: all
+cols: motors transmission machines lifting autoclaves explosives hot_matter falling_objects worker_fall handling traction hand_tools miscellaneous unknown footwear total
+check: total = motors + transmission + machines + lifting + autoclaves + explosives + hot_matter + falling_objects + worker_fall + handling + traction + hand_tools + miscellaneous + unknown + footwear
+Alimentation | 2 10 35 1 0 2 38 86 54 75 17 34 71 8 11 444
+Métallurgie | 3 4 45 3 1 0 65 258 45 93 10 80 90 5 7 709
+Tabac, Services d'Etat | 3 1 21 0 1 0 13 39 26 18 6 16 27 0 3 174
+Electricité, Eau, Gaz | 0 0 1 1 0 0 3 5 9 9 4 4 7 2 0 45
+Mines et Carrières | 0 0 0 0 0 33 0 471 0 0 821 144 2069 0 0 3538
+Transports : transport | 3 1 6 6 0 0 21 74 93 94 23 28 224 2 0 575
+Transports : ateliers | 0 0 56 7 1 0 34 113 50 69 0 64 256 0 0 650
+Construction | 0 0 3 2 0 6 22 208 115 97 68 30 73 5 19 648
+Manutention | 1 1 5 15 0 3 11 361 63 174 70 21 65 10 7 807
+Chaux et Ciment | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Industrie du bois | 0 0 35 1 0 0 14 81 20 25 4 38 30 5 1 254
+Agriculture | 4 11 43 1 1 0 10 42 50 35 110 39 14 1 2 363
+Autres | 0 5 32 2 0 1 31 91 45 62 28 35 67 7 6 412
+Totaux | 16 33 282 39 4 45 262 1829 570 751 1161 533 2993 45 56 8619
