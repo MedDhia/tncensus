@@ -1,0 +1,66 @@
+# Communes chapter, sgt1924 (ark bpt6k9105649x): "Concessions sur la voie publique, a) Autorisations de bâtir".
+# Drafted from Gallica OCR, every cell read on native-resolution crops of the page image.
+# Integers; printed » = 0; 'néant' kept as the word (stored 0); '?' = illegible; 'x' = not applicable (text across the row).
+@permits view=1030 page=40 year=1924
+cols: constructions raising n_auth
+Aïn-Draham | 0 0 0
+Ariana | 14 1 15
+Bardo (Le) | 0 0 0
+Ben-Gardane | 0 0 0
+Béja | 21 0 21
+Bizerte | 14 13 27
+Carthage | 10 4 14
+Djemmal | 0 0 0
+Djerba | 19 2 21
+Ebba-Ksour | 14 0 14
+# El-Djem: "Il n'existe pas de droits de voirie à El-Djem" printed across the row
+El-Djem | x x x
+Ferryville | 6 3 9
+Fériana | 0 0 0
+Foum-Tatahouine | 0 4 26
+Gabès | 8 2 65
+Gafsa | 12 10 22
+Ghardimaou | 2 0 0
+Goulette (La) | 35 10 39
+Grombalia | 28 11 39
+Hadjeb-el-Aïoun | 0 0 0
+Hammam-Lif | 60 2 62
+Hamma (El) | 0 0 0
+Kairouan | 1 1 2
+Kalaa-Kebira | 67 2 69
+Ksour-Essaf | 0 0 0
+Kef (Le) | 10 0 10
+Kram (Le) | 27 2 27
+Krib (Le) | 0 0 0
+Maharès | 15 0 15
+Mahdia | 8 1 9
+Marsa (La) | 37 5 42
+Mateur | 0 0 0
+Maxula-Radès | 17 2 19
+Médenine | 9 0 9
+Medjez-el-Bab | 3 0 3
+M'saken | 0 0 0
+Menzel-bou-Zelfa | 0 0 0
+Menzel-Temime | 7 1 8
+Moknine | 32 0 32
+Monastir | 7 2 9
+Nabeul | 20 2 81
+Nefta | 0 0 0
+Pêcherie (La) | 0 0 0
+Philippe-Thomas | 0 0 0
+Saint-Germain | 6 0 6
+Sfax | 57 30 87
+Sidi-bou-Saïd | 2 0 2
+Soliman | 4 0 4
+Souk-el-Arba | 5 2 7
+Souk-el-Khemis | 4 0 4
+Sousse | 74 14 88
+Tabarka | 0 0 0
+Thala | 0 0 0
+Tebourba | 0 0 0
+Téboursouk | 0 0 0
+Tunis | 479 96 575
+Tozeur | 3 1 4
+Zaghouan | 4 6 45
+Zarzis | 0 0 15
+Totaux | 1129 229 1546

@@ -1,0 +1,40 @@
+# sgt1922 european ark bpt6k9105649x marriages view 39, births/deaths view 40 - transcribed from the full-resolution page images
+[marriages] years: 1918 1919 1920 1921 1922
+# columns per year: grooms brides; TOTAUX: one value per year ("Totaux des mariages")
+Français | 347 254 397 270 746 603 510 376 608 471
+Italiens | 5 85 19 115 35 146 30 122 41 147
+Maltais | 4 18 7 38 9 37 6 29 3 14
+Grecs | 0 1 0 1 1 1 2 1 1 1
+Espagnols | 2 2 1 4 3 4 2 8 0 0
+Autres Européens | 6 4 5 0 5 8 8 13 4 5
+Nationalité non signalée | 1 1 0 1 1 0 0 0 11 30
+TOTAUX | 365 429 800 1107 668
+[mixed]
+# columns: number, brides musulmanes israélites françaises italiennes maltaises étrangères-autres ('.' = cell left blank in print)
+Français | 26 2 24 . . . .
+Italiens | 0 0 0 . . . .
+Maltais | 0 0 0 . . . .
+Etrangers autres | 0 0 0 . . . .
+TOTAL_EUROPEAN_GROOMS | 26 2 24 . . . .
+Musulmans | 4 . . 2 2 . .
+Israélites | 11 . . 11 0 . .
+TOTAL_INDIGENOUS_GROOMS | 15 . . 13 2 . .
+[births] years: 1918 1919 1920 1921 1922
+# columns per year: male female
+Français | 530 503 467 367 800 780 769 766 903 639
+Italiens | 121 130 193 170 1009 946 1203 1159 1382 1237
+Maltais | 24 20 22 13 132 121 186 163 143 127
+Grecs | 6 3 2 2 9 3 5 7 5 7
+Espagnols | 6 6 9 9 10 4 8 9 7 8
+Autres Européens | 16 17 10 16 21 11 44 41 40 34
+SUBTOTAL | 703 679 703 577 1981 1865 2215 2145 2480 2052
+TOTAUX | 1382 1280 3846 4360 4532
+[deaths] years: 1918 1919 1920 1921 1922
+Français | 825 357 733 303 509 353 571 350 570 362
+Italiens | 565 565 528 479 742 671 646 654 654 619
+Maltais | 103 87 94 72 150 124 144 127 109 100
+Grecs | 15 3 7 5 10 7 10 1 5 3
+Espagnols | 8 4 7 9 13 7 6 5 13 3
+Autres Européens | 368 8 130 5 32 16 76 36 53 25
+SUBTOTAL | 1884 1024 1499 873 1456 1178 1453 1173 1404 1112
+TOTAUX | 2908 2372 2634 2626 2516

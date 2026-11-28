@@ -1,0 +1,74 @@
+# Communes chapter, sgt1925 (ark bpt6k9105650k): "Concessions sur la voie publique, b) Terrasses et étalages".
+# Read on native-resolution crops (right-hand page, no labels); value lines matched to the labels of the facing
+# page (view 64) by OCR line position and by counting lines. Gallica OCR as draft only.
+# 'x' = no number: text printed instead (comment on the row).
+@terraces view=65 page=41 year=1925
+cols: terr_n terr_surf terr_prod stall_n stall_surf stall_prod
+Aïn-Draham | 0 0 0 0 586.05 117.30
+Ariana | 1020 3060 995.13 25 4675 1140
+Bardo (Le) | 0 0 0 0 73241 21972.15
+# Béja: "Taxes affermées pour 15.000 francs" across columns 2-5, then 15.000
+Béja | 0 x x x x 15000
+Ben-Gardane | 55200 55200 5520 138 1250 4830
+Bizerte | 0 0 0 0 0 0
+Carthage | 0 1152 384 0 0 0
+Djemmal | 8000 8000 800 4541 4541 454.10
+Djerba | 0 0 0 0 0 0
+Ebba-Ksour | 0 0 0 0 0 0
+# El-Djem: "Droits affermés" across columns 2-5, then 29.927,30
+El-Djem | 0 x x x x 29927.30
+Fériana | 0 0 0 0 0 0
+Ferryville | 500 500 1000 0 1314 3943.89
+Foum-Tatahouine | 0 0 0 16 608 30.40
+Gabès | 28 164 1974 8 32 576
+Gafsa | 150 100 300 100 250 1200
+Ghardimaou | 8 0 250.40 0 1160 611.30
+# Goulette (La): "Y compris les étalages" across columns 3-5 (terraces include stalls)
+Goulette (La) | 0 10646 x x x 5323
+Grombalia | 0 0 0 0 0 0
+Hadjeb-el-Aïoun | 6 36 216 0 0 0
+Hamma (El) | 0 0 0 0 0 0
+Hammam-Lif | 25 456 484.20 350 14326 2148.90
+Kairouan | 110 39600 5940 70890 283487 56697.40
+Kalaa-Kebira | 0 0 0 0 0 0
+# Kef (Le): "Affermés avec les droits de marché moyennant une somme globale de" 38.000
+Kef (Le) | x x x x x 38000
+Kram (Le) | 0 460 230 0 256 128
+Krib (Le) | 0 0 0 0 0 0
+Ksour-Essaf | 707 707 0 0 0 310
+Maharès | 0 0 0 0 0 0
+# Mahdia: "Concédés à l'adjudicataire des marchés" across columns 2-4
+Mahdia | 0 x x x 0 0
+Marsa (La) | 250 48 1275 25 52 1631
+Mateur | 87 0 11861 56 0 1334.50
+Maxula-Radès | 0 0 0 0 0 1359
+# Médenine: stall_n printed "233 50"
+Médenine | 0 163 81.50 233.50 1466.50 1186.50
+Medjez-el-Bab | 10 200 1440 0 0 3115
+Menzel-bou-Zelfa | 0 0 0 0 0 0
+Menzel-Temime | 5 7919 791.70 0 0 0
+Moknine | 0 0 0 0 0 0
+# Monastir: "Produits donnés en fermage avec les marchés municipaux" across columns 1-5
+Monastir | x x x x x 0
+# M'saken: "Stationnement et droit de marché" across columns 2-5, then 12.560,10
+M'saken | 0 x x x x 12560.10
+Nabeul | 450 110 2200 0 0 5820.50
+Nefta | 0 0 0 0 0 0
+Pêcherie (La) | 0 0 0 0 0 0
+Philippe-Thomas | 0 0 0 0 0 0
+Saint-Germain | 0 0 0 0 0 0
+Sfax | 800 900 37000 440 600 25000
+Sidi-bou-Saïd | 48 14 165 8 8 280
+Soliman | 0 0 0 0 38 138.90
+Souk-el-Arba | 17 80 2657.60 12 24 965
+Souk-el-Khemis | 0 40 1080 17 25 1389.55
+Sousse | 1356 4 5424 1990 0 35588.77
+Tabarka | 800 2500 375 0 4300 644
+Tebourba | 12 144 28.80 0 8075 1614.20
+Téboursouk | 578 578 978 900 900 1800
+Thala | 0 0 0 0 857 171.40
+Tozeur | 0 0 0 0 0 0
+Tunis | 314 2277.20 42336.95 596 965057 13054.30
+Zaghouan | 0 0 0 6 108 324
+Zarzis | 400 800 200 450 900 900
+Totaux | 70884 135858.20 125588.48 80795.50 404045.87 291186.46

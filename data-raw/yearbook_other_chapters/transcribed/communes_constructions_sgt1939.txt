@@ -1,0 +1,37 @@
+# Communes chapter, sgt1939 (ark bpt6k9105739w): "Constructions immobilières en 1939 (Villes de plus de 5.000 habitants)".
+# Drafted from Gallica OCR, every cell read on a native-resolution crop of the page image.
+# n_auth = Nombre total des autorisations de bâtir (integer, 'néant' kept, stored 0);
+# housing / commercial / other = Valeur of Logements à usage d'habitation / Bâtiments commerciaux et industriels /
+# Constructions diverses, in francs (no centimes printed). Printed » = 0. No total printed.
+@constructions view=27 page=21 year=1939
+cols: n_auth housing commercial other
+Tunis | 619 16500000 4850000 4904500
+Sfax | 46 1329000 150000 800000
+Sousse | 46 2000000 600000 30000
+Bizerte | 55 11540000 0 100000
+Kairouan | 14 295000 20000 455000
+M'Saken | 3 10000 0 70000
+Gabès | 45 860000 900000 0
+Nefta | néant 0 0 0
+Moknine | 6 5900 0 900
+Kalaa-Kebira | 3 0 15500 0
+Tozeur | 13 0 0 2600
+Béja | 11 280000 30000 0
+Gafsa | 24 290000 90000 0
+Monastir | 19 63000 0 20000
+Goulette (La) | 19 200000 25000 276000
+Téboursouk | néant 0 0 0
+Ksour-Essaf | 4 20000 0 0
+Mahdia | 3 60000 0 0
+Nabeul | 21 350000 20000 0
+Le Kef | 2 185000 35000 0
+Djemmal | 2 40000 0 0
+Mateur | 5 71100 55550 0
+Zarzis | 11 11000 13000 85000
+Menzel-Temime | 6 14800 8000 6000
+Ferryville | 46 800000 190000 272800
+El-Djem | néant 0 0 0
+El-Hamma | néant 0 0 0
+Ariana | 13 200000 600000 50000
+Marsa (La) | 37 385000 0 265000
+Menzel-Bou-Zelfa | 5 18000 16500 0

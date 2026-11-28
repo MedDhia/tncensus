@@ -1,0 +1,50 @@
+# sgt1929 pp.52-53, views 80-81 (two-page spread): "a) Electricité : longueur des canalisations ; puissance des
+# installations ; abonnés ; consommation ; produits". View 80: localities, length (mètres), power of the installations
+# in service at 31 December 1929 (Kws: Eclairage, Autres usages, TOTAL), subscribers (Eclairage, Autres usages, TOTAL),
+# kWh consumed by private customers (Particuliers: Eclairage, Force); view 81: kWh consumed by the town (Ville:
+# Eclairage, Force), TOTAL kWh, gross receipts (Particuliers Eclairage/Force, Ville Eclairage/Force, TOTAL, fr. c.),
+# Redevance à la ville et droit de contrôle, Droits d'occupation des sous-sols.
+# Tokens: numbers without thousands separators, '.' decimal; » = 0; '.' = blank; T:text = text printed across the kWh
+# and receipts columns ("Compris dans ...": consumption included with another locality); Hammam-Lif and Mornag are
+# braced in the kWh/receipt columns (one figure for both: row "Hammam-Lif et Mornag").
+# Every cell read on native crops (both pages in three bands at 0.62 scale; small-type kWh cells at 2-5x); OCR as draft.
+# Tunis kWh particuliers force printed "3.467,748 8" (condensed type: 4 and 1 look alike; read as 3.467.748,8).
+@elec view=80 view2=81 page=52 year=1929 left=11
+cols: len pw_l pw_o pw_t sub_l sub_o sub_t kwh_pl kwh_pf kwh_vl kwh_vf kwh_t rec_pl rec_pf rec_vl rec_vf rec_t redev droits
+La Goulette | » 200 180 380 » 5 5 T:Région_Bac_compris_dans_Djebel-Djelloud
+Tunis | 160700 13693 5068 18761 21138 862 22000 4849553.0 3467748.8 828668.0 » 8845739.0 7611290.00 3125122.00 1704028.00 » 12440440.00 » »
+Le Kram | 4350 50 10 60 426 8 434 48755.1 10816.3 2902.4 » 62473.8 107429.65 12832.35 4896.16 » 125158.16 » »
+Salammbo | 3410 15 15 30 205 1 206 29729.2 5269.3 T:Compris_dans_Carthage » 34998.5 61451.07 9260.32 » » 70711.39 » »
+Dermech | 850 10 » 10 50 » 50 6185.7 » T:id. » 6185.7 13818.43 » » » 13818.43 » »
+Carthage | 4395 15 15 30 105 7 112 22367.3 214.6 6424.4 » 29606.3 47674.34 1211.53 10929.74 » 59575.01 » »
+Ste-Monique | 1240 » » » 13 » 13 T:Compris_dans_Sidi-bou-Saïd
+Amilcar | 1830 10 » 10 23 » 23 3775.9 » » 1585.6 5361.5 8007.18 3777.43 » » 11784.61 » »
+Sidi-bou-Saïd | 2065 25 50 75 96 7 103 28083.4 13639.7 2232.7 » 43955.8 59038.32 24782.02 3748.11 » 87568.45 » »
+Archevêché | 940 5 » 5 5 » 5 T:Compris_dans_Sidi-bou-Saïd
+La Marsa | 14290 160 » 160 685 15 700 168828.7 14355.4 20003.1 93.2 203280.4 334886.11 27546.62 34062.34 417.79 396912.86 » »
+La Soukra | 5060 15 55 70 25 10 35 T:Compris_dans_Montplaisir
+Ariana | 5040 35 » 35 398 » 398 69975.8 12884.2 3158.00 1216.0 87234.0 137240.55 19908.75 5516.56 2240.17 164906.03 » »
+Cherguia | 1840 » 66 66 » 16 16 T:Compris_dans_Montplaisir
+Montplaisir | 325 10 35 45 40 3 43 18632.9 75130.8 » » 93763.7 34732.98 108240.45 » » 142973.43 » »
+Mutuelleville | 2390 15 » 15 84 » 84 9912.0 » 1368.9 » 11280.9 20558.08 » 2345.27 » 22903.35 » »
+Forgemol | » » 60 60 » 1 1 T:Compris_dans_Le_Bardo
+St-Henri | 2895 15 » 15 191 » 191 27838.0 6813.0 1549.1 » 36200.1 56425.35 10944.28 2597.76 » 69867.30 » »
+Le Bardo | 5995 15 » 15 134 » 134 20327.7 68428.0 1077.8 » 89833.5 41462.88 71916.75 2128.92 » 115508.55 » »
+La Manouba | 7120 60 110 170 90 10 100 21614.3 322458.5 » » 344072.8 41997.67 226731.89 » » 268729.56 » »
+Djebel-Djelloud | 1455 » 70 70 5 26 31 26909.1 1573484.9 » » 1600314.0 52439.28 1295843.38 » » 1348282.66 » »
+Fochville | 5985 10 » 10 55 5 60 7109.0 5820.6 » » 12929.6 14835.75 8687.60 » » 23523.35 » »
+Mégrine | 6700 26 » 26 76 » 76 T:Compris_dans_Djebel-Djelloud
+Radès | 9540 50 » 50 352 10 362 49827.8 6218.2 3131.5 » 59177.5 99725.15 10551.05 5650.92 » 115927.12 » »
+St-Germain | 8225 15 » 15 142 4 146 15950.0 » 2381.6 » 18331.6 32683.40 » 4067.84 » 36751.24 » »
+Hammam-Lif | 6940 85 100 185 680 15 695 . . . . . . . . . . . .
+Mornag | 1955 » 51 51 22 10 32 . . . . . . . . . . . .
+Hammam-Lif et Mornag | . . . . . . . 123435.1 534353.4 11530.2 1848.3 671167.0 239885.45 451270.23 19925.12 3034.33 714116.13 » »
+Bizerte | 45250 520 350 870 1893 77 1970 321162 95259 39189.00 3136.00 458746.00 844176.00 159282.00 67864.65 6120.80 1076443.45 » »
+Ferryville | 12700 60 52 112 286 14 300 48000 6000 12400.00 38000.00 104400.00 105300.00 9000.00 26700.00 57000.00 198000.00 » »
+Mateur | 61600 236.92 171.90 408.82 312 28 340 68597.28 60458.40 10858.80 » 139914.48 175000.00 95000.00 22562.52 » 22562.52 » »
+Zarzouna | 7650 11 » 11 33 » 33 2469.50 » 14.50 » 3084.00 9247.40 » 1668.30 » 10915.70 » »
+Béja | 10896 300 » 300 675 40 715 99200 49800 12600.00 » 161600.00 249182.28 84247.61 20500.00 » 353923.89 » »
+Sousse | 28536 10920 2913 13833 2371 133 2504 404479 225332 68300.00 25814.00 323925.00 1084748.12 289176.90 111240.33 29788.82 1494954.17 » »
+Kairouan | 17500 2431 198 2629 676 5 681 90022 1747 50000.00 » 141769.00 235997.32 3580.89 63000.00 » 302578.21 » »
+Sfax | 45247 1384490 1002600 2387090 3017 160 3177 524305.4 846848.5 33883.00 32084.00 527120.9 1105354.73 885855.34 188750.10 41051.51 2221811.68 23392.30 »
+Gabès | 12840 221260 5500 226760 546 11 557 » » » » » » » » » » » »

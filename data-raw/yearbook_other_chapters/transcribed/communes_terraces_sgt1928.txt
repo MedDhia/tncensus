@@ -1,0 +1,76 @@
+# Communes chapter, sgt1928 (ark bpt6k91056510): "Concessions sur la voie publique, b) Terrasses et étalages".
+# Read on native-resolution crops (right-hand page, no labels). The page has 58 value lines (OCR row positions
+# 940..2465, evenly spaced) for the 58 labels of the facing page (view 600); assigned in order (first line
+# "100 / 20" = Aïn-Draham, as in 1927: 1.080 m² / 216 fr; Sfax = line 45, Tunis = line 56).
+# 'x' = no number: text printed instead (comment on the row). No total printed.
+@terraces view=601 page=49 year=1928
+cols: terr_n terr_surf terr_prod stall_n stall_surf stall_prod
+Aïn-Draham | 0 0 0 0 100 20
+Ariana | 0 0 0 0 0 0
+Bardo (Le) | 0 0 0 0 0 0
+Ben-Gardane | 0 0 0 76997 40953 27528.50
+# Béja: "droits affermés" (whole line)
+Béja | x x x x x x
+Bizerte | 70000 70000 8470 140 1270 4970
+Carthage | 0 0 0 0 0 0
+# Djemmal: "droits affermés"
+Djemmal | x x x x x x
+Djerba | 7140 7140 2142 486 486 146
+# Ebba-Ksour: "droits affermés"
+Ebba-Ksour | x x x x x x
+El Djem | 0 0 0 0 0 0
+Fériana | 0 0 0 0 0 0
+Ferryville | 480 43200 4320 0 17968 8776.80
+Foum-Tatahouine | 0 0 0 14 1720 86
+Gabès | 7 49 98 2 4 3
+Gafsa | 130 60 1024 0 700 8000
+Ghardimaou | 0 0 0 7 0 1621.30
+Goulette (La) | 21 500 14000 10 40 7300
+Grombalia | 5 42 510 0 3052 457.80
+Hadjeb-el-Aïoun | 0 0 0 0 0 0
+Hamma (El) | 0 0 0 0 0 0
+Hammam-Lif | 18 150 1804 450 28878 4331.70
+Kairouan | 41 38310 11600 270 176200 52311.35
+Kalaa-Kebira | 0 0 0 0 0 0
+# Kef (Le): terr_prod "affermés"
+Kef (Le) | 335 425 x 25 135 0
+Krib (Le) | 0 0 0 0 0 0
+Ksour-Essaf | 92 80 808 0 0 0
+Maharès | 0 0 0 0 0 0
+Mahdia | 210 160 4460 6 12 144
+Marsa (La) | 205 60 3300 35 58 2709.50
+Mateur | 19 224 2000 2362 576 16889.40
+Maxula-Radès | 0 0 0 0 0 1429
+Médenine | 6 513 256.50 0 0 0
+Medjez-el-Bab | 0 11.50 1296 0 475.16 17571.15
+Menzel-bou-Zelfa | 0 0 0 0 0 0
+Menzel-Temime | 5 15000 750 0 0 0
+Moknine | 0 0 0 0 0 0
+# Monastir: "droits affermés"
+Monastir | x x x x x x
+# M'saken: "droits affermés"
+M'saken | x x x x x x
+# Nabeul: "480 | 1 20 | affermé | à 0 f. 30 le m2 | affermé | 27.000"
+Nabeul | 480 1.20 x x x 27000
+Nefta | 0 0 0 0 0 0
+Philippe-Thomas | 0 0 0 0 0 0
+# Saint-Germain: terr_prod "d°" (ditto: affermé)
+Saint-Germain | 0 0 x 0 0 0
+Sbeïtla | 0 0 0 0 113 45.10
+Sfax | 750 650 27300 275 427 17934
+Sidi-bou-Saïd | 48 18 295 11 20 318.75
+Soliman | 0 0 0 0 0 0
+Souk-el-Arba | 13 1300 795 5 12 71
+Souk-el-Khemis | 8 20 1440 14 81 4854.55
+Sousse | 50 2400 12600 13000 30000 60547.05
+# Tabarka: "droits affermés"
+Tabarka | x x x x x x
+Tebourba | 350 2422 969 0 7450 2980
+Téboursouk | 0 0 0 0 0 0
+Thala | 0 0 0 0 2028 709.75
+Tozeur | 0 0 0 0 0 0
+Tunis | 324 1629.40 168491.80 94 175.82 13641.40
+# Zaghouan: "droits affermés"
+Zaghouan | x x x x x x
+# Zarzis: "marchés affermés"
+Zarzis | x x x x x x

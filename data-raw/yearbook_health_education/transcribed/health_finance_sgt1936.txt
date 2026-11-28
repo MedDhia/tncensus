@@ -1,0 +1,88 @@
+# sgt1936, ark bpt6k91056547, chapter III "Hygiène et assistance"
+# Conventions as in health_finance_sgt1922.txt and health_finance_sgt1935.txt.
+# Only the "État des recettes et des dépenses du budget de l'Assistance publique" is printed in this
+# edition (no accounts of the societies, no Institut Pasteur / Arloing tables, no day-cost tables).
+# Transcribed from the page images (half resolution, checked against Gallica OCR).
+
+[etat_receipts] views=41 pages=30 year=1936 title=I. Recettes. Crédits alloués pour 1936
+Titre 1er | 2050000
+Titre II | 86977
+TOTAL du crédit pour 1936 | 2136977
+
+[etat_subsidies] views=41,42 pages=30,31 year=1936 cols=Subventions allouées en 1936, Titre 1er ; Titre II ; Total title=II. Dépenses
+# The first six lines are printed under the column heads with no group heading.
+A | - | Société Française de Bienfaisance de Bizerte | 10800 » 10800
+A | - | Société Musulmane de Bienfaisance de Bizerte | 4500 » 4500
+A | - | Société Israélite de Secours et de Bienfaisance de Bizerte | 2700 » 2700
+A | - | Croix-Verte de Bizerte | 1800 » 1800
+A | - | Société Française de Bienfaisance de Ferryville | 4500 » 4500
+A | - | Société Musulmane de Bienfaisance de Ferryville | 1350 » 1350
+A | a | Société Française de Bienfaisance de Tunis : Consultations internationales | 9000 » 9000
+A | b | Société Française de Bienfaisance de Tunis : Assistance aux indigents | 130500 » 130500
+A | c | Société Française de Bienfaisance de Tunis : Vieillards | 85500 » 85500
+A | d | Société Française de Bienfaisance de Tunis : Orphelinat | 104400 » 104400
+A | e | Société Française de Bienfaisance de Tunis : Secours aux mères françaises nécessiteuses | 40500 » 40500
+A | f | Société Française de Bienfaisance de Tunis : Service de la Rage | 4495 » 4495
+A | g | Société Française de Bienfaisance de Tunis : Chaussures aux petits français | 4050 » 4050
+A | a | Société Musulmane de Binfaisance de Tunis : Assistance Médicale | 9000 » 9000
+A | b | Société Musulmane de Binfaisance de Tunis : Assistance aux indigents | 117900 » 117900
+A | c | Société Musulmane de Binfaisance de Tunis : Vieillards | 27000 » 27000
+A | d | Société Musulmane de Binfaisance de Tunis : Orphelinat | 63000 » 63000
+A | e | Société Musulmane de Binfaisance de Tunis : Cuisines populaires | 9000 » 9000
+A | a | Communauté Israélite de Tunis : Assistance Médicale | 9000 » 9000
+A | b | Communauté Israélite de Tunis : Vieillards | 27000 » 27000
+A | c | Communauté Israélite de Tunis : Service antituberculeux | 31500 » 31500
+A | d | Communauté Israélite de Tunis : Orphelinat | 18000 » 18000
+A | - | Rétribution du délégué du Gouvernement près la Communauté Israélite de Tunis | 4000 » 4000
+A | a | Fourneau des Pauvres : Assistance Médicale | 9000 » 9000
+A | b | Fourneau des Pauvres : Assistance aux indigents | 67500 » 67500
+A | c | Fourneau des Pauvres : Garderie | 18000 » 18000
+A | d | Fourneau des Pauvres : Orphelinat de garçons de l'Institut Saint-Vincent-de-Paul à La Marsa | 2700 » 2700
+@ view=42 page=31
+A | a | Institut Héliothérapique Infantile du Kram : Fonctionnement de l'établissement | 99000 » 99000
+A | b | Institut Héliothérapique Infantile du Kram : Entretien des enfants placés par l'Administration | 135000 » 135000
+A | - | Société de Secours aux blessés militaires | 12600 » 12600
+A | - | Union des Femmes de France | 5850 » 5850
+A | - | Dispensaire de la Croix Rouge de Tunis | 9000 » 9000
+A | - | Croix Verte de Tunis | 4500 » 4500
+A | - | Asile des Vieillars des Petites Sœurs des Pauvres de Tunis | 27000 » 27000
+A | - | Dispensaire des Sœurs de N.D. de l'Espérance de Tunis | 4500 » 4500
+A | - | Sœurs de N.D. de l'Assomption à Tunis | 2700 » 2700
+A | - | Dispensaire des Sœurs de N.D. d'Afrique à Carthage | 1350 » 1350
+A | - | Asile de Nuit et Maternité Israélite | 6300 » 6300
+A | - | Cuisines populaires israélites | 18000 » 18000
+A | - | Œuvre Israélite des Couvertures | 4500 » 4500
+A | - | Garderie Israélite | 6300 » 6300
+A | - | Dispensaire Scolaire d'Hygiène et de Médecine Préventive des Écoles de l'Alliance Israélite de Tunis | 6300 » 6300
+A | - | Société Italienne de Bienfaisance de Tunis | 2025 » 2025
+A | - | Œuvre de Protection de la Jeune Fille (Fourneau des Pauvres) | 13500 » 13500
+A | - | Dispensaire Alapetite | 67500 » 67500
+A | - | Société de Saint Vincent de Paul | 1200 » 1200
+A | a | Œuvre de la Crèche : Préventorium de Zaghouan | 7200 » 7200
+A | b | Œuvre de la Crèche : Assistance aux enfants | 67500 » 67500
+A | - | Comité de Protection et d'Assistance de l'Enfance | 467023 9977 477000
+A | - | Œuvre de Protection du premier âge | 9000 » 9000
+A | - | Vestiaire Central | 27000 » 27000
+A | - | Œuvre des cantines scolaires | 12600 » 12600
+A | - | Société Musulmane de Bienfaisance de Nabeul | 5400 » 5400
+A | - | Caisse de Secours et de Bienfaisance Israélite de Nabeul | 2700 » 2700
+H | Autres œuvres
+A | - | Société Musulmane de Bienfaisance du Kef | 8352 » 8352
+A | - | Société Française de Bienfaisance de Sousse | 16200 » 16200
+A | - | Société Musulmane de Bienfaisance de Sousse | 16200 » 16200
+A | - | Caisse de Secours et de Bienfaisance Israélite de Sousse | 16200 » 16200
+A | - | Société Française de Bienfaisance de Kairouan | 900 » 900
+A | - | Société Musulmane de Bienfaisance de Kairouan | 2700 » 2700
+A | - | Société Musulmane de Bienfaisance de Monastir | 2700 » 2700
+A | - | Kolla de Monastir | 7580 32000 39580
+A | - | Société Française de Bienfaisance de Sfax | 1800 » 1800
+A | - | Société Musulmane de Bienfaisance de Sfax | 24525 » 24525
+A | - | Société Italienne de Bienfaisance de Sfax | 9000 » 9000
+A | - | Caisse de Secours et de Bienfaisance Israélite de Sfax | 5400 » 5400
+A | - | Société Musulmane de Biefaisance de Tozeur | 1800 » 1800
+A | - | Versement de 5 % au fonds de réserve de l'Assistance Publique | 102500 » 102500
+A | - | Placement des tuberculeux dans les sanatoria | » 30000 30000
+A | - | Dépenses imprévues | » 5000 5000
+H | Subventions exceptionnelles
+A | - | Fourneau des Pauvres (Dispensaire de Saint Vincent de Paul) | » 10000 10000
+T | TOTAL | 2050000 86977 2136977

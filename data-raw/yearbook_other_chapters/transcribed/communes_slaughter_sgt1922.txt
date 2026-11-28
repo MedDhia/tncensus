@@ -1,0 +1,101 @@
+# Communes chapter, sgt1922 (ark bpt6k9105649x): "d) Droits d'abatage" (no year printed in the heading; year =
+# the edition year, as for the chapter's other sgt1922 tables). One two-page spread, views 58-59 (printed pages
+# 34-35); view 57 ends the loans table, view 60 opens "Concessions sur la voie publique".
+# Format as in communes_slaughter_sgt1923.txt: '@slaughter view=<left> view2=<right> page=<left page> year=<year>',
+# 'cols:' (column order as printed), rows '<commune as printed> | values'; 'Totaux' = printed column totals.
+# <animal>_t = "Tarif par tête" (francs per head), <animal>_s = "Sommes perçues" (francs); total = "Totaux" (row
+# total). Printed » = 0. 'T:<text>' = tariff printed as text (several rates "6, 8", ranges "7 70-6 20-5 70"; '_' for
+# spaces, kept as printed); '~' = cell covered by a text printed across the row (the text in the '# span:' comment).
+# 'NNN.xx' = franc part legible, centimes hidden in the binding (goat sums; solved from the row total in the script).
+# Layout differences from sgt1923: one spread with a single 'Totaux' line (no 'A reporter'); camel ("Chameaux")
+# printed before "Autres"; communes taxing per kilogram have the rate printed across the whole row instead of
+# figures (the text runs over the left page and its rule over the right page up to the 'Totaux' column).
+# Footnotes: (1) Commune créée le 29 mars 1922. (2) Commune créée le 9 mai 1922. (3) Commune créée le 29 mars 1922.
+# Reading: every line read on native-resolution crops of both pages (left page full width, right page with the
+# commune names stitched in), the goat column on 1.4x crops across the binding (francs repeat on the gutter of the
+# right page, centimes lost) and the multi-rate tariffs on full-scale crops. Gallica OCR (very poor on this
+# spread) not used for values.
+@slaughter view=58 view2=59 page=34 year=1922
+cols: beef_t beef_s veal_t veal_s sheep_t sheep_s goat_t goat_s pig_t pig_s horse_t horse_s camel_t camel_s other_t other_s total
+animals_fr:beef=Bœufs;veal=Veaux;sheep=Moutons;goat=Chèvres;pig=Porcs;horse=Chevaux et mulets;camel=Chameaux;other=Autres
+# span: 0 fr. 06 par kilogr. de viande abattue
+Aïn-Draham | ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 2299.15
+Ariana | 6 1536 2 314 0.70 560 0 0 0 0 0 0 0 0 0.70 477.40 2887.40
+Bardo (Le) | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Ben-Gardane | T:3,_3_50 148 T:3,_3_50 62 T:0_30,_0_40 1048.40 T:0_30,_0_40 2559.xx 0 0 0 0 2 150 0 0 3967.50
+Béja | T:6,_8 7725.60 T:6,_8 528.08 T:6,_8 9720.64 T:6,_8 4157.xx T:6,_8 421.60 0 0 T:6,_8 87.20 T:15,_20 72.65 22713.60
+# span: 0 fr. 05 par kilogr. de viande abattue
+# Bizerte: the rate text covers beef to goat; pigs itemised (10 fr. per head); the rule continues over horses,
+# camels and "Autres".
+Bizerte | ~ ~ ~ ~ ~ ~ ~ ~ 10 11340 ~ ~ ~ ~ ~ ~ 122958.90
+Carthage | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Djemmal | 5 375 0 0 1 1948 0.60 680.xx 0 0 0 0 5 260 T:0_60,_4 6033.30 9305.60
+# span: 0 fr. 06 par kilogr. de viande abattue
+Djerba | ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 4210.80
+Ebba-Ksour | 6 732 2.50 90 T:1,_0_60 6537.20 0.60 3064.xx 4 72 0 0 0 0 4 948 11443.40
+El-Djem (1) | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+# span: 0 fr. 10 et 0 fr. 15 par kilogr. de viande abattue
+Ferryville | ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 26719.20
+Fériana | 3 48 2 12 0.75 286.50 0.50 168.xx 0 0 0 0 0 0 T:0_50,_0_30 455.30 970.30
+# The veal tariff is printed as a dot (worn »).
+Foum-Tatahouine | 2 622 0 0 0.30 1241.10 0.30 2196.xx 0 0 0 0 2 40 0.20 153.90 4253.90
+# span: 0 fr. 10 par kilogr. de viande abattue
+Gabès | ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 35072.20
+Gafsa | 7 2030 5 140 1.50 16558.50 1.50 3621.xx 7 21 0 0 10 220 1.50 37.50 22628
+Ghardimaou | 2.50 487.50 0 0 0.60 201.60 0.40 350.xx 2 94 0 0 0 0 0 0 1133.90
+# span: 0 fr. 20 par kilogr. de viande abattue
+Goulette (La) | ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 52877
+Grombalia | 6 810 0 0 1.20 1335.60 0.60 236.xx 6 78 0 0 0 0 T:1_»,_0_50 441.50 2901.50
+Hadjeb-el-Aïoun (2) | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+# span: 0 fr. 06 par kilogr. de viande abattue
+Hammam-Lif | ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 7242.50
+Hamma (El) | 5.50 55 3.50 105 0.90 2258.10 0.80 1954.xx 0 0 0 0 3 63 T:0_60,_0_70 1330.10 5765.60
+Kairouan | 5 8725 2 2000 0.80 24026.40 0.40 2766.xx 6 42 0 0 6 1506 0 0 39065.80
+Kalaa-Kebira | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Ksour-Essaf (3) | 0 0 2.50 5 1 268 0.60 21.xx 0 0 0 0 5 30 0.60 45.60 370.20
+Kef (Le) | 8.25 4496.25 2.65 604.20 1.15 6042.10 0.70 2384.xx 4 249.90 0 0 9.75 9.75 T:5_25-0_30-0_70 6671.85 20458.35
+# span: compris avec la commune de La Goulette
+Kram (Le) | ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 0
+Krib (Le) | 0 0 0 0 0.40 52.40 0 0 0 0 0 0 0 0 0 0 52.40
+Maharès | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+# span: 0 fr. 08 par kilogr. de viande abattue
+Mahdia | ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 7712.65
+# span: 0 fr. 15 par kilogr. de viande abattue
+Marsa (La) | ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 8022.52
+# span: 0 fr. 06 par kilogr. de viande abattue
+Mateur | ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 12282.15
+Maxula-Radès | 8 1352 4 556 1.20 844.80 1 25.xx 7 126 0 0 0 0 T:1_50,_0_80 1403.30 4307.10
+# "Autres" tariff printed 6 with sums ».
+Médenine | 1.50 109.50 1.50 28.50 0.30 1274.10 0.30 1636.xx 0 0 0 0 1.50 21 6 0 3069.30
+# span: Droits affermés
+Medjez-el-Bab | ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 1300
+M'saken | 0 0 0 0 1 1556 0.60 716.xx 0 0 0 0 6 486 T:4,_0_60,_0_30 4559.30 7317.70
+Menzel-bou-Zelfa | 6 906 0 0 1 1243 1 3839.xx 0 0 0 0 0 0 0 0 5988
+Menzel-Temime | T:6,_8 1044 0 0 T:1_10,_1_50 6110.10 T:1_60,_0_75 3401.xx 6 6 0 0 3 30 0 0 10591.25
+Moknine | 5 2455 2.50 415 1 1680 0.60 648.xx 0 0 0 0 5 25 0.60 5591.40 10814.40
+Monastir | 7 525 5 755 2 2462 1 148.xx 0 0 0 0 0 0 T:1_50,_6 11245.50 15135.50
+Nabeul | 6 8430 6 42 1.20 7807.20 0.60 166.xx 6 102 0 0 2 6 0 0 16554
+Nefta | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Pêcherie (La) | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Philippe-Thomas | 5 2180 3 72 1 6077 0.90 1111.xx 6 750 0 0 5 25 0 0 10215.50
+# Sheep sums printed 6 on this line, every other cell and the row total ».
+Saint-Germain | 0 0 0 0 0 6 0 0 0 0 0 0 0 0 0 0 0
+Sfax | 10 36190 6 6108 1.50 85120.50 0.50 7500.xx 10 2750 0 0 6 570 0 0 138238.50
+# span: 0 fr. 15 par kilogr. de viande abattue
+Sidi-bou-Saïd | ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 7506.62
+Soliman | 2 836 2 116 0.40 1610.80 0.30 1116.xx 2 4 0 0 1.50 9 0 0 3691.80
+# span: 0 fr. 10 par kilogr. de viande abattue
+Souk-el-Arba | ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 16581.80
+# span: 0 fr. 09 par kilogr. de viande abattue
+Souk-el-Khemis | ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 7634.70
+# span: 0 fr. 15 par kilogr. de viande abattue
+Sousse | ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 93598.65
+Tabarka | 4 776 3 1134 0.70 567 0.60 556.xx 4 412 0 0 0 0 2 228 3673.20
+Thala | 3 267 0 0 0.50 2277.50 0.40 1525.xx 0 0 0 0 0 0 0 0 4070.10
+Tebourba | 9 594 5 175 1 2104 0.80 1557.xx 3.90 93.60 0 0 0 0 0 0 4524.20
+Téboursouk | 3 375 3 723 0.45 2160 0.40 2100.xx 0 0 0 0 0 0 0 0 5358.80
+Tunis | T:7_70-6_20-5_70 247665.10 3.10 4811.20 T:1_55-1_05_0_55 111742 T:0_75,_0_35 15322.xx 6 31794 3 924 6.20 117.80 1 70 412447
+Tozeur | 1.50 541.50 0 0 0.50 3161.50 0.30 759.xx 0 0 0 0 1.50 75 0 0 4537.90
+Zaghouan | 5 465 4 208 1 2316 0.75 4003.xx 5 145 0 0 0 0 0 0 8037.50
+Zarzis | 4 88 0 0 0.75 1560 0.75 742.xx 0 0 0 0 4 64 0 0 2454.50
+Totaux | . 332589.45 . 19003.98 . 313758.04 . 71647.xx . 48501.10 . 924 . 3795.75 . 39764.50 1219603.74

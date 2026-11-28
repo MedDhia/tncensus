@@ -1,0 +1,418 @@
+# Public works chapter (Travaux publics), sgt1922. Format: see yb_tables.py. Only the table Routes (et pistes),
+# longueurs construites et dépenses faites cumulées, is transcribed so far (see csv/publicworks_survey.md);
+# every cell read on a native-resolution crop of the page image, the OCR not used for values.
+# Title printed "Routes et pistes" ... "(1913-1922)". Columns: road length built, cumulative (kilometres);
+# road expenditure, cumulative (francs); tracks (pistes) expenditure, cumulative (francs).
+
+@roads view=180 page=156 years=1913-1922
+img: all
+cols: road_km road_fr track_fr
+1913 | 4100 44000000 6300000
+1914 | 4150 45200000 6500000
+1915 | 4220 45900000 6600000
+1916 | 4280 46700000 6800000
+1917 | 4328 47236000 7070000
+1918 | 4363 47561000 7382000
+1919 | 4414 48732000 7567000
+1920 | 4423 48968000 7818000
+1921 | 4464 50297000 8075000
+1922 | 4590 56065000 8853000
+
+@water view=180 page=156 years=1913-1922
+img: all
+cols: m3 fr
+1913 | 53000 26300000
+1914 | 55000 26505000
+1915 | 56500 26700000
+1916 | 56600 27000000
+1917 | 56600 27040000
+1918 | 56600 27140000
+1919 | 56600 27200000
+1920 | 56000 27270000
+1921 | 56100 27636000
+1922 | 63314 27970000
+
+@irrigation view=180 page=156 years=1913-1922
+img: all
+cols: m3 fr
+1913 | 254000 900000
+1914 | 260000 930000
+1915 | 268000 960000
+1916 | 269000 964000
+1917 | 269000 1000000
+1918 | 269000 1036000
+1919 | 269000 1036000
+1920 | 269000 1036000
+1921 | 285000 1101000
+1922 | 300000 1706000
+
+@wells view=181 page=157 years=1913-1922
+img: all
+cols: ls fr
+1913 | 1065 1400000
+1914 | 1260 1530000
+1915 | 1280 1600000
+1916 | 1280 1676000
+1917 | 1285 1759000
+1918 | 1293 1843000
+1919 | 1323 1933000
+1920 | 1333 2143000
+1921 | 1336 2427000
+1922 | 1356 2623000
+
+@sanitation view=181 page=157 years=1913-1922
+img: all
+cols: fr
+1913 | 8250000
+1914 | 8525000
+1915 | 8700000
+1916 | 8800000
+1917 | 8840000
+1918 | 8860000
+1919 | 8861000
+1920 | 8882000
+1921 | 8912000
+1922 | 9499000
+
+@permits view=181 page=157 years=1913-1922
+img: all
+cols: requested granted current
+1913 | 144 54 438
+1914 | 175 152 518
+1915 | 29 87 605
+1916 | 43 37 642
+1917 | 122 84 721
+1918 | 49 95 812
+1919 | 74 75 801
+1920 | 285 142 670
+1921 | 177 286 890
+1922 | 64 29 886
+
+@mines_exports view=181 page=157 years=1913-1922
+img: all
+cols: mines value
+1913 | 40 19765000
+1914 | 37 15552000
+1915 | 25 11897000
+1916 | 26 30423750
+1917 | 30 31831095
+1918 | 35 29220275
+1919 | 40 24915775
+1920 | 40 40128875
+1921 | 34 22446715
+1922 | 36 44033555
+# c) Renseignements généraux sur les mines (1922). Plomb and Zinc share one bracketed figure for mines
+# concédées / exploitées, ouvriers and journées (row "Plomb-Zinc"); their production and value are separate.
+# Footnotes: (1) Manganèse: permis d'exploitation; (2) Lignites: dont 1 permis d'exploitation.
+
+@mines_detail view=182 page=158 year=1922
+img: all
+cols: conc_n conc_ha expl_n expl_ha workers days prod_t value
+Fer | 7 8168 3 2888 1070 235000 553755 24918975
+Plomb-Zinc | 43 37973 29 24220 4000 880000 - -
+Plomb | - - - - - - 30000 17400000
+Zinc | - - - - - - 8000 1600000
+Cuivre | 1 554 0 0 0 0 50 75000
+Manganèse | 1 0 1 300 10 2500 190 19000
+Lignites | 1 2800 1 400 30 7500 343 20580
+Totaux | - - - - - - - 44033555
+
+@phosphates view=182 page=158 years=1913-1922
+img: all
+cols: t fr
+1913 | 2071772 45522234
+1914 | 1395600 32099000
+1915 | 1170000 26910000
+1916 | 1041200 26030100
+1917 | 676600 23680860
+1918 | 862494 25874820
+1919 | 1075214 48384630
+1920 | 1357000 115345000
+1921 | 1467364 73366820
+1922 | 2117650 116470750
+
+@phosphate_works view=182 page=158 years=1918-1922
+img: all
+cols: state private workers days prod_t value
+1918 | 4 2 4400 1000000 819000 24570000
+1919 | 4 2 5200 1300000 815385 36692325
+1920 | 4 2 6800 1700000 1075000 91000000
+1921 | 4 2 9000 2180000 1828000 91400000
+1922 | 5 1 9400 2450000 1958000 107000000
+# Minerais a): cours moyens printed » in 1917-1919 and 1921 (no price quoted): stored '-' (not_applicable).
+
+@ores view=183 page=159 years=1913-1922
+img: all
+cols: mines t_zinc t_lead value_total v_zinc v_lead p_zinc p_lead
+1913 | 46 28627 59446 12373700 2862700 9511000 22.14 18.6
+1914 | 49 16800 39105 8143400 1730400 6413000 29.9 18.13
+1915 | 49 4550 21320 6773000 910000 5863000 66.2 22.17
+1916 | 49 12544 51286 20772500 2822400 17950100 67.7 30.18
+1917 | 49 14853 41391 17250500 2970600 14279900 - -
+1918 | 50 5508 30662 14077870 1046520 18031350 - -
+1919 | 52 5054 15433 8495720 1415120 7080600 - -
+1920 | 52 12575 24769 21425175 4086875 17338300 45.18 38.22
+1921 | 52 4065 18511 10271750 1016250 9255500 - -
+1922 | 52 8000 30000 19000000 1600000 17400000 29.14 23.19
+# b) iron ore: the ten values are printed slightly below their year labels; the last (553.755 t,
+# 24.918.975 fr) is 1922 (= Fer in the mines table).
+
+@iron_ore view=183 page=159 years=1913-1922
+img: all
+cols: t fr
+1913 | 594199 7427487
+1914 | 529170 7408380
+1915 | 297134 5051278
+1916 | 500935 9016830
+1917 | 605958 12119160
+1918 | 445022 12238105
+1919 | 349464 13978560
+1920 | 406280 16251200
+1921 | 262736 10509440
+1922 | 553755 24918975
+# a) Résultats comparés de l'exploitation du réseau tunisien de la Compagnie Bône-Guelma (1918-1922), f174|f175.
+# Columns per network as printed: Réseau de la Medjerdah 1917-1921 (1921 in the gutter of f174: the last digit
+# of the passenger product and the passenger tariff and train-km cells are cut, '?'); Ligne de Djedeida à Bizerte
+# et embranchements 1918 (gutter of f175, legible)-1921; Réseau à voie normale (1) 1922; Réseau à voie étroite
+# 1918-1922. (1) Appellation nouvelle de l'ensemble des réseaux de la Medjerdah et des lignes de Djedeida à
+# Bizerte et embranchements. Row codes: see extract_publicworks.py (RAIL_M).
+
+@rail view=174 page=150 company=bone_guelma network=medjerdah
+img: all
+cols: 1917 1918 1919 1920 1921
+len_km | 212 212 216 220 220
+rec_day | 11547 13744 16461 21432 22353
+rec_gv | 2274224 2695383 3368694 4481976 4628035
+rec_pv | 1940753 2320994 2639853 3362284 3530980
+rec_total | 4214977 5016577 6008547 7844260 8159015
+rec_km | 19898 23683 27796 35585 37013
+pass_n | 1611389 1784486 2049547 2116626 1932344
+pass_prod | 2028001 2426667 3013738 3962059 ?
+pass_km | - - - 28 27
+pass_avg | 1.26 1.36 1.47 1.87 2.13
+pass_tariff | - - - 0.066 ?
+goods_t | 449233 508296 544446 441936 382495
+goods_prod | 1940753 2320994 2639853 3362284 3530980
+goods_km | - - - 49 51
+goods_avg | 4.32 4.57 4.85 7.61 9.23
+goods_tariff | - - - 0.154 0.181
+train_km | 494548 566186 630322 623131 ?
+rec_train_km | 8.52 8.86 9.53 12.59 11.53
+
+@rail view=175 page=151 company=bone_guelma network=djedeida_bizerte
+img: all
+cols: 1918 1919 1920 1921
+len_km | 282 278 273 274
+rec_day | 9112 9208 10264 10183
+rec_gv | 1658297 1741996 2089674 2166960
+rec_pv | 1667841 1619186 1667111 1549854
+rec_total | 3326138 3361182 3756785 3716814
+rec_km | 11774 12083 13716 13571
+pass_n | 901279 881388 870509 742169
+pass_prod | 1519104 1593214 1913359 1975840
+pass_km | - - 34 33
+pass_avg | 1.69 1.81 2.20 2.66
+pass_tariff | - - 0.064 0.080
+goods_t | 344117 326883 299281 239936
+goods_prod | 1667841 1619186 1667111 1549853
+goods_km | - - 68 57
+goods_avg | 4.85 4.95 5.57 6.46
+goods_tariff | - - 0.082 0.114
+train_km | 329986 357262 337645 323262
+rec_train_km | 10.08 9.41 11.13 11.50
+
+@rail view=175 page=151 company=bone_guelma network=normal_gauge
+img: all
+cols: 1922
+len_km | 481
+rec_day | 27374
+rec_gv | 4978522
+rec_pv | 5013106
+rec_total | 9991628
+rec_km | 20754
+pass_n | 909758
+pass_prod | 4403354
+pass_km | 56
+pass_avg | 4.84
+pass_tariff | 0.086
+goods_t | 439432
+goods_prod | 4721908
+goods_km | 101
+goods_avg | 10.75
+goods_tariff | 0.106
+train_km | 886204
+rec_train_km | 11.27
+
+@rail view=175 page=151 company=bone_guelma network=narrow_gauge
+img: all
+cols: 1918 1919 1920 1921 1922
+len_km | 1037 1055 1055 1055 1072
+rec_day | 44947 49076 77028 95322 96464
+rec_gv | 5288756 6633051 8255364 8630758 9814827
+rec_pv | 11116866 11279754 19937132 26161702 25394487
+rec_total | 16405622 17912805 28192496 34792460 35209314
+rec_km | 15818 16974 26715 32970 32842
+pass_n | 1413328 1560513 1521251 1372719 2379504
+pass_prod | 4654586 5698228 6990530 7250143 8464611
+pass_km | - - 66 62 43
+pass_avg | 3.29 3.65 4.60 5.28 3.56
+pass_tariff | - - 0.07 0.085 0.082
+goods_t | 1142507 1144524 1334632 1403913 1581251
+goods_prod | 11116166 11279754 19937132 26161702 24858476
+goods_km | - - 206 197 204
+goods_avg | 9.73 9.86 14.94 18.63 15.72
+goods_tariff | - - 0.072 0.095 0.077
+train_km | 1936638 2118528 2579652 2717708 3354243
+rec_train_km | 8.47 8.46 10.93 12.80 10.50
+# b) Résultats comparés de l'exploitation du réseau de la Compagnie de Gafsa (1918-1922), f176|f177. (1) Les
+# chiffres de ce tableau sont fournis par la Compagnie. Sfax-Gafsa-Metlaoui: frais forfaitaires d'exploitation
+# 1.500 + R/2 avec minimum de 3.000 fr.; (2) Metlaoui-Tozeur: 1.050 fr. + R/2, minimum 2.100 fr.; (3) Graïba-Gabès:
+# barème spécial; (4) chiffres comprenant les transports militaires de toute nature; (5) embranchements miniers
+# exploités aux frais, risques et périls de la Compagnie. Metlaoui-Tozeur 1918 in the gutter of f176 (passenger
+# product and train-km last digits cut: '?').
+
+@rail view=176 page=152 company=gafsa network=sfax_gafsa_metlaoui
+img: all
+cols: 1918 1919 1920 1921 1922
+len_km | 243 243 243 243 243
+rec_day | 17515 20163 30932 46212 61259
+rec_gv | 524869 831201 1286935 1240883 1119321
+rec_pv | 5868142 6528538 10003267 15626552 21240217
+rec_total | 6393012 7359739 11290202 16867435 22359538
+rec_km | 26308 30286 46461 69413 92015
+rec_train_km | 12.38 12.73 20.30 22.00 26.14
+pass_n | 136005 207741 256025 184078 157237
+pass_prod | 439709 682232 1027554 981362 877594
+pass_km | 60 64 65 64 69.1
+pass_avg | 3.23 3.28 4.01 5.00 5.57
+pass_tariff | 0.053 0.05 0.06 0.08 0.08
+goods_t | 728540 808008 891435 936613 1399554
+goods_prod | 5596410 6279868 9935527 15508409 21086438
+goods_km | 284 231 221 235 238.4
+goods_avg | 7.68 7.77 11.15 17.00 15.06
+goods_tariff | 0.032 0.033 0.05 0.07 0.06
+train_km | 515354 578115 556126 782635 845578
+
+@rail view=177 page=153 company=gafsa network=metlaoui_tozeur
+img: all
+cols: 1918 1919 1920 1921 1922
+len_km | 54 54 54 54 54
+rec_day | 552 830 1224 1322 1429
+rec_gv | 118232 189275 276200 289017 287004
+rec_pv | 83485 113940 170754 193465 234440
+rec_total | 201717 303215 446954 482482 521444
+rec_km | 3735 5615 8277 8935 9656
+rec_train_km | 5.10 7.69 11.30 12.24 13.22
+pass_n | 62839 103454 95112 72344 72908
+pass_prod | ? 165104 241422 253486 253902
+pass_km | 3 31 37 38.7 36.8
+pass_avg | 1.64 1.60 2.535 3.50 3.48
+pass_tariff | 0.051 0.051 0.067 0.09 0.09
+goods_t | 14973 21158 21242 16747 20657
+goods_prod | 75765 104959 156353 179692 224620
+goods_km | 49 48 41 38 51
+goods_avg | 5.06 4.96 7.36 11.00 10.87
+goods_tariff | 0.10 0.10 0.177 0.28 0.21
+train_km | ? 41452 39528 39420 39420
+
+@rail view=177 page=153 company=gafsa network=graiba_gabes
+img: all
+cols: 1918 1919 1920 1921 1922
+len_km | 82 82 82 82 82
+rec_day | 1575 1699 2280 1793 1369
+rec_gv | 202628 290803 447518 392092 340051
+rec_pv | 372497 329416 385020 262408 159766
+rec_total | 575126 620219 832538 654500 499817
+rec_km | 7013 7563 10152 7982 6095
+rec_train_km | 5.49 5.90 7.91 6.22 4.78
+pass_n | 47132 62690 83528 54877 50987
+pass_prod | 172998 240825 373654 328397 288767
+pass_km | 74 73 73 74 72.1
+pass_avg | 3.67 3.84 4.47 6.05 5.66
+pass_tariff | 0.049 0.052 0.06 0.08 0.08
+goods_t | 15845 15074 27014 12822 6846
+goods_prod | 147818 144345 351747 243526 139061
+goods_km | 78 79 69 74 77.1
+goods_avg | 9.32 9.58 13.02 18.99 20.31
+goods_tariff | 0.11 0.12 0.186 0.26 0.26
+train_km | 104688 105120 105408 105120 104460
+
+@rail view=177 page=153 company=gafsa network=mining_branches
+img: all
+cols: 1918 1919 1920 1921 1922
+len_km | 63 63 63 63 63
+rec_day | 1382 864 7987 2841 2799
+rec_gv | 55012 81647 140226 204571 187059
+rec_pv | 449613 233850 362928 832312 834631
+rec_total | 504626 315497 503174 1036883 1021691
+rec_km | 8009 5007 7987 16458 16217
+rec_train_km | 7.79 5.42 6.54 10.72 16.41
+pass_n | 22801 33558 49152 53936 50361
+pass_prod | 47541 67339 123090 176220 161156
+pass_km | 39 35 36 36 35.9
+pass_avg | 2.08 2.00 2.53 3.26 3.20
+pass_tariff | 0.051 0.056 0.067 0.09 0.09
+goods_t | 308447 279503 359049 665664 717426
+goods_prod | 446989 230955 357758 425455 829085
+goods_km | 40 42 53 39 39.1
+goods_avg | 1.45 0.82 1.00 1.24 1.15
+goods_tariff | 0.036 0.019 0.018 0.031 0.03
+train_km | 747627 16309 76915 36660 96574
+# c) Résultats financiers de l'exploitation du réseau Bône-Guelma, ligne de la Medjerdah (1913-1922; lines
+# 1913-1921). Columns: recettes annuelles, insuffisances annuelles, subvention du Gouvernement français,
+# versements annuels au fonds de réserve de 750.000 fr., montant du fonds de réserve au 31 décembre.
+
+@fin_medjerdah view=178 page=154 
+img: all
+cols: receipts shortfall subsidy reserve_payment reserve_fund
+1913 | 3436435 1048356 1337000 0 750000
+1914 | 2916675 1288196 1306000 0 750000
+1915 | 3167820 1108476 1275000 0 750000
+1916 | 3939169 676221 1244000 0 750000
+1917 | 4214977 457780 1213000 0 750000
+1918 | 5016577 42585 1182000 0 750000
+1919 | 6008548 0 1151000 0 750000
+1920 | 7844261 0 1120000 0 750000
+1921 | 8159015 0 1099000 0 750000
+# d) Lignes non garanties (1913-1922; exercices 1913-1921): Djedeida à Bizerte et embranchements, réseau à voie
+# étroite, totaux annuels, total des excédents versés (cumulative). NOTA: from 1922 all these lines and networks
+# are worked by the Compagnie Fermière des Chemins de fer tunisiens (Bône-Guelma) on actual expenses; results
+# to be given in the 1923 Statistique.
+
+@fin_unguaranteed view=178 page=154 
+img: all
+cols: djedeida narrow total cumulative
+1913 | 313475 4612916 4926391 25259579
+1914 | 281782 3544182 3825964 29085543
+1915 | 358884 3253405 3612289 32697832
+1916 | 486993 4391453 4878446 37576278
+1917 | 537188 4400584 4937772 42514050
+1918 | 971008 5455707 6426715 48940765
+1919 | 995735 5792135 6787870 55728635
+1920 | 1145355 8695070 9840425 65569060
+1921 | 1046964 10335590 11382554 76951614
+# e) Résultats comparés de l'exploitation des chemins de fer électriques Tunis-Goulette-Marsa (1918-1922),
+# f179. Frais forfaitaires d'exploitation: barème spécial. The goods tariff line is printed "Tarif moyen d'une
+# tonne".
+
+@rail view=179 page=155 company=tgm network=tunis_goulette_marsa
+img: all
+cols: 1918 1919 1920 1921 1922
+len_km | 38 38 38 38 38
+rec_day | 2887 3755 6002 6284 7240
+rec_gv | 1049214 1364543 2189166 2303489 2607921
+rec_pv | 4792 5982 7655 20050 34519
+rec_total | 1054006 1370525 2196821 2323539 2642440
+rec_km | 27883 36258 58116 60939 69906
+rec_train_km | 1.70 2.30 3.40 3.41 3.50
+pass_n | 3482899 4143633 4893802 4743892 5271500
+pass_prod | 1033195 1342016 2146258 2248071 2548289
+pass_km | 15 15 15 15 15
+pass_avg | 0.296 0.323 0.438 0.473 0.483
+pass_tariff | 0.019 0.021 0.029 0.031 0.032
+goods_t | 27865 29783 31271 28414 17116
+goods_prod | 4792 5982 7655 20050 34519
+goods_km | 10 10 11 12 14
+goods_avg | 0.172 0.020 0.244 0.705 2.016
+goods_tariff | 0.017 0.020 0.022 0.058 0.144
+train_km | 619590 596700 644990 680150 753500

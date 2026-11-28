@@ -1,0 +1,72 @@
+# Communes chapter, sgt1930 (ark bpt6k9105652d): "Concessions sur la voie publique, b) Terrasses et étalages".
+# Read on native-resolution crops (right-hand page, no labels): 58 evenly spaced value lines for the 58 labels
+# of the facing page (view 608), assigned in order (checks: line 6 = Bizerte 77.080, 23 = Kairouan, 44 = Sfax,
+# 50 = Sousse, 56 = Tunis). Gallica OCR as draft only. No total printed.
+# Surfaces are printed with "m2" (stripped here); 'x' = text instead of a number; 'néant' -> stored 0.
+# Footnotes of views 608/609: (1) Y compris droits colportage. (2) Droits adjugés. (3) Droits affermés avec ceux
+# du marché. (4) Droits affermés avec ceux du marché. (5) Droits affermés avec droits de marché. (6) Droits affermés.
+@terraces view=609 page=51 year=1930
+cols: terr_n terr_surf terr_prod stall_n stall_surf stall_prod
+Aïn-Draham | 0 0 0 0 néant 0
+# Ariana: terr_surf "70 m2 à 1 fr."
+Ariana | 0 x 1164.40 0 0 0
+# Bardo (Le): terr_surf "44 m2 à 0 fr. 75"
+Bardo (Le) | 0 x néant 0 0 8476.36
+Ben-Gardane | 0 0 0 0 150479 30095.80
+# Béja: terr_surf "concédés à un adjudic."
+Béja | 0 x 0 0 0 19600
+Bizerte | 77080 77080 9000 156 1450 5500
+Carthage | 0 0 néant 0 0 6722
+Djemmal | 0 14400 480 23450 52100 10420
+Djerba | 5670 7850 2355 1200 2143 643
+Ebba-Ksour | 0 0 néant 0 0 néant
+El Djem | 0 0 0 0 0 0
+Ferryville (1) | 4512 1128 3384 0 6000 12470.95
+Fériana | 0 0 0 0 0 néant
+Foum-Tatahouine | 0 0 0 15 178 145.50
+Gabès | 8 1049 2098 5 60 180
+Gafsa | 140 70 1290 0 800 12000
+Ghardimaou | 0 0 néant 0 0 néant
+Goulette (La) | 42 255 11668 99 261 4169
+Grombalia | 0 142.50 1710 0 0 néant
+Hadjeb-el-Aïoun | 0 0 0 0 0 néant
+Hamma (El) | 0 0 0 0 0 néant
+Hammam-Lif | 0 462 6390 0 37670 11301
+Kairouan | 29 90739 27221.70 113 272218 81665.40
+Kalaa-Kebira | 0 0 0 0 0 néant
+Kef (Le) (2) | 51 355 0 0 0 106000
+Krib (Le) | 0 0 néant 0 0 néant
+Ksour-Essaf | 60 90 1120 0 0 néant
+Maharès | 0 0 0 0 0 néant
+Mahdia | 180 140 3340 30 60 840
+Marsa (La) | 272 69 4650 39 60 3520.70
+Mateur | 21 450 1675.50 7896 283568 17012.30
+Maxula-Radès | 40 40 3310 12 60 3011
+Médenine | 0 0 0 114 724 362.50
+Medjez-el-Bab | 0 12720 1272 0 84999 20999.95
+Menzel-bou-Zelfa (3) | 0 0 0 0 0 0
+Menzel-Temime | 4 5060 253 0 0 0
+Moknine | 0 0 0 0 0 0
+# Monastir: "prod. affermés avec les marchés" across columns 3-5
+Monastir | 0 0 x x x 0
+M'saken | 0 0 0 0 0 0
+Nabeul | 0 0 0 0 0 24000
+Nefta | 0 0 0 0 0 néant
+Philippe-Thomas | 0 0 0 0 0 néant
+Saint-Germain | 0 0 0 0 0 néant
+Sfax | 815 735 33075 290 454 24514.90
+Sbeïtla | 0 605 242.20 0 3000 1200
+Sidi-bou-Saïd | 46 16 280 10 20 319
+Soliman (4) | 0 0 0 0 0 0
+# Souk-el-Arba, Souk-el-Khemis: stall_surf printed in metres ("460 m.", "606 m.")
+Souk-el-Arba | 15 900 4200 18 460 2860
+Souk-el-Khemis | 7 409 2268 13 606 3910.45
+Sousse | 0 3246 18386 0 1604 20721.85
+Tabarka (5) | 0 0 160 22 0 400
+Tebourba | 60 120 960 0 9050 3620
+Téboursouk | 0 0 0 0 0 néant
+Thala | 0 0 0 1763 1963 687.05
+Tozeur | 0 0 néant 0 0 néant
+Tunis | 98 586 27817.40 36 108 2904.40
+Zaghouan | 0 0 néant 0 0 néant
+Zarzis (6) | 0 0 0 0 0 0

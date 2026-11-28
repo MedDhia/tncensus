@@ -1,0 +1,37 @@
+# view 15
+## Contrôle de Souk-el-Arba
+Souk-el-Arba | 367 449 26 12 6 6 866
+Ben-Bachir | 7 0 0 0 0 0* 7  # (printed «)
+Chouïchia | 73 130 0 0 0 0 203
+Djebel-Hallouf | 10 145 1 0 0 1 157
+Djendouba (Caïdat de) | 26 25 0 0 0 0 51
+Feïdja | 36 80 1 0 0 0 117
+Ghardimaou (Centre) | 194 226 6 1 0 1 428
+Ghardimaou (Caïdat de) | 19 51 1 0 0 0 71
+Oued-Meliz | 5 48 1 0 0 0 54
+Souk-el-Khemis (Centre) | 116 314 6 0 0 5 441
+Souk-el-Khemis (Caïdat de) | 151 29 1 0 0 2 183
+## Annexe de Tabarca
+Tabarca | 418 607 17 13 0 1 1056
+Tabarca (Banlieue) | 59 20 0 2 0 0 81
+Aïn-Draham | 244 174 3 14 0 0 435
+Babouch, Bordj-Hammam (Banlieue ouest d'Aïn-Draham) | 40 192 0 0 0 0 232
+Fernana (banlieue est d'Aïn-Draham) | 48 13 7 0 0 0 68
+Mekna | 40 101 0 1 0 0 142
+## Contrôle de Sousse
+Sousse | 1469 2823 874 15 9 51 5241
+Sousse (Banlieue) | 34 39 10 0 0 4 87
+Aïn-Hallouf | 0 2 0 0 0 0 2
+Bekalta | 7 0 0 0 0 0 7
+Bennane | 2 0 0 0 0 0 2
+Bou-Ficha | 14 440 4 0 0 2 460
+Bourgine | 2 0 0 0 0 0 2
+Djemmal | 26 41 2 0 0 0 69
+El-Djem | 16 10 8 0 0 0 34
+Enfidaville | 125 409 10 0 0 1 545
+El-Onk | 25 55 2 0 0 0 82
+Hammam-Sousse | 2 0 0 0 0 0 2
+Kalaâ-Kebira | 11 18 0 0 0 0 29
+Kalaâ-Sghira | 20 0 10 0 0 0 30
+Kerker | 0 1 0 0 0 0 1
+Krussiah-Sahali | 20 14 0 0 0 1 35

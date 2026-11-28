@@ -1,0 +1,65 @@
+# Communes chapter, sgt1925 (ark bpt6k9105650k): "Concessions sur la voie publique, a) Autorisations de bâtir".
+# Drafted from Gallica OCR, every cell read on native-resolution crops of the page image.
+# Integers; printed » = 0; 'néant' kept as the word (stored 0); '?' = illegible; 'x' = not applicable.
+@permits view=64 page=40 year=1925
+cols: constructions raising n_auth
+Aïn-Draham | 0 0 0
+Ariana | 18 7 25
+Bardo (Le) | 6 0 6
+Béja | 11 2 13
+Ben-Gardane | 0 0 0
+Bizerte | 20 10 27
+Carthage | 30 9 39
+Djemmal | 0 0 0
+Djerba | 7 2 31
+Ebba-Ksour | 15 1 16
+El-Djem | 0 0 0
+Fériana | 3 0 3
+Ferryville | 5 0 5
+Foum-Tatahouine | 0 0 6
+Gabès | 14 3 17
+Gafsa | 3 2 5
+Ghardimaou | 0 0 3
+Goulette (La) | 44 4 48
+Grombalia | 34 7 41
+Hadjeb-el-Aïoun | 0 0 0
+Hamma (El) | 0 0 0
+Hammam-Lif | 48 0 46
+Kairouan | 3 2 3
+Kalaa-Kebira | 38 2 40
+Kef (Le) | 6 3 9
+Kram (Le) | 53 2 55
+Krib (Le) | 0 0 0
+Ksour-Essaf | 45 0 45
+Maharès | 10 0 10
+Mahdia | 5 1 6
+Marsa (La) | 45 5 50
+Mateur | 19 6 25
+Maxula-Radès | 6 2 8
+Médenine | 5 0 15
+Medjez-el-Bab | 5 1 23
+Menzel-bou-Zelfa | 0 0 0
+Menzel-Temime | 14 1 15
+Moknine | 16 1 24
+Monastir | 0 0 0
+M'saken | 0 0 0
+Nabeul | 9 3 12
+Nefta | 0 0 0
+Pêcherie (La) | 0 0 0
+Philippe-Thomas | 0 0 0
+Saint-Germain | 28 0 18
+Sfax | 24 3 27
+Sidi-bou-Saïd | 2 0 2
+Soliman | 2 1 3
+Souk-el-Arba | 5 0 5
+Souk-el-Khemis | 3 0 3
+Sousse | 47 10 57
+Tabarka | 0 0 0
+Tebourba | 1 0 1
+Téboursouk | 0 0 0
+Thala | 0 0 0
+Tozeur | 2 0 2
+Tunis | 391 86 477
+Zaghouan | 4 1 5
+Zarzis | 30 0 20
+Totaux | 1076 177 1291

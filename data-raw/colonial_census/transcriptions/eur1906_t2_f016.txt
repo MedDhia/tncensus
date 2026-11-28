@@ -1,0 +1,38 @@
+# view 16
+Ksour-Saf | 6 5 0 1 0 0 12
+Ksibet-Mediouni | 0 6 0 0 0 0 6
+Ksibet-Sousse | 3 6 0 0 0 0 9
+Madhia | 157 309 105 0 0 3 574
+Menzel-Bir-Taïeb | 8 0 0 0 0 0 8
+Menzel-Dar-bel-Ouar | 4 6 2 0 0 0 12
+Mezawack | 1 0 0 0 0 0 1
+Moknine | 31 14 18 8 0 0 71
+Monastir | 129 244 184 0 4 0 561
+M’Saken | 14 15 0 0 0 0 29
+Ouardenine | 0 4 0 0 0 0 4
+Oued-Laya | 5 4 1 0 0 0 10
+Palmes | 7 9 18 0 0 0 34
+Reyville | 0 61 0 0 0 0 61
+Sahaline | 6 1 0 0 0 0 7
+Sidi-bou-Ali | 6 0 21 0 0 0 27
+Sidi-Djaber | 6 8 5 0 0 0 19
+Sidi-el-Hani | 10 0 1 0 0 0 11
+Smala des Souassi | 4 0 2 0 0 0 6
+Soza-Salmsun | 1 11 0 0 0 0 12
+Tabak-el Kelb | 0 3 0 0 0 0 3
+Tabia-el-Oubira | 2 2 0 0 0 0 4
+Teboulba | 14 0 0 0 0 0 14
+Touza | 7 1 0 0 0 0 8
+## Contrôle de Thala
+Thala | 51 25 0 0 0 0 76
+Aïn-Khammouda | 0 2 0 0 0 0 2
+Bir-Oum-Ali | 4 0 0 0 0 0 4
+Bou-Chebka | 15 0 0 0 0 0 15
+Dernaïa | 2 0 0 0 0 0 2
+Djebel-Chambi | 0 9 0 0 0 0 9
+Djebel-Zebbeus | 0 5 0 0 0 0 5
+El-Adjered | 1 13 0 0 0 0 14
+El-Oubira | 5* 0 0 0 0 0 5
+Feriana | 21 3 3 0 0 0 27
+Haïdra | 3 0 0 0 0 0 3
+Kasserine | 1 1 0 0 0 0 2

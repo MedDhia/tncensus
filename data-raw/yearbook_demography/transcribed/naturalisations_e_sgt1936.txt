@@ -1,0 +1,52 @@
+# Table e) "Naturalisations accordées", 1936 edition (sgt1936), volume
+# bpt6k91056547, views 23-24 (printed pp. 12-13). Transcribed from the
+# native-resolution images (hires.py) for the cell-by-cell comparison with
+# csv/naturalisations_by_nationality_sgt1939.csv (compare_naturalisations_e.py).
+# Comparison printing only: no data file is built.
+#
+# Format: see naturalisations_e_sgt1922.txt ("»" = 0, "?" = not visible,
+# "-" = blank, "= TOTAUX" printed column totals). Adults and minors are not split
+# (age T); there are no pair totals.
+#
+# Layout: columns 1891-1898, 1899-1910, "De 1911 à 1922" (décret 1910),
+# 1915-1924 (loi 1914), then one column per year 1925-1936 under "De 1925 à 1936
+# (en vertu de la loi du 20 décembre 1925 [sic])". There is NO 1924 column. 29 rows,
+# as in sgt1935 (Anglo-Maltais, Divers, no Marocains/Syriens/Indochinois/A.O.F.).
+#
+# 1915-1924, Roumains: the glyph is broken (prints like ")"); read as 1, which the
+# printed total (391) requires and which sgt1935 and sgt1939 print.
+# 1926, Italiens: printed 1.311 (clear on the image); the cells then sum to 3.144
+# against a printed total of 3.174; sgt1935 prints 1.341.
+
+@ sgt1936 23,24 12,13
+cols | 1891-1898/d1887/T@23 1899-1910/d1899/T@23 1911-1922/d1910/T@23 1915-1924/l1914/T@23 1925/l1923/T@23 1926/l1923/T@23 1927/l1923/T@24 1928/l1923/T@24 1929/l1923/T@24 1930/l1923/T@24 1931/l1923/T@24 1932/l1923/T@24 1933/l1923/T@24 1934/l1923/T@24 1935/l1923/T@24 1936/l1923/T@24
+Italiens | 142 881 1456 153 1812 1311 1195 1607 1330 949 1060 1194 1275 536 510 222
+Anglo-Maltais | 42 225 204 55 244 207 203 149 187 113 67 79 49 51 44 35
+Suisses | 18 36 20 5 6 13 6 » » 6 13 4 4 8 6 »
+Allemands | 28 30 12 2 5 7 1 » » 4 14 15 13 15 9 5
+Autrichiens | 10 44 2 1 7 6 » » » » » » 1 1 » »
+Espagnols | 3 27 4 2 43 24 52 39 11 5 11 10 5 9 1 1
+Grecs | 20 8 15 2 23 36 44 30 48 20 12 17 19 6 7 »
+Hollandais | 2 9 2 » » 4 » » » » » » » 2 » »
+Portugais | » 3 3 6 » 4 » » » » » » 4 1 1 »
+Belges | 6 1 » » 9 » 3 » » 4 3 4 1 1 » »
+Norvégiens et Suédois | » 4 » » » » » » » » 1 1 » » » »
+Tchéco-Slovaques | » » » » » » » » » 2 2 2 8 1 3 »
+Bulgares | » 2 » » 4 » » » » » 2 » 1 » » »
+Hongrois | » » » » » » » » » 1 » 2 4 » » »
+Roumains | » » » 1 » » » » » » 1 » » 5 » »
+Yougo-Slaves | » » » » 2 » » » » » 1 5 » 1 3 »
+Turcs | » 11 42 » 19 39 24 27 » 22 14 » 2 2 2 1
+Albanais | » » » » » » » » » 5 » » 7 » 4 »
+Polonais | » » » 1 6 3 » » » 12 3 5 11 2 1 2
+Russes | » 1 8 2 39 43 65 45 54 34 32 58 187 92 52 30
+Luxembourgeois | 2 » » » » » » » » 1 1 2 » » » »
+Algériens catholiques | » » » » » » » » » 5 4 » 2 » » »
+Algériens musulmans | 3 5 38 2 40 30 57 7 36 3 3 » » » » »
+Algériens israélites | » » » » 10 12 9 12 15 4 2 » 1 » 1 »
+Tunisiens catholiques | » » » » » » » » » » 5 7 5 » » »
+Tunisiens musulmans | 17 80 85 38 156 183 248 144 105 22 5 5 2 » » »
+Tunisiens israélites | » » 178 121 872 1222 976 780 747 397 388 456 346 99 23 7
+Divers | 3 5 » » » » 75 77 68 » » » 1 » » »
+Anglais | » » » » » » » » » » » » 1 » 1 »
+= TOTAUX | 296 1372 2069 391 3297 3174 2958 2917 2601 1609 1644 1866 1949 832 668 303

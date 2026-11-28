@@ -1,0 +1,80 @@
+# view 20 (printed page 16)
+## A) Français
+Tunisie | 9239
+Algérie, département d'Alger | 1274
+Algérie, département de Constantine | 3529
+Algérie, département d'Oran | 448
+Ain | 201
+Aisne | 86
+Allier | 186
+Alpes (Basses-) | 195
+Alpes (Hautes-) | 360
+Alpes-Maritimes | 169
+Ardèche | 346
+Ardennes | 65
+Ariège | 142
+Aube | 60
+Aude | 301
+Aveyron | 321
+Bouches-du-Rhône | 922
+Calvados | 55
+Cantal | 64
+Charente | 144
+Charente-Inférieure | 227
+Cher | 128
+Corrèze | 119
+Corse | 2022
+Côte-d'Or | 212
+Côtes-du-Nord | 119
+Creuse | 63
+Dordogne | 224
+Doubs | 203
+Drôme | 335
+Eure | 46
+Eure-et-Loire | 38
+Finistère | 192
+Gard | 497
+Garonne (Haute-) | 287
+Gers | 145
+Gironde | 324
+Hérault | 368
+= A reporter | 23656
+= Report | 23656
+Ille-et-Vilaine | 106
+Indre | 82
+Indre-et-Loire | 96
+Isère | 546
+Jura | 179
+Landes | 92
+Loir-et-Cher | 72
+Loire | 283
+Loire (Haute-) | 160
+Loire-Inférieure | 151
+Loiret | 79
+Lot | 115
+Lot-et-Garonne | 178
+Lozère | 77
+Maine-et-Loire | 93
+Manche | 78
+Marne | 114
+Marne (Haute-) | 79
+Mayenne | 52
+Meurthe-et-Moselle | 185
+Meuse | 68
+Morbihan | 134
+Nièvre | 116
+Nord | 199
+Oise | 56
+Orne | 42
+Pas-de-Calais | 105
+Puy-de-Dôme | 185
+Pyrénées (Basses-) | 206
+Pyrénées (Hautes-) | 164
+Pyrénées-Orientales | 298
+Rhin (Haut-) (Belfort) | 97
+Rhône | 635
+Saône (Haute-) | 125
+Saône-et-Loire | 296
+Sarthe | 52
+Savoie | 262
+= A reporter | 29513

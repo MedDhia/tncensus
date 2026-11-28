@@ -1,0 +1,20 @@
+# sgt1925 pp.42-43, views 66-67 (volume bpt6k9105650k), lower half of the water page (left) and of the gas page
+# (right): "ÉCLAIRAGE. a) Electricité : longueur des canalisations ; puissance des installations ; abonnés ;
+# consommation ; produits". Same layout as sgt1922-sgt1924 (power in hectowats; no year printed; no column totals).
+# Power printed with a decimal digit where needed (Ferryville "49 5", "94 5"; Sfax "7.528 3", "1.264 8", "8,793 1"):
+# stored with the decimal. kWh with a decimal sub-column (» or two digits), stored as printed.
+# Tokens as in communes_elec_sgt1922.txt.
+# Every cell read on native-resolution crops (both pages at 0.6 scale; doubtful cells at 1.3-3x). The table clears the
+# binding in this edition. OCR agrees on every figure.
+# Row failures confirmed on the image (printed values kept): Tunis subscribers 13.229 + 583 = 13.812, TOTAL printed
+# 13.882 (the "229" in slightly heavier type); Bizerte receipts 437.489,85 + 53.238,85 = 490.728,70, TOTAL printed
+# 540.728,70.
+@elec22 view=66 view2=67 page=42 year=1925 left=7
+cols: len pw_l pw_o pw_t sub_l sub_o sub_t kwh_p kwh_pub kwh_t rec_p rec_v rec_t redev droits
+Tunis | 132585 68950 29463 98413 13229 583 13882 5261535 199799 5461334 5391134.67 382947.39 5774082.06 292549.54 »
+Bizerte | 31527 3500 1400 4900 1349 31 1380 26192 35100 61292 437489.85 53238.85 540728.70 » »
+Ferryville | 12200 45 49.5 94.5 241 12 253 87342 10238 97580 150349.70 18426.40 168776.10 » »
+Sousse | 18840 7972 1915 9887 1501 69 1570 407747 80860 488607 541983.15 60000.00 601983.15 » »
+Sfax | 21579 7528.3 1264.8 8793.1 1448 35 1483 279213.01 78432.03 357645.04 479763.98 85632.03 565396.01 9201.67 »
+Béja | 10890 1250 250 1500 461 24 485 56997.06 10400 67397.06 120000.00 30590.00 150590.00 » »
+Kairouan | 18000 240 » 240 340 » 340 10800 » 10800 14650.00 » 14650.00 » »

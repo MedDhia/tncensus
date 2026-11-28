@@ -1,0 +1,71 @@
+# sgt1936: electricity tables. No year printed; `year` = 1936 (the edition year). Conventions as communes_elec_sgt1935.txt;
+# decimals are printed after a comma in this edition ("8.363.192,6").
+#
+# Production d'électricité, p.24, view 35. Read on a native crop (0.45 scale); OCR misreads several cells
+# (46.914.360 as 40.914.300, 1.692.517 as 1.092.517).
+@prod view=35 page=24 year=1936
+cols: st_kw st_kwh ic_kw ic_kwh tot_kw max_kw tot_kwh
+Centrale de La Goulette | 34800 46914360 » » 34800 13700 46914360
+Centrale de Ferryville | » » 189 197212 189 135 197212
+Centrale de Bizerte | » » 1770 1692517 1770 1088 1692517
+Centrale de Béja | » » 200 177110 200 83 177110
+Centrale de Souk-el-Arba | » » 368 420866.2 368 150 420866.2
+Centrale de Sousse | » » 1760 2292996 1760 940 2292996
+Centrale de Sfax | » » 3070 3104306 3070 1310 3104306
+Centrale de Gabès | » » 216 259185 216 138 259185
+Centrale de Gafsa | » » 160 168227 160 55 168227
+Totaux | 34800 46914360 7733 8312419.2 42533 17599 55226779.2
+#
+# Distribution d'électricité (Tableau II layout, no number), p.25, view 36: lengths of lines. A grand total HT + BT
+# (2.168.093) is printed under the two column totals. Read on a native crop (0.45 scale).
+@distr2 view=36 page=25 year=1936
+cols: len_ht len_bt
+La Goulette :: Concession Compagnie des Tramways de Tunis | 707835 302890
+La Goulette :: Tunis | 65845 200670
+La Goulette :: La Goulette | 292 27112
+La Goulette :: Région de Ferryville (fourniture C.T.T.) | 5300 2903
+Ferryville :: Ferryville (courant continu) | 1130 3770
+Bizerte :: Bizerte Pêcherie | » 5370
+Bizerte :: Région Bizerte | 38037 58887
+Béja :: Béja | 1170 10800
+Souk-el-Arba :: Souk-el-Arba | » 4950
+Souk-el-Arba :: Souk-el-Khemis | » 2980
+Souk-el-Arba :: Le Kef | » 8295
+Souk-el-Arba :: Téboursouk | » 3900
+Souk-el-Arba :: Région de Souk-el-Arba, Souk-el-Khemis, Le Kef, Téboursouk | 152065 538
+Sfax :: Sfax | 34434 47688
+Gabès :: Gabès | » 17000
+Gafsa :: Gafsa | 6226 11539
+Sousse :: Sousse | 7000 18000
+Sousse :: Sahel de Sousse | 238900 172947
+Sousse :: Kairouan (fourniture Union électrique tunisienne) | 1620 8000
+Totaux | 1259854 908239
+GRANDTOTAL | 2168093
+#
+# Distribution d'électricité (Tableau I layout), pp.26-27, views 37-38 (two-page spread). View 37: labels, subscribers,
+# HT Traction and HT Autres usages; view 38 from HT Services publics. Read on native crops (0.48-0.5 scale, two bands per
+# page). Faint cells checked against the row totals: Gaz de Tunis (à Tunis) "7.533.03?" lumière = 7.533.032 (BT
+# total 10.750.430 - other cells); Le Kef force 6.355,8. Téboursouk's BT services publics, BT total and total général
+# are printed on the line below its name (above the Concession d'État line). Bizerte's BT services publics cell
+# prints two figures one above the other, "106.605" and "39.060" (the two braced names): stored as their sum,
+# 145665, with the printed text in text_fr (the BT total 1.050.746 includes both).
+@distr1 view=37 view2=38 page=26 year=1936 left=6
+cols: sub_l sub_o sub_ht sub_t ht_traction ht_other ht_public ht_t bt_dom bt_force bt_publight bt_public bt_t total
+Compagnie des Tramways de Tunis (Banlieue de Tunis et dans un rayon de 60 km. autour de Tunis) | 9488 697 10185 20370 8363192.6 6497880 4948372.3 19809444.9 1430952.3 8374526 165920 6570 2440894.9 22250339.8
+Compagnie du Gaz de Tunis (à Tunis) | 34186 1235 52 35473 » 4195439 695450 4890889 7533032 1750010 1102088 365300 10750430 15641319
+Compagnie du Gaz de Tunis (à La Goulette) | 1496 55 1 1552 » 13156 » 13156 247573 71938 212313 12959 544783 557939
+Ferryville (fourniture C.T.T.) + Ferryville (centrale de Ferryville) | 1065 20 » 1085 » » » » 169166.8 12372.2 39812.3 50895.5 272246.8 272246.8
+Bizerte — La Pêcherie + Région de Bizerte | 4208 148 6 4362 » 149408 166540 315948 748999 94928 61154 S:106605+39060 1050746 1366694
+Béja | 797 49 » 846 » » » » 85437.9 37841.1 11995.3 9802.5 145076.8 145076.8
+Souk-el-Arba | 298 15 » 313 » » » » 37093.4 5767.4 12820.1 » 55680.9 55680.9
+Souk-el-Khemis | 120 8 » 128 » » » » 11618.2 30187.7 12227.5 » 54033.4 54033.4
+Le Kef | 292 15 » 307 » » » » 39703 25707 31392.6 » 96802.6 96802.6
+Téboursouk | 67 5 » 72 » » » » 9225.2 6355.8 15768.9 » 31349.9 31349.9
+Concession d'État région Souk-el-Arba, Souk-el-Khemis, Le Kef, Téboursouk | 3 1 23 27 » 72664 » 72664 358.3 932.3 520 » 1810.6 74474.6
+Sahel | 1122 137 2 1261 » 20344 » 20344 87972 205391 59133 16100 368596 388940
+Sousse | 3627 107 3 3737 » 51950 » 51950 782239 149248 175169 40397 1147053 1199003
+Kairouan | 980 18 2 1000 » » 53855 53855 146020 5696 30974 » 182690 236545
+Sfax | 4508 172 64 4744 » 1179810 76967 1256777 914732 208707 203890 48016 1375345 2632122
+Gabès | 914 56 » 970 » » » » 126513.8 39377 72870.9 » 238761.7 238761.7
+Gafsa | 310 9 » 319 » » » » 45995 40298 30294 5023 121610 121610
+Totaux | 63481 2747 10338 76566 8363192.6 12180651 5941184.3 26485027.9 12416630.9 3522209.1 2238342.6 700728 18877910.6 45362938.5

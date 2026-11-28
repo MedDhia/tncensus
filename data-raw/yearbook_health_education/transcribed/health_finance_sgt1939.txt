@@ -1,0 +1,116 @@
+# sgt1939, ark bpt6k9105739w, chapter III "Assistance et santé publiques"
+# Conventions as in health_finance_sgt1922.txt and health_finance_sgt1935.txt.
+# Only the "État des recettes et des dépenses du budget de l'Assistance publique" is printed in this
+# edition (no accounts of the societies, no Institut Pasteur / Arloing tables, no day-cost tables).
+# Amounts carry centimes where printed (8.128 50 = 8128.50). Transcribed from the page images,
+# checked against Gallica OCR.
+
+[etat_receipts] views=36 pages=30 year=1939 title=I. Recettes. Crédits alloués pour 1939
+Titre Ier. — Crédit spécial inscrit au budget de l'État | 3100000
+Titre II. — Disponibilité du « Fonds de réserve » en numéraire | 282804.48
+Total des crédits pour 1939 | 3382804.48
+
+[etat_subsidies] views=36,37,38 pages=30,31,32 year=1939 cols=Subventions allouées en 1939, Titre I ; Titre II ; Total title=II. Dépenses
+H | I. — Subventions ordinaires
+H | Première Région
+A | - | Société Française de Bienfaisance de Bizerte | 15000 » 15000
+A | - | Société Musulmane de Bienfaisance de Bizerte | 10000 10000 20000
+A | - | Société Israélite de Secours et de Bienfaisance de Bizerte | 3000 » 3000
+A | - | Croix-Verte de Bizerte | 3000 » 3000
+A | - | Société Française de Bienfaisance de Ferryville | 5000 » 5000
+A | - | Société Musulmane de Bienfaisance de Ferryville | 2000 » 2000
+H | Deuxième Région
+A | a | Société Française de Bienfaisance de Tunis : Consultations internationales | 5000 » 5000
+A | b | Société Française de Bienfaisance de Tunis : Assistance aux indigents | 150000 20000 170000
+A | c | Société Française de Bienfaisance de Tunis : Vieillards | 110000 5000 115000
+A | d | Société Française de Bienfaisance de Tunis : Orphelinat | 128500 5000 133500
+A | e | Société Française de Bienfaisance de Tunis : Secours aux mères françaises nécessiteuses | 55000 » 55000
+A | f | Société Française de Bienfaisance de Tunis : Service de la Rage | 1356 » 1356
+A | g | Société Française de Bienfaisance de Tunis : Chaussures aux petits français | 7500 » 7500
+A | h | Société Française de Bienfaisance de Tunis : Secours aux malades placés dans les sanatoria | 18000 » 18000
+A | a | Société Musulmane de Bienfaisance de Tunis : Assistance médicale | 22000 » 22000
+A | b | Société Musulmane de Bienfaisance de Tunis : Assistance aux indigents | 130000 15000 145000
+A | c | Société Musulmane de Bienfaisance de Tunis : Vieillards | 64000 » 64000
+A | d | Société Musulmane de Bienfaisance de Tunis : Orphelinat | 96000 » 96000
+A | e | Société Musulmane de Bienfaisance de Tunis : Cuisines populaires | 30000 5000 35000
+A | a | Communauté Israélite de Tunis : Assistance médicale | 12500 » 12500
+A | b | Communauté Israélite de Tunis : Vieillards | 29500 10000 39500
+A | c | Communauté Israélite de Tunis : Service antituberculeux | 17000 » 17000
+A | d | Communauté Israélite de Tunis : Orphelinat | 22500 » 22500
+A | - | Rétribution du Délégué du Gouvernement près la Communauté Israélite de Tunis | 4000 » 4000
+@ view=37 page=31
+A | a | Fourneau des Pauvres : Assistance médicale | 10000 » 10000
+A | b | Fourneau des Pauvres : Assistance aux indigents | 75000 10000 85000
+A | c | Fourneau des Pauvres : Garderie | 40000 » 40000
+A | d | Fourneau des Pauvres : Œuvre de Protection de la Jeune Fille | 13500 5000 18500
+A | a | Institut Héliothérapique Infantile du Kram : Fonctionnement de l'Établissement | 168500 27200 195700
+A | b | Institut Héliothérapique Infantile du Kram : Entretien des enfants placés par l'Administration | 273000 » 273000
+A | - | Société de Secours aux blessés militaires | 1600 » 1600
+A | - | Union des Femmes de France | 1850 » 1850
+A | - | Dispensaire de la Croix Rouge de Tunis | 8000 » 8000
+A | - | Croix Verte de Tunis | 6000 » 6000
+A | - | Asile des Vieillards des Petites Sœurs des Pauvres de Tunis | 55000 » 55000
+A | - | Dispensaire des Sœurs de Notre Dame de l'Espérance à Tunis | 4000 » 4000
+A | - | Sœurs de N.D. de l'Assomption à Tunis | 3500 » 3500
+A | - | Dispensaire des Sœurs de Notre Dame d'Afrique, à Carthage | 1500 » 1500
+A | - | Asile de Nuit Israélite | 4000 » 4000
+A | - | Cuisines populaires israélites | 25000 » 25000
+A | - | Œuvre Israélite des Couvertures | 5000 » 5000
+A | - | Garderie Israélite | 10000 » 10000
+A | - | Dispensaire scolaire d'Hygiène et de Médecine Préventive des Écoles de l'Alliance Israélite de Tunis | 3000 » 3000
+A | - | Dispensaire Alapetite | 50000 » 50000
+A | - | Société de Saint Vincent de Paul | 1500 » 1500
+A | - | Nos Petits de Tunis | 30000 » 30000
+A | - | Orphelinat de garçons de l'Institut Saint Vincent de Paul à La Marsa | 15000 10000 25000
+A | a | Œuvre de la Crèche : Assistance aux enfants | 59000 15000 74000
+A | b | Œuvre de la Crèche : Préventorium de Zaghouan | 8000 » 8000
+A | - | Comité de Protection et d'Assistance de l'Enfance | 630000 » 630000
+A | - | Œuvre de Protection du premier âge | 8128.50 1871.50 10000
+A | - | Vestiaire Central | 60000 » 60000
+A | - | Œuvre des cantines scolaires | 30000 » 30000
+A | - | Société Musulmane de Bienfaisance de Nabeul | 5000 » 5000
+A | - | Préventorium de la Société de l'Hôpital Israélite de Tunis | » 40000 40000
+H | Troisième Région
+A | - | Société Musulmane de Bienfaisance du Kef | 10500 » 10500
+A | - | Société Hospice des Vieillards Musulmans du Kef | 40000 » 40000
+H | Quatrième Région
+A | - | Société Française de Bienfaisance de Sousse | 10000 » 10000
+A | - | Société Musulmane de Bienfaisance de Sousse : Assistance aux indigents | 27000 » 27000
+A | a | Asile de Vieillards : Fonctionnement de l'Établissement | 20000 » 20000
+A | b | Asile de Vieillards : Vieillards placés par l'Administration | 30000 » 30000
+A | - | Caisse de Secours et de Bienfaisance Israélite de Sousse | 15000 » 15000
+A | - | Société Française de Bienfaisance de Kairouan | 1000 » 1000
+A | - | Société Musulmane de Bienfaisance de Kairouan | 8000 » 8000
+@ view=38 page=32
+H | Cinquième Région
+A | - | Société Française de Bienfaisance de Sfax | 10000 » 10000
+A | - | Société Musulmane de Bienfaisance de Sfax | 120000 » 120000
+A | - | Caisse de Secours et de Bienfaisance Israélite de Sfax | 10000 » 10000
+A | - | Nos Petits de Sfax | 5000 » 5000
+A | - | Société Musulmane de Biefaisance de Tozeur | 6000 » 6000
+A | - | Versement de 5 % au fonds de réserve de l'Assistance publique | 155000 » 155000
+A | - | Placement des tuberculeux dans les sanatoria | » 30000 30000
+A | - | Dépenses imprévues | 4928 » 4928
+A | - | Legs Joséphine Virieu | 637.50 » 637.50
+A | - | Dispensaire des Sœurs de Nevers à Tunis | » 1500 1500
+H | II. — Subventions exceptionnelles
+A | - | Société Musulmane de bienfaisance de Nabeul | » 10000 10000
+A | - | Fourneau des Pauvres (réparation d'un brûleur à mercure pour l'appareil de radiographie) | » 1800 1800
+A | - | Sœurs de N.D. de Montbareil, à La Manouba | 5000 » 5000
+H | III. — Subventions conditionnelles
+A | - | Fourneau des Pauvres (Travaux de construction) | » 20000 20000
+A | - | Nos Petits de Tunis (Travaux de construction) | » 20000 20000
+H | IV. — Subventions complémentaires
+H | Deuxième région
+A | - | Société Musulmane de bienfaisance de Tunis-Orphelinat | 4000 » 4000
+A | - | Société de Secours aux blessés militaires | 5000 » 5000
+A | - | Union des Femmes de France | 2000 » 2000
+A | - | Comité de Protection et d'Assistance de l'Enfance | 55000 15000 70000
+A | - | Garderie israélite | 5000 » 5000
+A | - | Nos Petits de Tunis | 5000 » 5000
+H | Cinquième région
+A | - | Société Française de bienfaisance de Sfax | » 5000 5000
+T | Totaux | 3100000 282371.50 3382371.50
+H | V. — Fonds de réserve
+A | - | Reliquat des crédits non répartis | » 432.98 432.98
+R | Total général | 3100000 282804.48 3382804.48

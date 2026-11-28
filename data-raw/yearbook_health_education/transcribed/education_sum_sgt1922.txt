@@ -1,0 +1,151 @@
+# sgt1922, volume ark bpt6k9105649x, chapter VII "Instruction publique et beaux-arts", views 113-152.
+# Transcribed from the page images; Gallica OCR only as a draft. "0" = printed "»". "." = not printed.
+# Nationality blocks: Français Musulmans Israélites Italiens Maltais Divers TOTAUX.
+# Views 148/149 and 150/151 are two-page spreads; one or two columns at the fold are partly hidden
+# in the binding (see the 
+[total view=114 page=90]
+year: 1922
+total | Total général des élèves de l'enseignement public et privé au 31 décembre 1922 | 51450
+
+[exams view=116 page=92]
+cepe | Certificat d'études primaires élémentaires | examined | 577 561 311 157 21 20 1647 | 429 14 214 113 15 20 805 | 2452
+cepe | Certificat d'études primaires élémentaires | passed | 386 273 179 88 9 11 946 | 304 11 130 71 10 15 541 | 1487
+beps | Brevet d'enseignement primaire supérieur | examined | 16 1 1 0 0 0 18 | 3 0 0 0 0 0 3 | 21
+beps | Brevet d'enseignement primaire supérieur | passed | 10 1 1 0 0 0 12 | 1 0 0 0 0 0 1 | 13
+brevet_elementaire | Brevet élémentaire | examined | 59 31 26 7 4 1 128 | 169 0 24 10 5 2 210 | 338
+brevet_elementaire | Brevet élémentaire | passed | 15 5 6 1 2 1 30 | 44 0 7 0 1 0 52 | 82
+brevet_superieur | Brevet supérieur | examined | 14 0 0 0 0 0 14 | 33 0 3 0 0 0 36 | 50
+brevet_superieur | Brevet supérieur | passed | 0 0 0 0 0 0 0 | 7 0 1 0 0 0 8 | 8
+sadiki_secondary_diploma | Diplôme de fin d'études secondaires du Collège Sadiki | examined | 0 7 0 0 0 0 7 | 0 0 0 0 0 0 0 | 7
+sadiki_secondary_diploma | Diplôme de fin d'études secondaires du Collège Sadiki | passed | 0 4 0 0 0 0 4 | 0 0 0 0 0 0 0 | 4
+baccalaureat | Baccalauréats | examined | 154 13 90 20 1 2 180 | 44 0 10 0 0 0 54 | 334
+baccalaureat | Baccalauréats | passed | 66 9 30 6 0 3 114 | 23 0 4 0 0 0 27 | 141
+arabic_spoken_cert | Examens d'arabe : Certificat d'arabe parlé | examined | 45 0 2 6 0 1 51 | 22 0 2 2 0 1 27 | 81
+arabic_spoken_cert | Examens d'arabe : Certificat d'arabe parlé | passed | 35 0 2 6 0 1 44 | 15 0 2 2 0 0 19 | 63
+arabic_brevet_elementaire | Examens d'arabe : Brevet élémentaire | examined | 21 79 1 1 0 0 103 | 1 0 0 0 0 1 2 | 105
+arabic_brevet_elementaire | Examens d'arabe : Brevet élémentaire | passed | 4 26 0 1 0 0 31 | 0 0 0 0 0 0 0 | 31
+arabic_diplome_superieur | Examens d'arabe : Diplôme supérieur | examined | 3 11 0 1 0 0 15 | 0 0 0 0 0 0 0 | 15
+arabic_diplome_superieur | Examens d'arabe : Diplôme supérieur | passed | 1 5 0 1 0 0 7 | 0 0 0 0 0 0 0 | 7
+
+[establishments view=117 page=93]
+Tunis | Lycée Carnot | 45 | 712 154 481 75 17 29 1468 | 0 0 0 0 0 0 0 | 1468 | 1450
+Tunis | Collège Sadiki | 13 | 0 435 0 0 0 0 435 | 0 0 0 0 0 0 0 | 435 | 406
+Tunis | Collège Alaoui | 16 | 212 155 10 18 2 0 397 | 0 0 0 0 0 0 0 | 397 | 308
+Tunis | École Normale d'Instituteurs | 8 | 107 96 0 7 1 0 211 | 1 0 0 0 0 0 1 | 212 | 232
+Tunis | École professionn. E.-Loubet | 16 | 290 31 5 43 9 4 382 | 0 0 0 0 0 0 0 | 382 | 372
+Tunis | Lycée Armand-Fallières (1) | 23 | 0 0 0 0 0 0 0 | 499 4 81 18 3 9 614 | 614 | 570
+Tunis | École Normale d'Institutrices | 11 | 22 0 0 1 0 0 23 | 174 101 1 11 6 1 294 | 317 | 326
+Tunis | Petit Lycée Jules-Ferry (1) | 15 | 0 0 0 0 0 0 0 | 308 12 123 42 0 17 592 | 502 | 491
+TOTAUX | Totaux | 147 | 1343 871 496 144 29 33 2916 | 982 117 205 71 9 27 1411 | 4327 | 4155
+note: (1) Ces établissements, créés au 1er janvier 1915, comprennent : le premier, les classes secondaires ; le deuxième, les classes élémentaires de l'ancienne École Jules Ferry.
+
+[libraries view=117 page=93]
+years: 1921 1922
+public_tunis | 1° Bibliothèque publique de Tunis | 19447 22372 | 72148 81380
+circulating | 2° Bibliothèque circulante | 306 148 | 676 361
+popular_tunis | 3° Bibliothèque populaire de Tunis | 11514 9884 | 34542 29652
+popular_interior | 3° Bibliothèques populaires de l'intérieur | 12956 14253 | 32664 34653
+
+[arabic_courses view=117 page=93]
+years: 1921 1922
+elementary_spoken | Cours élémentaire d'arabe parlé (1re et 2e année) | 95 71
+elementary_written | Cours élémentaire d'arabe écrit (1re et 2e année) | 148 173
+higher_written | Cours supérieur d'arabe écrit | 30 27
+
+[music_school view=117 page=93]
+enrolled | Nombre d'élèves inscrits | 154 1 86 14 1 15 271
+solfege | Classe de solfège | 83 0 40 6 1 7 137
+singing | Classe de chant | 10 0 5 0 0 3 18
+piano | Classe de piano | 25 0 33 7 0 3 68
+violin | Classe de violon | 26 0 7 1 0 1 35
+cello | Classe de violoncelle | 1 0 0 0 0 1 2
+woodwind | Classe d'instruments à vent (bois) | 7 0 1 0 0 0 8
+brass | Classe d'instruments à vent (cuivre) | 2 1 0 0 0 0 3
+
+[primary_total views=148,149 pages=124,125]
+public_primary | 1° Écoles primaires publiques | 3993 13280 2572 4541 563 148 25097 | 3708 1560 3446 4333 428 136 13611 | 38708 | 36639
+private | 2° Écoles privées | 578 37 2103 560 32 12 3322 | 797 458 1356 534 90 31 3266 | 6588 | 6298
+estab_primary_classes | 3° Classes primaires des établissements à personnalité civile (1) | 330 466 205 42 12 8 1063 | 447 113 124 53 6 18 761 | 1824 | 1842
+TOTAUX | Totaux généraux | 4901 13783 4880 5143 607 168 29482 | 4952 2131 4926 4920 524 185 17638 | 47120 | 44779
+note: (1) Ces nombres figurent déjà dans la statistique du Collège Sadiki (petit Collège), des Écoles normales d'instituteurs et d'institutrices (Écoles d'application) et du Petit Lycée Jules-Ferry. Ils ne sont reportés ici que pour déterminer le total général des élèves qui reçoivent l'enseignement primaire. Dans le tableau de la population scolaire, ils sont comptés seulement dans le total des établissements à personnalité civile.
+
+[vocational view=148 page=124]
+TUNIS | École place Halfaouine | 32
+TUNIS | École rue du Tribunal | 21
+TUNIS | École rue du Trésor | 19
+TUNIS | École place aux Moutons | 21
+TUNIS | École rue El-Monastiri (internat d'apprentissage) | 51
+TUNIS | École rue Sidi-Essourdou | 31
+SUBTOTAL | TUNIS | 175
+El-Adjim | El-Adjim | 16
+Bizerte | Bizerte | 6
+Ferryville | Ferryville | 22
+Gabès | Gabès | 26
+Gafsa | Gafsa | 24
+Grombalia | Grombalia | 2
+REPORT | A reporter | 271
+Kairouan | Kairouan | 61
+Ksar-Hellal | Ksar-Hellal | 29
+Mahdia | Mahdia | 5
+La Chebba | La Chebba | 0
+Metlaoui | Metlaoui | 21
+Ras-el-Djebel | Ras-el-Djebel | 0
+Sfax | Sfax | 60
+Sousse | Sousse | 81
+Teboulba | Teboulba | 6
+TOTAL | Total | 534
+
+[canteens view=149 page=125]
+years: 1921 1922
+free | Gratuites | 95929 90776
+paying | Payantes | 36543 35134
+TOTAUX | Totaux | 132472 125910
+
+[population views=150,151 pages=126,127]
+public_primary | Écoles primaires publiques | 3993 13280 2572 4541 563 148 25097 | 3708 1560 3446 4333 428 136 13611 | 7701 14840 6018 8874 991 284 | 38708 | 36639
+civil_personality | Établissements à personnalité civile | 1343 871 496 144 29 33 2916 | 982 117 205 71 9 27 1411 | 2325 988 701 215 38 60 | 4327 | 4155
+TOTAL_PUBLIC | Total de l'enseignement public | 5336 14151 3068 4685 592 181 28013 | 4690 1677 3651 4404 437 163 15022 | 10026 15828 6719 9089 1029 344 | 43035 | 40794
+private | Écoles privées | 578 37 2103 560 32 12 3322 | 797 458 1356 534 90 31 3266 | 1375 495 3459 1094 122 43 | 6588 | 6298
+TOTAL_GENERAL | Total général des établissements scolaires français publics et privés | 5914 14188 5171 5245 624 193 31335 | 5487 2135 5007 4938 527 194 18288 | 11401 16323 10178 10183 1151 387 | 49623 | 47092
+compare 1919 | 5330 9793 4599 4555 1031 135 25443 | 4972 1759 4650 4578 933 162 17054 | 10302 11552 9249 9133 1964 297 | 42497
+compare 1920 | 5402 10655 4756 4746 970 149 26678 | 4975 1858 4786 4584 950 180 17333 | 10377 12513 9542 9330 1920 329 | 44011
+compare 1921 | 5808 12477 4960 5050 791 153 29239 | 5385 1966 4690 4876 743 193 17853 | 11193 14443 9650 9926 1534 346 | 47092
+# The boys' TOTAUX column (view 150, right edge) and the girls' Françaises column (view 151, left
+# edge) run into the binding; all their cells were read on native-resolution crops of both views.
+
+[quinquennial view=152 page=128]
+1885 | 1803 1168 2971 | 1334 349 1683 | 4654
+1890 | 5567 1679 7246 | 2484 1261 3745 | 10991
+1895 | 7625 1582 9207 | 3256 1478 4734 | 13941
+1900 | 8907 1819 10726 | 4700 1790 6490 | 17216
+1905 | 10799 2159 12958 | 6682 2119 8801 | 21759
+1910 | 17371 3101 20472 | 9516 2746 12262 | 32734
+1915 | 21176 3057 24233 | 12882 3288 16170 | 40403
+1920 | 23636 3042 26678 | 14082 3251 17333 | 42497
+1922 | 28013 3322 31335 | 15022 3266 18288 | 49623
+
+[comparative view=152 page=128]
+years: 1921 1922
+n_public_establishments | Nombre total d'établissements scolaires publics (1) | 342 360
+n_public_primary_schools | Nombre total d'écoles primaires publiques | 334 350
+n_public_primary_classes | Nombre de classes dans les écoles primaires publiques | 1028 1084
+n_private_schools | Nombre total d'écoles privées | 29 31
+pupils french male | Français, garçons | 5270 5336
+pupils french female | Français, filles | 4540 4690
+pupils muslim male | Musulmans, garçons | 12451 14151
+pupils muslim female | Musulmans, filles | 1492 1677
+pupils jewish male | Israélites, garçons | 2871 3068
+pupils jewish female | Israélites, filles | 3561 3651
+pupils italian male | Italiens, garçons | 4518 4685
+pupils italian female | Italiens, filles | 4342 4404
+pupils maltese male | Maltais, garçons | 769 592
+pupils maltese female | Maltais, filles | 682 437
+pupils other male | Divers, garçons | 141 181
+pupils other female | Divers, filles | 157 163
+adult_auditors | Auditeurs des cours d'adultes | 1973 1827
+TOTAL_PUBLIC | Nombre total des élèves de l'enseignement public | 42767 44862
+TOTAL_MALE | Comparaison par sexes (2) : garçons | 27951 28013
+TOTAL_FEMALE | Comparaison par sexes (2) : filles | 14816 15022
+private_pupils | Nombre total des élèves de l'enseignement privé | 6298 6588
+TOTAL_GENERAL | Total général des élèves de l'enseignement public et de l'enseignement privé | 49065 51450
+note: (1) Y compris l'école de musique et l'école supérieure de langue et de littérature arabes. (2) Non compris les auditeurs des cours d'adultes.

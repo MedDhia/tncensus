@@ -1,0 +1,9 @@
+nationality,status,male_n,male_pct,female_n,female_pct,total_n,total_pct
+all_european,active,39691,30.8,7264,5.6,46955,36.4
+all_european,family,22262,17.2,46106,35.7,68768,53.2
+french,active,11150,32.5,2315,6.7,13465,39.2
+french,family,5344,15.6,11885,34.6,17229,50.2
+italian,active,24676,30.5,4296,5.3,28972,35.8
+italian,family,15171,18.8,29749,36.9,44920,55.7
+maltese,active,2933,28.7,469,4.6,3402,33.3
+maltese,family,1801,17.6,3802,37.2,5603,54.8

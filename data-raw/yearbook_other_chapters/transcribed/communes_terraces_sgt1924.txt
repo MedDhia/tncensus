@@ -1,0 +1,76 @@
+# Communes chapter, sgt1924 (ark bpt6k9105649x): "Concessions sur la voie publique, b) Terrasses et étalages".
+# Read on native-resolution crops (right-hand page, no labels); value lines matched to the labels of the facing
+# page (view 1030) by OCR line position and by counting lines. Gallica OCR as draft only.
+# 'x' = no number: text printed instead (comment on the row); 'néant' = printed "néant" (stored 0).
+@terraces view=1031 page=41 year=1924
+cols: terr_n terr_surf terr_prod stall_n stall_surf stall_prod
+Aïn-Draham | 0 0 0 0 10130 202.69
+Ariana | 0 0 315 0 0 1170
+Bardo (Le) | 0 0 0 0 0 néant
+Ben-Gardane | 0 0 0 93094 17881 26895.60
+Béja | 5 200 800 125 71000 14200
+Bizerte | 48000 48000 4800 120 1100 3982
+Carthage | 0 0 0 0 0 0
+Djemmal | 0 7620 381 0 0 0
+Djerba | 5400 5400 540 4300 4300 430
+Ebba-Ksour | 0 0 0 0 0 336
+El-Djem | 0 0 0 0 0 0
+Ferryville | 43980 21990 2199 48 25089 2508.90
+# Fériana: "Néant" printed across the row
+Fériana | néant néant néant néant néant néant
+Foum-Tatahouine | 0 0 0 22 950 47
+Gabès | 24 198 1215.20 9 35 520
+# Gafsa: stall_n and stall_surf: "Divers et non comptés"
+Gafsa | 30 100 3600 x x 26000
+Ghardimaou | 6 0 187.80 6 1120 609.45
+Goulette (La) | 35 1756 3512 50 473 952
+Grombalia | 0 0 0 0 0 0
+Hadjeb-el-Aïoun | 0 66 213.50 0 0 0
+Hammam-Lif | 14 380 537 280 12679 1901.85
+Hamma (El) | 0 0 0 0 0 0
+# Kairouan: stall_n printed "variables"
+Kairouan | 1629 139053 20857.90 x 223584 44716.80
+Kalaa-Kebira | 0 0 0 0 0 0
+Ksour-Essaf | 834 0 834 0 0 0
+# Kef (Le): stall_prod printed "Droits affermés avec les marchés"
+Kef (Le) | 406 595 0 15 1165 x
+Kram (Le) | 5 1275 255 10 93 234.40
+Krib (Le) | 0 0 0 0 0 0
+Maharès | 0 0 0 0 0 0
+# Mahdia: "Droits affermés" printed across the row
+Mahdia | x x x x x x
+Marsa (La) | 245 45 1120 35 65 2243
+Mateur | 46 0 2300 0 0 10123.95
+Maxula-Radès | 66 33 615 0 0 1309.80
+Médenine | 0 952 1186.50 0 330 165
+# Medjez-el-Bab: "Droits affermés (produit de l'affermage)" printed across the row
+Medjez-el-Bab | x x x x x x
+M'saken | 0 0 0 0 0 0
+Menzel-bou-Zelfa | 0 0 0 0 0 0
+Menzel-Temime | 5 7285 740 0 0 0
+Moknine | 0 0 0 0 0 0
+# Monastir: "Droits affermés (produit de l'affermage)" printed across the row
+Monastir | x x x x x x
+Nabeul | 450 120 2400 0 0 7733.25
+Nefta | 0 0 0 0 0 0
+Pêcherie (La) | 0 0 0 0 0 0
+# Philippe-Thomas: "Représentait les droits de stationnement" across columns 1-5, then 6.073,00
+Philippe-Thomas | x x x x x 6073
+Saint-Germain | 0 0 0 0 0 0
+Sfax | 748 652 27384 421 662 27804
+Sidi-bou-Saïd | 45 12 125 9 16 336.35
+Soliman | 2 4 18 8 16 584
+Souk-el-Arba | 8 530 1698 28 440 1407
+Souk-el-Khemis | 9 22 1188 12 24 1277.80
+Sousse | 0 1231 4924 0 2132 25969.79
+Tabarka | 600 137 274 15 300 625
+# Thala: stall_surf printed "divers"
+Thala | 0 0 0 0 x 50.40
+# Tebourba: stall_n printed "divers"
+Tebourba | 12 1080 216 x 5765 1153
+Téboursouk | 0 0 759.85 0 0 1131.65
+Tunis | 129 822.50 5163.65 77 114 834.30
+Tozeur | 0 0 0 0 0 0
+Zaghouan | 2 60 180 2 48 144
+Zarzis | 0 0 0 0 0 0
+Totaux | 102735 239613.50 97609.40 98686 378514 247027.98

@@ -1,0 +1,209 @@
+# Finances chapter (chapitre X), sgt1929. Format: see yb_tables.py. Every cell read on native-resolution crops of
+# the page images (OCR not used for values).
+
+# BUDGET ANNUEL (1919-1928). a) Recettes réalisées ("nomenclature des budgets de 1919 à 1928"). Spread f232
+# (p. 204: 1919-1921) | f233 (p. 205: 1922-1928). The 1926-1928 columns are reset in a bolder type; 1927
+# Produits divers printed 14.055.295 30 (sgt1928: 14.055.235 30), zoomed crop.
+@receipts view=232 page=204 kind=actual
+img: all
+cols: 1919 1920 1921
+ch1 | 25472500.74 32473325.58 37682885.38
+ch2 | 52140607.86 71145429.75 72957780.27
+ch3 | 52558424.10 62086603.59 87650080.19
+ch4 | 4032307.85 4565683.35 4566898.42
+ch5 | 7544819.72 8367037.62 8542464.98
+loans | 435187.50 1800000 29912267.50
+misc_exc | 17387249.38 49976185.16 48449644.73
+regions | 0 0 0
+closed | 0 0 0
+Total | 159571187.15 230414262.05 289762021.47
+
+@receipts view=233 page=205 kind=actual
+img: all
+cols: 1922 1923 1924 1925 1926 1927 1928
+ch1 | 23391959.89 30940490.39 30259293.34 35169638.38 47448091.73 51066512.85 69341580.37
+ch2 | 79548618.95 89680807.68 96819010.05 110104621.05 144616759.66 193490276.11 221483993.99
+ch3 | 77971468.81 69623382.49 76803211.93 87265074.06 115772504.70 135568019.93 148259459.80
+ch4 | 6164527.53 9197607.07 9852607.20 12257931.44 15994889.61 17629952.10 17724565.70
+ch5 | 16091301.01 10343582.88 19216048.75 12044951.11 14845254.99 14055295.30 24500108.75
+loans | 41073478.50 42022392.50 30910200 2565793.50 4852830 4328180 39749440
+misc_exc | 40778435.83 21616532.96 15794674.57 19555268.03 42122235.66 40223519.44 58936455.75
+regions | 0 0 5649041.91 29246956.79 20024610.68 17751332.99 0
+closed | 0 0 0 0 0 0 0
+Total | 285019790.52 273494795.97 285304087.75 308210234.36 405677177.03 474113028.72 579995604.36
+
+# BUDGET ANNUEL (1919-1928). b) Dépenses : droits constatés définitivement liquidés ("nomenclature de 1928").
+# Spread f234 (p. 206: 1919-1921) | f235 (p. 207: 1922-1928).
+@expenditure view=234 page=206 kind=actual
+img: all
+cols: 1919 1920 1921
+o1 | 90886785.04 81065363.05 101733733.55
+o2 | 5366658.06 11656497.39 13804131.15
+o3 | 9693326.43 18801845.47 23519062.15
+o4 | 2091453.97 5078048.99 5845320.38
+o5 | 5747348.77 12741635.14 14261959.08
+o6 | 806449.28 1431041.88 1504573.26
+o7 | 12919000.90 23237692.39 34451444.67
+o8 | 0 0 0
+o9 | 0 0 0
+o10 | 0 0 0
+x1 | 5794462.64 24056125.63 14218816.51
+x2 | 861231.93 2611457.82 2705188.26
+x3 | 265136.28 1095595.27 6524435.63
+x4 | 2057130.82 3784102.85 7360959.54
+x5 | 684083.53 586110.97 1554811.96
+x6 | 10559157.38 4551188.97 9351164.46
+x7 | 6157683.13 14023271.30 29945942.63
+x8 | 0 0 0
+closed | 19490359.97 43174281.72 57112293.86
+Total | 173380268.13 247894268.84 323893637.49
+
+@expenditure view=235 page=207 kind=actual
+img: all
+cols: 1922 1923 1924 1925 1926 1927 1928
+o1 | 82925519.83 93247300.95 106084322.99 108282348.08 135355552.20 160296941.36 163230792.19
+o2 | 14374897.17 14269179.74 15356611.02 16285263.14 22276176.32 29104387.41 33321632.25
+o3 | 24026113.08 21101628.91 23210849.82 24614824.18 31602932.85 41257414.76 45031658.90
+o4 | 6579856.62 7746900.36 9279355.01 10090956.43 13417208.61 23865036.34 30588205.27
+o5 | 16874361.73 18690583.16 20152332.99 21591173.19 29044082.25 39573858.83 47006870.73
+o6 | 1603829.03 1421847.25 1621396.11 1765240.88 2268518.36 2865477.69 3021770.15
+o7 | 33567063.18 32541283.45 35338596.54 37081381.80 44279176.07 64142097.40 73722822.19
+o8 | 0 2489056.79 2677590.10 3096461.71 4445084.58 6038388.41 8009238.34
+o9 | 0 0 0 0 0 0 0
+o10 | 0 0 0 0 0 7114308.14 0
+x1 | 42657048.84 5038561.92 3906264.43 11235076.55 6586013.21 15366935.14 6260495.24
+x2 | 3064845.49 3331806.77 3730565.67 4562452.37 7432320.05 8394777.47 7718134.17
+x3 | 1190342.51 1504399.25 3747601.65 2841647.71 3164623.23 3873137.54 5708184
+x4 | 14263370.40 7906972.47 10105343.50 10566280.95 7103866.57 17189892.22 39322539.53
+x5 | 1266441.96 2827378.64 2400557.64 1358301.33 382402.74 608827.96 1941750.44
+x6 | 10910787.24 2782902.77 2055095.42 2256211.03 3710684.17 4890065.75 6063171.63
+x7 | 25430925.99 22387475.69 26434380.09 35511667.24 58706376.75 39830990.01 79628284.90
+x8 | 0 0 24981.15 0 18941.62 9950.50 0
+closed | 79973254.36 79652696.10 70498545.63 47163431.19 39500204.53 83518295.51 57414818.03
+Total | 358708699.43 316939974.19 336624389.76 338302717.78 409294164.11 547940782.44 607990367.96
+
+# DETTE TUNISIENNE. a) Opérations auxquelles a donné lieu le service de la dette tunisienne de 1884 à 1925. f236
+# (p. 208). Every cell read on native-resolution crops. Format as in finance_sgt1925.txt. Totaux intérêts of the
+# charges printed 353.693.320 62 here (zoomed) and 353.693.320 69 in the balance below.
+@debt view=236 page=208 year=1925 period="1884 à 1925"
+img: all
+cols: ch_cap ch_int pay_cap pay_int
+cert1870 = Certificats de coupons, arriérés antérieurs à 1870 | 10171756.20 0 9884838.70 0
+d5_1880 = Dettes 5 % 1880 | 125000000 437578.20 124965500 325942
+d4_1884 = Dettes perpétuelles 4 % 1884 | 157688000 29793570.72 157685000 29792321.93
+d35_1889 = Dettes amortissables 3 ½ % 1889 | 174407500 20369842.93 174380447.46 20366510.45
+d3_1892 = d° 3 % 1892 | 198193000 188895167.90 18859276.25! 181855869.80
+d3_1902 = d° 3 % 1902-1907 | 137252500 69417565.30 8232060 63522325.30
+d35_1903 = d° 3 ½ % 1903 | 17658000 7058126.41! 14889973.75! 6281989.74
+d4_1912 = d° 4 % 1912 | 90500000 27822486.96 2450134.90 25808378.05
+d_1920 = d° 1920 | 80000000 9656956.42! 138589.83 8171763.85
+banque_algerie = Avance de la Banque de l'Algérie | 4000000 0 0 0
+t_bizerte = Annuité de rachat des pêcheries de Bizerte | 448000 0 448000 0
+t_medjerda = Part de la Tunisie dans la garantie des lignes de la Medjerda | 18909532.69 0 17697713.92 0
+t_tgm = Annuité de rachat du chemin de fer Tunis-Goulette-Marsa | 5733776.70 0 5415233.55 0
+t_rail_deficit = Déficit de l'exploitation des chemins de fer | 80812495.72 0 57812495.72 0
+t_military = Contribution de la Tunisie aux dépenses militaires de la Métropole | 1120000! 0 327180.30 0
+t_postal = Avances à l'Office Postal pour l'établissement de circuits téléphoniques | 10361366.51 242025.85 3692127.92 182804.68
+Totaux | 1112255927.82 353693320.62 596878572.30 336307905.80
+Totaux2 | 1465949248.51 - 933186478.10 -
+
+# b) Balance des opérations (same page).
+@debt_balance view=236 page=208 year=1925 period="1884 à 1925"
+img: all
+cols: cap int
+charges | 1112255927.82 353693320.69
+payments | 596878572.30 336307905.80
+remaining | 515377355.52 17385414.89
+remaining_both | 532762770.41 -
+due_prescribed | 368788.79 231133.07
+due_not_prescribed | 29121063.84 17154281.82
+not_due | 485887502.89 0
+Total | 515377355.52 17385414.89
+total_both | 532762770.41 -
+
+# DROIT DE PATENTE. Etat des assujettis au droit de patente (Bénéfices de l'année 1928 — Imposés en 1929). Folding
+# plate f259 (p. 231), 51 classes (1-9 as before; 10: 100.001-200.000, moyen 150.000; from the 11th, brackets of
+# 100.000 fr.: 11: 200.001-300.000, moyen 250.000 ... 51: 4.200.001-4.300.000, moyen 4.250.000). Read on
+# native-resolution crops of the plate in vertical strips with the column heads. Chefs-lieux de régions as on
+# sgt1928 (no Régions column); "Territoires militaire du Sud" as printed. Two isolated figures sit in otherwise
+# empty columns, outside the row arithmetic: Le Kef 6 in class 34 and Ouerghemma 7 in class 50 (Nombre, Montant and
+# Totaux all exclude them; kept as printed, flagged total_mismatch in extract_finance.py).
+@patente view=259 page=231 year=1929 profits=1928
+img: all
+cols: n c1 c2 c3 c4 c5 c6 c7 c8 c9 c10 c11 c12 c13 c14 c15 c16 c17 c18 c19 c20 c21 c22 c23 c24 c25 c26 c27 c28 c29 c30 c31 c32 c33 c34 c35 c36 c37 c38 c39 c40 c41 c42 c43 c44 c45 c46 c47 c48 c49 c50 c51 montant
+Bizerte ; Béja ; Béja | 761 347 184 140 44 18 9 11 2 1 3 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3467000
+Bizerte ; Bizerte ; Bizerte | 1399 585 299 249 122 87 19 15 10 6 5 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8907500
+Bizerte ; Bizerte ; Mateur | 744 379 140 147 33 23 6 11 3 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2521500
+Bizerte ; Tabarka ; Aïn-Draham | 152 60 36 40 6 5 0 1 1 2 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 871500
+Bizerte ; Souk-el-Arba ; Souk-el-Khemis | 357 154 107 68 15 5 5 2 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 955500
+Bizerte ; Souk-el-Arba ; Souk-el-Arba | 755 371 216 116 27 12 9 2 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2115500
+Tunis ; Tunis ; Tunis-Ville et sa banlieue | 11624 3040 3354 1966 1022 713 467 366 214 140 161 61 35 19 10 9 8 5 7 4 3 0 2 1 1 1 2 1 2 1 0 2 1 0 1 0 0 0 0 0 0 0 3 0 0 1 0 0 0 0 0 1 225832000
+Tunis ; Zaghouan ; Zaghouan | 752 282 310 141 10 4 3 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1499500
+Tunis ; Grombalia ; Cap-Bon | 1824 798 630 305 50 17 7 7 3 4 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4484000
+Le Kef ; Téboursouk ; Téboursouk | 489 227 145 84 24 4 3 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1042500
+Le Kef ; Le Kef ; Le Kef | 829 447 181 144 30 16 3 4 2 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1999000
+Le Kef ; Le Kef ; Tadjerouine | 290 147 58! 78 4 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 508500
+Le Kef ; Maktar ; Ouled-Ayar | 205 102 61 34 6 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 336500
+Le Kef ; Maktar ; Ouled-Aoun | 128 69 25 33 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 202500
+Le Kef ; Medjez-el-Bab ; Medjez-el-Bab | 896 464 234 137 26 25 6 3 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2152500
+Sousse ; Sousse ; Souassi | 314 277 27 9 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 218000
+Sousse ; Sousse ; Mahdia | 1082 580 392 85 12 9 0 3 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1608000
+Sousse ; Sousse ; Monastir | 1440 675 550 194 16 1 2 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2264000
+Sousse ; Sousse ; Sousse | 2362 819 724 392 231 74 38 42 16 9 13 2 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 13377500
+Sousse ; Kairouan ; Kairouan | 944 441 310 119 41 21 4 7 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2167000
+Sousse ; Kairouan ; Zlass | 233 119 47 51 13 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 451000
+Sousse ; Thala ; Fraichiches | 262 160 50 40 10 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 410000
+Sousse ; Thala ; Madjeurs | 279 90 77 92 16 2 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 782500
+Sfax ; Sfax ; Sfax | 3480 1247 1399 457 224 82! 31 20 9 1 9 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 11456500
+Sfax ; Sfax ; La Skira | 116 47 42 27 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 181000
+Sfax ; Sfax ; Djebeniana | 151 105 36 10 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 141500
+Sfax ; Gabès ; L'Arad | 720 326 191 121 41 18 12 6 1 2 0 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2728000
+Sfax ; Gafsa ; Hammama | 274 151 74 45 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 374000
+Sfax ; Gafsa ; Gafsa | 524 198 144 135 27 7 7 4 0 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1605000
+Sfax ; Tozeur ; Djerid | 272 127 77 49 16 1 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 535500
+Sfax ; Djerba ; Djerba | 996 648 256 72 11 4 0 5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1302500
+Territoires militaire du Sud ;  ; Nefzaoua | 179 85 25 69 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 321500
+Territoires militaire du Sud ;  ; Ouerghemma | 168 76 25 62 4 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 7 0 337500
+Territoires militaire du Sud ;  ; Tatahouine | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Territoires militaire du Sud ;  ; Matmata | 627 476 143 8 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 480500
+Totaux | 35628 14119 10569 5719 2086 1159 634 511 265 174 197 68 38 21 10 10 8 5 7 4 3 0 2 1 1 1 3 1 2 1 0 2 1 0 1 0 0 0 0 0 0 0 3 0 0 1 0 0 0 0 0 1 297637000
+
+# TAXE PERSONNELLE. Etat des contribuables soumis à la taxe personnelle. Spread f238 (p. 210) | f239 (p. 211).
+# Layout as in sgt1928 (see finance_sgt1925.txt).
+@taxe view=238 page=210 year=1929
+img: all
+cols: fr it uk es gr oth eur tun tot
+1re Région ; Béja ; Béja | 411 445 21 5 5 16 903 19200 20103
+1re Région ; Bizerte ; Bizerte | 2539 1395! 101 32 2 97 4166 17750 21916
+1re Région ; Bizerte ; Mateur | 309 635 18 2 1 12 977 15031 16008
+1re Région ; Tabarka ; Aïn-Draham | 241 125 2 2 0 6 376 10076 10452
+1re Région ; Souk-el-Arba ; Souk-el-Arba | 424 410 15 1 1 18 869 24136 25005
+2me Région ; Tunis-Ville et banlieue ; Banlieue | 13689! 15336 2171 81 79 965 32321 46301 78622
+2me Région ; Zaghouan ; Zaghouan | 570 537 21 0 1 24 1153 11316 12469
+2me Région ; Grombalia ; Cap Bon | 406! 1077 29 9 6 19 1546 34197! 35743
+3me Région ; Téboursouk ; Téboursouk | 415! 165 5 2 7 37 631 11308 11939
+3me Région ; Le Kef ; Le Kef | 345 425 15 2 0 24 811 18492 19303
+3me Région ; Le Kef ; Tadjerouine | 219 749 24 10 1 19 1022 14975 15997
+3me Région ; Mactar ; Oulad Ayar | 43 28 2 0 0 4 77 10011 10088
+3me Région ; Mactar ; Oulad Aoun | 33 24 0 0 0 6 63 7951 8014
+3me Région ; Medjez-el-Bab ; Medjez-el-Bab | 626 246 16 2 2 23 915 11658 12573
+4me Région ; Sousse ; Souassi | 2 0 0 0 0 1 3 11623 11626
+4me Région ; Sousse ; Mahdia | 89 82 15 1 0 0 187 18114 18301
+4me Région ; Sousse ; Monastir | 82 74 24 0 0 1 181 21463 21644
+4me Région ; Sousse ; Sousse | 1184 892 224 13 6 27 2346 30678 33024
+4me Région ; Kairouan ; Kairouan | 179 43 20 3 4 14 263 17632 17895
+4me Région ; Kairouan ; Djelass | 123 76 19 1 1 18 238 22514 22752
+4me Région ; Thala ; Fraichiches-Majeurs | 174! 105 15 0 0 3 297 30558 30855
+5me Région ; Sfax ; La Skhira | 59 11 5 0 0 1 76 7751 7827
+5me Région ; Sfax ; Sfax | 1082! 877 336 11 77 70 2453 24077 26350
+5me Région ; Sfax ; Djebeniana | 21 5 4 0 0 0 30 12060 12090
+5me Région ; Gabès ; L'Arad | 193 82 50 2 0 10 337 18181! 18518
+5me Région ; Gafsa ; Hemmama | 43 51 2 0 5 0 101 16549 16650
+5me Région ; Gafsa ; Gafsa | 691 487 27 3 6 76 1290 12719 14009
+5me Région ; Tozeur ; Djerid | 73 8 1 0 0 5 87 10897 10984
+5me Région ; Djerba ; Djerba | 107 20 105 2 12 4 250 13343 13593
+Territoires militaires du Sud ;  ; Nefzaoua | 8 2 0 0 0 0 10 9620 9630
+Territoires militaires du Sud ;  ; Ouerghema | 69 30 36 0 2 7 144 20063 20207
+Territoires militaires du Sud ;  ; Matmata | 2 0 0 0 0 0 2 6119 6121
+Territoires militaires du Sud ;  ; Tatahouine | 10 1 1 0 0 0 12 13443 13455
+Totaux | 24461 24443 3324 184 218 1507 54137 569806 623943

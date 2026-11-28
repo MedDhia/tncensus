@@ -1,0 +1,60 @@
+# Tables c) and d) of the 1926 census, transcribed from sgt1926 view 570
+# (bpt6k9105650k, printed page 6). Columns: 1921 | 1926. "»" = 0.
+# Lines starting with "=" are printed carry or grand totals (validation only).
+@c left
+Tunisie | 56100 56104
+Algérie | 1083 934
+Alsace-Lorraine | 0 0
+Belgique et Luxembourg | 147 165
+Suisse | 245 354
+Allemagne | 25 42
+Angleterre | 276 827
+Autriche | 30 20
+Bulgarie | 39 17
+Danemark | 244 33
+Espagne | 230 189
+Grèce | 157 308
+Hollande | 37 119
+Hongrie | 3 6
+Italie | 38736 38821
+Malte (Ile de) | 2632 1817
+Albanie | 7 17
+Pologne | 12 30
+= 100003 99803
+@c right
+Norvège | 16 17
+Portugal | 23 28
+Roumanie | 12 14
+Russie | 174 766
+Serbie (Yougo-Slavie) | 15 8
+Suède | 17 37
+Turquie (Europe et Asie) | 127 138
+Amérique du Nord | 117 160
+Amérique du Sud | 35 43
+Afrique : Egypte | 23 21
+Afrique : Maroc | 16 42
+Afrique : Erythrée | 7 1
+Afrique : Tripolitaine | 464 263
+Afrique : Autres pays | 2 17
+Asie | 5 12
+Australie | 1 0
+France | 196 467
+Pays non désignés | 386 424
+= 101639 102261
+@d left
+Piémont et Ligurie | 276 360
+Lombardie | 249 204
+Vénétie | 137 142
+Emilie | 173 224
+Ombrie | 47 12
+Toscane | 838 748
+Marches | 69 48
+= 1789 1738
+@d right
+Provinces de Rome | 237 177
+Provinces napolitaines | 1159 906
+Sardaigne | 2860 3488
+Sicile | 32582 29860
+Provinces non désignées | 109 333
+Pantelleria | 0 2319
+= 38736 38821

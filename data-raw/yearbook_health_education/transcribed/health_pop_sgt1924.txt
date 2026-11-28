@@ -1,0 +1,232 @@
+# sgt1924, ark bpt6k9105649x. Format as in health_pop_sgt1922.txt.
+# 'x' = printed » standing for "not available / not split" (stored NA, flag not_applicable).
+
+@civil_movements view=1046 page=56
+cols: adm_m adm_f adm_c adm_t rec_m rec_f rec_c rec_t dth_m dth_f dth_c dth_t
+1921 | 1155 1202 532 2889 1080 1146 491 2717 75 56 41 172
+1922 | 1164 1068 662 2894 1030 998 644 2672 97 68 57 222
+1923 | 966 1171 564 2701 797 979 459 2235 75 64 42 181
+1924 | 918 1175 832 2925 736 1010 745 2491 91 68 33 192
+
+@civil_ward_days view=1046 page=56 years=1923 1924
+Clinique du Dr Cuénod | 307 220 0 87
+Pavillon A | 8227 6853 0 1374
+B | 13094 14092 998 0
+C | 9320 10573 1253 0
+G Hommes | 5050 5869 819 0
+G Femmes | 3969 6230 2261 0
+G Enfants | 23 0 0 23
+H | 9659 10310 651 0
+Tribeaudeau | 9332 9116 0 216
+K | 4203 4558 355 0
+Enfants nés | 3345 4815 1470 0
+Enfants avec mère | 751 821 70 0
+Nx Hommes | 2802 1857 0 945
+Nx Femmes | 1857 2534 677 0
+Nx Enfants | 101 236 135 0
+D Femmes | 27 100 73 0
+D Enfants | 4667 5203 536 0
+E. Ch. Femmes | 218 180 0 38
+E. Ch. Enfants | 6647 8783 2136 0
+Isolés Hommes | 1518 2301 783 0
+Isolés Femmes | 1678 2014 336 0
+Isolés Enfants | 1665 1283 0 382
+Dispensaire | 1441 2454 1013 0
+TOTAUX | 89901 100402 13566 3065
+
+@civil_population view=1047 page=57 years=1923 1924
+patient_days ; Journées de malades | 89901 100402 10501 0
+patient_days_paying ; Journées de malades payants | 34956 44288 9332 0
+patient_days_indigent ; Journées de malades indigents | 54945 56114 1169 0
+admissions ; Nombre d'admissions | 2701 2925 224 0
+mean_daily_patients ; Effectif moyen journalier | 246 275 29 0
+mean_stay_days ; Durée moyenne du séjour par malade | 33 34 1 0
+staff_days_fed ; Journées du personnel nourri | 51520 52369 849 0
+staff_days_not_fed ; Journées du personnel non nourri | 12032 13481 1449 0
+
+@civil_births view=1047 page=57 year=1924
+cols: boys girls total
+Légitimes | 143 130 273
+Illégitimes | 16 13 29
+TOTAUX | 159 143 302
+
+@sadiki_movements view=1048 page=58
+cols: adm_m adm_f adm_c adm_t rec_m rec_f rec_c rec_t dth_m dth_f dth_c dth_t
+1915 | 1918 430 172 2520 1694 422 164 2280 224 8 8 240
+1916 | 2219 572 255 3046 1994 553 249 2796 225 19 6 250
+1917 | 2550 641 283 3474 2349 622 271 3242 201 19 12 232
+1918 | 2931 656 274 3861 2727 632 264 3623 204 24 10 238
+1919 | 2846 791 254 3891 2617 757 239 3613 229 34 15 278
+1920 | 2772 734 249 3755 2546 716 233 3495 226 18 16 260
+1921 | 2658 774 297 3729 2412 739 277 3428 246 35 20 301
+1922 | 2620 804 292 3716 2353 769 278 3400 267 35 14 316
+1923 | 2709 1013 409 4131 2398 972 392 3762 311 41 17 369
+1924 | 2837 1105 366 4308 2525 1045 348 3918 312 60 18 390
+
+@sadiki_population view=1049 page=59 years=1923 1924
+patient_days ; Journées de malades | 89047 89037 0 10
+patient_days_paying ; Journées de malades payants | 11822 12952 1130 0
+patient_days_indigent ; Journées de malades indigents | 77225 76085 0 1140
+admissions ; Nombre d'admissions | 3876 4099 223 0
+mean_daily_patients ; Effectif moyen journalier | 243.96 243.93 0 0.03
+mean_stay_days ; Durée moyenne du séjour par malade | 22.97 21.72 0 1.25
+staff_days_fed ; Journées du personnel nourri | 31390 31955 365 0
+staff_days_not_fed ; Journées du personnel non nourri | 18480 18965 485 0
+
+@sadiki_consultations view=1049 page=59
+cols: dressings consultations total operations
+1905 | x x 31911 1125
+1906 | x x 33176 1190
+1907 | x x 35499 873
+1908 | x x 36569 1266
+1909 | x x 46087 1178
+1910 | x x 24594 1482
+1911 | x x 20542 1047
+1912 | x x 32390 1135
+1913 | x x 39905 1445
+1914 | x x 41141 1414
+1915 | x x 47187 1503
+1916 | x x 54681 2420
+1917 | 41647 20612 62259 2624
+1918 | 51101 22034 73135 2789
+1919 | 63261 20389 83640 3647
+1920 | 59672 16144 75816 4493
+1921 | 60752 21921 82673 4487
+1922 | 57189 25764 82953 3771
+1923 | 57465 25251 82716 3996
+1924 | 898176 27815 115991 4678
+
+@rabta_movements view=1050 page=60
+cols: adm_m adm_f adm_c adm_t rec_m rec_f rec_c rec_t dth_m dth_f dth_c dth_t
+1922 | 70 15 16 101 48 14 11 73 13 0 4 17
+1923 | 131 32 40 203 84 19 20 123 35 7 11 53
+1924 | 232 68 80 380 159 57 58 274 56 9 13 78
+
+@rabta_population view=1050 page=60 years=1923 1924
+patient_days ; Journées de malades | 8124 12495 4371 0
+patient_days_paying ; Journées de malades payants | 438 120 0 318
+patient_days_indigent ; Journées de malades indigents | 7686 12375 4689 0
+admissions ; Nombre d'admissions | 203 380 177 0
+mean_daily_patients ; Effectif moyen journalier | 22.265 34.139 11.874 0
+mean_stay_days ; Durée moyenne de séjour par malade | 39.97 32.881 0 7.089
+staff_days_fed ; Journées du personnel nourri | 3232 3576 344 0
+staff_days_not_fed ; Journées du personnel non nourri | 1800 2190 390 0
+
+@rabta_diseases view=1051 page=61 year=1924
+cols: french tunisian_muslim tunisian_jewish italian anglo_maltese other total
+Tuberculose chirurgicale | 0 82 0 0 0 0 82
+Tuberculose médicale | 0 99 0 0 0 0 99
+Typhus | 0 7 0 0 0 0 7
+Variole | 7 15 1 30 14 0 67
+Bronchite grippale | 0 4 0 0 0 0 4
+Erysipèle | 0 8 0 0 0 0 8
+Fièvre et paludisme | 0 25 0 0 0 0 25
+Typhoïde | 0 14 0 0 0 0 14
+Rougeole | 0 4 0 0 0 0 4
+Scarlatine | 0 3 0 1 0 0 4
+Dyphtérie | 0 2 0 0 0 0 2
+Fièvre récurrente | 0 2 0 0 0 0 2
+Oreillons | 0 1 0 0 0 0 1
+Observations et autres maladies | 0 43 1 11 6 0 61
+TOTAUX | 7 309 2 42 20 0 380
+
+@rabta_months view=1051 page=61 year=1924
+cols: french tunisian_muslim tunisian_jewish italian anglo_maltese other total
+Janvier | 0 37 0 4 0 0 41
+Février | 0 4 0 0 0 0 4
+Mars | 0 32 0 3 3 0 38
+Avril | 0 33 0 0 1 0 34
+Mai | 0 55 0 3 3 0 61
+Juin | 0 24 0 10 3 0 37
+Juillet | 1 16 0 0 1 0 18
+Août | 0 23 0 0 0 0 23
+Septembre | 0 27 0 0 2 0 29
+Octobre | 3 16 0 13 5 0 37
+Novembre | 0 23 2 7 0 0 32
+Décembre | 3 19 0 2 2 0 26
+TOTAUX | 7 309 2 42 20 0 380
+
+@interior view=1053 page=63 year=1924
+cols: beds eur_m eur_f eur_c eur_t ind_m ind_f ind_c ind_t patient_days deu_m deu_f deu_c deu_t din_m din_f din_c din_t consultations
+Medjez-el-Bab | 23 9 12 1 22 110 32 0 142 2768 0 0 1 1 8 0 0 8 2522
+Béja | 19 20 40 23 83 185 16 11 212 4703 1 1 0 2 14 1 0 15 4694
+Kef (Le) | 32 9 22 7 38 389 153 104 646 14641 1 1 0 2 37 5 5 47 5464
+Sousse | 75 66 147 41 254 463 224 85 772 19362 5 6 2 13 40 9 4 53 6796
+Mahdia | 35 3 0 0 3 155 67 36 258 4290 0 0 0 0 1 1 0 2 7822
+Souk-el-Arba | 41 22 19 8 49 258 183 114 555 11245 2 1 0 3 14 8 3 25 4820
+Monastir | 32 5 4 0 9 146 96 39 281 5592 0 0 0 0 3 0 0 3 6324
+Nabeul | 32 2 1 0 3 97 26 16 139 2236 0 0 0 0 4 1 0 5 9683
+Mateur | 30 3 4 0 7 168 36 15 219 4393 1 0 0 1 17 0 0 17 1460
+Kairouan | 50 7 15 7 29 276 44 17 337 6038 1 1 4 6 37 6 0 43 33152
+Grombalia | 10 12 6 8 26 78 15 18 111 1579 1 0 0 1 5 0 0 5 4469
+Thala | 4 0 0 0 0 22 1 2 25 342 0 0 0 0 1 0 0 1 500
+Enfidaville | 8 0 1 0 1 28 6 6 40 439 0 0 0 0 2 1 0 3 684
+Ferryville | 11 1 0 0 1 123 0 0 123 1922 0 0 0 0 3 0 0 3 332
+Zaghouan | 5 1 0 0 1 44 0 0 44 831 0 0 0 0 0 8 0 8 1338
+Djerba | 16 2 0 0 2 61 8 2 71 970 0 0 0 0 6 1 0 7 5627
+Mactar | 16 0 1 0 1 144 59 15 218 2662 0 0 0 0 6 2 1 9 3840
+Médenine et annexes | 32 0 0 0 0 38 16 4 58 2019 0 0 0 0 5 2 0 7 33987
+Téboursouk | 8 2 0 0 2 66 10 12 88 1173 0 0 0 0 4 0 1 5 1881
+Tozeur | 12 1 0 0 1 36 16 3 55 0 0 0 0 0 3 2 1 6 7300
+Gabès | 20 3 5 2 10 70 34 16 120 2894 0 1 0 1 8 0 0 8 1947
+TOTAL | 511 168 277 97 542 2957 1042 515 4514 90100 12 11 7 30 218 47 15 280 143742
+
+@tunis_month_nationality view=1057 page=67 year=1924
+cols: french tunisian_muslim tunisian_jewish italian anglo_maltese other total
+Janvier | 36 295 73 94 15 8 521
+Février | 42 285 57 81 12 5 482
+Mars | 38 301 54 73 12 7 485
+Avril | 25 250 42 58 7 1 383
+Mai | 39 243 49 78 8 4 421
+Juin | 34 285 51 84 14 4 472
+Juillet | 42 257 42 95 13 5 454
+Août | 37 250 47 61 7 5 407
+Septembre | 38 257 49 99 20 3 466
+Octobre | 43 251 56 100 14 3 467
+Novembre | 59 279 50 100 19 9 516
+Décembre | 39 366 60 93 9 7 574
+TOTAUX | 472 3319 630 1016 150 61 5648
+
+@tunis_month_cause view=1057 page=67 year=1924
+cols: Maladies ordinaires;Variole;Diphtérie;Fièvre typhoïde;Typhus;Fièvre récurrente;Rougeole;Scarlatine;Tuberculose;Grippe;Paludisme;Affections cholériformes;Peste;TOTAUX
+Janvier | 436 1 1 14 0 0 9 0 48 11 1 0 0 521
+Février | 415 1 2 8 0 0 4 0 44 8 0 0 0 482
+Mars | 405 2 3 6 0 0 9 0 52 6 2 0 0 485
+Avril | 310 3 0 6 1 0 11 0 50 1 1 0 0 383
+Mai | 334 1 0 9 1 0 9 0 63 0 4 0 0 421
+Juin | 389 5 1 13 0 0 12 0 51 0 1 0 0 472
+Juillet | 363 7 0 10 1 0 11 0 57 1 4 0 0 454
+Août | 315 10 0 15 0 0 6 0 54 0 7 0 0 407
+Septembre | 379 3 2 19 1 0 4 1 54 0 2 0 1 466
+Octobre | 369 19 1 15 0 0 3 1 50 0 9 0 0 467
+Novembre | 423 27 3 12 0 0 3 0 44 3 1 0 0 516
+Décembre | 474 33 1 13 0 0 1 0 43 7 2 0 0 574
+TOTAUX | 4612 112 14 140 4 0 82 2 610 37 34 0 1 5648
+
+@tunis_cause_nationality view=1058 page=68 year=1924
+cols: french tunisian_muslim tunisian_jewish italian anglo_maltese other total
+Maladies ordinaires | 363 2668 567 831 135 48 4612
+Variole | 11 51 2 45 3 0 112
+Diphtérie | 3 1 2 5 2 1 14
+Fièvre typhoïde | 17 64 27 27 2 3 140
+Typhus | 0 4 0 0 0 0 4
+Fièvre récurrente | 0 0 0 0 0 0 0
+Rougeole | 3 57 8 13 1 0 82
+Scarlatine | 2 0 0 0 0 0 2
+Tuberculose | 59 440 16 82 6 7 610
+Grippe | 8 17 6 4 1 1 37
+Paludisme | 6 17 2 8 0 1 34
+Affections cholériformes | 0 0 0 0 0 0 0
+Peste | 0 0 0 1 0 0 1
+TOTAUX | 472 3319 630 1016 150 61 5648
+
+@tunis_natality_mortality view=1058 page=68 year=1924
+cols: french tunisian_muslim tunisian_jewish italian anglo_maltese other total
+deaths ; Nombre de décès | 472 3319 630 1016 150 61 5648
+stillbirths ; Morts-nés | 28 309 43 98 16 0 494
+non_residents ; Non résidents | 55 264 13 54 5 6 397
+deaths_corrected ; Mortalité rectifiée | 389 2746 574 864 129 55 4757
+births ; Naissances déclarées | 769 2999 1041 1532 122 65 6528
+births_minus_deaths ; Différence entre naissances et décès | 380 -253 467 668 7 10 1771
+population ; Population approximative | 22206 79175 19029 42592 7379 1295 171676
+mortality_per_1000 ; Mortalité par 1.000 habitants | 17.51 34.68 30.16 20.28 17.48 42.47 27.70

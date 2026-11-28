@@ -1,0 +1,37 @@
+# sgt1939 european ark bpt6k9105739w marriages view 13, births/deaths view 14 - transcribed from the full-resolution page images
+[marriages] years: 1938 1939
+Français | 649 452 1189 1005
+Italiens | 40 216 51 222
+Maltais | 10 17 11 29
+Grecs | 0 1 0 0
+Espagnols | 0 3 1 0
+Autres Européens | 24 34 23 19
+Nationalité non signalée | 0 0 0 0
+TOTAUX | 723 1275
+[mixed]
+Français | 76 4 72 . . . .
+Italiens | 8 0 8 . . . .
+Maltais | 1 0 1 . . . .
+Etrangers autres | 4 0 4 . . . .
+TOTAL_EUROPEAN_GROOMS | 89 4 85 . . . .
+Musulmans | 20 . . 16 1 1 2
+Israélites | 45 . . 42 0 0 3
+TOTAL_INDIGENOUS_GROOMS | 65 . . 58 1 1 5
+[births] years: 1938 1939
+Français | 1336 1249 2108 1284
+Italiens | 1315 1260 1268 1164
+Maltais | 91 89 75 75
+Grecs | 8 5 5 3
+Espagnols | 3 5 4 7
+Autres Européens | 62 76 53 28
+SUBTOTAL | 2815 2684 3513 2561
+TOTAUX | 5499 6074
+[deaths] years: 1938 1939
+Français | 790 618 1164 684
+Italiens | 622 594 710 651
+Maltais | 89 65 73 63
+Grecs | 1 2 47 4
+Espagnols | 6 3 9 13
+Autres Européens | 68 40 45 18
+SUBTOTAL | 1576 1322 2048 1433
+TOTAUX | 2898 3481

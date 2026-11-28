@@ -1,0 +1,63 @@
+# Statistique générale de la Tunisie, mutuality / economic institutions chapter, edition sgt1936. Format: yb_tables.py.
+
+# Crédit mutuel agricole (1927-1936; sgt1936, sgt1939 print no years in the title), f183 (p. 172). Caisses locales françaises et indigènes: one table, caisses locales (nombre de caisses, nombre d'adhérents français et tunisiens) and effets escomptés (nombre, montant). No split French / indigenous caisses. 1930 and 1932 effets number printed ».
+@credit_local view=183 page=172
+img: all
+cols: fr_caisses fr_members bills amount
+1927 | 64 3950 7437 68295411.28
+1928 | 67 4600 6379 83287370.75
+1929 | 71 4700 7355 84016933.05
+1930 | 70 5003 0 87530195.45
+1931 | 71 5003 3695 53276841
+1932 | 68 2964 0 25684792.06
+1933 | 64 2884 2743 30586537.70
+1934 | 68 3152 3730 43248447
+1935 | 68 2719 1850 18980475
+1936 | 66 2210 3732 35743933
+
+# Coopérative centrale des agriculteurs de Tunisie (1926-1936) and Coopérative de motoculture de Tunisie, f184 (p. 173). New layout: capital social versé, avances de l'Etat (statutaires, exceptionnelles; motoculture: one column), montant des marchandises (du matériel) acheté(es) en commun et livré(es) aux coopérateurs; situation au 31 décembre. No totals.
+@coop_central view=184 page=173
+img: all
+cols: capital adv_statutory adv_exceptional goods
+1926 | 169620 323450 1291787.65 7000000
+1927 | 204520 799900 791787.65 7750000
+1928 | 238170 799900 523666.50 7000000
+1929 | 276130 799900 523666.50 7100000
+1930 | 279610 799900 423666.50 6600000
+1931 | 278860 799900 323666.50 7087335
+1932 | 294100 799900 323666.50 9230764
+1933 | 296000 799900 323666.50 13200000
+1934 | 311424 799900 173666.50 8562968
+1935 | 1000000 799900 173666.50 3605150
+1936 | 1017740 1780000 173666.50 6400979
+@coop_moto view=184 page=173
+img: all
+cols: capital advances goods
+1926 | 195500 323500 3500000
+1927 | 203000 536500 5000000
+1928 | 223000 517650 9800000
+1929 | 242000 498800 11000000
+1930 | 270000 479950 10500000
+1931 | 276250 709100 10156289
+1932 | 280250 477250 8679148
+1933 | 277000 458400 6200000
+1934 | 281250 439550 5529122
+1935 | 386000 285700 4932908
+1936 | 393250 18850 5437605
+
+
+# Sociétés tunisiennes de prévoyance, opérations (1927-1936), f185|f186 (pp. 174|175). New columns prêts de cheptel and prêts de soufre et de sulfate de cuivre (loans and recouvrements); the annulation column is headed prêts de semences et de subsistance, with a footnote (1) on 1936: « Dont une somme de 15.307.447,46 au titre des prêts de semences ». Badly printed page (broken and misplaced type), read on 0.75x native crops: solid black slugs stand where a » is expected (f185: 1927 soufre, 1935 subsistance and hypothécaires, 1936 hypothécaires) and are typed 0; digits that are broken or missing are '?' (1928 semences '44.240.43; 63', 1930 total '.1.352.533 59', 1933 total '6.701.208 2б', 1931 recouvrements total '1 999.494 06', 1933 recouvrements gages '82.66 »' and avances '465.61▪ 88'). The différence column has its first digits in the binding: typed '?' (check only). Printed as they stand although the other editions differ: 1927 recouvrements soufre 91.661,95 (= the campagne figure), 1928 recouvrements semences 31.012.273,27 and total 31.504.741,66, 1929 recouvrements total 24.476.247,63, 1932 recouvrements semences 10.788.203,75 and campagne 19.683,95, 1932 total 32.738.151,54, 1934 total 32.765.588,31 and recouvrements total 10.527.603,16, 1935 total 10.980.031,30. Reste à recouvrer printed once, 40.316.426,52, braced against every line (no TOTAUX): typed on 1936.
+@prev view=185 page=174
+img: all
+cols: seed chep sulph camp subs mort gage adv total cancel diff r_seed r_chep r_sulph r_camp r_subs r_mort r_gage r_adv r_total outstanding
+1927 | 7194402.63 0 0 122050 0 301363.60 0 497855 8115671.23 161049.65 ? 2640471.36 0 91661.95 91661.95 480885.37 595071.31 0 323250.13 4131340.12 -
+1928 | ? 0 0 13200 5260515.82 1962269.24 0 405288.24 51881711.77 117755.42 ? 31012273.27 0 0 39458.62 1517885.82 404870.02 0 530253.93 31504741.66 -
+1929 | 8302601.48 0 0 703958 0 3689282.47 0 343989 13039830.95 457617.18 ? 21173131.91 0 0 445669.49 2127895.34 674104.50 0 386446.39 24476247.63 -
+1930 | 4422059.81 0 0 243050 67480 5780983.75 0 838660 ? 149150.37 ? 5446084.61 0 0 379861.29 478037.16 780904.26 0 391989.46 7476876.78 -
+1931 | 32450476 0 0 0 0 16330830.26 0 670761.05 49452067.31 216889.95 ? 10883971.52 0 0 39454.33 65806.65 331189.58 0 679071.98 ? -
+1932 | 26797948.14 0 0 0 4483883.45 1183965.95 0 272355 32738151.54 845108.49 ? 10788203.75 0 0 19683.95 576501.95 1209054.19 0 290261.42 21883704.42 -
+1933 | 5527738.76 0 0 0 0 311000 474919.50 387550 ? 1315397.77 ? 4691073.16 0 0 1086.19 296353.38 125156.04 ? ? 5661949.65 -
+1934 | 32556873.42 0 0 0 649614.94 75775.55 2197624.40 285400 32765588.31 913857.83 ? 9250255.70 0 0 280 159911.03 7129.32 814981.80 305045.31 10527603.16 -
+1935 | 8685198.81 0 0 0 0 0 1985572.50 309260 10980031.30 7537839.70 ? 21215422.40 0 0 929.82 0 11250.13 2117465.94 312183.91 23657252.20 -
+1936 | 0 134313.38 11576.40 0 0 0 4236051.26 216640 4598581.04 22454379.58 ? 2609298.98 0 5348.50 686 0 0 2440267.11 332159.11 5387760.50 40316426.52
+TOTAUX | 170178737.32 134313.38 11576.40 1082258 10461494.21 29635470.82 8894167.66 4227728.29 224624776.28 34260379.58 190364396.70 129710186.66 0 5348.50 1018770.80 5703327.70 4138729.65 5455377.65 4016280.52 150017970.18 -

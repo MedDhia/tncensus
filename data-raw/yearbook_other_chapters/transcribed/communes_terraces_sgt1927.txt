@@ -1,0 +1,71 @@
+# Communes chapter, sgt1927 (ark bpt6k91056510): "Concessions sur la voie publique, b) Terrasses et étalages".
+# Read on native-resolution crops (right-hand page, no labels); 59 value lines assigned to the 59 labels of the
+# facing page (view 76) by counting lines (checked against the 1926 and 1928 printings for the large communes).
+# Gallica OCR as draft only. Only the stall_prod column has a printed total (TOTAL).
+# 'x' = no number: text printed instead. Footnotes of view 76: (1) Droits affermés en 1927. (2) Droits donnés en
+# adjudication. (3) Affermé avec les droits de marché. (4) Produits affermés avec les droits de marché.
+# (5) Droits affermés.
+@terraces view=77 page=49 year=1927
+cols: terr_n terr_surf terr_prod stall_n stall_surf stall_prod
+Aïn-Draham | 0 0 0 0 1080 216
+Ariana | 0 0 0 0 0 0
+Bardo (Le) | 0 0 0 0 0 0
+Ben-Gardane | 0 0 0 0 45276.50 8367.25
+Béja (1) | 0 0 0 0 0 22600
+Bizerte | 6500 65000 8125 132 1200 4800
+Carthage | 0 0 0 0 0 0
+Djemmal | 0 14400 480 0 0 0
+Djerba | 7375 7375 2212.50 942 942 282.75
+Ebba-Ksour | 0 0 0 0 0 0
+El Djem (2) | 0 0 0 0 0 35518.90
+Fériana | 0 0 0 0 0 0
+# Ferryville: stall_n "divers"
+Ferryville | 700 700 1400 x 2386.66 6771.55
+Foum-Tatahouine | 0 0 0 50 2397 119.85
+Gabès | 21 110 2670 3 5 108
+Gafsa | 50 110 3800 0 600 5000
+Ghardimaou | 0 0 0 3 0 1139.30
+Goulette (La) | 560 11620 9823 19 44 88
+Grombalia | 37 0 456 13 0 858.90
+Hadjeb-el-Aïoun | 7 42 252 0 0 0
+Hamma (El) | 0 0 0 0 0 0
+Hammam-Lif | 18 100 1132 420 23970 3594.90
+Kairouan | 43 39600 11880 240 172800 51840
+Kalaa-Kebira (3) | 0 0 0 0 0 0
+Kef (Le) | 350 430 0 27 140 0
+Krib (Le) | 0 0 0 0 0 0
+Ksour-Essaf | 36 45 764 0 0 0
+Maharès | 0 0 0 0 0 0
+Mahdia | 0 0 0 4 6 554
+Marsa (La) | 260 55 2925 25 50 2320
+Mateur | 54 0 3200 2726 0 15400
+Maxula-Radès | 2 2 50 0 0 1867
+# Médenine: terr_n printed "4 (cafés)"
+Médenine | 4 143 71.50 0 0 0
+Medjez-el-Bab | 0 118 1416 29 173 2076
+Menzel-bou-Zelfa | 0 0 0 0 12800 2560
+Menzel-Temime | 6 5111 511.10 0 0 0
+Moknine | 16 346.50 346.50 0 0 0
+Monastir (4) | 0 0 0 0 0 0
+M'saken | 0 0 0 0 0 13497.35
+Nabeul | 368 92 1840 0 0 9539.05
+Nefta | 0 0 0 0 0 0
+Pêcherie (La) | 0 0 0 0 0 0
+Philippe-Thomas | 0 0 0 0 0 0
+Saint-Germain | 0 0 0 0 0 0
+Sbeïtla | 0 0 0 0 0 0
+Sfax | 750 663 27846 255 345 14490
+Sidi-bou-Saïd | 45 15 305 10 18 312.50
+Soliman | 0 0 0 0 15400 1540
+Souk-el-Arba | 10 85 6120 15 360 2160
+Souk-el-Khemis | 0 0 1700 0 0 3390
+Sousse | 2355 0 12826 3150 0 42575.20
+Tabarka (5) | 0 0 0 0 0 2100
+Tebourba | 22 2800 839.10 28 8331 2499.30
+Téboursouk | 0 0 0 0 0 0
+Thala | 0 0 0 6425 1285 254.10
+Tozeur | 6 0 540 10 0 350
+Tunis | 88 379.50 12167.35 53 110.50 2240.45
+Zaghouan | 9 264 792 0 0 0
+Zarzis | 420 842 452 420 985 727.65
+Total | . . . . . 261714

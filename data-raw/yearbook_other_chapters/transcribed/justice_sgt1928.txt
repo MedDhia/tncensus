@@ -1,0 +1,292 @@
+# Justice chapter (chapter IV), sgt1928 (ark bpt6k91056510), views 629-640 (629 chapter title).
+# Format: see yb_tables.py. French tables: 1919-1927 lines compared token by token with the Gallica OCR of these
+# pages (equal to the sgt1927 printing except OCR noise; unclear tokens re-read on crops), 1928 read on the image.
+
+@fr_criminal view=630 page=78 years=1919-1928
+img: 1928 line
+cols: criminal@Tunis criminal@Sousse correctional_contradictory@Tunis correctional_contradictory@Sousse correctional_default@Tunis correctional_default@Sousse total@Tunis total@Sousse
+1919 | 22 16 1336 311 137 65 1473 392
+1920 | 25 18 1654 516 248 104 1927 520
+1921 | 44 10 1802 450 396 98 2198 558
+1922 | 22 8 1650 372 364 54 2036 434
+1923 | 29 17 2031 330 373 102 2433 432
+1924 | 34 11 1558 326 234 86 1826 423
+1925 | 29 15 1856 357 194 107 2050 479
+1926 | 37 8 1584 455 203 146 1787 609
+1927 | 29 17 2169 498 411 114 2609 629
+1928 | 40 20 1442 533 408 149 1890 704
+
+@fr_civil view=630 page=78 years=1919-1928
+img: 1928 line
+cols: contradictory@Tunis contradictory@Sousse default@Tunis default@Sousse preparatory@Tunis preparatory@Sousse on_petition@Tunis on_petition@Sousse total@Tunis total@Sousse
+1919 | 588 228 360 163 201 60 761 263 1910 714
+1920 | 750 234 264 192 159 51 768 58 1941 540
+1921 | 257 188 589 400 217 36 822 35 2485 659
+1922 | 1005 177 708 352 262 25 851 53 2826 602
+1923 | 908 247 655 295 258 25 1419 261 3240 828
+1924 | 896 363 701 461 152 42 1326 192 3025 1038
+1925 | 937 472 697 470 310 52 659 281 2603 1275
+1926 | 869 531 728 662 320 37 489 297 2406 1527
+1927 | 1292 359 905 489 386 33 198 343 2781 1233
+1928 | 1944 608 677 537 259 86 498 236 3378 1489
+
+@fr_commercial view=631 page=79 years=1919-1928
+img: 1928 line
+cols: contradictory@Tunis contradictory@Sousse default@Tunis default@Sousse preparatory@Tunis preparatory@Sousse on_petition@Tunis on_petition@Sousse bankruptcies@Tunis bankruptcies@Sousse liquidations@Tunis liquidations@Sousse total@Tunis total@Sousse
+1919 | 419 185 149 102 70 23 71 25 6 0 3 0 718 235
+1920 | 714 126 264 104 306 18 68 55 17 0 1 7 1370 242
+1921 | 1117 209 592 508 460 50 139 48 12 4 7 0 2327 819
+1922 | 2780 345 758 813 335 27 299 201 109 32 19 45 2780 1463
+1923 | 1025 410 624 280 320 40 231 173 119 25 15 33 2334 961
+1924 | 978 402 517 275 219 29 216 108 134 40 34 12 2098 866
+1925 | 1221 340 879 295 209 33 357 130 210 44 27 35 2903 877
+1926 | 1428 343 930 367 126 30 468 108 165 87 28 67 3170 1002
+1927 | 1609 402 1200 534 427 27 443 262 228 83 32 55 3939 1363
+1928 | 2068 494 1098 725 477 43 574 330 329 64 24 18 4570 1674
+@tn_ouzara_criminal view=633 page=81 years=1924-1928
+img: all
+cols: 1924 1925 1926 1927 1928
+pending_start | 106 111 129 128 125
+entered | 270 212 199 161 127
+TOTAUX | 376 323 328 289 252
+out_acquittal | 51 52 74 47 40
+out_conviction | 214 142 126 117 102
+out_total | 265 194 200 164 142
+pending_end | 111 129 128 125 110
+
+@tn_appeals_civil view=633 page=81 year=1928
+img: all
+cols: pending_start entered total_to_judge confirmed partly_reversed fully_reversed struck_off out_total pending_end
+Driba | 569 363 932 159 51 67 10 287 645
+Sousse | 495 393 888 180 40 53 6 279 609
+Kairouan | 183 135 318 64 11 18 2 95 223
+Le Kef | 264 180 444 98 26 35 3 172 272
+Sfax | 251 147 398 106 25 14 3 148 250
+Gafsa | 133 54 187 52 9 8 5 74 113
+Gabès | 135 108 243 49 12 16 1 78 165
+Béja | 0 0 0 0 0 0 0 0 0
+TOTAUX | 2030 1380 3410 708 174 211 30 1133 2277
+
+@tn_appeals_correctional2 view=633 page=81 year=1928
+img: all
+cols: pending_start entered total_to_judge conv_confirmed conv_confirmed_reduced conv_confirmed_increased conv_reversed acq_confirmed acq_reversed out_total pending_end
+Driba | 491 734 1225 523 84 94 57 9 8 775 450
+Sousse | 179 484 663 278 26 64 15 4 10 397 266
+Kairouan | 400 415 815 401 10 52 15 9 5 492 323
+Le Kef | 366 512 878 482 34 29 45 0 4 594 284
+Sfax | 89 119 208 83 3 31 3 0 0 120 88
+Gafsa | 115 143 258 146 14 4 0 3 1 168 90
+Gabès | 90 189 279 101 21 20 6 2 4 154 125
+Béja | 0 0 0 0 0 0 0 0 0 0 0
+TOTAUX | 1730 2596 4326 2014 192 294 141 27 32 2700 1626
+
+@tn_regional view=634 page=82 matter=civil years=1924-1928
+img: all
+cols: 1924:pending_start 1924:entered 1924:pending_end 1925:pending_start 1925:entered 1925:pending_end 1926:pending_start 1926:entered 1926:pending_end 1927:pending_start 1927:entered 1927:pending_end 1928:pending_start 1928:entered 1928:pending_end
+Driba | 3431 3757 1723 1723 4196 2142 2142 3628 2029 2029 3775 2376 2376 4010 2688
+Sousse | 1007 2433 637 637 3146 756 756 3333 512 512 3052 759 759 2380 650
+Kairouan | 505 1040 417 417 1368 572 572 1124 631 631 652 416 416 1096 563
+Le Kef | 862 1569 681 681 1584 801 801 1355 456 456 1010 518 518 1321 609
+Sfax | 393 1300 378 378 1491 511 511 1275 476 476 1057 457 457 1290 548
+Gafsa | 197 679 113 113 714 206 206 613 158 158 395 89 89 500 157
+Gabès | 463 904 428 428 1046 298 298 805 263 263 790 269 269 831 207
+Béja | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+TOTAUX | 6858 11682 4377 4377 13545 5286 5286 12133 4525 4525 10731 4884 4884 11428 5422
+
+@tn_regional view=634 page=82 matter=correctional years=1924-1928
+img: all
+# 1924-1925 on f634 (the 1925 'Reste' column partly in the binding: 568 1.023 291 570 129 339 254 3.174 legible),
+# 1926-1928 on f635
+cols: 1924:pending_start 1924:entered 1924:convicted 1924:acquitted 1924:pending_end 1925:pending_start 1925:entered 1925:convicted 1925:acquitted 1925:pending_end 1926:pending_start 1926:entered 1926:convicted 1926:acquitted 1926:pending_end 1927:pending_start 1927:entered 1927:convicted 1927:acquitted 1927:pending_end 1928:pending_start 1928:entered 1928:convicted 1928:acquitted 1928:pending_end
+Driba | 632 4119 - - 587 587 4826 4060 785 568 568 3742 3080 426 804 804 4085 3775 348 766 766 4174 3138 628 1174
+Sousse | 673 2916 - - 656 656 3915 3224 324 1023 1023 3636 3950 275 434 434 4326 3553 381 826 826 3425 3251 397 603
+Kairouan | 237 1679 - - 715 715 1214 910 728 291 291 1404 1036 295 364 364 1489 1123 399 331 331 1246 862 365 350
+Le Kef | 595 1458 - - 755 755 2054 1957 282 570 570 2174 1541 347 856 856 2503 2536 356 467 467 2209 1939 305 432
+Sfax | 280 1218 - - 210 210 1143 911 313 129 129 1214 993 251 99 99 1253 983 266 103 103 1099 927 174 101
+Gafsa | 207 1092 - - 204 204 1394 978 281 339 339 1263 1036 281 285 285 1131 902 269 245 245 899 704 264 176
+Gabès | 98 1275 - - 253 253 1217 839 377 254 254 1260 841 320 353 353 1023 715 265 396 396 900 810 195 291
+Béja | 0 0 - - 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+TOTAUX | 2722 13757 - - 3380 3380 15763 12879 3090 3174 3174 14693 12477 2195 3195 3195 15810 13587 2284 3134 3134 13952 11631 2328 3127
+
+@tn_parquets view=635 page=83 year=1928
+img: all
+cols: entered dismissed direct_summons to_investigation to_police_court to_french_courts to_other_tunisian_courts pending_end
+Driba | 35562 4850 4374 818 24834 41 51 594
+Sousse | 14169 3958 3279 135 6098 20 145 534
+Kairouan | 3869 1393 1068 356 910 4 133 0
+Le Kef | 8187 2695 2057 539 2353 3 35 505
+Sfax | 7020 1675 956 291 3943 21 122 12
+Gafsa | 2708 860 843 96 817 10 39 43
+Gabès | 4804 1828 748 162 1908 3 24 131
+Béja | 0 0 0 0 0 0 0 0
+TOTAUX | 76319 17264 13325 2397 40863 102 549 1819
+
+@tn_instruction view=636 page=84 year=1928
+img: Driba, Sousse, Kairouan lines; the rest OCR
+cols: entered_criminal entered_correctional entered_total nl_criminal nl_correctional nl_total to_indictment_chamber criminal_correctionalised to_correctional to_police_court to_other_tunisian_judges to_french_courts out_total pending_end
+Driba | 266 921 1187 81 275 356 56 55 478 10 21 17 993 194
+Sousse | 82 96 178 31 23 54 23 10 64 1 3 1 156 22
+Kairouan | 175 268 443 45 88 133 25 17 161 6 0 0 342 101
+Le Kef | 288 406 694 79 89 168 23 21 116 4 9 5 346 348
+Sfax | 54 275 329 17 104 121 10 16 151 1 0 1 300 29
+Gafsa | 67 86 153 29 37 66 14 24 16 0 5 4 129 24
+Gabès | 100 94 194 47 36 83 20 23 52 0 0 0 178 16
+Béja | 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+TOTAUX | 1032 2146 3178 329 652 981 171 166 1038 22 38 28 2444 734
+
+@tn_accusation view=636 page=84 year=1928 part=final
+img: all
+cols: entered no_case to_criminal_chamber to_correctional_chamber pending_end
+Chambre d'accusation | 193 8 112 9 64
+
+@tn_accusation view=636 page=84 year=1928 part=incidents
+img: all
+cols: entered settled pending_end
+Chambre d'accusation | 84 78 6
+
+@tn_caids view=637 page=85 years=1927-1928
+img: all
+cols: civil:1927 civil:1928 penal:1927 penal:1928
+Président du Tribunal de la Driba | 379 331 25021 21294
+Président du Tribunal de Sousse | 326 365 3306 2502
+Président du Tribunal de Kairouan | 288 241 1054 815
+Président du Tribunal de Le Kef | 66 63 307 376
+Président du Tribunal de Sfax | 492 393 3590 3905
+Président du Tribunal de Gafsa | 72 63 546 334
+Président du Tribunal de Gabès | 152 149 853 806
+Président du Tribunal de Béja | 0 0 0 0
+Juge cantonal de Djerba | 375 417 723 649
+Caïd de Aïn-Draham | 0 0 105 209
+Caïd de Béja | 100 83 569 428
+Caïd de Bizerte | 177 204 883 997
+Caïd de Djebeniana | 141 216 216 137
+Caïd de Djerid | 17 12 162 210
+Caïd de Fraichiche | 82 68 180 180
+Caïd de Hemama | 12 5 37 3
+Caïd de Jlass | 10 42 79 69
+Caïd de La Skhira | 25 14 70 90
+Caïd de Mahdia | 290 370 798 1034
+Caïd de Majeur | 23 34 204 122
+Caïd de Mateur | 16 76 261 634
+Caïd de Matmata | 49 37 19 69
+Caïd de Medjez-el-Bab | 65 34 207 171
+Caïd de Monastir | 180 196 985 794
+Caïd de Nabeul | 503 718 823 584
+Caïd de Nefzaoua | 35 27 44 68
+Caïd de Ouerghemma | 91 66 272 140
+Caïd de Ouled-Aoûn | 28 20 194 220
+Caïd de Ouled-Ayar | 13 8 397 292
+Caïd de Soliman | 425 289 1565 1147
+Caïd de Souassi | 87 64 305 225
+Caïd de Souk-el-Arba | 101 41 547 453
+Caïd de Souk-el-Khemis | 19 12 340 400
+Caïd de Tadjerouine | 0 17 0 144
+Caïd de Tatahouine | 133 79 116 221
+Caïd de Téboursouk | 34 63 493 433
+Caïd de Zaghouan | 47 52 499 421
+A reporter | 4853 4869 45770 40576
+Report | 4853 4869 45770 40576
+Kahia de La Regba | 111 129 630 547
+Kahia de L'Enfida | 33 36 98 83
+Kahia de Menzel-Temime | 146 87 935 776
+Kahia de Moknine | 112 13 523 185
+Kahia de Ras-el-Djebel | 5 15 268 284
+Kahia de Tabarka | 15 11 343 295
+Kahia de Tébourba | 3 9 454 303
+Kahia de Testour | 16 27 206 129
+Khalifat de Beni-Zid | 0 0 0 0
+Khalifat de Bou-Arada | 39 16 116 59
+Khalifat de Chorbane | 54 14 74 21
+Khalifat de Djemmal | 272 247 649 579
+Khalifat de El-Djem | 69 38 147 131
+Khalifat de El-Hamma | 5 14 107 138
+Khalifat de Fériana | 9 17 246 78
+Khalifat de Fahs | 0 63 220 280
+Khalifat de Gâfour | 2 3 42 74
+Khalifat de Hadjeb-el-Aïoun | 12 7 91 64
+Khalifat de Hemarna | 12 16 90 57
+Khalifat de Jlass-el-Guebala | 17 22 62 150
+Khalifat de Kerkena | 10 33 5 0
+Khalifat de Ksour | 0 4 0 211
+Khalifat de Maknassi | 2 1 7 9
+Khalifat de Metlaoui | 1 0 79 128
+Khalifat de Mezzouna | 1 0 8 13
+Kahia de M'Saken | 240 172 812 613
+Khalifat de Nefta | 8 8 37 55
+Khalifat de Rohia-Skerra | 3 2 170 214
+Khalifat de Sbiba | 11 12 169 241
+Khalifat de Sbikha | 83 97 49 52
+Kahia de Sers | 14 16 135 169
+Khalifat de Tamerza | 0 0 13 2
+Khalifat de Touazine | 56 34 91 124
+Khalifat de Utique | 0 0 164 68
+Khalifat de Zarzis | 61 128 102 104
+Khalifat de Métouïa | 0 0 50 34
+Kahia de Ksour-es-Saf | 244 106 285 256
+Khalifat de Ousseltia | 0 0 16 21
+Khalifat de Kalaât-es-Senam | 0 11 0 54
+Khalifat de Zeghalma | 0 3 0 34
+Khalifat de Ebba-Ksour | 0 3 0 172
+TOTAUX | 6519 6283 53163 47383
+
+@tn_appeal_rate view=639 page=87 year=1928
+img: all
+cols: civil_appealable civil_appeals civil_pct penal_appealable penal_appeals penal_pct
+Driba | 2028 363 17.89 3616 734 20.29
+Sousse | 1353 393 29.71 1447 484 33.44
+Kairouan | 561 135 24.06 1166 415 35.59
+Le Kef | 504 180 35.91 1574 512 32.52
+Sfax | 591 147 24.87 186 119 14.58
+Gafsa | 238 54 22.68 688 143 20.78
+Gabès | 475 108 22.73 912 189 20.72
+Béja | 0 0 - 0 0 -
+TOTAUX | 5750 1380 - 10219 2596 -
+
+@tn_fees view=639 page=87 year=1928
+img: all
+cols: registration_stamp_duties chancery_stamp_duties fines_proportional_duties total
+Ouzara | 168310.80 3400.80 526305.42 698017.02
+Driba | 254340.50 13308.60 192538.15 460187.25
+Sousse | 117735.08 130387.00 406852.72 654974.80
+Kairouan | 115513.33 0 32562.00 148075.33
+Le Kef | 137987.06 17758.69 123246.00 278991.75
+Sfax | 64914.00 400.00 193792.23 259106.23
+Gafsa | 54320.42 256.00 138042.25 192618.67
+Gabès | 89834.18 1670.00 116702.84 253207.02
+Béja | 0 0 0 0
+Présidents des Tribunaux régionaux, Juges cantonaux, Caïds, Kahias et Khalifats | 64479.22 3410.50 718873.43 786763.15
+TOTAUX | 1067434.59 170591.59 2493915.04 3731941.22
+
+@tn_revision view=640 page=88 year=1928 matter=civil
+img: all
+cols: value
+pending_start | 327
+entered | 306
+TOTAUX | 633
+judged | 318
+pending_end | 315
+
+@tn_revision view=640 page=88 year=1928 matter=criminal
+img: all
+cols: value
+pending_start | 90
+entered | 41
+TOTAUX | 131
+judged | 78
+pending_end | 53
+
+@tn_revision view=640 page=88 year=1928 matter=correctional
+img: all
+cols: value
+pending_start | 170
+entered | 157
+TOTAUX | 327
+judged | 192
+pending_end | 135
+
+@fr_judgments_execution view=640 page=88 year=1928
+img: all
+cols: value
+deposited | 57
+executed_in_full | 14
+remaining | 43

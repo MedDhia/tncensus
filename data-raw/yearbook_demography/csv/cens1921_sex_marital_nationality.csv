@@ -1,0 +1,17 @@
+census,gallica_ark,table_id,source_page,gallica_view,census_year,nationality,nationality_fr,marital_status,marital_status_fr,sex,sex_fr,value,flag
+sgt1922,bpt6k9105649x,l,11,35,1921,all_europeans,Ensemble de la population européenne,single,Célibataires,male,Sexe masculin,44300,total_mismatch
+sgt1922,bpt6k9105649x,l,11,35,1921,all_europeans,Ensemble de la population européenne,single,Célibataires,female,Sexe féminin,41448,
+sgt1922,bpt6k9105649x,l,11,35,1921,all_europeans,Ensemble de la population européenne,married,Mariés,male,Sexe masculin,30360,
+sgt1922,bpt6k9105649x,l,11,35,1921,all_europeans,Ensemble de la population européenne,married,Mariés,female,Sexe féminin,30749,
+sgt1922,bpt6k9105649x,l,11,35,1921,all_europeans,Ensemble de la population européenne,widowed,Veufs,male,Sexe masculin,1934,
+sgt1922,bpt6k9105649x,l,11,35,1921,all_europeans,Ensemble de la population européenne,widowed,Veufs,female,Sexe féminin,6624,
+sgt1922,bpt6k9105649x,l,11,35,1921,all_europeans,Ensemble de la population européenne,divorced,Divorcés,male,Sexe masculin,227,
+sgt1922,bpt6k9105649x,l,11,35,1921,all_europeans,Ensemble de la population européenne,divorced,Divorcés,female,Sexe féminin,464,
+sgt1922,bpt6k9105649x,l,11,35,1921,french,Français,,,male,Sexe masculin,26084,
+sgt1922,bpt6k9105649x,l,11,35,1921,french,Français,,,female,Sexe féminin,28392,
+sgt1922,bpt6k9105649x,l,11,35,1921,italian,Italiens,,,male,Sexe masculin,42259,
+sgt1922,bpt6k9105649x,l,11,35,1921,italian,Italiens,,,female,Sexe féminin,42540,
+sgt1922,bpt6k9105649x,l,11,35,1921,maltese,Maltais,,,male,Sexe masculin,6786,
+sgt1922,bpt6k9105649x,l,11,35,1921,maltese,Maltais,,,female,Sexe féminin,6734,
+sgt1922,bpt6k9105649x,l,11,35,1921,other,Autres,,,male,Sexe masculin,1901,total_mismatch
+sgt1922,bpt6k9105649x,l,11,35,1921,other,Autres,,,female,Sexe féminin,1619,

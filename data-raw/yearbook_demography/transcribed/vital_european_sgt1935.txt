@@ -1,0 +1,37 @@
+# sgt1935 european ark bpt6k9105653t marriages view 27, births/deaths view 28 - transcribed from the full-resolution page images
+[marriages] years: 1933 1934
+Français | 845 644 832 595
+Italiens | 17 177 25 198
+Maltais | 8 23 11 21
+Grecs | 0 2 2 0
+Espagnols | 2 1 0 0
+Autres Européens | 23 22 16 55
+Nationalité non signalée | 21 47 3 20
+TOTAUX | 916 889
+[mixed]
+Français | 76 7 69 . . . .
+Italiens | 1 0 1 . . . .
+Maltais | 0 0 0 . . . .
+Etrangers autres | 1 0 1 . . . .
+TOTAL_EUROPEAN_GROOMS | 78 7 71 . . . .
+Musulmans | 12 . . 9 2 0 1
+Israélites | 12 . . 11 0 1 0
+TOTAL_INDIGENOUS_GROOMS | 24 . . 20 2 1 1
+[births] years: 1933 1934
+Français | 1707 1513 1630 1570
+Italiens | 1436 1381 1463 1446
+Maltais | 76 62 63 60
+Grecs | 3 6 1 4
+Espagnols | 3 9 3 6
+Autres Européens | 37 37 44 39
+SUBTOTAL | 3362 3008 3204 3125
+TOTAUX | 6370 6329
+[deaths] years: 1933 1934
+Français | 796 523 816 623
+Italiens | 822 684 783 654
+Maltais | 99 61 90 75
+Grecs | 7 2 7 3
+Espagnols | 5 5 1 4
+Autres Européens | 49 12 47 13
+SUBTOTAL | 1778 1287 1744 1372
+TOTAUX | 3065 3116

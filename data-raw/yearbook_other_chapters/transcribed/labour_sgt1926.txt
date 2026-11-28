@@ -1,0 +1,135 @@
+# Travail et prévoyance sociale, sgt1926 (chapter XV, f1037-f1044). Format: yb_tables.py.
+# Accidents du travail: no year printed in the titles (edition sgt1926). Faint print on f1039, every figure
+# legible on the crops.
+
+@acc_nat view=1039 page=475
+img: all
+cols: french italian indigenous foreign total
+check: total = french + italian + indigenous + foreign
+Alimentation | 41 191 490 35 757
+Métallurgie | 202 896 553 113 1764
+Tabac, Services d'Etat | 55 23 188 3 269
+Electricité, Eau, Gaz | 14 29 25 4 72
+Mines et Carrières | 2 362 3179 7 3550
+Transports : transport | 287 77 322 19 705
+Transports : ateliers | 466 200 258 33 957
+Construction | 69 618 938 29 1654
+Manutention | 15 142 2489 10 2656
+Chaux et Ciment | 3 36 68 2 109
+Industrie du bois | 27 256 180 26 489
+Agriculture | 106 179 940 20 1245
+Autres | 58 204 496 30 788
+Totaux | 1345 3213 10126 331 15015
+
+@acc_sev view=1039 page=475
+img: all
+cols: dead inc_more1m inc_less1m total
+check: total = dead + inc_more1m + inc_less1m
+Alimentation | 3 68 686 757
+Métallurgie | 1 98 1665 1764
+Tabac, Services d'Etat | 1 22 246 269
+Electricité, Eau, Gaz | 0 5 67 72
+Mines et Carrières | 39 106 3405 3550
+Transports : transport | 10 57 638 705
+Transports : ateliers | 0 80 877 957
+Construction | 6 194 1454 1654
+Manutention | 2 36 2618 2656
+Chaux et Ciment | 0 51 58 109
+Industrie du bois | 0 37 452 489
+Agriculture | 7 223 1015 1245
+Autres | 0 60 728 788
+Totaux | 69 1037 13909 15015
+
+# c) Causes matérielles par catégorie professionnelle (f1040|f1041 spread), same columns as sgt1925.
+# Agriculture, manutention: printed 103 (crop); row total 1.245 and column total 2.112 both need 102.
+@acc_cause view=1040 page=476 view2=1041 page2=477 split=falling_objects mismatch="Agriculture:handling"
+img: all
+cols: motors transmission machines lifting autoclaves explosives hot_matter falling_objects worker_fall handling traction hand_tools miscellaneous unknown footwear total
+check: total = motors + transmission + machines + lifting + autoclaves + explosives + hot_matter + falling_objects + worker_fall + handling + traction + hand_tools + miscellaneous + unknown + footwear
+Alimentation | 3 17 52 5 0 0 127 115 99 119 54 68 67 0 31 757
+Métallurgie | 17 11 79 2 0 0 520 223 110 288 99 259 123 0 33 1764
+Tabac, Services d'Etat | 3 8 21 0 0 0 34 36 32 30 27 36 33 0 9 269
+Electricité, Eau, Gaz | 4 0 2 0 0 0 15 6 19 9 4 6 4 0 3 72
+Mines et Carrières | 0 0 0 0 0 12 0 503 0 0 964 36 2035 0 0 3550
+Transports : transport | 14 1 6 4 0 0 61 63 117 106 11 42 276 0 4 705
+Transports : ateliers | 20 0 80 8 0 0 91 122 94 136 16 122 265 0 3 957
+Construction | 10 4 11 4 0 1 122 389 256 338 180 126 114 0 99 1654
+Manutention | 3 1 2 223 0 0 72 1088 147 789 206 17 41 0 67 2656
+Chaux et Ciment | 0 0 6 0 0 1 23 13 6 18 12 16 11 0 3 109
+Industrie du bois | 2 3 75 0 0 0 35 77 36 45 12 147 43 0 14 489
+Agriculture | 21 21 114 0 0 2 77 97 152 103 430 144 58 0 27 1245
+Autres | 5 13 34 5 0 0 74 137 0 132 73 94 177 0 44 788
+Totaux | 102 79 482 251 0 16 1251 2869 1068 2112 2088 1113 3247 0 337 15015
+
+# Grèves. a) Etat détaillé des grèves (f1040|f1041 spread; no year printed). Fields: profession ;; localité ;;
+# durée en jours ;; établissements atteints ;; grévistes ;; but de la grève ;; résultat.
+@strike_detail view=1040 page=476 view2=1041 page2=477
+img: all
+1 || Ouvriers métallurgistes ;; Tunis ;; 4 ;; 1 ;; 40 ;; Demande : augmentation de 25 % sur les salaires ;; Echec
+2 || Ouvriers peintres en bâtiment ;; Sousse ;; 1 ;; 6 ;; 30 ;; Demande : application de la journée de 8 heures ;; Réussite
+3 || Ouvriers maçons et similaires ;; Tunis ;; 3 ;; 1 ;; 16 ;; Demande : application de la journée de 8 heures, augmentation de salaire ;; Echec
+4 || Ouvriers maçons et similaires ;; Tunis et banlieue Nord ;; 9 ;; 5 ;; 35 ;; Demande : application de la journée de 8 heures, augmentation de salaire ;; Réussite
+5 || Ouvriers manœuvres et charretiers ;; Tunis ;; 5 ;; 1 ;; 60 ;; Demande : augmentation de salaire ;; Réussite
+6 || Ouvriers cartonniers ;; Tunis ;; 2 ;; 1 ;; 10 ;; Demande : augmentation de salaire ;; Transaction
+7 || Ouvriers fondeurs ;; Tunis ;; 23 ;; 6 ;; 47 ;; Demande : augmentation de salaire ;; Echec
+8 || Charretiers employés au transport des céréales ;; Tunis ;; 2 ;; 13 ;; 300 ;; Demande : augmentation du prix de transport des céréales ;; Réussite
+9 || Ouvriers en sacs et bâches ;; Tunis ;; 6 ;; 1 ;; 150 ;; Demande : augmentation de salaire ;; Réussite
+10 || Ouvriers métallurgistes ;; Tunis ;; 9 ;; 1 ;; 40 ;; Demande : augmentation de salaire ;; Transaction
+
+# b) Grèves survenues de 1917 à 1926 (f1042|f1043 spread). The 1926 figures are printed partly below the line
+# (10 strikes, 5 réussites, 3 échecs half a line low): the only line there, stored on 1926. 1926 agrees with
+# the detail table a) (10 strikes, 64 days, 36 establishments, 728 strikers, 5/2/3).
+@strikes view=1042 page=478 view2=1043 page2=479 split=establishments years=1917-1926
+img: all
+cols: strikes days establishments strikers success transaction failure
+check: strikes = success + transaction + failure
+1917 | 0 0 0 0 0 0 0
+1918 | 0 0 0 0 0 0 0
+1919 | 14 110 104 4047 0 8 6
+1920 | 6 79 9 5520 0 3 3
+1921 | 6 91 101 2254 3 1 2
+1922 | 9 113 248 1593 4 0 5
+1923 | 6 16 25 1227 3 0 3
+1924 | 16 224 149 2208 5 5 6
+1925 | 15 114 73 3170 1 8 6
+1926 | 10 64 36 728 5 2 3
+
+# Placement. Opérations de l'Office du Placement Français en Tunisie (1920-1926) (f1042|f1043 spread; the
+# 1922 column of placements runs into the gutter of f1042). Columns: d/o/p = demandes d'emploi, offres
+# d'emploi, placements effectués, by year. Bâtiment 1922 placements: first digit blotted in the gutter (4 or 1);
+# the Totaux 457 gives 11 (stored derived_from_totals).
+@placement view=1042 page=478 view2=1043 page2=479 split=d1923 derive="Bâtiment:p1922"
+img: all
+cols: d1920 o1920 p1920 d1921 o1921 p1921 d1922 o1922 p1922 d1923 o1923 p1923 d1924 o1924 p1924 d1925 o1925 p1925 d1926 o1926 p1926
+Agriculture | 358 103 86 251 121 71 212 74 89 185 74 57 182 80 60 127 43 53 151 72 75
+Commerce et Industrie | 292 93 91 259 106 92 420 120 73 476 83 93 485 94 95 415 77 90 397 135 121
+Bâtiment | 38 24 14 54 15 15 28 7 ? 21 5 7 40 25 36 18 2 3 34 6 11
+Métallurgie | 319 81 72 256 46 26 381 50 70 314 40 34 183 36 35 162 31 32 211 53 51
+Mines et Carrières | 143 29 83 15 19 18 22 30 23 12 23 23 14 18 19 10 23 28 16 18 21
+Services domestiques | 107 60 29 96 167 49 90 142 45 155 338 155 178 270 109 81 219 82 139 192 131
+Services publics | 315 46 78 240 21 54 252 36 70 71 17 47 82 30 60 54 19 53 41 11 32
+Divers | 163 89 31 146 148 53 186 213 76 113 7 39 181 38 48 190 31 79 188 54 82
+Totaux | 1735 525 484 1317 643 378 1591 672 457 1347 587 455 1345 591 462 1057 445 420 1177 541 524
+
+# Coût de la vie. Nombres-indices du coût de la vie, base 100 en juillet 1914. Labels: year, or year + s1/s2
+# (1er/2e semestre), t1-t4 (trimestres). N.B. printed below the table: the indices rest on the cost of fixed
+# quantities of foodstuffs for a family of four (father, mother, two children); they leave out rent and
+# clothing; separate indices for French, Italian and indigenous families, whose ways of life differ notably.
+@col view=1044 page=480
+img: all
+cols: french italian indigenous
+1915 | 114 120 114
+1916 | 150 154 146
+1917 | 184 187 178
+1918 | 250 238 240
+1919 | 286 286 260
+1920 | 360 350 311
+1921 | 352 349 312
+1922 | 311 301 264
+1923 | 343 332 302
+1924 s1 | 405 409 394
+1924 s2 | 421 442 410
+1925 s1 | 428 472 440
+1925 s2 | 481 526 506
+1926 s1 | 558 594 572
+1926 s2 | 676 707 682

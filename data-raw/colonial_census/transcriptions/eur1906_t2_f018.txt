@@ -1,0 +1,39 @@
+# view 18
+Hamaïm | 0 91 0 0 0 0 91
+Hammam-Lif | 177 651 35 0 0 3 866
+Kéreddine | 22 54 7 3 0 5 91
+Klédia | 16 16 0 0 0 0 32
+Kram | 28 103 40 6 0 1 178
+La Laverie (Mine du Djebel-Reças) | 44 843 0 2 8 6 903
+La Malga | 0 3 3 0 0 0 6
+Manouba | 189 208 36 9 2 6 450
+La Marsa | 139 164 43 0 5 17 368
+Maxula-Radès | 307 241 15 5 7 3 578
+Mégrine | 17 0 0 0 0 0 17
+Menilha,Villejacques | 18 106 3 0 0 0 127
+Mohammedia, Fouchana | 26 15 0 0 0 0 41
+La Mornaghia | 194 23 0 0 0 0 217
+M'rira | 8 168 0 0 0 0 176
+La Zaouïa (Mornag) | 17 104 4 0 0 0 125
+Nassen | 53 113 4 0 0 0 170
+Oudna | 15 33 0 0 0 0 48
+Oued-el-Lil (Manouba) | 0 151 0 0 0 0 151
+Oued-Gueriana (Manouba) | 14 55 0 0 0 1 70
+Potinville | 103 187 2 0 0 0 292
+Ras-Tabia | 62 160 5 1 0 3 231
+Saïda (près Djedeïda) | 9 189 0 7 16 0 221
+Saint-Germain | 35 15 0 0 0 0 50
+Saint-Henri | 67 46 6 1 0 0 120
+Salambo | 29 20 0 1 0 1 51
+Sedjoumi | 43 229 1 7 0 0 280
+Sidi-bou-Saïd | 63 40 3 2 0 15 123
+La Soukra | 32 66 0 7 0 2 107
+Tebourba | 83 116 2 0 0 0 201
+Aïn-Terglech, Aïn-Rhelal | 4 22 3 0 1 0 30
+(El) Bathan | 51 17 0 0 0 0 68
+Bordj-el-Amri | 0 245 0 0 0 0 245
+Bordj-Messaadine | 0 138 0 0 0 0 138
+Bordj-Toum | 20 39 0 0 0 0 59
+Bordj-Touta | 24 0 0 0 0 8 32
+La Cebala (route de Bizerte) | 19 1 0 0 0 0 20
+Djedeïda | 100 323 0 0 0 42 465

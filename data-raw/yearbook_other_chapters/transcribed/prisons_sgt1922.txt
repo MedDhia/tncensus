@@ -1,0 +1,222 @@
+# Prisons chapter (chapter V, Établissements pénitentiaires), sgt1922 (ark bpt6k9105649x), views 95-102
+# (95 chapter title, 96 blank). Format: see yb_tables.py. Only the recapitulation table is transcribed (see the notes).
+
+@recap view=102 page=78 years=1913-1922
+cols: start entries exits end detention_days average
+1913 | 2801 17421 17398 2724 915590 2510
+1914 | 2726 23598 23961 3147 1015483 2773
+1915 | 3147 23044 23109 2874 1092231 2969
+1916 | 2874 18858 18636 3096 1124392 3072
+1917 | 3096 18481 17449 3128 1123440 3077
+1918 | 3012 15182 15464 2730 1017672 2788
+1919 | 2732 17736 17698 2770 1038981 2751
+1920 | 2735 21289 20584 3440 1209043 3087
+1921 | 3457 19373 19495 3335 1274705 3492
+1922 | 3322 15196 15327 3191 1138902 3120
+
+@condemned_age view=97 page=73 year=1922
+img: all
+cols: age_0_10 age_11_15 age_16_20 age_21_30 age_31_40 age_41_50 age_51_plus age_total male female first_offender recidivist total
+Français | 0 0 4 26 9 8 0 47 44 3 15 32 47
+— (Algériens) | 0 0 25 59 52 7 10 153 153 0 85 68 153
+Italiens | 0 0 20 64 26 13 18 144 139 5 60 84 144
+Anglais (Maltais) | 0 0 2 6 5 3 2 18 17 1 10 8 18
+Grecs | 0 0 3 2 0 0 0 5 5 0 4 1 5
+Espagnols | 0 0 0 0 0 0 1 1 0 1 0 1 1
+Serbes | 0 0 0 0 0 0 0 0 0 0 0 0 0
+Divers | 0 0 1 1 2 0 1 5 5 0 3 2 5
+Musulmans (sujet musulmans) | 7 201 1410 3407 1670 600 283 7578 7417 161 3796 3782 7578
+Israélites (sujet musulmans) | 0 0 17 43 23 11 9 103 99 4 50 53 103
+Tripolitains | 0 2 29 71 34 11 3 150 148 2 84 66 150
+Marocains | 0 0 1 10 11 0 1 23 23 0 18 5 23
+Totaux | 7 203 1512 3689 1832 653 328 8227 8050 177 4125 4102 8227
+
+@condemned_offence view=97 page=73 year=1922
+img: all
+cols: hl.Français hl.Européens hl.Algériens hl.Tunisiens hl.Israélites hl.Total rc.Français rc.Européens rc.Algériens rc.Tunisiens rc.Israélites rc.Total pl.Français pl.Européens pl.Algériens pl.Tunisiens pl.Israélites pl.Total ps.Français ps.Européens ps.Algériens ps.Tunisiens ps.Tripolitains ps.Israélites ps.Total
+Meurtre | 0 0 1 172 2 175 0 1 0 4 0 5 0 1 1 21 0 23 0 0 2 51 0 1 54
+Coups, blessures, agressions | 0 0 0 57 1 58 0 0 1 6 0 7 0 0 1 51 0 52 6 11 33 839 0 6 895
+Attentat à la pudeur | 0 0 1 66 0 67 0 0 1 4 0 5 0 0 0 13 0 13 0 2 1 105 0 0 108
+Vol | 6 1 0 224 2 233 2 0 0 24 0 26 7 14 8 437 5 471 11 33 61 2890 0 37 3035
+Ivresse | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 1 3 15 1776 0 29 1824
+Délit de pacage | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 94 0 0 94
+Evasions | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 10 0 10 0 0 0 162 0 0 162
+Dettiers | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2 27 6 54 0 4 93
+Divers | 0 0 0 7 0 7 0 0 0 1 0 1 1 2 0 16 0 19 8 79 20 666 0 16 789
+Totaux | 6 1 2 526 5 540 2 1 2 39 0 44 8 17 10 549 5 589 31 155 138 6637 0 93 7054
+
+@work_days view=98 page=74 year=1922
+img: all
+# "Total par établissement" column printed into the binding; its last digits read on an enlarged crop.
+cols: ext_agriculture ext_saline ext_hopital_sadiki public_works roads_municipality agri_education agri_hospitals agri_controles agri_prisons agri_other saline mines_phosphates espadrilles_alfa other total
+Bardo | 9741 0 0 0 953 0 0 0 5754 472 0 0 30147 0 47067
+Béja | 188 0 0 0 0 0 0 0 0 0 0 0 0 0 188
+Bizerte | 839 0 0 0 0 0 0 769 0 0 0 0 0 0 1608
+Gabès | 0 0 0 4170 9151 796 0 1208 0 346 0 0 0 0 15671
+Gafsa | 0 0 0 391 8011 635 0 3120 1391 114 0 1308 2330 0 17300
+La Goulette | 21431 13160 0 1258 3053 0 0 0 0 80 0 8346 0 0 47328
+Kairouan | 0 0 0 0 14846 0 0 0 0 0 0 0 0 0 14846
+Kef | 3613 0 0 1497 8104 0 0 0 0 0 0 0 0 0 13214
+Porto-Farina | 0 0 0 0 0 0 0 0 15860 0 505 0 520 8460 25345
+Sfax | 341 0 0 1050 3276 0 0 0 0 0 0 0 1845 0 6482
+Sousse | 4278 0 0 0 10008 0 0 0 0 0 0 0 0 0 14286
+Salahia | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Tunis | 25249 0 18000 0 4517 9026 7597 9857 36500 5572 0 0 0 0 116318
+Dj.-Djougar | 0 0 0 0 0 0 0 0 104238 0 0 0 0 0 104238
+Colonie (jeunes détenus) | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Totaux | 65680 13160 18000 8366 61919 10457 7597 14954 163743 6584 505 9654 34812 8460 423891
+
+@expenditure view=99 page=75 year=1922
+img: all
+# Columns: Nombre de journées de détention; Dépenses totales: Art. 13 Personnel, Art. 14 entretien et dépenses
+# diverses, Art. 14 nourriture des détenus, Total art. 13 et 14; Prix de la journée de détention (1); Bénéfices de
+# cantine, produit du travail, produits divers. Money in francs.centimes; price per day in francs to 4 decimals.
+# Total lines: "Totaux" = the lines since the previous total line; "Totaux*" = every data line above.
+# '-' = nothing printed in a total line's cell that only totals the days.
+cols: days personnel upkeep food total price_per_day products
+Tunis | 402820 215490.84 190487.75 256041.46 662020.05 1.6434 13950.75
+Bardo | 57529 27373.87 20404.28 31769.58 79547.73 1.3827 11101.26
+La Goulette | 38342 26433.16 12873.95 24954.11 64261.22 1.6760 3117.95
+Porto-Farina | 123705 40250.57 39921.52 73993.78 154165.87 1.2462 2599.55
+Bizerte | 25072 15390.99 8960.30 15996.77 40348.06 1.6092 1598.72
+Béja | 12677 12046.66 4769.90 7646.41 24462.97 1.9297 1836.52
+Le Kef | 58452 15701.23 18541.86 36134.57 70377.66 1.2040 14938.22
+Sousse | 83126 29829.89 31736.20 52062.90 113628.99 1.3669 3837.27
+Kairouan | 53458 13159.19 17457.78 35143.30 65760.27 1.2301 3577.12
+Sfax | 62128 22513.22 22774.72 36265.85 81553.79 1.3126 1676.60
+Gabès | 35548 17606.90 11583.34 26667.77 55858.01 1.5713 1876.25
+Gafsa | 38681 14746.66 12415.76 26376.88 53539.30 1.3841 5725.42
+Totaux | 991538 450543.18 391927.36 623053.38 1465523.92 1.4780 65835.63
+Colonie | 147364 0 36841 86803.20 123644.20 0.8390 0
+Totaux* | 1138902 450543.18 428768.36 709856.58 1589168.12 - -
+Chantiers extérieurs | 96840 0 0 0 0 0 0
+TOTAL des journées de détention* | 1235742 - - - - - -
+Geôles | 0 0 3461.98 121893.63 125355.61 0 0
+
+@expenditure_note view=99 page=75 year=1922
+img: all
+# Footnote (1): "Le prix de la journée de détention dans les prisons de la Régence est de : 1 fr. 4780 se décomposant
+# ainsi : Frais de personnel 0 fr. 4544, d'entretien 0 fr. 3953, de nourriture 0 fr. 6283".
+cols: price_personnel price_upkeep price_food price_per_day
+Prisons de la Régence (note 1) | 0.4544 0.3953 0.6283 1.4780
+
+@movement_men view=98 page=74 year=1922 split=out_provisional:99:75
+img: all
+# Mouvement de la population, a) Mouvement général d'entrée et de sortie. Effectif au 31 décembre 1922
+# (Hommes et jeunes garçons). Two-page spread: up to "par grâce ou amnistie" on p. 74 (f98), from "par
+# libération provisoire" on p. 75 (f99); the grâce and libération provisoire columns run into the binding, read
+# on enlarged crops of both edges. Sorties, "par conditionnelle": the 9 is printed on the Djebel-Djougar line
+# (the label takes two lines) but is stored on the Tunis line (row_realigned): with it there both lines give
+# their printed Total des sorties (5.508 and 547). Maisons centrales Totaux printed 695 for lines summing to 605.
+cols: start in_free in_other_prisons re_escape re_colons re_hospital re_provisional in_total out_sentence out_pardon_amnesty out_provisional out_acquittal out_conditional out_administrative tr_central tr_other_prisons tr_convict_depots tr_hospitals out_colons_controles out_escaped out_died out_executed out_total end detention_days
+Le Bardo | 189 0 206 0 0 0 0 206 76 2 0 0 0 0 0 120 26 0 0 10 1 0 235 160 57529
+Béja | 33 119 62 2 0 0 0 183 63 0 40 2 0 0 0 64 0 0 0 2 0 0 171 45 12636
+Bizerte | 56 565 21 0 0 2 3 591 147 0 18 30 0 240 134 0 0 3 0 0 7 0 579 68 24514
+La Goulette | 219 0 275 0 0 0 0 275 132 11 0 0 0 0 0 137 0 0 0 24 0 0 304 190 38342
+Gabès | 53 567 252 9 0 1 28 857 337 0 33 99 0 85 71 156 0 5 0 2 1 0 789 121 35322
+Gafsa | 62 625 75 2 0 1 3 706 281 5 28 160 0 24 0 158 0 1 0 5 1 0 663 105 38482
+Le Kef | 111 1006 49 3 0 62 16 1136 293 0 23 283 0 188 0 270 0 0 0 12 5 0 1074 173 57738
+Kairouan | 88 922 29 2 0 3 9 965 433 1 92 186 0 75 0 148 0 4 0 6 1 0 946 107 52512
+Porto-Farina | 307 0 250 0 0 0 0 250 13 9 0 0 0 0 0 0 136 0 0 0 24 0 182 375 123705
+Sousse | 187 1849 296 23 0 30 39 2237 791 0 158 555 0 30 381 266 0 30 0 5 2 0 2218 206 80669
+Sfax | 165 1459 197 8 0 0 7 1671 852 7 121 163 0 11 0 514 0 1 0 3 2 0 1674 162 60319
+Tunis | 1322 3360 1620 72 98 61 5 5216 1986 36 66 1107 9 11 19 1301 453 70 297 21 131 1 5508 1030 382169
+Pénitencier Agricole du Djebel-Djougar | 422 0 504 0 0 0 0 504 245 4 0 0 0 0 0 257 0 0 0 23 18 0 547 379 147364
+Totaux | 3214 10472 3836 121 98 160 110 14797 5649 75 579 2585 9 664 695 3391 615 114 297 113 193 1 14890 3121 1111301
+
+@movement_women view=100 page=76 year=1922 split=out_provisional:101:77
+img: all
+# b) Mouvement général d'entrée et de sortie. Effectif au 31 décembre 1922 (Femmes et jeunes filles). p. 76
+# heading prints "Entrées pendant l'année 1921" (sic; p. 77 "Sorties pendant l'année 1922", population at
+# 31 December 1921 and 1922). No "réintégrés colons" and no "colons et contrôles" columns.
+cols: start in_free in_other_prisons re_escape re_hospital re_provisional in_total out_sentence out_pardon_amnesty out_provisional out_acquittal out_conditional out_administrative tr_central tr_other_prisons tr_convict_depots tr_hospitals out_escaped out_died out_executed out_total end detention_days
+Le Bardo | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Béja | 1 2 0 0 0 0 2 1 0 0 0 0 0 0 2 0 0 0 0 0 3 0 41
+Bizerte | 1 11 0 0 0 0 11 4 0 0 0 0 0 0 8 0 0 0 0 0 12 0 558
+La Goulette | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Gabès | 0 7 1 0 0 0 8 6 0 0 1 0 0 0 0 0 0 0 0 0 7 1 226
+Gafsa | 0 9 0 0 0 0 9 6 0 0 1 0 2 0 0 0 0 0 0 0 9 0 199
+Le Kef | 5 18 0 0 0 0 18 4 0 0 14 0 0 0 5 0 0 0 0 0 23 0 714
+Kairouan | 2 33 2 0 0 0 35 7 0 0 10 0 8 0 7 0 0 0 0 0 32 5 946
+Porto-Farina | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Sousse | 6 61 9 0 1 2 73 17 1 7 22 0 0 8 17 0 1 0 0 0 73 6 2457
+Sfax | 5 93 1 0 0 0 94 72 0 10 7 0 0 0 4 0 0 0 0 0 93 6 1809
+Tunis | 88 123 20 0 5 1 149 97 7 2 64 4 0 0 0 0 8 0 3 0 185 52 20651
+Pénitencier Agricole du Djebel-Djougar | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Totaux | 108 357 33 0 6 3 399 214 8 19 119 4 10 8 43 0 9 0 3 0 437 70 27601
+
+@transfers view=100 page=76 year=1922
+img: all
+# c) Prison de Tunis ; transfèrements (lower half of p. 76). Line label = "établissement destinataire //
+# observations" as printed (Maison d'arrêt Alger has two lines under one brace).
+cols: transfers prisoners
+Prisons départementales // Prévenus ou condamnés à toutes peines | 0 1650
+Maisons centrales // Condamnés à 1 an 1 jour et au-dessus. | 4 19
+Maison d'arrêt Alger // Appelants. | 24 48
+Maison d'arrêt Alger // Mandats d'arrêt. | 2 2
+Marseille // Mandats d'arrêt. | 10 11
+L'Harrach // Travaux forcés. | 7 43
+Frontière algérienne // | 10 61
+Maison de correction // | 0 0
+Contrôles civils et colons // | 0 236
+Totaux | 57 2070
+
+@deaths view=101 page=77 year=1922 heads="Paludisme;Grippe;Tuberculose;Cachexie;Bronchite;Syphilis;Entérites Dysenteries;Urémie;Divers;Phlegmon;Typhus;Fièvre typhoïde;Accidents-Mort subite;Misère physiologique;Pneumonie;Ostéite;Néphrite-Ascite"
+img: all
+# d) État numérique des décès par prison et par maladie (lower half of p. 77). The three infirmaries are
+# braced under "Tunis" (printed vertically). Last column = TOTAUX (check only).
+cols: paludisme grippe tuberculose cachexie bronchite syphilis enterite_dysenterie uremie divers phlegmon typhus fievre_typhoide accident_mort_subite misere_physiologique pneumonie osteite nephrite_ascite total
+Tunis : Infirmerie pénitentiaire | 0 0 75 4 2 0 0 0 15 0 0 0 0 1 0 2 0 99
+Tunis : Infirmerie de la Prison | 1 0 3 8 1 1 2 1 8 2 0 0 0 3 1 0 1 32
+Tunis : Infirmerie des femmes | 0 0 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3
+Hôpital Sadiki et hôpital civil | 0 0 6 0 0 0 0 0 1 0 0 0 0 0 0 0 0 7
+Djebel-Djougar | 4 0 0 6 7 0 0 0 0 1 0 0 0 0 0 0 0 18
+Porto-Farina | 1 1 11 2 0 1 4 0 2 1 0 0 0 0 0 1 0 24
+Le Kef | 1 1 0 1 0 0 0 0 1 0 0 0 0 0 1 0 0 5
+Sousse | 0 0 0 0 0 0 0 0 2 0 0 0 0 0 0 0 0 2
+Gafsa | 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1
+Bizerte | 0 0 6 1 0 0 0 0 0 0 0 0 0 0 0 0 0 7
+Le Bardo | 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1
+La Goulette | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Kairouan | 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1
+Sfax | 0 0 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2
+Gabès | 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1
+Béja | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Totaux | 9 2 108 22 10 2 6 1 29 4 0 0 0 4 2 3 1 203
+
+@guard view=102 page=78 year=1922
+img: all
+# e) État comparatif du personnel de garde avec l'effectif journalier maximum de chaque établissement de
+# détention (upper half of p. 78). Label "<prison> : Hommes / Femmes" for the braced lines; staff columns are
+# printed on the Hommes line (agents) and the Femmes line (surveillantes), » on the other line.
+cols: max_daily agents_french agents_indigenous wardresses
+Tunis : Hommes | 1345 22 21 0
+Tunis : Femmes | 89 0 0 2
+Bardo | 182 2 5 0
+La Goulette | 146 2 4 0
+Porto-Farina | 384 4 5 0
+Bizerte : Hommes | 84 1 2 0
+Bizerte : Femmes | 5 0 0 1
+Béja : Hommes | 54 1 1 0
+Béja : Femmes | 1 0 0 1
+Le Kef : Hommes | 212 1 3 0
+Le Kef : Femmes | 5 0 0 1
+Sousse : Hommes | 308 3 3 0
+Sousse : Femmes | 12 0 0 1
+Kairouan : Hommes | 201 1 2 0
+Kairouan : Femmes | 10 0 0 1
+Sfax : Hommes | 205 2 3 0
+Sfax : Femmes | 13 0 0 1
+Gabès : Hommes | 145 1 2 0
+Gabès : Femmes | 1 0 0 1
+Gafsa : Hommes | 136 1 2 0
+Gafsa : Femmes | 3 0 0 1
+Salahia | 0 0 0 0
+Djebel-Djougar | 503 15 1 0
+Totaux | 4044 56 54 10
+
+@guard_note view=102 page=78 year=1922
+img: all
+# Footnote (1) to "Agents indigènes": "20 agents indigènes temporaires au Djebel-Djougar."
+cols: agents_indigenous_temporary
+Djebel-Djougar (note 1) | 20

@@ -1,0 +1,187 @@
+# Expulsions prononcées, by nationality. Transcribed from the page images.
+# One block per edition: "@ <edition> <ark> <view> <printed page>", then
+# "years | y1 ... y10 [TOTAUX]", one line per nationality as printed, and
+# "= TOTAUX | ..." for the printed column totals. "»" = 0; "_" = blank cell.
+# A trailing column after the ten years is the printed row total.
+
+@ sgt1922 bpt6k9105649x 43 19
+years | 1913 1914 1915 1916 1917 1918 1919 1920 1921 1922
+Allemands | 2 » » » 1 » » » 6 1
+Anglais | » » » 1 » 5 » » » »
+Anglo-Maltais | 7 10 3 1 2 4 4 3 7 2
+Autrichiens | 2 » » » » » » » 3 »
+Belges | » » » 1 1 » » » » »
+Egyptiens | 1 » » » » » » 1 » 2
+Espagnols | 1 6 » » 6 17 7 » 1 »
+Grecs | 1 » 2 » 5 4 » 4 » 2
+Italiens | 97 94 38 25 45 41 37 43 53 33
+Marocains | 1 1 » 2 3 » » 2 » »
+Ottomans | 6 14 » » _ » 1 13 4 1
+Russes | » » » » » 2 » 4 » »
+Suisses | 4 1 2 4 2 1 » 1 » »
+Divers | 5 3 15 6 8 46 31 11 5 3
+= TOTAUX | 127 129 60 40 73 120 102 82 79 44
+
+@ sgt1923 bpt6k9105649x 521 19
+years | 1914 1915 1916 1917 1918 1919 1920 1921 1922 1923
+Allemands | » » » 1 » » » 6 1 1
+Anglais | » » 1 » 5 » » » » »
+Anglo-Maltais | 10 3 1 2 4 4 3 7 2 4
+Autrichiens | » » » » » » » 3 » »
+Belges | » » 1 1 » » » » » »
+Egyptiens | » » » » » » 1 » 2 »
+Espagnols | 6 » » 6 17 7 » 1 » »
+Grecs | » 2 » 5 4 » 4 » 2 1
+Italiens | 94 38 25 45 41 37 43 53 33 56
+Marocains | 1 » 2 3 » » 2 » » »
+Ottomans | 14 » » _ » 1 13 4 1 »
+Russes | » » » » 2 » 4 » » 2
+Suisses | 1 2 4 2 1 » 1 » » »
+Divers | 3 15 6 8 46 31 11 5 3 4
+= TOTAUX | 129 60 40 73 120 102 82 79 44 68
+
+@ sgt1924 bpt6k9105649x 1009 19
+years | 1915 1916 1917 1918 1919 1920 1921 1922 1923 1924 TOTAUX
+Allemands | » » 1 » » » 6 1 1 2 11
+Anglais | » 1 » 5 » » » » » » 6
+Anglo-Maltais | 3 1 2 4 4 3 7 2 4 6 36
+Autrichiens | » » » » » » 3 » » 1 4
+Belges | » 1 1 » » » » » » » 2
+Egyptiens | » » » » » 1 » 2 » 1 4
+Espagnols | » » 6 17 7 » 1 » » 1 32
+Grecs | 2 » 5 4 » 4 » 2 1 1 19
+Italiens | 38 25 45 41 37 43 53 33 56 60 431
+Marocains | » 2 3 » » 2 » » » 48 55
+Ottomans | » » _ » 1 13 4 1 » » 19
+Suisses | » » » 2 » 4 » » 2 » 8
+Russes | 2 4 2 1 » 1 » » » » 10
+Divers | 15 6 8 46 31 11 5 3 4 5 134
+= TOTAUX | 60 40 73 120 102 82 79 44 68 125 771
+
+@ sgt1925 bpt6k9105650k 41 17
+years | 1916 1917 1918 1919 1920 1921 1922 1923 1924 1925 TOTAUX
+Allemands | » 1 » » » 6 1 1 2 » 11
+Anglais | 1 » 5 » » » » » » » 6
+Anglo-Maltais | 1 2 4 4 3 7 2 4 6 2 35
+Autrichiens | » » » » » 3 » » 1 » 4
+Belges | 1 1 » » » » » » » » 2
+Egyptiens | » » » » 1 » 2 » 1 » 4
+Espagnols | » 6 17 7 » 1 » » 1 » 32
+Grecs | » 5 4 » 4 » 2 1 1 » 17
+Italiens | 25 45 41 37 43 53 33 56 60 48 441
+Marocains | 2 3 » » 2 » » » 48 12 67
+Ottomans | » _ » 1 13 4 1 » » 1 20
+Suisses | » » 2 » 4 » » 2 » 1 9
+Russes | 4 2 1 » 1 » » » » 1 9
+Divers | 6 8 46 31 11 5 3 4 5 » 119
+= TOTAUX | 40 73 120 102 82 79 44 68 125 65 776
+
+@ sgt1926 bpt6k9105650k 586 22
+years | 1917 1918 1919 1920 1921 1922 1923 1924 1925 1926 TOTAUX
+Allemands | 1 » » » 6 1 1 2 » » 11
+Anglais | » 5 » » » » » » » » 5
+Anglo-Maltais | 2 4 4 3 7 2 4 6 2 » 34
+Autrichiens | » » » » 3 » » 1 » » 4
+Belges | 1 » » » » » » » » 1 2
+Egyptiens | » » » 1 » 2 » 1 » » 4
+Espagnols | 6 17 7 » 1 » » 1 » 1 33
+Grecs | 5 4 » 4 » 2 1 1 » » 17
+Italiens | 45 41 37 43 53 35 56 60 48 47 463
+Marocains | 3 » » 2 » » » 48 12 21 86
+Ottomans | » » 1 13 4 1 » » 1 » 20
+Suisses | » 2 » 4 » » 2 » 1 » 9
+Russes | 2 1 » 1 » » » » 1 2 7
+Divers | 8 46 31 11 5 3 4 5 » » 113
+= TOTAUX | 73 120 102 82 79 44 68 125 65 72 808
+
+@ sgt1927 bpt6k91056510 50 22
+years | 1918 1919 1920 1921 1922 1923 1924 1925 1926 1927 TOTAUX
+Allemands | » » » 6 1 1 2 » » 1 11
+Anglais | 5 » » » » » » » » 1 6
+Anglo-Maltais | 4 4 3 7 2 4 6 2 » 4 36
+Autrichiens | » » » 3 » » 1 » » 1 5
+Belges | » » » » » » » » 1 » 1
+Egyptiens | » » 1 » 2 » 1 » » » 4
+Espagnols | 17 7 » 1 » » 1 » 1 » 27
+Grecs | 4 » 4 » 2 1 1 » » » 12
+Italiens | 41 37 43 53 35 56 60 48 47 57 475
+Marocains | » » 2 » » » 48 12 21 42 125
+Ottomans | » 1 13 4 1 » » 1 » 1 21
+Suisses | 2 » 4 » » 2 » 1 » » 9
+Russes | 1 » 1 » » » » 1 2 » 5
+Divers | 46 31 11 5 3 4 5 » » 1 106
+= TOTAUX | 120 80 82 79 44 68 125 65 72 108 843
+
+@ sgt1928 bpt6k91056510 574 22
+years | 1919 1920 1921 1922 1923 1924 1925 1926 1927 1928 TOTAUX
+Allemands | » » 6 1 1 2 » » 1 1 12
+Anglais | » » » » » » » » 1 » 1
+Anglo-Maltais | 4 3 7 2 4 6 2 » 4 3 35
+Autrichiens | » » 3 » » 1 » » 1 1 6
+Belges | » » » » » » » 1 » » 1
+Egyptiens | » 1 » 2 » 1 » » » » 4
+Espagnols | 7 » 1 » » 1 » 1 » 3 13
+Grecs | » 4 » 2 1 1 » » » » 8
+Italiens | 37 43 53 35 56 60 48 47 57 61 497
+Marocains | » 2 » » » 48 12 21 42 15 140
+Ottomans | 1 13 4 1 » » 1 » 1 1 22
+Suisses | » 4 » » 2 » 1 » » 1 8
+Russes | » 1 » » » » 1 2 » » 4
+Divers | 31 11 5 3 4 5 » » 1 12 72
+= TOTAUX | 80 82 79 46 68 125 65 72 108 98 823
+
+@ sgt1929 bpt6k9105652d 50 22
+years | 1920 1921 1922 1923 1924 1925 1926 1927 1928 1929 TOTAUX
+Allemands | » 6 1 1 2 » » 1 1 1 13
+Anglais | » » » » » » » 1 » » 1
+Anglo-Maltais | 3 7 2 4 6 2 » 4 3 2 33
+Autrichiens | » 3 » » 1 » » 1 1 » 6
+Belges | » » » » » » 1 » » » 1
+Egyptiens | 1 » 2 » 1 » » » » » 4
+Espagnols | » 1 » » 1 » 1 » 3 » 6
+Grecs | 4 » 2 1 1 » » » » » 8
+Italiens | 43 53 35 56 60 48 47 57 61 38 498
+Marocains | 2 » » » 48 12 21 42 15 » 140
+Ottomans | 13 4 1 » » 1 » 1 1 » 21
+Suisses | 4 » » 2 » 1 » » 1 » 8
+Russes | 1 » » » » 1 2 » » » 4
+Divers | 11 5 3 4 5 » » 1 12 6 47
+= TOTAUX | 82 79 46 68 125 65 72 108 98 47 790
+
+@ sgt1930 bpt6k9105652d 580 22
+years | 1921 1922 1923 1924 1925 1926 1927 1928 1929 1930 TOTAUX
+Allemands | 6 1 1 2 » » 1 1 1 » 13
+Anglais | » » » » » » 1 » » » 1
+Anglo-Maltais | 7 2 4 6 2 » 4 3 2 » 30
+Autrichiens | 3 » » 1 » » 1 1 » » 6
+Belges | » » » » » 1 » » » » 1
+Egyptiens | » 2 » 1 » » » » » » 3
+Espagnols | 1 » » 1 » 1 » 3 » 2 8
+Grecs | » 2 1 1 » » » » » » 4
+Italiens | 53 35 56 60 48 47 57 61 38 36 491
+Marocains | » » » 48 12 21 42 15 » 29 167
+Ottomans | 4 1 » » 1 » 1 1 » » 8
+Suisses | » » 2 » 1 » » 1 » 1 5
+Russes | » » » » 1 2 » » » 1 4
+Divers | 5 3 4 5 » » 1 12 6 2 38
+= TOTAUX | 79 46 68 125 65 72 108 98 47 71 779
+
+# sgt1935: the TOTAUX column covers 1924-1934 (eleven years) although the table
+# body prints only 1925-1934; the 1924 values are those of sgt1930.
+@ sgt1935 bpt6k9105653t 31 11
+years | 1925 1926 1927 1928 1929 1930 1931 1932 1933 1934 TOTAUX
+Allemands | » » 1 1 1 » » 2 3 4 14
+Anglais | » » 1 » » » » 1 » 1 3
+Anglo-Maltais | 2 » 4 3 2 » 1 » » 1 19
+Autrichiens | » » 1 1 » » » 1 » 1 5
+Belges | » 1 » » » » 1 » » » 2
+Egyptiens | » » » » » » » » » 1 2
+Espagnols | » 1 » 3 » 2 » 2 » 1 10
+Grecs | » » » » » » » » » 1 2
+Italiens | 48 47 57 61 38 36 57 49 46 56 555
+Marocains | 12 21 42 15 » 29 4 1 1 2 175
+Ottomans | 1 » 1 1 » » » » » » 3
+Suisses | 1 » » 1 » 1 » » » » 3
+Russes | 1 2 » » » 1 » 3 2 2 11
+Divers | » » 1 12 6 2 3 7 16 29 81
+= TOTAUX | 65 72 108 98 47 71 66 66 68 99 885

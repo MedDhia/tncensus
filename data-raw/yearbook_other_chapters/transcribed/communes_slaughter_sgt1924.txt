@@ -1,0 +1,99 @@
+# Communes chapter, sgt1924 (ark bpt6k9105649x): "d) Droits d'abatage" (no year printed in the heading; year =
+# the edition year). Three two-page spreads, views 1024-1025, 1026-1027, 1028-1029 (printed pages 34-39); view 1023
+# ends the loans table, view 1030 opens "Concessions sur la voie publique".
+# Format as in communes_slaughter_sgt1923.txt ('T:' text tariff with '_' for spaces, kept as printed; a tariff
+# printed on two lines with a brace is written 'a/b'; '# obs:' = the Observations column, assigned to the commune
+# it describes when the text starts on the line above).
+# Reading: every line read on native-resolution crops of both pages stitched (0.55 scale, both pages of each
+# spread), each failed check and each doubtful cell re-read on full-scale crops; the goat sums, at the binding,
+# are legible in full (their last digits repeat on the gutter of the right page). Gallica OCR used as a draft.
+@slaughter view=1024 view2=1025 page=34 year=1924
+cols: beef_t beef_s veal_t veal_s sheep_t sheep_s goat_t goat_s pig_t pig_s horse_t horse_s other_t other_s camel_t camel_s total
+animals_fr:beef=Bœuf;veal=Veau;sheep=Mouton et agneaux;goat=Chèvre;pig=Porc;horse=Chevaux et mulets;other=Autres;camel=Chameau
+Aïn-Draham | T:0,06_par_kg. 1027.95 0.06 180.02 0.06 638.26 0.06 595.74 0.06 60.48 0 0 T:0_06_par_kilo 22.08 0 0 2524.58
+Ariana | 6 1992 2 92 0.70 952.70 0 0 0 0 0 0 0 0 0 0 3036.70
+Bardo (Le) | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Ben-Gardane | 4 152 4 44 0.50 1196 0.50 3876.50 0 0 0 0 0 0 2.50 177.50 5446
+Béja | T:0,08_par_kg. 4983.60 0.08 259.20 0.08 9468 0.08 5776.88 0.08 401.25 0.08 0 T:0_20_par_kilo 80 0.08 96 21070.85
+# obs: La perception a eu lieu à raison de 0,05 par kilo (poids vif) du 1er janvier au 30 juin 1924 et à raison de 0 fr. 10 du 1er juillet au 31 décembre 1924 par suite du relèvement général des tarifs de l'abattoir (décret du 6 juin 1924).
+Bizerte | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 151535.75
+Carthage | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Djemmal | T:5_et_4 1644 0 0 T:1_et_0_60 3462.40 0.60 938.40 0 0 0 0 0 0 5 235 6279.80
+# The beef tariff reads "6 »" with "par 100 kil." under it.
+Djerba | T:6_»_par_100_kil. 83.45 6 41.20 6 1607.20 6 1082.90 6 12.60 0 0 0 0 4 650 3477.60
+Ebba-Ksour | T:5_et_6 1879 4 324 1.25 5597.50 T:0,60-1,00 5224.60 6 72 0 0 0 0 2 12 13109.10
+El-Djem | 5 25 0 0 0.80 2559.20 0.45 1197.90 0 0 0 0 0 0 5 55 3837.10
+# obs: Y compris viandes foraines; il est perçu pour les animaux abattus à l'abattoir une taxe de 0.15 par kilo pour les porcs et de 0.10 pour les autres animaux.
+Ferryville | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 19336.20
+Fériana | 3 90 2 38 0.75 291 0.50 231 0 0 0 0 T:0_50_(viandes_foraines) 204 0 0 854
+Foum-Tatahouine | 2 594 0 0 0.30 1525.20 0.30 2457.90 0 0 0 0 0 0 2 22 4599.10
+# obs: 0 fr. 15 par kilo de viande abattue.
+Gabès | T:0,15_par_kg 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 52238.35
+Gafsa | 7 3871 5 575 1.50 13903.50 1.50 3487.50 7 7 0 0 1.50 4.50 10 520 22368.50
+Ghardimaou | 2.50 132.50 2.50 75 0.60 189 0.40 211.60 2 44 0 0 0 0 0 0 652.10
+# obs: La perception se fait à raison de 0 fr. 20 par kilo de viande abattue à l'abattoir et de 0.30 pour la viande foraine.
+Goulette (La) | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 60209.55
+# "Autres": 81 20 with "Viande foraine" under the sum.
+Grombalia | 6 1902 1 976 1.20 940.80 T:0,60-0,30 707.70 6 90 0 0 T:0_10_par_kilo 81.20 3 12 4709.70
+Hadjeb-el-Aïoun | T:0,06_par_kg 537.60 0 0 T:0_06_par_kilog. 1807.20 T:0_06_par_kilog. 942.15 0 0 0 0 0 0 0 0 3286.95
+A reporter | . 18914.10 . 2604.62 . 44437.96 . 26730.79 . 687.33 . 0 . 391.78 . 1779.50 378570.93
+
+@slaughter view=1026 view2=1027 page=36 year=1924
+cols: beef_t beef_s veal_t veal_s sheep_t sheep_s goat_t goat_s pig_t pig_s horse_t horse_s other_t other_s camel_t camel_s total
+animals_fr:beef=Bœuf;veal=Veau;sheep=Mouton et agneaux;goat=Chèvre;pig=Porc;horse=Chevaux et mulets;other=Autres;camel=Chameau
+Report | . 18914.10 . 2604.62 . 44437.90 . 26730.79 . 687.33 . 0 . 391.78 . 1779.50 378570.93
+# obs: 6 fr. par 100 kilogs de viande abattue.
+Hammam-Lif | T:5_»_par_100_kilos 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6015.70
+Hamma (El) | 5 200 3 42 T:0,90-0,70 1513.40 T:0_80/0_60 2059.60 0 0 0 0 0 0 3 300 4115
+Kairouan | T:0_13_par_kilo 14408.60 0.13 72.80 0.13 29007.55 0.13 4454.32 0.13 62.40 0 0 0.13 4.55 0.13 7020 54430.22
+Kalaa-Kebira | 6 60 2.50 15 1 1354 0.60 1995 0 0 0 0 0 0 6 168 3592
+Ksour-Essaf | 5 20 2.50 17.50 T:1_et_0,60 5378.60 T:0_60/0_30 411.30 0 0 0 0 4 4 5 235 6066.40
+Kef (Le) | T:0_10_par_kilo 5065.50 0.10 683 0.10 8576.30 0.10 6014.60 0.10 234 0 0 0.20 21.45 0.10 13.20 20608.05
+Kram (Le) | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Krib (Le) | 3 3 0 0 0.45 22.05 0.40 36.80 0 0 0 0 0 0 0 0 61.85
+# obs: Taxe perçue à partir du 1er juillet.
+Maharès | 5 5 0 0 0.50 25.50 0.45 9.90 0 0 0 0 0 0 5 5 45.40
+# The beef sums column repeats the rate, "0 08" (stored as text, NA).
+# obs: 0 fr. 08 par kilo de viande abattue.
+Mahdia | T:0_08_par_kilo T:0_08 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6143.68
+Marsa (La) | T:0_15_par_kilo 10300 0.15 150 0.15 2500 0 0 0 0 0 0 0 0 0 0 12950
+# obs: 6 fr. les 100 kil. pour toutes les viandes.
+Mateur | T:6_»_par_100_kilos 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 10582.85
+Maxula-Radès | 8 1288 4 572 1.20 646.80 1 7 7 21 0 0 T:divers 925 0 0 3459.50
+Médenine | T:1,50_et_2 207.50 0 0 T:0,30-0,40 1408.70 T:0_30/0_40 3409.70 0 0 0 0 0 0 T:1_50/2_» 67 5092.90
+# obs: Droits d'abatage affermés.
+Medjez-el-Bab | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+M'saken | 6 90 2.50 200 1 1889 0.60 3222.60 0 0 0 0 0 0 6 744 6145.60
+Menzel-bou-Zelfa | 6 606 6 584 1 1800 1 6577 0 0 0 0 0 0 3 6 9573
+Menzel-Temime | T:8_et_6 1506 0 0 T:1,50,1,10 5495.50 T:1_»/0_75 2457.50 6 6 0 0 0 0 3 42 9507
+Moknine | 5 1625 2.50 310 T:1,00-0,60 5973.60 T:0_60/0_30 268.20 0 0 0 0 0 0 5 120 8296.80
+# The beef tariff column prints "1.048 »" (sic).
+Monastir | 1048 6830 T:7_et_5 1346 T:3_et_2 5803 T:3_»/1_50 220.50 0 0 0 0 0 0 0 0 14199.50
+A reporter | . 61127.70 . 6596.92 . 115831.96 . 57874.79 . 1004.73 . 0 . 1346.78 . 10499.70 559456.38
+
+@slaughter view=1028 view2=1029 page=38 year=1924
+cols: beef_t beef_s veal_t veal_s sheep_t sheep_s goat_t goat_s pig_t pig_s horse_t horse_s other_t other_s camel_t camel_s total
+animals_fr:beef=Bœuf;veal=Veau;sheep=Mouton et agneaux;goat=Chèvre;pig=Porc;horse=Chevaux et mulets;other=Autres;camel=Chameau
+Report | . 61127.70 . 6596.92 . 115831.96 . 57874.79 . 1004.73 . 0 . 1346.78 . 10499.70 559456.38
+# "Autres": tariff », sums 12 with "(viande foraine)" under the line.
+Nabeul | 6 8412 0 0 1.20 6706.80 0.60 205.20 6 6 0 0 0 12 3 9 15351
+Nefta | 4 188 0 0 0.75 2046.75 0.50 880 0 0 0 0 0 0 4 560 3674.75
+Pêcherie (La) | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Philippe-Thomas | 5 1925 3 108 1 4672 0.90 746.10 6 378 0 0 0 0 5 105 7934.10
+Saint-Germain | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Sfax | 10 32840 6 6754 1.50 69644.50 0.50 7059 10 2080 0 0 0 0 6 1014 119391.50
+Sidi-bou-Saïd | T:0_15_par_kilo 10540 0.15 2500 0.15 58 0.15 4.50 0 0 0 0 0 0 0 0 13102.50
+Soliman | 2 826 2 154 0.40 1284.80 0.30 1074.30 0 0 0 0 0 0 1.50 10.50 3349.60
+Souk-el-Arba | T:0_10_par_kilo 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12812.50
+Souk-el-Khemis | T:0_09_par_kilo 2472.45 0.09 150.50 0.09 3325.05 0.09 1234 0.09 120.55 0 0 0 0 0 0 7302.55
+Sousse | T:0_15_par_kilo 38607.45 0.15 14512.80 0.15 7790.10 0.15 6460.55 0.15 1392 0 0 0 0 0.15 1138.95 79901.85
+Tabarka | 4 432 3 777 0.70 394.20 0.60 504 4 176 0 0 2 264 0 0 2547.20
+Thala | 3 384 0 0 0.50 1392 0.40 1451.60 0 0 0 0 0 0 0 0 3227.60
+Tebourba | 9 459 5 180 1 1848 0.80 1070.40 3.90 58.50 0 0 0 0 3 6 3621.90
+Téboursouk | 3 660 3 435 0.45 1635.75 0.40 1786.80 0 0 0 0 0 0 0 0 4517.55
+Tunis | T:10_50/7_» 287146 5 8505 T:2_»/1,50-0,75 156104.25 T:1_»/0_50 14314 9 30969 T:5-2 3488 0 0 8 11.52 501678.25
+# obs: Droits affermés (produits 11.950 fr.). Nouveaux tarifs appliqués à partir du 6 septembre.
+Tozeur | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Zaghouan | 6 1047 4 212 1.50 1186 1 4999.50 6 12 0 0 0 0 0 0 8256.50
+Zarzis | 4 124 0 0 0.75 1237.50 0.75 900 4 4 0 0 0 0 4 96 2361.50
+Totaux | . 447190.60 . 40885.22 . 375157.66 . 110564.74 . 36200.78 . 3488 . 1622.78 . 14591.15 1348487.23

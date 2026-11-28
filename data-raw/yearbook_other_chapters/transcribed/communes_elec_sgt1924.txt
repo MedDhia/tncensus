@@ -1,0 +1,22 @@
+# sgt1924 pp.42-43, views 1032-1033, lower half of the water page (left) and of the gas page (right): "ÉCLAIRAGE.
+# a) Electricité : longueur des canalisations ; puissance des installations ; abonnés ; consommation ; produits".
+# Same layout as sgt1922-sgt1923 (power in hectowats; no year printed; no column totals). The kWh columns are printed
+# with a decimal sub-column like the francs ("4.635.997 »", Sfax "220.535 30"): stored with the decimals as printed.
+# Tokens as in communes_elec_sgt1922.txt.
+# Every cell read on native-resolution crops (both pages at 0.6 scale; binding strips of both views stitched at 1.2x;
+# doubtful cells at 1.3-4x). OCR agrees on every figure it reads.
+# The kWh Particuliers column curves into the binding: Tunis "4.449.733" (leading "4." faint at the edge of view
+# 1033, also visible on the edge of view 1032), Bizerte "234.669", Ferryville "87.462" (first digits on the curve);
+# Bizerte and Ferryville agree with their row totals.
+# Row failures confirmed on the image (printed values kept): Tunis power 60.273 + 22.206 = 82.479, TOTAL printed
+# 82.481; Tunis kWh 4.449.733 + 186.224 = 4.635.957, TOTAL printed 4.635.997 (3x); Tunis receipts 4.605.143 +
+# 334.139,10 = 4.939.282,10, TOTAL printed 4.939.282 »; Sfax kWh 220.535,30 + 98.931,69 = 319.466,99, TOTAL printed
+# 319.446,99 (Particuliers re-read at 4x).
+@elec22 view=1032 view2=1033 page=42 year=1924 left=7
+cols: len pw_l pw_o pw_t sub_l sub_o sub_t kwh_p kwh_pub kwh_t rec_p rec_v rec_t redev droits
+Tunis | 97440 60273 22206 82481 11526 536 12062 4449733 186224 4635997 4605143.00 334139.10 4939282.00 162155.00 »
+Bizerte | 30987 3200 1300 4500 1300 28 1328 234669 35100 269769 413360.65 51129.77 464490.42 » »
+Ferryville | 12200 450 495 945 232 12 244 87462 9217 96679 130150.90 14244.20 144395.10 » »
+Sousse | 18300 7150 2120 9270 1331 67 1398 336737 95080 431817 446647.20 60000.00 506647.20 » »
+Sfax | 32950 7240 1030 8270 1251 26 1277 220535.30 98931.69 319446.99 463325.89 128693.18 592019.07 8574.13 »
+Béja | 7000 1250 250 1500 385 19 404 65000 6000 71000 126000.00 10000.00 136000.00 » »

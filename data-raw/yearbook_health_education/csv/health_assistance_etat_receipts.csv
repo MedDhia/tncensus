@@ -1,0 +1,7 @@
+census,table_id,gallica_ark,source_page,gallica_view,year,line_fr,line_en,value,flag
+sgt1935,etat_receipts,bpt6k9105653t,38,58,1935,Titre 1er,title_1er,1850000,
+sgt1935,etat_receipts,bpt6k9105653t,38,58,1935,Titre II,title_ii,270000,
+sgt1936,etat_receipts,bpt6k91056547,30,41,1936,Titre 1er,title_1er,2050000,
+sgt1936,etat_receipts,bpt6k91056547,30,41,1936,Titre II,title_ii,86977,
+sgt1939,etat_receipts,bpt6k9105739w,30,36,1939,Titre Ier. — Crédit spécial inscrit au budget de l'État,title_ier_—_credit_special_inscrit_budget_etat,3100000,
+sgt1939,etat_receipts,bpt6k9105739w,30,36,1939,Titre II. — Disponibilité du « Fonds de réserve » en numéraire,title_ii_—_disponibilite_reserve_fund_numeraire,282804.48,

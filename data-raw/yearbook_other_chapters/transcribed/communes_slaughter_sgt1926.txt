@@ -1,0 +1,96 @@
+# Communes chapter, sgt1926 (ark bpt6k9105650k): "d) Droits d'abatage" (no year printed in the heading; year =
+# the edition year). Three two-page spreads, views 606-607, 608-609, 610-611 (printed pages 34-39); view 605 ends
+# the loans table, view 612 opens "Concessions sur la voie publique".
+# Format as in communes_slaughter_sgt1923.txt. Layout differences: the column "Autres" is replaced by "Âne"
+# (donkey, before "Chameau"); 'A reporter', 'Report' and 'Totaux' are printed for the row-total column only.
+# Tariff cells printed as a note call "(n) »" refer to numbered notes in the Observations column (numbering
+# restarts on each page); they are written 'T:(n)' and the 'callnotes:' line of the section gives the note texts
+# (the script puts call and note into text_fr). 'P:' = row total that includes dues not itemised (foreign meat).
+# Reading: every line read on native-resolution crops of each whole spread (0.55 scale); the goat column at the
+# binding on 1.5-2x strips (legible in full); the third spread (faint print) and every failing row re-read on
+# full-scale strips. Gallica OCR not used for values.
+@slaughter view=606 view2=607 page=34 year=1926
+cols: beef_t beef_s veal_t veal_s sheep_t sheep_s goat_t goat_s pig_t pig_s horse_t horse_s donkey_t donkey_s camel_t camel_s total
+animals_fr:beef=Bœuf;veal=Veau;sheep=Mouton et agneaux;goat=Chèvre et chevreaux;pig=Porc;horse=Chevaux et mulets;donkey=Âne;camel=Chameau
+callnotes:(1)=0 fr. 06 par kilo de viande abattue.;(2)=0 fr. 125 par kilo.;(3)=0 fr. 15 par kilo de viande abattue.;(4)=0 fr. 15 par kilo (poids vif de viande abattue), sauf pour les porcs qui paient 21 fr. par tête.;(5)=0 fr. 15 par kilo de viande abattue: 155.306 kilos.;(6)=0 fr. 20 par kilo pour les viandes foraines, 0 fr. 10 par kilo pour les viandes provenant de l'abattoir, 0 fr. 10 par kilo pour la viande de porc, au total: 145.421 kilos.;(7)=0 fr. 20 par kilo de viande abattue à l'abattoir, 0 fr. 30 pour les viandes foraines: 258.196 kilos.;(8)=6 fr. par 100 kilos.
+# The call (1) is printed in the veal tariff column.
+Aïn-Draham | 0 0 T:(1) 0 0 0 0 0 0 0 0 0 0 0 0 0 2069.77
+Ariana | 6 690 2 74 0.70 1091.30 0.70 3.50 0 0 0 0 0 0 0 0 1858.80
+Bardo (Le) | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Ben-Gardane | 4 44 4 12 0.50 996 0.50 5493 0 0 0 0 0 0 2.50 290 6840
+Béja | T:(3) 0 T:(3) 0 T:(3) 0 T:(3) 0 0 0 0 0 0 0 0 0 51062.15
+Bizerte | T:(4) 0 T:(4) 0 T:(4) 0 T:(4) 0 0 0 0 0 0 0 0 0 233116.15
+Carthage | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Djemmal | 5 435 4 376 T:1_et_0_60 5518.60 0.60 686.40 0 0 0 0 0 0 5 235 7249
+Djerba | T:(2) 108.20 T:(2) 20.15 T:(2) 4749.20 T:(2) 5279.60 0 0 0 0 0 0 T:(2) 341.65 10498.80
+Ebba-Ksour | T:(5) 0 T:(5) 0 0 0 0 0 0 0 0 0 0 0 0 0 23295.90
+El-Djem | 5 15 2.50 37.50 1 2817 0.60 1260 0 0 0 0 0 0 6 96 4285.50
+Ferryville | T:(6) 0 T:(6) 0 T:(6) 0 T:(6) 0 0 0 0 0 0 0 0 0 17004.50
+Fériana | 3 54 2 16 0.75 752.75 0.50 150.50 0 0 0 0 0 0 3 27 1000.25
+# obs: Y compris 129 fr. 55 viandes foraines: 1.295 k 500 à 10 fr. les 100 k.
+Foum-Tatahouine | 2.25 65.25 0 0 0.45 1041.75 0.45 2382.75 0 0 0 0 0 0 2.25 58.50 P:3677.80
+Gabès | T:(3) 0 T:(3) 0 T:(3) 0 T:(3) 0 0 0 0 0 0 0 0 0 48474.75
+Gafsa | 7 742 5 70 1.50 9013.50 1.50 4686 7 14 0 14 1.50 10.50 10 730 15273
+Ghardimaou | 2.50 115 2.50 80 0.60 172.20 0.40 216.40 2 42 0 0 0 0 0 0 625.60
+Goulette (La) | T:(7) 0 T:(7) 0 T:(7) 0 T:(7) 0 0 0 0 0 0 0 0 0 55681.40
+# obs: Y compris 650 fr. 80 viandes foraines.
+Grombalia | 6 882 0 0 1.20 1854 0.60 725.40 6 192 0 0 0 0 0 0 P:4304.20
+Hadjeb-el-Aïoun | T:(8) 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2856.04
+A reporter | . . . . . . . . . . . . . . . . 489173.61
+
+@slaughter view=608 view2=609 page=36 year=1926
+cols: beef_t beef_s veal_t veal_s sheep_t sheep_s goat_t goat_s pig_t pig_s horse_t horse_s donkey_t donkey_s camel_t camel_s total
+animals_fr:beef=Bœuf;veal=Veau;sheep=Mouton et agneaux;goat=Chèvre et chevreaux;pig=Porc;horse=Chevaux et mulets;donkey=Âne;camel=Chameau
+callnotes:(1)=6 fr. par 100 kilos de viande abattue, 10 fr. par 100 kilos pour les viandes foraines.;(2)=0 fr. 15 par kilo.;(3)=0 fr. 20 par kilo.;(4)=0 fr. 25 par kilo.;(5)=0 fr. 10 par kilo de viande abattue.;(6)=0 fr. 20 par kilo de viande abattue.;(7)=6 fr. par 100 kilos de viande abattue.
+Report | . . . . . . . . . . . . . . . . 489173.61
+Hamma (El) | 7 168 4 76 1.20 1560 1 1800 0 0 0 0 0 0 6 468 4172
+Hammam-Lif | T:(1) 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3659.30
+# The horse tariff column prints "4 20" with the sums ».
+Kairouan | T:(2) 3203.05 T:(2) 6.50 T:(2) 9649.85 T:(2) 3623.75 T:(2) 0 4.20 0 0 0 T:(2) 5796 22310.35
+Kalaa-Kebira | T:(3) 305.20 T:(3) 166 T:(3) 3356.10 T:(3) 1454.20 0 0 0 0 0 0 T:(3) 1060 6341.50
+Kef (Le) | T:(4) 7275 T:(4) 183.75 T:(4) 23754.65 T:(4) 13415.20 T:(4) 1064.70 0 0 0 0 T:(4) 115.20 45808.50
+# obs: Adjugés avec les droits de marchés.
+Krib (Le) | 3 0 1.50 0 0.45 0 0.40 0 2 0 0 0 0 0 1.50 0 2200
+Ksour-Essaf | 5 30 0 0 T:1,et_0,60 4505.30 0.60 162.60 0 0 0 0 0 0 5 390 5087.90
+Maharès | 0 0 0 0 T:(5) 239.65 T:(5) 73.35 0 0 0 0 0 0 T:(5) 17.55 330.55
+Mahdia | T:(5) 0 T:(5) 0 0 0 0 0 0 0 0 0 0 0 0 0 6077.20
+Marsa (La) | T:(3) 0 T:(3) 0 0 0 0 0 0 0 0 0 0 0 0 0 8821
+Mateur | T:(7) 0 T:(7) 0 0 0 0 0 0 0 0 0 0 0 0 0 11826.85
+Maxula-Radès | 8 544 4 36 1.20 957.50 0 207 0 0 0 0 0 0 0 0 1744.50
+Médenine | 2.50 50 0 0 0.50 1632 0.50 3356.50 2.50 5 0 0 0 0 2.50 152.50 5196
+Medjez-el-Bab | 6 114 2 310 2 4410 2 4330 6 348 0 0 0 0 0 0 9512
+Menzel-bou-Zelfa | 6 30 6 420 1 3093 1 2491 0 0 0 0 0 0 3 18 6052
+Menzel-Temime | T:8_et_10 568 T:4_et_5 271 T:1,50_et_2 10938 T:1_et_1,50 4062 0 0 0 0 0 0 6 60 15899
+Moknine | 5 555 2.50 5 1 4059 0.60 540.80 0 0 0 0 0 0 5 25 5194.80
+Monastir | T:8_et_10 6750 7 1190 T:2_et_3 5870 T:1,50_et_3 195 0 0 0 0 0 0 0 0 14005
+M'saken | T:(3) 61.80 T:(3) 22 T:(3) 8356.10 T:(3) 3327.30 0 0 0 0 0 0 T:(3) 918.80 12686
+A reporter | . . . . . . . . . . . . . . . . 676098.06
+
+@slaughter view=610 view2=611 page=38 year=1926
+cols: beef_t beef_s veal_t veal_s sheep_t sheep_s goat_t goat_s pig_t pig_s horse_t horse_s donkey_t donkey_s camel_t camel_s total
+animals_fr:beef=Bœuf;veal=Veau;sheep=Mouton et agneaux;goat=Chèvre et chevreaux;pig=Porc;horse=Chevaux et mulets;donkey=Âne;camel=Chameau
+callnotes:(1)=0 fr. 20 par kilo.;(2)=0 fr. 25 par kilo.;(3)=0 fr. 10 par kilo de viande foraine: 16.949 fr. 50.;(4)=0 fr. 14 par kilo de viande foraine: 14.143 fr.;(5)=Béliers, 2 fr., moutons 1 f. 50, agneaux 0 f. 75.
+Report | . . . . . . . . . . . . . . . . 676098.06
+# obs: Y compris 35 fr. 40 droits sur les viandes foraines.
+Nabeul | 6 4800 6 12 1.20 7040.40 0.60 503.40 6 18 0 0 0 0 3 27 P:12436.20
+Nefta | 4 44 0 0 0.75 1578.75 0.60 983.40 0 0 0 0 0 0 5 1145 3751.15
+Pêcherie (La) | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Philippe-Thomas | 5 150 3 18 1 1054 0.90 528.30 0 0 0 0 0 0 5 45 1795.30
+Saint-Germain | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+# obs: Droits variables suivant les animaux perçus au poids.
+Sfax | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 112899.40
+Sidi-bou-Saïd | T:(1) 5350 T:(1) 12 T:(1) 3202 0 0 0 0 0 0 0 0 0 0 8564
+Soliman | 2 564 2 122 0.40 2313.60 0.30 2440.20 0 0 0 0 0 0 1.50 13.50 5453.30
+Souk-el-Arba | T:(3) 0 T:(3) 0 0 0 0 0 0 0 0 0 0 0 0 0 16949.50
+Souk-el-Khemis | T:(4) 0 T:(4) 0 0 0 0 0 0 0 0 0 0 0 0 0 14143
+Sousse | T:(2) 41225.30 T:(2) 5084.30 T:(2) 30656.90 T:(2) 6764.85 T:(2) 1636.15 0 0 0 0 T:(2) 1303.30 86705.55
+# obs: Adjudication.
+Tabarka | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2800
+Tebourba | T:8_et_10 294 6 18 1.20 2064 1 2004 0 0 0 0 0 0 10 10 4390
+Téboursouk | 1 288 0 0 0.45 2239.65 0.40 263.45 0 0 0 0 0 0 0 0 5471.10
+Thala | 3 54 0 0 0.50 1116.50 0.40 1957.60 0 0 0 0 0 0 0 0 3128.20
+Tozeur | 1.50 96 1.50 7.50 0.50 2011.50 0.30 571.80 0 0 0 0 0 0 2 272 2958.80
+Tunis | T:7_et_8,50 176142.50 5 5120 T:(5) 106595.25 T:0,50_et_1 31110 9 52605 5 4415 2 700 8 1472 378159.75
+Zaghouan | 6 702 4 32 T:1_et_1,50 2277 1 7510 6 30 0 0 0 0 0 0 10551
+Zarzis | 4 8 0 0 0.75 1079.70 0.75 1102.50 0 0 0 0 0 0 4 48 2238.20
+Totaux | . . . . . . . . . . . . . . . . 1368192.41

@@ -1,0 +1,370 @@
+{
+ "property_tribunal_cases": {
+  "rows": 306,
+  "checks": 171,
+  "failed": [
+   "sgt1923 p.87 (f589) activity interlocutory: total = tunis + sousse: cells give 330, printed 334 (difference 4)",
+   "sgt1923 p.87 (f589) activity rectification: total = tunis + sousse: cells give 7, printed 0 (difference -7)",
+   "sgt1924 p.89 (f1079) cases tunis: Total = pending_start + entered: cells give 1508, printed 1058 (difference -450)",
+   "sgt1925 p.91 (f115) activity rectification: total = tunis + sousse: cells give 1, printed 0 (difference -1)",
+   "sgt1928 p.100 (f652) cases tunis: pending_end = pending_start + entered - judged: cells give 1725, printed 1727 (difference 2)",
+   "sgt1928 p.100 (f652) cases sousse: pending_end = pending_start + entered - judged: cells give 352, printed 342 (difference -10)",
+   "sgt1928 p.100 (f652) cases sousse: Total = pending_start + entered: cells give 463, printed 453 (difference -10)"
+  ],
+  "overlap_compared": 0,
+  "overlap_diffs": [],
+  "flagged": [],
+  "continuity_compared": 18,
+  "continuity_diffs": [
+   "tunis: sgt1925 pending at 31 Dec 1925 = 1149, sgt1926 pending at the start = 1151",
+   "tunis: sgt1927 pending at 31 Dec 1927 = 1672, sgt1928 pending at the start = 1670",
+   "sousse: sgt1928 pending at 31 Dec 1928 = 342, sgt1929 pending at the start = 350"
+  ]
+ },
+ "property_pending_requisitions": {
+  "rows": 3606,
+  "checks": 769,
+  "failed": [
+   "sgt1922 p.82 (f106) pending II.2: partial = T.A + T.B + S.C1 + S.C2 + S.C3 + D.1 + D.2 + D.3 + C.1 + C.2 + C.3: cells give 265, printed 284 (difference 19)",
+   "sgt1922 p.82 (f106) pending S.C3: lines vs Total: cells give 0, printed 19 (difference 19)",
+   "sgt1922 p.82 (f106) pending_age 1911: partial = T.A + T.B + S.C1 + S.C2 + S.C3 + D.1 + D.2 + D.3 + C.1 + C.2 + C.3: cells give 20, printed 25 (difference 5)",
+   "sgt1922 p.82 (f106) pending_age S.C1: lines vs Total: cells give 249, printed 254 (difference 5)",
+   "sgt1925 p.92 (f116) pending_age 1923: partial = T.A + T.B + S.1 + S.2 + S.3 + D.1 + D.2 + D.3 + C.1 + C.2 + C.3: cells give 172, printed 154 (difference -18)",
+   "sgt1925 p.92 (f116) pending_age T.A: lines vs Total: cells give 381, printed 363 (difference -18)",
+   "sgt1926 p.103 (f667) pending I.3: partial = T.A + T.B + S.C1 + S.C2 + D.1 + D.2 + D.3 + C.1 + C.2 + C.3: cells give 91, printed 31 (difference -60)",
+   "sgt1926 p.103 (f667) pending partial: lines vs Total: cells give 1534, printed 1594 (difference 60)",
+   "sgt1926 p.103 (f667) pending_groups group I = sum of its lines: cells give 771, printed 831 (difference 60)",
+   "sgt1927 p.101 (f129) pending Total: partial = T.A + T.B + S.C + D.1 + D.2 + D.3 + C.1 + C.2 + C.3: cells give 1878, printed 1978 (difference 100)",
+   "sgt1927 p.101 (f129) pending D.2: lines vs Total: cells give 204, printed 104 (difference -100)",
+   "sgt1927 p.101 (f129) pending_age Total: partial = T.A + T.B + S.C + D.1 + D.2 + D.3 + C.1 + C.2 + C.3: cells give 1995, printed 1978 (difference -17)",
+   "sgt1927 p.101 (f129) pending_age T.B: lines vs Total: cells give 395, printed 426 (difference 31)",
+   "sgt1927 p.101 (f129) pending_age S.C: lines vs Total: cells give 296, printed 282 (difference -14)",
+   "sgt1927 p.101 (f129) pending_age C.1: lines vs Total: cells give 197, printed 143 (difference -54)",
+   "sgt1927 p.101 (f129) pending_age T.B: Total IV = Total I-III: cells give 395, printed 426 (difference 31)",
+   "sgt1927 p.101 (f129) pending_age S.C: Total IV = Total I-III: cells give 296, printed 282 (difference -14)",
+   "sgt1927 p.101 (f129) pending_age D.2: Total IV = Total I-III: cells give 104, printed 204 (difference 100)",
+   "sgt1928 p.101 (f653) pending I.3: partial = T.A + T.B + S.C1 + S.C2 + D.1 + D.2 + D.3 + C.1 + C.2 + C.3: cells give 115, printed 116 (difference 1)",
+   "sgt1928 p.101 (f653) pending C.1: lines vs Total: cells give 21, printed 22 (difference 1)",
+   "sgt1928 p.101 (f653) pending_age V: partial = T.A + T.B + S.C1 + S.C2 + D.1 + D.2 + D.3 + C.1 + C.2 + C.3: cells give 0, printed 1 (difference 1)",
+   "sgt1930 p.107 (f665) pending_age T.A: lines vs Total: cells give 113, printed 114 (difference 1)",
+   "sgt1930 p.107 (f665) pending_age partial: lines vs Total: cells give 2640, printed 2641 (difference 1)"
+  ],
+  "overlap_compared": 0,
+  "overlap_diffs": [],
+  "flagged": [
+   "sgt1922 pending II.2 / S.C3: printed 0; its line and its column are both 19 off their printed totals (printed value kept)",
+   "sgt1922 pending_age 1911 / S.C1: printed 3; its line and its column are both 5 off their printed totals (printed value kept)",
+   "sgt1925 pending_age 1923 / T.A: printed 53; its line and its column are both -18 off their printed totals (printed value kept)",
+   "sgt1928 pending I.3 / C.1: printed 0; its line and its column are both 1 off their printed totals (printed value kept)",
+   "sgt1930 pending III / T.C: printed \"7·\" with its second digit broken; 73 from the column total 887 and the line total 228"
+  ]
+ },
+ "property_results_legal_status": {
+  "rows": 216,
+  "checks": 168,
+  "failed": [
+   "sgt1923 p.89 (f591) legal_status Total@pair imm.tunis+imm.sousse: cells give 296, printed 796 (difference 500)",
+   "sgt1924 p.91 (f1081) legal_status Total: total = imm.tunis + imm.sousse + rej.tunis + rej.sousse + rad.tunis + rad.sousse: cells give 387, printed 389 (difference 2)",
+   "sgt1924 p.91 (f1081) legal_status total: lines vs Total: cells give 387, printed 389 (difference 2)"
+  ],
+  "overlap_compared": 0,
+  "overlap_diffs": [],
+  "flagged": []
+ },
+ "property_results_charges": {
+  "rows": 312,
+  "checks": 84,
+  "failed": [
+   "sgt1922 p.83 (f107) charges enzel_registered: total = imm.tunis + imm.sousse + rej.tunis + rej.sousse + rad.tunis + rad.sousse: cells give 23226.35, printed 33226.35 (difference 10000.00)",
+   "sgt1922 p.83 (f107) charges enzel_declared: total = imm.tunis + imm.sousse + rej.tunis + rej.sousse + rad.tunis + rad.sousse: cells give 3, printed 0 (difference -3)",
+   "sgt1924 p.91 (f1081) charges_summary nombre total des immeubles = a) Totaux: cells give 389, printed 387 (difference -2)",
+   "sgt1925 p.93 (f117) charges_summary Total enzel = enzel_registered total: cells give 28580.10, printed 25580.10 (difference -3000.00)"
+  ],
+  "overlap_compared": 0,
+  "overlap_diffs": [],
+  "flagged": []
+ },
+ "property_results_location": {
+  "rows": 432,
+  "checks": 600,
+  "failed": [
+   "sgt1924 p.91 (f1081) location Total@pair rural imm.tunis+imm.sousse: cells give 183, printed 173 (difference -10)",
+   "sgt1924 p.91 (f1081) location melk rad.tunis: urban + rural = a): cells give 0, printed 2 (difference 2)",
+   "sgt1924 p.91 (f1081) location melk total: urban + rural = a): cells give 236, printed 238 (difference 2)",
+   "sgt1924 p.91 (f1081) location enzel rad.tunis: urban + rural = a): cells give 2, printed 0 (difference -2)",
+   "sgt1924 p.91 (f1081) location enzel total: urban + rural = a): cells give 136, printed 134 (difference -2)",
+   "sgt1926 p.104 (f668) location urban.melk: total = imm.tunis + imm.sousse + rej.tunis + rej.sousse + rad.tunis + rad.sousse: cells give 109, printed 108 (difference -1)",
+   "sgt1926 p.104 (f668) location rad.sousse: lines vs Total urban: cells give 1, printed 0 (difference -1)",
+   "sgt1926 p.104 (f668) location melk rad.sousse: urban + rural = a): cells give 1, printed 0 (difference -1)",
+   "sgt1930 p.108 (f666) location melk rej.sousse: urban + rural = a): cells give 9, printed 8 (difference -1)",
+   "sgt1930 p.108 (f666) location melk total: urban + rural = a): cells give 355, printed 354 (difference -1)",
+   "sgt1930 p.108 (f666) location habous rej.sousse: urban + rural = a): cells give 1, printed 2 (difference 1)",
+   "sgt1930 p.108 (f666) location habous total: urban + rural = a): cells give 63, printed 64 (difference 1)",
+   "sgt1936 p.54 (f65) location melk imm.tunis: urban + rural = a): cells give 280, printed 279 (difference -1)",
+   "sgt1936 p.54 (f65) location melk total: urban + rural = a): cells give 395, printed 394 (difference -1)",
+   "sgt1936 p.54 (f65) location enzel imm.tunis: urban + rural = a): cells give 66, printed 67 (difference 1)",
+   "sgt1936 p.54 (f65) location enzel total: urban + rural = a): cells give 76, printed 77 (difference 1)"
+  ],
+  "overlap_compared": 0,
+  "overlap_diffs": [],
+  "flagged": [
+   "sgt1926 location urban.melk / rad.sousse: printed 1; its line and its column are both -1 off their printed totals (printed value kept)"
+  ]
+ },
+ "property_results_areas": {
+  "rows": 288,
+  "checks": 177,
+  "failed": [
+   "sgt1922 p.84 (f108) areas rural.melk: total = imm.tunis + imm.sousse + ref.tunis + ref.sousse: cells give 23873.7985, printed 23873.8285 (difference 0.0300)",
+   "sgt1922 p.84 (f108) areas Total: total = imm.tunis + imm.sousse + ref.tunis + ref.sousse: cells give 28542.0503, printed 28542.0803 (difference 0.0300)",
+   "sgt1922 p.84 (f108) areas Total@pair imm.tunis+imm.sousse: cells give 13314.3723, printed 13314.3813 (difference 0.0090)",
+   "sgt1926 p.105 (f669) areas Total: total = imm.tunis + imm.sousse + ref.tunis + ref.sousse: cells give 64064.3724, printed 64064.3752 (difference 0.0028)",
+   "sgt1926 p.105 (f669) areas imm.tunis: lines vs Total: cells give 19961.4304, printed 19961.4303 (difference -0.0001)",
+   "sgt1926 p.105 (f669) areas total: lines vs Total: cells give 64064.3725, printed 64064.3752 (difference 0.0027)",
+   "sgt1926 p.105 (f669) areas Total@pair imm.tunis+imm.sousse: cells give 44336.9515, printed 44336.9516 (difference 0.0001)",
+   "sgt1926 p.105 (f669) areas total: Total général = sum of total lines: cells give 64064.3752, printed 64064.3725 (difference -0.0027)",
+   "sgt1927 p.103 (f131) areas Total: total = imm.tunis + imm.sousse + ref.tunis + ref.sousse: cells give 26849.0683, printed 22883.8498 (difference -3965.2185)",
+   "sgt1927 p.103 (f131) areas imm.sousse: lines vs Total: cells give 1128.1728, printed 3723.1273 (difference 2594.9545)",
+   "sgt1927 p.103 (f131) areas ref.tunis: lines vs Total: cells give 3723.1273, printed 5093.3913 (difference 1370.2640)",
+   "sgt1927 p.103 (f131) areas Total@pair imm.tunis+imm.sousse: cells give 19561.3212, printed 16966.3667 (difference -2594.9545)",
+   "sgt1927 p.103 (f131) areas Total@pair ref.tunis+ref.sousse: cells give 7287.7471, printed 5917.4831 (difference -1370.2640)",
+   "sgt1928 p.103 (f655) areas urban.enzel: total = imm.tunis + imm.sousse + ref.tunis + ref.sousse: cells give 15.0985, printed 15.0984 (difference -0.0001)",
+   "sgt1928 p.103 (f655) areas imm.sousse: lines vs Total: cells give 3793.9464, printed 3793.9463 (difference -0.0001)",
+   "sgt1930 p.109 (f667) areas rural.melk: total = imm.tunis + imm.sousse + ref.tunis + ref.sousse: cells give 13011.2093, printed 22741.2093 (difference 9730.0000)",
+   "sgt1930 p.109 (f667) areas Total: total = imm.tunis + imm.sousse + ref.tunis + ref.sousse: cells give 26403.4468, printed 26403.4968 (difference 0.0500)",
+   "sgt1930 p.109 (f667) areas imm.sousse: lines vs Total: cells give 4723.2532, printed 4723.2032 (difference -0.0500)",
+   "sgt1930 p.109 (f667) areas ref.sousse: lines vs Total: cells give 1475.7952, printed 11205.7952 (difference 9730.0000)",
+   "sgt1930 p.109 (f667) areas Total@pair imm.tunis+imm.sousse: cells give 13403.6173, printed 13403.6673 (difference 0.0500)",
+   "sgt1935 p.75 (f95) areas rural.enzel: total = imm.tunis + imm.sousse + ref.tunis + ref.sousse: cells give 804.2203, printed 824.2203 (difference 20.0000)",
+   "sgt1935 p.75 (f95) areas total: lines vs Total: cells give 36481.1338, printed 36461.1338 (difference -20.0000)",
+   "sgt1936 p.55 (f66) areas Total: total = imm.tunis + imm.sousse + ref.tunis + ref.sousse: cells give 32555.9391, printed 32585.9391 (difference 30.0000)",
+   "sgt1936 p.55 (f66) areas ref.sousse: lines vs Total: cells give 2548.3584, printed 2518.3584 (difference -30.0000)",
+   "sgt1936 p.55 (f66) areas Total@pair ref.tunis+ref.sousse: cells give 9591.6902, printed 9621.6902 (difference 30.0000)"
+  ],
+  "overlap_compared": 0,
+  "overlap_diffs": [],
+  "flagged": [
+   "sgt1928 areas urban.enzel / imm.sousse: printed 0.5253; its line and its column are both -0.0001 off their printed totals (printed value kept)",
+   "sgt1930 areas rural.melk / ref.sousse: printed 1412.6765; its line and its column are both 9730.0000 off their printed totals (printed value kept)",
+   "sgt1936 areas urban.enzel / imm.tunis: printed \"2.84.·1\" with a broken digit; 2 ha 84 a 51 c from the line total 3.03.46"
+  ]
+ },
+ "property_oppositions": {
+  "rows": 94,
+  "checks": 75,
+  "failed": [],
+  "overlap_compared": 0,
+  "overlap_diffs": [],
+  "flagged": []
+ },
+ "property_claimants": {
+  "rows": 666,
+  "checks": 443,
+  "failed": [
+   "sgt1923 p.90 (f592) claimant_status Total: total = imm.tunis + imm.sousse + rej.tunis + rej.sousse + ren.tunis + ren.sousse: cells give 622, printed 604 (difference -18)",
+   "sgt1923 p.90 (f592) claimant_status rej.tunis: lines vs Total: cells give 30, printed 48 (difference 18)",
+   "sgt1923 p.90 (f592) claimant_status Total@pair rej.tunis+rej.sousse: cells give 95, printed 77 (difference -18)",
+   "sgt1930 p.110 (f668) claimant_nationality Espagnols: total = imm.tunis + imm.sousse + rej.tunis + rej.sousse + ren.tunis + ren.sousse: cells give 3, printed 1 (difference -2)",
+   "sgt1930 p.110 (f668) claimant_nationality imm.tunis: lines vs Total: cells give 865, printed 863 (difference -2)",
+   "sgt1923 p.91 (f593) claimant_nationality rej.tunis: f) Totaux = e) Totaux: cells give 48, printed 30 (difference -18)"
+  ],
+  "overlap_compared": 0,
+  "overlap_diffs": [],
+  "flagged": [
+   "sgt1930 claimant_nationality Espagnols / imm.tunis: printed 2; its line and its column are both -2 off their printed totals (printed value kept)",
+   "sgt1936 claimant_nationality Français / rej.tunis: cell left blank in the printing; 6 from the line total 185 and the column total 68"
+  ]
+ },
+ "property_requisitions": {
+  "rows": 160,
+  "checks": 260,
+  "failed": [
+   "sgt1922 p.86 (f110) requisitions area: lines vs Totaux: cells give 1756361, printed 1756362 (difference 1)",
+   "sgt1924 p.94 (f1084) requisitions 1924: number = french + foreign + tunisian: cells give 636, printed 645 (difference 9)",
+   "sgt1924 p.94 (f1084) requisitions tunisian: lines vs Totaux: cells give 6728, printed 6737 (difference 9)",
+   "sgt1925 p.96 (f120) requisitions 1924: number = french + foreign + tunisian: cells give 636, printed 645 (difference 9)",
+   "sgt1925 p.96 (f120) requisitions tunisian: lines vs Totaux: cells give 7019, printed 7028 (difference 9)",
+   "sgt1926 p.107 (f671) requisitions 1924: number = french + foreign + tunisian: cells give 636, printed 645 (difference 9)",
+   "sgt1926 p.107 (f671) requisitions tunisian: lines vs Totaux: cells give 7338, printed 7347 (difference 9)",
+   "sgt1927 p.105 (f133) requisitions 1924: number = french + foreign + tunisian: cells give 636, printed 645 (difference 9)",
+   "sgt1927 p.105 (f133) requisitions tunisian: lines vs Totaux: cells give 7886, printed 7895 (difference 9)",
+   "sgt1927 p.105 (f133) requisitions area: lines vs Totaux: cells give 1996430, printed 1996340 (difference -90)",
+   "sgt1928 p.105 (f657) requisitions 1924: number = french + foreign + tunisian: cells give 636, printed 645 (difference 9)",
+   "sgt1928 p.105 (f657) requisitions tunisian: lines vs Totaux: cells give 8425, printed 8434 (difference 9)",
+   "sgt1929 p.107 (f135) requisitions 1924: number = french + foreign + tunisian: cells give 636, printed 645 (difference 9)",
+   "sgt1929 p.107 (f135) requisitions tunisian: lines vs Totaux: cells give 8954, printed 8963 (difference 9)",
+   "sgt1930 p.111 (f669) requisitions 1924: number = french + foreign + tunisian: cells give 636, printed 645 (difference 9)",
+   "sgt1930 p.111 (f669) requisitions tunisian: lines vs Totaux: cells give 9490, printed 9499 (difference 9)",
+   "sgt1935 p.77 (f97) requisitions 1886-1932: number = french + foreign + tunisian: cells give 21171, printed 20871 (difference -300)",
+   "sgt1935 p.77 (f97) requisitions foreign: lines vs Totaux: cells give 5274, printed 4974 (difference -300)"
+  ],
+  "overlap_compared": 720,
+  "overlap_diffs": [],
+  "flagged": [
+   "sgt1924 requisitions 1924 / tunisian: printed 450; its line and its column are both 9 off their printed totals (printed value kept)",
+   "sgt1924 requisitions 1924 / value: every printing of 1924 (sgt1924-sgt1930) prints \"17.872 50\", the plate missing a digit; 17.872.150 from the Totaux of sgt1924 (304.039.499)",
+   "sgt1925 requisitions 1924 / tunisian: printed 450; its line and its column are both 9 off their printed totals (printed value kept)",
+   "sgt1925 requisitions 1924 / value: every printing of 1924 (sgt1924-sgt1930) prints \"17.872 50\", the plate missing a digit; 17.872.150 from the Totaux of sgt1924 (304.039.499)",
+   "sgt1926 requisitions 1924 / tunisian: printed 450; its line and its column are both 9 off their printed totals (printed value kept)",
+   "sgt1926 requisitions 1924 / value: every printing of 1924 (sgt1924-sgt1930) prints \"17.872 50\", the plate missing a digit; 17.872.150 from the Totaux of sgt1924 (304.039.499)",
+   "sgt1927 requisitions 1924 / tunisian: printed 450; its line and its column are both 9 off their printed totals (printed value kept)",
+   "sgt1927 requisitions 1924 / value: every printing of 1924 (sgt1924-sgt1930) prints \"17.872 50\", the plate missing a digit; 17.872.150 from the Totaux of sgt1924 (304.039.499)",
+   "sgt1928 requisitions 1924 / tunisian: printed 450; its line and its column are both 9 off their printed totals (printed value kept)",
+   "sgt1928 requisitions 1924 / value: every printing of 1924 (sgt1924-sgt1930) prints \"17.872 50\", the plate missing a digit; 17.872.150 from the Totaux of sgt1924 (304.039.499)",
+   "sgt1929 requisitions 1924 / tunisian: printed 450; its line and its column are both 9 off their printed totals (printed value kept)",
+   "sgt1929 requisitions 1924 / value: every printing of 1924 (sgt1924-sgt1930) prints \"17.872 50\", the plate missing a digit; 17.872.150 from the Totaux of sgt1924 (304.039.499)",
+   "sgt1930 requisitions 1924 / tunisian: printed 450; its line and its column are both 9 off their printed totals (printed value kept)",
+   "sgt1930 requisitions 1924 / value: every printing of 1924 (sgt1924-sgt1930) prints \"17.872 50\", the plate missing a digit; 17.872.150 from the Totaux of sgt1924 (304.039.499)",
+   "sgt1935 requisitions 1886-1932 / french: Français: 126 is printed on the 1886-1932 line and 5.708 on the 1933 line; with the printed values neither line gives its Nombre (5.708 + 60 + 261 = 447 needs 126; 126 + 5.134 + 10.329 = 20.871 needs 5.708), and sgt1936 prints 5.834 = 5.708 + 126 for 1886-1933",
+   "sgt1935 requisitions 1886-1932 / foreign: printed 5134; its line and its column are both -300 off their printed totals (printed value kept)",
+   "sgt1935 requisitions 1933 / french: see 1886-1932"
+  ]
+ },
+ "property_requisitions_value": {
+  "rows": 128,
+  "checks": 424,
+  "failed": [
+   "sgt1926 p.107 (f671) value_brackets Totaux: total = le_3000 + 3001_12000 + 12001_60000 + ge_60001: cells give 16482, printed 15600 (difference -882)",
+   "sgt1926 p.107 (f671) value_brackets 3001_12000: lines vs Totaux: cells give 6253, printed 6235 (difference -18)",
+   "sgt1926 p.107 (f671) value_brackets total: lines vs Totaux: cells give 16500, printed 15600 (difference -900)"
+  ],
+  "overlap_compared": 576,
+  "overlap_diffs": [],
+  "flagged": []
+ },
+ "property_titles": {
+  "rows": 160,
+  "checks": 248,
+  "failed": [
+   "sgt1922 p.87 (f111) titles 1886-1909: total_titles = subdivision + judgment: cells give 15168, printed 15171 (difference 3)",
+   "sgt1922 p.87 (f111) titles 1910: total_titles = subdivision + judgment: cells give 934, printed 922 (difference -12)",
+   "sgt1922 p.87 (f111) titles 1912: total_titles = subdivision + judgment: cells give 1117, printed 1126 (difference 9)",
+   "sgt1923 p.93 (f595) titles 1886-1909: total_titles = subdivision + judgment: cells give 15168, printed 15171 (difference 3)",
+   "sgt1923 p.93 (f595) titles 1910: total_titles = subdivision + judgment: cells give 934, printed 922 (difference -12)",
+   "sgt1923 p.93 (f595) titles 1912: total_titles = subdivision + judgment: cells give 1117, printed 1126 (difference 9)",
+   "sgt1924 p.95 (f1085) titles 1886-1909: total_titles = subdivision + judgment: cells give 15168, printed 15171 (difference 3)",
+   "sgt1924 p.95 (f1085) titles 1910: total_titles = subdivision + judgment: cells give 934, printed 922 (difference -12)",
+   "sgt1924 p.95 (f1085) titles 1912: total_titles = subdivision + judgment: cells give 1117, printed 1126 (difference 9)",
+   "sgt1924 p.95 (f1085) titles value: lines vs Totaux: cells give 222114176, printed 232114176 (difference 10000000)",
+   "sgt1925 p.97 (f121) titles 1886-1909: total_titles = subdivision + judgment: cells give 15168, printed 15171 (difference 3)",
+   "sgt1925 p.97 (f121) titles 1910: total_titles = subdivision + judgment: cells give 934, printed 922 (difference -12)",
+   "sgt1925 p.97 (f121) titles 1912: total_titles = subdivision + judgment: cells give 1117, printed 1126 (difference 9)",
+   "sgt1926 p.108 (f672) titles 1886-1909: total_titles = subdivision + judgment: cells give 15168, printed 15171 (difference 3)",
+   "sgt1926 p.108 (f672) titles 1910: total_titles = subdivision + judgment: cells give 934, printed 922 (difference -12)",
+   "sgt1926 p.108 (f672) titles 1912: total_titles = subdivision + judgment: cells give 1117, printed 1126 (difference 9)",
+   "sgt1927 p.106 (f134) titles 1886-1909: total_titles = subdivision + judgment: cells give 15168, printed 15171 (difference 3)",
+   "sgt1927 p.106 (f134) titles 1910: total_titles = subdivision + judgment: cells give 934, printed 922 (difference -12)",
+   "sgt1927 p.106 (f134) titles 1912: total_titles = subdivision + judgment: cells give 1117, printed 1126 (difference 9)",
+   "sgt1928 p.106 (f658) titles 1886-1909: total_titles = subdivision + judgment: cells give 15168, printed 15171 (difference 3)",
+   "sgt1928 p.106 (f658) titles 1910: total_titles = subdivision + judgment: cells give 934, printed 922 (difference -12)",
+   "sgt1928 p.106 (f658) titles 1912: total_titles = subdivision + judgment: cells give 1117, printed 1126 (difference 9)",
+   "sgt1929 p.108 (f136) titles 1886-1909: total_titles = subdivision + judgment: cells give 15168, printed 15171 (difference 3)",
+   "sgt1929 p.108 (f136) titles 1910: total_titles = subdivision + judgment: cells give 934, printed 922 (difference -12)",
+   "sgt1929 p.108 (f136) titles 1912: total_titles = subdivision + judgment: cells give 1117, printed 1126 (difference 9)",
+   "sgt1930 p.112 (f670) titles 1886-1909: total_titles = subdivision + judgment: cells give 15168, printed 15171 (difference 3)",
+   "sgt1930 p.112 (f670) titles 1910: total_titles = subdivision + judgment: cells give 934, printed 922 (difference -12)",
+   "sgt1930 p.112 (f670) titles 1912: total_titles = subdivision + judgment: cells give 1117, printed 1126 (difference 9)",
+   "sgt1935 p.77 (f97) titles area: lines vs Totaux: cells give 1457908.9816, printed 1449008.4215 (difference -8900.5601)",
+   "sgt1935 p.77 (f97) titles value: lines vs Totaux: cells give 489080640, printed 513080640 (difference 24000000)",
+   "sgt1939 p.56 (f62) titles Totaux: total_titles = subdivision + judgment: cells give 53758, printed 53778 (difference 20)",
+   "sgt1939 p.56 (f62) titles judgment: lines vs Totaux: cells give 19369, printed 19349 (difference -20)",
+   "sgt1939 p.56 (f62) titles value: lines vs Totaux: cells give 621234214, printed 621233714 (difference -500)"
+  ],
+  "overlap_compared": 720,
+  "overlap_diffs": [],
+  "flagged": [
+   "sgt1935 titles 1886-1932 / area: printed 1.398.823 02 59 ha; the Totaux (1.449.008 42 15) need 1.389.922 46 58, which is also sgt1936's 1886-1933 (1.399.899 11 41) less 1933 (9.976 64 83); printed value kept",
+   "sgt1935 titles 1886-1932 / value: printed 359.173.670 fr.; the Totaux (513.080.640) need 383.173.670, which is also sgt1936's 1886-1933 (413.337.722) less 1933 (30.164.052); printed value kept",
+   "sgt1936 titles 1886-1933 / area: ares and centiares printed \"1· 11\"; 11 a 41 c from the Totaux 1.474.945 22 57"
+  ]
+ },
+ "property_conservation_recap": {
+  "rows": 132,
+  "checks": 96,
+  "failed": [
+   "sgt1924 p.95 (f1085) recap value_registered = titles Totaux value: cells give 232114176, printed 222114176 (difference -10000000)",
+   "sgt1927 p.106 (f134) recap area_declared = requisitions Totaux area: cells give 1996340, printed 1996430 (difference 90)",
+   "sgt1930 p.112 (f670) recap value_declared = requisitions Totaux value: cells give 553101391, printed 553301391 (difference 200000)",
+   "sgt1939 p.56 (f62) recap value_registered = titles Totaux value: cells give 621233714, printed 621233914 (difference 200)",
+   "sgt1939 p.56 (f62) recap titles_established = titles Totaux judgment: cells give 19349, printed 19369 (difference 20)"
+  ],
+  "overlap_compared": 0,
+  "overlap_diffs": [],
+  "flagged": []
+ },
+ "property_transfers_1939": {
+  "rows": 38,
+  "checks": 2,
+  "failed": [
+   "sgt1939 p.57 (f63) transfers value: lines vs Totaux: cells give 209216237.28, printed 209216217.28 (difference -20.00)"
+  ],
+  "overlap_compared": 0,
+  "overlap_diffs": [],
+  "flagged": []
+ },
+ "_chapter_views": {
+  "sgt1922": [
+   103,
+   112
+  ],
+  "sgt1923": [
+   587,
+   596
+  ],
+  "sgt1924": [
+   1077,
+   1086
+  ],
+  "sgt1925": [
+   113,
+   122
+  ],
+  "sgt1926": [
+   665,
+   672
+  ],
+  "sgt1927": [
+   127,
+   134
+  ],
+  "sgt1928": [
+   651,
+   658
+  ],
+  "sgt1929": [
+   129,
+   136
+  ],
+  "sgt1930": [
+   663,
+   670
+  ],
+  "sgt1935": [
+   91,
+   98
+  ],
+  "sgt1936": [
+   62,
+   67
+  ],
+  "sgt1939": [
+   57,
+   64
+  ]
+ },
+ "_survey": {
+  "sgt1922": "f103 chapter VI title (Propriété immobilière); f104 blank; f105 Tribunal mixte, travaux du tribunal: a) statistique des affaires (cases) and the work of the court (activity); f106 b) situation des affaires d'immatriculation en cours au 31 décembre (pending, I-V); f107 résultats des instances d'immatriculation: a) état juridique et charge des immeubles (legal_status, charges, box), b) situation des immeubles (location); f108 c) superficies (areas), d) jugement des oppositions, e) nombre et qualité juridique des requérants; f109 f) nationalité des requérants; f110 Conservation foncière: réquisitions d'immatriculation (1886-1922) a) nationalité, nombre, contenances, valeurs, b) répartition d'après les valeurs; f111 titres délivrés (1886-1922), récapitulation a) and b); f112 blank. f113 = chapter VII.",
+  "sgt1923": "f587 title; f588 blank; f589 a) cases and activity; f590 b) pending; f591 a) legal status, charges, b) location; f592 c) areas, d) oppositions, e) claimants; f593 f) nationality; f594 Conservation foncière a), b) (1886-1923); f595 titres délivrés, récapitulation; f596 blank. f597 = chapter VII.",
+  "sgt1924": "f1077 title; f1078 blank; f1079 a); f1080 b) pending; f1081 a), b); f1082 c), d), e); f1083 f); f1084 Conservation foncière a), b) (1886-1924); f1085 titres délivrés, récapitulation; f1086 blank. f1087 = chapter VII.",
+  "sgt1925": "f113 title; f114 blank; f115 a) (upper part now printed as lines); f116 b); f117 a), b); f118 c), d) (new line \"renvoyées devant les juridictions de droit commun\"), e); f119 f); f120 Conservation foncière a), b) (1886-1925); f121 titres délivrés, récapitulation; f122 blank. f123 = chapter VII.",
+  "sgt1926": "f665 title; f666 a); f667 b); f668 a), b); f669 c), d), e); f670 f); f671 Conservation foncière a), b) (1886-1926); f672 titres délivrés, récapitulation. f673 = chapter VII. Faint print throughout.",
+  "sgt1927": "f127 title; f128 a); f129 b); f130 a), b); f131 c), d), e); f132 f); f133 Conservation foncière a), b) (1886-1927); f134 titres délivrés, récapitulation. f135 = chapter VII.",
+  "sgt1928": "f651 title; f652 a); f653 b); f654 a), b); f655 c), d), e); f656 f); f657 Conservation foncière a), b) (1886-1928); f658 titres délivrés, récapitulation. f659 = chapter VII.",
+  "sgt1929": "f129 title; f130 a); f131 b) (new layout: judges A-C Tunis, D Sousse, seven magistrates; III one line); f132 a), b); f133 c), d), e); f134 f); f135 Conservation foncière a), b) (1886-1929); f136 titres délivrés, récapitulation. f137 = chapter VII.",
+  "sgt1930": "f663 title; f664 a); f665 b); f666 a), b); f667 c), d), e); f668 f); f669 Conservation foncière a), b) (1886-1930); f670 titres délivrés, récapitulation. f671 = chapter VII.",
+  "sgt1935": "f91 chapter VI title (Tribunal mixte); f92 a); f93 b); f94 a), b); f95 c), d) (Totaux only), e); f96 f); f97 Conservation foncière a), b) (1886-1932 then 1933-1935), titres délivrés, récapitulation, all on one page; f98 blank. f99 = chapter VII.",
+  "sgt1936": "f62 chapter V title (Propriété foncière); f63 a) travaux du Tribunal mixte; f64 b) pending (judges A-C Tunis, D-E Sousse, seven magistrates); f65 a) état juridique et charges, b) situation des immeubles; f66 c) superficie, d) nationalité des requérants (no oppositions, no legal quality); f67 Conservation foncière (1886-1933 then 1934-1936), titres délivrés, récapitulation. f68 = chapter VI Instruction publique. The range 62-67 of CHAPTERS.md is confirmed.",
+  "sgt1939": "f57 chapter V title; f58 travaux du Tribunal mixte; f59 pending by seat only; f60 A. état juridique et charge, B. situation; f61 C. superficies, D. nationalité des requérants; f62 Conservation foncière (1886-1934 then 1935-1939), titres délivrés, récapitulation; f63 Conservation de la propriété foncière: mutations entre vifs en 1939 d'immeubles immatriculés, by contrôle civil (property_transfers_1939); f64 blank. f65 = chapter VI."
+ },
+ "_not_transcribed": "Every table of the chapter is transcribed in every edition that prints it, every cell read on native-resolution crops of the page images (contact sheets of every view from the view before the chapter title to the next chapter title); the yearly Conservation foncière series of sgt1923-sgt1930 were re-read in full on each printing. Nothing in the chapter is left out: the views not listed as tables are the chapter title and blank pages. The boxes printed under a) (totals repeating the table) and the TOTAUX columns and lines are used as checks only; the récapitulation, which exists only as cumulative totals, is stored."
+}

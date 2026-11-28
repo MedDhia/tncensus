@@ -1,0 +1,439 @@
+# Agriculture chapter (chapitre XI), sgt1925 (volume bpt6k9105650k, views 287-342). Format: see yb_tables.py.
+# Every cell read on native-resolution crops of the page images (Gallica OCR used only to locate the lines).
+# Row codes are decoded in extract_agriculture.py.
+
+# SUPERFICIE. a) Superficie territoriale; b) Répartition en superficie productive et improductive; c) Répartition de
+# la superficie productive; d) Répartition de la superficie labourable. f289 (p. 265).
+# d) the parts sum to 2.844.820 for the printed 2.845.000 (zoomed crop; the faulty cell cannot be identified).
+@land_a view=289 page=265 year=1925
+img: all
+cols: value
+area_km2 | 125180
+inhabitants | 2093939
+density | 16.72
+
+@land_b view=289 page=265 year=1925
+img: all
+cols: ha pct
+productive | 9000000 72.00
+unproductive | 3500000 28.00
+Total | 12500000 100
+
+@land_c view=289 page=265 year=1925
+img: all
+cols: ha pct
+arable | 2845000 31.6
+meadows | 100000 1.1
+tree_crops | 390000 4.3
+forest | 1090000 12.1
+rangeland | 4575000 50.9
+Total | 9000000 100
+
+@land_d view=289 page=265 year=1925
+img: all
+cols: ha pct
+cereals | 1224470 43
+fodder | 30000 1.1
+food_plants | 40500 1.4
+industrial_plants | 4500 0.1
+other_products | 120000 4.3
+fallow | 1425350 50.1
+Total | 2845000 100
+
+# PRODUCTIONS VÉGÉTALES. CULTURES DIVERSES ; SUPERFICIE ET PRODUCTION (1916-1925). From this edition the cereals
+# are printed for two zones (no whole-Tunisia figures): 1° Tunisie septentrionale et Hauts plateaux (1re, 2e et 3e
+# Régions), spread f290|f291; 2° Tunisie centrale et méridionale (4e et 5e Régions et Territoires militaires),
+# spread f292|f293. b) c) f294|f295, d) f296|f297. Left page 1916-1920 (1920 next to the binding), right page
+# 1921-1925 and the averages 1916-1920, 1921-1925, 1916-1925 (m columns, checks only; » = '-'). The 1924 column
+# is printed in bold on the right pages. No asterisks except on some 1924 figures (b-d).
+@crops_a view=290 page=266 years=1916-1920 zone=north
+img: all
+cols: 1916 1917 1918 1919 1920
+durum_area | 303848 311617 303898 278773 291614
+durum_prod | 1000000 1150000 1673600 1100000 995000
+durum_yield | 3.2 3.6 5.5 3.9 3.4
+soft_area | 25000 30237 54906 54500 51520
+soft_prod | 187000 336000 551950 448000 346660
+soft_yield | 7.4 11.1 10 8.1 6.7
+barley_area | 186951 186897 193006 180537 157736
+barley_prod | 550000 880000 1325000 770000 475000
+barley_yield | 4 4.7 6.8 4.2 3
+oats_area | 62298 57803 56263 50315 56313
+oats_prod | 350100 552000 546000 425400 214500
+oats_yield | 5.6 9.5 9.7 8.4 3.8
+maize_area | 15100 17700 13400 17672 9585
+maize_prod | 29500 84000 71500 61550 25760
+maize_yield | 1.9 4.7 5.3 3.4 2.6
+
+@crops_a view=291 page=267 years=1921-1925 zone=north
+img: all
+cols: 1921 1922 1923 1924 1925 m1916_1920 m1921_1925 m1916_1925
+durum_area | 304702 300322 313407 344684 129774 293950 318577 306263
+durum_prod | 1755000 775500 1755000 1030000 2200000 1183372 1503000 1343186
+durum_yield | 5 2.5 5.6 3 6.6 3.92 4.54 4.23
+soft_area | 36550 39540 50400 50749 67040 43232 48855 46043
+soft_prod | 344850 199500 346400 360000 695200 373922 389190 381556
+soft_yield | 9.4 5 6.8 7 10.3 8.66 7.7 8.1
+barley_area | 155031 151215 153772 163234 178841 181025 160418 170721
+barley_prod | 1300000 355000 1090000 520000 900000 800000 833000 816500
+barley_yield | 7.8 2.3 7 3.4 5 4.5 5.1 4.8
+oats_area | 59392 48294 46624 44516 36774 56598 47120 51859
+oats_prod | 549200 137200 380000 229000 394000 417600 337680 377640
+oats_yield | 9.6 2.8 8.1 5.1 10.7 7.4 7.26 7.3
+maize_area | 21804 6178 17549 16034 22131 14691 16739 15715
+maize_prod | 88000 6460 58050 50500 54900 54862 51582 53222
+maize_yield | 4 1 3.3 3.1 2.4 3.5 2.76 3.17
+
+@crops_a view=292 page=268 years=1916-1920 zone=centre_south
+img: all
+cols: 1916 1917 1918 1919 1920
+durum_area | 270681 245458 290304 229837 190659
+durum_prod | 310000 500000 1020000 350000 80000
+durum_yield | 1.1 2 3.5 1.5 0.4
+soft_area | 500 480 560 500 480
+soft_prod | 3000 4000 5050 2000 1340
+soft_yield | 6 8.3 9 4 3
+barley_area | 311955 291952 380732 267197 217625
+barley_prod | 520000 820000 1525000 430000 95000
+barley_yield | 1.6 2.8 4 1.8 0.4
+oats_area | 3950 4000 9232 5461 4979
+oats_prod | 9900 28000 74000 24600 500
+oats_yield | 2.5 7 8 4.5 0.1
+maize_area | 1000 1100 1100 690 560
+maize_prod | 3500 6000 6500 3450 2240
+maize_yield | 3.5 5.4 5.9 5 4
+
+# The last average column is headed "1916 1925".
+@crops_a view=293 page=269 years=1921-1925 zone=centre_south
+img: all
+cols: 1921 1922 1923 1924 1925 m1916_1920 m1921_1925 m1916_1925
+durum_area | 264994 93558 285586 95315 260003 245387 199897 222642
+durum_prod | 795000 24500 575000 10000 300000 452000 340900 396450
+durum_yield | 3 0.2 1.2 0.1 1.1 1.7 1.1 1.4
+soft_area | 450 460 600 680 960 504 630 567
+soft_prod | 3150 500 3000 140 4800 3078 2318 2698
+soft_yield | 7 1 5 0.2 5 6 3.6 4.8
+barley_area | 342799 145635 336865 138526 324989 293892 257763 275827
+barley_prod | 1200000 45000 1410000 30000 600000 678000 657000 667500
+barley_yield | 3.6 0.3 4.2 0.2 1.8 2.1 2 2
+oats_area | 7254 2743 3020 2227 3871 5524 3823 4673
+oats_prod | 50800 2800 20000 1000 6000 27400 16120 21760
+oats_yield | 7 0.1 6.6 0.4 1.5 4.4 3.1 3.7
+maize_area | 357 387 425 431 517 890 423 656
+maize_prod | 2000 1540 1950 1500 2100 4333 1818 3078
+maize_yield | 5.5 4 4.5 3.5 4 4.7 5.1 4.9
+
+@crops_b view=294 page=270 years=1916-1920
+img: all
+cols: 1916 1917 1918 1919 1920
+beans_area | 16000 17700 17900 28484 22440
+beans_prod | 58000 115000 200000 107000 68000
+beans_yield | 3.6 6.4 11.1 3.7 3.0
+chickpeas_area | 4000 4600 5986 6439 6862
+chickpeas_prod | 18000 20000 30000 25000 20000
+chickpeas_yield | 4.5 4.3 5.00 3.8 2.9
+potatoes_area | 450 500 1000 750 1180
+potatoes_prod | 22000 25000 60000 37500 40000
+potatoes_yield | 48 50 60 50 36
+
+@crops_b view=295 page=271 years=1921-1925
+img: all
+cols: 1921 1922 1923 1924 1925 m1916_1920 m1921_1925 m1916_1925
+beans_area | 23477 22403 24834 28710 39584 20505 27801 24153
+beans_prod | 141000 48000 300000 215000 400000 109600 220800 165200
+beans_yield | 6 2.1 12.0 7.5 10.1 5.5 7.5 6.5
+chickpeas_area | 6954 1636 3734 4651 6182 5977 4631 5304
+chickpeas_prod | 35000 2000 15000 10700 32200 22600 18980 20790
+chickpeas_yield | 5 1.2 4.0 2.3 5.2 4.1 3.5 3.8
+potatoes_area | 1000 1050 1000 1050 1100 776 1040 908
+potatoes_prod | 40000 45000 40000 38400 44000 36900 41480 39190
+potatoes_yield | 40 42 40 36.5 40 48.8 39.7 44.2
+
+@crops_c view=294 page=270 years=1916-1920
+img: all
+cols: 1916 1917 1918 1919 1920
+flax_area | 2000 2200 2200 3262 3366
+flax_prod | 4100 12000 14000 14000 8500
+flax_yield | 2.05 5.4 6.3 4.3 2.5
+tobacco_area | 112 109 186 237 254
+tobacco_prod | 1487 1710 2195 2850 3044
+tobacco_yield | 13.2 15.6 11.8 12.0 11.9
+
+# Averages of the tabac 1916-1920 and 1916-1925 printed with decimals (179,60; 2257,5; 271,30; 3122,2).
+@crops_c view=295 page=271 years=1921-1925
+img: all
+cols: 1921 1922 1923 1924 1925 m1916_1920 m1921_1925 m1916_1925
+flax_area | 3715 1939 1747 2126 2605 2605 2426 2515
+flax_prod | 15000 2000 6900 4300 10500 10500 7540 9020
+flax_yield | 4.0 1.0 3.9 2.0 4 4.1 2.9 3.5
+tobacco_area | 371 278 379 344 443 179.60 363 271.30
+tobacco_prod | 4851 3273 3327 3884 5500 2257.5 3987 3122.2
+tobacco_yield | 13.0 11.7 8.7 11.2 12.4 12.9 11.4 12.1
+
+@crops_d view=296 page=272 years=1916-1920
+img: all
+cols: 1916 1917 1918 1919 1920
+vine_area | 20666 21309 22608 23246 23414
+vine_wine | 450000 432200 608106 444157 498148
+vine_grapes | 0 42000 51000 46000 50000
+vine_yield | 21.7 20.2 26.8 19.1 21.2
+olive_trees | 11750910 11730924 11711278 11907007 12008043
+olive_bearing | 7642163 7623941 7605485 8138732 8137181
+olive_oil | 554480 150000 390000 165000 450000
+olive_pomace | 75000 20000 50000 20500 60000
+carob_trees | 20000 20000 20000 20000 20000
+carob_prod | 11300 9000 12000 12000 8000
+almond_trees | 200000 200000 210000 214000 216000
+almond_prod | 18000 26000 22000 27600 24000
+degla_trees | 52376 52375 52371 60097 60097
+degla_prod | 12000 12000 15000 14000 15000
+otherdates_trees | 982315 982285 982076 975055 975035
+otherdates_prod | 210000 410000 385000 350000 335000
+orange_trees | 61000 61000 61000 63000 64500
+orange_prod | 12000 14000 13500 14500 14000
+lemon_trees | 50000 50000 50000 51000 51500
+lemon_prod | 12000 11000 12000 12500 11000
+
+# The first average column is headed "1916-1921" (the 1916-1920 average), the second "1921 1925".
+@crops_d view=297 page=273 years=1921-1925
+img: all
+cols: 1921 1922 1923 1924 1925 m1916_1920 m1921_1925 m1916_1925
+vine_area | 23621 23706 26895 28086 30213 22248 26504 24376
+vine_wine | 283509 618000 781381 839035 918853 486522 688155 587338
+vine_grapes | 40000 52000 58000 60000 60000 - 54000 -
+vine_yield | 12.0 26.3 33.0 35.5 38.8 20.2 29.1 24.6
+olive_trees | 13412200 15109295 15260037 15654347 16060037 11821632 15099183 13460840
+olive_bearing | 8432502 10039474 10039474 10056049 10061401 7829500 9725780 8777640
+olive_oil | 340000 180000 220000 220000 340000 341896 260000 300948
+olive_pomace | 48000 20000 35000 34000 36000 45100 34600 39850
+carob_trees | 20300 20500 20600 20600 20700 20000 20400 20200
+carob_prod | 17000 8000 19000 23000 28000 10200 19000 14600
+almond_trees | 216500 220000 221000 221000 225000 208000 220700 214350
+almond_prod | 35000 16000 19000 13000 18500 20300 23520 21910
+degla_trees | 60057 60057 60049 60049 69701 - - -
+degla_prod | 16000 15500 14000 16800 18000 15600 16060 15830
+otherdates_trees | 975017 974987 974202 974128 1030473 979353 985761 982557
+otherdates_prod | 415000 340000 346000 340000 352000 338000 358600 345800
+orange_trees | 66000 66900 67000 67800 68000 62100 67140 64620
+orange_prod | 15200 13800 14400 14000 14200 13600 14800 14200
+lemon_trees | 52000 52000 52000 52000 52000 50120 52000 51060
+lemon_prod | 13000 11000 10500 10000 10000 11700 10900 11300
+
+# PRINCIPALES CULTURES ; RENDEMENT ET RÉPARTITION (1921-1925). New layout: one spread per crop (f298|f299 a) Blé,
+# f300|f301 b) Orge, f302|f303 c) Avoine), left page Tunisie septentrionale et Hauts Plateaux (1re, 2e et 3e
+# Régions), right page Tunisie centrale et méridionale (4e et 5e Régions et Territoires militaires). Columns:
+# SURFACES ENSEMENCÉES; NOMBRE D'HECTARES ayant produit de 0 à 5 hectol. (h05) and its RAPPORT avec les surfaces
+# ensemencées (p05, printed in %); NOMBRE D'HECTARES ayant produit 6 hectolitres et au-dessus (h6) and RAPPORT
+# (p6). Lines: year (harvest year as printed) x Européennes / Indigènes; no totals. Whole hectares. Every cell
+# read on native-resolution crops of the page images (Gallica OCR not used).
+@zclasses view=298 page=274 crop=wheat zone=north
+img: all
+cols: sown h05 p05 h6 p6
+1921_eur | 74525 1851 2.48 72674 97.52
+1921_ind | 266727 59583 22 207144 78
+1922_eur | 84701 34788 41.07 49913 58.93
+1922_ind | 255017 214017 83.96 41144 16.04
+1923_eur | 98013 3892 3.97 94121 96.03
+1923_ind | 265794 78186 29.43 187608 70.57
+1924_eur | 100612 13385 13.31 87227 86.69
+1924_ind | 294821 204215 69.26 90606 30.74
+1925_eur | 105856 3896 3.68 101960 96.32
+1925_ind | 290858 115006 39.54 175582 60.46
+
+@zclasses view=299 page=275 crop=wheat zone=centre_south
+img: all
+cols: sown h05 p05 h6 p6
+1921_eur | 5178 1500 29 3678 71
+1921_ind | 259866 85389 32.85 174477 67.15
+1922_eur | 2399 1963 81.82 436 18.18
+1922_ind | 91189 88334 96.86 2855 13.14
+1923_eur | 4287 1449 33.79 2838 66.21
+1923_ind | 281899 137647 48.82 144252 51.18
+1924_eur | 3541 2213 62.47 1328 37.53
+1924_ind | 85594 83652 97.73 1942 2.27
+1925_eur | 5592 3645 65.18 1947 34.82
+1925_ind | 255371 236332 92.54 19039 7.46
+
+@zclasses view=300 page=276 crop=barley zone=north
+img: all
+cols: sown h05 p05 h6 p6
+1921_eur | 11571 772 6.67 10799 93.33
+1921_ind | 143460 8415 6.25 135045 93.75
+1922_eur | 11387 5879 51.62 5508 48.38
+1922_ind | 139828 114143 81.63 25685 18.37
+1923_eur | 14550 833 5.73 13717 94.27
+1923_ind | 139222 23219 16.68 116003 83.32
+1924_eur | 14941 2593 17.35 12348 82.65
+1924_ind | 148293 78555 52.97 69728 47.03
+1925_eur | 17873 1071 5.99 16802 94.01
+1925_ind | 160968 46539 28.91 114429 71.09
+
+@zclasses view=301 page=277 crop=barley zone=centre_south
+img: all
+cols: sown h05 p05 h6 p6
+1921_eur | 6210 596 9.59 5254 90.41
+1921_ind | 336589 105394 31.31 231195 68.69
+1922_eur | 2904 2796 96.28 108 3.72
+1922_ind | 142731 138298 96.89 4433 3.11
+1923_eur | 6634 2903 43.75 3731 56.25
+1923_ind | 330231 118192 35.79 212039 64.21
+1924_eur | 4513 3060 67.80 1453 32.20
+1924_ind | 134015 126613 95.22 7402 4.78
+1925_eur | 8112 5867 72.32 2245 27.68
+1925_ind | 316877 252731 79.75 64146 20.25
+
+@zclasses view=302 page=278 crop=oats zone=north
+img: all
+cols: sown h05 p05 h6 p6
+1921_eur | 39883 858 2.15 39025 97.85
+1921_ind | 19509 193 0.98 19316 99.02
+1922_eur | 31256 17126 54.79 14130 45.21
+1922_ind | 17038 14938 87.67 2100 22.33
+1923_eur | 30435 1210 3.97 29225 96.03
+1923_ind | 16189 1325 8.18 14864 91.82
+1924_eur | 25744 4045 15.75 21699 84.25
+1924_ind | 18771 7293 38.85 11478 61.15
+1925_eur | 20795 1489 7.11 19306 92.89
+1925_ind | 17067 2664 15.60 14603 84.40
+
+@zclasses view=303 page=279 crop=oats zone=centre_south
+img: all
+cols: sown h05 p05 h6 p6
+1921_eur | 3376 285 8.44 3091 91.56
+1921_ind | 3878 1038 26.76 2840 73.24
+1922_eur | 1700 1390 81.76 310 18.24
+1922_ind | 1043 1039 99.61 4 0.39
+1923_eur | 1473 471 31.97 1002 68.03
+1923_ind | 1547 194 12.54 1353 87.46
+1924_eur | 1227 835 68.01 392 31.99
+1924_ind | 1000 820 82.00 180 18.00
+1925_eur | 1942 1347 69.36 595 30.64
+1925_ind | 1929 1372 71.12 557 28.88
+
+# i) Vigne. Répartition des viticulteurs par régions et par nationalité, f304|f305: lines by région, chef-lieu de
+# région and contrôle civil (label = région / chef-lieu / contrôle). Columns as in sgt1924 (Français, Italiens,
+# Anglo-Maltais, Autres Européens, Tunisiens, TOTAUX). Footnote: the European vineyard covers 27.986 ha; the
+# indigenous vineyard, scattered in small plots over the Regency, is estimated at about 2.227 ha; the total
+# Tunisian vineyard at 30.213 ha. Every cell read on native-resolution crops (gutter on both pages).
+@vine view=304 page=280 geo=region
+img: all
+cols: fr_n fr_ha it_n it_ha am_n am_ha ae_n ae_ha tn_n tn_ha tot_n tot_ha
+1re Région/Bizerte/Béja | 13 109.95 4 4.80 0 0 0 0 3 1 20 115.75
+1re Région/Bizerte/Bizerte | 123 696.60 162 477.10 0 0 0 0 9 32.35 294 1206.05
+1re Région/Bizerte/Souk-el-Arba | 7 55.85 1 1 0 0 0 0 4 3.10 12 59.95
+1re Région/Bizerte/Tabarka | 22 61.80 12 15.55 0 0 0 0 12 4.90 46 82.25
+2me Région/Tunis/Tunis | 451 6800.90 969 7962.90 4 245.40 7 176.35 91 263.40 1522 15448.95
+2me Région/Tunis/Zaghouan | 64 330.55 58 400.85 0 0 0 0 7 17.60 129 749
+2me Région/Tunis/Grombalia | 71 2333.90 457 5359.25 2 427 3 94.25 40 155.80 573 8370.20
+3me Région/Le Kef/Le Kef | 4 5.30 18 19.85 0 0 0 0 11 10.60 33 35.75
+3me Région/Le Kef/Téboursouk | 12 25 1 2.20 0 0 2 54.50 3 4.25 18 85.95
+3me Région/Le Kef/Maktar | 3 1.75 0 0 0 0 0 0 0 0 3 1.75
+3me Région/Le Kef/Medjez-el-Bab | 46 387.20 1 7.40 0 0 0 0 1 0.50 48 395.10
+4me Région/Sousse/Sousse | 78 443.75 63 438.80 0 0 0 0 49 141.70 190 1024.25
+4me Région/Sousse/Kairouan | 3 0.65 0 0 0 0 0 0 0 0 3 0.65
+4me Région/Sousse/Thala | 1 19 0 0 0 0 0 0 0 0 1 19
+5me Région/Sfax/Sfax | 17 287.75 7 7.05 0 0 0 0 4 24.40 28 319.20
+5me Région/Sfax/Gabès-Zarzis | 8 54.50 0 0 1 1 2 4 3 3.70 14 63.20
+5me Région/Sfax/Djerba | 5 9.15 0 0 2 0.30 0 0 0 0 7 9.45
+TOTAUX | 928 11623.60 1753 14696.75 9 673.70 14 329.10 237 663.30 2811 27986.45
+
+# Oliviers. Répartition par régions, f306. Lines: région / chef-lieu de région / contrôle civil / caïdat (label
+# parts separated by " / "; "Cap-Bon > Nabeul" = caïdat bracketed under Cap-Bon). Columns as before (oliviers
+# improductifs et oléastres; jeunes oliviers non imposés; oliviers imposés; total). Aïn-Draham: "Non recensés"
+# across the four columns ('-'). Djerba (1): classes "»" and total 412.728; footnote (1): the olive trees of
+# Djerba, not subject to the canoun tax, are not counted by category ('-' for the classes, total stored). Every
+# cell read on native-resolution crops. Under Cap-Bon this edition prints Nabeul first with the figures printed
+# for Soliman in sgt1922-sgt1924 (and Soliman second with Nabeul's): names kept as printed.
+@olive view=306 page=282 geo=4
+img: all
+cols: unprod young taxed total
+1re Région / Bizerte / Béja / Béja | 1359 2420 12946 16725
+1re Région / Bizerte / Bizerte / Bizerte | 14262 26851 425992 467105
+1re Région / Bizerte / Bizerte / Mateur | 102448 19691 18750 140889
+1re Région / Bizerte / Tabarka / Aïn-Draham | - - - -
+1re Région / Bizerte / Souk-el-Arba / Souk-el-Arba | 47727 37966 9191 94884
+1re Région / Bizerte / Souk-el-Arba / Souk-el-Khemis | 1247 3574 3434 8255
+2me Région / Tunis / Tunis / Banlieue de Tunis | 53858 64521 804542 922921
+2me Région / Tunis / Zaghouan / Zaghouan | 7448 8311 83008 98767
+2me Région / Tunis / Grombalia / Cap-Bon > Nabeul | 72898 38069 1157941 1268908
+2me Région / Tunis / Grombalia / Cap-Bon > Soliman | 8477 170263 377466 556206
+3me Région / Le Kef / Téboursouk / Téboursouk | 860 9404 53487 63751
+3me Région / Le Kef / Le Kef / Le Kef | 24505 4783 29996 59284
+3me Région / Le Kef / Le Kef / Tadjerouine | 903 758 1511 3172
+3me Région / Le Kef / Maktar / Oulad Ayar | 8760 6498 33084 48342
+3me Région / Le Kef / Maktar / Oulad Aoun | 18581 9446 23031 51088
+3me Région / Le Kef / Medjez-el-Bab / Medjez-el-Bab | 5397 13346 36967 55710
+4me Région / Sousse / Sousse / Souassi | 767 276966 58193 335926
+4me Région / Sousse / Sousse / Mahdia | 57611 635642 865261 1558514
+4me Région / Sousse / Sousse / Monastir | 39921 702468 1520459 2262848
+4me Région / Sousse / Sousse / Sousse | 55737 669794 1378974 2104505
+4me Région / Sousse / Kairouan / Kairouan | 11074 49228 15115 75417
+4me Région / Sousse / Kairouan / Djelass | 121604 215167 75949 412720
+4me Région / Sousse / Thala / Fraichiches | 118 11863 2754 14735
+4me Région / Sousse / Thala / Majeurs | 494 15172 1938 17604
+5me Région / Sfax / Sfax / Sfax | 21964 1013777 1141617 2177358
+5me Région / Sfax / Sfax / La Skhira | 284 497729 80189 578202
+5me Région / Sfax / Sfax / Djebéniane | 19095 642508 476961 1138564
+5me Région / Sfax / Gabès / Arad | 956 82658 52898 136512
+5me Région / Sfax / Gafsa / Hammama | 551 84103 6981 91635
+5me Région / Sfax / Gafsa / Gafsa | 2938 40303 134988 178229
+5me Région / Sfax / Tozeur / Djerid | 1704 12896 21481 36081
+5me Région / Sfax / Djerba / Djerba (1) | - - - 412728
+Territoires Militaires du Sud /  /  / Nefzaoua | 195 23651 9636 33482
+Territoires Militaires du Sud /  /  / Ouerghemma | 7937 407157 149210 564304
+Territoires Militaires du Sud /  /  / Tataouine | 1968 32781 39947 74696
+TOTAUX | 713648 5829764 9103897 16060037
+
+# FORÊTS. a) (1903-1925). f307 (p. 283). Every line typed from native-resolution crops of this printing. » = 0.
+@forest_a view=307 page=283 years=1903-1925
+img: all
+cols: n_delim n_total hp_delim hp_total total n_bornage hp_bornage bornage_total
+1903-1910 | 49019 246976 82846 561394 808370 0 0 0
+1911 | 0 246976 0 561394 808370 0 0 0
+1912 | 0 246976 287842 849236 1096212 0 0 0
+1913 | 0 246976 0 849236 1096212 0 0 0
+1914 | 0 246976 0 849236 1096212 900 7000 7900
+1915 | 0 246976 0 849236 1096212 2160 5763 15823
+1916 | 0 246976 0 849236 1096212 2740 6000 24563
+1917 | 0 246976 0 849236 1096212 8000 5000 37563
+1918 | 0 246976 0 849236 1096212 3000 6130 46693
+1919 | 0 246976 0 849236 1096212 2000 6300 54993
+1920 | 0 246976 0 849236 1096212 1800 8000 64793
+1921 | 0 246976 0 849236 1096212 1950 2800 69543
+1922 | 0 246976 0 849236 1096212 3300 2500 75343
+1923 | 0 246976 0 849236 1096212 3500 1500 80343
+1924 | 0 246976 0 849236 1096212 3500 4000 87843
+1925 | 0 246976 0 849236 1096212 6008 20400 114251
+
+# FORÊTS. b) Produits forestiers. f308 (p. 284). Footnotes (1) (2): ventes sur deux exercices. c)-e): not
+# transcribed.
+@forest_b view=308 page=284 year=1925 units=m.c.,stères,quint.,mèt.lin.,unités,quint.,quint.
+img: all
+cols: ind fuel bark props poles cork_rep cork_male
+5 mars 1925 (Marché de gré à gré, chênes-zéen) | 934 0 0 0 0 0 0
+25 mars 1925 (Adjud. chênes-liège et chênes-zéen) | 950 25700 4900 7400 2200 0 6100
+17 juin (1) 1925 (Adjud. ch.-zéen, ch.-verts, pins) | 1236 14480 7 81276 22933 0 0
+17 octobre 1925 (Adjud. lièges de reproduction) | 0 0 0 0 0 48464 0
+25 novembre (2) 1925 (Adjud. chênes-liège, chênes-zéen, pins) | 1191 1300 30 15259 5300 0 0
+Total | 4311 41480 4937 103935 30433 48464 6100
+
+# FORÊTS. c) Rendement en argent, by sale (francs). f308 (p. 284). Footnotes: (1) plus 36.075 francs payables en
+# 1926; (2) plus 11.250 francs payables en 1926.
+@forest_c view=308 page=284 year=1925
+img: all
+cols: qty price total
+Adjudication du 17 juin 1924 (Somme payable en 1925) @@  @@  | - - 19920
+Adjudication du 12 novembre 1924 (Somme payable en 1925) @@  @@  | - - 835425
+5 mars 1925 (Marché de gré à gré) @@  @@  | - - 32700
+25 mars 1925 (Adjudication) @@  @@  | - - 214050
+17 juin 1925 (Adjudication) (1) @@  @@  | - - 72415
+17 octobre 1925 (Lièges de reproduction) @@  @@  | - - 4451085.50
+25 novembre 1925 (Adjudication) (2) @@  @@  | - - 3750
+Menus produits @@  @@  | - - 217832.75
+Total | - - 5847178.25
+
+# FORÊTS. d), e). f308 (p. 284). Superficie printed "607 hect. 95 ares".
+@forest_de view=308 page=284 year=1925
+img: all
+cols: prosecutions fire_reports ha ares ca damage
+all | 835 34 607 95 - 29555

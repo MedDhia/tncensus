@@ -1,0 +1,341 @@
+# sgt1928, ark bpt6k91056510, chapter III "Hygiène et assistance"
+# Conventions as in health_finance_sgt1922.txt. Article number "-" = line printed without a number.
+
+[budget_receipts] views=607 pages=55 cols=1927 ; 1928 title=a) Recettes
+A | 1 | Produits des encaissements réalisés par le Trésor pour le compte de l'Assistance publique (Chap. III. — Titre I. — Art. 13 § 1) | 1027600 1164100
+I | Total | 1027600 1164100
+A | 2 | Ressources exceptionnelles | 414400 396300
+I | Total | 414400 396300
+T | TOTAUX GÉNÉRAUX | 1442000 1560400
+# printed: En plus au budget de 1928: 136.500 (1°); En moins: 18.100 (2°); En plus: 118.400 (général).
+
+[budget_expenditure] views=608,609,610,611 pages=56,57,58,59 year=1928 cols=Titre I, art. 13, § 1 ; Titre II, art. 1, crédits provenant du fonds de réserve de l'Assistance publique ; Total ; Différence avec le budget de 1927, en plus ; en moins title=b) Dépenses
+H | a) Assistance publique
+A | 1 | Sourds-muets et aveugles | 20000 » 20000 » 5000
+H | 2. Vieillards et incurables
+A | - | Service d'assistance aux vieillards de la Société de Bienfaisance de Tunis | 75000 » 75000 5000 »
+A | - | Service d'assistance aux vieillards de la Société musulmane de Bienfaisance de Tunis | 5000 » 5000 » »
+A | - | Asile des Petites Sœurs des Pauvres de Tunis | 12000 8000 20000 12000 »
+A | - | Asile des vieillards israélites de Tunis | 13000 » 13000 5000 »
+A | - | Fonds de concours pour le placement de vieillards dans les hospices | 37500 82500 120000 45000 »
+A | 3 | Aliénés : Placement d'aliénés dans les asiles de la Métropole | 77100 194100{tm} 272000 92000 »
+H | 4. Tuberculeux
+A | - | Fonds de concours pour placement de tuberculeux dans des sanatoria | » » » » 5000
+A | - | Service antituberculeux de la communauté israélite de Tunis | 20000 » 20000 10000 »
+A | 5 | Hospitalisation d'étrangers dans les hôpitaux de Tunis | » » » » 30000
+H | b) Dispensaires et Services d'assistance médicale
+A | 6 | Service d'ophtalmologie. — Clinique du Dr Chatenier | 3000 » 3000 » 7000
+A | 7 | Société de secours aux blessés militaires (pour ses dispensaires) | 8000 » 8000 » »
+A | 8 | Union des Femmes de France (pour ses dispensaires) | 7000 » 7000 » »
+A | 9 | Fourneau des Pauvres (pour son dispensaire) | 6000 » 6000 » »
+A | 10 | Croix Verte de Tunis et de Bizerte | 4000 » 4000 » »
+A | 11 | Consultations internationales de la Société Française de Bienfaisance de Tunis | 12000 » 12000 » »
+S | A reporter | 299600 285400 585000 169000 47000
+A | 12 | Service d'assistance médicale de la Société musulmane de Bienfaisance de Tunis | 20000 » 20000 6000 »
+A | 13 | Dispensaire des Sœurs de N.-D. de l'Espérance à Tunis | 2500 » 2500 500 »
+A | 14 | Dispensaire des Sœurs Missionnaires de N.-D. d'Afrique à Carthage | 2000 » 2000 500 »
+A | 15 | Hôpital israélite de Tunis | 65000 55000 120000 20000 »
+A | 16 | Société de l'Hôpital israélite de Bizerte | 4000 » 4000 2000 »
+H | c) Protection et Assistance de l'Enfance
+A | 17 | Crédits réservés, suivant le tableau de répartition annexe, aux œuvres de Protection de l'Enfance (décret du 15 janvier 1923) | 380000 » 380000 40000 »
+H | d) Sociétés de Bienfaisance et Œuvres d'Assistance diverses
+H | Tunis
+A | 18 | Service des indigents de la Société Française de Bienfaisance de Tunis | 85000 25000 110000 15000 »
+A | 19 | Service des indigents de la Société Musulmane de Bienfaisance de Tunis | 55000 » 55000 » »
+A | 20 | Service des indigents de la Communauté Israélite de Tunis | 10000 » 10000 » »
+A | 21 | Fourneau des Pauvres (pour son service d'assistance aux indigents) | 50000 5000 55000 10000 »
+A | 22 | Société Italienne de Bienfaisance de Tunis | 2000 » 2000 » »
+A | 23 | Asile de Nuit et Maternité Israélite | 8000 » 8000 2500 »
+A | 24 | Cuisines populaires israélites | 16000 » 16000 » »
+A | 25 | Œuvre israélite des couvertures | 7500{tm} » 7000 » »
+A | 26 | Œuvre de Protection de la Jeune Fille | 8500 » 8500 1000 »
+S | A reporter | 1014600 370400 1385000 266500 47000
+# art. 25: Titre I printed 7.500, total printed 7.000; the "A reporter" lines are consistent with 7.000 in both columns, so the Titre I cell is the misprint.
+H | Intérieur, Première Région
+A | 27 | Société française de Bienfaisance de Bizerte | 20000 » 20000 1000 »
+A | 28 | Société musulmane de Bienfaisance de Bizerte | 5000 » 5000 » »
+A | 29 | Société italienne de Bienfaisance de Bizerte | 1000 » 1000 » »
+A | 30 | Caisse de Secours et de Bienfaisance israélite de Bizerte | 2000 » 2000 2000 »
+A | 31 | Comité de Bienfaisance israélite de Mateur | 500 » 500 500 »
+H | Deuxième Région
+A | 32 | Société française de Bienfaisance de La Goulette | 1500 » 1500 500 »
+A | 33 | Société musulmane de Bienfaisance de Nabeul | 3500 » 3500 » »
+H | Troisième Région
+A | 34 | Société musulmane de Bienfaisance du Kef | 3000 » 3000 2000 »
+H | Quatrième Région
+A | 35 | Société française de Bienfaisance de Sousse | 20000 » 20000 » »
+A | 36 | Société musulmane de Bienfaisance de Sousse | 5000 » 5000 » »
+A | 37 | Caisse de Bienfaisance israélite de Sousse | 12000 8000 20000 8000 »
+A | 38 | Société française de Bienfaisance de Kairouan | 3500 » 3500 » »
+A | 39 | Société musulmane de Bienfaisance de Kairouan | 4000 » 4000 1000 »
+A | 40 | Société musulmane de Bienfaisance de Monastir | 1500 » 1500 500 »
+H | Cinquième Région
+A | 41 | Société française de Bienfaisance de Sfax | 11000 » 11000 » »
+A | 42 | Société musulmane de Bienfaisance de Sfax | 1500 » 1500 500 »
+A | 43 | Société italienne de Bienfaisance de Sfax | 1000 » 1000 » »
+A | 44 | Caisse de Bienfaisance israélite de Sfax | 10000 2000 12000 4000 »
+A | 45 | Société musulmane de Bienfaisance de Tozeur | 1500 » 1500 » »
+S | A reporter | 1122100 380400 1502500 286500 47000
+A | 46 | Caisse de Secours et de Bienfaisance israélite de Gafsa | 1000 » 1000 1000 »
+A | 46bis | Legs Joséphine Virieu. — Dotation à une jeune fille française | 637.50 » 637.50 » »
+A | 47 | Dépenses imprévues, subventions exceptionnelles et part contributive du Comité supérieur au programme de réalisation d'assistance | 1157.50 15900 17057.50 » 125425
+A | 48 | Versement au fonds de réserve du 5 % sur le montant du budget de l'Assistance publique, déduction faite du crédit de 380.000 francs, réservé aux œuvres de Protection et d'Assistance de l'Enfance | 39205 » 39205 3325 »
+T | TOTAUX | 1164100 396300 1560400 290825 172425
+# Two articles are numbered 46 (Gafsa and Legs Virieu); the second is stored as "46bis".
+# printed under the totals: En plus 290.825; En moins 172.425; En plus pour 1928: 118.400.
+# Récapitulation: Art. 13 § 1: 1.027.600 (1927), 1.164.100 (1928), +136.500; Titre II art. 1: 414.400, 396.300, -18.100;
+# totals 1.442.000 and 1.560.400; "En plus au budget de 1928 ... 118.100" (sic; 118.400 above).
+# Provenance des crédits complémentaires: Fonds de réserve au 15 décembre 1927 357.124,76; versement en 1928 au 5 % 39.205;
+# total 396.329,76; crédits demandés 396.300; reste au fonds de réserve 29,76.
+
+[child_protection] views=612,613 pages=60,61 year=1928 cols=Titre I, article 13, § 1 ; Différence avec le budget de 1927, en plus ; en moins title=c) Tableau de répartition des crédits réservés aux œuvres de protection et d'assistance de l'enfance
+A | 1 | Dispensaire Alapetite | 60000 15000 »
+A | 2 | Œuvre de la Crèche | 48000 » »
+A | 3 | Œuvre française de protection du premier âge | 10000 » »
+A | 4 | Fonds de secours aux mères françaises | 20000 2000 »
+A | 5 | Orphelinat de la Société Française de Bienfaisance de Tunis | 63000 » »
+A | 6 | Fonds de secours aux orphelins musulmans de la Société musulmane de Bienfaisance de Tunis | 25000 15000 »
+A | 7 | Fonds de secours aux orphelins israélites | 7000 » »
+A | 8 | Institut héliothérapique du Kram | 70000 10000 »
+H | 9. Fonds de secours aux œuvres d'habillement de l'Enfance
+A | 9a | Garderie israélite | 7000 » »
+A | 9b | Garderie du Fourneau des Pauvres | 7000 » »
+A | 9c | Vestiaire Central | 7000 4000 »
+H | Gouttes de Lait, Première Région
+A | 10 | Goutte de Lait de Béja | 1800 1800 »
+H | Deuxième Région
+A | 11 | Dispensaire de la Croix Rouge de Tunis | 12000 » »
+A | 12 | Goutte de Lait de Zaghouan | 1800 1800 »
+H | Troisième Région
+A | 13 | Goutte de Lait de Maktar | 1800 » »
+A | 14 | Goutte de Lait du Kef | 1800 1800 »
+H | Quatrième Région
+A | 15 | Goutte de Lait de Thala | 1800 » »
+A | 16 | Goutte de Lait de Sousse | 1800 » »
+A | 17 | Goutte de Lait de Mahdia | 1800 » »
+S | A reporter | 348600 54000 »
+# The "Report" on page 61 reprints the en plus column as 51.400 (A reporter on page 60: 54.000; cells sum to 51.400).
+H | Cinquième Région
+A | 18 | Goutte de Lait Lucien Saint à Sfax | 1800 » »
+A | 19 | Goutte de Lait Lucien Saint à Gafsa | 1800 » »
+A | 20 | Goutte de Lait Lucien Saint à Tozeur | 1800 » »
+A | 21 | Goutte de Lait Lucien Saint à Gabès | 1800 » »
+A | 22 | Goutte de Lait Lucien Saint à Djerba | 1800 » »
+A | 23 | Subvention exceptionnelle et dépenses | 3400 » 14900
+A | 24 | Versement au fonds de réserve | 19000 3500 »
+T | TOTAUX | 380000 54900 14900
+# printed below: En plus 54.900; En moins 14.000 (sic; 14.900 in the totals); En plus au budget de 1928: 40.000.
+
+[complementary_allocations] views=613 pages=61 year=1928 title=Allocations complémentaires à provenir des excédents de recettes de 1927
+Hôpital israélite | 30000
+Fourneau des pauvres (pour son dispensaire) | 4000
+Œuvre de protection de Jeune Fille | 4000
+Garderie du Fourneau des pauvres | 2500
+Dépenses exceptionnelles et part contributive du Comité supérieur au programme de réalisation d'assistance | 85000
+TOTAL | 125000
+
+[societies] views=614,615 pages=62,63 year=1928 caisse_debut=1928-01-01 caisse_fin=1929-01-01
+# The right-hand page heads its cash column "Reste en caisse au 1er janvier 1928" (sic; it is the end-of-year balance).
+Sœurs Mission. N.D. d'Afrique, Carthage | » » 2000 » 2000 | 475 1711 » » 1008.75 » 3194.75 | » | 190 » 18662 »
+Sœurs de N.D. Espérance, Tunis | » » 2500 2000 4500 | » 1200 » » 7785 1130 10115.00 | » | 54415 280 7105 »
+Hôpital israélite, Tunis | » » » » » | » » » » » » » | » | » » » »
+Hôpital israélite, Bizerte | » 3831.45 4000 7899.75 15631.20 | 3749.50 320 » » 10634.65 » 14704.15 | 927.05 | » » » »
+Société Française de Bienfaisance, Tunis | 1977.05 19805.02 260000 49760.20 331542.27 | 47484.09 66274.33 163799.67 6207.64 12303.25 16561 312626.98 | 18915.29 | 2644 6801 4151 16
+Société Française de Bienfaisance, Sousse | 47.45 730 20000 5426.65 26204.10 | » 25116.45 » » 515.25 105.10 25781.80 | 422.30 | 1730 1502 176 52
+Société Française de Bienfaisance, Sfax | 3495.65 2827.60 11000 7117.15 24440.40 | 31.35 14485 4579.50 2501.35 1295 » 22892.20 | 1540.20 | 2052 489 34 100
+Société Française de Bienfaisance, Bizerte | 3112.35 3584.50 20000 5285.55 31982.40 | 2400 24462.05 » » 297.20 502.25 27661.50 | 4320.90 | 253 5220 17 2
+Société Française de Bienfaisance, Kairouan | » » » » » | » » » » » » » | » | » » » »
+Société Française de Bienfaisance, La Goulette | » » » » » | » » » » » » » | » | » » » »
+Société Musulmane de Bienfaisance, Tunis | 15128.60 132063.65 105000 34585.75 286778.00 | 72926.26 45716.15 126362.10 » 16949.65 3960.20 265614.36 | 20863.64 | 2470 2270 550 17
+Société Musulmane de Bienfaisance du Kef | 21369.15 580.10 3000 24949.25 49898.50 | » » 14126.55 » » » 14126.55 | 10822.70 | 195 » » 8
+Société Musulmane de Bienfaisance de Sousse | 861.96 5488.45 5000 14546.00 25896.41 | 300 13534.70 3486.65 » 642.70 435 18399.05 | 7497.36 | 2264 2103 147 14
+Société Musulmane de Bienfaisance de Nabeul | » » » » » | » » » » » » » | » | » » » »
+Société Musulmane de Bienfaisance de Kairouan | 13578.30 17179.10 4000 31089.25 65846.65 | 29050.90 14791.55 » » » 1571.55 45414.00 | 20432.65 | » » » »
+Société Musulmane de Bienfaisance de Béja | » » » » » | » » » » » » » | » | » » » »
+Société Musulmane de Bienfaisance de Tozeur | » 3603.70 1500 3500.00 8603.70 | 31.50 5795.50 16 300 35 » 6218.00 | 2385.70 | 400 15 1 »
+Société Musulmane de Bienfaisance de Bizerte | 1177.22 5317.00 5000 3393.65 14887.87 | 138.65 6363.00 5481 » 65 » 12047.65 | 2840.22 | 2145 727 7 12
+Société Musulmane de bienfaisance de Ferryville | 1299.00 952.50 » 1301.50 3553.00 | 1124.90 797.50 676.90 » » » 2599.30 | 953.70 | 66 38 17 11
+Société Musulmane de Bienfaisance de Sfax | 13649.00 3932.00 1500 3678.00 22759.00 | 1813.80 11509.75 » » » 6036.00 19359.55 | 3399.45 | 1857 1574 » »
+Société Musulmane de Bienfaisance de Monastir | 4109.12 4927.30 1500 5400.15 15936.57 | » » 13145.87 » » 1480.85 14626.72 | 1309.85 | 88 88 » »
+Société de Secours aux Blessés militaires, Tunis | 262509.40 46279.80 29100 6510.95 343400.15 | 1220.75 1580.00 » » 58310.80 » 61111.55 | 282288.60 | » » 88622 »
+Asile de nuit et Maternité israélites, Tunis | » 5471.00 8000 6080.40 19551.40 | 8093.55 3686.05 » » 2011.75 6833.70 21625.05 | 2073.65 | 9903 445 855 »
+Cuisines populaires israélites, Tunis | » 3434.50 16000 70101.80 89536.30 | 22467.80 61484.50 » » » » 83952.30 | 1809.20 | 81359 » » »
+Société italienne de Bienfaisance, Tunis | 1034.65 14596.20 2000 35864.25 53495.10 | 7292.00 26950.10 9410 » 282 2649.20 46583.30 | 6911.80 | 394 1432 326 426
+Société Italienne de Bienfaisance de Bizerte | » » » » » | » » » » » » » | » | » » » »
+Société Italienne de Bienfaisance de Sfax | » » » » » | » » » » » » » | » | » » » »
+Croix Verte de Tunis | 1714.67 10486.60 3800 7528.85 23530.12 | 14953.20 2985.75 » » » 9435.50 27374.45 | » | 1097 308 662 »
+Croix Verte de Bizerte | » » » » » | » » » » » » » | » | » » » »
+Clinique Châtelier oculiste | » » » » » | » » » » » » » | » | » » » »
+Garderie Israélite, Tunis | » » » » » | » » » » » » » | » | » » » »
+Union des Femmes de France | » » » » » | » » » » » » » | » | » » » »
+Fourneau des Pauvres de Tunis | 178.92 18395 68000 36180.05 122753.97 | 20250 88568 » » 7620 3972 120410 | 2343.97 | 450 175560 11856 »
+Protection de la Jeune Fille | 2292.75 1825 8500 47150 59767.75 | 11480 42558 » 250 » 3156 57444 | 2323.75 | 98 » » »
+Dispensaire Alapetite, Tunis | 84.86 100 60499 9195.25 69879.11 | 34247.70 » » » » 35631.41 69879.11 | » | » » 117808 »
+Œuvre de la Crèche de Tunis | 8568.69 13318.60 58000 4353.21 84240.50 | 32137.55 » » » » 26940.54 59078.09 | 25162.41 | 615 83735 615 »
+Œuvre Française de Protection du 1er âge | » 2580.25 10000 9070 21650.25 | 585.50 » » » » 20338.60 20924.10 | » | 200 6850 3800 »
+Institut Héliothérapique du Kram | 6861.90 73009 70000 32130 182000.90 | 39808 » » » 130020.45 » 169828.45 | 12172.45 | 33055 » » »
+Vestiaire Central de Tunis | 6296.46 » 7000 325742.59 339039.05 | 11035.85 11976.30 » 40086.05 » 191168.55 254266.75 | 84772.30 | 8481 8481 » »
+Goutte de Lait, Tunis | » » » » » | » » » » » » » | » | » » » »
+Goutte de Lait du Kef | 3198.05 575 1800 22730 28303.05 | 2228.90 27678.40 » » 4731 3393.60 28131.90 | 171.15 | 273 » » »
+Goutte de Lait, Mactar | 1618.65 600 1800 4200 8218.65 | 1918.40 3916.50 » » » » 5834.90 | 2383.75 | 762 1704 » »
+Goutte de Lait, Thala | 2393.65 753 1100 2000 6946.65 | 180 5845.25 » » » 45 6070.25 | 876.40 | 250 917 » »
+Goutte de Lait, Sousse | 14048.35 38912.70 1800 20854.86 75615.91 | 7030.85 12804.95 » » 797.60 1736.40 22369.80 | 53246.11 | » » » »
+Goutte de Lait, Mahdia | 293.85 215 1800 4080.60 6389.45 | 78.60 4506.40 » » » » 4585 | 1804.45 | » » » »
+Goutte de Lait, Sfax | 22799.70 18279.15 1800 23290 66168.85 | 5400.75 19519.15 » » » 10870.85 35790.75 | 30378.20 | 114 » » »
+Goutte de Lait, Gabès | » » » » » | » » » » » » » | » | » » » »
+Goutte de Lait, Djerba | 12358.15 420 1800 4000 18578.15 | 1820.05 8953.95 » » » 264.15 11038.15 | 7540 | 6500 148 » »
+Goutte de Lait, Gafsa | » » » » » | » » » » » » » | » | » » » »
+Goutte de Lait, Tozeur | 690.65 50 1800 505 3045.65 | 223.40 1075.15 » » 40.50 350.15 1689.20 | 1356.45 | 120 120 40 »
+Caisse de secours et de Bienfaisance Israélite, Sousse | » » » » » | » » » » » » » | » | » » » »
+Caisse de Secours et de Bienfaisance israélite de Bizerte | » 1796.90 3000 31973.95 36770.85 | 13798 14147.50 1422 » 1500 6287.75 33155.25 | » | 354 4046 » 19
+Caisse de Secours et de Bienfaisance Israélite de Sfax | » » » » » | » » » » » » » | » | » » » »
+TOTAUX | 425748.20 455920.07 804299 903374.61 2589341.88 | 395916.80 560309.93 342506.24 49345.04 257845.55 354900.35 1960823.91 | 613253.65 | 215804 304865 251951 677
+# Monastir "Nombre de secours en espèces" printed "p. 88"; stored 88.
+
+[institute_budget] institute=pasteur view=623 page=71 year=1928
+receipts: Subventions de l'Etat | 582050
+receipts: Subventions particulières | 4300
+receipts: Ventes de produits | 506114.40
+receipts: TOTAL DES RECETTES | 1092464.40
+expenditure: Personnel | 454634.98
+expenditure: Personnel subalterne | 107687
+expenditure: Fonctionnement des Services | 436845.53
+expenditure: TOTAL DES DÉPENSES | 999167.51
+
+[pasteur_products] view=623 page=71 year=1928
+X: Vaccin antivariolique, doses préparées et distribuées | doses | 655881
+V: Vaccin antigonococcique | doses | 6892
+V: Vaccin antistaphylococcique | doses | 3943
+V: Vaccin anticoquelucheux | doses | 6017
+V: Vaccin antityphoïdique curatif | doses | 614
+V: Vaccin antityphoïdique préventif | doses | 10938
+V: Vaccin antiméditerranéen curatif n° 1 | doses | 386
+V: Vaccin antiméditerranéen curatif n° 2 | doses | 84
+V: Vaccin antipesteux | doses | 27627
+V: Vaccin antistreptobacillaire | doses | 1367
+V: Vaccin antistreptobacillaire (fourniture industrielle) | litres | 50
+V: Emulsion de Ducrey pour cutiréaction | ampoules | 82
+V: Autovaccin | échantillons | 81
+V: Filtrat pour intradermoréaction de la fièvre méditerranéenne | ampoules | 402
+V: Toxine diphtérique pour intradermoréaction (Schick) | - | 75
+V: Sérum préventif de la rougeole (sérum de convalescents) | flacons de 10 c.c. | 10
+V: Sérum préventif du typhus exanthématique (sérum de convalescents) | flacons de 10 c.c. | 4
+P: Sérum antidiphtérique ordinaire | flacons de 10 c.c. | 3902
+P: Sérum antidiphtérique purifié à 5.000 unités | - | 453
+P: Sérum antidiphtérique purifié à 1.000 unités | - | 80
+P: Sérum antitétanique ordinaire | - | 4545
+P: Sérum antitétanique purifié à 1.500 unités | - | 9
+P: Sérum antitétanique à 5.000 unités | - | 60
+P: Sérum antistreptococcique | - | 1207
+P: Sérum antivenimeux | - | 534
+P: Sérum antidysentérique | - | 859
+P: Sérum antiméningococcique | - | 119
+P: Sérum antipneumococcique | - | 154
+P: Sérum antigangréneux (antiperfringens) | - | 234
+P: Sérum antipesteux | - | 295
+P: Tuberculine brute pour usage médical (solution mère) | - | 6
+P: Tuberculine diluée pour usage vétérinaire et pour intradermoréaction chez l'homme | - | 235
+P: Vaccin antidiphtérique (5 ampoules) | - | 134
+P: Vaccin antidiphtérique 10 cc. | - | 165
+# In this edition the two convalescent-serum lines are printed inside the "vaccins microbiens" list (no separate heading).
+
+[institute_budget] institute=arloing view=624 page=72 year=1928
+receipts: Subvention de l'Etat | 311598.24
+receipts: Ventes de produits | 244818.99
+receipts: Recettes diverses | 54217.10
+receipts: TOTAL DES RECETTES | 610634.33
+expenditure: Personnel | 159282.27
+expenditure: Dépenses diverses | 400333.99
+expenditure: TOTAL DES DÉPENSES | 569622.21
+
+[arloing_doses] view=625 page=73 year=1928 kind=serum title=c) Doses de sérums distribuées
+cols: Anticlaveleux ; Antitétanique ; Antistreptococcique ; Anticharbonneux ; Contre le charbon symptomatique ; Trypanblau
+units: cc. ; cc. ; cc. ; cc. ; cc. ; gr.
+Janvier | 1000 810 100 » » »
+Février | » 780 » » » »
+Mars | » 960 » » » 20
+Avril | 350 10 » » » »
+Mai | » 460 20 » » 20
+Juin | » 170 » » 940 5.5
+Juillet | 250 40 » » » 55
+Août | » » » 1070 » »
+Septembre | » 100 » » » »
+Octobre | » 450 40 60 » »
+Novembre | 250 460 » 700 2500 »
+Décembre | 1000 » » » » »
+TOTAUX | 2850 4240 160 1830 3440 100.5
+# Trypanblau: "5 1/2" and "100 1/2" stored as 5.5 and 100.5.
+
+[arloing_doses] view=625 page=73 year=1928 kind=vaccine title=d) Doses de vaccins distribuées
+cols: Vaccin anticharbonneux ; Vaccin anticlaveleux ; Vaccin antisymptomatique ; Vaccin contre la diphtérie aviaire ; Vaccin contre le typhon aviaire ; Solution contre la piroplasmose
+units: cc. ; cc. ; cc. ; cc. ; cc. ; cc.
+Janvier | 360 16585 300 120 » 250
+Février | 1370 5085 345 » » »
+Mars | 1949 245 930 » » »
+Avril | 2341 2370 1060 330 » 720
+Mai | 2611 14969 1825 580 » 400
+Juin | 1420 11510 750 100 » 2595
+Juillet | 300 1271 185 10 » 30
+Août | 115 124 » » » 60
+Septembre | 30 » 30 70 » 90
+Octobre | 437 » 250 » » »
+Novembre | » 1300 570 » » »
+Décembre | » 600 60 160 » »
+TOTAUX | 10933 54059 6305 1370 » 4145
+
+# Hospitals and infirmaries-dispensaries of the interior, a) Situation financière (francs; the year is the
+# edition's year, as for the interior table of health_pop). Drafted from Gallica OCR with column bands taken
+# from the page rules, then checked against the printed row and column totals and the page image.
+[hospital_finance] view=621 page=69 year=1928 cols=state ; region ; municipality ; patient_day_receipts ; other_receipts ; total_receipts ; total_expenditure
+Béja | 33858 20000 12000 21230 21051.48 108139.48 99407.72
+Bizerte | 139784 4000 18000 48421.4 3655.17 213860.57 221299.36
+Ferryville | 248425.5 3000 11000 43479.35 36490.15 342395 314308.08
+Mateur | 44500 25000 4500 57314 146 131460 107015.97
+# Souk-el-Arba: other receipts printed 31.673,85; 81.673,85 closes both the row total and the column total (494.421,54).
+Souk-el-Arba | 39500 45000 13000 37530 31673.85{tm} 216703.85 196675.5
+Grombalia | 30250 5000 3750 4510 939.55 44449.55 41637
+Nabeul | 27000 8000 4250 3194.5 5389.47 47833.97 41373.67
+Zaghouan | 14600 5350 » 7402 7.5 27359.5 25905.64
+Le Kef | 92000 70000 12000 44665 109154.04 327819.04 235746.11
+Téboursouk | 13500 10000 500 4832 6599.54 35431.54 23398.64
+Maktar | 22500 15000 » 9978 » 47478 47946.6
+Medjez-el-Bab | 27000 25000 5000 10900 38500 106400 90000
+Sousse | 92000 106000 48000 66870 2278 315148 246850
+Enfidaville | 4800 5500 » 1132 » 11432 14870.29
+Madhia | 18000 25000 26500 6511 12750 88761 76000.5
+Monastir | 38500 40000 15000 11644 26723.81 131867.81 100662.78
+Thala | 3500 3500 » 997.3 8255.3 16252.6 10981.39
+Kairouan | 78400 40000 16000 26973 41445 202818 185791.95
+Gabès | 28500 15000 5500 13452 3228 65680 92814.88
+Djerba | 16500 12000 5000 3135 62950.78 99585.78 34925.08
+Tozeur | 18212 4000 6500 1494 4453.7 34659.7 34404.02
+Médenine | 202250 » 5200 » 28730.2 236180.2 118713.74
+TOTAUX | 1233579.5 486350 211700 425664.55 494421.54 2851715.59 2360728.92
+
+# Day-cost table "Prix moyen de la journée de traitement" (number of patient-days and staff-days, expenditure
+# in francs, cost per patient-day in francs as printed: 2 or 3 decimals). Row label = year; the civil-hospital
+# table of sgt1922-sgt1925 has one row printed "Civils" (or the year), stored as the edition's year.
+[day_cost] hospital=civil view=616 page=64 years=1925 1926 1927 1928 cols=patient_days ; staff_days_fed ; staff_days_not_fed ; total_days ; expenditure ; cost_per_patient_day
+1925 | 100151 48449 16118 164718 2139991.94 21.36
+1926 | 98762 41687 3518 143967 2536647.65 25.68
+1927 | 110052 76147 39000 225199 3261440.95 29.63
+1928 | 110381 47427 26372 184180 3329666.26 30.16
+
+[day_cost] hospital=sadiki view=617 page=65 years=1919 1920 1921 1922 1923 1924 1925 1926 1927 1928 cols=patient_days ; staff_days_fed ; staff_days_not_fed ; total_days ; expenditure ; cost_per_patient_day
+1919 | 76331 39256 2590 118177 401908.44 5.262
+1920 | 78262 39785 3640 121687 678655.50 8.671
+1921 | 81581 42125 4045 127751 792307.74 9.711
+1922 | 82306 45990 4745 133046 810819.95 9.851
+1923 | 89047 31390 18480 138917 959638.75 10.889
+1924 | 89037 31955 18965 139957 1102826.62 12.386
+1925 | 88810 30185 18505 137500 1229658.95 13.845
+1926 | 90507 29200 20425 140132 1517312.08 16.764
+1927 | 88784 32540 20970 142294 1985314.45 22.361
+1928 | 90666 32850 21535 145051 1934560.07 21.337
+
+[day_cost] hospital=rabta view=619 page=67 years=1924 1925 1926 1927 1928 cols=patient_days ; staff_days_fed ; staff_days_not_fed ; total_days ; expenditure ; cost_per_patient_day
+1924 | 12495 3576 2190 18261 152752.29 12.225
+1925 | 16543 4817.5 2460 23820.50 233886.51 14.138
+1926 | 26091 5795 3474 35360 306649.76 11.752
+1927 | 27134 7718 4080 38932 425029.46 15.674
+1928 | 28352 8265 3314 39931 474031.91 11.811

@@ -1,0 +1,43 @@
+# sgt1928 pp.50-51, views 602-603 (volume bpt6k91056510), lower half of the water page (left) and of the gas page
+# (right): "a) Electricité : longueur des canalisations ; puissance des installations ; abonnés ; consommation ;
+# produits". NEW LAYOUT (that of sgt1929-sgt1930, section @elec28, file communes_electricity_1928.csv). View 602:
+# localities, length (mètres), power of the installations in service at 31 December 1928 (Kws: Eclairage, Autres
+# usages, TOTAL), subscribers (Eclairage, Autres usages, TOTAL), kWh consumed (KILOWATHEURES CONSOMMÉS) by private
+# customers (Particuliers: Eclairage, Force); view 603: kWh Ville (Eclairage, Force), kWh TOTAL, Produits bruts
+# (Particuliers Eclairage / Force, Ville Eclairage / Force, TOTAL, francs), Redevance à la ville et droit de contrôle,
+# Droits d'occupation des sous-sols. No column totals printed. 17 localities, set solid.
+# Decimals printed with a comma ("386.023,5"), thousands with a point; written here with '.' decimal, no separator.
+# "Néant" printed in some cells: written néant (stored 0, as » ).
+# Every cell read on native-resolution crops (left page in two parts at 0.9, right page in two parts at 1.0;
+# doubtful cells at 1.8-3x). OCR agrees on every figure it reads; it misses the kWh Particuliers Force column of view
+# 602, which was read on the image only.
+# kWh Particuliers Force (view 602, against the binding): the 17 entries are set progressively higher than their
+# lines (the last ones about half a line high); they were assigned in order and every one is confirmed by its kWh
+# row total (all 17 rows check except Ariana, below).
+# Tunis kWh Particuliers Eclairage "7.469.424" and Béja "1.279.977" in smaller type (both confirmed by the row totals).
+# St-Germain kWh Ville Eclairage printed "2.114 5" = 2.114,5.
+# Power in "Kws" as printed (Tunis 122.468 + 43.418 = 165.886 Kws; sgt1929 prints 13.693 + 5.068 kW for Tunis); kept
+# as printed.
+# Row failures confirmed on the image (printed values kept): Hammam-Lif power 363.395 + 332.312 = 695.707, TOTAL
+# printed 595.707; Carthage subscribers 85 + 3 = 88, TOTAL printed 98; Hammam-Lif subscribers 693 + 24 = 717, TOTAL
+# printed 617; Ariana kWh 51.110,2 + 19.182,4 + 2.212,8 + 73,1 = 72.578,5, TOTAL printed 72.578,0; La Marsa receipts
+# 294.233,05 + 23.641,25 + 23.837,09 + 891,07 = 342.602,46, TOTAL printed 342.512,46.
+@elec28 view=602 view2=603 page=50 year=1928 left=9
+cols: len pw_l pw_o pw_t sub_l sub_o sub_t kwh_pl kwh_pf kwh_vl kwh_vf kwh_t rec_pl rec_pf rec_vl rec_vf rec_t redev droits
+La Goulette | 21702 4890 525 5415 856 14 870 187874 » 20560 » 208434 286882.17 » 31218.71 » 318100.88 » »
+Tunis | 182235 122468 43418 165886 18872 789 19661 7469424 » 362703 » 7832127 10851944.33 » 856131.47 » 11708075.80 » »
+Bizerte | 49740 14650 2596 17246 1713 67 1780 386023.5 34534.7 420558.2 » 841116.4 739329.05 » 64834.65 » 804163.70 » 82.28
+Ferryville | 12200 50 49 99 253 12 265 89400 » 12325 » 101725 159800.00 » 24650.00 » 184450.00 » »
+Sousse | 26836 10334 2800 13134 2138 114 2252 532042 » 64523 » 596565 1126984.60 » 115220.04 » 1242204.64 » »
+Sfax | 31837 16512 7024 23536 2645 125 2770 990060 » 72328 » 1062388 808284.43 » 662057.39 » 1470341.82 19997.22 »
+Béja | 10896 150 » 150 633 41 674 1279977 » 125775 » 1405752 255772.70 » 10500.00 » 266272.70 » »
+Kairouan | 27500 2212 198 2410 585 3 588 81221 » 50000 » 131221 212304.51 » 63000.00 » 275304.51 » »
+St-Germain | 7100 65725 néant 65725 122 néant 122 11652.9 néant 2114.5 néant 13767.4 22488.70 » 3284.62 » 25773.32 » »
+Mateur | 17500 194 95 289 256 21 277 49480.4 37195.7 14752.2 » 101428.3 109368.23 65528.18 26644.97 » 201541.38 » 100.00
+Carthage | 11840 112700 8657 121357 85 3 98 26714.6 777.9 6599.7 » 34092.2 49144.81 1783.29 10163.64 » 61091.74 » »
+Radès | 6440 183560 20290 203850 313 4 317 43249.0 5028.0 3193.6 » 51470.6 80884.62 8204.12 5311.05 » 94399.79 » »
+Hammam-Lif | 9760 363395 332312 595707 693 24 617 101467.0 340190.3 11653.7 1430.1 454741.1 184566.95 285613.88 16482.20 2004.39 488667.42 » »
+Gabès | 12840 710 » 710 382 5 387 470893 » 23000 » 493893 130181.00 » » » 130181.00 » »
+Sidi-bou-Saïd | 7340 143533 63748 207281 103 9 112 22061.0 12808.7 1823.4 » 36693.1 45105.00 19996.71 2869.41 néant 67971.12 » »
+Ariana | 5100 204933 37116 242049 335 10 345 51110.2 19182.4 2212.8 73.1 72578.0 94495.84 26073.29 3552.19 150.30 124271.62 » »
+La Marsa | 22940 666298 84855 751153 510 20 530 160423.7 13896.5 14995.3 183.6 189499.1 294233.05 23641.25 23837.09 891.07 342512.46 » »

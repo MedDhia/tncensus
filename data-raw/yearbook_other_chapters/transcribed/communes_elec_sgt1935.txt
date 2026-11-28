@@ -1,0 +1,73 @@
+# sgt1935: electricity tables of the Communes chapter. No year is printed in the headings; `year` = 1935 (the edition
+# year, as for the water sales and the 1934-1935 gas table of the same edition). View 53 is a blank page.
+# Tokens: no thousands separators, '.' decimal; » = 0; NNN.x? = franc/kWh part legible, decimal digit hidden in the
+# binding. Braced groups (one line of figures for several names) are stored under the joined label ' + '.
+#
+# Production d'électricité, p.32, view 52: per power station (Centrale), thermal production by steam turbines and by
+# internal-combustion engines (installed power kW; energy supplied to the networks at the plant terminals, kWh), and
+# total production (installed power kW, maximum power produced kW, energy produced kWh), with a column-total line.
+# Read on native crops (0.5-0.6 scale); OCR agrees.
+@prod view=52 page=32 year=1935
+cols: st_kw st_kwh ic_kw ic_kwh tot_kw max_kw tot_kwh
+Centrale de la Goulette | 34800 44748965 » » 34800 13000 44748965
+Centrale de Ferryville | » » 189 162922 189 132 162922
+Centrale de Bizerte | » » 1770 1392243 1770 570 1392243
+Centrale de Béja | » » 200 178883.4 200 88 178883.4
+Centrale de Souk-el-Arba | » » 368 389355.6 368 130 389355.6
+Centrale de Sousse | » » 1800 2678159 1800 930 2678159
+Centrale de Sfax | » » 2178 3052704 2178 1210 3052704
+Centrale de Gabès | » » 216 261389 216 134 261389
+Centrale de Gafsa | » » 170 154173 170 50 154173
+Totaux | 34800 44748965 6891 8269829 41691 16244 53018794
+#
+# Distribution d'électricité, Tableau I, pp.34-35, views 54-55 (two-page spread): per distributor / region, number of
+# subscribers (Éclairage, Autres usages, Haute tension, TOTAL) and energy delivered by the networks to consumers (kWh):
+# high voltage (Traction, Autres usages, Services publics, TOTAL), low voltage (Lumière et usages domestiques, Force,
+# Éclairage publics, Services publics, TOTAL), TOTAL général haute et basse tension; column-total line.
+# View 54 holds the labels to HT Autres usages (cut by the binding); view 55 from HT Services publics.
+# Read on native crops (labels + columns of view 54 at 0.62 scale; binding strip of both views; view 55 at 0.6).
+# Tramways HT Autres usages printed "5.900.714" with the decimal digit in the binding (gutter of view 55 shows "14").
+@distr1 view=54 view2=55 page=34 year=1935 left=6
+cols: sub_l sub_o sub_ht sub_t ht_traction ht_other ht_public ht_t bt_dom bt_force bt_publight bt_public bt_t total
+Compagnie des Tramways de Tunis (Banlieue de Tunis et dans un rayon de 60 km. autour de Tunis) | 9064 745 34 9573 8040798 p:5900.714 5310150.2 19251662.7 1385981.9 585267.8 135673.3 4548.3 2111471.3 21363134
+Compagnie du Gaz de Tunis (à Tunis) | 31824 1152 51 33027 » 3546770 693215 4239985 7079778 1666238 1042093 378305 10166414 14406399
+Compagnie du Gaz de Tunis (à La Goulette) | 1496 55 1 1552 » 12544 » 12544 253373 70953 48690 12017 385033 397577
+Ferryville (Fourniture C. T. T.) + Ferryville (Centrale de Ferryville) | 1010 19 » 1029 » » » » 157146 13074 38074 48882 257176 257176
+Bizerte - La Pêcherie + Région de Bizerte | 3745 130 2 3877 » 37093 82822 119915 700515 138084 56323 123238 1018160 1138075
+Béja | 744 46 » 790 » » » » 82653.7 33116.2 20769.4 » 136539.3 136539.3
+Souk-el-Arba | 303 10 » 313 » » » » 35255.7 3633.8 14793.2 » 53682.7 53682.7
+Souk-el-Khemis | 121 7 » 128 » » » » 11573.3 47528.3 12211.4 » 71313 71313
+Le Kef | 246 12 » 258 » » » » 37534.9 11050 29731.7 » 78316.6 78316.6
+Téboursouk | 73 6 » 79 » » » » 7792.1 5034 14333.4 » 27159.5 27159.5
+Concession d'État, région S. E. A., S. E. K., le Kef et Téboursouk | 3 1 21 25 » 48078.4 » 48078.4 236.7 731.5 597.3 » 1565.5 49643.9
+Sahel | 940 114 2 1056 » 6262 » 6262 74928 270047 67252 5901 418128 424390
+Sousse | 3459 116 3 3578 » 37908 » 37908 700645 261599 198342 20227 1180813 1218721
+Kairouan | 925 15 2 942 » 13000 » 13000 131939 10459 30000 » 172398 185398
+Sfax | 4346 168 65 4579 » 1277861 82977 1360838 843130 216703 192428 46324 1298585 2659423
+Gabès | 893 34 » 927 » » » » 116097.1 33261.6 53422.3 » 202781 202781
+Gafsa | 262 7 » 269 » » » » 37212 40241 21730 » 99183 99183
+Totaux | 59454 2367 181 62002 8040798 10880230.9 6169164.2 25090193.1 11655791.4 3407021.2 1976464 639442.3 17678718.9 42768912
+#
+# Distribution d'électricité, Tableau II, p.36, view 56: per power station (Centrales) and town or region
+# electrified (Villes ou régions électrifiées), length of the lines (Longueurs des lignes, mètres): high voltage,
+# low voltage; column-total line. Label = "<centrale> :: <ville ou région>". Read on a native crop (0.5 scale).
+@distr2 view=56 page=36 year=1935
+cols: len_ht len_bt
+La Goulette :: Concession Compagnie des Tramways de Tunis | 631536 251092
+La Goulette :: Tunis | 65232 193976
+La Goulette :: La Goulette | 292 27112
+Ferryville :: Ferryville (et région de Ferryville) | 4130 10250
+Bizerte :: Bizerte-Pêcherie + Région de Bizerte | 25060 54840
+Béja :: Béja | 1170 10800
+Souk-el-Arba :: Souk-el-Arba | » 4880
+Souk-el-Arba :: Souk-el-Khemis | » 2980
+Souk-el-Arba :: Le Kef | » 8295
+Souk-el-Arba :: Téboursouk | » 3900
+Souk-el-Arba :: Région Souk-el-Arba, Souk-el-Khemis, Le Kef, Téboursouk | 147950 538
+Sousse :: Sousse | 7000 18000
+Sousse :: Sahel de Sousse | 238900 172947
+Sousse :: Kairouan (fourniture Union Électrique tunisienne) | 1620 9000
+Sfax :: Sfax | 332770 41892
+Gabès :: Gabès | » 16280
+Gafsa :: Gafsa | 6226 8207
+Totaux | 1461886 834989

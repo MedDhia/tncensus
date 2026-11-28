@@ -1,0 +1,350 @@
+# Canoun des dattiers and canoun des oliviers, sgt1925. Format and reading as in finance_canoun_sgt1922.txt (every
+# cell read on native-resolution crops of the page images; gutter columns on both views; the Gallica OCR not used).
+# From this edition the caïdats are grouped by région (dattiers: 5e Région, Territoires Militaires; oliviers:
+# région, chef-lieu de région, contrôle civil, caïdat). Row labels "région ; contrôle civil ; caïdat".
+#
+# CANOUN DES DATTIERS. a) Relevé par caïdat du nombre d'arbres d'après leur âge au 1er novembre 1924, f268|f269
+# (pp. 244-245): the title still prints 1924 (sgt1924 also printed "1er novembre 1924"), but every figure differs
+# from sgt1924 and the caïdats are new (Gabès, Tozeur for L'Arad, Djerid). year = 1924 as printed.
+@dattiers_age view=268 page=244 year=1924 kind=degla
+img: all
+cols: m a0 a1 a2 a3 a4 a5 a6 a7 a8 a9
+5e Région ;  ; Gabès | 0 11 0 0 0 0 0 0 0 0 0
+5e Région ;  ; Gafsa | 0 129 0 0 0 0 372 0 0 0 0
+5e Région ;  ; Tozeur | 0 52609 0 0 0 0 20505 0 0 0 0
+Territoires militaires ;  ; Nefzaoua | 0 6178 0 0 0 0 4613 0 0 0 0
+Territoires militaires ;  ; Ouerghemma | 0 0 0 0 0 0 0 0 0 0 0
+Totaux | 0 58927 0 0 0 0 25490 0 0 0 0
+
+@dattiers_age view=269 page=245 year=1924 kind=degla
+img: all
+cols: a10 a11 a12 a13 a14 a15 a16 a17 a18 a19 tj imp tot
+5e Région ;  ; Gabès | 0 0 0 0 0 0 0 0 0 0 11 2 13
+5e Région ;  ; Gafsa | 244 0 0 0 0 277 0 0 0 0 1022 1225 2247
+5e Région ;  ; Tozeur | 10043 0 0 0 0 8176 0 0 0 0 91333 65636 156969
+Territoires militaires ;  ; Nefzaoua | 2418 0 0 0 0 1041 0 0 0 0 14250 2838 17088
+Territoires militaires ;  ; Ouerghemma | 0 0 0 0 0 0 0 0 0 0 0 0 0
+Totaux | 12705 0 0 0 0 9494 0 0 0 0 106616 69701 176317
+
+# Communs: Nefzaoua moins d'un an printed 91.022 (zoomed); its Total des jeunes 229.311, the column Totaux 531.990
+# and c) (non imposés 47 + 321.706 = 92.442 + 229.311) all require 71.022: printed value kept, flag total_mismatch.
+# Gafsa Total des jeunes printed 18.923 for 12.923 (the cells, the line Total 73.483 and c) give 12.923; check
+# column, not stored).
+@dattiers_age view=268 page=244 year=1924 kind=communs
+img: all
+cols: m a0 a1 a2 a3 a4 a5 a6 a7 a8 a9
+5e Région ;  ; Gabès | 54752 294501 0 0 0 0 101017 0 0 0 0
+5e Région ;  ; Gafsa | 6569 3057 0 0 0 0 2803 0 0 0 0
+5e Région ;  ; Tozeur | 91280 98732 0 0 0 0 42603 0 0 0 0
+Territoires militaires ;  ; Nefzaoua | 92442 91022 0 0 0 0 75660 0 0 0 0
+Territoires militaires ;  ; Ouerghemma | 7831 64678 0 0 0 0 30961 0 0 0 0
+Totaux | 252874 531990 0 0 0 0 253044 0 0 0 0
+
+@dattiers_age view=269 page=245 year=1924 kind=communs
+img: all
+cols: a10 a11 a12 a13 a14 a15 a16 a17 a18 a19 tj imp tot
+5e Région ;  ; Gabès | 44024 0 0 0 0 42920 0 0 0 0 482462 346914 884128
+5e Région ;  ; Gafsa | 3408 0 0 0 0 3655 0 0 0 0 18923 53991 73483
+5e Région ;  ; Tozeur | 24118 0 0 0 0 22372 0 0 0 0 187825 438386 717491
+Territoires militaires ;  ; Nefzaoua | 49328 0 0 0 0 33301 0 0 0 0 229311 224430 546183
+Territoires militaires ;  ; Ouerghemma | 13816 0 0 0 0 8497 0 0 0 0 117952 74562 200345
+Totaux | 134694 0 0 0 0 110745 0 0 0 0 1030473 1138283 2421630
+
+# b) f270|f271 (pp. 246-247), upper half; same tariffs as sgt1922.
+@dattiers_tariff view=270 page=246 year=1924 kind=degla tariffs="à 1,40;à 1,80;à 2 fr.;à 2,40"
+img: all
+cols: t1 t2 t3 t4 tot
+5e Région ;  ; Gabès | 0 2 0 0 2
+5e Région ;  ; Gafsa | 0 0 1225 0 1225
+5e Région ;  ; Tozeur | 545 0 1185 63906 65636
+Territoires militaires ;  ; Nefzaoua | 0 2838 0 0 2838
+Territoires militaires ;  ; Ouerghemma | 0 0 0 0 0
+Totaux | 545 2840 2410 63906 69701
+
+@dattiers_tariff view=271 page=247 year=1924 kind=communs tariffs="à 0,15;à 0,40;à 0,75;à 1,00;à 1,20"
+img: all
+cols: t1 t2 t3 t4 t5 tot
+5e Région ;  ; Gabès | 0 346914 0 0 0 346914
+5e Région ;  ; Gafsa | 0 0 0 53991 0 53991
+5e Région ;  ; Tozeur | 0 0 22916 42789 372681 438386
+Territoires militaires ;  ; Nefzaoua | 0 224430 0 0 0 224430
+Territoires militaires ;  ; Ouerghemma | 74562 0 0 0 0 74562
+Totaux | 74562 571344 22916 96780 372681 1138283
+
+# c) f270|f271, lower half. Nefzaoua indigènes communs imposés printed 224.361 (zoomed): b) and a) give 224.430 -
+# 67 = 224.363, and the column Totaux 1.130.481 also requires 224.363: printed value kept, flag total_mismatch.
+@dattiers_roll view=270 page=246 year=1924
+img: all
+cols: e_dg_i e_dg_n e_cm_i e_cm_n i_dg_i i_dg_n i_cm_i i_cm_n
+5e Région ;  ; Gabès | 0 0 3911 13146 2 11 343003 524068
+5e Région ;  ; Gafsa | 8 0 161 63 1217 1022 53830 19429
+5e Région ;  ; Tozeur | 868 4299 2364 1360 64768 87034 436022 277745
+Territoires militaires ;  ; Nefzaoua | 8 40 67 47 2830 14210 224361 321706
+Territoires militaires ;  ; Ouerghemma | 0 0 1299 1485 0 0 73263 124298
+Totaux | 884 4339 7802 16101 68817 102277 1130481 1267246
+
+@dattiers_roll view=271 page=247 year=1924
+img: all
+cols: ar_e ar_i ar_t co_e co_i co_t
+5e Région ;  ; Gabès | 38 21712 21750 26 13363 13389
+5e Région ;  ; Gafsa | 4 3270 3274 3 2336 2339
+5e Région ;  ; Tozeur | 33 9661 9694 16 5763 5779
+Territoires militaires ;  ; Nefzaoua | 6 15815 15821 4 8654 8658
+Territoires militaires ;  ; Ouerghemma | 40 8243 8283 28 6499 6527
+Totaux | 121 58701 58822 77 36615 36692
+
+# CANOUN DES OLIVIERS. a) Relevé par caïdat du nombre d'arbres d'après leur âge au 1er novembre 1925, f272|f273
+# (pp. 248-249). Columns: 1 Régions, 2 Chefs-lieux de régions, 3 Contrôles civils, 4 Caïdats (label "région
+# (chef-lieu) ; contrôle civil ; caïdat"), 5 arbres sauvages, 6 moins d'un an, 7-25 1 an .. 19 ans, 26 Total des
+# jeunes, 27 20 ans imposables, 28 Total. f272 ends with 7 ans (col. 13, repeated at the fold of f273); the 8 ans
+# column (col. 14) starts at the fold of f273, its first digits read on the edge of f272. Cap-Bon (contrôle de
+# Grombalia) printed as a brace over Nabeul and Soliman; in a) the line printed as Nabeul carries the figures of
+# Soliman (72.898 sauvages, 1.157.941 imposables, the old tithe land, = b) and c) Soliman and sgt1924 Soliman) and the
+# line printed as Soliman those of Nabeul: stored under the caïdat they belong to (flag row_realigned).
+@oliviers_age view=272 page=248 year=1925
+img: all
+cols: sv a0 a1 a2 a3 a4 a5 a6 a7
+1re Région (Bizerte) ; Béja ; Béja | 1359 0 0 0 1377 0 0 0 0
+1re Région (Bizerte) ; Bizerte ; Bizerte | 14262 0 0 7411 0 0 0 0 5692
+1re Région (Bizerte) ; Bizerte ; Mateur | 102448 0 0 0 9019 0 0 0 0
+1re Région (Bizerte) ; Souk-el-Arba ; Souk-el-Arba | 47727 0 0 0 624 0 0 0 0
+1re Région (Bizerte) ; Souk-el-Arba ; Souk-el-Khemis | 1247 0 0 0 1198 0 0 0 0
+2me Région (Tunis) ; Tunis ; Banlieue | 53858 0 0 0 21256 0 0 0 0
+2me Région (Tunis) ; Zaghouan ; Zaghouan | 7448 0 0 1898 0 645 0 0 1514
+2me Région (Tunis) ; Grombalia ; Cap-Bon - Soliman | 72898 0 0 15086 0 0 0 0 11187
+2me Région (Tunis) ; Grombalia ; Cap-Bon - Nabeul | 8477 0 0 276 86838 0 0 0 106
+3me Région (Le Kef) ; Téboursouk ; Téboursouk | 860 0 0 3864 0 0 0 0 2799
+3me Région (Le Kef) ; Le Kef ; Le Kef | 24505 0 0 3188 0 0 0 0 767
+3me Région (Le Kef) ; Le Kef ; Tadjérouine | 903 0 0 574 0 0 0 0 60
+3me Région (Le Kef) ; Mactar ; Oulad Ayar | 8760 0 0 0 1850 0 0 0 0
+3me Région (Le Kef) ; Mactar ; Oulad Aoun | 18581 0 0 0 4166 0 0 0 0
+3me Région (Le Kef) ; Medjez-el-Bab ; Medjez-el-Bab | 5397 0 0 0 3300 0 0 0 0
+4me Région (Sousse) ; Sousse ; Souassi | 767 0 0 0 0 151695 0 0 0
+4me Région (Sousse) ; Sousse ; Mahdia | 57611 0 0 0 0 238622 23426 0 0
+4me Région (Sousse) ; Sousse ; Monastir | 39921 0 0 0 151451 148143 10446 0 0
+4me Région (Sousse) ; Sousse ; Sousse | 55737 0 0 0 37639 304298 1022 0 0
+4me Région (Sousse) ; Kairouan ; Kairouan | 11074 0 0 0 27118 0 0 0 0
+4me Région (Sousse) ; Kairouan ; Djelass | 121604 0 0 0 147810 0 0 0 0
+4me Région (Sousse) ; Thala ; Fraichiches | 118 0 0 0 6123 0 0 0 0
+4me Région (Sousse) ; Thala ; Madjeurs | 494 0 0 0 8341 0 0 0 0
+5me Région (Sfax) ; Sfax ; Sfax | 21964 0 0 0 314705 0 0 0 0
+5me Région (Sfax) ; Sfax ; La Skhira | 284 0 0 93781 120250 0 0 0 9652
+5me Région (Sfax) ; Sfax ; Djebéniana | 10095 0 0 0 218394 9554 0 0 0
+5me Région (Sfax) ; Gabès ; L'Arad | 956 0 0 0 35259 0 0 0 0
+5me Région (Sfax) ; Gafsa ; Hemmama | 551 0 0 63893 0 0 0 0 9071
+5me Région (Sfax) ; Gafsa ; Gafsa | 2938 0 0 0 20033 0 0 0 0
+5me Région (Sfax) ; Tozeur ; Djerid | 1704 0 0 3936 0 0 0 0 2963
+Territoires militaires du Sud ;  ; Nefzaoua | 195 0 0 11045 0 0 0 0 4945
+Territoires militaires du Sud ;  ; Ouerghema | 7937 0 191685 0 0 0 0 87740 0
+Territoires militaires du Sud ;  ; Tataouine | 1967 0 8357 0 0 0 0 10016 0
+Totaux | 713648 0 200042 203952 1216751 852957 34894 97756 48756
+
+@oliviers_age view=273 page=249 year=1925
+img: all
+cols: a8 a9 a10 a11 a12 a13 a14 a15 a16 a17 a18 a19 tj imp tot
+1re Région (Bizerte) ; Béja ; Béja | 472 0 0 0 0 339 0 0 0 0 232 0 2420 12946 16725
+1re Région (Bizerte) ; Bizerte ; Bizerte | 0 0 0 0 9502 0 0 0 0 4246 0 0 26851 425992 467105
+1re Région (Bizerte) ; Bizerte ; Mateur | 4311 0 0 0 0 3649 0 0 0 0 1712 0 19691 18750 140889
+1re Région (Bizerte) ; Souk-el-Arba ; Souk-el-Arba | 12397 0 0 0 0 9026 0 0 0 0 15919 0 37966 9191 94884
+1re Région (Bizerte) ; Souk-el-Arba ; Souk-el-Khemis | 651 0 0 0 0 912 0 0 0 0 843 0 3574 3434 8255
+2me Région (Tunis) ; Tunis ; Banlieue | 16129 0 0 0 0 16498 0 0 0 0 10638 0 64521 804542 922921
+2me Région (Tunis) ; Zaghouan ; Zaghouan | 0 289 0 0 1322 0 238 0 0 2241 0 64 8311 83008 98767
+2me Région (Tunis) ; Grombalia ; Cap-Bon - Soliman | 0 0 0 0 8367 0 0 0 0 3429 0 0 38069 1157941 1268908
+2me Région (Tunis) ; Grombalia ; Cap-Bon - Nabeul | 33551 0 0 0 145 22732 0 0 0 125 26490 0 170263 337466 556206
+3me Région (Le Kef) ; Téboursouk ; Téboursouk | 0 0 0 0 2433 0 0 0 0 1308 0 0 9404 53487 63751
+3me Région (Le Kef) ; Le Kef ; Le Kef | 0 0 0 0 688 0 0 0 0 140 0 0 4783 29996 59284
+3me Région (Le Kef) ; Le Kef ; Tadjérouine | 0 0 0 0 116 0 0 0 0 8 0 0 758 1511 3172
+3me Région (Le Kef) ; Mactar ; Oulad Ayar | 2304 0 0 0 0 1765 0 0 0 0 579 0 6498 33084 48342
+3me Région (Le Kef) ; Mactar ; Oulad Aoun | 2670 0 0 0 0 1584 0 0 0 0 1026 0 9446 23031 51058
+3me Région (Le Kef) ; Medjez-el-Bab ; Medjez-el-Bab | 3094 0 0 0 0 4240 0 0 0 0 2712 0 13346 36967 55710
+4me Région (Sousse) ; Sousse ; Souassi | 0 69006 0 0 0 0 29280 0 0 0 0 26983 276966 58193 335926
+4me Région (Sousse) ; Sousse ; Mahdia | 0 170711 9977 0 0 0 95120 6971 0 0 0 90815 635642 865261 1558514
+4me Région (Sousse) ; Sousse ; Monastir | 71474 67588 9683 0 0 69030 63171 9378 0 0 63551 38553 702468 1520459 2262848
+4me Région (Sousse) ; Sousse ; Sousse | 10667 130205 1579 0 0 7738 101489 226 0 0 8986 65945 669794 1378974 2104505
+4me Région (Sousse) ; Kairouan ; Kairouan | 10899 0 0 0 0 5963 0 0 0 0 5248 0 49228 15115 75417
+4me Région (Sousse) ; Kairouan ; Djelass | 30967 0 0 0 0 26761 0 0 0 0 9629 0 215167 75949 412720
+4me Région (Sousse) ; Thala ; Fraichiches | 3033 0 0 0 0 1870 0 0 0 0 837 0 11863 2754 14735
+4me Région (Sousse) ; Thala ; Madjeurs | 5241 0 0 0 0 1058 0 0 0 0 532 0 15172 1938 17604
+5me Région (Sfax) ; Sfax ; Sfax | 244318 0 0 0 0 238197 0 0 0 0 216557 0 1013777 1141617 2177358
+5me Région (Sfax) ; Sfax ; La Skhira | 132633 0 0 0 9788 70350 0 0 0 3738 57537 0 597729 80189 578202
+5me Région (Sfax) ; Sfax ; Djebéniana | 155366 6980 0 0 0 110181 3618 0 0 0 136410 2055 642508 476961 1138564
+5me Région (Sfax) ; Gabès ; L'Arad | 17596 0 0 0 0 29736 0 0 0 0 67 0 82658 52898 136512
+5me Région (Sfax) ; Gafsa ; Hemmama | 0 0 0 0 7790 0 0 0 0 3349 0 0 84103 6981 91635
+5me Région (Sfax) ; Gafsa ; Gafsa | 7619 0 0 0 0 5106 0 0 0 0 7545 0 40303 134988 178229
+5me Région (Sfax) ; Tozeur ; Djerid | 0 0 0 0 3380 0 0 0 0 2617 0 0 12896 21481 36081
+Territoires militaires du Sud ;  ; Nefzaoua | 0 0 0 0 7625 0 0 0 0 36 0 0 23651 9636 33482
+Territoires militaires du Sud ;  ; Ouerghema | 0 0 0 82196 0 0 0 0 45536 0 0 0 407157 149210 564304
+Territoires militaires du Sud ;  ; Tataouine | 0 0 0 8262 0 0 0 0 6146 0 0 0 32781 39947 74696
+Totaux | 765392 444779 21239 90458 51156 626735 293016 16575 51682 21237 568020 224367 5829764 9103897 15647309
+# Failing checks of a), each re-read zoomed (printed values kept): Téboursouk 2 ans 3.864 (Total des jeunes and the
+# column Totaux require 2.864); Mateur 18 ans 1.712 and Souk-el-Khemis 18 ans 843 (the two Totals des jeunes and the
+# column Totaux require 2.712 and 813); Zaghouan 14 ans 238 (338); Souassi 19 ans 26.983 (26.985) and Djebéniana
+# 19 ans 2.055 (2.005); Djebéniana sauvages 10.095 (19.095) and Tataouine sauvages 1.967 (1.968), from the line
+# Totals and the column Totaux; Cap-Bon - Nabeul (line printed as Soliman) 20 ans imposables 337.466 (377.466: the line Total and the column
+# Totaux). La Skhira Total des jeunes printed 597.729 for 497.729 (check column).
+
+# b) Répartition des arbres imposables par catégorie du tarif, f274|f275 (pp. 250-251); the ten tariffs of sgt1923.
+@oliviers_tariff view=274 page=250 year=1925 tariffs="0,05;0,10;0,15;0,20;0,25;0,30;0,40;0,50;0,75;1,00"
+img: all
+cols: t1 t2 t3
+1re Région (Bizerte) ; Béja ; Béja | 112 443 17
+1re Région (Bizerte) ; Bizerte ; Bizerte | 0 0 0
+1re Région (Bizerte) ; Bizerte ; Mateur | 5 496 0
+1re Région (Bizerte) ; Souk-el-Arba ; Souk-el-Arba | 0 0 0
+1re Région (Bizerte) ; Souk-el-Arba ; Souk-el-Khemis | 0 0 25
+2me Région (Tunis) ; Tunis ; Banlieue | 0 0 0
+2me Région (Tunis) ; Zaghouan ; Zaghouan | 0 0 0
+2me Région (Tunis) ; Grombalia ; Cap-Bon - Nabeul | 7160 17748 41945
+2me Région (Tunis) ; Grombalia ; Cap-Bon - Soliman | 0 0 0
+3me Région (Le Kef) ; Téboursouk ; Téboursouk | 1020 1179 1846
+3me Région (Le Kef) ; Le Kef ; Le Kef | 92 29 532
+3me Région (Le Kef) ; Le Kef ; Tadjérouine | 548 104 347
+3me Région (Le Kef) ; Mactar ; Oulad Ayar | 2911 6279 7913
+3me Région (Le Kef) ; Mactar ; Oulad Aoun | 603 2352 4224
+3me Région (Le Kef) ; Medjez-el-Bab ; Medjez-el-Bab | 457 565 3849
+4me Région (Sousse) ; Sousse ; Souassi | 918 23 331
+4me Région (Sousse) ; Sousse ; Mahdia | 3453 43667 56444
+4me Région (Sousse) ; Sousse ; Monastir | 8811 21952 60021
+4me Région (Sousse) ; Sousse ; Sousse | 1437 3386 14551
+4me Région (Sousse) ; Kairouan ; Kairouan | 125 735 104
+4me Région (Sousse) ; Kairouan ; Djelass | 5195 4166 3316
+4me Région (Sousse) ; Thala ; Fraichiches | 0 0 7
+4me Région (Sousse) ; Thala ; Madjeurs | 0 0 0
+5me Région (Sfax) ; Sfax ; Sfax | 287 0 5258
+5me Région (Sfax) ; Sfax ; La Skhira | 998 2353 542
+5me Région (Sfax) ; Sfax ; Djebéniana | 21 10399 27510
+5me Région (Sfax) ; Gabès ; L'Arad | 5758 25630 6849
+5me Région (Sfax) ; Gafsa ; Hemmama | 0 1732 0
+5me Région (Sfax) ; Gafsa ; Gafsa | 0 11755 0
+5me Région (Sfax) ; Tozeur ; Djerid | 31 1835 2888
+Territoires militaires du Sud ;  ; Nefzaoua | 1849 26 4070
+Territoires militaires du Sud ;  ; Ouerghema | 17576 25425 17943
+Territoires militaires du Sud ;  ; Tataouine | 14 784 559
+Totaux | 59381 183063 261051
+
+@oliviers_tariff view=275 page=251 year=1925 tariffs="0,05;0,10;0,15;0,20;0,25;0,30;0,40;0,50;0,75;1,00"
+img: all
+cols: t4 t5 t6 t7 t8 t9 t10 dime tot
+1re Région (Bizerte) ; Béja ; Béja | 0 1392 2092 0 4347 4543 0 0 12946
+1re Région (Bizerte) ; Bizerte ; Bizerte | 0 0 0 0 0 0 0 425992 425992
+1re Région (Bizerte) ; Bizerte ; Mateur | 989 0 2008 4834 7693 2725 0 0 18750
+1re Région (Bizerte) ; Souk-el-Arba ; Souk-el-Arba | 43 285 4247 1299 2486 831 0 0 9191
+1re Région (Bizerte) ; Souk-el-Arba ; Souk-el-Khemis | 491 0 610 667 828 813 0 0 3434
+2me Région (Tunis) ; Tunis ; Banlieue | 0 0 0 0 0 0 0 804542 804542
+2me Région (Tunis) ; Zaghouan ; Zaghouan | 26 0 877 0 340 4 0 81751 83008
+2me Région (Tunis) ; Grombalia ; Cap-Bon - Nabeul | 105642 54287 104503 37865 6899 110 0 1307 377466
+2me Région (Tunis) ; Grombalia ; Cap-Bon - Soliman | 0 0 0 0 0 0 0 1157941 1157941
+3me Région (Le Kef) ; Téboursouk ; Téboursouk | 1396 2674 13595 11271 18212 2294 0 0 53487
+3me Région (Le Kef) ; Le Kef ; Le Kef | 688 0 5667 4575 18413 0 0 0 29987
+3me Région (Le Kef) ; Le Kef ; Tadjérouine | 99 0 262 80 41 30 0 0 1511
+3me Région (Le Kef) ; Mactar ; Oulad Ayar | 4914 6920 3145 896 101 5 0 0 33084
+3me Région (Le Kef) ; Mactar ; Oulad Aoun | 4356 2940 4010 3875 662 9 0 0 23031
+3me Région (Le Kef) ; Medjez-el-Bab ; Medjez-el-Bab | 6355 2335 11125 5523 3029 1729 0 0 36977
+4me Région (Sousse) ; Sousse ; Souassi | 0 7414 0 0 19796 29711 0 0 58193
+4me Région (Sousse) ; Sousse ; Mahdia | 117302 47513 219851 167258 128843 80930 0 0 865261
+4me Région (Sousse) ; Sousse ; Monastir | 123257 147382 441830 346489 266306 104411 0 0 1520459
+4me Région (Sousse) ; Sousse ; Sousse | 17802 26443 114562 134469 397738 668596 0 0 1378974
+4me Région (Sousse) ; Kairouan ; Kairouan | 252 684 506 1065 3270 8368 0 0 15115
+4me Région (Sousse) ; Kairouan ; Djelass | 9472 10226 14918 3013 15312 10331 0 0 75949
+4me Région (Sousse) ; Thala ; Fraichiches | 0 0 236 0 1158 1410 0 0 2754
+4me Région (Sousse) ; Thala ; Madjeurs | 0 0 0 0 525 1353 0 0 1938
+5me Région (Sfax) ; Sfax ; Sfax | 4 0 14176 2286 50069 706155 363382 0 1141617
+5me Région (Sfax) ; Sfax ; La Skhira | 10 213 689 108 16388 55045 3843 0 80189
+5me Région (Sfax) ; Sfax ; Djebéniana | 73847 112 35298 21270 28411 245879 34214 0 476961
+5me Région (Sfax) ; Gabès ; L'Arad | 7173 4314 2319 339 462 54 0 0 52898
+5me Région (Sfax) ; Gafsa ; Hemmama | 0 4022 159 0 680 388 0 0 6981
+5me Région (Sfax) ; Gafsa ; Gafsa | 0 23515 33196 0 38218 28304 0 0 134988
+5me Région (Sfax) ; Tozeur ; Djerid | 2081 7927 4741 0 1977 41 0 0 21481
+Territoires militaires du Sud ;  ; Nefzaoua | 1023 44 2572 22 30 0 0 0 9636
+Territoires militaires du Sud ;  ; Ouerghema | 18264 13461 23660 4661 17443 10787 0 0 149210
+Territoires militaires du Sud ;  ; Tataouine | 249 2393 3231 4 10733 21980 0 0 39947
+Totaux | 495741 366486 1064085 751869 1060403 1988836 401439 2470343 9103897
+# b): every failing figure re-read zoomed and confirmed as printed. Cells identified by both the line TOTAL and the
+# column Totaux (flag total_mismatch): Djerid 0,15 2.888 (2.848), Medjez-el-Bab 0,75 1.729 (3.729), Sousse 0,25
+# 26.443 (26.433), Kairouan 0,20 252 (258); Fraichiches and Madjeurs 0,75 (1.410 and 1.353; sgt1924 prints 1.353 and
+# 1.410) do not fit their TOTALs either way. Not attributable: Zaghouan (+10), Ouerghema (-10), Le Kef TOTAL 29.987
+# for 29.996, Madjeurs 0,50 525, Totaux 0,15, 0,20, 0,50, dime, TOTAL.
+
+# c) Répartition entre les européens et les indigènes, f276|f277 (pp. 252-253). In this edition the Imposés
+# columns (Européens, Indigènes, TOTAL) are on f276, the Non imposés (jeunes et sauvages), articles and comptes
+# on f277. Every failing figure re-read zoomed.
+@oliviers_roll view=276 page=252 year=1925
+img: all
+cols: imp_e imp_i imp_t
+1re Région (Bizerte) ; Béja ; Béja | 1003 11943 12946
+1re Région (Bizerte) ; Bizerte ; Bizerte | 38935 387057 425992
+1re Région (Bizerte) ; Bizerte ; Mateur | 10499 8251 18750
+1re Région (Bizerte) ; Souk-el-Arba ; Souk-el-Arba | 4276 4915 9191
+1re Région (Bizerte) ; Souk-el-Arba ; Souk-el-Khemis | 4 3430 3434
+2me Région (Tunis) ; Tunis ; Banlieue | 88390 716152 804542
+2me Région (Tunis) ; Zaghouan ; Zaghouan | 21519 61489 83008
+2me Région (Tunis) ; Grombalia ; Cap-Bon - Nabeul | 11800 365666 377466
+2me Région (Tunis) ; Grombalia ; Cap-Bon - Soliman | 106257 1051684 1157941
+3me Région (Le Kef) ; Téboursouk ; Téboursouk | 1956 51531 53487
+3me Région (Le Kef) ; Le Kef ; Le Kef | 1612 28384 29906
+3me Région (Le Kef) ; Le Kef ; Tadjérouine | 3 1508 1511
+3me Région (Le Kef) ; Mactar ; Oulad Ayar | 338 32746 33084
+3me Région (Le Kef) ; Mactar ; Oulad Aoun | 90 22941 23031
+3me Région (Le Kef) ; Medjez-el-Bab ; Medjez-el-Bab | 8471 28496 36967
+4me Région (Sousse) ; Sousse ; Souassi | 148 53045 58193
+4me Région (Sousse) ; Sousse ; Mahdia | 52719 812542 865261
+4me Région (Sousse) ; Sousse ; Monastir | 59521 1460938 1520459
+4me Région (Sousse) ; Sousse ; Sousse | 56182 1322792 1378974
+4me Région (Sousse) ; Kairouan ; Kairouan | 352 14763 15115
+4me Région (Sousse) ; Kairouan ; Djelass | 13411 62538 75949
+4me Région (Sousse) ; Thala ; Fraichiches | 2 2752 2754
+4me Région (Sousse) ; Thala ; Madjeurs | 0 1938 1938
+5me Région (Sfax) ; Sfax ; Sfax | 157397 984220 1141617
+5me Région (Sfax) ; Sfax ; La Skhira | 26180 54009 80189
+5me Région (Sfax) ; Sfax ; Djebéniana | 34446 442515 476961
+5me Région (Sfax) ; Gabès ; L'Arad | 18277 34621 52898
+5me Région (Sfax) ; Gafsa ; Hemmama | 566 6415 6981
+5me Région (Sfax) ; Gafsa ; Gafsa | 60 134928 134988
+5me Région (Sfax) ; Tozeur ; Djerid | 1942 19539 21481
+Territoires militaires du Sud ;  ; Nefzaoua | 0 9636 9636
+Territoires militaires du Sud ;  ; Ouerghema | 6845 142365 149210
+Territoires militaires du Sud ;  ; Tataouine | 0 39947 39947
+Totaux | 723201 8380696 9103897
+
+@oliviers_roll view=277 page=253 year=1925
+img: all
+cols: non_e non_i non_t ar_e ar_i ar_t co_e co_i co_t
+1re Région (Bizerte) ; Béja ; Béja | 513 3266 3779 31 977 1008 30 877 907
+1re Région (Bizerte) ; Bizerte ; Bizerte | 7116 33997 41113 598 11146 11744 215 4640 4855
+1re Région (Bizerte) ; Bizerte ; Mateur | 48900 73239 122139 54 586 640 46 578 624
+1re Région (Bizerte) ; Souk-el-Arba ; Souk-el-Arba | 55563 30130 85693 16 487 503 15 426 441
+1re Région (Bizerte) ; Souk-el-Arba ; Souk-el-Khemis | 128 4693 4821 7 459 466 7 456 463
+2me Région (Tunis) ; Tunis ; Banlieue | 40014 78365 118379 1405 9202 10607 715 4799 5514
+2me Région (Tunis) ; Zaghouan ; Zaghouan | 7557 8202 15759 68 1525 1593 43 725 778
+2me Région (Tunis) ; Grombalia ; Cap-Bon - Nabeul | 9833 168907 178740 288 28036 28324 119 13006 13125
+2me Région (Tunis) ; Grombalia ; Cap-Bon - Soliman | 26198 84767 110967 459 8704 9163 165 3611 3776
+3me Région (Le Kef) ; Téboursouk ; Téboursouk | 2971 7293 10264 33 982 1015 24 777 801
+3me Région (Le Kef) ; Le Kef ; Le Kef | 1709 27579 29288 59 1265 1324 27 739 766
+3me Région (Le Kef) ; Le Kef ; Tadjérouine | 361 1300 1661 5 188 193 3 174 177
+3me Région (Le Kef) ; Mactar ; Oulad Ayar | 1507 13751 15258 44 5016 5060 7 1973 1980
+3me Région (Le Kef) ; Mactar ; Oulad Aoun | 10018 18009 28027 21 3125 3146 5 1247 1252
+3me Région (Le Kef) ; Medjez-el-Bab ; Medjez-el-Bab | 7766 10977 18743 117 1121 1238 140 841 981
+4me Région (Sousse) ; Sousse ; Souassi | 95 277638 277733 3 6178 6181 2 4455 4457
+4me Région (Sousse) ; Sousse ; Mahdia | 20729 672524 693253 1226 61642 62868 168 20517 20685
+4me Région (Sousse) ; Sousse ; Monastir | 28178 714211 742389 1000 110611 111611 324 42776 43100
+4me Région (Sousse) ; Sousse ; Sousse | 127910 597621 725531 1707 73453 75160 803 32519 33315
+4me Région (Sousse) ; Kairouan ; Kairouan | 574 59728 60302 21 1248 1269 11 928 939
+4me Région (Sousse) ; Kairouan ; Djelass | 84035 252736 336771 180 4152 4332 145 3638 3783
+4me Région (Sousse) ; Thala ; Fraichiches | 44 11937 11981 6 522 528 6 298 304
+4me Région (Sousse) ; Thala ; Madjeurs | 10006 5660 15666 2 276 278 2 258 260
+5me Région (Sfax) ; Sfax ; Sfax | 427610 608131 1035741 1843 22803 24736 1377 17418 18795
+5me Région (Sfax) ; Sfax ; La Skhira | 269777 228236 498013 416 3486 3902 340 2530 2870
+5me Région (Sfax) ; Sfax ; Djebéniana | 62023 599580 661603 481 17204 17685 231 9320 9551
+5me Région (Sfax) ; Gabès ; L'Arad | 2279 81335 83614 10 7527 7537 10 4876 4886
+5me Région (Sfax) ; Gafsa ; Hemmama | 24858 59796 84654 19 1241 1260 16 1167 1183
+5me Région (Sfax) ; Gafsa ; Gafsa | 985 42256 43241 2 11580 11482 2 5631 5633
+5me Région (Sfax) ; Tozeur ; Djerid | 1121 13479 14600 27 1343 1370 15 1039 1054
+Territoires militaires du Sud ;  ; Nefzaoua | 162 23684 23846 2 2583 2585 2 1745 1747
+Territoires militaires du Sud ;  ; Ouerghema | 53914 361180 415094 103 25039 25142 40 15462 15502
+Territoires militaires du Sud ;  ; Tataouine | 665 34084 34749 2 17701 17703 2 10915 10917
+Totaux | 1335119 5208293 6543412 10255 441498 451753 5057 210364 215421
+# c) failing checks: Souassi indigènes imposés printed 53.045 (zoomed; the line TOTAL 58.193 and the column Totaux
+# require 58.045) and Sfax articles indigènes 22.803 (zoomed; TOTAL and Totaux require 22.893): flag total_mismatch.
+# The c) Cap-Bon lines are printed in the right order (Nabeul 377.466 imposés, as in b)). Smaller unattributed
+# differences: Zaghouan comptes TOTAL, Le Kef imposés TOTAL 29.906, Sousse comptes TOTAL, Gafsa articles TOTAL
+# 11.482, Totaux non imposés indigènes, comptes indigènes (check figures).

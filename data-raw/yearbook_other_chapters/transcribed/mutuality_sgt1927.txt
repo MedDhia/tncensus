@@ -1,0 +1,229 @@
+# Statistique générale de la Tunisie, mutuality / economic institutions chapter, edition sgt1927. Format: yb_tables.py.
+
+# Crédit mutuel agricole (1918-1927), f490 (p. 462). a) Caisses locales françaises et indigènes: Caisses françaises / Caisses indigènes (nombre de caisses, nombre d'adhérents); b) Effets escomptés (nombre, montant fr. c.).
+@credit_caisses view=490 page=462
+img: all
+cols: fr_caisses fr_members ind_caisses ind_members
+1918 | 24 517 38 1429
+1919 | 24 514 38 1429
+1920 | 24 508 38 1429
+1921 | 37 668 38 1429
+1922 | 40 735 38 1429
+1923 | 47 2250 38 952
+1924 | 49 2946 38 952
+1925 | 57 3496 34 850
+1926 | 57 3723 34 850
+1927 | 64 3950 34 850
+@credit_bills view=490 page=462
+img: all
+cols: bills amount
+1918 | 256 328950
+1919 | 107 279840.50
+1920 | 12 23320.30
+1921 | 459 2355656.60
+1922 | 2510 13552423.85
+1923 | 5720 26010703.85
+1924 | 5284 31529289.40
+1925 | 5505 33188515.45
+1926 | 6043 30541110.20
+1927 | 7437 68295411.28
+
+# Coopérative centrale des agriculteurs (1918-1927), f491 (p. 463).
+# No TOTAUX lines printed.
+@coop_parts view=491 page=463
+img: all
+cols: p50 sums
+1918 | 0 0
+1919 | 0 0
+1920 | 0 0
+1921 | 61 3050
+1922 | 65 3250
+1923 | 74 3700
+1924 | 215 10750
+1925 | 379 18950
+1926 | 921 46050
+1927 | 698 34900
+@coop_business view=491 page=463
+img: all
+cols: goods seeds labour spring harvest fertiliser tractors loans_total outstanding
+1918 | 1889092.17 653870.35 82826 116050 441438.20 6931 0 1301115.55 3407
+1919 | 1494406.11 625854.55 82310 93734.35 329770 272240.40 0 1403909.30 39956.15
+1920 | 2840290 69710 5850 0 0 35360 1061102.85 1172022.85 305544.40
+1921 | 2461269.75 91127.60 0 0 0 0 0 91127.60 0
+1922 | 4266075.62 0 0 0 0 0 175331.45 175331.45 0
+1923 | 6942374.25 0 0 0 0 0 0 0 0
+1924 | 5277892.85 0 0 0 0 0 0 0 0
+1925 | 6290270.05 0 0 0 0 0 0 0 0
+1926 | 7014150.70 0 0 0 0 0 0 0 0
+1927 | 7775000 0 0 0 0 0 0 0 0
+
+
+# Assurances mutuelles agricoles (1918-1927), spread f492|f493 (pp. 464|465). a) Incendie, b) Grêle; layout of
+# sgt1923. No totals printed. Read on 0.8 whole-half crops.
+@ins_fire view=492 page=464 rview=493 rpage=465 split=claims
+img: all
+cols: policies insured contrib_local contrib_regional contrib_central subsidy_local subsidy_regional misc_local misc_regional claims indemn_local indemn_regional indemn_central costs_local costs_regional costs_central deficit_local gen_local gen_regional
+1918 | 754 40871907 970.03 1963.18 208746.15 833.33 1666.67 0 7840.83 10 526.67 1053.28 123995.54 7235.12 6532.31 0 0 0 0
+1919 | 740 41777790 1933.20 3866.59 206499.80 883 1667 0 13759.57 24 1049.21 2098.58 69192.02 9383.50 10468.54 0 150.43 0 0
+1920 | 833 56992723 3571.30 7166.51 266987.18 3333 6667 0 10517.70 14 1851.20 3702.40 109494.25 14040.07 13779.83 2167.95 0 0 0
+1921 | 1140 78824053 7243.05 14486.12 375836.22 3333 6667 0 16826.42 0 13922.09 27843.85 325553.83 20569.88 12588.99 0 0 0 0
+1922 | 1128 67386247 15087.88 30174.44 248815.36 3333 31667 0 57578.78 21 4747.65 9495.29 90803.95 1056.13 22231.92 0 0 0 0
+1923 | 1332 97751061 4483963 183140.69 227971.32 5000 20000 8229.22 28961.56 14 28238.24 116755.41 146194.26 1217.15 4865.73 6085.58 0 24119.41 22602.37
+1924 | 1300 100408820 45641.68 182566.76 228208.44 5000 20000 10868.60 47912.51 22 18371.68 75534.92 93906.60 500.50 2181.99 2682.49 0 22820.80 24218.80
+1925 | 1486 148097250! 71069.70 284278.97 355348.67 5000 20000 23778 83322.20 45 74432.35 297729.42 372161.77 2271 9084.04 11355.05 23778.97 39637.60 35003.36
+1926 | 1688 199201242 97369.93 389480.50 486850.43 0 25000 15329.22 75318.71 38 69392.15 277568.72 346960.87 1902.20 7608.84 9511.04 7264.05 57168.57 48404.94
+1927 | 2026 240604659 104221.14 416884.59 521105.73 0 25000 15633.17 88688.67 46 42962.69 171850.80 214813.49 2670.66 10682.64! 13353.30 0 60044.86 73790.28
+@ins_hail view=492 page=464 rview=493 rpage=465 split=claims
+img: all
+cols: policies insured contrib_local contrib_regional contrib_central subsidy_local subsidy_regional misc_local misc_regional claims indemn_local indemn_regional indemn_central costs_local costs_regional costs_central deficit_local gen_local gen_regional
+1918 | 327 21167932 6811.87 32293.55 143369.04 1400 5600 0 2128.31 42 11252.77 45011.01 194248.24 7804.86 9510.56 0 10838.16 0 0
+1919 | 331 20199860 10346.68 26712.65 134886.92 1400 5600 0 2276.52 17 2017.44 8069.75 47071.70 8417.20 17205.26 0 0 0 0
+1920 | 342 30963842 10077.56 40070.28 264117.09 2600 10400 0 3187.29 7 446.10 1784.44 7852.06 16389.19 15193.09 434.61 0 0 0
+1921 | 518 47828184 15325.87 61363.21 370287.32 600 10400 0 1447.48 40 22343.76 89374.94 464531.25 23752.41 46926.12 0 13519.08 0 0
+1922 | 478 29016341 13121.29 52485.65 211655.75 2600 12400 0 42522.27 18 3484.50 13948.08 35102.77 332.32 24062.49 0 0 0 0
+1923 | 668 56933140 59631.02 238524.62 298155.64 5000 20000 16382.01 45415.97 27 17425.62 69702.51 87128.14 563.48 2290.66 2854.05 0 31637.66 53855.25
+1924 | 498 46339835 38158.14 152634.96 190793.72 5000 20000 11086.60 28258.18! 14 8789.60 35158.48 43948.02 285.93 1143.72 1429.65 0 19079.37 26988.60
+1925 | 576 71000282 60924.86 243699.46 304624.32 5000 20000 5319.19 51012.79! 7 2104.61 8418.44 10523.05 284.92 1139.68 1424.60 0 34351.44 73377.54
+1926 | 566 91734691 67375.65 269512.63 336888.28 0 25000 16622.37 80191.38 28 21870.68 87482.74 109353.43 608.64 2434.59 3043.22 0 37458.17 82025.99
+1927 | 580 91678302 64412.82! 257698.51 322111.67 0 25000 9661.92 66406.88 60 118697.61 474790.47 593488.07 2219.69 8878.79 11098.48 60372.80! 34802.12 69866.85
+
+# Sociétés indigènes de prévoyance, opérations (1918-1927), f494|f495 (pp. 466|467). Same layout as sgt1926. Reste à recouvrer printed once, 36.132.211,33, braced against every line (= TOTAUX): typed on 1927.
+@prev view=494 page=466
+img: all
+cols: seed camp subs mort adv total cancel diff r_seed r_camp r_subs r_mort r_adv r_total outstanding
+1918 | 539948.26 0 216157.60 121.65 897618.69 1653846.20 4657.95 1649188.25 1539847.18 0 72435.35 80311.01 133936.31 1826529.85 -
+1919 | 463935.91 0 0 1089.75 160505.27 625530.93 2953.65 622577.28 678622.39 0 68240.01 166218.97 396838.72 1309920.09 -
+1920 | 1515500.77 0 0 12493.45 185928.79 1713923.01 0 1713923.01 397445.50 0 17840.57 127727.28 237129.64 780142.99 -
+1921 | 15020044.43 0 9254466.72 169378.90 575204.23 25019094.28 0 25019094.28 12638968.98 0 3443662.63 70142.71 296341.80 16449116.12 -
+1922 | 3143548.80 0 0 859241.48 663348.95 4666139.23 347533.40 4318605.83 1975440.91 0 966407.78 112424.25 709089.51 3763362.45 -
+1923 | 19024251.65 627411.60 6584987.05 2617278.74 877229.50 29731158.54 144841.13 29586317.41 15915723.27 547605.66 2492970.87 144189.09 368217.21 19468706.10 -
+1924 | 2653500.11 118085 24616.40 659857.70 582713.70 4038772.91 41595.10 3997177.81 1748821.05 139750.40 356718.67 252223.48 208957.85 2706471.45 -
+1925 | 29779643.23 167142 6629818.12 1050292.81 335844.10 37962740.26 613693.99 37349046.27 11033675.79 150709.84 409509.36 312748.74 373546.84 12280190.57 -
+1926 | 13569478.97 25540 98854.10 925257.90 165159.60 14784290.57 112972.88 14671317.69 24665653.24 24628.09 2471325.89 634271.25 237999.89 28033878.36 -
+1927 | 7194402.63 122050 0 301363.60 497855 8115671.23 161049.65 7954621.58 2640471.36 91661.95 480885.37 595071.31 323250.13 4131340.12 36132211.33
+TOTAUX | 92904254.76 1060228.60 22808899.99 6596375.98 4941407.83 128311167.16 1429297.75 126881869.41 73234669.67 954355.94 10779996.50 2495328.09 3285307.90 90749658.10 36132211.33
+
+# ---------------------------------------------------------------- bilans (banques populaires, coopérative de consommation)
+# f496 (p. 468) BANQUES POPULAIRES. a) Bilan de la Banque populaire française de Tunisie au 31 décembre 1927 and its
+# Compte de Profits et Pertes; b) Bilan de la Coopérative tunisienne de Crédit au 31 décembre 1927. f497 blank.
+# f498|f499 (p. 470|471) Bilan au 24 avril 1927 de la « Société coopérative de consommation », exercice 1926-1927
+# (the « Maison Française » of sgt1926 and sgt1928; actif f498, passif f499; the 2 of 24 under an ink blot).
+# Format as in sgt1926 (nested headings joined with ' : '; ditto dashes '— à La Goulette' expanded to the full label;
+# SUBTOTAL = group figure printed in an outer column, TOTAL = total of the side; checks only). Every cell read on native
+# crops (0.75-0.85x; Effets à payer 74.241,10, partly hidden by the fold, at 2x).
+@bilan view=496 page=468 inst=bpf date="31 décembre 1927" side=assets
+img: all
+cols: value
+Caisse et banques | 2406323.14
+Comptes courants | 565721.84
+Correspondants | 165170.05
+Effets à recevoir | 2935551.35
+Effets à l'encaissement | 636085.85
+Participation | 12500
+Mobilier | 3
+Titres et marchandises | 523670
+Comptes d'ordre | 601
+TOTAL | 7245626.23
+@bilan view=496 page=468 inst=bpf date="31 décembre 1927" side=liabilities
+img: all
+cols: value
+Capital | 750000
+Effets à payer au Trésor | 2400000
+Fonds de Prévoyance | 150000
+Fonds spécial | 96000
+Réserve légale | 65034.65
+Réserve spéciale | 34240.85
+Bénéfices reportés | 102722.46
+Profits et pertes | 157347.69
+Dividendes à payer | 22044
+Comptes de dépôts | 2048819.03
+Comptes d'encaissement | 817846.85
+Titres en garantie | 310525
+Titres en dépôt | 213145
+Effets à payer | 6580.70
+Réescompte portefeuille | 21320
+Crédit artisanal | 50000
+TOTAL | 7245626.23
+@pl view=496 page=468 inst=bpf date="31 décembre 1927" side=debit
+img: all
+cols: value
+Frais généraux | 173118.99
+Réescompte portefeuille | 21320
+Bénéfice net | 157347.69
+TOTAL | 351786.68
+@pl view=496 page=468 inst=bpf date="31 décembre 1927" side=credit
+img: all
+cols: value
+Intérêts et commissions | 351786.68
+TOTAL | 351786.68
+@bilan view=496 page=468 inst=ctc date="31 décembre 1927" side=assets
+img: all
+cols: value
+Caisses et Banques | 610378.10
+Portefeuille | 3963508.35
+Comptes courants | 670921.95
+Correspondants | 122938.35
+Mobiliers et frais d'installation | 42056.15
+TOTAL | 5409802.90
+@bilan view=496 page=468 inst=ctc date="31 décembre 1927" side=liabilities
+img: all
+cols: value
+Capital | 500000
+Profits et pertes | 456067.85
+Réserves | 133803.45
+Trésor et Société de Prévoyance | 4160000
+Réescompte et intérêts à payer | 77733.65
+Clients de passage | 42197.95
+Crédit artisanal | 40000
+TOTAL | 5409802.90
+@bilan view=498 page=470 inst=mf date="24 avril 1927" side=assets
+img: all
+cols: value
+Valeurs disponibles court terme : Espèces en Caisse | 26603.25
+Valeurs disponibles court terme : Caisse d'Epargne, espèces en dépôt | 139.94
+Valeurs disponibles court terme : Office Postal, virement des débiteurs en dépôt | 69.74
+Valeurs disponibles court terme : Achats : Stock à Tunis | 130451.70
+Valeurs disponibles court terme : Achats : Stock à La Goulette | 18562.85
+Valeurs disponibles court terme : Achats : Stock à Franceville | 5798.45
+SUBTOTAL Valeurs disponibles court terme : Achats | 154813
+SUBTOTAL Valeurs disponibles court terme | 181625.93
+Valeurs disponibles long terme : Titres en dépôt à la B. I. F. de Crédit | 2200
+Valeurs disponibles long terme : Comptes courants : Soldes débiteurs clients | 84027.50
+Valeurs disponibles long terme : Comptes courants : Soldes débiteurs clients La Goulette | 1088.95
+Valeurs disponibles long terme : Comptes courants : Soldes débiteurs clients Franceville | 17950.05
+SUBTOTAL Valeurs disponibles long terme : Comptes courants | 103066.50
+SUBTOTAL Valeurs disponibles long terme | 105266.50
+Immeuble : Valeur actuelle immeuble Tunis | 900000
+Valeurs immobilisées : Frais d'achat immeuble | 21581.60
+Valeurs immobilisées : Travaux neufs immeuble | 28019.40
+Valeurs immobilisées : Mobilier et Matériel : Tunis | 21216.30
+Valeurs immobilisées : Mobilier et Matériel : La Goulette | 9641.25
+Valeurs immobilisées : Mobilier et Matériel : Franceville | 1601.45
+SUBTOTAL Valeurs immobilisées : Mobilier et Matériel | 32459
+Valeurs immobilisées : Frais de premier établissement | 12045.28
+Valeurs immobilisées : Fédération des Coopératives de France | 150.61
+Valeurs immobilisées : Frais généraux : Fournitures de bureau | 2841.55
+Valeurs immobilisées : Frais généraux : Loyer anticipé (Franceville) | 208.34
+Valeurs immobilisées : Marchandises en litiges : Divers manquants constatés | 808.55
+SUBTOTAL Valeurs immobilisées | 98114.33
+Compte du capital, résultats d'inventaire | 28318.70
+TOTAL | 1313325.46
+@bilan view=499 page=471 inst=mf date="24 avril 1927" side=liabilities
+img: all
+cols: value
+Valeurs exigibles court terme : Banque, solde créditeur | 88005
+Valeurs exigibles long terme : Créance de l'Etat | 199500
+Valeurs exigibles long terme : Comptes courants : Avances | 10000
+Valeurs exigibles long terme : Comptes courants : Avances | 5000
+SUBTOTAL Valeurs exigibles long terme : Comptes courants | 15000
+Valeurs exigibles long terme : Attente : Factures à payer | 46499.70
+Valeurs exigibles long terme : Attente : Effets à payer | 74241.10
+SUBTOTAL Valeurs exigibles long terme : Attente | 120740.80
+SUBTOTAL Valeurs exigibles long terme | 335240.80
+Cautionnements : Succursale de La Goulette | 2000
+Cautionnements : Succursale de Franceville | 1400
+SUBTOTAL Cautionnements | 3400
+Compte du capital : Capital souscrit en circulation | 182440
+Réserves : Réserve légale | 4239.66
+Compte d'ordre : Immeuble, redressement valeur immeuble | 700000
+TOTAL | 1313325.46

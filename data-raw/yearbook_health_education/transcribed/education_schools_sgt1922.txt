@@ -1,0 +1,438 @@
+# Statistique générale de la Tunisie, édition 1922 (situation au 31 décembre 1922), volume bpt6k9105649x
+# Chapitre VII, Instruction publique et beaux-arts. Lists a) Écoles primaires publiques (views 118-143) and b) Écoles privées (views 144-147).
+# Format: see the docstring of ../extract_education_schools.py. School lines:
+#   locality | school | classes staff_fr staff_ar staff_div staff_TOT | boys fr mus isr ita mal div TOT | girls fr mus isr ita mal div TOT | TOTAUX_généraux previous_year
+# "»" printed dash = 0; "?" hidden in the binding, solved from the row total; "na" a word instead of a number;
+# "v#w" printed v kept, totals imply w; "v#" misprinted printed total; "a+b" one cell printed as two numbers.
+# REPORT / AREPORTER / TOTAL = printed "Report" / "A reporter" / final total lines (checks only).
+
+@ primary_public sector=public level=primary cols=cstaff,boys,girls,genprev table=a)_Ecoles_primaires_publiques
+## views 118 119 pages 94 95
+Tunis | Garçons : Quartier Bab-Aléoua | 6 6 » » 6 | 27 ? » 147 4 » 196 | » » » » » » » | 196 208
+Tunis | Garçons : Rue Bab-el-Khadra | 9 9 » » 9 | 69 ? 115 158 105 1 448 | » » » » » » » | 448 457
+Tunis | Garçons : Rue Claude-Bernard (Belvédère) | 1 1 » » 1 | 40 ? 3 21 1 » 65 | » » » » » » » | 65 74
+Tunis | Garçons : Rue Ayed (Bab-Djedid) | 5 5 » » 5 | 67 ? 1 109 7 » 191 | » » » » » » » | 191 183
+Tunis | Garçons : Rue de Colmar | 10 10 » » 10 | 124 ? 127 146 9 6 416 | » » » » » » » | 416 440
+Tunis | Garçons : Rue de l'Eglise | 6 6 » » 6 | 37 ? 7 188 34 5 290 | » » » » » » » | 290 270
+Tunis | Garçons : Rue des Glacières | 8 8 » 1 9 | 45 ? 109 175 27 5 363 | » » » » » » » | 363 320
+Tunis | Garçons : Place Halfaouine | 10 7 3 » 10 | 2 ? » 1 2 » 422 | » » » » » » » | 422 387
+Tunis | Garçons : Rue Hoche | 6 6 » » 6 | 53 ? 36 112 41 » 245 | » » » » » » » | 245 195
+Tunis | Garçons : Rue d'Italie | 10 10 » » 10 | 308 ? 4 93 12 4 421 | » » » » » » » | 421 430
+Tunis | Garçons : Rue de la Loire | 3 3 » » 3 | 9 ? » 52 29 » 90 | » » » » » » » | 90 92
+Tunis | Garçons : (enfantine) av. de Londres | 5 5 » » 5 | 35 ? 77 101 60 » 273 | » » » » » » » | 273 273
+Tunis | Garçons : Place aux Moutons | 5 3 2 » 5 | » ? » » » » 176 | » » » » » » » | 176 162
+Tunis | Garçons : Rue de Normandie | 6 6 » » 6 | 43 ? » 208 10 2 263 | » » » » » » » | 263 271
+Tunis | Garçons : Rue du Pacha (int. d'app.) | 1 1 1 1 3 | » ? » » » » 51 | » » » » » » » | 51 46
+Tunis | Garçons : Rue Sidi-Essourdou | 5 4 3 3 10 | » ? » » » » 187 | » » » » » » » | 187 150
+Tunis | Garçons : Rue de Suède | 3 3 » » 3 | 24 ? 22 31 7 7 93 | » » » » » » » | 93 99
+Tunis | Garçons : Rue du Trésor | 7 5 3 1 9 | » ? » » » » 311 | » » » » » » » | 311 250
+Tunis | Garçons : Rue du Tribunal | 13 10 4 1 15 | » ? » » » » 580 | » » » » » » » | 580 604
+Tunis | Garçons : Rue de Tripoli | 3 3 » 1 4 | 14 ? » 71 2 2 89 | » » » » » » » | 89 95
+Tunis | Filles : Ecole Paul-Cambon | 17 16 » 10 26 | » ? » » » » » | 175 1 142 47 » 8 373 | 373 404
+Tunis | Filles : Rue Arago | 9 8 » 1 9 | » ? » » » » » | 93 » 203 92 30 » 418 | 418 413
+Tunis | Filles : (enfantine) Rue Arago | 3 3 » » 3 | » ? » » » » » | 26 » 64 53 34 1 178 | 178 179
+Tunis | Filles : Quartier Bab-Aléoua | 6 7 » 2 9 | » ? » » » » » | 80 » » 130 5 » 215 | 215 242
+Tunis | Mixte : (enfantine) Quart. Bab-Aléoua | 4 3 » 1 4 | 13 ? » 62 3 » 83 | 12 » » 71 4 » 87 | 170 173
+Tunis | Filles : Avenue Bab-Djedid | 10 9 » 1 10 | » ? » » » » » | 139 21 4 206 15 » 385 | 385 374
+Tunis | Filles : Rue Bab-el-Khadra | 10 10 » 1 11 | » ? » » » » » | 51 3 250 146 41 » 491 | 491 520
+Tunis | Filles : Rue Bab-Souika | 15 12 » 6 18 | » ? » » » » » | 49 12 238 147 41 » 487 | 487 567
+AREPORTER | A reporter | 196 179 16 30 225 | 910 ? 501 1675 353 32 5253 | 625 37 901 892 170 ? 2634 | 7887 7878
+## views 120 121 pages 96 97
+REPORT | Report | 196 179 16 30 225 | 910 ? 501 1675 353 32 5253 | 625 37 901 892 170 9 2634 | 7887 7878
+Tunis | Filles : Rue Cl.-Bernard (Belvédère) | 2 2 » » 2 | » ? » » » » » | 37 2 6 28 6 » 79 | 79 76
+Tunis | Filles : Rue Chaker | 3 3 » » 3 | 2 ? » 15 » 1 18 | 11 » 8 48 9 4 80 | 98 130
+Tunis | Filles : Rue Hoche | 5 5 » » 5 | » ? » » » » » | 44 3 40 95 21 » 203 | 203 200
+Tunis | Filles : Rue de Marseille | 10 10 » 3 13 | » ? » » » » » | 97 1 230 86 2 12 428 | 428 403
+Tunis | Filles : Rue de Normandie | 6 6 » » 6 | » ? » » » » » | 46 » » 199 2 1 248 | 248 253
+Tunis | Filles : Rue de Patras | 5 5 » » 5 | » ? » » » » » | 56 » 73 62 9 » 200 | 200 207
+Tunis | Filles : Rue de la Ruche (fil. musulm.) | 3 2 1 2 5 | » ? » » » » » | » 78 » » » » 78 | 78 76
+Tunis | Filles : Rue Sidi-Saber | 8 8 » 1 9 | » ? » » » » » | 64 4 67 216 31 4 386 | 386 386
+Tunis | Filles : Rue Zarouane (fil. musulm.) | 3 1 » 2 3 | » ? » » » » » | » 53 » » » » 53 | 53 53
+Tunis | Mixte : Quartier de Franceville | 1 1 » » 1 | 12 ? » 6 » » 18 | 20 1 » 6 » » 27 | 45 38
+Tunis | Mixte : Quartier de Mutuelleville | 1 1 » » 1 | 10 ? » 2 » » 12 | 14 » » 1 » » 15 | 27 na  # previous year printed "Création"
+Tunis | Maternelle : Boulevard Bab-Menara | 2 2 » » 2 | 40 ? » 23 4 1 69 | 41 1 » 36 4 1 83 | 152 151
+Agareb (El) | Garçons | 2 1 1 » 2 | 1 ? » » » » 42 | » » » » » » » | 42 28
+Aïn-Draham | Garçons (Internat de) | 3 4 » » 4 | 37 ? 5 12 » » 88 | 3 » » » » » 3 | 91 78
+Aïn-Draham | Filles (Internat de) | 2 3 » » 3 | » ? » » » » » | 19 » 1 11 » 2 33 | 33 34
+Aïn-el-Asker | Garçons | 1 1 » » 1 | 1 ? » 5 2 » 10 | » » » 2 1 » 3 | 13 na  # previous year printed "Réouverture"
+Akouda | Garçons | 4 2 1 1 4 | » ? » » » » 184 | 1 » » » » » 1 | 185 152
+Alia (El) | Garçons | 2 1 1 » 2 | » ? » 2 » » 63 | » » » » » » » | 63 59
+Aousdja (El) | Garçons | 1 » 1 » 1 | » ? » » » » 36 | » » » » » » » | 36 29
+Ariana (L') | Enfants victimes de la guerre | 2 3 » » 3 | 32 ? » » » » 32 | 37 » » » » » 37 | 69 64
+Ariana (L') | Ecole de plein air | 2 2 » » 2 | 19 ? 1 2 » » 22 | 8 » 3 1 » » 12 | 34 39
+Ariana (L') | Garçons | 4 4 » » 4 | 1 ? 120 5 » » 161 | » » » » » » » | 161 168
+Ariana (L') | Filles | 4 4 » » 4 | » ? » » » » » | 3 2 172 3 » » 180 | 180 176
+Ariana (L') | Mixte enfantine | 1 1 » » 1 | 3 ? 12 2 » » 20 | 1 4 18 » » » 23 | 43 50
+Armand-Colin | Mixte (avec internat) | 3 4 » » 4 | 31 ? » 13 » » 44 | 18 » » 6 » » 24 | 68 72
+Aroussa (El) | Mixte | 2 1 » 1 2 | 24 ? » 3 » » 30 | 19 » » 5 » » 24 | 54 54
+Azib (El) | Mixte (fermée) | » » » » » | » ? » » » » » | » » » » » » » | » 5
+Baie-Ponty | Mixte | 1 1 » » 1 | 10 ? » 2 » » 13 | 18 » » » » 1 19 | 32 31
+AREPORTER | A reporter | 279 257 21 40 318 | 1133 ? 639 1767 359 34 6115 | 1182 186 1519 1697 255 34 4873 | 10988 10890
+## views 122 123 pages 98 99
+REPORT | Report | 279 257 21 40 318 | 1133 ? 639 1767 359 34 6115 | 1182 186 1519 1697 255 34 4873 | 10988 10890
+Bardo (Le) | Garçons | 2 2 » » 2 | 47 ? » 37 2 1 96 | » » » » » » » | 96 81
+Bardo (Le) | Filles | 3 3 » » 3 | » ? » » » » » | 57 1 » 29 7 8 102 | 102 119
+Bathan (El) | Mixte | 1 1 » » 1 | 4 ? » 1 » » 8 | 2 » » » » » 2 | 10 25
+Bazina | Mixte | 1 1 » » 1 | 1 ? » 13 » » 14 | » » » 15 » » 15 | 29 27
+Béja | Garçons (Internat de) | 7 8 » » 8 | 92 ? 12 99 3 » 219 | 15 » » 2 » » 17 | 236 210
+Béja | Garçons (franco-arabe) | 8 6 2 1 9 | » ? 106 » » » 353 | » » » » » » » | 353 321
+Béja | Filles (Internat de) | 8 9 » » 9 | » ? » » » » » | 80 16 107 106 » » 309 | 309 308
+Béja | Enfantine | 2 2 » » 2 | 5 ? 28 14 1 » 49 | 6 3 25 20 2 » 56 | 105 91
+Bekalta | Garçons | 2 1 1 » 2 | » ? » » » » 71 | » » » » » » » | 71 64
+Belli | Mixte | 1 1 » » 1 | » ? » 7 » » 7 | 1 » » 9 » » 10 | 17 10
+Ben-Arous | Mixte | 1 1 » » 1 | 16 ? » 3 » » 19 | 18 » » 4 » » 22 | 41 32
+Ben-Gardane | Garçons | 2 1 1 » 2 | 3 ? 2 1 » » 52 | » » » » » » » | 52 53
+Beni-Khalled | Mixte | 2 1 1 » 2 | » ? » 2 » » 51 | » » » » » » » | 51 48
+Beni-Khiar | Garçons | 2 1 1 1 3 | » ? » » » » 77 | » » » » » » » | 77 59
+Besbessia | Garçons | 1 1 » » 1 | » ? » 33 » » 33 | » » » » » » » | 33 na  # "Création"
+Besbessia | Filles | 1 1 » » 1 | » ? » » » » » | » » » 33 » » 33 | 33 na  # printed "—" under "Création"
+Bir-Halima | Mixte | 1 1 » » 1 | 2 ? » 20 » » 23 | 3 3 » 29 » » 35 | 58 32
+Birine | Mixte | 2 2 » » 2 | » ? » 27 » » 27 | » » » 30 » » 30 | 57 39
+Bir-M'cherga | Mixte | 1 1 » » 1 | 6 ? » 4 » 1 11 | 8 » » 10 » » 18 | 29 17
+Bir-M'roua | Mixte | 1 1 » » 1 | 4 ? » » » » 4 | 5 » » » » » 5 | 9 11
+Bizerte | Garçons (Collège Stephen-Pichon) | 12 18 » » 18 | 233 ? 15 29 1 5 302 | » » » » » » » | 302 344
+Bizerte | Garçons (école primaire élémentaire, rue d'Algérie) | 8 8 » » 8 | 74 ? 120 39 8 5 246 | » » » » » » » | 246 291
+Bizerte | Garçons (école primaire élémentaire, rue de Grèce) | 5 5 » » 5 | 92 ? 37 106 4 » 239 | » » » » » » » | 239 185
+Bizerte | Garçons (école franco-arabe), rue de Constantinople | 7 5 2 » 7 | » ? » » » » 227 | » » » » » » » | 227 205
+Bizerte | Filles (école primaire supérieure) | 9 10 » » 10 | 12 ? 2 1 » 2 17 | 194 2 18 20 » 3 237 | 254 239
+Bizerte | Filles (école primaire élémentaire), rue de Constantinople | 7 7 » » 7 | » ? » » » » » | 54 8 137 74 » 1 274 | 274 279
+Bizerte | Filles (école primaire élémentaire), place de la gare | 5 5 » » 5 | » ? » » » » » | 50 5 6 76 » 1 138 | 138 140
+Bizerte | Enfantine : mixte | 1 1 » » 1 | 9 ? 2 7 » » 20 | 7 2 3 7 » 1 20 | 40 62
+AREPORTER | A reporter | 382 361 29 42 432 | 1733 ? 963 2210 378 48 8280 | 1682 226 1815 2161 264 48 6196 | 14476 14182
+## views 124 125 pages 100 101
+REPORT | Report | 382 361 29 42 432 | 1733 ? 963 2210 378 48 8280 | 1682 226 1815 2161 264 48 6196 | 14476 14182
+Bou-Arada | Mixte | 1 1 » » 1 | 15 ? » 1 » » 16 | 8 1 » 2 » » 11 | 27 37
+Bou-Arkoub | Mixte | 1 1 » » 1 | 5 ? » 21 » » 26 | 3 » » 13 » » 16 | 42 40
+Bou-Ficha | Mixte | 2 2 » » 2 | » ? » 14 » » 21 | 6 » » 11 » » 17 | 38 37
+Bou-Jaber | Mixte | 1 1 » » 1 | 5 ? » 14 » » 19 | 1 » » 13 » » 14 | 33 24
+Bou-Thadi | Garçons | 1 1 » » 1 | » ? » » » » 8 | » » » » » » » | 8 10
+Carthage | Mixte | 1 1 » » 1 | 3 ? » 4 » » 21 | 3 » » 4 » » 7 | 28 33
+Chaouat | Mixte | 1 1 » » 1 | 10 ? » 1 » » 11 | 10 » » 3 » » 13 | 24 21
+Chebaou | Mixte | 2 2 » » 2 | » ? » 24 » » 25 | » » » 28 » » 28 | 53 40
+Chebba (La) | Garçons | 2 1 1 » 2 | 1 ? 3 » » » 82 | » » » » » » » | 82 63
+Chenini de Gabès | Garçons | 3 1 1 1 3 | » ? » » » » 114 | » » » » » » » | 114 109
+Chuiggui | Mixte | 1 1 » » 1 | 2 ? » 5 » » 13 | 1 » » 9 » » 10 | 23 23
+Crétéville | Garçons, Filles : Mixte | 1 1 » » 1 | 1 ? » 7 » » 10 | 3 » » 12 » » 15 | 25 19
+Dar-Chabane | Garçons | 3 2 1 1 4 | » ? » » » » 101 | » » » » » » » | 101 96
+Dar-Chabane | Filles musulmanes | 3 1 1 3 5 | » ? » » » » » | » 104 » » » » 104 | 104 83
+Depienne | Mixte | 1 1 » » 1 | 10 ? » 6 » » 17 | 5 » » 9 » » 14 | 31 24
+Deggache (El-Oudiane) | Garçons | 2 1 1 » 2 | » ? » 1 » » 37 | » » » » » » » | 37 33
+Djebel-Hallouf | Garçons | 1 1 » » 1 | » ? » 24 » » 24 | » » » » » » » | 24 31
+Djebel-Hallouf | Filles | 1 1 » » 1 | » ? » » » » » | 1 » » 24 » » 25 | 25 26
+Djebel-Abiod | Mixte | 1 1 » » 1 | 3 ? » 1 » » 5 | 7 1#0 » 1 » » 8 | 13 19
+Djebel-Trozza | Mixte | 1 1 » » 1 | » ? » 9 » » 9 | 1 » » 4 » 1 6 | 15 22
+Djebeniana | Garçons | 1 1 » » 1 | » ? » » » » 22 | » » » » » » » | 22 20
+Djedeïda | Garçons | 1 1 » » 1 | 8 ? 3 20 » » 35 | » » » » » » » | 35 37
+Djedeïda | Filles | 1 1 » » 1 | » ? » » » » » | 12 » 2 16 » 1 31 | 31 37
+Djemmal | Garçons | 4 3 1 » 4 | 1 ? » » » » 150 | » » » » » » » | 150 123
+Djemmal | Filles | 1 1 » » 1 | 4 ? » 4 » » 8 | 4 » » 3 » » 7 | 15 19
+Adjim (Djerba) | Garçons | 2 1 1 » 2 | 2 ? » » 2 » 84 | » 2 » » » » 2 | 86 119
+El-May (Djerba) | Garçons | 3 2 1 » 3 | » ? » » » » 80 | » » » » » » » | 80 80
+Guellala (Djerba) | Garçons | 2 1 1 » 2 | » ? » » » » 17 | » » » » » » » | 17 37
+AREPORTER | A reporter | 427 395 38 47 480 | 1803 ? 969 2366 380 48 9235 | 1747 333 1817 2313 264 50 6524 | 15759 15444
+## views 126 127 pages 102 103
+REPORT | Report | 427 395 38 47 480 | 1803 ? 969 2366 380 48 9235 | 1747 333 1817 2313 264 50 6524 | 15759 15444
+Hara-Srira (Djerba) | Garçons | 2 2 » » 2 | » ? 17 » » » 36 | » » » » » » » | 36 54
+Houmt-Souk (Djerba) | Garçons | 6 4 2 1 7 | 35 ? 18 3 » 10 240 | » » » » » » » | 240 209
+Houmt-Souk (Djerba) | Filles | 3 3 » » 3 | 8 ? » » » 2 10 | 45 5 8 6 » 7 71 | 81 83
+Houmt-Souk (Djerba) | Filles musulmanes | 2 1 1 1 3 | » ? » » » » » | » 61 » » » » 61 | 61 50
+Mahboubine (Djerba) | Garçons | 3 2 1 » 3 | » ? » » » » 82 | » » » » » » » | 82 92
+Midoun (Djerba) | Garçons | 2 1 1 » 2 | » ? » » » » 73 | » » » » » » » | 73 52
+Djerissa | Garçons, Filles : Mixte | 3 3 » » 3 | 13 ? » 42 » 1 56 | 14 » » 43 » 1 58 | 114 126
+Djouggar | Mixte | 1 1 » » 1 | 4 ? » » » » 4 | 7 » » » » » 7 | 11 11
+Dubosville | Garçons coéducation | 1 1 » » 1 | 12 ? » 4 2 » 18 | 8 » » 2 2 » 12 | 30 24
+Dubosville | Filles coéducation | 1 1 » » 1 | 9 ? » 8 1 » 18 | 15 » » 7 1 » 23 | 41 32
+Ebba-Ksour | Mixte | 2 2 » » 2 | 5 ? 17 15 2 » 52 | 4 2 14 13 1 » 34 | 86 78
+Eddekhila | Mixte | 1 1 » » 1 | » ? » 2 » » 8 | 3 » » 1 » » 4 | 12 11
+El-Djem | Mixte | 2 1 1 » 2 | 2 ? » 3 » 1 89 | 1 » » » » » 1 | 90 37
+Enfidaville | Filles, Garçons : Mixte | 3 3 » » 3 | 11 ? 3 23 » » 58 | 15 1 7 19 1 » 43 | 101 102
+Fedjet Khemaken | Mixte | 1 1 » » 1 | 6 ? » 1 » » 16 | 5 » » 2 » » 7 | 23 na  # "Création"
+Fériana | Mixte | 3 2 1 » 3 | 6 ? » » » » 84 | 4 1 » » » » 5 | 89 47
+Ferryville | Garçons | 11 11 » » 11 | 229 ? 8 149 3 2 410 | 25 » » » » » 25 | 435 428
+Ferryville | Ecole des apprentis de l'Arsenal | 1 1 » » 1 | 19 ? » » » » 30 | » » » » » » » | 30 89
+Ferryville | Garçons (internat d'apprentissage ind.) | 1 1 » » 1 | » ? » » » » 20 | » » » » » » » | 20 17
+Ferryville | Filles | 6 7 » » 7 | » ? » » » » » | 142 3 7 103 4 3 262 | 262 265
+Ferryville | Enfantine : mixte | 2 2 » » 2 | 20 ? 2 20 » » 43 | 24 1 5 16 1 » 47 | 90 80
+Fondouk-Choucha | Mixte | 1 1 » » 1 | 4 ? » 5 » » 9 | 6 » » 9 1 » 16 | 25 40
+Fondouk-Djedid | Garçons | 1 1 » » 1 | 4 ? » 11 » » 15 | 3 » » 11 » » 14 | 29 26
+Fondouk-Djedid | Filles | 1 1 » » 1 | » ? » 15 » » 15 | 5 » » 20 » » 25 | 40 48
+Fouchana | Mixte | 1 1 » » 1 | » ? » 13 » » 13 | 1 » » 9 » » 10 | 23 30
+AREPORTER | A reporter | 488 450 45 49 544 | 2190 ? 1034 2680 388 64 10634 | 2074 407 1858 2574 275 61 7249 | 17883 17475
+## views 128 129 pages 104 105
+REPORT | Report | 488 450 45 49 544 | 2190 ? 1034 2680 388 64 10634 | 2074 407 1858 2574 275 61 7249 | 17883 17475
+Foum-Tatahouine | Mixte | 2 1 1 » 2 | » ? 15 » » » 72 | » » » » » » » | 72 47
+Furna | Garçons | 1 1 » » 1 | » ? » 42 » » 42 | » » » » » » » | 42 36
+Furna | Filles | 1 1 » » 1 | » ? » » » » » | » » » 34 » » 34 | 34 35
+Gabès | Garçons | 4 5 » » 5 | 41 ? 19 14 6 1 94 | 4 » 1 » » » 5 | 99 96
+Gabès | Filles | 4 4 » » 4 | 16 ? 4 2 2 » 24 | 31 1 42 18 9 » 101 | 125 117
+Gabès | Filles musulmanes | 1 1 » » 1 | » ? » » » » » | » 13 » » » » 13 | 13 na  # "Création"
+Gabès | Garçons (section agricole) | 1 1 » » 1 | » ? » » » » 26 | » » » » » » » | 26 19
+Gabès | Garçons (quartier de Djara) | 8 5 2 1 8 | » ? 45 » » » 327 | » » » » » » » | 327 317
+Gabès | Garçons (quartier de Menzel) | 5 2 2 1 5 | » ? » » » » 197 | » » » » » » » | 197 187
+Gafour | Garçons | 2 2 » » 2 | 20 ? » 20 » » 41 | 26 » » 15 » » 41 | 82 79
+Gafour | Filles | 2 2 » » 2 | 27 ? » 17 » » 44 | 18 » » 11 » » 29 | 73 86
+Gafsa (ville) | Garçons | 7 4 2 2 8 | 8 ? 50 4 » » 383 | » » » » » » » | 383 378
+Gafsa (ville) | Filles | 2 2 » » 2 | » ? » » » » » | 4 4 50 2 » » 60 | 60 48
+Gafsa (ville) | Filles musulmanes | 2 1 1 » 2 | » ? » » » » » | » 32 » » » » 32 | 32 33
+Gafsa (gare) | Mixte | 3 3 » » 3 | 27 ? » 19 » » 46 | 30 » » 22 » » 52 | 98 100
+Galite (La) | Mixte | 1 1 » » 1 | 2 ? » 11 » » 13 | 2 » » 5 » » 7 | 20 25
+Garn-Alfaya | Mixte | 1 1 » » 1 | » ? » 9 » » 9 | 1 » » 9 » » 10 | 19 na  # "Création"
+Ghardimaou | Garçons, Filles : coéducation | 5 4 1 » 5 | 24 ? » 16 » » 107 | 19 1 1 14 » » 35 | 142 81+38  # previous year printed separately for garçons (81) and filles (38)
+Goubellat (Le) | Mixte (avec internat) | 2 2 » » 2 | 17 ? » 5 » » 22 | 9 » » 1 » » 10 | 32 44
+Goulette (La) | Garçons | 7 7 1 » 8 | 50 ? 202 31 8 6 343 | » » » » » » » | 343 316
+Goulette (La) | Filles | 8 10 » 5 15 | » ? » » » » » | 44 19 219 27 3 » 312 | 312 295
+Goulette (La) | Enfantine : mixte | 3 3 » » 3 | 9 ? 50 4 3 » 71 | 3 7 70 6 3 » 89 | 160 159
+Grombalia | Garçons | 4 3 1 » 4 | 14 ? » 45 » » 188 | » » » » » » » | 188 144
+Grombalia | Filles | 3 3 » » 3 | 2 ? » 23 » » 25 | 14 10 » 52 » » 76 | 101 112
+Hadjeb-el-Aïoun | Mixte | 2 1 1 » 2 | 3 ? 8 6 » » 72 | 2 » 1 3 » » 6 | 78 55
+Hamma (El) | Garçons | 4 3 1 1 5 | 1 ? 17 » » » 165 | 1 » » » » » 1 | 166 151
+Hamaïm | Mixte | 1 1 » » 1 | » ? » 20 » » 20 | » » » 15 » » 15 | 35 47
+Hammamet | Garçons | 4 3 1 » 4 | 4 ? » 9 » » 144 | » » » » » » » | 144 138
+Hammamet | Filles | 1 1 » » 1 | » ? » 4 » » 4 | 8 9 » 10 » » 27 | 31 16
+AREPORTER | A reporter | 579 528 59 59 646 | 2455 ? 1444 2981 407 71 13113 | 2290 503 2242 2818 290 61 8204 | 21317 20674
+## views 130 131 pages 106 107
+REPORT | Report | 579 528 59 59 646 | 2455 ? 1444 2981 407 71 13113 | 2290 503 2242 2818 290 61 8204 | 21317 20674
+Hammam-Lif | Garçons | 3 3 » » 3 | 24 ? 16 62 1 » 122 | » » » » » » » | 122 100
+Hammam-Lif | Filles | 3 3 » » 3 | » ? » » » » » | 15 11 30 73 3 » 132 | 132 105
+Hammam-Lif | Enfantine : mixte | 1 1 » » 1 | 1 ? 3 12 1 » 19 | 2 4 4 12 » » 22 | 41 56
+Jalta | Mixte | 1 1 » » 1 | 1 ? » 2 » » 3 | 1 » » 5 » » 6 | 9 22
+Kairouan | Garçons (primaire élémentaire) | 3 3 » » 3 | 21 ? 27 25 » » 85 | » » » » » » » | 85 87
+Kairouan | Garçons (franco-arabe), r. des Remparts | 10 7 3 5 15 | » ? » » » » 433 | » » » » » » » | 433 385
+Kairouan | Garçons (franco-arabe), rue Zarrouk | 4 3 1 » 4 | » ? » » » » 168 | » » » » » » » | 168 158
+Kairouan | Filles et enfantine : mixte | 3 3 » » 3 | 4 ? 8 » » » 12 | 24 2 32 21 1 » 80 | 92 109
+Kairouan | Filles musulmanes | 5 3 1 3 7 | » ? » » » » » | » 129 » » » » 129 | 129 147
+Kalaâ-Djerda | Garçons | 2 2 » » 2 | 7 ? » 44 » » 51 | 8 » 2 38 » 1 49 | 100 96
+Kalaâ-Djerda | Filles | 1 1 » » 1 | 3 ? » 19 » » 22 | 3 » 1 21 » » 25 | 47 48
+Kalaât-el-Andleuss | Garçons | 2 1 1 » 2 | » ? » » » » 37 | » » » » » » » | 37 39
+Kalaât-es-Senam (gare) | Mixte | 2 1 » 1 2 | 6 ? » 9 » » 22 | 6 » » 18 » » 24 | 46 63
+Kalaat-Senam (Mine) | Mixte | 1 1 » 1 2 | » ? » 22 » 2 25 | 1 » » 37 » 1 39 | 64 na  # "Création"
+Kalaâ-Kebira | Garçons | 2 1 1 » 2 | 1 ? » » » » 64 | » » » » » » » | 64 59
+Kalaâ-Srira | Garçons (franco-arabe) | 2 1 1 » 2 | » ? » » » » 63 | 2 » » » » » 2 | 65 56
+Kebili | Mixte | 2 1 1 » 2 | 1 ? 6 » » » 41 | » 1 1 » » » 2 | 43 47
+Kef (Le) | Garçons (internat) avec cours complémentaire mixte | 6 7 » » 7 | 62 ? 81 46 » 3 195 | 8 » » 2 2 » 12 | 207 190
+Kef (Le) | Garçons (franco-arabe) | 6 3 2 1 6 | » ? » » » » 246 | » » » » » » » | 246 203
+Kef (Le) | Filles | 5 5 » 1 6 | » ? » » » » » | 35 21 77 66 4 » 203 | 203 175
+Kef-Chambi | Mixte (fermé) | » » » » » | » ? » » » » » | » » » » » » » | » »
+Kelibia | Garçons | 2 1 1 » 2 | 2 ? » 13 » » 52 | » » » 11 » » 11 | 63 41
+Kelibia | Filles | 1 1 » » 1 | 1 ? » 9 » » 10 | 2 » » 8 » » 10 | 20 19
+Chergui (Kerkenna) | Garçons | 2 1 1 » 2 | » ? » » » » 60 | » » » » » » » | 60 87
+El-Attaïa (Kerkenna) | Garçons | 2 1 1 » 2 | » ? » » » » 49 | » » » » » » » | 49 43
+Kellabine (Kerkenna) | Garçons | 4 2 1 1 4 | » ? » » » » 102 | » » » » » » » | 102 121
+Mélita (Kerkenna) | Garçons | 2 1 1 » 2 | » ? » » » » 62 | » » » » » » » | 62 66
+Ouled-Kacem (Kerkenna) | Garçons | 3 3 1 » 4 | » ? » » » » 100 | » » » » » » » | 100 111
+AREPORTER | A reporter | 659 589 76 72 737 | 2589 ? 1585 3244 409 76 15156 | 2397 671 2389 3130 300 63 8950 | 24106 23307
+## views 132 133 pages 108 109
+REPORT | Report | 659 589 76 72 737 | 2589 ? 1585 3244 409 76 15156 | 2397 671 2389 3130 300 63 8950 | 24106 23307
+Ouled-Yanèg (Kerkenna) | Garçons | 2 1 1 » 2 | » ? » » » » 70 | » » » » » » » | 70 60
+Remla (Kerkenna) | Garçons | 2 1 1 » 2 | » ? » » » » 61 | » » » » » » » | 61 48
+Kanguet-el-Hadjaj | Mixte | 1 1 » » 1 | 5 ? » 9 » » 16 | 2 » » 5 » » 7 | 23 21
+Khanguet-gare | Mixte | 2 2 » » 2 | 1 ? » 37 » » 44 | » » » 17 » » 17 | 61 58
+Khlédia | Mixte | 1 1 » » 1 | 8 ? » 1 » » 13 | 2 » » 1 » » 3 | 16 16
+Korba | Garçons | 2 1 1 » 2 | 1 ? » 2 » » 42 | 1 » » 1 » » 2 | 44 43
+Kram | Garçons | 1 1 1 » 2 | 9 ? 1 5 » » 44 | » » » » » » » | 44 46
+Kram | Filles | 1 1 » » 1 | » ? » » » » » | 19 9 2 15 » » 45 | 45 45
+Ksar (El) | Garçons (franco-arabe) | 2 1 1 » 2 | » ? » » » » 94 | » » » » » » » | 94 na  # "Création"
+Ksar-el-Ahmar | Mixte | 2 1 1 » 2 | » ? » » » » 18 | » 6 » » » » 6 | 24 na  # printed "—" under "Création"
+Ksar-Hellal | Mixte | 3 2 1 1 4 | 1 ? » » » » 111 | » » » » » » » | 111 65
+Ksour | Mixte | 2 1 1 » 2 | » ? » » » » 27 | » » » » » » » | 27 28
+Ksour-Essaf | Garçons | 3 2 1 » 3 | » ? » » » » 100 | » » » » » » » | 100 112
+La Laverie (Djebel-Reças) | Mixte | 2 2 » » 2 | 5 ? » 23 » » 28 | 2 » » 25 » » 27 | 55 38
+Maharès | Mixte | 2 1 1 » 2 | 3 ? 1 3 » » 47 | » » 2 2 » » 4 | 51 81
+Maharine | Mixte | 1 1 » » 1 | » ? » 5 » » 6 | » » » 6 » » 6 | 12 7
+Maareth | Garçons (franco-arabe) | 2 1 1 » 2 | 1 ? 2 » » » 53 | » » » » » » » | 53 na  # "Création"
+Mahdia | Garçons | 8 6 2 1 9 | 11 ? 38 3 » » 373 | » » » » » » » | 373 366
+Mahdia | Filles | 4 4 » » 4 | 4 ? 19 » » » 26 | 9 » 55 10 1 » 75 | 101 127
+Mahdia | Filles musulmanes | 3 2 1 2 5 | » ? » » » » » | » 64 » » » » 64 | 64 63
+Maktar | Garçons | 2 1 1 » 2 | 1 ? 33 3 » » 37 | 2 » » » » » 2 | 39 66
+Maknassy | Mixte | 1 1 » » 1 | 5 ? » » » » 15 | 8 » » 1 » » 9 | 24 40
+Manouba (La) | Garçons | 3 3 1 » 4 | 13 ? » 26 » » 85 | 6 1 » 6 » » 13 | 98 109
+Manouba (La) | Filles | 1 1 » » 1 | » ? » » » » » | 12 1 » 7 » 2 22 | 22 27
+Marsa (La) | Garçons | 4 3 1 » 4 | 10 ? 37 10 3 » 179 | » » » » » » » | 179 110
+Marsa (La) | Filles | 2 2 » » 2 | » ? » » » » » | 9 18 30 6 3 » 66 | 66 61
+Massicault (Bordj-el-Amri) | Mixte | 1 1 » » 1 | 6 ? » 7 » » 14 | 2 » » 14 » » 16 | 30 26
+Mateur | Garçons | 5 6 » » 6 | 41 ? 35 138 2 » 218 | » » » » » » » | 218 214
+Mateur | Garçons (franco-arabe) | 3 2 1 » 3 | » ? » » » » 107 | » » » » » » » | 107 88
+Mateur | Filles (internat) | 6 7 » » 7 | » ? » » » » » | 41 7 36 119 7 4 214 | 214 215
+Mateur | Enfantine | 2 2 » » 2 | 5 ? 17 32 » » 54 | 5 1 11 24 » » 41 | 95 90
+AREPORTER | A reporter | 735 651 94 76 821 | 2719 ? 1768 3548 414 76 17038 | 2517 778 2525 3389 311 69 9589 | 26627 25571#  # previous-year total printed 25.571; the Report of this page plus its rows give 25.577 (rows re-read); the next page's Report repeats 25.571
+## views 134 135 pages 110 111
+REPORT | Report | 735 651 94 76 821 | 2719 ? 1768 3548 414 76 17038 | 2517 778 2525 3389 311 69 9589 | 26627 25571
+Matmata | Garçons | 2 1 1 » 2 | » ? 2 » » » 34 | » » » » » » » | 34 37
+Maxula-Radès | Garçons (Internat de) | 5 7 » » 7 | 112 ? » 35 4 3 157 | » » » » » » » | 157 170
+Maxula-Radès | Garçons (franco-arabe) | 2 1 1 » 2 | » ? » » » » 63 | » » » » » » » | 63 62
+Maxula-Radès | Filles (Internat de) | 7 8 » 3 11 | 4 ? » 1 » » 5 | 145 3 » 22 5 » 175 | 180 178
+Médenine | Garçons | 3 2 1 » 3 | 2 ? 7 » 2 » 93 | » » » » » » » | 93 84
+Médenine | Filles | 1 1 » » 1 | 4 ? » » » » 4 | 4 22 » 2 2 » 30 | 34 18
+Medjez-el-Bab | Garçons | 4 3 1 » 4 | 10 ? 16 25 2 » 124 | » » » » » » » | 124 121
+Medjez-el-Bab | Filles | 2 2 » » 2 | » ? » » » » » | 12 4 23 32 » » 71 | 71 64
+Mégrine | Garçons | 1 1 » » 1 | 7 ? » 9 » » 17 | 5 » » 3 1 » 9 | 26 20
+Mégrine | Filles | 1 1 » » 1 | 6 ? » 9 2 » 19 | 6 » » 5 » » 11 | 30 38
+Meheri-Zebbeus | Mixte (coéducation) | 2 2 » » 2 | 2 ? » 21 » » 24 | » » » 18 » » 18 | 42 39
+Menzel-Abdarrahmane | Garçons | 2 1 1 » 2 | » ? » » » » 63 | » » » » » » » | 63 69
+Menzel-bou-Zelfa | Garçons | 2 1 1 » 2 | 2 ? 5 3 » » 52 | » » » » » » » | 52 47
+Menzel-Djemil | Mixte | 2 1 1 » 2 | » ? » » » » 41 | » » » » » » » | 41 41
+Menzel-Temime | Garçons | 3 1 1 1 3 | 2 ? » » » » 82 | » » » » » » » | 82 77
+Merira | Mixte | 2 2 » » 2 | » ? » 21 » » 21 | » » » 19 » » 19 | 40 45
+Methouia | Garçons | 3 2 1 » 3 | » ? » » » » 94 | » » » » » » » | 94 79
+Metlaoui-Mine | Garçons | 2 1 1 » 2 | » ? » » » » 52 | » » » » » » » | 52 44
+Metline | Garçons | 2 1 1 » 2 | » ? » » » » 54 | » » » » » » » | 54 57
+Michaud | Mixte | 1 1 » » 1 | 2 ? » 11 » » 13 | » » » 8 » » 8 | 21 30
+Moghrane | Mixte | 1 1 » » 1 | 3 ? » 8 2 » 13 | 2 » » 4 1 » 7 | 20 21
+Monastir | Garçons | 9 7 3 1 11 | 8 ? 17 5 1 » 432 | » » » » » » » | 432 385
+Monastir | Filles | 2 2 » » 2 | 3 ? 10 1 1 » 15 | 2 2 23 2 4 » 33 | 48 57
+Monastir | Filles musulmanes | 3 2 2 » 4 | » ? » » » » » | » 79 » » » » 79 | 79 56
+Moknine | Garçons | 5 3 1 1 5 | 5 ? 17 » » » 281 | » » » » » » » | 281 172
+Moknine | Filles | 1 1 » » 1 | » ? » » » » » | 1 » 36 » » » 37 | 37 35
+Mornaghia | Mixte | 1 1 » 1 2 | 7 ? » 12 » » 22 | 7 1 » 11 » » 19 | 41 37
+AREPORTER | A reporter | 806 708 111 83 902 | 2898 ? 1842 3709 428 79 18813 | 2701 889 2607 3515 324 69 10105 | 28918 27654
+## views 136 137 pages 112 113
+REPORT | Report | 806 708 111 83 902 | 2898 ? 1842 3709 428 79 18813 | 2701 889 2607 3515 324 69 10105 | 28918 27654
+Msaken | Garçons | 4 3 1 » 4 | » ? » » 1 » 169 | » » » » » » » | 169 145
+Munchar | Mixte | 1 1 » » 1 | 5 ? » » » » 5 | 5 » » » » » 5 | 10 11
+Nabeul | Garçons | 10 9 3 » 12 | 27 ? 119 12 » » 408 | » » » » » » » | 408 383
+Nabeul | Filles | 5 5 » 1 6 | » ? » » » » » | 24 1 127 15 » » 167 | 167 167
+Nabeul | Filles musulmanes | 4 2 3 2 7 | » ? » » » » » | » 155 » » » » 155 | 155 133
+Nassen | Mixte | 1 1 » » 1 | » ? » 17 » » 18 | 1 » » 5 » » 6 | 24 31
+Nefta | Garçons | 3 1 1 1 3 | 1 ? 14 » » » 90 | » » » » » » » | 90 85
+Ouardenine | Garçons | 2 1 1 » 2 | » ? » » » » 33 | » » » » » » » | 33 37
+Oudref (El) | Garçons | 2 1 1 » 2 | » ? » » » » 86 | » » » » » » » | 86 80
+Oued-Ellil | Garçons | 1 1 » » 1 | » ? » 26 » » 26 | » » » » » » » | 26 58  # previous-year total printed once (bracketed) for Garçons and Filles
+Oued-Ellil | Filles | 1 1 » » 1 | » ? » » » » » | » » » 35 » » 35 | 35 na  # see the line above
+Oued-Meliz | Mixte | 1 » 1 » 1 | » ? » » » » 24 | » » » » » » » | 24 18
+Oued-Zerga | Mixte | 1 1 » » 1 | 1 ? » 9 » » 11 | 1 » » 10 » » 11 | 22 20
+Philippe-Thomas | Garçons | 1 1 » » 1 | 1 ? 5 14 » » 27 | » » » » » » » | 27 23
+Philippe-Thomas | Filles | 1 1 » » 1 | » ? » » » » » | 1 3 7 10 » » 21 | 21 18
+Pichon | Mixte | 1 1 » » 1 | » ? » 3 » » 21 | 3 » » » » » 3 | 24 26
+Pont-du-Fahs | Mixte | 1 1 » » 1 | 3 ? » 16 » » 27 | 4 » » 10 » » 14 | 41 32
+Porto-Farina | Garçons | 2 1 1 » 2 | 34 ? » 4 1 » 76 | 1 » » » » » 1 | 77 37
+Porto-Farina | Filles | 1 1 » » 1 | » ? » » » » » | 26 2 » 3 2 » 33 | 33 41
+Potinville | Mixte | 2 2 » » 2 | 1 ? » 26 8 » 40 | 3 2 » 15 2 » 22 | 62 51
+Protville | Mixte | 1 1 » » 1 | » ? » 4 » » 22 | 1 » » 4 » » 5 | 27 15
+Ras-el-Djebel | Garçons | 3 2 1 » 3 | » ? 3 » » » 84 | » 1 » » » » 1 | 85 76
+Rebiba | Mixte | 1 1 » » 1 | 6 ? » 14 » » 20 | 5 » » 18 1 » 24 | 44 39
+Reyville | Mixte (coéducation) | 2 2 » 1 3 | » ? » 29 » » 29 | » 1 » 18 » » 19 | 48 43
+Sahaline | Garçons | 2 1 1 » 2 | » ? » » » » 58 | » » » » » » » | 58 51
+Saïda | Garçons : coéducation | 1 1 » » 1 | » ? » 38 » » 38 | » » » » » » » | 38 101  # previous-year total printed once (bracketed) for Garçons and Filles
+Saïda | Filles : coéducation | 1 1 » » 1 | » ? » » » » » | » » » 46 » » 46 | 46 na  # see the line above
+Saint-Cyprien | Mixte | 1 1 » » 1 | 9 ? » 1 » » 10 | 7 » » 1 » 3 11 | 21 15
+Saint-Germain | Mixte | 1 1 » » 1 | 9 ? » 3 » » 13 | 15 » » 1 » » 16 | 29 30
+Sakiet-Mine | Mixte | 1 1 » » 1 | 3 ? » 18 » » 22 | 5 » » 19 » » 24 | 46 39
+AREPORTER | A reporter | 865 755 125 88 968 | 2998 ? 1983 3943 438 79 20170 | 2803 1054 2741 3725 329 72 10724 | 30894 29459
+## views 138 139 pages 114 115
+REPORT | Report | 865 755 125 88 968 | 2998 ? 1983 3943 438 79 20170 | 2803 1054 2741 3725 329 72 10724 | 30894 29459
+Sakiet-Sidi-Youssef | Mixte | 1 1 » » 1 | 4 ? » 3 » » 15 | 3 » 1 4 » » 8 | 23 30
+Sbeïtla | Mixte | 1 1 » » 1 | 7 ? 6 6 » » 31 | 10 » 2 3 2 » 17 | 48 37
+Sbiba | Garçons | 1 1 » » 1 | » ? » » » » 60 | » » » » » » » | 60 na  # "Création"
+Sebbala-du-Mornag | Mixte | 1 1 » » 1 | 7 ? » 11 » » 20 | 9 1 » 8 » » 18 | 38 30
+Sedjoumi | Mixte | 1 1 » » 1 | » ? » 15 1 » 17 | » » » 21 1 » 22 | 39 46
+Sened | Mixte | 1 1 » » 1 | 3 ? 1 » » » 18 | 2 » 1 2 » » 5 | 23 12
+Sers | Garçons | 2 1 1 » 2 | » ? » » » » 44 | » » » » » » » | 44 40
+Sfax | Garçons (école primaire supérieure) | 9 13 » » 13 | 141 ? 43 25 9 14 246 | » » » » » » » | 246 231
+Sfax | Garçons (école primaire élémentaire) | 8 8 » 1 9 | 99 ? 108 64 24 20 315 | » » » » » » » | 315 301
+Sfax | Garçons (franco-arabe) | 9 6 3 » 9 | » ? » » » » 499 | » » » » » » » | 499 426
+Sfax | Filles (école primaire supérieure) | 10 15 » » 15 | » ? » » » » » | 157 » 48 31 11 11 258 | 258 253
+Sfax | Filles (école primaire élémentaire) | 8 9 » » 9 | » ? » » » » » | 92 10 143 44 15 30 334 | 334 305
+Sfax | Enfantine. — Mixte | 2 2 » » 2 | 4 ? 12 6 1 6 30 | 6 1 22 7 1 8 45 | 75 76
+Sfax | Moulinville. — Mixte | 2 2 » » 2 | 23 ? 15 5 6 » 51 | 26 3 14 2 4 » 49 | 100 67
+Sfax | Picville. — Garçons | 3 3 » » 3 | 37 ? 9 41 22 11 120 | » » » » » » » | 120 119
+Sfax | Picville. — Filles | 4 4 » » 4 | 14 ? 1 8 4 1 28 | 63 1 11 73 18 6 172 | 200 195
+Sidi-Amor-b.-Salem | Mixte | 2 1 » 1 2 | 3 ? » 42 3 » 48 | » » » 35 » » 35 | 83 87
+Sidi-bou-Saïd | Garçons (franco-arabe) | 2 1 1 » 2 | » ? » » » » 50 | » » » » » » » | 50 32
+Sidi-bou-Zid | Mixte | 1 1 » » 1 | » ? 3 » » » 28 | 1 2 » » » » 3 | 31 33
+Sidi-Tabet | Mixte | 1 1 » » 1 | 4 ? » 2 » » 7 | 1 » » 7 » » 8 | 15 11
+Siliana | Mixte | 1 1 » » 1 | » ? 8 » » » 23 | 1 » » » » » 1 | 24 33
+Slata | Mixte | 1 1 » » 1 | » ? » 4 » » 4 | 2 1 » 7 » 1 11 | 15 16
+Smala-des-Souassi | Garçons | 2 1 1 » 2 | » ? » » » » 25 | » » » » » » » | 25 19
+Soliman | Garçons | 4 3 1 » 4 | 2 ? 36 9 1 1 156 | » » » » » » » | 156 131
+Soliman | Filles | 1 1 » » 1 | 1 ? » » » » 1 | 4 » 21 6 » » 31 | 32 27
+Soliman | Filles musulmanes | 2 2 1 » 3 | » ? » » » » » | » 73 » » » » 73 | 73 78
+Souk-el-Arba | Garçons | 3 3 » » 3 | 23 ? 13 15 » » 52 | 20 10 15 15 » » 60 | 112 118
+Souk-el-Arba | Garçons (franco-arabe) | 3 2 1 » 3 | » ? » » » » 119 | » » » » » » » | 119 85
+Souk-el-Arba | Filles | 4 4 » » 4 | 21 ? 23 11 » » 55 | 16 1 14 24 » » 55 | 110 107
+AREPORTER | A reporter | 955 846 134 90 1070 | 3391 ? 2261 4210 509 132 22232 | 3216 1157 3033 4014 381 128 11929 | 34161 32404
+## views 140 141 pages 116 117
+REPORT | Report | 955 846 134 90 1070 | 3391 ? 2261 4210 509 132 22232 | 3216 1157 3033 4014 381 128 11929 | 34161 32404
+Souk-el-Khemis | Garçons (internat) | 3 4 » » 4 | 67 ? 6 33 » 1 107 | » » » » » » » | 107 96
+Souk-el-Khemis | Garçons (franco-arabe) | 3 2 1 » 3 | » ? » » » » 75 | » » » » » » » | 75 86
+Souk-el-Khemis | Filles | 2 2 » » 2 | » ? » » » » » | 21 2 8 28 » 3 62 | 62 71
+Soukra (La) | Mixte | 1 1 » 1 2 | 4 ? » 4 » » 8 | 3 » » 14 » » 17 | 25 24
+Sousse | Garçons (école primaire supérieure) | 11 16 » » 16 | 134 ? 93 46 19 5 364 | » » » » » » » | 364 341
+Sousse | Garçons (école primaire élémentaire), rue Khéreddine | 9 9 » » 9 | 138 ? 141 65 25 4 388 | » » » » » » » | 388 365
+Sousse | Garçons (franco-arabe) | 12 10 3 3 16 | » ? » » » » 506 | » » » » » » » | 506 486
+Sousse | Filles (école primaire supérieure), avenue Boucher | 11 15 » » 15 | » ? » » » » » | 129 8 441#141 44 17 1 340 | 340 393  # printed 441; row and column totals imply 141
+Sousse | Filles (école primaire élémentaire), place de la Gare | 10 10 » » 10 | » ? » » » » » | 151 5 171 71 22 1 421 | 421 355
+Sousse | Filles musulmanes | 8 6 1 3 10 | » ? » » » » » | » 282 » » » » 282 | 282 271
+Sousse | Enfantine, place de la Gare. — Mixte | 4 4 » » 4 | 28 ? 31 15 8 2 85 | 31 2 52 10 7 » 102 | 187 193
+Tabarca | Garçons | 5 4 1 » 5 | 48 ? » 30 » 1 150 | 2 » » 2 » » 4 | 154 151
+Tabarca | Filles | 3 3 » » 3 | 5 ? » 2 » 1 8 | 49 2 3 48 » 1 103 | 111 122
+Tadjerouine | Garçons (franco-arabe) | 1 1 » » 1 | 1 ? 1 11 » » 29 | » » » 4 » » 4 | 33 26
+Teboulba | Garçons | 2 1 » 1 2 | 1 ? » 1 » » 101 | » » » » » » » | 101 74
+Teboulbou | Garçons | 2 1 1 » 2 | » ? » » » » 71 | » » » » » » » | 71 na  # "Création"
+Tebourba | Mixte (avec internat) | 1 1 » » 1 | 13 ? » 5 » » 18 | 4 » » 2 » » 6 | 24 24
+Tebourba | Garçons (franco-arabe) | 2 1 1 » 2 | » ? » » » » 41 | » » » » » » » | 41 50
+Tebourba | Filles mixte | 1 1 » » 1 | 14 ? 1 9 » » 24 | 5 » » 3 » » 8 | 32 29
+AREPORTER | A reporter | 1046 938 142 98 1178 | 3844 ? 2534 4431 561 146 24207 | 3611 1458 3408 4210# 427 134 13278 | 37485 35561  # 4.210 printed; cells and the girls total 13.278 imply 4.240
+## views 142 143 pages 118 119
+REPORT | Report | 1046 938 142 98 1178 | 3844 ? 2534 4431 561 146 24207 | 3611 1458 3408 4240 427 134 13278 | 37485 35561  # this page's Report prints 4.240
+Teboursouk | Garçons | 4 3 1 » 4 | 9 ? 5 18 » » 133 | 2 2 2 6 » » 12 | 145 103
+Teboursouk | Filles | 1 1 » » 1 | » ? » » » » » | 4 » 3 7 » » 14 | 14 16
+Testour | Mixte | 1 1 » » 1 | 2 ? 10 » » » 64 | » 1 » » » » 1 | 65 46
+Thala | Garçons | 2 1 1 » 2 | 2 ? 2 4 » » 77 | » » » » » » » | 77 52
+Thala | Filles | 1 1 » » 1 | » ? » 1 1 » 2 | 7 3 » 6 1 » 17 | 19 17
+Tindja | Garçons | 2 2 » » 2 | 27 ? » 18 » » 45 | 26 1 » 7 » » 34 | 79 76
+Tindja | Filles | 2 2 » » 2 | 31 ? » 19 » » 50 | 21 1 » 33 » » 55 | 105 107
+Tozeur | Garçons | 3 2 1 » 3 | 2 ? 15 » » » 92 | » » » » » » » | 92 82
+Tozeur | Filles | 1 1 » » 1 | » ? » » » » » | 4 2 22 » » » 28 | 28 32
+Turki | Garçons (franco-arabe) | 2 1 1 » 2 | 2 ? » » » » 39 | 1 » » » » » 1 | 40 40
+Utique | Mixte | 1 1 » » 1 | 7 ? » 6 1 2 19 | 1 » » 7 » » 8 | 27 24
+Villejacques | Mixte | 1 1 » » 1 | 1 ? » 13 » » 16 | » 1 » 2 » » 3 | 19 33
+Zaghouan | Garçons (avec internat) | 3 4 » » 4 | 44 ? » 14 » » 58 | 4 » » » » » 4 | 62 67
+Zaghouan | Garçons (franco-arabe) | 3 2 1 » 3 | » ? » » » » 109 | » » » » » » » | 109 85
+Zaghouan | Filles | 2 2 » » 2 | 8 ? » 13 » » 21 | 13 » 2 19 » » 34 | 55 59
+Zaghouan | Filles musulmanes | 3 2 1 » 3 | » ? » » » » » | » 85 » » » » 85 | 85 86
+Zarzis | Garçons | 3 2 1 » 3 | 8 ? 6 4 » » 94 | » » » » » » » | 94 104
+Zarzis | Filles | 1 1 » » 1 | » ? » » » » » | 11 4 9 5 » 2 31 | 31 31
+Zeramdine | Garçons | 1 1 » » 1 | » ? » » » » 64 | » » » » » » » | 64 na  # "Création"
+Zriba | Mixte | 1 1 » » 1 | 6 ? » » » » 7 | 3 2 » 1 » » 6 | 13 18
+TOTAL | Totaux des écoles primaires publiques | 1084 970 149 98 1217 | 3993 ? 2572 4541 563 148 25097 | 3708 1560 3446 4333 428 136 13611 | 38708 36639  # Musulmans in the binding, solved from the boys' total (13.280, as printed in the primary-education total). Previous-year total: the rows add to 36.645; the final total carries the 6 lost in the misprinted carry-over of view 133 (25.571 for 25.577)
+
+@ primary_private sector=private level=primary cols=cstaff,boys,girls,genprev table=b)_Ecoles_privées
+## views 144 145 pages 120 121
+Tunis | Ecole pratique de commerce | 1 2 » » 2 | 14 ? 12 9 1 2 40 | » » » » » » » | 40 36
+Tunis | Cours privés de commerce pour adultes | 3 » » 1 1 | 1 ? 21 3 » » 25 | » » » » » » » | 25 22
+Tunis | Ecole secondaire libre, rue d'Algérie | 11 22 » 3 25 | 347 ? » 22 20 1 393 | » » » » » » » | 393 328
+Tunis | Ecole protestante : garçons | 4 4 » » 4 | 1 ? 96 4 » » 101 | » » » » » » » | 101 108
+Tunis | Ecole protestante : filles | 4 4 » 1 5 | » ? » » » » » | » » 108 » » » 108 | 108 120
+Tunis | Ecole Mixte de Mme Bonhomme | 1 2 » » 2 | 8 ? 5 2 » » 15 | 12 1 7 2 » » 22 | 37 49
+Tunis | Ecole libre de jeunes filles musulmanes | 14 7 3 13 23 | » ? » » » » » | » 420 » » » » 420 | 420 450
+Tunis | Pensionnat de Notre-Dame de Sion | 10 13 » 3 16 | » ? » » » » » | 154 4 41 26 10 2 237 | 237 262
+Tunis | Ecole gratuite de Notre-Dame de Sion | 4 4 » » 4 | » ? » » » » » | 59 » 5 80 62 » 206 | 206 204
+Tunis | Pensionnat des sœurs de Saint-Joseph | 8 8 » 7 15 | 21 ? 9 14 2 » 50 | 184 16 22 52 5 7 286 | 336 347
+Aïn-Moularès | Ecole de M. Carrière | 2 2 » » 2 | 7 ? » 34 » » 41 | 7 » » 25 » » 32 | 73 na  # "Création"
+Ariana | Orfanotrofio « Principe di Piemonte » | 5 2 » 2 4 | » ? » 83 » » 83 | » » » » » » » | 83 89
+Bizerte | Ecole Umberto Ier | » » » » » | » ? » » » » » | » » » » » » » | » 288
+Bizerte | Ecole de Mme Médeville | 1 1 » » 1 | 3 ? » 1 » 1 5 | 4 » » » » » 4 | 9 na  # "Réouverture"
+Bizerte | Ecole de filles de Notre-Dame de Sion | 7 5 » 7 12 | » ? » » » » » | 67 » 3 49 2 8 129 | 129 136
+Carthage | Orphelinat des sœurs de Sainte-Monique (sœurs franciscaines de Marie) | 2 2 » » 2 | » ? » » » » » | 17 5 » 14 » 3 39 | 39 29
+Ferryville | Ecole de la Société Nord-Africaine (sœurs du Sacré-Cœur de Marie) | 5 5 » » 5 | 30 ? 1 4 » » 37 | 120 1 » 6 » » 127 | 164 187
+Le Kef | Ecole de Mlle Lo Vecchio | 1 » » 1 1 | » ? » 23 » » 23 | » » » 5 » » 5 | 28 30
+AREPORTER | A reporter | 90# 83 3 46# 132# | 432 ? 144 369# 23 4 983# | 624 447 186 367# 79 20 1723# | 2706# 2685  # the printed carry-over exceeds the itemised rows by 7 classes, 8 other staff, 170 Italian boys and 108 Italian girls (278 pupils): apparently the Ecole Umberto Ier (Bizerte), printed as » throughout
+## views 146 147 pages 122 123
+REPORT | Report | 90 83 3 46 132 | 432 ? 144 369 23 4 983 | 624 447 186 367 79 20 1723 | 2706 2685
+La Manouba | Ecole de Notre-Dame Auxiliatrice | 4 4 » 1 5 | 2 ? » » » » 2 | 60 » » 19 1 » 80 | 82 90
+La Manouba | Ecole privée d'enseignement secondaire de jeunes filles (ouverte le 1er mars 1923) | » » » » » | » ? » » » » » | » » » » » » » | » »
+La Marsa | Orphelinat Perret | 3 2 » 1 3 | 27 ? » 6 2 2 37 | » » » » » » » | 37 55
+Mehdia | Ecole de Mme Costa | 1 1 » 1 2 | » ? » 20 » » 20 | » » » » » » » | 20 13
+Metlaoui | Ecole mixte de la Cie des Phosphates (sœurs de Saint-Joseph) | 4 4 » 1 5 | 28 ? 2 81 7 1 119 | 35 » 4 80 9 5 133 | 252 256
+Redeyef | Ecole mixte de M. Combès | 4 4 » » 4 | 31 ? » 59 » » 90 | 33 8#0 » 45 » » 78 | 168 193  # printed 8 Muslim girls: row total (78) and column total imply 0
+St-Joseph-de-Thibar | Ecole de filles | 1 1 » » 1 | » ? » » » » 12 | » 11 » » » » 11 | 23 15
+Seillonville | Ecole mixte de Mlle Lemplaire | 1 1 » » 1 | 23 ? » » » » 23 | 13 » » » » » 13 | 36 25
+% Ecoles de l'Alliance Israélite (subventionnées)
+Tunis | Garçons : Rue Malta-Srira | 17 18 » 2 20 | 11 ? 686 41#11 » 5 714 | » » » » » » » | 714 703  # printed 41 Italian boys: row total (714) and column total imply 11 (Muslim boys then 1, the digit visible in the binding)
+Tunis | Garçons : Rue du Tribunal | 19 13 » 4 17 | 24 ? 897 14 » » 935 | » » »#70 70#0 » » 70 | 1005 953  # 70 girls printed in the Italian column; the column totals put them in the Jewish column
+Tunis | Filles | 19 23 » 4 27 | » ? » » » » » | 32 » 1020 23 1 6 1082 | 1082 844
+Sfax | Garçons | 5 4 » 2 6 | » ? 222 » » » 235 | » » » » » » » | 235 225
+Sfax | Filles | 2 2 » » 2 | » ? » » » » » | » » 76 » » » 76 | 76 87
+Sousse | Garçons | 5 3 » 2 5 | » ? 152 » » » 152 | » » » » » » » | 152 154
+TOTAL | Totaux des écoles privées | 175 163 3 64 230 | 578 ? 2103 560 32 12 3322 | 797 458 1356 534 90 31 3266 | 6588 6298  # stored (see notes): includes the 7 classes, 8 Maîtres divers, 170 Italian boys and 108 Italian girls of the first spread's carry-over that are not itemised (apparently the Ecole Umberto Ier, Bizerte); Musulmans in the binding, solved from the boys' total (37, as in the primary-education total)
+

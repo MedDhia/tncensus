@@ -1,0 +1,36 @@
+# view 12
+Bordj-Djelidj | 8 0 0 0 0 0 8
+El-Kantara | 10 0 6 0 0 0 16
+Guellala | 6 0 3 0 0 0 9
+Midoun | 10 3 5 0 0 0 18
+Turganess | 3 0 0 0 0 0 3
+## Contrôle de Gafsa
+Gafsa | 158 73 3 0 0 0 234
+Gafsa-Gare | 62* 46 22 0 0 0 130
+Aïn-Zannouch | 6 7 0 0 0 0 13
+Maknassy | 46 26 3 0 0 0 75
+Metlaoui-Gare | 56 258 9 5 3 0 331
+Metlaoui-Mine | 230 522 6 12 4 0 774
+Redeyeff | 12 67 0 1 0 2 82
+Seldja Ras-El-Aïoun | 64 196 2 3 1 1 267
+Sened | 9 17 4 0 0 0 30
+Sidi-bou-Zid | 18 1 0 0 0 0 19
+## Annexe de Tozeur
+Tozeur | 48 14 0 2 0 1 65
+Degache | 5 2 0 0 0 0 7
+Kriz | 1 0 0 0 0 0 1
+Nefta | 14 0 0 0 0 0 14
+Tamerza | 6 0 0 0 0 0 6
+## Contrôle de Grombalia
+Grombalia | 145 175 15 3 0 0 338
+Grombalia (Environs de) | 40 53 0 0 0 1 94
+Belli, Nianou et environs | 34 98 4 9 0 0 145
+Bou-Arkoub | 14 95 0 0 0 0 109
+Bou-Ficha (kil.72) | 4 4 0 0 0 0 8
+Fondouck-Djedid | 111 382 0 0 0 8 501
+Hammamet | 61 72 51 0 0 1 185
+Khanguet-el-Hajaj et Ben-Aïech | 103 81 14 1 0 1 200
+Khanguet-Gare et Semech | 6 149 0 0 1 0 156
+Kelibia | 43 185 3 1 0 0 232
+Korbous | 30 317 12* 0 0 0 359  # (Maltese 12 printed half a line low)
+Menzel-bou-Zelfa | 15 40 0* 0 4 0 59

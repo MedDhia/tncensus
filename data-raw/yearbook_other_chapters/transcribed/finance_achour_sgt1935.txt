@@ -1,0 +1,20 @@
+# Achour, sgt1935. Format: see yb_tables.py (sections parsed by extract_finance_achour.py). Every cell read on a
+# native-resolution crop of the page image (f133, rows Blé .. Lin, x 40-1700, y 950-2450); the Gallica OCR is a
+# cross-check ('!' = OCR differs).
+#
+# ACHOUR (1935). Superficies ensemencées par les Européens et les Tunisiens. One page, f133 (p. 113). Rows: nature
+# des cultures; columns: Nombre d'hectares ensemencés par les européens (eur), par les tunisiens (ind),
+# Récapitulation (rec; check = eur + ind), Cultures effectuées sur terrains nouvellement défrichés et exemptées de
+# l'achour (européens et tunisiens) (new; footnote (1): included in the Récapitulation). Printed in hectares and
+# ares (two-figure ares after a space; "31.50" printed with a point), stored as decimal hectares.
+@achour_nat view=133 page=113 year=1935
+img: all
+cols: eur ind rec new
+wheat | 158814.54 662913.88 821728.42 13331.91
+barley | 20335.45 528865.90 549201.35 2705.71
+oats | 12599.12 12189.21 24788.33 714.66
+broad_beans | 4867.23 17654.34 22521.57 377.63
+chickpeas | 1469.08 3815.62 5284.70 31.50
+maize | 297.26 14133.71 14430.97 3
+sorghum | 512.62 2004.88 2517.50 10.50
+flax | 39.76 393.88 433.64 0

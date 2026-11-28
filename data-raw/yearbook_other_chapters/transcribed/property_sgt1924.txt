@@ -1,0 +1,236 @@
+# Property chapter (chapter VI, Propriété immobilière: Tribunal mixte, Conservation foncière), sgt1924
+# (ark bpt6k9105649x), views 1077-1086 (1077 chapter title, 1078 blank, 1086 blank; 1087 = chapter VII).
+# Format: see yb_tables.py and property_sgt1922.txt.
+
+@cases view=1079 page=89 year=1924
+img: all
+cols: tunis sousse
+pending_start | 956 315
+entered | 552 89
+Total@in | 1058 404
+judged | 275 112
+pending_end | 1233 292
+Total@all | 1912 -
+Total@judged | 387 -
+Total@pending | 1525 -
+
+@activity view=1079 page=89 year=1924
+img: all
+cols: tunis sousse total
+requisitions | 552 89 641
+hearings | 124 13 137
+judg_registration | 259 85 -
+judg_rejection | 14 26 -
+judg_radiation | 2 1 -
+Total@judgments | - - 387
+interlocutory | 253 66 319
+rectification | 0 1 1
+inspections | 63 48 111
+expertises | 0 0 0
+
+@pending view=1080 page=90 year=1924 heads="A B C(1) C(2) 1 2 3 1 2 3"
+img: all
+cols: T.A S.B S.C1 S.C2 D.1 D.2 D.3 C.1 C.2 C.3 partial
+I.1 | 465 102 0 0 0 0 209 0 0 0 776
+I.2 | 1 0 0 0 0 0 0 0 0 0 1
+I.3 | 4 18 4 0 11 0 4 15 6 2 64
+II.1 | 55 32 8 0 11 0 2 54 27 37 226
+II.2 | 52 60 23 3 25 0 10 41 70 36 320
+III.1 | 34 29 13 0 35 1 2 10 10 4 138
+III.2 | 0 0 0 0 0 0 0 0 0 0 0
+Total | 611 241 48 3 82 1 227 120 113 79 1525
+
+@pending_groups view=1080 page=90 year=1924
+img: all
+cols: general
+I | 841
+II | 546
+III | 138
+
+@pending_age view=1080 page=90 year=1924 heads="A B C(1) C(2) 1 2 3 1 2 3"
+img: all
+cols: T.A S.B S.C1 S.C2 D.1 D.2 D.3 C.1 C.2 C.3 partial
+1905 | 0 2 0 0 0 0 0 0 0 0 2
+1906 | 2 2 0 0 0 0 0 0 0 0 4
+1907 | 3 4 0 0 0 0 0 0 0 0 7
+1908 | 0 5 3 2 0 0 0 0 0 0 10
+1909 | 3 0 0 1 0 0 0 1 0 0 5
+1910 | 4 6 2 0 0 0 2 2 1 0 17
+1911 | 9 5 1 0 1 0 1 0 1 0 18
+1912 | 11 12 8 0 0 0 0 4 1 0 36
+1913 | 20 8 4 0 0 0 0 6 1 1 40
+1914 | 25 14 5 0 0 0 0 15 11 4 74
+1915 | 2 1 1 0 3 0 0 1 2 1 11
+1916 | 2 2 0 0 2 0 1 1 2 2 12
+1917 | 4 2 0 0 0 0 0 1 4 2 13
+1918 | 0 4 1 0 2 0 0 3 8 2 20
+1919 | 13 5 2 0 3 0 1 10 20 15 69
+1920 | 15 7 3 0 6 0 1 22 21 20 95
+1921 | 12 15 4 0 12 0 4 21 27 15 110
+1922 | 32 20 3 0 13 1 7 18 11 12 117
+1923 | 128 39 11 0 29 0 1 14 3 5 230
+1924 | 326 88 0 0 11 0 209 1 0 0 635
+Total | 611 241 48 3 82 1 227 120 113 79 1525
+V | 0 0 0 0 0 0 0 0 0 0 0
+
+@legal_status view=1081 page=91 year=1924
+img: all
+cols: imm.tunis imm.sousse rej.tunis rej.sousse rad.tunis rad.sousse total
+melk | 141 57 13 24 2 1 238
+enzel | 105 28 0 1 0 0 134
+habous | 13 0 1 1 0 0 15
+Total | 259 85 14 26 2 1 389
+Total@pair | 344 - 40 - 3 - -
+
+@charges view=1081 page=91 year=1924
+img: all
+cols: imm.tunis imm.sousse rej.tunis rej.sousse rad.tunis rad.sousse total
+enzel_registered | 55553.55 15376 0 0 0 0 70929.55
+enzel_declared | 0 0 0 75 678.54 0 753.54
+mortgage_registered | 2383821.71 6901852.03 0 0 0 0 9285673.74
+mortgage_declared | 0 0 3000 12082.40 24000 1500 40582.40
+
+@charges_summary view=1081 page=91 year=1924
+img: all
+cols: value
+n_properties | 387
+Total enzel | 70929.55
+Total mortgage | 9285673.74
+mortgage_titles_tunis | 54
+mortgage_titles_sousse | 19
+
+@location view=1081 page=91 year=1924
+img: all
+cols: imm.tunis imm.sousse rej.tunis rej.sousse rad.tunis rad.sousse total
+urban.melk | 54 18 1 8 0 0 81
+urban.enzel | 64 23 0 0 2 0 89
+urban.habous | 2 0 0 0 0 0 2
+Total urban | 120 41 1 8 2 0 172
+Total@pair urban | 161 - 9 - 2 - -
+rural.melk | 87 39 12 16 0 1 155
+rural.enzel | 41 5 0 1 0 0 47
+rural.habous | 11 0 1 1 0 0 13
+Total rural | 139 44 13 18 0 1 215
+Total@pair rural | 173 - 31 - 1 - -
+Total général | - - - - - - 387
+
+@areas view=1082 page=92 year=1924
+img: all
+cols: imm.tunis imm.sousse ref.tunis ref.sousse total
+urban.melk | 5.3660 1.2853 0.0242 0.4474 7.1229
+urban.enzel | 3.3841 0.2382 0.7867 0.0003 4.4093
+urban.habous | 0.3231 0 0 0 0.3231
+rural.melk | 13009.6378 4966.6751 2870.5055 4745.7273 25592.5457
+rural.enzel | 1656.8672 66.0936 61.9629 21.4000 1806.3237
+rural.habous | 2948.9526 0 373.4139 4.5600 3326.9265
+Total | 17624.5308 5034.2922 3306.6932 4772.1350 30737.6512
+Total@pair | 22658.8230 - 8078.8282 - -
+Total général | - - - - 30737.6512
+
+@oppositions view=1082 page=92 year=1924
+img: all
+cols: tunis sousse total
+accepted | 424 193 617
+rejected | 98 42 140
+withdrawn | 268 115 383
+not_ruled | 19 53 72
+Total | 809 403 -
+Total@all | 1212 - 1212
+
+@claimant_status view=1082 page=92 year=1924
+img: all
+cols: imm.tunis imm.sousse rej.tunis rej.sousse ren.tunis ren.sousse total
+owners | 290 127 53 54 0 1 525
+enzel_holders | 154 31 0 2 2 0 189
+real_right_holders | 0 0 0 1 0 0 1
+Total | 444 158 53 57 2 1 715
+Total@pair | 602 - 110 - 3 - -
+Total général | - - - - - - 715
+
+@claimant_nationality view=1083 page=93 year=1924
+img: all
+cols: imm.tunis imm.sousse rej.tunis rej.sousse ren.tunis ren.sousse total
+Français | 75 13 4 3 0 0 95
+Tunisiens | 273 134 47 47 2 1 504
+Italiens | 60 7 1 3 0 0 71
+Anglais | 12 1 1 4 0 0 18
+Divers | 24 3 0 0 0 0 27
+Total | 444 158 53 57 2 1 715
+Total@pair | 602 - 110 - 3 - -
+Total général | - - - - - - 715
+
+@requisitions view=1084 page=94 years=1886-1924
+img: all
+# 1924 value printed "17.872 50" (a digit of the broken figure missing); 17.872.150 from the Totaux and the
+# later reprints.
+cols: french foreign tunisian number area value
+1886-1909 | 3578 3182 4333 11093 1488950 181902700
+1910 | 107 83 200 390 22955 5174200
+1911 | 118 82 217 417 20793 6328200
+1912 | 110 116 224 450 28388 7301103
+1913 | 133 79 237 449 38455 7502369
+1914 | 105 69 169 343 40600 9217926
+1915 | 24 21 35 80 3228 1643370
+1916 | 19 21 46 86 2043 1501274
+1917 | 20 13 23 56 5041 1004425
+1918 | 14 10 36 60 2127 1226816
+1919 | 59 60 133 252 16937 7288994
+1920 | 48 58 142 248 33655 14999193
+1921 | 78 60 128 266 36380 17340801
+1922 | 67 65 163 295 16809 9987001
+1923 | 69 74 192 335 26016 13748977
+1924 | 87 99 450 645 42227 17872150
+Totaux | 4636 4092 6737 15465 1824604 304039499
+
+@value_brackets view=1084 page=94 years=1886-1924
+img: all
+cols: le_3000 3001_12000 12001_60000 ge_60001 total
+1886-1909 | 3800 4297 2481 515 11093
+1910 | 90 185 106 9 390
+1911 | 105 187 109 16 417
+1912 | 135 174 123 18 450
+1913 | 119 192 115 23 449
+1914 | 84 142 97 20 343
+1915 | 22 42 13 3 80
+1916 | 17 36 27 6 86
+1917 | 18 16 19 3 56
+1918 | 15 22 20 3 60
+1919 | 43 91 73 45 252
+1920 | 40 81 100 27 248
+1921 | 43 94 89 40 266
+1922 | 45 95 119 36 295
+1923 | 43 132 117 43 335
+1924 | 267 149 174 55 645
+Totaux | 4886 5935 3782 862 15465
+
+@titles view=1085 page=95 years=1886-1924
+img: all
+cols: total_titles subdivision judgment area value
+1886-1909 | 15171 6514 8654 1017241.9027 152733997
+1910 | 922 571 363 32178.7842 5213063
+1911 | 993 675 318 23711.6126 5990907
+1912 | 1126 715 402 17837.0446 7585953
+1913 | 1108 717 391 8294.6845 4870828
+1914 | 883 588 295 10976.9349 5208013
+1915 | 394 290 104 2242.1016 1860017
+1916 | 408 299 109 6919.4179 1547880
+1917 | 372 286 86 33049.9386 2024534
+1918 | 392 337 55 3712.7685 878810
+1919 | 683 624 59 4126.9694 1630480
+1920 | 1226 1058 168 7141.8952 2589061
+1921 | 1147 939 208 10311.2541 5909533
+1922 | 1085 824 261 11814.8489 7166039
+1923 | 1195 904 291 10973.3560 7642057
+1924 | 1542 1207 335 9075.2310 9263004
+Totaux | 28647 16548 12099 1209608.7447 232114176
+
+@recap view=1085 page=95 year=1924
+img: all
+cols: demands area_declared value_declared solved area_registered value_registered titles_established titles_mutation titles_total
+cumulative | 15465 1824604 304039499 14100 1209608 222114176 12099 16548 28647
+
+@registered view=1085 page=95 year=1924
+img: all
+cols: value
+enzel_rents | 3502119
+mortgage_claims | 364452728

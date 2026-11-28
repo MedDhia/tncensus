@@ -1,0 +1,217 @@
+# Posts chapter (chapter VII), sgt1939 (ark bpt6k9105739w), views 77-82 (77 chapter title; 83 = chapter VIII
+# Travaux publics). Format: see yb_tables.py. Every section read cell by cell on native-resolution crops
+# (img: all), the Gallica OCR used as a cross-check only.
+# New layout: only "Exploitation" (1930-1939) over the spreads f78|f79 (postes: mandats émis / payés, colis;
+# télégraphes) and f80|f81 (téléphones, caisse d'épargne, avances sur pensions, chèques postaux); no Réseau,
+# no correspondence, registered items, collections or financial situation; no money-order tables. The 1932
+# column (9 mois) is cut by the binding on f78 and f80 ('?'). f82 Caisse nationale d'épargne, comptes ouverts
+# (1930-1939), amounts only.
+# Printed » in lines that did not exist before 1938 (urban conversations, radiotelephone, subscribers, TSF
+# sets, passbooks outstanding, pension advances, postal cheques) are stored '-' (not_applicable): the
+# printed » there marks a figure not collected, not a zero.
+
+# Mandats-poste: the columns are misaligned in this printing. The column headed 1931 prints the 1927 figures
+# (sgt1936's 1927 to the unit), and the columns headed 1932-1936 print the figures of 1931-1935 (sgt1936's
+# 1931-1935); the 1936 figures are not printed. Stored on the year they belong to (row_realigned); 1937-1939
+# are as printed.
+@operations view=78 page=72 years=1930
+img: all
+cols: 1930
+mo_issued_tunisia_n | 681281
+mo_issued_tunisia_amt | 330440533
+mo_issued_france_n | 448237
+mo_issued_france_amt | 155698469
+mo_issued_foreign_n | 19557
+mo_issued_foreign_amt | 4428391
+mo_paid_tunisia_n | 667080
+mo_paid_tunisia_amt | 329877407
+mo_paid_france_n | 251722
+mo_paid_france_amt | 86306445
+mo_paid_foreign_n | 15124
+mo_paid_foreign_amt | 5437000
+
+@operations view=78 page=72 years=1927-1931 realigned=1 printed="columns headed 1931 and 1932"
+img: all
+cols: 1927 1931
+mo_issued_tunisia_n | 492403 ?
+mo_issued_tunisia_amt | 223731640 ?
+mo_issued_france_n | 303763 ?
+mo_issued_france_amt | 99357342 ?
+mo_issued_foreign_n | 6160 ?
+mo_issued_foreign_amt | 1060063 ?
+mo_paid_tunisia_n | 489048 ?
+mo_paid_tunisia_amt | 226264010 ?
+mo_paid_france_n | 211864 ?
+mo_paid_france_amt | 57509127 ?
+mo_paid_foreign_n | 10667 ?
+mo_paid_foreign_amt | 3037538 ?
+
+@operations view=79 page=73 years=1932-1935 realigned=1 printed="columns headed 1933-1936"
+img: all
+cols: 1932 1933 1934 1935
+mo_issued_tunisia_n | 531966 493248 480477 479555
+mo_issued_tunisia_amt | 226249423 187569303 165440659 165433685
+mo_issued_france_n | 348496 338280 329504 342929
+mo_issued_france_amt | 131969647 126049998 112345405 107590
+mo_issued_foreign_n | 16166 14359 13521 12212
+mo_issued_foreign_amt | 3866256 3440692 2738671 2345936
+mo_paid_tunisia_n | 526383 489310 474705 479485
+mo_paid_tunisia_amt | 229810812 187107175 161700667 165818047
+mo_paid_france_n | 200017 176242 189239 211931
+mo_paid_france_amt | 63150943 57524189 59782058 63110829
+mo_paid_foreign_n | 11732 11147 11158 12852
+mo_paid_foreign_amt | 3976717 3566290 3372065 3366063
+
+@operations view=79 page=73 years=1937-1939
+img: all
+cols: 1937 1939
+mo_issued_tunisia_n | 543243 576815
+mo_issued_tunisia_amt | 271606469.42 289871852.45
+mo_issued_france_n | 339969 394387
+mo_issued_france_amt | 137581667.19 198481562.70
+mo_issued_foreign_n | 11320 4714
+mo_issued_foreign_amt | 2502355.73 1126084.70
+mo_paid_tunisia_n | 541216 575542
+mo_paid_tunisia_amt | 270710204.90 290638159.64
+mo_paid_france_n | 227920 378825
+mo_paid_france_amt | 90858293.25 124591463.88
+mo_paid_foreign_n | 13686 21223
+mo_paid_foreign_amt | 3369025.47 4895449.36
+
+# 1938: France and Étranger printed as one figure across both lines (brace); telegrams of each direction
+# printed as one figure across Tunisie, France, Étranger; Service officiel and Totaux printed » ('-').
+@operations view=79 page=73 years=1938
+img: all
+cols: 1938
+mo_issued_tunisia_n | 558810
+mo_issued_tunisia_amt | 254400400.40
+mo_issued_ff_n | 371239
+mo_issued_ff_amt | 157191147.48
+mo_paid_tunisia_n | 560410
+mo_paid_tunisia_amt | 254651537.54
+mo_paid_ff_n | 253596
+mo_paid_ff_amt | 90234256.67
+parcels_dep_tunisia | 40516
+parcels_dep_france | 63560
+parcels_dep_foreign | 6578
+parcels_arr_tunisia | 39523
+parcels_arr_france | 233981
+parcels_arr_foreign | 11598
+Total@parcels | 395756
+tg_dep_all | 645663
+tg_arr_all | 706895
+tg_official_dep | -
+tg_official_arr | -
+Total@tg | -
+
+@operations view=78 page=72 years=1930-1932
+img: all
+cols: 1930 1931 1932
+parcels_dep_tunisia | 165081 107067 ?
+parcels_dep_france | 144478 107351 ?
+parcels_dep_foreign | 14110 10227 ?
+parcels_arr_tunisia | 170645 115995 ?
+parcels_arr_france | 838197 911286 ?
+parcels_arr_foreign | 24714 19320 ?
+Total@parcels | 1357225 1271246 ?
+tg_dep_tunisia | 303958 257223 ?
+tg_dep_france | 340978 340582 ?
+tg_dep_foreign | 66198 47256 ?
+tg_arr_tunisia | 379627 337740 ?
+tg_arr_france | 393730 311859 ?
+tg_arr_foreign | 81981 47210 ?
+tg_official_dep | 58161 46553 ?
+tg_official_arr | 40845 32495 ?
+Total@tg | 1665478 1420918 ?
+
+@operations view=79 page=73 years=1933-1939
+img: all
+cols: 1933 1934 1935 1936 1937 1939
+parcels_dep_tunisia | 67947 52941 46228 46768 38586 46946
+parcels_dep_france | 95183 90484 81200 75848 66381 56613
+parcels_dep_foreign | 7212 6570 2499 5917 7206 4898
+parcels_arr_tunisia | 321735 282650 181332 166623 164129 45413
+parcels_arr_france | 696423 551362 483146 447762 360524 194875
+parcels_arr_foreign | 52109 58710 43778 25959 23899 5510
+Total@parcels | 1241019 1032717 842183 768877 660725 354255
+tg_dep_tunisia | 192416 186030 182270 168302 195962 260191
+tg_dep_france | 313102 331628 335054 351337 352433 451965
+tg_dep_foreign | 40957 52334 51653 40537 47792 32735
+tg_arr_tunisia | 271184 239754 190932 219389 236395 275162
+tg_arr_france | 322067 359446 382294 384819 374897 397379
+tg_arr_foreign | 50547 38723 36942 48700 52916 27498
+tg_official_dep | 34884 38043 33722 33789 41447 78384
+tg_official_arr | 26094 33190 32723 33097 42690 76222
+Total@tg | 1251251 1279148 1245590 1279970 1344532 1599536
+
+# Téléphones: for 1930-1937 the one figure printed (on the "Suburbaines" line, "Urbaines" printed ») is the
+# total of conversations printed by the earlier editions (sgt1936 to the unit): stored as the total
+# (row_realigned). From 1938 the lines are split (urbaines / suburbaines). Labels "au 31 décembre 1938" are
+# printed for every column.
+@operations view=80 page=74 years=1930-1932 realigned=1 printed="Suburbaines line"
+img: all
+cols: 1930 1931 1932
+tel_conversations | 9921963 10323847 ?
+
+@operations view=81 page=75 years=1933-1937 realigned=1 printed="Suburbaines line"
+img: all
+cols: 1933 1934 1935 1936 1937
+tel_conversations | 11298526 11967491 12213072 10412144 11019235
+
+@operations view=81 page=75 years=1938-1939
+img: all
+cols: 1938 1939
+tel_urban | 8308151 8405529
+tel_suburban | 2414412 2805254
+radio_tf | 7754 5781
+radio_ft | 7846 5275
+tel_subscribers | 9614 10101
+tsf_sets | 22368 32920
+cne_passbooks_stock | 105840 109501
+pension_adv_n | 7300 7862
+pension_adv_amt | 1665631 1808556
+pension_arrears_n | 12026 13037
+pension_arrears_amt | 1785504.10 1859935.42
+cheque_accounts | 4225 4758
+cheque_debit | 515745623.99 559346301.30
+cheque_credit | 553389540.68 619137953.97
+
+@operations view=80 page=74 years=1930-1932
+img: all
+cols: 1930 1931 1932
+cne_deposits_n | 85642 66968 ?
+cne_deposits_amt | 68859446.44 66564664.97 ?
+cne_withdrawals_n | 40416 36759 ?
+cne_withdrawals_amt | 48628731.76 46728128.95 ?
+Total@cne_n | 126058 103727 ?
+Total@cne_amt | 117488178.20 113292793.92 ?
+cne_balance | 88557744.28 99965748.85 ?
+
+# Totaux printed » for 1933-1936 (amount) and 1936 (number): '-'.
+@operations view=81 page=75 years=1933-1939
+img: all
+cols: 1933 1934 1935 1936 1937 1938 1939
+cne_deposits_n | 72200 77745 73904 76370 70150 87259 63838
+cne_deposits_amt | 66505064.21 70750560.30 69419552.92 62992349.01 75306183.54 98648256.08 81932797.81
+cne_withdrawals_n | 42424 43608 48399 53870 55941 61979 49886
+cne_withdrawals_amt | 58305618.67 55119637.45 6920421.16 71006961.14 71325676.38 93498319.50 80392897.39
+Total@cne_n | 114624 121353 130735 - 126091 149238 113724
+Total@cne_amt | - - - - 146631859.92 192146575.08 162325695.20
+cne_balance | 124810682.88 125270197.75 156460180.65 152541495.82 160665844.50 170213852.12 170216433.88
+
+# f82: amounts only (no depositor columns, no total). 1932-1934 repeat sgt1935's misprints; 1935 remboursements
+# printed 61.930.421 16 (Exploitation 1935: 6.920.421 16 here, 61.920.421 16 in sgt1935/sgt1936); 1937 avoir
+# 160.665.339 95 (Exploitation 160.665.844 50).
+@savings view=82 page=76 years=1930-1939
+img: all
+cols: deposits withdrawals balance
+1930 | 68859446.44 48628731.76 88557744.28
+1931 | 66564664.97 46728128.95 99965748.85
+1932 | 19584818.06 37491399.92 18940606.76
+1933 | 66505064.21 58305618.67 130473218.88
+1934 | 69419552.92 61920421.16 156460180.65
+1935 | 69419552.92 61930421.16 156460180.65
+1936 | 62995998.91 71009711.65 152541495.82
+1937 | 75306683.54 71326676.38 160665339.95
+1938 | 98648256.08 93498319.50 170213852.12
+1939 | 81932797.81 80392897.39 170216433.88

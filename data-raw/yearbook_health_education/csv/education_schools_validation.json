@@ -1,0 +1,2362 @@
+{
+ "summary": {
+  "sgt1922/public_schools": {
+   "schools": 350,
+   "cells": 5950,
+   "checks": 1670
+  },
+  "sgt1922/private_schools": {
+   "schools": 32,
+   "cells": 561,
+   "checks": 189
+  },
+  "sgt1930/public_schools": {
+   "schools": 466,
+   "cells": 7922,
+   "checks": 2136
+  },
+  "sgt1930/private_schools": {
+   "schools": 31,
+   "cells": 527,
+   "checks": 195
+  }
+ },
+ "rows": 14960,
+ "checks": 4190,
+ "checks_by_kind": {
+  "row": 2930,
+  "column": 630,
+  "carry": 546,
+  "grand": 84
+ },
+ "failed": [
+  {
+   "kind": "row",
+   "check": "sgt1922 primary_public l374 AREPORTER / A reporter: girls by column vs printed TOTAUX",
+   "cells": 13248,
+   "printed": 13278,
+   "explanation": "4.210 printed; cells and the girls total 13.278 imply 4.240"
+  },
+  {
+   "kind": "column",
+   "check": "sgt1922 primary_public l257 A reporter: previous-year total, printed Report + rows of the page vs printed",
+   "cells": 25577,
+   "printed": 25571,
+   "explanation": "previous-year total printed 25.571; the Report of this page plus its rows give 25.577 (rows re-read); the next page's Report repeats 25.571"
+  },
+  {
+   "kind": "column",
+   "check": "sgt1922 primary_public l374 A reporter: girls italian, printed Report + rows of the page vs printed",
+   "cells": 4240,
+   "printed": 4210,
+   "explanation": "4.210 printed; cells and the girls total 13.278 imply 4.240"
+  },
+  {
+   "kind": "carry",
+   "check": "sgt1922 primary_public l376 Report: Report girls italian vs previous page's A reporter",
+   "cells": 4240,
+   "printed": 4210,
+   "explanation": "this page's Report prints 4.240"
+  },
+  {
+   "kind": "grand",
+   "check": "sgt1922 primary_public l397 Totaux des écoles primaires publiques: previous-year total, sum of all school rows of the table vs printed total",
+   "cells": 36645,
+   "printed": 36639,
+   "explanation": "Musulmans in the binding, solved from the boys' total (13.280, as printed in the primary-education total). Previous-year total: the rows add to 36.645; the final total carries the 6 lost in the misprinted carry-over of view 133 (25.571 for 25.577)"
+  },
+  {
+   "kind": "column",
+   "check": "sgt1922 primary_private l419 A reporter: classes, printed Report + rows of the page vs printed",
+   "cells": 83,
+   "printed": 90,
+   "explanation": "the printed carry-over exceeds the itemised rows by 7 classes, 8 other staff, 170 Italian boys and 108 Italian girls (278 pupils): apparently the Ecole Umberto Ier (Bizerte), printed as » throughout"
+  },
+  {
+   "kind": "column",
+   "check": "sgt1922 primary_private l419 A reporter: staff other, printed Report + rows of the page vs printed",
+   "cells": 38,
+   "printed": 46,
+   "explanation": "the printed carry-over exceeds the itemised rows by 7 classes, 8 other staff, 170 Italian boys and 108 Italian girls (278 pupils): apparently the Ecole Umberto Ier (Bizerte), printed as » throughout"
+  },
+  {
+   "kind": "column",
+   "check": "sgt1922 primary_private l419 A reporter: staff TOTAUX, printed Report + rows of the page vs printed",
+   "cells": 124,
+   "printed": 132,
+   "explanation": "the printed carry-over exceeds the itemised rows by 7 classes, 8 other staff, 170 Italian boys and 108 Italian girls (278 pupils): apparently the Ecole Umberto Ier (Bizerte), printed as » throughout"
+  },
+  {
+   "kind": "column",
+   "check": "sgt1922 primary_private l419 A reporter: boys italian, printed Report + rows of the page vs printed",
+   "cells": 199,
+   "printed": 369,
+   "explanation": "the printed carry-over exceeds the itemised rows by 7 classes, 8 other staff, 170 Italian boys and 108 Italian girls (278 pupils): apparently the Ecole Umberto Ier (Bizerte), printed as » throughout"
+  },
+  {
+   "kind": "column",
+   "check": "sgt1922 primary_private l419 A reporter: boys TOTAUX, printed Report + rows of the page vs printed",
+   "cells": 813,
+   "printed": 983,
+   "explanation": "the printed carry-over exceeds the itemised rows by 7 classes, 8 other staff, 170 Italian boys and 108 Italian girls (278 pupils): apparently the Ecole Umberto Ier (Bizerte), printed as » throughout"
+  },
+  {
+   "kind": "column",
+   "check": "sgt1922 primary_private l419 A reporter: girls italian, printed Report + rows of the page vs printed",
+   "cells": 259,
+   "printed": 367,
+   "explanation": "the printed carry-over exceeds the itemised rows by 7 classes, 8 other staff, 170 Italian boys and 108 Italian girls (278 pupils): apparently the Ecole Umberto Ier (Bizerte), printed as » throughout"
+  },
+  {
+   "kind": "column",
+   "check": "sgt1922 primary_private l419 A reporter: girls TOTAUX, printed Report + rows of the page vs printed",
+   "cells": 1615,
+   "printed": 1723,
+   "explanation": "the printed carry-over exceeds the itemised rows by 7 classes, 8 other staff, 170 Italian boys and 108 Italian girls (278 pupils): apparently the Ecole Umberto Ier (Bizerte), printed as » throughout"
+  },
+  {
+   "kind": "column",
+   "check": "sgt1922 primary_private l419 A reporter: TOTAUX généraux, printed Report + rows of the page vs printed",
+   "cells": 2428,
+   "printed": 2706,
+   "explanation": "the printed carry-over exceeds the itemised rows by 7 classes, 8 other staff, 170 Italian boys and 108 Italian girls (278 pupils): apparently the Ecole Umberto Ier (Bizerte), printed as » throughout"
+  },
+  {
+   "kind": "grand",
+   "check": "sgt1922 primary_private l437 Totaux des écoles privées: classes, sum of all school rows of the table vs printed total",
+   "cells": 168,
+   "printed": 175,
+   "explanation": "stored (see notes): includes the 7 classes, 8 Maîtres divers, 170 Italian boys and 108 Italian girls of the first spread's carry-over that are not itemised (apparently the Ecole Umberto Ier, Bizerte); Musulmans in the binding, solved from the boys' total (37, as in the primary-education total)"
+  },
+  {
+   "kind": "grand",
+   "check": "sgt1922 primary_private l437 Totaux des écoles privées: staff other, sum of all school rows of the table vs printed total",
+   "cells": 56,
+   "printed": 64,
+   "explanation": "stored (see notes): includes the 7 classes, 8 Maîtres divers, 170 Italian boys and 108 Italian girls of the first spread's carry-over that are not itemised (apparently the Ecole Umberto Ier, Bizerte); Musulmans in the binding, solved from the boys' total (37, as in the primary-education total)"
+  },
+  {
+   "kind": "grand",
+   "check": "sgt1922 primary_private l437 Totaux des écoles privées: staff TOTAUX, sum of all school rows of the table vs printed total",
+   "cells": 222,
+   "printed": 230,
+   "explanation": "stored (see notes): includes the 7 classes, 8 Maîtres divers, 170 Italian boys and 108 Italian girls of the first spread's carry-over that are not itemised (apparently the Ecole Umberto Ier, Bizerte); Musulmans in the binding, solved from the boys' total (37, as in the primary-education total)"
+  },
+  {
+   "kind": "grand",
+   "check": "sgt1922 primary_private l437 Totaux des écoles privées: boys italian, sum of all school rows of the table vs printed total",
+   "cells": 390,
+   "printed": 560,
+   "explanation": "stored (see notes): includes the 7 classes, 8 Maîtres divers, 170 Italian boys and 108 Italian girls of the first spread's carry-over that are not itemised (apparently the Ecole Umberto Ier, Bizerte); Musulmans in the binding, solved from the boys' total (37, as in the primary-education total)"
+  },
+  {
+   "kind": "grand",
+   "check": "sgt1922 primary_private l437 Totaux des écoles privées: boys TOTAUX, sum of all school rows of the table vs printed total",
+   "cells": 3152,
+   "printed": 3322,
+   "explanation": "stored (see notes): includes the 7 classes, 8 Maîtres divers, 170 Italian boys and 108 Italian girls of the first spread's carry-over that are not itemised (apparently the Ecole Umberto Ier, Bizerte); Musulmans in the binding, solved from the boys' total (37, as in the primary-education total)"
+  },
+  {
+   "kind": "grand",
+   "check": "sgt1922 primary_private l437 Totaux des écoles privées: girls italian, sum of all school rows of the table vs printed total",
+   "cells": 426,
+   "printed": 534,
+   "explanation": "stored (see notes): includes the 7 classes, 8 Maîtres divers, 170 Italian boys and 108 Italian girls of the first spread's carry-over that are not itemised (apparently the Ecole Umberto Ier, Bizerte); Musulmans in the binding, solved from the boys' total (37, as in the primary-education total)"
+  },
+  {
+   "kind": "grand",
+   "check": "sgt1922 primary_private l437 Totaux des écoles privées: girls TOTAUX, sum of all school rows of the table vs printed total",
+   "cells": 3158,
+   "printed": 3266,
+   "explanation": "stored (see notes): includes the 7 classes, 8 Maîtres divers, 170 Italian boys and 108 Italian girls of the first spread's carry-over that are not itemised (apparently the Ecole Umberto Ier, Bizerte); Musulmans in the binding, solved from the boys' total (37, as in the primary-education total)"
+  },
+  {
+   "kind": "grand",
+   "check": "sgt1922 primary_private l437 Totaux des écoles privées: TOTAUX généraux, sum of all school rows of the table vs printed total",
+   "cells": 6310,
+   "printed": 6588,
+   "explanation": "stored (see notes): includes the 7 classes, 8 Maîtres divers, 170 Italian boys and 108 Italian girls of the first spread's carry-over that are not itemised (apparently the Ecole Umberto Ier, Bizerte); Musulmans in the binding, solved from the boys' total (37, as in the primary-education total)"
+  },
+  {
+   "kind": "row",
+   "check": "sgt1930 primary_public l34 Tunis / Filles : Ecole Paul-Cambon: staff by column vs printed TOTAUX",
+   "cells": 35,
+   "printed": 15,
+   "explanation": "staff total printed 15; cells and column total give 35"
+  },
+  {
+   "kind": "row",
+   "check": "sgt1930 primary_public l458 AREPORTER / A reporter: staff by column vs printed TOTAUX",
+   "cells": 1549,
+   "printed": 1548,
+   "explanation": "Maîtres divers printed 93; the rows give 92 and the next page's Report prints 92"
+  },
+  {
+   "kind": "column",
+   "check": "sgt1930 primary_public l202 A reporter: classes, printed Report + rows of the page vs printed",
+   "cells": 661,
+   "printed": 660,
+   "explanation": "classes: the 36 printed rows of this page add to 97, the carry-over implies 96 (page re-read)"
+  },
+  {
+   "kind": "column",
+   "check": "sgt1930 primary_public l361 A reporter: previous-year total, printed Report + rows of the page vs printed",
+   "cells": 42674,
+   "printed": 42697,
+   "explanation": "previous-year column of this page adds to 3.502 (re-read); the carry-over implies 3.525"
+  },
+  {
+   "kind": "column",
+   "check": "sgt1930 primary_public l409 A reporter: classes, printed Report + rows of the page vs printed",
+   "cells": 1229,
+   "printed": 1228,
+   "explanation": "classes of this page add to 105 (re-read), carry-over implies 104"
+  },
+  {
+   "kind": "column",
+   "check": "sgt1930 primary_public l458 A reporter: staff other, printed Report + rows of the page vs printed",
+   "cells": 92,
+   "printed": 93,
+   "explanation": "Maîtres divers printed 93; the rows give 92 and the next page's Report prints 92"
+  },
+  {
+   "kind": "carry",
+   "check": "sgt1930 primary_public l460 Report: Report staff other vs previous page's A reporter",
+   "cells": 92,
+   "printed": 93,
+   "explanation": "prints 92 Maîtres divers, correcting the 93 of the previous page's A reporter"
+  },
+  {
+   "kind": "column",
+   "check": "sgt1930 primary_public l486 A reporter: previous-year total, printed Report + rows of the page vs printed",
+   "cells": 56730,
+   "printed": 56816,
+   "explanation": "previous-year column: the rows of this page add to 4.745 (all re-read; the OCR agrees), the carry-over 56.816 implies 4.831 (+86); the next page's Report also prints 56.816"
+  },
+  {
+   "kind": "grand",
+   "check": "sgt1930 primary_public l513 Totaux des écoles primaires publiques: classes, sum of all school rows of the table vs printed total",
+   "cells": 1567,
+   "printed": 1565,
+   "explanation": "Musulmans partly in the binding (29.9.8): the boys' total 45.138 gives 29.968. The rows add to 1.567 classes and 58.546 previous-year pupils: the final total carries the misprinted carry-overs (A reporter) of view 684 (classes 660 for 661), view 694 (classes 1.228 for 1.229), view 693 (previous year 42.697 for 42.674, +23) and view 699 (56.816 for 56.730, +86)"
+  },
+  {
+   "kind": "grand",
+   "check": "sgt1930 primary_public l513 Totaux des écoles primaires publiques: previous-year total, sum of all school rows of the table vs printed total",
+   "cells": 58546,
+   "printed": 58655,
+   "explanation": "Musulmans partly in the binding (29.9.8): the boys' total 45.138 gives 29.968. The rows add to 1.567 classes and 58.546 previous-year pupils: the final total carries the misprinted carry-overs (A reporter) of view 684 (classes 660 for 661), view 694 (classes 1.228 for 1.229), view 693 (previous year 42.697 for 42.674, +23) and view 699 (56.816 for 56.730, +86)"
+  },
+  {
+   "kind": "column",
+   "check": "sgt1930 primary_private l552 Totaux des écoles privées: previous-year total, printed Report + rows of the page vs printed",
+   "cells": 7217,
+   "printed": 7244,
+   "explanation": "previous-year column: the rows of this page add to 3.708, the printed total 7.244 implies 3.735 (+27); all cells re-read, the OCR agrees"
+  },
+  {
+   "kind": "grand",
+   "check": "sgt1930 primary_private l552 Totaux des écoles privées: previous-year total, sum of all school rows of the table vs printed total",
+   "cells": 7217,
+   "printed": 7244,
+   "explanation": "previous-year column: the rows of this page add to 3.708, the printed total 7.244 implies 3.735 (+27); all cells re-read, the OCR agrees"
+  }
+ ],
+ "cells_derived_from_row_totals": 776,
+ "flags": {
+  "": 14131,
+  "derived_from_totals": 778,
+  "not_applicable": 39,
+  "total_mismatch": 12
+ },
+ "cross_checks": [
+  {
+   "edition": "sgt1922",
+   "sector": "public",
+   "cell": "boys french",
+   "other_table": "education_primary_totals",
+   "schools_summed": 3993,
+   "schools_summed_as_implied_by_totals": 3993,
+   "list_printed_total": 3993,
+   "other_table_value": 3993,
+   "equal": true,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1922",
+   "sector": "public",
+   "cell": "boys french",
+   "other_table": "education_school_population",
+   "schools_summed": 3993,
+   "schools_summed_as_implied_by_totals": 3993,
+   "list_printed_total": 3993,
+   "other_table_value": 3993,
+   "equal": true,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1922",
+   "sector": "public",
+   "cell": "boys muslim",
+   "other_table": "education_primary_totals",
+   "schools_summed": 13280,
+   "schools_summed_as_implied_by_totals": 13280,
+   "list_printed_total": 13280,
+   "other_table_value": 13280,
+   "equal": true,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1922",
+   "sector": "public",
+   "cell": "boys muslim",
+   "other_table": "education_school_population",
+   "schools_summed": 13280,
+   "schools_summed_as_implied_by_totals": 13280,
+   "list_printed_total": 13280,
+   "other_table_value": 13280,
+   "equal": true,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1922",
+   "sector": "public",
+   "cell": "boys jewish",
+   "other_table": "education_primary_totals",
+   "schools_summed": 2572,
+   "schools_summed_as_implied_by_totals": 2572,
+   "list_printed_total": 2572,
+   "other_table_value": 2572,
+   "equal": true,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1922",
+   "sector": "public",
+   "cell": "boys jewish",
+   "other_table": "education_school_population",
+   "schools_summed": 2572,
+   "schools_summed_as_implied_by_totals": 2572,
+   "list_printed_total": 2572,
+   "other_table_value": 2572,
+   "equal": true,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1922",
+   "sector": "public",
+   "cell": "boys italian",
+   "other_table": "education_primary_totals",
+   "schools_summed": 4541,
+   "schools_summed_as_implied_by_totals": 4541,
+   "list_printed_total": 4541,
+   "other_table_value": 4541,
+   "equal": true,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1922",
+   "sector": "public",
+   "cell": "boys italian",
+   "other_table": "education_school_population",
+   "schools_summed": 4541,
+   "schools_summed_as_implied_by_totals": 4541,
+   "list_printed_total": 4541,
+   "other_table_value": 4541,
+   "equal": true,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1922",
+   "sector": "public",
+   "cell": "boys maltese",
+   "other_table": "education_primary_totals",
+   "schools_summed": 563,
+   "schools_summed_as_implied_by_totals": 563,
+   "list_printed_total": 563,
+   "other_table_value": 563,
+   "equal": true,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1922",
+   "sector": "public",
+   "cell": "boys maltese",
+   "other_table": "education_school_population",
+   "schools_summed": 563,
+   "schools_summed_as_implied_by_totals": 563,
+   "list_printed_total": 563,
+   "other_table_value": 563,
+   "equal": true,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1922",
+   "sector": "public",
+   "cell": "boys other",
+   "other_table": "education_primary_totals",
+   "schools_summed": 148,
+   "schools_summed_as_implied_by_totals": 148,
+   "list_printed_total": 148,
+   "other_table_value": 148,
+   "equal": true,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1922",
+   "sector": "public",
+   "cell": "boys other",
+   "other_table": "education_school_population",
+   "schools_summed": 148,
+   "schools_summed_as_implied_by_totals": 148,
+   "list_printed_total": 148,
+   "other_table_value": 148,
+   "equal": true,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1922",
+   "sector": "public",
+   "cell": "girls french",
+   "other_table": "education_primary_totals",
+   "schools_summed": 3708,
+   "schools_summed_as_implied_by_totals": 3708,
+   "list_printed_total": 3708,
+   "other_table_value": 3708,
+   "equal": true,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1922",
+   "sector": "public",
+   "cell": "girls french",
+   "other_table": "education_school_population",
+   "schools_summed": 3708,
+   "schools_summed_as_implied_by_totals": 3708,
+   "list_printed_total": 3708,
+   "other_table_value": 3708,
+   "equal": true,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1922",
+   "sector": "public",
+   "cell": "girls muslim",
+   "other_table": "education_primary_totals",
+   "schools_summed": 1561,
+   "schools_summed_as_implied_by_totals": 1560,
+   "list_printed_total": 1560,
+   "other_table_value": 1560,
+   "equal": false,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1922",
+   "sector": "public",
+   "cell": "girls muslim",
+   "other_table": "education_school_population",
+   "schools_summed": 1561,
+   "schools_summed_as_implied_by_totals": 1560,
+   "list_printed_total": 1560,
+   "other_table_value": 1560,
+   "equal": false,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1922",
+   "sector": "public",
+   "cell": "girls jewish",
+   "other_table": "education_primary_totals",
+   "schools_summed": 3746,
+   "schools_summed_as_implied_by_totals": 3446,
+   "list_printed_total": 3446,
+   "other_table_value": 3446,
+   "equal": false,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1922",
+   "sector": "public",
+   "cell": "girls jewish",
+   "other_table": "education_school_population",
+   "schools_summed": 3746,
+   "schools_summed_as_implied_by_totals": 3446,
+   "list_printed_total": 3446,
+   "other_table_value": 3446,
+   "equal": false,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1922",
+   "sector": "public",
+   "cell": "girls italian",
+   "other_table": "education_primary_totals",
+   "schools_summed": 4333,
+   "schools_summed_as_implied_by_totals": 4333,
+   "list_printed_total": 4333,
+   "other_table_value": 4333,
+   "equal": true,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1922",
+   "sector": "public",
+   "cell": "girls italian",
+   "other_table": "education_school_population",
+   "schools_summed": 4333,
+   "schools_summed_as_implied_by_totals": 4333,
+   "list_printed_total": 4333,
+   "other_table_value": 4333,
+   "equal": true,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1922",
+   "sector": "public",
+   "cell": "girls maltese",
+   "other_table": "education_primary_totals",
+   "schools_summed": 428,
+   "schools_summed_as_implied_by_totals": 428,
+   "list_printed_total": 428,
+   "other_table_value": 428,
+   "equal": true,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1922",
+   "sector": "public",
+   "cell": "girls maltese",
+   "other_table": "education_school_population",
+   "schools_summed": 428,
+   "schools_summed_as_implied_by_totals": 428,
+   "list_printed_total": 428,
+   "other_table_value": 428,
+   "equal": true,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1922",
+   "sector": "public",
+   "cell": "girls other",
+   "other_table": "education_primary_totals",
+   "schools_summed": 136,
+   "schools_summed_as_implied_by_totals": 136,
+   "list_printed_total": 136,
+   "other_table_value": 136,
+   "equal": true,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1922",
+   "sector": "public",
+   "cell": "girls other",
+   "other_table": "education_school_population",
+   "schools_summed": 136,
+   "schools_summed_as_implied_by_totals": 136,
+   "list_printed_total": 136,
+   "other_table_value": 136,
+   "equal": true,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1922",
+   "sector": "public",
+   "cell": "previous-year total",
+   "other_table": "education_primary_totals",
+   "schools_summed": 36645,
+   "schools_summed_as_implied_by_totals": 36645,
+   "list_printed_total": 36639,
+   "other_table_value": 36639,
+   "equal": false,
+   "equal_implied": false,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1922",
+   "sector": "public",
+   "cell": "previous-year total",
+   "other_table": "education_school_population",
+   "schools_summed": 36645,
+   "schools_summed_as_implied_by_totals": 36645,
+   "list_printed_total": 36639,
+   "other_table_value": 36639,
+   "equal": false,
+   "equal_implied": false,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1922",
+   "sector": "private",
+   "cell": "boys french",
+   "other_table": "education_primary_totals",
+   "schools_summed": 578,
+   "schools_summed_as_implied_by_totals": 578,
+   "list_printed_total": 578,
+   "other_table_value": 578,
+   "equal": true,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1922",
+   "sector": "private",
+   "cell": "boys french",
+   "other_table": "education_school_population",
+   "schools_summed": 578,
+   "schools_summed_as_implied_by_totals": 578,
+   "list_printed_total": 578,
+   "other_table_value": 578,
+   "equal": true,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1922",
+   "sector": "private",
+   "cell": "boys muslim",
+   "other_table": "education_primary_totals",
+   "schools_summed": 37,
+   "schools_summed_as_implied_by_totals": 37,
+   "list_printed_total": 37,
+   "other_table_value": 37,
+   "equal": true,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1922",
+   "sector": "private",
+   "cell": "boys muslim",
+   "other_table": "education_school_population",
+   "schools_summed": 37,
+   "schools_summed_as_implied_by_totals": 37,
+   "list_printed_total": 37,
+   "other_table_value": 37,
+   "equal": true,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1922",
+   "sector": "private",
+   "cell": "boys jewish",
+   "other_table": "education_primary_totals",
+   "schools_summed": 2103,
+   "schools_summed_as_implied_by_totals": 2103,
+   "list_printed_total": 2103,
+   "other_table_value": 2103,
+   "equal": true,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1922",
+   "sector": "private",
+   "cell": "boys jewish",
+   "other_table": "education_school_population",
+   "schools_summed": 2103,
+   "schools_summed_as_implied_by_totals": 2103,
+   "list_printed_total": 2103,
+   "other_table_value": 2103,
+   "equal": true,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1922",
+   "sector": "private",
+   "cell": "boys italian",
+   "other_table": "education_primary_totals",
+   "schools_summed": 420,
+   "schools_summed_as_implied_by_totals": 390,
+   "list_printed_total": 560,
+   "other_table_value": 560,
+   "equal": false,
+   "equal_implied": false,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1922",
+   "sector": "private",
+   "cell": "boys italian",
+   "other_table": "education_school_population",
+   "schools_summed": 420,
+   "schools_summed_as_implied_by_totals": 390,
+   "list_printed_total": 560,
+   "other_table_value": 560,
+   "equal": false,
+   "equal_implied": false,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1922",
+   "sector": "private",
+   "cell": "boys maltese",
+   "other_table": "education_primary_totals",
+   "schools_summed": 32,
+   "schools_summed_as_implied_by_totals": 32,
+   "list_printed_total": 32,
+   "other_table_value": 32,
+   "equal": true,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1922",
+   "sector": "private",
+   "cell": "boys maltese",
+   "other_table": "education_school_population",
+   "schools_summed": 32,
+   "schools_summed_as_implied_by_totals": 32,
+   "list_printed_total": 32,
+   "other_table_value": 32,
+   "equal": true,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1922",
+   "sector": "private",
+   "cell": "boys other",
+   "other_table": "education_primary_totals",
+   "schools_summed": 12,
+   "schools_summed_as_implied_by_totals": 12,
+   "list_printed_total": 12,
+   "other_table_value": 12,
+   "equal": true,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1922",
+   "sector": "private",
+   "cell": "boys other",
+   "other_table": "education_school_population",
+   "schools_summed": 12,
+   "schools_summed_as_implied_by_totals": 12,
+   "list_printed_total": 12,
+   "other_table_value": 12,
+   "equal": true,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1922",
+   "sector": "private",
+   "cell": "girls french",
+   "other_table": "education_primary_totals",
+   "schools_summed": 797,
+   "schools_summed_as_implied_by_totals": 797,
+   "list_printed_total": 797,
+   "other_table_value": 797,
+   "equal": true,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1922",
+   "sector": "private",
+   "cell": "girls french",
+   "other_table": "education_school_population",
+   "schools_summed": 797,
+   "schools_summed_as_implied_by_totals": 797,
+   "list_printed_total": 797,
+   "other_table_value": 797,
+   "equal": true,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1922",
+   "sector": "private",
+   "cell": "girls muslim",
+   "other_table": "education_primary_totals",
+   "schools_summed": 466,
+   "schools_summed_as_implied_by_totals": 458,
+   "list_printed_total": 458,
+   "other_table_value": 458,
+   "equal": false,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1922",
+   "sector": "private",
+   "cell": "girls muslim",
+   "other_table": "education_school_population",
+   "schools_summed": 466,
+   "schools_summed_as_implied_by_totals": 458,
+   "list_printed_total": 458,
+   "other_table_value": 458,
+   "equal": false,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1922",
+   "sector": "private",
+   "cell": "girls jewish",
+   "other_table": "education_primary_totals",
+   "schools_summed": 1286,
+   "schools_summed_as_implied_by_totals": 1356,
+   "list_printed_total": 1356,
+   "other_table_value": 1356,
+   "equal": false,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1922",
+   "sector": "private",
+   "cell": "girls jewish",
+   "other_table": "education_school_population",
+   "schools_summed": 1286,
+   "schools_summed_as_implied_by_totals": 1356,
+   "list_printed_total": 1356,
+   "other_table_value": 1356,
+   "equal": false,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1922",
+   "sector": "private",
+   "cell": "girls italian",
+   "other_table": "education_primary_totals",
+   "schools_summed": 496,
+   "schools_summed_as_implied_by_totals": 426,
+   "list_printed_total": 534,
+   "other_table_value": 534,
+   "equal": false,
+   "equal_implied": false,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1922",
+   "sector": "private",
+   "cell": "girls italian",
+   "other_table": "education_school_population",
+   "schools_summed": 496,
+   "schools_summed_as_implied_by_totals": 426,
+   "list_printed_total": 534,
+   "other_table_value": 534,
+   "equal": false,
+   "equal_implied": false,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1922",
+   "sector": "private",
+   "cell": "girls maltese",
+   "other_table": "education_primary_totals",
+   "schools_summed": 90,
+   "schools_summed_as_implied_by_totals": 90,
+   "list_printed_total": 90,
+   "other_table_value": 90,
+   "equal": true,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1922",
+   "sector": "private",
+   "cell": "girls maltese",
+   "other_table": "education_school_population",
+   "schools_summed": 90,
+   "schools_summed_as_implied_by_totals": 90,
+   "list_printed_total": 90,
+   "other_table_value": 90,
+   "equal": true,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1922",
+   "sector": "private",
+   "cell": "girls other",
+   "other_table": "education_primary_totals",
+   "schools_summed": 31,
+   "schools_summed_as_implied_by_totals": 31,
+   "list_printed_total": 31,
+   "other_table_value": 31,
+   "equal": true,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1922",
+   "sector": "private",
+   "cell": "girls other",
+   "other_table": "education_school_population",
+   "schools_summed": 31,
+   "schools_summed_as_implied_by_totals": 31,
+   "list_printed_total": 31,
+   "other_table_value": 31,
+   "equal": true,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1922",
+   "sector": "private",
+   "cell": "previous-year total",
+   "other_table": "education_primary_totals",
+   "schools_summed": 6298,
+   "schools_summed_as_implied_by_totals": 6298,
+   "list_printed_total": 6298,
+   "other_table_value": 6298,
+   "equal": true,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1922",
+   "sector": "private",
+   "cell": "previous-year total",
+   "other_table": "education_school_population",
+   "schools_summed": 6298,
+   "schools_summed_as_implied_by_totals": 6298,
+   "list_printed_total": 6298,
+   "other_table_value": 6298,
+   "equal": true,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1930",
+   "sector": "public",
+   "cell": "boys french",
+   "other_table": "education_primary_totals",
+   "schools_summed": 6676,
+   "schools_summed_as_implied_by_totals": 6676,
+   "list_printed_total": 6676,
+   "other_table_value": 6667,
+   "equal": false,
+   "equal_implied": false,
+   "list_total_equal": false
+  },
+  {
+   "edition": "sgt1930",
+   "sector": "public",
+   "cell": "boys french",
+   "other_table": "education_school_population",
+   "schools_summed": 6676,
+   "schools_summed_as_implied_by_totals": 6676,
+   "list_printed_total": 6676,
+   "other_table_value": 6676,
+   "equal": true,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1930",
+   "sector": "public",
+   "cell": "boys muslim",
+   "other_table": "education_primary_totals",
+   "schools_summed": 29968,
+   "schools_summed_as_implied_by_totals": 29968,
+   "list_printed_total": 29968,
+   "other_table_value": 29968,
+   "equal": true,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1930",
+   "sector": "public",
+   "cell": "boys muslim",
+   "other_table": "education_school_population",
+   "schools_summed": 29968,
+   "schools_summed_as_implied_by_totals": 29968,
+   "list_printed_total": 29968,
+   "other_table_value": 29968,
+   "equal": true,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1930",
+   "sector": "public",
+   "cell": "boys jewish",
+   "other_table": "education_primary_totals",
+   "schools_summed": 3637,
+   "schools_summed_as_implied_by_totals": 3637,
+   "list_printed_total": 3637,
+   "other_table_value": 3637,
+   "equal": true,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1930",
+   "sector": "public",
+   "cell": "boys jewish",
+   "other_table": "education_school_population",
+   "schools_summed": 3637,
+   "schools_summed_as_implied_by_totals": 3637,
+   "list_printed_total": 3637,
+   "other_table_value": 3637,
+   "equal": true,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1930",
+   "sector": "public",
+   "cell": "boys italian",
+   "other_table": "education_primary_totals",
+   "schools_summed": 4185,
+   "schools_summed_as_implied_by_totals": 4183,
+   "list_printed_total": 4183,
+   "other_table_value": 4183,
+   "equal": false,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1930",
+   "sector": "public",
+   "cell": "boys italian",
+   "other_table": "education_school_population",
+   "schools_summed": 4185,
+   "schools_summed_as_implied_by_totals": 4183,
+   "list_printed_total": 4183,
+   "other_table_value": 4183,
+   "equal": false,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1930",
+   "sector": "public",
+   "cell": "boys maltese",
+   "other_table": "education_primary_totals",
+   "schools_summed": 537,
+   "schools_summed_as_implied_by_totals": 537,
+   "list_printed_total": 537,
+   "other_table_value": 537,
+   "equal": true,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1930",
+   "sector": "public",
+   "cell": "boys maltese",
+   "other_table": "education_school_population",
+   "schools_summed": 537,
+   "schools_summed_as_implied_by_totals": 537,
+   "list_printed_total": 537,
+   "other_table_value": 537,
+   "equal": true,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1930",
+   "sector": "public",
+   "cell": "boys other",
+   "other_table": "education_primary_totals",
+   "schools_summed": 137,
+   "schools_summed_as_implied_by_totals": 137,
+   "list_printed_total": 137,
+   "other_table_value": 137,
+   "equal": true,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1930",
+   "sector": "public",
+   "cell": "boys other",
+   "other_table": "education_school_population",
+   "schools_summed": 137,
+   "schools_summed_as_implied_by_totals": 137,
+   "list_printed_total": 137,
+   "other_table_value": 137,
+   "equal": true,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1930",
+   "sector": "public",
+   "cell": "girls french",
+   "other_table": "education_primary_totals",
+   "schools_summed": 6390,
+   "schools_summed_as_implied_by_totals": 6390,
+   "list_printed_total": 6390,
+   "other_table_value": 6390,
+   "equal": true,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1930",
+   "sector": "public",
+   "cell": "girls french",
+   "other_table": "education_school_population",
+   "schools_summed": 6390,
+   "schools_summed_as_implied_by_totals": 6390,
+   "list_printed_total": 6390,
+   "other_table_value": 6390,
+   "equal": true,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1930",
+   "sector": "public",
+   "cell": "girls muslim",
+   "other_table": "education_primary_totals",
+   "schools_summed": 3204,
+   "schools_summed_as_implied_by_totals": 3204,
+   "list_printed_total": 3204,
+   "other_table_value": 3204,
+   "equal": true,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1930",
+   "sector": "public",
+   "cell": "girls muslim",
+   "other_table": "education_school_population",
+   "schools_summed": 3204,
+   "schools_summed_as_implied_by_totals": 3204,
+   "list_printed_total": 3204,
+   "other_table_value": 3204,
+   "equal": true,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1930",
+   "sector": "public",
+   "cell": "girls jewish",
+   "other_table": "education_primary_totals",
+   "schools_summed": 4428,
+   "schools_summed_as_implied_by_totals": 4428,
+   "list_printed_total": 4428,
+   "other_table_value": 4428,
+   "equal": true,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1930",
+   "sector": "public",
+   "cell": "girls jewish",
+   "other_table": "education_school_population",
+   "schools_summed": 4428,
+   "schools_summed_as_implied_by_totals": 4428,
+   "list_printed_total": 4428,
+   "other_table_value": 4428,
+   "equal": true,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1930",
+   "sector": "public",
+   "cell": "girls italian",
+   "other_table": "education_primary_totals",
+   "schools_summed": 3965,
+   "schools_summed_as_implied_by_totals": 3964,
+   "list_printed_total": 3964,
+   "other_table_value": 3964,
+   "equal": false,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1930",
+   "sector": "public",
+   "cell": "girls italian",
+   "other_table": "education_school_population",
+   "schools_summed": 3965,
+   "schools_summed_as_implied_by_totals": 3964,
+   "list_printed_total": 3964,
+   "other_table_value": 3964,
+   "equal": false,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1930",
+   "sector": "public",
+   "cell": "girls maltese",
+   "other_table": "education_primary_totals",
+   "schools_summed": 503,
+   "schools_summed_as_implied_by_totals": 503,
+   "list_printed_total": 503,
+   "other_table_value": 503,
+   "equal": true,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1930",
+   "sector": "public",
+   "cell": "girls maltese",
+   "other_table": "education_school_population",
+   "schools_summed": 503,
+   "schools_summed_as_implied_by_totals": 503,
+   "list_printed_total": 503,
+   "other_table_value": 503,
+   "equal": true,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1930",
+   "sector": "public",
+   "cell": "girls other",
+   "other_table": "education_primary_totals",
+   "schools_summed": 131,
+   "schools_summed_as_implied_by_totals": 129,
+   "list_printed_total": 129,
+   "other_table_value": 129,
+   "equal": false,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1930",
+   "sector": "public",
+   "cell": "girls other",
+   "other_table": "education_school_population",
+   "schools_summed": 131,
+   "schools_summed_as_implied_by_totals": 129,
+   "list_printed_total": 129,
+   "other_table_value": 129,
+   "equal": false,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1930",
+   "sector": "public",
+   "cell": "previous-year total",
+   "other_table": "education_primary_totals",
+   "schools_summed": 58546,
+   "schools_summed_as_implied_by_totals": 58546,
+   "list_printed_total": 58655,
+   "other_table_value": 58655,
+   "equal": false,
+   "equal_implied": false,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1930",
+   "sector": "public",
+   "cell": "previous-year total",
+   "other_table": "education_school_population",
+   "schools_summed": 58546,
+   "schools_summed_as_implied_by_totals": 58546,
+   "list_printed_total": 58655,
+   "other_table_value": 58655,
+   "equal": false,
+   "equal_implied": false,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1930",
+   "sector": "private",
+   "cell": "boys french",
+   "other_table": "education_primary_totals",
+   "schools_summed": 1070,
+   "schools_summed_as_implied_by_totals": 1070,
+   "list_printed_total": 1070,
+   "other_table_value": 1070,
+   "equal": true,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1930",
+   "sector": "private",
+   "cell": "boys french",
+   "other_table": "education_school_population",
+   "schools_summed": 1070,
+   "schools_summed_as_implied_by_totals": 1070,
+   "list_printed_total": 1070,
+   "other_table_value": 1070,
+   "equal": true,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1930",
+   "sector": "private",
+   "cell": "boys muslim",
+   "other_table": "education_primary_totals",
+   "schools_summed": 88,
+   "schools_summed_as_implied_by_totals": 85,
+   "list_printed_total": 85,
+   "other_table_value": 85,
+   "equal": false,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1930",
+   "sector": "private",
+   "cell": "boys muslim",
+   "other_table": "education_school_population",
+   "schools_summed": 88,
+   "schools_summed_as_implied_by_totals": 85,
+   "list_printed_total": 85,
+   "other_table_value": 85,
+   "equal": false,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1930",
+   "sector": "private",
+   "cell": "boys jewish",
+   "other_table": "education_primary_totals",
+   "schools_summed": 1718,
+   "schools_summed_as_implied_by_totals": 1718,
+   "list_printed_total": 1718,
+   "other_table_value": 1718,
+   "equal": true,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1930",
+   "sector": "private",
+   "cell": "boys jewish",
+   "other_table": "education_school_population",
+   "schools_summed": 1718,
+   "schools_summed_as_implied_by_totals": 1718,
+   "list_printed_total": 1718,
+   "other_table_value": 1718,
+   "equal": true,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1930",
+   "sector": "private",
+   "cell": "boys italian",
+   "other_table": "education_primary_totals",
+   "schools_summed": 552,
+   "schools_summed_as_implied_by_totals": 552,
+   "list_printed_total": 552,
+   "other_table_value": 552,
+   "equal": true,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1930",
+   "sector": "private",
+   "cell": "boys italian",
+   "other_table": "education_school_population",
+   "schools_summed": 552,
+   "schools_summed_as_implied_by_totals": 552,
+   "list_printed_total": 552,
+   "other_table_value": 552,
+   "equal": true,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1930",
+   "sector": "private",
+   "cell": "boys maltese",
+   "other_table": "education_primary_totals",
+   "schools_summed": 42,
+   "schools_summed_as_implied_by_totals": 39,
+   "list_printed_total": 39,
+   "other_table_value": 39,
+   "equal": false,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1930",
+   "sector": "private",
+   "cell": "boys maltese",
+   "other_table": "education_school_population",
+   "schools_summed": 42,
+   "schools_summed_as_implied_by_totals": 39,
+   "list_printed_total": 39,
+   "other_table_value": 39,
+   "equal": false,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1930",
+   "sector": "private",
+   "cell": "boys other",
+   "other_table": "education_primary_totals",
+   "schools_summed": 33,
+   "schools_summed_as_implied_by_totals": 33,
+   "list_printed_total": 33,
+   "other_table_value": 33,
+   "equal": true,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1930",
+   "sector": "private",
+   "cell": "boys other",
+   "other_table": "education_school_population",
+   "schools_summed": 33,
+   "schools_summed_as_implied_by_totals": 33,
+   "list_printed_total": 33,
+   "other_table_value": 33,
+   "equal": true,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1930",
+   "sector": "private",
+   "cell": "girls french",
+   "other_table": "education_primary_totals",
+   "schools_summed": 1327,
+   "schools_summed_as_implied_by_totals": 1327,
+   "list_printed_total": 1327,
+   "other_table_value": 1327,
+   "equal": true,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1930",
+   "sector": "private",
+   "cell": "girls french",
+   "other_table": "education_school_population",
+   "schools_summed": 1327,
+   "schools_summed_as_implied_by_totals": 1327,
+   "list_printed_total": 1327,
+   "other_table_value": 1327,
+   "equal": true,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1930",
+   "sector": "private",
+   "cell": "girls muslim",
+   "other_table": "education_primary_totals",
+   "schools_summed": 595,
+   "schools_summed_as_implied_by_totals": 595,
+   "list_printed_total": 595,
+   "other_table_value": 595,
+   "equal": true,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1930",
+   "sector": "private",
+   "cell": "girls muslim",
+   "other_table": "education_school_population",
+   "schools_summed": 595,
+   "schools_summed_as_implied_by_totals": 595,
+   "list_printed_total": 595,
+   "other_table_value": 595,
+   "equal": true,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1930",
+   "sector": "private",
+   "cell": "girls jewish",
+   "other_table": "education_primary_totals",
+   "schools_summed": 1166,
+   "schools_summed_as_implied_by_totals": 1166,
+   "list_printed_total": 1166,
+   "other_table_value": 1166,
+   "equal": true,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1930",
+   "sector": "private",
+   "cell": "girls jewish",
+   "other_table": "education_school_population",
+   "schools_summed": 1166,
+   "schools_summed_as_implied_by_totals": 1166,
+   "list_printed_total": 1166,
+   "other_table_value": 1166,
+   "equal": true,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1930",
+   "sector": "private",
+   "cell": "girls italian",
+   "other_table": "education_primary_totals",
+   "schools_summed": 620,
+   "schools_summed_as_implied_by_totals": 620,
+   "list_printed_total": 620,
+   "other_table_value": 620,
+   "equal": true,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1930",
+   "sector": "private",
+   "cell": "girls italian",
+   "other_table": "education_school_population",
+   "schools_summed": 620,
+   "schools_summed_as_implied_by_totals": 620,
+   "list_printed_total": 620,
+   "other_table_value": 620,
+   "equal": true,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1930",
+   "sector": "private",
+   "cell": "girls maltese",
+   "other_table": "education_primary_totals",
+   "schools_summed": 81,
+   "schools_summed_as_implied_by_totals": 81,
+   "list_printed_total": 81,
+   "other_table_value": 81,
+   "equal": true,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1930",
+   "sector": "private",
+   "cell": "girls maltese",
+   "other_table": "education_school_population",
+   "schools_summed": 81,
+   "schools_summed_as_implied_by_totals": 81,
+   "list_printed_total": 81,
+   "other_table_value": 81,
+   "equal": true,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1930",
+   "sector": "private",
+   "cell": "girls other",
+   "other_table": "education_primary_totals",
+   "schools_summed": 48,
+   "schools_summed_as_implied_by_totals": 48,
+   "list_printed_total": 48,
+   "other_table_value": 48,
+   "equal": true,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1930",
+   "sector": "private",
+   "cell": "girls other",
+   "other_table": "education_school_population",
+   "schools_summed": 48,
+   "schools_summed_as_implied_by_totals": 48,
+   "list_printed_total": 48,
+   "other_table_value": 48,
+   "equal": true,
+   "equal_implied": true,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1930",
+   "sector": "private",
+   "cell": "previous-year total",
+   "other_table": "education_primary_totals",
+   "schools_summed": 7217,
+   "schools_summed_as_implied_by_totals": 7217,
+   "list_printed_total": 7244,
+   "other_table_value": 7244,
+   "equal": false,
+   "equal_implied": false,
+   "list_total_equal": true
+  },
+  {
+   "edition": "sgt1930",
+   "sector": "private",
+   "cell": "previous-year total",
+   "other_table": "education_school_population",
+   "schools_summed": 7217,
+   "schools_summed_as_implied_by_totals": 7217,
+   "list_printed_total": 7244,
+   "other_table_value": 7244,
+   "equal": false,
+   "equal_implied": false,
+   "list_total_equal": true
+  }
+ ],
+ "name_changes": {
+  "public": {
+   "schools_1922": 350,
+   "schools_1930": 466,
+   "localities_1922": 206,
+   "localities_1930": 279,
+   "localities_only_1922": [
+    "Ben-Arous",
+    "Deggache (El-Oudiane)",
+    "Fedjet Khemaken",
+    "Hamma (El)",
+    "Hamaïm",
+    "Kef-Chambi",
+    "Kanguet-el-Hadjaj",
+    "Ksar-el-Ahmar",
+    "Maareth",
+    "Rebiba",
+    "Sahaline",
+    "Sers",
+    "Zeramdine"
+   ],
+   "localities_only_1930": [
+    "Aïn-Rhellal",
+    "Aouareb (El)",
+    "Aouïna (El)",
+    "Attar",
+    "Bembla",
+    "Ben-Arous (Fochville)",
+    "Beni-Hassen",
+    "Bir-bou-Rekba",
+    "Bir-Chaaba",
+    "Bir-Touil",
+    "Bordj-Frendj",
+    "Bou-Merdès",
+    "Camp-Servière",
+    "De Carnières",
+    "Chahal",
+    "Deggache",
+    "Djebel-Mdilla",
+    "Cédouikech (Djerba)",
+    "Cédriane (Djerba)",
+    "Oued-Zebib (Djerba)",
+    "Mélita (Djerba)",
+    "Douaria",
+    "Douz",
+    "Dra ben Djouder",
+    "El-Alem",
+    "Ellès",
+    "Fedjet-Khemakhem",
+    "Fondouk-Hafaïed",
+    "Gamart",
+    "Ghenouche",
+    "Ghomrassen",
+    "Guétar (El)",
+    "Hamma (El) du Djerid",
+    "Hamma (El) de Gabès",
+    "Hammaïm",
+    "Hammam-Sousse",
+    "Hergla",
+    "Hiboun",
+    "Jama",
+    "Kasserine",
+    "Ouled-bou Ali (Kerkenna)",
+    "Kesra (La)",
+    "Khanguet-el-Hadjaj",
+    "Korbous",
+    "Kouba-Kebira",
+    "Krib (Le)",
+    "Ksar-Lahmar",
+    "Ksiba-Sousse",
+    "La Hencha",
+    "Lamta",
+    "Mareth",
+    "Marquez-Kamoun",
+    "Masdour",
+    "Menzel-Kamel",
+    "Merira-centre",
+    "Métameur",
+    "Nebeur",
+    "Ousseltia",
+    "Raf-Raf",
+    "Rebiba, gare",
+    "Rebiba, mine",
+    "Redjich",
+    "Rohia",
+    "Saheline",
+    "Saint-Henri",
+    "Sakiet-Ed-Daïr",
+    "Sakiet-Ez-Zit",
+    "Salammbô",
+    "Sekarna",
+    "Sers-gare",
+    "Sers-village",
+    "Sidi-Abbès",
+    "Sidi-Alouane",
+    "Sidi-Ameur",
+    "Sidi-Assaker",
+    "Sidi-bou-Ali",
+    "Sidi-bou-Aouane",
+    "Sidi-Freidj",
+    "Sidi-Naceur-Allah",
+    "Sidi-Zehili",
+    "Somaâ",
+    "Toukabeur",
+    "Touireuf",
+    "Triaga",
+    "Zarat",
+    "Zéramdine"
+   ],
+   "schools_by_locality": {
+    "Tunis": {
+     "only_sgt1922": [
+      "Garçons : Rue Ayed (Bab-Djedid)",
+      "Garçons : Rue du Pacha (int. d'app.)",
+      "Garçons : Rue de Tripoli",
+      "Filles : Rue Chaker",
+      "Filles : Rue de Patras",
+      "Mixte : Quartier de Franceville",
+      "Mixte : Quartier de Mutuelleville"
+     ],
+     "only_sgt1930": [
+      "Garçons : Avenue Bab-Djedid",
+      "Garçons : Rue Dar-el Djeld",
+      "Garçons : Quartier de Franceville",
+      "Garçons : Rue du Pacha (cours complém. d'enseignement professionnel)",
+      "Garçons : Rue Sidi-Ali-Azouz",
+      "Maternelle : Rue de Tripoli",
+      "Filles : Impasse Mousmar-el-Kassah",
+      "Mixte : Rue de Patras (enfantine)",
+      "Quartier de Franceville",
+      "Quartier de Mutuelleville"
+     ]
+    },
+    "Aïn-Draham": {
+     "only_sgt1922": [
+      "Garçons (Internat de)",
+      "Filles (Internat de)"
+     ],
+     "only_sgt1930": [
+      "Mixte (Internat)",
+      "Garçons : franco-arabe (Internat)"
+     ]
+    },
+    "Aïn-el-Asker": {
+     "only_sgt1922": [
+      "Garçons"
+     ],
+     "only_sgt1930": [
+      "Mixte"
+     ]
+    },
+    "Aroussa (El)": {
+     "only_sgt1922": [],
+     "only_sgt1930": [
+      "Filles"
+     ]
+    },
+    "Azib (El)": {
+     "only_sgt1922": [
+      "Mixte (fermée)"
+     ],
+     "only_sgt1930": [
+      "Mixte"
+     ]
+    },
+    "Béja": {
+     "only_sgt1922": [
+      "Garçons (Internat de)"
+     ],
+     "only_sgt1930": [
+      "Garçons (Internat de) avec cours compl.",
+      "Filles musulmanes"
+     ]
+    },
+    "Beni-Khalled": {
+     "only_sgt1922": [
+      "Mixte"
+     ],
+     "only_sgt1930": [
+      "Franco-arabe"
+     ]
+    },
+    "Bir-Halima": {
+     "only_sgt1922": [
+      "Mixte"
+     ],
+     "only_sgt1930": [
+      "Garçons",
+      "Filles"
+     ]
+    },
+    "Birine": {
+     "only_sgt1922": [
+      "Mixte"
+     ],
+     "only_sgt1930": [
+      "Garçons",
+      "Filles"
+     ]
+    },
+    "Bizerte": {
+     "only_sgt1922": [
+      "Enfantine : mixte"
+     ],
+     "only_sgt1930": [
+      "Enfantine",
+      "Maternelle",
+      "Filles musulmanes"
+     ]
+    },
+    "Bou-Arada": {
+     "only_sgt1922": [
+      "Mixte"
+     ],
+     "only_sgt1930": [
+      "Garçons",
+      "Filles"
+     ]
+    },
+    "Chebaou": {
+     "only_sgt1922": [
+      "Mixte"
+     ],
+     "only_sgt1930": [
+      "Garçons",
+      "Filles"
+     ]
+    },
+    "Crétéville": {
+     "only_sgt1922": [
+      "Garçons, Filles : Mixte"
+     ],
+     "only_sgt1930": [
+      "Mixte"
+     ]
+    },
+    "Djedeïda": {
+     "only_sgt1922": [],
+     "only_sgt1930": [
+      "Orphelinat"
+     ]
+    },
+    "Djemmal": {
+     "only_sgt1922": [
+      "Filles"
+     ],
+     "only_sgt1930": []
+    },
+    "Djerissa": {
+     "only_sgt1922": [
+      "Garçons, Filles : Mixte"
+     ],
+     "only_sgt1930": [
+      "Garçons",
+      "Filles"
+     ]
+    },
+    "Djouggar": {
+     "only_sgt1922": [],
+     "only_sgt1930": [
+      "Pénitencier"
+     ]
+    },
+    "Dubosville": {
+     "only_sgt1922": [
+      "Garçons coéducation",
+      "Filles coéducation"
+     ],
+     "only_sgt1930": [
+      "Garçons",
+      "Filles"
+     ]
+    },
+    "Ebba-Ksour": {
+     "only_sgt1922": [
+      "Mixte"
+     ],
+     "only_sgt1930": [
+      "Garçons",
+      "Filles"
+     ]
+    },
+    "Enfidaville": {
+     "only_sgt1922": [
+      "Filles, Garçons : Mixte"
+     ],
+     "only_sgt1930": [
+      "Garçons",
+      "Filles"
+     ]
+    },
+    "Ferryville": {
+     "only_sgt1922": [
+      "Garçons",
+      "Ecole des apprentis de l'Arsenal"
+     ],
+     "only_sgt1930": [
+      "Garçons, avec cours complémentaire mixte",
+      "Garçons (franco-arabe)"
+     ]
+    },
+    "Gabès": {
+     "only_sgt1922": [
+      "Filles",
+      "Garçons (section agricole)"
+     ],
+     "only_sgt1930": [
+      "Filles, avec cours complémentaire mixte"
+     ]
+    },
+    "Gafour": {
+     "only_sgt1922": [],
+     "only_sgt1930": [
+      "Filles musulmanes"
+     ]
+    },
+    "Gafsa (gare)": {
+     "only_sgt1922": [
+      "Mixte"
+     ],
+     "only_sgt1930": [
+      "Garçons",
+      "Filles"
+     ]
+    },
+    "Ghardimaou": {
+     "only_sgt1922": [
+      "Garçons, Filles : coéducation"
+     ],
+     "only_sgt1930": [
+      "Garçons",
+      "Garçons (franco-arabe)",
+      "Filles"
+     ]
+    },
+    "Kalaat-Senam (Mine)": {
+     "only_sgt1922": [
+      "Mixte"
+     ],
+     "only_sgt1930": [
+      "Garçons",
+      "Filles"
+     ]
+    },
+    "Kalaâ-Kebira": {
+     "only_sgt1922": [
+      "Garçons"
+     ],
+     "only_sgt1930": [
+      "Garçons (franco arabe)"
+     ]
+    },
+    "Kebili": {
+     "only_sgt1922": [
+      "Mixte"
+     ],
+     "only_sgt1930": [
+      "Garçons"
+     ]
+    },
+    "Kef (Le)": {
+     "only_sgt1922": [
+      "Garçons (internat) avec cours complémentaire mixte",
+      "Filles"
+     ],
+     "only_sgt1930": [
+      "Garçons (internat) avec cours complémentaire",
+      "Filles, avec cours complémentaire"
+     ]
+    },
+    "Khanguet-gare": {
+     "only_sgt1922": [
+      "Mixte"
+     ],
+     "only_sgt1930": [
+      "Garçons",
+      "Filles"
+     ]
+    },
+    "Kram": {
+     "only_sgt1922": [],
+     "only_sgt1930": [
+      "Institut héliothérapique"
+     ]
+    },
+    "Ksour": {
+     "only_sgt1922": [
+      "Mixte"
+     ],
+     "only_sgt1930": [
+      "Franco-arabe"
+     ]
+    },
+    "La Laverie (Djebel-Reças)": {
+     "only_sgt1922": [
+      "Mixte"
+     ],
+     "only_sgt1930": [
+      "Garçons",
+      "Filles"
+     ]
+    },
+    "Maharès": {
+     "only_sgt1922": [
+      "Mixte"
+     ],
+     "only_sgt1930": [
+      "Garçons",
+      "Filles musulmanes"
+     ]
+    },
+    "Mahdia": {
+     "only_sgt1922": [],
+     "only_sgt1930": [
+      "Garçons (franco-arabe) avec cours compl."
+     ]
+    },
+    "Mateur": {
+     "only_sgt1922": [
+      "Garçons",
+      "Enfantine"
+     ],
+     "only_sgt1930": [
+      "Garçons avec cours complémentaire mixte"
+     ]
+    },
+    "Maxula-Radès": {
+     "only_sgt1922": [
+      "Filles (Internat de)"
+     ],
+     "only_sgt1930": [
+      "Filles (Ecole Primaire Supérieure)"
+     ]
+    },
+    "Meheri-Zebbeus": {
+     "only_sgt1922": [
+      "Mixte (coéducation)"
+     ],
+     "only_sgt1930": [
+      "Mixte"
+     ]
+    },
+    "Menzel-Abdarrahmane": {
+     "only_sgt1922": [
+      "Garçons"
+     ],
+     "only_sgt1930": [
+      "Garçons (franco-arabe)"
+     ]
+    },
+    "Merira": {
+     "only_sgt1922": [
+      "Mixte"
+     ],
+     "only_sgt1930": [
+      "Garçons",
+      "Filles"
+     ]
+    },
+    "Methouia": {
+     "only_sgt1922": [
+      "Garçons"
+     ],
+     "only_sgt1930": [
+      "Garçons (franco-arabe)"
+     ]
+    },
+    "Metlaoui-Mine": {
+     "only_sgt1922": [
+      "Garçons"
+     ],
+     "only_sgt1930": [
+      "Garçons (franco-arabe)"
+     ]
+    },
+    "Metline": {
+     "only_sgt1922": [
+      "Garçons"
+     ],
+     "only_sgt1930": [
+      "Garçons (franco-arabe)"
+     ]
+    },
+    "Nabeul": {
+     "only_sgt1922": [],
+     "only_sgt1930": [
+      "Garçons (franco-arabe)"
+     ]
+    },
+    "Oued-Meliz": {
+     "only_sgt1922": [
+      "Mixte"
+     ],
+     "only_sgt1930": [
+      "Garçons"
+     ]
+    },
+    "Ras-el-Djebel": {
+     "only_sgt1922": [],
+     "only_sgt1930": [
+      "Filles musulmanes"
+     ]
+    },
+    "Reyville": {
+     "only_sgt1922": [
+      "Mixte (coéducation)"
+     ],
+     "only_sgt1930": [
+      "Garçons",
+      "Filles"
+     ]
+    },
+    "Saïda": {
+     "only_sgt1922": [
+      "Garçons : coéducation",
+      "Filles : coéducation"
+     ],
+     "only_sgt1930": [
+      "Garçons",
+      "Filles"
+     ]
+    },
+    "Saint-Germain": {
+     "only_sgt1922": [
+      "Mixte"
+     ],
+     "only_sgt1930": [
+      "Garçons",
+      "Filles",
+      "Enfantine"
+     ]
+    },
+    "Sakiet-Mine": {
+     "only_sgt1922": [
+      "Mixte"
+     ],
+     "only_sgt1930": [
+      "Coéducation : Garçons",
+      "Coéducation : Filles"
+     ]
+    },
+    "Sbeïtla": {
+     "only_sgt1922": [
+      "Mixte"
+     ],
+     "only_sgt1930": [
+      "Garçons",
+      "Filles"
+     ]
+    },
+    "Sebbala-du-Mornag": {
+     "only_sgt1922": [
+      "Mixte"
+     ],
+     "only_sgt1930": [
+      "Garçons",
+      "Filles"
+     ]
+    },
+    "Sfax": {
+     "only_sgt1922": [
+      "Garçons (école primaire élémentaire)",
+      "Filles (école primaire élémentaire)",
+      "Enfantine. — Mixte",
+      "Moulinville. — Mixte"
+     ],
+     "only_sgt1930": [
+      "Garçons (rue Alexandre Dumas)",
+      "Filles (rue Massicault)",
+      "Filles musulmanes",
+      "Moulinville. — Garçons",
+      "Moulinville. — Franco-arabe",
+      "Moulinville. — Filles"
+     ]
+    },
+    "Sousse": {
+     "only_sgt1922": [
+      "Garçons (école primaire supérieure)",
+      "Filles musulmanes"
+     ],
+     "only_sgt1930": [
+      "Collège de garçons",
+      "Ecole Industrielle et Commerciale",
+      "Garçons, route de Monastir",
+      "Filles, rue Léon Mougeot",
+      "Filles musulmanes, rue El-Marr",
+      "Filles musulmanes, rue Laroussi Zarrouk",
+      "Filles musulmanes, rue Souk-el-Caïd"
+     ]
+    },
+    "Tabarca": {
+     "only_sgt1922": [
+      "Garçons"
+     ],
+     "only_sgt1930": [
+      "Garçons, avec cours complémentaire mixte"
+     ]
+    },
+    "Tebourba": {
+     "only_sgt1922": [
+      "Filles mixte"
+     ],
+     "only_sgt1930": []
+    },
+    "Thala": {
+     "only_sgt1922": [
+      "Garçons",
+      "Filles"
+     ],
+     "only_sgt1930": [
+      "Garçons (franco-arabe)",
+      "Mixte"
+     ]
+    },
+    "Tindja": {
+     "only_sgt1922": [],
+     "only_sgt1930": [
+      "Garçons (franco-arabe)"
+     ]
+    },
+    "Tozeur": {
+     "only_sgt1922": [],
+     "only_sgt1930": [
+      "Filles musulmanes"
+     ]
+    },
+    "Zaghouan": {
+     "only_sgt1922": [
+      "Garçons (avec internat)"
+     ],
+     "only_sgt1930": [
+      "Garçons (avec internat et cours complémentaire)"
+     ]
+    }
+   }
+  },
+  "private": {
+   "schools_1922": 32,
+   "schools_1930": 31,
+   "localities_1922": 16,
+   "localities_1930": 16,
+   "localities_only_1922": [
+    "Seillonville"
+   ],
+   "localities_only_1930": [
+    "Sillonville"
+   ],
+   "schools_by_locality": {
+    "Tunis": {
+     "only_sgt1922": [
+      "Ecole Mixte de Mme Bonhomme"
+     ],
+     "only_sgt1930": [
+      "Ecole Jeanne d'Arc"
+     ]
+    },
+    "Aïn-Moularès": {
+     "only_sgt1922": [
+      "Ecole de M. Carrière"
+     ],
+     "only_sgt1930": [
+      "Ecole de M. Merlet"
+     ]
+    },
+    "Bizerte": {
+     "only_sgt1922": [
+      "Ecole de Mme Médeville"
+     ],
+     "only_sgt1930": [
+      "Ecole de Mme Médevielle"
+     ]
+    },
+    "Le Kef": {
+     "only_sgt1922": [
+      "Ecole de Mlle Lo Vecchio"
+     ],
+     "only_sgt1930": [
+      "Ecole Dante Alighieri"
+     ]
+    },
+    "La Manouba": {
+     "only_sgt1922": [
+      "Ecole privée d'enseignement secondaire de jeunes filles (ouverte le 1er mars 1923)"
+     ],
+     "only_sgt1930": [
+      "Collège de « Notre-Dame de Carthage »"
+     ]
+    },
+    "Mehdia": {
+     "only_sgt1922": [
+      "Ecole de Mme Costa"
+     ],
+     "only_sgt1930": [
+      "Ecole Francesco Valenza"
+     ]
+    },
+    "Redeyef": {
+     "only_sgt1922": [
+      "Ecole mixte de M. Combès"
+     ],
+     "only_sgt1930": [
+      "Ecole mixte"
+     ]
+    },
+    "St-Joseph-de-Thibar": {
+     "only_sgt1922": [
+      "Ecole de filles"
+     ],
+     "only_sgt1930": [
+      "Ecole Mixte"
+     ]
+    },
+    "Sfax": {
+     "only_sgt1922": [
+      "Filles"
+     ],
+     "only_sgt1930": []
+    }
+   }
+  }
+ },
+ "chapters": {
+  "sgt1922": [
+   113,
+   152
+  ],
+  "sgt1930": [
+   671,
+   710
+  ],
+  "sgt1939": [
+   65,
+   76
+  ]
+ },
+ "sgt1939": "no school-by-school primary or private list printed (chapter VI, views 65-76)"
+}

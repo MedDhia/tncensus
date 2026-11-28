@@ -1,0 +1,68 @@
+# Communes chapter, sgt1924 (ark bpt6k9105649x): "Finances municipales: b) Emprunts communaux" (Tunis bond
+# loans) and "c) Emprunts contractés à la Caisse des Prêts Communaux". Two-page spreads, views 1020-1021 and 1022-1023.
+# Read on native-resolution crops of the page images; Gallica OCR used only to locate the lines.
+# Format: '@<table> view=<left view> view2=<right view> page=<left page> year=<exercice>', 'cols:', then
+# '= <commune heading as printed>' and rows '<date of the loan as printed> | values', 'Totaux | ...' per commune.
+# Money: francs with centimes after '.', no thousands separator; printed » = 0; 'NNN.xx' = franc part legible,
+# centimes hidden in the binding; durations in years ("ans"); interest rate in percent ("3 75" = 3.75, "3 1/2" = 3.5).
+# @tunis_bonds cols: dur rate cap_net cap_nom int_due cap_due int_paid_year cap_paid_year int_paid_before
+#   cap_paid_before int_paid_total cap_paid_total int_lapsed cap_lapsed int_outstanding cap_outstanding
+#   (columns 2-17 of the table).
+# @caisse cols: dur cap_net cap_nom rate annuity due paid_year paid_before paid_total arrears amortised
+#   remaining (columns 2-13 of the table).
+@tunis_bonds view=1020 view2=1021 page=30 year=1924
+cols: dur rate cap_net cap_nom int_due cap_due int_paid_year cap_paid_year int_paid_before cap_paid_before int_paid_total cap_paid_total int_lapsed cap_lapsed int_outstanding cap_outstanding
+= Commune de Tunis
+17 février 1891 | 50 3.5 3000000 3623500 3463827.50 1669482.50 62116.25 77552.50 3352597.50 1532836.25 3414713.75 1610388.75 1277.50 0 47836.25 59093.75
+31 janvier 1897 | 50 3.5 2000000 2087500 1791028.75 657851.25 43531.25 38517.50 1712103.75 595545 1755635 634062.50 472.50 0 34921.25 23788.75
+Totaux | . . 5000000 5711000 5254856.25 2327333.75 105647.50 116070 5064701.25 2128381.25 5170348.75 2244451.25 1750 0 82757.50 82882.50
+
+@caisse view=1020 view2=1021 page=30 year=1924
+cols: dur cap_net cap_nom rate annuity due paid_year paid_before paid_total arrears amortised remaining
+= Commune de Tunis
+28 août 1903 | 30 1400000 1478000 3.75 81656.xx 1734641.52 81656.24 1652985.28 1734641.52 0 852232.86 625767.14
+1er octobre 1907 | 30 200000 214600 3.75 11912.xx 201331.73 11912 189419.73 201331.73 0 87310.09 127289.91
+30 juin 1908 | 55 4000000 4292000 3.75 184726.88 2436125.18 184726.88 2251398.30 2436125.18 0 201229.48 4090770.52
+31 décembre 1921 | 35 5000000 5000000 7 192304.75 745111.11 325111.11 420000 745111.11 0 0 5000000
+Totaux | . 10600000 10984600 . 470599.87 5117209.54 603406.23 4513803.31 5117209.54 0 1140772.43 9843827.57
+= Commune de Béja
+3 avril 1907 | 25 150000 161000 3.75 9897.94 172854.92 9897.94 162956.98 172854.92 0 92454.29 68545.71
+= Commune de Bizerte
+20 février 1904 | 60 1000000 1056000 3.75 44301.24 847075.80 44301.24 802774.56 847075.80 0 74950.84 981049.16
+= Commune de Ferryville
+16 mars 1911 | 50 70000 75100 3.75 3333.36 39446.43 3333.36 36113.07 39446.43 0 4902.65 70197.35
+
+@caisse view=1022 view2=1023 page=32 year=1924
+cols: dur cap_net cap_nom rate annuity due paid_year paid_before paid_total arrears amortised remaining
+= Commune d'Hammam-Lif
+1er décembre 1908 | 20 15000 16000 3.75 1132.90 17904.20 1132.90 16771.30 17904.20 0 11320.91 4679.09
+= Commune de Kairouan
+19 octobre 1912 | 30 200000 214600 3.75 11945.34 143981.90 11945.34 132036.56 143981.90 0 56068.74 158531.26
+= Commune de Mahdia
+27 mars 1909 | 25 100000 107300 3.75 6608.48 103268.90 6608.48 96660.42 103268.90 0 54279.90 53020.10
+= Commune de Monastir
+3 mars 1908 | 25 25000 26800 3.75 1648.68 27453.92 1648.68 25805.24 27453.92 0 14768.70 12031.30
+= Commune de Nabeul
+5 avril 1910 | 15 15000 16000 3.75 1385.xx 19896.92 1385.16 18511.76 19896.92 0 14650.43 1349.57
+= Commune de Sfax
+1er août 1904 et 22 juin 1909 | 63 300000 317000 3.75 9019.xx 292569.84 9019.22 283550.62 202569.84 0 117269.77 199730.23
+22 juin 1909 | 58 100000 107300 3.75 4551.xx 68369.02 4551.32 63817.70 68369.02 0 6511.10 100788.90
+22 juin 1909 | 57 9000000 9657000 3.75 418708.xx 4640519.36 137221.20 4221811.26 4640519.36 0 383723.73 9272276.27
+Totaux | . 9400000 10081300 . 432278.64 5001458.22 150791.74 4569179.58 5001458.22 0 508504.60 9572795.40
+= Commune de Souk-el-Arba
+1er mars 1921 | 30 168000 168000 7 13469.78 47144.23 13469.78 33674.45 47144.23 0 6650.57 161349.43
+22 août 1922 | 25 332000 332000 7 28308.78 49628.84 28308.78 21320.06 49628.84 0 7872.38 324127.62
+Totaux | . 500000 500000 . 41778.56 96773.07 41778.56 54994.51 96773.07 0 14522.95 485477.05
+= Commune de Souk-el-Khemis
+28 février 1921 | 30 120000 120000 7 9621.26 23637.86 9621.26 14016.60 23637.86 0 1896.75 118103.25
+1er mai 1923 | 30 60000 60000 7 4810.64 4301.16 3921.99 379.17 4301.16 0 305.32 59694.68
+Totaux | . 180000 180000 . 14431.xx 27939.02 13543.25 14395.77 27939.02 0 2202.07 177797.93
+= Commune de Sousse
+21 février 1906 et 1er mars 1911 | 50 300000 317000 3.75 13462.xx 259997.56 13462.80 246534.76 259997.56 0 40754.99 276245.01
+2 mars 1908 et 1er mars 1911 | 50 300000 322000 3.75 13170.xx 238540.58 13170.76 225369.82 238540.58 0 51747.19 270252.81
+1er mars 1911 | 50 300000 322000 3.75 14286.xx 193430.35 14286.14 179144.21 193430.35 0 28860.91 293139.09
+Totaux | . 900000 961000 . 40919.70 691968.49 40919.70 651048.79 691968.49 0 121363.09 839636.91
+= Commune de Tébourba
+25 avril 1907 | 25 20000 21500 3.75 1321.80 22988.77 1321.80 21666.97 22988.77 0 12346.32 9153.68
+= Commune de La Marsa
+5 avril 1924 | 30 150000 150000 7 13260.56 9930.28 9930.28 0 9930.28 0 630.28 149369.72

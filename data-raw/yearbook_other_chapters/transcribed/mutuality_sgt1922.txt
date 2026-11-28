@@ -1,0 +1,182 @@
+# Statistique générale de la Tunisie, mutuality / economic institutions chapter, edition sgt1922. Format: yb_tables.py.
+
+# Crédit mutuel agricole (1913-1922), f460 (p. 436). a) Caisses locales françaises et indigènes: Caisses françaises / Caisses indigènes (nombre de caisses, nombre d'adhérents); b) Effets escomptés (nombre, montant fr. c.).
+# sgt1922 prints each figure one year earlier than sgt1923-sgt1930 (e.g. 37 caisses / 668 adhérents for 1920, later 1921) and 1921 = 1922 (40 / 735); effets 1922 2.511 / 13.465.233,15 printed by no other edition.
+@credit_caisses view=460 page=436
+img: all
+cols: fr_caisses fr_members ind_caisses ind_members
+1913 | 24 556 27 849
+1914 | 24 565 41 1483
+1915 | 24 548 40 1470
+1916 | 24 536 40 1464
+1917 | 24 517 38 1429
+1918 | 24 514 38 1429
+1919 | 24 508 38 1429
+1920 | 37 668 38 1429
+1921 | 40 735 38 1429
+1922 | 40 735 38 1429
+@credit_bills view=460 page=436
+img: all
+cols: bills amount
+1913 | 4131 5141876.90
+1914 | 4119 4728235.29
+1915 | 968 1127997.65
+1916 | 81 186916.35
+1917 | 256 328950
+1918 | 107 279840.50
+1919 | 12 23320.30
+1920 | 459 2355656.60
+1921 | 2510 13552423.85
+1922 | 2511 13465233.15
+
+# Coopérative centrale des agriculteurs (1913-1922), f461 (p. 437).
+# a) Nombre de parts souscrites: parts à 20 fr. (» in every line and in TOTAUX), parts à 50 fr., sommes; TOTAUX 1.332 / 66.600.
+# b) Affaires traitées: opérations commerciales (montant des marchandises livrées) and prêts divers (heading misprinted 'PRÊTS DIVERS 6914-1921'): semences, main-d'oeuvre, travaux de printemps, récolte, engrais, tracteurs, montant total, prêts restant à rembourser. 1913 loans printed » (total and restant printed as a dot-like »).
+@coop_parts view=461 page=437
+img: all
+cols: p20 p50 sums
+1913 | 0 945 47250
+1914 | 0 240 12000
+1915 | 0 5 250
+1916 | 0 6 300
+1917 | 0 8 400
+1918 | 0 20 1000
+1919 | 0 21 1050
+1920 | 0 10 500
+1921 | 0 12 600
+1922 | 0 65 3250
+TOTAUX | 0 1332 66600
+@coop_business view=461 page=437
+img: all
+cols: goods seeds labour spring harvest fertiliser tractors loans_total outstanding
+1913 | 793294.05 0 0 0 0 0 0 0 0
+1914 | 408012.85 880558.10 332794.45 0 0 0 0 1213382.55 0
+1915 | 472348.65 81451.45 166035.85 112275 275512.60 0 0 635274.90 14430.05
+1916 | 1020837.20 1024508.60 408430.75 106217.40 202434.70 0 0 1741591.45 13759.75
+1917 | 847599.15 968488.60 177001.30 128207 350454 109291.55 0 1733442.45 966.10
+1918 | 1889092.17 653870.35 82826 116050 441438.20 6931 0 1301115.55 3407
+1919 | 1492456.11 625854.55 82310 93734.35 329770 272240.40 0 1403909.30 39956.15
+1920 | 2982705.30 69710 5850 0 0 35360 1061102.85 1172022.85 305544.40
+1921 | 2397469.25 91127.60 0 0 0 0 0 91127.60 0
+1922 | 3109047.17 0 0 0 0 0 175331.45 175331.45 0
+TOTAUX | 15512861.90 4395569.25 1255248.35 556483.85 1599609.50 423822.95 1236434.30 9467198.10 378063.45
+
+
+# Assurances mutuelles agricoles (1913-1922), two-page spread f462|f463 (pp. 438|439). a) Incendie (upper half),
+# b) Grêle (lower half). Left page: nombre de polices, valeurs assurées, cotisations versées (caisses locales, caisse
+# régionale, caisse centrale), subventions (caisses locales, caisse régionale, caisse centrale), recettes
+# supplémentaires et ristournes, total des recettes (cents partly in the binding; read on the left page and the strip
+# visible on the right page). Right page (rview): nombre de sinistres, indemnités payées (caisses locales, caisse
+# régionale, caisse centrale), autres frais (caisses locales, caisse régionale, caisse centrale, déficit des caisses
+# locales), total des dépenses. Read at 0.85 on whole-half crops of both pages, doubtful figures zoomed at 1.5x.
+@ins_fire view=462 page=438 rview=463 rpage=439 split=claims
+img: all
+cols: policies insured contrib_local contrib_regional contrib_central subsidy_local subsidy_regional subsidy_central receipts_extra receipts_total claims indemn_local indemn_regional indemn_central costs_local costs_regional costs_central deficit_local expend_total
+1913 | 364 7416737 415.35 540.46 54465.87 484.98 1577.62 2424.90 6651.11 68570.69 9 89.33 90.03 17850.24 1662.71 3236.66 0 0 22928.97
+1914 | 384 7875699 198.03 365.56 52319.70 1000 2000 3000 6094.65 68145.34! 6 85.77 171.55 25746.34 2182.35 3862.50 0 0 32048.51
+1915 | 509 16324743 659.57 1246.73 120053.85 833.10 1666.90 2500 14266.93 147092.61 6 272.07 644.15 40435.10 3773.80 5273.26 0 0 50398.38
+1916 | 563 14817284 775.87 1551.75 80885.31 834.65 1665.35 2500 13034.93 107877.96! 17 556.40 1163.14 34234.56 2161.64 5107.27 0 0 43223.01
+1917 | 652 23231069 911.64 1823.30 116415.73 833 1667 2500 4368.37 128519.04! 16 536.17 1072.34 61229.02 2667.92 4851.15 0 0 70356.60
+1918 | 754 40871907 970.03 1963.18 208746.15 833.33 1666.67 2500 7840.83 224526.19 10 526.67 1053.28 123995.54 7235.12 6532.31 0 150.43 139493.35
+1919 | 740 41777790 1933.20 3866.59 206499.80 883 1667 2500 13759.57 231059.25 24 1049.21 2098.58 69192.02 9383.50 10468.54 0 0 92191.85
+1920 | 833 56992723 3571.30 7166.51 266987.18 3333 6667 2500 10517.70 300742.69 14 1851.20 3702.40 109494.25 14040.07 13779.83 2167.95 0 145035.70
+1921 | 1140 78824053 7243.05 14486.12 375836.22 3333 6667 2500 16826.42 426891.81 0 13922.09 27843.85 325553.83 20569.88 12588.99 0 0 400478.64
+1922 | 1128 67386247 15087.88 30174.44 248815.36 3333 31667 0 57578.78 386655.76 21 4747.65 9495.29 90803.95 1056.13 22231.92 0 0 128334.94
+@ins_hail view=462 page=438 rview=463 rpage=439 split=claims
+img: all
+cols: policies insured contrib_local contrib_regional contrib_central subsidy_local subsidy_regional subsidy_central receipts_extra receipts_total claims indemn_local indemn_regional indemn_central costs_local costs_regional costs_central deficit_local expend_total
+1913 | 124 3236370 2663.39 10654.53 13316.92 700 2800 3500 90.03 33724.87! 14 4760.12 19040.46 23800.58 1056.57 7009.82 0 3115.57 58783.12
+1914 | 154 3253261 2640.06 11241.12 13881.04 1400 5600 7000 132.23 41894.45 4 1769.26 11390.39 13846.33 1607.62 4925.55 0 1113.68 34652.83
+1915 | 254 10538211 7928.87 31715.92 39664.78 1500 6000 7500 75.39 94364.96! 64 32340.12 129330.69 163035.67 3514.63 6018.38 0 26697.30 360936.79
+1916 | 215 6187325 3812.87 15251.28 32146.58 1400 5600 7000 1095.64 66306.37! 9 1286.82 5197.32 6851.39 1350.74 5161.29 0 0 19847.56
+1917 | 243 8672916 4745.46 18981.84 47744.05 1400 5600 7000 1724.42 87195.77! 5 450.22 1800.85 5300.91 1559.08 5369.20 0 168.92 14649.18
+1918 | 327 21167932 6811.87 32293.55 143369.04 1400 5600 7000 2128.31 198602.77! 42 11252.77 45011.01 194248.24 7804.86 9510.56 0 10838.16 278665.60
+1919 | 331 20199860 10346.68 26712.65 134886.92 1400 5600 7000 2276.52 188222.77! 17 2017.44 8069.75 47071.70 8417.20 17205.26 0 0 82781.35
+1920 | 342 30963842 10077.56 40070.28 264117.09 2600 10400 22000 3187.29 352392.22! 7 446.10 1784.44 7852.06 16389.19 15193.09 434.61 0 42099.49
+1921 | 518 47828184 15325.87 61363.21 370287.32 2600 10400 22000 1447.48 483423.88! 40 22343.76 89374.94 464531.25 23752.41 46926.12 0 13519.08 660447.56
+1922 | 478 29016341 13121.29 52485.65 211655.75 2600 12400 0 42522.27 334784.96! 18 3484.50! 13948.08 35102.77 332.32 24062.49 0 0 80930.06
+# (1) Frais de constitution: 8.150,20 printed above the 1913 line of b) Grêle in the subventions / caisse régionale
+# column (left page) and in the autres frais / caisse régionale column (right page); not included in the 1913 totals.
+@ins_hail_constitution view=462 page=438 rview=463 rpage=439 split=costs_regional
+img: all
+cols: subsidy_regional costs_regional
+1913 | 8150.20 8150.20
+
+# Sociétés indigènes de prévoyance, opérations (1913-1922), f464|f465 (pp. 440|441). Montant des prêts (semences, subsistance, hypothécaires, avances aux filiales, total); annulation des prêts de subsistance (centimes partly in the binding of f464, read on a 1.5x crop); différence (= total - annulation, left edge in the binding of f465; check only); montant des recouvrements (same four types, total); reste à recouvrer sur les prêts. The reste à recouvrer 488.536,84 is printed once, braced against the lines 1914-1919: typed on 1919, the other lines '-'.
+@prev view=464 page=440
+img: all
+cols: seed subs mort adv total cancel diff r_seed r_subs r_mort r_adv r_total outstanding
+1913 | 1786550.37 58435.48 698224.93 41185.29 2584396.07 0 2584396.07 1219547.09 56.55 30916.73 11420 1261940.37 1322455.70
+1914 | 451175.82 83459.75 544024.29 23790 1102449.86 0 1102449.86 137999.10 16622 57158.76 47526.64 259306.50 -
+1915 | 6511125.79 0 217959.21 77314.24 6806399.24 0 6806399.24 3633201.75 37039 43970.04 51676.73 3765887.52 -
+1916 | 1570483.20 0 102181.41 100586.55 1773251.22 0 1773251.22 2087703.69 12919.85 65892.92 89949.57 2256466.03 -
+1917 | 227867.24 215887.75 9755.20 50130.60 503640.79 122.70 503518.09 2291707.17 48009.23 182539.45 28480.36 2550736.21 -
+1918 | 539948.26 216157.60 121.65 897618.69 1653846.20 4657.95 1649188.25 1539847.18 72435.35 80311.01 133936.31 1826529.85 -
+1919 | 463935.91 0 1089.75 160505.27 625530.93 2953.65 622577.28 678622.39 68240.01 166218.97 396838.72 1309920.09 488536.84
+1920 | 1515500.77 0 12493.45 185928.79 1713923.01 0 1713923.01 397445.50 17840.57 127727.28 237129.64 780142.99 933780.92
+1921 | 15020044.43 0 169378.90 575204.23 15764627.56 0 15764627.56 12638968.98 32807.67 70142.71 296341.80 13038261.16 2726366.40
+1922 | 3143548.80 0 859241.48 663348.95 4666139.23 10676 4655463.23 1975440.91 5442.73 112424.25 709089.51 2802397.40 1853065.83
+TOTAUX | 31230180.65 573940.58 2614470.27 2775612.61 37194204.11 18410.30 37175793.81 26600483.76 311412.96 937302.12 2002389.28 29851588.12 7324205.69
+
+# ---------------------------------------------------------------- labour tables printed in this chapter (labour_early_*)
+# Accidents du travail, f459 (p. 435) a) Répartition d'après la nationalité des victimes, b) Répartition d'après la
+# gravité; f460|f461 (p. 436|437) c) Causes matérielles par catégorie professionnelle (two-page spread, upper half of
+# both pages; split after Matières incandescentes, which f461 repeats on its left edge with the same figures).
+# No year in the titles: year = edition year (as labour_accidents_* of sgt1925-sgt1926). Same 13 professions and the
+# same column headings as sgt1925-sgt1926. Every cell read on native-resolution crops (0.8-1x, gutter columns 2.5x).
+@acc_nat view=459 page=435
+img: all
+cols: french italian indigenous foreign total
+check: total = french + italian + indigenous + foreign
+Alimentation | 16 143 177 27 363
+Métallurgie | 29 268 192 46 535
+Tabac, Services d'Etat | 26 14 140 6 186
+Electricité, Eau, Gaz | 3 24 8 3 38
+Mines et Carrières | 31 180 650 15 876
+Transports : transport | 133 152 314 32 631
+Transports : ateliers | 124 148 89 49 410
+Construction | 59 148 202 25 434
+Manutention | 8 62 426 15 511
+Chaux et Ciment | 0 2 4 0 6
+Industrie du bois | 11 105 46 11 173
+Agriculture | 20 25 139 14 198
+Autres | 8 70 108 21 207
+Totaux | 468 1341 2495 264 4568
+
+@acc_sev view=459 page=435
+img: all
+cols: dead inc_more1m inc_less1m total
+check: total = dead + inc_more1m + inc_less1m
+Alimentation | 3 8 352 363
+Métallurgie | 0 9 526 535
+Tabac, Services d'Etat | 0 2 184 186
+Electricité, Eau, Gaz | 0 1 37 38
+Mines et Carrières | 35 47 794 876
+Transports : transport | 4 51 576 631
+Transports : ateliers | 1 32 377 410
+Construction | 2 3 429 434
+Manutention | 0 3 508 511
+Chaux et Ciment | 0 0 6 6
+Industrie du bois | 0 1 172 173
+Agriculture | 2 5 191 198
+Autres | 0 0 207 207
+Totaux | 47 162 4359 4568
+
+@acc_cause view=460 page=436 view2=461 page2=437 split=falling_objects
+img: all
+cols: motors transmission machines lifting autoclaves explosives hot_matter falling_objects worker_fall handling traction hand_tools miscellaneous unknown footwear total
+check: total = motors + transmission + machines + lifting + autoclaves + explosives + hot_matter + falling_objects + worker_fall + handling + traction + hand_tools + miscellaneous + unknown + footwear
+Alimentation | 0 14 16 1 0 7 27 94 56 39 21 22 56 5 5 363
+Métallurgie | 3 2 17 3 0 0 90 181 34 40 18 34 44 64 5 535
+Tabac, Services d'Etat | 0 0 30 0 0 0 16 34 23 26 20 8 26 1 2 186
+Electricité, Eau, Gaz | 0 0 2 0 0 0 7 12 6 1 0 5 5 0 0 38
+Mines et Carrières | 0 3 9 2 0 7 10 273 52 97 230 46 140 7 0 876
+Transports : transport | 3 1 8 2 11 0 31 121 84 81 96 38 151 3 1 631
+Transports : ateliers | 1 0 42 0 5 0 28 83 32 27 8 59 124 1 0 410
+Construction | 1 0 20 3 0 4 13 162 64 49 0 29 70 8 11 434
+Manutention | 0 4 3 13 0 0 4 285 35 69 42 13 34 4 5 511
+Chaux et Ciment | 0 0 0 0 0 0 0 1 1 0 4 0 0 0 0 6
+Industrie du bois | 1 0 41 0 0 0 7 40 9 11 1 24 26 7 6 173
+Agriculture | 2 3 8 1 0 1 9 35 28 10 61 16 21 2 1 198
+Autres | 1 1 25 3 0 0 20 47 34 15 15 10 32 1 3 207
+Totaux | 12 28 221 28 16 19 262 1368 458 465 516 304 729 103 39 4568

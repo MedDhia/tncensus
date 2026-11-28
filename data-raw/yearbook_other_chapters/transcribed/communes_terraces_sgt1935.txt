@@ -1,0 +1,80 @@
+# Communes chapter, sgt1935 (ark bpt6k9105653t): "Concessions sur la voie publique, b) Terrasses et étalages".
+# Read on native-resolution crops (right-hand page, no labels). The facing page's last column (n_auth of the
+# permits table) shows in the gutter at the left edge of the page and fixes the line of every commune.
+# Gallica OCR as draft only. No total printed. A last column "Observations" carries notes (comments below).
+# 'x' = text instead of a number (comment on the row).
+@terraces view=47 page=27 year=1935
+cols: terr_n terr_surf terr_prod stall_n stall_surf stall_prod
+Aïn-Draham | 0 0 0 0 0 0
+Ariana | 8 206 1952.50 0 0 6294.20
+Bardo (Le) | 0 0 0 0 0 0
+Béja | 23 115 5520 125 150 7200
+Ben-Gardane | 0 0 0 46546 46546 15744.60
+# Bizerte, Observations: "Les droits de stationnement sont perçus par un adjudicataire, ils s'élèvent pour 1935
+# à 38.627 frs."
+Bizerte | 40 813 12195 409 1100 13290
+Carthage | 0 0 0 0 0 0
+Djemmal | 0 0 0 0 0 0
+Djerba | 1600 1000 2000 1297 1251 2502
+# Ebba-Ksour: "Produits affermés" across the row
+Ebba-Ksour | x x x x x x
+El-Djem | 0 0 0 0 0 0
+Fériana | 0 0 0 0 0 0
+Ferryville | 1376 0 3906 363 748.50 7485
+Foum-Tatahouine | 48 288 288 32 130.90 130.90
+# Gabès: "Produits affermés" across the row
+Gabès | x x x x x x
+Gafsa | 120 964 3856 0 1491 745.50
+Ghardimaou | 0 0 0 0 0 0
+Goulette (La) | 50 829 13688 136 317 3555
+# Grombalia: stall_n and stall_surf "(1)": (1) Droits perçus par le fermier au marché général qui a rapporté à
+# la Commune, en 1935 une somme de 19.701 frs.
+Grombalia | 7 280 2892.60 x x 19700
+Hadjeb-el-Aïoun | 0 0 0 0 0 0
+Hammam-Lif | 0 347 5195 0 0 0
+Hamma (El) | 0 0 0 0 0 0
+Kairouan | 31 54600 17380 122 242500 72750
+Kalaa-Kebira | 0 0 0 0 0 0
+Ksour-Essaf | 146 84 1008 0 0 0
+Kef | 1 220 0 0 0 0
+Krib | 0 0 0 0 0 0
+Maharès | 9 127.60 638 0 0 0
+Mahdia | 250 6300 3150 90 3600 1800
+Marsa (La) | 9 329 1500 17 9069 4951.60
+Mateur | 0 76 45.60 9 28 16.80
+# Maxula-Radès, Observations: "dont 2.705 frs. encaissés par le collecteur au moyen de tickets"
+Maxula-Radès | 17 170 1700 2 124 3945
+Médenine | 5 84 252 29 348 1044
+Medjez-el-Bab | 0 0 0 0 0 2339.55
+Menzel-bou-Zelfa | 0 0 0 0 0 0
+# Menzel-Temime: "affermé" across the terrace columns
+Menzel-Temime | x x x 0 0 0
+Moknine | 0 0 0 0 0 0
+# Monastir: "Produits affermés" across the row
+Monastir | x x x x x x
+# M'saken: "Produits affermés" across columns 1-5, then 31.865
+M'saken | x x x x x 31865
+# Nabeul: stall_surf printed "0 30" (0,30, a rate per m² rather than a surface)
+Nabeul | 20 200 4380 0 x 76841
+Nefta | 0 0 0 0 0 0
+Philippe-Thomas | 0 500 100 0 4364 872.80
+Saint-Germain | 30 150 390 45 4054 2027
+Sbeïtla | 0 5700 570 0 3770 1510.95
+Sfax | 890 497 22290 196 401 16104.45
+# Sidi-bou-Saïd, Observations: "Stationnement : 550 frs."
+Sidi-bou-Saïd | 0 20 200.40 0 10 101
+Soliman | 0 0 0 0 0 0
+Souk-el-Arba | 12 3800 11400 0 10223 30669
+Souk-el-Khemis | 7 49 2820 0 0 798.20
+# Sousse, Observations: "dont 3.803 frs. 30 encaissés par le collecteur au moyen de tickets."
+Sousse | 0 1066 18656 0 1503 9815.30
+# Tabarka: "Produits affermés" across columns 1-5, then 6.000
+Tabarka | x x x x x 6000
+Tébourba | 60 120 960 0 9060 3620
+Téboursouk | 0 0 0 0 0 0
+Thala | 0 0 0 439 439 153.65
+Tozeur | 0 0 0 0 0 0
+Tunis | 65 483 31548.80 241 492 7074.75
+# Zaghouan: "Produits affermés" across columns 1-5, then 1.350
+Zaghouan | x x x x x 1350
+Zarzis | 0 20 50 0 42140 12642

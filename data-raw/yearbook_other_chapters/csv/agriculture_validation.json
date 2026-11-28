@@ -1,0 +1,2314 @@
+{
+ "agriculture_land": {
+  "rows": 348,
+  "checks": 264,
+  "failed": [
+   "sgt1922 p.209 (f233) land_c forest: % = hectares / total: cells give 12.11, printed 11.1 (difference -1.01)",
+   "sgt1922 p.209 (f233) land_c rangeland: % = hectares / total: cells give 51.22, printed 52.4 (difference 1.18)",
+   "sgt1922 p.209 (f233) land_d hectares: parts vs total: cells give 2920000, printed 2820000 (difference -100000)",
+   "sgt1922 p.209 (f233) land_d fallow: % = hectares / total: cells give 69.05, printed 65.5 (difference -3.55)",
+   "sgt1923 p.221 (f723) land_c %: parts vs 100: cells give 108.3, printed 100 (difference -8.3)",
+   "sgt1923 p.221 (f723) land_c rangeland: % = hectares / total: cells give 50.94, printed 59.4 (difference 8.46)",
+   "sgt1923 p.221 (f723) land_d hectares: parts vs total: cells give 2820000, printed 2840000 (difference 20000)",
+   "sgt1923 p.221 (f723) land_d %: parts vs 100: cells give 99.3, printed 100 (difference 0.7)",
+   "sgt1925 p.265 (f289) land_d hectares: parts vs total: cells give 2844820, printed 2845000 (difference 180)",
+   "sgt1927 p.233 (f261) land_d hectares: parts vs total: cells give 2913001, printed 2913000 (difference -1)",
+   "sgt1927 p.233 (f261) land_d cereals: % = hectares / total: cells give 33.31, printed 32.3 (difference -1.01)",
+   "sgt1927 p.233 (f261) land_d fodder: % = hectares / total: cells give 1.03, printed 9.2 (difference 8.17)",
+   "sgt1927 p.233 (f261) land_d food_plants: % = hectares / total: cells give 1.36, printed 3.2 (difference 1.84)",
+   "sgt1927 p.233 (f261) land_d industrial_plants: % = hectares / total: cells give 0.16, printed 2.16 (difference 2.00)",
+   "sgt1927 p.233 (f261) land_d other_products: % = hectares / total: cells give 4.12, printed 3.1 (difference -1.02)",
+   "sgt1927 p.233 (f261) land_d fallow: % = hectares / total: cells give 60.02, printed 50.1 (difference -9.92)",
+   "sgt1928 p.233 (f785) land_b % of the total line: cells give 0, printed 100 (difference 100)",
+   "sgt1928 p.233 (f785) land_c %: parts vs 100: cells give 99.7, printed 100 (difference 0.3)",
+   "sgt1928 p.233 (f785) land_c arable: % = hectares / total: cells give 32.61, printed 32.4 (difference -0.21)",
+   "sgt1929 p.235 (f263) land_b % of the total line: cells give 0, printed 100 (difference 100)",
+   "sgt1930 p.239 (f797) land_d %: parts vs 100: cells give 99.0, printed 100 (difference 1.0)",
+   "sgt1930 p.239 (f797) land_d fallow: % = hectares / total: cells give 47.94, printed 47 (difference -0.94)",
+   "sgt1935 p.121 (f141) land_d %: parts vs 100: cells give 99.73, printed 100 (difference 0.27)",
+   "sgt1935 p.121 (f141) land_d fallow: % = hectares / total: cells give 46.19, printed 45.9 (difference -0.29)",
+   "sgt1936 p.91 (f102) land_d hectares: parts vs total: cells give 2834000, printed 2934000 (difference 100000)",
+   "sgt1936 p.91 (f102) land_d fallow: % = hectares / total: cells give 60.36, printed 63.77 (difference 3.41)"
+  ],
+  "overlap_compared": 0,
+  "overlap_diffs": [],
+  "flagged": [
+   "sgt1922 1922 d / fallow_grazed / area = 1947136 (total_mismatch)",
+   "sgt1923 1923 c / rangeland_uncultivated / percent = 59.4 (total_mismatch)",
+   "sgt1927 1927 d / artificial_meadows_fodder / percent = 9.2 (total_mismatch)",
+   "sgt1936 1936 b / productive / area = 9000000 (derived_from_totals)",
+   "sgt1936 1936 d / fallow_grazed / area = 1770898 (total_mismatch)"
+  ],
+  "editions": [
+   "sgt1922",
+   "sgt1923",
+   "sgt1924",
+   "sgt1925",
+   "sgt1926",
+   "sgt1927",
+   "sgt1928",
+   "sgt1929",
+   "sgt1930",
+   "sgt1935",
+   "sgt1936",
+   "sgt1939"
+  ]
+ },
+ "agriculture_crops": {
+  "rows": 1492,
+  "checks": 1658,
+  "failed": [
+   "sgt1922 p.210 (f234) crops_a oats_yield 1915: yield = production / area: cells give 10.67, printed 8.0 (difference -2.67)",
+   "sgt1922 p.210 (f234) crops_a oats_yield 1916: yield = production / area: cells give 5.43, printed 4.6 (difference -0.83)",
+   "sgt1922 p.210 (f234) crops_a maize_yield 1913: yield = production / area: cells give 3.00, printed 2 (difference -1.00)",
+   "sgt1922 p.211 (f235) crops_a soft_yield 1921: yield = production / area: cells give 9.19, printed 9.9 (difference 0.71)",
+   "sgt1922 p.213 (f237) crops_b potatoes_yield 1920: yield = production / area: cells give 33.90, printed 36 (difference 2.10)",
+   "sgt1923 p.222 (f724) crops_a oats_yield 1915: yield = production / area: cells give 10.67, printed 8.0 (difference -2.67)",
+   "sgt1923 p.222 (f724) crops_a oats_yield 1916: yield = production / area: cells give 5.43, printed 4.6 (difference -0.83)",
+   "sgt1923 p.223 (f725) crops_a soft_yield 1921: yield = production / area: cells give 9.19, printed 9.9 (difference 0.71)",
+   "sgt1923 p.223 (f725) crops_a maize_yield 1923: yield = production / area: cells give 3.34, printed 3.9 (difference 0.56)",
+   "sgt1923 p.225 (f727) crops_b potatoes_yield 1920: yield = production / area: cells give 33.90, printed 36 (difference 2.10)",
+   "sgt1924 p.230 (f1220) crops_a oats_yield 1915: yield = production / area: cells give 10.67, printed 8.0 (difference -2.67)",
+   "sgt1924 p.230 (f1220) crops_a oats_yield 1916: yield = production / area: cells give 5.43, printed 4.6 (difference -0.83)",
+   "sgt1924 p.231 (f1221) crops_a durum_yield 1924: yield = production / area: cells give 5.63, printed 2.4 (difference -3.23)",
+   "sgt1924 p.231 (f1221) crops_a soft_yield 1921: yield = production / area: cells give 9.19, printed 9.9 (difference 0.71)",
+   "sgt1924 p.231 (f1221) crops_a maize_yield 1923: yield = production / area: cells give 3.34, printed 3.9 (difference 0.56)",
+   "sgt1924 p.233 (f1223) crops_b potatoes_yield 1920: yield = production / area: cells give 33.90, printed 36 (difference 2.10)",
+   "sgt1925 p.266 (f290) crops_a barley_yield 1916: yield = production / area: cells give 2.94, printed 4 (difference 1.06)",
+   "sgt1925 p.267 (f291) crops_a durum_yield 1921: yield = production / area: cells give 5.76, printed 5 (difference -0.76)",
+   "sgt1925 p.267 (f291) crops_a durum_yield 1925: yield = production / area: cells give 16.95, printed 6.6 (difference -10.35)",
+   "sgt1925 p.267 (f291) crops_a barley_yield 1921: yield = production / area: cells give 8.39, printed 7.8 (difference -0.59)",
+   "sgt1925 p.267 (f291) crops_a barley_yield 1924: yield = production / area: cells give 3.19, printed 3.4 (difference 0.21)",
+   "sgt1925 p.268 (f292) crops_a soft_yield 1920: yield = production / area: cells give 2.79, printed 3 (difference 0.21)",
+   "sgt1925 p.268 (f292) crops_a barley_yield 1919: yield = production / area: cells give 1.61, printed 1.8 (difference 0.19)",
+   "sgt1925 p.269 (f293) crops_a durum_yield 1923: yield = production / area: cells give 2.01, printed 1.2 (difference -0.81)",
+   "sgt1925 p.269 (f293) crops_a oats_yield 1922: yield = production / area: cells give 1.02, printed 0.1 (difference -0.92)",
+   "sgt1925 p.270 (f294) crops_b potatoes_yield 1920: yield = production / area: cells give 33.90, printed 36 (difference 2.10)",
+   "sgt1926 p.244 (f808) crops_b potatoes_yield 1920: yield = production / area: cells give 33.90, printed 36 (difference 2.10)",
+   "sgt1927 p.236 (f264) crops_b potatoes_yield 1920: yield = production / area: cells give 33.90, printed 36 (difference 2.10)",
+   "sgt1928 p.236 (f788) crops_b potatoes_yield 1920: yield = production / area: cells give 33.90, printed 36 (difference 2.10)",
+   "sgt1929 p.238 (f266) crops_b potatoes_yield 1920: yield = production / area: cells give 33.90, printed 36 (difference 2.10)",
+   "sgt1922 p.211 (f235) crops_a durum_area: average 1913-1922: cells give 524861.40, printed 514858 (difference -10003.40)",
+   "sgt1922 p.211 (f235) crops_a durum_prod: average 1918-1922: cells give 1623420.00, printed 1663420 (difference 40000.00)",
+   "sgt1922 p.211 (f235) crops_a durum_prod: average 1913-1922: cells give 1614710.00, printed 1634710 (difference 20000.00)",
+   "sgt1922 p.211 (f235) crops_a barley_prod: average 1913-1917: cells give 1564000.00, printed 1782000 (difference 218000.00)",
+   "sgt1922 p.211 (f235) crops_a oats_area: average 1913-1917: cells give 56610.20, printed 56210 (difference -400.20)",
+   "sgt1922 p.213 (f237) crops_b beans_area: average 1913-1917: cells give 14440.00, printed 14400 (difference -40.00)",
+   "sgt1922 p.213 (f237) crops_b beans_prod: average 1913-1917: cells give 72200.00, printed 72600 (difference 400.00)",
+   "sgt1922 p.213 (f237) crops_b beans_prod: average 1913-1922: cells give 92500.00, printed 92700 (difference 200.00)",
+   "sgt1922 p.213 (f237) crops_c flax_prod: average 1918-1922: cells give 10700.00, printed 11160 (difference 460.00)",
+   "sgt1922 p.215 (f239) crops_d olive_bearing: average 1918-1922: cells give 8470674.80, printed 8670674 (difference 199999.20)",
+   "sgt1922 p.215 (f239) crops_d olive_bearing: average 1913-1922: cells give 8055359.90, printed 8155359 (difference 99999.10)",
+   "sgt1922 p.215 (f239) crops_d olive_pomace: average 1913-1917: cells give 36447.60, printed 20160 (difference -16287.60)",
+   "sgt1922 p.215 (f239) crops_d olive_pomace: average 1913-1922: cells give 38073.80, printed 29930 (difference -8143.80)",
+   "sgt1923 p.223 (f725) crops_a barley_area: average 1914-1918: cells give 463473.40, printed 475473 (difference 11999.60)",
+   "sgt1923 p.223 (f725) crops_a barley_area: average 1914-1923: cells give 442473.40, printed 448473 (difference 5999.60)",
+   "sgt1923 p.225 (f727) crops_b potatoes_prod: average 1919-1923: cells give 40500.00, printed 40400 (difference -100.00)",
+   "sgt1923 p.227 (f729) crops_d otherdates_trees: average 1919-1923: cells give 974859.20, printed 774859 (difference -200000.20)",
+   "sgt1923 p.227 (f729) crops_d otherdates_prod: average 1919-1923: cells give 357200.00, printed 377200 (difference 20000.00)",
+   "sgt1923 p.227 (f729) crops_d otherdates_prod: average 1914-1923: cells give 306962.00, printed 316962 (difference 10000.00)",
+   "sgt1924 p.231 (f1221) crops_a durum_prod: average 1920-1924: cells give 1734700.00, printed 1474700 (difference -260000.00)",
+   "sgt1924 p.231 (f1221) crops_a durum_prod: average 1915-1924: cells give 1802710.00, printed 1672710 (difference -130000.00)",
+   "sgt1924 p.231 (f1221) crops_a maize_area: average 1920-1924: cells give 14662.00, printed 16652 (difference 1990.00)",
+   "sgt1924 p.231 (f1221) crops_a maize_area: average 1915-1924: cells give 16407.10, printed 17402 (difference 994.90)",
+   "sgt1924 p.233 (f1223) crops_b chickpeas_prod: average 1920-1924: cells give 16540.00, printed 16500 (difference -40.00)",
+   "sgt1924 p.235 (f1225) crops_d almond_prod: average 1915-1919: cells give 20960.00, printed 20900 (difference -60.00)",
+   "sgt1924 p.235 (f1225) crops_d degla_prod: average 1920-1924: cells give 15460.00, printed 15400 (difference -60.00)",
+   "sgt1924 p.235 (f1225) crops_d degla_prod: average 1915-1924: cells give 13830.00, printed 13800 (difference -30.00)",
+   "sgt1925 p.267 (f291) crops_a durum_area: average 1916-1920: cells give 297950.00, printed 293950 (difference -4000.00)",
+   "sgt1925 p.267 (f291) crops_a durum_area: average 1921-1925: cells give 278577.80, printed 318577 (difference 39999.20)",
+   "sgt1925 p.267 (f291) crops_a durum_area: average 1916-1925: cells give 288263.90, printed 306263 (difference 17999.10)",
+   "sgt1925 p.267 (f291) crops_a maize_prod: average 1916-1920: cells give 54462.00, printed 54862 (difference 400.00)",
+   "sgt1925 p.267 (f291) crops_a maize_prod: average 1916-1925: cells give 53022.00, printed 53222 (difference 200.00)",
+   "sgt1925 p.271 (f295) crops_b chickpeas_area: average 1916-1920: cells give 5577.40, printed 5977 (difference 399.60)",
+   "sgt1925 p.271 (f295) crops_b chickpeas_area: average 1916-1925: cells give 5104.40, printed 5304 (difference 199.60)",
+   "sgt1925 p.271 (f295) crops_c flax_prod: average 1921-1925: cells give 7740.00, printed 7540 (difference -200.00)",
+   "sgt1925 p.271 (f295) crops_c flax_prod: average 1916-1925: cells give 9130.00, printed 9020 (difference -110.00)",
+   "sgt1925 p.271 (f295) crops_c tobacco_prod: average 1921-1925: cells give 4167.00, printed 3987 (difference -180.00)",
+   "sgt1925 p.271 (f295) crops_c tobacco_prod: average 1916-1925: cells give 3212.10, printed 3122.2 (difference -89.90)",
+   "sgt1925 p.273 (f297) crops_d carob_trees: average 1921-1925: cells give 20540.00, printed 20400 (difference -140.00)",
+   "sgt1925 p.273 (f297) crops_d carob_trees: average 1916-1925: cells give 20270.00, printed 20200 (difference -70.00)",
+   "sgt1925 p.273 (f297) crops_d carob_prod: average 1916-1920: cells give 10460.00, printed 10200 (difference -260.00)",
+   "sgt1925 p.273 (f297) crops_d carob_prod: average 1916-1925: cells give 14730.00, printed 14600 (difference -130.00)",
+   "sgt1925 p.273 (f297) crops_d almond_prod: average 1916-1920: cells give 23520.00, printed 20300 (difference -3220.00)",
+   "sgt1925 p.273 (f297) crops_d almond_prod: average 1921-1925: cells give 20300.00, printed 23520 (difference 3220.00)",
+   "sgt1925 p.273 (f297) crops_d degla_prod: average 1916-1920: cells give 13600.00, printed 15600 (difference 2000.00)",
+   "sgt1925 p.273 (f297) crops_d degla_prod: average 1916-1925: cells give 14830.00, printed 15830 (difference 1000.00)",
+   "sgt1925 p.273 (f297) crops_d otherdates_prod: average 1916-1925: cells give 348300.00, printed 345800 (difference -2500.00)",
+   "sgt1925 p.273 (f297) crops_d orange_prod: average 1921-1925: cells give 14320.00, printed 14800 (difference 480.00)",
+   "sgt1925 p.273 (f297) crops_d orange_prod: average 1916-1925: cells give 13960.00, printed 14200 (difference 240.00)",
+   "sgt1925 p.273 (f297) crops_d lemon_trees: average 1916-1920: cells give 50500.00, printed 50120 (difference -380.00)",
+   "sgt1925 p.273 (f297) crops_d lemon_trees: average 1916-1925: cells give 51250.00, printed 51060 (difference -190.00)",
+   "sgt1926 p.243 (f807) crops_a durum_prod: average 1917-1926: cells give 1855650.00, printed 1885650 (difference 30000.00)",
+   "sgt1926 p.245 (f809) crops_b potatoes_prod: average 1922-1926: cells give 41480.00, printed 43480 (difference 2000.00)",
+   "sgt1926 p.245 (f809) crops_b potatoes_prod: average 1917-1926: cells give 40990.00, printed 41990 (difference 1000.00)",
+   "sgt1926 p.247 (f811) crops_d olive_trees: average 1917-1921: cells give 12153890.40, printed 12193890 (difference 39999.60)",
+   "sgt1926 p.247 (f811) crops_d olive_pomace: average 1922-1926: cells give 32600.00, printed 32200 (difference -400.00)",
+   "sgt1926 p.247 (f811) crops_d olive_pomace: average 1917-1926: cells give 36150.00, printed 35950 (difference -200.00)",
+   "sgt1927 p.235 (f263) crops_a soft_area: average 1918-1922: cells give 47893.20, printed 239466 (difference 191572.80)",
+   "sgt1927 p.235 (f263) crops_a barley_area: average 1918-1927: cells give 440408.00, printed 420408 (difference -20000.00)",
+   "sgt1927 p.235 (f263) crops_a oats_area: average 1918-1922: cells give 59947.00, printed 603347 (difference 543400.00)",
+   "sgt1927 p.235 (f263) crops_a oats_area: average 1923-1927: cells give 42326.60, printed 37561 (difference -4765.60)",
+   "sgt1927 p.235 (f263) crops_a oats_area: average 1918-1927: cells give 51136.80, printed 51336 (difference 199.20)",
+   "sgt1927 p.237 (f265) crops_b chickpeas_area: average 1918-1922: cells give 5580.60, printed 5460 (difference -120.60)",
+   "sgt1927 p.237 (f265) crops_b chickpeas_area: average 1918-1927: cells give 5619.20, printed 5559 (difference -60.20)",
+   "sgt1927 p.237 (f265) crops_c flax_area: average 1918-1927: cells give 2620.70, printed 1685 (difference -935.70)",
+   "sgt1927 p.237 (f265) crops_c tobacco_prod: average 1923-1927: cells give 4410.80, printed 4510 (difference 99.20)",
+   "sgt1927 p.239 (f267) crops_d vine_grapes: average 1918-1922: cells give 47800.00, printed 48200 (difference 400.00)",
+   "sgt1927 p.239 (f267) crops_d vine_grapes: average 1918-1927: cells give 50900.00, printed 51100 (difference 200.00)",
+   "sgt1927 p.239 (f267) crops_d olive_trees: average 1923-1927: cells give 15861830.20, printed 1586183 (difference -14275647.20)",
+   "sgt1927 p.239 (f267) crops_d degla_trees: average 1923-1927: cells give 65834.20, printed 62834 (difference -3000.20)",
+   "sgt1927 p.239 (f267) crops_d degla_trees: average 1918-1927: cells give 62185.00, printed 60685 (difference -1500.00)",
+   "sgt1928 p.235 (f787) crops_a durum_prod: average 1919-1928: cells give 1882350.00, printed 1860350 (difference -22000.00)",
+   "sgt1928 p.235 (f787) crops_a barley_area: average 1919-1928: cells give 442064.50, printed 432064 (difference -10000.50)",
+   "sgt1928 p.235 (f787) crops_a maize_area: average 1924-1928: cells give 17470.20, printed 17670 (difference 199.80)",
+   "sgt1928 p.235 (f787) crops_a maize_area: average 1919-1928: cells give 16257.30, printed 16157 (difference -100.30)",
+   "sgt1928 p.237 (f789) crops_b chickpeas_area: average 1924-1928: cells give 6046.80, printed 6246 (difference 199.20)",
+   "sgt1928 p.237 (f789) crops_b chickpeas_area: average 1919-1928: cells give 5588.50, printed 5688 (difference 99.50)",
+   "sgt1928 p.237 (f789) crops_b potatoes_area: average 1924-1928: cells give 1070.00, printed 1050 (difference -20.00)",
+   "sgt1928 p.237 (f789) crops_b potatoes_area: average 1919-1928: cells give 1033.00, printed 1023 (difference -10.00)",
+   "sgt1928 p.237 (f789) crops_b potatoes_prod: average 1924-1928: cells give 40480.00, printed 40880 (difference 400.00)",
+   "sgt1928 p.237 (f789) crops_c flax_area: average 1924-1928: cells give 2550.20, printed 2556 (difference 5.80)",
+   "sgt1928 p.237 (f789) crops_c tobacco_area: average 1919-1923: cells give 303.80, printed 803 (difference 499.20)",
+   "sgt1928 p.237 (f789) crops_c tobacco_prod: average 1919-1923: cells give 3469.00, printed 3669 (difference 200.00)",
+   "sgt1928 p.239 (f791) crops_d orange_trees: average 1924-1928: cells give 67960.00, printed 69960 (difference 2000.00)",
+   "sgt1928 p.239 (f791) crops_d orange_trees: average 1919-1928: cells give 66720.00, printed 67720 (difference 1000.00)",
+   "sgt1929 p.241 (f269) crops_d orange_prod: average 1925-1929: cells give 14340.00, printed 12340 (difference -2000.00)",
+   "sgt1929 p.241 (f269) crops_d orange_prod: average 1920-1929: cells give 14310.00, printed 13310 (difference -1000.00)",
+   "sgt1929 p.241 (f269) crops_d lemon_prod: average 1925-1929: cells give 8300.00, printed 8100 (difference -200.00)",
+   "sgt1930 p.241 (f799) crops_a durum_area: average 1926-1930: cells give 649848.20, printed 651448 (difference 1599.80)",
+   "sgt1930 p.245 (f803) crops_d orange_trees: average 1926-1930: cells give 61509.80, printed 75709 (difference 14199.20)",
+   "sgt1930 p.245 (f803) crops_d orange_trees: average 1921-1930: cells give 64324.90, printed 71424 (difference 7099.10)"
+  ],
+  "overlap_compared": 3288,
+  "overlap_diffs": [
+   [
+    [
+     1919,
+     "tunisia",
+     "durum_wheat",
+     "area"
+    ],
+    "sgt1922",
+    "514861",
+    "sgt1928",
+    "513110"
+   ],
+   [
+    [
+     1919,
+     "tunisia",
+     "durum_wheat",
+     "area"
+    ],
+    "sgt1923",
+    "514861",
+    "sgt1928",
+    "513110"
+   ],
+   [
+    [
+     1919,
+     "tunisia",
+     "durum_wheat",
+     "area"
+    ],
+    "sgt1924",
+    "514861",
+    "sgt1928",
+    "513110"
+   ],
+   [
+    [
+     1920,
+     "tunisia",
+     "durum_wheat",
+     "area"
+    ],
+    "sgt1922",
+    "481766",
+    "sgt1929",
+    "481786"
+   ],
+   [
+    [
+     1920,
+     "tunisia",
+     "durum_wheat",
+     "area"
+    ],
+    "sgt1923",
+    "481766",
+    "sgt1929",
+    "481786"
+   ],
+   [
+    [
+     1920,
+     "tunisia",
+     "durum_wheat",
+     "area"
+    ],
+    "sgt1924",
+    "481766",
+    "sgt1929",
+    "481786"
+   ],
+   [
+    [
+     1921,
+     "tunisia",
+     "durum_wheat",
+     "area"
+    ],
+    "sgt1922",
+    "566609",
+    "sgt1930",
+    "570031"
+   ],
+   [
+    [
+     1921,
+     "tunisia",
+     "durum_wheat",
+     "area"
+    ],
+    "sgt1923",
+    "566609",
+    "sgt1930",
+    "570031"
+   ],
+   [
+    [
+     1921,
+     "tunisia",
+     "durum_wheat",
+     "area"
+    ],
+    "sgt1924",
+    "566609",
+    "sgt1930",
+    "570031"
+   ],
+   [
+    [
+     1918,
+     "tunisia",
+     "durum_wheat",
+     "production"
+    ],
+    "sgt1922",
+    "2693600",
+    "sgt1927",
+    "2693000"
+   ],
+   [
+    [
+     1918,
+     "tunisia",
+     "durum_wheat",
+     "production"
+    ],
+    "sgt1923",
+    "2693600",
+    "sgt1927",
+    "2693000"
+   ],
+   [
+    [
+     1918,
+     "tunisia",
+     "durum_wheat",
+     "production"
+    ],
+    "sgt1924",
+    "2693600",
+    "sgt1927",
+    "2693000"
+   ],
+   [
+    [
+     1921,
+     "tunisia",
+     "barley",
+     "area"
+    ],
+    "sgt1922",
+    "497046",
+    "sgt1930",
+    "497828"
+   ],
+   [
+    [
+     1921,
+     "tunisia",
+     "barley",
+     "area"
+    ],
+    "sgt1923",
+    "497046",
+    "sgt1930",
+    "497828"
+   ],
+   [
+    [
+     1921,
+     "tunisia",
+     "barley",
+     "area"
+    ],
+    "sgt1924",
+    "497046",
+    "sgt1930",
+    "497828"
+   ],
+   [
+    [
+     1921,
+     "tunisia",
+     "oats",
+     "area"
+    ],
+    "sgt1922",
+    "64146",
+    "sgt1930",
+    "66646"
+   ],
+   [
+    [
+     1921,
+     "tunisia",
+     "oats",
+     "area"
+    ],
+    "sgt1923",
+    "64146",
+    "sgt1930",
+    "66646"
+   ],
+   [
+    [
+     1921,
+     "tunisia",
+     "oats",
+     "area"
+    ],
+    "sgt1924",
+    "64146",
+    "sgt1930",
+    "66646"
+   ],
+   [
+    [
+     1921,
+     "tunisia",
+     "maize_sorghum",
+     "area"
+    ],
+    "sgt1922",
+    "22161",
+    "sgt1930",
+    "22177"
+   ],
+   [
+    [
+     1921,
+     "tunisia",
+     "maize_sorghum",
+     "area"
+    ],
+    "sgt1923",
+    "22161",
+    "sgt1930",
+    "22177"
+   ],
+   [
+    [
+     1921,
+     "tunisia",
+     "maize_sorghum",
+     "area"
+    ],
+    "sgt1924",
+    "22161",
+    "sgt1930",
+    "22177"
+   ],
+   [
+    [
+     1921,
+     "tunisia",
+     "broad_beans",
+     "area"
+    ],
+    "sgt1922",
+    "23477",
+    "sgt1930",
+    "23513"
+   ],
+   [
+    [
+     1921,
+     "tunisia",
+     "broad_beans",
+     "area"
+    ],
+    "sgt1923",
+    "23477",
+    "sgt1930",
+    "23513"
+   ],
+   [
+    [
+     1921,
+     "tunisia",
+     "broad_beans",
+     "area"
+    ],
+    "sgt1924",
+    "23477",
+    "sgt1930",
+    "23513"
+   ],
+   [
+    [
+     1921,
+     "tunisia",
+     "broad_beans",
+     "area"
+    ],
+    "sgt1925",
+    "23477",
+    "sgt1930",
+    "23513"
+   ],
+   [
+    [
+     1921,
+     "tunisia",
+     "chickpeas",
+     "area"
+    ],
+    "sgt1922",
+    "6954",
+    "sgt1930",
+    "6980"
+   ],
+   [
+    [
+     1921,
+     "tunisia",
+     "chickpeas",
+     "area"
+    ],
+    "sgt1923",
+    "6954",
+    "sgt1930",
+    "6980"
+   ],
+   [
+    [
+     1921,
+     "tunisia",
+     "chickpeas",
+     "area"
+    ],
+    "sgt1924",
+    "6954",
+    "sgt1930",
+    "6980"
+   ],
+   [
+    [
+     1921,
+     "tunisia",
+     "chickpeas",
+     "area"
+    ],
+    "sgt1925",
+    "6954",
+    "sgt1930",
+    "6980"
+   ],
+   [
+    [
+     1921,
+     "tunisia",
+     "flax",
+     "area"
+    ],
+    "sgt1922",
+    "3715",
+    "sgt1930",
+    "3730"
+   ],
+   [
+    [
+     1921,
+     "tunisia",
+     "flax",
+     "area"
+    ],
+    "sgt1923",
+    "3715",
+    "sgt1930",
+    "3730"
+   ],
+   [
+    [
+     1921,
+     "tunisia",
+     "flax",
+     "area"
+    ],
+    "sgt1924",
+    "3715",
+    "sgt1930",
+    "3730"
+   ],
+   [
+    [
+     1921,
+     "tunisia",
+     "flax",
+     "area"
+    ],
+    "sgt1925",
+    "3715",
+    "sgt1930",
+    "3730"
+   ],
+   [
+    [
+     1922,
+     "tunisia",
+     "flax",
+     "area"
+    ],
+    "sgt1922",
+    "1939",
+    "sgt1930",
+    "1962"
+   ],
+   [
+    [
+     1922,
+     "tunisia",
+     "flax",
+     "area"
+    ],
+    "sgt1923",
+    "1939",
+    "sgt1930",
+    "1962"
+   ],
+   [
+    [
+     1922,
+     "tunisia",
+     "flax",
+     "area"
+    ],
+    "sgt1924",
+    "1939",
+    "sgt1930",
+    "1962"
+   ],
+   [
+    [
+     1922,
+     "tunisia",
+     "flax",
+     "area"
+    ],
+    "sgt1925",
+    "1939",
+    "sgt1930",
+    "1962"
+   ],
+   [
+    [
+     1923,
+     "tunisia",
+     "durum_wheat",
+     "area"
+    ],
+    "sgt1923",
+    "598977",
+    "sgt1930",
+    "598997"
+   ],
+   [
+    [
+     1923,
+     "tunisia",
+     "durum_wheat",
+     "area"
+    ],
+    "sgt1924",
+    "598977",
+    "sgt1930",
+    "598997"
+   ],
+   [
+    [
+     1924,
+     "tunisia",
+     "durum_wheat",
+     "area"
+    ],
+    "sgt1924",
+    "417607",
+    "sgt1930",
+    "433139"
+   ],
+   [
+    [
+     1924,
+     "tunisia",
+     "durum_wheat",
+     "production"
+    ],
+    "sgt1924",
+    "2350000",
+    "sgt1930",
+    "1040000"
+   ],
+   [
+    [
+     1924,
+     "tunisia",
+     "soft_wheat",
+     "production"
+    ],
+    "sgt1924",
+    "360000",
+    "sgt1930",
+    "360140"
+   ],
+   [
+    [
+     1924,
+     "tunisia",
+     "maize_sorghum",
+     "area"
+    ],
+    "sgt1924",
+    "16465",
+    "sgt1930",
+    "16645"
+   ],
+   [
+    [
+     1925,
+     "tunisia",
+     "vine",
+     "area"
+    ],
+    "sgt1925",
+    "30213",
+    "sgt1930",
+    "27986"
+   ],
+   [
+    [
+     1925,
+     "tunisia",
+     "dates_other",
+     "trees"
+    ],
+    "sgt1925",
+    "1030473",
+    "sgt1930",
+    "1138283"
+   ],
+   [
+    [
+     1927,
+     "tunisia",
+     "durum_wheat",
+     "production"
+    ],
+    "sgt1927",
+    "1800000",
+    "sgt1930",
+    "1760000"
+   ],
+   [
+    [
+     1927,
+     "tunisia",
+     "soft_wheat",
+     "production"
+    ],
+    "sgt1927",
+    "450000",
+    "sgt1930",
+    "440000"
+   ],
+   [
+    [
+     1927,
+     "tunisia",
+     "barley",
+     "production"
+    ],
+    "sgt1927",
+    "900800",
+    "sgt1930",
+    "895000"
+   ],
+   [
+    [
+     1928,
+     "tunisia",
+     "durum_wheat",
+     "production"
+    ],
+    "sgt1928",
+    "2850000",
+    "sgt1930",
+    "3230000"
+   ],
+   [
+    [
+     1928,
+     "tunisia",
+     "soft_wheat",
+     "production"
+    ],
+    "sgt1928",
+    "450000",
+    "sgt1930",
+    "500000"
+   ],
+   [
+    [
+     1928,
+     "tunisia",
+     "barley",
+     "production"
+    ],
+    "sgt1928",
+    "2750000",
+    "sgt1930",
+    "2700000"
+   ],
+   [
+    [
+     1928,
+     "tunisia",
+     "oats",
+     "production"
+    ],
+    "sgt1928",
+    "325000",
+    "sgt1930",
+    "445000"
+   ],
+   [
+    [
+     1928,
+     "tunisia",
+     "maize_sorghum",
+     "production"
+    ],
+    "sgt1928",
+    "68000",
+    "sgt1930",
+    "65000"
+   ],
+   [
+    [
+     1935,
+     "tunisia",
+     "olive",
+     "trees_bearing"
+    ],
+    "sgt1935",
+    "11581001",
+    "sgt1936",
+    "12581001"
+   ],
+   [
+    [
+     1935,
+     "tunisia",
+     "dates_other",
+     "trees"
+    ],
+    "sgt1935",
+    "1285304",
+    "sgt1936",
+    "1284789"
+   ]
+  ],
+  "flagged": [
+   "sgt1925 1925 north / durum_wheat / area = 129774 (total_mismatch)",
+   "sgt1930 1925 tunisia / dates_other / production = 352000 (derived_from_totals)",
+   "sgt1930 1930 tunisia / orange / trees = 19000 (total_mismatch)",
+   "sgt1939 1938 tunisia / pear / trees = None (illegible)"
+  ],
+  "editions": [
+   "sgt1922",
+   "sgt1923",
+   "sgt1924",
+   "sgt1925",
+   "sgt1926",
+   "sgt1927",
+   "sgt1928",
+   "sgt1929",
+   "sgt1930",
+   "sgt1935",
+   "sgt1936",
+   "sgt1939"
+  ]
+ },
+ "agriculture_cereal_zones": {
+  "rows": 504,
+  "checks": 705,
+  "failed": [
+   "sgt1926 p.248 (f812) zones soft_CS_yield 1920: yield = production / area: cells give 2.79, printed 3 (difference 0.21)",
+   "sgt1926 p.248 (f812) zones barley_CS_yield 1919: yield = production / area: cells give 1.61, printed 1.8 (difference 0.19)",
+   "sgt1926 p.249 (f813) zones durum_CS_yield 1923: yield = production / area: cells give 2.01, printed 1.2 (difference -0.81)",
+   "sgt1926 p.249 (f813) zones barley_N_yield 1921: yield = production / area: cells give 8.39, printed 7.8 (difference -0.59)",
+   "sgt1926 p.249 (f813) zones barley_N_yield 1924: yield = production / area: cells give 3.19, printed 3.4 (difference 0.21)",
+   "sgt1926 p.249 (f813) zones oats_CS_yield 1922: yield = production / area: cells give 1.02, printed 0.1 (difference -0.92)",
+   "sgt1927 p.240 (f268) zones soft_CS_yield 1920: yield = production / area: cells give 2.79, printed 3 (difference 0.21)",
+   "sgt1927 p.240 (f268) zones barley_N_yield 1921: yield = production / area: cells give 8.39, printed 7.8 (difference -0.59)",
+   "sgt1927 p.240 (f268) zones barley_CS_yield 1919: yield = production / area: cells give 1.61, printed 1.8 (difference 0.19)",
+   "sgt1927 p.241 (f269) zones durum_CS_yield 1923: yield = production / area: cells give 2.01, printed 1.2 (difference -0.81)",
+   "sgt1927 p.241 (f269) zones soft_CS_yield 1927: yield = production / area: cells give 4.50, printed 4.0 (difference -0.50)",
+   "sgt1927 p.241 (f269) zones barley_N_yield 1924: yield = production / area: cells give 3.19, printed 3.4 (difference 0.21)",
+   "sgt1927 p.241 (f269) zones oats_CS_yield 1922: yield = production / area: cells give 1.02, printed 0.1 (difference -0.92)",
+   "sgt1927 p.241 (f269) zones oats_CS_yield 1927: yield = production / area: cells give 1.70, printed 1.0 (difference -0.70)",
+   "sgt1928 p.240 (f792) zones soft_CS_yield 1920: yield = production / area: cells give 2.79, printed 3 (difference 0.21)",
+   "sgt1928 p.240 (f792) zones barley_N_yield 1921: yield = production / area: cells give 8.39, printed 7.8 (difference -0.59)",
+   "sgt1928 p.240 (f792) zones barley_CS_yield 1919: yield = production / area: cells give 1.61, printed 1.8 (difference 0.19)",
+   "sgt1928 p.240 (f792) zones oats_CS_yield 1922: yield = production / area: cells give 1.02, printed 0.1 (difference -0.92)",
+   "sgt1928 p.241 (f793) zones durum_CS_yield 1923: yield = production / area: cells give 2.01, printed 1.2 (difference -0.81)",
+   "sgt1928 p.241 (f793) zones barley_N_yield 1924: yield = production / area: cells give 3.19, printed 3.4 (difference 0.21)",
+   "sgt1928 p.241 (f793) zones oats_CS_yield 1927: yield = production / area: cells give 1.70, printed 1.0 (difference -0.70)",
+   "sgt1929 p.242 (f270) zones soft_CS_yield 1920: yield = production / area: cells give 2.79, printed 3 (difference 0.21)",
+   "sgt1929 p.242 (f270) zones barley_N_yield 1921: yield = production / area: cells give 8.39, printed 7.8 (difference -0.59)",
+   "sgt1929 p.243 (f271) zones barley_N_yield 1924: yield = production / area: cells give 3.19, printed 3.4 (difference 0.21)",
+   "sgt1929 p.243 (f271) zones oats_CS_yield 1927: yield = production / area: cells give 1.70, printed 1.0 (difference -0.70)",
+   "sgt1930 p.246 (f804) zones barley_N_yield 1921: yield = production / area: cells give 8.39, printed 7.8 (difference -0.59)",
+   "sgt1930 p.246 (f804) zones barley_N_yield 1924: yield = production / area: cells give 3.19, printed 3.4 (difference 0.21)",
+   "sgt1930 p.247 (f805) zones barley_N_yield 1930: yield = production / area: cells give 2.06, printed 5 (difference 2.94)",
+   "sgt1930 p.247 (f805) zones oats_CS_yield 1927: yield = production / area: cells give 1.70, printed 1.0 (difference -0.70)",
+   "sgt1935 p.125 (f145) zones durum_N_yield 1933: yield = production / area: cells give 3.75, printed 3.5 (difference -0.25)",
+   "sgt1936 p.95 (f106) zones barley_N_yield 1935: yield = production / area: cells give 2.00, printed 6 (difference 4.00)",
+   "sgt1939 p.99 (f105) zones durum_N_yield 1937: yield = production / area: cells give 7.39, printed 6.8 (difference -0.59)",
+   "sgt1939 p.99 (f105) zones soft_CS_yield 1939: yield = production / area: cells give 5.56, printed 8.5 (difference 2.94)",
+   "sgt1927 p.241 (f269) zones durum_CS_area: average 1923-1927: cells give 213550.40, printed 215550 (difference 1999.60)",
+   "sgt1927 p.241 (f269) zones durum_CS_area: average 1918-1927: cells give 214122.30, printed 215122 (difference 999.70)",
+   "sgt1927 p.241 (f269) zones soft_N_area: average 1918-1922: cells give 47403.20, printed 474032 (difference 426628.80)",
+   "sgt1927 p.241 (f269) zones soft_N_prod: average 1923-1927: cells give 497540.00, printed 459540 (difference -38000.00)",
+   "sgt1927 p.241 (f269) zones soft_CS_prod: average 1923-1927: cells give 4488.00, printed 4468 (difference -20.00)",
+   "sgt1927 p.241 (f269) zones barley_N_area: average 1923-1927: cells give 174891.40, printed 154770 (difference -20121.40)",
+   "sgt1927 p.241 (f269) zones barley_N_area: average 1918-1927: cells give 170972.10, printed 160911 (difference -10061.10)",
+   "sgt1927 p.241 (f269) zones barley_N_prod: average 1918-1922: cells give 845000.00, printed 841000 (difference -4000.00)",
+   "sgt1927 p.241 (f269) zones barley_N_prod: average 1918-1927: cells give 855230.00, printed 853230 (difference -2000.00)",
+   "sgt1927 p.241 (f269) zones barley_CS_area: average 1918-1922: cells give 271197.80, printed 251197 (difference -20000.80)",
+   "sgt1927 p.241 (f269) zones barley_CS_area: average 1923-1927: cells give 267674.80, printed 247674 (difference -20000.80)",
+   "sgt1927 p.241 (f269) zones barley_CS_area: average 1918-1927: cells give 269436.30, printed 249436 (difference -20000.30)",
+   "sgt1927 p.241 (f269) zones barley_CS_prod: average 1918-1927: cells give 633770.00, printed 663770 (difference 30000.00)",
+   "sgt1927 p.241 (f269) zones oats_N_area: average 1918-1922: cells give 54028.00, printed 53222 (difference -806.00)",
+   "sgt1927 p.241 (f269) zones oats_N_area: average 1923-1927: cells give 39436.60, printed 39272 (difference -164.60)",
+   "sgt1927 p.241 (f269) zones oats_N_area: average 1918-1927: cells give 46732.30, printed 46247 (difference -485.30)",
+   "sgt1928 p.241 (f793) zones durum_N_area: average 1919-1928: cells give 332310.90, printed 331310 (difference -1000.90)",
+   "sgt1928 p.241 (f793) zones durum_CS_area: average 1919-1923: cells give 213757.80, printed 213157 (difference -600.80)",
+   "sgt1928 p.241 (f793) zones soft_N_area: average 1919-1923: cells give 46502.00, printed 53102 (difference 6600.00)",
+   "sgt1928 p.241 (f793) zones soft_N_area: average 1919-1928: cells give 54119.90, printed 57419 (difference 3299.10)",
+   "sgt1928 p.241 (f793) zones soft_CS_prod: average 1919-1923: cells give 1998.00, printed 2038 (difference 40.00)",
+   "sgt1928 p.241 (f793) zones barley_N_area: average 1924-1928: cells give 184029.20, printed 185031 (difference 1001.80)",
+   "sgt1929 p.243 (f271) zones oats_N_prod: average 1920-1929: cells give 318890.00, printed 310890 (difference -8000.00)",
+   "sgt1930 p.247 (f805) zones barley_N_prod: average 1926-1930: cells give 976460.00, printed 1076460 (difference 100000.00)",
+   "sgt1930 p.247 (f805) zones barley_N_prod: average 1921-1930: cells give 904730.00, printed 954730 (difference 50000.00)",
+   "sgt1930 p.247 (f805) zones barley_CS_prod: average 1926-1930: cells give 756540.00, printed 766540 (difference 10000.00)",
+   "sgt1930 p.247 (f805) zones barley_CS_prod: average 1921-1930: cells give 706770.00, printed 711770 (difference 5000.00)"
+  ],
+  "overlap_compared": 909,
+  "overlap_diffs": [
+   [
+    [
+     1923,
+     "centre_south",
+     "durum_wheat",
+     "yield_per_hectare"
+    ],
+    "sgt1926",
+    "1.2",
+    "sgt1930",
+    "2"
+   ],
+   [
+    [
+     1923,
+     "centre_south",
+     "durum_wheat",
+     "yield_per_hectare"
+    ],
+    "sgt1927",
+    "1.2",
+    "sgt1930",
+    "2"
+   ],
+   [
+    [
+     1923,
+     "centre_south",
+     "durum_wheat",
+     "yield_per_hectare"
+    ],
+    "sgt1928",
+    "1.2",
+    "sgt1930",
+    "2"
+   ],
+   [
+    [
+     1922,
+     "centre_south",
+     "oats",
+     "yield_per_hectare"
+    ],
+    "sgt1926",
+    "0.1",
+    "sgt1930",
+    "1"
+   ],
+   [
+    [
+     1922,
+     "centre_south",
+     "oats",
+     "yield_per_hectare"
+    ],
+    "sgt1927",
+    "0.1",
+    "sgt1930",
+    "1"
+   ],
+   [
+    [
+     1922,
+     "centre_south",
+     "oats",
+     "yield_per_hectare"
+    ],
+    "sgt1928",
+    "0.1",
+    "sgt1930",
+    "1"
+   ],
+   [
+    [
+     1927,
+     "north",
+     "durum_wheat",
+     "production"
+    ],
+    "sgt1927",
+    "1699000",
+    "sgt1930",
+    "1660000"
+   ],
+   [
+    [
+     1927,
+     "north",
+     "durum_wheat",
+     "yield_per_hectare"
+    ],
+    "sgt1927",
+    "4.5",
+    "sgt1930",
+    "4.4"
+   ],
+   [
+    [
+     1927,
+     "centre_south",
+     "durum_wheat",
+     "production"
+    ],
+    "sgt1927",
+    "101000",
+    "sgt1930",
+    "100000"
+   ],
+   [
+    [
+     1927,
+     "north",
+     "soft_wheat",
+     "production"
+    ],
+    "sgt1927",
+    "441000",
+    "sgt1930",
+    "432000"
+   ],
+   [
+    [
+     1927,
+     "north",
+     "soft_wheat",
+     "yield_per_hectare"
+    ],
+    "sgt1927",
+    "7.8",
+    "sgt1930",
+    "7.7"
+   ],
+   [
+    [
+     1927,
+     "centre_south",
+     "soft_wheat",
+     "production"
+    ],
+    "sgt1927",
+    "9000",
+    "sgt1930",
+    "8000"
+   ],
+   [
+    [
+     1927,
+     "north",
+     "barley",
+     "production"
+    ],
+    "sgt1927",
+    "717300",
+    "sgt1930",
+    "712300"
+   ],
+   [
+    [
+     1928,
+     "north",
+     "durum_wheat",
+     "production"
+    ],
+    "sgt1928",
+    "1886000",
+    "sgt1930",
+    "2230000"
+   ],
+   [
+    [
+     1928,
+     "north",
+     "durum_wheat",
+     "yield_per_hectare"
+    ],
+    "sgt1928",
+    "4.4",
+    "sgt1930",
+    "5.2"
+   ],
+   [
+    [
+     1928,
+     "centre_south",
+     "durum_wheat",
+     "production"
+    ],
+    "sgt1928",
+    "964000",
+    "sgt1930",
+    "1000000"
+   ],
+   [
+    [
+     1928,
+     "centre_south",
+     "durum_wheat",
+     "yield_per_hectare"
+    ],
+    "sgt1928",
+    "2.9",
+    "sgt1930",
+    "3"
+   ],
+   [
+    [
+     1928,
+     "north",
+     "soft_wheat",
+     "production"
+    ],
+    "sgt1928",
+    "437000",
+    "sgt1930",
+    "485000"
+   ],
+   [
+    [
+     1928,
+     "north",
+     "soft_wheat",
+     "yield_per_hectare"
+    ],
+    "sgt1928",
+    "6.9",
+    "sgt1930",
+    "7.6"
+   ],
+   [
+    [
+     1928,
+     "centre_south",
+     "soft_wheat",
+     "production"
+    ],
+    "sgt1928",
+    "13000",
+    "sgt1930",
+    "15000"
+   ],
+   [
+    [
+     1928,
+     "centre_south",
+     "soft_wheat",
+     "yield_per_hectare"
+    ],
+    "sgt1928",
+    "5.0",
+    "sgt1930",
+    "5.7"
+   ],
+   [
+    [
+     1928,
+     "north",
+     "barley",
+     "production"
+    ],
+    "sgt1928",
+    "1360000",
+    "sgt1930",
+    "1320000"
+   ],
+   [
+    [
+     1928,
+     "north",
+     "barley",
+     "yield_per_hectare"
+    ],
+    "sgt1928",
+    "6.8",
+    "sgt1930",
+    "6.5"
+   ],
+   [
+    [
+     1928,
+     "centre_south",
+     "barley",
+     "production"
+    ],
+    "sgt1928",
+    "1390000",
+    "sgt1930",
+    "1330000"
+   ],
+   [
+    [
+     1928,
+     "centre_south",
+     "barley",
+     "production"
+    ],
+    "sgt1929",
+    "1380000",
+    "sgt1930",
+    "1330000"
+   ],
+   [
+    [
+     1935,
+     "north",
+     "barley",
+     "area"
+    ],
+    "sgt1935",
+    "150000",
+    "sgt1936",
+    "450000"
+   ]
+  ],
+  "flagged": [
+   "sgt1930 1930 north / barley / production = 350000 (total_mismatch)",
+   "sgt1935 1935 north / barley / area = 150000 (reprint_corrected)"
+  ],
+  "editions": [
+   "sgt1926",
+   "sgt1927",
+   "sgt1928",
+   "sgt1929",
+   "sgt1930",
+   "sgt1935",
+   "sgt1936",
+   "sgt1939"
+  ]
+ },
+ "agriculture_yield_classes": {
+  "rows": 1904,
+  "checks": 3986,
+  "failed": [
+   "sgt1925 p.274 (f298) zclasses wheat [north] 1922_ind: 0-5 hl + 6 hl et au-dessus vs surfaces ensemencées: cells give 255161, printed 255017 (difference -144)",
+   "sgt1925 p.274 (f298) zclasses wheat [north] 1922_ind: p05 = h05 / surfaces ensemencées: cells give 83.92, printed 83.96 (difference 0.04)",
+   "sgt1925 p.274 (f298) zclasses wheat [north] 1922_ind: p6 = h6 / surfaces ensemencées: cells give 16.13, printed 16.04 (difference -0.09)",
+   "sgt1925 p.274 (f298) zclasses wheat [north] 1925_ind: 0-5 hl + 6 hl et au-dessus vs surfaces ensemencées: cells give 290588, printed 290858 (difference 270)",
+   "sgt1925 p.274 (f298) zclasses wheat [north] 1925_ind: p6 = h6 / surfaces ensemencées: cells give 60.37, printed 60.46 (difference 0.09)",
+   "sgt1925 p.275 (f299) zclasses wheat [centre_south] 1922_ind: the two percentages vs 100: cells give 110.00, printed 100 (difference -10.00)",
+   "sgt1925 p.275 (f299) zclasses wheat [centre_south] 1922_ind: p6 = h6 / surfaces ensemencées: cells give 3.13, printed 13.14 (difference 10.01)",
+   "sgt1925 p.275 (f299) zclasses wheat [centre_south] 1924_eur: p05 = h05 / surfaces ensemencées: cells give 62.50, printed 62.47 (difference -0.03)",
+   "sgt1925 p.275 (f299) zclasses wheat [centre_south] 1924_eur: p6 = h6 / surfaces ensemencées: cells give 37.50, printed 37.53 (difference 0.03)",
+   "sgt1925 p.276 (f300) zclasses barley [north] 1921_ind: p05 = h05 / surfaces ensemencées: cells give 5.87, printed 6.25 (difference 0.38)",
+   "sgt1925 p.276 (f300) zclasses barley [north] 1921_ind: p6 = h6 / surfaces ensemencées: cells give 94.13, printed 93.75 (difference -0.38)",
+   "sgt1925 p.276 (f300) zclasses barley [north] 1924_ind: 0-5 hl + 6 hl et au-dessus vs surfaces ensemencées: cells give 148283, printed 148293 (difference 10)",
+   "sgt1925 p.277 (f301) zclasses barley [centre_south] 1921_eur: 0-5 hl + 6 hl et au-dessus vs surfaces ensemencées: cells give 5850, printed 6210 (difference 360)",
+   "sgt1925 p.277 (f301) zclasses barley [centre_south] 1921_eur: p6 = h6 / surfaces ensemencées: cells give 84.61, printed 90.41 (difference 5.80)",
+   "sgt1925 p.277 (f301) zclasses barley [centre_south] 1924_ind: p05 = h05 / surfaces ensemencées: cells give 94.48, printed 95.22 (difference 0.74)",
+   "sgt1925 p.277 (f301) zclasses barley [centre_south] 1924_ind: p6 = h6 / surfaces ensemencées: cells give 5.52, printed 4.78 (difference -0.74)",
+   "sgt1925 p.278 (f302) zclasses oats [north] 1922_ind: the two percentages vs 100: cells give 110.00, printed 100 (difference -10.00)",
+   "sgt1925 p.278 (f302) zclasses oats [north] 1922_ind: p6 = h6 / surfaces ensemencées: cells give 12.33, printed 22.33 (difference 10.00)",
+   "sgt1925 p.278 (f302) zclasses oats [north] 1924_eur: p05 = h05 / surfaces ensemencées: cells give 15.71, printed 15.75 (difference 0.04)",
+   "sgt1925 p.278 (f302) zclasses oats [north] 1924_eur: p6 = h6 / surfaces ensemencées: cells give 84.29, printed 84.25 (difference -0.04)",
+   "sgt1925 p.278 (f302) zclasses oats [north] 1925_eur: p05 = h05 / surfaces ensemencées: cells give 7.16, printed 7.11 (difference -0.05)",
+   "sgt1925 p.278 (f302) zclasses oats [north] 1925_eur: p6 = h6 / surfaces ensemencées: cells give 92.84, printed 92.89 (difference 0.05)",
+   "sgt1925 p.278 (f302) zclasses oats [north] 1925_ind: 0-5 hl + 6 hl et au-dessus vs surfaces ensemencées: cells give 17267, printed 17067 (difference -200)",
+   "sgt1925 p.278 (f302) zclasses oats [north] 1925_ind: p6 = h6 / surfaces ensemencées: cells give 85.56, printed 84.40 (difference -1.16)",
+   "sgt1925 p.279 (f303) zclasses oats [centre_south] 1924_eur: p05 = h05 / surfaces ensemencées: cells give 68.05, printed 68.01 (difference -0.04)",
+   "sgt1925 p.279 (f303) zclasses oats [centre_south] 1924_eur: p6 = h6 / surfaces ensemencées: cells give 31.95, printed 31.99 (difference 0.04)",
+   "sgt1922 p.217 (f241) classes wheat 1915_ind: classes vs TOTAUX: cells give 448180.91, printed 448380.91 (difference 200.00)",
+   "sgt1922 p.216 (f240) classes wheat 1915 c3: Européens + Indigènes vs TOTAUX: cells give 56218.98, printed 56418.98 (difference 200.00)",
+   "sgt1922 p.217 (f241) classes wheat 1916_eur: classes vs TOTAUX: cells give 63551.92, printed 63511.92 (difference -40.00)",
+   "sgt1922 p.217 (f241) classes wheat 1916_tot r5: c5 / TOTAUX = 0.08444, printed 0.0958",
+   "sgt1922 p.217 (f241) classes wheat 1916 tot: Européens + Indigènes vs TOTAUX: cells give 553072.51, printed 553112.51 (difference 40.00)",
+   "sgt1922 p.217 (f241) classes wheat 1918_eur: classes vs TOTAUX: cells give 81872.97, printed 81866.97 (difference -6.00)",
+   "sgt1922 p.217 (f241) classes wheat 1918_tot: classes vs TOTAUX: cells give 638276.59, printed 638270.59 (difference -6.00)",
+   "sgt1922 p.217 (f241) classes wheat 1919_ind r4: c4 / TOTAUX = 0.12618, printed 0.1211",
+   "sgt1922 p.217 (f241) classes wheat 1921_tot r5: c5 / TOTAUX = 0.05493, printed 0.0565",
+   "sgt1922 p.217 (f241) classes wheat 1922_ind: classes vs TOTAUX: cells give 271553.62, printed 271513.62 (difference -40.00)",
+   "sgt1922 p.217 (f241) classes wheat 1922_ind r4: c4 / TOTAUX = 0.13507, printed 0.1316",
+   "sgt1922 p.217 (f241) classes wheat 1922_tot: classes vs TOTAUX: cells give 346857.70, printed 316818.70 (difference -30039.00)",
+   "sgt1922 p.216 (f240) classes wheat 1922 c1: Européens + Indigènes vs TOTAUX: cells give 51914.27, printed 51913.27 (difference -1.00)",
+   "sgt1922 p.217 (f241) classes wheat 1922 tot: Européens + Indigènes vs TOTAUX: cells give 346818.70, printed 316818.70 (difference -30000.00)",
+   "sgt1922 p.217 (f241) classes wheat 1922: TOTAUX vs surfaces imposées: cells give 316818.70, printed 346818.70 (difference 30000.00)",
+   "sgt1922 p.219 (f243) classes barley 1916_eur r6: c6 / TOTAUX = 0.69648, printed 0.0945",
+   "sgt1922 p.219 (f243) classes barley 1917_eur: classes vs TOTAUX: cells give 20223.77, printed 20233.77 (difference 10.00)",
+   "sgt1922 p.219 (f243) classes barley 1917_ind: classes vs TOTAUX: cells give 445708.79, printed 455708.79 (difference 10000.00)",
+   "sgt1922 p.218 (f242) classes barley 1917_tot r1: c1 / TOTAUX = 0.05408, printed 0.0548",
+   "sgt1922 p.219 (f243) classes barley 1917 tot: Européens + Indigènes vs TOTAUX: cells give 475942.56, printed 465932.56 (difference -10010.00)",
+   "sgt1922 p.219 (f243) classes barley 1918_ind: classes vs TOTAUX: cells give 534695.24, printed 543695.24 (difference 9000.00)",
+   "sgt1922 p.219 (f243) classes barley 1918_ind r4: c4 / TOTAUX = 0.11069, printed 0.1272",
+   "sgt1922 p.219 (f243) classes barley 1918_tot: classes vs TOTAUX: cells give 566011.71, printed 565011.77 (difference -999.94)",
+   "sgt1922 p.219 (f243) classes barley 1918_tot r6: c6 / TOTAUX = 0.62815, printed 0.6821",
+   "sgt1922 p.218 (f242) classes barley 1918 c1: Européens + Indigènes vs TOTAUX: cells give 12828.85, printed 12828.79 (difference -0.06)",
+   "sgt1922 p.219 (f243) classes barley 1918 c4: Européens + Indigènes vs TOTAUX: cells give 60662.80, printed 69662.80 (difference 9000.00)",
+   "sgt1922 p.219 (f243) classes barley 1918 c6: Européens + Indigènes vs TOTAUX: cells give 353912.02, printed 354912.02 (difference 1000.00)",
+   "sgt1922 p.218 (f242) classes barley 1919_eur r2: c2 / TOTAUX = 0.06609, printed 0.0647",
+   "sgt1922 p.219 (f243) classes barley 1919_ind r6: c6 / TOTAUX = 0.26261, printed 0.2655",
+   "sgt1922 p.219 (f243) classes barley 1919_tot: classes vs TOTAUX: cells give 351081.45, printed 351281.45 (difference 200.00)",
+   "sgt1922 p.218 (f242) classes barley 1919 c2: Européens + Indigènes vs TOTAUX: cells give 77358.81, printed 77158.81 (difference -200.00)",
+   "sgt1922 p.219 (f243) classes barley 1921_ind r6: c6 / TOTAUX = 0.77621, printed 0.0762",
+   "sgt1922 p.221 (f245) classes oats 1918_eur: classes vs TOTAUX: cells give 36544.55, printed 36544.75 (difference 0.20)",
+   "sgt1922 p.221 (f245) classes oats 1918_tot: classes vs TOTAUX: cells give 65055.36, printed 65055.56 (difference 0.20)",
+   "sgt1922 p.220 (f244) classes oats 1918_tot r2: c2 / TOTAUX = 0.00869, printed 0.0040",
+   "sgt1922 p.221 (f245) classes oats 1918_tot r5: c5 / TOTAUX = 0.01555, printed 0.0170",
+   "sgt1922 p.220 (f244) classes oats 1919_eur r3: c3 / TOTAUX = 0.02136, printed 0.213",
+   "sgt1922 p.221 (f245) classes oats 1919_ind: classes vs TOTAUX: cells give 16965.37, printed 18535.37 (difference 1570.00)",
+   "sgt1922 p.220 (f244) classes oats 1919_ind r3: c3 / TOTAUX = 0.00780, printed 0.0925",
+   "sgt1922 p.220 (f244) classes oats 1919 c3: Européens + Indigènes vs TOTAUX: cells give 833.01, printed 2403.01 (difference 1570.00)",
+   "sgt1922 p.221 (f245) classes oats 1920_ind: classes vs TOTAUX: cells give 18873.03, printed 18873.13 (difference 0.10)",
+   "sgt1922 p.221 (f245) classes oats 1920 tot: Européens + Indigènes vs TOTAUX: cells give 56770.45, printed 56770.35 (difference -0.10)",
+   "sgt1922 p.221 (f245) classes oats 1921_tot: classes vs TOTAUX: cells give 63426.30, printed 63426.20 (difference -0.10)",
+   "sgt1922 p.221 (f245) classes oats 1921 c5: Européens + Indigènes vs TOTAUX: cells give 636.57, printed 636.67 (difference 0.10)",
+   "sgt1922 p.220 (f244) classes maize 1919_eur r1: c1 / TOTAUX = 0.01641, printed 0.0016",
+   "sgt1922 p.221 (f245) classes maize 1921_eur: classes vs TOTAUX: cells give 495.30, printed 494.80 (difference -0.50)",
+   "sgt1922 p.221 (f245) classes maize 1921_tot: classes vs TOTAUX: cells give 20498.10, printed 20497.60 (difference -0.50)",
+   "sgt1922 p.220 (f244) classes maize 1922_ind r2: c2 / TOTAUX = 0.13611, printed 0.0136",
+   "sgt1922 p.221 (f245) classes maize 1922_tot: classes vs TOTAUX: cells give 4122.32, printed 4121.32 (difference -1.00)",
+   "sgt1922 p.221 (f245) classes maize 1922 tot: Européens + Indigènes vs TOTAUX: cells give 4122.32, printed 4121.32 (difference -1.00)",
+   "sgt1922 p.221 (f245) classes maize 1922: TOTAUX vs surfaces imposées: cells give 4121.32, printed 4122.32 (difference 1.00)",
+   "sgt1922 p.223 (f247) classes sorghum 1919_eur r4: c4 / TOTAUX = 0.00194, printed 0",
+   "sgt1922 p.222 (f246) classes sorghum 1919_ind r2: c2 / TOTAUX = 0.15748, printed 0.1666",
+   "sgt1922 p.222 (f246) classes sorghum 1919_tot r3: c3 / TOTAUX = 0.00414, printed 0.0049",
+   "sgt1922 p.223 (f247) classes sorghum 1921_ind: classes vs TOTAUX: cells give 985.43, printed 985.47 (difference 0.04)",
+   "sgt1922 p.223 (f247) classes sorghum 1921_tot: classes vs TOTAUX: cells give 1451.74, printed 1451.78 (difference 0.04)",
+   "sgt1922 p.222 (f246) classes sorghum 1921_tot r1: c1 / TOTAUX = 0.00197, printed 0.0012",
+   "sgt1922 p.223 (f247) classes sorghum 1921_tot r6: c6 / TOTAUX = 0.94540, printed 0.0946",
+   "sgt1922 p.223 (f247) classes sorghum 1921: TOTAUX vs surfaces imposées: cells give 1451.78, printed 1451.74 (difference -0.04)",
+   "sgt1922 p.223 (f247) classes beans 1919_ind: classes vs TOTAUX: cells give 11303.36, printed 21213.36 (difference 9910.00)",
+   "sgt1922 p.223 (f247) classes beans 1919_tot: classes vs TOTAUX: cells give 16246.41, printed 26156.41 (difference 9910.00)",
+   "sgt1922 p.223 (f247) classes beans 1920_eur: classes vs TOTAUX: cells give 4495.75, printed 4495.65 (difference -0.10)",
+   "sgt1922 p.222 (f246) classes beans 1920_eur r1: c1 / TOTAUX = 0.03351, printed 0.5335",
+   "sgt1922 p.223 (f247) classes beans 1920_ind r6: c6 / TOTAUX = 0.26585, printed 0.2688",
+   "sgt1922 p.223 (f247) classes beans 1920 tot: Européens + Indigènes vs TOTAUX: cells give 20770.08, printed 20770.18 (difference 0.10)",
+   "sgt1922 p.223 (f247) classes beans 1921: TOTAUX vs surfaces imposées: cells give 23183.28, printed 23183.20 (difference -0.08)",
+   "sgt1922 p.223 (f247) classes beans 1922_eur r4: c4 / TOTAUX = 0.14614, printed 0.1429",
+   "sgt1922 p.224 (f248) classes chickpeas 1919_eur r3: c3 / TOTAUX = 0.03771, printed 0.0371",
+   "sgt1922 p.225 (f249) classes chickpeas 1920_eur: classes vs TOTAUX: cells give 1328.34, printed 928.34 (difference -400.00)",
+   "sgt1922 p.224 (f248) classes chickpeas 1920_eur r1: c1 / TOTAUX = 0.50716, printed 0.0762",
+   "sgt1922 p.224 (f248) classes chickpeas 1920 c1: Européens + Indigènes vs TOTAUX: cells give 914.00, printed 514 (difference -400.00)",
+   "sgt1922 p.224 (f248) classes chickpeas 1921_eur r3: c3 / TOTAUX = 0.01131, printed 0.0171",
+   "sgt1922 p.225 (f249) classes chickpeas 1921_ind r6: c6 / TOTAUX = 0.79811, printed 0.0798",
+   "sgt1922 p.225 (f249) classes chickpeas 1922: TOTAUX vs surfaces imposées: cells give 1017.03, printed 1017 (difference -0.03)",
+   "sgt1922 p.225 (f249) classes flax 1919_eur: classes vs TOTAUX: cells give 754.21, printed 751.21 (difference -3.00)",
+   "sgt1922 p.225 (f249) classes flax 1919_ind: classes vs TOTAUX: cells give 2299.03, printed 2308.03 (difference 9.00)",
+   "sgt1922 p.224 (f248) classes flax 1919_tot r1: c1 / TOTAUX = 0.02643, printed 0.0206",
+   "sgt1922 p.225 (f249) classes flax 1919 c6: Européens + Indigènes vs TOTAUX: cells give 1913.36, printed 1922.36 (difference 9.00)",
+   "sgt1922 p.225 (f249) classes flax 1919 tot: Européens + Indigènes vs TOTAUX: cells give 3059.24, printed 3062.24 (difference 3.00)",
+   "sgt1922 p.224 (f248) classes flax 1921_ind r1: c1 / TOTAUX = 0.00964, printed 0.0960",
+   "sgt1922 p.225 (f249) classes flax 1922_tot: classes vs TOTAUX: cells give 1494.31, printed 1594.31 (difference 100.00)",
+   "sgt1922 p.225 (f249) classes flax 1922 tot: Européens + Indigènes vs TOTAUX: cells give 1494.31, printed 1594.31 (difference 100.00)",
+   "sgt1922 p.225 (f249) classes flax 1922: TOTAUX vs surfaces imposées: cells give 1594.31, printed 1494.31 (difference -100.00)",
+   "sgt1923 p.229 (f731) classes wheat 1916_eur: classes vs TOTAUX: cells give 63551.92, printed 63511.92 (difference -40.00)",
+   "sgt1923 p.229 (f731) classes wheat 1916_tot r5: c5 / TOTAUX = 0.08444, printed 0.0958",
+   "sgt1923 p.229 (f731) classes wheat 1916 tot: Européens + Indigènes vs TOTAUX: cells give 553072.51, printed 553112.51 (difference 40.00)",
+   "sgt1923 p.229 (f731) classes wheat 1916: TOTAUX vs surfaces imposées: cells give 553112.51, printed 600029.48 (difference 46916.97)",
+   "sgt1923 p.229 (f731) classes wheat 1918_eur: classes vs TOTAUX: cells give 81872.97, printed 81866.97 (difference -6.00)",
+   "sgt1923 p.229 (f731) classes wheat 1918_tot: classes vs TOTAUX: cells give 638276.59, printed 638270.59 (difference -6.00)",
+   "sgt1923 p.229 (f731) classes wheat 1919_ind r4: c4 / TOTAUX = 0.12618, printed 0.1211",
+   "sgt1923 p.229 (f731) classes wheat 1921_tot r5: c5 / TOTAUX = 0.05493, printed 0.0565",
+   "sgt1923 p.229 (f731) classes wheat 1922_ind: classes vs TOTAUX: cells give 271553.62, printed 271513.62 (difference -40.00)",
+   "sgt1923 p.229 (f731) classes wheat 1922_ind r4: c4 / TOTAUX = 0.13507, printed 0.1316",
+   "sgt1923 p.229 (f731) classes wheat 1922_tot: classes vs TOTAUX: cells give 346857.70, printed 316818.70 (difference -30039.00)",
+   "sgt1923 p.228 (f730) classes wheat 1922 c1: Européens + Indigènes vs TOTAUX: cells give 51914.27, printed 51913.27 (difference -1.00)",
+   "sgt1923 p.229 (f731) classes wheat 1922 tot: Européens + Indigènes vs TOTAUX: cells give 346818.70, printed 316818.70 (difference -30000.00)",
+   "sgt1923 p.229 (f731) classes wheat 1922: TOTAUX vs surfaces imposées: cells give 316818.70, printed 346818.70 (difference 30000.00)",
+   "sgt1923 p.228 (f730) classes wheat 1923_eur r1: c1 / TOTAUX = 0.00152, printed 0.2015",
+   "sgt1923 p.231 (f733) classes barley 1916_eur r6: c6 / TOTAUX = 0.69648, printed 0.0945",
+   "sgt1923 p.231 (f733) classes barley 1917_eur: classes vs TOTAUX: cells give 20223.77, printed 20233.77 (difference 10.00)",
+   "sgt1923 p.231 (f733) classes barley 1917_ind: classes vs TOTAUX: cells give 445708.79, printed 455708.79 (difference 10000.00)",
+   "sgt1923 p.230 (f732) classes barley 1917_tot r1: c1 / TOTAUX = 0.05408, printed 0.0548",
+   "sgt1923 p.231 (f733) classes barley 1917 tot: Européens + Indigènes vs TOTAUX: cells give 475942.56, printed 465932.56 (difference -10010.00)",
+   "sgt1923 p.231 (f733) classes barley 1918_ind: classes vs TOTAUX: cells give 534695.24, printed 543695.24 (difference 9000.00)",
+   "sgt1923 p.231 (f733) classes barley 1918_ind r4: c4 / TOTAUX = 0.11069, printed 0.1272",
+   "sgt1923 p.231 (f733) classes barley 1918_tot: classes vs TOTAUX: cells give 566011.71, printed 565011.77 (difference -999.94)",
+   "sgt1923 p.231 (f733) classes barley 1918_tot r6: c6 / TOTAUX = 0.62815, printed 0.6821",
+   "sgt1923 p.230 (f732) classes barley 1918 c1: Européens + Indigènes vs TOTAUX: cells give 12828.85, printed 12828.79 (difference -0.06)",
+   "sgt1923 p.231 (f733) classes barley 1918 c4: Européens + Indigènes vs TOTAUX: cells give 60662.80, printed 69662.80 (difference 9000.00)",
+   "sgt1923 p.231 (f733) classes barley 1918 c6: Européens + Indigènes vs TOTAUX: cells give 353912.02, printed 354912.02 (difference 1000.00)",
+   "sgt1923 p.230 (f732) classes barley 1919_eur r2: c2 / TOTAUX = 0.06609, printed 0.0647",
+   "sgt1923 p.231 (f733) classes barley 1919_ind r6: c6 / TOTAUX = 0.26261, printed 0.2655",
+   "sgt1923 p.231 (f733) classes barley 1919_tot: classes vs TOTAUX: cells give 351081.45, printed 351281.45 (difference 200.00)",
+   "sgt1923 p.230 (f732) classes barley 1919 c2: Européens + Indigènes vs TOTAUX: cells give 77358.81, printed 77158.81 (difference -200.00)",
+   "sgt1923 p.231 (f733) classes barley 1921_ind r6: c6 / TOTAUX = 0.77621, printed 0.0762",
+   "sgt1923 p.232 (f734) classes oats 1919_eur r3: c3 / TOTAUX = 0.02136, printed 0.213",
+   "sgt1923 p.233 (f735) classes oats 1919_ind: classes vs TOTAUX: cells give 16965.37, printed 18535.37 (difference 1570.00)",
+   "sgt1923 p.232 (f734) classes oats 1919_ind r3: c3 / TOTAUX = 0.00780, printed 0.0925",
+   "sgt1923 p.232 (f734) classes oats 1919 c3: Européens + Indigènes vs TOTAUX: cells give 833.01, printed 2403.01 (difference 1570.00)",
+   "sgt1923 p.233 (f735) classes oats 1920_ind: classes vs TOTAUX: cells give 18873.03, printed 18873.13 (difference 0.10)",
+   "sgt1923 p.233 (f735) classes oats 1920 tot: Européens + Indigènes vs TOTAUX: cells give 56770.45, printed 56770.35 (difference -0.10)",
+   "sgt1923 p.233 (f735) classes oats 1921_tot: classes vs TOTAUX: cells give 63426.30, printed 63426.20 (difference -0.10)",
+   "sgt1923 p.233 (f735) classes oats 1921 c5: Européens + Indigènes vs TOTAUX: cells give 636.57, printed 636.67 (difference 0.10)",
+   "sgt1923 p.232 (f734) classes oats 1923_eur r2: c2 / TOTAUX = 0.00374, printed 0.0030",
+   "sgt1923 p.233 (f735) classes maize 1921_eur: classes vs TOTAUX: cells give 495.30, printed 494.80 (difference -0.50)",
+   "sgt1923 p.233 (f735) classes maize 1921_tot: classes vs TOTAUX: cells give 20498.10, printed 20497.60 (difference -0.50)",
+   "sgt1923 p.232 (f734) classes maize 1922_ind r2: c2 / TOTAUX = 0.13611, printed 0.0136",
+   "sgt1923 p.233 (f735) classes maize 1922_tot: classes vs TOTAUX: cells give 4122.32, printed 4121.32 (difference -1.00)",
+   "sgt1923 p.233 (f735) classes maize 1922 tot: Européens + Indigènes vs TOTAUX: cells give 4122.32, printed 4121.32 (difference -1.00)",
+   "sgt1923 p.233 (f735) classes maize 1922: TOTAUX vs surfaces imposées: cells give 4121.32, printed 4122.32 (difference 1.00)",
+   "sgt1923 p.233 (f735) classes maize 1923_eur r6: c6 / TOTAUX = 0.96182, printed 0.9929",
+   "sgt1923 p.235 (f737) classes sorghum 1920_eur: classes vs TOTAUX: cells give 123.81, printed 206.65 (difference 82.84)",
+   "sgt1923 p.235 (f737) classes sorghum 1920_ind: classes vs TOTAUX: cells give 1425.48, printed 1094.34 (difference -331.14)",
+   "sgt1923 p.235 (f737) classes sorghum 1920_tot: classes vs TOTAUX: cells give 1549.29, printed 1300.99 (difference -248.30)",
+   "sgt1923 p.235 (f737) classes sorghum 1920: TOTAUX vs surfaces imposées: cells give 1300.99, printed 1549.29 (difference 248.30)",
+   "sgt1923 p.235 (f737) classes sorghum 1921_eur: classes vs TOTAUX: cells give 466.31, printed 123.81 (difference -342.50)",
+   "sgt1923 p.235 (f737) classes sorghum 1921_ind: classes vs TOTAUX: cells give 985.43, printed 1425.48 (difference 440.05)",
+   "sgt1923 p.235 (f737) classes sorghum 1921_tot: classes vs TOTAUX: cells give 1451.74, printed 1549.29 (difference 97.55)",
+   "sgt1923 p.234 (f736) classes sorghum 1921_tot r1: c1 / TOTAUX = 0.00185, printed 0.0012",
+   "sgt1923 p.235 (f737) classes sorghum 1921_tot r6: c6 / TOTAUX = 0.88590, printed 0.0946",
+   "sgt1923 p.235 (f737) classes sorghum 1921: TOTAUX vs surfaces imposées: cells give 1549.29, printed 1451.74 (difference -97.55)",
+   "sgt1923 p.235 (f737) classes sorghum 1922_eur: classes vs TOTAUX: cells give 76.70, printed 466.31 (difference 389.61)",
+   "sgt1923 p.235 (f737) classes sorghum 1922_ind: classes vs TOTAUX: cells give 1234.32, printed 985.47 (difference -248.85)",
+   "sgt1923 p.235 (f737) classes sorghum 1922_tot: classes vs TOTAUX: cells give 1311.02, printed 1451.78 (difference 140.76)",
+   "sgt1923 p.235 (f737) classes sorghum 1922: TOTAUX vs surfaces imposées: cells give 1451.78, printed 1311.02 (difference -140.76)",
+   "sgt1923 p.235 (f737) classes sorghum 1923_ind r4: c4 / TOTAUX = 0.01970, printed 0.0188",
+   "sgt1923 p.235 (f737) classes beans 1920_eur: classes vs TOTAUX: cells give 4495.75, printed 4495.65 (difference -0.10)",
+   "sgt1923 p.234 (f736) classes beans 1920_eur r1: c1 / TOTAUX = 0.03351, printed 0.5335",
+   "sgt1923 p.235 (f737) classes beans 1920_ind r6: c6 / TOTAUX = 0.26585, printed 0.2688",
+   "sgt1923 p.235 (f737) classes beans 1920 tot: Européens + Indigènes vs TOTAUX: cells give 20770.08, printed 20770.18 (difference 0.10)",
+   "sgt1923 p.235 (f737) classes beans 1921: TOTAUX vs surfaces imposées: cells give 23183.28, printed 23183.20 (difference -0.08)",
+   "sgt1923 p.235 (f737) classes beans 1922_eur r4: c4 / TOTAUX = 0.14614, printed 0.1429",
+   "sgt1923 p.237 (f739) classes chickpeas 1920_eur: classes vs TOTAUX: cells give 1328.34, printed 928.34 (difference -400.00)",
+   "sgt1923 p.236 (f738) classes chickpeas 1920_eur r1: c1 / TOTAUX = 0.50716, printed 0.0762",
+   "sgt1923 p.236 (f738) classes chickpeas 1920 c1: Européens + Indigènes vs TOTAUX: cells give 914.00, printed 514 (difference -400.00)",
+   "sgt1923 p.236 (f738) classes chickpeas 1921_eur r3: c3 / TOTAUX = 0.01131, printed 0.0171",
+   "sgt1923 p.237 (f739) classes chickpeas 1921_ind r6: c6 / TOTAUX = 0.79811, printed 0.0798",
+   "sgt1923 p.237 (f739) classes chickpeas 1922: TOTAUX vs surfaces imposées: cells give 1017.03, printed 1017 (difference -0.03)",
+   "sgt1923 p.236 (f738) classes flax 1921_ind r1: c1 / TOTAUX = 0.00964, printed 0.0960",
+   "sgt1923 p.237 (f739) classes flax 1922_tot: classes vs TOTAUX: cells give 1494.31, printed 1594.31 (difference 100.00)",
+   "sgt1923 p.237 (f739) classes flax 1922 tot: Européens + Indigènes vs TOTAUX: cells give 1494.31, printed 1594.31 (difference 100.00)",
+   "sgt1923 p.237 (f739) classes flax 1922: TOTAUX vs surfaces imposées: cells give 1594.31, printed 1494.31 (difference -100.00)",
+   "sgt1923 p.236 (f738) classes flax 1923_eur r1: c1 / TOTAUX = 0.08835, printed 0.0083",
+   "sgt1923 p.236 (f738) classes flax 1923_ind r1: c1 / TOTAUX = 0.00293, printed 0.0236",
+   "sgt1924 p.237 (f1227) classes wheat 1918_eur: classes vs TOTAUX: cells give 81872.97, printed 81866.97 (difference -6.00)",
+   "sgt1924 p.237 (f1227) classes wheat 1918_tot: classes vs TOTAUX: cells give 638276.59, printed 638270.59 (difference -6.00)",
+   "sgt1924 p.237 (f1227) classes wheat 1919_ind r4: c4 / TOTAUX = 0.12618, printed 0.1211",
+   "sgt1924 p.237 (f1227) classes wheat 1921_tot r5: c5 / TOTAUX = 0.05493, printed 0.0565",
+   "sgt1924 p.237 (f1227) classes wheat 1922_ind: classes vs TOTAUX: cells give 271553.62, printed 271513.62 (difference -40.00)",
+   "sgt1924 p.237 (f1227) classes wheat 1922_ind r4: c4 / TOTAUX = 0.13507, printed 0.1316",
+   "sgt1924 p.237 (f1227) classes wheat 1922_tot: classes vs TOTAUX: cells give 346857.70, printed 316818.70 (difference -30039.00)",
+   "sgt1924 p.236 (f1226) classes wheat 1922 c1: Européens + Indigènes vs TOTAUX: cells give 51914.27, printed 51913.27 (difference -1.00)",
+   "sgt1924 p.237 (f1227) classes wheat 1922 tot: Européens + Indigènes vs TOTAUX: cells give 346818.70, printed 316818.70 (difference -30000.00)",
+   "sgt1924 p.237 (f1227) classes wheat 1922: TOTAUX vs surfaces imposées: cells give 316818.70, printed 346818.70 (difference 30000.00)",
+   "sgt1924 p.236 (f1226) classes wheat 1923_eur r1: c1 / TOTAUX = 0.00152, printed 0.2015",
+   "sgt1924 p.239 (f1229) classes barley 1917_eur: classes vs TOTAUX: cells give 20223.77, printed 20233.77 (difference 10.00)",
+   "sgt1924 p.239 (f1229) classes barley 1917_ind: classes vs TOTAUX: cells give 445708.79, printed 455708.79 (difference 10000.00)",
+   "sgt1924 p.238 (f1228) classes barley 1917_tot r1: c1 / TOTAUX = 0.05408, printed 0.0548",
+   "sgt1924 p.239 (f1229) classes barley 1917 tot: Européens + Indigènes vs TOTAUX: cells give 475942.56, printed 465932.56 (difference -10010.00)",
+   "sgt1924 p.239 (f1229) classes barley 1918_ind: classes vs TOTAUX: cells give 534695.24, printed 543695.24 (difference 9000.00)",
+   "sgt1924 p.239 (f1229) classes barley 1918_ind r4: c4 / TOTAUX = 0.11069, printed 0.1272",
+   "sgt1924 p.239 (f1229) classes barley 1918_tot: classes vs TOTAUX: cells give 566011.71, printed 565011.77 (difference -999.94)",
+   "sgt1924 p.239 (f1229) classes barley 1918_tot r6: c6 / TOTAUX = 0.62815, printed 0.6821",
+   "sgt1924 p.238 (f1228) classes barley 1918 c1: Européens + Indigènes vs TOTAUX: cells give 12828.85, printed 12828.79 (difference -0.06)",
+   "sgt1924 p.239 (f1229) classes barley 1918 c4: Européens + Indigènes vs TOTAUX: cells give 60662.80, printed 69662.80 (difference 9000.00)",
+   "sgt1924 p.239 (f1229) classes barley 1918 c6: Européens + Indigènes vs TOTAUX: cells give 353912.02, printed 354912.02 (difference 1000.00)",
+   "sgt1924 p.238 (f1228) classes barley 1919_eur r2: c2 / TOTAUX = 0.06609, printed 0.0647",
+   "sgt1924 p.239 (f1229) classes barley 1919_ind r6: c6 / TOTAUX = 0.26261, printed 0.2655",
+   "sgt1924 p.239 (f1229) classes barley 1919_tot: classes vs TOTAUX: cells give 351081.45, printed 351281.45 (difference 200.00)",
+   "sgt1924 p.238 (f1228) classes barley 1919 c2: Européens + Indigènes vs TOTAUX: cells give 77358.81, printed 77158.81 (difference -200.00)",
+   "sgt1924 p.239 (f1229) classes barley 1921_ind r6: c6 / TOTAUX = 0.77621, printed 0.0762",
+   "sgt1924 p.240 (f1230) classes oats 1919_eur r3: c3 / TOTAUX = 0.02136, printed 0.213",
+   "sgt1924 p.241 (f1231) classes oats 1919_ind: classes vs TOTAUX: cells give 16965.37, printed 18535.37 (difference 1570.00)",
+   "sgt1924 p.240 (f1230) classes oats 1919_ind r3: c3 / TOTAUX = 0.00780, printed 0.0925",
+   "sgt1924 p.240 (f1230) classes oats 1919 c3: Européens + Indigènes vs TOTAUX: cells give 833.01, printed 2403.01 (difference 1570.00)",
+   "sgt1924 p.241 (f1231) classes oats 1920_ind: classes vs TOTAUX: cells give 18873.03, printed 18873.13 (difference 0.10)",
+   "sgt1924 p.241 (f1231) classes oats 1920 tot: Européens + Indigènes vs TOTAUX: cells give 56770.45, printed 56770.35 (difference -0.10)",
+   "sgt1924 p.241 (f1231) classes oats 1921_tot: classes vs TOTAUX: cells give 63426.30, printed 63426.20 (difference -0.10)",
+   "sgt1924 p.241 (f1231) classes oats 1921 c5: Européens + Indigènes vs TOTAUX: cells give 636.57, printed 636.67 (difference 0.10)",
+   "sgt1924 p.240 (f1230) classes oats 1923_eur r2: c2 / TOTAUX = 0.00374, printed 0.0030",
+   "sgt1924 p.243 (f1233) classes maize 1921_eur: classes vs TOTAUX: cells give 495.30, printed 494.80 (difference -0.50)",
+   "sgt1924 p.243 (f1233) classes maize 1921_tot: classes vs TOTAUX: cells give 20498.10, printed 20497.60 (difference -0.50)",
+   "sgt1924 p.242 (f1232) classes maize 1922_ind r2: c2 / TOTAUX = 0.13611, printed 0.0136",
+   "sgt1924 p.243 (f1233) classes maize 1922_tot: classes vs TOTAUX: cells give 4122.32, printed 4121.32 (difference -1.00)",
+   "sgt1924 p.243 (f1233) classes maize 1922 tot: Européens + Indigènes vs TOTAUX: cells give 4122.32, printed 4121.32 (difference -1.00)",
+   "sgt1924 p.243 (f1233) classes maize 1922: TOTAUX vs surfaces imposées: cells give 4121.32, printed 4122.32 (difference 1.00)",
+   "sgt1924 p.243 (f1233) classes maize 1923_eur r6: c6 / TOTAUX = 0.96182, printed 0.9929",
+   "sgt1924 p.245 (f1235) classes sorghum 1920_eur: classes vs TOTAUX: cells give 123.81, printed 206.65 (difference 82.84)",
+   "sgt1924 p.245 (f1235) classes sorghum 1920_ind: classes vs TOTAUX: cells give 1425.48, printed 1094.34 (difference -331.14)",
+   "sgt1924 p.245 (f1235) classes sorghum 1920_tot: classes vs TOTAUX: cells give 1549.29, printed 1300.99 (difference -248.30)",
+   "sgt1924 p.245 (f1235) classes sorghum 1920: TOTAUX vs surfaces imposées: cells give 1300.99, printed 1549.29 (difference 248.30)",
+   "sgt1924 p.245 (f1235) classes sorghum 1921_eur: classes vs TOTAUX: cells give 466.31, printed 123.81 (difference -342.50)",
+   "sgt1924 p.245 (f1235) classes sorghum 1921_ind: classes vs TOTAUX: cells give 985.43, printed 1425.48 (difference 440.05)",
+   "sgt1924 p.245 (f1235) classes sorghum 1921_tot: classes vs TOTAUX: cells give 1451.74, printed 1549.29 (difference 97.55)",
+   "sgt1924 p.244 (f1234) classes sorghum 1921_tot r1: c1 / TOTAUX = 0.00185, printed 0.0012",
+   "sgt1924 p.245 (f1235) classes sorghum 1921_tot r6: c6 / TOTAUX = 0.88590, printed 0.0946",
+   "sgt1924 p.245 (f1235) classes sorghum 1921: TOTAUX vs surfaces imposées: cells give 1549.29, printed 1451.74 (difference -97.55)",
+   "sgt1924 p.245 (f1235) classes sorghum 1922_eur: classes vs TOTAUX: cells give 76.70, printed 466.31 (difference 389.61)",
+   "sgt1924 p.245 (f1235) classes sorghum 1922_ind: classes vs TOTAUX: cells give 1234.32, printed 985.47 (difference -248.85)",
+   "sgt1924 p.245 (f1235) classes sorghum 1922_tot: classes vs TOTAUX: cells give 1311.02, printed 1451.78 (difference 140.76)",
+   "sgt1924 p.245 (f1235) classes sorghum 1922: TOTAUX vs surfaces imposées: cells give 1451.78, printed 1311.02 (difference -140.76)",
+   "sgt1924 p.245 (f1235) classes sorghum 1923_ind r4: c4 / TOTAUX = 0.01970, printed 0.0188",
+   "sgt1924 p.245 (f1235) classes sorghum 1924_eur: classes vs TOTAUX: cells give 682.00, printed 678.00 (difference -4.00)",
+   "sgt1924 p.245 (f1235) classes sorghum 1924_tot: classes vs TOTAUX: cells give 2361.77, printed 2357.77 (difference -4.00)",
+   "sgt1924 p.245 (f1235) classes sorghum 1924: TOTAUX vs surfaces imposées: cells give 2357.77, printed 2361.77 (difference 4.00)",
+   "sgt1924 p.247 (f1237) classes beans 1920_eur: classes vs TOTAUX: cells give 4496.75, printed 4495.65 (difference -1.10)",
+   "sgt1924 p.246 (f1236) classes beans 1920_eur r1: c1 / TOTAUX = 0.03351, printed 0.5335",
+   "sgt1924 p.247 (f1237) classes beans 1920_ind r6: c6 / TOTAUX = 0.26585, printed 0.2688",
+   "sgt1924 p.247 (f1237) classes beans 1920_tot: classes vs TOTAUX: cells give 20470.18, printed 20770.18 (difference 300.00)",
+   "sgt1924 p.247 (f1237) classes beans 1920_tot r6: c6 / TOTAUX = 0.29520, printed 0.3096",
+   "sgt1924 p.247 (f1237) classes beans 1920 c5: Européens + Indigènes vs TOTAUX: cells give 1278.05, printed 1277.05 (difference -1.00)",
+   "sgt1924 p.247 (f1237) classes beans 1920 c6: Européens + Indigènes vs TOTAUX: cells give 6431.36, printed 6131.36 (difference -300.00)",
+   "sgt1924 p.247 (f1237) classes beans 1920 tot: Européens + Indigènes vs TOTAUX: cells give 20770.08, printed 20770.18 (difference 0.10)",
+   "sgt1924 p.247 (f1237) classes beans 1921: TOTAUX vs surfaces imposées: cells give 23183.28, printed 23183.20 (difference -0.08)",
+   "sgt1924 p.247 (f1237) classes beans 1922_eur r4: c4 / TOTAUX = 0.14614, printed 0.1429",
+   "sgt1924 p.247 (f1237) classes beans 1922_ind: classes vs TOTAUX: cells give 9651.88, printed 651.88 (difference -9000.00)",
+   "sgt1924 p.247 (f1237) classes beans 1922 tot: Européens + Indigènes vs TOTAUX: cells give 6968.34, printed 15968.34 (difference 9000.00)",
+   "sgt1924 p.246 (f1236) classes beans 1924_ind r2: c2 / TOTAUX = 0.03046, printed 0.0310",
+   "sgt1924 p.249 (f1239) classes chickpeas 1920_eur: classes vs TOTAUX: cells give 1328.34, printed 928.34 (difference -400.00)",
+   "sgt1924 p.248 (f1238) classes chickpeas 1920_eur r1: c1 / TOTAUX = 0.50716, printed 0.0762",
+   "sgt1924 p.249 (f1239) classes chickpeas 1920_tot: classes vs TOTAUX: cells give 6483.93, printed 6554.87 (difference 70.94)",
+   "sgt1924 p.249 (f1239) classes chickpeas 1920_tot r5: c5 / TOTAUX = 0.02822, printed 0.0390",
+   "sgt1924 p.248 (f1238) classes chickpeas 1920 c1: Européens + Indigènes vs TOTAUX: cells give 914.00, printed 514.11 (difference -399.89)",
+   "sgt1924 p.249 (f1239) classes chickpeas 1920 c5: Européens + Indigènes vs TOTAUX: cells give 256.02, printed 184.97 (difference -71.05)",
+   "sgt1924 p.248 (f1238) classes chickpeas 1921_eur r3: c3 / TOTAUX = 0.01131, printed 0.0171",
+   "sgt1924 p.249 (f1239) classes chickpeas 1921_ind r6: c6 / TOTAUX = 0.79811, printed 0.0798",
+   "sgt1924 p.249 (f1239) classes chickpeas 1922: TOTAUX vs surfaces imposées: cells give 1017.03, printed 1017 (difference -0.03)",
+   "sgt1924 p.249 (f1239) classes chickpeas 1924_ind: classes vs TOTAUX: cells give 3983.45, printed 3542.90 (difference -440.55)",
+   "sgt1924 p.249 (f1239) classes chickpeas 1924_tot: classes vs TOTAUX: cells give 4920.40, printed 4479.85 (difference -440.55)",
+   "sgt1924 p.251 (f1241) classes flax 1920_eur: classes vs TOTAUX: cells give 992.27, printed 992.16 (difference -0.11)",
+   "sgt1924 p.251 (f1241) classes flax 1920_tot: classes vs TOTAUX: cells give 3060.25, printed 2989.20 (difference -71.05)",
+   "sgt1924 p.251 (f1241) classes flax 1920_tot r5: c5 / TOTAUX = 0.08565, printed 0.0618",
+   "sgt1924 p.250 (f1240) classes flax 1920 c2: Européens + Indigènes vs TOTAUX: cells give 494.05, printed 493.94 (difference -0.11)",
+   "sgt1924 p.251 (f1241) classes flax 1920 c5: Européens + Indigènes vs TOTAUX: cells give 184.97, printed 256.02 (difference 71.05)",
+   "sgt1924 p.250 (f1240) classes flax 1921_ind r1: c1 / TOTAUX = 0.00964, printed 0.0960",
+   "sgt1924 p.251 (f1241) classes flax 1922_tot: classes vs TOTAUX: cells give 1494.31, printed 1594.31 (difference 100.00)",
+   "sgt1924 p.251 (f1241) classes flax 1922 tot: Européens + Indigènes vs TOTAUX: cells give 1494.31, printed 1594.31 (difference 100.00)",
+   "sgt1924 p.251 (f1241) classes flax 1922: TOTAUX vs surfaces imposées: cells give 1594.31, printed 1494.31 (difference -100.00)",
+   "sgt1924 p.250 (f1240) classes flax 1923_eur r1: c1 / TOTAUX = 0.08835, printed 0.0083",
+   "sgt1924 p.250 (f1240) classes flax 1923_ind r1: c1 / TOTAUX = 0.00293, printed 0.0236",
+   "sgt1922 p.216 (f240) surfaces wheat 1914: imposées + non imposées (with or without the terres nouvellement défrichées) vs ensemencées: cells give 405965.06, printed 405965.66 (difference 0.60)",
+   "sgt1922 p.217 (f241) surfaces wheat 1919: imposées + non imposées (with or without the terres nouvellement défrichées) vs ensemencées: cells give 568110.78, printed 508110.78 (difference -60000.00)",
+   "sgt1922 p.219 (f243) surfaces barley 1917: imposées + non imposées (with or without the terres nouvellement défrichées) vs ensemencées: cells give 478849.58, printed 478849.68 (difference 0.10)",
+   "sgt1922 p.219 (f243) surfaces barley 1918: imposées + non imposées (with or without the terres nouvellement défrichées) vs ensemencées: cells give 573737.97, printed 573738.06 (difference 0.09)",
+   "sgt1922 p.221 (f245) surfaces maize 1922: imposées + non imposées (with or without the terres nouvellement défrichées) vs ensemencées: cells give 4888.83, printed 4888.03 (difference -0.80)",
+   "sgt1922 p.223 (f247) surfaces beans 1921: imposées + non imposées (with or without the terres nouvellement défrichées) vs ensemencées: cells give 23513.46, printed 23477.37 (difference -36.09)",
+   "sgt1923 p.228 (f730) surfaces wheat 1916: imposées + non imposées (with or without the terres nouvellement défrichées) vs ensemencées: cells give 646946.45, printed 553112.51 (difference -93833.94)",
+   "sgt1923 p.229 (f731) surfaces wheat 1919: imposées + non imposées (with or without the terres nouvellement défrichées) vs ensemencées: cells give 568110.78, printed 508110.78 (difference -60000.00)",
+   "sgt1923 p.231 (f733) surfaces barley 1917: imposées + non imposées (with or without the terres nouvellement défrichées) vs ensemencées: cells give 478849.58, printed 478849.68 (difference 0.10)",
+   "sgt1923 p.231 (f733) surfaces barley 1918: imposées + non imposées (with or without the terres nouvellement défrichées) vs ensemencées: cells give 573737.97, printed 573738.06 (difference 0.09)",
+   "sgt1923 p.233 (f735) surfaces maize 1922: imposées + non imposées (with or without the terres nouvellement défrichées) vs ensemencées: cells give 4888.83, printed 4888.03 (difference -0.80)",
+   "sgt1923 p.233 (f735) surfaces maize 1923: imposées + non imposées (with or without the terres nouvellement défrichées) vs ensemencées: cells give 15661.65, printed 15841.65 (difference 180.00)",
+   "sgt1923 p.235 (f737) surfaces beans 1921: imposées + non imposées (with or without the terres nouvellement défrichées) vs ensemencées: cells give 23513.46, printed 23477.37 (difference -36.09)",
+   "sgt1923 p.237 (f739) surfaces flax 1923: imposées + non imposées (with or without the terres nouvellement défrichées) vs ensemencées: cells give 1745.63, printed 1747.63 (difference 2.00)",
+   "sgt1924 p.236 (f1226) surfaces wheat 1916: imposées + non imposées (with or without the terres nouvellement défrichées) vs ensemencées: cells give 646946.45, printed 553112.51 (difference -93833.94)",
+   "sgt1924 p.237 (f1227) surfaces wheat 1919: imposées + non imposées (with or without the terres nouvellement défrichées) vs ensemencées: cells give 568110.78, printed 508110.78 (difference -60000.00)",
+   "sgt1924 p.237 (f1227) surfaces wheat 1924: imposées + non imposées (with or without the terres nouvellement défrichées) vs ensemencées: cells give 484568.34, printed 484568.36 (difference 0.02)",
+   "sgt1924 p.239 (f1229) surfaces barley 1917: imposées + non imposées (with or without the terres nouvellement défrichées) vs ensemencées: cells give 478849.58, printed 478849.68 (difference 0.10)",
+   "sgt1924 p.239 (f1229) surfaces barley 1918: imposées + non imposées (with or without the terres nouvellement défrichées) vs ensemencées: cells give 573737.97, printed 573738.06 (difference 0.09)",
+   "sgt1924 p.243 (f1233) surfaces maize 1922: imposées + non imposées (with or without the terres nouvellement défrichées) vs ensemencées: cells give 4888.83, printed 4888.03 (difference -0.80)",
+   "sgt1924 p.243 (f1233) surfaces maize 1923: imposées + non imposées (with or without the terres nouvellement défrichées) vs ensemencées: cells give 15661.65, printed 15841.65 (difference 180.00)",
+   "sgt1924 p.247 (f1237) surfaces beans 1921: imposées + non imposées (with or without the terres nouvellement défrichées) vs ensemencées: cells give 23513.46, printed 23477.37 (difference -36.09)",
+   "sgt1924 p.251 (f1241) surfaces flax 1923: imposées + non imposées (with or without the terres nouvellement défrichées) vs ensemencées: cells give 1745.63, printed 1747.63 (difference 2.00)"
+  ],
+  "overlap_compared": 2088,
+  "overlap_diffs": [
+   [
+    [
+     1916,
+     "tunisia",
+     "wheat",
+     "surfaces",
+     "all",
+     "sown",
+     "area"
+    ],
+    "sgt1922",
+    "600029.48",
+    "sgt1924",
+    "553112.51"
+   ],
+   [
+    [
+     1916,
+     "tunisia",
+     "wheat",
+     "surfaces",
+     "all",
+     "taxed",
+     "area"
+    ],
+    "sgt1922",
+    "553112.51",
+    "sgt1924",
+    "600029.48"
+   ],
+   [
+    [
+     1920,
+     "tunisia",
+     "broad_beans",
+     "yield_classes",
+     "european",
+     "yield_5_hl",
+     "area"
+    ],
+    "sgt1922",
+    "662.23",
+    "sgt1924",
+    "663.23"
+   ],
+   [
+    [
+     1920,
+     "tunisia",
+     "broad_beans",
+     "yield_classes",
+     "european",
+     "yield_5_hl",
+     "area"
+    ],
+    "sgt1923",
+    "662.23",
+    "sgt1924",
+    "663.23"
+   ],
+   [
+    [
+     1920,
+     "tunisia",
+     "flax",
+     "yield_classes",
+     "european",
+     "yield_2_hl",
+     "area"
+    ],
+    "sgt1922",
+    "24",
+    "sgt1924",
+    "24.11"
+   ],
+   [
+    [
+     1920,
+     "tunisia",
+     "flax",
+     "yield_classes",
+     "european",
+     "yield_2_hl",
+     "area"
+    ],
+    "sgt1923",
+    "24",
+    "sgt1924",
+    "24.11"
+   ]
+  ],
+  "flagged": [
+   "sgt1922 1915 tunisia / wheat / yield_classes / indigenous / yield_3_hl / area = 55309.86 (total_mismatch)",
+   "sgt1922 1915 tunisia / wheat / yield_classes / indigenous / yield_3_hl / ratio_to_line_total = 0.1238 (ocr_corrected)",
+   "sgt1922 1916 tunisia / wheat / surfaces / all / sown / area = 600029.48 (reprint_corrected)",
+   "sgt1922 1916 tunisia / wheat / surfaces / all / taxed / area = 553112.51 (reprint_corrected)",
+   "sgt1923 1916 tunisia / barley / yield_classes / european / yield_6_hl_plus / ratio_to_line_total = 0.0945 (total_mismatch)",
+   "sgt1924 1918 tunisia / barley / yield_classes / indigenous / yield_4_hl / area = 60181.79 (total_mismatch)",
+   "sgt1922 1919 tunisia / maize / yield_classes / european / yield_1_hl / ratio_to_line_total = 0.0016 (total_mismatch)",
+   "sgt1922 1919 tunisia / maize / yield_classes / indigenous / yield_1_hl / ratio_to_line_total = 0.0095 (ocr_corrected)",
+   "sgt1922 1919 tunisia / sorghum / yield_classes / indigenous / yield_2_hl / ratio_to_line_total = 0.1666 (total_mismatch)",
+   "sgt1922 1919 tunisia / sorghum / yield_classes / european / yield_4_hl / ratio_to_line_total = 0 (total_mismatch)",
+   "sgt1922 1919 tunisia / broad_beans / yield_classes / indigenous / yield_6_hl_plus / area = 1105.13 (total_mismatch)",
+   "sgt1924 1919 tunisia / wheat / yield_classes / indigenous / yield_4_hl / ratio_to_line_total = 0.1211 (total_mismatch)",
+   "sgt1924 1919 tunisia / oats / yield_classes / european / yield_3_hl / ratio_to_line_total = 0.213 (total_mismatch)",
+   "sgt1924 1919 tunisia / oats / yield_classes / indigenous / yield_3_hl / area = 144.57 (total_mismatch)",
+   "sgt1923 1920 tunisia / broad_beans / yield_classes / european / yield_5_hl / area = 662.23 (reprint_corrected)",
+   "sgt1923 1920 tunisia / flax / yield_classes / european / yield_2_hl / area = 24 (reprint_corrected)",
+   "sgt1924 1920 tunisia / broad_beans / yield_classes / european / yield_1_hl / ratio_to_line_total = 0.5335 (total_mismatch)",
+   "sgt1924 1920 tunisia / chickpeas / yield_classes / european / yield_1_hl / area = 470.82 (total_mismatch)",
+   "sgt1924 1921 tunisia / barley / yield_classes / indigenous / yield_6_hl_plus / ratio_to_line_total = 0.0762 (total_mismatch)",
+   "sgt1924 1921 tunisia / chickpeas / yield_classes / european / yield_3_hl / ratio_to_line_total = 0.0171 (total_mismatch)",
+   "sgt1924 1921 tunisia / chickpeas / yield_classes / indigenous / yield_6_hl_plus / ratio_to_line_total = 0.0798 (total_mismatch)",
+   "sgt1924 1921 tunisia / flax / yield_classes / indigenous / yield_1_hl / ratio_to_line_total = 0.0960 (total_mismatch)",
+   "sgt1924 1922 tunisia / maize / yield_classes / indigenous / yield_2_hl / ratio_to_line_total = 0.0136 (total_mismatch)",
+   "sgt1925 1922 centre_south / wheat / yield_classes / indigenous / yield_6_hl_plus / percent_of_sown_area = 13.14 (total_mismatch)",
+   "sgt1925 1922 north / oats / yield_classes / indigenous / yield_6_hl_plus / percent_of_sown_area = 22.33 (total_mismatch)",
+   "sgt1924 1923 tunisia / wheat / yield_classes / european / yield_1_hl / ratio_to_line_total = 0.2015 (total_mismatch)",
+   "sgt1924 1923 tunisia / maize / yield_classes / european / yield_6_hl_plus / ratio_to_line_total = 0.9929 (total_mismatch)",
+   "sgt1924 1923 tunisia / flax / yield_classes / european / yield_1_hl / ratio_to_line_total = 0.0083 (total_mismatch)",
+   "sgt1924 1923 tunisia / flax / yield_classes / indigenous / yield_1_hl / ratio_to_line_total = 0.0236 (total_mismatch)",
+   "sgt1925 1925 north / wheat / yield_classes / indigenous / yield_6_hl_plus / area = 175582 (total_mismatch)",
+   "sgt1925 1925 north / oats / yield_classes / indigenous / yield_6_hl_plus / area = 14603 (total_mismatch)"
+  ],
+  "editions": [
+   "sgt1922",
+   "sgt1923",
+   "sgt1924",
+   "sgt1925"
+  ]
+ },
+ "agriculture_cereal_farmers": {
+  "rows": 132,
+  "checks": 87,
+  "failed": [
+   "sgt1926 p.251 (f815) split wheat_eur: average 1917-1921: cells give 77167.16, printed 77173.15 (difference 5.99)",
+   "sgt1926 p.251 (f815) split wheat_eur: average 1917-1926: cells give 91198.43, printed 91201.42 (difference 2.99)",
+   "sgt1927 p.243 (f271) split wheat_eur: average 1918-1922: cells give 79864.52, printed 79870.52 (difference 6.00)",
+   "sgt1927 p.243 (f271) split wheat_eur: average 1918-1927: cells give 95218.92, printed 95221.91 (difference 2.99)",
+   "sgt1927 p.243 (f271) split barley_eur: average 1918-1922: cells give 17039.89, printed 17057.89 (difference 18.00)",
+   "sgt1927 p.243 (f271) split barley_eur: average 1918-1927: cells give 19481.18, printed 19490.18 (difference 9.00)",
+   "sgt1927 p.243 (f271) split barley_ind: average 1918-1922: cells give 421210.86, printed 421216.85 (difference 5.99)",
+   "sgt1927 p.243 (f271) split barley_ind: average 1918-1927: cells give 420927.50, printed 420930.50 (difference 3.00)",
+   "sgt1927 p.243 (f271) split oats_eur: average 1918-1922: cells give 37826.36, printed 37806.36 (difference -20.00)",
+   "sgt1927 p.243 (f271) split oats_eur: average 1923-1927: cells give 23544.44, printed 23544.02 (difference -0.42)",
+   "sgt1927 p.243 (f271) split oats_eur: average 1918-1927: cells give 30685.40, printed 30675.28 (difference -10.12)",
+   "sgt1927 p.243 (f271) split oats_ind: average 1918-1927: cells give 20451.88, printed 10451.88 (difference -10000.00)",
+   "sgt1928 p.259 (f795) split wheat_eur: average 1919-1928: cells give 102156.23, printed 112156 (difference 9999.77)",
+   "sgt1928 p.259 (f795) split wheat_ind: average 1919-1923: cells give 474656.67, printed 514856 (difference 40199.33)",
+   "sgt1928 p.259 (f795) split wheat_ind: average 1919-1928: cells give 503300.36, printed 524400 (difference 21099.64)",
+   "sgt1928 p.259 (f795) split barley_eur: average 1919-1923: cells give 16952.66, printed 16738 (difference -214.66)",
+   "sgt1928 p.259 (f795) split barley_eur: average 1919-1928: cells give 20359.06, printed 20252 (difference -107.06)",
+   "sgt1928 p.259 (f795) split barley_ind: average 1919-1928: cells give 421707.12, printed 401707 (difference -20000.12)",
+   "sgt1930 p.263 (f807) split wheat_eur: average 1926-1930: cells give 137109.05, printed 138709 (difference 1599.95)",
+   "sgt1939 p.101 (f107) split soft_eur: average 1937-1939: cells give 121833.33, printed 121666 (difference -167.33)",
+   "sgt1939 p.101 (f107) split soft_ind: average 1937-1939: cells give 38833.33, printed 37666 (difference -1167.33)"
+  ],
+  "overlap_compared": 228,
+  "overlap_diffs": [
+   [
+    [
+     1920,
+     "wheat",
+     "european",
+     "area"
+    ],
+    "sgt1926",
+    "72914.55",
+    "sgt1929",
+    "72944.55"
+   ],
+   [
+    [
+     1920,
+     "wheat",
+     "european",
+     "area"
+    ],
+    "sgt1927",
+    "72914.55",
+    "sgt1929",
+    "72944.55"
+   ]
+  ],
+  "flagged": [
+   "sgt1926 1917 barley / european / area = 20494.88 (derived_from_totals)"
+  ],
+  "editions": [
+   "sgt1926",
+   "sgt1927",
+   "sgt1928",
+   "sgt1929",
+   "sgt1930",
+   "sgt1935",
+   "sgt1936",
+   "sgt1939"
+  ]
+ },
+ "agriculture_vine": {
+  "rows": 638,
+  "checks": 194,
+  "failed": [
+   "sgt1922 p.226 (f250) vine it_ha: lines vs TOTAUX: cells give 12841.67, printed 12889.37 (difference 47.70)",
+   "sgt1922 p.226 (f250) vine tot_n: lines vs TOTAUX: cells give 2439, printed 2499 (difference 60)",
+   "sgt1922 p.226 (f250) vine tot_ha: lines vs TOTAUX: cells give 23706.81, printed 23706.80 (difference -0.01)",
+   "sgt1922 p.226 (f250) vine TOTAUX: nationalities vs TOTAUX (n): cells give 2439, printed 2499 (difference 60)",
+   "sgt1922 p.226 (f250) vine Sfax: nationalities vs TOTAUX (ha): cells give 301.30, printed 347.80 (difference 46.50)",
+   "sgt1922 p.226 (f250) vine Tabarka: nationalities vs TOTAUX (ha): cells give 36.50, printed 37.70 (difference 1.20)",
+   "sgt1922 p.226 (f250) vine TOTAUX: nationalities vs TOTAUX (ha): cells give 23706.81, printed 23706.80 (difference -0.01)",
+   "sgt1923 p.238 (f740) vine am_n: lines vs TOTAUX: cells give 26, printed 25 (difference -1)",
+   "sgt1923 p.238 (f740) vine TOTAUX: nationalities vs TOTAUX (n): cells give 2571, printed 2572 (difference 1)",
+   "sgt1923 p.238 (f740) vine Grombalia: nationalities vs TOTAUX (ha): cells give 7465.30, printed 7565.30 (difference 100.00)",
+   "sgt1923 p.238 (f740) vine TOTAUX: nationalities vs TOTAUX (ha): cells give 24595.90, printed 24695.90 (difference 100.00)",
+   "sgt1925 p.280 (f304) vine tot_n: lines vs TOTAUX: cells give 2941, printed 2811 (difference -130)",
+   "sgt1925 p.280 (f304) vine TOTAUX: nationalities vs TOTAUX (n): cells give 2941, printed 2811 (difference -130)"
+  ],
+  "overlap_compared": 0,
+  "overlap_diffs": [],
+  "flagged": [
+   "sgt1922 1922  / Sfax / italian / area = 1.45 (total_mismatch)",
+   "sgt1922 1922  / Tabarka / italian / area = 10.25 (total_mismatch)"
+  ],
+  "editions": [
+   "sgt1922",
+   "sgt1923",
+   "sgt1924",
+   "sgt1925"
+  ]
+ },
+ "agriculture_olive": {
+  "rows": 1234,
+  "checks": 462,
+  "failed": [
+   "sgt1922 p.228 (f252) olive Djelass: classes vs total: cells give 412716, printed 412720 (difference 4)",
+   "sgt1922 p.228 (f252) olive Hammama: classes vs total: cells give 32457, printed 34457 (difference 2000)",
+   "sgt1922 p.228 (f252) olive TOTAUX: classes vs total: cells give 15109295, printed 15109296 (difference 1)",
+   "sgt1922 p.228 (f252) olive taxed: lines vs TOTAUX: cells give 9094188, printed 9094191 (difference 3)",
+   "sgt1922 p.228 (f252) olive total: lines vs TOTAUX: cells give 15111296, printed 15109296 (difference -2000)",
+   "sgt1923 p.240 (f742) olive Skhira (La): classes vs total: cells give 124403, printed 124423 (difference 20)",
+   "sgt1923 p.240 (f742) olive Cap-Bon > Soliman: classes vs total: cells give 1273452, printed 1273492 (difference 40)",
+   "sgt1923 p.240 (f742) olive Banlieue: classes vs total: cells give 924443, printed 224443 (difference -700000)",
+   "sgt1923 p.240 (f742) olive Kef: classes vs total: cells give 59359, printed 53359 (difference -6000)",
+   "sgt1923 p.240 (f742) olive Hammama: classes vs total: cells give 91635, printed 94635 (difference 3000)",
+   "sgt1923 p.240 (f742) olive unprod: lines vs TOTAUX: cells give 722867, printed 722887 (difference 20)",
+   "sgt1923 p.240 (f742) olive young: lines vs TOTAUX: cells give 5493628, printed 5493648 (difference 20)",
+   "sgt1923 p.240 (f742) olive total: lines vs TOTAUX: cells give 14557057, printed 15260037 (difference 702980)",
+   "sgt1924 p.254 (f1244) olive Medjez-el-Bab: classes vs total: cells give 55710, printed 15710 (difference -40000)",
+   "sgt1924 p.254 (f1244) olive Ouled-Aoun: classes vs total: cells give 48058, printed 51058 (difference 3000)",
+   "sgt1924 p.254 (f1244) olive unprod: lines vs TOTAUX: cells give 711312, printed 714312 (difference 3000)",
+   "sgt1924 p.254 (f1244) olive total: lines vs TOTAUX: cells give 15614347, printed 15654347 (difference 40000)",
+   "sgt1925 p.282 (f306) olive 3me Région / Le Kef / Maktar / Oulad Aoun: classes vs total: cells give 51058, printed 51088 (difference 30)",
+   "sgt1925 p.282 (f306) olive total: lines vs TOTAUX: cells give 16060067, printed 16060037 (difference -30)",
+   "sgt1927 p.245 (f273) olive 3me Région / Le Kef / Maktar / Oulad Ayar: classes vs total: cells give 48312, printed 48342 (difference 30)",
+   "sgt1927 p.245 (f273) olive 4me Région / Sousse / Sousse / Mahdia: classes vs total: cells give 1589078, printed 1619078 (difference 30000)",
+   "sgt1927 p.245 (f273) olive 4me Région / Sousse / Sousse / Sousse: classes vs total: cells give 1632627, printed 2132627 (difference 500000)",
+   "sgt1927 p.245 (f273) olive 5me Région / Sfax / Tozeur / Djerid: classes vs total: cells give 36011, printed 36081 (difference 70)",
+   "sgt1927 p.245 (f273) olive taxed: lines vs TOTAUX: cells give 10181157, printed 10211257 (difference 30100)",
+   "sgt1928 p.245 (f797) olive 1re Région / Bizerte / Bizerte / Mateur: classes vs total: cells give 140147, printed 142147 (difference 2000)",
+   "sgt1928 p.245 (f797) olive 1re Région / Bizerte / Souk-el-Arba / Souk-el-Arba: classes vs total: cells give 95113, printed 95023 (difference -90)",
+   "sgt1928 p.245 (f797) olive 1re Région / Bizerte / Souk-el-Arba / Souk-el-Khemis: classes vs total: cells give 8193, printed 2193 (difference -6000)",
+   "sgt1928 p.245 (f797) olive 2me Région / Tunis / Zaghouan / Zaghouan: classes vs total: cells give 99538, printed 39538 (difference -60000)",
+   "sgt1928 p.245 (f797) olive 3me Région / Le Kef / Téboursouk / Téboursouk: classes vs total: cells give 64261, printed 65261 (difference 1000)",
+   "sgt1928 p.245 (f797) olive 3me Région / Le Kef / Maktar / Oulad Ayar: classes vs total: cells give 48293, printed 48323 (difference 30)",
+   "sgt1928 p.245 (f797) olive TOTAUX: classes vs total: cells give 16317913, printed 16317983 (difference 70)",
+   "sgt1928 p.245 (f797) olive unprod: lines vs TOTAUX: cells give 766376, printed 766276 (difference -100)",
+   "sgt1928 p.245 (f797) olive young: lines vs TOTAUX: cells give 5340866, printed 5342866 (difference 2000)",
+   "sgt1928 p.245 (f797) olive taxed: lines vs TOTAUX: cells give 10207731, printed 10208771 (difference 1040)",
+   "sgt1928 p.245 (f797) olive total: lines vs TOTAUX: cells give 16251913, printed 16317983 (difference 66070)",
+   "sgt1929 p.247 (f275) olive 2me Région / Tunis / Grombalia / Cap-Bon > Nabeul: classes vs total: cells give 559611, printed 556611 (difference -3000)",
+   "sgt1929 p.247 (f275) olive 4me Région / Sousse / Sousse / Mahdia: classes vs total: cells give 1588529, printed 1618529 (difference 30000)",
+   "sgt1929 p.247 (f275) olive 4me Région / Sousse / Kairouan / Djelass: classes vs total: cells give 413023, printed 414023 (difference 1000)",
+   "sgt1929 p.247 (f275) olive 5me Région / Sfax / Sfax / Djebéniane: classes vs total: cells give 1147624, printed 1147574 (difference -50)",
+   "sgt1929 p.247 (f275) olive 5me Région / Sfax / Gafsa / Hammama: classes vs total: cells give 96012, printed 95612 (difference -400)",
+   "sgt1929 p.247 (f275) olive unprod: lines vs TOTAUX: cells give 769583, printed 769533 (difference -50)",
+   "sgt1929 p.247 (f275) olive young: lines vs TOTAUX: cells give 5162887, printed 5193490 (difference 30603)",
+   "sgt1929 p.247 (f275) olive taxed: lines vs TOTAUX: cells give 10408130, printed 10405130 (difference -3000)",
+   "sgt1929 p.247 (f275) olive total: lines vs TOTAUX: cells give 16368150, printed 16368153 (difference 3)",
+   "sgt1930 p.251 (f809) olive 1re Région / Bizerte / Bizerte / Bizerte: classes vs total: cells give 465179, printed 466179 (difference 1000)",
+   "sgt1930 p.251 (f809) olive Territoires Militaires du Sud /  /  / Ouerghemma: classes vs total: cells give 563950, printed 565950 (difference 2000)",
+   "sgt1930 p.251 (f809) olive taxed: lines vs TOTAUX: cells give 10391114, printed 10392114 (difference 1000)",
+   "sgt1930 p.251 (f809) olive total: lines vs TOTAUX: cells give 16371690, printed 16369690 (difference -2000)",
+   "sgt1935 p.129 (f149) olive 2me Région / Tunis / Grombalia / Cap-Bon > Soliman: classes vs total: cells give 1260856, printed 1261856 (difference 1000)",
+   "sgt1935 p.129 (f149) olive 4me Région / Sousse / Sousse / Mahdia: classes vs total: cells give 1627854, printed 1627863 (difference 9)",
+   "sgt1935 p.129 (f149) olive 4me Région / Sousse / Sousse / Monastir: classes vs total: cells give 2313883, printed 2313885 (difference 2)",
+   "sgt1935 p.129 (f149) olive 4me Région / Sousse / Thala / Sbeitla: classes vs total: cells give 32636, printed 32736 (difference 100)",
+   "sgt1935 p.129 (f149) olive 5me Région / Sfax / Gafsa / Hammama: classes vs total: cells give 115210, printed 115130 (difference -80)",
+   "sgt1935 p.129 (f149) olive young: lines vs TOTAUX: cells give 4808197, printed 4808217 (difference 20)",
+   "sgt1935 p.129 (f149) olive taxed: lines vs TOTAUX: cells give 11580992, printed 11581001 (difference 9)",
+   "sgt1935 p.129 (f149) olive total: lines vs TOTAUX: cells give 17145423, printed 17144421 (difference -1002)",
+   "sgt1936 p.99 (f110) olive 2me Région / Tunis / Grombalia / Cap-Bon > Soliman: classes vs total: cells give 1260856, printed 1261856 (difference 1000)",
+   "sgt1936 p.99 (f110) olive 4me Région / Sousse / Sousse / Mahdia: classes vs total: cells give 1627854, printed 1627863 (difference 9)",
+   "sgt1936 p.99 (f110) olive 4me Région / Sousse / Sousse / Monastir: classes vs total: cells give 2313883, printed 2313885 (difference 2)",
+   "sgt1936 p.99 (f110) olive 4me Région / Sousse / Thala / Sbeitla: classes vs total: cells give 32636, printed 32736 (difference 100)",
+   "sgt1936 p.99 (f110) olive 5me Région / Sfax / Gafsa / Hammama: classes vs total: cells give 115210, printed 115130 (difference -80)",
+   "sgt1936 p.99 (f110) olive young: lines vs TOTAUX: cells give 4808197, printed 4808217 (difference 20)",
+   "sgt1936 p.99 (f110) olive taxed: lines vs TOTAUX: cells give 11580992, printed 11581001 (difference 9)",
+   "sgt1936 p.99 (f110) olive total: lines vs TOTAUX: cells give 17145423, printed 17144421 (difference -1002)"
+  ],
+  "overlap_compared": 0,
+  "overlap_diffs": [],
+  "flagged": [
+   "sgt1923 1923  /  / Skhira (La) / unproductive_and_wild = 54 (total_mismatch)",
+   "sgt1923 1923  /  / Kef / unproductive_and_wild = 19873 (derived_from_totals)",
+   "sgt1924 1924  /  / Ouled-Aoun / unproductive_and_wild = 15581 (total_mismatch)",
+   "sgt1925 1925 1re Région / Tabarka / Aïn-Draham / unproductive_and_wild = None (not_applicable)",
+   "sgt1925 1925 1re Région / Tabarka / Aïn-Draham / young_untaxed = None (not_applicable)",
+   "sgt1925 1925 1re Région / Tabarka / Aïn-Draham / taxed = None (not_applicable)",
+   "sgt1925 1925 1re Région / Tabarka / Aïn-Draham / total = None (not_applicable)",
+   "sgt1926 1926 1re Région / Tabarka / Aïn-Draham / unproductive_and_wild = None (not_applicable)",
+   "sgt1926 1926 1re Région / Tabarka / Aïn-Draham / young_untaxed = None (not_applicable)",
+   "sgt1926 1926 1re Région / Tabarka / Aïn-Draham / taxed = None (not_applicable)",
+   "sgt1926 1926 1re Région / Tabarka / Aïn-Draham / total = None (not_applicable)",
+   "sgt1927 1927 1re Région / Tabarka / Aïn-Draham / unproductive_and_wild = None (not_applicable)",
+   "sgt1927 1927 1re Région / Tabarka / Aïn-Draham / young_untaxed = None (not_applicable)",
+   "sgt1927 1927 1re Région / Tabarka / Aïn-Draham / taxed = None (not_applicable)",
+   "sgt1927 1927 1re Région / Tabarka / Aïn-Draham / total = None (not_applicable)",
+   "sgt1927 1927 3me Région / Maktar / Oulad Ayar / taxed = 33633 (total_mismatch)",
+   "sgt1927 1927 4me Région / Sousse / Mahdia / taxed = 941943 (total_mismatch)",
+   "sgt1927 1927 4me Région / Sousse / Sousse / young_untaxed = 122974 (total_mismatch)",
+   "sgt1927 1927 5me Région / Tozeur / Djerid / taxed = 21411 (total_mismatch)",
+   "sgt1927 1927 Territoires Militaires du Sud /  / Matmata / unproductive_and_wild = None (not_applicable)",
+   "sgt1927 1927 Territoires Militaires du Sud /  / Matmata / young_untaxed = None (not_applicable)",
+   "sgt1927 1927 Territoires Militaires du Sud /  / Matmata / taxed = None (not_applicable)",
+   "sgt1927 1927 Territoires Militaires du Sud /  / Matmata / total = None (not_applicable)",
+   "sgt1928 1928 1re Région / Bizerte / Mateur / young_untaxed = 16224 (total_mismatch)",
+   "sgt1928 1928 1re Région / Tabarka / Aïn-Draham / unproductive_and_wild = None (not_applicable)",
+   "sgt1928 1928 1re Région / Tabarka / Aïn-Draham / young_untaxed = None (not_applicable)",
+   "sgt1928 1928 1re Région / Tabarka / Aïn-Draham / taxed = None (not_applicable)",
+   "sgt1928 1928 1re Région / Tabarka / Aïn-Draham / total = None (not_applicable)",
+   "sgt1928 1928 1re Région / Souk-el-Arba / Souk-el-Arba / unproductive_and_wild = 47803 (total_mismatch)",
+   "sgt1928 1928 1re Région / Souk-el-Arba / Souk-el-Arba / taxed = 25112 (total_mismatch)",
+   "sgt1928 1928 3me Région / Téboursouk / Téboursouk / taxed = 53795 (total_mismatch)",
+   "sgt1928 1928 3me Région / Maktar / Oulad Ayar / taxed = 33633 (total_mismatch)",
+   "sgt1929 1929 2me Région / Grombalia / Cap-Bon > Nabeul / taxed = 407751 (total_mismatch)",
+   "sgt1929 1929 4me Région / Sousse / Mahdia / young_untaxed = 558347 (total_mismatch)",
+   "sgt1929 1929 4me Région / Kairouan / Djelass / young_untaxed = 206347 (total_mismatch)",
+   "sgt1929 1929 5me Région / Sfax / Djebéniane / unproductive_and_wild = 19692 (total_mismatch)",
+   "sgt1929 1929 5me Région / Gafsa / Hammama / young_untaxed = 85990 (total_mismatch)",
+   "sgt1930 1930 1re Région / Bizerte / Bizerte / taxed = 428234 (total_mismatch)"
+  ],
+  "editions": [
+   "sgt1922",
+   "sgt1923",
+   "sgt1924",
+   "sgt1925",
+   "sgt1926",
+   "sgt1927",
+   "sgt1928",
+   "sgt1929",
+   "sgt1930",
+   "sgt1935",
+   "sgt1936",
+   "sgt1939"
+  ]
+ },
+ "agriculture_dates": {
+  "rows": 528,
+  "checks": 152,
+  "failed": [
+   "sgt1936 p.100 (f111) dates common a16: lines vs TOTAUX: cells give 252060, printed 249060 (difference -3000)",
+   "sgt1936 p.100 (f111) dates common Gafsa: ages vs TOTAL des jeunes: cells give 10352, printed 7352 (difference -3000)",
+   "sgt1939 p.104 (f110) dates degla a4: lines vs TOTAUX: cells give 16548, printed 16568 (difference 20)",
+   "sgt1939 p.104 (f110) dates degla a9: lines vs TOTAUX: cells give 15923, printed 15933 (difference 10)",
+   "sgt1939 p.104 (f110) dates degla total: lines vs TOTAUX: cells give 215993, printed 216693 (difference 700)",
+   "sgt1939 p.104 (f110) dates degla Gafsa: ages vs TOTAL des jeunes: cells give 567, printed 587 (difference 20)",
+   "sgt1939 p.104 (f110) dates degla Tozeur: mâles + jeunes + imposables vs TOTAL: cells give 196961, printed 196261 (difference -700)",
+   "sgt1939 p.104 (f110) dates degla Nefzaoua: ages vs TOTAL des jeunes: cells give 11297, printed 11307 (difference 10)",
+   "sgt1939 p.104 (f110) dates common a19: lines vs TOTAUX: cells give 247873, printed 248053 (difference 180)",
+   "sgt1939 p.104 (f110) dates common Gabès: ages vs TOTAL des jeunes: cells give 394114, printed 394294 (difference 180)"
+  ],
+  "overlap_compared": 0,
+  "overlap_diffs": [],
+  "flagged": [
+   "sgt1936 1936 Gafsa / common / age_16 = 5582 (total_mismatch)",
+   "sgt1939 1939 Gafsa / deglet_nour / age_4 = 8 (total_mismatch)",
+   "sgt1939 1939 Nefzaoua / deglet_nour / age_9 = 465 (total_mismatch)",
+   "sgt1939 1939 Gabès / common / age_19 = 100356 (total_mismatch)",
+   "sgt1939 1939 Tozeur / common / age_9 = 23241 (derived_from_totals)"
+  ],
+  "editions": [
+   "sgt1936",
+   "sgt1939"
+  ]
+ },
+ "agriculture_animals": {
+  "rows": 4336,
+  "checks": 1302,
+  "failed": [
+   "sgt1927 p.246 (f274) animals european horses: lines vs TOTAUX: cells give 9911, printed 9961 (difference 50)",
+   "sgt1927 p.250 (f278) animals total horses: lines vs TOTAUX: cells give 91748, printed 92348 (difference 600)",
+   "sgt1928 p.246 (f798) animals european sheep: lines vs TOTAUX: cells give 103563, printed 103557 (difference -6)",
+   "sgt1928 p.250 (f802) animals total mules: lines vs TOTAUX: cells give 40543, printed 40243 (difference -300)",
+   "sgt1928 p.250 (f802) animals total sheep: lines vs TOTAUX: cells give 2112814, printed 2172820 (difference 60006)",
+   "sgt1929 p.250 (f278) animals indigenous cattle: lines vs TOTAUX: cells give 442720, printed 443520 (difference 800)",
+   "sgt1929 p.250 (f278) animals indigenous goats: lines vs TOTAUX: cells give 1633843, printed 1634443 (difference 600)",
+   "sgt1929 p.252 (f280) animals total camels: lines vs TOTAUX: cells give 155642, printed 155842 (difference 200)",
+   "sgt1929 p.252 (f280) animals total mules: lines vs TOTAUX: cells give 43982, printed 40892 (difference -3090)",
+   "sgt1929 p.252 (f280) animals total goats: lines vs TOTAUX: cells give 1628926, printed 1664926 (difference 36000)",
+   "sgt1930 p.256 (f814) animals total camels: lines vs TOTAUX: cells give 165038, printed 164038 (difference -1000)",
+   "sgt1930 p.256 (f814) animals total mules: lines vs TOTAUX: cells give 43673, printed 43683 (difference 10)",
+   "sgt1930 p.256 (f814) animals total donkeys: lines vs TOTAUX: cells give 180133, printed 180153 (difference 20)",
+   "sgt1935 p.130 (f150) animals total horses: lines vs TOTAUX: cells give 101948, printed 101945 (difference -3)",
+   "sgt1936 p.102 (f113) animals total sheep: lines vs TOTAUX: cells give 3611388, printed 3532388 (difference -79000)",
+   "sgt1939 p.106 (f112) animals total camels: lines vs TOTAUX: cells give 152216, printed 152226 (difference 10)",
+   "sgt1927 p.250 (f278) animals 1re Région / Bizerte / Béja / Béja horses: européens + indigènes vs total: cells give 8953, printed 9003 (difference 50)",
+   "sgt1927 p.250 (f278) animals Territoires militaires du Sud /  /  / Ouerghemma horses: européens + indigènes vs total: cells give 910, printed 310 (difference -600)",
+   "sgt1928 p.250 (f802) animals 1re Région / Bizerte / Béja / Béja sheep: européens + indigènes vs total: cells give 74521, printed 14518 (difference -60003)",
+   "sgt1928 p.250 (f802) animals 1re Région / Bizerte / Bizerte / Bizerte camels: européens + indigènes vs total: cells give 338, printed 339 (difference 1)",
+   "sgt1928 p.250 (f802) animals 2me Région / Tunis / Grombalia / Cap-Bon > Soliman sheep: européens + indigènes vs total: cells give 14807, printed 14801 (difference -6)",
+   "sgt1928 p.250 (f802) animals 3me Région / Le Kef / Medjez-el-Bab / Medjez-el-Bab sheep: européens + indigènes vs total: cells give 45182, printed 45179 (difference -3)",
+   "sgt1928 p.250 (f802) animals 4me Région / Sousse / Kairouan / Kairouan camels: européens + indigènes vs total: cells give 7266, printed 7265 (difference -1)",
+   "sgt1928 p.250 (f802) animals 4me Région / Sousse / Thala / Fraichiches mules: européens + indigènes vs total: cells give 685, printed 985 (difference 300)",
+   "sgt1929 p.252 (f280) animals 2me Région / Tunis / Tunis / Banlieue mules: européens + indigènes vs total: cells give 5305, printed 5395 (difference 90)",
+   "sgt1929 p.252 (f280) animals 2me Région / Tunis / Grombalia / Cap-Bon > Nabeul cattle: européens + indigènes vs total: cells give 37226, printed 38026 (difference 800)",
+   "sgt1929 p.252 (f280) animals 3me Région / Le Kef / Téboursouk / Téboursouk mules: européens + indigènes vs total: cells give 1997, printed 4997 (difference 3000)",
+   "sgt1929 p.252 (f280) animals 3me Région / Le Kef / Mactar / Oulad Ayar camels: européens + indigènes vs total: cells give 1580, printed 1380 (difference -200)",
+   "sgt1929 p.252 (f280) animals 5me Région / Sfax / Gabès / L'Aradh goats: européens + indigènes vs total: cells give 29378, printed 29978 (difference 600)",
+   "sgt1929 p.252 (f280) animals Territoires militaires du Sud /  /  / Ouerghemma goats: européens + indigènes vs total: cells give 73900, printed 37900 (difference -36000)",
+   "sgt1929 p.252 (f280) animals Territoires militaires du Sud /  /  / Tatahouine horses: européens + indigènes vs total: cells give 465, printed 464 (difference -1)",
+   "sgt1929 p.252 (f280) animals Territoires militaires du Sud /  /  / Matmata horses: européens + indigènes vs total: cells give 41, printed 42 (difference 1)",
+   "sgt1930 p.256 (f814) animals 5me Région / Sfax / Sfax / Sfax goats: européens + indigènes vs total: cells give 11333, printed 11903 (difference 570)",
+   "sgt1930 p.256 (f814) animals 5me Région / Sfax / Sfax / La Skhira goats: européens + indigènes vs total: cells give 37919, printed 37349 (difference -570)",
+   "sgt1930 p.256 (f814) animals 5me Région / Sfax / Sfax / Djebéniana camels: européens + indigènes vs total: cells give 8084, printed 9084 (difference 1000)",
+   "sgt1930 p.256 (f814) animals Territoires militaires du Sud /  /  / Tatahouine mules: européens + indigènes vs total: cells give 60, printed 50 (difference -10)",
+   "sgt1930 p.256 (f814) animals TOTAUX donkeys: européens + indigènes vs total: cells give 180133, printed 180153 (difference 20)"
+  ],
+  "overlap_compared": 0,
+  "overlap_diffs": [],
+  "flagged": [
+   "sgt1927 1927 1re Région / Béja / Béja / european / horses = 634 (total_mismatch)",
+   "sgt1927 1927 Territoires militaires du Sud /  / Ouerghemma / total / horses = 310 (total_mismatch)",
+   "sgt1928 1928 2me Région / Grombalia / Cap-Bon > Soliman / european / sheep = 2553 (total_mismatch)",
+   "sgt1928 1928 1re Région / Béja / Béja / total / sheep = 14518 (total_mismatch)",
+   "sgt1928 1928 4me Région / Thala / Fraichiches / total / mules = 985 (total_mismatch)",
+   "sgt1928 1928 4me Région / Thala / Madjeurs / total / pigs = 16 (derived_from_totals)",
+   "sgt1929 1929 2me Région / Grombalia / Cap-Bon > Nabeul / indigenous / cattle = 36065 (total_mismatch)",
+   "sgt1929 1929 5me Région / Gabès / L'Aradh / indigenous / goats = 29106 (total_mismatch)",
+   "sgt1929 1929 2me Région / Tunis / Banlieue / total / mules = 5395 (total_mismatch)",
+   "sgt1929 1929 3me Région / Téboursouk / Téboursouk / total / mules = 4997 (total_mismatch)",
+   "sgt1929 1929 3me Région / Mactar / Oulad Ayar / total / camels = 1380 (total_mismatch)",
+   "sgt1929 1929 4me Région / Thala / Madjeurs / total / pigs = 16 (derived_from_totals)",
+   "sgt1929 1929 Territoires militaires du Sud /  / Ouerghemma / total / goats = 37900 (total_mismatch)",
+   "sgt1930 1930 5me Région / Sfax / Djebéniana / total / camels = 9084 (total_mismatch)",
+   "sgt1930 1930 Territoires militaires du Sud /  / Tatahouine / total / mules = 50 (total_mismatch)",
+   "sgt1935 1935 3me Région / Téboursouk / Téboursouk / total / goats = None (illegible)",
+   "sgt1935 1935 4me Région / Kairouan / Kairouan / total / goats = None (illegible)",
+   "sgt1939 1939 2me Région / Grombalia / Cap-Bon > Nabeul / total / horses = None (illegible)"
+  ],
+  "editions": [
+   "sgt1927",
+   "sgt1928",
+   "sgt1929",
+   "sgt1930",
+   "sgt1935",
+   "sgt1936",
+   "sgt1939"
+  ]
+ },
+ "agriculture_forest_area": {
+  "rows": 168,
+  "checks": 540,
+  "failed": [
+   "sgt1924 p.255 (f1245) forest_a 1915: bornage_total = previous line + n_bornage + hp_bornage: cells give 16123, printed 15823 (difference -300)",
+   "sgt1924 p.255 (f1245) forest_a 1924: bornage_total = previous line + n_bornage + hp_bornage: cells give 87843, printed 88843 (difference 1000)"
+  ],
+  "overlap_compared": 1026,
+  "overlap_diffs": [
+   [
+    [
+     1915,
+     "1915",
+     "north",
+     "bounded_in_year"
+    ],
+    "sgt1924",
+    "2460",
+    "sgt1930",
+    "2160"
+   ],
+   [
+    [
+     1924,
+     "1924",
+     "both",
+     "bounded_total"
+    ],
+    "sgt1924",
+    "88843",
+    "sgt1930",
+    "87843"
+   ]
+  ],
+  "flagged": [
+   "sgt1930 1926 1926 / north / total_area = None (not_applicable)",
+   "sgt1930 1926 1926 / high_plateaux / total_area = None (not_applicable)",
+   "sgt1930 1926 1926 / both / total_delimited = None (not_applicable)",
+   "sgt1930 1927 1927 / north / total_area = None (not_applicable)",
+   "sgt1930 1927 1927 / high_plateaux / total_area = None (not_applicable)",
+   "sgt1930 1927 1927 / both / total_delimited = None (not_applicable)",
+   "sgt1930 1928 1928 / north / total_area = None (not_applicable)",
+   "sgt1930 1928 1928 / high_plateaux / total_area = None (not_applicable)",
+   "sgt1930 1928 1928 / both / total_delimited = None (not_applicable)",
+   "sgt1930 1929 1929 / north / total_area = None (not_applicable)",
+   "sgt1930 1929 1929 / high_plateaux / total_area = None (not_applicable)",
+   "sgt1930 1929 1929 / both / total_delimited = None (not_applicable)",
+   "sgt1930 1930 1930 / north / total_area = None (not_applicable)",
+   "sgt1930 1930 1930 / high_plateaux / total_area = None (not_applicable)",
+   "sgt1930 1930 1930 / both / total_delimited = None (not_applicable)"
+  ],
+  "editions": [
+   "sgt1922",
+   "sgt1923",
+   "sgt1924",
+   "sgt1925",
+   "sgt1926",
+   "sgt1927",
+   "sgt1928",
+   "sgt1929",
+   "sgt1930"
+  ]
+ },
+ "agriculture_forest_domain": {
+  "rows": 110,
+  "checks": 69,
+  "failed": [
+   "sgt1935 p.133 (f153) forest_domain 1931: total = Nord + Hauts plateaux: cells give 938040, printed 1001040 (difference 63000)",
+   "sgt1935 p.133 (f153) forest_domain 1931: hp_total = previous line + hp_new - declassed: cells give 781990, printed 718990 (difference -63000)",
+   "sgt1935 p.133 (f153) forest_domain 1931: bornage_total = previous line + n_bornage + hp_bornage: cells give 184066, printed 198415 (difference 14349)",
+   "sgt1935 p.133 (f153) forest_domain 1932: hp_total = previous line + hp_new - declassed: cells give 717954, printed 780954 (difference 63000)",
+   "sgt1936 p.104 (f115) forest_domain before_1932: total = Nord + Hauts plateaux: cells give 1948645, printed 2011645 (difference 63000)",
+   "sgt1936 p.104 (f115) forest_domain 1932: n_total = previous line + n_new - declassed: cells give 438580, printed 217993 (difference -220587)",
+   "sgt1936 p.104 (f115) forest_domain 1932: hp_total = previous line + hp_new - declassed: cells give 1507972, printed 780954 (difference -727018)",
+   "sgt1936 p.104 (f115) forest_domain 1932: bornage_total = previous line + n_bornage + hp_bornage: cells give 385271, printed 208525 (difference -176746)",
+   "sgt1939 p.108 (f114) forest_domain 1934: total = Nord + Hauts plateaux: cells give 996269, printed 996262 (difference -7)",
+   "sgt1939 p.108 (f114) forest_domain 1934: hp_total = previous line + hp_new - declassed: cells give 778302, printed 778309 (difference 7)",
+   "sgt1939 p.108 (f114) forest_domain 1935: hp_total = previous line + hp_new - declassed: cells give 778061, printed 778054 (difference -7)"
+  ],
+  "overlap_compared": 89,
+  "overlap_diffs": [
+   [
+    [
+     1932,
+     "1932",
+     "north",
+     "newly_bounded"
+    ],
+    "sgt1935",
+    "1110",
+    "sgt1939",
+    "2110"
+   ],
+   [
+    [
+     1932,
+     "1932",
+     "north",
+     "newly_bounded"
+    ],
+    "sgt1936",
+    "1110",
+    "sgt1939",
+    "2110"
+   ],
+   [
+    [
+     1934,
+     "1934",
+     "high_plateaux",
+     "domain_area"
+    ],
+    "sgt1935",
+    "778302",
+    "sgt1939",
+    "778309"
+   ],
+   [
+    [
+     1934,
+     "1934",
+     "high_plateaux",
+     "domain_area"
+    ],
+    "sgt1936",
+    "778302",
+    "sgt1939",
+    "778309"
+   ]
+  ],
+  "flagged": [
+   "sgt1935 1931 1931 / high_plateaux / domain_area = 718990 (total_mismatch)",
+   "sgt1936 1931 before_1932 / north / domain_area = 439637 (total_mismatch)",
+   "sgt1936 1931 before_1932 / high_plateaux / domain_area = 1509008 (total_mismatch)",
+   "sgt1936 1931 before_1932 / both / domain_area_total = 2011645 (total_mismatch)",
+   "sgt1936 1931 before_1932 / both / bounded_total = 375161 (total_mismatch)",
+   "sgt1936 1932 1932 / north / newly_bounded = 1110 (reprint_corrected)",
+   "sgt1936 1934 1934 / high_plateaux / domain_area = 778302 (reprint_corrected)"
+  ],
+  "editions": [
+   "sgt1935",
+   "sgt1936",
+   "sgt1939"
+  ]
+ },
+ "agriculture_forest_products": {
+  "rows": 455,
+  "checks": 63,
+  "failed": [
+   "sgt1924 p.256 (f1246) forest_b fuel: lines vs Total: cells give 62641, printed 62637 (difference -4)"
+  ],
+  "overlap_compared": 0,
+  "overlap_diffs": [],
+  "flagged": [],
+  "editions": [
+   "sgt1922",
+   "sgt1923",
+   "sgt1924",
+   "sgt1925",
+   "sgt1926",
+   "sgt1927",
+   "sgt1928",
+   "sgt1929",
+   "sgt1930",
+   "sgt1935",
+   "sgt1936",
+   "sgt1939"
+  ]
+ },
+ "agriculture_forest_revenue": {
+  "rows": 101,
+  "checks": 26,
+  "failed": [
+   "sgt1923 p.242 (f744) forest_c Bois d'industrie (chêne-zéen, bois de charronnage): quantity x unit price = prix total (to half a centime per unit): cells give 1086681.89, printed 1036806 (difference -49875.89)",
+   "sgt1923 p.242 (f744) forest_c Liège de reproduction: quantity x unit price = prix total (to half a centime per unit): cells give 190600280.00, printed 1906471.30 (difference -188693808.70)",
+   "sgt1936 p.104 (f115) forest_c lines vs TOTAL: cells give 6696691.90, printed 6696688.90 (difference -3.00)"
+  ],
+  "overlap_compared": 0,
+  "overlap_diffs": [],
+  "flagged": [
+   "sgt1923 1923 6 / unit_price = 2872 (total_mismatch)"
+  ],
+  "editions": [
+   "sgt1922",
+   "sgt1923",
+   "sgt1924",
+   "sgt1925",
+   "sgt1926",
+   "sgt1927",
+   "sgt1928",
+   "sgt1929",
+   "sgt1930",
+   "sgt1935",
+   "sgt1936",
+   "sgt1939"
+  ]
+ },
+ "agriculture_forest_offences_fires": {
+  "rows": 29,
+  "checks": 0,
+  "failed": [],
+  "overlap_compared": 0,
+  "overlap_diffs": [],
+  "flagged": [],
+  "editions": [
+   "sgt1922",
+   "sgt1923",
+   "sgt1924",
+   "sgt1925",
+   "sgt1926",
+   "sgt1927"
+  ]
+ },
+ "_chapter_views": {
+  "sgt1922": [
+   231,
+   280
+  ],
+  "sgt1923": [
+   721,
+   770
+  ],
+  "sgt1924": [
+   1217,
+   1274
+  ],
+  "sgt1925": [
+   287,
+   342
+  ],
+  "sgt1926": [
+   803,
+   852
+  ],
+  "sgt1927": [
+   259,
+   314
+  ],
+  "sgt1928": [
+   783,
+   842
+  ],
+  "sgt1929": [
+   261,
+   320
+  ],
+  "sgt1930": [
+   795,
+   856
+  ],
+  "sgt1935": [
+   139,
+   154
+  ],
+  "sgt1936": [
+   100,
+   115
+  ],
+  "sgt1939": [
+   99,
+   114
+  ]
+ },
+ "_survey": {
+  "sgt1922": "f231 chapter XI title (Agriculture); f232 blank; f233 Superficie a)-d) [transcribed]; f234|f235 Productions végétales, cultures diverses, superficie et production (1913-1922) a) céréales [transcribed]; f236|f237 b) autres plantes alimentaires, c) plantes industrielles [transcribed]; f238|f239 d) plantes arbustives [transcribed]; f240|f241 Principales cultures, rendement et répartition a) blé (1914-1922; surfaces ensemencées, imposées, non imposées, by yield class, européennes / indigènes); f242|f243 b) orge; f244|f245 c) avoine; f246|f247 d)-f) (fèves, maïs, sorgho); f248|f249 g) pois chiches (h) lin); f250|f251 i) vigne, répartition des viticulteurs par contrôle et par nationalité; f252 j) oliviers, répartition par caïdat; f253 Forêts a) superficie des terrains domaniaux boisés, délimitations (1903-1922) [transcribed]; f254 b) produits forestiers (adjudications) [b)-e) transcribed]; f255-f259 Météorologie a) relevé pluviométrique de l'année agricole 1921-1922 (pluies par saison, by station); f260-f269 b) relevé pluviométrique de l'année solaire (mm and days per month, by station); f270|f271 c) données climatologiques 1922 par région; f272|f273 d) statistique thermométrique 1911-1920; f274 École coloniale d'agriculture a) lieu d'origine des élèves (1898-1922); f275 b) promotions; f276 c) effectif par année scolaire; f277 Service botanique a) essais de variétés nouvelles (1912-1922); f278 b) vente de semences pédigrées (1910-1922); f279 c) ventes d'arbres et de plantes (1917-1922); f280 blank. f281 = chapter XII Commerce et navigation.",
+  "sgt1923": "f721 title; f722 blank; f723 Superficie [transcribed]; f724|f725, f726|f727, f728|f729 cultures diverses 1914-1923 [transcribed]; f730|f731 principales cultures a) blé (1915-1923); f732|f733 b) orge; f734|f735 c) avoine (1918-1923); f736|f737 e) sorgho...; f738|f739 g) pois chiches (1919-1923); f740|f741 i) vigne par contrôle et nationalité; f742 l) oliviers par caïdat; f743 forêts a) (1903-1923) [transcribed]; f744 b) produits forestiers [b)-e) transcribed]; f745-f749 météorologie a) année agricole 1922-1923; f750-f759 b) année solaire; f760|f761 c) données climatologiques 1923; f762-f764 d) pluviométrie agricole 1900-1901 à 1919-1920 (moyennes par période quinquennale); f765-f767 école coloniale a)-c) (1898-1923); f768-f770 service botanique a)-c). f771 = chapter XII.",
+  "sgt1924": "f1217 title; f1218 blank; f1219 Superficie [transcribed]; f1220-f1225 cultures diverses 1915-1924 [transcribed]; f1226-f1241 principales cultures a) blé ... (eight two-page spreads, 1915/1918/1919-1924; f1240 without OCR); f1242|f1243 i) vigne par contrôle et nationalité; f1244 j) oliviers par caïdat; f1245 forêts a) (1903-1924) [transcribed]; f1246 b) [b)-e) transcribed]; f1247-f1251 météorologie a) 1923-1924; f1252-f1263 b) année solaire; f1264|f1265 c); f1266-f1268 d) moyennes pluviométriques 1911-1920; f1269-f1271 école coloniale a)-c); f1272-f1274 service botanique a)-c). f1275 = chapter XII.",
+  "sgt1925": "f287 title; f288 blank; f289 Superficie [transcribed]; f290|f291 cultures diverses a) céréales 1° Tunisie septentrionale et Hauts plateaux [transcribed]; f292|f293 2° Tunisie centrale et méridionale [transcribed]; f294|f295 b), c) [transcribed]; f296|f297 d) [transcribed]; f298|f299 principales cultures a) blé (1921-1925); f300|f301 by zone (Tunisie septentrionale / centrale et méridionale); f302|f303 c) avoine...; f304|f305 i) vigne par régions et nationalité; f306 oliviers par régions; f307 forêts a) (1903-1925) [transcribed]; f308 b) [b)-e) transcribed]; f309-f315 météorologie a) 1924-1925; f316-f329 b) année solaire; f330|f331 c); f332-f334 pluviométrie agricole 1900-1901 à 1924-1925; f335-f337 Institutions d'enseignement et de recherches: école coloniale a)-c); f338-f340 service botanique a)-c); f341 laboratoire de chimie, analyses effectuées; f342 blank. f343 = chapter XII.",
+  "sgt1926": "f803 title; f804 blank; f805 Superficie [transcribed]; f806-f811 cultures diverses 1917-1926 [transcribed]; f812|f813 principales cultures a) céréales, rendement par zone (Nord, Centre et Sud, 1917-1926); f814|f815 b) céréales, répartition de la superficie entre européens et indigènes; f816 d) oliviers par régions; f817 forêts a) (1903-1926) [transcribed]; f818 b) [b)-e) transcribed]; f819-f825 météorologie a) 1925-1926; f826-f839 b); f840|f841 c); f842-f845 d) températures moyennes et extrêmes 1901-1925; f846-f848 école coloniale a)-c); f849|f850 service botanique a) semences, b) arbres; f851 laboratoire de chimie; f852 blank. f853 = chapter XII.",
+  "sgt1927": "f259 title; f260 blank; f261 Superficie [transcribed]; f262-f267 cultures diverses 1918-1927 [transcribed]; f268|f269 principales cultures a) rendement par zone (1918-1927); f270|f271 b) répartition européens / indigènes; f272|f273 d) oliviers par régions; f274-f279 Animaux a) nombre d'animaux de chaque espèce des européens, b) des indigènes, c) total (by contrôle civil); f280 forêts a) [transcribed]; f281 b) [b)-e) transcribed]; f282-f287 météorologie a) 1926-1927; f288-f303 b); f304|f305 c); f306|f307 d) 1901-1925; f308-f310 école coloniale; f311|f312 service botanique; f313 laboratoire de chimie; f314 blank. f315 = chapter XII.",
+  "sgt1928": "f783 title; f784 blank; f785 Superficie [transcribed]; f786-f791 cultures diverses 1919-1928 [transcribed; f787, f789 without OCR]; f792|f793 principales cultures a) rendement par zone; f794|f795 b) répartition; f796|f797 d) oliviers par régions; f798-f803 animaux a)-c); f804 forêts a) [transcribed]; f805 b) [b), c) transcribed]; f806-f812 météorologie a) 1927-1928; f813-f829 b); f830|f831 c); f832-f835 humidité relative 1901-1925; f836-f838 école coloniale; f839|f840 service botanique; f841 laboratoire de chimie; f842 blank. f843 = chapter XII.",
+  "sgt1929": "f261 title; f262 blank; f263 Superficie [transcribed]; f264-f269 cultures diverses 1920-1929 [transcribed]; f270|f271 principales cultures a); f272|f273 b); f274|f275 d) oliviers par régions; f276-f281 animaux a)-c); f282 forêts a) [transcribed]; f283 b) [b), c) transcribed]; f284-f290 météorologie a) 1928-1929; f291-f309 b); f310|f311 c) (année 1929); f312 station centrale de la Manoubia (année 1929); f313-f315 école coloniale; f316|f317 service botanique; f318 laboratoire de chimie (Tunis); f319 (Sfax); f320 blank. f321 = chapter XII.",
+  "sgt1930": "f795 title; f796 blank; f797 Superficie [transcribed]; f798-f803 cultures diverses 1921-1930 [transcribed]; f804|f805 principales cultures a); f806|f807 b); f808|f809 d) oliviers par régions; f810-f815 animaux a)-c); f816 forêts a) [transcribed]; f817 b) [b), c) transcribed]; f818-f825 météorologie a) 1929-1930; f826-f843 b) année 1930; f844|f845 c); f846-f849 pluies moyennes 1926-1930 et 1901-1930; f850-f852 école coloniale; f853|f854 service botanique; f855 laboratoire de chimie (Tunis); f856 (Sfax). f857 = chapter XII.",
+  "sgt1935": "f139 chapter XI title; f140 blank; f141 Superficie [transcribed]; f142 cultures diverses a) (1933-1935) [transcribed]; f143 b), c) [transcribed]; f144 d) [transcribed]; f145 principales cultures a) rendement par zone (1933-1935); f146|f147 b) répartition européens / indigènes; f148|f149 d) oliviers par régions; f150|f151 animaux, nombre total (européens et tunisiens) by contrôle; f152 blank (confirmed on the image); f153 forêts a) superficie et modifications du domaine soumis au régime forestier, b) produits forestiers [transcribed], c) rendement en argent [transcribed]; f154 blank. f155 = chapter XII Institutions d'enseignement et de recherches (with the school, the laboratories and the meteorology: research_ chapter).",
+  "sgt1936": "f100 chapter X title; f101 blank; f102 Superficie [transcribed]; f103-f105 cultures diverses (1934-1936) [transcribed]; f106 rendement par zone; f107|f108 répartition européens / indigènes; f109|f110 oliviers par régions; f111|f112 dattiers, relevé par caïdat du nombre d'arbres d'après leur âge au 1er novembre 1936; f113|f114 animaux jeunes et imposables (rôle de 1936) by contrôle; f115 forêts, consistance du domaine soumis au régime forestier, produits forestiers [transcribed], rendement en argent [transcribed]. f116 = chapter XI Institutions d'enseignement et de recherches (Institut Pasteur, Institut Arloing, école coloniale, service botanique, laboratoires, f123-f144 relevé pluviométrique 1936); f146 = chapter XII Commerce. The range 100-145 of CHAPTERS.md is 100-115 for Agriculture.",
+  "sgt1939": "f99 chapter X title; f100 Superficie [transcribed]; f101 céréales (1937-1939) [transcribed]; f102 autres plantes alimentaires, plantes industrielles [transcribed]; f103|f104 cultures arbustives et fruitières [transcribed]; f105 rendement par zone; f106|f107 répartition européens / indigènes; f108|f109 oliviers par régions; f110|f111 dattiers par caïdat; f112|f113 animaux jeunes et imposables (rôle de 1939, printed) by contrôle; f114 forêts, consistance du domaine soumis au régime forestier, produits forestiers [transcribed], rendement en argent [transcribed]. f115 = chapter XI Institutions d'enseignement et de recherches."
+ },
+ "_not_transcribed": "Transcribed (every printing, every cell read on native-resolution crops): Superficie (agriculture_land), Cultures diverses (agriculture_crops), cereal yields by zone (agriculture_cereal_zones), principales cultures by yield class sgt1922-sgt1925 (agriculture_yield_classes), répartition européens / indigènes sgt1926-sgt1939 (agriculture_cereal_farmers), vigne by contrôle and nationality sgt1922-sgt1925 (agriculture_vine), oliviers by caïdat / région, all editions (agriculture_olive), dattiers by caïdat and age sgt1936 and sgt1939 (agriculture_dates), animaux by contrôle and caïdat sgt1927-sgt1939 (agriculture_animals). forêts a) sgt1922-sgt1930 (agriculture_forest_area), consistance du domaine forestier sgt1935-sgt1939 (agriculture_forest_domain), forêts b) produits forestiers, all editions (agriculture_forest_products). forêts c) rendement en argent, all editions (agriculture_forest_revenue), d) poursuites des délits and e) incendies sgt1922-sgt1927 (agriculture_forest_offences_fires). Météorologie, école coloniale d'agriculture, service botanique and laboratoires de chimie belong to the research_ extraction."
+}

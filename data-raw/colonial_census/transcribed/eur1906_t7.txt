@@ -1,0 +1,165 @@
+# Table VII, transcribed from page-image crops (views 29-32).
+# Per circonscription: 6 nationality lines of 32 values (column order in
+# extract_eur1906_t6_t7.py: T7_COLS), then PAIR (18 printed pair totals:
+# 7 groups x active/family M+F, then rentiers M, F, unclassified M, F) and
+# GROUP (9 printed group totals). » is written 0.
+Béja|french|116 5 33 81 38 10 14 43 72 1 19 58 25 0 18 31 61 2 17 53 4 0 4 8 13 0 3 14 3 5 4 18
+Béja|italian|108 7 99 147 21 2 19 28 506 1 187 479 58 0 65 44 9 0 9 16 0 0 0 0 6 3 3 9 2 0 41 14
+Béja|maltese|1 0 0 3 5 1 8 7 6 0 0 0 4 0 1 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0
+Béja|spanish|0 0 0 0 2 0 0 0 4 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1
+Béja|greek|0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Béja|other_european|1 0 0 2 2 0 0 0 5 0 0 8 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Béja|PAIR|238 365 82 119 596 753 88 163 72 95 4 12 22 29 5 5 46 33
+Béja|GROUP|603 201 1349 251 167 16 51 10 79
+Medjez-el-Bab|french|115 2 55 115 5 4 0 4 26 0 10 12 19 1 10 17 22 1 10 21 3 0 4 9 3 2 2 3 1 1 1 1
+Medjez-el-Bab|italian|74 0 31 53 4 0 11 12 68 4 21 44 11 0 13 21 7 0 4 15 0 0 0 0 0 1 0 0 0 0 1 2
+Medjez-el-Bab|maltese|1 0 0 2 4 0 3 5 1 0 0 1 2 0 0 5 0 0 0 0 0 0 0 0 1 0 0 2 0 0 0 0
+Medjez-el-Bab|spanish|2 0 2 7 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1
+Medjez-el-Bab|greek|0 0 0 0 1 0 0 2 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Medjez-el-Bab|other_european|2 0 1 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Medjez-el-Bab|PAIR|196 269 19 37 99 89 33 66 30 50 3 13 7 7 1 1 2 4
+Medjez-el-Bab|GROUP|465 56 188 99 80 16 14 2 6
+Bizerte|french|224 4 113 195 156 33 102 185 374 12 178 404 134 0 79 186 334 38 175 397 37 0 10 47 40 13 30 59 200 463 110 279
+Bizerte|italian|497 1 502 716 325 22 253 436 1389 0 1196 1836 247 0 239 427 3 0 5 7 0 0 0 0 37 11 33 43 96 114 257 477
+Bizerte|maltese|51 0 19 57 40 7 25 56 44 0 27 41 26 0 22 30 0 0 0 0 0 0 0 0 1 0 0 0 13 22 8 18
+Bizerte|spanish|6 1 0 1 9 2 2 4 12 1 6 6 0 0 0 0 0 0 0 0 0 0 0 0 2 0 0 0 4 3 7 26
+Bizerte|greek|0 0 0 0 3 1 3 5 2 0 0 1 1 0 1 1 0 0 0 0 0 0 0 0 4 0 0 0 2 2 0 3
+Bizerte|other_european|10 3 0 4 4 0 3 1 14 0 2 7 0 0 0 0 0 0 0 0 0 0 0 0 2 10 0 0 4 3 6 6
+Bizerte|PAIR|797 1607 602 1075 1848 3704 408 985 375 584 37 57 120 165 319 607 388 809
+Bizerte|GROUP|2404 1677 5552 1393 959 94 285 926 1197
+Gabès|french|4 0 0 3 11 3 7 17 32 16 23 45 2 0 0 2 42 4 14 75 4 0 1 1 4 0 0 6 10 8 0 1
+Gabès|italian|2 0 4 6 11 0 10 29 74 44 59 108 0 0 0 0 0 0 0 0 0 0 0 0 2 1 1 4 2 6 1 1
+Gabès|maltese|2 0 1 3 17 0 7 24 20 9 13 35 13 0 8 22 0 0 0 0 0 0 0 0 3 0 0 0 0 1 5 13
+Gabès|spanish|0 0 0 0 0 0 0 0 1 0 0 1 2 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5
+Gabès|greek|0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Gabès|other_european|0 0 0 0 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Gabès|PAIR|8 17 44 95 196 284 17 33 46 89 4 2 10 11 12 15 6 20
+Gabès|GROUP|25 139 480 50 135 6 21 27 26
+Djerba|french|7 0 2 10 11 2 4 15 6 1 5 10 0 0 0 0 37 2 20 38 1 0 0 0 2 0 0 7 2 1 2 2
+Djerba|italian|0 0 0 0 10 2 7 17 11 0 10 14 2 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 2 2 2 5
+Djerba|maltese|0 0 0 0 27 2 23 31 57 3 45 94 7 0 2 13 3 1 1 1 0 0 0 0 1 0 0 0 0 0 13 21
+Djerba|spanish|0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Djerba|greek|0 0 0 0 7 7 4 5 3 0 5 4 1 0 0 2 0 0 0 0 0 0 0 0 1 0 2 2 0 0 2 3
+Djerba|other_european|0 0 0 0 9 0 6 6 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2 5
+Djerba|PAIR|7 12 70 118 81 187 10 19 43 60 1 0 4 11 4 3 21 36
+Djerba|GROUP|19 188 268 29 103 1 15 7 57
+# Gafsa transport active M: leading digits hidden in the binding; visible 5 / 9 / 4 (?9, ?4 = last digit visible); solved from printed total 58, Table G and Table VI
+Gafsa|french|11 0 2 10 34 0 13 39 174 0 40 145 ? 0 20 34 21 0 10 32 6 0 1 13 4 0 1 2 0 1 2 11
+Gafsa|italian|2 0 1 3 14 0 4 15 643 0 118 328 ?9 0 18 33 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 15
+Gafsa|maltese|0 0 0 0 4 0 0 0 18 0 2 13 ?4 0 2 6 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Gafsa|spanish|0 0 0 0 0 0 0 0 11 0 2 8 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Gafsa|greek|0 0 0 0 1 0 0 0 7 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Gafsa|other_european|0 0 0 0 0 0 0 0 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Gafsa|PAIR|13 16 53 71 856 656 58 113 21 42 6 14 4 3 0 1 2 26
+Gafsa|GROUP|29 124 1512 171 63 20 7 1 28
+Tozeur|french|0 0 0 0 5 1 0 5 1 0 0 1 0 0 0 0 26 0 4 18 1 0 0 2 2 3 0 4 0 1 0 0
+Tozeur|italian|1 0 0 0 3 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4 3 1 3 0 0 0 0
+Tozeur|maltese|0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Tozeur|spanish|0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0
+Tozeur|greek|0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Tozeur|other_european|0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Tozeur|PAIR|1 0 11 6 1 1 0 0 26 22 1 2 13 8 0 1 0 0
+Tozeur|GROUP|1 17 2 0 48 3 21 1 0
+# Grombalia transport active M: column hidden in the binding; solved from printed total 34, Table G and Table VI
+Grombalia|french|216 1 52 165 29 19 17 37 58 4 32 38 ? 3 14 25 61 6 33 89 15 0 1 13 9 0 6 6 19 6 5 28
+Grombalia|italian|424 8 166 544 35 9 33 55 383 4 83 209 ? 3 6 11 3 0 6 8 0 0 0 0 0 0 0 0 2 3 9 9
+Grombalia|maltese|14 0 10 12 13 0 14 25 30 0 16 21 ? 0 1 6 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1
+Grombalia|spanish|10 0 5 4 1 1 2 3 0 0 0 0 ? 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2
+Grombalia|greek|0 0 0 0 4 0 3 2 0 0 0 0 ? 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 3 0 1
+Grombalia|other_european|5 0 3 8 2 0 3 0 5 0 0 2 ? 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 4
+Grombalia|PAIR|678 969 113 194 484 401 40 63 70 136 15 14 10 12 22 13 14 45
+Grombalia|GROUP|1647 307 885 103 206 29 22 35 59
+# Kairouan transport active M: column hidden in the binding; solved from printed total 25, Table G and Table VI
+Kairouan|french|27 0 11 27 11 6 6 9 81 4 7 31 ? 0 4 11 56 4 21 48 7 0 1 5 6 0 3 8 0 1 10 19
+Kairouan|italian|10 0 11 10 28 2 22 31 332 24 34 98 ? 0 0 2 0 0 0 0 0 0 0 0 2 0 0 0 0 0 12 64
+Kairouan|maltese|1 0 0 0 2 0 4 4 8 0 0 2 ? 0 3 4 0 0 0 0 0 0 0 0 0 0 0 3 0 0 3 1
+Kairouan|spanish|1 0 0 0 3 0 5 3 1 0 0 2 ? 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2
+Kairouan|greek|3 0 0 2 5 0 6 4 1 0 0 0 ? 0 2 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Kairouan|other_european|0 0 0 0 6 0 0 0 6 0 2 3 ? 0 0 2 0 0 0 0 0 0 0 0 2 3 1 5 1 0 4 3
+Kairouan|PAIR|42 61 63 94 457 179 25 31 60 69 7 6 13 20 1 1 29 89
+Kairouan|GROUP|103 157 636 56 129 13 33 2 118
+# view 31: industry family F column (index 11) hidden in the binding for every block -> '?'
+Le Kef|french|28 0 10 18 41 7 20 49 112 4 40 ? 37 2 15 28 71 6 42 96 12 0 2 11 6 1 1 2 2 9 11 37
+Le Kef|italian|76 1 44 110 46 2 21 54 797 19 173 ? 72 0 21 13 3 1 0 3 0 0 0 0 4 1 1 6 0 0 9 18
+Le Kef|maltese|4 0 2 4 4 0 4 4 6 1 4 ? 4 0 3 1 0 0 0 0 0 0 0 0 0 0 0 0 2 0 3 2
+Le Kef|spanish|0 0 0 0 3 1 0 3 4 1 2 ? 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3
+Le Kef|greek|0 0 0 0 2 0 0 0 0 0 0 ? 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0
+Le Kef|other_european|1 0 0 1 2 0 0 0 11 0 2 ? 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Le Kef|PAIR|110 189 108 155 955 778 115 81 81 141 12 13 13 9 4 9 24 60
+Le Kef|GROUP|299 263 1733 196 222 25 22 13 84
+# '?d' = leading digit(s) hidden in the binding, last digit d visible
+Teboursouk|french|44 0 21 38 15 4 16 33 18 1 3 ? 26 0 18 43 22 1 21 58 0 0 0 0 20 5 0 0 3 0 4 3
+Teboursouk|italian|6 0 4 4 29 0 22 51 139 0 37 ? ?5 2 5 14 3 0 2 9 0 0 0 0 0 0 0 0 0 0 9 17
+Teboursouk|maltese|0 0 0 0 4 0 2 1 0 0 0 ? ?1 0 2 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1
+Teboursouk|spanish|1 0 0 0 0 0 0 0 1 0 0 ? ?1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Teboursouk|greek|0 0 0 0 2 0 0 0 0 0 0 ? 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Teboursouk|other_european|3 0 0 1 1 0 1 4 2 0 0 ? 0 0 0 0 0 0 0 0 0 0 0 0 20 2 0 0 0 0 0 0
+Teboursouk|PAIR|54 68 55 130 161 106 45 84 26 90 0 0 47 0 3 0 13 21
+Teboursouk|GROUP|122 185 267 129 116 0 47 3 34
+Mactar|french|9 0 1 9 0 0 0 0 2 0 3 ? 0 0 0 0 18 0 11 14 0 0 0 0 0 0 0 0 0 0 0 2
+Mactar|italian|0 0 0 0 1 0 0 1 14 0 0 ? 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Mactar|maltese|1 0 0 0 0 0 0 0 1 0 0 ? 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Mactar|spanish|2 0 0 0 0 0 0 0 0 0 0 ? 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Mactar|greek|0 0 0 0 0 0 0 0 0 0 0 ? 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Mactar|other_european|0 0 0 0 0 0 0 0 0 0 0 ? 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3 0
+Mactar|PAIR|12 10 1 1 17 8 0 0 18 25 0 0 0 0 0 0 3 2
+Mactar|GROUP|22 2 25 0 43 0 0 0 5
+# Sfax transport active M hidden (sum 75)
+Sfax|french|55 0 29 69 172 36 76 216 73 8 26 ? ? 0 22 25 245 23 161 329 13 0 5 8 29 3 7 26 5 3 38 16
+Sfax|italian|23 2 26 28 216 40 161 324 619 9 408 ? ? 2 29 70 8 3 7 29 0 0 0 0 16 6 8 15 2 1 146 184
+Sfax|maltese|32 1 17 49 201 45 165 335 76 0 37 ? ? 1 13 28 4 1 8 6 0 0 0 0 5 0 2 17 7 10 62 66
+Sfax|spanish|0 0 0 0 4 0 1 6 0 0 0 ? ? 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 2
+Sfax|greek|0 0 0 0 95 1 33 67 5 0 5 ? ? 0 1 2 0 2 0 0 0 0 0 0 2 1 1 0 0 0 3 4
+Sfax|other_european|0 0 0 2 16 8 15 20 2 0 3 ? ? 0 0 0 0 0 0 0 0 0 0 0 1 1 0 1 1 0 6 3
+Sfax|PAIR|113 220 834 1419 792 1511 78 190 286 540 13 13 64 77 15 15 256 275
+Sfax|GROUP|333 2253 2303 268 826 26 141 30 531
+# Souk-el-Arba transport active M hidden (sum 126); agriculture family cells sum to 199 (printed 200 and group 351)
+Souk-el-Arba|french|91 1 34 83 52 4 31 72 86 6 41 ? ? 0 20 43 70 3 35 91 8 0 4 21 8 5 1 5 10 14 6 35
+Souk-el-Arba|italian|52 0 32 49 28 3 24 47 384 9 146 ? ? 0 58 118 0 0 0 2 0 0 0 0 10 2 1 6 1 1 50 89
+Souk-el-Arba|maltese|3 0 0 0 7 0 4 4 7 0 1 ? ? 0 0 0 0 0 0 0 0 0 0 0 2 0 0 0 0 0 2 4
+Souk-el-Arba|spanish|1 0 1 0 0 0 0 0 0 0 0 ? ? 0 1 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 6
+Souk-el-Arba|greek|0 0 0 0 0 0 0 0 1 0 2 ? ? 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0
+Souk-el-Arba|other_european|3 0 0 0 1 1 1 2 2 0 0 ? ? 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3 1 0
+Souk-el-Arba|PAIR|151 200 96 185 495 585 126 241 73 128 8 25 28 13 11 18 61 134
+Souk-el-Arba|GROUP|351 281 1080 367 201 33 41 29 195
+# view 32: industry family F column (index 11) hidden in the binding -> '?'
+Tabarca|french|35 1 20 46 41 0 21 55 61 0 47 ? 8 0 11 8 74 0 48 106 2 0 0 5 3 0 2 3 13 13 69 49
+Tabarca|italian|16 0 19 31 34 0 39 58 214 0 337 ? 17 0 9 14 0 0 0 0 0 0 0 0 0 0 0 0 3 0 48 67
+Tabarca|maltese|0 0 0 0 1 0 1 1 6 0 7 ? 1 0 0 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Tabarca|spanish|4 0 4 0 2 0 3 5 1 0 1 ? 2 0 0 2 0 0 0 0 0 0 0 0 0 0 0 0 2 2 1 1
+Tabarca|greek|0 0 0 0 0 0 0 0 0 0 0 ? 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Tabarca|other_european|0 0 0 0 0 0 0 0 0 0 0 ? 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Tabarca|PAIR|56 120 78 183 282 709 28 46 75 154 2 5 3 5 18 15 118 117
+Tabarca|GROUP|176 261 991 74 229 7 8 33 235
+Sousse|french|66 1 29 60 106 22 64 125 156 28 96 ? 65 2 49 86 248 17 144 313 30 0 18 36 31 20 12 46 23 48 39 117
+Sousse|italian|200 5 230 381 168 14 105 269 781 55 537 ? 33 0 25 51 9 6 10 11 0 0 0 0 22 6 8 35 37 53 107 207
+Sousse|maltese|27 2 17 35 119 4 93 214 136 20 79 ? 51 0 31 56 3 0 4 3 0 0 0 0 7 5 2 4 29 22 37 65
+Sousse|spanish|0 0 0 0 6 0 3 5 2 2 0 ? 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3
+Sousse|greek|0 0 0 0 5 0 0 0 1 0 1 ? 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 4
+Sousse|other_european|2 0 0 4 9 1 3 11 11 0 3 ? 0 0 0 0 0 0 0 0 0 0 0 0 1 2 0 3 1 1 2 2
+Sousse|PAIR|303 756 454 892 1192 2231 151 298 283 485 30 54 94 110 90 124 186 398
+Sousse|GROUP|1059 1346 3423 449 768 84 204 214 584
+Thala|french|6 0 5 4 2 1 4 8 24 0 2 ? 0 0 0 0 29 0 10 29 3 0 0 2 0 0 0 0 1 1 0 0
+Thala|italian|3 0 0 1 1 0 2 3 247 0 11 ? 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1
+Thala|maltese|0 0 0 0 0 0 0 0 4 0 0 ? 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Thala|spanish|0 0 0 0 0 0 0 0 0 0 0 ? 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Thala|greek|0 0 0 0 0 0 0 0 0 0 0 ? 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Thala|other_european|0 0 0 0 0 0 0 0 0 0 0 ? 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Thala|PAIR|9 10 4 17 275 28 0 0 29 39 3 2 0 0 1 1 0 1
+Thala|GROUP|19 21 303 0 68 5 0 2 1
+Tunis|french|859 56 325 778 1186 541 558 1331 1185 349 549 ? 514 215 247 465 1369 445 780 1730 213 85 112 201 422 201 196 372 275 483 787 1443
+Tunis|italian|2296 147 1751 3220 2572 1257 1609 3558 9240 2192 5475 ? 350 143 263 428 124 57 66 180 0 0 0 0 237 156 146 278 294 295 1393 2489
+Tunis|maltese|69 3 65 92 682 141 403 926 868 175 494 ? 56 22 46 80 35 5 11 44 1 0 0 3 24 13 16 34 90 79 191 411
+Tunis|spanish|34 1 20 28 32 12 17 21 28 8 1 ? 3 0 2 2 1 0 1 1 0 0 0 0 2 1 0 7 9 7 13 20
+Tunis|greek|6 0 2 9 49 14 30 52 16 6 5 ? 2 0 0 3 4 1 0 3 1 0 0 3 3 0 0 11 22 20 9 9
+Tunis|other_european|52 3 17 35 113 45 34 63 79 10 23 ? 5 1 0 2 15 4 12 14 0 0 0 0 38 26 11 34 58 33 94 68
+Tunis|PAIR|3526 6342 6644 8602 14156 20089 1311 1538 2060 2842 300 319 1123 1105 748 917 2487 4410
+Tunis|GROUP|9868 15246 34245 2849 4902 619 2228 1665 6897
+Territoires du Sud|french|2 0 3 1 11 1 1 13 6 1 0 ? 3 0 1 3 21 2 8 17 2 0 5 0 5 0 0 1 5 2 1 23
+Territoires du Sud|italian|3 0 3 3 2 3 1 5 33 2 10 ? 3 0 1 5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3
+Territoires du Sud|maltese|0 0 0 0 12 1 6 8 7 4 8 ? 2 0 1 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Territoires du Sud|spanish|0 0 0 0 0 0 0 0 0 3 3 ? 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2
+Territoires du Sud|greek|0 0 0 0 3 0 0 2 2 1 1 ? 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Territoires du Sud|other_european|1 0 0 0 3 0 3 6 0 0 0 ? 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Territoires du Sud|PAIR|6 10 36 45 59 67 8 14 23 25 2 5 5 1 5 2 1 28
+Territoires du Sud|GROUP|16 81 126 22 48 7 6 7 29

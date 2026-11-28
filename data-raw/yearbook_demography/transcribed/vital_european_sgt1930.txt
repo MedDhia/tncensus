@@ -1,0 +1,37 @@
+# sgt1930 european ark bpt6k9105652d marriages view 576, births/deaths view 577 - transcribed from the full-resolution page images
+[marriages] years: 1929 1930
+Français | 794 613 828 619
+Italiens | 26 169 29 192
+Maltais | 2 9 2 21
+Grecs | 0 3 1 0
+Espagnols | 0 1 0 2
+Autres Européens | 33 39 22 49
+Nationalité non signalée | 5 26 5 4
+TOTAUX | 860 887
+[mixed]
+Français | 26 9 17 . . . .
+Italiens | 0 0 0 . . . .
+Maltais | 0 0 0 . . . .
+Etrangers autres | 0 0 0 . . . .
+TOTAL_EUROPEAN_GROOMS | 26 9 17 . . . .
+Musulmans | 8 . . 8 0 0 0
+Israélites | 6 . . 6 0 0 0
+TOTAL_INDIGENOUS_GROOMS | 14 . . 14 0 0 0
+[births] years: 1929 1930
+Français | 1476 1434 1531 1532
+Italiens | 1370 1373 1469 1495
+Maltais | 49 61 59 63
+Grecs | 1 4 2 5
+Espagnols | 4 6 7 6
+Autres Européens | 51 52 55 43
+SUBTOTAL | 2951 2930 3123 3144
+TOTAUX | 5881 6267
+[deaths] years: 1929 1930
+Français | 691 500 700 535
+Italiens | 816 652 741 680
+Maltais | 93 65 78 75
+Grecs | 2 1 7 5
+Espagnols | 4 3 5 7
+Autres Européens | 53 15 51 7
+SUBTOTAL | 1659 1236 1582 1309
+TOTAUX | 2895 2891

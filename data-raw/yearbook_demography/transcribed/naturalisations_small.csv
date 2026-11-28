@@ -1,0 +1,135 @@
+edition,view,page,table,section,sex,item,item_fr,value
+sgt1922,44,20,a,granted,male,men_civil,Hommes civils,122
+sgt1922,44,20,a,granted,male,men_military,Hommes militaires,5
+sgt1922,44,20,a,granted,female,women_naturalised,Femmes naturalisées,82
+sgt1922,44,20,a,granted,male,adult_sons,Enfants majeurs naturalisés avec leurs parents : garçons,1
+sgt1922,44,20,a,granted,female,adult_daughters,Enfants majeurs naturalisés avec leurs parents : filles,3
+sgt1922,44,20,a,granted,female,women_reinstated,Femmes réintégrées,13
+sgt1922,44,20,a,granted,male,minor_boys_definitive,Enfants mineurs naturalisés définitivement : garçons,34
+sgt1922,44,20,a,granted,female,minor_girls_definitive,Enfants mineurs naturalisés définitivement : filles,16
+sgt1922,44,20,a,granted,male,minor_boys_conditional,Enfants mineurs naturalisés conditionnellement : garçons,133
+sgt1922,44,20,a,granted,female,minor_girls_conditional,Enfants mineurs naturalisés conditionnellement : filles,104
+sgt1922,44,20,a,total,,total_adults,TOTAL (naturalisations accordées),213
+sgt1922,44,20,a,total,,total_minors,TOTAL (enfants mineurs),287
+sgt1922,44,20,a,total,,grand_total,TOTAL GÉNÉRAL,513
+sgt1923,522,20,a,granted,male,men_civil,Hommes civils,167
+sgt1923,522,20,a,granted,male,men_military,Hommes militaires,10
+sgt1923,522,20,a,granted,female,women_naturalised,Femmes naturalisées,112
+sgt1923,522,20,a,granted,male,adult_sons,Enfants majeurs naturalisés avec leurs parents : garçons,2
+sgt1923,522,20,a,granted,female,adult_daughters,Enfants majeurs naturalisés avec leurs parents : filles,5
+sgt1923,522,20,a,granted,female,women_reinstated,Femmes réintégrées,11
+sgt1923,522,20,a,granted,male,minor_boys_definitive,Enfants mineurs naturalisés définitivement : garçons,202
+sgt1923,522,20,a,granted,female,minor_girls_definitive,Enfants mineurs naturalisés définitivement : filles,149
+sgt1923,522,20,a,granted,male,minor_boys_conditional,Enfants mineurs naturalisés conditionnellement : garçons,»
+sgt1923,522,20,a,granted,female,minor_girls_conditional,Enfants mineurs naturalisés conditionnellement : filles,»
+sgt1923,522,20,a,total,,total_adults,TOTAL (naturalisations accordées),296
+sgt1923,522,20,a,total,,total_minors,TOTAL (enfants mineurs),351
+sgt1923,522,20,a,total,,grand_total,TOTAL GÉNÉRAL,658
+sgt1924,1010,20,a,granted,male,men_civil,Hommes civils,420
+sgt1924,1010,20,a,granted,male,men_military,Hommes militaires,5
+sgt1924,1010,20,a,granted,female,women_naturalised,Femmes naturalisées,294
+sgt1924,1010,20,a,granted,male,adult_sons,Enfants majeurs naturalisés avec leurs parents : garçons,9
+sgt1924,1010,20,a,granted,female,adult_daughters,Enfants majeurs naturalisés avec leurs parents : filles,4
+sgt1924,1010,20,a,granted,female,women_reinstated,Femmes réintégrées,30
+sgt1924,1010,20,a,granted,male,minor_boys_definitive,Enfants mineurs naturalisés définitivement : garçons,421
+sgt1924,1010,20,a,granted,female,minor_girls_definitive,Enfants mineurs naturalisés définitivement : filles,467
+sgt1924,1010,20,a,total,,total_adults,TOTAL (naturalisations accordées),732
+sgt1924,1010,20,a,total,,total_minors,TOTAL (enfants mineurs),888
+sgt1924,1010,20,a,total,,grand_total,TOTAL GÉNÉRAL,1650
+sgt1925,42,18,a,granted,male,men_civil,Hommes civils,900
+sgt1925,42,18,a,granted,male,men_military,Hommes militaires,27
+sgt1925,42,18,a,granted,female,women_naturalised,Femmes naturalisées,599
+sgt1925,42,18,a,granted,male,adult_sons,Enfants majeurs naturalisés avec leurs parents : garçons,13
+sgt1925,42,18,a,granted,female,adult_daughters,Enfants majeurs naturalisés avec leurs parents : filles,7
+sgt1925,42,18,a,granted,female,women_reinstated,Femmes réintégrées,26
+sgt1925,42,18,a,granted,male,minor_boys_definitive,Enfants mineurs naturalisés définitivement : garçons,896
+sgt1925,42,18,a,granted,female,minor_girls_definitive,Enfants mineurs naturalisés définitivement : filles,830
+sgt1925,42,18,a,total,,total_adults,TOTAL (naturalisations accordées),1546
+sgt1925,42,18,a,total,,total_minors,TOTAL (enfants mineurs),1726
+sgt1925,42,18,a,total,,grand_total,TOTAL GÉNÉRAL,3298
+sgt1926,587,23,a,granted,male,men_civil,Hommes civils,879
+sgt1926,587,23,a,granted,male,men_military,Hommes militaires,11
+sgt1926,587,23,a,granted,female,women_naturalised,Femmes naturalisées,617
+sgt1926,587,23,a,granted,male,adult_sons,Enfants majeurs naturalisés avec leurs parents : garçons,7
+sgt1926,587,23,a,granted,female,adult_daughters,Enfants majeurs naturalisés avec leurs parents : filles,6
+sgt1926,587,23,a,granted,female,women_reinstated,Femmes réintégrées,30
+sgt1926,587,23,a,granted,male,minor_boys_definitive,Enfants mineurs naturalisés définitivement : garçons,832
+sgt1926,587,23,a,granted,female,minor_girls_definitive,Enfants mineurs naturalisés définitivement : filles,792
+sgt1926,587,23,a,total,,total_adults,TOTAL (naturalisations accordées),1520
+sgt1926,587,23,a,total,,total_minors,TOTAL (enfants mineurs),1624
+sgt1926,587,23,a,total,,grand_total,TOTAL GÉNÉRAL,3174
+sgt1927,51,23,a,granted,male,men_civil,Hommes civils,780
+sgt1927,51,23,a,granted,male,men_military,Hommes militaires,15
+sgt1927,51,23,a,granted,female,women_naturalised,Femmes naturalisées,587
+sgt1927,51,23,a,granted,male,adult_sons,Enfants majeurs naturalisés avec leurs parents : garçons,7
+sgt1927,51,23,a,granted,female,adult_daughters,Enfants majeurs naturalisés avec leurs parents : filles,13
+sgt1927,51,23,a,granted,female,women_reinstated,Femmes réintégrées,29
+sgt1927,51,23,a,granted,male,minor_boys_definitive,Enfants mineurs naturalisés définitivement : garçons,815
+sgt1927,51,23,a,granted,female,minor_girls_definitive,Enfants mineurs naturalisés définitivement : filles,712
+sgt1927,51,23,a,total,,total_adults,TOTAL (naturalisations accordées),1402
+sgt1927,51,23,a,total,,total_minors,TOTAL (enfants mineurs),1527
+sgt1927,51,23,a,total,,grand_total,TOTAL GÉNÉRAL,2958
+sgt1928,575,23,a,granted,male,men_civil,Hommes civils,825
+sgt1928,575,23,a,granted,male,men_military,Hommes militaires,30
+sgt1928,575,23,a,granted,female,women_naturalised,Femmes naturalisées,597
+sgt1928,575,23,a,granted,male,adult_sons,Enfants majeurs naturalisés avec leurs parents : garçons,4
+sgt1928,575,23,a,granted,female,adult_daughters,Enfants majeurs naturalisés avec leurs parents : filles,9
+sgt1928,575,23,a,granted,female,women_reinstated,Femmes réintégrées,14
+sgt1928,575,23,a,granted,male,minor_boys_definitive,Enfants mineurs naturalisés définitivement : garçons,841
+sgt1928,575,23,a,granted,female,minor_girls_definitive,Enfants mineurs naturalisés définitivement : filles,597
+sgt1928,575,23,a,total,,total_adults,TOTAL (naturalisations accordées),1465
+sgt1928,575,23,a,total,,total_minors,TOTAL (enfants mineurs),1438
+sgt1928,575,23,a,total,,grand_total,TOTAL GÉNÉRAL,2917
+sgt1929,51,23,a,granted,male,men_civil,Hommes civils,758
+sgt1929,51,23,a,granted,male,men_military,Hommes militaires,28
+sgt1929,51,23,a,granted,female,women_naturalised,Femmes naturalisées,537
+sgt1929,51,23,a,granted,male,adult_sons,Enfants majeurs naturalisés avec leurs parents : garçons,5
+sgt1929,51,23,a,granted,female,adult_daughters,Enfants majeurs naturalisés avec leurs parents : filles,8
+sgt1929,51,23,a,granted,female,women_reinstated,Femmes réintégrées,9
+sgt1929,51,23,a,granted,male,minor_boys_definitive,Enfants mineurs naturalisés définitivement : garçons,756
+sgt1929,51,23,a,granted,female,minor_girls_definitive,Enfants mineurs naturalisés définitivement : filles,535
+sgt1929,51,23,a,total,,total_adults,TOTAL (naturalisations accordées),1336
+sgt1929,51,23,a,total,,total_minors,TOTAL (enfants mineurs),1291
+sgt1929,51,23,a,total,,grand_total,TOTAL GÉNÉRAL,2636
+sgt1930,581,23,a,granted,male,men_civil,Hommes civils,501
+sgt1930,581,23,a,granted,male,men_military,Hommes militaires,13
+sgt1930,581,23,a,granted,female,women_naturalised,Femmes naturalisées,322
+sgt1930,581,23,a,granted,male,adult_sons,Enfants majeurs naturalisés avec leurs parents : garçons,2
+sgt1930,581,23,a,granted,female,adult_daughters,Enfants majeurs naturalisés avec leurs parents : filles,9
+sgt1930,581,23,a,granted,female,women_reinstated,Femmes réintégrées,19
+sgt1930,581,23,a,granted,male,minor_boys,Enfants mineurs naturalisés avec leurs parents : garçons,379
+sgt1930,581,23,a,granted,female,minor_girls,Enfants mineurs naturalisés avec leurs parents : filles,364
+sgt1930,581,23,a,total,,total_adults,TOTAL (naturalisations accordées),866
+sgt1930,581,23,a,total,,total_minors,TOTAL (enfants mineurs),743
+sgt1930,581,23,a,total,,grand_total,TOTAL GÉNÉRAL,1609
+sgt1935,32,12,a,granted,male,men_civil,Hommes civils,232
+sgt1935,32,12,a,granted,male,men_military,Hommes militaires,8
+sgt1935,32,12,a,granted,female,women_naturalised,Femmes naturalisées,118
+sgt1935,32,12,a,granted,female,women_reinstated,Femmes réintégrées,30
+sgt1935,32,12,a,granted,male,adult_sons,Enfants majeurs naturalisés avec leurs parents : garçons,7
+sgt1935,32,12,a,granted,female,adult_daughters,Enfants majeurs naturalisés avec leurs parents : filles,5
+sgt1935,32,12,a,granted,male,minor_boys,Enfants mineurs naturalisés avec leurs parents : garçons,141
+sgt1935,32,12,a,granted,female,minor_girls,Enfants mineurs naturalisés avec leurs parents : filles,127
+sgt1935,32,12,a,total,,total_adults,TOTAL (majeurs),400
+sgt1935,32,12,a,total,,total_minors,TOTAL (mineurs),268
+sgt1935,32,12,a,total,,grand_total,TOTAL GÉNÉRAL,668
+sgt1936,22,11,a,granted,male,men_civil,Hommes civils,103
+sgt1936,22,11,a,granted,male,men_military,Hommes militaires,6
+sgt1936,22,11,a,granted,female,women_naturalised,Femmes naturalisées,64
+sgt1936,22,11,a,granted,female,women_reinstated,Femmes réintégrées,15
+sgt1936,22,11,a,granted,male,adult_sons,Enfants majeurs naturalisés avec leurs parents : garçons,»
+sgt1936,22,11,a,granted,female,adult_daughters,Enfants majeurs naturalisés avec leurs parents : filles,»
+sgt1936,22,11,a,granted,male,minor_boys,Enfants mineurs naturalisés avec leurs parents : garçons,57
+sgt1936,22,11,a,granted,female,minor_girls,Enfants mineurs naturalisés avec leurs parents : filles,58
+sgt1936,22,11,a,total,,total_adults,TOTAL (majeurs),188
+sgt1936,22,11,a,total,,total_minors,TOTAL (mineurs),115
+sgt1936,22,11,a,total,,grand_total,TOTAL GÉNÉRAL,303
+sgt1939,17,11,a,granted,male,men_naturalised,Hommes naturalisés,436
+sgt1939,17,11,a,granted,male,men_reinstated,Hommes réintégrés,2
+sgt1939,17,11,a,granted,female,women_naturalised,Femmes naturalisées,506
+sgt1939,17,11,a,granted,female,women_reinstated,Femmes réintégrées,75
+sgt1939,17,11,a,granted,male,minor_boys,Enfants mineurs naturalisés avec leurs parents : garçons,345
+sgt1939,17,11,a,granted,female,minor_girls,Enfants mineurs naturalisés avec leurs parents : filles,269
+sgt1939,17,11,a,total,,total_adults,TOTAL (majeurs),1019
+sgt1939,17,11,a,total,,total_minors,TOTAL (mineurs),614
+sgt1939,17,11,a,total,,grand_total,TOTAL GÉNÉRAL,1633

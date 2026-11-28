@@ -1,0 +1,23 @@
+# sgt1922 pp.38-39, views 62-63, lower half of the water page (left) and of the gas page (right): "ÉCLAIRAGE.
+# a) Electricité : longueur des canalisations ; puissance des installations ; abonnés ; consommation ; produits".
+# View 62: localities, length (mètres), power of the installations in service at 31 December (no year printed;
+# hectowats: Eclairage, Autres usages, TOTAL), subscribers (Nombre d'abonnés: Eclairage, Autres usages, TOTAL);
+# view 63: kWh consumed (Nombre de kilowats-heures consommés: Particuliers, Eclairage public, TOTAL), gross receipts
+# (Produits bruts: Particuliers, Ville, TOTAL, fr. c.), Redevance à la ville et droit de contrôle (fr. c.),
+# Droit d'occupation du sous-sol (fr. c.). No column totals printed.
+# Tokens: numbers without thousands separators, '.' decimal (francs.centimes); » = 0;
+# 'p:NNN' = a TOTAL cell of which only the leading digits NNN are legible (the subscribers TOTAL column runs into the
+# binding: Tunis "9.4", Bizerte "1.09", ...; checked against the sum of its parts on those digits).
+# Every cell read on native-resolution crops (both pages at 0.6 scale; binding strips of both views stitched at 1x;
+# La Goulette receipts and Bizerte droit at 2.5x). OCR used as a check only (it misreads Ferryville kWh 62.300 as
+# 69.300 and Sfax 178.888 as 118.888).
+# La Goulette receipts: 100.927,08 + 4.472,23 = 105.399,31; the TOTAL is printed 105.399,23 (re-read at 2.5x).
+@elec22 view=62 view2=63 page=38 year=1922 left=7
+cols: len pw_l pw_o pw_t sub_l sub_o sub_t kwh_p kwh_pub kwh_t rec_p rec_v rec_t redev droits
+Tunis | 144870 52600 23860 76460 9069 426 p:949 3055511 119067 3174578 3031877.26 140853.88 3172731.14 » »
+Bizerte | 25100 900 400 1300 1070 28 p:109 320000 44525 364525 350480.00 50082.61 400562.61 » 9.15
+Ferryville | 18500 500 200 700 220 5 p:22 62300 8700 71000 99207.90 12380.10 111588.00 » »
+Sousse | 8400 5876 1736 7612 925 47 p:97 321997 62500 384497 324220.68 52233.64 376454.32 » »
+Sfax | 28480 3312 300 3612 1045 18 p:106 178888 27712 206600 333759.30 52652.80 386412.10 » »
+Béja | 7000 1250 250 1500 289 5 p:29 46500 6500 53000 84000.00 14400.00 98400.00 » »
+La Goulette | 5610 2052 435 2487 376 13 p:38 80456 3302 83758 100927.08 4472.23 105399.23 » »

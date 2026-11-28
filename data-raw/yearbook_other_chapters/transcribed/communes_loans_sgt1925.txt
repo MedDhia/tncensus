@@ -1,0 +1,106 @@
+# Communes chapter, sgt1925 (ark bpt6k9105650k): "Finances municipales: b) Emprunts communaux" (Tunis bond
+# loans) and "c) Emprunts contractés à la Caisse des Prêts Communaux". Two-page spreads, views 52-53, 54-55 and 56-57. View 52 (left page of the first spread: Tunis bonds and the Caisse loans of Tunis, Béja, Bizerte, Ferryville) is a black image in the Gallica scan: only the right page (view 53) of that spread is transcribed, see below.
+# Read on native-resolution crops of the page images; Gallica OCR used only to locate the lines.
+# Format: '@<table> view=<left view> view2=<right view> page=<left page> year=<exercice>', 'cols:', then
+# '= <commune heading as printed>' and rows '<date of the loan as printed> | values', 'Totaux | ...' per commune.
+# Money: francs with centimes after '.', no thousands separator; printed » = 0; 'NNN.xx' = franc part legible,
+# centimes hidden in the binding; durations in years ("ans"); interest rate in percent ("3 75" = 3.75, "3 1/2" = 3.5).
+# @tunis_bonds cols: dur rate cap_net cap_nom int_due cap_due int_paid_year cap_paid_year int_paid_before
+#   cap_paid_before int_paid_total cap_paid_total int_lapsed cap_lapsed int_outstanding cap_outstanding
+#   (columns 2-17 of the table).
+# @caisse cols: dur cap_net cap_nom rate annuity due paid_year paid_before paid_total arrears amortised
+#   remaining (columns 2-13 of the table).
+# Recovered by the third worker: view 53 (right page of the first spread) is legible. Its columns are
+# transcribed below from native-resolution crops; the left-page columns (duration, capital, rate, annuity) are
+# on the black view 52 and are left absent ('.'). View 53 carries no loan dates or commune headings: each line
+# is identified by its numbers, earlier payments = total payments 1924 of sgt1924 and total payments = earlier
+# payments of sgt1926 (every line matches both), and the headings are those of sgt1924/sgt1926. The column
+# heading of the bond payments in the year reads "de 1924" (sic; "jusqu'à la fin de 1925" and "à la clôture de
+# l'exercice 1925" in the same heading, "1925" on the Caisse columns).
+@tunis_bonds view=52 view2=53 page=28 year=1925
+cols: dur rate cap_net cap_nom int_due cap_due int_paid_year cap_paid_year int_paid_before cap_paid_before int_paid_total cap_paid_total int_lapsed cap_lapsed int_outstanding cap_outstanding
+= Commune de Tunis
+17 février 1891 | . . . . . . 65467.50 69298.75 3414713.75 1610388.75 3480181.25 1679687.50 1478.75 0 49052.50 75795
+31 janvier 1897 | . . . . . . 48685 29973.75 1755635 634062.50 1804320 664036.25 481.25 0 35577.50 32815
+Totaux | . . . . . . 114152.50 99272.50 5170348.75 2244451.25 5284501.25 2343723.75 1960 0 84630 108610
+
+@caisse view=52 view2=53 page=28 year=1925
+cols: dur cap_net cap_nom rate annuity due paid_year paid_before paid_total arrears amortised remaining
+= Commune de Tunis
+28 août 1903 | . . . . . 1816297.76 81656.24 1734641.52 1816297.76 0 911473.40 566526.60
+1er octobre 1907 | . . . . . 213243.73 11912 201331.73 213243.73 0 94702.82 119897.18
+30 juin 1908 | . . . . . 2620852.06 184726.88 2436125.18 2620852.06 0 242422.09 4049577.91
+31 décembre 1921 | . . . . . 937415.86 192304.75 745111.11 937415.86 0 17304.75 4982695.25
+Totaux | . . . . . 5587809.41 470599.87 5117209.54 5587809.41 0 1265903.06 9718696.94
+= Commune de Béja
+3 avril 1907 | . . . . . 182752.86 9897.94 172854.92 182752.86 0 99888.64 61111.36
+23 mai 1924 | . . . . . 21518.15 20907.04 611.11 21518.15 0 925.18 249074.82
+5 juin 1924 | . . . . . 64519.99 63908.88 611.11 64519.99 0 0 1400000
+Totaux | . . . . . 268791 94713.86 184077.14 268791 0 100813.82 1710186.18
+= Commune de Bizerte
+20 février 1904 | . . . . . 891377.04 44301.24 847075.80 891377.04 0 84829.67 971170.33
+= Commune de Ferryville
+16 mars 1911 | . . . . . 42779.79 3333.36 39446.43 42779.79 0 5771.57 69328.43
+
+@caisse view=54 view2=55 page=30 year=1925
+cols: dur cap_net cap_nom rate annuity due paid_year paid_before paid_total arrears amortised remaining
+= Commune d'Hammam-Lif
+1er décembre 1908 | 20 15000 16000 3.75 1132.90 19037.10 1132.90 17904.20 19037.10 0 12281.71 3718.29
+= Commune de Kairouan
+19 octobre 1912 | 30 200000 214600 3.75 11945.34 155927.24 11945.34 143981.90 155927.24 0 62410.47 152189.53
+= Commune de Mahdia
+27 mars 1909 | 25 100000 107300 3.75 6608.48 109877.38 6608.48 103268.90 109877.38 0 58991.81 48308.19
+= Commune de Monastir
+3 mars 1908 | 25 25000 26800 3.75 1648.68 29102.60 1648.68 27453.92 29102.60 0 15985.73 10814.27
+31 juillet 1924 | 25 22000 22000 8 2048.20 684.44 684.44 0 684.44 0 0 22000
+Totaux | . 47000 48000 . 3696.88 29787.04 2333.12 27453.92 29787.04 0 15985.73 32814.27
+= Commune de Nabeul
+5 avril 1910 | 15 15000 16000 3.75 1385.16 21282.08 1385.16 19896.92 21282.08 0 15976.85 23.15
+= Commune de Sfax
+1er août 1904 et 22 juin 1909 | 63 300000 317000 3.75 9019.22 301589.06 9019.22 292569.84 301589.06 0 119280.99 197719.01
+22 juin 1909 | 58 100000 107300 3.75 4551.32 72920.34 4551.32 68369.02 72920.34 0 7526 99774
+22 juin 1909 | 57 9000000 9657000 3.75 418708.10 5059227.46 418708.10 4640519.36 5059227.46 0 427092.28 9179907.72
+10 mai 1923 | 25 1500000 1500000 7 127901.14 166109.48 127901.14 38208.34 166109.48 0 23301.91 1476698.09
+10 juin 1924 | 25 400000 400000 8 37240.16 37506.83 37506.83 0 37506.83 0 5344.96 394655.04
+Totaux | . 11300000 11981300 . 597410.94 5637353.17 597686.61 5039666.56 5637353.17 0 632546.14 11348753.86
+= Commune de Souk-el-Arba
+1er mars 1921 | 30 168000 168000 7 13469.78 60614.01 13469.78 47144.23 60614.01 0 8863.95 159136.05
+22 août 1922 | 25 332000 332000 7 28308.78 77937.62 28308.78 49628.84 77937.62 0 13590.57 318409.43
+Totaux | . 500000 500000 . 41778.56 138551.63 41778.56 96773.07 138551.63 0 22454.52 477545.48
+= Commune de Souk-el-Khemis
+28 février 1921 | 30 120000 120000 7 9621.26 33259.12 9621.26 23637.86 33259.12 0 3274.48 116725.52
+1er mai 1923 | 30 60000 60000 7 4810.64 8223.15 3921.99 4301.16 8223.15 0 948.30 59051.70
+Totaux | . 180000 180000 . 14431.90 41482.27 13543.25 27939.02 41482.27 0 4222.78 175777.22
+
+@caisse view=56 view2=57 page=32 year=1925
+cols: dur cap_net cap_nom rate annuity due paid_year paid_before paid_total arrears amortised remaining
+= Commune de Sousse
+21 février 1906 et 1er mars 1911 | 50 300000 317000 3.75 13462.80 273460.36 13462.80 259997.56 273460.36 0 44516.58 272483.32
+2 mars 1908 et 1er mars 1911 | 50 300000 322000 3.75 13170.76 251711.34 13170.76 238540.58 251711.34 0 55427.19 266572.81
+1er mars 1911 | 50 300000 322000 3.75 14286.14 207716.49 14286.14 193430.35 207716.49 0 32852.56 289147.44
+20 juin 1923 | 30 500000 500000 8 44201.86 28933.33 19822.22 9111.11 28933.33 0 0 500000
+Totaux | . 1400000 1461000 . 85121.56 761821.52 60741.92 701079.60 761821.52 0 132796.33 1328203.67
+= Commune de Tébourba
+25 avril 1907 | 25 20000 21500 3.75 1321.80 24310.57 1321.80 22988.77 24310.57 0 13339.13 8160.87
+15 décembre 1923 | 30 95000 95000 7 8398.36 7781.82 6901.96 879.86 7781.82 0 874.18 94125.82
+Totaux | . 115000 116500 . 9720.16 32092.39 8223.76 23868.63 32092.39 0 14213.31 102286.69
+= Commune de La Marsa
+5 avril 1924 | 30 150000 150000 8 13260.56 16560.56 13260.56 3300 16560.56 0 1285.77 148714.23
+16 avril 1924 | 30 300000 300000 8 26521.12 14133.33 12000 2133.33 14133.33 0 0 200000
+Totaux | . 450000 450000 . 39781.68 30693.89 25260.56 5433.33 30093.89 0 1285.77 448714.23
+= Commune du Kram
+16 mai 1924 | 30 125000 125000 8 11050.46 11050.46 11050.46 0 11050.46 0 1071.47 123928.53
+= Commune de la Goulette
+16 mai 1924 | 25 550000 550000 8 51205.22 52794.11 52794.11 0 52794.11 0 7349.32 542650.68
+= Commune de Ghardimaou
+20 mai 1924 | 30 500000 500000 7 40088.82 23294.44 23294.44 0 23294.44 0 0 500000
+= Commune de Médenine
+23 mai 1924 | 15 30000 30000 8 3479.80 2441.57 2441.57 0 2441.57 0 534.90 29465.10
+= Commune de Carthage
+5 juin 1924 | 30 125000 125000 8 11050.46 11411.57 11411.57 0 11411.57 0 1971.47 123928.53
+= Commune de Mateur
+6 juin 1923 | 25 500000 500000 7 42633.70 32594.62 32594.62 4550 37144.62 0 3816.85 496183.15
+= Commune du Kef
+20 août 1924 | 25 200000 200000 8 18620.08 14154.48 14154.48 0 14154.48 0 1310.04 198689.96
+= Commune du Krib
+10 mars 1925 | 25 25000 25000 8 2327.50 361.11 361.11 0 361.11 0 0 25000

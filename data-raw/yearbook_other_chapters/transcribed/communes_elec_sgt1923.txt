@@ -1,0 +1,23 @@
+# sgt1923 pp.42-43, views 544-545, lower half of the water page (left) and of the gas page (right): "ÉCLAIRAGE.
+# a) Electricité : longueur des canalisations ; puissance des installations ; abonnés ; consommation ; produits".
+# Same layout as sgt1922: view 544 localities, length (mètres), power in service at 31 December (no year printed;
+# hectowats: Eclairage, Autres usages, TOTAL), subscribers (Eclairage, Autres usages, TOTAL); view 545 kWh consumed
+# (Particuliers, Eclairage public, TOTAL), Produits bruts (Particuliers, Ville, TOTAL, fr. c.), Redevance à la ville et
+# droit de contrôle, Droit d'occupation du sous-sol (fr. c.). No column totals printed.
+# Tokens as in communes_elec_sgt1922.txt. The subscribers TOTAL column is fully legible here (raised against the
+# binding; the stub of each figure repeats on view 545).
+# Every cell read on native-resolution crops (both pages at 0.6 scale; binding strips stitched at 1x; doubtful cells at
+# 1.4-4x). OCR agrees on every figure it reads (it misreads Ferryville kWh 65.400 as 85.400).
+# Row failures confirmed on the image (printed values kept): Ferryville power 500 + 320 = 820, TOTAL printed 770;
+# Sousse subscribers 1.065 + 55 = 1.120, TOTAL printed 1.122; Sfax kWh 186.167 + 94.100 = 280.267, TOTAL printed
+# 208.267 (at 4x the first cell reads 186.167, not 114.167); Tunis receipts 4.919.507,59 + 270.543,60 = 5.190.051,19,
+# TOTAL printed 5.190.051,09.
+# Bizerte length printed "30 547" (space for the point). Bizerte droit 9 15 = 9,15 fr.
+@elec22 view=544 view2=545 page=42 year=1923 left=7
+cols: len pw_l pw_o pw_t sub_l sub_o sub_t kwh_p kwh_pub kwh_t rec_p rec_v rec_t redev droits
+Tunis | 127592 57454 26345 83799 10131 476 10607 5522365 150748 5673113 4919507.59 270543.60 5190051.09 144901.06 »
+Bizerte | 30547 3200 1300 4500 1175 28 1203 221483 44500 265983 411431.00 46675.00 458106.00 » 9.15
+Ferryville | 18500 500 320 770 228 9 237 65400 9100 74500 102505.15 12851.15 115356.30 » »
+Sousse | 12600 6766 1760 8526 1065 55 1122 267498 90457 357955 388799.61 46701.32 435500.93 » »
+Sfax | 28480 6470 940 7410 1165 20 1185 186167 94100 208267 353316.38 94801.85 448118.23 5898.50 »
+Béja | 7000 1250 250 1500 340 10 350 32700 8880 41580 65400.00 17760.00 83160.00 » »

@@ -1,0 +1,32 @@
+# sgt1927 pp.50-51, views 78-79 (volume bpt6k91056510), lower half of the water page (left) and of the gas page
+# (right): "ÉCLAIRAGE. a) Electricité : longueur des canalisations ; puissance des installations ; abonnés ;
+# consommation ; produits". Same columns as sgt1922-sgt1926 (power headed hectowats; no year printed; no column
+# totals); 17 localities, set solid (no blank line between rows).
+# Tokens as in communes_elec_sgt1922.txt.
+# Every cell read on native-resolution crops (each page in two bands at 0.7-0.75 scale; doubtful cells at 3x). The
+# table clears the binding. OCR agrees on every figure.
+# Bizerte power printed 4.975.820 / 2.626 / 4.278 446 (3x): far above every other locality (and the 4.500-5.200 hW
+# of sgt1923-sgt1926), apparently watts, like Sfax and Gabès in sgt1929; kept as printed. The TOTAL implies a
+# lighting figure 4.275.820: 9 and 2 differ in one cell; the row check fails.
+# Other row failures confirmed on the image (printed values kept): Tunis receipts 10.199.268,68 + 809.331,44 =
+# 11.008.600,12, TOTAL printed 11.008.598,12; Gabès kWh 19.401 + 630 = 20.031, TOTAL printed 20.631.
+# Bizerte droit 45 65 = 45,65 fr.; Mateur droit 100 ».
+@elec22 view=78 view2=79 page=50 year=1927 left=7
+cols: len pw_l pw_o pw_t sub_l sub_o sub_t kwh_p kwh_pub kwh_t rec_p rec_v rec_t redev droits
+La Goulette | 17802 4322 525 4847 760 14 774 124527 22864 147391 254748.44 26487.11 281235.55 » »
+Tunis | 148080 91991 41325 133316 16984 730 17714 3601111 2401891 6003002 10199268.68 809331.44 11008598.12 430286.87 »
+Bizerte | 43440 4975820 2626 4278446 1556 62 1618 331036 36031 367067 696451.05 63977.79 760428.84 » 45.65
+Ferryville | 12200 45 49 94 241 12 253 89202 10238 99440 178085.90 25111.87 203197.77 » »
+Sousse | 22836 890 235 1125 1972 101 2073 525786 66660 592446 699272.37 100000.00 799272.37 » »
+Sfax | 30187 10441 64 10505 2202 89 2291 860175 111518 971693 1237102.01 145239.41 1382341.42 16987.93 »
+Béja | 10896 57 29 86 593 34 627 71478 8230 79708 192990.00 20500.00 213490.00 » »
+Kairouan | 18000 155 6 161 570 2 572 76068 36000 112068 187998.53 66578.95 254577.48 30000.00 »
+St-Germain | 3300 414 » 414 88 » 88 6387 1694 8081 14250.80 3137.64 17388.44 » »
+Mateur | 8700 44093 17920 62013 192 13 205 48316 13697 62013 108490.00 27284.00 135774.00 » 100.00
+Carthage | 4400 967 68 1035 90 3 93 17362 10430 27792 37898.02 19042.23 56940.25 » »
+Radès | 9300 1507 250 1757 263 5 268 43094 2492 45586 88649.33 4600.50 93249.83 » »
+Hammam-Lif | 6500 3174 2651 5825 507 14 521 331970 23223 355193 434336.96 41852.08 476189.04 » »
+Gabès | 12840 710 » 710 300 » 300 19401 630 20631 54324.48 » 54324.48 » »
+Sidi-bou-Saïd | 4800 2812 51 2863 89 9 98 38849 912 39761 78858.92 1747.68 80606.60 » »
+Ariana | 8100 1426 267 1693 282 4 286 56742 4577 61319 104942.87 8898.91 113841.78 » »
+La Marsa | 12200 5995 974 6969 520 20 540 111732 62716 174448 238777.47 116224.10 355001.57 » »

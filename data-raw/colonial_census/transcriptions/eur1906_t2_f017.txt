@@ -1,0 +1,37 @@
+# view 17
+Ouled-Ghida, Route Kalaâ-Djerda-Thala (Chantiers de la) | 2 7 0 0 0 0 9
+Sbeïtla | 3 0 0 0 0 0 3
+Sbiba | 3 0 0 0 0 0 3
+Route Ksour-Sbiba (Chantiers de la) | 2* 0 0 0 0 0 2
+Voie ferrée Kairouan-Aïn-Moularès (Chantiers de la) | 23 214 1 0 0 0 238
+## Contrôle de Tunis
+Tunis | 14222 40606 5447 184* 247 791 61497
+Abattoirs | 70 61 26 0 0 1 158
+Aïn-el-Asker | 76 165 1 0 0 5* 247
+Aouina | 48 374 5 0 0 0 427
+Ariana | 42 77 25 7 3 8 162
+Bardo | 137* 119 49 2 0 12 319
+Béjaoua (Manouba) | 1* 4 0 0 0 3 8
+Belvédère | 86 19 0 0 0 2 107
+Ben-Arous | 16 24 0 1 0 0 41
+Bir-Droudj | 0 62 0 0 0 0 62
+Bir-el-Bey | 0 54 0 0 0 0 54
+Birine | 0 252 0 0 0 0 252
+Bordj-Chakir | 25 181 24 0 0 0 230
+Bordj-Gourbal | 9 47 2 0 0 2 60
+Bordj-Touil | 5 2 0 0 0 4 11
+Bou-Rebia | 7 1 0 0 0 6 14
+Carthage | 151* 30 9 3 0 48 241
+La Cebala (Mornag) | 154 196 10 0 0 2 362
+Chebaou | 0 84 0 0 0 0 84
+Choutrana | 0 31 0 0 0 0 31
+Crétéville | 124 207 2 0 0 1 334
+Djaffar | 12* 62 0 3 0 0 77
+Djebel-Djelloud, Dubosville | 112* 120 16 0 0 0 248
+Douar-ech-Chott | 9 3 14 0 0 0 26
+Douémis (Mornag) | 38 225 1 0 0 4 268
+Fondouk-Choucha | 19 37 0 0 0 0 56
+Gamart | 2 7* 7 0 0 0 16
+La Goulette-Neuve | 181 413 145 7 4* 24 774
+La Goulette-Vieille | 233 1807 125 0 0 9 2174
+La Hafsia | 0 24 3* 0 0 0 27

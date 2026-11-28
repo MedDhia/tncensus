@@ -1,0 +1,217 @@
+# Property chapter (chapter V, Propriété foncière; page headings "Propriété immobilière", "Tribunal mixte de
+# Tunisie", "Conservation foncière", "Conservation de la propriété foncière"), sgt1939 (ark bpt6k9105739w),
+# views 57-64 (57 chapter title, 64 blank; 65 = chapter VI Instruction publique). Format: see yb_tables.py and
+# property_sgt1922.txt. The pending requisitions are printed by seat only (no judges); no oppositions, no legal
+# quality of claimants, no line V. New: transfers inter vivos of registered properties by contrôle civil (f63).
+
+@cases view=58 page=52 year=1939
+img: all
+cols: tunis sousse
+pending_start | 1306 523
+entered | 298 584
+Total@in | 1604 1107
+judged | 288 81
+pending_end | 1316 1026
+Total@pending | 2342 -
+
+@activity view=58 page=52 year=1939
+img: all
+cols: tunis sousse total
+requisitions | 298 584 882
+hearings | 80 7 87
+judg_registration | 267 66 -
+judg_rejection | 21 14 -
+judg_radiation | 0 1 -
+Total@judgments | - - 369
+interlocutory | 183 51 234
+rectification | 0 0 0
+inspections | 114 21 135
+expertises | 0 0 0
+
+@pending view=59 page=53 year=1939 heads="Tunis Sousse"
+img: all
+cols: seat.tunis seat.sousse partial
+I.1 | 485 711 1196
+I.2 | 6 12 18
+I.3 | 148 33 181
+II.1 | 189 142 331
+II.2 | 438 52 490
+III | 50 76 126
+Total | 1316 1026 2342
+
+@pending_groups view=59 page=53 year=1939
+img: all
+cols: general
+I | 1395
+II | 821
+III | 126
+
+@pending_age view=59 page=53 year=1939 heads="Tunis Sousse"
+img: all
+# 1939 line: totaux printed "77" (first digit not printed); 293 + 584 = 877, transcribed 877.
+cols: seat.tunis seat.sousse partial
+1911 | 1 0 1
+1912 | 2 1 3
+1913 | 1 0 1
+1919 | 6 0 6
+1920 | 4 0 4
+1921 | 9 0 9
+1922 | 5 0 5
+1923 | 4 1 5
+1924 | 12 2 14
+1925 | 16 4 20
+1926 | 34 2 36
+1927 | 45 10 55
+1928 | 62 9 71
+1929 | 43 14 57
+1930 | 66 27 93
+1931 | 81 28 109
+1932 | 81 9 90
+1933 | 39 44 83
+1934 | 31 32 63
+1935 | 59 28 87
+1936 | 62 45 107
+1937 | 101 82 183
+1938 | 259 104 363
+1939 | 293 584 877
+Total | 1316 1026 2342
+
+@legal_status view=60 page=54 year=1939
+img: all
+cols: imm.tunis imm.sousse rej.tunis rej.sousse rad.tunis rad.sousse total
+melk | 193 62 19 13 0 1 288
+enzel | 64 1 1 0 0 0 66
+habous | 10 3 1 1 0 0 15
+Total | 267 66 21 14 0 1 369
+Total@pair | 333 - 35 - 1 - -
+
+@charges view=60 page=54 year=1939
+img: all
+cols: imm.tunis imm.sousse rej.tunis rej.sousse rad.tunis rad.sousse total
+enzel_registered | 20281.41 700 0 0 0 0 20981.41
+enzel_declared | 0 0 24 0 0 0 24
+mortgage_registered | 4489958.41 543746.75 0 0 0 0 5033705.16
+mortgage_declared | 0 0 47000 0 0 0 47000
+
+@charges_summary view=60 page=54 year=1939
+img: all
+cols: value
+n_properties | 369
+Total enzel | 20981.41
+Total mortgage | 5033705.16
+mortgage_titles_tunis | 64
+mortgage_titles_sousse | 17
+
+@location view=60 page=54 year=1939
+img: all
+cols: imm.tunis imm.sousse rej.tunis rej.sousse rad.tunis rad.sousse total
+urban.melk | 45 27 1 3 0 1 77
+urban.enzel | 33 1 1 0 0 0 35
+urban.habous | 1 0 0 0 0 0 1
+Total urban | 79 28 2 3 0 1 113
+Total@pair urban | 107 - 5 - 1 - -
+rural.melk | 148 35 18 10 0 0 211
+rural.enzel | 31 0 0 0 0 0 31
+rural.habous | 9 3 1 1 0 0 14
+Total rural | 188 38 19 11 0 0 256
+Total@pair rural | 226 - 30 - 0 - -
+Total général | - - - - - - 369
+
+@areas view=61 page=55 year=1939
+img: all
+# printed "h. a. c." with points as separators. The Totaux line prints » under TOTAUX; the grand total 24.365.01 65
+# is printed beside the brace totals and as Total des surfaces.
+cols: imm.tunis imm.sousse ref.tunis ref.sousse total
+urban.melk | 34.1454 3.7773 0.1166 0.1420 38.1813
+urban.enzel | 2.8609 0.0128 0.0315 0 2.9052
+urban.habous | 0.0093 0 0 0 0.0093
+rural.melk | 8870.3092 4017.6074 4742.3819 762.5636 18392.8621
+rural.enzel | 691.0406 0 8.7600 0 699.8006
+rural.habous | 2079.4284 2408.0202 725.1594 18.6500 5231.2580
+Total | 11677.7938 6429.4177 5476.4494 781.3556 -
+Total@pair | 18107.2115 - 6257.8050 - -
+Total général | - - - - 24365.0165
+
+@claimant_nationality view=61 page=55 year=1939
+img: all
+cols: imm.tunis imm.sousse rej.tunis rej.sousse ren.tunis ren.sousse total
+Français | 122 39 2 3 0 0 166
+Tunisiens | 664 91 65 50 0 1 871
+Italiens | 29 8 1 0 0 0 38
+Anglais | 5 1 0 1 0 0 7
+Grecs | 0 0 0 0 0 0 0
+Belges | 0 0 0 0 0 0 0
+Espagnols | 0 1 0 0 0 0 1
+Divers | 2 0 0 0 0 0 2
+Total | 822 140 68 54 0 1 1085
+Total@pair | 962 - 122 - 1 - -
+Total général | - - - - - - 1085
+
+@requisitions view=62 page=56 years=1886-1939
+img: all
+cols: french foreign tunisian number area value
+1886-1934 | 5984 4937 10893 21814 2328061 734453164
+1935 | 148 37 169 354 31522 22544897
+1936 | 131 35 168 334 81800 25533160
+1937 | 116 42 236 394 15503 15321018
+1938 | 108 43 309 460 53203 35030601
+1939 | 80 32 781 893 32904 45488430
+Totaux | 6567 5126 12556 24249 2542993 878371270
+
+@value_brackets view=62 page=56 years=1886-1939
+img: all
+cols: le_3000 3001_12000 12001_60000 ge_60001 total
+1886-1934 | 5747 7603 6310 2154 21814
+1935 | 53 84 137 80 354
+1936 | 45 103 120 66 334
+1937 | 41 148 158 47 394
+1938 | 48 130 199 83 460
+1939 | 49 207 485 152 893
+Totaux | 5983 8275 7409 2582 24249
+
+@titles view=62 page=56 years=1886-1939
+img: all
+cols: total_titles subdivision judgment area value
+1886-1934 | 46779 29727 17052 1427131.9639 465873823
+1935 | 1604 990 614 21876.4576 47206817
+1936 | 1269 816 453 25936.8042 24772447
+1937 | 1502 997 505 31487.8226 39645420
+1938 | 1354 1000 354 38132.2692 27683939
+1939 | 1270 879 391 14403.8167 16051768
+Totaux | 53778 34409 19349 1558969.1342 621233714
+
+@recap view=62 page=56 year=1939
+img: all
+# valeur printed 621.233.914 (titles Totaux 621.233.714); nombre de titres établis printed 19.369 (Totaux 19.349).
+cols: demands area_declared value_declared solved area_registered value_registered titles_established titles_mutation titles_total
+cumulative | 24249 2542993 878371270 21912 1558969 621233914 19369 34409 53778
+
+@registered view=62 page=56 year=1939
+img: all
+cols: value
+enzel_rents | 4910204
+mortgage_claims | 1813227080
+
+@transfers view=63 page=57 year=1939
+img: all
+cols: number value
+Tunis | 1242 116854740.37
+Zaghouan | 123 5838244.62
+Grombalia | 131 7732308.66
+Bizerte | 276 19074636.13
+Béja | 55 4715741.90
+Souk-el-Arba | 61 1585293.44
+Kef | 52 771066.10
+Téboursouk | 43 3935524.70
+Medjez-el-Bab | 115 13555054.05
+Maktar | 4 2611580
+Sousse | 132 6732770.36
+Kairouan | 7 376736.50
+Thala | 7 515387.20
+Sfax | 266 22471695.39
+Gabès | 31 1523610.40
+Gafsa | 13 698786
+Tozeur | 5 28510.46
+Djerba | 2 27907
+Territoire Militaire (Medenine) | 6 166644
+Totaux | 2571 209216217.28

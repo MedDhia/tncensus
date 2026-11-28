@@ -1,0 +1,20 @@
+# sgt1922 views 32-33 (pp.8-9). Table f) Population européenne d'après l'âge, le sexe et l'état civil.
+# Columns per age group: single M F | married M F | widowed_divorced M F.
+# "ensemble" = all Europeans including nationalities not listed separately ("compris européens non dénommés").
+# French married F (three cells) is lost in the sgt1922 gutter; read from sgt1923 (view 510) and flagged reprint_corrected (marked +).
+ensemble | lt20 | 32681 31929 58 571 0 8
+ensemble | 20_39 | 9713 8034 11772 16177 285 1240
+ensemble | 40plus | 1915 1485 18530 14001 1876 5840
+ensemble = | 44309 41448 30360 30749 2161 7088 | 85757 61109 9249 | 55.0 39.0 5.7
+french | lt20 | 9903 9768 3 153+ 0 4
+french | 20_39 | 3163 3172 4365 6366+ 144 600
+french | 40plus | 789 640 6947 5399+ 770 2290
+french = | 13855 13580 11315 11918 914 2894 | 27435 23233 3808 | 50.3 42.5 6.9
+italian | lt20 | 19270 18724 41 350 0 4
+italian | 20_39 | 5232 3904 6120 8133 112 558
+italian | 40plus | 727 574 9859 7406 898 2887
+italian = | 25229 23202 16020 15889 1010 3449 | 48431 31909 4459 | 55.9 37.5 5.2
+maltese | lt20 | 2947 2902 8 48 0 0
+maltese | 20_39 | 970 713 1082 1365 23 69
+maltese | 40plus | 251 157 1334 931 171 549
+maltese = | 4168 3772 2424 2344 194 618 | 7940 4768 812 | 58.6 35.2 5.8

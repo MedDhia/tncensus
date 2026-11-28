@@ -1,0 +1,216 @@
+# Travail et prévoyance sociale, sgt1939 (chapter XV, f163-f175). Format: yb_tables.py.
+# Habitations à bon marché (only "Logements construits" printed; no subventions table). The bracket is printed
+# over 1925-1927 with 104 and 204 on the line 1928; every earlier edition (and this edition's own totals with
+# the figures of sgt1935) joins 1925-1926 = 104 and 1927-1928 = 204: stored so (row_realigned).
+
+@hbm_built view=165 page=159 realigned="1925-1926:*;1927-1928:*"
+img: all
+cols: indiv coll workers military maritime
+1912 à 1920 | 231 0 0 0 0
+1921 | 87 12 0 0 0
+1922 | 103 70 0 0 0
+1923 | 131 0 0 0 0
+1924 | 57 0 0 0 0
+1925-1926 | 104 0 0 0 0
+1927-1928 | 204 0 0 0 0
+1929 | 291 32 301 0 0
+1930 | 0 0 0 90 0
+1931 | 332 6 0 95 41
+1932 | 0 44 0 36 89
+1933 | 38 114 193 0 30
+1934 | 5 0 1 0 10
+1935 | 0 0 0 0 0
+1936 | 0 0 0 0 0
+1937 | 1 0 0 5 0
+1938 | 22 0 0 5 17
+1939 | 13 22 0 5 54
+Totaux | 1619 300 495 236 241
+Total général | 2891 - - - -
+
+# Accidents du travail (no year printed; edition sgt1939; the causes table is the same year). Back to the
+# 14 categories of sgt1927. Transports, italiens: printed 295 (zoomed crop); the row total 2.539 and the column
+# total 1.639 both need 292: total_mismatch.
+@acc_nat view=166 page=160 mismatch="Transports : chemins de fer et tramways, autres transports par terre et entrepôts, poste et télégraphe, navigation aérienne et maritime:italian"
+img: all
+cols: french indigenous italian foreign total
+check: total = french + indigenous + italian + foreign
+Agriculture et forêts | 36 1702 123 5 1866
+Alimentation (moulins, boissons, produits alimentaires, tabacs) | 23 313 124 4 464
+Mines | 46 2051 224 612 2933
+Grande et petite métallurgie | 74 418 274 2 768
+Pierres et terres (carrières, pierres au feu) | 13 302 63 3 381
+Bâtiment et travaux publics, théâtre | 102 1750 308 53 2213
+Bois et bimbeloterie | 10 98 57 0 165
+Industries chimiques, services d'eau et gaz et d'électricité | 83 278 122 14 497
+Industrie textile, nettoyage, cuirs et peaux | 0 16 7 0 23
+Papier et industrie polygraphique | 0 17 8 0 25
+Transports : chemins de fer et tramways, autres transports par terre et entrepôts, poste et télégraphe, navigation aérienne et maritime | 503 1741 295 3 2539
+Commerce de gros et de détail, banques | 0 23 4 1 28
+Armées de terre et de mer | 39 80 0 0 119
+Autres | 14 103 33 3 153
+Totaux | 943 8892 1639 700 12174
+
+# Suites: the TOTAUX column repeats the totals of the nationality table except Autres (145 here, 153 there);
+# three lines do not add up (Agriculture by 8, Transports by 6, Armées by 11) and the column totals of
+# permanent, temporary and unknown differ from the lines (by -2, +22, +13): every cell re-read on zoomed crops,
+# printed as such; no single faulty cell identified (no flags).
+@acc_sev view=167 page=161
+img: all
+cols: dead inc_perm inc_temp unknown total
+check: total = dead + inc_perm + inc_temp + unknown
+Agriculture et forêts | 12 23 1700 123 1866
+Alimentation (moulins, boissons, produits alimentaires, tabacs) | 7 3 424 30 464
+Mines | 21 106 2806 0 2933
+Grande et petite métallurgie | 0 3 729 36 768
+Pierres et terres (carrières, pierres au feu) | 4 6 349 22 381
+Bâtiment et travaux publics, théâtre | 14 15 1987 197 2213
+Bois et bimbeloterie | 0 2 160 3 165
+Industries chimiques, services d'eau et gaz et d'électricité | 1 2 434 60 497
+Industrie textile, nettoyage, cuirs et peaux | 0 1 22 0 23
+Papier et industrie polygraphique | 0 0 24 1 25
+Transports : chemins de fer et tramways, autres transports par terre et entrepôts, poste et télégraphe, navigation aérienne et maritime | 7 8 2300 218 2539
+Commerce de gros et de détail, banques | 0 0 25 3 28
+Armées de terre et de mer | 1 0 107 0 119
+Autres | 0 0 135 10 145
+Totaux | 67 167 11224 716 12174
+
+# Causes matérielles des accidents (f168|f169 spread), causes as in sgt1927; the boilers column in the gutter
+# (» throughout but 3, 3, total 6, legible on both edges). Transports, matières brûlantes: printed 119 (zoomed
+# crop); the row total 2.539 and the column total 365 both need 109: total_mismatch. The line totals of this
+# table differ from the nationality table for several categories (e.g. Bâtiment 2.202 against 2.213, Industrie
+# textile 54 against 23), with the same grand total 12.174: printed as such.
+@acc_cause view=168 page=162 view2=169 page2=163 split=explosives mismatch="Transports : chemins de fer et tramways, autres transports par terre et entrepôts, poste et télégraphe, navigation aérienne et maritime:hot_matter"
+img: all
+cols: motors transmission machines lifting boilers explosives hot_matter collapse falls_height loading vehicles railways navigation hand_tools miscellaneous total
+check: total = motors + transmission + machines + lifting + boilers + explosives + hot_matter + collapse + falls_height + loading + vehicles + railways + navigation + hand_tools + miscellaneous
+Agriculture et forêts | 10 41 150 0 0 1 36 11 362 139 532 0 0 377 207 1866
+Alimentation (moulins, boissons, produits alimentaires, tabacs) | 6 7 20 0 0 6 37 3 113 52 30 0 0 107 83 464
+Mines | 0 0 0 0 0 2 0 808 19 0 0 728 0 35 1341 2933
+Grande et petite métallurgie | 10 2 60 0 0 2 82 4 175 47 43 0 0 222 121 768
+Pierres et terres (carrières, pierres au feu) | 2 2 3 0 0 1 4 4 115 53 52 1 0 102 39 378
+Bâtiment et travaux publics, théâtre | 13 2 85 2 0 1 45 37 615 262 198 0 0 661 281 2202
+Bois et bimbeloterie | 0 2 25 0 0 0 2 1 48 12 5 0 0 44 26 165
+Industries chimiques, services d'eau et gaz et d'électricité | 8 1 18 1 3 3 35 5 101 32 43 0 0 108 122 480
+Industrie textile, nettoyage, cuirs et peaux | 0 1 4 0 0 0 1 0 4 13 0 0 0 15 16 54
+Papier et industrie polygraphique | 1 0 4 0 0 0 3 0 7 3 2 0 0 4 1 25
+Transports : chemins de fer et tramways, autres transports par terre et entrepôts, poste et télégraphe, navigation aérienne et maritime | 9 8 72 2 3 0 119 138 505 335 192 41 2 476 647 2539
+Commerce de gros et de détail, banques | 0 2 0 0 0 1 0 0 9 4 4 0 0 7 1 28
+Armées de terre et de mer | 0 0 4 0 0 0 2 1 45 16 8 0 0 28 15 119
+Autres | 1 2 7 0 0 0 9 1 46 2 13 0 0 39 33 153
+Totaux | 60 70 452 5 6 17 365 1013 2164 970 1122 770 2 2225 2933 12174
+
+# Grèves survenues de 1930 à 1939 (f170|f171 spread). 1936 results » » » as in sgt1936; 1937: 93 strikes,
+# results 70 / » / 23 (sum 93). Identity fails for 1936 only (results not printed).
+@strikes view=170 page=164 view2=171 page2=165 split=establishments years=1930-1939
+img: all
+cols: strikes days establishments strikers success transaction failure
+check: strikes = success + transaction + failure
+1930 | 6 38 12 2805 1 0 5
+1931 | 8 38 76 855 2 2 4
+1932 | 3 24 9 189 0 1 2
+1933 | 3 26 31 2076 0 3 0
+1934 | 2 16 2 77 2 0 0
+1935 | 7 105 12 772 0 2 5
+1936 | 50 273 784 21004 0 0 0
+1937 | 93 674 356 26181 70 0 23
+1938 | 32 248 84 7040 13 15 4
+1939 | 10 107 47 2324 5 4 1
+
+# Opérations de l'Office du Placement Français en Tunisie (1930-1939) (f170|f171). 1930-1936 from the standing
+# type of sgt1936 with its misprints: 1932 Industrie hôtelière demandes 296 (sgt1935: 6.200; total 11.971 needs
+# it; offres printed 3.128 here); 1933 Divers placements "611" and Totaux placements "716" (leading digit not
+# printed; sgt1935 2.611, 4.716). Those three cells are stored from sgt1935 (reprint_corrected, key prefer=).
+# The 1936 demandes Totaux is now printed 7.350 (sgt1936 6.711), agreeing with the lines. "Commerce et
+# transports terrestres" replaces "Commerce et industrie" (same figures 1930-1936); "Industrie hôtelière" as in
+# sgt1936. The 1933 placements and 1934 demandes columns are in the gutter; digits partly hidden but legible.
+@placement view=170 page=164 view2=171 page2=165 split=d1934 prefer="Industrie hôtelière:d1932=sgt1935;Divers:p1933=sgt1935"
+img: all
+cols: d1930 o1930 p1930 d1931 o1931 p1931 d1932 o1932 p1932 d1933 o1933 p1933 d1934 o1934 p1934 d1935 o1935 p1935 d1936 o1936 p1936 d1937 o1937 p1937 d1938 o1938 p1938 d1939 o1939 p1939
+Agriculture | 389 239 280 490 274 250 614 202 194 342 107 100 329 116 71 113 44 14 100 27 37 185 48 31 145 33 15 59 48 8
+Commerce et transports terrestres | 834 477 311 1278 667 808 2089 720 723 1259 403 225 1122 309 214 768 259 146 944 190 93 2200 200 347 1558 221 290 1164 242 215
+Bâtiment | 197 120 373 120 108 150 304 168 285 548 505 575 422 157 188 514 206 456 372 53 156 751 122 476 433 84 599 727 592 575
+Métallurgie | 337 138 197 520 261 280 621 180 316 469 146 143 437 132 90 286 73 45 370 37 16 695 92 97 564 80 99 398 137 123
+Mines et carrières | 98 191 448 390 39 70 270 40 297 148 36 49 98 45 46 31 160 15 38 3 0 24 4 8 10 3 1 7 6 1
+Services domestiques | 251 949 372 528 1483 866 1176 1670 952 902 2005 774 1027 1958 810 741 1675 668 513 1418 485 594 1588 474 440 1523 404 320 1159 337
+Industrie hôtelière | 175 228 135 241 413 296 296 3128 3128 330 321 239 231 235 180 145 133 74 196 103 66 299 97 41 168 109 70 102 115 57
+Divers | 309 76 386 3568 49 3164 697 300 195 8200 301 611 8068 386 1981 2464 292 1765 4817 94 2747 3492 205 2008 2393 166 1708 1820 399 413
+Totaux | 2590 2418 2502 7135 3294 5884 11971 6408 6090 12198 3824 716 11735 3338 3580 5062 2842 3183 7350 1925 3601 8240 2356 3482 5711 2219 3186 4597 2688 1729
+
+# Liste des conventions collectives dont les dispositions ont été rendues obligatoires par arrêtés au cours de
+# l'année 1939 (application des dispositions du décret du 4 août 1936) (f172). Fields: date de l'arrêté
+# d'extension et de sa publication au J.O.T. ;; date de la conclusion de la convention ;; industrie ou
+# profession ;; champ d'application.
+@conventions view=172 page=166 year=1939
+img: all
+1 || 3 mars 1939 (J.O.T. du 17 mars 1939) ;; 1er décembre 1938 ;; Commerce des céréales (manutention). ;; Tunis
+2 || 26 avril 1939 (J.O.T. du 6 mai 1939) ;; 5 février 1939 ;; Boulangeries (avenant à la convention collective du 23 juin 1938). ;; Tunis
+3 || 28 avril 1939 (J.O.T. du 11 mai 1939) ;; 1er mars 1939 ;; Industries du bâtiment et des travaux publics. ;; Tunis
+4 || 26 juin 1939 (J.O.T. du 4 juillet 1939) ;; 1er mai 1939 ;; Spectacles. ;; Tunis
+5 || 29 juin 1939 (J.O.T. du 6 juillet 1939) ;; 11 mai 1938 ;; Commerce des machines agricoles. ;; Tunis
+6 || 3 octobre 1939 (J.O.T. du 12 octobre 1939) ;; 11 août 1939 ;; Banques (avenant à la convention collective du 29 décembre 1936). ;; Régence de Tunis
+
+# Sentences arbitrales ou accords signés au cours de la procédure de conciliation et d'arbitrage obligatoire
+# rendus obligatoires en 1939 (application des dispositions du décret du 22 avril 1937) (f173). Fields:
+# sentence ou accord (arbitrators' names as printed) ;; date de la sentence ou de l'accord ;; commerces ou
+# industries ;; champ d'application ;; date de la publication au J.O. ("Industrie de 'ameublement" as printed).
+@arbitration view=173 page=167 year=1939
+img: all
+1 || Accord ;; 6 décembre 1938 ;; Industrie de 'ameublement. ;; Tunis ;; 6 janvier 1939
+2 || Accord ;; 20 janvier 1939 ;; Commerce de l'alimentation. ;; Tunis ;; 3 février 1939
+3 || Prelorenzo-Benet ;; 15 février 1939 ;; Industries des pâtes alimentaires. ;; Tunis ;; 17 mars 1939
+4 || Accord ;; 28 février 1939 ;; Commerce de gros de tissus indigènes. ;; Tunis ;; 14 mars 1939
+5 || Strauss-Faivre ;; 2 mars 1939 ;; Assurances. ;; Tunis ;; 31 mars 1939
+6 || Accord ;; 6 mars 1939 ;; Industries des bateaux en bois. ;; Tunis ;; 21 mars 1939
+7 || Saliba-Fouchy ;; 27 avril 1939 ;; Confiseries. ;; Tunis ;; 16 mai 1939
+8 || Cohen-Hadria ;; 25 mai 1939 ;; Commerce automobile. ;; Tunis ;; 17 juin 1939
+
+# Immigration des travailleurs. Contrats de travail visés au cours de l'année 1939 (application des
+# dispositions du décret du 20 février 1930) (f174). Visas accordés 397 = renouvellements 183 + transferts 76
+# (bracketed 259) + immigrants nouveaux 138.
+@visas view=174 page=168 year=1939
+img: all
+cols: n
+Visas accordés | 397
+Renouvellements | 183
+Transferts | 76
+Renouvellements et transferts | 259
+Immigrants nouveaux | 138
+
+# Répartition des visas accordés (the 138 new immigrants), by corps de métier and nationality. Bâtiment et
+# Métallurgie, Suisses: printed "–" (nil, stored 0; the row total needs 0).
+@visa_trade view=174 page=168 year=1939
+img: all
+cols: italian dutch swiss other total
+check: total = italian + dutch + swiss + other
+Industrie forestière | 70 0 0 0 70
+Bâtiment et Métallurgie | 5 18 0 6 29
+Services domestiques | 12 1 8 5 26
+Divers | 3 0 2 8 13
+Totaux | 90 19 10 19 138
+
+# Coût de la vie, base 100 en juillet 1914 (f175, p.169). 1939 4th quarter printed » (not yet computed):
+# stored NA (not_applicable). Footnote as in
+# sgt1936 ("tunisiens" for "indigènes").
+@col view=175 page=169
+img: all
+cols: french italian indigenous
+1935 t1 | 486 475 394
+1935 t2 | 476 464 374
+1935 t3 | 468 453 391
+1935 t4 | 472 456 395
+1936 t1 | 472 461 398
+1936 t2 | 479 486 413
+1936 t3 | 512 527 465
+1936 t4 | 547 572 498
+1937 t1 | 544 575 490
+1937 t2 | 566 589 514
+1937 t3 | 604 628 561
+1937 t4 | 650 660 580
+1938 t1 | 670 690 601
+1938 t2 | 680 697 606
+1938 t3 | 714 733 628
+1938 t4 | 733 748 653
+1939 t1 | 741 750 640
+1939 t2 | 741 752 639
+1939 t3 | 749 765 677
+1939 t4 | - - -

@@ -1,0 +1,617 @@
+{
+ "labour_hbm_dwellings": {
+  "rows": 90,
+  "checks": 31,
+  "failed": [
+   "sgt1930 p.489 (f1047) hbm_built workers: lines vs Totaux: cells give 305, printed 395 (difference 90)",
+   "sgt1930 p.489 (f1047) hbm_built Total général = sum of the Totaux indiv+coll+workers+military: cells give 1916, printed 1826 (difference -90)"
+  ],
+  "overlap_compared": 218,
+  "overlap_diffs": [
+   [
+    [
+     "individual",
+     "1927-1928"
+    ],
+    "sgt1928",
+    "145",
+    "sgt1939",
+    "204"
+   ],
+   [
+    [
+     "individual",
+     "1929"
+    ],
+    "sgt1929",
+    "253",
+    "sgt1939",
+    "291"
+   ],
+   [
+    [
+     "workers",
+     "1929"
+    ],
+    "sgt1929",
+    "235",
+    "sgt1939",
+    "301"
+   ],
+   [
+    [
+     "military",
+     "1929"
+    ],
+    "sgt1929",
+    "206",
+    "sgt1939",
+    "0"
+   ]
+  ],
+  "flagged": [
+   "sgt1939 1926 1925 / 1925-1926 / individual / Maisons individuelles = 104 (row_realigned)",
+   "sgt1939 1926 1925 / 1925-1926 / collective / Maisons collectives (nombre de logements) = 0 (row_realigned)",
+   "sgt1939 1926 1925 / 1925-1926 / workers / Logements ouvriers (individuels) = 0 (row_realigned)",
+   "sgt1939 1926 1925 / 1925-1926 / military / Logements militaires = 0 (row_realigned)",
+   "sgt1939 1926 1925 / 1925-1926 / maritime / Logements maritimes = 0 (row_realigned)",
+   "sgt1939 1928 1927 / 1927-1928 / individual / Maisons individuelles = 204 (row_realigned)",
+   "sgt1939 1928 1927 / 1927-1928 / collective / Maisons collectives (nombre de logements) = 0 (row_realigned)",
+   "sgt1939 1928 1927 / 1927-1928 / workers / Logements ouvriers (individuels) = 0 (row_realigned)",
+   "sgt1939 1928 1927 / 1927-1928 / military / Logements militaires = 0 (row_realigned)",
+   "sgt1939 1928 1927 / 1927-1928 / maritime / Logements maritimes = 0 (row_realigned)"
+  ],
+  "editions": [
+   "sgt1927",
+   "sgt1928",
+   "sgt1929",
+   "sgt1930",
+   "sgt1935",
+   "sgt1936",
+   "sgt1939"
+  ]
+ },
+ "labour_hbm_finance": {
+  "rows": 71,
+  "checks": 19,
+  "failed": [
+   "sgt1928 p.481 (f1033) hbm_finance cap: lines vs Totaux: cells give 27551397.52, printed 27551897.52 (difference 500.00)",
+   "sgt1930 p.489 (f1047) hbm_finance Total général = sum of the Totaux cap+cap_workers+cap_military: cells give 70764110.54, printed 70764310.54 (difference 200.00)",
+   "sgt1935 p.301 (f321) hbm_finance subv: lines vs Totaux: cells give 14236000, printed 14336000 (difference 100000)",
+   "sgt1935 p.301 (f321) hbm_finance Total général = sum of the Totaux cap+cap_workers+cap_military+cap_maritime: cells give 108510629, printed 122856629 (difference 14346000)",
+   "sgt1936 p.178 (f189) hbm_finance subv: lines vs Totaux: cells give 14236000, printed 14336000 (difference 100000)",
+   "sgt1936 p.178 (f189) hbm_finance cap_workers: lines vs Totaux: cells give 10500000, printed 65145374 (difference 54645374)",
+   "sgt1936 p.178 (f189) hbm_finance Total général = sum of the Totaux cap+cap_workers+cap_military+cap_maritime: cells give 163156003, printed 122856629 (difference -40299374)"
+  ],
+  "overlap_compared": 175,
+  "overlap_diffs": [
+   [
+    [
+     "state_subsidy",
+     "",
+     "1912 à 1919"
+    ],
+    "sgt1928",
+    "56000",
+    "sgt1930",
+    "36000"
+   ],
+   [
+    [
+     "state_subsidy",
+     "",
+     "1930"
+    ],
+    "sgt1930",
+    "1100000",
+    "sgt1936",
+    "1000000"
+   ],
+   [
+    [
+     "state_subsidy",
+     "",
+     "1930"
+    ],
+    "sgt1930",
+    "1100000",
+    "sgt1936",
+    "1000000"
+   ],
+   [
+    [
+     "capital_invested",
+     "individual_and_collective",
+     "1920"
+    ],
+    "sgt1927",
+    "5287472.52",
+    "sgt1930",
+    "5287472.54"
+   ],
+   [
+    [
+     "capital_invested",
+     "individual_and_collective",
+     "1920"
+    ],
+    "sgt1928",
+    "5287472.52",
+    "sgt1930",
+    "5287472.54"
+   ],
+   [
+    [
+     "capital_invested",
+     "individual_and_collective",
+     "1927-1928"
+    ],
+    "sgt1928",
+    "5201000",
+    "sgt1936",
+    "7830808"
+   ],
+   [
+    [
+     "capital_invested",
+     "individual_and_collective",
+     "1920"
+    ],
+    "sgt1929",
+    "5287472.52",
+    "sgt1930",
+    "5287472.54"
+   ],
+   [
+    [
+     "capital_invested",
+     "individual_and_collective",
+     "1929"
+    ],
+    "sgt1929",
+    "15980000",
+    "sgt1936",
+    "16814168"
+   ],
+   [
+    [
+     "capital_invested",
+     "workers",
+     "1929"
+    ],
+    "sgt1929",
+    "8225000",
+    "sgt1936",
+    "9768737"
+   ],
+   [
+    [
+     "capital_invested",
+     "military",
+     "1929"
+    ],
+    "sgt1929",
+    "14000000",
+    "sgt1936",
+    "0"
+   ]
+  ],
+  "flagged": [
+   "sgt1936 1928 1927 / 1927-1928 / capital_invested / Capitaux investis = 7830808 (row_realigned)",
+   "sgt1936 1929 1929 / 1929 / capital_invested / Capitaux investis = 16814168 (row_realigned)",
+   "sgt1936 1929 1929 / 1929 / capital_invested / Capitaux investis = 9768737 (row_realigned)",
+   "sgt1930 1930 1930 / 1930 / state_subsidy / Subventions de l'Etat = 1100000 (reprint_corrected)"
+  ],
+  "editions": [
+   "sgt1927",
+   "sgt1928",
+   "sgt1929",
+   "sgt1930",
+   "sgt1935",
+   "sgt1936"
+  ]
+ },
+ "labour_hbm_pending": {
+  "rows": 4,
+  "checks": 1,
+  "failed": [],
+  "overlap_compared": 0,
+  "overlap_diffs": [],
+  "flagged": [],
+  "editions": [
+   "sgt1930"
+  ]
+ },
+ "labour_accidents_nationality": {
+  "rows": 447,
+  "checks": 159,
+  "failed": [
+   "sgt1925 p.491 (f515) acc_nat Mines et Carrières: total = french + italian + indigenous + foreign: cells give 3715, printed 3735 (difference 20)",
+   "sgt1925 p.491 (f515) acc_nat indigenous: lines vs Totaux: cells give 8922, printed 8942 (difference 20)",
+   "sgt1935 p.302 (f322) acc_nat Mines: total = french + indigenous + italian + foreign: cells give 1264, printed 1764 (difference 500)",
+   "sgt1935 p.302 (f322) acc_nat foreign: lines vs Totaux: cells give 120, printed 620 (difference 500)",
+   "sgt1936 p.179 (f190) acc_nat total: lines vs Total: cells give 17972, printed 18930 (difference 958)",
+   "sgt1939 p.160 (f166) acc_nat Transports : chemins de fer et tramways, autres transports par terre et entrepôts, poste et télégraphe, navigation aérienne et maritime: total = french + indigenous + italian + foreign: cells give 2542, printed 2539 (difference -3)",
+   "sgt1939 p.160 (f166) acc_nat italian: lines vs Totaux: cells give 1642, printed 1639 (difference -3)"
+  ],
+  "overlap_compared": 0,
+  "overlap_diffs": [],
+  "flagged": [
+   "sgt1925 1925 mines_quarries / Mines et Carrières / indigenous / Indigènes = 3335 (total_mismatch)",
+   "sgt1935 1935 mines / Mines / foreign / Autres étrangers = 11 (total_mismatch)",
+   "sgt1939 1939 transport / Transports : chemins de fer et tramways, autres transports par terre et entrepôts, poste et télégraphe, navigation aérienne et maritime / italian / Italiens = 295 (total_mismatch)"
+  ],
+  "editions": [
+   "sgt1925",
+   "sgt1926",
+   "sgt1927",
+   "sgt1928",
+   "sgt1929",
+   "sgt1930",
+   "sgt1935",
+   "sgt1936",
+   "sgt1939"
+  ]
+ },
+ "labour_accidents_outcome": {
+  "rows": 414,
+  "checks": 155,
+  "failed": [
+   "sgt1928 p.483 (f1035) acc_sev Mines: total = dead + inc_perm + inc_temp + unknown: cells give 3884, printed 3914 (difference 30)",
+   "sgt1928 p.483 (f1035) acc_sev dead: lines vs Totaux: cells give 43, printed 73 (difference 30)",
+   "sgt1939 p.161 (f167) acc_sev Agriculture et forêts: total = dead + inc_perm + inc_temp + unknown: cells give 1858, printed 1866 (difference 8)",
+   "sgt1939 p.161 (f167) acc_sev Transports : chemins de fer et tramways, autres transports par terre et entrepôts, poste et télégraphe, navigation aérienne et maritime: total = dead + inc_perm + inc_temp + unknown: cells give 2533, printed 2539 (difference 6)",
+   "sgt1939 p.161 (f167) acc_sev Armées de terre et de mer: total = dead + inc_perm + inc_temp + unknown: cells give 108, printed 119 (difference 11)",
+   "sgt1939 p.161 (f167) acc_sev inc_perm: lines vs Totaux: cells give 169, printed 167 (difference -2)",
+   "sgt1939 p.161 (f167) acc_sev inc_temp: lines vs Totaux: cells give 11202, printed 11224 (difference 22)",
+   "sgt1939 p.161 (f167) acc_sev unknown: lines vs Totaux: cells give 703, printed 716 (difference 13)",
+   "sgt1939 p.161 (f167) acc_sev total: lines vs Totaux: cells give 12166, printed 12174 (difference 8)"
+  ],
+  "overlap_compared": 0,
+  "overlap_diffs": [],
+  "flagged": [
+   "sgt1928 1928 mines / Mines / dead / Morts = 3 (total_mismatch)",
+   "sgt1929 1929 mines / Mines / permanent_incapacity / Incapacité permanente = 63 (derived_from_totals)",
+   "sgt1929 1929 commerce_banking / Commerce de gros et de détail, banques / permanent_incapacity / Incapacité permanente = 4 (derived_from_totals)"
+  ],
+  "editions": [
+   "sgt1925",
+   "sgt1926",
+   "sgt1927",
+   "sgt1928",
+   "sgt1929",
+   "sgt1930",
+   "sgt1935",
+   "sgt1939"
+  ]
+ },
+ "labour_accidents_causes": {
+  "rows": 1650,
+  "checks": 277,
+  "failed": [
+   "sgt1926 p.476 (f1040) acc_cause Agriculture: total = motors + transmission + machines + lifting + autoclaves + explosives + hot_matter + falling_objects + worker_fall + handling + traction + hand_tools + miscellaneous + unknown + footwear: cells give 1246, printed 1245 (difference -1)",
+   "sgt1926 p.476 (f1040) acc_cause handling: lines vs Totaux: cells give 2113, printed 2112 (difference -1)",
+   "sgt1928 p.484 (f1036) acc_cause Agriculture et forêts: total = motors + transmission + machines + lifting + boilers + explosives + hot_matter + collapse + falls_height + loading + vehicles + railways + navigation + hand_tools + miscellaneous: cells give 1456, printed 1515 (difference 59)",
+   "sgt1928 p.484 (f1036) acc_cause vehicles: lines vs Totaux: cells give 1411, printed 1470 (difference 59)",
+   "sgt1935 p.304 (f324) acc_cause Autres: total = motors + transmission + machines + lifting + boilers + explosives + hot_matter + collapse + falls_height + loading + vehicles + railways + navigation + hand_tools + miscellaneous: cells give 139, printed 189 (difference 50)",
+   "sgt1935 p.304 (f324) acc_cause miscellaneous: lines vs Totaux: cells give 2448, printed 2498 (difference 50)",
+   "sgt1936 p.180 (f191) acc_cause Mines: total = motors + transmission + machines + lifting + boilers + explosives + hot_matter + collapse + falls_height + loading + vehicles + railways + navigation + hand_tools + miscellaneous: cells give 1792, printed 1764 (difference -28)",
+   "sgt1936 p.180 (f191) acc_cause Industrie textile, nettoyage, cuirs et peaux: total = motors + transmission + machines + lifting + boilers + explosives + hot_matter + collapse + falls_height + loading + vehicles + railways + navigation + hand_tools + miscellaneous: cells give 10, printed 11 (difference 1)",
+   "sgt1936 p.180 (f191) acc_cause Autres: total = motors + transmission + machines + lifting + boilers + explosives + hot_matter + collapse + falls_height + loading + vehicles + railways + navigation + hand_tools + miscellaneous: cells give 139, printed 189 (difference 50)",
+   "sgt1936 p.180 (f191) acc_cause hot_matter: lines vs Totaux: cells give 706, printed 707 (difference 1)",
+   "sgt1936 p.180 (f191) acc_cause vehicles: lines vs Totaux: cells give 887, printed 859 (difference -28)",
+   "sgt1936 p.180 (f191) acc_cause miscellaneous: lines vs Totaux: cells give 2448, printed 2498 (difference 50)",
+   "sgt1939 p.162 (f168) acc_cause Transports : chemins de fer et tramways, autres transports par terre et entrepôts, poste et télégraphe, navigation aérienne et maritime: total = motors + transmission + machines + lifting + boilers + explosives + hot_matter + collapse + falls_height + loading + vehicles + railways + navigation + hand_tools + miscellaneous: cells give 2549, printed 2539 (difference -10)",
+   "sgt1939 p.162 (f168) acc_cause hot_matter: lines vs Totaux: cells give 375, printed 365 (difference -10)"
+  ],
+  "overlap_compared": 210,
+  "overlap_diffs": [
+   [
+    [
+     1935,
+     "mines",
+     "vehicles"
+    ],
+    "sgt1935",
+    "3",
+    "sgt1936",
+    "31"
+   ],
+   [
+    [
+     1935,
+     "textiles_cleaning_leather",
+     "hot_matter"
+    ],
+    "sgt1935",
+    "1",
+    "sgt1936",
+    "0"
+   ]
+  ],
+  "flagged": [
+   "sgt1926 1926 agriculture / Agriculture / handling / Manutention de fardeaux = 103 (total_mismatch)",
+   "sgt1928 1928 agriculture_forestry / Agriculture et forêts / vehicles / Véhicules et animaux = 428 (total_mismatch)",
+   "sgt1935 1935 mines / Mines / vehicles / Véhicules et animaux = 3 (reprint_corrected)",
+   "sgt1935 1935 textiles_cleaning_leather / Industrie textile, nettoyage, cuirs et peaux / hot_matter / Matières brûlantes et corrosives = 1 (reprint_corrected)",
+   "sgt1936 1935 armed_forces / Armées de terre et de mer / miscellaneous / Divers = 11 (total_mismatch)",
+   "sgt1936 1935 other / Autres / miscellaneous / Divers = 6 (total_mismatch)",
+   "sgt1939 1939 transport / Transports : chemins de fer et tramways, autres transports par terre et entrepôts, poste et télégraphe, navigation aérienne et maritime / hot_matter / Matières brûlantes et corrosives = 119 (total_mismatch)"
+  ],
+  "editions": [
+   "sgt1925",
+   "sgt1926",
+   "sgt1927",
+   "sgt1928",
+   "sgt1929",
+   "sgt1930",
+   "sgt1935",
+   "sgt1936",
+   "sgt1939"
+  ]
+ },
+ "labour_strikes": {
+  "rows": 168,
+  "checks": 90,
+  "failed": [
+   "sgt1936 p.182 (f193) strikes 1936: strikes = success + transaction + failure: cells give 0, printed 50 (difference 50)",
+   "sgt1939 p.164 (f170) strikes 1936: strikes = success + transaction + failure: cells give 0, printed 50 (difference 50)"
+  ],
+  "overlap_compared": 462,
+  "overlap_diffs": [],
+  "flagged": [],
+  "editions": [
+   "sgt1925",
+   "sgt1926",
+   "sgt1927",
+   "sgt1928",
+   "sgt1929",
+   "sgt1930",
+   "sgt1935",
+   "sgt1936",
+   "sgt1939"
+  ]
+ },
+ "labour_strike_details": {
+  "rows": 153,
+  "checks": 42,
+  "failed": [
+   "sgt1929 p.486 (f514) strike_detail sum of days vs the yearly line: cells give 62, printed 65 (difference 3)"
+  ],
+  "overlap_compared": 0,
+  "overlap_diffs": [],
+  "flagged": [],
+  "editions": [
+   "sgt1926",
+   "sgt1927",
+   "sgt1928",
+   "sgt1929",
+   "sgt1930",
+   "sgt1935"
+  ]
+ },
+ "labour_placement": {
+  "rows": 480,
+  "checks": 213,
+  "failed": [
+   "sgt1928 p.486 (f1038) placement o1923: lines vs Totaux: cells give 587, printed 588 (difference 1)",
+   "sgt1928 p.486 (f1038) placement p1923: lines vs Totaux: cells give 505, printed 455 (difference -50)",
+   "sgt1929 p.488 (f516) placement o1923: lines vs Totaux: cells give 587, printed 588 (difference 1)",
+   "sgt1929 p.488 (f516) placement p1923: lines vs Totaux: cells give 505, printed 455 (difference -50)",
+   "sgt1930 p.494 (f1052) placement o1923: lines vs Totaux: cells give 587, printed 588 (difference 1)",
+   "sgt1930 p.494 (f1052) placement p1923: lines vs Totaux: cells give 505, printed 455 (difference -50)",
+   "sgt1935 p.306 (f326) placement d1934: lines vs Totaux: cells give 11734, printed 11735 (difference 1)",
+   "sgt1936 p.182 (f193) placement p1928: lines vs Totaux: cells give 1412, printed 1472 (difference 60)",
+   "sgt1936 p.182 (f193) placement d1932: lines vs Totaux: cells give 6067, printed 11971 (difference 5904)",
+   "sgt1936 p.182 (f193) placement d1934: lines vs Totaux: cells give 11734, printed 11735 (difference 1)",
+   "sgt1936 p.182 (f193) placement d1936: lines vs Totaux: cells give 7350, printed 6711 (difference -639)",
+   "sgt1936 p.182 (f193) placement p1936: lines vs Totaux: cells give 3600, printed 3601 (difference 1)",
+   "sgt1939 p.164 (f170) placement d1932: lines vs Totaux: cells give 6067, printed 11971 (difference 5904)",
+   "sgt1939 p.164 (f170) placement p1933: lines vs Totaux: cells give 2716, printed 716 (difference -2000)",
+   "sgt1939 p.164 (f170) placement d1934: lines vs Totaux: cells give 11734, printed 11735 (difference 1)",
+   "sgt1939 p.164 (f170) placement p1936: lines vs Totaux: cells give 3600, printed 3601 (difference 1)",
+   "sgt1939 p.164 (f170) placement o1939: lines vs Totaux: cells give 2698, printed 2688 (difference -10)"
+  ],
+  "overlap_compared": 1253,
+  "overlap_diffs": [
+   [
+    [
+     1923,
+     "metallurgy",
+     "placements"
+    ],
+    "sgt1926",
+    "34",
+    "sgt1930",
+    "84"
+   ],
+   [
+    [
+     1923,
+     "metallurgy",
+     "placements"
+    ],
+    "sgt1927",
+    "34",
+    "sgt1930",
+    "84"
+   ],
+   [
+    [
+     1928,
+     "metallurgy",
+     "placements"
+    ],
+    "sgt1928",
+    "99",
+    "sgt1936",
+    "39"
+   ],
+   [
+    [
+     1928,
+     "metallurgy",
+     "placements"
+    ],
+    "sgt1929",
+    "99",
+    "sgt1936",
+    "39"
+   ],
+   [
+    [
+     1928,
+     "metallurgy",
+     "placements"
+    ],
+    "sgt1930",
+    "99",
+    "sgt1936",
+    "39"
+   ],
+   [
+    [
+     1928,
+     "metallurgy",
+     "placements"
+    ],
+    "sgt1935",
+    "99",
+    "sgt1936",
+    "39"
+   ],
+   [
+    [
+     1932,
+     "public_services",
+     "applications"
+    ],
+    "sgt1935",
+    "6200",
+    "sgt1939",
+    "296"
+   ],
+   [
+    [
+     1933,
+     "miscellaneous",
+     "placements"
+    ],
+    "sgt1935",
+    "2611",
+    "sgt1939",
+    "611"
+   ]
+  ],
+  "flagged": [
+   "sgt1927 1923 metallurgy / Métallurgie / placements / Placements effectués = 34 (reprint_corrected)",
+   "sgt1935 1928 metallurgy / Métallurgie / placements / Placements effectués = 99 (reprint_corrected)",
+   "sgt1935 1932 public_services / Services publics / applications / Demandes d'emploi = 6200 (reprint_corrected)",
+   "sgt1935 1933 miscellaneous / Divers / placements / Placements effectués = 2611 (reprint_corrected)"
+  ],
+  "editions": [
+   "sgt1926",
+   "sgt1927",
+   "sgt1928",
+   "sgt1929",
+   "sgt1930",
+   "sgt1935",
+   "sgt1936",
+   "sgt1939"
+  ]
+ },
+ "labour_cost_of_living": {
+  "rows": 201,
+  "checks": 0,
+  "failed": [],
+  "overlap_compared": 270,
+  "overlap_diffs": [],
+  "flagged": [
+   "sgt1939 1939 t4 / 4e trimestre / french / Français =  (not_applicable)",
+   "sgt1939 1939 t4 / 4e trimestre / italian / Italiens =  (not_applicable)",
+   "sgt1939 1939 t4 / 4e trimestre / indigenous / Indigènes =  (not_applicable)"
+  ],
+  "editions": [
+   "sgt1926",
+   "sgt1927",
+   "sgt1928",
+   "sgt1929",
+   "sgt1930",
+   "sgt1935",
+   "sgt1936",
+   "sgt1939"
+  ]
+ },
+ "labour_immigration_visas": {
+  "rows": 19,
+  "checks": 13,
+  "failed": [],
+  "overlap_compared": 0,
+  "overlap_diffs": [],
+  "flagged": [],
+  "editions": [
+   "sgt1939"
+  ]
+ },
+ "labour_collective_agreements": {
+  "rows": 14,
+  "checks": 0,
+  "failed": [],
+  "overlap_compared": 0,
+  "overlap_diffs": [],
+  "flagged": [],
+  "editions": [
+   "sgt1939"
+  ]
+ },
+ "_chapter_views": {
+  "sgt1925": [
+   513,
+   524
+  ],
+  "sgt1926": [
+   1037,
+   1044
+  ],
+  "sgt1927": [
+   501,
+   510
+  ],
+  "sgt1928": [
+   1031,
+   1040
+  ],
+  "sgt1929": [
+   509,
+   518
+  ],
+  "sgt1930": [
+   1045,
+   1054
+  ],
+  "sgt1935": [
+   319,
+   328
+  ],
+  "sgt1936": [
+   188,
+   197
+  ],
+  "sgt1939": [
+   163,
+   175
+  ]
+ },
+ "_survey": {
+  "sgt1925": "f513 chapter XIV title (Travail et prévoyance sociale); f514 blank; f515 accidents du travail a) répartition d'après la nationalité des victimes, b) répartition d'après la gravité; f516|f517 c) causes matérielles par catégorie professionnelle; grèves survenues en Tunisie de 1916 à 1925; f518 Crédit mutuel agricole (1916-1925) a) caisses locales françaises et indigènes ...; f519 Coopérative centrale des agriculteurs (1916-1925); f520|f521 Assurances mutuelles agricoles (1916-1925); f522|f523 Sociétés indigènes de prévoyance, opérations (1916-1925) - f518-f523: see mutuality_* (extract_mutuality.py); f524 blank; f525-f539 table alphabétique of the volume; f541 front matter of sgt1926 (same volume).",
+  "sgt1926": "f1037 chapter XV title; f1038 blank; f1039 accidents a) nationalité, b) gravité; f1040|f1041 c) causes matérielles, grèves a) état détaillé des grèves; f1042|f1043 b) grèves survenues de 1917 à 1926, placement: opérations de l'Office de Placement Français en Tunisie (1920-1926); f1044 coût de la vie, nombres-indices 1915-1926; f1045-f1059 table alphabétique; f1060-f1061 blank (end of volume).",
+  "sgt1927": "f501 chapter XV title; f502 blank; f503 habitations à bon marché a) logements construits (1912-1927), b) subventions de l'Etat et capitaux investis; f504 accidents a) nationalité (new categories); f505 b) suites connues ou probables; f506|f507 c) causes matérielles (new causes), grèves a) état détaillé; f508|f509 b) grèves survenues de 1918 à 1927, placement (1921-1927); f510 coût de la vie 1915-1927; f511+ table alphabétique; the volume continues with sgt1928.",
+  "sgt1928": "f1031 chapter XV title; f1032 blank; f1033 HBM a) and b) (1912-1928); f1034 accidents a); f1035 b); f1036|f1037 c), grèves a); f1038|f1039 grèves b) 1919-1928, placement 1920-1928; f1040 coût de la vie 1919-1928; f1041+ table alphabétique.",
+  "sgt1929": "f509 chapter XV title; f510 blank; f511 HBM a) and b) (1912-1929); f512 accidents a); f513 b); f514|f515 c), grèves a) état détaillé des grèves survenues en 1929; f516|f517 grèves b) 1920-1929, placement 1920-1929; f518 coût de la vie 1920-1929; f519+ table alphabétique.",
+  "sgt1930": "f1045 chapter XV title; f1046 blank; f1047 HBM a) (with the list of projects under award) and b) (1912-1930); f1048 accidents a); f1049 b); f1050|f1051 c), grèves a) 1930; f1052|f1053 grèves b) 1921-1930, placement 1921-1930; f1054 coût de la vie 1924-1930; f1055-f1071 table alphabétique (end of volume).",
+  "sgt1935": "f319 chapter XVI title; f320 blank; f321 HBM a) and b) (headed 1912-1935, lines to 1934); f322 accidents a); f323 b); f324|f325 c) causes des accidents survenues en 1935, grèves a) 1935; f326|f327 grèves b) 1926-1935, placement 1926-1935; f328 coût de la vie 1931-1935; f329-f338 table alphabétique; f339-f340 blank (end of volume).",
+  "sgt1936": "f182-f186 chapter XIV Mutualité agricole (not this chapter); f187 blank; f188 chapter XV title; f189 HBM logements construits (1912-1936; lines to 1934) and b) subventions et capitaux; f190 accidents, répartition d'après la nationalité (1): totals only; f191|f192 causes matérielles des accidents (1935); f193|f194 grèves survenues de 1927 à 1936, placement 1927-1936; f195 coût de la vie 1932-1936; f196-f197 blank; f198-f210 tables analytique and alphabétique; f211-f212 end of volume.",
+  "sgt1939": "f163 chapter XV title; f164 blank; f165 HBM logements construits (1912-1939; no subsidy table); f166 accidents, nationalité; f167 suites; f168|f169 causes matérielles; f170|f171 grèves survenues de 1930 à 1939, placement 1930-1939; f172 liste des conventions collectives rendues obligatoires en 1939; f173 sentences arbitrales ou accords rendus obligatoires en 1939; f174 immigration des travailleurs: contrats de travail visés en 1939, répartition des visas accordés; f175 coût de la vie 1935-1939; f176-f188 tables analytique and alphabétique; f189-f190 end of volume."
+ },
+ "_not_transcribed": "Every labour table of the chapter is transcribed in every edition that prints it, every cell read on native-resolution crops of the page images (whole-page views of every page from the chapter title to the index, then zoomed crops of every table and of every cell behind a failed check). Printed TOTAUX / TOTAL lines are used as checks only. The four agricultural mutual-credit tables printed in sgt1925's chapter (f518-f523: Crédit mutuel agricole, Coopérative centrale des agriculteurs, Assurances mutuelles agricoles, Sociétés indigènes de prévoyance, 1916-1925) are transcribed with the mutual-credit chapter: see mutuality_* (extract_mutuality.py)."
+}

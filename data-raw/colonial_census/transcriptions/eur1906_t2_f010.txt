@@ -1,0 +1,38 @@
+# view 10
+## Contrôle de Béja
+Béja | 384 1156 41 3 1 11 1596
+Béja (banlieue) | 39 138 0 0 0 3 180
+Aïn-Roumi | 8 7 0 0 0 0 15
+Amdouns | 19 16 0 0 0 0 35
+Djebel Abiod des Nefzas | 21 6 0 0 0 0 27
+Djebel ben Amar | 7 68 0 0 1 1 77
+Djebel Chara | 2 121 0 0 0 3 126
+El-Afareg | 41 1 0 6 0 0 48
+El-Ghodor (Enchir) | 19 7 0 0 0 1 27
+El-Gueliah | 5 0 0 0 0 0 5
+Enfida (Enchir) | 0 23 0 0 0 0 23
+Khanguet Kef Tout | 23 70 0 0 0 0 93
+Ksar Mezoual | 29 21 0 0 0 0 50
+Monchar | 79 29 0 0 0 0 108
+Nefzas | 40 36 0 0 0 0 76
+Pont de Trajan | 8 2 0 0 0 0 10
+Rebahine | 18 0 0 0 0 0 18
+Sidi-Ahmed | 26 48 0 0 0 0 74
+Sidi-Mimoun (Enchir) | 0 18 0 0 0 0 18
+Sidi-Zehili (Chantier de) | 2 29 0 0 0 0 31
+Zbir (Enchir) | 0 76 0 0 0 0 76
+Route de Béja à Mateur (Chantiers de la) | 3 11 0 0 0 0 14
+## Annexe de Medjez-el-Bab
+Medjez-el-Bab | 117 162 15 5 2 0 301
+Medjez-el-Bab (Banlieue) | 85 50 5 0* 1 1 142
+Bou-Arada | 18 20 0 0 0 0 38
+El-Aroussa | 25 11 0 7 0 0 43
+Goubellat | 143 26 0 0 0 3 172
+Ksar-Tyr et région Est | 27 17 0 0 0 0 44
+Oued-Zargua | 45 100 0 0 0 0 145
+Sidi-Ayed | 4 7 5 0 0 0 16
+Testour | 12 11 1 1 0 0 25
+## Contrôle de Bizerte
+Bizerte | 2369 4922 195 50 8 41 7585
+Bizerte (Banlieue, route de Mateur) | 26 5 0 0 0 1 32
+Bizerte (Banlieue Ouest) | 68 50 4 0 0 0 122

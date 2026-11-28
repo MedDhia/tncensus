@@ -1,0 +1,37 @@
+# sgt1928 european ark bpt6k91056510 marriages view 570, births/deaths view 571 - transcribed from the full-resolution page images
+[marriages] years: 1927 1928
+Français | 467 327 683 550
+Italiens | 38 144 31 143
+Maltais | 2 12 6 19
+Grecs | 1 1 2 1
+Espagnols | 0 0 0 2
+Autres Européens | 20 39 23 27
+Nationalité non signalée | 6 11 4 7
+TOTAUX | 534 749
+[mixed]
+Français | 9 2 7 . . . .
+Italiens | 0 0 0 . . . .
+Maltais | 0 0 0 . . . .
+Etrangers autres | 0 0 0 . . . .
+TOTAL_EUROPEAN_GROOMS | 9 2 7 . . . .
+Musulmans | 7 . . 5 2 0 0
+Israélites | 10 . . 6 4 0 0
+TOTAL_INDIGENOUS_GROOMS | 17 . . 11 6 0 0
+[births] years: 1927 1928
+Français | 1151 1038 1277 1280
+Italiens | 1242 1157 1447 1230
+Maltais | 50 61 73 66
+Grecs | 1 4 2 4
+Espagnols | 6 8 5 6
+Autres Européens | 37 32 50 34
+SUBTOTAL | 2487 2300 2854 2620
+TOTAUX | 4787 5474
+[deaths] years: 1927 1928
+Français | 723 528 698 466
+Italiens | 809 701 769 601
+Maltais | 101 84 91 79
+Grecs | 9 4 9 3
+Espagnols | 7 7 2 4
+Autres Européens | 72 22 59 18
+SUBTOTAL | 1721 1346 1628 1171
+TOTAUX | 3067 2799

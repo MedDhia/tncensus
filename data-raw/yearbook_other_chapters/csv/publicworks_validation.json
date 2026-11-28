@@ -1,0 +1,1073 @@
+{
+ "publicworks_railways": {
+  "rows": 2494,
+  "checks": 2067,
+  "failed": [
+   "sgt1922 p.150 (f174) rail medjerdah 1918: recette totale = G.V. + P.V.: cells give 5016377, printed 5016577 (difference 200)",
+   "sgt1922 p.152 (f176) rail sfax_gafsa_metlaoui 1918: recette totale = G.V. + P.V.: cells give 6393011, printed 6393012 (difference 1)",
+   "sgt1922 p.152 (f176) rail sfax_gafsa_metlaoui 1921: rec_train_km = rec_total / train_km (printed rounding, 1 %): cells give 21.55, printed 22.00 (difference 0.45)",
+   "sgt1922 p.152 (f176) rail sfax_gafsa_metlaoui 1921: pass_avg = pass_prod / pass_n (printed rounding, 1 %): cells give 5.33, printed 5.00 (difference -0.33)",
+   "sgt1922 p.152 (f176) rail sfax_gafsa_metlaoui 1921: goods_avg = goods_prod / goods_t (printed rounding, 1 %): cells give 16.56, printed 17.00 (difference 0.44)",
+   "sgt1922 p.152 (f176) rail sfax_gafsa_metlaoui 1922: rec_train_km = rec_total / train_km (printed rounding, 1 %): cells give 26.44, printed 26.14 (difference -0.30)",
+   "sgt1922 p.153 (f177) rail metlaoui_tozeur 1919: rec_train_km = rec_total / train_km (printed rounding, 1 %): cells give 7.31, printed 7.69 (difference 0.38)",
+   "sgt1922 p.153 (f177) rail metlaoui_tozeur 1921: goods_avg = goods_prod / goods_t (printed rounding, 1 %): cells give 10.73, printed 11.00 (difference 0.27)",
+   "sgt1922 p.153 (f177) rail graiba_gabes 1918: recette totale = G.V. + P.V.: cells give 575125, printed 575126 (difference 1)",
+   "sgt1922 p.153 (f177) rail mining_branches 1918: recette totale = G.V. + P.V.: cells give 504625, printed 504626 (difference 1)",
+   "sgt1922 p.153 (f177) rail mining_branches 1918: rec_train_km = rec_total / train_km (printed rounding, 1 %): cells give 0.67, printed 7.79 (difference 7.12)",
+   "sgt1922 p.153 (f177) rail mining_branches 1919: rec_train_km = rec_total / train_km (printed rounding, 1 %): cells give 19.34, printed 5.42 (difference -13.92)",
+   "sgt1922 p.153 (f177) rail mining_branches 1920: recette totale = G.V. + P.V.: cells give 503154, printed 503174 (difference 20)",
+   "sgt1922 p.153 (f177) rail mining_branches 1921: rec_train_km = rec_total / train_km (printed rounding, 1 %): cells give 28.28, printed 10.72 (difference -17.56)",
+   "sgt1922 p.153 (f177) rail mining_branches 1921: goods_avg = goods_prod / goods_t (printed rounding, 1 %): cells give 0.64, printed 1.24 (difference 0.60)",
+   "sgt1922 p.153 (f177) rail mining_branches 1922: recette totale = G.V. + P.V.: cells give 1021690, printed 1021691 (difference 1)",
+   "sgt1922 p.153 (f177) rail mining_branches 1922: rec_train_km = rec_total / train_km (printed rounding, 1 %): cells give 10.58, printed 16.41 (difference 5.83)",
+   "sgt1922 p.155 (f179) rail tunis_goulette_marsa 1919: goods_avg = goods_prod / goods_t (printed rounding, 1 %): cells give 0.201, printed 0.020 (difference -0.181)",
+   "sgt1923 p.163 (f665) rail normal_gauge 1923: rec_train_km = rec_total / train_km (printed rounding, 1 %): cells give 41.02, printed 12.10 (difference -28.92)",
+   "sgt1923 p.163 (f665) rail narrow_gauge 1923: rec_train_km = rec_total / train_km (printed rounding, 1 %): cells give 13.77, printed 11.27 (difference -2.50)",
+   "sgt1923 p.164 (f666) rail sfax_gafsa_metlaoui 1921: rec_train_km = rec_total / train_km (printed rounding, 1 %): cells give 21.55, printed 22.00 (difference 0.45)",
+   "sgt1923 p.164 (f666) rail sfax_gafsa_metlaoui 1921: pass_avg = pass_prod / pass_n (printed rounding, 1 %): cells give 5.33, printed 5.00 (difference -0.33)",
+   "sgt1923 p.164 (f666) rail sfax_gafsa_metlaoui 1921: goods_avg = goods_prod / goods_t (printed rounding, 1 %): cells give 16.56, printed 17.00 (difference 0.44)",
+   "sgt1923 p.164 (f666) rail sfax_gafsa_metlaoui 1922: rec_train_km = rec_total / train_km (printed rounding, 1 %): cells give 26.44, printed 26.14 (difference -0.30)",
+   "sgt1923 p.165 (f667) rail metlaoui_tozeur 1919: rec_train_km = rec_total / train_km (printed rounding, 1 %): cells give 7.31, printed 7.69 (difference 0.38)",
+   "sgt1923 p.165 (f667) rail metlaoui_tozeur 1921: goods_avg = goods_prod / goods_t (printed rounding, 1 %): cells give 10.73, printed 11.00 (difference 0.27)",
+   "sgt1923 p.165 (f667) rail graiba_gabes 1922: rec_train_km = rec_total / train_km (printed rounding, 1 %): cells give 4.93, printed 4.78 (difference -0.15)",
+   "sgt1923 p.165 (f667) rail graiba_gabes 1923: rec_km = rec_total / len_km (printed rounding, 1 %): cells give 7216, printed 5216 (difference -2000)",
+   "sgt1923 p.165 (f667) rail graiba_gabes 1923: goods_avg = goods_prod / goods_t (printed rounding, 1 %): cells give 19.10, printed 15.09 (difference -4.01)",
+   "sgt1923 p.165 (f667) rail mining_branches 1919: rec_train_km = rec_total / train_km (printed rounding, 1 %): cells give 19.34, printed 5.42 (difference -13.92)",
+   "sgt1923 p.165 (f667) rail mining_branches 1920: recette totale = G.V. + P.V.: cells give 503154, printed 503174 (difference 20)",
+   "sgt1923 p.165 (f667) rail mining_branches 1921: rec_train_km = rec_total / train_km (printed rounding, 1 %): cells give 28.28, printed 10.72 (difference -17.56)",
+   "sgt1923 p.165 (f667) rail mining_branches 1921: goods_avg = goods_prod / goods_t (printed rounding, 1 %): cells give 0.64, printed 1.24 (difference 0.60)",
+   "sgt1923 p.165 (f667) rail mining_branches 1922: recette totale = G.V. + P.V.: cells give 1021690, printed 1021691 (difference 1)",
+   "sgt1923 p.165 (f667) rail mining_branches 1922: rec_train_km = rec_total / train_km (printed rounding, 1 %): cells give 10.58, printed 16.41 (difference 5.83)",
+   "sgt1923 p.165 (f667) rail mining_branches 1923: goods_avg = goods_prod / goods_t (printed rounding, 1 %): cells give 0.65, printed 0.69 (difference 0.04)",
+   "sgt1923 p.167 (f669) rail tunis_goulette_marsa 1919: goods_avg = goods_prod / goods_t (printed rounding, 1 %): cells give 0.201, printed 0.020 (difference -0.181)",
+   "sgt1924 p.171 (f1161) rail narrow_gauge 1923: rec_train_km = rec_total / train_km (printed rounding, 1 %): cells give 13.77, printed 11.27 (difference -2.50)",
+   "sgt1924 p.172 (f1162) rail sfax_gafsa_metlaoui 1921: rec_train_km = rec_total / train_km (printed rounding, 1 %): cells give 21.55, printed 22.00 (difference 0.45)",
+   "sgt1924 p.172 (f1162) rail sfax_gafsa_metlaoui 1921: pass_avg = pass_prod / pass_n (printed rounding, 1 %): cells give 5.33, printed 5.00 (difference -0.33)",
+   "sgt1924 p.172 (f1162) rail sfax_gafsa_metlaoui 1921: goods_avg = goods_prod / goods_t (printed rounding, 1 %): cells give 16.56, printed 17.00 (difference 0.44)",
+   "sgt1924 p.172 (f1162) rail sfax_gafsa_metlaoui 1922: rec_train_km = rec_total / train_km (printed rounding, 1 %): cells give 26.44, printed 26.14 (difference -0.30)",
+   "sgt1924 p.172 (f1162) rail sfax_gafsa_metlaoui 1924: rec_km = rec_total / len_km (printed rounding, 1 %): cells give 112841, printed 42841 (difference -70000)",
+   "sgt1924 p.173 (f1163) rail metlaoui_tozeur 1921: goods_avg = goods_prod / goods_t (printed rounding, 1 %): cells give 10.73, printed 11.00 (difference 0.27)",
+   "sgt1924 p.173 (f1163) rail graiba_gabes 1922: rec_train_km = rec_total / train_km (printed rounding, 1 %): cells give 4.93, printed 4.78 (difference -0.15)",
+   "sgt1924 p.173 (f1163) rail graiba_gabes 1923: rec_km = rec_total / len_km (printed rounding, 1 %): cells give 7216, printed 5216 (difference -2000)",
+   "sgt1924 p.173 (f1163) rail graiba_gabes 1923: goods_avg = goods_prod / goods_t (printed rounding, 1 %): cells give 19.10, printed 15.09 (difference -4.01)",
+   "sgt1924 p.173 (f1163) rail mining_branches 1920: recette totale = G.V. + P.V.: cells give 503154, printed 503174 (difference 20)",
+   "sgt1924 p.173 (f1163) rail mining_branches 1921: rec_train_km = rec_total / train_km (printed rounding, 1 %): cells give 28.28, printed 10.72 (difference -17.56)",
+   "sgt1924 p.173 (f1163) rail mining_branches 1921: goods_avg = goods_prod / goods_t (printed rounding, 1 %): cells give 0.64, printed 1.24 (difference 0.60)",
+   "sgt1924 p.173 (f1163) rail mining_branches 1922: recette totale = G.V. + P.V.: cells give 1021690, printed 1021691 (difference 1)",
+   "sgt1924 p.173 (f1163) rail mining_branches 1922: rec_train_km = rec_total / train_km (printed rounding, 1 %): cells give 10.58, printed 16.41 (difference 5.83)",
+   "sgt1924 p.173 (f1163) rail mining_branches 1923: goods_avg = goods_prod / goods_t (printed rounding, 1 %): cells give 0.65, printed 0.69 (difference 0.04)",
+   "sgt1925 p.177 (f201) rail narrow_gauge 1923: rec_train_km = rec_total / train_km (printed rounding, 1 %): cells give 13.77, printed 11.27 (difference -2.50)",
+   "sgt1925 p.178 (f202) rail sfax_gafsa_metlaoui 1921: rec_train_km = rec_total / train_km (printed rounding, 1 %): cells give 21.55, printed 22.00 (difference 0.45)",
+   "sgt1925 p.178 (f202) rail sfax_gafsa_metlaoui 1921: pass_avg = pass_prod / pass_n (printed rounding, 1 %): cells give 5.33, printed 5.00 (difference -0.33)",
+   "sgt1925 p.178 (f202) rail sfax_gafsa_metlaoui 1921: goods_avg = goods_prod / goods_t (printed rounding, 1 %): cells give 16.56, printed 17.00 (difference 0.44)",
+   "sgt1925 p.178 (f202) rail sfax_gafsa_metlaoui 1922: rec_train_km = rec_total / train_km (printed rounding, 1 %): cells give 26.44, printed 26.14 (difference -0.30)",
+   "sgt1925 p.179 (f203) rail metlaoui_tozeur 1921: goods_avg = goods_prod / goods_t (printed rounding, 1 %): cells give 10.73, printed 11.00 (difference 0.27)",
+   "sgt1925 p.179 (f203) rail graiba_gabes 1922: rec_train_km = rec_total / train_km (printed rounding, 1 %): cells give 4.93, printed 4.78 (difference -0.15)",
+   "sgt1925 p.179 (f203) rail graiba_gabes 1923: rec_km = rec_total / len_km (printed rounding, 1 %): cells give 7216, printed 5216 (difference -2000)",
+   "sgt1925 p.179 (f203) rail graiba_gabes 1923: goods_avg = goods_prod / goods_t (printed rounding, 1 %): cells give 19.10, printed 15.09 (difference -4.01)",
+   "sgt1925 p.179 (f203) rail graiba_gabes 1925: goods_avg = goods_prod / goods_t (printed rounding, 1 %): cells give 20.53, printed 20.05 (difference -0.48)",
+   "sgt1925 p.179 (f203) rail mining_branches 1921: rec_train_km = rec_total / train_km (printed rounding, 1 %): cells give 28.28, printed 10.72 (difference -17.56)",
+   "sgt1925 p.179 (f203) rail mining_branches 1921: goods_avg = goods_prod / goods_t (printed rounding, 1 %): cells give 0.64, printed 1.24 (difference 0.60)",
+   "sgt1925 p.179 (f203) rail mining_branches 1922: recette totale = G.V. + P.V.: cells give 1021690, printed 1021691 (difference 1)",
+   "sgt1925 p.179 (f203) rail mining_branches 1922: rec_train_km = rec_total / train_km (printed rounding, 1 %): cells give 10.58, printed 16.41 (difference 5.83)",
+   "sgt1925 p.179 (f203) rail mining_branches 1923: goods_avg = goods_prod / goods_t (printed rounding, 1 %): cells give 0.65, printed 0.69 (difference 0.04)",
+   "sgt1926 p.193 (f757) rail narrow_gauge 1923: rec_train_km = rec_total / train_km (printed rounding, 1 %): cells give 13.77, printed 11.27 (difference -2.50)",
+   "sgt1926 p.195 (f759) rail graiba_gabes 1922: rec_train_km = rec_total / train_km (printed rounding, 1 %): cells give 4.93, printed 4.78 (difference -0.15)",
+   "sgt1926 p.195 (f759) rail graiba_gabes 1923: rec_km = rec_total / len_km (printed rounding, 1 %): cells give 7216, printed 5216 (difference -2000)",
+   "sgt1926 p.195 (f759) rail graiba_gabes 1923: goods_avg = goods_prod / goods_t (printed rounding, 1 %): cells give 19.10, printed 15.09 (difference -4.01)",
+   "sgt1926 p.195 (f759) rail graiba_gabes 1925: goods_avg = goods_prod / goods_t (printed rounding, 1 %): cells give 20.53, printed 20.05 (difference -0.48)",
+   "sgt1926 p.195 (f759) rail mining_branches 1922: recette totale = G.V. + P.V.: cells give 1021690, printed 1021691 (difference 1)",
+   "sgt1926 p.195 (f759) rail mining_branches 1922: rec_train_km = rec_total / train_km (printed rounding, 1 %): cells give 10.58, printed 16.41 (difference 5.83)",
+   "sgt1926 p.195 (f759) rail mining_branches 1923: goods_avg = goods_prod / goods_t (printed rounding, 1 %): cells give 0.65, printed 0.69 (difference 0.04)",
+   "sgt1926 p.195 (f759) rail mining_branches 1926: goods_avg = goods_prod / goods_t (printed rounding, 1 %): cells give 0.25, printed 5.14 (difference 4.89)",
+   "sgt1926 p.197 (f761) rail tunis_goulette_marsa 1926: recette totale = G.V. + P.V.: cells give 4876212, printed 4876213 (difference 1)",
+   "sgt1927 p.191 (f219) rail narrow_gauge 1923: rec_train_km = rec_total / train_km (printed rounding, 1 %): cells give 13.77, printed 11.27 (difference -2.50)",
+   "sgt1927 p.193 (f221) rail graiba_gabes 1923: rec_km = rec_total / len_km (printed rounding, 1 %): cells give 7216, printed 5216 (difference -2000)",
+   "sgt1927 p.193 (f221) rail graiba_gabes 1923: goods_avg = goods_prod / goods_t (printed rounding, 1 %): cells give 19.10, printed 15.09 (difference -4.01)",
+   "sgt1927 p.193 (f221) rail graiba_gabes 1925: goods_avg = goods_prod / goods_t (printed rounding, 1 %): cells give 20.53, printed 20.05 (difference -0.48)",
+   "sgt1927 p.193 (f221) rail mining_branches 1923: goods_avg = goods_prod / goods_t (printed rounding, 1 %): cells give 0.65, printed 0.69 (difference 0.04)",
+   "sgt1927 p.195 (f223) rail tunis_goulette_marsa 1926: recette totale = G.V. + P.V.: cells give 4876212, printed 4876213 (difference 1)",
+   "sgt1927 p.195 (f223) rail tunis_goulette_marsa 1927: rec_train_km = rec_total / train_km (printed rounding, 1 %): cells give 6, printed 11 (difference 5)",
+   "sgt1928 p.192 (f744) rail sfax_gafsa_metlaoui 1928: rec_km = rec_total / len_km (printed rounding, 1 %): cells give 207131, printed 204565 (difference -2566)",
+   "sgt1928 p.192 (f744) rail sfax_gafsa_metlaoui 1928: rec_train_km = rec_total / train_km (printed rounding, 1 %): cells give 47.11, printed 47.81 (difference 0.70)",
+   "sgt1928 p.193 (f745) rail graiba_gabes 1925: goods_avg = goods_prod / goods_t (printed rounding, 1 %): cells give 20.53, printed 20.05 (difference -0.48)",
+   "sgt1928 p.195 (f747) rail tunis_goulette_marsa 1926: recette totale = G.V. + P.V.: cells give 4876212, printed 4876213 (difference 1)",
+   "sgt1929 p.193 (f221) rail normal_gauge 1929: recette totale = G.V. + P.V.: cells give 25526608, printed 25526609 (difference 1)",
+   "sgt1929 p.193 (f221) rail narrow_gauge 1929: recette totale = G.V. + P.V.: cells give 87546143, printed 87546144 (difference 1)",
+   "sgt1929 p.194 (f222) rail sfax_gafsa_metlaoui 1928: rec_km = rec_total / len_km (printed rounding, 1 %): cells give 207131, printed 204565 (difference -2566)",
+   "sgt1929 p.194 (f222) rail sfax_gafsa_metlaoui 1928: rec_train_km = rec_total / train_km (printed rounding, 1 %): cells give 47.11, printed 47.81 (difference 0.70)",
+   "sgt1929 p.194 (f222) rail sfax_gafsa_metlaoui 1929: recette totale = G.V. + P.V.: cells give 59460504, printed 59450504 (difference -10000)",
+   "sgt1929 p.194 (f222) rail sfax_gafsa_metlaoui 1929: rec_km = rec_total / len_km (printed rounding, 1 %): cells give 244652, printed 241473 (difference -3179)",
+   "sgt1929 p.195 (f223) rail graiba_gabes 1925: goods_avg = goods_prod / goods_t (printed rounding, 1 %): cells give 20.53, printed 20.05 (difference -0.48)",
+   "sgt1929 p.195 (f223) rail graiba_gabes 1929: recette totale = G.V. + P.V.: cells give 1094015, printed 1094016 (difference 1)",
+   "sgt1929 p.197 (f225) rail tunis_goulette_marsa 1926: recette totale = G.V. + P.V.: cells give 4876212, printed 4876213 (difference 1)",
+   "sgt1929 p.197 (f225) rail tunis_goulette_marsa 1929: rec_km = rec_total / len_km (printed rounding, 1 %): cells give 195553, printed 191414 (difference -4139)",
+   "sgt1930 p.197 (f755) rail normal_gauge 1929: recette totale = G.V. + P.V.: cells give 25526608, printed 25526609 (difference 1)",
+   "sgt1930 p.197 (f755) rail narrow_gauge 1929: recette totale = G.V. + P.V.: cells give 87546143, printed 87546144 (difference 1)",
+   "sgt1930 p.198 (f756) rail sfax_gafsa_metlaoui 1928: rec_km = rec_total / len_km (printed rounding, 1 %): cells give 207131, printed 204565 (difference -2566)",
+   "sgt1930 p.198 (f756) rail sfax_gafsa_metlaoui 1928: rec_train_km = rec_total / train_km (printed rounding, 1 %): cells give 47.11, printed 47.81 (difference 0.70)",
+   "sgt1930 p.198 (f756) rail sfax_gafsa_metlaoui 1929: recette totale = G.V. + P.V.: cells give 59460504, printed 59450504 (difference -10000)",
+   "sgt1930 p.198 (f756) rail sfax_gafsa_metlaoui 1929: rec_km = rec_total / len_km (printed rounding, 1 %): cells give 244652, printed 241473 (difference -3179)",
+   "sgt1930 p.198 (f756) rail sfax_gafsa_metlaoui 1930: rec_km = rec_total / len_km (printed rounding, 1 %): cells give 225481, printed 221729 (difference -3752)",
+   "sgt1930 p.198 (f756) rail sfax_gafsa_metlaoui 1930: goods_avg = goods_prod / goods_t (printed rounding, 1 %): cells give 23.75, printed 24.87 (difference 1.12)",
+   "sgt1930 p.199 (f757) rail graiba_gabes 1929: recette totale = G.V. + P.V.: cells give 1094015, printed 1094016 (difference 1)",
+   "sgt1930 p.199 (f757) rail mining_branches 1930: goods_avg = goods_prod / goods_t (printed rounding, 1 %): cells give 0.22, printed 0.27 (difference 0.05)",
+   "sgt1930 p.201 (f759) rail tunis_goulette_marsa 1926: recette totale = G.V. + P.V.: cells give 4876212, printed 4876213 (difference 1)",
+   "sgt1930 p.201 (f759) rail tunis_goulette_marsa 1930: rec_km = rec_total / len_km (printed rounding, 1 %): cells give 217084, printed 220876 (difference 3792)",
+   "sgt1935 p.99 (f119) rail normal_gauge 1934: rec_train_km = rec_total / train_km (printed rounding, 1 %): cells give 10.67, printed 10.54 (difference -0.13)",
+   "sgt1935 p.99 (f119) rail narrow_gauge 1934: recette totale = G.V. + P.V.: cells give 37296535, printed 37298535 (difference 2000)",
+   "sgt1935 p.99 (f119) rail narrow_gauge 1934: rec_km = rec_total / len_km (printed rounding, 1 %): cells give 33846, printed 33240 (difference -606)",
+   "sgt1935 p.100 (f120) rail sfax_gafsa_metlaoui 1931: rec_km = rec_total / len_km (printed rounding, 1 %): cells give 149304, printed 147074 (difference -2230)",
+   "sgt1935 p.101 (f121) rail metlaoui_tozeur 1934: rec_km = rec_total / len_km (printed rounding, 1 %): cells give 7290, printed 5438 (difference -1852)",
+   "sgt1935 p.101 (f121) rail metlaoui_tozeur 1934: rec_train_km = rec_total / train_km (printed rounding, 1 %): cells give 9.67, printed 7.21 (difference -2.46)",
+   "sgt1935 p.101 (f121) rail graiba_gabes 1932: goods_avg = goods_prod / goods_t (printed rounding, 1 %): cells give 19.81, printed 18.96 (difference -0.85)",
+   "sgt1935 p.101 (f121) rail mining_branches 1934: recette totale = G.V. + P.V.: cells give 280776, printed 265684 (difference -15092)",
+   "sgt1935 p.101 (f121) rail mining_branches 1934: rec_train_km = rec_total / train_km (printed rounding, 1 %): cells give 2.80, printed 2.75 (difference -0.05)",
+   "sgt1935 p.101 (f121) rail mining_branches 1934: pass_avg = pass_prod / pass_n (printed rounding, 1 %): cells give 7.23, printed 6.25 (difference -0.98)",
+   "sgt1935 p.102 (f122) rail tunis_goulette_marsa 1931: rec_km = rec_total / len_km (printed rounding, 1 %): cells give 217084, printed 220876 (difference 3792)",
+   "sgt1935 p.102 (f122) rail tunis_goulette_marsa 1934: recette totale = G.V. + P.V.: cells give 6263353, printed 6240258 (difference -23095)",
+   "sgt1935 p.102 (f122) rail tunis_goulette_marsa 1934: goods_avg = goods_prod / goods_t (printed rounding, 1 %): cells give 5.09, printed 5.38 (difference 0.29)",
+   "sgt1935 p.102 (f122) rail tunis_goulette_marsa 1935: rec_train_km = rec_total / train_km (printed rounding, 1 %): cells give 5.74, printed 6.69 (difference 0.95)",
+   "sgt1936 p.75 (f86) rail normal_gauge 1934: rec_train_km = rec_total / train_km (printed rounding, 1 %): cells give 10.67, printed 10.54 (difference -0.13)",
+   "sgt1936 p.75 (f86) rail narrow_gauge 1934: recette totale = G.V. + P.V.: cells give 37296535, printed 37298535 (difference 2000)",
+   "sgt1936 p.75 (f86) rail narrow_gauge 1934: rec_km = rec_total / len_km (printed rounding, 1 %): cells give 33846, printed 33240 (difference -606)",
+   "sgt1936 p.77 (f88) rail metlaoui_tozeur 1934: recette totale = G.V. + P.V.: cells give 393644, printed 893644 (difference 500000)",
+   "sgt1936 p.77 (f88) rail metlaoui_tozeur 1934: rec_km = rec_total / len_km (printed rounding, 1 %): cells give 16549, printed 5438 (difference -11111)",
+   "sgt1936 p.77 (f88) rail metlaoui_tozeur 1934: rec_train_km = rec_total / train_km (printed rounding, 1 %): cells give 21.95, printed 7.21 (difference -14.74)",
+   "sgt1936 p.77 (f88) rail graiba_gabes 1932: goods_avg = goods_prod / goods_t (printed rounding, 1 %): cells give 19.81, printed 18.96 (difference -0.85)",
+   "sgt1936 p.77 (f88) rail mining_branches 1934: recette totale = G.V. + P.V.: cells give 280776, printed 265684 (difference -15092)",
+   "sgt1936 p.77 (f88) rail mining_branches 1934: rec_train_km = rec_total / train_km (printed rounding, 1 %): cells give 2.80, printed 2.75 (difference -0.05)",
+   "sgt1936 p.77 (f88) rail mining_branches 1934: pass_avg = pass_prod / pass_n (printed rounding, 1 %): cells give 7.23, printed 6.25 (difference -0.98)",
+   "sgt1939 p.81 (f87) rail graiba_gabes 1939: recette totale = G.V. + P.V.: cells give 6990077, printed 6990078 (difference 1)",
+   "sgt1939 p.81 (f87) rail graiba_gabes 1939: goods_avg = goods_prod / goods_t (printed rounding, 1 %): cells give 24.07, printed 24.56 (difference 0.49)",
+   "sgt1939 p.81 (f87) rail mining_branches 1937: rec_km = rec_total / len_km (printed rounding, 1 %): cells give 5981, printed 5797 (difference -184)"
+  ],
+  "overlap_compared": 4076,
+  "overlap_diffs": [
+   [
+    [
+     1920,
+     "djedeida_bizerte",
+     "passengers"
+    ],
+    "sgt1922",
+    "870509",
+    "sgt1924",
+    "870409"
+   ],
+   [
+    [
+     1922,
+     "graiba_gabes",
+     "train_km"
+    ],
+    "sgt1922",
+    "104460",
+    "sgt1926",
+    "101460"
+   ],
+   [
+    [
+     1923,
+     "normal_gauge",
+     "train_km"
+    ],
+    "sgt1923",
+    "292903",
+    "sgt1927",
+    "992903"
+   ],
+   [
+    [
+     1924,
+     "sfax_gafsa_metlaoui",
+     "receipts_per_km_year"
+    ],
+    "sgt1924",
+    "42841",
+    "sgt1928",
+    "112841"
+   ],
+   [
+    [
+     1925,
+     "metlaoui_tozeur",
+     "train_km"
+    ],
+    "sgt1926",
+    "39930",
+    "sgt1929",
+    "39960"
+   ],
+   [
+    [
+     1926,
+     "mining_branches",
+     "receipts_per_tonne"
+    ],
+    "sgt1926",
+    "5.14",
+    "sgt1930",
+    "0.25"
+   ],
+   [
+    [
+     1927,
+     "mining_branches",
+     "receipts_per_tonne"
+    ],
+    "sgt1927",
+    "0.219",
+    "sgt1930",
+    "0.22"
+   ],
+   [
+    [
+     1927,
+     "mining_branches",
+     "receipts_per_tonne"
+    ],
+    "sgt1928",
+    "0.219",
+    "sgt1930",
+    "0.22"
+   ],
+   [
+    [
+     1927,
+     "mining_branches",
+     "receipts_per_tonne"
+    ],
+    "sgt1929",
+    "0.219",
+    "sgt1930",
+    "0.22"
+   ],
+   [
+    [
+     1927,
+     "tunis_goulette_marsa",
+     "receipts_per_train_km"
+    ],
+    "sgt1927",
+    "11",
+    "sgt1930",
+    "6.12"
+   ],
+   [
+    [
+     1929,
+     "normal_gauge",
+     "average_length_worked"
+    ],
+    "sgt1929",
+    "507.487",
+    "sgt1930",
+    "508"
+   ],
+   [
+    [
+     1929,
+     "narrow_gauge",
+     "average_length_worked"
+    ],
+    "sgt1929",
+    "1075.572",
+    "sgt1930",
+    "1075"
+   ],
+   [
+    [
+     1929,
+     "sfax_gafsa_metlaoui",
+     "receipts_per_train_km"
+    ],
+    "sgt1929",
+    "47.395",
+    "sgt1930",
+    "47.39"
+   ],
+   [
+    [
+     1929,
+     "graiba_gabes",
+     "receipts_per_train_km"
+    ],
+    "sgt1929",
+    "10.338",
+    "sgt1930",
+    "10.34"
+   ],
+   [
+    [
+     1929,
+     "tunis_goulette_marsa",
+     "average_length_worked"
+    ],
+    "sgt1929",
+    "37",
+    "sgt1930",
+    "38"
+   ],
+   [
+    [
+     1932,
+     "narrow_gauge",
+     "train_km"
+    ],
+    "sgt1935",
+    "2754013",
+    "sgt1936",
+    "2745013"
+   ],
+   [
+    [
+     1934,
+     "metlaoui_tozeur",
+     "receipts_total"
+    ],
+    "sgt1935",
+    "393644",
+    "sgt1936",
+    "893644"
+   ]
+  ],
+  "flagged": [
+   "sgt1922 1917 medjerdah / passenger_average_journey = None (not_applicable)",
+   "sgt1922 1917 medjerdah / passenger_tariff_per_km = None (not_applicable)",
+   "sgt1922 1917 medjerdah / goods_average_haul = None (not_applicable)",
+   "sgt1922 1917 medjerdah / goods_tariff_per_km = None (not_applicable)",
+   "sgt1922 1918 medjerdah / passenger_average_journey = None (not_applicable)",
+   "sgt1922 1918 medjerdah / passenger_tariff_per_km = None (not_applicable)",
+   "sgt1922 1918 medjerdah / goods_average_haul = None (not_applicable)",
+   "sgt1922 1918 medjerdah / goods_tariff_per_km = None (not_applicable)",
+   "sgt1922 1918 djedeida_bizerte / passenger_average_journey = None (not_applicable)",
+   "sgt1922 1918 djedeida_bizerte / passenger_tariff_per_km = None (not_applicable)",
+   "sgt1922 1918 djedeida_bizerte / goods_average_haul = None (not_applicable)",
+   "sgt1922 1918 djedeida_bizerte / goods_tariff_per_km = None (not_applicable)",
+   "sgt1922 1918 narrow_gauge / passenger_average_journey = None (not_applicable)",
+   "sgt1922 1918 narrow_gauge / passenger_tariff_per_km = None (not_applicable)",
+   "sgt1922 1918 narrow_gauge / goods_average_haul = None (not_applicable)",
+   "sgt1922 1918 narrow_gauge / goods_tariff_per_km = None (not_applicable)",
+   "sgt1922 1918 metlaoui_tozeur / passenger_receipts = None (illegible)",
+   "sgt1922 1918 metlaoui_tozeur / train_km = None (illegible)",
+   "sgt1923 1919 medjerdah / passenger_average_journey = None (not_applicable)",
+   "sgt1923 1919 medjerdah / passenger_tariff_per_km = None (not_applicable)",
+   "sgt1923 1919 medjerdah / goods_average_haul = None (not_applicable)",
+   "sgt1923 1919 medjerdah / goods_tariff_per_km = None (not_applicable)",
+   "sgt1923 1919 djedeida_bizerte / passenger_average_journey = None (not_applicable)",
+   "sgt1923 1919 djedeida_bizerte / passenger_tariff_per_km = None (not_applicable)",
+   "sgt1923 1919 djedeida_bizerte / goods_average_haul = None (not_applicable)",
+   "sgt1923 1919 djedeida_bizerte / goods_tariff_per_km = None (not_applicable)",
+   "sgt1923 1919 narrow_gauge / passenger_average_journey = None (not_applicable)",
+   "sgt1923 1919 narrow_gauge / passenger_tariff_per_km = None (not_applicable)",
+   "sgt1923 1919 narrow_gauge / goods_average_haul = None (not_applicable)",
+   "sgt1923 1919 narrow_gauge / goods_tariff_per_km = None (not_applicable)",
+   "sgt1927 1924 normal_gauge / passenger_tariff_per_km = None (not_applicable)",
+   "sgt1927 1924 normal_gauge / goods_average_haul = None (not_applicable)",
+   "sgt1927 1924 normal_gauge / goods_tariff_per_km = None (not_applicable)",
+   "sgt1927 1924 narrow_gauge / passenger_tariff_per_km = None (not_applicable)",
+   "sgt1927 1924 narrow_gauge / goods_average_haul = None (not_applicable)",
+   "sgt1927 1924 narrow_gauge / goods_tariff_per_km = None (not_applicable)",
+   "sgt1927 1924 sfax_gafsa_metlaoui / passenger_average_journey = None (not_applicable)",
+   "sgt1927 1924 sfax_gafsa_metlaoui / passenger_tariff_per_km = None (not_applicable)",
+   "sgt1927 1924 sfax_gafsa_metlaoui / goods_average_haul = None (not_applicable)",
+   "sgt1927 1924 sfax_gafsa_metlaoui / goods_tariff_per_km = None (not_applicable)",
+   "sgt1927 1924 metlaoui_tozeur / passenger_average_journey = None (not_applicable)",
+   "sgt1927 1924 metlaoui_tozeur / passenger_tariff_per_km = None (not_applicable)",
+   "sgt1927 1924 metlaoui_tozeur / goods_average_haul = None (not_applicable)",
+   "sgt1927 1924 metlaoui_tozeur / goods_tariff_per_km = None (not_applicable)",
+   "sgt1927 1924 graiba_gabes / passenger_average_journey = None (not_applicable)",
+   "sgt1927 1924 graiba_gabes / passenger_tariff_per_km = None (not_applicable)",
+   "sgt1927 1924 graiba_gabes / goods_average_haul = None (not_applicable)",
+   "sgt1927 1924 graiba_gabes / goods_tariff_per_km = None (not_applicable)",
+   "sgt1927 1924 mining_branches / passenger_average_journey = None (not_applicable)",
+   "sgt1927 1924 mining_branches / passenger_tariff_per_km = None (not_applicable)",
+   "sgt1927 1924 mining_branches / goods_average_haul = None (not_applicable)",
+   "sgt1927 1924 mining_branches / goods_tariff_per_km = None (not_applicable)",
+   "sgt1927 1924 tunis_goulette_marsa / passenger_average_journey = None (not_applicable)",
+   "sgt1927 1924 tunis_goulette_marsa / passenger_tariff_per_km = None (not_applicable)",
+   "sgt1927 1924 tunis_goulette_marsa / goods_average_haul = None (not_applicable)",
+   "sgt1927 1924 tunis_goulette_marsa / goods_tariff_per_km = None (not_applicable)",
+   "sgt1928 1924 normal_gauge / passenger_average_journey = None (not_applicable)",
+   "sgt1928 1924 narrow_gauge / passenger_average_journey = None (not_applicable)",
+   "sgt1927 1925 normal_gauge / passenger_tariff_per_km = None (not_applicable)",
+   "sgt1927 1925 normal_gauge / goods_average_haul = None (not_applicable)",
+   "sgt1927 1925 normal_gauge / goods_tariff_per_km = None (not_applicable)",
+   "sgt1927 1925 narrow_gauge / passenger_tariff_per_km = None (not_applicable)",
+   "sgt1927 1925 narrow_gauge / goods_average_haul = None (not_applicable)",
+   "sgt1927 1925 narrow_gauge / goods_tariff_per_km = None (not_applicable)",
+   "sgt1927 1925 sfax_gafsa_metlaoui / passenger_average_journey = None (not_applicable)",
+   "sgt1927 1925 sfax_gafsa_metlaoui / passenger_tariff_per_km = None (not_applicable)",
+   "sgt1927 1925 sfax_gafsa_metlaoui / goods_average_haul = None (not_applicable)",
+   "sgt1927 1925 sfax_gafsa_metlaoui / goods_tariff_per_km = None (not_applicable)",
+   "sgt1927 1925 metlaoui_tozeur / passenger_average_journey = None (not_applicable)",
+   "sgt1927 1925 metlaoui_tozeur / passenger_tariff_per_km = None (not_applicable)",
+   "sgt1927 1925 metlaoui_tozeur / goods_average_haul = None (not_applicable)",
+   "sgt1927 1925 metlaoui_tozeur / goods_tariff_per_km = None (not_applicable)",
+   "sgt1927 1925 graiba_gabes / passenger_average_journey = None (not_applicable)",
+   "sgt1927 1925 graiba_gabes / passenger_tariff_per_km = None (not_applicable)",
+   "sgt1927 1925 graiba_gabes / goods_average_haul = None (not_applicable)",
+   "sgt1927 1925 graiba_gabes / goods_tariff_per_km = None (not_applicable)",
+   "sgt1927 1925 mining_branches / passenger_average_journey = None (not_applicable)",
+   "sgt1927 1925 mining_branches / passenger_tariff_per_km = None (not_applicable)",
+   "sgt1927 1925 mining_branches / goods_average_haul = None (not_applicable)",
+   "sgt1927 1925 mining_branches / goods_tariff_per_km = None (not_applicable)",
+   "sgt1927 1925 tunis_goulette_marsa / passenger_average_journey = None (not_applicable)",
+   "sgt1927 1925 tunis_goulette_marsa / passenger_tariff_per_km = None (not_applicable)",
+   "sgt1927 1925 tunis_goulette_marsa / goods_average_haul = None (not_applicable)",
+   "sgt1927 1925 tunis_goulette_marsa / goods_tariff_per_km = None (not_applicable)",
+   "sgt1929 1925 normal_gauge / passenger_average_journey = None (not_applicable)",
+   "sgt1929 1925 narrow_gauge / passenger_average_journey = None (not_applicable)",
+   "sgt1927 1926 normal_gauge / passenger_tariff_per_km = None (not_applicable)",
+   "sgt1927 1926 normal_gauge / goods_average_haul = None (not_applicable)",
+   "sgt1927 1926 normal_gauge / goods_tariff_per_km = None (not_applicable)",
+   "sgt1927 1926 narrow_gauge / passenger_tariff_per_km = None (not_applicable)",
+   "sgt1927 1926 narrow_gauge / goods_average_haul = None (not_applicable)",
+   "sgt1927 1926 narrow_gauge / goods_tariff_per_km = None (not_applicable)",
+   "sgt1927 1926 sfax_gafsa_metlaoui / passenger_average_journey = None (not_applicable)",
+   "sgt1927 1926 sfax_gafsa_metlaoui / passenger_tariff_per_km = None (not_applicable)",
+   "sgt1927 1926 sfax_gafsa_metlaoui / goods_average_haul = None (not_applicable)",
+   "sgt1927 1926 sfax_gafsa_metlaoui / goods_tariff_per_km = None (not_applicable)",
+   "sgt1927 1926 metlaoui_tozeur / passenger_average_journey = None (not_applicable)",
+   "sgt1927 1926 metlaoui_tozeur / passenger_tariff_per_km = None (not_applicable)",
+   "sgt1927 1926 metlaoui_tozeur / goods_average_haul = None (not_applicable)",
+   "sgt1927 1926 metlaoui_tozeur / goods_tariff_per_km = None (not_applicable)",
+   "sgt1927 1926 graiba_gabes / passenger_average_journey = None (not_applicable)",
+   "sgt1927 1926 graiba_gabes / passenger_tariff_per_km = None (not_applicable)",
+   "sgt1927 1926 graiba_gabes / goods_average_haul = None (not_applicable)",
+   "sgt1927 1926 graiba_gabes / goods_tariff_per_km = None (not_applicable)",
+   "sgt1927 1926 mining_branches / passenger_average_journey = None (not_applicable)",
+   "sgt1927 1926 mining_branches / passenger_tariff_per_km = None (not_applicable)",
+   "sgt1927 1926 mining_branches / goods_average_haul = None (not_applicable)",
+   "sgt1927 1926 mining_branches / goods_tariff_per_km = None (not_applicable)",
+   "sgt1927 1926 tunis_goulette_marsa / passenger_average_journey = None (not_applicable)",
+   "sgt1927 1926 tunis_goulette_marsa / passenger_tariff_per_km = None (not_applicable)",
+   "sgt1927 1926 tunis_goulette_marsa / goods_average_haul = None (not_applicable)",
+   "sgt1927 1926 tunis_goulette_marsa / goods_tariff_per_km = None (not_applicable)",
+   "sgt1930 1926 normal_gauge / passenger_average_journey = None (not_applicable)",
+   "sgt1930 1926 narrow_gauge / passenger_average_journey = None (not_applicable)",
+   "sgt1927 1927 normal_gauge / passenger_tariff_per_km = None (not_applicable)",
+   "sgt1927 1927 normal_gauge / goods_average_haul = None (not_applicable)",
+   "sgt1927 1927 normal_gauge / goods_tariff_per_km = None (not_applicable)",
+   "sgt1927 1927 narrow_gauge / passenger_tariff_per_km = None (not_applicable)",
+   "sgt1927 1927 narrow_gauge / goods_average_haul = None (not_applicable)",
+   "sgt1927 1927 narrow_gauge / goods_tariff_per_km = None (not_applicable)",
+   "sgt1927 1927 sfax_gafsa_metlaoui / passenger_average_journey = None (not_applicable)",
+   "sgt1927 1927 sfax_gafsa_metlaoui / passenger_tariff_per_km = None (not_applicable)",
+   "sgt1927 1927 sfax_gafsa_metlaoui / goods_average_haul = None (not_applicable)",
+   "sgt1927 1927 sfax_gafsa_metlaoui / goods_tariff_per_km = None (not_applicable)",
+   "sgt1927 1927 metlaoui_tozeur / passenger_average_journey = None (not_applicable)",
+   "sgt1927 1927 metlaoui_tozeur / passenger_tariff_per_km = None (not_applicable)",
+   "sgt1927 1927 metlaoui_tozeur / goods_average_haul = None (not_applicable)",
+   "sgt1927 1927 metlaoui_tozeur / goods_tariff_per_km = None (not_applicable)",
+   "sgt1927 1927 graiba_gabes / passenger_average_journey = None (not_applicable)",
+   "sgt1927 1927 graiba_gabes / passenger_tariff_per_km = None (not_applicable)",
+   "sgt1927 1927 graiba_gabes / goods_average_haul = None (not_applicable)",
+   "sgt1927 1927 graiba_gabes / goods_tariff_per_km = None (not_applicable)",
+   "sgt1927 1927 mining_branches / passenger_average_journey = None (not_applicable)",
+   "sgt1927 1927 mining_branches / passenger_tariff_per_km = None (not_applicable)",
+   "sgt1927 1927 mining_branches / goods_average_haul = None (not_applicable)",
+   "sgt1927 1927 mining_branches / goods_tariff_per_km = None (not_applicable)",
+   "sgt1927 1927 tunis_goulette_marsa / passenger_average_journey = None (not_applicable)",
+   "sgt1927 1927 tunis_goulette_marsa / passenger_tariff_per_km = None (not_applicable)",
+   "sgt1927 1927 tunis_goulette_marsa / goods_average_haul = None (not_applicable)",
+   "sgt1927 1927 tunis_goulette_marsa / goods_tariff_per_km = None (not_applicable)",
+   "sgt1930 1927 normal_gauge / passenger_average_journey = None (not_applicable)",
+   "sgt1930 1927 narrow_gauge / passenger_average_journey = None (not_applicable)",
+   "sgt1930 1928 normal_gauge / passenger_average_journey = None (not_applicable)",
+   "sgt1930 1928 narrow_gauge / passenger_average_journey = None (not_applicable)",
+   "sgt1930 1929 normal_gauge / passenger_average_journey = None (not_applicable)",
+   "sgt1930 1929 narrow_gauge / passenger_average_journey = None (not_applicable)",
+   "sgt1930 1930 normal_gauge / passenger_average_journey = None (not_applicable)",
+   "sgt1930 1930 narrow_gauge / passenger_average_journey = None (not_applicable)",
+   "sgt1935 1931 normal_gauge / passenger_average_journey = None (not_applicable)",
+   "sgt1935 1931 normal_gauge / receipts_per_tonne = None (illegible)",
+   "sgt1935 1931 narrow_gauge / passenger_average_journey = None (not_applicable)",
+   "sgt1936 1932 normal_gauge / passenger_average_journey = None (not_applicable)",
+   "sgt1936 1932 narrow_gauge / passenger_average_journey = None (not_applicable)",
+   "sgt1936 1933 normal_gauge / passenger_average_journey = None (not_applicable)",
+   "sgt1936 1933 narrow_gauge / passenger_average_journey = None (not_applicable)",
+   "sgt1936 1934 normal_gauge / passenger_average_journey = None (not_applicable)",
+   "sgt1936 1934 narrow_gauge / passenger_average_journey = None (not_applicable)",
+   "sgt1939 1935 normal_gauge / passenger_average_journey = None (not_applicable)",
+   "sgt1939 1935 narrow_gauge / passenger_average_journey = None (not_applicable)",
+   "sgt1939 1936 normal_gauge / passenger_average_journey = None (not_applicable)",
+   "sgt1939 1936 narrow_gauge / passenger_average_journey = None (not_applicable)",
+   "sgt1939 1937 normal_gauge / passenger_average_journey = None (not_applicable)",
+   "sgt1939 1937 narrow_gauge / passenger_average_journey = None (not_applicable)",
+   "sgt1939 1937 metlaoui_tozeur / receipts_fast_goods_passengers = None (illegible)",
+   "sgt1939 1937 metlaoui_tozeur / receipts_slow_goods = None (illegible)",
+   "sgt1939 1937 metlaoui_tozeur / receipts_total = None (illegible)",
+   "sgt1939 1937 metlaoui_tozeur / receipts_per_km_year = None (illegible)",
+   "sgt1939 1937 metlaoui_tozeur / receipts_per_train_km = None (illegible)",
+   "sgt1939 1937 metlaoui_tozeur / passengers = None (illegible)",
+   "sgt1939 1937 metlaoui_tozeur / passenger_receipts = None (illegible)",
+   "sgt1939 1937 metlaoui_tozeur / goods_tonnes = None (illegible)",
+   "sgt1939 1937 metlaoui_tozeur / goods_receipts = None (illegible)",
+   "sgt1939 1937 metlaoui_tozeur / train_km = None (illegible)",
+   "sgt1939 1938 normal_gauge / passenger_average_journey = None (not_applicable)",
+   "sgt1939 1938 narrow_gauge / passenger_average_journey = None (not_applicable)",
+   "sgt1939 1939 normal_gauge / passenger_average_journey = None (not_applicable)",
+   "sgt1939 1939 narrow_gauge / passenger_average_journey = None (not_applicable)"
+  ],
+  "editions": [
+   "sgt1922",
+   "sgt1923",
+   "sgt1924",
+   "sgt1925",
+   "sgt1926",
+   "sgt1927",
+   "sgt1928",
+   "sgt1929",
+   "sgt1930",
+   "sgt1935",
+   "sgt1936",
+   "sgt1939"
+  ]
+ },
+ "publicworks_railway_finance": {
+  "rows": 200,
+  "checks": 161,
+  "failed": [
+   "sgt1928 p.194 (f746) fin_convention 1928: versements totaux = travaux + contrôle + intérêts: cells give 2294150, printed 2294158 (difference 8)",
+   "sgt1929 p.196 (f224) fin_convention 1928: versements totaux = travaux + contrôle + intérêts: cells give 2294150, printed 2294158 (difference 8)",
+   "sgt1930 p.200 (f758) fin_convention 1928: versements totaux = travaux + contrôle + intérêts: cells give 2294150, printed 2294158 (difference 8)",
+   "sgt1935 p.102 (f122) fin_convention 1935: versements totaux = travaux + contrôle + intérêts: cells give 4998883, printed 4998823 (difference -60)",
+   "sgt1936 p.78 (f89) fin_convention 1935: versements totaux = travaux + contrôle + intérêts: cells give 4998883, printed 4998823 (difference -60)",
+   "sgt1939 p.82 (f88) fin_convention 1935: versements totaux = travaux + contrôle + intérêts: cells give 4998883, printed 4998823 (difference -60)"
+  ],
+  "overlap_compared": 700,
+  "overlap_diffs": [
+   [
+    [
+     1923,
+     "whole_network_convention_1922",
+     "operating_deficit"
+    ],
+    "sgt1923",
+    "9345555",
+    "sgt1930",
+    "9311616"
+   ],
+   [
+    [
+     1923,
+     "whole_network_convention_1922",
+     "company_remuneration"
+    ],
+    "sgt1923",
+    "905481",
+    "sgt1930",
+    "905922"
+   ],
+   [
+    [
+     1924,
+     "whole_network_convention_1922",
+     "operating_deficit"
+    ],
+    "sgt1924",
+    "12291742",
+    "sgt1930",
+    "12283386"
+   ],
+   [
+    [
+     1924,
+     "whole_network_convention_1922",
+     "company_remuneration"
+    ],
+    "sgt1924",
+    "853650",
+    "sgt1930",
+    "853116"
+   ],
+   [
+    [
+     1924,
+     "whole_network_convention_1922",
+     "treasury_financial_charges"
+    ],
+    "sgt1924",
+    "1492470",
+    "sgt1930",
+    "1544459"
+   ],
+   [
+    [
+     1924,
+     "whole_network_convention_1922",
+     "treasury_total"
+    ],
+    "sgt1924",
+    "2599434",
+    "sgt1930",
+    "2651423"
+   ],
+   [
+    [
+     1925,
+     "whole_network_convention_1922",
+     "operating_deficit"
+    ],
+    "sgt1925",
+    "12701196",
+    "sgt1930",
+    "12676679"
+   ],
+   [
+    [
+     1925,
+     "whole_network_convention_1922",
+     "company_remuneration"
+    ],
+    "sgt1925",
+    "925178",
+    "sgt1930",
+    "925497"
+   ],
+   [
+    [
+     1926,
+     "whole_network_convention_1922",
+     "operating_deficit"
+    ],
+    "sgt1926",
+    "15290365",
+    "sgt1930",
+    "15256932"
+   ],
+   [
+    [
+     1926,
+     "whole_network_convention_1922",
+     "company_remuneration"
+    ],
+    "sgt1926",
+    "1094667",
+    "sgt1930",
+    "1095101"
+   ],
+   [
+    [
+     1927,
+     "whole_network_convention_1922",
+     "company_remuneration"
+    ],
+    "sgt1927",
+    "1391330",
+    "sgt1930",
+    "1391122"
+   ],
+   [
+    [
+     1929,
+     "whole_network_convention_1922",
+     "operating_deficit"
+    ],
+    "sgt1929",
+    "24500714",
+    "sgt1930",
+    "24487374"
+   ],
+   [
+    [
+     1929,
+     "whole_network_convention_1922",
+     "company_remuneration"
+    ],
+    "sgt1929",
+    "2014151",
+    "sgt1930",
+    "2013999"
+   ]
+  ],
+  "flagged": [],
+  "editions": [
+   "sgt1922",
+   "sgt1923",
+   "sgt1924",
+   "sgt1925",
+   "sgt1926",
+   "sgt1927",
+   "sgt1928",
+   "sgt1929",
+   "sgt1930",
+   "sgt1935",
+   "sgt1936",
+   "sgt1939"
+  ]
+ },
+ "publicworks_roads": {
+  "rows": 58,
+  "checks": 207,
+  "failed": [],
+  "overlap_compared": 172,
+  "overlap_diffs": [
+   [
+    [
+     1929,
+     "roads",
+     "length_built_cumulative"
+    ],
+    "sgt1929",
+    "5525",
+    "sgt1935",
+    "5475"
+   ],
+   [
+    [
+     1929,
+     "roads",
+     "expenditure_cumulative"
+    ],
+    "sgt1929",
+    "106497742",
+    "sgt1935",
+    "102316240"
+   ]
+  ],
+  "flagged": [],
+  "editions": [
+   "sgt1922",
+   "sgt1923",
+   "sgt1924",
+   "sgt1925",
+   "sgt1926",
+   "sgt1927",
+   "sgt1928",
+   "sgt1929",
+   "sgt1930",
+   "sgt1935"
+  ]
+ },
+ "publicworks_hydraulics": {
+  "rows": 134,
+  "checks": 540,
+  "failed": [
+   "sgt1922 p.156 (f180) water m3: 1920 (56000) below 1919 (56600) in a cumulative series",
+   "sgt1923 p.168 (f670) water m3: 1920 (56000) below 1919 (56600) in a cumulative series",
+   "sgt1924 p.176 (f1166) water m3: 1920 (56000) below 1919 (56600) in a cumulative series",
+   "sgt1925 p.182 (f206) water m3: 1920 (56000) below 1919 (56600) in a cumulative series",
+   "sgt1926 p.198 (f762) water m3: 1920 (56000) below 1919 (56600) in a cumulative series",
+   "sgt1927 p.196 (f224) water m3: 1920 (56000) below 1919 (56600) in a cumulative series",
+   "sgt1928 p.196 (f748) water m3: 1920 (56000) below 1919 (56600) in a cumulative series"
+  ],
+  "overlap_compared": 466,
+  "overlap_diffs": [
+   [
+    [
+     1927,
+     "artesian_wells",
+     "flow"
+    ],
+    "sgt1927",
+    "1564",
+    "sgt1930",
+    "1451"
+   ]
+  ],
+  "flagged": [],
+  "editions": [
+   "sgt1922",
+   "sgt1923",
+   "sgt1924",
+   "sgt1925",
+   "sgt1926",
+   "sgt1927",
+   "sgt1928",
+   "sgt1929",
+   "sgt1930",
+   "sgt1935",
+   "sgt1936"
+  ]
+ },
+ "publicworks_mining_permits": {
+  "rows": 54,
+  "checks": 0,
+  "failed": [],
+  "overlap_compared": 216,
+  "overlap_diffs": [],
+  "flagged": [],
+  "editions": [
+   "sgt1922",
+   "sgt1923",
+   "sgt1924",
+   "sgt1925",
+   "sgt1926",
+   "sgt1927",
+   "sgt1928",
+   "sgt1929",
+   "sgt1930"
+  ]
+ },
+ "publicworks_mines_exports": {
+  "rows": 54,
+  "checks": 0,
+  "failed": [],
+  "overlap_compared": 186,
+  "overlap_diffs": [],
+  "flagged": [],
+  "editions": [
+   "sgt1922",
+   "sgt1923",
+   "sgt1924",
+   "sgt1925",
+   "sgt1926",
+   "sgt1927",
+   "sgt1928",
+   "sgt1929",
+   "sgt1930",
+   "sgt1935",
+   "sgt1936",
+   "sgt1939"
+  ]
+ },
+ "publicworks_mines_detail": {
+  "rows": 516,
+  "checks": 12,
+  "failed": [],
+  "overlap_compared": 0,
+  "overlap_diffs": [],
+  "flagged": [],
+  "editions": [
+   "sgt1922",
+   "sgt1923",
+   "sgt1924",
+   "sgt1925",
+   "sgt1926",
+   "sgt1927",
+   "sgt1928",
+   "sgt1929",
+   "sgt1930",
+   "sgt1935",
+   "sgt1936",
+   "sgt1939"
+  ]
+ },
+ "publicworks_phosphates": {
+  "rows": 54,
+  "checks": 0,
+  "failed": [],
+  "overlap_compared": 156,
+  "overlap_diffs": [
+   [
+    [
+     1927,
+     "value"
+    ],
+    "sgt1927",
+    "328000000",
+    "sgt1930",
+    "228000000"
+   ]
+  ],
+  "flagged": [],
+  "editions": [
+   "sgt1922",
+   "sgt1923",
+   "sgt1924",
+   "sgt1925",
+   "sgt1926",
+   "sgt1927",
+   "sgt1928",
+   "sgt1929",
+   "sgt1930",
+   "sgt1935",
+   "sgt1936",
+   "sgt1939"
+  ]
+ },
+ "publicworks_phosphate_works": {
+  "rows": 132,
+  "checks": 0,
+  "failed": [],
+  "overlap_compared": 228,
+  "overlap_diffs": [
+   [
+    [
+     1935,
+     "workings_state_land"
+    ],
+    "sgt1935",
+    "0",
+    "sgt1939",
+    "7"
+   ],
+   [
+    [
+     1935,
+     "workings_private_land"
+    ],
+    "sgt1935",
+    "0",
+    "sgt1939",
+    "1"
+   ]
+  ],
+  "flagged": [],
+  "editions": [
+   "sgt1922",
+   "sgt1923",
+   "sgt1924",
+   "sgt1925",
+   "sgt1926",
+   "sgt1927",
+   "sgt1928",
+   "sgt1929",
+   "sgt1930",
+   "sgt1935",
+   "sgt1936",
+   "sgt1939"
+  ]
+ },
+ "publicworks_ores": {
+  "rows": 251,
+  "checks": 117,
+  "failed": [
+   "sgt1922 p.159 (f183) 1918: value_total = zinc + lead + mixtes/mercure values: cells give 19077870, printed 14077870 (difference -5000000)",
+   "sgt1923 p.171 (f673) 1918: value_total = zinc + lead + mixtes/mercure values: cells give 19077870, printed 14077870 (difference -5000000)",
+   "sgt1924 p.179 (f1169) 1918: value_total = zinc + lead + mixtes/mercure values: cells give 19077870, printed 14077870 (difference -5000000)",
+   "sgt1925 p.185 (f209) 1918: value_total = zinc + lead + mixtes/mercure values: cells give 19077870, printed 14077870 (difference -5000000)",
+   "sgt1926 p.201 (f765) 1918: value_total = zinc + lead + mixtes/mercure values: cells give 19077870, printed 14077870 (difference -5000000)",
+   "sgt1927 p.199 (f227) 1918: value_total = zinc + lead + mixtes/mercure values: cells give 19077870, printed 14077870 (difference -5000000)",
+   "sgt1935 p.105 (f125) 1935: value_total = zinc + lead + mixtes/mercure values: cells give 3120000, printed 3060000 (difference -60000)",
+   "sgt1936 p.81 (f92) 1935: value_total = zinc + lead + mixtes/mercure values: cells give 3120000, printed 3060000 (difference -60000)",
+   "sgt1939 p.86 (f92) 1935: value_total = zinc + lead + mixtes/mercure values: cells give 3120000, printed 3060000 (difference -60000)"
+  ],
+  "overlap_compared": 821,
+  "overlap_diffs": [],
+  "flagged": [
+   "sgt1939 1931  / mines_conceded = 50 (row_realigned)",
+   "sgt1939 1931 zinc / tonnage = 660 (row_realigned)",
+   "sgt1939 1931 mixed / tonnage = 0 (row_realigned)",
+   "sgt1939 1931 zinc / value = 120000 (row_realigned)",
+   "sgt1939 1931 mixed / value = 0 (row_realigned)",
+   "sgt1935 1932 mixed / tonnage = 0 (row_realigned)",
+   "sgt1935 1932 mixed / value = 0 (row_realigned)",
+   "sgt1939 1932  / mines_conceded = 51 (row_realigned)",
+   "sgt1939 1932 zinc / tonnage = 0 (row_realigned)",
+   "sgt1939 1932 zinc / value = 0 (row_realigned)",
+   "sgt1935 1933 mixed / tonnage = 0 (row_realigned)",
+   "sgt1935 1933 mixed / value = 0 (row_realigned)",
+   "sgt1939 1933  / mines_conceded = 52 (row_realigned)",
+   "sgt1939 1933 zinc / tonnage = 0 (row_realigned)",
+   "sgt1939 1933 zinc / value = 0 (row_realigned)"
+  ],
+  "editions": [
+   "sgt1922",
+   "sgt1923",
+   "sgt1924",
+   "sgt1925",
+   "sgt1926",
+   "sgt1927",
+   "sgt1928",
+   "sgt1929",
+   "sgt1930",
+   "sgt1935",
+   "sgt1936",
+   "sgt1939"
+  ]
+ },
+ "publicworks_other_transport": {
+  "rows": 47,
+  "checks": 4,
+  "failed": [
+   "sgt1939 p.82 (f88) vehicles 1936: TOTAL = four categories: cells give 28512, printed 28962 (difference 450)"
+  ],
+  "overlap_compared": 0,
+  "overlap_diffs": [],
+  "flagged": [],
+  "editions": [
+   "sgt1939"
+  ]
+ },
+ "publicworks_iron_ore": {
+  "rows": 54,
+  "checks": 0,
+  "failed": [],
+  "overlap_compared": 186,
+  "overlap_diffs": [],
+  "flagged": [],
+  "editions": [
+   "sgt1922",
+   "sgt1923",
+   "sgt1924",
+   "sgt1925",
+   "sgt1926",
+   "sgt1927",
+   "sgt1928",
+   "sgt1929",
+   "sgt1930",
+   "sgt1935",
+   "sgt1936",
+   "sgt1939"
+  ]
+ },
+ "_chapter_views": {
+  "sgt1922": [
+   173,
+   184
+  ],
+  "sgt1923": [
+   663,
+   674
+  ],
+  "sgt1924": [
+   1159,
+   1170
+  ],
+  "sgt1925": [
+   199,
+   210
+  ],
+  "sgt1926": [
+   755,
+   766
+  ],
+  "sgt1927": [
+   217,
+   228
+  ],
+  "sgt1928": [
+   741,
+   752
+  ],
+  "sgt1929": [
+   219,
+   230
+  ],
+  "sgt1930": [
+   753,
+   764
+  ],
+  "sgt1935": [
+   117,
+   126
+  ],
+  "sgt1936": [
+   84,
+   93
+  ],
+  "sgt1939": [
+   83,
+   92
+  ]
+ },
+ "_survey": {
+  "sgt1922": "f173 chapter IX title (Travaux publics); f174|f175 Voies ferrées a) résultats comparés de l'exploitation du réseau tunisien de la Compagnie Bône-Guelma (1918-1922: réseau de la Medjerdah, ligne de Djedeida à Bizerte et embranchements, réseau à voie normale, réseau à voie étroite); f176|f177 b) résultats comparés de l'exploitation du réseau de la Compagnie de Gafsa (1918-1922: Sfax-Gafsa-Metlaoui, Metlaoui-Tozeur, Graïba-Gabès, embranchements miniers); f178 c) résultats financiers du réseau Bône-Guelma, ligne de la Medjerdah (1913-1922), d) lignes non garanties (1913-1922); f179 e) chemins de fer électriques Tunis-Goulette-Marsa (1918-1922); f180 Routes et pistes, longueurs construites et dépenses cumulées (1913-1922) , Travaux hydrauliques a) alimentation en eau potable des centres habités, b) aménagement d'hydraulique agricole (1913-1922); f181 c) forages artésiens, d) installation d'assainissement des centres habités (1913-1922), Industrie minière: a) permis de recherches, b) mines exploitées et valeur des produits exportés (1913-1922); f182 c) renseignements généraux sur les mines (by mineral), Phosphates de chaux a) tonnage et valeur transportés (1913-1922), b) renseignements généraux sur les exploitations de phosphates; f183 Minerais a) tonnage et valeur des minerais transportés (zinc, plomb; 1913-1922), b) minerais de fer (1913-1922); f184 blank. f185 = chapter X Finances.",
+  "sgt1923": "f663 title; f664|f665 a) Compagnie Fermière des Chemins de fer tunisiens (1919-1923); f666|f667 b) Compagnie de Gafsa (1919-1923); f668 c) résultats financiers (Compagnie Fermière); f669 f) Tunis-Goulette-Marsa; f670 Routes et pistes (1914-1923) , travaux hydrauliques; f671 c) forages artésiens, d) assainissement, industrie minière; f672 c) renseignements généraux sur les mines, phosphates; f673 minerais (1914-1923); f674 blank. f675 = chapter X.",
+  "sgt1924": "f1159 title; f1160|f1161 a) (1920-1924); f1162|f1163 b) Gafsa (1920-1924); f1164 c); f1165 f) Tunis-Goulette-Marsa; f1166 Routes et pistes (1915-1924) , travaux hydrauliques; f1167 forages, assainissement, industrie minière; f1168 mines, phosphates; f1169 minerais (1915-1924); f1170 blank. f1171 = chapter X.",
+  "sgt1925": "f199 title; f200|f201 a) (1921-1925); f202|f203 b) (1921-1925); f204 c); f205 f); f206 Routes (1916-1925; pistes no longer printed) , travaux hydrauliques; f207 forages, assainissement, industrie minière; f208 mines, phosphates; f209 minerais (1916-1925); f210 blank. f211 = chapter X.",
+  "sgt1926": "f755 title; f756|f757 a) (1922-1926); f758|f759 b) (1922-1926; f758 nearly empty in the OCR); f760 c); f761 f); f762 Routes (1917-1926) , travaux hydrauliques; f763 forages, assainissement, industrie minière; f764 mines, phosphates; f765 minerais (1917-1926); f766 blank. f767 = chapter X.",
+  "sgt1927": "f217 title; f218|f219 a) (1923-1927); f220|f221 b) (1923-1927); f222 c); f223 f); f224 Routes (1918-1927) , travaux hydrauliques; f225 forages, assainissement, industrie minière; f226 mines, phosphates; f227 minerais (1918-1927); f228 blank. f229 = chapter X.",
+  "sgt1928": "f741 title; f742|f743 a) (1924-1928); f744|f745 b) (1924-1928); f746 c); f747 f); f748 Routes (1919-1928) , travaux hydrauliques; f749 forages, assainissement, industrie minière; f750 mines, phosphates; f751 minerais (1919-1928); f752 blank. f753 = chapter X.",
+  "sgt1929": "f219 title; f220|f221 a) (1925-1929); f222|f223 b) (1925-1929); f224 c); f225 f); f226 Routes (1920-1929) , industrie minière; f227 travaux hydrauliques a) forages artésiens, b) assainissement; f228 mines, phosphates; f229 minerais (1920-1929); f230 blank. f231 = chapter X.",
+  "sgt1930": "f753 title; f754|f755 a) (1926-1930); f756|f757 b) (1926-1930); f758 c); f759 f); f760 Routes (1921-1930) , industrie minière; f761 travaux hydrauliques; f762 mines, phosphates; f763 minerais (1921-1930); f764 blank. f765 = chapter X.",
+  "sgt1935": "f117 chapter IX title; f118|f119 a) Compagnie Fermière (1931-1935; f118 row headings, the 1931 normal-gauge column in the gutter); f120|f121 b) Compagnie de Gafsa (1931-1935); f122 c) résultats financiers (Convention), d) Tunis-Goulette-Marsa (1931-1935), Routes (1926-1935); f123 travaux hydrauliques a) forages artésiens, b) assainissement (1926-1935), industrie minière (mines exploitées et valeur des produits exportés, 1926-1935); f124 b) renseignements généraux sur les mines (1935), phosphates a) and b) (1931-1935); f125 minerais a) zinc/plomb, b) fer (1926-1935); f126 blank. f127 = chapter X Finances.",
+  "sgt1936": "f84 chapter VIII title (Travaux publics); f85|f86 a) Compagnie Fermière (1932-1936); f87|f88 b) Compagnie Sfax-Gafsa (1932-1936); f89 c) résultats financiers (1932-1936), a) forages artésiens (1927-1936); f90 industrie minière (1927-1936) and exploitations minières (1936); f91 phosphates a) (1932-1936) and b); f92 minerais a) (1927-1936) and b) fer; f93 blank. f94 = chapter IX Finances (f94-f99), f100 = chapter X Agriculture. No roads, no Tunis-Goulette-Marsa, no sanitation. Range 84-93 confirmed.",
+  "sgt1939": "f83 chapter VIII title; f84|f85 a) Compagnie Fermière (1935-1939; the 1935 normal-gauge column cut by the binding); f86|f87 b) Compagnie Sfax-Gafsa (1935-1939); f88 c) résultats financiers (1935-1939), nombre total des voitures automobiles immatriculées (1936-1939); f89 autres transports publics (1938-1939), mouvement du port aérien de Tunis (1937-1939); f90 industrie minière (1930-1939), exploitations minières (1939); f91 phosphates; f92 minerais (1930-1939). f93 = chapter IX Finances. No roads, no hydraulic works."
+ },
+ "_not_transcribed": "Every table of the chapter is transcribed in every edition that prints it, every cell read on native-resolution crops of the page images (whole-page views of every page from the chapter title to the next chapter title, then zoomed crops of every table). Cells cut by the binding are `illegible` (stored from another printing when one exists). Nothing printed in the chapter is left out; printed TOTAUX / TOTAL lines are used as checks only."
+}

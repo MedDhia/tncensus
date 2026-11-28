@@ -1,0 +1,23 @@
+# sgt1929 jewish ark bpt6k9105652d view 49 - verified against the full-resolution page image
+years: 1925 1926 1927 1928 1929
+Béja | 24 17 27 6 21 7 26 4 22 6
+Bizerte | 46 22 70 32 52 43 66 36 82 36
+Djerba | 98 44 150 68 151 104 174 99 186 122
+Gabès | 53 32 68 19 77 24 88 44 116 34
+Gafsa | 22 6 23 17 22 18 33 18 26 14
+Grombalia | 77 29 79 25 89 53 77 35 73 24
+Kairouan | 5 1 16 7 5 0 5 2 3 0
+Kef | 35 2 37 7 37 7 40 9 24 17
+Mactar | 1 1 3 0 4 1 4 0 0 0
+Medjez-el-Bab | 3 0 1 0 0 0 0 0 1 0
+Sfax | 106 63 117 77 96 91 89 55 114 51
+Souk-el-Arba | 4 0 2 0 0 0 0 0 0 0
+Sousse | 189 92 166 92 189 97 176 93 167 89
+Tabarka | 0 0 0 0 0 0 0 0 0 0
+Téboursouk | 0 1 2 0 0 0 0 0 1 0
+Thala | 5 0 1 1 0 0 6 1 9 0
+Tozeur | 4 2 7 1 20 21 4 4 12 4
+Tunis | 976 718 967 587 855 606 876 540 936 571
+Zaghouan | 0 0 0 0 0 0 0 0 2 0
+Territoires du Sud | 116 40 101 41 64 32 92 54 89 43
+TOTAUX | 1764 1070 1837 980 1682 1104 1756 994 1863 1011

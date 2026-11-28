@@ -1,0 +1,1569 @@
+{
+ "research_pasteur_budget": {
+  "rows": 20,
+  "checks": 6,
+  "failed": [
+   "sgt1935 p.136 (f156) pasteur_budget [expenditure] value: lines vs Total des dépenses: cells give 1527166.69, printed 1427166.69 (difference -100000.00)",
+   "sgt1936 p.106 (f117) pasteur_budget [receipts] value: lines vs Total des recettes: cells give 1025939.45, printed 1630049.78 (difference 604110.33)"
+  ],
+  "overlap_compared": 0,
+  "overlap_diffs": [],
+  "flagged": [],
+  "editions": [
+   "sgt1935",
+   "sgt1936",
+   "sgt1939"
+  ]
+ },
+ "research_pasteur_activity": {
+  "rows": 224,
+  "checks": 6,
+  "failed": [],
+  "overlap_compared": 0,
+  "overlap_diffs": [],
+  "flagged": [
+   "sgt1936 1936 service_veterinaire / tuberculine_diluee_au_1_10_pour_usage_hypodermique = None (illegible)",
+   "sgt1939 1939 service_des_analyses_medicales / 1_analyses_microbiologiques_diverses = None (illegible)",
+   "sgt1939 1939 produits_divers_non_prepares_a_l_institut / serum_antipesteux = None (not_applicable)"
+  ],
+  "editions": [
+   "sgt1935",
+   "sgt1936",
+   "sgt1939"
+  ]
+ },
+ "research_arloing_analyses": {
+  "rows": 285,
+  "checks": 1,
+  "failed": [],
+  "overlap_compared": 0,
+  "overlap_diffs": [],
+  "flagged": [],
+  "editions": [
+   "sgt1935",
+   "sgt1936",
+   "sgt1939"
+  ]
+ },
+ "research_school_origin": {
+  "rows": 190,
+  "checks": 380,
+  "failed": [
+   "sgt1922 p.250 (f274) school_origin 1907: total = sum: cells give 17, printed 15 (difference -2)",
+   "sgt1922 p.250 (f274) school_origin abroad: lines vs Totaux: cells give 33, printed 31 (difference -2)",
+   "sgt1923 p.263 (f765) school_origin 1910: total = sum: cells give 32, printed 31 (difference -1)",
+   "sgt1923 p.263 (f765) school_origin algeria: lines vs Totaux: cells give 43, printed 44 (difference 1)",
+   "sgt1923 p.263 (f765) school_origin abroad: lines vs Totaux: cells give 36, printed 34 (difference -2)",
+   "sgt1928 p.284 (f836) school_origin 1927: total = sum: cells give 91, printed 46 (difference -45)",
+   "sgt1928 p.284 (f836) school_origin france: lines vs Totaux: cells give 834, printed 789 (difference -45)",
+   "sgt1935 p.139 (f159) school_origin 1931: total = sum: cells give 21, printed 37 (difference 16)",
+   "sgt1935 p.139 (f159) school_origin Totaux: total = sum: cells give 1257, printed 1269 (difference 12)",
+   "sgt1935 p.139 (f159) school_origin france: lines vs Totaux: cells give 893, printed 883 (difference -10)",
+   "sgt1935 p.139 (f159) school_origin tunisia: lines vs Totaux: cells give 233, printed 249 (difference 16)",
+   "sgt1935 p.139 (f159) school_origin colonies: lines vs Totaux: cells give 29, printed 27 (difference -2)",
+   "sgt1936 p.109 (f120) school_origin 1931: total = sum: cells give 21, printed 37 (difference 16)",
+   "sgt1936 p.109 (f120) school_origin Totaux: total = sum: cells give 1285, printed 1297 (difference 12)",
+   "sgt1936 p.109 (f120) school_origin france: lines vs Totaux: cells give 901, printed 891 (difference -10)",
+   "sgt1936 p.109 (f120) school_origin tunisia: lines vs Totaux: cells give 248, printed 264 (difference 16)",
+   "sgt1936 p.109 (f120) school_origin colonies: lines vs Totaux: cells give 30, printed 28 (difference -2)",
+   "sgt1939 p.113 (f119) school_origin 1931: total = sum: cells give 21, printed 37 (difference 16)",
+   "sgt1939 p.113 (f119) school_origin Totaux: total = sum: cells give 1357, printed 1369 (difference 12)",
+   "sgt1939 p.113 (f119) school_origin france: lines vs Totaux: cells give 921, printed 911 (difference -10)",
+   "sgt1939 p.113 (f119) school_origin tunisia: lines vs Totaux: cells give 287, printed 303 (difference 16)",
+   "sgt1939 p.113 (f119) school_origin algeria: lines vs Totaux: cells give 64, printed 63 (difference -1)",
+   "sgt1939 p.113 (f119) school_origin colonies: lines vs Totaux: cells give 33, printed 31 (difference -2)",
+   "sgt1939 p.113 (f119) school_origin total: lines vs Totaux: cells give 1370, printed 1369 (difference -1)"
+  ],
+  "overlap_compared": 1330,
+  "overlap_diffs": [
+   [
+    [
+     "1925",
+     "france"
+    ],
+    "sgt1925",
+    "33",
+    "sgt1939",
+    "35"
+   ],
+   [
+    [
+     "1925",
+     "france"
+    ],
+    "sgt1926",
+    "33",
+    "sgt1939",
+    "35"
+   ],
+   [
+    [
+     "1925",
+     "france"
+    ],
+    "sgt1927",
+    "33",
+    "sgt1939",
+    "35"
+   ],
+   [
+    [
+     "1925",
+     "france"
+    ],
+    "sgt1928",
+    "33",
+    "sgt1939",
+    "35"
+   ],
+   [
+    [
+     "1925",
+     "france"
+    ],
+    "sgt1929",
+    "33",
+    "sgt1939",
+    "35"
+   ],
+   [
+    [
+     "1925",
+     "abroad"
+    ],
+    "sgt1925",
+    "2",
+    "sgt1939",
+    "3"
+   ],
+   [
+    [
+     "1925",
+     "abroad"
+    ],
+    "sgt1926",
+    "2",
+    "sgt1939",
+    "3"
+   ],
+   [
+    [
+     "1925",
+     "abroad"
+    ],
+    "sgt1927",
+    "2",
+    "sgt1939",
+    "3"
+   ],
+   [
+    [
+     "1925",
+     "abroad"
+    ],
+    "sgt1928",
+    "2",
+    "sgt1939",
+    "3"
+   ],
+   [
+    [
+     "1925",
+     "abroad"
+    ],
+    "sgt1929",
+    "2",
+    "sgt1939",
+    "3"
+   ],
+   [
+    [
+     "1927",
+     "france"
+    ],
+    "sgt1928",
+    "72",
+    "sgt1939",
+    "27"
+   ]
+  ],
+  "flagged": [
+   "sgt1936 1900 france = 32 (derived_from_totals)",
+   "sgt1939 1931 tunisia = 1 (total_mismatch)"
+  ],
+  "editions": [
+   "sgt1922",
+   "sgt1923",
+   "sgt1924",
+   "sgt1925",
+   "sgt1926",
+   "sgt1927",
+   "sgt1928",
+   "sgt1929",
+   "sgt1930",
+   "sgt1935",
+   "sgt1936",
+   "sgt1939"
+  ]
+ },
+ "research_school_promotions": {
+  "rows": 165,
+  "checks": 24,
+  "failed": [
+   "sgt1922 p.251 (f275) school_promotions dipl_school: lines vs Totaux: cells give 173, printed 143 (difference -30)",
+   "sgt1925 p.312 (f336) school_promotions dipl_eng: lines vs Totaux: cells give 457, printed 447 (difference -10)",
+   "sgt1925 p.312 (f336) school_promotions dipl_school: lines vs Totaux: cells give 229, printed 199 (difference -30)",
+   "sgt1927 p.281 (f309) school_promotions year1: lines vs Totaux: cells give 1023, printed 1028 (difference 5)",
+   "sgt1927 p.281 (f309) school_promotions year2: lines vs Totaux: cells give 829, printed 229 (difference -600)",
+   "sgt1935 p.140 (f160) school_promotions dipl_school: lines vs Totaux: cells give 295, printed 268 (difference -27)"
+  ],
+  "overlap_compared": 1054,
+  "overlap_diffs": [
+   [
+    [
+     1,
+     "diploma_engineer"
+    ],
+    "sgt1922",
+    "22",
+    "sgt1935",
+    "24"
+   ],
+   [
+    [
+     1,
+     "diploma_engineer"
+    ],
+    "sgt1923",
+    "22",
+    "sgt1935",
+    "24"
+   ],
+   [
+    [
+     1,
+     "diploma_engineer"
+    ],
+    "sgt1924",
+    "22",
+    "sgt1935",
+    "24"
+   ],
+   [
+    [
+     1,
+     "diploma_engineer"
+    ],
+    "sgt1925",
+    "22",
+    "sgt1935",
+    "24"
+   ],
+   [
+    [
+     1,
+     "diploma_engineer"
+    ],
+    "sgt1926",
+    "22",
+    "sgt1935",
+    "24"
+   ],
+   [
+    [
+     1,
+     "diploma_engineer"
+    ],
+    "sgt1927",
+    "22",
+    "sgt1935",
+    "24"
+   ],
+   [
+    [
+     10,
+     "regular_students_year1"
+    ],
+    "sgt1922",
+    "15",
+    "sgt1935",
+    "17"
+   ],
+   [
+    [
+     12,
+     "diploma_engineer"
+    ],
+    "sgt1922",
+    "28",
+    "sgt1935",
+    "29"
+   ],
+   [
+    [
+     12,
+     "diploma_engineer"
+    ],
+    "sgt1923",
+    "28",
+    "sgt1935",
+    "29"
+   ],
+   [
+    [
+     12,
+     "diploma_engineer"
+    ],
+    "sgt1924",
+    "28",
+    "sgt1935",
+    "29"
+   ],
+   [
+    [
+     12,
+     "diploma_engineer"
+    ],
+    "sgt1925",
+    "28",
+    "sgt1935",
+    "29"
+   ],
+   [
+    [
+     12,
+     "diploma_engineer"
+    ],
+    "sgt1926",
+    "28",
+    "sgt1935",
+    "29"
+   ],
+   [
+    [
+     12,
+     "diploma_engineer"
+    ],
+    "sgt1927",
+    "28",
+    "sgt1935",
+    "29"
+   ],
+   [
+    [
+     13,
+     "regular_students_year1"
+    ],
+    "sgt1923",
+    "31",
+    "sgt1935",
+    "32"
+   ],
+   [
+    [
+     13,
+     "regular_students_year1"
+    ],
+    "sgt1924",
+    "31",
+    "sgt1935",
+    "32"
+   ],
+   [
+    [
+     13,
+     "regular_students_year1"
+    ],
+    "sgt1925",
+    "31",
+    "sgt1935",
+    "32"
+   ],
+   [
+    [
+     13,
+     "regular_students_year1"
+    ],
+    "sgt1926",
+    "31",
+    "sgt1935",
+    "32"
+   ],
+   [
+    [
+     13,
+     "regular_students_year1"
+    ],
+    "sgt1927",
+    "31",
+    "sgt1935",
+    "32"
+   ],
+   [
+    [
+     13,
+     "regular_students_year1"
+    ],
+    "sgt1928",
+    "31",
+    "sgt1935",
+    "32"
+   ],
+   [
+    [
+     13,
+     "regular_students_year1"
+    ],
+    "sgt1929",
+    "31",
+    "sgt1935",
+    "32"
+   ],
+   [
+    [
+     13,
+     "diploma_school"
+    ],
+    "sgt1922",
+    "43",
+    "sgt1935",
+    "13"
+   ],
+   [
+    [
+     13,
+     "diploma_school"
+    ],
+    "sgt1923",
+    "43",
+    "sgt1935",
+    "13"
+   ],
+   [
+    [
+     13,
+     "diploma_school"
+    ],
+    "sgt1924",
+    "43",
+    "sgt1935",
+    "13"
+   ],
+   [
+    [
+     13,
+     "diploma_school"
+    ],
+    "sgt1925",
+    "43",
+    "sgt1935",
+    "13"
+   ],
+   [
+    [
+     13,
+     "diploma_school"
+    ],
+    "sgt1926",
+    "43",
+    "sgt1935",
+    "13"
+   ],
+   [
+    [
+     13,
+     "diploma_school"
+    ],
+    "sgt1927",
+    "43",
+    "sgt1935",
+    "13"
+   ],
+   [
+    [
+     17,
+     "diploma_engineer"
+    ],
+    "sgt1922",
+    "31",
+    "sgt1935",
+    "32"
+   ],
+   [
+    [
+     17,
+     "diploma_engineer"
+    ],
+    "sgt1923",
+    "31",
+    "sgt1935",
+    "32"
+   ],
+   [
+    [
+     17,
+     "diploma_engineer"
+    ],
+    "sgt1924",
+    "31",
+    "sgt1935",
+    "32"
+   ],
+   [
+    [
+     17,
+     "diploma_engineer"
+    ],
+    "sgt1925",
+    "31",
+    "sgt1935",
+    "32"
+   ],
+   [
+    [
+     17,
+     "diploma_engineer"
+    ],
+    "sgt1926",
+    "31",
+    "sgt1935",
+    "32"
+   ],
+   [
+    [
+     17,
+     "diploma_engineer"
+    ],
+    "sgt1927",
+    "31",
+    "sgt1935",
+    "32"
+   ],
+   [
+    [
+     17,
+     "diploma_school"
+    ],
+    "sgt1922",
+    "16",
+    "sgt1935",
+    "41"
+   ],
+   [
+    [
+     17,
+     "diploma_school"
+    ],
+    "sgt1923",
+    "16",
+    "sgt1935",
+    "41"
+   ],
+   [
+    [
+     17,
+     "diploma_school"
+    ],
+    "sgt1924",
+    "16",
+    "sgt1935",
+    "41"
+   ],
+   [
+    [
+     17,
+     "diploma_school"
+    ],
+    "sgt1925",
+    "16",
+    "sgt1935",
+    "41"
+   ],
+   [
+    [
+     17,
+     "diploma_school"
+    ],
+    "sgt1926",
+    "16",
+    "sgt1935",
+    "41"
+   ],
+   [
+    [
+     17,
+     "diploma_school"
+    ],
+    "sgt1927",
+    "16",
+    "sgt1935",
+    "41"
+   ],
+   [
+    [
+     17,
+     "diploma_school"
+    ],
+    "sgt1928",
+    "14",
+    "sgt1935",
+    "41"
+   ],
+   [
+    [
+     17,
+     "diploma_school"
+    ],
+    "sgt1929",
+    "14",
+    "sgt1935",
+    "41"
+   ],
+   [
+    [
+     17,
+     "diploma_school"
+    ],
+    "sgt1930",
+    "14",
+    "sgt1935",
+    "41"
+   ],
+   [
+    [
+     18,
+     "diploma_engineer"
+    ],
+    "sgt1922",
+    "35",
+    "sgt1935",
+    "36"
+   ],
+   [
+    [
+     18,
+     "diploma_engineer"
+    ],
+    "sgt1923",
+    "35",
+    "sgt1935",
+    "36"
+   ],
+   [
+    [
+     18,
+     "diploma_engineer"
+    ],
+    "sgt1924",
+    "35",
+    "sgt1935",
+    "36"
+   ],
+   [
+    [
+     18,
+     "diploma_engineer"
+    ],
+    "sgt1925",
+    "35",
+    "sgt1935",
+    "36"
+   ],
+   [
+    [
+     18,
+     "diploma_engineer"
+    ],
+    "sgt1926",
+    "35",
+    "sgt1935",
+    "36"
+   ],
+   [
+    [
+     18,
+     "diploma_engineer"
+    ],
+    "sgt1927",
+    "35",
+    "sgt1935",
+    "36"
+   ],
+   [
+    [
+     19,
+     "diploma_school"
+    ],
+    "sgt1922",
+    "0",
+    "sgt1935",
+    "16"
+   ],
+   [
+    [
+     20,
+     "diploma_engineer"
+    ],
+    "sgt1922",
+    "0",
+    "sgt1935",
+    "31"
+   ],
+   [
+    [
+     20,
+     "diploma_engineer"
+    ],
+    "sgt1923",
+    "0",
+    "sgt1935",
+    "31"
+   ],
+   [
+    [
+     20,
+     "diploma_school"
+    ],
+    "sgt1922",
+    "0",
+    "sgt1935",
+    "11"
+   ],
+   [
+    [
+     20,
+     "diploma_school"
+    ],
+    "sgt1923",
+    "0",
+    "sgt1935",
+    "11"
+   ],
+   [
+    [
+     20,
+     "diploma_school"
+    ],
+    "sgt1924",
+    "12",
+    "sgt1935",
+    "11"
+   ],
+   [
+    [
+     20,
+     "diploma_school"
+    ],
+    "sgt1925",
+    "12",
+    "sgt1935",
+    "11"
+   ],
+   [
+    [
+     20,
+     "diploma_school"
+    ],
+    "sgt1926",
+    "12",
+    "sgt1935",
+    "11"
+   ],
+   [
+    [
+     20,
+     "diploma_school"
+    ],
+    "sgt1927",
+    "12",
+    "sgt1935",
+    "11"
+   ],
+   [
+    [
+     22,
+     "regular_students_year2"
+    ],
+    "sgt1924",
+    "54",
+    "sgt1935",
+    "49"
+   ],
+   [
+    [
+     22,
+     "diploma_engineer"
+    ],
+    "sgt1924",
+    "0",
+    "sgt1935",
+    "40"
+   ],
+   [
+    [
+     22,
+     "diploma_school"
+    ],
+    "sgt1924",
+    "0",
+    "sgt1935",
+    "8"
+   ],
+   [
+    [
+     23,
+     "regular_students_year2"
+    ],
+    "sgt1925",
+    "0",
+    "sgt1935",
+    "47"
+   ],
+   [
+    [
+     23,
+     "diploma_engineer"
+    ],
+    "sgt1925",
+    "0",
+    "sgt1935",
+    "33"
+   ],
+   [
+    [
+     23,
+     "diploma_school"
+    ],
+    "sgt1925",
+    "0",
+    "sgt1935",
+    "12"
+   ],
+   [
+    [
+     23,
+     "diploma_school"
+    ],
+    "sgt1926",
+    "11",
+    "sgt1935",
+    "12"
+   ],
+   [
+    [
+     23,
+     "diploma_school"
+    ],
+    "sgt1927",
+    "11",
+    "sgt1935",
+    "12"
+   ],
+   [
+    [
+     23,
+     "certificate_of_studies"
+    ],
+    "sgt1925",
+    "0",
+    "sgt1935",
+    "1"
+   ],
+   [
+    [
+     24,
+     "regular_students_year2"
+    ],
+    "sgt1925",
+    "47",
+    "sgt1935",
+    "38"
+   ],
+   [
+    [
+     24,
+     "regular_students_year2"
+    ],
+    "sgt1926",
+    "0",
+    "sgt1935",
+    "38"
+   ],
+   [
+    [
+     24,
+     "diploma_engineer"
+    ],
+    "sgt1925",
+    "0",
+    "sgt1935",
+    "27"
+   ],
+   [
+    [
+     24,
+     "diploma_school"
+    ],
+    "sgt1925",
+    "0",
+    "sgt1935",
+    "10"
+   ],
+   [
+    [
+     24,
+     "certificate_of_studies"
+    ],
+    "sgt1925",
+    "0",
+    "sgt1935",
+    "1"
+   ],
+   [
+    [
+     27,
+     "regular_students_year2"
+    ],
+    "sgt1929",
+    "0",
+    "sgt1935",
+    "37"
+   ],
+   [
+    [
+     28,
+     "regular_students_year2"
+    ],
+    "sgt1930",
+    "0",
+    "sgt1935",
+    "43"
+   ]
+  ],
+  "flagged": [
+   "sgt1935 1935 diploma_school = 41 (total_mismatch)",
+   "sgt1935 1935 certificate_of_studies = None (not_applicable)",
+   "sgt1935 1935 certificate_of_studies = None (not_applicable)"
+  ],
+  "editions": [
+   "sgt1922",
+   "sgt1923",
+   "sgt1924",
+   "sgt1925",
+   "sgt1926",
+   "sgt1927",
+   "sgt1928",
+   "sgt1929",
+   "sgt1930",
+   "sgt1935"
+  ]
+ },
+ "research_school_enrolment": {
+  "rows": 99,
+  "checks": 282,
+  "failed": [
+   "sgt1923 p.265 (f767) school_enrolment auditors: lines vs Totaux: cells give 159, printed 150 (difference -9)",
+   "sgt1924 p.281 (f1271) school_enrolment year1: lines vs Totaux: cells give 877, printed 977 (difference 100)",
+   "sgt1924 p.281 (f1271) school_enrolment auditors: lines vs Totaux: cells give 167, printed 157 (difference -10)",
+   "sgt1925 p.313 (f337) school_enrolment auditors: lines vs Totaux: cells give 187, printed 177 (difference -10)",
+   "sgt1926 p.284 (f848) school_enrolment auditors: lines vs Totaux: cells give 187, printed 177 (difference -10)",
+   "sgt1927 p.282 (f310) school_enrolment auditors: lines vs Totaux: cells give 196, printed 186 (difference -10)",
+   "sgt1928 p.286 (f838) school_enrolment auditors: lines vs Totaux: cells give 204, printed 194 (difference -10)",
+   "sgt1929 p.287 (f315) school_enrolment auditors: lines vs Totaux: cells give 216, printed 206 (difference -10)",
+   "sgt1930 p.294 (f852) school_enrolment 1924-1925: total = sum: cells give 124, printed 116 (difference -8)",
+   "sgt1930 p.294 (f852) school_enrolment year2: lines vs Totaux: cells give 915, printed 907 (difference -8)",
+   "sgt1930 p.294 (f852) school_enrolment auditors: lines vs Totaux: cells give 232, printed 222 (difference -10)",
+   "sgt1935 p.141 (f161) school_enrolment year2: lines vs Totaux: cells give 1069, printed 1061 (difference -8)",
+   "sgt1935 p.141 (f161) school_enrolment auditors: lines vs Totaux: cells give 257, printed 262 (difference 5)"
+  ],
+  "overlap_compared": 651,
+  "overlap_diffs": [
+   [
+    [
+     "1898-1899",
+     "auditors"
+    ],
+    "sgt1922",
+    "15",
+    "sgt1935",
+    "0"
+   ],
+   [
+    [
+     "1898-1899",
+     "auditors"
+    ],
+    "sgt1923",
+    "15",
+    "sgt1935",
+    "0"
+   ],
+   [
+    [
+     "1898-1899",
+     "auditors"
+    ],
+    "sgt1924",
+    "15",
+    "sgt1935",
+    "0"
+   ],
+   [
+    [
+     "1898-1899",
+     "auditors"
+    ],
+    "sgt1925",
+    "15",
+    "sgt1935",
+    "0"
+   ],
+   [
+    [
+     "1898-1899",
+     "auditors"
+    ],
+    "sgt1926",
+    "15",
+    "sgt1935",
+    "0"
+   ],
+   [
+    [
+     "1898-1899",
+     "auditors"
+    ],
+    "sgt1927",
+    "15",
+    "sgt1935",
+    "0"
+   ],
+   [
+    [
+     "1898-1899",
+     "auditors"
+    ],
+    "sgt1928",
+    "15",
+    "sgt1935",
+    "0"
+   ],
+   [
+    [
+     "1898-1899",
+     "auditors"
+    ],
+    "sgt1929",
+    "15",
+    "sgt1935",
+    "0"
+   ],
+   [
+    [
+     "1898-1899",
+     "auditors"
+    ],
+    "sgt1930",
+    "15",
+    "sgt1935",
+    "0"
+   ],
+   [
+    [
+     "1907-1908",
+     "regular_students_year1"
+    ],
+    "sgt1922",
+    "15",
+    "sgt1935",
+    "17"
+   ],
+   [
+    [
+     "1910-1911",
+     "regular_students_year1"
+    ],
+    "sgt1923",
+    "31",
+    "sgt1935",
+    "32"
+   ],
+   [
+    [
+     "1910-1911",
+     "regular_students_year1"
+    ],
+    "sgt1924",
+    "31",
+    "sgt1935",
+    "32"
+   ],
+   [
+    [
+     "1910-1911",
+     "regular_students_year1"
+    ],
+    "sgt1925",
+    "31",
+    "sgt1935",
+    "32"
+   ],
+   [
+    [
+     "1910-1911",
+     "regular_students_year1"
+    ],
+    "sgt1926",
+    "31",
+    "sgt1935",
+    "32"
+   ],
+   [
+    [
+     "1910-1911",
+     "regular_students_year1"
+    ],
+    "sgt1927",
+    "31",
+    "sgt1935",
+    "32"
+   ],
+   [
+    [
+     "1910-1911",
+     "regular_students_year1"
+    ],
+    "sgt1928",
+    "31",
+    "sgt1935",
+    "32"
+   ],
+   [
+    [
+     "1910-1911",
+     "regular_students_year1"
+    ],
+    "sgt1929",
+    "31",
+    "sgt1935",
+    "32"
+   ],
+   [
+    [
+     "1924-1925",
+     "regular_students_year2"
+    ],
+    "sgt1924",
+    "54",
+    "sgt1935",
+    "59"
+   ],
+   [
+    [
+     "1924-1925",
+     "regular_students_year2"
+    ],
+    "sgt1925",
+    "54",
+    "sgt1935",
+    "59"
+   ],
+   [
+    [
+     "1924-1925",
+     "regular_students_year2"
+    ],
+    "sgt1926",
+    "54",
+    "sgt1935",
+    "59"
+   ],
+   [
+    [
+     "1924-1925",
+     "regular_students_year2"
+    ],
+    "sgt1927",
+    "54",
+    "sgt1935",
+    "59"
+   ],
+   [
+    [
+     "1924-1925",
+     "regular_students_year2"
+    ],
+    "sgt1928",
+    "54",
+    "sgt1935",
+    "59"
+   ],
+   [
+    [
+     "1924-1925",
+     "regular_students_year2"
+    ],
+    "sgt1929",
+    "54",
+    "sgt1935",
+    "59"
+   ],
+   [
+    [
+     "1928-1929",
+     "regular_students_year2"
+    ],
+    "sgt1928",
+    "46",
+    "sgt1935",
+    "47"
+   ],
+   [
+    [
+     "1928-1929",
+     "regular_students_year2"
+    ],
+    "sgt1929",
+    "46",
+    "sgt1935",
+    "47"
+   ]
+  ],
+  "flagged": [],
+  "editions": [
+   "sgt1922",
+   "sgt1923",
+   "sgt1924",
+   "sgt1925",
+   "sgt1926",
+   "sgt1927",
+   "sgt1928",
+   "sgt1929",
+   "sgt1930",
+   "sgt1935"
+  ]
+ },
+ "research_botanical_seeds": {
+  "rows": 90,
+  "checks": 34,
+  "failed": [
+   "sgt1935 p.142 (f162) bot_seeds [seeds] Blés durs: average 1931-1935: cells give 100.6, printed 100.1 (difference -0.5)",
+   "sgt1935 p.142 (f162) bot_seeds [controlled] 1935: lines vs Total (Ha.): cells give 465, printed 471 (difference 6)",
+   "sgt1935 p.142 (f162) bot_seeds [controlled] Total (Ha.): average 1931-1935: cells give 869.6, printed 868.4 (difference -1.2)"
+  ],
+  "overlap_compared": 40,
+  "overlap_diffs": [],
+  "flagged": [],
+  "editions": [
+   "sgt1935",
+   "sgt1936",
+   "sgt1939"
+  ]
+ },
+ "research_botanical_trials": {
+  "rows": 187,
+  "checks": 148,
+  "failed": [
+   "sgt1923 p.266 (f768) bot_trials Sorghos: total = sum: cells give 23, printed 12 (difference -11)",
+   "sgt1923 p.266 (f768) bot_trials Plantes médicinales: total = sum: cells give 58, printed 47 (difference -11)",
+   "sgt1923 p.266 (f768) bot_trials 1923: lines vs Totaux: cells give 161, printed 139 (difference -22)",
+   "sgt1924 p.282 (f1272) bot_trials Sorghos: total = sum: cells give 27, printed 16 (difference -11)",
+   "sgt1924 p.282 (f1272) bot_trials Plantes médicinales: total = sum: cells give 58, printed 47 (difference -11)",
+   "sgt1924 p.282 (f1272) bot_trials 1923: lines vs Totaux: cells give 161, printed 139 (difference -22)"
+  ],
+  "overlap_compared": 297,
+  "overlap_diffs": [],
+  "flagged": [],
+  "editions": [
+   "sgt1922",
+   "sgt1923",
+   "sgt1924",
+   "sgt1925"
+  ]
+ },
+ "research_botanical_seed_sales": {
+  "rows": 715,
+  "checks": 482,
+  "failed": [
+   "sgt1922 p.254 (f278) bot_seedsales [Blés durs] Hamira: total = sum: cells give 10380, printed 10320 (difference -60)",
+   "sgt1922 p.254 (f278) bot_seedsales [Blés tendres] Richelle hâtive: total = sum: cells give 47702, printed 44702 (difference -3000)",
+   "sgt1923 p.267 (f769) bot_seedsales [Blés durs] Mekki: total = sum: cells give 5455, printed 4855 (difference -600)",
+   "sgt1923 p.267 (f769) bot_seedsales [Blés durs] Autres variétés: total = sum: cells give 6670, printed 6690 (difference 20)",
+   "sgt1923 p.267 (f769) bot_seedsales [Blés durs] 1910-18: lines vs Totaux: cells give 54150, printed 53550 (difference -600)",
+   "sgt1924 p.283 (f1273) bot_seedsales [Blés durs] Adjini: total = sum: cells give 4340, printed 3640 (difference -700)",
+   "sgt1924 p.283 (f1273) bot_seedsales [Blés durs] Biskri glabre: total = sum: cells give 6450, printed 6550 (difference 100)",
+   "sgt1924 p.283 (f1273) bot_seedsales [Blés durs] Hamira: total = sum: cells give 11360, printed 11260 (difference -100)",
+   "sgt1924 p.283 (f1273) bot_seedsales [Blés durs] Mekki: total = sum: cells give 7005, printed 6905 (difference -100)",
+   "sgt1924 p.283 (f1273) bot_seedsales [Blés durs] 1910-19: lines vs Totaux: cells give 63850, printed 63150 (difference -700)",
+   "sgt1924 p.283 (f1273) bot_seedsales [Blés durs] 1924: lines vs Totaux: cells give 11825, printed 11725 (difference -100)",
+   "sgt1924 p.283 (f1273) bot_seedsales [Avoines] de Perse: total = sum: cells give 300, printed 100 (difference -200)",
+   "sgt1925 p.315 (f339) bot_seedsales [Blés durs] Azizi: total = sum: cells give 1355, printed 2355 (difference 1000)",
+   "sgt1926 p.285 (f849) bot_seedsales [Blés durs] Huguenot: total = sum: cells give 3391, printed 3441 (difference 50)",
+   "sgt1926 p.285 (f849) bot_seedsales [Blés durs] Jenah Rhetifa: total = sum: cells give 4450, printed 4400 (difference -50)",
+   "sgt1927 p.283 (f311) bot_seedsales [Blés durs] Biskri glabre: total = sum: cells give 12810, printed 12800 (difference -10)",
+   "sgt1927 p.283 (f311) bot_seedsales [Blés durs] Huguenot: total = sum: cells give 3841, printed 3891 (difference 50)",
+   "sgt1927 p.283 (f311) bot_seedsales [Blés durs] Jenah Rhetifa: total = sum: cells give 4450, printed 4400 (difference -50)",
+   "sgt1927 p.283 (f311) bot_seedsales [Blés durs] 1910-22: lines vs Totaux: cells give 81270, printed 81260 (difference -10)",
+   "sgt1928 p.287 (f839) bot_seedsales [Blés durs] Biskri glabre: total = sum: cells give 15720, printed 15710 (difference -10)",
+   "sgt1928 p.287 (f839) bot_seedsales [Blés durs] Huguenot: total = sum: cells give 3841, printed 3891 (difference 50)",
+   "sgt1928 p.287 (f839) bot_seedsales [Blés durs] Jenah Rhetifa: total = sum: cells give 4450, printed 4400 (difference -50)",
+   "sgt1928 p.287 (f839) bot_seedsales [Blés durs] 1910-23: lines vs Totaux: cells give 92955, printed 92555 (difference -400)",
+   "sgt1928 p.287 (f839) bot_seedsales [Blés tendres] Florence: total = sum: cells give 7810, printed 7830 (difference 20)",
+   "sgt1928 p.287 (f839) bot_seedsales [Blés tendres] 1928: lines vs Totaux: cells give 8880, printed 8800 (difference -80)",
+   "sgt1928 p.287 (f839) bot_seedsales [Avoines] Medjerdah: total = sum: cells give 360, printed 300 (difference -60)",
+   "sgt1928 p.287 (f839) bot_seedsales [Avoines] 1910-23: lines vs Totaux: cells give 138385, printed 138325 (difference -60)",
+   "sgt1929 p.288 (f316) bot_seedsales [Blés durs] Huguenot: total = sum: cells give 3841, printed 3814 (difference -27)",
+   "sgt1929 p.288 (f316) bot_seedsales [Blés durs] Sbéi: total = sum: cells give 10285, printed 10305 (difference 20)",
+   "sgt1929 p.288 (f316) bot_seedsales [Blés durs] Souri: total = sum: cells give 15205, printed 15265 (difference 60)",
+   "sgt1929 p.288 (f316) bot_seedsales [Blés durs] 1910-24: lines vs Totaux: cells give 104700, printed 104780 (difference 80)",
+   "sgt1929 p.288 (f316) bot_seedsales [Blés tendres] 1928: lines vs Totaux: cells give 8880, printed 8800 (difference -80)",
+   "sgt1929 p.288 (f316) bot_seedsales [Avoines] de Laconie: total = sum: cells give 1000, printed 1150 (difference 150)",
+   "sgt1930 p.295 (f853) bot_seedsales [Blés durs] Huguenot: total = sum: cells give 3841, printed 3814 (difference -27)",
+   "sgt1930 p.295 (f853) bot_seedsales [Blés durs] Sbéi: total = sum: cells give 14285, printed 14305 (difference 20)",
+   "sgt1930 p.295 (f853) bot_seedsales [Blés tendres] Pusa Florence: total = sum: cells give 1190, printed 67097 (difference 65907)",
+   "sgt1930 p.295 (f853) bot_seedsales [Blés tendres] Richelle hâtive: total = sum: cells give 67097, printed 2740 (difference -64357)",
+   "sgt1930 p.295 (f853) bot_seedsales [Blés tendres] Richelle tardive: total = sum: cells give 2740, printed 1190 (difference -1550)",
+   "sgt1930 p.295 (f853) bot_seedsales [Blés tendres] Autres variétés: total = sum: cells give 2590, printed 2500 (difference -90)",
+   "sgt1930 p.295 (f853) bot_seedsales [Blés tendres] 1910-25: lines vs Totaux: cells give 118782, printed 128782 (difference 10000)",
+   "sgt1930 p.295 (f853) bot_seedsales [Blés tendres] 1928: lines vs Totaux: cells give 8880, printed 8800 (difference -80)",
+   "sgt1930 p.295 (f853) bot_seedsales [Avoines] Crême: total = sum: cells give 121770, printed 113460 (difference -8310)",
+   "sgt1930 p.295 (f853) bot_seedsales [Avoines] de Laconie: total = sum: cells give 1250, printed 1400 (difference 150)",
+   "sgt1930 p.295 (f853) bot_seedsales [Avoines] 1930: lines vs Totaux: cells give 1300, printed 1800 (difference 500)"
+  ],
+  "overlap_compared": 893,
+  "overlap_diffs": [
+   [
+    [
+     "1921-22",
+     "Orges",
+     "Escourgeons"
+    ],
+    "sgt1922",
+    "22",
+    "sgt1926",
+    "2400"
+   ]
+  ],
+  "flagged": [
+   "sgt1923 1918 Blés durs / Mekki = 1650 (total_mismatch)",
+   "sgt1924 1919 Blés durs / Mekki = 2500 (total_mismatch)",
+   "sgt1927 1922 Blés durs / Biskri glabre = 3360 (total_mismatch)",
+   "sgt1928 1923 Blés durs / Biskri glabre = 3860 (total_mismatch)",
+   "sgt1928 1923 Avoines / Medjerdah = 360 (total_mismatch)",
+   "sgt1929 1924 Blés durs / Biskri glabre = 6460 (total_mismatch)",
+   "sgt1929 1924 Blés durs / Sbéi = 8175 (total_mismatch)",
+   "sgt1929 1924 Blés durs / Souri = 14705 (total_mismatch)",
+   "sgt1930 1925 Blés durs / Biskri glabre = 8810 (total_mismatch)",
+   "sgt1930 1925 Blés durs / Sbéi = 8885 (total_mismatch)",
+   "sgt1930 1925 Blés durs / Souri = 15205 (total_mismatch)",
+   "sgt1930 1926 Blés durs / Huguenot = 500 (total_mismatch)",
+   "sgt1930 1926 Blés durs / Jenah Rhetifa = 50 (total_mismatch)"
+  ],
+  "editions": [
+   "sgt1922",
+   "sgt1923",
+   "sgt1924",
+   "sgt1925",
+   "sgt1926",
+   "sgt1927",
+   "sgt1928",
+   "sgt1929",
+   "sgt1930"
+  ]
+ },
+ "research_botanical_trees": {
+  "rows": 666,
+  "checks": 160,
+  "failed": [
+   "sgt1924 p.284 (f1274) bot_trees_cum [fruit] grafts: total général = livraisons + antérieures: cells give 185055, printed 285055 (difference 100000)",
+   "sgt1927 p.284 (f312) bot_trees_cum [fruit] plants: total général = livraisons + antérieures: cells give 371470, printed 371270 (difference -200)",
+   "sgt1927 p.284 (f312) bot_trees_cum [fruit] grafts: total général = livraisons + antérieures: cells give 286218, printed 186218 (difference -100000)",
+   "sgt1927 p.284 (f312) bot_trees_cum [fruit] plants: livraisons vs sum of season totals: cells give 29462, printed 29662 (difference 200)",
+   "sgt1928 p.288 (f840) bot_trees_cum [fruit] plants: livraisons vs sum of season totals: cells give 30181, printed 34124 (difference 3943)",
+   "sgt1929 p.289 (f317) bot_trees_cum [fruit] plants: livraisons vs sum of season totals: cells give 27465, printed 31408 (difference 3943)",
+   "sgt1929 p.289 (f317) bot_trees_cum [fruit] grafts: livraisons vs sum of season totals: cells give 2778, printed 2828 (difference 50)",
+   "sgt1930 p.296 (f854) bot_trees_cum [fruit] plants: livraisons vs sum of season totals: cells give 28304, printed 32247 (difference 3943)",
+   "sgt1930 p.296 (f854) bot_trees_cum [fruit] grafts: livraisons vs sum of season totals: cells give 5958, printed 6008 (difference 50)",
+   "sgt1935 p.143 (f163) bot_trees_cum [fruit] plants: livraisons vs sum of season totals: cells give 25267, printed 25067 (difference -200)",
+   "sgt1935 p.143 (f163) bot_trees_cum [fruit] grafts: livraisons vs sum of season totals: cells give 3639, printed 7196 (difference 3557)",
+   "sgt1922 p.255 (f279) bot_trees 1922p: lines vs Total: cells give 4623, printed 4183 (difference -440)",
+   "sgt1923 p.268 (f770) bot_trees 1922p: lines vs Total: cells give 4623, printed 4183 (difference -440)",
+   "sgt1924 p.284 (f1274) bot_trees 1922p: lines vs Total: cells give 4623, printed 4183 (difference -440)",
+   "sgt1927 p.284 (f312) bot_trees 1927g: lines vs Total: cells give 676, printed 726 (difference 50)",
+   "sgt1928 p.288 (f840) bot_trees 1927g: lines vs Total: cells give 676, printed 726 (difference 50)",
+   "sgt1929 p.289 (f317) bot_trees 1928p: lines vs Total: cells give 4666, printed 5181 (difference 515)",
+   "sgt1930 p.296 (f854) bot_trees 1928p: lines vs Total: cells give 4666, printed 5181 (difference 515)",
+   "sgt1935 p.143 (f163) bot_trees 1931p: lines vs Total: cells give 5308, printed 5306 (difference -2)"
+  ],
+  "overlap_compared": 1184,
+  "overlap_diffs": [
+   [
+    [
+     "1921-22",
+     "fruit",
+     "Poirier",
+     "plants"
+    ],
+    "sgt1922",
+    "1445",
+    "sgt1926",
+    "1005"
+   ],
+   [
+    [
+     "1921-22",
+     "fruit",
+     "Poirier",
+     "plants"
+    ],
+    "sgt1923",
+    "1445",
+    "sgt1926",
+    "1005"
+   ],
+   [
+    [
+     "1921-22",
+     "fruit",
+     "Poirier",
+     "plants"
+    ],
+    "sgt1924",
+    "1445",
+    "sgt1926",
+    "1005"
+   ],
+   [
+    [
+     "1927-28",
+     "fruit",
+     "Abricotier",
+     "plants"
+    ],
+    "sgt1928",
+    "572",
+    "sgt1930",
+    "57"
+   ]
+  ],
+  "flagged": [
+   "sgt1928 1928 fruit / Abricotier / plants = 572 (reprint_corrected)"
+  ],
+  "editions": [
+   "sgt1922",
+   "sgt1923",
+   "sgt1924",
+   "sgt1925",
+   "sgt1926",
+   "sgt1927",
+   "sgt1928",
+   "sgt1929",
+   "sgt1930",
+   "sgt1935"
+  ]
+ },
+ "research_chemistry_lab": {
+  "rows": 2718,
+  "checks": 535,
+  "failed": [
+   "sgt1927 p.285 (f313) chemlab [Tunis] Huiles essentielles: total = sum: cells give 7, printed 6 (difference -1)",
+   "sgt1927 p.285 (f313) chemlab [Tunis] public: lines vs Totaux par service: cells give 2338, printed 2337 (difference -1)",
+   "sgt1928 p.289 (f841) chemlab [Tunis] Spiritueux et liqueurs: total = sum: cells give 63, printed 10 (difference -53)",
+   "sgt1928 p.289 (f841) chemlab [Tunis] public: lines vs Totaux par service: cells give 2616, printed 2626 (difference 10)",
+   "sgt1928 p.289 (f841) chemlab [Tunis] total: lines vs Totaux par service: cells give 5780, printed 5843 (difference 63)",
+   "sgt1929 p.290 (f318) chemlab [Tunis] Totaux par service: total = sum: cells give 6666, printed 6674 (difference 8)",
+   "sgt1929 p.290 (f318) chemlab [Tunis] total: lines vs Totaux par service: cells give 6666, printed 6674 (difference 8)",
+   "sgt1930 p.298 (f856) chemlab [Sfax] Totaux: total = sum: cells give 2941, printed 2939 (difference -2)",
+   "sgt1930 p.298 (f856) chemlab [Sfax] studies: lines vs Totaux: cells give 183, printed 185 (difference 2)",
+   "sgt1936 p.111 (f122) chemlab [Sfax] Goudrons, huiles de goudron: total = sum: cells give 12, printed 2 (difference -10)",
+   "sgt1936 p.111 (f122) chemlab [Sfax] customs: lines vs Totaux par service: cells give 1671, printed 1661 (difference -10)"
+  ],
+  "overlap_compared": 0,
+  "overlap_diffs": [],
+  "flagged": [
+   "sgt1927 1927 Tunis / huiles_essentielles / paid_public = 1 (total_mismatch)",
+   "sgt1928 1928 Tunis / spiritueux_et_liqueurs / paid_public = 0 (total_mismatch)",
+   "sgt1929 1929 Tunis / engrais_produits_anticryptogamiques / fraud_repression_good = 0 (row_realigned)",
+   "sgt1929 1929 Tunis / engrais_produits_anticryptogamiques / fraud_repression_suspect = 0 (row_realigned)",
+   "sgt1929 1929 Tunis / epices / fraud_repression_good = 20 (row_realigned)",
+   "sgt1929 1929 Tunis / epices / fraud_repression_suspect = 12 (row_realigned)",
+   "sgt1929 1929 Tunis / farines_et_farineux_alimentaires / fraud_repression_good = 12 (row_realigned)",
+   "sgt1929 1929 Tunis / farines_et_farineux_alimentaires / fraud_repression_suspect = 12 (row_realigned)",
+   "sgt1929 1929 Sfax / engrais_produits_anticryptogamiques / fraud_repression_good = 0 (row_realigned)",
+   "sgt1929 1929 Sfax / engrais_produits_anticryptogamiques / fraud_repression_suspect = 0 (row_realigned)",
+   "sgt1929 1929 Sfax / epices / fraud_repression_good = 0 (row_realigned)",
+   "sgt1929 1929 Sfax / epices / fraud_repression_suspect = 0 (row_realigned)",
+   "sgt1936 1936 Tunis / goudrons_huiles_de_goudron / customs = 7 (total_mismatch)",
+   "sgt1936 1936 Tunis / mouts_mutes / customs = 429 (row_realigned)",
+   "sgt1936 1936 Tunis / petroles_mazouts_essences / customs = 430 (row_realigned)",
+   "sgt1936 1936 Tunis / produits_alimentaires_divers / customs = 68 (row_realigned)",
+   "sgt1936 1936 Tunis / produits_chimiques / customs = 0 (derived_from_totals)",
+   "sgt1936 1936 Sfax / goudrons_huiles_de_goudron / customs = 12 (total_mismatch)",
+   "sgt1936 1936 Sfax / mouts_mutes / customs = 0 (row_realigned)",
+   "sgt1936 1936 Sfax / petroles_mazouts_essences / customs = 0 (row_realigned)",
+   "sgt1936 1936 Sfax / produits_alimentaires_divers / customs = 2 (row_realigned)"
+  ],
+  "editions": [
+   "sgt1925",
+   "sgt1926",
+   "sgt1927",
+   "sgt1928",
+   "sgt1929",
+   "sgt1930",
+   "sgt1935",
+   "sgt1936",
+   "sgt1939"
+  ]
+ },
+ "_chapter_views": {
+  "sgt1922": "255-279 (météorologie f255-f273; institutions f274-f279; f280 blank; f281 chapter XII)",
+  "sgt1923": "745-770",
+  "sgt1924": "1247-1274",
+  "sgt1925": "309-341",
+  "sgt1926": "819-851",
+  "sgt1927": "282-313",
+  "sgt1928": "806-841",
+  "sgt1929": "284-319",
+  "sgt1930": "818-856",
+  "sgt1935": "155-184 (f185 chapter XIII Commerce et navigation)",
+  "sgt1936": "116-145 (f146 chapter XII Commerce et navigation)",
+  "sgt1939": "115-122 (f123 chapter XII Commerce et navigation)"
+ },
+ "_cumulative_deliveries": [
+  "sgt1922 fruit: Livraisons de 1917-1918 à 1921-1922 29630/3594; Livraisons antérieures (de 1893 à 1917-1918) 312178/179453; Total général 341808/183047",
+  "sgt1922 other: Livraisons de 1917-1918 à 1921-1922 292170; Livraisons antérieures (de 1893 à 1917-1918) 1940688; Total général 2232858",
+  "sgt1923 fruit: Livraisons de 1918-1919 à 1922-1923 27053/3353; Livraisons antérieures (de 1893 à 1918-1919) 319217/180501; Total général 346270/183854",
+  "sgt1923 other: Livraisons de 1918-1919 à 1922-1923 306531; Livraisons antérieures (de 1893 à 1918-1919) 1987897; Total général 2294428",
+  "sgt1924 fruit: Livraisons de 1919-1920 à 1923-1924 29854/2962; Livraisons antérieures (de 1893 à 1919-1920) 324461/182093; Total général 354315/285055",
+  "sgt1924 other: Livraisons de 1919-1920 à 1923-1924 301697; Livraisons antérieures (de 1893 à 1919-1920) 2044480; Total général 2346177",
+  "sgt1925 fruit: Livraisons de 1920-1921 à 1924-1925 29607/2238; Livraisons antérieures (de 1893 à 1920-1921) 330861/182987; Total général 360468/185225",
+  "sgt1925 other: Livraisons de 1920-1921 à 1924-1925 315429; Livraisons antérieures (de 1893 à 1919-1920) 2100290; Total général 2415719",
+  "sgt1926 fruit: Livraisons de 1921-1922 à 1925-1926 27575/2505; Livraisons antérieures (de 1893 à 1921-1922) 337625/182987; Total général 365200/185492",
+  "sgt1926 other: Livraisons de 1921-1922 à 1925-1926 301819; Livraisons antérieures (de 1893 à 1920-1921) 2171569; Total général 2473388",
+  "sgt1927 fruit: Livraisons de 1922-1923 à 1926-1927 29662/3171; Livraisons antérieures (de 1893 à 1922-1923) 341808/283047; Total général 371270/186218",
+  "sgt1927 other: Livraisons de 1922-1923 à 1926-1927 313078; Livraisons antérieures (de 1893 à 1920-1921) 2232858; Total général 2545936",
+  "sgt1928 fruit: Livraisons de 1923-1924 à 1927-1928 34124/4029; Livraisons antérieures (de 1893 à 1923-1924) 342327/183854; Total général 376451/187883",
+  "sgt1928 other: Livraisons de 1923-1924 à 1927-1928 323374; Livraisons antérieures (de 1893 à 1922-1923) 2294428; Total général 2617802",
+  "sgt1929 fruit: Livraisons de 1924-1925 à 1928-1929 31408/2828; Livraisons antérieures (de 1893 à 1924-1925) 350372/185055; Total général 381780/187883",
+  "sgt1929 other: Livraisons de 1924-1925 à 1928-1929 335920; Livraisons antérieures (de 1893 à 1924-1925) 2346177; Total général 2682097",
+  "sgt1930 fruit: Livraisons de 1925-1926 à 1929-1930 32247/6008; Livraisons antérieures (de 1893 à 1924-1925) 356525/185225; Total général 388772/191233",
+  "sgt1930 other: Livraisons de 1925-1926 à 1929-1930 311460; Livraisons antérieures (de 1893 à 1924-1925) 2415719; Total général 2727179",
+  "sgt1935 fruit: Livraisons de 1930-1931 à 1934-1935 25067/7196; Livraisons antérieures (de 1893 à 1929-1930) 417239/197457; Total général 442306/204653",
+  "sgt1935 other: Livraisons de 1930-1931 à 1934-1935 265112; Livraisons antérieures (de 1893 à 1929-1930) 2858273; Total général 3123385"
+ ],
+ "_survey": {
+  "sgt1922": "Inside chapter XI Agriculture. f255-f259 Météorologie a) relevé pluviométrique de l'année agricole 1921-1922; f260-f269 b) année solaire 1922 (mm and days per month); f270|f271 c) données climatologiques 1922; f272|f273 d) statistique thermométrique 1911-1920 [météorologie not yet transcribed]. f274 École coloniale d'agriculture a) lieu d'origine des élèves (1898-1922) [transcribed]; f275 b) promotions (1898-1922) [transcribed]; f276 c) effectif par année scolaire [transcribed]; f277 Service botanique a) nature et nombre des essais de variétés nouvelles (1912-1922) [transcribed]; f278 b) vente de semences de variétés pédigrées (1910-1922) [transcribed]; f279 c) ventes d'arbres et de plantes diverses (1917-1922) [transcribed]; f280 blank; f281 chapter XII.",
+  "sgt1923": "Inside chapter XI Agriculture. f745-f749 Météorologie a) relevé pluviométrique de l'année agricole 1922-1923 (pluies totales par saison et pour l'année, with the 1901-1910 normal); f750-f759 b) relevé pluviométrique de l'année solaire 1923 (millimètres de pluie on the left page, nombre de jours on the right, per station and month); f760|f761 c) données climatologiques essentielles 1923 par les principales régions; f762-f764 d) pluviométrie agricole des années 1900-1901 à 1919-1920 (seasonal and annual means by five-year period) [météorologie not yet transcribed]. f765 École coloniale d'agriculture a) lieu d'origine (1898-1923); f766 b) promotions; f767 c) effectif; f768 Service botanique a) essais de variétés nouvelles (1913-1923); f769 b) vente de semences (1910-1923); f770 c) ventes d'arbres et de plantes (1918-1923) [all transcribed]; f771 chapter XII.",
+  "sgt1924": "Inside chapter XI Agriculture. f1247-f1251 Météorologie a) relevé pluviométrique de l'année agricole 1923-1924; f1252-f1263 b) année solaire 1924 (mm | jours spreads); f1264|f1265 c) données climatologiques essentielles 1924; f1266-f1268 d) moyennes pluviométriques mensuelles, saisonnières et annuelles pour la période décennale 1911-1920 [météorologie not yet transcribed]. f1269 École coloniale a) lieu d'origine; f1270 b) promotions; f1271 c) effectif; f1272 Service botanique a) essais (1914-1924); f1273 b) vente de semences (1910-1924); f1274 c) ventes d'arbres (1919-1924) [all transcribed]; f1275 chapter XII.",
+  "sgt1925": "Inside chapter XI Agriculture. f309-f315 Météorologie a) relevé pluviométrique de l'année agricole 1924-1925; f316-f329 b) année solaire 1925 (mm | jours spreads); f330|f331 c) données climatologiques essentielles 1925; f332-f334 d) pluviométrie agricole des années 1900-1901 à 1924-1925 (five-year means) [météorologie not yet transcribed]. f335 École coloniale a) lieu d'origine; f336 b) promotions; f337 c) effectif; f338 Service botanique a) essais (1915-1925); f339 b) vente de semences (1910-1925); f340 c) ventes d'arbres (1920-1925); f341 laboratoire de chimie (Tunis) 1925 [all transcribed]; f342 blank; f343 chapter XII.",
+  "sgt1926": "Inside chapter XI Agriculture. f819-f825 Météorologie a) relevé pluviométrique de l'année agricole 1925-1926; f826-f839 b) année solaire 1926 (mm | jours spreads; signes conventionnels — pas d'observation, × pluie non mesurée, O gouttes, OI observations incomplètes); f840|f841 c) données climatologiques essentielles 1926; f842-f845 d) températures moyennes et extrêmes mensuelles, saisonnières et annuelles de la période 1901-1925 [météorologie not yet transcribed]. f846 École coloniale a) lieu d'origine; f847 b) promotions; f848 c) effectif; f849 Service botanique a) vente de semences (1910-1926); f850 b) ventes d'arbres (1921-1926); f851 laboratoire de chimie (Tunis) 1926 [all transcribed]; f852 blank; f853 chapter XII.",
+  "sgt1927": "Inside chapter XI Agriculture. f282-f287 Météorologie a) relevé pluviométrique de l'année agricole 1926-1927; f288-f303 b) année solaire 1927 (mm | jours spreads); f304|f305 c) données climatologiques essentielles 1927; f306|f307 d) période 1901-1925, pluies moyennes mensuelles, saisonnières et annuelles (année agricole à partir de septembre) [météorologie not yet transcribed]. f308 École coloniale a) lieu d'origine; f309 b) promotions; f310 c) effectif; f311 Service botanique a) vente de semences (1910-1927); f312 b) ventes d'arbres (1922-1927); f313 laboratoire de chimie (Tunis) 1927 [all transcribed]; f314 blank; f315 chapter XII.",
+  "sgt1928": "Inside chapter XI Agriculture. f806-f835 Météorologie [not yet transcribed]. f836 École coloniale a) lieu d'origine (1898-1928); f837 b) promotions; f838 c) effectif; f839 Service botanique a) vente de semences (1910-1928); f840 b) ventes d'arbres (1923-1928); f841 laboratoire de chimie (Tunis) 1928 [all transcribed].",
+  "sgt1929": "Inside chapter XI Agriculture. f284-f312 Météorologie [not yet transcribed]. f313 École coloniale a) lieu d'origine (1898-1929); f314 b) promotions; f315 c) effectif; f316 Service botanique a) vente de semences (1910-1929); f317 b) ventes d'arbres (1924-1929); f318 laboratoire de chimie (Tunis) 1929; f319 laboratoire de chimie (Sfax) 1929 [all transcribed].",
+  "sgt1930": "Inside chapter XI Agriculture. f818-f849 Météorologie [not yet transcribed]. f850 Institutions d'enseignement et de recherches: École coloniale a) lieu d'origine (1898-1930); f851 b) promotions; f852 c) effectif; f853 Service botanique a) vente de semences (1910-1930); f854 b) ventes d'arbres (1925-1930); f855 laboratoire de chimie (Tunis) 1930 (with Contributions indirectes columns); f856 laboratoire de chimie (Sfax) 1930 [all transcribed].",
+  "sgt1935": "f155 chapter XII title (Institutions d'enseignement et de recherches); f156 Institut Pasteur a) budget, b) travaux de l'Institut [transcribed]; f157 c) service vétérinaire [transcribed]; f158 Institut Arloing, analyses microbiologiques [transcribed]; f159 École coloniale d'agriculture a) lieu d'origine (1899-1935) [transcribed]; f160 b) promotions [transcribed]; f161 c) effectif [transcribed]; f162 Service botanique et agronomique a) semences pédigrées (1931-1935) [transcribed]; f163 b) ventes d'arbres et de plantes (1930-31 à 1934-35) [transcribed]; f164 laboratoire de chimie (Tunis) 1935 [transcribed]; f165 laboratoire de chimie (Sfax) 1935 [transcribed]; f166-f183 relevé pluviométrique de l'année 1935 (nine two-page spreads, by station and month) [not yet transcribed]; f184 blank; f185 chapter XIII Commerce et navigation.",
+  "sgt1936": "f116 chapter XI title; f117 Institut Pasteur a) budget, b) travaux [transcribed]; f118 c) service vétérinaire [transcribed]; f119 Institut Arloing [transcribed]; f120 École coloniale, lieu d'origine (1899-1936) [transcribed]; f121 Service botanique et agronomique, semences pédigrées (1934-1936) [transcribed]; f122 laboratoires de chimie Tunis et Sfax 1936 [transcribed]; f123-f144 relevé pluviométrique 1936 (eleven two-page spreads) [not yet transcribed]; f145 blank; f146 chapter XII Commerce et navigation.",
+  "sgt1939": "f115 chapter XI title; f116 Institut Pasteur a) budget, b) travaux [transcribed]; f117 c) service vétérinaire [transcribed]; f118 Institut Arloing [transcribed]; f119 École coloniale, lieu d'origine (1899-1913 as one line, 1919-1939) [transcribed]; f120 Service botanique et agronomique, semences pédigrées (1935-1939) [transcribed]; f121 statistique des analyses du laboratoire de chimie, 13 rue de Rome, 1939 [transcribed]; f122 blank; f123 chapter XII Commerce et navigation. No meteorology printed."
+ },
+ "_not_transcribed": "Transcribed (every cell read on native-resolution crops): the separate chapter of sgt1935 (f156-f165), sgt1936 (f117-f122) and sgt1939 (f116-f121), and the institutions inside the Agriculture chapter of sgt1922 (f274-f279), sgt1923 (f765-f770), sgt1924 (f1269-f1274), sgt1925 (f335-f341), sgt1926 (f846-f851), sgt1927 (f308-f313), sgt1928 (f836-f841), sgt1929 (f313-f319) and sgt1930 (f850-f856). NOT YET TRANSCRIBED: all meteorology: rainfall 1935 (sgt1935 f166-f183), 1936 (sgt1936 f123-f144), and the Météorologie pages of sgt1922 (f255-f273), sgt1923 (f745-f764), sgt1924 (f1247-f1268), sgt1925 (f309-f334), sgt1926 (f819-f845), sgt1927 (f282-f307), sgt1928 (f806-f835), sgt1929 (f284-f312), sgt1930 (f818-f849)."
+}

@@ -1,0 +1,269 @@
+# Institutions d'enseignement et de recherches, printed under that heading at the end of the Agriculture chapter
+# (chapitre XI), sgt1925 (volume bpt6k9105650k): École coloniale d'agriculture f335-f337, Service botanique
+# f338-f340, laboratoire de chimie f341 (f342 blank; f343 = chapter XII); Météorologie f309-f334. Format: see
+# yb_tables.py and extract_research.py. Every cell read on native-resolution crops.
+
+# ÉCOLE COLONIALE D'AGRICULTURE. a) Lieu d'origine des élèves entrés à l'École (1898-1925; a 1926 line printed).
+# f335 (p. 311). The 1926 row total is printed » (51 by the columns; stored "-": totals are checks only).
+@school_origin view=335 page=311 years=1898-1926
+img: all
+cols: france tunisia algeria colonies abroad total
+1898 | 26 4 1 0 2 33
+1899 | 30 1 1 0 1 33
+1900 | 32 2 6 0 0 40
+1901 | 24 2 4 2 0 32
+1902 | 28 1 2 0 0 31
+1903 | 25 0 0 0 2 27
+1904 | 26 1 5 1 0 33
+1905 | 18 0 2 1 0 21
+1906 | 16 0 0 1 1 18
+1907 | 12 0 0 1 4 17
+1908 | 8 3 2 1 2 16
+1909 | 30 2 3 1 4 40
+1910 | 29 2 0 1 0 32
+1911 | 33 6 1 4 1 45
+1912 | 20 5 2 3 8 38
+1913 | 34 7 4 2 3 50
+1919 | 50 15 2 0 0 67
+1920 | 46 15 2 0 1 64
+1921 | 50 11 2 3 0 66
+1922 | 46 7 1 0 4 58
+1923 | 50 4 3 0 3 60
+1924 | 37 17 0 0 3 57
+1925 | 33 11 0 0 2 46
+1926 | 32 18 1 0 0 -
+Totaux | 735 134 44 21 41 975
+
+# b) Promotions (1898-1925). f336 (p. 312). (2) promotion en cours d'études, printed on the 21e line (figures kept).
+# 23e and 24e lines as printed (24e: 51 and 47).
+@school_promotions view=336 page=312 year=1925
+img: all
+cols: year1 year2 dipl_eng dipl_school certificate
+1 1898-1900 | 33 33 22 8 1
+2 1899-1901 | 33 26 14 10 0
+3 1900-1902 | 40 31 18 10 3
+4 1901-1903 | 32 24 17 5 1
+5 1902-1904 | 31 20 8 9 0
+6 1903-1905 | 27 18 13 5 0
+7 1904-1906 | 33 27 11 10 6
+8 1905-1907 | 21 21 14 4 2
+9 1906-1908 | 18 14 9 2 1
+10 1907-1909 | 17 14 11 3 0
+11 1908-1910 | 16 16 10 6 0
+12 1909-1911 | 40 39 28 8 2
+13 1910-1912 | 31 30 12 43 3
+14 1911-1913 | 45 40 27 9 1
+15 1912-1914 | 38 33 19 13 0
+16 1914-1920 | 50 16 16 0 0
+17 1919-1921 | 67 47 31 16 0
+18 1920-1922 | 64 49 35 12 1
+19 1921-1923 | 66 56 40 16 0
+20 1922-1924 | 58 43 31 12 0
+21 1923-1925 | 60 51 31 20 0
+22 1924-1926 | 57 49 40 8 0
+23 1925-1927 | 49 0 0 0 0
+24 1926-1928 | 51 47 0 0 0
+Totaux | 977 744 447 199 21
+
+# c) Effectif par année scolaire (1898-1925; lines to 1926-1927 printed). f337 (p. 313).
+@school_enrolment view=337 page=313 year=1925
+img: all
+cols: year1 year2 auditors total
+1898-1899 | 33 0 15 48
+1899-1900 | 33 33 6 72
+1900-1901 | 40 26 6 72
+1901-1902 | 32 31 7 70
+1902-1903 | 31 24 9 64
+1903-1904 | 27 20 4 51
+1904-1905 | 33 18 5 56
+1905-1906 | 21 27 1 49
+1906-1907 | 18 21 1 40
+1907-1908 | 17 14 2 33
+1908-1909 | 16 14 0 30
+1909-1910 | 40 16 1 57
+1910-1911 | 31 39 7 77
+1911-1912 | 45 30 6 81
+1912-1913 | 38 40 2 80
+1913-1914 | 50 33 12 95
+1919-1920 | 67 16 28 111
+1920-1921 | 64 47 16 127
+1921-1922 | 66 49 8 123
+1922-1923 | 58 56 12 126
+1923-1924 | 60 43 11 114
+1924-1925 | 57 54 8 119
+1925-1926 | 49 49 10 108
+1926-1927 | 51 47 10 108
+Totaux | 977 747 177 -
+
+# SERVICE BOTANIQUE. a) Nature et nombre des essais de variétés nouvelles (1915-1925). f338 (p. 314). Total antérieur
+# = trials before 1915-16. The 1922-23 column now totals 161 (Sorghos 11, Plantes médicinales 11, as sgt1923 printed
+# them, with its totals 139/12/47 left uncorrected there).
+@bot_trials view=338 page=314 section=agricole first=1915-16
+img: all
+cols: prior 1916 1917 1918 1919 1920 1921 1922 1923 1924 1925 total
+Blés durs | 872 0 18 0 14 33 0 56 19 112 30 1154
+Blés tendres | 461 0 28 6 8 18 9 108 83 77 97 895
+Orges | 609 0 0 2 0 9 0 38 9 30 74 771
+Avoines | 133 0 0 1 9 41 0 42 17 22 0 265
+Sorghos | 0 0 0 0 0 1 7 4 11 4 17 44
+Plantes fourragères | 989 0 0 0 0 0 7 40 2 0 46 1084
+Plantes industrielles | 0 0 0 0 0 0 38 0 5 0 12 55
+Plantes médicinales | 0 0 0 0 0 0 27 20 11 0 0 58
+Cotonniers | 80 0 0 0 0 0 0 0 4 0 24 108
+Totaux | 3144 0 46 9 31 102 88 308 161 245 300 4434
+
+@bot_trials view=338 page=314 section=horticole first=1915-16
+img: all
+cols: prior 1916 1917 1918 1919 1920 1921 1922 1923 1924 1925 total
+Introductions de graines | 8595 4 86 10 5 55 119 128 594 146 857 10599
+Introductions de plantes | 677 0 0 0 0 0 0 0 29 0 0 706
+Totaux | 9272 4 86 10 5 55 119 128 623 146 857 11305
+
+# b) Vente de semences de variétés pédigrées (1910-1925). f339 (p. 315). First column 1910-20. Avoines Crême 1910-20
+# printed 88.050 (the Escourgeons figure; sgt1924 has 33.850 + 3.900 = 37.750 for 1910-20), and its row total 111.870
+# and the column total 113.975 are computed from it: kept as printed (overlap difference). Azizi row total printed
+# 2.355 for 1.355.
+@bot_seedsales view=339 page=315 group="Blés durs"
+img: all
+cols: 1910-20 1921 1922 1923 1924 1925 total
+Adjini | 3240 200 200 500 200 0 4340
+Agili | 0 0 0 800 700 700 2200
+Azizi | 1355 0 0 0 0 0 2355
+Biskri glabre | 2100 500 750 500 2600 2350 8800
+Derbessi | 5050 0 0 0 0 0 5050
+Hamira | 9740 340 300 380 600 2100 13460
+Huguenot | 0 0 0 0 1425 1466 2891
+Jenah Rhetifa | 1915 225 400 1310 550 0 4400
+Mahmoudi | 19125 1450 1500 3450 2950 1400 29875
+Médéa | 2500 350 500 430 0 0 3780
+Mekki | 3000 475 600 1480 1450 0 7005
+Sbéi | 4075 950 800 1220 1150 710 8905
+Souri | 10820 930 1200 1615 200 500 15265
+Autres variétés | 6670 0 0 0 0 0 6670
+Totaux | 69590 5420 6250 11685 11825 9226 -
+
+@bot_seedsales view=339 page=315 group="Blés tendres"
+img: all
+cols: 1910-20 1921 1922 1923 1924 1925 total
+Barletta | 0 0 0 1460 350 450 2260
+Comeback | 0 50 0 0 0 0 50
+Florence | 0 0 0 0 0 1400 1400
+Mahon | 42250 0 1900 4550 1970 1440 52110
+Italie | 0 0 0 0 0 230 230
+Richelle hâtive | 40502 5400 1800 3300 5900 500 57402
+Richelle tardive | 2740 0 0 0 0 0 2740
+Vi King | 100 50 0 0 0 0 150
+King Fan | 100 50 0 0 0 0 150
+Autres variétés | 2290 0 0 0 0 0 2290
+Totaux | 87982 5550 3700 9310 8220 4020 -
+
+@bot_seedsales view=339 page=315 group="Orges"
+img: all
+cols: 1910-20 1921 1922 1923 1924 1925 total
+Escourgeons | 88050 50 2400 5700 2510 0 98710
+Orges de brasserie | 3300 0 0 0 0 0 3300
+Totaux | 91350 50 2400 5700 2510 0 -
+
+@bot_seedsales view=339 page=315 group="Avoines"
+img: all
+cols: 1910-20 1921 1922 1923 1924 1925 total
+Crême | 88050 12000 3100 6120 2600 0 111870
+Medjerdah | 0 0 0 300 0 0 300
+de Perse | 0 0 0 100 200 0 300
+Rousse | 25925 0 0 2730 0 0 28655
+Totaux | 113975 12000 3100 9250 2800 0 -
+
+# c) Ventes d'arbres et de plantes diverses (1920-1925). f340 (p. 316). Poirier 1921-22 now 1.005 (sgt1922-sgt1924
+# printed 1.445 against the same column total 4.183, which needs 1.005). The 66 espèces figures sit under the greffons
+# sub-columns (stored as plants).
+@bot_trees view=340 page=316 seasons=1920-21,1921-22,1922-23,1923-24,1924-25
+img: all
+cols: 1921p 1921g 1922p 1922g 1923p 1923g 1924p 1924g 1925p 1925g
+Abricotier | 634 0 62 0 462 0 754 30 877 20
+Amandier | 1106 0 873 0 748 0 1243 500 51 20
+Brugnon | 0 0 0 0 112 0 24 0 0 0
+Caroubier | 1131 0 371 10 344 0 145 0 343 0
+Cédratier | 0 0 0 0 0 0 0 0 0 0
+Citronnier | 0 0 0 0 0 0 0 0 0 0
+Cognassier | 96 0 8 0 9 0 16 0 0 0
+Figuier | 722 0 647 0 314 0 491 0 445 0
+Grenadier | 106 0 5 0 309 0 255 0 213 0
+Mandarinier | 0 0 0 0 0 0 0 0 0 0
+Néflier | 551 0 475 0 465 0 731 0 594 0
+Olivier | 0 0 0 0 549 0 334 35 663 0
+Oranger | 0 0 0 0 0 0 0 0 0 20
+Pêcher | 137 0 202 0 658 0 335 36 0 0
+Pistachier | 0 0 0 50 0 0 0 0 0 0
+Poirier | 1085 0 1005 0 125 387 1336 230 1055 50
+Pommier | 1006 0 529 0 0 420 1501 230 771 40
+Prunier | 190 0 6 0 367 0 880 140 1141 20
+Total | 6764 0 4183 60 4462 807 8045 1201 6153 170
+
+@bot_trees_cum view=340 page=316 group=fruit
+img: all
+cols: plants grafts
+Livraisons de 1920-1921 à 1924-1925 | 29607 2238
+Livraisons antérieures (de 1893 à 1920-1921) | 330861 182987
+Total général | 360468 185225
+
+@bot_trees_other view=340 page=316 seasons=1920-21,1921-22,1922-23,1923-24,1924-25
+img: all
+cols: 1921p 1922p 1923p 1924p 1925p
+66 espèces ou variétés | 71279 61289 61570 51749 69542
+
+@bot_trees_cum view=340 page=316 group=other
+img: all
+cols: plants
+Livraisons de 1920-1921 à 1924-1925 | 315429
+Livraisons antérieures (de 1893 à 1919-1920) | 2100290
+Total général | 2415719
+
+# LABORATOIRE DE CHIMIE. Analyses effectuées (1925; one laboratory, Tunis). f341 (p. 317). No Contributions
+# indirectes columns. Bracketed groups (Huiles, Produits) prefixed to their lines. "Produits divers pour p" and
+# "divers autres H" as printed (the letters are probably footnote keys with no footnote printed).
+@chemlab view=341 page=317 year=1925 lab=Tunis
+img: all
+cols: customs fraud_good fraud_suspect other_admin studies public total
+Alcools et dénaturants | 34 0 0 96 0 2 132
+Cafés et thés | 0 9 11 0 0 4 24
+Calcaires, chaux, ciments et mortiers | 1 0 0 0 2 17 20
+Céréales et graines diverses | 18 4 0 0 0 2 24
+Combustibles | 0 0 0 0 0 26 26
+Conserves de tomates | 7 7 0 0 0 9 23
+Couleurs | 80 0 0 0 0 6 86
+Divers pour expertises assurances maritimes | 0 0 0 0 0 763 763
+Eaux | 1 0 0 66 29 65 161
+Engrais, phosphates | 7 0 0 1 5 18 31
+Epices | 2 2 1 0 0 2 7
+Farines et farineux alimentaires | 5 23 13 0 0 12 53
+Goudrons, huiles de goudron | 21 0 0 1 0 12 34
+Grignons, huiles de grignons | 30 0 0 0 0 50 80
+Huiles de lin | 30 0 0 0 0 1 31
+Huiles minérales | 7 0 0 0 0 21 28
+Huiles d'olive | 692 12 2 0 28 51 785
+Huiles autres | 14 0 0 0 22 2 38
+Laits et laits condensés | 0 85 65 1 10 4 165
+Lessives | 9 0 0 0 0 1 10
+Minerais et métaux | 21 0 0 0 0 206 227
+Moûts mutés | 28 0 0 1 0 180 209
+Olives | 0 0 0 0 73 0 73
+Parfumerie et extraits alcooliques | 5 0 0 0 0 0 5
+Pétroles, mazouts, essences | 42 0 0 0 0 5 47
+Produits alimentaires divers | 33 24 5 0 0 10 72
+Produits chimiques divers | 31 0 0 5 0 15 51
+Produits pharmaceutiques | 3 0 0 0 4 4 11
+Produits divers pour p | 0 0 0 0 136 0 136
+Produits divers autres H | 74 0 0 0 15 28 117
+Savons | 9 2 0 4 0 13 28
+Sel marin | 5 0 0 1 0 10 16
+Sons, aliments pour le bétail | 393 0 0 0 0 21 414
+Soufres, produits anticryptogamiques | 1 0 0 0 0 25 26
+Spiritueux et liqueurs | 99 1 0 14 0 20 134
+Sucres, miels, confiseries, confitures | 182 0 0 0 0 12 194
+Tartres et lies | 0 0 0 0 15 0 15
+Terres | 12 0 0 82 18 74 186
+Tissus, textiles, bonneterie | 34 0 0 0 0 9 43
+Urines, analyses médicales | 0 0 0 35 6 23 64
+Vins, boissons alcooliques | 84 82 41 5 299 637 1148
+Vinaigres | 6 1 6 0 0 1 14
+Totaux par service | 2020 252 144 312 662 2361 5751

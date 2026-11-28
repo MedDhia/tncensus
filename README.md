@@ -21,6 +21,7 @@
 - **Fast Parquet Storage:** High-dimensional tables (28 disaggregated 2014 tables and full 2024 indicator suites) are backed by Zstandard-compressed Apache Parquet (`arrow`) for lightning-fast loads.
 - **Built-in Administrative GeoJSON & Spatial Boundaries (`load_geojson()`):** Seamlessly load ready-to-map `sf` polygons for National (1), Regional (6), Governorate (24), and Delegation (264) tiers, enriched with Arabic (`_name_ar`), French (`_name`), and alternate romanizations (`_name_alt`).
 - **Deep Historical & Colonial Archives:** Digitized and harmonized from [Ben Salah et al. (2024)](https://doi.org/10.1016/j.jce.2024.09.002), including 1,276 historical geonames, 1984–2014 boundary transition matrices, and colonial population tables.
+- **Original Colonial Census and Statistical Publications (`load_colonial_census()`):** 308 tables (244,603 cells) transcribed from Gallica scans: the 1906 European and 1931 indigenous census volumes (down to 333 localities and 804 cheikhats), and the *Démographie* chapter of 12 *Statistique générale de la Tunisie* yearbooks, which reprint the 1921, 1926, 1931 and 1936 censuses and give yearly births, deaths, marriages, expulsions, naturalisations, foreigners' movements and recruitment (1902–1939), plus hospital activity, Tunis mortality by cause and nationality, the public-assistance budget, school enrolment by nationality and sex (with a pupil series from 1885), municipal finances, the courts, the prisons, land registration, the posts and telegraphs, public works and mines, the state budget, debt and taxes, colonisation lotissements, crops, mutual credit, labour, foreign trade, and research institutions. Every table is checked against its printed totals and its reprints, and every cell keeps its page and Gallica view, so it can be checked against the scan.
 - **Inequality Metrics:** Built-in functions for calculating Gini coefficients (`gini()`) and Generalized Entropy Theil inequality decompositions (`theil_decompose()`).
 
 ---
@@ -81,6 +82,60 @@ install.packages(c("sf", "ggplot2", "arrow"))
 | `colonial_age_caidat_1931` | Caidat | 1931 | 37 × 14 | Age pyramid and sex breakdown of the Tunisian population by caidat. |
 | `colonial_age_controle_civil_1931` | Contrôle Civil | 1931 | 21 × 15 | Age pyramid and sex breakdown of the European population by civil control. |
 
+#### Tables from the original 1906 and 1931 census publications
+
+`load_colonial_census()` loads tables transcribed from two census volumes digitized on [Gallica](#archival-scans-from-gallica-bnf); `colonial_census_tables()` lists all 39. Tables are tidy (one row per printed cell), keep place names as printed (canonical names and coordinates are in `colonial_place_crosswalk`), and give each cell's printed page and Gallica view. See [`data-raw/colonial_census/CODEBOOK.md`](data-raw/colonial_census/CODEBOOK.md) for every column and code.
+
+| Table | Admin Level | Rows | Description |
+|:---|:---|---:|:---|
+| `eur1906_t1_circonscription_nationality` | Contrôle Civil | 114 | Europeans by nationality (French, Italian, Maltese, Spanish, Greek, other), 1906. |
+| `eur1906_t2_locality_nationality` | Locality | 1,998 | Europeans by nationality in 333 localities, 1906. |
+| `eur1906_t3_birthplace` | National | 139 | Europeans by place of birth (French départements, foreign countries, Italian provinces). |
+| `eur1906_t4_residence_duration` | Contrôle Civil | 1,368 | Europeans by length of residence in Tunisia and nationality. |
+| `eur1906_t5_sex_age_marital` | National | 336 | Europeans by nationality, sex, age group and marital status. |
+| `eur1906_t6_profession_nationality`, `eur1906_t7_profession_circonscription` | National / Contrôle Civil | 192 / 3,648 | Europeans by profession, active vs family member, sex and nationality. |
+| `eur1906_t8_instruction` | National | 18 | Literacy and knowledge of French by nationality. |
+| `eur1906_ta_*` … `eur1906_tg_*` | Contrôle Civil / Locality | 2,234 | Analysis tables: densities, French population 1891–1906 by district, locality and birthplace, growth coefficients, French by origin, occupations 1901/1906. |
+| `eur1906_text_*` | National | 578 | Twelve small tables printed in the commentary (sex, age, marital status, birthplace, occupations). |
+| `ind1931_t1_controle_nationality`, `ind1931_t2_caidat_nationality` | Contrôle Civil / Caidat | 280 / 518 | Muslim and Jewish population by nationality (Tunisian, Algerian, Moroccan, Sudanese, Syrian, Tripolitanian, other), 1931. |
+| `ind1931_t3_cheikhat_nationality` | Cheikhat | 11,256 | The same for 804 cheikhats in 37 caidats. |
+| `ind1931_t4_*`, `ind1931_t4annex_*` | Contrôle Civil / National | 80 / 28 | 1926 vs 1931, by district and by nationality. |
+| `ind1931_t5_caidat_sex_age`, `ind1931_t5annex_*` | Caidat / National | 296 / 16 | Men, women, boys and girls, by religion; 1926 vs 1931. |
+| `ind1931_t6_caidat_profession`, `ind1931_t6annex_*` | Caidat / National | 592 / 32 | Occupations of men aged 18 and over, by religion; 1926 vs 1931. |
+| `ind1931_t7_communes`, `ind1931_t7annex_communes_1921_1931` | Commune | 116 / 174 | Muslim and Jewish population of the 58 communes; 1921, 1926 and 1931. |
+| `ind1931_t8_localities` | Locality | 562 | Non-commune localities with more than 25 households. |
+
+#### Tables from the *Statistique générale de la Tunisie* yearbooks (1918–1939)
+
+The *Démographie* chapter of 12 annual editions (1922–1930, 1935, 1936, 1939; see [`data-raw/yearbook_demography/EDITIONS.md`](data-raw/yearbook_demography/EDITIONS.md)). These tables share `load_colonial_census()`; their rows carry the edition (`census = "sgt1927"` etc.) and its `gallica_ark`. Census tables reprinted in several editions are stored once and were compared cell by cell with the reprints; yearly series take each year from the latest edition that prints it.
+
+| Tables | Admin Level | Rows | Description |
+|:---|:---|---:|:---|
+| `cens1921_*` (16 tables) | Contrôle Civil / Circonscription / Town | 1,741 | 1921 census: population and density, French by birthplace 1891–1921, naturalised French, foreigners and Italians by origin, Europeans by age, sex, marital status and profession, illiterates, 1911 vs 1921, Europeans 1881–1921, towns. |
+| `cens1926_*` (9 tables) | Contrôle Civil / Commune / Town | 2,706 | 1926 census: Europeans by nationality, Muslims and Jews by contrôle; French and foreigners by birthplace; Italians by region; age, sex and marital status; profession; instruction; towns over 5,000; the 59 communes with decree dates. |
+| `cens1931_*`, `cens1936_*` (6 tables) | Contrôle Civil / Circonscription / Town | 1,824 | 1931 and 1936 censuses: population by contrôle, Europeans compared with the previous census, towns over 5,000. |
+| `vital_*` (6 tables) | Contrôle Civil / National | 2,674 | Muslim and Jewish births and deaths by contrôle (1918–1939); European marriages, births and deaths by nationality; mixed marriages. |
+| `expulsions_nationality`, `foreigners_movements` | National | 2,048 | Expulsions by nationality (1913–1934); foreigners' arrivals and departures by nationality (1917–1939). |
+| `naturalisations_*` (8 tables) | National | 1,793 | Naturalisations granted, civil status, age, profession and nationality of the naturalised (1922–1939), and two long series by nationality (1891–1930, 1891–1939). |
+| `health_*` population (20 tables) | Tunis / Hospital / Interior town | 12,010 | Health chapter, population: Tunis deaths by month, cause and nationality, and natality vs mortality; admissions, discharges, deaths, wards and consultations of the French civil, Sadiki and Rabta hospitals; diseases treated by nationality; provincial hospitals and dispensaries; Manouba mental hospital (1905–1939). |
+| `health_*` finance (14 tables) | National / Hospital / Society | 10,992 | Health chapter, finance: public-assistance receipts, expenditure and credits; child-protection credits; accounts of subsidised charities; Pasteur and Arloing institute budgets and doses distributed; provincial hospitals' finances; cost of a patient-day (1912–1939). |
+| `education_*` (16 tables) | National / Establishment | 9,723 | Public-instruction chapter: total pupils; examination candidates and passes by exam, nationality and sex; secondary, higher and special establishments; primary-education totals; school population by type of school, nationality and sex (yearly series 1919–1939, quinquennial from 1885); vocational education; libraries, canteens, Arabic courses, music and commerce schools. |
+| `education_schools` | School | 14,960 | School-by-school lists of public primary and private schools for 1922 and 1930 (382 and 497 schools): locality, classes, staff, and pupils by sex and nationality. |
+| `communes_*` (19 tables) | Commune | 27,005 | Communes chapter: receipts and expenditure of each commune (1918–1938); communal property (1922–1937); building permits (1922–1936) and building values (1939); café terraces and street stalls (1922–1935); municipal loans and Tunis city bonds (1922–1929); slaughter dues per animal (1922–1930); water networks and sales (1913–1939); Tunis gas consumption (1913–1939) and gas works (1934–1939); electricity networks (1922–1930), production and distribution (1935–1939). |
+| `justice_*` (16 tables) | Court / Caidat | 6,335 | Justice chapter: French criminal, civil and commercial cases (1913–1939); Ouzara, regional courts, caids, prosecutors, investigation, indictment and revision chambers (1918–1930); appeal rates; court fees and fines; the 1935–1939 Tunisian courts. |
+| `prisons_*` (9 tables) | Prison / National | 18,032 | Prisons chapter, complete: prison population, entries, releases and days of detention (1913–1939); entries and releases by prison and kind, men and women (every edition); condemned prisoners by nationality, age, sex and penal category, and by offence and sentence (1922–1939); deaths by prison and disease, transfers, guard staff against the maximum daily population (1922–1935); days of work by prison (1922–1930, 1935); expenditure and cost per day of detention (1922–1935; this table stores the printed totals too, so don't add them to the items). |
+| `property_*` (13 tables) | Seat of the Tribunal mixte / Contrôle civil / National | 6,538 | Land registration (Tribunal mixte immobilier and Conservation de la propriété foncière), every edition: cases and pending requisitions by seat and stage; results by legal status (melk, enzel, habous), urban or rural, areas (hectares), enzel rents and mortgages; oppositions; claimants by status and nationality; requisitions filed by nationality, declared value bracket, area and value, and titles issued, yearly 1910–1939; cumulative registry summary; transfers of registered properties by contrôle civil (1939). Opening multi-year periods (e.g. 1886-1909) overlap the single years and must not be summed with them. |
+| `posts_*` (7 tables) | National | 6,100 | Posts, telegraphs and telephones, yearly 1913–1939 (each year from the latest edition printing it): network (offices, lines in km), traffic (letters, parcels, telegrams, telephone calls, money orders, postal cheques), revenue and expenditure, money orders to and from France and Italy, savings-bank accounts opened. Also the dated exchange rates applied to international money orders for eight countries, April 1915 to November 1930 (from the 1930 printing, compared with every earlier one). |
+| `publicworks_*` (12 tables) | Network / line / National | 4,048 | Public works and mines, yearly 1913–1939: railway operating results by network and line (length, receipts, passengers, goods) and their finances under the 1922 Convention; roads; drinking-water, irrigation, artesian-well and sanitation works; mining permits, mines worked, ore exports, phosphates, zinc, lead and iron ore (tonnage and value); a detailed mining table for each edition's own year; registered vehicles and Tunis airport traffic (1936–1939). Several failed totals cannot be pinned to one cell; the notes list them. |
+| `finance_*` (15 tables) | Caïdat / National | 52,468 | Finances chapter: the Regency's annual budget, realised receipts by budget chapter and expenditure as finally settled by service, exercices 1915–1938 (1930–1931 not printed; 1932 is a 9-month exercice); the public debt since 1884 (charges and payments by loan, amounts remaining due); taxpayers of the patente by caïdat and class of profit (1922–1930) and by caïdat with mean profit (1935–1939); taxpayers of the personal tax by caïdat and nationality (1922–1930); animals on the livestock-tax rolls by caïdat, species and age class, European and indigenous rolls (1922–1926); areas sown subject to the achour (tithe on cereals) by caïdat, crop and roll, by yield class in 1922–1925 (hectares; 1935 national totals only); date palms and olive trees on the canoun rolls by caïdat and age, by tariff category, and taxed or not for Europeans and Tunisians (1922–1930, 1935). |
+| `colonisation_*` (16 tables) | Lotissement / Contrôle civil / National | 7,326 | Colonisation chapter: state lotissements sold to settlers with an obligation of personal settlement, lot by lot (area, lots by type, contrôle civil; every edition, 1913–1939), land for planting, urban, industrial and summer lotissements, the summary by origin of the land, the settlement of Tunisians on the land (1920–1939) and definitive sales to Tunisian allottees, the 1935 regrouping operations, and the colonisation fund 1900–1928. Lists are revised from edition to edition, so each edition is kept (filter on `census`). In 1922–1923 also: lands delivered and lots sold by contrôle civil since 1893, sales with an obligation to plant (authorisations and definitive sales by nationality), and habous cessions by substitution and à enzel, by year and by contrôle. |
+| `mutuality_*` (7 tables) | Institution / National | 2,422 | Economic institutions: agricultural mutual credit (local French and Tunisian caisses, bills discounted), yearly 1913–1939; the central farmers' cooperative (shares, goods delivered, loans, 1913–1929) and its capital with the motor-cultivation cooperative (1921–1939). Also agricultural mutual insurance (fire, hail, accidents), 1913–1935, and the Office public de crédit agricole indigène, 1925–1934. Also the Tunisian provident societies (loans by type, cancellations, recoveries, balance due), 1913–1939. Also the balance sheets of the Banque populaire française, the Coopérative tunisienne de crédit and « La Maison Française » (1926–1930; item codes follow each printed label). |
+| `labour_*` (14 tables) | National | 4,555 | Labour and social welfare chapter (1925–1939 editions): low-cost housing (dwellings built, state subsidies and capital invested); industrial accidents by occupational category and nationality, by outcome and by material cause (each edition); strikes yearly 1916–1939 and strike by strike; the French placement office (applications, offers, placements by trade); cost-of-living indices (July 1914 = 100), 1915–1939; immigrant workers' contract visas (1939). The `labour_early_*` tables give industrial accidents for 1922–1924 (printed in the economic-institutions chapter) with the same columns and codes. The 1939 lists of collective agreements and arbitration awards are text only and are kept in `data-raw`. |
+| `commerce_*` (13 tables) | Commune / Port / Country / National | 6,258 | Commerce chapter, from the 1922–1924 editions so far: imports and exports by class of product, by category of the customs nomenclature, by origin group (France and Algeria vs foreign countries and colonies) and by country, values in francs, 1913–1924; import duties by product category and export duties by product, 1913–1924. Navigation: ships, tonnage, goods and passengers entered and cleared by port and by flag (each edition's year) and yearly 1913–1924, coastal trade, and fisheries by nationality; animals slaughtered by commune and species (1922–1924); cereal import, export and balance by campaign, 1912-13 to 1923-24 (quintals). Prices, stocks, the product tables and the 1925–1939 editions are in progress. |
+| `research_*` (11 tables) | Institution / National | 5,359 | Teaching and research institutions: the École coloniale d'agriculture (pupils by origin, graduating classes, enrolment by year), the botanical service (variety trials, pedigree seed sold and produced, trees and plants sold), the chemistry laboratories of Tunis and Sfax (analyses by product and requester), and from 1935 the Institut Pasteur (budget, work, veterinary service) and the Institut Arloing (microbiological analyses). Meteorology is in progress. |
+| `agriculture_*` (14 tables) | Caïdat / Contrôle civil / Zone / National | 11,979 | Agriculture chapter: land area (territorial, productive, arable, forest, rangeland; each edition); area, production and yield of every crop, yearly 1913–1939 (each year from the latest edition printing it; revisions listed in the notes); cereals by zone (North, Centre and South), 1917–1939. Also: areas sown and taxed by yield class, European and indigenous farmers (1914–1925); cereal areas of European and indigenous farmers, 1917–1939; vine growers and vineyards by contrôle and nationality (1922–1925); olive trees by caïdat or region (each edition). Date palms by caïdat and age (1936, 1939); livestock by species, contrôle and caïdat, European and indigenous owners (1927–1939). Forests: area delimited and boundary-marked 1903–1930, the domain under forest management 1931–1939 (a different series), products sold and their cash revenue (each edition), and offences and fires (1922–1927; burnt area stored in its printed hectare, are and centiare parts). |
+| `recruitment_*` (5 tables) | National | 1,132 | French recruitment (allocation, education, draft boards, classes 1902–1939) and indigenous conscription (1913–1939). |
+
 ### 4. Geographic Boundaries & Spatial Harmonization
 
 | Dataset / Function | Geometry / Type | Features | Attributes | Description |
@@ -91,6 +146,7 @@ install.packages(c("sf", "ggplot2", "arrow"))
 | `load_geojson("national")` | `sf` MultiPolygon | 1 | 5 | National coastal & terrestrial boundary of Tunisia. |
 | `delegation_codes_ins` | Crosswalk Table | 264 | 11 | Master INS crosswalk connecting 1984 codes, modern codes, UN SALB, & coords. |
 | `historical_geonames` | Gazeteer Table | 1,276 | 14 | Historical place names mapped to modern equivalents, coordinates, & GeoNames. |
+| `colonial_place_crosswalk` | Crosswalk Table | 2,489 | 16 | Every place name printed in the `load_colonial_census()` tables, with canonical spelling, contrôle civil and caidat, linked to `historical_geonames` (1,554 links, 1,532 with coordinates). |
 | `delegation_matrix_merged` | Transition Matrix | 217 | 5 | Time-consistent merged delegation units reconciling 1984–2014 boundary splits. |
 
 ---
@@ -285,6 +341,40 @@ data("delegation_matrix_merged")
 head(delegation_matrix_merged, 10)
 ```
 
+### 6. Working with the Original Colonial Census and Yearbook Tables
+
+```r
+# List the 308 transcribed tables
+idx <- colonial_census_tables()
+idx[, c("table", "title_en", "n_rows")]
+
+# Europeans by contrôle civil and nationality, 1906 (cross-tabulated)
+t1 <- load_colonial_census("eur1906_t1_circonscription_nationality")
+xtabs(value ~ controle_civil + nationality, data = t1)
+
+# Jewish population by cheikhat in the caidat of Djerba, 1931.
+# Drop the four Tunis-Ville rows that repeat Tunis-Banlieue groups first.
+ch <- load_colonial_census("ind1931_t3_cheikhat_nationality")
+ch <- ch[ch$duplicate == 0, ]
+djerba <- subset(ch, caidat == "Djerba" & religion == "jewish")
+aggregate(value ~ cheikhat, data = djerba, sum)
+
+# Every value can be checked against the scan:
+# https://gallica.bnf.fr/ark:/12148/<gallica_ark>/f<gallica_view>
+subset(ch, flag == "ocr_corrected")[1:5, c("cheikhat", "nationality", "value", "gallica_view")]
+
+# Muslim births recorded each year, 1918-1939 (Statistique générale yearbooks)
+vm <- load_colonial_census("vital_muslim_births_deaths")
+births <- subset(vm, event == "births")
+tapply(births$value, births$year, sum)
+
+# Population of the communes at the 1926 census
+co <- load_colonial_census("cens1926_communes")
+xtabs(value ~ commune + population_group, data = co)[1:5, ]
+```
+
+Values flagged `total_mismatch` are printed as in the original but do not add up with its printed totals (misprints in the original); `derived_from_totals` marks cells hidden in the binding and solved from the printed totals; `reprint_corrected` marks yearbook values taken from another edition's printing; `illegible` and `not_applicable` cells are `NA`.
+
 ---
 
 ## Multilingual Support & Geographic Harmonization
@@ -312,9 +402,29 @@ All contemporary census data (2014, 2024, and earlier national publications) are
 
 The digitized colonial (1891–1956) and historical post-independence census series (1966–2004), as well as the historical geographic crosswalks, were compiled, cleaned, and published in the replication package of:
 
-> **Ben Salah, E., Boughzala, M. S., & Zouabi, O. (2024).** *Historical census and educational data of Tunisia (1891–2014)*. **Journal of Comparative Economics**, 52(4), 1013–1032. [https://doi.org/10.1016/j.jce.2024.09.002](https://doi.org/10.1016/j.jce.2024.09.002)
+> **Ben Salah, M., Chambru, C., & Fourati, M. (2024).** The colonial legacy of education: Evidence from Tunisia. *Journal of Comparative Economics*, 52(4), 773–792. [https://doi.org/10.1016/j.jce.2024.09.002](https://doi.org/10.1016/j.jce.2024.09.002)
 
 If you use the historical or colonial datasets (`colonial_*`, `rgph1966_illiteracy`, `rgph1984_education`, `rgph2004`, `historical_education`, `historical_geonames`, or `delegation_matrix_*`), please cite **Ben Salah et al. (2024)**.
+
+### Archival Scans from Gallica (BnF)
+
+The tables returned by `load_colonial_census()` are transcriptions of the figures in two of these volumes (the 1906 and 1931 censuses below). They are distributed with the package; please cite the original publication and its Gallica credit line, as given in each table's documentation. The original colonial census publications can be retrieved as PDFs with [`data-raw/bnf_gallica_download.py`](data-raw/bnf_gallica_download.py), which uses the BnF's IIIF API (`openapi.bnf.fr`). The scans themselves are **not redistributed** in this repository and are **not covered by its CC BY 4.0 licence**: they remain subject to the [Gallica terms of use](https://gallica.bnf.fr/edit/und/conditions-dutilisation-des-contenus-de-gallica) and to the terms of the library that holds each original.
+
+Gallica allows free non-commercial reuse provided the source credit is kept; commercial reuse requires a licence. The credit names Gallica and the holding institution, which is not always the BnF:
+
+| Document | Gallica ark | Holding institution | Rights | Credit line |
+|:---|:---|:---|:---:|:---|
+| *Dénombrement de la population européenne civile en Tunisie au 16 décembre 1906* (1907) | [`bd6t53563851`](https://gallica.bnf.fr/ark:/12148/bd6t53563851) | Bibliothèques de l'Université de Poitiers, NUM GIR-220 | [NoC-CR](http://rightsstatements.org/vocab/NoC-CR/1.0/) | Source gallica.bnf.fr / Bibliothèques de l'Université de Poitiers |
+| *Dénombrement de la population civile indigène (musulmane et israélite) en Tunisie au 22 mars 1931* (1932) | [`bpt6k994559s`](https://gallica.bnf.fr/ark:/12148/bpt6k994559s) | BnF, Droit, économie, politique, 8-O3W-167 (1931) | [NoC-NC](http://rightsstatements.org/vocab/NoC-NC/1.0/) | Source gallica.bnf.fr / Bibliothèque nationale de France |
+| *Statistique générale de la Tunisie*, volumes 1922, 1925, 1927, 1929, 1935, 1936, 1939 | see [`bnf_gallica_sources.csv`](data-raw/bnf_gallica_sources.csv) | Ministère des Affaires étrangères, Per 10 | [NoC-CR](http://rightsstatements.org/vocab/NoC-CR/1.0/) | Source gallica.bnf.fr / Ministère des Affaires étrangères |
+
+*NoC-NC*: public domain, non-commercial reuse only. *NoC-CR*: public domain, reuse subject to the contractual terms of the partner library that holds the original. Check that library's terms before any commercial or large-scale reuse. Rights and holdings are taken from each document's IIIF manifest.
+
+When you cite a scan, give the original publication, the credit line and the ark permalink. For example:
+
+> Tunisie, Direction générale de l'intérieur (1932). *Dénombrement de la population civile indigène (musulmane et israélite) en Tunisie au 22 mars 1931*. Tunis : Impr. J. Aloccio. Source gallica.bnf.fr / Bibliothèque nationale de France, <https://gallica.bnf.fr/ark:/12148/bpt6k994559s>.
+
+The catalogue information used to find these documents comes from the BnF catalogue (`catalogue.bnf.fr/api/SRU`), whose metadata is released under the [Licence Ouverte / Open Licence (Etalab)](https://www.bnf.fr/fr/conditions-de-reutilisations-des-donnees-de-la-bnf) on condition that the source and the date of retrieval are given. Source: BnF catalogue général, retrieved 24 November 2026.
 
 ### Citing the `tncensus` Package
 
@@ -335,6 +445,8 @@ To cite the **tncensus** package in publications:
 ## License
 
 This package and its documentation are distributed under the **Creative Commons Attribution 4.0 International License (CC BY 4.0)**. You are free to share and adapt the material for any purpose, provided appropriate credit is given.
+
+This licence does not cover archival scans retrieved from Gallica with the `data-raw` scripts. Those remain under the Gallica terms of use and the terms of each holding library (see [Archival Scans from Gallica](#archival-scans-from-gallica-bnf)).
 
 ---
 

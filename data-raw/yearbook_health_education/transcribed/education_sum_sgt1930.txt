@@ -1,0 +1,190 @@
+# sgt1930, volume ark bpt6k9105652d, chapter VII "Instruction publique et beaux-arts", views 671-710
+# (view 671 is the chapter heading, view 711 the heading of chapter VIII "Postes - Télégraphes - Téléphones").
+# Transcribed from the page images (native-resolution crops of every table); Gallica OCR not used.
+# "0" = printed "»". "." = not printed. Nationality blocks: Français Musulmans Israélites Italiens
+# Maltais Divers TOTAUX. Spreads 706/707 and 708/709: fold columns read on crops of both views.
+# The total page (view 672) carries no page number; 114 is inferred from the next page.
+
+[total view=672 page=114]
+year: 1930
+total | Total général des élèves de l'enseignement public et privé au 31 décembre 1930 | 79708
+
+[exams view=673 page=115]
+cepe | Certificat d'études primaires élémentaires | examined | 467 1729 344 190 33 8 2771 | 400 45 277 150 25 7 904 | 3675
+cepe | Certificat d'études primaires élémentaires | passed | 305 717 172 132 14 4 1344 | 275 38 176 97 16 6 608 | 1952
+brevet_elementaire | Brevet élémentaire | examined | 144 84 24 20 1 2 275 | 251 0 50 15 0 5 321 | 596
+brevet_elementaire | Brevet élémentaire | passed | 27 14 6 1 0 0 48 | 49 0 6 6 0 2 63 | 111
+beps_general | Brevet d'enseignement primaire supérieur : Section générale | examined | 21 15 6 2 0 0 44 | 66 0 14 2 0 5 87 | 131
+beps_general | Brevet d'enseignement primaire supérieur : Section générale | passed | 8 4 1 0 0 0 13 | 20 0 2 1 0 2 25 | 38
+beps_commercial | Brevet d'enseignement primaire supérieur : Section commerciale | examined | 9 18 6 10 1 0 44 | 1 0 3 0 0 2 6 | 50
+beps_commercial | Brevet d'enseignement primaire supérieur : Section commerciale | passed | 1 9 2 3 0 0 15 | 0 0 0 0 0 0 0 | 15
+beps_industrial | Brevet d'enseignement primaire supérieur : Section industrielle | examined | 3 0 0 1 0 0 4 | 0 0 0 0 0 0 0 | 4
+beps_industrial | Brevet d'enseignement primaire supérieur : Section industrielle | passed | 1 0 0 1 0 0 2 | 0 0 0 0 0 0 0 | 2
+beps_domestic | Brevet d'enseignement primaire supérieur : Section ménagère | examined | 0 0 0 0 0 0 0 | 14 0 3 0 0 0 17 | 17
+beps_domestic | Brevet d'enseignement primaire supérieur : Section ménagère | passed | 0 0 0 0 0 0 0 | 4 0 0 0 0 0 4 | 4
+beps_arts_crafts | Brevet d'enseignement primaire supérieur : Section arts et métiers | examined | 0 0 0 0 0 0 0 | 0 0 0 0 0 0 0 | 0
+beps_arts_crafts | Brevet d'enseignement primaire supérieur : Section arts et métiers | passed | 0 0 0 0 0 0 0 | 0 0 0 0 0 0 0 | 0
+brevet_superieur | Brevet supérieur | examined | 28 2 0 0 0 0 30 | 52 0 0 3 0 0 55 | 85
+brevet_superieur | Brevet supérieur | passed | 21 2 0 0 0 0 23 | 18 0 0 0 0 0 18 | 41
+# Baccalauréats examined, boys: the six cells give 547 against the printed TOTAUX 549 (and 549 + 112 = 661);
+# Certificat d'arabe parlé examined, boys: 56 against 60. All cells re-read on a crop; kept as printed.
+baccalaureat | Baccalauréats | examined | 297 79 143 22 2 4 549 | 65 1 36 9 0 1 112 | 661
+baccalaureat | Baccalauréats | passed | 103 25 51 4 0 1 184 | 25 0 19 4 0 1 49 | 233
+arabic_spoken_cert | Examens d'arabe : Certificat d'arabe parlé | examined | 37 0 13 4 0 2 60 | 27 0 7 7 0 2 43 | 103
+arabic_spoken_cert | Examens d'arabe : Certificat d'arabe parlé | passed | 15 0 6 2 2 2 27 | 11 0 5 7 0 1 24 | 51
+
+[exams view=674 page=116]
+arabic_brevet_elementaire | Examens d'arabe : Brevet élémentaire | examined | 5 129 0 2 0 0 136 | 0 0 0 0 0 0 0 | 136
+arabic_brevet_elementaire | Examens d'arabe : Brevet élémentaire | passed | 2 31 0 1 0 0 34 | 0 0 0 0 0 0 0 | 34
+arabic_diplome_superieur | Examens d'arabe : Diplôme supérieur | examined | 1 29 0 0 0 0 30 | 0 0 0 0 0 0 0 | 30
+arabic_diplome_superieur | Examens d'arabe : Diplôme supérieur | passed | 0 2 0 0 0 0 2 | 0 0 0 0 0 0 0 | 2
+gymnastics_teaching_cert | Certificat d'aptitude à l'enseignement de la gymnastique (degré élémentaire) | examined | 21 3 0 0 0 0 24 | 20 0 0 0 0 0 20 | 44
+gymnastics_teaching_cert | Certificat d'aptitude à l'enseignement de la gymnastique (degré élémentaire) | passed | 21 2 0 0 0 0 23 | 16 0 0 0 0 0 16 | 39
+sewing_teaching_cert | Certificat d'aptitude à l'enseignement élémentaire des travaux de couture | examined | 0 0 0 0 0 0 0 | 29 0 0 0 0 0 29 | 29
+sewing_teaching_cert | Certificat d'aptitude à l'enseignement élémentaire des travaux de couture | passed | 0 0 0 0 0 0 0 | 26 0 0 0 0 0 26 | 26
+sadiki_secondary_diploma | Diplôme de fin d'études secondaires du Collège Sadiki | examined | 0 11 0 0 0 0 11 | 0 0 0 0 0 0 0 | 11
+sadiki_secondary_diploma | Diplôme de fin d'études secondaires du Collège Sadiki | passed | 0 10 0 0 0 0 10 | 0 0 0 0 0 0 0 | 10
+emile_loubet_diploma | Diplôme de fin d'études de l'École Émile Loubet | examined | 15 6 0 1 1 0 23 | 0 0 0 0 0 0 0 | 23
+emile_loubet_diploma | Diplôme de fin d'études de l'École Émile Loubet | passed | 12 6 0 1 1 0 20 | 0 0 0 0 0 0 0 | 20
+emile_loubet_3rd_year_cert | Certificat de 3e année de l'École Émile Loubet | examined | 38 2 0 3 2 0 45 | 0 0 0 0 0 0 0 | 45
+emile_loubet_3rd_year_cert | Certificat de 3e année de l'École Émile Loubet | passed | 17 1 0 2 1 0 21 | 0 0 0 0 0 0 0 | 21
+paul_cambon_commercial_4th_year | Examens de l'École Paul-Cambon : Examen de fin d'études de la 4e année commerciale | examined | 0 0 0 0 0 0 0 | 5 0 3 0 0 0 8 | 8
+paul_cambon_commercial_4th_year | Examens de l'École Paul-Cambon : Examen de fin d'études de la 4e année commerciale | passed | 0 0 0 0 0 0 0 | 4 0 2 0 0 0 6 | 6
+paul_cambon_manual_work_cert | Examens de l'École Paul-Cambon : Certificat de travaux manuels | examined | 0 0 0 0 0 0 0 | 12 1 6 0 0 1 20 | 20
+paul_cambon_manual_work_cert | Examens de l'École Paul-Cambon : Certificat de travaux manuels | passed | 0 0 0 0 0 0 0 | 11 1 6 0 0 1 19 | 19
+girls_secondary_cert | Certificat de fin d'études secondaires | examined | 0 0 0 0 0 0 0 | 82 1 8 5 0 0 96 | 96
+girls_secondary_cert | Certificat de fin d'études secondaires | passed | 0 0 0 0 0 0 0 | 50 0 4 1 0 0 55 | 55
+girls_secondary_diploma | Diplôme de fin d'études secondaires (ancien régime) | examined | 0 0 0 0 0 0 0 | 0 0 0 1 0 0 1 | 1
+girls_secondary_diploma | Diplôme de fin d'études secondaires (ancien régime) | passed | 0 0 0 0 0 0 0 | 0 0 0 1 0 0 1 | 1
+girls_secondary_diploma_new_part1 | Diplôme de fin d'études secondaires (nouveau régime), 1re partie | examined | 0 0 0 0 0 0 0 | 9 0 2 0 0 0 11 | 11
+girls_secondary_diploma_new_part1 | Diplôme de fin d'études secondaires (nouveau régime), 1re partie | passed | 0 0 0 0 0 0 0 | 4 0 2 0 0 0 6 | 6
+girls_secondary_diploma_new_part2 | Diplôme de fin d'études secondaires (nouveau régime), 2e partie | examined | 0 0 0 0 0 0 0 | 0 0 0 0 0 0 0 | 0
+girls_secondary_diploma_new_part2 | Diplôme de fin d'études secondaires (nouveau régime), 2e partie | passed | 0 0 0 0 0 0 0 | 0 0 0 0 0 0 0 | 0
+
+[establishments view=675 page=117]
+Tunis | Lycée Carnot | 60 | 994 273 501 103 3 41 1915 | 0 0 0 0 0 0 0 | 1915 | 1939
+Tunis | Collège Sadiki | 20 | 0 721 0 0 0 0 721 | 0 0 0 0 0 0 0 | 721 | 487
+Tunis | Collège Alaoui | 18 | 246 253 17 35 2 1 554 | 0 0 0 0 0 0 0 | 554 | 511
+Tunis | École Normale d'Instituteurs | 14 | 144 186 3 7 0 6 346 | 0 0 0 0 0 0 0 | 346 | 342
+Tunis | École professionn. E.-Loubet | 17 | 234 79 6 41 4 7 371 | 0 0 0 0 0 0 0 | 371 | 360
+Tunis | Lycée Armand-Fallières (1) | 27 | 0 0 0 0 0 0 0 | 518 17 119 31 5 9 699 | 699 | 684
+Tunis | École Normale d'Institutrices | 13 | 3 0 0 0 0 0 3 | 226 223 0 24 1 2 476 | 479 | 479
+Tunis | Petit Lycée Jules-Ferry (1) | 18 | 0 0 0 0 0 0 0 | 367 22 116 51 5 16 577 | 577 | 568
+TOTAUX | Totaux | 187 | 1621 1512 527 186 9 55 3910 | 1111 262 235 106 11 27 1752 | 5662 | 5370
+note: (1) Ces établissements, créés au 1er janvier 1915, comprennent : le premier, les classes secondaires ; le deuxième, les classes élémentaires de l'ancienne École Jules Ferry.
+
+[libraries view=675 page=117]
+years: 1929 1930
+public_tunis | 1° Bibliothèque publique de Tunis | 27871 35523 | 141351 200286
+circulating | 2° Bibliothèque circulante | 805 750 | 1910 1536
+popular_tunis | 3° Bibliothèque populaire de Tunis | 6356 6096 | 22246 21336
+popular_interior | 3° Bibliothèques populaires de l'intérieur | 19662 24032 | 48752 61090
+
+[arabic_courses view=675 page=117]
+years: 1929 1930
+elementary_spoken_y1 | Cours élémentaire d'arabe parlé, 1re année | 40 45
+elementary_spoken_y2 | Cours élémentaire d'arabe parlé, 2e année | 51 31
+elementary_written | Cours élémentaire d'arabe écrit (1re et 2e année) | 175 250
+higher_written | Cours supérieur d'arabe écrit | 12 24
+
+[music_school view=675 page=117]
+enrolled | Nombre d'élèves inscrits | 146 0 151 40 10 13 360
+solfege | Classe de solfège | 65 0 80 25 10 5 185
+singing | Classe de chant | 10 0 5 2 0 0 17
+piano | Classe de piano | 30 0 40 8 0 2 80
+violin | Classe de violon | 19 0 15 5 0 1 40
+cello | Classe de violoncelle | 8 0 2 0 0 5 15
+woodwind | Classe d'instruments à vent (bois) | 7 0 2 0 0 0 9
+brass | Classe d'instruments à vent (cuivre) | 0 0 0 0 0 0 0
+diction | Classe de diction | 6 0 7 0 0 0 13
+viola | Classe d'alto | 1 0 0 0 0 0 1
+
+[primary_total views=706,707 pages=148,149]
+# 1° Écoles primaires publiques, garçons, Français: printed 6.667 (clear on the crop); the row total 45.138,
+# the column total 8.289 and the population table (6.676) all need 6.676: a transposition misprint, kept.
+flag: public_primary;male;french = total_mismatch
+public_primary | 1° Écoles primaires publiques | 6667 29968 3637 4183 537 137 45138 | 6390 3204 4428 3964 503 129 18618 | 63756 | 58655
+private | 2° Écoles privées | 1070 85 1718 552 39 33 3497 | 1327 595 1166 620 81 48 3837 | 7334 | 7244
+estab_primary_classes | 3° Classes primaires des établissements à personnalité civile (1) | 543 727 239 55 0 28 1592 | 529 243 116 74 6 18 986 | 2578 | 2327
+TOTAUX | Totaux généraux | 8289 30780 5594 4790 576 198 50227 | 8246 4042 5710 4658 590 195 23441 | 73668 | 68226
+
+[vocational view=706 page=148]
+# Tunis: the seven schools are printed » and only the bracket total (187) is given; it is stored as one
+# row "Tunis (ensemble des écoles)". The seven school rows are not stored.
+Tunis | Tunis (ensemble des écoles, non détaillé) | 187
+El-Adjim | El-Adjim | 20
+Bizerte | Bizerte | 24
+Ferryville | Ferryville | 34
+Gabès (Chenini) | Gabès (Chenini) | 54
+Gafsa | Gafsa | 36
+Houmt-Souk | Houmt-Souk | 20
+Beni-Khiar | Beni-Khiar | 5
+Béja | Béja | 30
+REPORT | A reporter | 410
+Kairouan | Kairouan | 77
+Kef (Le) | Kef (Le) | 0
+Ksar-Hellal | Ksar-Hellal | 26
+Mahdia | Mahdia | 9
+Monastir | Monastir | 0
+Sfax | Sfax | 26
+Sousse | Sousse | 0
+Teboulba | Teboulba | 0
+Tébourba | Tébourba | 0
+TOTAL | Total | 548
+
+[canteens view=707 page=149]
+years: 1929 1930
+free | Gratuites | 111087 116323
+paying | Payantes | 57986 76106
+TOTAUX | Totaux | 169073 192429
+
+[population views=708,709 pages=150,151]
+public_primary | Écoles primaires publiques | 6676 29968 3637 4183 537 137 45138 | 6390 3204 4428 3964 503 129 18618 | 13066 33172 8065 8147 1040 266 | 63756 | 58655
+civil_personality | Établissements à personnalité civile | 1621 1512 527 186 9 55 3910 | 1111 262 235 106 11 27 1752 | 2732 1774 762 292 20 82 | 5662 | 5370
+TOTAL_PUBLIC | Total de l'enseignement public | 8297 31480 4164 4369 546 192 49048 | 7501 3466 4663 4070 514 156 20370 | 15798 34946 8827 8439 1060 348 | 69418 | 64025
+private | Écoles privées | 1070 85 1718 552 39 33 3497 | 1327 595 1166 620 81 48 3837 | 2397 680 2884 1172 120 81 | 7334 | 7244
+TOTAL_GENERAL | Total général des établissements scolaires français publics et privés | 9367 31565 5882 4921 585 225 52545 | 8828 4061 5829 4690 595 204 24207 | 18195 35626 11711 9611 1180 429 | 76752 | 71269
+compare 1927 | 7506 25398 5878 4950 600 224 44556 | 7008 3473 5389 4578 589 209 21246 | 14514 28871 11267 9528 1189 433 | 65802
+compare 1928 | 8018 27180 6035 4810 622 216 46881 | 7554 3814 5611 4590 601 186 22356 | 15572 30994 11646 9400 1223 402 | 69237
+compare 1929 | 8714 27930 5930 4839 622 225 48260 | 8028 3777 5774 4601 628 201 23009 | 16742 31707 11704 9440 1250 426 | 71269
+
+[quinquennial view=710 page=152]
+# 1930 boys total printed 51.545 (clear on the crop); 49.048 + 3.497 = 52.545, the population table's
+# 52.545, and 52.545 + 24.207 = 76.752 as printed: a misprint of the total, which is not stored.
+1885 | 1803 1168 2971 | 1334 349 1683 | 4654
+1890 | 5567 1679 7246 | 2484 1261 3745 | 10991
+1895 | 7625 1582 9207 | 3256 1478 4734 | 13941
+1900 | 8907 1819 10726 | 4700 1790 6490 | 17216
+1905 | 10999 2159 12958 | 6682 2119 8801 | 21759
+1910 | 17371 3101 20472 | 9516 2746 12262 | 32734
+1915 | 21176 3057 24233 | 12882 3288 16170 | 40403
+1920 | 23636 3042 26678 | 14082 3251 17333 | 42497
+1925 | 36183 3239 39422 | 16756 3419 20175 | 59597
+1930 | 49048 3497 51545 | 20370 3837 24207 | 76752
+
+[comparative view=710 page=152]
+# 1929 column: sgt1930 prints 461 establishments and 451 primary schools, the reverse of sgt1929 (451, 461).
+years: 1929 1930
+n_public_establishments | Nombre total d'établissements scolaires publics (1) | 461 474
+n_public_primary_schools | Nombre total d'écoles primaires publiques | 451 464
+n_public_primary_classes | Nombre de classes dans les écoles primaires publiques | 1494 1565
+n_private_schools | Nombre total d'écoles privées | 31 31
+pupils french male | Français, garçons | 7670 8297
+pupils french female | Français, filles | 6829 7501
+pupils muslim male | Musulmans, garçons | 27857 31480
+pupils muslim female | Musulmans, filles | 3173 3466
+pupils jewish male | Israélites, garçons | 4179 4164
+pupils jewish female | Israélites, filles | 4591 4663
+pupils italian male | Italiens, garçons | 4294 4369
+pupils italian female | Italiens, filles | 3972 4070
+pupils maltese male | Maltais, garçons | 574 546
+pupils maltese female | Maltais, filles | 539 514
+pupils other male | Divers, garçons | 191 192
+pupils other female | Divers, filles | 156 156
+adult_auditors | Auditeurs des cours d'adultes | 2795 2956
+TOTAL_PUBLIC | Nombre total des élèves de l'enseignement public | 66820 72374
+TOTAL_MALE | Comparaison par sexes (2) : garçons | 44765 49048
+TOTAL_FEMALE | Comparaison par sexes (2) : filles | 19260 20370
+private_pupils | Nombre total des élèves de l'enseignement privé | 7244 7334
+TOTAL_GENERAL | Total général des élèves de l'enseignement public et de l'enseignement privé | 74064 79708
+note: (1) Y compris l'école de musique et l'école supérieure de langue et de littérature arabes. (2) Non compris les auditeurs des cours d'adultes.

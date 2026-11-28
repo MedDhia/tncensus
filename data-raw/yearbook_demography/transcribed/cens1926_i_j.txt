@@ -1,0 +1,30 @@
+# Tables i) and j) of the 1926 census, transcribed from sgt1929 view 41
+# (bpt6k9105652d, printed page 13); checked against sgt1926 view 577 and the
+# other reprints. Columns: French, Italians, Maltese, Spanish, Greeks, other
+# Europeans, TOTAL Europeans, Muslims, Jews, TOTAL indigenous, GRAND TOTAL.
+# "»" = 0. Table i lists the five largest towns; they are rows 1-5 of table j.
+@j 1° plus de 10.000 habitants
+Tunis | Tunis | 27922 44076 4994 219 162 1763 79136 82729 24131 106860 185996
+Sfax | Sfax | 3237 2590 542 25 336 154 6884 17574 3265 20839 27723
+Sousse | Sousse | 3664 2437 563 36 7 149 6856 10714 3728 14442 21298
+Bizerte | Bizerte | 3951 2511 135 21 19 101 6738 12465 1390 13855 20593
+Kairouan | Kairouan | 426 155 11 2 0 35 629 18527 270 18797 19426
+M'Saken | Sousse | 36 0 1 0 0 0 37 16583 0 16583 16620
+Gabès | Gabès | 756 341 97 5 0 71 1270 11354 2495 13849 15119
+Nefta | Tozeur | 31 2 0 0 0 0 33 13131 86 13217 13250
+Moknine | Sousse | 36 0 0 0 0 0 36 11539 616 12155 12191
+Kalaa-Kebira | Sousse | 10 0 1 0 0 0 11 11815 4 11819 11830
+Tozeur | Tozeur | 119 12 0 1 0 20 152 10723 181 10904 11056
+Béja | Béja | 756 1109 17 6 8 15 1911 7522 1035 8557 10468
+@j 2° de 5.000 à 10.000 habitants
+Ksour-Essaf | Sousse | 27 0 0 0 0 0 27 8930 0 8930 8957
+Monastir | Sousse | 151 97 79 21 0 5 353 7816 168 7984 8337
+Mahdia | Sousse | 261 188 33 0 1 7 490 6979 419 7398 7888
+Nabeul | Grombalia | 263 151 3 0 0 2 419 5692 1737 7429 7848
+Gafsa | Gafsa | 185 59 3 0 0 1 248 6810 695 7505 7753
+Goulette (La) | Tunis | 1046 2619 243 8 6 59 3981 1369 2057 3426 7407
+Le Kef | Le Kef | 500 626 22 0 0 15 1163 5387 812 6199 7362
+Djemmal | Sousse | 51 11 0 0 0 0 62 7131 10 7141 7203
+Mateur | Bizerte | 432 1525 69 9 0 20 2055 4678 391 5069 7124
+Zarzis | Terr. Militaires | 106 9 18 0 2 23 168 5444 693 6137 6305
+Menzel Temime | Grombalia | 36 16 0 0 0 0 52 5072 0 5072 5124

@@ -1,0 +1,335 @@
+# Achour, sgt1926. Format: see yb_tables.py (sections parsed by extract_finance_achour.py). Every cell read on
+# native-resolution crops of the page images (two crops per page, rows 1-17 and 16-36 with the Totaux, numeric
+# columns and caïdat labels; doubtful cells re-read on zoomed crops); the Gallica OCR is a cross-check ('!' = the
+# OCR token differs from the image reading).
+#
+# ACHOUR. Superficies ensemencées par les européens et les indigènes. a) Blé ... h) Lin, one page per crop,
+# f776-f783 (pp. 212-219). No year printed (year = edition year). Columns: Nombre d'hectares ensemencés par les
+# européens (eur), par les indigènes (ind), Récapitulation (rec; check = eur + ind), Cultures effectuées sur
+# terrains nouvellement défrichés et exemptés de l'achour, Européens et Indigènes (hectares) (new). Hectares and
+# ares as printed ("10.285 55" = 10285.55 ha). Rows: région (with its chef-lieu in brackets), contrôle civil,
+# caïdat, as printed; Totaux = check.
+
+@achour_roll view=776 page=212 crop=wheat
+img: all
+cols: eur ind rec new
+1re Région (Bizerte) ; Béja ; Béja | 10285.55 23669.04 33954.59 123
+1re Région (Bizerte) ; Bizerte ; Bizerte | 6118.67 13423.37 19542.04 391.03
+1re Région (Bizerte) ; Bizerte ; Mateur | 12268.08 24956.79 37224.87 446.01
+1re Région (Bizerte) ; Tabarka ; Aïn-Draham | 170.75 6018.91 6189.66 4
+1re Région (Bizerte) ; Souk-el-Arba ; Souk-el-Arba | 1400.67 25176.70 26577.37 110.80
+1re Région (Bizerte) ; Souk-el-Arba ; Souk-el-Khemis | 5720.43 12299.18 18019.61 11
+2e Région (Tunis) ; Tunis ; Caïdat de la banlieue | 21188.64 26258.57 47447.21 2583.08
+2e Région (Tunis) ; Zaghouan ; Zaghouan | 12563.57 22887.09 35450.66 5908.85
+2e Région (Tunis) ; Grombalia ; Cap-Bon | 3232.20 24138.55 27370.75 628.18
+3e Région (Le Kef) ; Téboursouk ; Téboursouk | 6068.88 17789.88 23858.76 2424.59
+3e Région (Le Kef) ; Le Kef ; Le Kef | 2969.87 40228.61 43198.48 336.74
+3e Région (Le Kef) ; Le Kef ; Tadjérouine | 645.10 27648.69 28293.79 60
+3e Région (Le Kef) ; Mactar ; Oulad Ayar | 372.58 14123.43 14496.01 30
+3e Région (Le Kef) ; Mactar ; Oulad Aoun | 125.50 23262.45 23387.95 0
+3e Région (Le Kef) ; Medjez-el-Bab ; Medjez-el-Bab | 18755.14 23658.47 42413.61 2338.64
+4e Région (Sousse) ; Sousse ; Souassi | 20 29872.21 29892.21 0
+4e Région (Sousse) ; Sousse ; Mahdia | 18.10 13942.44 13960.54 0
+4e Région (Sousse) ; Sousse ; Monastir | 57.83 7707.78 7765.61 0
+4e Région (Sousse) ; Sousse ; Sousse | 1719.90 46538.11 48258.01 449
+4e Région (Sousse) ; Kairouan ; Kairouan | 798 42181.71 42979.71 134.06
+4e Région (Sousse) ; Kairouan ; Djelass | 982.39 41671.47 42653.86 525.23
+4e Région (Sousse) ; Thala ; Fraichiches | 191 14303.75 14494.75 23
+4e Région (Sousse) ; Thala ; Madjeurs | 166.07 24707.71 24873.78 193.36
+4e Région (Sousse) ; Sfax ; Sfax | 0 20025.09 20025.09 26.50
+4e Région (Sousse) ; Sfax ; La Skhira | 44.95 8050.58 8462.53 285
+4e Région (Sousse) ; Sfax ; Djebéniana | 48.11 18161.70 18209.81 44
+5e Région (Sfax) ; Gabès ; L'Arad | 29.75 754.07 783.82 0
+5e Région (Sfax) ; Gafsa ; Hemmama | 8 13411.82 13419.82 5.06
+5e Région (Sfax) ; Gafsa ; Gafsa | 18.70 2508.97 2527.67 19.85
+5e Région (Sfax) ; Tozeur ; Djerid | 14.50 72.60 87.10 56
+5e Région (Sfax) ; Djerba ; Djerba | 0 0 0 0
+Territoires Militaires du Sud ;  ; Nefzaoua | 0 0 0 0
+Territoires Militaires du Sud ;  ; Ouerghemma | 172.50 11519.26 11691.76 0
+Territoires Militaires du Sud ;  ; Tataouine | 0 0 0 0
+Territoires Militaires du Sud ;  ; Matmata | 0 0 0 0
+Totaux | 106542.43 620969 727511.43 17156.98
+
+@achour_roll view=777 page=213 crop=barley
+img: all
+cols: eur ind rec new
+1re Région (Bizerte) ; Béja ; Béja | 826.65 6962.50 7789.15 9
+1re Région (Bizerte) ; Bizerte ; Bizerte | 592.14 4600.46 5192.60 51.50
+1re Région (Bizerte) ; Bizerte ; Mateur | 1005.15 8098.26 9103.41 32.65
+1re Région (Bizerte) ; Tabarka ; Aïn-Draham | 81.70 2566.41 2648.11 8
+1re Région (Bizerte) ; Souk-el-Arba ; Souk-el-Arba | 271.40 14746.65 15018.05 19
+1re Région (Bizerte) ; Souk-el-Arba ; Souk-el-Khemis | 469.75 6379.55 6849.30 0
+2e Région (Tunis) ; Tunis ; Caïdat de la banlieue | 4231.01 14293.67 18524.68 365.26
+2e Région (Tunis) ; Zaghouan ; Zaghouan | 2432.94 10629.00 13061.94 924.42
+2e Région (Tunis) ; Grombalia ; Cap-Bon | 1545.03 15417.34 16962.37 458.80
+3e Région (Le Kef) ; Téboursouk ; Téboursouk | 872.75 8516.00 9388.75 280.18
+3e Région (Le Kef) ; Le Kef ; Le Kef | 1091.58 29480.69 30572.27 99.95
+3e Région (Le Kef) ; Le Kef ; Tadjérouine | 406.85 30160.57 30567.42 134.25
+3e Région (Le Kef) ; Mactar ; Oulad Ayar | 159.15 11214.11 11373.26 2.50
+3e Région (Le Kef) ; Mactar ; Oulad Aoun | 23.15 12631.45 12654.60 0
+3e Région (Le Kef) ; Medjez-el-Bab ; Medjez-el-Bab | 3333.41 11820.77 15154.18 343.72
+4e Région (Sousse) ; Sousse ; Souassi | 18.20 36688.07 36706.27 0
+4e Région (Sousse) ; Sousse ; Mahdia | 59.34 20924.84 20984.18 0
+4e Région (Sousse) ; Sousse ; Monastir | 111.88 9966.67 10078.55 1
+4e Région (Sousse) ; Sousse ; Sousse | 745.86 33415.50 34161.36 125.25
+4e Région (Sousse) ; Kairouan ; Kairouan | 647.22 40284.68 40931.90 226.55
+4e Région (Sousse) ; Kairouan ; Djelass | 531.65 41956.46 42488.11 349.52
+4e Région (Sousse) ; Thala ; Fraichiches | 145.40 15248.88 15394.28 43
+4e Région (Sousse) ; Thala ; Madjeurs | 124.88 23967.42 24092.30 242.98
+4e Région (Sousse) ; Sfax ; Sfax | 3105.86 36508.15 39614.01 600.05
+4e Région (Sousse) ; Sfax ; La Skhira | 270.25 12947.44 13217.69 241
+4e Région (Sousse) ; Sfax ; Djebéniana | 229.70 34112.77 34342.47 8.50
+5e Région (Sfax) ; Gabès ; L'Arad | 25.50 2314.26 2339.76 10
+5e Région (Sfax) ; Gafsa ; Hemmama | 26.50 13804.97 13831.47 42.27
+5e Région (Sfax) ; Gafsa ; Gafsa | 12.25 1854.88 1867.13 72.50
+5e Région (Sfax) ; Tozeur ; Djerid | 0 167.17 167.17 0
+5e Région (Sfax) ; Djerba ; Djerba | 0 0 0 0
+Territoires Militaires du Sud ;  ; Nefzaoua | 0.10 0 0.10 0
+Territoires Militaires du Sud ;  ; Ouerghemma | 168.10 30368.65 30536.75 0
+Territoires Militaires du Sud ;  ; Tataouine | 0 0 0 0
+Territoires Militaires du Sud ;  ; Matmata | 0 0 0 0
+Totaux | 23565.35 542048.24 565613.59 4691.85
+
+@achour_roll view=778 page=214 crop=oats
+img: all
+cols: eur ind rec new
+1re Région (Bizerte) ; Béja ; Béja | 367.60 464.00 831.60 8
+1re Région (Bizerte) ; Bizerte ; Bizerte | 1309.52 1782.44 3091.96 8
+1re Région (Bizerte) ; Bizerte ; Mateur | 1079.95 1572.14 2652.09 150.50
+1re Région (Bizerte) ; Tabarka ; Aïn-Draham | 63.30 202.82 266.12 9
+1re Région (Bizerte) ; Souk-el-Arba ; Souk-el-Arba | 310.30 485.08 795.38 25.30
+1re Région (Bizerte) ; Souk-el-Arba ; Souk-el-Khemis | 555.00 472.50 1027.50 0
+2e Région (Tunis) ; Tunis ; Caïdat de la banlieue | 4346.35 4095.80 8442.15 497.66
+2e Région (Tunis) ; Zaghouan ; Zaghouan | 2312.79 2278.86 4591.65 1185.23
+2e Région (Tunis) ; Grombalia ; Cap-Bon | 1036.65 658.03 1694.68 186.20
+3e Région (Le Kef) ; Téboursouk ; Téboursouk | 446.50 954.56 1401.06 169.36
+3e Région (Le Kef) ; Le Kef ; Le Kef | 814.75 1673.82 2488.57 130.05
+3e Région (Le Kef) ; Le Kef ; Tadjérouine | 143.75 310.15 453.90 62
+3e Région (Le Kef) ; Mactar ; Oulad Ayar | 43.08 26.14 69.22 0
+3e Région (Le Kef) ; Mactar ; Oulad Aoun | 27.00 280.97 307.97 0
+3e Région (Le Kef) ; Medjez-el-Bab ; Medjez-el-Bab | 2086.21 1566.20 3652.41 162
+4e Région (Sousse) ; Sousse ; Souassi | 0 28.20 28.20 0
+4e Région (Sousse) ; Sousse ; Mahdia | 0 39.34 39.34 0
+4e Région (Sousse) ; Sousse ; Monastir | 9 49.80 58.80 0
+4e Région (Sousse) ; Sousse ; Sousse | 531.65 1372.62 1904.27 120.50
+4e Région (Sousse) ; Kairouan ; Kairouan | 275.90 368.17 644.07 48
+4e Région (Sousse) ; Kairouan ; Djelass | 118.79 173.93 292.72 10
+4e Région (Sousse) ; Thala ; Fraichiches | 40.10 28.30 68.40 0
+4e Région (Sousse) ; Thala ; Madjeurs | 22.10 27.80 49.90 0
+4e Région (Sousse) ; Sfax ; Sfax | 148.50 76.95 225.45 40
+4e Région (Sousse) ; Sfax ; La Skhira | 233.72 38.00 271.72 5
+4e Région (Sousse) ; Sfax ; Djebéniana | 91.00 12.00 103.00 0
+5e Région (Sfax) ; Gabès ; L'Arad | 4.00 6.50 10.50 0
+5e Région (Sfax) ; Gafsa ; Hemmama | 106.50 4.87 111.37 2.25
+5e Région (Sfax) ; Gafsa ; Gafsa | 0 2.74 2.74 53.45
+5e Région (Sfax) ; Tozeur ; Djerid | 0 2.00 2.00 0
+5e Région (Sfax) ; Djerba ; Djerba | 0 0 0 0
+Territoires Militaires du Sud ;  ; Nefzaoua | 0 0 0 0
+Territoires Militaires du Sud ;  ; Ouerghemma | 22.10 18.23 40.33 0
+Territoires Militaires du Sud ;  ; Tataouine | 0 0 0 0
+Territoires Militaires du Sud ;  ; Matmata | 0 0 0 0
+Totaux | 16546.11 19072.96 35619.07 2872.50
+
+# f779: Sousse européens printed "104 8" with the last figure of the ares broken: '?' (derived = Récapitulation -
+# indigènes, 104.81). Récapitulation of Aïn-Draham (": 88 13") and of the Caïdat de la banlieue ("6.98) 83") printed
+# with a broken figure, read 388.13 and 6989.83 (checks only). Le Kef new land: "42" printed in the ares place, no hectares
+# figure: 0.42 (the Totaux 719.91 requires it).
+@achour_roll view=779 page=215 crop=broad_beans
+img: all
+cols: eur ind rec new
+1re Région (Bizerte) ; Béja ; Béja | 2003.85 3240.38 5244.23 40
+1re Région (Bizerte) ; Bizerte ; Bizerte | 1601.61 2026.36 3627.97 66.60
+1re Région (Bizerte) ; Bizerte ; Mateur | 2366.10 2672.30 5038.40 38.75
+1re Région (Bizerte) ; Tabarka ; Aïn-Draham | 25.01 363.12 388.13 3
+1re Région (Bizerte) ; Souk-el-Arba ; Souk-el-Arba | 48.70 859.56 908.26 8.50
+1re Région (Bizerte) ; Souk-el-Arba ; Souk-el-Khemis | 211.40 881.17 1092.57 0
+2e Région (Tunis) ; Tunis ; Caïdat de la banlieue | 4882.63 2107.20 6989.83 259.50
+2e Région (Tunis) ; Zaghouan ; Zaghouan | 864.60 625.39 1489.99 89.79
+2e Région (Tunis) ; Grombalia ; Cap-Bon | 462.81 6955.22 7418.03 146.87
+3e Région (Le Kef) ; Téboursouk ; Téboursouk | 20.20 522.37 542.57 5.30
+3e Région (Le Kef) ; Le Kef ; Le Kef | 105.53 500.60 606.13 0.42
+3e Région (Le Kef) ; Le Kef ; Tadjérouine | 3.00 65.91 68.91 0
+3e Région (Le Kef) ; Mactar ; Oulad Ayar | 0.15 11.26 11.41 0
+3e Région (Le Kef) ; Mactar ; Oulad Aoun | 0.40 117.98 118.38 0
+3e Région (Le Kef) ; Medjez-el-Bab ; Medjez-el-Bab | 1485.21 858.29 2343.50 41.18
+4e Région (Sousse) ; Sousse ; Souassi | 2.00 175.35 177.35 0
+4e Région (Sousse) ; Sousse ; Mahdia | 1.23 531.38 532.61 0
+4e Région (Sousse) ; Sousse ; Monastir | 2.22 810.45 812.67 0
+4e Région (Sousse) ; Sousse ; Sousse | ? 888.67 993.48 8
+4e Région (Sousse) ; Kairouan ; Kairouan | 8.00 196.11 204.11 2
+4e Région (Sousse) ; Kairouan ; Djelass | 7.20 18.61 25.81 9.50
+4e Région (Sousse) ; Thala ; Fraichiches | 1.00 28.23 29.23 0
+4e Région (Sousse) ; Thala ; Madjeurs | 0.50 22.97 23.47 0
+4e Région (Sousse) ; Sfax ; Sfax | 3.88 30.87 34.75 0.50
+4e Région (Sousse) ; Sfax ; La Skhira | 5.90 0 5.90 0
+4e Région (Sousse) ; Sfax ; Djebéniana | 3.50 254.09 257.59 0
+5e Région (Sfax) ; Gabès ; L'Arad | 0.50 0 0.50 0
+5e Région (Sfax) ; Gafsa ; Hemmama | 0 0.57 0.57 0
+5e Région (Sfax) ; Gafsa ; Gafsa | 0 64.88 64.88 0
+5e Région (Sfax) ; Tozeur ; Djerid | 0 74.95 74.95 0
+5e Région (Sfax) ; Djerba ; Djerba | 0 0 0 0
+Territoires Militaires du Sud ;  ; Nefzaoua | 0.08 0 0.08 0
+Territoires Militaires du Sud ;  ; Ouerghemma | 0 0 0 0
+Territoires Militaires du Sud ;  ; Tataouine | 0 0 0 0
+Territoires Militaires du Sud ;  ; Matmata | 0 0 0 0
+Totaux | 14222.02 24904.24 39126.26 719.91
+
+@achour_roll view=780 page=216 crop=chickpeas
+img: all
+cols: eur ind rec new
+1re Région (Bizerte) ; Béja ; Béja | 611.00 1144.74 1755.74 0
+1re Région (Bizerte) ; Bizerte ; Bizerte | 22.20 356.13 378.33 0
+1re Région (Bizerte) ; Bizerte ; Mateur | 256.50 909.85 1166.31 3
+1re Région (Bizerte) ; Tabarka ; Aïn-Draham | 1.80 143.80 145.60 0
+1re Région (Bizerte) ; Souk-el-Arba ; Souk-el-Arba | 9.60 142.43 152.03 0
+1re Région (Bizerte) ; Souk-el-Arba ; Souk-el-Khemis | 3.10 173.01 176.11 0
+2e Région (Tunis) ; Tunis ; Caïdat de la banlieue | 120.49 144.69 265.18 2
+2e Région (Tunis) ; Zaghouan ; Zaghouan | 31.45 58.44 89.89 13.85
+2e Région (Tunis) ; Grombalia ; Cap-Bon | 60.80 1038.57 1099.37 22.20
+3e Région (Le Kef) ; Téboursouk ; Téboursouk | 23.00 619.69 642.69 0.25
+3e Région (Le Kef) ; Le Kef ; Le Kef | 8.76 59.78 68.54 0
+3e Région (Le Kef) ; Le Kef ; Tadjérouine | 1.25 2.80 4.05 4
+3e Région (Le Kef) ; Mactar ; Oulad Ayar | 0 7.78 7.78 0
+3e Région (Le Kef) ; Mactar ; Oulad Aoun | 1.50 102.33 103.83 0
+3e Région (Le Kef) ; Medjez-el-Bab ; Medjez-el-Bab | 61.00 101.10 162.10 0
+4e Région (Sousse) ; Sousse ; Souassi | 0 3.53 3.53 0
+4e Région (Sousse) ; Sousse ; Mahdia | 0 13.84 13.84 0
+4e Région (Sousse) ; Sousse ; Monastir | 1.00 12.41 13.41 0
+4e Région (Sousse) ; Sousse ; Sousse | 8.50 71.18 79.68 0
+4e Région (Sousse) ; Kairouan ; Kairouan | 0 1.12 1.12 0
+4e Région (Sousse) ; Kairouan ; Djelass | 0.20 3.03 3.23 0
+4e Région (Sousse) ; Thala ; Fraichiches | 0 0.09 0.09 0
+4e Région (Sousse) ; Thala ; Madjeurs | 0 0 0 0
+4e Région (Sousse) ; Sfax ; Sfax | 0 1.63 1.63 0
+4e Région (Sousse) ; Sfax ; La Skhira | 0.30 0 0.30 0.50
+4e Région (Sousse) ; Sfax ; Djebéniana | 0 2.87 2.87 0
+5e Région (Sfax) ; Gabès ; L'Arad | 0 0 0 0
+5e Région (Sfax) ; Gafsa ; Hemmama | 0 0 0 0
+5e Région (Sfax) ; Gafsa ; Gafsa | 0 0 0 0
+5e Région (Sfax) ; Tozeur ; Djerid | 0 0 0 0
+5e Région (Sfax) ; Djerba ; Djerba | 0 0 0 0
+Territoires Militaires du Sud ;  ; Nefzaoua | 0 0 0 0
+Territoires Militaires du Sud ;  ; Ouerghemma | 0 1.40 1.40 0
+Territoires Militaires du Sud ;  ; Tataouine | 0 0 0 0
+Territoires Militaires du Sud ;  ; Matmata | 0 0 0 0
+Totaux | 1222.45 5116.24 6338.69 45.80
+
+@achour_roll view=781 page=217 crop=maize
+img: all
+cols: eur ind rec new
+1re Région (Bizerte) ; Béja ; Béja | 16.00 5532.03 5548.03 0
+1re Région (Bizerte) ; Bizerte ; Bizerte | 72.33 1779.74 1852.07 0
+1re Région (Bizerte) ; Bizerte ; Mateur | 16.75 3172.76 3189.51 1
+1re Région (Bizerte) ; Tabarka ; Aïn-Draham | 0 29.23 29.23 0
+1re Région (Bizerte) ; Souk-el-Arba ; Souk-el-Arba | 0 3.13 3.13 0
+1re Région (Bizerte) ; Souk-el-Arba ; Souk-el-Khemis | 0 150.80 150.80 0
+2e Région (Tunis) ; Tunis ; Caïdat de la banlieue | 23.23 413.55 436.78 0
+2e Région (Tunis) ; Zaghouan ; Zaghouan | 3.00 78.32 81.32 5
+2e Région (Tunis) ; Grombalia ; Cap-Bon | 174.40 3135.44 3309.84 27.70
+3e Région (Le Kef) ; Téboursouk ; Téboursouk | 7.60 112.19 119.79 0
+3e Région (Le Kef) ; Le Kef ; Le Kef | 6.00 15.84 21.84 0
+3e Région (Le Kef) ; Le Kef ; Tadjérouine | 0 20.14 20.14 0
+3e Région (Le Kef) ; Mactar ; Oulad Ayar | 31.00 9.32 40.32 0
+3e Région (Le Kef) ; Mactar ; Oulad Aoun | 4.00 44.41 48.41 0
+3e Région (Le Kef) ; Medjez-el-Bab ; Medjez-el-Bab | 7.00 532.75 539.75 0
+4e Région (Sousse) ; Sousse ; Souassi | 0 0 0 0
+4e Région (Sousse) ; Sousse ; Mahdia | 0 65.12 65.12 0
+4e Région (Sousse) ; Sousse ; Monastir | 0.09 4.80 4.89 0
+4e Région (Sousse) ; Sousse ; Sousse | 3.00 13.54 16.54 0
+4e Région (Sousse) ; Kairouan ; Kairouan | 0 1.09 1.09 0
+4e Région (Sousse) ; Kairouan ; Djelass | 0 0 0 0
+4e Région (Sousse) ; Thala ; Fraichiches | 38.00 0 38.00 15
+4e Région (Sousse) ; Thala ; Madjeurs | 8.00 109.73 117.73 0
+4e Région (Sousse) ; Sfax ; Sfax | 0 0 0 0
+4e Région (Sousse) ; Sfax ; La Skhira | 0 0 0 0
+4e Région (Sousse) ; Sfax ; Djebéniana | 0 11.34 11.34 0
+5e Région (Sfax) ; Gabès ; L'Arad | 0 0 0 0
+5e Région (Sfax) ; Gafsa ; Hemmama | 0 0 0 0
+5e Région (Sfax) ; Gafsa ; Gafsa | 0 0 0 0
+5e Région (Sfax) ; Tozeur ; Djerid | 0 0 0 0
+5e Région (Sfax) ; Djerba ; Djerba | 0 0 0 0
+Territoires Militaires du Sud ;  ; Nefzaoua | 0 0 0 0
+Territoires Militaires du Sud ;  ; Ouerghemma | 0 0 0 0
+Territoires Militaires du Sud ;  ; Tataouine | 0 0 0 0
+Territoires Militaires du Sud ;  ; Matmata | 0 0 0 0
+Totaux | 410.40 15235.27 15645.67 48.70
+
+@achour_roll view=782 page=218 crop=sorghum
+img: all
+cols: eur ind rec new
+1re Région (Bizerte) ; Béja ; Béja | 309.00 97.67 406.67 0
+1re Région (Bizerte) ; Bizerte ; Bizerte | 13.00 0.20 13.20 0
+1re Région (Bizerte) ; Bizerte ; Mateur | 197.00 13.00 210.00 14
+1re Région (Bizerte) ; Tabarka ; Aïn-Draham | 9.50 561.30 570.80 0
+1re Région (Bizerte) ; Souk-el-Arba ; Souk-el-Arba | 0 58.76 58.76 0
+1re Région (Bizerte) ; Souk-el-Arba ; Souk-el-Khemis | 0 157.56 157.56 0
+2e Région (Tunis) ; Tunis ; Caïdat de la banlieue | 6.50 71.55 78.05 0
+2e Région (Tunis) ; Zaghouan ; Zaghouan | 1.00 0.20 1.20 3
+2e Région (Tunis) ; Grombalia ; Cap-Bon | 3.60 406.84 410.44 0.60
+3e Région (Le Kef) ; Téboursouk ; Téboursouk | 14.00 18.60 32.60 0
+3e Région (Le Kef) ; Le Kef ; Le Kef | 0 8.94 8.94 0
+3e Région (Le Kef) ; Le Kef ; Tadjérouine | 0 0 0 0
+3e Région (Le Kef) ; Mactar ; Oulad Ayar | 0 0.30 0.30 0
+3e Région (Le Kef) ; Mactar ; Oulad Aoun | 0 2.00 2.00 0
+3e Région (Le Kef) ; Medjez-el-Bab ; Medjez-el-Bab | 27.00 2.00 29.00 0
+4e Région (Sousse) ; Sousse ; Souassi | 0 0 0 0
+4e Région (Sousse) ; Sousse ; Mahdia | 0 14.48 14.48 0
+4e Région (Sousse) ; Sousse ; Monastir | 0 0 0 0
+4e Région (Sousse) ; Sousse ; Sousse | 4.00 0.05 4.05 0
+4e Région (Sousse) ; Kairouan ; Kairouan | 8.00 3.00 11.00 0
+4e Région (Sousse) ; Kairouan ; Djelass | 0 0 0 0
+4e Région (Sousse) ; Thala ; Fraichiches | 0 0 0 0
+4e Région (Sousse) ; Thala ; Madjeurs | 0 0.09 0.09 0
+4e Région (Sousse) ; Sfax ; Sfax | 0 0 0 0
+4e Région (Sousse) ; Sfax ; La Skhira | 0 0 0 0
+4e Région (Sousse) ; Sfax ; Djebéniana | 0 29.32 29.32 0
+5e Région (Sfax) ; Gabès ; L'Arad | 0 0 0 0
+5e Région (Sfax) ; Gafsa ; Hemmama | 0 0 0 0
+5e Région (Sfax) ; Gafsa ; Gafsa | 0 0 0 0
+5e Région (Sfax) ; Tozeur ; Djerid | 0 0 0 0
+5e Région (Sfax) ; Djerba ; Djerba | 0 0 0 0
+Territoires Militaires du Sud ;  ; Nefzaoua | 0 0 0 0
+Territoires Militaires du Sud ;  ; Ouerghemma | 0 6.02 6.02 0
+Territoires Militaires du Sud ;  ; Tataouine | 0 0 0 0
+Territoires Militaires du Sud ;  ; Matmata | 0 0 0 0
+Totaux | 592.60 1451.88 2044.48 17.60
+
+@achour_roll view=783 page=219 crop=flax
+img: all
+cols: eur ind rec new
+1re Région (Bizerte) ; Béja ; Béja | 11.75 43.33 55.08 0
+1re Région (Bizerte) ; Bizerte ; Bizerte | 8.10 340.55 348.65 12
+1re Région (Bizerte) ; Bizerte ; Mateur | 1.05 205.18 206.23 0
+1re Région (Bizerte) ; Tabarka ; Aïn-Draham | 0 0.67 0.67 0
+1re Région (Bizerte) ; Souk-el-Arba ; Souk-el-Arba | 0 0 0 0
+1re Région (Bizerte) ; Souk-el-Arba ; Souk-el-Khemis | 0 0 0 0
+2e Région (Tunis) ; Tunis ; Caïdat de la banlieue | 45.72 954.38 1000.10 1
+2e Région (Tunis) ; Zaghouan ; Zaghouan | 1.50 194.24 195.74 19.58
+2e Région (Tunis) ; Grombalia ; Cap-Bon | 0.75 129.92 130.72 0
+3e Région (Le Kef) ; Téboursouk ; Téboursouk | 0 26.86 26.86 0
+3e Région (Le Kef) ; Le Kef ; Le Kef | 0 6.30 6.30 0
+3e Région (Le Kef) ; Le Kef ; Tadjérouine | 0 0 0 0
+3e Région (Le Kef) ; Mactar ; Oulad Ayar | 1.00 1.46 2.46 0
+3e Région (Le Kef) ; Mactar ; Oulad Aoun | 0 3.14 3.14 0
+3e Région (Le Kef) ; Medjez-el-Bab ; Medjez-el-Bab | 2.00 127.29 129.29 0
+4e Région (Sousse) ; Sousse ; Souassi | 0 3.65 3.65 0
+4e Région (Sousse) ; Sousse ; Mahdia | 0 58.23 58.23 0
+4e Région (Sousse) ; Sousse ; Monastir | 0 3.42 3.42 0
+4e Région (Sousse) ; Sousse ; Sousse | 23.00 273.18 296.18 0
+4e Région (Sousse) ; Kairouan ; Kairouan | 22.17 189.72 211.89 0
+4e Région (Sousse) ; Kairouan ; Djelass | 0 7.45 7.45 0
+4e Région (Sousse) ; Thala ; Fraichiches | 0 0 0 0
+4e Région (Sousse) ; Thala ; Madjeurs | 0 0.71 0.71 0
+4e Région (Sousse) ; Sfax ; Sfax | 0.15 0 0.15 0
+4e Région (Sousse) ; Sfax ; La Skhira | 0 0 0 0
+4e Région (Sousse) ; Sfax ; Djebéniana | 0 0.55 0.55 0
+5e Région (Sfax) ; Gabès ; L'Arad | 0 0 0 0
+5e Région (Sfax) ; Gafsa ; Hemmama | 0 0 0 0
+5e Région (Sfax) ; Gafsa ; Gafsa | 0 0 0 0
+5e Région (Sfax) ; Tozeur ; Djerid | 0 0.20 0.20 0
+5e Région (Sfax) ; Djerba ; Djerba | 0 0 0 0
+Territoires Militaires du Sud ;  ; Nefzaoua | 0 0 0 0
+Territoires Militaires du Sud ;  ; Ouerghemma | 0 0.58 0.58 0
+Territoires Militaires du Sud ;  ; Tataouine | 0 0 0 0
+Territoires Militaires du Sud ;  ; Matmata | 0 0 0 0
+Totaux | 117.19 2571.06 2688.25 32.58

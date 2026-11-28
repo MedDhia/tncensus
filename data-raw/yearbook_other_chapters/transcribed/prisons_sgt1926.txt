@@ -1,0 +1,187 @@
+# Prisons chapter (chapter V), sgt1926 (ark bpt6k9105650k), views 655-664 (655 title, 656 blank, 664 blank).
+
+@recap view=663 page=99 years=1925-1926
+img: all
+cols: start entries exits end detention_days average
+1925 | 3195 17110 17141 3164 1182172 3238
+1926 | 3164 17464 17303 3325 1132897 3104
+
+@condemned_age view=657 page=93 year=1926
+img: all
+cols: age_0_10 age_11_15 age_16_20 age_21_30 age_31_40 age_41_50 age_51_plus age_total male female first_offender recidivist total
+Français | 0 0 4 26 9 4 3 46 40 6 23 23 46
+Algériens | 0 0 19 49 41 7 6 122 121 1 85 37 122
+Italiens | 0 5 20 51 29 13 15 133 116 17 62 71 133
+Maltais | 0 0 1 8 6 2 2 19 18 1 12 7 19
+Grecs | 0 0 0 0 2 0 0 2 2 0 1 1 2
+Espagnols | 0 0 0 0 0 0 0 0 0 0 0 0 0
+Autres européens | 0 0 0 5 0 4 0 9 7 2 7 2 9
+Tunisiens musulmans | 9 220 1589 3840 1776 721 317 8472 8304 168 4253 4219 8472
+Tunisiens israélites | 0 0 15 22 14 5 4 60 60 0 33 27 60
+Marocains | 0 1 4 25 12 6 2 50 50 0 39 11 50
+Tripolitains | 0 2 21 118 59 31 5 236 231 5 133 103 236
+Divers | 0 0 0 0 0 0 0 0 0 0 0 0 0
+Totaux | 9 228 1673 4144 1948 793 354 9149 8949 200 4648 4501 9149
+
+@condemned_offence view=657 page=93 year=1926 hl_total_includes_death=1
+img: all
+cols: dp.Européens dp.Tunisiens hl.Français hl.Européens hl.Algériens hl.Musulmans hl.Israélites hl.Divers hl.Total rc.Français rc.Européens rc.Algériens rc.Musulmans rc.Israélites rc.Total pl.Français pl.Européens pl.Algériens pl.Musulmans pl.Israélites pl.Divers pl.Total ps.Français ps.Européens ps.Algériens ps.Musulmans ps.Israélites ps.Divers ps.Total
+Meurtre | 0 1 0 1 2 46 0 0 50 0 0 0 0 0 0 1 0 2 11 0 0 14 1 1 2 36 0 0 40
+Coups, blessures | 0 0 0 0 0 11 0 0 11 0 0 0 1 0 1 0 1 1 29 0 0 31 6 23 29 717 11 7 793
+Attentat à la pudeur | 0 0 0 1 0 11 0 0 12 0 0 1 1 0 2 0 0 0 59 0 0 59 0 2 2 127 0 0 131
+Vol | 0 0 7 0 0 22 0 0 29 2 1 0 7 0 10 10 6 7 350 7 0 380 13 52 52 3871 17 28 4033
+Ivresse | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3 0 0 3 0 4 49 2188 13 48 2302
+Délit de paccage | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 67 0 1 68
+Faillis et dettiers | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 2 0 1 0 0 4 0 8 1 69 8 0 86
+Divers | 0 0 0 0 0 10 0 0 10 0 0 0 0 0 0 0 0 0 30 1 0 31 5 56 16 922 10 39 1048
+Totaux | 0 1 7 2 2 100 0 0 112 2 1 1 9 0 13 12 9 10 483 8 0 522 25 146 151 7997 59 123 8501
+
+@work_days view=658 page=94 year=1926 split=adm_municipal_gaols:659:95
+img: all
+# Two-page spread: the line labels and the columns up to Contrôles civils / Prisons on p. 94 (f658), the other
+# columns and the Total général on p. 95 (f659). source_page / gallica_view of a cell = its page.
+cols: emp_municipalities emp_agricultural emp_hospitals_education emp_agriculture_directorate emp_salines emp_mines adm_controles_gaols adm_controles_prisons adm_municipal_gaols adm_municipal_prisons adm_agricultural adm_hospitals_education_justice adm_agriculture_directorate adm_public_works_directorate adm_mines_phosphates int_contractors_espadrilles int_contractors_scourtins int_state_prison_workshops total
+Béja | 0 0 365 0 0 0 0 0 0 5108 0 0 0 0 0 0 0 730 6203
+Bizerte | 0 0 0 0 0 0 0 727 0 0 0 0 0 0 0 0 0 730 1457
+Gabès | 0 0 0 0 0 0 3703 3555 0 2795 0 0 0 0 0 0 0 1880 11933
+Gafsa | 0 0 0 0 0 0 2600 6468 0 3278 0 123 0 0 1607 0 0 3417 17493
+Kairouan | 0 0 0 0 0 0 0 0 0 11450 0 224 0 0 0 0 0 2345 14019
+Le Kef | 0 0 0 0 0 0 6139 1304 1253 4463 0 2543 0 0 0 0 0 1200 16902
+Sfax | 0 0 0 0 0 0 0 1377 0 1756 0 0 0 0 0 0 0 3832 6965
+Sousse | 0 0 1204 0 0 0 0 655 0 3649 0 1513 0 0 0 0 0 2903 9924
+Tunis | 1301 0 20430 8653 0 31572 11174 769 0 1598 0 10262 5869 0 0 0 0 42969 134597
+Bardo | 0 3345 0 0 0 0 0 0 0 0 0 8121 0 1167 0 28604 0 3274 44511
+La Goulette | 0 14330 82 0 26796 0 0 0 0 695 0 0 0 0 8424 0 912 1536 52775
+Porto-Farina | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 16833 17021 33854
+Pénitencier du Djougar | 0 0 0 0 0 0 0 0 0 0 88958 0 0 0 0 0 0 14456 103414
+Totaux | 1301 17675 22081 8653 26796 31572 23616 14855 1253 34792 88958 22786 5869 1167 10031 28604 17745 96293 454047
+
+@expenditure view=658 page=94 year=1926 split=personnel:659:95
+img: all
+# Two-page spread: designation and Nombre de journées de détention on p. 94 (f658), the money on p. 95 (f659).
+# From sgt1926 the columns are Personnel; Entretien des détenus: Nourriture, Dépenses diverses; Total; Prix de la
+# journée de détention (printed to 3 decimals); Produit du travail et produits divers versés au Trésor. No footnote.
+# The price column is blank under the Totaux line ('-'); the Totaux généraux line prints no days ('-').
+cols: days personnel food upkeep total price_per_day products
+Béja | 8823 19288.69 11734.68 8070.86 39094.23 4.431 9565.25
+Bizerte | 10769 18248.70 13694.17 6734.62 38677.49 3.591 5.00
+Gabès | 41730 28626.76 57573.52 17761.90 103962.18 2.491 5012.20
+Gafsa | 49688 25593.68 57684.78 18675.35 101953.81 2.051 9656.42
+Kairouan | 58381 23535.37 68960.56 20821.04 113316.97 1.940 21311.19
+Le Kef | 47382 31788.51 49693.34 14697.61 96180.46 2.029 7864.60
+Sfax | 49518 43035.53 56326.38 20586.24 119948.15 2.422 2909.66
+Sousse | 78265 50752.33 100005.56 27020.60 177778.49 2.271 5923.77
+Tunis | 455955 416237.47 473746.78 216025.70 1106009.95 2.425 7807.45
+Bardo | 48852 49473.22 49039.74 20181.50 118694.46 2.429 34536.41
+La Goulette | 20465 26891.52 20491.18 13040.37 60423.07 2.952 33586.32
+Porto-Farina | 111872 94350.02 104045.61 37249.24 235644.87 2.106 4343.21
+Pénitencier du Djougar | 151197 139865.83 100122.25 14335.05 254323.13 1.682 265.50
+Totaux | 1132897 967687.63 1163119.55 435200.08 2566007.26 2.264 -
+Géôles | 25655 0 60847.65 0 60847.65 - 0
+En Algérie | 38215 0 212043.75 0 212043.07 - 0
+Dans les Hôpitaux | 5135 0 24630 0 24630 - 0
+Chantiers extérieurs | 132947 0 0 0 0 - 84484.27
+Totaux généraux (Dépenses et Recettes)* | - 967687.63 1460640.95 435200.08 2863528.66 - 227271.25
+
+@movement_men view=660 page=96 year=1926 split=out_provisional:661:97
+img: all
+# e) Mouvement général d'entrée et de sortie. Effectif au 31 décembre 1926 des détenus (Hommes et jeunes
+# garçons); two-page spread, up to "par libération conditionnelle" on p. 96 (f660), from "par libération
+# provisoire" on p. 97 (f661). Sousse, d'autres prisons: printed "-343" (a stray dash before the figure).
+# Sousse, transférés dans d'autres prisons: middle digit stained (looks like 782); read 732, which gives both
+# the Sousse Total des sorties (1.804) and the column total (3.705).
+cols: start in_free in_other_prisons re_escape re_conditional re_provisional in_total out_sentence out_pardon out_conditional out_provisional out_acquittal out_administrative tr_central tr_correction tr_convict_depots tr_other_prisons tr_work_sites tr_various out_escaped out_died out_executed out_total end detention_days
+Béja | 23 121 44 0 0 3 168 69 0 0 46 0 0 0 0 0 45 0 0 2 0 0 162 29 8754
+Bizerte | 26 560 76 2 0 0 638 59 0 0 63 1 86 0 0 0 367 70 0 0 0 0 646 18 10674
+Gabès | 130 747 24 0 0 12 783 325 0 0 39 226 5 0 0 0 146 34 15 14 0 0 804 109 40848
+Gafsa | 91 790 34 8 0 0 832 379 0 0 0 265 39 0 0 0 99 17 0 7 2 0 808 115 49498
+Kairouan | 137 1187 4 0 0 0 1191 564 0 0 193 156 21 0 0 0 216 0 7 1 0 0 1158 170 57550
+Le Kef | 137 948 46 0 0 9 1003 371 0 0 198 46 42 0 0 0 284 50 23 1 2 0 1017 123 46610
+Sfax | 114 1540 217 7 0 10 1774 1025 0 0 208 98 27 0 0 0 398 0 0 4 0 0 1760 128 47713
+Sousse | 189 1443 343 14 0 70 1870 620 0 0 268 138 25 0 0 0 732 0 16 4 1 0 1804 255 76853
+Tunis | 1201 5263 1920 19 0 1 7203 2680 11 15 792 651 12 9 631 349 773 639 448 8 59 2 7079 1325 437930
+Le Bardo | 125 0 333 0 0 0 333 146 2 6 0 0 0 0 0 0 140 0 0 13 0 0 307 151 48852
+La Goulette | 156 0 339 0 0 0 339 332 1 0 1 0 0 0 0 0 53 0 0 17 0 0 404 91 20465
+Porto-Farina | 349 0 199 0 0 0 199 55 2 1 0 0 0 0 0 0 185 0 0 1 1 0 245 303 111872
+Pénitencier Agricole du Djebel Djougar | 416 0 718 0 0 0 718 380 3 7 0 0 0 0 0 0 267 0 0 33 4 0 694 440 151197
+Totaux | 3094 12599 4297 50 0 105 17051 7005 19 29 1808 1581 257 9 631 349 3705 810 509 105 69 2 16888 3257 1108816
+
+@movement_women view=660 page=96 year=1926 split=out_provisional:661:97
+img: all
+# f) the same for the women (Femmes et jeunes filles), lower half of the spread; only the nine prisons
+# holding women are printed.
+cols: start in_free in_other_prisons re_escape re_conditional re_provisional in_total out_sentence out_pardon out_conditional out_provisional out_acquittal out_administrative tr_central tr_correction tr_convict_depots tr_other_prisons tr_work_sites tr_various out_escaped out_died out_executed out_total end detention_days
+Béja | 1 4 0 0 0 0 4 1 0 0 3 0 0 0 0 0 1 0 0 0 0 0 5 0 69
+Bizerte | 2 12 0 0 0 0 12 0 0 0 3 0 5 0 0 0 6 0 0 0 0 0 14 0 95
+Gabès | 1 22 1 0 0 0 23 4 0 0 8 3 0 0 0 0 4 0 1 0 0 0 20 4 882
+Gafsa | 0 12 0 0 0 0 12 4 0 0 0 7 0 0 0 0 1 0 0 0 0 0 12 0 190
+Kairouan | 1 34 0 0 0 0 34 17 0 0 9 3 0 0 0 0 4 0 0 0 0 0 33 2 831
+Le Kef | 3 9 6 0 0 0 15 3 0 0 5 0 0 0 0 0 7 0 1 0 0 0 16 2 772
+Sfax | 6 80 4 0 0 1 85 53 0 0 7 14 0 0 0 0 9 0 0 0 0 0 83 8 1805
+Sousse | 6 29 13 0 0 2 44 8 0 0 8 4 0 0 0 0 22 0 2 0 0 0 44 6 1412
+Tunis | 50 160 19 0 4 1 184 82 2 0 49 23 0 0 0 0 5 0 27 0 0 0 188 46 18025
+Totaux | 70 362 43 0 4 4 413 172 2 0 92 54 5 0 0 0 59 0 31 0 0 0 415 68 24081
+
+@transfers view=662 page=98 year=1926
+img: all
+# g) Service des transfèrements (upper half of p. 98; all prisons, not only Tunis). Label = "destination //
+# observations".
+cols: transfers prisoners
+Prisons tunisiennes // Prévenus ou condamnés à toutes peines. | 728 3669
+Prisons algériennes // Appelants, mandats d'arrêt. | 26 95
+Maisons centrales // | 7 9
+Maisons de correction // | 23 631
+Dépôts de forçats : Algérie // | 18 50
+Dépôts de forçats : Tunisie // | 21 299
+Chantiers extérieurs // | 109 810
+Destinations diverses // Expulsés, évacués, etc. | 138 540
+Totaux | 1070 6103
+
+@deaths view=662 page=98 year=1926 heads="Tuberculose pulmonaire;Grippe;Pneumonie;Bronchite;Affection cardiaque;Cachexie;Typhus;Fièvre typhoïde;Paludisme;Syphilis;Dysenterie;Péritonite;Cancer;Urémie"
+img: all
+# h) État numérique des décès par prison et par maladie (lower half of p. 98). Tunis split into Infirmerie
+# centrale, Infirmerie de la prison, Hôpitaux.
+cols: tuberculose grippe pneumonie bronchite affection_cardiaque cachexie typhus fievre_typhoide paludisme syphilis dysenterie peritonite cancer uremie total
+Béja | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Bizerte | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Gabès | 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1
+Gafsa | 2 0 0 0 0 0 0 0 0 0 0 0 0 0 2
+Kairouan | 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1
+Le Kef | 1 0 0 0 0 0 0 0 0 0 0 1 0 0 2
+Sfax | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Sousse | 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1
+Tunis : Infirmerie centrale | 47 0 0 0 0 1 0 0 0 0 0 0 0 0 48
+Tunis : Infirmerie de la prison | 4 0 2 0 0 0 0 0 0 0 2 2 1 0 11
+Tunis : Hôpitaux | 0 0 0 0 0 0 0 0 0 1 0 1 1 0 3
+Le Bardo | 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Porto-Farina | 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1
+Pénitencier du Djougar | 0 0 0 1 0 0 0 0 3 0 0 0 0 0 4
+Totaux | 54 0 2 1 1 1 1 0 4 1 2 4 2 1 74
+
+@guard view=663 page=99 year=1926
+img: all
+# i) État comparatif du personnel de garde … (upper half of p. 99). The Totaux line is printed empty (no
+# totals); no column check is possible.
+cols: max_daily agents_french agents_indigenous wardresses
+Béja : Hommes | 40 1 1 0
+Béja : Femmes | 2 0 0 1
+Bizerte : Hommes | 98 1 1 0
+Bizerte : Femmes | 1 0 0 1
+Gabès : Hommes | 160 1 2 0
+Gabès : Femmes | 8 0 0 1
+Gafsa : Hommes | 191 1 2 0
+Gafsa : Femmes | 4 0 0 1
+Kairouan : Hommes | 223 1 2 0
+Kairouan : Femmes | 6 0 0 1
+Le Kef : Hommes | 187 2 2 0
+Le Kef : Femmes | 6 0 0 1
+Sfax : Hommes | 181 2 3 0
+Sfax : Femmes | 12 0 0 1
+Sousse : Hommes | 276 3 3 0
+Sousse : Femmes | 8 0 0 1
+Tunis : Hommes | 1373 29 20 0
+Tunis : Femmes | 60 0 0 2
+Le Bardo : Hommes | 168 2 5 0
+La Goulette : Hommes | 235 1 4 0
+Porto-Farina : Hommes | 376 7 6 0
+Pénitencier agricole du Djougar : Hommes | 533 16 0 0

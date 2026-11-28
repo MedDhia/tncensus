@@ -1,0 +1,56 @@
+# Table e) "Naturalisations accordées (1891-1922)", 1922 edition (sgt1922),
+# volume bpt6k9105649x, views 44-45 (printed pp. 20-21). Transcribed from the
+# native-resolution images (hires.py) for the cell-by-cell comparison with
+# csv/naturalisations_by_nationality_sgt1930.csv (compare_naturalisations_e.py).
+# Comparison printing only: no data file is built from it.
+#
+# Format (same as naturalisations_by_nationality.txt, plus "?" and "=="):
+#   "@ <edition> <views> <pages>"  starts the table (comma-separated lists).
+#   "cols | ..."   one token per printed column: <period>/<legal basis>/<age>@<view>;
+#                  age T = total, M = majeurs (adults), m = mineurs (minors).
+#                  Legal bases: d1887 décret du 29 juillet 1887, d1899 décret du
+#                  28 février 1899, d1910 décret du 3 octobre 1910, l1914 loi du
+#                  5 août 1914, l1923 loi du 20 décembre 1923.
+#   "<row label> | v v v ..."  row label as printed, one value per column.
+#                  "»" = 0; "?" = not visible (inside the binding); "-" = blank cell.
+#   "= TOTAUX | ..."  the printed column totals.
+#   "== | <period>/<basis>=<n> ..."  the printed majeurs+mineurs totals under each
+#                  pair of columns.
+#
+# Layout of this printing: one pair of columns per year, 1911-1922 under the 1910
+# decree and 1915-1922 under the 1914 law (no grouped 1911-1920 column). 22 rows;
+# the Muslims are split into Marocains, Algériens, Tunisiens and Soudanais; there
+# is no Serbes, Tchéco-Slovaques, Hongrois, Albanais, Israélites algériens,
+# Indigènes catholiques or Divers row; "Turcs" (not "Turcs et Syriens").
+#
+# Binding: the 1915 minors column (decree of 1910) is entirely in the gutter,
+# in neither view, including its total; the pair total (17) and the visible
+# adults total (7) give a column total of 10. The 1915 adults column is visible
+# on view 44 and again at the left edge of view 45.
+
+@ sgt1922 44,45 20,21
+cols | 1891-1898/d1887/T@44 1899-1910/d1899/M@44 1899-1910/d1899/m@44 1911/d1910/M@44 1911/d1910/m@44 1912/d1910/M@44 1912/d1910/m@44 1913/d1910/M@44 1913/d1910/m@44 1914/d1910/M@44 1914/d1910/m@44 1915/d1910/M@44 1915/d1910/m@44 1916/d1910/M@45 1916/d1910/m@45 1917/d1910/M@45 1917/d1910/m@45 1918/d1910/M@45 1918/d1910/m@45 1919/d1910/M@45 1919/d1910/m@45 1920/d1910/M@45 1920/d1910/m@45 1921/d1910/M@45 1921/d1910/m@45 1922/d1910/M@45 1922/d1910/m@45 1915/l1914/M@45 1915/l1914/m@45 1916/l1914/M@45 1916/l1914/m@45 1917/l1914/M@45 1917/l1914/m@45 1918/l1914/M@45 1918/l1914/m@45 1919/l1914/M@45 1919/l1914/m@45 1920/l1914/M@45 1920/l1914/m@45 1921/l1914/M@45 1921/l1914/m@45 1922/l1914/M@45 1922/l1914/m@45
+Italiens | 142 436 445 92 107 51 77 31 42 19 37 » ? 1 » » » 2 3 7 18 2 » 26 32 151 234 19 10 34 23 3 1 4 » 3 » 23 19 4 1 7 »
+Anglo-Maltais | 42 107 118 10 2 21 17 20 19 8 4 2 ? 4 4 » » » » » » 7 3 3 2 16 20 3 » 12 9 5 4 3 » 1 » 7 6 2 » 2 1
+Suisses | 18 21 15 » » 3 7 » » 1 1 2 ? » » » » » » » » » » » » » » » » 3 » » » 2 » » » » » » » » »
+Allemands | 28 22 8 5 3 » » 2 1 » » » ? » » » » 1 » » » » » » » » » » » » » » » » » 1 » » » » » 1 »
+Autrichiens | 10 22 22 » » » » 2 » » » » ? » » » » » » » » » » » » » » » » » » » » » » » » » » » » » »
+Espagnols | 3 19 8 2 » » » » » 1 » » ? » » » » » » » » 1 » » » » » 2 » » » » » » » » » » » » » » »
+Grecs | 20 6 2 3 4 4 1 » » » » » ? » » » » » » » » 1 » » » 1 » 1 » 1 » » » » » » » » » » » » »
+Hollandais | 2 4 5 » » » » » » » » » ? » » » » » » » » » » 2 » » » » » » » » » » » » » » » » » » »
+Portugais | » 3 » » » » » » » » » 1 ? » » » » » » » » » » » » » » 2 4 » » » » » » » » » » » » » »
+Belges | 6 1 » » » » » » » » » » ? » » » » » » » » » » » » » » » » » » » » » » » » » » » » » »
+Norvégiens | » 2 2 » » » » » » » » » ? » » » » » » » » » » » » » » » » » » » » » » » » » » » » » »
+Bulgares | » 2 » » » » » » » » » » ? » » » » » » » » » » » » » » » » » » » » » » » » » » » » » »
+Roumains | » » » » » » » » » » » » ? » » » » » » » » » » » » » » » » 1 » » » » » » » » » » » » »
+Turcs | » 8 3 1 » 12 16 1 » » » » ? » » » » » » » » » » » » 6 2 » » » » » » » » » » » » » » » »
+Polonais | » » » » » » » » » » » » ? » » » » » » » » » » » » » » » » » » » » » » » » » » » » 1 »
+Musulmans Marocains | 3 3 2 » » » » » » » » » ? » » » » » » » » » » » » » » » » » » » » » » » » » » » » » »
+Musulmans Algériens | 2 5 » 4 4 » » 2 1 2 3 » ? » » » » » » » » » » » » 5 7 » » 1 » » » » » » » 1 » » » » »
+Musulmans Tunisiens | 17 71 9 2 5 » » » » » » » ? 1 » » » 1 » » » 12 1 2 4 14 7 2 » 8 » 3 » 5 2 5 » 2 » 4 » 3 3
+Musulmans Soudanais | 1 » » » » » » » » » » » ? » » » » » » » » » » » » » » » » » » » » » » » » » » » » » »
+Luxembourgeois | 2 » » » » » » » » » » » ? » » » » » » » » » » » » » » » » » » » » » » » » » » » » » »
+Russes | » 1 » » » » » » » » » » ? » » » » » » » » 1 » » » 1 » » » » » » » » » » » » » » » 2 »
+Israélites tunisiens | » » » 10 10 11 22 5 13 9 13 2 ? » » » » » » 5 3 8 1 4 2 14 13 14 8 27 8 23 6 3 3 13 » 9 2 3 » 2 »
+= TOTAUX | 296 733 639 129 135 102 140 63 76 40 58 7 ? 6 4 » » 4 3 12 21 32 5 37 40 208 283 43 22 87 40 34 11 17 5 23 » 42 27 13 1 18 4
+== | 1899-1910/d1899=1372 1911/d1910=264 1912/d1910=242 1913/d1910=139 1914/d1910=98 1915/d1910=17 1916/d1910=10 1917/d1910=» 1918/d1910=7 1919/d1910=33 1920/d1910=37 1921/d1910=77 1922/d1910=491 1915/l1914=65 1916/l1914=127 1917/l1914=45 1918/l1914=22 1919/l1914=23 1920/l1914=69 1921/l1914=14 1922/l1914=22

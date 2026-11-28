@@ -1,0 +1,536 @@
+# Institutions d'enseignement et de recherches (chapitre XII), sgt1935 (volume bpt6k9105653t, views 155-184:
+# f155 chapter title, f156-f165 institutions, f166-f183 relevé pluviométrique 1935, f184 blank; f185 = chapter XIII
+# Commerce et navigation). Format: see yb_tables.py; item sections: '<label as printed> {unit} | value' (the unit in
+# braces, ditto marks resolved). Every cell read on native-resolution crops of the page images.
+
+# INSTITUT PASTEUR. a) Budget. f156 (p. 136). Francs.
+@pasteur_budget view=156 page=136 year=1935 side=receipts
+img: all
+cols: value
+Subventions de l'Etat {francs} | 1070000
+Subventions particulières {francs} | 4200
+Ventes de produits médicaux {francs} | 538779.82
+Vente de produits vétérinaires {francs} | 34974.05
+Recettes exceptionnelles {francs} | 0
+Total des recettes {francs} | 1647953.87
+
+@pasteur_budget view=156 page=136 year=1935 side=expenditure
+img: all
+cols: value
+Personnel {francs} | 766978.78
+Personnel subalterne {francs} | 202328.50
+Fonctionnement des Services {francs} | 557859.41
+Total des dépenses {francs} | 1427166.69
+
+# b) Travaux de l'Institut. f156 (p. 136). The analyses printed are "les principales" of the 55.361 (no check).
+# The headings jump from 2° to 4° (Analyses chimiques) as printed.
+@pasteur_work view=156 page=136 year=1935 service="Service antirabique"
+img: all
+cols: value
+Nombre total des personnes traitées : Mordues en Tunisie {persons} | 1074
+Nombre total des personnes traitées : Mordues en Algérie {persons} | 163
+Total Nombre total des personnes traitées {persons} | 1237
+
+@pasteur_work view=156 page=136 year=1935 service="Service des analyses"
+img: all
+cols: value
+Nombre total des analyses pratiquées {analyses} | 55361
+1° Analyses microbiologiques : Analyses d'eaux {analyses} | 1298
+1° Analyses microbiologiques : Examens de crachats pour la recherche du bacille tuberculeux {analyses} | 909
+1° Analyses microbiologiques : Examens de fausses membranes pour la recherche du bacille diphtérique {analyses} | 531
+1° Analyses microbiologiques : Examens de sang sur lames (hématozoaires du paludisme, spirilles de la fièvre récurrente) {analyses} | 702
+1° Analyses microbiologiques : Sérodiagnostics des fièvres typhoïde et paratyphoïdes, de la fièvre méditerranéenne chez l'homme {analyses} | 8059
+1° Analyses microbiologiques : Réactions de fixation pour le diagnostic de la syphilis {analyses} | 23416
+1° Analyses microbiologiques : Diagnostics par inoculation ou autopsie des animaux {analyses} | 86
+1° Analyses microbiologiques : Recherche du gonocoque dans le pus uréthral ou vaginal {analyses} | 1446
+1° Analyses microbiologiques : Hémocultures chez l'homme {analyses} | 167
+1° Analyses microbiologiques : Recherche de l'amibe dysentérique {analyses} | 241
+1° Analyses microbiologiques : Recherche du bacille dysentérique {analyses} | 29
+1° Analyses microbiologiques : Liquides pleuraux et péritonéaux, pus divers {analyses} | 102
+1° Analyses microbiologiques : Diagnostic du kala-azar par ponctions de la rate {analyses} | 5
+1° Analyses microbiologiques : Analyses de vins {analyses} | 21
+2° Analyses histologiques : Tumeurs {analyses} | 79
+2° Analyses histologiques : Sang {analyses} | 400
+4° Analyses chimiques : Urines {analyses} | 1211
+4° Analyses chimiques : Lait {analyses} | 22
+4° Analyses chimiques : Urée dans le sang {analyses} | 637
+4° Analyses chimiques : Eaux {analyses} | 11
+
+@pasteur_work view=156 page=136 year=1935 service="Centre vaccinogène"
+img: all
+cols: value
+Vaccin antivariolique, doses préparées et distribuées {doses} | 793895
+
+@pasteur_work view=156 page=136 year=1935 service="Service des vaccins microbiens"
+img: all
+cols: value
+Nombre de doses distribuées : Vaccin antigonococcique {doses} | 5355
+Nombre de doses distribuées : Vaccin antistaphylococcique {doses} | 9397
+Nombre de doses distribuées : Vaccin anticoquelucheux {doses} | 7499
+Nombre de doses distribuées : Vaccin antityphoïdique curatif {doses} | 18
+Nombre de doses distribuées : Vaccin antityphoïdique préventif {doses} | 15783
+Nombre de doses distribuées : Vaccin antiméditerranéen curatif nos 1 et 2 {doses} | 35
+Nombre de doses distribuées : Vaccin antipesteux {doses} | 8549
+Nombre de doses distribuées : Vaccin antistreptobacillaire {doses} | 1547
+Autovaccin (nombre d'échantillons) {samples} | 79
+Filtrat pour intradermoréaction de la fièvre méditerranéenne (nombre de c.c.) {cc} | 341
+
+@pasteur_work view=156 page=136 year=1935 service="Produits divers non préparés à l'Institut"
+img: all
+cols: value
+Sérum antidiphtérique ordinaire (flacons de 10 c.c.) {flacons} | 2492
+Sérum antidiphtérique purifié à 5.000 unités {flacons} | 789
+Sérum antidiphtérique purifié à 1.000 unités {flacons} | 81
+Sérum antitétanique ordinaire {flacons} | 2324
+Sérum antitétanique à 5.000 unités {flacons} | 32
+Sérum antitétanique à 1.500 unités {flacons} | 94
+Sérum antistreptococcique {flacons} | 620
+Sérum antivenimeux {flacons} | 782
+Sérum antidysentérique {flacons} | 348
+Sérum antiméningococcique {flacons} | 707
+Sérum antipneumococcique {flacons} | 177
+Sérum antigangréneux {flacons} | 1211
+Sérum antipesteux {flacons} | 775
+Tuberculine brute pour usage médical (solution mère c.c.) {cc} | 105
+Vaccin antidiphtérique (ampoules) {ampoules} | 363
+Vaccin antidiphtérique 10 cc. {ampoules} | 342
+Vaccin antitétanique (10 cc.) {ampoules} | 150
+
+@pasteur_work view=156 page=136 year=1935 service="Service des fermentations"
+img: all
+cols: value
+Levures sélectionnées pour la vinification (litres) {litres} | 1369
+
+# c) Service vétérinaire. f157 (p. 137). Units printed in a column beside the figures ('—' = ditto, resolved).
+@pasteur_work view=157 page=137 year=1935 service="Service vétérinaire"
+img: all
+cols: value
+Vaccin anticlaveleux : Tunisie {doses} | 23054
+Vaccin anticlaveleux : Exportation {doses} | 9510
+Total Vaccin anticlaveleux {doses} | 32564
+Vaccin contre le charbon bactéridien {doses} | 6140
+Vaccin contre le charbon symptomatique {doses} | 1590
+Vaccin antirabique préventif {doses} | 243
+Vaccin antirabique curatif {doses} | 14
+Vaccin antirabique d'entretien {doses} | 128
+Vaccin contre la typhose {doses} | 50
+Vaccin contre la diphtérie aviaire {doses} | 4720
+Sérum anticlaveleux (flacons de 10 c.c.) {flacons} | 38
+Sérum contre le charbon symptomatique (c.c.) {cc} | 150
+Sérum antigangréneux (flacons de 20 c.c.) {flacons} | 4
+Sérum antitétanique (flacons de 10 c.c.) {flacons} | 191
+Sérum antistreptococcique (flacons de 10 c.c.) {flacons} | 53
+Sérum polyvalent de Leclainche et Vallée (c.c.) {cc} | 70
+Tuberculine diluée au 1/4 pour intradermoréaction : Tubes de 1 dose {tubes} | 357
+Tuberculine diluée au 1/4 pour intradermoréaction : Tubes de 5 doses {tubes} | 270
+Tuberculine diluée au 1/10 pour usage hypodermique : Tubes de 1 dose {tubes} | 29
+Tuberculine diluée au 1/10 pour usage hypodermique : Tubes de 5 doses {tubes} | 35
+Malléine diluée au 1/4 pour intradermoréaction : Tubes de 1 dose {tubes} | 254
+Tuberculine aviaire {tubes} | 100
+Anatoxine tétanique (boîtes de 2 ampoules) {tubes} | 18
+Vaccin contre la maladie du jeune âge des chiens {tubes} | 10
+Virus pour la destruction des rats (flacons de 60 c.c.) {flacons} | 42
+
+# INSTITUT ARLOING. Analyses microbiologiques en vue des diagnostics. f158 (p. 138). Counts of analyses.
+@arloing view=158 page=138 year=1935 group="Maladies des équidés"
+img: all
+cols: value
+Avortement contagieux {analyses} | 1
+Piroplasmose {analyses} | 1
+Salmonellose {analyses} | 1
+Pasteurellose {analyses} | 1
+Pneumonie par B. de Schmorl {analyses} | 1
+Parasites intestinaux {analyses} | 3
+Teigne {analyses} | 1
+
+@arloing view=158 page=138 year=1935 group="Maladies des bovidés"
+img: all
+cols: value
+Brucelloses {analyses} | 107
+Charbon bactéridien {analyses} | 1
+Charbon symptomatique {analyses} | 2
+Entérite paratuberculeuse {analyses} | 74
+Fièvre aphteuse {analyses} | 2
+Actinomycose {analyses} | 1
+Pasteurellose {analyses} | 4
+Mammite {analyses} | 3
+Septicémie {analyses} | 1
+Echinococcose {analyses} | 1
+Parasites intestinaux {analyses} | 6
+Parasites externes (teigne) {analyses} | 2
+Piroplasmoses : piroplas. vraie {analyses} | 1
+Piroplasmoses : anaplasmose {analyses} | 29
+Piroplasmoses : babésiellose {analyses} | 13
+Piroplasmoses : theilériose {analyses} | 94
+Tuberculose {analyses} | 1
+
+@arloing view=158 page=138 year=1935 group="Maladies des camelidés"
+img: all
+cols: value
+Charbon bactéridien {analyses} | 1
+Pasteurellose {analyses} | 1
+
+@arloing view=158 page=138 year=1935 group="Maladies des ovins et des caprins"
+img: all
+cols: value
+Clavelée {analyses} | 1
+Pasteurellose {analyses} | 2
+Piroplasmoses : anaplasmose {analyses} | 3
+Piroplasmoses : babésiellose {analyses} | 3
+Stomatite ulcéreuse chez caprins {analyses} | 20
+Mammite {analyses} | 1
+Muguet {analyses} | 1
+Maladie à suppuration (pyocyanique) {analyses} | 1
+Echinococcose {analyses} | 2
+Pneumonie {analyses} | 3
+Parasites intestinaux {analyses} | 44
+Parasites extérieurs (gale) {analyses} | 11
+Intoxication alimentaire {analyses} | 3
+Ecthyma contagieux {analyses} | 20
+
+@arloing view=158 page=138 year=1935 group="Maladie des porcins"
+img: all
+cols: value
+Pasteurellose {analyses} | 18
+Bronchite vermineuse {analyses} | 1
+Parasites intestinaux {analyses} | 13
+
+@arloing view=158 page=138 year=1935 group="Maladies des chiens et des chats"
+img: all
+cols: value
+Maladie du jeune âge {analyses} | 1
+Piroplasmose {analyses} | 6
+Spiroptérose {analyses} | 1
+Leishmaniose {analyses} | 5
+Rage {analyses} | 3
+Parasites intestinaux {analyses} | 2
+Parasites externes (gale) {analyses} | 3
+Eczéma {analyses} | 3
+Catarrhe auriculaire {analyses} | 1
+Purpura hémorragique {analyses} | 1
+Pneumonie (par B. de Schmorl) {analyses} | 2
+
+@arloing view=158 page=138 year=1935 group="Maladies des lapins"
+img: all
+cols: value
+Pasteurellose {analyses} | 2
+Pseudo-tuberculose {analyses} | 2
+Maladies à suppuration (Schmorl) {analyses} | 2
+Coccidiose : hépatique {analyses} | 18
+Coccidiose : intestinale {analyses} | 22
+Cysticercose {analyses} | 6
+Intoxication alimentaire {analyses} | 4
+
+@arloing view=158 page=138 year=1935 group="Maladies des volailles"
+img: all
+cols: value
+Choléra {analyses} | 1
+Typhose {analyses} | 44
+Diarrhée blanche ou Pullorose {analyses} | 30
+Piroplasmose {analyses} | 3
+Spirochétose {analyses} | 23
+Parasites intestinaux {analyses} | 17
+Streptotrichose {analyses} | 2
+Variolo-diphtérie {analyses} | 33
+Tumeurs {analyses} | 6
+Goutte {analyses} | 1
+Pneumonie (par B. de Schmorl) {analyses} | 2
+Avitaminose {analyses} | 1
+
+@arloing view=158 page=138 year=1935 group="Maladies diverses"
+img: all
+cols: value
+Maladies diverses {analyses} | 72
+
+@arloing view=158 page=138 year=1935 group="Analyses chimiques"
+img: all
+cols: value
+(fourrages, graines, résidus industriels, aliments divers, etc.) {analyses} | 51
+
+@arloing view=158 page=138 year=1935 group="Analyses de laines"
+img: all
+cols: value
+Analyses de laines {analyses} | 86
+
+@arloing view=158 page=138 year=1935 group="Autos-vaccins préparés à l'Institut Arloing pour l'expérimentation"
+img: all
+cols: value
+Pour la pasteurellose porcine {doses} | 800
+Pour la pasteurellose ovine {doses} | 600
+Pour la typhose aviaire {doses} | 560
+Pour la diphtérie aviaire {doses} | 500
+Pour la mammite à staphilocoque {doses} | 50
+Pour la septicémie à staphilocoque {doses} | 50
+Pour la fièvre aphteuse {doses} | 175
+
+# ÉCOLE COLONIALE D'AGRICULTURE. a) Lieu d'origine des élèves entrés à l'École (1899-1935). f159 (p. 139).
+# Footnote (1) on 1919: École fermée durant la guerre 1914-1918.
+@school_origin view=159 page=139 years=1899-1935
+img: all
+cols: france tunisia algeria colonies abroad total
+1899 | 30 1 1 0 1 33
+1900 | 32 2 6 0 0 40
+1901 | 24 2 4 2 0 32
+1902 | 28 1 2 0 0 31
+1903 | 25 0 0 0 2 27
+1904 | 26 1 5 1 0 33
+1905 | 18 0 2 1 0 21
+1906 | 16 0 0 1 1 18
+1907 | 12 0 0 1 4 17
+1908 | 8 3 2 1 2 16
+1909 | 30 2 3 1 4 40
+1910 | 29 2 0 1 0 32
+1911 | 33 6 1 4 1 45
+1912 | 20 5 2 3 8 38
+1913 | 34 7 4 2 3 50
+1919 | 50 15 2 0 0 67
+1920 | 46 15 2 0 1 64
+1921 | 50 11 2 3 0 66
+1922 | 46 7 1 0 4 58
+1923 | 50 4 3 0 3 60
+1924 | 37 17 0 0 3 57
+1925 | 35 11 0 0 3 49
+1926 | 32 18 1 0 0 51
+1927 | 27 14 2 0 3 46
+1928 | 27 18 0 0 1 46
+1929 | 32 15 0 0 0 47
+1930 | 23 18 1 3 0 45
+1931 | 18 1 1 1 0 37
+1932 | 19 8 1 1 1 30
+1933 | 9 12 1 0 0 22
+1934 | 13 8 2 2 0 25
+1935 | 14 9 2 1 0 26
+Totaux | 883 249 53 27 45 1269
+
+# b) Promotions (1898-1935). f160 (p. 140). Footnotes: (1) 16e promotion 1914-1920, études interrompues par la
+# guerre; (2) certificat d'études of the 30e and 31e promotions: promotions en cours d'études (stored '-').
+@school_promotions view=160 page=140 year=1935
+img: all
+cols: year1 year2 dipl_eng dipl_school certificate
+1 1898-1900 | 33 33 24 8 1
+2 1899-1901 | 33 26 14 10 0
+3 1900-1902 | 40 31 18 10 3
+4 1901-1903 | 32 24 17 5 1
+5 1902-1904 | 31 20 8 9 0
+6 1903-1905 | 27 18 13 5 0
+7 1904-1906 | 33 27 11 10 6
+8 1905-1907 | 21 21 14 4 2
+9 1906-1908 | 18 14 9 2 1
+10 1907-1909 | 17 14 11 3 0
+11 1908-1910 | 16 16 10 6 0
+12 1909-1911 | 40 39 29 8 2
+13 1910-1912 | 32 30 12 13 3
+14 1911-1913 | 45 40 27 9 1
+15 1912-1914 | 38 33 19 13 0
+16 1914-1920 | 50 16 16 0 0
+17 1919-1921 | 67 47 32 41 0
+18 1920-1922 | 64 49 36 12 1
+19 1921-1923 | 66 56 40 16 0
+20 1922-1924 | 58 43 31 11 0
+21 1923-1925 | 60 51 31 20 0
+22 1924-1926 | 57 49 40 8 0
+23 1925-1927 | 49 47 33 12 1
+24 1926-1928 | 51 38 27 10 1
+25 1927-1929 | 46 47 37 6 0
+26 1928-1930 | 46 41 26 13 1
+27 1929-1931 | 47 37 23 8 1
+28 1930-1932 | 45 43 31 11 1
+29 1931-1933 | 37 36 27 8 1
+30 1932-1934 | 30 29 26 3 -
+31 1933-1935 | 22 20 19 1 -
+32 1934-1936 | 25 25 0 0 0
+33 1935-1937 | 26 0 0 0 0
+Totaux | 1302 1060 711 268 26
+
+# c) Effectif par année scolaire (1898-1935). f161 (p. 141). No total printed under TOTAUX.
+@school_enrolment view=161 page=141 year=1935
+img: all
+cols: year1 year2 auditors total
+1898-1899 | 33 0 0 33
+1899-1900 | 33 33 6 72
+1900-1901 | 40 26 6 72
+1901-1902 | 32 31 7 70
+1902-1903 | 31 24 9 64
+1903-1904 | 27 20 4 51
+1904-1905 | 33 18 5 56
+1905-1906 | 21 27 1 49
+1906-1907 | 18 21 1 40
+1907-1908 | 17 14 2 33
+1908-1909 | 16 14 0 30
+1909-1910 | 40 16 1 57
+1910-1911 | 32 39 7 78
+1911-1912 | 45 30 6 81
+1912-1913 | 38 40 2 80
+1913-1914 | 50 33 12 95
+1919-1920 | 67 16 28 111
+1920-1921 | 64 47 16 127
+1921-1922 | 66 49 8 123
+1922-1923 | 58 56 12 126
+1923-1924 | 60 43 11 114
+1924-1925 | 57 59 8 124
+1925-1926 | 49 49 10 108
+1926-1927 | 51 47 10 108
+1927-1928 | 46 38 9 93
+1928-1929 | 46 47 8 101
+1929-1930 | 47 41 12 100
+1930-1931 | 45 37 16 98
+1931-1932 | 37 43 14 94
+1932-1933 | 30 36 8 74
+1933-1934 | 22 29 8 59
+1934-1935 | 25 21 3 49
+1935-1936 | 26 25 7 58
+Totaux | 1302 1061 262 -
+
+# SERVICE BOTANIQUE ET AGRONOMIQUE. a) Semences pédigrées produites par le Service (1910-1935). f162 (p. 142).
+# Columns: Moyenne 1910-1930 (m1910_1930, not stored: its years are printed in earlier editions only), 1931-1935,
+# Moyenne 1931-1935 (heading misprinted "1931-1335"; check only).
+@bot_seeds view=162 page=142 years=1931-1935 part=seeds
+img: all
+cols: m1910_1930 1931 1932 1933 1934 1935 m1931_1935
+Blés tendres de force {quintals} | 4.3 94 161 102 188 208 150.6
+Blés tendres boulangers {quintals} | 80.2 109 115 54 76 27 76.2
+Blés durs {quintals} | 72.2 155 142 41 54 111 100.1
+Orges {quintals} | 56.3 13 51 22 36 33 31.0
+Avoines {quintals} | 72.9 18 56 39 70 60 48.6
+
+@bot_seeds view=162 page=142 years=1931-1935 part=controlled
+img: all
+cols: m1910_1930 1931 1932 1933 1934 1935 m1931_1935
+Nombre de producteurs {producers} | 19 18 21 14 9 6 14
+Blés tendres de force (Ha.) {hectares} | 153.4 98 150 142 90 46 105.2
+Blés tendres boulangers (Ha.) {hectares} | 339.6 379 376 350 101 3 241.8
+Blés durs (Ha.) {hectares} | 486.2 593 646 441 511 416 521.4
+Total (Ha.) {hectares} | 979.2 1070 1172 933 702 471 868.4
+
+@bot_seeds view=162 page=142 years=1931-1935 part=analyses
+img: all
+cols: m1910_1930 1931 1932 1933 1934 1935 m1931_1935
+Analyses pour le public {analyses} | 0 0 0 212 1634 1978 -
+
+# b) Ventes d'arbres et de plantes diverses (1930-1935). f163 (p. 143). Seasons 1930-31 .. 1934-35, plants (p) and
+# greffons (g). Then cumulative deliveries (stored with season = the period as printed) and the "arbres, arbustes
+# et plantes diverses" (50 espèces ou variétés), plants per season.
+@bot_trees view=163 page=143 seasons=1930-31,1931-32,1932-33,1933-34,1934-35
+img: all
+cols: 1931p 1931g 1932p 1932g 1933p 1933g 1934p 1934g 1935p 1935g
+Abricotier | 237 55 408 0 1082 0 592 350 305 250
+Amandier | 197 5 469 0 677 0 433 300 202 250
+Brugnon | 0 15 0 0 0 0 0 0 0 0
+Caroubier | 132 0 0 0 0 0 0 0 0 0
+Cédratier | 0 0 0 0 0 0 0 0 0 0
+Citronnier | 0 0 0 0 0 0 0 0 0 0
+Cognassier | 0 0 35 0 53 0 129 0 94 0
+Figuier | 638 0 525 0 354 0 396 100 629 0
+Grenadier | 0 0 0 0 5 0 0 0 20 0
+Mandarinier | 0 0 0 0 0 0 0 0 0 0
+Néflier | 0 0 792 0 171 0 371 0 449 0
+Olivier | 551 10 569 0 331 0 248 0 309 0
+Oranger | 0 20 0 0 0 0 0 0 0 0
+Pêcher | 959 120 681 0 820 0 770 350 791 400
+Pistachier | 0 0 0 0 0 0 0 0 0 0
+Poirier | 935 10 723 0 524 0 843 200 416 150
+Pommier | 855 10 687 0 406 0 851 180 220 200
+Prunier | 804 64 770 0 657 0 622 350 532 250
+Total | 5306 309 5659 0 5080 0 5255 1830 3967 1500
+
+@bot_trees_cum view=163 page=143 group=fruit
+img: all
+cols: plants grafts
+Livraisons de 1930-1931 à 1934-1935 | 25067 7196
+Livraisons antérieures (de 1893 à 1929-1930) | 417239 197457
+Total général | 442306 204653
+
+@bot_trees_other view=163 page=143 seasons=1930-31,1931-32,1932-33,1933-34,1934-35
+img: all
+cols: 1931p 1932p 1933p 1934p 1935p
+50 espèces ou variétés | 57662 58606 63394 46450 39000
+
+@bot_trees_cum view=163 page=143 group=other
+img: all
+cols: plants
+Livraisons de 1930-1931 à 1934-1935 | 265112
+Livraisons antérieures (de 1893 à 1929-1930) | 2858273
+Total général | 3123385
+
+# LABORATOIRE DE CHIMIE (TUNIS). Analyses effectuées en 1935. f164 (p. 144). Columns: Douanes; Répression des
+# fraudes, échantillons reconnus bons / suspects; Contributions indirectes, bons / suspects; Autres administrations;
+# Études et recherches; Analyses payantes pour le public; Totaux par catégories. Footnote line: Nombre de dosages :
+# 12.275.
+@chemlab view=164 page=144 year=1935 lab=Tunis
+img: all
+cols: customs fraud_good fraud_suspect indirect_good indirect_suspect other_admin studies public total
+Alcools et dénaturants | 5 0 0 241 0 0 12 8 266
+Cafés et thés | 0 39 53 0 0 0 7 0 99
+Calcaires, chaux, ciments et mortiers | 18 0 0 0 0 0 0 0 18
+Céréales et graines diverses | 63 0 0 0 0 0 0 0 63
+Combustibles | 0 0 0 0 0 0 0 17 17
+Conserves alimentaires | 150 24 70 0 0 1 42 23 310
+Couleurs | 80 0 0 0 0 3 0 8 91
+Divers pour expertises assurances maritimes | 0 0 0 0 0 0 0 44 44
+Eaux | 0 0 0 0 0 10 0 23 33
+Eaux de Javel | 0 0 10 0 0 0 0 1 11
+Engrais | 5 0 0 0 0 0 0 12 17
+Epices | 16 3 2 0 0 0 1 0 22
+Farines et farineux alimentaires | 125 76 3 22 0 4 40 8 278
+Goudrons, huiles de goudron | 21 0 0 0 0 0 0 0 21
+Grignons, huiles de grignons | 136 0 0 0 0 0 10 103 249
+Huiles minérales | 17 0 0 0 0 7 0 12 36
+Huiles d'olive | 695 33 54 0 0 0 30 10 822
+Huiles autres | 45 1 0 0 0 0 0 2 48
+Laits, laits condensés | 92 42 90 0 0 0 89 13 326
+Minerais et métaux | 5 0 0 0 0 0 0 0 5
+Mouts mutés | 223 28 1 2 0 0 10 23 287
+Parfums, extraits alcooliques | 8 2 3 0 0 0 0 1 14
+Pétroles, mazouts, essences | 264 0 1 5 0 1 0 13 284
+Produits alimentaires divers | 17 4 1 0 0 1 0 16 39
+Produits chimiques | 26 0 0 0 0 2 0 5 33
+Produits pharmaceutiques | 21 0 0 0 0 1 0 3 25
+Produits divers autres | 76 1 0 3 0 2 0 25 107
+Savons, lessives | 17 0 0 0 0 3 0 3 23
+Sels | 0 0 0 0 0 0 0 2 2
+Sirops | 0 10 1 0 0 0 10 5 26
+Sons, aliments pour le bétail | 4 1 0 0 0 0 0 0 5
+Soufre, produits anticryptogamiques | 1 13 9 0 0 1 0 9 33
+Spiritueux et liqueurs | 28 2 2 26 0 0 0 2 60
+Sucres, miels, confiseries, confitures | 40 6 0 0 0 0 0 4 50
+Terres | 0 0 0 0 0 12 0 10 22
+Tissus | 21 0 0 0 0 16 0 4 41
+Urines, analyses médicales | 0 0 0 0 0 0 7 0 7
+Vins, boissons alcooliques | 3031 12 11 64 0 18 168 341 3645
+Vinaigres | 1 3 8 9 0 0 0 0 21
+Totaux par service | 5251 300 319 372 0 82 426 750 7500
+
+# LABORATOIRE DE CHIMIE (SFAX). Analyses effectuées en 1935. f165 (p. 145). No Contributions indirectes columns.
+@chemlab view=165 page=145 year=1935 lab=Sfax
+img: all
+cols: customs fraud_good fraud_suspect other_admin studies public total
+Alcools | 4 0 0 0 0 0 4
+Beurres, fromages | 0 3 2 0 0 0 5
+Cafés | 0 9 8 0 12 0 29
+Calcaires, chaux, ciments, mortiers | 1 0 0 0 0 0 1
+Combustibles | 1 0 0 0 0 2 3
+Conserves alimentaires | 8 11 5 0 0 2 26
+Couleurs | 5 0 0 0 0 0 5
+Eaux | 0 0 0 0 0 2 2
+Eaux de Javel | 1 3 5 0 3 2 14
+Engrais, phosphates | 6 0 0 0 0 12 18
+Epices | 1 0 0 0 0 0 1
+Farines | 7 14 3 0 12 0 36
+Goudrons, huiles de goudron | 3 0 0 0 0 0 3
+Grignons, huiles de grignons | 0 0 0 0 30 6 36
+Huiles d'olive | 1492 8 4 0 205 12 1721
+Céréales, graines | 3 0 1 0 0 0 4
+Laits, laits condensés | 5 1 1 0 0 0 7
+Lessives | 2 0 0 0 0 0 2
+Olives | 0 0 0 0 172 0 172
+Pains | 0 9 1 0 0 0 10
+Produits alimentaires autres | 2 0 0 0 0 0 2
+Produits chimiques | 5 0 0 3 0 0 8
+Produits divers | 4 0 0 0 0 0 4
+Savons, pâtes de neutralisation | 8 0 0 0 23 5 36
+Sels marins | 1 0 0 0 0 0 1
+Spiritueux et liqueurs | 0 0 1 0 0 2 3
+Sucres, confiseries, biscuits | 1 0 0 0 0 0 1
+Terres | 0 0 0 17 0 0 17
+Vins, vinaigres | 4 0 1 0 0 5 10
+Totaux | 1564 58 32 20 457 50 2181
