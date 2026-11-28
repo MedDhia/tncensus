@@ -336,6 +336,8 @@ Every table is tidy: one row per printed cell. Printed subtotals and totals are 
 | [`commerce_slaughter_by_commune`](#commerce_slaughter_by_commune) | slaughter | by edition | 1,298 | count | Consumption: animals slaughtered, by commune |
 | [`commerce_cereals_balance`](#commerce_cereals_balance) | cereals | by edition | 252 | mixed | Cereals: imports and exports by commercial campaign |
 | [`commerce_cereals_stocks`](#commerce_cereals_stocks) | cereals_consumption;cereals_stocks | by edition | 258 | mixed | Cereals: available stocks and average consumption |
+| [`meteo_rainfall_monthly`](#meteo_rainfall_monthly) | rainfall_solar_year | by edition | 8,328 | millimetres | Rainfall record: total rainfall in millimetres by station and month (solar year) |
+| [`meteo_rain_days`](#meteo_rain_days) | rainfall_solar_year | by edition | 8,328 | count | Rainfall record: number of rainy days by station and month (solar year) |
 
 ### eur1906_t1_circonscription_nationality
 
@@ -17030,3 +17032,207 @@ Source `sgt`, table cereals_consumption;cereals_stocks, printed pages by edition
 | `kilograms_per_inhabitant` |  | 9 |
 | `quintals` |  | 9 |
 | `thousand_quintals` |  | 240 |
+
+### meteo_rainfall_monthly
+
+**Relevé pluviométrique : hauteur totale de pluie en millimètres et dixièmes, par station et par mois**  
+*Rainfall record: total rainfall in millimetres by station and month (solar year)*
+
+Source `sgt`, table rainfall_solar_year, printed pages by edition. 8,328 rows. Value type: millimetres. Flags: (empty) 7,529, not_applicable 692, derived_from_totals 87, illegible 20. Notes and validation: [`../yearbook_other_chapters/csv/meteo_rainfall_monthly.md`](../yearbook_other_chapters/csv/meteo_rainfall_monthly.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `region` | Coded dimension. |
+| `controle` | Coded dimension. |
+| `station` | Text (497 distinct values). |
+| `month` | Coded dimension. |
+| `month_fr` | Printed French label for `month`. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `obs` | Coded dimension. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`region`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `Haute Vallée de la Medjerdah` |  | 1,572 |
+| `Tunisie de l'Est ou Sahel` |  | 1,044 |
+| `Tunisie du Centre (Hautes Plaines)` |  | 1,296 |
+| `Tunisie du Centre (Région Est intermédiaire entre les Hautes Plaines et le Sahel)` |  | 564 |
+| `Tunisie du Nord` |  | 612 |
+| `Tunisie du Nord-Est` |  | 2,496 |
+| `Tunisie du Sud` |  | 744 |
+
+`controle`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `Contrôle de Bizerte` |  | 312 |
+| `Contrôle de Béja` |  | 204 |
+| `Contrôle de Djerba` |  | 24 |
+| `Contrôle de Gabès` |  | 72 |
+| `Contrôle de Gafsa` |  | 252 |
+| `Contrôle de Grombalia` |  | 492 |
+| `Contrôle de Kairouan` |  | 564 |
+| `Contrôle de Mactar` |  | 192 |
+| `Contrôle de Medjez-el-Bab` |  | 1,080 |
+| `Contrôle de Sfax` |  | 552 |
+| `Contrôle de Souk-el-Arba` |  | 180 |
+| `Contrôle de Sousse` |  | 492 |
+| `Contrôle de Tabarka` |  | 96 |
+| `Contrôle de Thala` |  | 312 |
+| `Contrôle de Tozeur` |  | 84 |
+| `Contrôle de Tunis` |  | 1,164 |
+| `Contrôle de Téboursouk` |  | 312 |
+| `Contrôle de Zaghouan` |  | 840 |
+| `Contrôle du Kef` |  | 792 |
+| `Territoires militaires` |  | 312 |
+
+`month`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `april` | Avril | 694 |
+| `august` | Août | 694 |
+| `december` | Décembre | 694 |
+| `february` | Février | 694 |
+| `january` | Janvier | 694 |
+| `july` | Juillet | 694 |
+| `june` | Juin | 694 |
+| `march` | Mars | 694 |
+| `may` | Mai | 694 |
+| `november` | Novembre | 694 |
+| `october` | Octobre | 694 |
+| `september` | Septembre | 694 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `rainfall` | Hauteur totale en millimètres et dixièmes | 8,328 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `mm` |  | 8,328 |
+
+`obs`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `(empty)` |  | 7,294 |
+| `incomplete` |  | 30 |
+| `no_observation` |  | 692 |
+| `traces` |  | 312 |
+
+### meteo_rain_days
+
+**Relevé pluviométrique : nombre de jours de pluie, par station et par mois**  
+*Rainfall record: number of rainy days by station and month (solar year)*
+
+Source `sgt`, table rainfall_solar_year, printed pages by edition. 8,328 rows. Value type: count. Flags: (empty) 7,498, not_applicable 812, total_mismatch 18. Notes and validation: [`../yearbook_other_chapters/csv/meteo_rain_days.md`](../yearbook_other_chapters/csv/meteo_rain_days.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `region` | Coded dimension. |
+| `controle` | Coded dimension. |
+| `station` | Text (497 distinct values). |
+| `month` | Coded dimension. |
+| `month_fr` | Printed French label for `month`. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `obs` | Coded dimension. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`region`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `Haute Vallée de la Medjerdah` |  | 1,572 |
+| `Tunisie de l'Est ou Sahel` |  | 1,044 |
+| `Tunisie du Centre (Hautes Plaines)` |  | 1,296 |
+| `Tunisie du Centre (Région Est intermédiaire entre les Hautes Plaines et le Sahel)` |  | 564 |
+| `Tunisie du Nord` |  | 612 |
+| `Tunisie du Nord-Est` |  | 2,496 |
+| `Tunisie du Sud` |  | 744 |
+
+`controle`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `Contrôle de Bizerte` |  | 312 |
+| `Contrôle de Béja` |  | 204 |
+| `Contrôle de Djerba` |  | 24 |
+| `Contrôle de Gabès` |  | 72 |
+| `Contrôle de Gafsa` |  | 252 |
+| `Contrôle de Grombalia` |  | 492 |
+| `Contrôle de Kairouan` |  | 564 |
+| `Contrôle de Mactar` |  | 192 |
+| `Contrôle de Medjez-el-Bab` |  | 1,080 |
+| `Contrôle de Sfax` |  | 552 |
+| `Contrôle de Souk-el-Arba` |  | 180 |
+| `Contrôle de Sousse` |  | 492 |
+| `Contrôle de Tabarka` |  | 96 |
+| `Contrôle de Thala` |  | 312 |
+| `Contrôle de Tozeur` |  | 84 |
+| `Contrôle de Tunis` |  | 1,164 |
+| `Contrôle de Téboursouk` |  | 312 |
+| `Contrôle de Zaghouan` |  | 840 |
+| `Contrôle du Kef` |  | 792 |
+| `Territoires militaires` |  | 312 |
+
+`month`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `april` | Avril | 694 |
+| `august` | Août | 694 |
+| `december` | Décembre | 694 |
+| `february` | Février | 694 |
+| `january` | Janvier | 694 |
+| `july` | Juillet | 694 |
+| `june` | Juin | 694 |
+| `march` | Mars | 694 |
+| `may` | Mai | 694 |
+| `november` | Novembre | 694 |
+| `october` | Octobre | 694 |
+| `september` | Septembre | 694 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `rain_days` | Nombre de jours | 8,328 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `days` |  | 8,328 |
+
+`obs`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `(empty)` |  | 7,516 |
+| `days_not_observed` |  | 76 |
+| `incomplete` |  | 45 |
+| `no_observation` |  | 691 |

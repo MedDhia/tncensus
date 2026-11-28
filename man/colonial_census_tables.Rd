@@ -16,7 +16,7 @@ A \code{data.frame} with one row per table and columns
   (semicolon-separated when a series spans several volumes),
   \code{n_rows}, and \code{value_type} (\code{"count"}, \code{"percent"},
   \code{"rate"}, \code{"francs"} for money amounts (francs, centimes
-  kept), \code{"hectares"} for areas, or \code{"mixed"} for tables whose
+  kept), \code{"hectares"} for areas, \code{"millimetres"} for rainfall, or \code{"mixed"} for tables whose
   \code{measure} column mixes counts, shares, areas or amounts (a
   \code{unit} column then gives each row's unit where printed).
 }
@@ -25,7 +25,7 @@ Returns an index of the tables transcribed from publications digitized on
 Gallica (BnF): the 1906 census of the European civilian population of
 Tunisia, the 1931 census of the indigenous (Muslim and Jewish) population,
 and the \emph{Démographie}, health, public-instruction, communes, justice,
-prisons, land-registration, posts, public-works, finance, colonisation, agriculture, mutual-credit, labour, commerce and research-institutions chapters of the
+prisons, land-registration, posts, public-works, finance, colonisation, agriculture, mutual-credit, labour, commerce, research-institutions and meteorology chapters of the
 \emph{Statistique générale de la Tunisie} yearbooks (editions 1922--1930, 1935, 1936 and
 1939). The yearbooks reprint tables from the 1921, 1926, 1931 and 1936
 censuses, whose own volumes are not on Gallica, and give yearly vital
