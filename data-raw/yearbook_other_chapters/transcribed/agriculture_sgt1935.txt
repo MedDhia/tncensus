@@ -238,3 +238,40 @@ Territoires militaires du Sud /  /  / Nefzaoua | 230 7044 122 31 0 1626 56328 42
 Territoires militaires du Sud /  /  / Médenine-Tatahouine | 2258 29612 575 265 0 11645 178442 145647
 Territoires militaires du Sud /  /  / Matmata | 79 3043 915 1038 0 1457 37634 26184
 TOTAUX | 101945 167368 441161 53290 26510 163020 1815381 3209981
+
+# FORÊTS. a) Superficie et modifications dans la consistance du domaine soumis au régime forestier. f153 (p. 133).
+# New layout (surfaces nouvellement soumises, déclassées, surface du domaine, per region; superficie totale des
+# terrains domaniaux soumis; bornages administratifs: surfaces nouvellement bornées Nord / Hauts plateaux, surface
+# totale des forêts bornée). First line "Antérieures à 1931". Every line typed from native-resolution crops. » = 0.
+# 1931 Hauts plateaux surface printed 718.990 (790.018 - 8.028 = 781.990, which the total 1.001.040 and 1932 also
+# need). 1933 surface totale bornée: last digit cut by the column rule ("214.19?"; 214.190 in sgt1936 and sgt1939).
+@forest_domain view=153 page=133 years=1931-1935
+img: all
+cols: n_new n_declassed n_total hp_new hp_declassed hp_total total n_bornage hp_bornage bornage_total
+before_1931 | 49019 5602 220587 0 150 790018 1010605 0 0 176746
+1931 | 0 1537 219050 0 8028 718990 1001040 1020 6300 198415
+1932 | 0 1057 217993 0 1036 780954 998947 1110 9000 208525
+1933 | 0 33 217960 0 2254 778700 996660 1290 4375 ?
+1934 | 0 0 217960 0 398 778302 996262 1290 0 215480
+1935 | 0 0 217960 0 248 778054 996014 0 0 215480
+
+# FORÊTS. b) Produits forestiers (bois, lièges). f153 (p. 133). Units printed only under bois de chauffage (q.),
+# étais (m. l.) and the two lièges (q.); '_' = no unit printed. No total line. c) on the same page: not
+# transcribed.
+@forest_b view=153 page=133 year=1935 units=_,q.,_,m.l.,_,q.,q.
+img: all
+cols: ind fuel bark props poles cork_rep cork_male
+Adjudication du 20 juin 1935 (coupe de pins) | 103 3675 0 55500 0 0 0
+Cessions de gré à gré | 0 500 0 23000 157 0 0
+Adjudication du 17 octobre 1935 (Vente lièges) | 0 0 0 0 0 55986 1154
+
+# FORÊTS. c) Rendement en argent des produits forestiers, by sale (francs). f153 (p. 133).
+@forest_c view=153 page=133 year=1935
+img: all
+cols: qty price total
+Adjudication du 20 juin 1935 (Coupes de pins) @@  @@  | - - 53900
+Cessions par marchés de gré à gré (Coupes de bois) @@  @@  | - - 18160
+Adjudication du 17 octobre 1935 (Vente de lièges) @@  @@  | - - 1810483
+Chasse et menus-produits @@  @@  | - - 153745
+Transactions @@  @@  | - - 74359
+Total | - - 2110647

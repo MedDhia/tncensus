@@ -305,6 +305,11 @@ Every table is tidy: one row per printed cell. Printed subtotals and totals are 
 | [`agriculture_dates`](#agriculture_dates) | dates | by edition | 528 | count | Date palms (canoun) by caïdat and age, degla and common, at 1 November |
 | [`agriculture_animals`](#agriculture_animals) | animals | by edition | 4,336 | count | Livestock by species, contrôle civil and caïdat (European-owned, indigenous-owned, total) |
 | [`mutuality_provident_societies`](#mutuality_provident_societies) | prev | by edition | 445 | francs | Indigenous (Tunisian) provident societies: loans by type, loans cancelled, recoveries by type and loans outstanding, by year (1913-1939) |
+| [`agriculture_forest_area`](#agriculture_forest_area) | forest_a | by edition | 168 | hectares | Forests: area of the wooded state lands, delimitation and boundary-marking (bornage), by region, 1903-1930 |
+| [`agriculture_forest_domain`](#agriculture_forest_domain) | forest_domain | by edition | 110 | hectares | Forests: area of the domain under the forest regime (land newly brought under it, declassified, total) and administrative boundary-marking, by region, before 1931 to 1939 |
+| [`agriculture_forest_products`](#agriculture_forest_products) | forest_b | by edition | 455 | mixed | Forests: forest products sold, by adjudication or private sale (wood, tan bark, pit props, poles, cork) |
+| [`agriculture_forest_revenue`](#agriculture_forest_revenue) | forest_c | by edition | 101 | mixed | Forests: money yield of forest products, by product (1922-1923) or by sale (1924-1939), in francs |
+| [`agriculture_forest_offences_fires`](#agriculture_forest_offences_fires) | forest_de | by edition | 29 | mixed | Forests: offences reported to the courts; forest fires (reports, area burnt, damage) |
 
 ### eur1906_t1_circonscription_nationality
 
@@ -14816,3 +14821,336 @@ Source `sgt`, table prev, printed pages by edition. 445 rows. Value type: francs
 | Code | Printed label | N |
 |---|---|---:|
 | `francs` |  | 445 |
+
+### agriculture_forest_area
+
+**Forêts. a) Superficie des terrains domaniaux boisés ; délimitations**  
+*Forests: area of the wooded state lands, delimitation and boundary-marking (bornage), by region, 1903-1930*
+
+Source `sgt`, table forest_a, printed pages by edition. 168 rows. Value type: hectares. Flags: (empty) 153, not_applicable 15. Notes and validation: [`../yearbook_other_chapters/csv/agriculture_forest_area.md`](../yearbook_other_chapters/csv/agriculture_forest_area.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `period` | Coded dimension. |
+| `period_fr` | Printed French label for `period`. |
+| `region` | Coded dimension. |
+| `region_fr` | Printed French label for `region`. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`period`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `1903-1910` | 1903-1910 | 8 |
+| `1911` | 1911 | 8 |
+| `1912` | 1912 | 8 |
+| `1913` | 1913 | 8 |
+| `1914` | 1914 | 8 |
+| `1915` | 1915 | 8 |
+| `1916` | 1916 | 8 |
+| `1917` | 1917 | 8 |
+| `1918` | 1918 | 8 |
+| `1919` | 1919 | 8 |
+| `1920` | 1920 | 8 |
+| `1921` | 1921 | 8 |
+| `1922` | 1922 | 8 |
+| `1923` | 1923 | 8 |
+| `1924` | 1924 | 8 |
+| `1925` | 1925 | 8 |
+| `1926` | 1926 | 8 |
+| `1927` | 1927 | 8 |
+| `1928` | 1928 | 8 |
+| `1929` | 1929 | 8 |
+| `1930` | 1930 | 8 |
+
+`region`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `both` | Les deux régions | 42 |
+| `high_plateaux` | Région des Hauts plateaux (forêts de pins d'Alep, chênes verts, genévriers) | 63 |
+| `north` | Région Nord (forêts de chênes-liège) | 63 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `bounded_in_year` | Nombre d'hectares bornés dans l'année | 42 |
+| `bounded_total` | Superficie totale bornée au 31 décembre de chaque année | 21 |
+| `delimited` | Nombre d'hectares délimités | 42 |
+| `total_area` | Superficie totale | 42 |
+| `total_delimited` | Superficie totale délimitée dans les deux régions | 21 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `hectares` |  | 168 |
+
+### agriculture_forest_domain
+
+**Forêts. Superficie et modifications dans la consistance du domaine soumis au régime forestier**  
+*Forests: area of the domain under the forest regime (land newly brought under it, declassified, total) and administrative boundary-marking, by region, before 1931 to 1939*
+
+Source `sgt`, table forest_domain, printed pages by edition. 110 rows. Value type: hectares. Flags: (empty) 103, total_mismatch 5, reprint_corrected 2. Notes and validation: [`../yearbook_other_chapters/csv/agriculture_forest_domain.md`](../yearbook_other_chapters/csv/agriculture_forest_domain.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `period` | Coded dimension. |
+| `period_fr` | Printed French label for `period`. |
+| `region` | Coded dimension. |
+| `region_fr` | Printed French label for `region`. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`period`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `1931` | 1931 | 10 |
+| `1932` | 1932 | 10 |
+| `1933` | 1933 | 10 |
+| `1934` | 1934 | 10 |
+| `1935` | 1935 | 10 |
+| `1936` | 1936 | 10 |
+| `1937` | 1937 | 10 |
+| `1938` | 1938 | 10 |
+| `1939` | 1939 | 10 |
+| `before_1931` | Antérieures à 1931 | 10 |
+| `before_1932` | Antérieures à 1932 | 10 |
+
+`region`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `both` | Les deux régions | 22 |
+| `high_plateaux` | Région des Hauts plateaux (forêts de pins, chênes verts, genévriers) | 44 |
+| `north` | Région Nord (forêts de chênes-liège et zéen) | 44 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `bounded_total` | Bornages administratifs : surface totale des forêts bornée | 11 |
+| `declassified` | Surfaces déclassées du régime forestier | 22 |
+| `domain_area` | Surface du domaine soumis au régime forestier | 22 |
+| `domain_area_total` | Superficie totale des terrains domaniaux soumis au régime forestier | 11 |
+| `newly_bounded` | Bornages administratifs : surfaces nouvellement bornées | 22 |
+| `newly_subjected` | Surfaces nouvellement soumises au régime forestier | 22 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `hectares` |  | 110 |
+
+### agriculture_forest_products
+
+**Forêts. b) Produits forestiers (bois, écorces à tan, lièges)**  
+*Forests: forest products sold, by adjudication or private sale (wood, tan bark, pit props, poles, cork)*
+
+Source `sgt`, table forest_b, printed pages by edition. 455 rows. Value type: mixed. Flags: (empty) 455. Notes and validation: [`../yearbook_other_chapters/csv/agriculture_forest_products.md`](../yearbook_other_chapters/csv/agriculture_forest_products.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `sale_no` | Coded dimension. |
+| `sale_fr` | Place or label as printed (65 distinct values). |
+| `product` | Coded dimension. |
+| `product_fr` | Printed French label for `product`. |
+| `unit` | Coded dimension. |
+| `unit_fr` | Printed French label for `unit`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`sale_no`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `1` |  | 84 |
+| `10` |  | 14 |
+| `11` |  | 14 |
+| `12` |  | 14 |
+| `13` |  | 14 |
+| `14` |  | 14 |
+| `15` |  | 14 |
+| `16` |  | 14 |
+| `2` |  | 84 |
+| `3` |  | 56 |
+| `4` |  | 35 |
+| `5` |  | 35 |
+| `6` |  | 21 |
+| `7` |  | 14 |
+| `8` |  | 14 |
+| `9` |  | 14 |
+
+`product`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `fuel_wood` | Bois de chauffage | 65 |
+| `industrial_wood` | Bois d'industrie | 65 |
+| `male_cork` | Liège mâle | 65 |
+| `pit_props` | Étais de mine | 65 |
+| `poles` | Perches | 65 |
+| `reproduction_cork` | Lièges de reproduction | 65 |
+| `tan_bark` | Écorces à tan | 65 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `count` | unités | 58 |
+| `cubic_metres` | m.c. | 60 |
+| `linear_metres` | m.l. / mèt.lin. | 65 |
+| `not_printed` |  | 17 |
+| `quintals` | q. / quint. | 195 |
+| `steres` | st. / stères | 60 |
+
+### agriculture_forest_revenue
+
+**Forêts. c) Rendement en argent des produits forestiers**  
+*Forests: money yield of forest products, by product (1922-1923) or by sale (1924-1939), in francs*
+
+Source `sgt`, table forest_c, printed pages by edition. 101 rows. Value type: mixed. Flags: (empty) 100, total_mismatch 1. Notes and validation: [`../yearbook_other_chapters/csv/agriculture_forest_revenue.md`](../yearbook_other_chapters/csv/agriculture_forest_revenue.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `line_no` | Coded dimension. |
+| `item_fr` | Place or label as printed (53 distinct values). |
+| `observation_fr` | Place or label as printed (5 distinct values). |
+| `in_total` | Coded dimension. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `unit_fr` | Printed French label for `unit`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`line_no`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `1` |  | 16 |
+| `10` |  | 2 |
+| `11` |  | 1 |
+| `12` |  | 1 |
+| `2` |  | 16 |
+| `3` |  | 16 |
+| `4` |  | 14 |
+| `5` |  | 11 |
+| `6` |  | 10 |
+| `7` |  | 9 |
+| `8` |  | 3 |
+| `9` |  | 2 |
+
+`in_total`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `no` |  | 1 |
+| `yes` |  | 100 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `quantity` | Quantités | 14 |
+| `revenue` | Rendement en argent | 51 |
+| `total_price` | Montant des condamnations (mémoire) / Prix total | 22 |
+| `unit_price` | Prix moyen à l'unité de produit | 14 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `count` | unité | 2 |
+| `cubic_metres` | mètre cube | 2 |
+| `francs` | fr. c / francs | 73 |
+| `francs_per_count` | fr. c | 2 |
+| `francs_per_cubic_metres` | fr. c | 2 |
+| `francs_per_linear_metres` | fr. c | 2 |
+| `francs_per_quintals` | fr. c | 6 |
+| `francs_per_steres` | fr. c | 2 |
+| `linear_metres` | mèt. linre | 2 |
+| `quintals` | quintal / — | 6 |
+| `steres` | stère | 2 |
+
+### agriculture_forest_offences_fires
+
+**Forêts. d) Poursuites des délits ; e) Incendies**  
+*Forests: offences reported to the courts; forest fires (reports, area burnt, damage)*
+
+Source `sgt`, table forest_de, printed pages by edition. 29 rows. Value type: mixed. Flags: (empty) 29. Notes and validation: [`../yearbook_other_chapters/csv/agriculture_forest_offences_fires.md`](../yearbook_other_chapters/csv/agriculture_forest_offences_fires.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `part` | Coded dimension. |
+| `part_fr` | Printed French label for `part`. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`part`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `d` | Poursuites des délits | 6 |
+| `e` | Incendies | 23 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `area_burnt` | Superficie parcourue par le feu (ares) / Superficie parcourue par le feu (centiares) / Superficie parcourue par le feu (hectares) | 11 |
+| `court_reports` | Nombre de procès-verbaux adressés aux Tribunaux pour poursuites | 6 |
+| `damage` | Estimation des dommages causés | 6 |
+| `fire_reports` | Nombre de procès-verbaux dressés | 6 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `ares` |  | 3 |
+| `centiares` |  | 2 |
+| `count` |  | 12 |
+| `francs` |  | 6 |
+| `hectares` |  | 6 |

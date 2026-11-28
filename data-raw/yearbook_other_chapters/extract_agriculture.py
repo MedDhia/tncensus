@@ -16,8 +16,8 @@ from decimal import Decimal
 from pathlib import Path as _Path
 
 sys.path.insert(0, str(_Path(__file__).resolve().parent))  # shared helper yb_tables.py
-from yb_tables import (COMMON, EDITIONS, ORDER, OUT, TR, Checks, coverage_lines, parse, ssum, where,  # noqa: E402
-                       write_csv, write_notes, write_validation)
+from yb_tables import (COMMON, EDITIONS, ORDER, OUT, TR, Checks, check_col_totals, coverage_lines, parse,  # noqa: E402
+                       ssum, where, write_csv, write_notes, write_validation)
 
 CHAPTER = "Agriculture"
 SCRIPT = "extract_agriculture.py"
@@ -1228,8 +1228,8 @@ SURVEY = {
                "européennes / indigènes); f242|f243 b) orge; f244|f245 c) avoine; f246|f247 d)-f) (fèves, maïs, "
                "sorgho); f248|f249 g) pois chiches (h) lin); f250|f251 i) vigne, répartition des viticulteurs par "
                "contrôle et par nationalité; f252 j) oliviers, répartition par caïdat; f253 Forêts a) superficie "
-               "des terrains domaniaux boisés, délimitations (1903-1922); f254 b) produits forestiers "
-               "(adjudications); f255-f259 Météorologie a) relevé pluviométrique de l'année agricole 1921-1922 "
+               "des terrains domaniaux boisés, délimitations (1903-1922) [transcribed]; f254 b) produits forestiers "
+               "(adjudications) [b)-e) transcribed]; f255-f259 Météorologie a) relevé pluviométrique de l'année agricole 1921-1922 "
                "(pluies par saison, by station); f260-f269 b) relevé pluviométrique de l'année solaire (mm and "
                "days per month, by station); f270|f271 c) données climatologiques 1922 par région; f272|f273 d) "
                "statistique thermométrique 1911-1920; f274 École coloniale d'agriculture a) lieu d'origine des "
@@ -1241,14 +1241,14 @@ SURVEY = {
                "diverses 1914-1923 [transcribed]; f730|f731 principales cultures a) blé (1915-1923); f732|f733 b) "
                "orge; f734|f735 c) avoine (1918-1923); f736|f737 e) sorgho...; f738|f739 g) pois chiches "
                "(1919-1923); f740|f741 i) vigne par contrôle et nationalité; f742 l) oliviers par caïdat; f743 "
-               "forêts a) (1903-1923); f744 b) produits forestiers; f745-f749 météorologie a) année agricole "
+               "forêts a) (1903-1923) [transcribed]; f744 b) produits forestiers [b)-e) transcribed]; f745-f749 météorologie a) année agricole "
                "1922-1923; f750-f759 b) année solaire; f760|f761 c) données climatologiques 1923; f762-f764 d) "
                "pluviométrie agricole 1900-1901 à 1919-1920 (moyennes par période quinquennale); f765-f767 école "
                "coloniale a)-c) (1898-1923); f768-f770 service botanique a)-c). f771 = chapter XII.",
     "sgt1924": "f1217 title; f1218 blank; f1219 Superficie [transcribed]; f1220-f1225 cultures diverses 1915-1924 "
                "[transcribed]; f1226-f1241 principales cultures a) blé ... (eight two-page spreads, 1915/1918/"
                "1919-1924; f1240 without OCR); f1242|f1243 i) vigne par contrôle et nationalité; f1244 j) oliviers "
-               "par caïdat; f1245 forêts a) (1903-1924); f1246 b); f1247-f1251 météorologie a) 1923-1924; "
+               "par caïdat; f1245 forêts a) (1903-1924) [transcribed]; f1246 b) [b)-e) transcribed]; f1247-f1251 météorologie a) 1923-1924; "
                "f1252-f1263 b) année solaire; f1264|f1265 c); f1266-f1268 d) moyennes pluviométriques 1911-1920; "
                "f1269-f1271 école coloniale a)-c); f1272-f1274 service botanique a)-c). f1275 = chapter XII.",
     "sgt1925": "f287 title; f288 blank; f289 Superficie [transcribed]; f290|f291 cultures diverses a) céréales 1° "
@@ -1256,14 +1256,14 @@ SURVEY = {
                "méridionale [transcribed]; f294|f295 b), c) [transcribed]; f296|f297 d) [transcribed]; f298|f299 "
                "principales cultures a) blé (1921-1925); f300|f301 by zone (Tunisie septentrionale / centrale et "
                "méridionale); f302|f303 c) avoine...; f304|f305 i) vigne par régions et nationalité; f306 oliviers "
-               "par régions; f307 forêts a) (1903-1925); f308 b); f309-f315 météorologie a) 1924-1925; f316-f329 "
+               "par régions; f307 forêts a) (1903-1925) [transcribed]; f308 b) [b)-e) transcribed]; f309-f315 météorologie a) 1924-1925; f316-f329 "
                "b) année solaire; f330|f331 c); f332-f334 pluviométrie agricole 1900-1901 à 1924-1925; f335-f337 "
                "Institutions d'enseignement et de recherches: école coloniale a)-c); f338-f340 service botanique "
                "a)-c); f341 laboratoire de chimie, analyses effectuées; f342 blank. f343 = chapter XII.",
     "sgt1926": "f803 title; f804 blank; f805 Superficie [transcribed]; f806-f811 cultures diverses 1917-1926 "
                "[transcribed]; f812|f813 principales cultures a) céréales, rendement par zone (Nord, Centre et "
                "Sud, 1917-1926); f814|f815 b) céréales, répartition de la superficie entre européens et indigènes; "
-               "f816 d) oliviers par régions; f817 forêts a) (1903-1926); f818 b); f819-f825 météorologie a) "
+               "f816 d) oliviers par régions; f817 forêts a) (1903-1926) [transcribed]; f818 b) [b)-e) transcribed]; f819-f825 météorologie a) "
                "1925-1926; f826-f839 b); f840|f841 c); f842-f845 d) températures moyennes et extrêmes 1901-1925; "
                "f846-f848 école coloniale a)-c); f849|f850 service botanique a) semences, b) arbres; f851 "
                "laboratoire de chimie; f852 blank. f853 = chapter XII.",
@@ -1271,24 +1271,24 @@ SURVEY = {
                "[transcribed]; f268|f269 principales cultures a) rendement par zone (1918-1927); f270|f271 b) "
                "répartition européens / indigènes; f272|f273 d) oliviers par régions; f274-f279 Animaux a) nombre "
                "d'animaux de chaque espèce des européens, b) des indigènes, c) total (by contrôle civil); f280 "
-               "forêts a); f281 b); f282-f287 météorologie a) 1926-1927; f288-f303 b); f304|f305 c); f306|f307 d) "
+               "forêts a) [transcribed]; f281 b) [b)-e) transcribed]; f282-f287 météorologie a) 1926-1927; f288-f303 b); f304|f305 c); f306|f307 d) "
                "1901-1925; f308-f310 école coloniale; f311|f312 service botanique; f313 laboratoire de chimie; "
                "f314 blank. f315 = chapter XII.",
     "sgt1928": "f783 title; f784 blank; f785 Superficie [transcribed]; f786-f791 cultures diverses 1919-1928 "
                "[transcribed; f787, f789 without OCR]; f792|f793 principales cultures a) rendement par zone; "
                "f794|f795 b) répartition; f796|f797 d) oliviers par régions; f798-f803 animaux a)-c); f804 forêts "
-               "a); f805 b); f806-f812 météorologie a) 1927-1928; f813-f829 b); f830|f831 c); f832-f835 humidité "
+               "a) [transcribed]; f805 b) [b), c) transcribed]; f806-f812 météorologie a) 1927-1928; f813-f829 b); f830|f831 c); f832-f835 humidité "
                "relative 1901-1925; f836-f838 école coloniale; f839|f840 service botanique; f841 laboratoire de "
                "chimie; f842 blank. f843 = chapter XII.",
     "sgt1929": "f261 title; f262 blank; f263 Superficie [transcribed]; f264-f269 cultures diverses 1920-1929 "
                "[transcribed]; f270|f271 principales cultures a); f272|f273 b); f274|f275 d) oliviers par régions; "
-               "f276-f281 animaux a)-c); f282 forêts a); f283 b); f284-f290 météorologie a) 1928-1929; f291-f309 "
+               "f276-f281 animaux a)-c); f282 forêts a) [transcribed]; f283 b) [b), c) transcribed]; f284-f290 météorologie a) 1928-1929; f291-f309 "
                "b); f310|f311 c) (année 1929); f312 station centrale de la Manoubia (année 1929); f313-f315 école "
                "coloniale; f316|f317 service botanique; f318 laboratoire de chimie (Tunis); f319 (Sfax); f320 "
                "blank. f321 = chapter XII.",
     "sgt1930": "f795 title; f796 blank; f797 Superficie [transcribed]; f798-f803 cultures diverses 1921-1930 "
                "[transcribed]; f804|f805 principales cultures a); f806|f807 b); f808|f809 d) oliviers par régions; "
-               "f810-f815 animaux a)-c); f816 forêts a); f817 b); f818-f825 météorologie a) 1929-1930; f826-f843 "
+               "f810-f815 animaux a)-c); f816 forêts a) [transcribed]; f817 b) [b), c) transcribed]; f818-f825 météorologie a) 1929-1930; f826-f843 "
                "b) année 1930; f844|f845 c); f846-f849 pluies moyennes 1926-1930 et 1901-1930; f850-f852 école "
                "coloniale; f853|f854 service botanique; f855 laboratoire de chimie (Tunis); f856 (Sfax). f857 = "
                "chapter XII.",
@@ -1297,13 +1297,13 @@ SURVEY = {
                "cultures a) rendement par zone (1933-1935); f146|f147 b) répartition européens / indigènes; "
                "f148|f149 d) oliviers par régions; f150|f151 animaux, nombre total (européens et tunisiens) by "
                "contrôle; f152 blank (confirmed on the image); f153 forêts a) superficie et modifications du domaine soumis au régime "
-               "forestier; f154 blank. f155 = chapter XII Institutions d'enseignement et de recherches (with the "
+               "forestier, b) produits forestiers [transcribed], c) rendement en argent [transcribed]; f154 blank. f155 = chapter XII Institutions d'enseignement et de recherches (with the "
                "school, the laboratories and the meteorology: research_ chapter).",
     "sgt1936": "f100 chapter X title; f101 blank; f102 Superficie [transcribed]; f103-f105 cultures diverses "
                "(1934-1936) [transcribed]; f106 rendement par zone; f107|f108 répartition européens / indigènes; "
                "f109|f110 oliviers par régions; f111|f112 dattiers, relevé par caïdat du nombre d'arbres d'après "
                "leur âge au 1er novembre 1936; f113|f114 animaux jeunes et imposables (rôle de 1936) by contrôle; "
-               "f115 forêts, consistance du domaine soumis au régime forestier. f116 = chapter XI Institutions "
+               "f115 forêts, consistance du domaine soumis au régime forestier, produits forestiers [transcribed], rendement en argent [transcribed]. f116 = chapter XI Institutions "
                "d'enseignement et de recherches (Institut Pasteur, Institut Arloing, école coloniale, service "
                "botanique, laboratoires, f123-f144 relevé pluviométrique 1936); f146 = chapter XII Commerce. The "
                "range 100-145 of CHAPTERS.md is 100-115 for Agriculture.",
@@ -1311,7 +1311,7 @@ SURVEY = {
                "autres plantes alimentaires, plantes industrielles [transcribed]; f103|f104 cultures arbustives et "
                "fruitières [transcribed]; f105 rendement par zone; f106|f107 répartition européens / indigènes; "
                "f108|f109 oliviers par régions; f110|f111 dattiers par caïdat; f112|f113 animaux jeunes et imposables (rôle de 1939, printed) by contrôle; "
-               "f114 forêts, consistance du domaine soumis au régime forestier. f115 = chapter XI Institutions "
+               "f114 forêts, consistance du domaine soumis au régime forestier, produits forestiers [transcribed], rendement en argent [transcribed]. f115 = chapter XI Institutions "
                "d'enseignement et de recherches.",
 }
 NOT_DONE = ("Transcribed (every printing, every cell read on native-resolution crops): Superficie (agriculture_land), "
@@ -1320,8 +1320,10 @@ NOT_DONE = ("Transcribed (every printing, every cell read on native-resolution c
             "sgt1926-sgt1939 (agriculture_cereal_farmers), vigne by contrôle and nationality sgt1922-sgt1925 "
             "(agriculture_vine), oliviers by caïdat / région, all editions (agriculture_olive), dattiers by caïdat "
             "and age sgt1936 and sgt1939 (agriculture_dates), animaux by contrôle and caïdat sgt1927-sgt1939 "
-            "(agriculture_animals). NOT YET TRANSCRIBED (views in the survey above): forêts a) and b) (all "
-            "editions; sgt1935 f152 confirmed blank). Météorologie, école coloniale d'agriculture, service botanique and "
+            "(agriculture_animals). forêts a) sgt1922-sgt1930 (agriculture_forest_area), consistance du domaine "
+            "forestier sgt1935-sgt1939 (agriculture_forest_domain), forêts b) produits forestiers, all editions "
+            "(agriculture_forest_products). forêts c) rendement en argent, all editions (agriculture_forest_revenue), "
+            "d) poursuites des délits and e) incendies sgt1922-sgt1927 (agriculture_forest_offences_fires). Météorologie, école coloniale d'agriculture, service botanique and "
             "laboratoires de chimie belong to the research_ extraction.")
 
 
@@ -1377,6 +1379,383 @@ CHECKERS = {"land": chk_land, "crops": chk_crops, "zones": chk_zones, "vine": ch
 ALL_CHECKERS = {"agriculture_crops": chk_crops_all, "agriculture_cereal_zones": chk_zones_all,
                 "agriculture_yield_classes": chk_yc_all, "agriculture_cereal_farmers": chk_split_all,
                 "agriculture_animals": chk_animals_all}
+
+
+# ----------------------------------------------------------------- forêts
+
+FOREST_REGION = {"north": "Région Nord (forêts de chênes-liège)",
+                 "high_plateaux": "Région des Hauts plateaux (forêts de pins d'Alep, chênes verts, genévriers)",
+                 "both": "Les deux régions"}
+DOMAIN_REGION = {"north": "Région Nord (forêts de chênes-liège et zéen)",
+                 "high_plateaux": "Région des Hauts plateaux (forêts de pins, chênes verts, genévriers)",
+                 "both": "Les deux régions"}
+FOREST_A_COL = {  # column: (region, measure, measure_fr)
+    "n_delim": ("north", "delimited", "Nombre d'hectares délimités"),
+    "n_total": ("north", "total_area", "Superficie totale"),
+    "hp_delim": ("high_plateaux", "delimited", "Nombre d'hectares délimités"),
+    "hp_total": ("high_plateaux", "total_area", "Superficie totale"),
+    "total": ("both", "total_delimited", "Superficie totale délimitée dans les deux régions"),
+    "n_bornage": ("north", "bounded_in_year", "Nombre d'hectares bornés dans l'année"),
+    "hp_bornage": ("high_plateaux", "bounded_in_year", "Nombre d'hectares bornés dans l'année"),
+    "bornage_total": ("both", "bounded_total", "Superficie totale bornée au 31 décembre de chaque année"),
+}
+FOREST_D_COL = {
+    "n_new": ("north", "newly_subjected", "Surfaces nouvellement soumises au régime forestier"),
+    "n_declassed": ("north", "declassified", "Surfaces déclassées du régime forestier"),
+    "n_total": ("north", "domain_area", "Surface du domaine soumis au régime forestier"),
+    "hp_new": ("high_plateaux", "newly_subjected", "Surfaces nouvellement soumises au régime forestier"),
+    "hp_declassed": ("high_plateaux", "declassified", "Surfaces déclassées du régime forestier"),
+    "hp_total": ("high_plateaux", "domain_area", "Surface du domaine soumis au régime forestier"),
+    "total": ("both", "domain_area_total", "Superficie totale des terrains domaniaux soumis au régime forestier"),
+    "n_bornage": ("north", "newly_bounded", "Bornages administratifs : surfaces nouvellement bornées"),
+    "hp_bornage": ("high_plateaux", "newly_bounded", "Bornages administratifs : surfaces nouvellement bornées"),
+    "bornage_total": ("both", "bounded_total", "Bornages administratifs : surface totale des forêts bornée"),
+}
+FOREST_PRODUCT = {"ind": ("industrial_wood", "Bois d'industrie"), "fuel": ("fuel_wood", "Bois de chauffage"),
+                  "bark": ("tan_bark", "Écorces à tan"), "props": ("pit_props", "Étais de mine"),
+                  "poles": ("poles", "Perches"), "cork_rep": ("reproduction_cork", "Lièges de reproduction"),
+                  "cork_male": ("male_cork", "Liège mâle")}
+FOREST_UNIT = {"m.c.": "cubic_metres", "stères": "steres", "st.": "steres", "quint.": "quintals", "q.": "quintals",
+               "mèt.lin.": "linear_metres", "m.l.": "linear_metres", "unités": "count", "_": "not_printed"}
+
+FLAGS.update({
+    ("sgt1924", "forest_a", "1915", "n_bornage"): "total_mismatch",
+    ("sgt1924", "forest_a", "1924", "bornage_total"): "total_mismatch",
+    ("sgt1935", "forest_domain", "1931", "hp_total"): "total_mismatch",
+    ("sgt1936", "forest_domain", "before_1932", "n_total"): "total_mismatch",
+    ("sgt1936", "forest_domain", "before_1932", "hp_total"): "total_mismatch",
+    ("sgt1936", "forest_domain", "before_1932", "total"): "total_mismatch",
+    ("sgt1936", "forest_domain", "before_1932", "bornage_total"): "total_mismatch",
+    ("sgt1939", "forest_domain", "1932", "n_bornage"): "total_mismatch",
+    ("sgt1939", "forest_domain", "1934", "hp_total"): "total_mismatch",
+})
+# sgt1939 (latest printing) misprints: keep sgt1936's cell (reprint_corrected); keys as in TABLES[...]["key"].
+PREFER.update({(1932, "1932", "north", "newly_bounded"): "sgt1936",
+               (1934, "1934", "high_plateaux", "domain_area"): "sgt1936"})
+
+
+def forest_period(label):
+    """(year, period, period_fr): year = last year covered by the line."""
+    if label.startswith("before_"):
+        y = int(label.split("_")[1])
+        return y - 1, label, f"Antérieures à {y}"
+    if "-" in label:
+        return int(label.split("-")[1]), label, label
+    return int(label), label, label
+
+
+def cells_forest(sec, colmap, regions):
+    out = []
+    for r in dl(sec):
+        y, p, pfr = forest_period(r["label"])
+        for c in sec["cols"]:
+            cell = r["cells"][c]
+            reg, m, mfr = colmap[c]
+            out.append(dict(base(sec, y), period=p, period_fr=pfr, region=reg, region_fr=regions[reg], measure=m,
+                            measure_fr=mfr, unit="hectares", value=cell.value,
+                            flag=flag_of(sec, r["label"], c, cell)))
+    return out
+
+
+def cells_forest_a(sec):
+    return cells_forest(sec, FOREST_A_COL, FOREST_REGION)
+
+
+def cells_forest_domain(sec):
+    return cells_forest(sec, FOREST_D_COL, DOMAIN_REGION)
+
+
+def cells_forest_b(sec):
+    units = sec["units"].split(",")
+    out = []
+    for i, r in enumerate(dl(sec), 1):
+        for c, u in zip(sec["cols"], units):
+            cell = r["cells"][c]
+            out.append(dict(base(sec, int(sec["year"])), sale_no=i, sale_fr=r["label"], product=FOREST_PRODUCT[c][0],
+                            product_fr=FOREST_PRODUCT[c][1], unit=FOREST_UNIT[u], unit_fr="" if u == "_" else u,
+                            value=cell.value, flag=flag_of(sec, r["label"], c, cell)))
+    return out
+
+
+def chk_forest(sec):
+    t = sec["table"]
+    if t == "forest_b":
+        check_col_totals(CHK, "agriculture_forest_products", sec, total=lambda l: l == "Total")
+        return
+    out = "agriculture_forest_area" if t == "forest_a" else "agriculture_forest_domain"
+    rows = dl(sec)
+    new = {"n_total": "n_delim", "hp_total": "hp_delim"} if t == "forest_a" else {"n_total": "n_new",
+                                                                                  "hp_total": "hp_new"}
+    prev = None
+    for r in rows:
+        c = {k: x.value for k, x in r["cells"].items()}
+        w = f"{where(sec)} {r['label']}"
+        CHK.eq(out, f"{w}: total = Nord + Hauts plateaux", ssum([c["n_total"], c["hp_total"]]), c["total"])
+        y = forest_period(r["label"])[0]
+        cumulative = t == "forest_domain" or y <= 1926
+        if prev is not None:
+            for tot, add in new.items():
+                parts = [prev[tot], c[add]]
+                if t == "forest_domain":
+                    parts.append(None if c[add.replace("new", "declassed")] is None
+                                 else -c[add.replace("new", "declassed")])
+                CHK.eq(out, f"{w}: {tot} = previous line + {add}" + (" - declassed" if t == "forest_domain" else ""),
+                       ssum(parts), c[tot])
+        if cumulative and prev is not None:
+            CHK.eq(out, f"{w}: bornage_total = previous line + n_bornage + hp_bornage",
+                   ssum([prev["bornage_total"], c["n_bornage"], c["hp_bornage"]]), c["bornage_total"])
+        elif not cumulative:
+            CHK.eq(out, f"{w}: bornage_total = n_bornage + hp_bornage (hectares bornés in the year, from 1927)",
+                   ssum([c["n_bornage"], c["hp_bornage"]]), c["bornage_total"])
+        prev = c
+
+
+FOREST_DOC = dict(
+    year="last year covered by the line (`period` 1903-1910: 1910; `before_1931`: 1930; `before_1932`: 1931)",
+    period="printed line: a year, the group 1903-1910, or `before_1931` / `before_1932` (Antérieures à 1931 / "
+           "1932)",
+    period_fr="printed line heading",
+    region="`north` (Région Nord), `high_plateaux` (Région des Hauts plateaux) or `both` (the two regions)",
+    region_fr="printed region heading",
+    measure="measure code (English)", measure_fr="printed column heading", unit="`hectares`",
+    flag="empty, or `illegible`, `not_applicable`, `total_mismatch` (cell identified as the faulty one of a failed "
+         "check, printed value kept), `reprint_corrected`")
+
+TABLES.update({
+    "agriculture_forest_area": dict(
+        secs=["forest_a"], cells=cells_forest_a, key=["year", "period", "region", "measure"],
+        dims=["period", "period_fr", "region", "region_fr", "measure", "measure_fr", "unit"], doc=FOREST_DOC,
+        title_fr="Forêts. a) Superficie des terrains domaniaux boisés ; délimitations",
+        title_en="Forests: area of the wooded state lands, delimitation and boundary-marking (bornage), by region, "
+                 "1903-1930",
+        unit="Units: hectares (`unit`); value_type: area.",
+        paras=["Printed in sgt1922-sgt1930 (f253, f743, f1245, f307, f817, f280, f804, f282, f816), one line for "
+               "1903-1910 and one per year to the edition year; nine independent printings, each typed from its "
+               "own page image. Columns: Région Nord (forêts de chênes-liège) and Région des Hauts plateaux "
+               "(forêts de pins d'Alep, chênes verts, genévriers), each with the hectares délimités in the period "
+               "and the superficie totale; superficie totale délimitée dans les deux régions; hectares bornés dans "
+               "l'année (Nord, Hauts plateaux); superficie totale bornée au 31 décembre. The total columns are "
+               "printed columns of the table (not total lines) and are stored; they are also used as checks.",
+               "From 1926 the three superficie columns are printed » (no stock printed any more): stored NA, "
+               "`not_applicable`; the hectares délimités printed » are stored 0. From 1927 the last column holds "
+               "the hectares bornés in the year (11.200 = 4.200 + 7.000 in 1927), not the cumulative total "
+               "(143.161 at the end of 1926): the check changes accordingly; the values are stored as printed "
+               "(`measure` stays `bounded_total`, see `measure_fr`).",
+               "Checks: superficie totale Nord + Hauts plateaux = total of the two regions; each superficie totale = "
+               "previous line + hectares délimités of the line (not on the first line: the 1903-1910 delimitations, "
+               "49.019 and 82.846, do not account for the superficies 246.976 and 561.394); total bornée = previous "
+               "line + hectares bornés of the line to 1926, = hectares bornés of the line from 1927.",
+               "The sgt1935-sgt1939 layout (domaine soumis au régime forestier, with surfaces déclassées and "
+               "a first line for all earlier years, from 1931) is a different table: `agriculture_forest_domain`. "
+               "It does not continue these columns (its Région Nord surface, 220.587 ha before 1931, is not the "
+               "246.976 ha délimités here; its bornages start again at 176.746 ha), so it is kept apart rather "
+               "than coded as extra columns."],
+        fail_note="sgt1924 prints the 1915 Région Nord bornage 2.460 (2.160 in the eight other printings, and its own "
+                  "cumulative 15.823 needs 2.160; flagged in that printing, value stored from sgt1930) and the 1924 "
+                  "total bornée 88.843 (87.843 = 80.343 + 7.500 in every later printing; flagged, stored from "
+                  "sgt1930). Both are failures of the sgt1924 printing only."),
+    "agriculture_forest_domain": dict(
+        secs=["forest_domain"], cells=cells_forest_domain, key=["year", "period", "region", "measure"],
+        dims=["period", "period_fr", "region", "region_fr", "measure", "measure_fr", "unit"], doc=FOREST_DOC,
+        title_fr="Forêts. Superficie et modifications dans la consistance du domaine soumis au régime forestier",
+        title_en="Forests: area of the domain under the forest regime (land newly brought under it, declassified, "
+                 "total) and administrative boundary-marking, by region, before 1931 to 1939",
+        unit="Units: hectares (`unit`); value_type: area.",
+        paras=["Printed in sgt1935 (f153, a) Superficie et modifications ...: Antérieures à 1931, 1931-1935), "
+               "sgt1936 (f115, Consistance du domaine ...: Antérieures à 1932, 1932-1936) and sgt1939 (f114: "
+               "1932-1939). Columns per region (Région Nord: forêts de chênes-liège et zéen; Hauts plateaux: pins, "
+               "chênes verts, genévriers): surfaces nouvellement soumises au régime forestier, surfaces déclassées, "
+               "surface du domaine soumis; superficie totale des terrains domaniaux soumis; bornages "
+               "administratifs (sgt1939: ou surfaces immatriculées): surfaces nouvellement bornées per region and "
+               "surface totale des forêts bornée (cumulative). » = 0. Separate from `agriculture_forest_area` "
+               "(sgt1922-sgt1930), whose columns and stocks it does not continue (see that file).",
+               "Checks: Nord + Hauts plateaux = superficie totale; surface of the domain = previous line + "
+               "nouvellement soumises - déclassées; surface totale bornée = previous line + surfaces bornées. "
+               "Each year is taken from the latest printing (rule 4); sgt1939's misprints of 1932 and 1934 are "
+               "replaced by sgt1936's cells (`reprint_corrected`)."],
+        fail_note="sgt1935 prints the 1931 Hauts plateaux surface 718.990 for 781.990 (790.018 - 8.028; its own total "
+                  "1.001.040 and the 1932 line need 781.990): flagged; it fails two checks (total, and 1932 = 1931 - "
+                  "1.036). Its 1931 surface totale bornée 198.415 is 21.669 above 176.746 although the line prints "
+                  "1.020 + 6.300 bornés: the difference, 14.349, is the 1930 bornage of `agriculture_forest_area` "
+                  "(sgt1930), and 176.746 = 143.161 (end of 1926) + 11.200 + 11.682 + 10.703 (1927-1929), i.e. the "
+                  "line Antérieures à 1931 stops at 1929 and 1930 is counted in 1931 (cells kept as printed, "
+                  "unflagged). sgt1936's line Antérieures à 1932 adds sgt1935's Antérieures à 1931 and "
+                  "1931 lines column by column, stocks included (439.637 = 220.587 + 219.050, 1.509.008 = 790.018 + "
+                  "718.990, 2.011.645, 375.161 = 176.746 + 198.415): the surfaces and the total bornée of that line "
+                  "are flagged `total_mismatch` (the déclassées 7.139 and 8.178 are correct sums of 1903-1931). "
+                  "sgt1939 prints the 1934 Hauts plateaux surface 778.309 (778.302 in sgt1935 and sgt1936 = 778.700 - "
+                  "398; three failed checks) and the 1932 Région Nord bornage 2.110 (1.110 in sgt1935 and sgt1936; "
+                  "198.415 + 1.110 + 9.000 = 208.525): both flagged in that printing and stored from sgt1936. "
+                  "sgt1935's 1933 surface totale bornée has its last digit cut by the column rule (\"214.19?\", "
+                  "illegible; 214.190 in sgt1936 and sgt1939, stored from sgt1939)."),
+    "agriculture_forest_products": dict(
+        secs=["forest_b"], cells=cells_forest_b, key=["census", "sale_no", "product"], rule5=True,
+        dims=["sale_no", "sale_fr", "product", "product_fr", "unit", "unit_fr"],
+        doc=dict(year="edition year (the sales listed are mostly of that year; sgt1922 and sgt1923 also list "
+                      "earlier sales whose payments fall in the year, see the footnotes in `sale_fr`)",
+                 sale_no="order of the sale line on the page", sale_fr="printed line heading (date and kind of "
+                 "sale, footnote calls kept), as printed", product="product code (English)",
+                 product_fr="printed column heading",
+                 unit="unit of `value` as printed under the heading (`cubic_metres`, `steres`, `quintals`, "
+                      "`linear_metres`, `count`), or `not_printed` (sgt1935-sgt1939 leave some units blank); never "
+                      "converted",
+                 unit_fr="unit as printed (empty: none printed)",
+                 flag="empty (no cell flagged)"),
+        title_fr="Forêts. b) Produits forestiers (bois, écorces à tan, lièges)",
+        title_en="Forests: forest products sold, by adjudication or private sale (wood, tan bark, pit props, poles, "
+                 "cork)",
+        unit="Units: cubic metres, steres, quintals, linear metres, count (`unit`); value_type: quantity.",
+        paras=["Printed in every edition (sgt1922-sgt1930: b) on the page after a); sgt1935-sgt1939: under the "
+               "domain table), one line per adjudication or marché de gré à gré, seven product columns: bois "
+               "d'industrie (m.c.), bois de chauffage (stères; printed q. in sgt1935-sgt1936, st. in sgt1939), "
+               "écorces à tan (quint.), étais de mine (mètres linéaires), perches (unités), lièges de reproduction "
+               "and liège mâle (quint.). Rule 5: each edition kept; » = 0. The TOTAL / TOTAUX lines "
+               "(sgt1922-sgt1930) are checks only; sgt1935-sgt1939 print none.",
+               "Read as printed: sgt1923 prints the 7 juin 1923 bois d'industrie \"183.58\" with its thousands "
+               "point misplaced; the TOTAL 27.283 needs 18.358 (stored 18358). sgt1927 prints a liège de "
+               "reproduction of 14,50 quintals (TOTAUX 33.164,50). sgt1936 prints 240.172 in the écorces column of "
+               "the first line (no unit printed there; it is of the order of the étais de mine of the other years, "
+               "but stored where printed).",
+               "c) Rendement en argent: `agriculture_forest_revenue`; d) Poursuites des délits and e) Incendies "
+               "(sgt1922-sgt1927): `agriculture_forest_offences_fires`."],
+        fail_note="sgt1924 bois de chauffage: the lines (13.804 + 10.937 + 28.800 + 9.100) give 62.641, the TOTAL "
+                  "prints 62.637; every cell re-read on a zoomed crop, no line identifiable (kept unflagged)."),
+})
+CHECKERS["forest"] = chk_forest
+
+
+QTY_UNIT = {"mètre cube": "cubic_metres", "stère": "steres", "quintal": "quintals", "mèt. linre": "linear_metres",
+            "unité": "count", "—": "quintals"}   # "—" = ditto (only with a quantity: liège mâle, under quintal)
+FLAGS.update({
+    ("sgt1923", "forest_c", "Liège de reproduction @@ quintal @@", "price"): "total_mismatch",
+})
+
+
+def cells_forest_c(sec):
+    out = []
+    for i, r in enumerate(dl(sec), 1):
+        item, ufr, obs = [x.strip() for x in r["label"].split("@@")]
+        memo = item.startswith("MEMO ")
+        item = item[5:] if memo else item
+        c = r["cells"]
+        common = dict(line_no=i, item_fr=item, observation_fr=obs, in_total="no" if memo else "yes")
+        if c["qty"].flag != "not_applicable":
+            u = QTY_UNIT[ufr]
+            out.append(dict(base(sec, int(sec["year"])), **common, measure="quantity", measure_fr="Quantités",
+                            unit=u, unit_fr=ufr, value=c["qty"].value, flag=flag_of(sec, r["label"], "qty", c["qty"])))
+            out.append(dict(base(sec, int(sec["year"])), **common, measure="unit_price",
+                            measure_fr="Prix moyen à l'unité de produit", unit=f"francs_per_{u}", unit_fr="fr. c",
+                            value=c["price"].value, flag=flag_of(sec, r["label"], "price", c["price"])))
+        out.append(dict(base(sec, int(sec["year"])), **common, measure="total_price" if sec["ed"] in ("sgt1922", "sgt1923") else "revenue",
+                        measure_fr=("Montant des condamnations (mémoire)" if memo else "Prix total")
+                        if sec["ed"] in ("sgt1922", "sgt1923") else "Rendement en argent",
+                        unit="francs", unit_fr="fr. c" if sec["ed"] in ("sgt1922", "sgt1923") else "francs",
+                        value=c["total"].value, flag=flag_of(sec, r["label"], "total", c["total"])))
+    return out
+
+
+def chk_forest_c(sec):
+    out = "agriculture_forest_revenue"
+    lines = [r for r in dl(sec) if not r["label"].startswith("MEMO ")]
+    tot = row(sec, "Total")
+    if tot:
+        CHK.eq(out, f"{where(sec)} lines vs TOTAL", ssum(r["cells"]["total"].value for r in lines),
+               tot["total"].value)
+    for r in lines:
+        q, p, t = (r["cells"][k].value for k in ("qty", "price", "total"))
+        if None in (q, p, t):
+            continue
+        CHK.eq(out, f"{where(sec)} {r['label'].split('@@')[0].strip()}: quantity x unit price = prix total "
+               "(to half a centime per unit)", (q * p).quantize(Decimal("0.01")), t, tol=q * Decimal("0.005") + 1)
+
+
+DE_COL = {"prosecutions": ("d", "Poursuites des délits", "court_reports",
+                           "Nombre de procès-verbaux adressés aux Tribunaux pour poursuites", "count"),
+          "fire_reports": ("e", "Incendies", "fire_reports", "Nombre de procès-verbaux dressés", "count"),
+          "ha": ("e", "Incendies", "area_burnt", "Superficie parcourue par le feu (hectares)", "hectares"),
+          "ares": ("e", "Incendies", "area_burnt", "Superficie parcourue par le feu (ares)", "ares"),
+          "ca": ("e", "Incendies", "area_burnt", "Superficie parcourue par le feu (centiares)", "centiares"),
+          "damage": ("e", "Incendies", "damage", "Estimation des dommages causés", "francs")}
+
+
+def cells_forest_de(sec):
+    out = []
+    for r in dl(sec):
+        for c in sec["cols"]:
+            cell = r["cells"][c]
+            if cell.flag == "not_applicable":
+                continue           # part of the area not printed (hectares only, or hectares and ares)
+            part, part_fr, m, mfr, u = DE_COL[c]
+            out.append(dict(base(sec, int(sec["year"])), part=part, part_fr=part_fr, measure=m, measure_fr=mfr,
+                            unit=u, value=cell.value, flag=flag_of(sec, r["label"], c, cell)))
+    return out
+
+
+_chk_forest_ab = chk_forest
+
+
+def chk_forest(sec):          # noqa: F811  (extends the a)/b) checker with c))
+    if sec["table"] == "forest_c":
+        chk_forest_c(sec)
+    elif sec["table"] != "forest_de":
+        _chk_forest_ab(sec)
+
+
+CHECKERS["forest"] = chk_forest
+
+TABLES.update({
+    "agriculture_forest_revenue": dict(
+        secs=["forest_c"], cells=cells_forest_c, key=["census", "line_no", "measure"], rule5=True,
+        dims=["line_no", "item_fr", "observation_fr", "in_total", "measure", "measure_fr", "unit", "unit_fr"],
+        doc=dict(year="edition year", line_no="order of the line on the page",
+                 item_fr="printed line heading: product (sgt1922-sgt1923) or sale (from sgt1924), as printed",
+                 observation_fr="printed observation (sgt1922-sgt1923), else empty",
+                 in_total="`yes`, or `no` for the montant des condamnations (mémoire) of sgt1922, printed beside "
+                          "the table and not part of its TOTAUX",
+                 measure="`quantity`, `unit_price`, `total_price` (sgt1922-sgt1923 columns), or `revenue` (the "
+                         "single amount column from sgt1924)",
+                 measure_fr="printed column heading (or the table title for the single amount column)",
+                 unit="`francs`, `francs_per_<unit>`, or the quantity unit (`cubic_metres`, `steres`, `quintals`, "
+                      "`linear_metres`, `count`); never converted",
+                 unit_fr="unit as printed (\"—\" = ditto of the line above; fr. c = francs and centimes)",
+                 flag="empty, or `total_mismatch`"),
+        title_fr="Forêts. c) Rendement en argent des produits forestiers",
+        title_en="Forests: money yield of forest products, by product (1922-1923) or by sale (1924-1939), in "
+                 "francs",
+        unit="Units: francs, francs per unit, and quantity units (`unit`); value_type: money (and quantities).",
+        paras=["Printed in every edition beside b). sgt1922 and sgt1923 print one line per product (unités, "
+               "quantités, prix moyen à l'unité, prix total, observations); from sgt1924 one amount per sale "
+               "(adjudication, marché de gré à gré), menus produits and, from sgt1935, chasse and transactions. "
+               "Amounts in francs and centimes as printed. Rule 5: each edition kept. The TOTAL / TOTAUX lines "
+               "are checks only. Lines without quantity or price (» printed) store the amount only. sgt1922's "
+               "souches de bruyère bracket two amounts (4e annuité; marché gré à gré): two lines; sgt1936 "
+               "brackets two lines (adjudications diverses; cessions de gré à gré) to one amount: one line.",
+               "Checks: lines = TOTAL; for sgt1922-sgt1923, quantity x prix moyen = prix total (to half a centime "
+               "per unit, the rounding of the printed price). Footnotes of the sale lines (sums payable the next "
+               "year) are given in the transcriptions; the next edition prints them as their own lines (e.g. "
+               "sgt1925 \"Adjudication du 17 juin 1924 (Somme payable en 1925)\" 19.920)."],
+        fail_note="sgt1923 prints the liège de reproduction price \"2.872 »\" (1.906.471,30 / 66.365 = 28,73: flagged "
+                  "`total_mismatch`) and the bois d'industrie price 39,83 where 1.036.806 / 27.283 = 38,00 (price or "
+                  "amount; not identifiable, kept unflagged; the amount fits the TOTAUX). sgt1936: the lines give "
+                  "6.696.691,90, the TOTAL prints 6.696.688,90 (3 francs; every cell re-read, not identifiable)."),
+    "agriculture_forest_offences_fires": dict(
+        secs=["forest_de"], cells=cells_forest_de, key=["census", "part", "measure", "unit"], rule5=True,
+        dims=["part", "part_fr", "measure", "measure_fr", "unit"],
+        doc=dict(year="edition year (the figures are those of the year, as printed)",
+                 part="sub-table letter (`d` poursuites des délits, `e` incendies)", part_fr="printed sub-table title",
+                 measure="measure code (English)", measure_fr="printed line heading",
+                 unit="`count`, `francs`, or the unit of each printed part of the burnt area (`hectares`, `ares`, "
+                      "`centiares`: sgt1925 prints \"607 hect. 95 ares\", sgt1926-sgt1927 \"8.231 h. 66 a. 78\"; "
+                      "the parts are stored as printed, not combined)",
+                 flag="empty (no cell flagged)"),
+        title_fr="Forêts. d) Poursuites des délits ; e) Incendies",
+        title_en="Forests: offences reported to the courts; forest fires (reports, area burnt, damage)",
+        unit="Units: count, hectares / ares / centiares, francs (`unit`); value_type: mixed.",
+        paras=["Printed in sgt1922-sgt1927 only (one figure for d), three lines for e)), below c). Rule 5: each "
+               "edition kept. No totals, hence no checks. sgt1922-sgt1924 print the burnt area in hectares only; "
+               "the ares (sgt1925-sgt1927) and centiares (sgt1926-sgt1927) are stored as separate rows (`unit`). "
+               "sgt1923's d) \"909\" has a faint last digit (read 9)."]),
+})
 
 
 def build(write=True):

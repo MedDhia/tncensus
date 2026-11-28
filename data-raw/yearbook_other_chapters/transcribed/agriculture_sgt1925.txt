@@ -383,3 +383,57 @@ Territoires Militaires du Sud /  /  / Nefzaoua | 195 23651 9636 33482
 Territoires Militaires du Sud /  /  / Ouerghemma | 7937 407157 149210 564304
 Territoires Militaires du Sud /  /  / Tataouine | 1968 32781 39947 74696
 TOTAUX | 713648 5829764 9103897 16060037
+
+# FORÊTS. a) (1903-1925). f307 (p. 283). Every line typed from native-resolution crops of this printing. » = 0.
+@forest_a view=307 page=283 years=1903-1925
+img: all
+cols: n_delim n_total hp_delim hp_total total n_bornage hp_bornage bornage_total
+1903-1910 | 49019 246976 82846 561394 808370 0 0 0
+1911 | 0 246976 0 561394 808370 0 0 0
+1912 | 0 246976 287842 849236 1096212 0 0 0
+1913 | 0 246976 0 849236 1096212 0 0 0
+1914 | 0 246976 0 849236 1096212 900 7000 7900
+1915 | 0 246976 0 849236 1096212 2160 5763 15823
+1916 | 0 246976 0 849236 1096212 2740 6000 24563
+1917 | 0 246976 0 849236 1096212 8000 5000 37563
+1918 | 0 246976 0 849236 1096212 3000 6130 46693
+1919 | 0 246976 0 849236 1096212 2000 6300 54993
+1920 | 0 246976 0 849236 1096212 1800 8000 64793
+1921 | 0 246976 0 849236 1096212 1950 2800 69543
+1922 | 0 246976 0 849236 1096212 3300 2500 75343
+1923 | 0 246976 0 849236 1096212 3500 1500 80343
+1924 | 0 246976 0 849236 1096212 3500 4000 87843
+1925 | 0 246976 0 849236 1096212 6008 20400 114251
+
+# FORÊTS. b) Produits forestiers. f308 (p. 284). Footnotes (1) (2): ventes sur deux exercices. c)-e): not
+# transcribed.
+@forest_b view=308 page=284 year=1925 units=m.c.,stères,quint.,mèt.lin.,unités,quint.,quint.
+img: all
+cols: ind fuel bark props poles cork_rep cork_male
+5 mars 1925 (Marché de gré à gré, chênes-zéen) | 934 0 0 0 0 0 0
+25 mars 1925 (Adjud. chênes-liège et chênes-zéen) | 950 25700 4900 7400 2200 0 6100
+17 juin (1) 1925 (Adjud. ch.-zéen, ch.-verts, pins) | 1236 14480 7 81276 22933 0 0
+17 octobre 1925 (Adjud. lièges de reproduction) | 0 0 0 0 0 48464 0
+25 novembre (2) 1925 (Adjud. chênes-liège, chênes-zéen, pins) | 1191 1300 30 15259 5300 0 0
+Total | 4311 41480 4937 103935 30433 48464 6100
+
+# FORÊTS. c) Rendement en argent, by sale (francs). f308 (p. 284). Footnotes: (1) plus 36.075 francs payables en
+# 1926; (2) plus 11.250 francs payables en 1926.
+@forest_c view=308 page=284 year=1925
+img: all
+cols: qty price total
+Adjudication du 17 juin 1924 (Somme payable en 1925) @@  @@  | - - 19920
+Adjudication du 12 novembre 1924 (Somme payable en 1925) @@  @@  | - - 835425
+5 mars 1925 (Marché de gré à gré) @@  @@  | - - 32700
+25 mars 1925 (Adjudication) @@  @@  | - - 214050
+17 juin 1925 (Adjudication) (1) @@  @@  | - - 72415
+17 octobre 1925 (Lièges de reproduction) @@  @@  | - - 4451085.50
+25 novembre 1925 (Adjudication) (2) @@  @@  | - - 3750
+Menus produits @@  @@  | - - 217832.75
+Total | - - 5847178.25
+
+# FORÊTS. d), e). f308 (p. 284). Superficie printed "607 hect. 95 ares".
+@forest_de view=308 page=284 year=1925
+img: all
+cols: prosecutions fire_reports ha ares ca damage
+all | 835 34 607 95 - 29555

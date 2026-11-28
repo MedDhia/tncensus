@@ -263,3 +263,38 @@ Territoires militaires du Sud /  /  / Ouerghema | 1345 15363 313 124 0 6053 5017
 Territoires militaires du Sud /  /  / Tatahouine | 872 13566 195 159 0 5305 74493 49477
 Territoires militaires du Sud /  /  / Matmata | 77 2966 666 1041 0 1452 39665 27575
 TOTAUX | 118778 166235 538973 57958 28800 186717 1910296 3532388
+
+# FORÊTS. Consistance du domaine soumis au régime forestier. f115 (p. 104). Layout of sgt1935. Every line typed
+# from native-resolution crops. » = 0. The first line "Antérieures à 1932" adds sgt1935's "antérieures à 1931" and
+# 1931 lines column by column, including the surfaces (stocks): 439.637 = 220.587 + 219.050, 1.509.008 = 790.018 +
+# 718.990, 2.011.645, 375.161 = 176.746 + 198.415.
+@forest_domain view=115 page=104 years=1932-1936
+img: all
+cols: n_new n_declassed n_total hp_new hp_declassed hp_total total n_bornage hp_bornage bornage_total
+before_1932 | 49019 7139 439637 0 8178 1509008 2011645 0 0 375161
+1932 | 0 1057 217993 0 1036 780954 998947 1110 9000 208525
+1933 | 0 33 217960 0 2254 778700 996660 1290 4375 214190
+1934 | 0 0 217960 0 398 778302 996262 1290 0 215480
+1935 | 0 0 217960 0 248 778054 996014 0 0 215480
+1936 | 0 0 217960 0 314 777740 995700 0 0 215480
+
+# FORÊTS. Produits forestiers (bois, lièges). f115 (p. 104). Units printed: bois de chauffage q., étais m. l.,
+# lièges q. The 240.172 of the first line stands in the écorces column (printed so; no unit printed there).
+# No total line. Rendement en argent on the same page: not transcribed.
+@forest_b view=115 page=104 year=1936 units=_,q.,_,m.l.,_,q.,q.
+img: all
+cols: ind fuel bark props poles cork_rep cork_male
+Adjudications diverses au cours de l'année cession de gré à gré | 1166 7203 240172 0 0 0 0
+Adjudication du 6 octobre 1936 (Vente lièges) | 0 0 0 0 0 60905 5680
+
+# FORÊTS. Rendement en argent des produits forestiers (francs). f115 (p. 104). The first two lines (Adjudications
+# diverses; Cessions par marchés de gré à gré (Coupes de bois)) are bracketed to one amount: one line here. The
+# lines give 6.696.691,90, TOTAL printed 6.696.688,90 (every cell re-read on a zoomed crop).
+@forest_c view=115 page=104 year=1936
+img: all
+cols: qty price total
+Adjudications diverses / Cessions par marchés de gré à gré (Coupes de bois) @@  @@  | - - 226205
+Adjudication du 6 octobre 1936 (Vente de lièges) @@  @@  | - - 6146006
+Chasse et menus-produits @@  @@  | - - 226507.10
+Transactions @@  @@  | - - 97973.80
+Total | - - 6696688.90

@@ -297,3 +297,36 @@ Territoires militaires du Sud /  /  / Ouerghema | 809 14304 188 205 0 5399 55359
 Territoires militaires du Sud /  /  / Tatahouine | 339 11844 141 142 0 4077 78973 39710
 Territoires militaires du Sud /  /  / Matmata | 47 2435 311 803 0 888 17998 13745
 TOTAUX | 92529 152226 478543 55570 15000 130519 1406827 2687081
+
+# FORÊTS. Consistance du domaine soumis au régime forestier. f114 (p. 108). Layout of sgt1935 (bornages
+# administratifs ou surfaces immatriculées). Every line typed from native-resolution crops. » = 0. 1932 Région
+# Nord bornée printed 2.110 (1.110 in sgt1935 and sgt1936; 198.415 + 1.110 + 9.000 = 208.525); 1934 Hauts plateaux
+# surface printed 778.309 (778.302 in sgt1935 and sgt1936; 778.700 - 398).
+@forest_domain view=114 page=108 years=1932-1939
+img: all
+cols: n_new n_declassed n_total hp_new hp_declassed hp_total total n_bornage hp_bornage bornage_total
+1932 | 0 1057 217993 0 1036 780954 998947 2110 9000 208525
+1933 | 0 33 217960 0 2254 778700 996660 1290 4375 214190
+1934 | 0 0 217960 0 398 778309 996262 1290 0 215480
+1935 | 0 0 217960 0 248 778054 996014 0 0 215480
+1936 | 0 0 217960 0 314 777740 995700 0 0 215480
+1937 | 0 0 217960 0 0 777740 995700 0 0 215480
+1938 | 0 0 217960 0 3214 774526 992486 0 3892 219372
+1939 | 0 267 217693 2746 793 776479 994172 286 566 220224
+
+# FORÊTS. Produits forestiers (bois, lièges). f114 (p. 108). No total line. Rendement en argent: not transcribed.
+@forest_b view=114 page=108 year=1939 units=m.c.,st.,q.,m.l.,_,q.,q.
+img: all
+cols: ind fuel bark props poles cork_rep cork_male
+Adjudications diverses au cours de l'année, cessions de gré à gré (Coupes de bois) | 7264 34433 7965 245505 0 0 0
+Adjudication du 14 novembre 1939 et cessions de gré à gré (lièges) | 0 0 0 0 0 68850 6338
+
+# FORÊTS. Rendement en argent des produits forestiers (francs). f114 (p. 108).
+@forest_c view=114 page=108 year=1939
+img: all
+cols: qty price total
+Adjudication diverses et cessions par marchés de gré à gré (Coupes de bois) @@  @@  | - - 1287550
+Adjudication du 14 novembre 1939 et cessions de gré à gré (lièges) @@  @@  | - - 7603846
+Chasse, menus-produits et panages @@  @@  | - - 297524.32
+Transactions @@  @@  | - - 163475.30
+Total | - - 9352395.62

@@ -419,3 +419,52 @@ Territoires militaires du Sud /  /  / Ouerghemma | 310 18411 476 46 14 5819 7583
 Territoires militaires du Sud /  /  / Tatahouine | 360 11379 237 38 0 4138 85874 59794
 Territoires militaires du Sud /  /  / Matmata | 48 3314 987 415 0 1519 20967 15943
 TOTAUX | 92348 155356 501223 38484 13473 162044 1380855 2142366
+
+# FORÊTS. a) (1903-1927). f280 (p. 252). Every line typed from native-resolution crops of this printing. » = 0,
+# except the superficie columns from 1926 ('-'). From 1927 the last column holds the hectares bornés in the year
+# (11.200 = 4.200 + 7.000), no longer the cumulative total.
+@forest_a view=280 page=252 years=1903-1927
+img: all
+cols: n_delim n_total hp_delim hp_total total n_bornage hp_bornage bornage_total
+1903-1910 | 49019 246976 82846 561394 808370 0 0 0
+1911 | 0 246976 0 561394 808370 0 0 0
+1912 | 0 246976 287842 849236 1096212 0 0 0
+1913 | 0 246976 0 849236 1096212 0 0 0
+1914 | 0 246976 0 849236 1096212 900 7000 7900
+1915 | 0 246976 0 849236 1096212 2160 5763 15823
+1916 | 0 246976 0 849236 1096212 2740 6000 24563
+1917 | 0 246976 0 849236 1096212 8000 5000 37563
+1918 | 0 246976 0 849236 1096212 3000 6130 46693
+1919 | 0 246976 0 849236 1096212 2000 6300 54993
+1920 | 0 246976 0 849236 1096212 1800 8000 64793
+1921 | 0 246976 0 849236 1096212 1950 2800 69543
+1922 | 0 246976 0 849236 1096212 3300 2500 75343
+1923 | 0 246976 0 849236 1096212 3500 1500 80343
+1924 | 0 246976 0 849236 1096212 3500 4000 87843
+1925 | 0 246976 0 849236 1096212 6008 20400 114251
+1926 | 0 - 0 - - 7910 21000 143161
+1927 | 0 - 0 - - 4200 7000 11200
+
+# FORÊTS. b) Produits forestiers. f281 (p. 253). The liège de reproduction of 27 avril is printed 14.50 (decimal:
+# the TOTAUX prints 33 164 50 = 33.150 + 14,50). Footnote (1): vente sur deux exercices. c)-e): not transcribed.
+@forest_b view=281 page=253 year=1927 units=m.c.,stères,quint.,mèt.lin.,unités,quint.,quint.
+img: all
+cols: ind fuel bark props poles cork_rep cork_male
+27 avril 1927. Adjudication (chênes-lièges, chênes-zéen, pins, essences diverses, liège) (1) | 514 59395 12374 136883 0 14.50 7380
+13 octobre 1927. Adjudication : (liège mâle et de reproduction) | 0 0 0 0 0 33150 2693
+Total | 514 59395 12374 136883 0 33164.50 10073
+
+# FORÊTS. c) Rendement en argent, by sale (francs). f281 (p. 253). Footnote (1): plus 407.637 fr. payables en 1928.
+@forest_c view=281 page=253 year=1927
+img: all
+cols: qty price total
+27 avril 1927. — Adjudication (1) @@  @@  | - - 1245663
+13 octobre 1927 (Lièges) @@  @@  | - - 5047597
+Menus-produits @@  @@  | - - 479000
+Total | - - 6772260
+
+# FORÊTS. d), e). f281 (p. 253). Superficie printed "10.030 h. 62 a. 04"; dommages "2.824.293 50 fr.".
+@forest_de view=281 page=253 year=1927
+img: all
+cols: prosecutions fire_reports ha ares ca damage
+all | 1028 56 10030 62 04 2824293.50

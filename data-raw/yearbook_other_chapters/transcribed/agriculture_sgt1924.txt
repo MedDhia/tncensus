@@ -689,3 +689,58 @@ Gafsa | 2938 40282 134976 178196
 Hammama | 551 84103 6981 91635
 Djerid | 1704 12896 21481 36081
 TOTAUX | 714312 5822515 9117520 15654347
+
+# FORÊTS. a) (1903-1924). f1245 (p. 255). Every line typed from native-resolution crops of this printing. » = 0.
+# 1915 Région Nord printed 2.460 (2.160 in every other printing; the cumulative 15.823 needs 2.160); 1924 total
+# bornée printed 88.843 (87.843 in every later printing; 80.343 + 7.500).
+@forest_a view=1245 page=255 years=1903-1924
+img: all
+cols: n_delim n_total hp_delim hp_total total n_bornage hp_bornage bornage_total
+1903-1910 | 49019 246976 82846 561394 808370 0 0 0
+1911 | 0 246976 0 561394 808370 0 0 0
+1912 | 0 246976 287842 849236 1096212 0 0 0
+1913 | 0 246976 0 849236 1096212 0 0 0
+1914 | 0 246976 0 849236 1096212 900 7000 7900
+1915 | 0 246976 0 849236 1096212 2460 5763 15823
+1916 | 0 246976 0 849236 1096212 2740 6000 24563
+1917 | 0 246976 0 849236 1096212 8000 5000 37563
+1918 | 0 246976 0 849236 1096212 3000 6130 46693
+1919 | 0 246976 0 849236 1096212 2000 6300 54993
+1920 | 0 246976 0 849236 1096212 1800 8000 64793
+1921 | 0 246976 0 849236 1096212 1950 2800 69543
+1922 | 0 246976 0 849236 1096212 3300 2500 75343
+1923 | 0 246976 0 849236 1096212 3500 1500 80343
+1924 | 0 246976 0 849236 1096212 3500 4000 88843
+
+# FORÊTS. b) Produits forestiers. f1246 (p. 256). Footnotes (1) (2): ventes sur deux exercices. c)-e): not
+# transcribed. Bois de chauffage: lines 62.641, TOTAL printed 62.637 (every cell re-read).
+@forest_b view=1246 page=256 year=1924 units=m.c.,stères,quint.,mèt.lin.,unités,quint.,quint.
+img: all
+cols: ind fuel bark props poles cork_rep cork_male
+21 janvier 1924. Marché de gré à gré. Pins d'Alep | 0 13804 0 79300 0 0 0
+24 janvier 1924. Adjudication, pins d'Alep, chênes verts | 280 10937 0 7311 0 0 0
+27 mars 1924. Adjudication, écorces à tan, liège mâle, bois à charbon, étais de mine (1) | 2802 28800 17542 17736 7249 0 13250
+17 juin 1924. Adjudication (pins d'Alep, chênes verts) | 270 9100 0 59500 0 0 0
+25 septembre 1924. Adjudication. Liège de reproduction (2) | 0 0 0 0 0 64721 0
+12 novembre 1924. Souches de bruyères | 0 0 0 0 0 0 0
+Total | 3352 62637 17542 163847 7249 64721 13250
+
+# FORÊTS. c) Rendement en argent des produits forestiers, by sale (francs). f1246 (p. 256). Footnotes: (1) plus
+# 19.920 fr. payables en 1925; (2) plus 835.425 fr. payables en 1925.
+@forest_c view=1246 page=256 year=1924
+img: all
+cols: qty price total
+21 janvier 1924. — Marché de gré à gré @@  @@  | - - 40000
+24 janvier 1924. — Adjudication @@  @@  | - - 47450
+27 mars 1924. — Adjudication @@  @@  | - - 653080
+17 juin 1924. — Adjudication (1) @@  @@  | - - 75465
+12 novembre 1924. — Adjudication bruyères (2) @@  @@  | - - 278475
+25 septembre 1924. — Lièges de reproduction @@  @@  | - - 2822974
+Menus produits @@  @@  | - - 222420.60
+Total | - - 4139864.60
+
+# FORÊTS. d), e). f1246 (p. 256).
+@forest_de view=1246 page=256 year=1924
+img: all
+cols: prosecutions fire_reports ha ares ca damage
+all | 906 63 23674 - - 509750
