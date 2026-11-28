@@ -10,7 +10,7 @@ Transcriptions: `../transcribed/meteo_<edition>.txt`; rebuild with `python3 -I d
 
 Rows: 8328 (one per station, month and edition). The printed annual totals (*Année*) are checks, not rows. Each solar year is printed in one edition only, so no overlap selection is needed (SPEC_ADDENDUM rule 4 would apply to any year printed twice).
 
-Partial coverage: Transcribed: sgt1936 f123-f144 (complete) and sgt1935 f166-f183 (complete). NOT YET TRANSCRIBED: every Météorologie page of sgt1930 (f818-f849), sgt1929 (f284-f312), sgt1928 (f806-f835), sgt1927 (f282-f307), sgt1926 (f819-f845), sgt1925 (f309-f334), sgt1924 (f1247-f1268), sgt1923 (f745-f764) and sgt1922 (f255-f273). Tables meteo_rainfall_season, meteo_climate and meteo_means are designed but have no rows yet.
+Partial coverage: Transcribed: sgt1936 f123-f144 (complete), sgt1935 f166-f183 (complete) and sgt1930 part a) f818-f825 (complete). NOT YET TRANSCRIBED: sgt1930 parts b) f826-f843, c) f844-f845 and d) f846-f849; every Météorologie page of sgt1929 (f284-f312), sgt1928 (f806-f835), sgt1927 (f282-f307), sgt1926 (f819-f845), sgt1925 (f309-f334), sgt1924 (f1247-f1268), sgt1923 (f745-f764) and sgt1922 (f255-f273). Tables meteo_climate and meteo_means are designed but have no rows yet.
 
 ## Columns
 

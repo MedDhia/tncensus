@@ -339,6 +339,7 @@ Every table is tidy: one row per printed cell. Printed subtotals and totals are 
 | [`meteo_rainfall_monthly`](#meteo_rainfall_monthly) | rainfall_solar_year | by edition | 8,328 | millimetres | Rainfall record: total rainfall in millimetres by station and month (solar year) |
 | [`meteo_rain_days`](#meteo_rain_days) | rainfall_solar_year | by edition | 8,328 | count | Rainfall record: number of rainy days by station and month (solar year) |
 | [`commerce_oil_wine_balance`](#commerce_oil_wine_balance) | oil_wine_consumption;oil_wine_stocks;oil_wine_trade | by edition | 156 | mixed | Olive oil and wine: imports and exports by commercial campaign, available stocks and average consumption |
+| [`meteo_rainfall_season`](#meteo_rainfall_season) | rainfall_agricultural_year | by edition | 1,292 | millimetres | Rainfall of the agricultural year: total rainfall by season and station |
 
 ### eur1906_t1_circonscription_nationality
 
@@ -17324,3 +17325,97 @@ Source `sgt`, table oil_wine_consumption;oil_wine_stocks;oil_wine_trade, printed
 | `litres_per_inhabitant` |  | 3 |
 | `thousand_hectolitres` |  | 72 |
 | `thousand_quintals` |  | 72 |
+
+### meteo_rainfall_season
+
+**Relevé pluviométrique de l'année agricole : pluies totales par saison et pour l'année**  
+*Rainfall of the agricultural year: total rainfall by season and station*
+
+Source `sgt`, table rainfall_agricultural_year, printed pages by edition. 1,292 rows. Value type: millimetres. Flags: (empty) 1,114, not_applicable 177, total_mismatch 1. Notes and validation: [`../yearbook_other_chapters/csv/meteo_rainfall_season.md`](../yearbook_other_chapters/csv/meteo_rainfall_season.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `region` | Coded dimension. |
+| `controle` | Coded dimension. |
+| `station` | Text (313 distinct values). |
+| `period` | Coded dimension. |
+| `season` | Coded dimension. |
+| `season_fr` | Printed French label for `season`. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `obs` | Coded dimension. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`region`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `Arad` |  | 31 |
+| `Extrême Sud` |  | 18 |
+| `Golfe de Tunis` |  | 197 |
+| `Hautes Plaines Tunisiennes` |  | 195 |
+| `Kroumirie` |  | 36 |
+| `Mogods` |  | 67 |
+| `Nefzaoua` |  | 5 |
+| `Région de Dakla` |  | 128 |
+| `Région de Gabès` |  | 5 |
+| `Région de Gafsa` |  | 29 |
+| `Région de Kairouan` |  | 105 |
+| `Région de Metlaoui et Djerid` |  | 18 |
+| `Région de Sfax` |  | 77 |
+| `Région de Sousse` |  | 42 |
+| `Région de l'Enfida` |  | 89 |
+| `Région de l'Oued Miliane` |  | 165 |
+| `Vallée Basse de la Medjerdah` |  | 85 |
+
+`controle`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `(empty)` |  | 1,292 |
+
+`period`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `1901-1925` |  | 40 |
+| `1929-1930` |  | 1,252 |
+
+`season`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `autumn` | Automne | 313 |
+| `spring` | Printemps | 313 |
+| `summer` | Eté | 313 |
+| `winter` | Hiver | 313 |
+| `year` | Année | 40 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `rainfall` | Relevé des pluies totales par saison et pour l'année | 1,252 |
+| `rainfall_mean` | Relevé des pluies totales par saison et pour l'année | 40 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `mm` |  | 1,292 |
+
+`obs`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `(empty)` |  | 1,106 |
+| `no_observation` |  | 177 |
+| `traces` |  | 9 |

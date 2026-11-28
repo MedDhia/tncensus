@@ -104,6 +104,8 @@ def parse(path, ed):
         cells = [Cell(x) for x in vals.split()]
         if len(cells) != len(cur["cols"]):
             raise ValueError(f"{path.name}:{n} row {label!r}: {len(cells)} values for {len(cur['cols'])} columns")
+        if cur["cols"] is None:
+            raise ValueError(f"{path.name}:{n}: no cols: line")
         cur["rows"].append({"label": label.strip(), "region": region, "controle": controle,
                             "cells": dict(zip(cur["cols"], cells)), "line": n})
     return secs
@@ -120,7 +122,17 @@ FLAGS = {("sgt1936", st, "d05"): "total_mismatch" for st in (
     "Bizerte (Port)", "Aïn-bou-Rass (Captage)", "Mateur", "El-Oggaline (Aïn-Rhelal)", "Tamera (Aïn-Kherma)",
     "Utique I", "Selma", "Djebel-Abiod", "Béja", "Oum-el-Aguareb", "El-Guéria", "Aïn-Essid", "Le Munchar",
     "Guermanez", "M'Zourah (Sidi-Khalled)", "Tabarka", "Aïn-Sebaa", "Aïn-Draham")}
+# sgt1930 p.262 (f820) Menzel-Temime: Printemps printed 172.6, identical to Hiver; the printed Année 410.3 implies
+# 66.9 (confirmed on a zoomed crop): the Printemps cell repeats the Hiver cell, kept as printed and flagged.
+FLAGS[("sgt1930", "Menzel-Temime", "spr")] = "total_mismatch"
 FAIL_NOTES = {
+    "meteo_rainfall_season": "Every failure was re-read on a zoomed native-resolution crop of the line; printed "
+                             "values kept. sgt1930 p. 262 Menzel-Temime: Printemps (172.6) is printed identical "
+                             "to Hiver, the Année implies 66.9, so the Printemps cell is flagged `total_mismatch`. "
+                             "p. 265 Djebel-Mansour (Sainte-Gilberte) (540.8 vs 510.8, a difference of exactly "
+                             "30: one digit misprinted, cell not identifiable). Small differences (p. 260 "
+                             "Aïn-Sebaâ -0.6, p. 263 Le Kef I +0.2, p. 265 Sainte Maurice de Djebibina +0.1, "
+                             "Kundar +0.9): printed inconsistencies, every digit clear.",
     "meteo_rain_days": "sgt1936 p. 113 (f124): the Mai column is printed as an exact copy of the Avril column on "
                        "every line of the page, which explains all eighteen failures on that page (Mai cells "
                        "flagged `total_mismatch`; the true May values are not recoverable from the annual total "
@@ -187,6 +199,38 @@ def rain_cells(sec):
     return out_mm, out_d
 
 
+SEASONS = [("aut", "autumn", "Automne"), ("win", "winter", "Hiver"), ("spr", "spring", "Printemps"),
+           ("sum", "summer", "Eté")]
+
+
+def season_cells(sec):
+    """a) Agricultural-year rainfall by season. The printed Année of the year is a check, not a row; the printed
+    normal annual rainfall (Année 1901-1925) is stored as a row with period 1901-1925."""
+    out = []
+    y = sec["year"]
+    per = f"{y - 1}-{y}"
+    for r in sec["rows"]:
+        c = r["cells"]
+        vals = [c[k].value for k, _, _ in SEASONS]
+        if all(c[k].obs in ("", "traces") and c[k].flag != "illegible" for k, _, _ in SEASONS):
+            CHK.eq("meteo_rainfall_season", f"{where(sec, r)}: seasons vs Année {per}", ssum(vals), c["yr"].value)
+        base = {"census": sec["ed"], "table_id": "rainfall_agricultural_year", "gallica_ark": sec["ark"],
+                "source_page": sec["page"], "gallica_view": sec["view"], "region": r["region"],
+                "controle": r["controle"], "station": r["label"], "measure": "rainfall",
+                "measure_fr": "Relevé des pluies totales par saison et pour l'année", "unit": "mm"}
+        for k, en, fr in SEASONS:
+            cell = c[k]
+            out.append(dict(base, year=y, period=per, season=en, season_fr=fr, value=cell.value, obs=cell.obs,
+                            flag=FLAGS.get((sec["ed"], r["label"], k), cell.flag)))
+        cell = c["nor"]
+        if cell.obs == "no_observation":   # no normal printed for this station: no row
+            continue
+        out.append(dict(base, year=None, period=sec.get("normal", "1901-1925"), season="year",
+                        season_fr="Année", measure="rainfall_mean", value=cell.value, obs=cell.obs,
+                        flag=cell.flag))
+    return out
+
+
 DOC = {
     "census": "Source edition (`sgt1936` = *Statistique générale de la Tunisie*, 1936 edition).",
     "table_id": "`rainfall_solar_year` = *Relevé pluviométrique, année (solaire)*.",
@@ -215,6 +259,39 @@ DOC = {
 }
 DIMS = ["region", "controle", "station", "month", "month_fr", "measure", "measure_fr", "unit"]
 TABLES = {
+    "meteo_rainfall_season": dict(
+        title_fr="Relevé pluviométrique de l'année agricole : pluies totales par saison et pour l'année",
+        title_en="Rainfall of the agricultural year: total rainfall by season and station", idx=2,
+        dims=["region", "controle", "station", "period", "season", "season_fr", "measure", "measure_fr", "unit"],
+        rows_text="(one per station and season of the agricultural year, plus one row per printed normal annual "
+                  "rainfall). The agricultural year runs September-August (Automne = September-November, Hiver = "
+                  "December-February, Printemps = March-May, Eté = June-August) and is coded in `year` as the year "
+                  "it ends (1929-1930 = 1930). The printed annual total of the year (*Année 1929-30*) is a check, "
+                  "not a row. The printed normal (*Année 1901-1925*) exists only as a mean: it is stored with "
+                  "`season` = `year`, `measure` = `rainfall_mean`, `period` = `1901-1925` and `year` NA, only "
+                  "where a value is printed.",
+        check_text="Année of the agricultural year = sum of the four seasons, for every line whose four seasons "
+                   "are printed and whose Année is printed",
+        doc={"table_id": "`rainfall_agricultural_year` = *a) Relevé pluviométrique de l'année agricole*.",
+             "source_page": "Printed page number (one page per table).",
+             "year": "Year in which the agricultural year (September-August) ends (1929-1930 = 1930); NA for "
+                     "the normals.",
+             "region": "Natural-region heading as printed in part a) (e.g. `Kroumirie`, `Mogods`, `Golfe de "
+                       "Tunis`, `Région de Dakla`), without roman numerals, in title case with accents restored "
+                       "as in the solar-year tables. The part a) regions differ from the part b) regions.",
+             "controle": "Empty (part a) has no contrôle headings).",
+             "station": "Rain-gauge station exactly as printed.",
+             "period": "`1929-1930` for the observations of the agricultural year; `1901-1925` for the printed "
+                       "normal annual rainfall.",
+             "season": "`autumn`, `winter`, `spring`, `summer`, or `year` (normal annual rainfall).",
+             "season_fr": "Column heading as printed.",
+             "measure": "`rainfall` (total rainfall of the season) or `rainfall_mean` (normal annual rainfall, "
+                        "mean of the period).",
+             "measure_fr": "Table heading as printed.",
+             "unit": "`mm` (millimètres, one decimal).",
+             "value": "Value as printed; NA when nothing was printed (`—`).",
+             "obs": "`traces` (\"gouttes\": value 0); `no_observation` (\"—\", value NA). Empty otherwise.",
+             "flag": "Empty, `not_applicable` (dash printed: see `obs`), `illegible`."}),
     "meteo_rainfall_monthly": dict(
         title_fr="Relevé pluviométrique : hauteur totale de pluie en millimètres et dixièmes, par station et par mois",
         title_en="Rainfall record: total rainfall in millimetres by station and month (solar year)", idx=0),
@@ -236,9 +313,24 @@ SURVEY = {
                "same signes conventionnels as sgt1936; only part b) printed. The binding gutter hides the decimals "
                "of the November column on most spreads (cells derived from the annual total, flagged "
                "`derived_from_totals`). f184 blank.",
-    "sgt1930": "f818-f849 Météorologie (inside chapter XI Agriculture): parts a) agricultural-year rainfall by "
-               "season, b) solar-year spreads, c) données climatologiques, d) retrospective table (views per part "
-               "not yet surveyed page by page).",
+    "sgt1930": "Météorologie at the end of chapter XI Agriculture, printed pages 260-291. f818-f825 (p. 260-267) "
+               "*a) Relevé pluviométrique de l'année agricole (1929-1930)*, one table per page: Automne, Hiver, "
+               "Printemps, Eté, Année 1929-30, Année 1901-1925 (p. 266 head misprinted \"1901-1905\"), stations "
+               "grouped by natural region (Kroumirie ... Extrême Sud), no contrôle headings; transcribed "
+               "(meteo_rainfall_season). f826-f843 (p. 268-285) *b) Relevé pluviométrique de l'année 1930*, nine "
+               "two-page spreads (left page: stations and Millimètres de pluie by month; right page: the rest of "
+               "the mm and Total, then Nombre de jours by month and Total; the exact split column is to be "
+               "confirmed when transcribing), key \"Signes conventionnels : — pas d'observation; × ...\" across "
+               "the top of the spread; NOT YET TRANSCRIBED. f844|f845 (p. 286-287) *c) Données climatologiques "
+               "essentielles fournies par les principales régions tunisiennes (année 1930)*, one spread: localités "
+               "grouped by region, Pluies (millimètres, nombre de jours), Température moyenne du mois le plus chaud "
+               "/ le plus froid (moyennes, maxima, minima), Température absolue (maxima, minima, with dates), "
+               "nombre de jours au cours de l'année pendant lesquels le vent a soufflé de N, NE, E, SE, S, SW, W, "
+               "NW, calme, vent dominant; footnotes (1)-(3) on missing months; NOT YET TRANSCRIBED. f846-f849 "
+               "(p. 288-291) *Pluies moyennes mensuelles, par saison et annuelles pour les périodes : 1926-1930 et "
+               "1901-1930*, two lines (1926-1930, 1901-1930) per station (Tabarka ... Tatahouine), columns "
+               "Septembre-Août, Automne, Hiver, Printemps, Eté, Année; NOT YET TRANSCRIBED (means only: "
+               "meteo_means).",
     "sgt1929": "f284-f312 Météorologie, parts a)-d) (views per part not yet surveyed page by page).",
     "sgt1928": "f806-f835 Météorologie, parts a)-d) (views per part not yet surveyed page by page).",
     "sgt1927": "f282-f287 a) relevé pluviométrique de l'année agricole 1926-1927; f288-f303 b) année solaire 1927 "
@@ -283,6 +375,8 @@ def build(write=True):
             secs += parse(p, ed)
     recs = {k: [] for k in TABLES}
     for s in secs:
+        if s["table"] == "season":
+            recs["meteo_rainfall_season"] += season_cells(s)
         if s["table"] == "rain":
             mm, d = rain_cells(s)
             recs["meteo_rainfall_monthly"] += mm
@@ -297,7 +391,7 @@ def build(write=True):
                         not_applicable=sum(1 for r in rows if r["flag"] == "not_applicable"),
                         overlap_compared=0, overlap_diffs=[])
         if write:
-            cols = COMMON + DIMS + ["value", "obs", "flag"]
+            cols = COMMON + spec.get("dims", DIMS) + ["value", "obs", "flag"]
             write_csv(out, cols, rows)
             write_md(out, spec, rows, cols, eds, fails)
     if write:
@@ -307,11 +401,11 @@ def build(write=True):
     return res
 
 
-REMAINING = ("Transcribed: sgt1936 f123-f144 (complete) and sgt1935 f166-f183 (complete). NOT YET TRANSCRIBED: "
-             "every Météorologie page of sgt1930 (f818-f849), sgt1929 (f284-f312), sgt1928 (f806-f835), sgt1927 "
+REMAINING = ("Transcribed: sgt1936 f123-f144 (complete), sgt1935 f166-f183 (complete) and sgt1930 part a) "
+             "f818-f825 (complete). NOT YET TRANSCRIBED: sgt1930 parts b) f826-f843, c) f844-f845 and d) "
+             "f846-f849; every Météorologie page of sgt1929 (f284-f312), sgt1928 (f806-f835), sgt1927 "
              "(f282-f307), sgt1926 (f819-f845), sgt1925 (f309-f334), sgt1924 (f1247-f1268), sgt1923 (f745-f764) and "
-             "sgt1922 (f255-f273). Tables meteo_rainfall_season, meteo_climate and meteo_means are designed but have "
-             "no rows yet.")
+             "sgt1922 (f255-f273). Tables meteo_climate and meteo_means are designed but have no rows yet.")
 
 
 def write_md(out, spec, rows, cols, eds, fails):
@@ -326,14 +420,15 @@ def write_md(out, spec, rows, cols, eds, fails):
          "Pages and views: " + "; ".join(f"{e} p. {p}, f{v}" for e, p, v in views) + ".", "",
          f"Transcriptions: `../transcribed/meteo_<edition>.txt`; rebuild with "
          f"`python3 -I data-raw/yearbook_other_chapters/{SCRIPT} build`.", "",
-         f"Rows: {len(rows)} (one per station, month and edition). The printed annual totals (*Année*) are "
-         "checks, not rows. Each solar year is printed in one edition only, so no overlap selection is needed "
-         "(SPEC_ADDENDUM rule 4 would apply to any year printed twice).", "",
+         f"Rows: {len(rows)} " + spec.get("rows_text", "(one per station, month and edition). The printed annual "
+         "totals (*Année*) are checks, not rows. Each solar year is printed in one edition only, so no overlap "
+         "selection is needed (SPEC_ADDENDUM rule 4 would apply to any year printed twice)."), "",
          "Partial coverage: " + REMAINING, "", "## Columns", ""]
-    L += [f"- `{c}`: {DOC[c]}" for c in cols]
+    doc = dict(DOC, **spec.get("doc", {}))
+    L += [f"- `{c}`: {doc[c]}" for c in cols]
     L += ["", "## Validation", "",
-          f"- Annual total = sum of the twelve months, for every line whose twelve months are all observed and "
-          f"whose annual total is printed: {CHK.n[out]} checks; passed {CHK.n[out] - len(fails)}; failed "
+          "- " + spec.get("check_text", "Annual total = sum of the twelve months, for every line whose twelve "
+                          "months are all observed and whose annual total is printed") + f": {CHK.n[out]} checks; passed {CHK.n[out] - len(fails)}; failed "
           f"{len(fails)}."]
     if fails:
         L += ["", "Failed checks (printed values kept; each re-read on a native-resolution crop):", ""]

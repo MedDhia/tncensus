@@ -1,4 +1,23 @@
 {
+ "meteo_rainfall_season": {
+  "rows": 1292,
+  "checks": 212,
+  "failed": [
+   "sgt1930 p.260 (f818) Aïn-Sebaâ: seasons vs Année 1929-1930: cells give 1152.6, printed 1152.0 (difference -0.6)",
+   "sgt1930 p.262 (f820) Menzel-Temime: seasons vs Année 1929-1930: cells give 516.0, printed 410.3 (difference -105.7)",
+   "sgt1930 p.263 (f821) Le Kef I: seasons vs Année 1929-1930: cells give 510.9, printed 511.1 (difference 0.2)",
+   "sgt1930 p.265 (f823) Djebel-Mansour (Sainte-Gilberte): seasons vs Année 1929-1930: cells give 540.8, printed 510.8 (difference -30.0)",
+   "sgt1930 p.265 (f823) Sainte Maurice de Djebibina: seasons vs Année 1929-1930: cells give 475.0, printed 475.1 (difference 0.1)",
+   "sgt1930 p.265 (f823) Kundar: seasons vs Année 1929-1930: cells give 311.0, printed 311.9 (difference 0.9)"
+  ],
+  "editions": [
+   "sgt1930"
+  ],
+  "flagged": 1,
+  "not_applicable": 177,
+  "overlap_compared": 0,
+  "overlap_diffs": []
+ },
  "meteo_rainfall_monthly": {
   "rows": 8328,
   "checks": 527,
@@ -112,7 +131,7 @@
  "_survey": {
   "sgt1936": "f116-f122 research institutions (extract_research.py). f123-f144 *Relevé pluviométrique - année 1936*, eleven two-page spreads (left page: stations and mm January-September; right page: mm October-December, Année, then nombre de jours January-December, Année), stations grouped by region and contrôle; N.B. signes conventionnels: — pas d'observation, × nombre de jours non observés, O.I. observations incomplètes; \"gttes\" = gouttes. Only part b) (solar year) is printed. f145 blank.",
   "sgt1935": "f165 (p. 145) Laboratoire de chimie (Sfax), analyses 1935 (not meteorology). f166-f183 *b) Relevé pluviométrique de l'année 1935*, nine two-page spreads (left page: stations and mm January-November, December in the binding gutter; right page: Total mm, then nombre de jours January-December, Total), same signes conventionnels as sgt1936; only part b) printed. The binding gutter hides the decimals of the November column on most spreads (cells derived from the annual total, flagged `derived_from_totals`). f184 blank.",
-  "sgt1930": "f818-f849 Météorologie (inside chapter XI Agriculture): parts a) agricultural-year rainfall by season, b) solar-year spreads, c) données climatologiques, d) retrospective table (views per part not yet surveyed page by page).",
+  "sgt1930": "Météorologie at the end of chapter XI Agriculture, printed pages 260-291. f818-f825 (p. 260-267) *a) Relevé pluviométrique de l'année agricole (1929-1930)*, one table per page: Automne, Hiver, Printemps, Eté, Année 1929-30, Année 1901-1925 (p. 266 head misprinted \"1901-1905\"), stations grouped by natural region (Kroumirie ... Extrême Sud), no contrôle headings; transcribed (meteo_rainfall_season). f826-f843 (p. 268-285) *b) Relevé pluviométrique de l'année 1930*, nine two-page spreads (left page: stations and Millimètres de pluie by month; right page: the rest of the mm and Total, then Nombre de jours by month and Total; the exact split column is to be confirmed when transcribing), key \"Signes conventionnels : — pas d'observation; × ...\" across the top of the spread; NOT YET TRANSCRIBED. f844|f845 (p. 286-287) *c) Données climatologiques essentielles fournies par les principales régions tunisiennes (année 1930)*, one spread: localités grouped by region, Pluies (millimètres, nombre de jours), Température moyenne du mois le plus chaud / le plus froid (moyennes, maxima, minima), Température absolue (maxima, minima, with dates), nombre de jours au cours de l'année pendant lesquels le vent a soufflé de N, NE, E, SE, S, SW, W, NW, calme, vent dominant; footnotes (1)-(3) on missing months; NOT YET TRANSCRIBED. f846-f849 (p. 288-291) *Pluies moyennes mensuelles, par saison et annuelles pour les périodes : 1926-1930 et 1901-1930*, two lines (1926-1930, 1901-1930) per station (Tabarka ... Tatahouine), columns Septembre-Août, Automne, Hiver, Printemps, Eté, Année; NOT YET TRANSCRIBED (means only: meteo_means).",
   "sgt1929": "f284-f312 Météorologie, parts a)-d) (views per part not yet surveyed page by page).",
   "sgt1928": "f806-f835 Météorologie, parts a)-d) (views per part not yet surveyed page by page).",
   "sgt1927": "f282-f287 a) relevé pluviométrique de l'année agricole 1926-1927; f288-f303 b) année solaire 1927 (mm | jours spreads); f304|f305 c) données climatologiques essentielles 1927; f306|f307 d) période 1901-1925, pluies moyennes mensuelles, saisonnières et annuelles (année agricole à partir de septembre).",
@@ -122,5 +141,5 @@
   "sgt1923": "f745-f749 a) année agricole 1922-1923 (with the 1901-1910 normal); f750-f759 b) année solaire 1923; f760|f761 c) données climatologiques essentielles 1923; f762-f764 d) pluviométrie agricole 1900-1901 à 1919-1920 (five-year means).",
   "sgt1922": "f255-f259 a) année agricole 1921-1922; f260-f269 b) année solaire 1922; f270|f271 c) données climatologiques 1922; f272|f273 d) statistique thermométrique 1911-1920."
  },
- "_remaining": "Transcribed: sgt1936 f123-f144 (complete) and sgt1935 f166-f183 (complete). NOT YET TRANSCRIBED: every Météorologie page of sgt1930 (f818-f849), sgt1929 (f284-f312), sgt1928 (f806-f835), sgt1927 (f282-f307), sgt1926 (f819-f845), sgt1925 (f309-f334), sgt1924 (f1247-f1268), sgt1923 (f745-f764) and sgt1922 (f255-f273). Tables meteo_rainfall_season, meteo_climate and meteo_means are designed but have no rows yet."
+ "_remaining": "Transcribed: sgt1936 f123-f144 (complete), sgt1935 f166-f183 (complete) and sgt1930 part a) f818-f825 (complete). NOT YET TRANSCRIBED: sgt1930 parts b) f826-f843, c) f844-f845 and d) f846-f849; every Météorologie page of sgt1929 (f284-f312), sgt1928 (f806-f835), sgt1927 (f282-f307), sgt1926 (f819-f845), sgt1925 (f309-f334), sgt1924 (f1247-f1268), sgt1923 (f745-f764) and sgt1922 (f255-f273). Tables meteo_climate and meteo_means are designed but have no rows yet."
 }

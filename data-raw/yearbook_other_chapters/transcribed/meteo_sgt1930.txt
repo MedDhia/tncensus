@@ -1,0 +1,379 @@
+# sgt1930 (bpt6k9105652d) f818-f849: "Météorologie" (end of chapter XI Agriculture), printed pages 260-291.
+# Every cell typed from native-resolution crops (hires.py page(ark, view)); no OCR used.
+# Tokens as in meteo_sgt1935.txt: number; g = "gouttes" (traces, 0); - = "—" (no value printed); ? = illegible.
+#
+# a) "Relevé pluviométrique de l'année agricole (1929-1930)", f818-f825 (p. 260-267), one table per page:
+# Automne, Hiver, Printemps, Eté, Année 1929-30, Année 1901-1925 (the 1901-1925 normal annual rainfall).
+# Region headings in this part are the printed natural regions (KROUMIRIE, MOGODS, ...), typed in title case
+# with accents restored, as in the solar-year tables.
+@season view=818 page=260 year=1930 split=6
+img: all
+cols: aut win spr sum yr nor
+region: Kroumirie
+Tabarka | 377.4 465.6 283.3 24.6 1150.9 988.0
+Aïn-Sebaâ | 397.5 451.0 277.5 26.6 1152.0 -
+Aïn Draham | 545.0 663.0 446.0 51.0 1705.0 1578.0
+El-Feïdja | 226.0 - 259.7 - - 1188.0
+Ghardimaou | - - 109.7 15.9 - -
+La Forestière | 164.4 268.9 166.6 - - -
+Bulla Régia | 129.0 131.0 172.0 21.0 453.0 -
+Souk-el-Arba | 128.6 145.8 135.3 23.5 433.2 436.0
+region: Mogods
+Djebel-Abiod (Nefza) | - - 215.2 40.3 - -
+Sidi-Méchir-Tamera | 278.7 508.5 200.3 18.9 1006.4 -
+El-Guetma | 244.0 522.0 244.0 - - -
+Henchir-Sria | 217.5 443.4 209.7 - - -
+Sedjenane (Gare) | 261.7 567.3 174.2 0.0 1003.2 -
+Oum-el-Aguareb | 109.7 316.6 151.0 21.9 599.2 -
+Béja | 127.9 227.0 144.8 30.1 529.8 621.0
+Aïn-Essid | 132.9 225.9 179.2 29.5 567.5 -
+Le Munchar | 113.5 189.2 151.8 24.8 479.3 -
+Guermanez | 93.5 304.3 170.7 29.4 597.9 -
+Eddekila | 61.8 164.6 137.3 - - -
+Goussat-el-Bey | 61.9 197.7 134.9 - - -
+Chouigui | - 182.5 88.0 - - 459.0
+Tindja | 118.5 310.9 124.5 2.2 556.1 -
+Bizerte (Carouba) | 258.4 319.8 117.9 14.5 710.6 595.0
+Bizerte (Port) | 241.1 420.1 116.7 0.8 778.7 -
+region: Vallée Basse de la Medjerdah
+Utique I | - 145.5 99.0 g - -
+Utique II | - - - - - -
+Mabtouha (St-Victor) | - 152.7 100.2 g - 479.0
+El-Oggaline (Aïn-Rhelal) | 138.3 283.5 140.0 10.7 572.5 -
+Selma | 114.6 183.5 115.2 6.1 419.4 -
+De Carnières (Saint-Antoine) | 92.3 149.4 100.8 2.2 344.7 -
+De Carnières (A.S.I.H.) | 74.3 146.0 108.0 g 328.3 -
+Chougafa | - - - 8.0 - -
+@season view=819 page=261 year=1930 split=6
+img: all
+cols: aut win spr sum yr nor
+# no heading at the top of p. 261: continues Vallée Basse de la Medjerdah from p. 260
+region: Vallée Basse de la Medjerdah
+Chaouat | - 171.7 156.0 11.7 - -
+Bordj Hadida | 80.5 155.4 138.3 8.7 382.9 -
+Sidi-Tabet | 98.8 143.2 147.8 10.5 400.3 -
+Mateur | 87.3 282.0 181.7 10.8 561.8 -
+Djedeïda I | 68.4 187.4 168.8 - - -
+Attar | 97.1 119.6 124.0 25.0 365.7 -
+Es-Souni | 75.2 124.9 136.1 23.5 359.7 -
+Tébourba | - 146.1 138.1 - - -
+El-Hattermine | 80.3 135.5 143.4 21.1 380.3 -
+Bordj-Touta I | - 196.3 126.8 - - -
+Bordj-Toum | 101.8 195.1 185.3 8.5 490.7 -
+Bordj-Toum (Saint Henri) | 103.2 212.7 146.9 9.0 471.8 -
+Bordj-Toum (Henchir-el-Bey) | 89.2 174.7 145.3 54.0 463.2 -
+region: Golfe de Tunis
+Henchir-French | 82.1 137.1 141.3 36.3 396.8 -
+El-Hafsia | 88.9 151.9 125.9 21.0 387.7 -
+Massicault | - 147.4 120.3 39.0 - -
+Dridjat | 70.3 136.9 167.7 45.0 419.9 -
+Brescou | - - 137.9 45.0 - -
+Poincaré | - 136.4 115.9 51.0 - -
+Mengoub | 71.2 128.2 161.1 21.7 382.2 -
+Fedjet-Kemaken | 90.8 150.3 190.9 37.1 469.1 -
+Khlédia | 84.5 - - - - -
+Oudna (gare) | - 179.0 106.6 - - -
+Bou-er-Rebia | - 128.9 136.0 8.6 - -
+Bordj-Chakir | 87.9 132.2 117.0 28.7 365.8 425.0
+Dom. de la Foy (Cebala du Mornag) | 92.9 120.7 96.4 20.0 330.0 -
+Saint Cyprien | 112.7 125.2 133.9 46.5 418.3 -
+M'Rira | 50.6 126.5 - - - -
+Fouchana | 63.1 127.4 118.2 16.4 325.1 -
+Birine | - - - - - -
+Sedjoumi | 89.8 147.6 121.4 25.0 383.8 -
+Manouba (Béjaoua) | - - 161.5 14.0 - -
+Clos des Arcades | 103.9 183.7 111.9 10.7 410.2 -
+Ecole Coloniale d'Agriculture | 89.3 159.2 120.3 22.6 391.4 -
+Service Botanique | 97.1 174.9 125.8 24.1 421.9 -
+Ariana (Ecole) | - 145.0 120.0 - - -
+Ariana | 78.3 140.9 107.7 7.7 334.6 -
+La Soukra | 77.4 140.8 115.7 18.5 352.4 -
+Salammbô (S.O.S.) | 85.7 139.1 - 19.7 - -
+El-Aouïna | 74.7 118.1 108.8 10.1 311.7 -
+Tunis (La Manoubia) | 79.2 153.8 121.8 27.1 381.9 405.0
+@season view=820 page=262 year=1930 split=6
+img: all
+cols: aut win spr sum yr nor
+# no heading at the top of p. 262: continues Golfe de Tunis
+region: Golfe de Tunis
+Tunis (Usine Elévatoire) | 75.8 193.2 128.5 52.6 450.1 -
+Tunis (Avenue Gambetta) | 90.9 196.2 133.2 53.9 474.2 -
+Mégrine | - - 102.7 15.0 - -
+Aïn-Kettan | 126.9 178.4 98.6 24.9 428.8 -
+La Laverie (Douïmsi) | 91.8 159.4 123.4 14.0 388.6 -
+Kélibia | 227.0 158.0 65.0 11.0 461.0 394.0
+Menzel-Temime | 154.8 172.6 172.6 16.0 410.3 -
+Henchir Lebna (gare) | - 154.4 50.8 6.0 - -
+Korbous | - 182.3 94.0 19.0 - -
+M'Raïssa | 103.2 120.2 121.4 24.0 368.8 -
+Oued-el-Abid | 130.0 179.4 - - - -
+Soltane | 98.6 96.1 75.5 17.0 287.2 -
+Fondouk-Djedid | 88.0 107.0 75.4 17.4 287.8 -
+Soliman | 113.1 118.8 62.2 4.6 298.7 471.0
+Kouba-Kbira | 115.2 101.7 - 20.0 - -
+Grombalia | 91.5 113.7 75.0 14.6 294.8 499.0
+Aïn-Tébornok | 127.3 175.4 97.0 13.7 413.4 -
+Bir-bou-Rekba | 102.2 78.0 65.9 - - -
+Hammamet | - - - - - -
+Nabeul | 217.5 90.9 79.0 11.0 398.4 -
+region: Région de Dakla
+Bir-el-Akhdar | 55.2 106.2 94.1 30.0 285.5 -
+Medjez-el-Bab | 73.5 150.0 151.0 29.0 403.5 418.0
+Dar-Keskiss | 83.7 145.3 130.8 40.9 400.7 -
+Sidi-Abdallah (Ksar Tyr) | 77.6 134.0 113.2 41.5 366.3 -
+Montarnaud I | 87.4 131.4 139.1 17.9 375.8 -
+Montarnaud II | 79.3 99.3 118.3 20.5 317.4 -
+Melah-Rechga | 116.7 136.9 134.3 33.7 421.6 -
+Ech-Chériffa (Seilhac) | 81.8 126.5 114.9 16.0 339.2 -
+Bordj-Sidi-Sabah | 83.7 193.8 - - - -
+Beauce Tunisienne | 98.4 165.2 151.9 22.9 438.4 -
+Aïn-Tounga | 97.0 92.5 176.9 30.0 396.4 -
+Téboursouk | 130.9 136.2 176.6 43.6 487.3 526.0
+Sidi-Smaïl (gare) | - 106.0 191.0 10.0 - -
+Testour (Briouik) | 128.3 155.6 219.1 57.7 560.7 -
+Le Thibar | 154.9 145.2 211.0 69.0 580.1 652.0
+Zaouem | 136.0 138.0 145.0 32.0 451.0 460.0
+Aïn-Garsa | 131.4 177.0 203.7 21.4 533.5 -
+El-Akhouat | 98.0 81.0 111.5 57.0 347.5 -
+Sidi-bou-Rouis (gare) | - 106.1 154.9 6.2 - -
+Gafour (Ecole) | - 100.3 160.3 - - -
+Gafour (supérieur) | 111.0 78.7 154.9 24.1 368.7 -
+@season view=821 page=263 year=1930 split=6
+img: all
+cols: aut win spr sum yr nor
+# no heading at the top of p. 263: continues Région de Dakla
+region: Région de Dakla
+Gafour (Saint-Guy) | 121.8 91.5 165.1 24.0 402.4 -
+Sidi-Ayed | 95.5 99.7 192.0 43.2 430.4 -
+Khalled | 142.0 152.4 202.9 31.0 528.3 -
+El-Aroussa (Aïn-Sid) | - 94.3 - 31.0 - -
+El-Aroussa (Domaine) | 106.5 103.3 155.9 13.2 378.9 -
+El-Aroussa (l'Alsacienne) | - - 161.9 33.0 - -
+El-Aroussa (Djelida) | 88.3 106.8 159.9 27.0 382.0 -
+Djelida (gare) | - 83.7 147.6 12.0 - -
+Er-Remil-Etat | 84.9 138.1 173.9 25.0 421.9 -
+Bir-el-Bey | 78.0 101.5 151.0 10.0 340.5 -
+region: Hautes Plaines Tunisiennes
+Bahara (Henchir-el-Meya) | - 111.5 - 51.5 - -
+Sidi-el-Faci | 103.7 105.9 179.2 33.8 422.6 -
+Sidi-el-Faci II (Ragouba) | - - 180.0 34.1 - -
+Lorbeuss I (Les Romarins) | 119.5 116.0 133.9 20.0 389.4 -
+Lorbeuss II (Gare) | 128.8 110.0 126.7 48.8 414.3 -
+Lorbeuss III (Gauthra) | 138.9 119.7 - - - -
+Salines de Lorbeuss | 120.7 116.0 146.7 62.6 446.0 -
+Les Salines (gare) | - - 151.0 22.0 - -
+Bou-Djerida (Zafrane) | - 126.2 126.3 62.5 - -
+Le Kef I | 167.0 166.2 131.9 45.8 511.1 496.0
+Le Kef II (Aurore) | 133.3 125.8 111.7 55.5 426.3 -
+Le Kef III (Sainte-Marie) | - - 105.1 57.3 - -
+Le Kef (Héliopolis) | 114.8 121.9 112.4 64.5 413.6 -
+Charèmes | 98.9 117.2 121.5 36.4 374.0 -
+Le Sers | - 109.0 167.6 - - -
+Le Vieux Sers (Souk-el-Tléta) | 134.3 109.9 172.7 - - -
+Aïn-el-Bida | 19.6 116.2 203.4 30.9 370.1 -
+Sakiet Mine | 133.1 156.5 191.2 47.1 527.9 -
+Coucha | 116.3 119.4 110.2 23.0 368.9 -
+Aïn-Kerma | 113.0 103.6 130.3 39.9 386.8 -
+Tadjerouine (Aïn-Zouagha) | 83.0 99.8 93.4 45.0 321.2 -
+Djerissa (gare) | - 102.3 118.0 20.0 - -
+Majouba (gare) | - 90.4 102.4 36.1 - -
+Rebiba | - 189.0 177.0 72.0 - -
+Kalâa-Djerda | 76.6 98.0 125.7 52.8 353.1 -
+Le Ksour | 63.0 126.5 152.0 28.0 369.5 -
+Ebba-Ksour | 94.2 94.2 130.0 28.2 346.6 -
+Aïn-Mesria (gare) | - 84.8 130.2 36.6 - -
+Ben Arar | 140.0 102.9 107.9 37.7 388.5 -
+Henchir-Brouich (Bir Hassen) | 81.4 138.6 133.5 15.5 369.0 -
+Henchir-Medjet-es-Soltane | 123.7 152.3 219.4 49.5 544.9 -
+@season view=822 page=264 year=1930 split=6
+img: all
+cols: aut win spr sum yr nor
+# no heading at the top of p. 264: continues Hautes Plaines Tunisiennes
+region: Hautes Plaines Tunisiennes
+Souk-el-Djemaâ | - 130.3 211.3 57.3 - -
+Mactar | 144.9 148.7 141.8 35.5 470.9 470.0
+Ousseltia (Baher-Chira) | 108.0 86.7 123.8 98.4 416.9 -
+Ousseltia (Oued-bou-Jedra) | 88.4 55.5 124.5 87.5 355.9 -
+Sainte Madeleine d'Ousseltia | 94.5 64.2 120.4 - - -
+Rohia | 62.8 76.9 62.8 65.5 268.0 -
+Bou-Habel | 93.0 124.5 69.7 72.2 359.4 -
+Thala | 134.8 139.6 172.3 121.5 568.2 448.0
+Le Chambi | 70.5 64.5 45.5 15.5 196.0 -
+Kasserine | - - - - - -
+Sbeïtla I | 86.3 35.7 30.6 33.0 185.6 -
+Sbeïtla II (Henchir-el-Aouda) | 109.5 56.3 36.4 52.1 254.3 -
+Sbeïtla III (Henchir-Touille) | 127.6 57.0 54.9 60.7 300.2 -
+Sbeïtla IV | - - 48.9 15.5 - -
+Djilma | - - - - - -
+Thelepte (gare) | - 57.0 32.5 12.0 - -
+Fériana | 91.0 60.0 29.5 57.0 237.5 -
+region: Région de l'Oued Miliane
+Aïn-el-Asker (Henchir-bou-Farda) | 58.9 119.9 150.2 20.3 349.3 443.0
+Aïn-el-Asker | - - 157.4 14.4 - -
+Smindja (Depienne) | 81.6 156.8 142.9 15.2 396.5 -
+Moghrane | 102.0 194.0 146.0 23.0 465.0 504.0
+Zaghouan (Ville) | 97.1 157.4 135.2 39.7 429.4 -
+Zaghouan (Contrôle) | 103.4 164.3 132.3 40.7 440.7 506.0
+Val-Saint-Pierre | 91.6 177.3 154.7 23.5 447.1 -
+Bou-Remada | 97.7 162.7 189.9 19.7 470.0 -
+# Goubellat: the 1929-30 cell is left blank in print (no dash); typed '-'
+Goubellat | - - - - - -
+Djebel-Rihane | 73.0 143.4 185.4 - - -
+Kheniguet (Beau Vallon) | 78.9 126.0 127.5 - - -
+Kheniguet-ed-Deham I | 75.5 116.8 137.5 - - -
+Kheniguet-ed-Deham II | - - 137.0 8.7 - -
+Sidi-Attia | 71.5 115.9 137.2 - - -
+Griffat-Soltane | 83.5 151.9 144.4 0.0 379.8 -
+Aïn-Zeress | - - 130.3 15.0 - -
+Domaine La Fauvette | 104.0 90.2 125.7 23.5 343.4 -
+Foreston les lilas (Guedal-el-Beylik) | - - 140.0 33.1 - -
+Thibika (Maltournée) | 102.8 - - - - -
+Thibika (gare) | - 108.9 109.9 99.0 - -
+Tarf-ech-Chena I | 70.7 112.6 126.8 23.0 333.1 -
+Tarf-ech-Chena II | - - 143.5 21.2 - -
+Mechtah-Cheik-Amar | 105.4 141.7 141.1 5.6 393.8 -
+Djebel-Mansour (Ste-Thérèse) | 77.2 105.0 140.0 24.0 346.2 -
+@season view=823 page=265 year=1930 split=6
+img: all
+cols: aut win spr sum yr nor
+# no heading at the top of p. 265: continues Région de l'Oued Miliane
+region: Région de l'Oued Miliane
+Djebel-Mansour (Sainte-Gilberte) | 99.1 187.0 212.0 42.7 510.8 -
+Djebel-Mansour (Henchir-Aouéli) | 82.5 133.5 184.0 34.3 434.3 -
+Djebel-Mansour (Saint-Auguste) | 101.5 107.2 133.5 18.0 360.2 -
+Djebel-Mansour (Oum-el-Abouab) | 96.7 120.9 140.4 7.0 365.0 -
+Djebel-Mansour (Dne du Fortin) | 106.0 104.9 - - - -
+Sidi-bou-Becker | 103.2 113.3 123.4 34.5 374.4 -
+Dhomda I | 78.7 122.4 120.9 15.2 337.2 -
+Dhomda II (Le Boisy) | 116.0 122.6 122.4 - - -
+Djebel-Djouggar | 92.7 129.8 121.1 11.2 354.8 508.0
+Henchir-Souar | 155.6 117.0 155.8 4.8 433.2 -
+# Bou-Arada: middle digit of the 1929-30 total damaged ("3?1.7"; the seasons give 391.7)
+Bou-Arada | 77.7 114.2 192.3 7.5 ? -
+Bou-Arada (Plaine) | 71.9 118.2 184.3 9.3 383.7 -
+Oued-Remil | 84.7 122.6 161.3 0.0 368.6 -
+Oued-Dridja | 78.2 85.5 109.6 31.1 304.4 -
+Aïn-Robaâ (Siliana) | - - - 51.2 - -
+Saadia du Bargou | 114.7 173.0 162.0 35.9 485.6 544.0
+region: Région de l'Enfida
+Sainte Marie du Zit I | 60.5 76.9 66.2 16.6 220.2 -
+Beni-Deraj | 75.5 89.2 85.9 15.3 265.9 -
+Bou-Ficha | 138.7 79.2 91.3 12.0 321.2 -
+Zériba (Aïn-Saboun) | 123.2 91.5 129.6 9.0 353.3 -
+Zériba (Frais Vallon) | 143.7 97.1 124.8 16.2 381.8 -
+Zériba | 127.4 67.0 113.5 11.0 318.9 -
+Djeradou Nord | 136.4 78.6 - - - -
+Djeradou Sud | 181.0 69.8 121.8 19.3 391.9 -
+Val Suzon | 123.9 - 112.0 9.3 - -
+Aïn-Battaria | 189.9 85.3 107.2 8.2 390.6 -
+Saouaf (Henchir-Zeguidane) | 125.0 74.9 131.3 - - -
+Saouaf (Aïn-Zectoun) | - - 119.7 19.6 - -
+Saouaf (Sainte-Cécile) | 106.6 46.2 113.2 14.5 280.5 -
+Loukanda I | 104.0 108.0 139.0 32.0 383.0 -
+Loukanda II | - - 139.0 16.2 - -
+El-Kley | 135.4 79.4 76.0 45.5 336.3 -
+Djebibina | 67.9 78.5 119.1 - - -
+Sainte Maurice de Djebibina | 98.6 133.5 238.8 4.1 475.1 -
+Henchir-Kasbatt | 70.1 117.7 - - - -
+Enfidaville | 171.1 67.9 108.6 14.6 362.2 360.0
+Kundar | 131.0 53.5 95.0 31.5 311.9 -
+Menzel-dar-bel-Ouar (gare) | 186.9 49.1 88.0 9.0 333.0 -
+region: Région de Kairouan
+Besserour | 99.0 73.5 76.5 17.4 266.4 -
+El-Alem (Henriville) | 87.9 75.7 100.7 19.5 283.8 -
+@season view=824 page=266 year=1930 split=6
+img: all
+cols: aut win spr sum yr nor
+# no heading at the top of p. 266: continues Région de Kairouan. The column head of p. 266 reads "1929-1930" and
+# "1901-1905" (sic; every other page prints 1901-1925): taken as the same 1901-1925 normal.
+region: Région de Kairouan
+Sbikha (Henchir Nedjema) | 74.4 55.8 48.6 11.5 190.3 -
+Kairouan | 80.5 38.0 109.1 40.3 267.9 290.0
+Saadia (Aïn Soltane) | 103.8 31.2 76.1 - - -
+Aïn-Koudiat | 96.0 45.0 105.0 52.0 298.0 -
+Sbikha-es-Sbatt | 69.7 60.5 68.5 14.3 213.0 -
+Sbikha | 92.5 73.0 80.4 13.9 259.8 -
+Sbikha (Henchir-Aieriah) | 74.6 102.0 113.0 - - -
+Sbikha Est | 130.0 85.6 75.3 9.0 299.9 -
+Hadjeb-el-Aïoun I | 63.0 61.0 28.0 30.0 182.0 -
+Hadjeb-el-Aïoun (Bater-Rzel) | 80.5 42.3 32.4 28.3 183.5 -
+El-Haouareb I | 82.8 46.7 72.8 8.5 210.8 -
+El-Haouareb II | - - - - - -
+El-Haouareb III | 32.5 44.6 68.5 0.0 145.6 -
+Oued-Laya | - - - - - -
+Kroussiah Sahali (gare) | - 37.6 88.3 15.8 - -
+Aïn-Grasésia (gare) | - - 66.1 15.5 - -
+Sidi-Saad I | 112.2 70.0 118.5 6.5 307.2 -
+Sidi-Saad II | - - - - - -
+Pavilliers (gare) | - 42.2 49.9 4.5 - -
+Sidi-Mansour | 77.6 39.9 47.1 11.2 175.8 -
+Bou-Thadi I | 80.1 42.2 38.6 g 160.9 -
+Bou-Thadi II (Cesarée) | 51.5 32.7 34.8 7.0 126.0 -
+Bou-Thadi (Surcôte) | 70.5 35.5 42.3 7.4 155.7 -
+La Fauconnerie | 74.8 56.8 47.0 8.3 186.9 -
+region: Région de Sousse
+Sidi-bou-Ali | 184.0 47.5 67.0 12.0 310.5 -
+Akouda | 177.7 102.8 104.1 - - -
+Sousse | 234.9 45.8 104.8 7.4 392.9 320.0
+Monastir | 207.1 33.0 42.0 0.0 282.1 -
+Téboulba (Bonne Veine) | 207.2 76.4 55.2 0.0 338.8 -
+Sidi-el-Hani | 73.0 23.5 45.9 - - -
+Mahédia | 157.5 45.3 35.0 g 237.8 -
+Ksour-Essaf | 183.9 49.6 45.0 0.0 278.5 -
+Salakta | 169.1 46.5 58.8 0.0 274.4 -
+El-Djem | 80.5 - 71.5 - - 255.0
+region: Région de Sfax
+La Provence Limaya | 69.8 38.0 46.1 2.5 156.4 -
+El-Mouassat (Sfax) | 63.1 50.7 37.8 - - -
+Achichina (Sfax) | - 56.2 26.0 9.5 - -
+Sfax (Port) | 75.7 40.3 52.7 0.0 168.7 211.0
+Sfax (Réservoirs) | 90.0 20.5 - 1.0 - -
+La Forestière de Sfax | 82.0 52.5 43.1 0.0 177.6 -
+Maharès | - 37.5 - - - -
+Mirabaud | 76.6 31.9 10.7 21.5 140.7 -
+@season view=825 page=267 year=1930 split=6
+img: all
+cols: aut win spr sum yr nor
+# no heading at the top of p. 267: continues Région de Sfax
+region: Région de Sfax
+Molinos | 47.5 42.0 41.4 38.3 169.2 -
+De Nervo | 45.0 55.9 57.6 72.0 230.5 -
+Saint-Michel | 42.1 66.9 34.8 25.5 169.3 -
+Dolfus | 38.7 48.4 33.5 5.1 125.7 -
+Chahal (Ferme Roux) | 56.6 56.5 47.2 13.9 174.2 -
+Chahal (Ferme Salavy) | 46.0 43.5 19.5 1.5 110.5 -
+Ben Nessim | 54.5 45.4 41.8 41.5 183.2 -
+Laurans | 61.2 52.0 48.0 42.1 203.3 -
+Bordj-Lacroix | 47.5 67.6 47.3 8.0 170.4 -
+St-Michel du Sud Roderiebourg | 69.7 48.2 13.5 21.7 153.1 -
+St-Michel du Sud II | - - 15.3 21.7 - -
+region: Région de Gafsa
+Maknassy (Gare) | 114.6 39.9 49.1 24.0 227.6 -
+Maknassy (Saint-Félix) | 105.0 39.4 31.0 20.3 195.7 -
+Maknassy (Domaine des 2 gazelles) | 151.3 35.7 61.1 30.5 278.6 -
+Sened | 117.1 48.0 38.5 27.1 230.7 -
+Zannouch | - - - - - -
+Gafsa I | 70.2 37.4 38.6 5.7 151.9 151.0
+Gafsa II (gare) | 68.0 26.8 28.0 4.5 127.3 -
+region: Région de Metlaoui et Djerid
+Tabeditt | 6.0 13.0 21.0 g 40.0 -
+Redeyef | 38.6 32.2 39.1 1.2 111.1 -
+Metlaoui | 52.8 18.4 28.3 6.5 106.0 126.0
+Tozeur | 37.5 13.0 8.7 0.2 59.4 98.0
+region: Région de Gabès
+Gabès | 48.1 21.0 6.5 3.0 78.6 193.0
+region: Arad
+Djerba | 60.0 33.7 52.4 1.0 147.1 224.0
+Zarzis | 83.5 38.5 43.0 4.0 169.0 -
+Médenine | 58.0 46.0 20.0 1.0 125.0 122.0
+Ben-Gardane | 34.2 35.5 44.0 g 113.7 193.0
+Sidi-Toui | 32.9 23.0 14.5 0.0 70.4 -
+Meched-Salah | 9.2 21.2 16.3 - - -
+Allouet-el-Gouna | 18.3 25.0 20.3 0.0 63.6 -
+region: Nefzaoua
+Kébili | 45.5 12.0 20.0 g 77.5 100.0
+region: Extrême Sud
+Matmata | 49.5 47.5 36.5 3.0 136.5 241.0
+Tatahouine | 45.2 68.4 22.5 3.0 139.1 136.0
+Dehibat | 7.0 21.0 34.0 3.0 65.0 -
+Fort-Saint | g 14.0 37.0 0.0 51.0 -
