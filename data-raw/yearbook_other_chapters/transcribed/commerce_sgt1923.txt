@@ -976,3 +976,194 @@ cols: production campaign remaining
 img: all
 cols: total per_capita
 wine | 252900 168
+# ---- Mercuriales (prices), f906-911: values in francs with centimes; printed '— (1)' = no transactions ('-')
+# The live-animal table of this edition has no veal columns (beef on f906, mutton and pork on f907; the beef
+# 'moyen' column lies against the binding and is repeated, cut, at the edge of f907).
+@prices_live view=906 page=404 market=tunis
+img: all
+cols: beef.min beef.max beef.avg
+01 | 1.68 2.66 2.17
+02 | 1.35 2.20 1.78
+03 | 1.12 1.91 1.51
+04 | 1.02 2.21 1.61
+05 | 0.94 1.75 1.34
+06 | 0.92 1.86 1.39
+07 | 1.20 1.66 1.43
+08 | 1.25 1.85 1.55
+09 | 1.55 2.17 1.86
+10 | 1.60 2.37 1.98
+11 | 1.90 2.51 ?
+12 | 1.82 3.10 2.46
+@prices_live view=907 page=405 market=tunis
+img: all
+cols: mutton.min mutton.max mutton.avg pork.min pork.max pork.avg
+01 | 1.64 2.08 1.86 3.26 4.06 3.66
+02 | 1.40 1.80 1.60 3.20 4.06 3.63
+03 | 1.37 1.82 1.54 4.02 5.04 4.53
+04 | 1.51 2.00 1.75 4.70 5.02 4.86
+05 | 1.30 1.76 1.53 3.86 4.10 3.98
+06 | 1.15 1.87 1.51 3.97 4.27 4.12
+07 | 1.34 1.96 1.65 4.28 4.72 4.50
+08 | 1.56 2.01 1.78 5.06 5.68 5.37
+09 | 1.62 2.12 1.87 5.00 5.50 5.25
+10 | 1.60 2.47 2.03 4.62 5.31 4.96
+11 | 1.92 2.42 2.17 4.50 5.18 4.84
+12 | 1.76 2.82 2.29 4.60 5.65 5.12
+@prices_retail view=906 page=404 market=tunis
+img: all
+cols: beef_fillet beef_sirloin beef_thigh beef_rib beef_breast_neck beef_shoulder beef_short_rib veal_flank veal_leg veal_rack
+01 | 11 8 7 7 5 6 6 11 11 11
+02 | 10 9 8 7.50 4 6 4.50 12 12 12
+03 | 9 7 6 6 3.50 4.50 4 10 10 10
+04 | 8 7 7 6 3 4 4 10 10 10
+05 | 8.50 6.50 5 5 3 4 3.50 8.50 8.50 8.50
+06 | 9 7 5 5 3 4 3 9 9 9
+07 | 8 7 6 6 3 5 4 9 9 9
+08 | 9 7 6 6 3 4.50 4 10 10 10
+09 | 10 8 7 6.50 3.50 5 4 10 10 10
+10 | 8 6 5.50 5 4 5 4 7 7 7
+11 | 9 7 7 6 4.50 5.60 5 8 7 8
+12 | 10 8 7 7 5.50 6 5.60 10 10 9
+# veal longes: the column lies in the binding (only the » of the centimes visible); not legible
+@prices_retail view=907 page=405 market=tunis
+img: all
+cols: veal_loin veal_shoulder veal_breast mutton_leg mutton_rack mutton_fillet mutton_breast_neck mutton_scrag mutton_shoulder pork_fillet pork_loin pork_ham pork_belly pork_shoulder pork_chine pork_head
+01 | ? 10 9 7.50 7.50 7.50 5 6.50 6.50 7 7 7 7 6.50 6.50 4
+02 | ? 10 9 7 7 7 5 6.50 6.50 8 8 7.50 8.50 7 7.50 3.50
+03 | ? 8 7 6 6 6 4 4.50 5 9 9 9 9 8.50 8.50 3
+04 | ? 8 7 5.50 5.50 5.50 4 5 5 9 9 8.50 8 8 8 4
+05 | ? 7.50 6.50 6 6 6 4 5 5 8.50 8.50 8.25 7.75 7.75 7.75 3.25
+06 | ? 7 6 6 6 6 4 5 5 9 9 9 8 7.50 7.50 4
+07 | ? 7 6 6.50 6.50 6.50 3.50 5 5 8 8 8 7 7.50 7.50 3
+08 | ? 7 6 6 6 6 4 5 5 9 9 9 8 7.50 7.50 3.50
+09 | ? 8 7 6.50 6.50 6.50 4.50 6 6 9.50 9.50 9 8.50 8.50 9 3.50
+10 | ? 7 6 6 6 6 4 5.60 5 9 7 8.50 7.60 8 8.50 5
+11 | ? 7 6 7 7 7 5 6 6 9 9 9 8 8 8.50 5
+12 | ? 9 8 7 7 7 5 6.50 6 9 9 8 7.60 7.80 8.40 6
+# Dépouilles: this edition prints no eggs column; the cattle-hide 'moyenne' column lies against the binding
+# (repeated, cut, on f909): September and November centimes not legible.
+@prices_animal_products view=908 page=406 market=tunis
+img: all
+cols: cattle_hides.min cattle_hides.max cattle_hides.avg
+01 | 300 338 319
+02 | 335 385 360
+03 | 382 412 397
+04 | 512 612 562
+05 | 600 650 625
+06 | 650 650 650
+07 | 640 640 640
+08 | 562.50 575 568.75
+09 | 650 693.75 ?
+10 | 512.50 625 568.75
+11 | 437.50 625 ?
+12 | 450 590 520
+@prices_animal_products view=909 page=407 market=tunis
+img: all
+cols: sheep_skins.min sheep_skins.max sheep_skins.avg goat_skins.min goat_skins.max goat_skins.avg greasy_wool.min greasy_wool.max greasy_wool.avg
+01 | 2.19 2.66 2.42 6 7 6.50 386 420 403
+02 | 2.05 2.75 2.40 6 7 6.50 398 419 408.50
+03 | 2.46 3.07 2.76 5.87 7.50 6.68 360 411 386
+04 | 3.75 4.50 4.12 9.25 9.75 9.50 406 430 418
+05 | 3.90 4.50 4.20 10.10 10.80 10.45 447 474 460.50
+06 | 4.50 4.75 4.63 10 11.25 10.63 472.50 480 476.25
+07 | 5.05 5.15 5.10 10.90 11.50 11.20 498.75 525 511.90
+08 | 4.75 4.75 4.75 10.87 11.87 11.37 488.75 510 499.35
+09 | 5 5.43 5.21 11.75 12.18 11.96 463.75 543.75 453.75
+10 | 5.12 5.50 5.31 12.25 12.50 12.37 496.25 532.50 514.35
+11 | 5.19 6.06 5.62 11.31 11.62 11.46 497.50 538.75 518.10
+12 | 5.24 5.73 5.48 11.60 11.90 11.75 558 565 561.50
+# Céréales: no chickpea columns in this edition; a lone » is footnoted '(») Aucune transaction' (stored '-').
+@prices_cereals view=908 page=406 market=tunis
+img: all
+cols: durum_wheat.min durum_wheat.max durum_wheat.avg soft_wheat.min soft_wheat.max soft_wheat.avg barley.min barley.max barley.avg
+01 | 96.40 102 99.20 88.80 91.20 90 59.80 64 61.90
+02 | 102.50 108.50 105.50 94 97 95.50 66.50 69.25 67.90
+03 | 111 118.25 114.62 - - - 63.25 75 72.15
+04 | 99.25 109.50 104.40 - - - 63.75 66 64.90
+05 | 90.80 99.80 95.30 - - - 50.65 53.65 52.15
+06 | 84.25 85 84.60 83.50 84.10 83.80 40.75 41.50 41.10
+07 | 74.80 77.90 71.35 79.80 81.80 80.80 42 43.10 42.55
+08 | 68.40 75.75 72.10 79.25 80.90 80.10 42.10 43 42.55
+09 | 71.25 77 79.10 82.25 84.50 83.35 44.75 46.05 45.40
+10 | 72.50 77.10 72.80 84.25 87.75 86 46.25 47.25 46.75
+11 | 76.50 80.25 78.35 88.25 91.25 89.50 50.50 51.35 50.95
+12 | 83 87.40 85.20 90.50 93.80 92.15 59 60.10 59.55
+# oats minimum lies in the binding: the tens digit is cut but its remnant is visible; read with the help of the
+# max and average columns (each reading is consistent with the printed average).
+# daris: headings printed 'maximum | minimum | moyenne'; the values show the first column is the minimum
+@prices_cereals view=909 page=407 market=tunis heading_swap=daris
+img: all
+cols: oats.min oats.max oats.avg maize.min maize.max maize.avg daris.min daris.max daris.avg broad_beans.min broad_beans.max broad_beans.avg linseed.min linseed.max linseed.avg
+01 | 63.60 65.60 64.60 63.60 67 65.30 72.80 77.60 75.20 76.20 80.60 78.40 100.60 105.80 103.20
+02 | 69.50 73.25 71.40 70 71.75 70.90 72.25 74.75 73.50 92 96.50 94.25 105 112.35 108.70
+03 | 67.50 72 69.75 77.25 78.25 77.75 80 80 80 - - - 180 180 180
+04 | 60.50 62 61.25 75.65 76.35 76 81.35 81.35 81.35 - - - - - -
+05 | - - - - - - - - - - - - 115 115 115
+06 | 48 48.90 48.45 - - - - - - 66 67 66.50 128.50 131 129.75
+07 | 47.80 49.80 48.80 - - - - - - 70.20 71.60 70.90 132 135.40 133.70
+08 | 44 47.25 45.65 - - - - - - 75.75 77 76.35 130.25 133 131.60
+09 | 45.50 48 46.75 54.50 56.50 55.50 57 58 57.50 78.25 80.50 79.35 132 136.75 134.35
+10 | 47.50 49.40 48.45 59 61 60 58.50 60 59.25 82.50 85.75 84.10 136.50 139.50 138
+11 | 48.25 50.50 49.35 60 61.25 60.60 59.25 60.25 58.75 86 91 88.50 136.65 140 138.30
+12 | 54.80 57 55.90 63.80 65.20 64.50 61.40 63 62.20 87.80 93.80 90.80 150 162 156
+@prices_oils view=910 page=408 market=tunis
+img: all
+cols: oil_first_press.min oil_first_press.max oil_first_press.avg oil_second_press.min oil_second_press.max oil_second_press.avg oil_masri_lampante.min oil_masri_lampante.max oil_masri_lampante.avg
+01 | 406 419 412.50 372 385 378.50 355 361 358
+02 | 450 470 460 426 450 438 404 411 407.50
+03 | 487 504 495.50 459 474 466.50 431 442 436.50
+04 | 477 492 484.50 444 458 451 425 435 430
+05 | 470 478 474 437 445 441 419 423 421
+06 | 447.50 456 451.75 418.35 426.70 422.55 412.50 412.50 412.50
+07 | 447 458 452.50 429 439 434 413 422 417.50
+08 | 475 486.25 480.60 450 458.75 454.35 437.50 445 441.25
+09 | 485 490 487.50 462.50 469 465.75 441.20 445.50 444.35
+10 | 475 483.75 349.35 450 457.50 453.75 433 440.60 436.75
+11 | 482.50 488.75 485.60 465 472.50 468.75 448.75 453.75 451.25
+12 | 568 579 573.50 562 563 562.50 545 551 548
+@prices_oils view=910 page=408 market=sousse
+img: all
+cols: oil_first_press.min oil_first_press.max oil_first_press.avg oil_second_press.min oil_second_press.max oil_second_press.avg oil_masri_lampante.min oil_masri_lampante.max oil_masri_lampante.avg pomace_oil.min pomace_oil.max pomace_oil.avg
+01 | 403.75 407.50 405.65 378.75 385 381.85 347.50 353.75 350.65 222.50 223.75 223.15
+02 | 457.25 462.50 459.85 438.35 443.35 441.35 398.75 403.75 401.25 276.25 278.75 277.50
+03 | 493.75 501.25 497.50 458.35 465 461.65 422.50 427.50 425 263.75 263.75 263.75
+04 | 450 450 450 420 425 422.50 403.75 405 404.35 283.75 286.25 285
+05 | 460 469 464.50 430 430 430 400.40 477.40 438.70 256 256 256
+06 | 428.75 430 429.40 405 405 405 388.75 392.50 390.60 243.75 245 244.40
+07 | 431 440 435.50 420 425 422.50 395 401 398 266 267 266.50
+08 | 476.25 481.25 478.75 440 440 440 427.50 430 428.75 287.50 287.50 287.50
+09 | 472.50 477.50 475 442.50 442.50 442.50 417 422.50 419.75 287.50 290 288.75
+10 | 456.25 461.25 458.75 440 440 440 420.75 423.75 422.25 297.50 306.25 301.85
+11 | 485 492.50 488.75 458.75 461.25 460 436.25 440 438.10 323.75 326.25 325
+12 | 581 595 588 550 550 550 512 514 513 341 341 341
+@prices_oils view=911 page=409 market=sfax
+img: all
+cols: oil_first_press.min oil_first_press.max oil_first_press.avg oil_second_press.min oil_second_press.max oil_second_press.avg oil_masri_lampante.min oil_masri_lampante.max oil_masri_lampante.avg
+01 | 409.45 413.70 411.60 386.10 389.05 387.55 332.15 348.60 340.40
+02 | 450.70 493.60 472.15 436.40 447.15 441.75 396.85 482.15 439.50
+03 | 493.50 510 501.75 465 477.10 471.05 427.70 443.90 435.80
+04 | 481.65 495 488.35 446.65 456.65 451.65 410.50 418.75 415.65
+05 | 460.25 471.90 466.10 435 445 440 400.50 404.70 402.60
+06 | 438.75 442.50 440.50 406.25 408.75 407.50 384.25 388 386
+07 | 448.20 452.20 450.20 418.75 423.75 421.25 398.60 404 401.30
+08 | 475 481.25 478.15 452.50 452.50 452.50 427.50 432.50 430
+09 | 485.60 491.90 488.80 455 461.90 458.45 426.25 433.05 429.65
+10 | 466.85 476.25 471.50 442.50 447.50 445 418.75 423 420.85
+11 | 479.75 489.85 482.80 463.75 469.25 466.50 439.25 447.50 443.22
+12 | 581 586 583.50 555.50 564 559.75 529.30 541.40 535.35
+# Vins: this edition prints the price per degree only; a lone » is footnoted '(») Sans affaires' (stored '-')
+@prices_wine view=911 page=409 market=tunis
+img: all
+cols: red_wine_deg.min red_wine_deg.max red_wine_deg.avg white_wine_deg.min white_wine_deg.max white_wine_deg.avg
+01 | 5.05 5.35 5.20 6 6.35 6.15
+02 | 5 5.05 5.02 6 6.10 6.05
+03 | 5.30 5.80 5.55 6.10 6.35 6.25
+04 | 5.50 5.90 5.70 6.35 6.90 6.60
+05 | 5.15 5.50 5.35 6.20 6.50 6.35
+06 | 5.25 5.45 5.35 6.25 6.50 6.35
+07 | 5.15 5.50 5.35 6.50 6.50 6.50
+08 | 5.30 5.60 5.45 - - -
+09 | 5.20 5.95 5.55 6.50 7 6.75
+10 | 5.75 6.30 6 6.50 7 6.75
+11 | 6.25 6.75 6.50 6.50 7 6.75
+12 | 6.65 7.15 6.90 7 7.50 7.25

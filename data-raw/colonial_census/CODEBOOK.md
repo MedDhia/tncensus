@@ -340,6 +340,7 @@ Every table is tidy: one row per printed cell. Printed subtotals and totals are 
 | [`meteo_rain_days`](#meteo_rain_days) | rainfall_solar_year | by edition | 8,328 | count | Rainfall record: number of rainy days by station and month (solar year) |
 | [`commerce_oil_wine_balance`](#commerce_oil_wine_balance) | oil_wine_consumption;oil_wine_stocks;oil_wine_trade | by edition | 156 | mixed | Olive oil and wine: imports and exports by commercial campaign, available stocks and average consumption |
 | [`meteo_rainfall_season`](#meteo_rainfall_season) | rainfall_agricultural_year | by edition | 1,292 | millimetres | Rainfall of the agricultural year: total rainfall by season and station |
+| [`commerce_prices`](#commerce_prices) | prices_animal_products;prices_cereals;prices_live;prices_oils;prices_retail;prices_wine | by edition | 4,032 | francs | Market prices (mercuriales): monthly minimum, maximum and average prices |
 
 ### eur1906_t1_circonscription_nationality
 
@@ -17419,3 +17420,128 @@ Source `sgt`, table rainfall_agricultural_year, printed pages by edition. 1,292 
 | `(empty)` |  | 1,106 |
 | `no_observation` |  | 177 |
 | `traces` |  | 9 |
+
+### commerce_prices
+
+**Mercuriales**  
+*Market prices (mercuriales): monthly minimum, maximum and average prices*
+
+Source `sgt`, table prices_animal_products;prices_cereals;prices_live;prices_oils;prices_retail;prices_wine, printed pages by edition. 4,032 rows. Value type: francs. Flags: (empty) 3,892, not_applicable 123, illegible 15, total_mismatch 2. Notes and validation: [`../yearbook_other_chapters/csv/commerce_prices.md`](../yearbook_other_chapters/csv/commerce_prices.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `month` | Coded dimension. |
+| `market` | Coded dimension. |
+| `market_fr` | Printed French label for `market`. |
+| `product` | Coded dimension. |
+| `product_fr` | Printed French label for `product`. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`month`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `1` |  | 336 |
+| `10` |  | 336 |
+| `11` |  | 336 |
+| `12` |  | 336 |
+| `2` |  | 336 |
+| `3` |  | 336 |
+| `4` |  | 336 |
+| `5` |  | 336 |
+| `6` |  | 336 |
+| `7` |  | 336 |
+| `8` |  | 336 |
+| `9` |  | 336 |
+
+`market`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `sfax` | Place de Sfax | 324 |
+| `sousse` | Place de Sousse | 432 |
+| `tunis` | Place de Tunis | 3,276 |
+
+`product`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `barley` | Orge | 108 |
+| `beef_breast_neck` | Bœuf, 2e catégorie, poitrine et collier | 36 |
+| `beef_fillet` | Bœuf, 1re catégorie, filets | 36 |
+| `beef_live` | Bœuf, sur pied | 108 |
+| `beef_rib` | Bœuf, 1re catégorie, côtes | 36 |
+| `beef_short_rib` | Bœuf, 2e catégorie, plats de côtes | 36 |
+| `beef_shoulder` | Bœuf, 2e catégorie, épaules | 36 |
+| `beef_sirloin` | Bœuf, 1re catégorie, aloyaux | 36 |
+| `beef_thigh` | Bœuf, 1re catégorie, cuisses | 36 |
+| `broad_beans` | Fèves et fèverolles | 108 |
+| `cattle_hides` | Peaux de bœuf | 108 |
+| `chickpeas` | Pois chiches | 36 |
+| `daris` | Daris (sorgho blanc) | 108 |
+| `durum_wheat` | Blé dur | 108 |
+| `eggs` | Œufs | 36 |
+| `goat_skins` | Peaux de chèvre | 108 |
+| `greasy_wool` | Laines en suint | 108 |
+| `linseed` | Graines de lin | 108 |
+| `maize` | Maïs | 108 |
+| `mutton_breast_neck` | Mouton, 2e catégorie, poitrine et collets | 36 |
+| `mutton_fillet` | Mouton, 1re catégorie, filets | 36 |
+| `mutton_leg` | Mouton, 1re catégorie, gigots | 36 |
+| `mutton_live` | Mouton, sur pied | 108 |
+| `mutton_rack` | Mouton, 1re catégorie, carrés | 36 |
+| `mutton_scrag` | Mouton, 2e catégorie, bas carrés | 36 |
+| `mutton_shoulder` | Mouton, 2e catégorie, épaules | 36 |
+| `oats` | Avoine | 108 |
+| `olive_oil_first_pressing` | Huile d'olive, 1re pression | 324 |
+| `olive_oil_masri_lampante` | Huile d'olive, masri lampante | 324 |
+| `olive_oil_second_pressing` | Huile d'olive, 2e pression | 324 |
+| `pomace_oil` | Huile de grignons | 108 |
+| `pork_belly` | Porc, 1re catégorie, poitrine | 36 |
+| `pork_chine` | Porc, 2e catégorie, échine | 36 |
+| `pork_fillet` | Porc, 1re catégorie, filets | 36 |
+| `pork_ham` | Porc, 1re catégorie, jambons | 36 |
+| `pork_head` | Porc, 2e catégorie, tête | 36 |
+| `pork_live` | Porc, sur pied | 108 |
+| `pork_loin` | Porc, 1re catégorie, reins | 36 |
+| `pork_shoulder` | Porc, 2e catégorie, épaules | 36 |
+| `red_wine` | Vin rouge | 144 |
+| `sheep_skins` | Peaux de mouton | 108 |
+| `soft_wheat` | Blé tendre | 108 |
+| `veal_breast` | Veau, 2e catégorie, poitrines | 36 |
+| `veal_flank` | Veau, 1re catégorie, pans | 36 |
+| `veal_leg` | Veau, 1re catégorie, cuisseaux / Veau, 1re catégorie, cuissots | 36 |
+| `veal_live` | Veau, sur pied | 36 |
+| `veal_loin` | Veau, 2e catégorie, longes | 36 |
+| `veal_rack` | Veau, 1re catégorie, carrés | 36 |
+| `veal_shoulder` | Veau, 2e catégorie, épaules | 36 |
+| `white_wine` | Vin blanc | 144 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `average` | moyen / moyenne / prix moyen mensuel | 1,968 |
+| `maximum` | maximum / minimum | 1,032 |
+| `minimum` | maximum / minimum | 1,032 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `francs_per_degree` |  | 216 |
+| `francs_per_hectolitre` |  | 72 |
+| `francs_per_hundred` |  | 36 |
+| `francs_per_kilogram` |  | 1,296 |
+| `francs_per_piece` |  | 216 |
+| `francs_per_quintal` |  | 2,196 |

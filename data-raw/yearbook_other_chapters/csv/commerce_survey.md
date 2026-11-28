@@ -64,7 +64,8 @@ consumption / prices / warehouses / weights pages.
 | `commerce_cereals_balance` | **done**, sgt1922-1924, 252 rows | f408-409, f898-899, f1402-1403, every cell read on native-resolution crops (img: all), each printing independently; gutter cells `?` (sgt1922 1915-16 maize, sgt1923 1916-17 all lines, sgt1923 flour export 1914-15 ink blot); 4 balances `total_mismatch` (located by the printed averages), 1 `row_realigned` |
 | `commerce_cereals_stocks` | **done**, sgt1922-1924, 258 rows | f410-411, f900-901, f1404-1405, every cell read on native-resolution crops (img: all), each printing typed separately; sgt1923 prints harvest 1922 as "1923" (misprint); 6 failed identities (oats 1916, 1919 in each edition) and 1 failed average (sgt1923 maize, flagged `total_mismatch`), explained in the notes |
 | `commerce_oil_wine_balance` | **done**, sgt1922-1924, 156 rows | f412-415, f902-905, f1406-1409, every cell read on native-resolution crops (img: all), each printing typed separately; 10 failed checks (oil 1919 and wine 1916 remaining, in each edition; sgt1922 wine c) total; three sgt1923 oil averages), explained in the notes |
-| all others listed above | to do (next: f416-427, then f298-403) | – |
+| `commerce_prices` | **done**, sgt1922-1924, 4032 rows | f416-421, f906-911, f1410-1415, every cell read on native-resolution crops (img: all), each printing typed separately; content differs by edition (sgt1922 only: live veal, eggs, chickpeas, wine per hl); 15 gutter cells `illegible` (sgt1923); 11 failed min <= avg <= max checks, explained in the notes; 2 cells with the hundreds digit missing flagged `total_mismatch` |
+| all others listed above | to do (next: f422-427, then f298-403) | – |
 
 ## Image reading
 
@@ -86,3 +87,5 @@ f1284-1287) read on native-resolution crops, each printing typed from its own im
 transcribed as check columns (not stored). OCR not used.
 
 `commerce_customs_duties` and `commerce_export_duties`: every cell of every printing (sgt1922 f294-297, sgt1923 f784-787, sgt1924 f1288-1291) read on native-resolution crops, each printing typed from its own image; the printed averages were read only to try to locate failing totals (not stored). OCR not used.
+
+`commerce_prices`: every cell of every printing (sgt1922 f416-421, sgt1923 f906-911, sgt1924 f1410-1415) read on native-resolution crops, each printing typed from its own images; gutter columns read on both facing pages; Gallica OCR used only as a cross-check.

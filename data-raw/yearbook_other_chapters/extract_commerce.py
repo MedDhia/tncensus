@@ -1711,6 +1711,197 @@ def build_oil_wine(secs, write):
     return res
 
 
+T_PRI = "commerce_prices"
+PRI_MARKET = {"tunis": "Place de Tunis", "sousse": "Place de Sousse", "sfax": "Place de Sfax"}
+# column code -> (product, product_fr as printed, unit as printed)
+_KG, _Q = "francs_per_kilogram", "francs_per_quintal"
+PRI_PRODUCT = {
+    "beef": ("beef_live", "Bœuf, sur pied", _KG), "veal": ("veal_live", "Veau, sur pied", _KG),
+    "mutton": ("mutton_live", "Mouton, sur pied", _KG), "pork": ("pork_live", "Porc, sur pied", _KG),
+    "beef_fillet": ("beef_fillet", "Bœuf, 1re catégorie, filets", _KG),
+    "beef_sirloin": ("beef_sirloin", "Bœuf, 1re catégorie, aloyaux", _KG),
+    "beef_thigh": ("beef_thigh", "Bœuf, 1re catégorie, cuisses", _KG),
+    "beef_rib": ("beef_rib", "Bœuf, 1re catégorie, côtes", _KG),
+    "beef_breast_neck": ("beef_breast_neck", "Bœuf, 2e catégorie, poitrine et collier", _KG),
+    "beef_shoulder": ("beef_shoulder", "Bœuf, 2e catégorie, épaules", _KG),
+    "beef_short_rib": ("beef_short_rib", "Bœuf, 2e catégorie, plats de côtes", _KG),
+    "veal_flank": ("veal_flank", "Veau, 1re catégorie, pans", _KG),
+    "veal_leg": ("veal_leg", "Veau, 1re catégorie, cuisseaux", _KG),
+    "veal_rack": ("veal_rack", "Veau, 1re catégorie, carrés", _KG),
+    "veal_loin": ("veal_loin", "Veau, 2e catégorie, longes", _KG),
+    "veal_shoulder": ("veal_shoulder", "Veau, 2e catégorie, épaules", _KG),
+    "veal_breast": ("veal_breast", "Veau, 2e catégorie, poitrines", _KG),
+    "mutton_leg": ("mutton_leg", "Mouton, 1re catégorie, gigots", _KG),
+    "mutton_rack": ("mutton_rack", "Mouton, 1re catégorie, carrés", _KG),
+    "mutton_fillet": ("mutton_fillet", "Mouton, 1re catégorie, filets", _KG),
+    "mutton_breast_neck": ("mutton_breast_neck", "Mouton, 2e catégorie, poitrine et collets", _KG),
+    "mutton_scrag": ("mutton_scrag", "Mouton, 2e catégorie, bas carrés", _KG),
+    "mutton_shoulder": ("mutton_shoulder", "Mouton, 2e catégorie, épaules", _KG),
+    "pork_fillet": ("pork_fillet", "Porc, 1re catégorie, filets", _KG),
+    "pork_loin": ("pork_loin", "Porc, 1re catégorie, reins", _KG),
+    "pork_ham": ("pork_ham", "Porc, 1re catégorie, jambons", _KG),
+    "pork_belly": ("pork_belly", "Porc, 1re catégorie, poitrine", _KG),
+    "pork_shoulder": ("pork_shoulder", "Porc, 2e catégorie, épaules", _KG),
+    "pork_chine": ("pork_chine", "Porc, 2e catégorie, échine", _KG),
+    "pork_head": ("pork_head", "Porc, 2e catégorie, tête", _KG),
+    "cattle_hides": ("cattle_hides", "Peaux de bœuf", _Q),
+    "sheep_skins": ("sheep_skins", "Peaux de mouton", "francs_per_piece"),
+    "goat_skins": ("goat_skins", "Peaux de chèvre", "francs_per_piece"),
+    "greasy_wool": ("greasy_wool", "Laines en suint", _Q),
+    "eggs": ("eggs", "Œufs", "francs_per_hundred"),
+    "durum_wheat": ("durum_wheat", "Blé dur", _Q), "soft_wheat": ("soft_wheat", "Blé tendre", _Q),
+    "barley": ("barley", "Orge", _Q), "oats": ("oats", "Avoine", _Q), "maize": ("maize", "Maïs", _Q),
+    "daris": ("daris", "Daris (sorgho blanc)", _Q), "broad_beans": ("broad_beans", "Fèves et fèverolles", _Q),
+    "chickpeas": ("chickpeas", "Pois chiches", _Q), "linseed": ("linseed", "Graines de lin", _Q),
+    "oil_first_press": ("olive_oil_first_pressing", "Huile d'olive, 1re pression", _Q),
+    "oil_second_press": ("olive_oil_second_pressing", "Huile d'olive, 2e pression", _Q),
+    "oil_masri_lampante": ("olive_oil_masri_lampante", "Huile d'olive, masri lampante", _Q),
+    "pomace_oil": ("pomace_oil", "Huile de grignons", _Q),
+    "red_wine_deg": ("red_wine", "Vin rouge", "francs_per_degree"),
+    "red_wine_hl": ("red_wine", "Vin rouge", "francs_per_hectolitre"),
+    "white_wine_deg": ("white_wine", "Vin blanc", "francs_per_degree"),
+    "white_wine_hl": ("white_wine", "Vin blanc", "francs_per_hectolitre"),
+}
+PRI_MEASURE = {"min": ("minimum", "minimum"), "max": ("maximum", "maximum"), "avg": ("average", "moyenne")}
+PRI_TABLE = {"prices_live": "Animaux (viande sur pied)",
+             "prices_retail": "Prix moyen mensuel du kilogr. de viande au détail par catégories et par espèces",
+             "prices_animal_products": "Dépouilles et produits animaux (peaux, laine en suint et œufs)",
+             "prices_cereals": "Céréales (blé; orge; avoine; maïs; sorgho; fèves, pois chiches; graine de lin)",
+             "prices_oils": "Huiles végétales (huile d'olive; huile de grignons)", "prices_wine": "Vins"}
+PRI_MOYEN = {"prices_live"}  # average column headed 'moyen' (elsewhere 'moyenne')
+PRI_MOYEN_ED = {(ed, "sfax", "oil_masri_lampante") for ed in EDITIONS_DONE}
+PRI_LABEL_ED = {("sgt1924", "veal_leg"): "Veau, 1re catégorie, cuissots"}
+# cells printed with their hundreds digit missing (located by the minimum / average / maximum of the line)
+PRI_MISPRINTS = {
+    ("sgt1924", "durum_wheat", 12, "min"): "printed '1 38'; the maximum 146,25 and average 142,10 imply 138",
+    ("sgt1924", "soft_wheat", 12, "max"): "printed '1 31'; the minimum 125,50 and average 128,25 imply 131",
+}
+PRI_DOC = {
+    "census": "edition (each prints one year, its reference year; no overlap)",
+    "table_id": "`prices_live`, `prices_retail`, `prices_animal_products`, `prices_cereals`, `prices_oils`, "
+                "`prices_wine` (sub-tables of *Mercuriales*)",
+    "gallica_ark": "Gallica volume ark", "source_page": "printed page number", "gallica_view": "Gallica view (fNNNN)",
+    "year": "reference year of the edition (not printed in the heading: 1922, 1923, 1924)",
+    "month": "month, 1-12 (printed Janvier ... Décembre)",
+    "market": "`tunis`, `sousse`, `sfax`", "market_fr": "as printed (Place de ...)",
+    "product": "product code (live animal, cut of meat, hide, cereal, oil, wine)",
+    "product_fr": "column headings as printed, joined with commas",
+    "measure": "`minimum`, `maximum`, `average` (retail meat: average only)",
+    "measure_fr": "column heading as printed (retail meat: prix moyen mensuel)",
+    "unit": "`francs_per_kilogram`, `francs_per_quintal`, `francs_per_piece`, `francs_per_hundred` (eggs), "
+            "`francs_per_degree`, `francs_per_hectolitre` (wine), as printed",
+    "value": "price in francs, with centimes (printed '1 35' = 1.35; » in the centimes column = .00)",
+    "flag": "empty or `not_applicable` (printed — (1) *Aucune transaction* / *Sans affaires*)",
+}
+
+
+PRI_PARAS = [
+    "Market prices (*Mercuriales*) for the reference year of each edition (the heading prints no year: sgt1922 "
+    "1922, sgt1923 1923, sgt1924 1924; consecutive editions do not overlap). Sub-tables (table_id): `prices_live` "
+    "*Animaux (Viande sur pied et viande abattue)*, live weight per kg, minimum / maximum / moyen; `prices_retail` "
+    "*Prix moyen mensuel du kilogr. de viande au détail par catégories et par espèces* (beef, veal, mutton, pork "
+    "by cut and category; one monthly average per cut); `prices_animal_products` *Dépouilles et produits animaux* "
+    "(cattle hides per quintal, sheep and goat skins per piece, greasy wool per quintal, eggs per hundred); "
+    "`prices_cereals` *Céréales* (prices per quintal: the unit is not printed in this sub-table; stored as "
+    "`francs_per_quintal`, the usual unit of the Tunis cereal market and consistent with the magnitudes); "
+    "`prices_oils` *Huiles végétales* a) Tunis, b) Sousse, c) Sfax, per quintal; `prices_wine` *Vins*, Tunis, per "
+    "degree and (sgt1922 only) per hectolitre. All markets are *Place de Tunis* unless stated (`market`).",
+    "Content differs between editions: sgt1922 prints live veal, eggs, chickpeas and the wine price per hectolitre; "
+    "sgt1923 and sgt1924 do not (their live-animal table has beef, mutton and pork; the beef 'moyen' column "
+    "lies against the binding and is repeated, cut, at the edge of the facing page). Products are stored only for "
+    "the editions that print them.",
+    "Values: francs with centimes ('1 35' = 1,35; '2 »' = 2,00), stored with two decimals. A dash with footnote "
+    "(1) *Aucune transaction* / *Sans affaires* (sgt1922), or a lone » with footnote (») *Aucune transaction* / "
+    "*Sans affaires* (sgt1923, sgt1924), means no transaction that month: stored empty, flag `not_applicable`. "
+    "Daris (white sorghum): every edition prints the three headings as *maximum | minimum | moyenne*, but the "
+    "first column is always the lower; stored as `minimum` / `maximum` by position, `measure_fr` keeping the "
+    "printed heading.",
+    "Gutter cells (binding): sgt1923 beef live average November and cattle-hide average September and November: "
+    "centimes cut, stored empty with flag `illegible`; sgt1923 retail veal *longes* (2e catégorie): the whole "
+    "column lies in the binding (only the » of some centimes visible), stored `illegible`. sgt1923 oats minimum: "
+    "the tens digit is partly cut; read from its visible remnant, each reading agreeing with the printed maximum "
+    "and average. The remaining gutter columns (sgt1922 veal carrés / longes, oats and maize; sgt1923 veal "
+    "carrés, barley average; sgt1924 veal carrés, barley average) were read on the crops of both facing pages.",
+    "Checks: on every line with minimum, maximum and average, minimum <= average <= maximum (the average is not "
+    "always the midpoint, so no stricter check is made). Explanation of the failed checks (all cells re-read on "
+    "native-resolution crops; the printed values are kept): sgt1922 Sfax masri lampante February, average printed "
+    "236,25 between 202,50 and 210 (probably 206,25); sgt1922 cattle hides August, maximum printed 48 (probably "
+    "248); sgt1923 daris November, average 58,75 below the minimum 59,25 (probably 59,75); sgt1923 durum wheat July "
+    "average 71,35 (74,80-77,90, probably 76,35) and September average 79,10 (71,25-77; probably 74,10); sgt1923 "
+    "greasy wool September, average 453,75 (463,75-543,75, probably 503,75); sgt1923 Tunis first-pressing oil "
+    "October, average 349,35 (475-483,75, probably 479,35); sgt1924 Sfax second-pressing oil April, average "
+    "675,30 above the maximum 673,10 (probably 670,30); sgt1924 barley May, average 68,50 (57,50-59,50, probably "
+    "58,50); sgt1924 cattle hides September, average 568,75 above the maximum 537,50 (the minimum 400 or the "
+    "average is misprinted; not decidable); sgt1924 soft wheat December, maximum printed '1 31' (hundreds digit "
+    "missing). The two cells printed with the hundreds digit missing are flagged `total_mismatch`: "
+    + "; ".join(f"{e} {p} month {m} {s}: {n}" for (e, p, m, s), n in PRI_MISPRINTS.items()) + " (the "
+    "first passes the check only because 1,38 is below the average). Not caught by the check: sgt1922 Tunis masri "
+    "lampante June maximum printed 843,75 (minimum 335, average 339,35; probably 343,75), kept as printed.",
+    "The Gallica OCR was used only as a cross-check (it renders » and the centimes column unreliably).",
+    "Survey of the whole chapter: `commerce_survey.md`.",
+]
+
+
+def build_prices(secs, write):
+    recs, used = [], []
+    trip = defaultdict(dict)
+    for s in secs:
+        if not s["table"].startswith("prices_"):
+            continue
+        used.append(s)
+        ed, mk = s["ed"], s["market"]
+        swap = s.get("heading_swap", "")
+        for r in s["rows"]:
+            month = int(r["label"])
+            for c, cell in r["cells"].items():
+                code, stat = c.split(".") if "." in c else (c, "avg")
+                prod, prod_fr, unit = PRI_PRODUCT[code]
+                prod_fr = PRI_LABEL_ED.get((ed, code), prod_fr)
+                m, m_fr = PRI_MEASURE[stat]
+                if s["table"] == "prices_retail":
+                    m_fr = "prix moyen mensuel"
+                elif s["table"] in PRI_MOYEN or (ed, mk, code) in PRI_MOYEN_ED:
+                    m_fr = "moyen" if stat == "avg" else m_fr
+                if code == swap and stat in ("min", "max"):
+                    m_fr = {"min": "maximum", "max": "minimum"}[stat]
+                val = None if cell.value is None else cell.value.quantize(Decimal("0.01"))
+                if s["table"] != "prices_retail":
+                    trip[(ed, mk, code, month, f"f{s['view']}")][stat] = val
+                recs.append({"census": ed, "table_id": s["table"], "gallica_ark": s["ark"], "source_page": s["page"],
+                             "gallica_view": s["view"], "year": int(ed[3:]), "month": month, "market": mk,
+                             "market_fr": PRI_MARKET[mk], "product": prod, "product_fr": prod_fr, "measure": m,
+                             "measure_fr": m_fr, "unit": unit, "value": val,
+                             "flag": cell.flag or ("total_mismatch" if (ed, code, month, stat) in PRI_MISPRINTS else "")})
+    for (ed, mk, code, month, view), d in sorted(trip.items()):
+        if any(d.get(k) is None for k in ("min", "max", "avg")):
+            continue
+        CHK.n[T_PRI] += 1
+        if not d["min"] <= d["avg"] <= d["max"]:
+            CHK.fail[T_PRI].append(f"{ed} {view} {mk} {code} month {month}: minimum <= average <= maximum: printed "
+                                   f"{d['min']}, {d['avg']}, {d['max']}")
+    kept, compared, diffs = select_latest(recs, ["year", "market", "product", "unit", "month", "measure"])
+    order = list(PRI_TABLE)
+    codes = [p[0] for p in PRI_PRODUCT.values()]
+    kept.sort(key=lambda r: (r["year"], order.index(r["table_id"]), list(PRI_MARKET).index(r["market"]),
+                             codes.index(r["product"]), r["unit"], r["month"],
+                             ["minimum", "maximum", "average"].index(r["measure"])))
+    fails = CHK.fail[T_PRI]
+    flagged = [f"{r['census']} {r['market']} {r['product']} {r['month']} {r['measure']} {r['flag']}"
+               for r in kept if r["flag"]]
+    res = dict(rows=len(kept), checks=CHK.n[T_PRI], failed=list(fails), overlap_compared=compared,
+               overlap_diffs=[list(d) for d in diffs], flagged=flagged, editions=EDITIONS_DONE, value_type="francs")
+    if write:
+        cols = COMMON + ["month", "market", "market_fr", "product", "product_fr", "measure", "measure_fr", "unit",
+                         "value", "flag"]
+        write_csv(T_PRI, cols, kept)
+        write_notes(T_PRI, CHAPTER, SCRIPT, kept, cols, PRI_DOC, "Mercuriales",
+                    "Market prices (mercuriales): monthly minimum, maximum and average prices", PRI_PARAS,
+                    CHK.n[T_PRI], fails, compared, diffs, coverage_lines(used),
+                    "Selection: each edition prints a single year (its reference year); no overlap, all stored.",
+                    "Unit: francs (with centimes) per unit as printed (see `unit`). value_type: francs.")
+    return res
+
+
 def build(write):
     secs = []
     for ed in EDITIONS_DONE:
@@ -1756,6 +1947,7 @@ def build(write):
     res[T_CER] = build_cereals(secs, write)
     res[T_CST] = build_cereals_stocks(secs, write)
     res[T_OW] = build_oil_wine(secs, write)
+    res[T_PRI] = build_prices(secs, write)
     if write:
         cols = COMMON + DIMS + ["value", "flag"]
         write_csv(T, cols, kept)
