@@ -1345,7 +1345,7 @@ locality,Birine,,,Birine,,,,exact,1,108,Birine,,36.717609,10.107189,education_sc
 locality,Birine,Tunis,,Birine,Tunis,,,exact,1,108,Birine,,36.717609,10.107189,eur1906_t2_locality_nationality
 locality,Bizerte,Bizerte,,Bizerte,Bizerte,,,exact,1,109,Bizerte,,37.274767,9.863165,eur1906_t2_locality_nationality
 locality,Bizerte,Contrôle de Bizerte,,Bizerte,Bizerte,,,exact,1,109,Bizerte,,37.274767,9.863165,eur1906_td_french_population_by_locality_1891_1901
-locality,Bizerte,,,Bizerte,,,,exact,1,109,Bizerte,,37.274767,9.863165,communes_electricity_1922_1927;communes_electricity_1928;communes_electricity_networks;communes_water_pipes;communes_water_sales;education_schools;education_vocational
+locality,Bizerte,,,Bizerte,,,,exact,1,109,Bizerte,,37.274767,9.863165,communes_electricity_1922_1927;communes_electricity_1928;communes_electricity_networks;communes_water_pipes;communes_water_sales;education_schools;education_vocational;labour_strike_details
 locality,Bizerte (Banlieue Ouest),Bizerte,,Bizerte (Banlieue Ouest),Bizerte,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,"Bizerte (Banlieue, route de Mateur)",Bizerte,,Bizerte (Banlieue,Bizerte,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,Bled-el-Hader,,Djerid,Bled-el-Hader,Tozeur,Djerid,,exact,1,635,Bled-El-Hader,,33.91175,8.133053,ind1931_t8_localities
@@ -1484,11 +1484,12 @@ locality,Djebel-Hallouf,Souk-el-Arba,,Djebel-Hallouf,Souk-el-Arba,,,exact,1,124,
 locality,Djebel-Harraba,Contrôle du Kef,,Djebel-Harraba,Le Kef,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,Djebel-Kebbauch,Contrôle du Kef,,Djebel-Kebbauch,Le Kef,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,Djebel-Kebir,Contrôle de Bizerte,,Djebel-Kebir,Bizerte,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
-locality,Djebel-Mdilla,,,Djebel-Mdilla,,,,exact,1,126,Djebel-Mdilla,,34.287598,8.749657,education_schools
+locality,Djebel-Mdilla,,,Djebel-Mdilla,,,,exact,1,126,Djebel-Mdilla,,34.287598,8.749657,education_schools;labour_strike_details
 locality,Djebel-Nador (fort),Contrôle de Bizerte,,Djebel-Nador (fort),Bizerte,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,Djebel-Rara (fort),Contrôle de Bizerte,,Djebel-Rara (fort),Bizerte,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,Djebel-Serdj,Kairouan,,Djebel-Serdj,Kairouan,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,Djebel-Slata,Le Kef,,Djebel-Slata,Le Kef,,,none,0,,,,,,eur1906_t2_locality_nationality
+locality,Djebel-Slata,,,Djebel-Slata,,,,none,0,,,,,,labour_strike_details
 locality,Djebel-Trozza,Kairouan,,Djebel-Trozza,Kairouan,,,exact,1,127,Djebel-Trozza,,35.542355,9.580693,eur1906_t2_locality_nationality
 locality,Djebel-Trozza,,,Djebel-Trozza,,,,exact,1,127,Djebel-Trozza,,35.542355,9.580693,education_schools
 locality,Djebel-Zebbeus,Thala,,Djebel-Zebbeus,Thala,,,none,0,,,,,,eur1906_t2_locality_nationality
@@ -1726,6 +1727,7 @@ locality,K'sar-Beni-Aïssa,,Matmata,K'sar-Beni-Aïssa,Territoires militaires du 
 locality,Kairouan,Kairouan,,Kairouan,Kairouan,,,exact,1,22,Kairouan,,35.675914,10.091924,eur1906_t2_locality_nationality
 locality,Kairouan,,,Kairouan,,,,exact,1,22,Kairouan,,35.675914,10.091924,communes_electricity_1922_1927;communes_electricity_1928;communes_electricity_networks;communes_water_pipes;communes_water_sales;education_schools;education_vocational
 locality,Kalaa (El),,Nefzaoua,Kalaa (El),Territoires militaires du Sud,Nefzaoua,,exact,1,873,El-Kalaa,,33.484854,9.007165,ind1931_t8_localities
+locality,Kalaa-Djerda,,,Kalaa-Djerda,,,,exact,1,230,Kalaa-Djerda,,35.6633492337049,8.58598584079496,labour_strike_details
 locality,Kalaa-Djerda,,Tadjerouine,Kalaa-Djerda,Le Kef,Tadjerouine,,exact,1,230,Kalaa-Djerda,,35.6633492337049,8.58598584079496,ind1931_t8_localities
 locality,Kalaat-Es-Senam,,,Kalaat-Es-Senam,,,,none,0,,,,,,communes_water_pipes;communes_water_sales
 locality,Kalaat-Senam (Mine),,,Kalaat-Senam (Mine),,,,none,0,,,,,,education_schools
@@ -1931,6 +1933,7 @@ locality,Maxula-Radès,,,Maxula-Radès,,,,exact,1,51,Maxula-Rades,,36.771457,10.
 locality,Maxula-Radès,Tunis,,Maxula-Radès,Tunis,,,exact,1,51,Maxula-Rades,,36.771457,10.280813,eur1906_t2_locality_nationality
 locality,Maxula-Radès et Megrine,Contrôle de Tunis,,Maxula-Radès et Megrine,Tunis,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,Maârif (El),,Tadjerouine,Maârif (El),Le Kef,Tadjerouine,,none,0,,,,,,ind1931_t8_localities
+locality,Mdilla,,,Mdilla,,,,none,0,,,,,,labour_strike_details
 locality,Medenine,Territoire du Sud,,Medenine,Territoires militaires du Sud,,,exact,1,903,Medenine,,33.34,10.49,eur1906_td_french_population_by_locality_1891_1901
 locality,Medioula,,Ouled-Aoun,Medioula,Maktar,Oulad-Aoun,,none,0,,,,,,ind1931_t8_localities
 locality,Medjez-el-Bab,Annexe de Medjez-el-Bab,,Medjez-el-Bab,Medjez-el-Bab,,,exact,1,52,Medjez-El-Bab,,36.647829,9.612908,eur1906_td_french_population_by_locality_1891_1901
@@ -1940,7 +1943,7 @@ locality,Medjez-el-Bab (Banlieue),Béja,,Medjez-el-Bab,Béja,,,qualifier_strippe
 locality,Medou (El),,Aradh,Medou (El),Gabès,Aradh,,none,0,,,,,,ind1931_t8_localities
 locality,Megrine,Contrôle de Tunis,,Megrine,Tunis,,,exact,1,53,Megrine,,36.769903,10.232833,eur1906_td_french_population_by_locality_1891_1901
 locality,Mehdia,,,Mehdia,,,,none,0,,,,,,education_schools
-locality,Meheri-Zebbeus,,,Meheri-Zebbeus,,,,none,0,,,,,,education_schools
+locality,Meheri-Zebbeus,,,Meheri-Zebbeus,,,,none,0,,,,,,education_schools;labour_strike_details
 locality,Mejez el Bab,,,Mejez el Bab,,,,exact,1,52,Medjez-El-Bab,,36.647829,9.612908,communes_water_pipes;communes_water_sales
 locality,Mekna,Annexe de Tabarca,,Mekna,Tabarka,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,Mekna,Souk-el-Arba,,Mekna,Souk-el-Arba,,,none,0,,,,,,eur1906_t2_locality_nationality
@@ -1981,7 +1984,7 @@ locality,Messaïba et Areg,,Djerid,Messaïba et Areg,Tozeur,Djerid,,none,0,,,,,,
 locality,Methouia,,Aradh,Methouia,Gabès,Aradh,,exact,1,859,Methouia,,33.96,10.004755,ind1931_t8_localities
 locality,Methouia,,,Methouia,,,,exact,1,859,Methouia,,33.96,10.004755,education_schools
 locality,Metlaoui,Contrôle de Gafsa,,Metlaoui,Gafsa,,,exact,1,166,Metlaoui,,34.326044,8.40181,eur1906_td_french_population_by_locality_1891_1901
-locality,Metlaoui,,,Metlaoui,,,,exact,1,166,Metlaoui,,34.326044,8.40181,education_schools;education_vocational
+locality,Metlaoui,,,Metlaoui,,,,exact,1,166,Metlaoui,,34.326044,8.40181,education_schools;education_vocational;labour_strike_details
 locality,Metlaoui-Gare,Gafsa,,Metlaoui-Gare,Gafsa,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,Metlaoui-Mine,Gafsa,,Metlaoui-Mine,Gafsa,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,Metlaoui-Mine,,,Metlaoui-Mine,,,,none,0,,,,,,education_schools
@@ -2143,7 +2146,8 @@ locality,Rebiba,,,Rebiba,,,,exact,1,240,Rebiba,,35.80175,8.37899,education_schoo
 locality,"Rebiba, gare",,,Rebiba,,,,qualifier_stripped,1,240,Rebiba,,35.80175,8.37899,education_schools
 locality,"Rebiba, mine",,,Rebiba,,,,qualifier_stripped,1,240,Rebiba,,35.80175,8.37899,education_schools
 locality,Redeyef,,Gafsa,Redeyef,Gafsa,Gafsa,,exact,1,167,Redeyef,,34.38193,8.14707,ind1931_t8_localities
-locality,Redeyef,,,Redeyef,,,,exact,1,167,Redeyef,,34.38193,8.14707,education_schools
+locality,Redeyef,,,Redeyef,,,,exact,1,167,Redeyef,,34.38193,8.14707,education_schools;labour_strike_details
+locality,Redeyef-Gafsa,,,Redeyef-Gafsa,,,,none,0,,,,,,labour_strike_details
 locality,Redeyeff,Gafsa,,Redeyeff,Gafsa,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,Redjich,,,Redjich,,,,exact,1,784,Rejich,,35.46661,11.042531,education_schools
 locality,Rejich,,Mahdia,Rejich,Sousse,Mahdia,,exact,1,784,Rejich,,35.46661,11.042531,ind1931_t8_localities
@@ -2224,7 +2228,7 @@ locality,Sers,Le Kef,,Sers,Le Kef,,,exact,1,242,Sers,,36.077579,9.021234,eur1906
 locality,Sers,,,Sers,,,,exact,1,242,Sers,,36.077579,9.021234,education_schools
 locality,Sers-gare,,,Sers-gare,,,,none,0,,,,,,education_schools
 locality,Sers-village,,,Sers-village,,,,none,0,,,,,,education_schools
-locality,Sfax,,,Sfax,,,,exact,1,80,Sfax,,34.73309867816,10.7583704515768,communes_electricity_1922_1927;communes_electricity_1928;communes_electricity_networks;communes_water_pipes;communes_water_sales;education_schools;education_vocational
+locality,Sfax,,,Sfax,,,,exact,1,80,Sfax,,34.73309867816,10.7583704515768,communes_electricity_1922_1927;communes_electricity_1928;communes_electricity_networks;communes_water_pipes;communes_water_sales;education_schools;education_vocational;labour_strike_details
 locality,Sfax,Sfax,,Sfax,Sfax,,,exact,1,80,Sfax,,34.73309867816,10.7583704515768,eur1906_t2_locality_nationality
 locality,Sidi-Abbès,,,Sidi-Abbès,,,,exact,1,81,Sidi-Abbes,,34.76094,10.73096,education_schools
 locality,Sidi-Ahmed,Bizerte,,Sidi-Ahmed,Bizerte,,,exact,1,470,Sidi-Ahmed,,37.247682,9.779529,eur1906_t2_locality_nationality
@@ -2307,7 +2311,7 @@ locality,Souk-el-Khemis (Centre),Souk-el-Arba,,Souk-el-Khemis,Souk-el-Arba,,,qua
 locality,Souk-el-Khemis-de-Silama,Contrôle de Mactar,,Souk-el-Khemis-de-Silama,Maktar,,,none,0,,,,,,eur1906_td_french_population_by_locality_1891_1901
 locality,Soukra (La),,,Soukra (La),,,,exact,1,391,La Soukra,,36.879188,10.263228,education_schools
 locality,Sousse,Contrôle de Sousse,,Sousse,Sousse,,,exact,1,89,Sousse,,35.8246122656788,10.6351825862153,eur1906_td_french_population_by_locality_1891_1901
-locality,Sousse,,,Sousse,,,,exact,1,89,Sousse,,35.8246122656788,10.6351825862153,communes_electricity_1922_1927;communes_electricity_1928;communes_electricity_networks;communes_water_pipes;communes_water_sales;education_schools;education_vocational
+locality,Sousse,,,Sousse,,,,exact,1,89,Sousse,,35.8246122656788,10.6351825862153,communes_electricity_1922_1927;communes_electricity_1928;communes_electricity_networks;communes_water_pipes;communes_water_sales;education_schools;education_vocational;labour_strike_details
 locality,Sousse,Sousse,,Sousse,Sousse,,,exact,1,89,Sousse,,35.8246122656788,10.6351825862153,eur1906_t2_locality_nationality
 locality,Sousse (Banlieue),Sousse,,Sousse,Sousse,,,qualifier_stripped,1,89,Sousse,,35.8246122656788,10.6351825862153,eur1906_t2_locality_nationality
 locality,"Sousse, Kairouan et villages du Sahel",,,Sousse,,,,qualifier_stripped,1,89,Sousse,,35.8246122656788,10.6351825862153,communes_water_pipes;communes_water_sales
@@ -2393,8 +2397,9 @@ locality,Tozeur,,,Tozeur,,,,exact,1,96,Tozeur,,33.918534,8.122933,communes_water
 locality,Triaga,,,Triaga,,,,exact,1,280,Triaga,,34.966791,10.369416,education_schools
 locality,Triaga,Sfax,,Triaga,Sfax,,,exact,1,280,Triaga,,34.966791,10.369416,eur1906_t2_locality_nationality
 locality,Tunis,Contrôle de Tunis,,Tunis,Tunis,,,exact,1,325,Tunis,,36.799257,10.176146,eur1906_td_french_population_by_locality_1891_1901
-locality,Tunis,,,Tunis,,,,exact,1,325,Tunis,,36.799257,10.176146,communes_electricity_1922_1927;communes_electricity_1928;communes_electricity_networks;communes_water_pipes;communes_water_sales;education_civil_personality_establishments;education_schools;education_vocational
+locality,Tunis,,,Tunis,,,,exact,1,325,Tunis,,36.799257,10.176146,communes_electricity_1922_1927;communes_electricity_1928;communes_electricity_networks;communes_water_pipes;communes_water_sales;education_civil_personality_establishments;education_schools;education_vocational;labour_strike_details
 locality,Tunis,Tunis,,Tunis,Tunis,,,exact,1,325,Tunis,,36.799257,10.176146,eur1906_t2_locality_nationality
+locality,Tunis et banlieue Nord,,,Tunis et banlieue Nord,,,,none,0,,,,,,labour_strike_details
 locality,Turganess,Gabès,,Turganess,Gabès,,,none,0,,,,,,eur1906_t2_locality_nationality
 locality,Turki,Contrôle de Grombalia,,Turki,Grombalia,,,exact,1,190,Turki,,36.575238,10.514759,eur1906_td_french_population_by_locality_1891_1901
 locality,Turki,,,Turki,,,,exact,1,190,Turki,,36.575238,10.514759,education_schools

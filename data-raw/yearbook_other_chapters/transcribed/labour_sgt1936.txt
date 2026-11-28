@@ -1,0 +1,157 @@
+# Travail et prévoyance sociale, sgt1936 (chapter XV, f188-f195). Format: yb_tables.py.
+# Habitations à bon marché: see labour_sgt1927.txt for the conventions. Headed (1912-1936); lines to 1934
+# (same figures as sgt1935, reset). b) 1921 capital printed with a broken first digit ("5.000.000"-like): read
+# 3.000.000 (the Totaux 65.145.374 needs 3.000.000). b) "7.830.808" is printed on the line 1927 and
+# "16.814.168", "9.768.737" between the lines 1928 and 1929; stored as in sgt1935 (1927-1928 and 1929,
+# row_realigned, key realigned=). Totaux of the logements ouvriers capital printed 65.145.374 (repeats the
+# previous column; sgt1935: 10.500.000). 1930 subsidy printed 1.000.000 (also sgt1935); the subsidy Totaux
+# 14.336.000 of both editions needs 1.100.000, the figure of sgt1930: stored from sgt1930 (reprint_corrected).
+
+@hbm_built view=189 page=178
+img: all
+cols: indiv coll workers military maritime
+1912 à 1920 | 231 0 0 0 0
+1921 | 87 12 0 0 0
+1922 | 103 70 0 0 0
+1923 | 131 0 0 0 0
+1924 | 57 0 0 0 0
+1925-1926 | 104 0 0 0 0
+1927-1928 | 204 0 0 0 0
+1929 | 291 32 301 0 0
+1930 | 0 0 0 90 0
+1931 | 332 6 0 95 41
+1932 | 0 44 0 36 89
+1933 | 38 114 193 0 30
+1934 | 5 0 1 0 10
+Totaux | 1583 278 495 221 170
+Total général | 2747 - - - -
+
+@hbm_finance view=189 page=178 realigned="1927-1928:cap;1929:cap,cap_workers" prefer="1930:subv=sgt1930"
+img: all
+cols: subv cap cap_workers cap_military cap_maritime
+1912 à 1920 | 436000 5825472 0 0 0
+1921 | 700000 3000000 0 0 0
+1922 | 700000 5176726 0 0 0
+1923 | 700000 3547399 0 0 0
+1924 | 700000 1440900 0 0 0
+1925 | 900000 3359900 0 0 0
+1926 | 900000 0 0 0 0
+1927 | 1100000 - - - -
+1928 | 1100000 - - - -
+1927-1928 | - 7830808 0 0 0
+1929 | 1100000 16814168 9768737 0 0
+1930 | 1000000 0 0 7173500 0
+1931 | 2450000 17250000 0 7530700 3634584
+1932 | 2450000 0 0 3960000 7424503
+1933 | 0 900001 731263 0 2006968
+1934 | 0 0 0 0 1135000
+Totaux | 14336000 65145374 65145374 18664200 14201055
+Total général | - 122856629 - - -
+
+# Accidents du travail. Répartition des accidents d'après la nationalité des victimes (1), new categories
+# (7 lines). (1) "Le dépouillement par nationalité n'a pu être effectué en 1936": the nationality columns are
+# printed » throughout: stored NA (not_applicable); the TOTAUX column is stored (nationality = total). The
+# printed TOTAL 18.930 exceeds the sum of the lines (17.972) by 958; no line identified (re-read on crops).
+@acc_nat view=190 page=179 year=1936 natna=1
+img: all
+cols: french indigenous italian foreign total
+check: total = french + indigenous + italian + foreign
+Agriculture | - - - - 1482
+Mines et carrières | - - - - 2849
+Métallurgie | - - - - 1048
+Bâtiments et travaux publics | - - - - 4740
+Transports | - - - - 4527
+Commerce | - - - - 1306
+Autres professions | - - - - 2020
+Total | - - - - 18930
+
+# Causes matérielles des accidents (1935) (f191|f192 spread): a reprint of sgt1935 c) (year 1935), new setting.
+# Differences from sgt1935, re-read on zoomed crops of both: Mines véhicules 31 (sgt1935 3; row total 1.764 and
+# column total 859 need 3); Industrie textile matières brûlantes » (sgt1935 1; row total 11 needs 1). Both are
+# misprints here: the series takes sgt1935 values (reprint_corrected). Armées divers 11 as in sgt1935.
+@acc_cause view=191 page=180 view2=192 page2=181 split=explosives year=1935 mismatch="Armées de terre et de mer:miscellaneous;Autres:miscellaneous" prefer="Mines:vehicles=sgt1935;Industrie textile, nettoyage, cuirs et peaux:hot_matter=sgt1935"
+img: all
+cols: motors transmission machines lifting boilers explosives hot_matter collapse falls_height loading vehicles railways navigation hand_tools miscellaneous total
+check: total = motors + transmission + machines + lifting + boilers + explosives + hot_matter + collapse + falls_height + loading + vehicles + railways + navigation + hand_tools + miscellaneous
+Agriculture et forêts | 32 27 83 18 0 5 33 118 196 134 331 0 0 234 129 1340
+Alimentation (moulins, boissons, produits alimentaires, tabacs) | 11 18 39 2 0 1 51 76 86 97 16 0 0 120 62 579
+Mines | 0 1 0 0 0 2 1 421 8 51 31 510 0 157 610 1764
+Grande et petite métallurgie | 20 17 24 6 0 2 141 115 63 121 44 0 0 313 47 913
+Pierres et terres (carrières, pierres à feu) | 4 3 16 6 0 4 23 100 57 86 50 0 0 72 35 456
+Bâtiment et travaux publics, théâtre | 19 14 26 17 3 0 87 585 717 617 157 0 2 735 583 3562
+Bois et bimbeloterie | 1 0 49 0 0 0 2 40 20 32 4 0 0 99 17 264
+Industries chimiques, service d'eau et gaz et d'électricité | 4 2 8 4 4 1 52 25 81 51 27 0 0 98 199 556
+Industrie textile, nettoyage, cuirs et peaux | 0 1 3 0 0 0 0 0 2 1 0 0 0 2 1 11
+Papier et industrie polygraphique | 2 0 3 0 0 0 4 2 3 4 0 0 0 9 6 33
+Transports : chemins de fer et tramways, autres transports par terre entrepôts, poste et télégraphe, navigation aérienne et maritime | 21 20 94 64 9 8 246 693 446 664 164 4 2 381 656 3472
+Commerce de gros et de détail, banques | 7 7 0 6 0 0 36 98 112 133 46 0 0 125 86 656
+Armées de terre et de mer | 1 1 8 1 0 1 12 30 19 19 9 0 0 55 11 167
+Autres | 0 3 0 0 0 0 18 13 32 33 8 0 1 25 6 189
+Totaux | 122 114 353 124 16 24 707 2316 1842 2043 859 514 5 2425 2498 13962
+
+# Grèves survenues de 1927 à 1936 (f193|f194 spread; no "a) Etat détaillé" in this edition). 1936: 50 strikes,
+# results printed » » » (results not given for the 1936 strike wave): stored as printed (0); the identity
+# strikes = success + transaction + failure fails for 1936 (explained in the notes).
+@strikes view=193 page=182 view2=194 page2=183 split=establishments years=1927-1936
+img: all
+cols: strikes days establishments strikers success transaction failure
+check: strikes = success + transaction + failure
+1927 | 8 115 26 1532 1 5 2
+1928 | 11 89 126 1637 2 6 3
+1929 | 9 65 106 4869 3 3 3
+1930 | 6 38 12 2805 1 0 5
+1931 | 8 38 76 855 2 2 4
+1932 | 3 24 9 189 0 1 2
+1933 | 3 26 31 2076 0 3 0
+1934 | 2 16 2 77 2 0 0
+1935 | 7 105 12 772 0 2 5
+1936 | 50 273 784 21004 0 0 0
+
+# Opérations de l'Office du Placement Français en Tunisie (1927-1936) (f193|f194). The 7th line is headed
+# "Industrie hôtelière" but carries the figures of "Services publics" of every earlier printing (1927-1935
+# identical): stored as the same line (occupation = public_services, occupation_fr as printed). Misprints here
+# (re-read on zoomed crops; each total re-added): 1928 Métallurgie placements 39 (sgt1935 99; Totaux 1.472 needs
+# 99); 1932 Industrie hôtelière demandes 296 and offres "?.200" (sgt1935 6.200 and 3.128; totals 11.971 and
+# 6.408 need those); 1933 Services domestiques offres ".005", Divers placements "611", Totaux offres "3.82",
+# Totaux placements "716": leading digits not printed (sgt1935 2.005, 2.611, 3.824, 4.716). Those cells are
+# stored from sgt1935 (reprint_corrected, key prefer=). 1936: the demandes column adds to 7.350 (printed Totaux
+# 6.711) and the placements to 3.600 (printed 3.601): no line identified, every 1936 figure re-read on a crop.
+@placement view=193 page=182 view2=194 page2=183 split=d1931 prefer="Métallurgie:p1928=sgt1935;Industrie hôtelière:d1932=sgt1935;Industrie hôtelière:o1932=sgt1935;Services domestiques:o1933=sgt1935;Divers:p1933=sgt1935"
+img: all
+cols: d1927 o1927 p1927 d1928 o1928 p1928 d1929 o1929 p1929 d1930 o1930 p1930 d1931 o1931 p1931 d1932 o1932 p1932 d1933 o1933 p1933 d1934 o1934 p1934 d1935 o1935 p1935 d1936 o1936 p1936
+Agriculture | 241 121 227 373 312 464 383 333 487 389 239 280 490 274 250 614 202 194 342 107 100 329 116 71 113 44 14 100 27 37
+Commerce et industrie | 561 205 182 653 294 181 697 459 263 834 477 311 1278 667 808 2089 720 723 1259 403 225 1122 309 214 768 259 146 944 190 93
+Bâtiment | 118 7 16 105 46 40 163 62 199 197 120 373 120 108 150 304 168 285 548 505 575 422 157 188 514 206 456 372 53 156
+Métallurgie | 519 81 136 379 130 39 302 108 115 337 138 197 520 261 280 621 180 316 469 146 143 437 132 90 286 73 45 370 37 16
+Mines et carrières | 67 83 172 76 74 140 106 59 203 98 191 448 390 39 70 270 40 297 148 36 49 98 45 46 31 160 15 38 3 0
+Services domestiques | 226 393 225 215 582 228 219 791 309 251 949 372 528 1483 866 1176 1670 952 902 ? 774 1027 1958 810 741 1675 668 513 1418 485
+Industrie hôtelière | 91 23 29 147 95 117 197 265 164 175 228 135 241 413 296 296 ? 3128 330 321 239 231 235 180 145 133 74 196 103 66
+Divers | 391 120 163 598 194 203 335 86 262 309 76 386 3568 49 3164 697 300 195 8200 301 ? 8068 386 1981 2464 292 1765 4817 94 2747
+Totaux | 2214 1033 1150 2546 1727 1472 2402 2163 2002 2590 2418 2502 7135 3294 5884 11971 6408 6090 12198 ? ? 11735 3338 3580 5062 2842 3183 6711 1925 3601
+
+# Coût de la vie, base 100 en juillet 1914 (f195). Footnote: indices based on all the expenditure of a working
+# family of 4 (food, heating and lighting, housing, clothing and miscellaneous); separate French, Italian and
+# indigenous indices.
+@col view=195 page=184
+img: all
+cols: french italian indigenous
+1932 t1 | 530 547 518
+1932 t2 | 509 522 474
+1932 t3 | 481 483 433
+1932 t4 | 483 483 434
+1933 t1 | 476 476 432
+1933 t2 | 456 457 413
+1933 t3 | 453 461 439
+1933 t4 | 445 461 434
+1934 t1 | 444 458 433
+1934 t2 | 411 423 395
+1934 t3 | 493 488 416
+1934 t4 | 489 480 407
+1935 t1 | 486 475 394
+1935 t2 | 476 464 374
+1935 t3 | 468 453 391
+1935 t4 | 472 456 395
+1936 t1 | 472 461 398
+1936 t2 | 479 486 413
+1936 t3 | 512 527 465
+1936 t4 | 547 572 498

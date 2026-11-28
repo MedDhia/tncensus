@@ -1,0 +1,173 @@
+# Travail et prévoyance sociale, sgt1928 (chapter XV, f1031-f1040). Format: yb_tables.py.
+# Habitations à bon marché: see labour_sgt1927.txt for the conventions. Observations 1927-1928: "En cours
+# d'adjudication" (a and b).
+
+@hbm_built view=1033 page=481
+img: all
+cols: indiv coll
+1912 à 1919 | 68 0
+1920 | 163 0
+1921 | 87 12
+1922 | 103 70
+1923 | 131 0
+1924 | 57 0
+1925-1926 | 104 0
+1927-1928 | 145 0
+Totaux | 858 82
+Total général | 940 -
+
+@hbm_finance view=1033 page=481
+img: all
+cols: subv cap
+1912 à 1919 | 56000 538000
+1920 | 400000 5287472.52
+1921 | 700000 3000000
+1922 | 700000 5176726
+1923 | 700000 3547399
+1924 | 700000 1440900
+1925 | 900000 -
+1926 | 900000 -
+1925-1926 | - 3359900
+1927 | 1100000 -
+1928 | 1100000 -
+1927-1928 | - 5201000
+Totaux | - 27551897.52
+
+# Accidents du travail (no year printed; edition sgt1928). Same layout as sgt1927.
+@acc_nat view=1034 page=482
+img: all
+cols: french indigenous italian foreign total
+check: total = french + indigenous + italian + foreign
+Agriculture et forêts | 106 1221 172 16 1515
+Alimentation (moulins, boissons, produits alimentaires, tabacs) | 32 573 150 20 775
+Mines | 2 3675 226 11 3914
+Grande et petite métallurgie | 195 505 802 46 1548
+Pierres et terres (carrières, pierres au feu) | 5 416 90 5 516
+Bâtiment et travaux publics, théâtre | 90 1233 774 24 2121
+Bois et bimbeloterie | 33 108 239 19 399
+Industries chimiques, services d'eau et gaz et d'électricité | 20 85 75 6 186
+Industrie textile, nettoyage, cuirs et peaux | 2 26 7 0 35
+Papier et industrie polygraphique | 4 31 8 3 46
+Transports : chemins de fer et tramways, autres transports par terre et entrepôts, poste et télégraphe, navigation aérienne et maritime | 1010 3743 304 36 5093
+Commerce de gros et de détail, banques | 111 1027 305 52 1495
+Armées de terre et de mer | 87 86 0 0 173
+Autres | 7 28 8 0 43
+Totaux | 1704 12757 3160 238 17859
+
+# Mines, morts: printed 3 (crop); row total 3.914 and column total 73 both need 33: total_mismatch.
+@acc_sev view=1035 page=483 mismatch="Mines:dead"
+img: all
+cols: dead inc_perm inc_temp unknown total
+check: total = dead + inc_perm + inc_temp + unknown
+Agriculture et forêts | 9 75 1242 189 1515
+Alimentation (moulins, boissons, produits alimentaires, tabacs) | 0 7 715 53 775
+Mines | 3 75 3788 18 3914
+Grande et petite métallurgie | 0 11 1465 72 1548
+Pierres et terres (carrières, pierres au feu) | 5 26 472 13 516
+Bâtiment et travaux publics, théâtre | 6 35 1962 118 2121
+Bois et bimbeloterie | 0 2 364 33 399
+Industries chimiques, services d'eau et gaz et d'électricité | 0 4 164 18 186
+Industrie textile, nettoyage, cuirs et peaux | 0 0 34 1 35
+Papier et industrie polygraphique | 0 2 44 0 46
+Transports : chemins de fer et tramways, autres transports par terre et entrepôts, poste et télégraphe, navigation aérienne et maritime | 17 112 4923 41 5093
+Commerce de gros et de détail, banques | 2 3 1412 78 1495
+Armées de terre et de mer | 0 1 135 37 173
+Autres | 1 1 36 5 43
+Totaux | 73 354 16756 676 17859
+
+# c) Causes matérielles (f1036|f1037 spread), causes as in sgt1927.
+# Agriculture et forêts, véhicules: printed 428 (crop); row total 1.515 and column total 1.470 both need 487.
+@acc_cause view=1036 page=484 view2=1037 page2=485 split=explosives mismatch="Agriculture et forêts:vehicles"
+img: all
+cols: motors transmission machines lifting boilers explosives hot_matter collapse falls_height loading vehicles railways navigation hand_tools miscellaneous total
+check: total = motors + transmission + machines + lifting + boilers + explosives + hot_matter + collapse + falls_height + loading + vehicles + railways + navigation + hand_tools + miscellaneous
+Agriculture et forêts | 63 45 115 12 9 2 58 75 127 144 428 0 0 317 61 1515
+Alimentation (moulins, boissons, produits alimentaires, tabacs) | 8 29 50 7 13 0 93 80 63 161 108 0 0 127 36 775
+Mines | 0 4 25 0 0 23 0 746 33 41 11 927 0 38 2066 3914
+Grande et petite métallurgie | 44 10 44 17 0 0 218 170 77 333 77 0 0 517 41 1548
+Pierres et terres (carrières, pierres au feu) | 1 4 14 2 0 1 20 120 11 39 31 138 0 30 105 516
+Bâtiment et travaux publics, théâtre | 11 8 11 26 2 0 87 386 315 615 195 0 0 326 139 2121
+Bois et bimbeloterie | 0 2 69 1 1 0 28 35 21 52 10 0 0 166 14 399
+Industries chimiques, services d'eau et gaz et d'électricité | 2 1 3 0 2 0 26 16 29 39 20 0 0 39 9 186
+Industrie textile, nettoyage, cuirs et peaux | 0 1 2 0 0 0 1 0 1 2 0 0 0 25 3 35
+Papier et industrie polygraphique | 1 2 11 0 0 0 3 4 6 7 3 0 0 4 5 46
+Transports : chemins de fer et tramways, autres transports par terre et entrepôts, poste et télégraphe, navigation aérienne et maritime | 12 4 72 152 5 17 260 1247 350 1621 320 137 0 279 617 5093
+Commerce de gros et de détail, banques | 3 0 0 0 0 0 85 243 101 533 190 0 0 182 158 1495
+Armées de terre et de mer | 1 2 7 4 0 0 12 38 22 38 9 0 0 35 5 173
+Autres | 0 0 0 1 0 0 3 3 11 3 9 0 0 5 8 43
+Totaux | 146 112 423 222 32 43 894 3163 1167 3628 1470 1202 0 2090 3267 17859
+
+# Grèves. a) Etat détaillé des grèves (f1036|f1037; no year printed).
+@strike_detail view=1036 page=484 view2=1037 page2=485
+img: all
+1 || Ouvriers typographes ;; Tunis ;; 3 ;; 1 ;; 28 ;; Demande : Augmentation de salaire ;; Transaction
+2 || Ouvriers maçons ;; Tunis ;; 16 ;; 6 ;; 160 ;; Demande : Application de la journée de huit heures ;; Réussite
+3 || Ouvriers carrossiers ;; Tunis ;; 3 ;; 1 ;; 6 ;; Demande : Augmentation de salaire ;; Echec
+4 || Ouvriers briquetiers ;; Tunis ;; 6 ;; 3 ;; 110 ;; Demande : Application de la journée de huit heures ;; Echec
+5 || Ouvriers maçons ;; Bizerte ;; 29 ;; 10 ;; 100 ;; Demande : Application de la journée de huit heures ;; Echec
+6 || Personnel de la Compagnie des Tramways ;; Tunis ;; 2 ;; 1 ;; 279 ;; Demande : Application de la journée de huit heures (suppression du travail supplémentaire) ;; Transaction
+7 || Personnel de la Compagnie des Tramways ;; Tunis ;; 10 ;; 1 ;; 311 ;; Demande : Application de la journée de huit heures (suppression des heures supplémentaires) ;; Transaction
+8 || Ouvriers boulangers ;; Tunis ;; 7 ;; 30 ;; 153 ;; Demande : Augmentation de salaire ;; Réussite
+9 || Ouvriers meuniers ;; Tunis ;; 4 ;; 13 ;; 250 ;; Demande : Augmentation de salaire ;; Transaction
+10 || Ouvriers en pâtes alimentaires ;; Tunis ;; 7 ;; 55 ;; 218 ;; Demande : Augmentation de salaire ;; Transaction
+11 || Ouvriers menuisiers ;; Sousse ;; 2 ;; 5 ;; 22 ;; Demande : Augmentation de salaire ;; Transaction
+
+# b) Grèves survenues de 1919 à 1928 (f1038|f1039 spread).
+@strikes view=1038 page=486 view2=1039 page2=487 split=establishments years=1919-1928
+img: all
+cols: strikes days establishments strikers success transaction failure
+check: strikes = success + transaction + failure
+1919 | 14 110 104 4047 0 8 6
+1920 | 6 79 9 5520 0 3 3
+1921 | 6 91 101 2254 3 1 2
+1922 | 9 113 248 1593 4 0 5
+1923 | 6 16 25 1227 3 0 3
+1924 | 16 224 149 2208 5 5 6
+1925 | 15 114 73 3170 1 8 6
+1926 | 10 64 36 728 5 2 3
+1927 | 8 115 26 1532 1 5 2
+1928 | 11 89 126 1637 2 6 3
+
+# Opérations de l'Office du Placement Français en Tunisie (1920-1928) (f1038|f1039). Printed here: 1923
+# Métallurgie placements 84 (sgt1926, sgt1927: 34; the Totaux 455 needs 34) and 1923 offres Totaux 588 (column
+# sums to 587, as printed in sgt1926 and sgt1927). Stored as printed; the 84 is replaced by sgt1927's 34
+# (reprint_corrected) in the series.
+@placement view=1038 page=486 view2=1039 page2=487 split=d1923
+img: all
+cols: d1920 o1920 p1920 d1921 o1921 p1921 d1922 o1922 p1922 d1923 o1923 p1923 d1924 o1924 p1924 d1925 o1925 p1925 d1926 o1926 p1926 d1927 o1927 p1927 d1928 o1928 p1928
+Agriculture | 358 103 86 251 121 71 212 74 89 185 74 57 182 80 60 127 43 53 151 72 75 241 121 227 373 312 464
+Commerce et Industrie | 292 93 91 259 106 92 420 120 73 476 83 93 485 94 95 415 77 90 397 135 121 561 205 182 653 294 181
+Bâtiment | 38 24 14 54 15 15 28 7 11 21 5 7 40 25 36 18 2 3 34 6 11 118 7 16 105 46 40
+Métallurgie | 319 81 72 256 46 26 381 50 70 314 40 84 183 36 35 162 31 32 211 53 51 519 81 136 379 130 99
+Mines et Carrières | 143 29 83 15 19 18 22 30 23 12 23 23 14 18 19 10 23 28 16 18 21 67 83 172 76 74 140
+Services domestiques | 107 60 29 96 167 49 90 142 45 155 338 155 178 270 109 81 219 82 139 192 131 226 393 225 215 582 228
+Services publics | 315 46 78 240 21 54 252 36 70 71 17 47 82 30 60 54 19 53 41 11 32 91 23 29 147 95 117
+Divers | 163 89 31 146 148 53 186 213 76 113 7 39 181 38 48 190 31 79 188 54 82 391 120 163 598 194 203
+Totaux | 1735 525 484 1317 643 378 1591 672 457 1347 588 455 1345 591 462 1057 445 420 1177 541 524 2214 1033 1150 2546 1727 1472
+
+# Coût de la vie, base 100 en juillet 1914 (f1040). N.B. as in sgt1926, plus: up to the 4th quarter 1928
+# exclusively the indices rest only on food expenditure (budget of a working family of 4); (1) the indices of
+# the 4th quarter 1928 rest on all the expenditure of the same family (food, heating and lighting, housing,
+# clothing and miscellaneous).
+@col view=1040 page=488 allexp="1928 t4"
+img: all
+cols: french italian indigenous
+1919 | 286 286 260
+1920 | 360 350 311
+1921 | 352 349 312
+1922 | 311 301 264
+1923 | 343 332 302
+1924 s1 | 405 409 394
+1924 s2 | 421 442 410
+1925 s1 | 428 472 440
+1925 s2 | 481 526 506
+1926 s1 | 558 594 572
+1926 s2 | 676 707 682
+1927 t1 | 689 708 674
+1927 t2 | 670 703 637
+1927 t3 | 641 680 606
+1927 t4 | 625 650 594
+1928 t1 | 618 640 586
+1928 t2 | 605 639 579
+1928 t3 | 602 622 573
+1928 t4 | 651 577 562

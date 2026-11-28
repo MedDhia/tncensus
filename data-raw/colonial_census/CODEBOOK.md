@@ -281,6 +281,17 @@ Every table is tidy: one row per printed cell. Printed subtotals and totals are 
 | [`mutuality_credit_caisses`](#mutuality_credit_caisses) | credit_bills;credit_caisses;credit_local | by edition | 144 | mixed | Agricultural mutual credit: local credit banks (caisses) and members, French and indigenous, and bills discounted, by year (1913-1939) |
 | [`mutuality_coop_central_shares_business`](#mutuality_coop_central_shares_business) | coop_business;coop_parts | by edition | 197 | mixed | Central cooperative of farmers: shares subscribed, goods delivered and loans by type, by year (1913-1929) |
 | [`mutuality_coop_central_capital`](#mutuality_coop_central_capital) | coop_central;coop_moto | by edition | 133 | francs | Central cooperative of farmers and motor-cultivation cooperative of Tunisia: paid-up capital, State advances and goods bought in common and delivered, by year (1921-1939) |
+| [`labour_hbm_dwellings`](#labour_hbm_dwellings) | hbm_built | by edition | 90 | count | Low-cost housing (habitations à bon marché): dwellings built, by period and type |
+| [`labour_hbm_finance`](#labour_hbm_finance) | hbm_finance | by edition | 71 | francs | Low-cost housing: state subsidies and capital invested, by period and type of dwelling |
+| [`labour_hbm_pending`](#labour_hbm_pending) | hbm_award | by edition | 4 | count | Low-cost housing: dwellings under award in 1930 (observations column of sgt1930) |
+| [`labour_accidents_nationality`](#labour_accidents_nationality) | acc_nat | by edition | 447 | count | Industrial accidents by occupational category and nationality of the victim |
+| [`labour_accidents_outcome`](#labour_accidents_outcome) | acc_sev | by edition | 414 | count | Industrial accidents by occupational category and outcome (deaths, incapacity) |
+| [`labour_accidents_causes`](#labour_accidents_causes) | acc_cause | by edition | 1,650 | count | Industrial accidents by occupational category and material cause |
+| [`labour_strikes`](#labour_strikes) | strikes | by edition | 168 | mixed | Strikes per year: number, duration, establishments, strikers and results |
+| [`labour_strike_details`](#labour_strike_details) | strike_detail | by edition | 153 | mixed | Strikes: detail of each strike (occupation, locality, duration, establishments, strikers, aim, result) |
+| [`labour_placement`](#labour_placement) | placement | by edition | 480 | count | French Placement Office in Tunisia: job applications, offers and placements by occupation |
+| [`labour_cost_of_living`](#labour_cost_of_living) | col | by edition | 201 | rate | Cost-of-living index numbers for French, Italian and indigenous working families (July 1914 = 100) |
+| [`labour_immigration_visas`](#labour_immigration_visas) | visa_trade;visas | by edition | 19 | count | Immigrant workers: labour contracts visaed in 1939 (renewals, transfers, new immigrants) and new immigrants by trade and nationality |
 
 ### eur1906_t1_circonscription_nationality
 
@@ -13279,3 +13290,615 @@ Source `sgt`, table coop_central;coop_moto, printed pages by edition. 133 rows. 
 | Code | Printed label | N |
 |---|---|---:|
 | `francs` |  | 133 |
+
+### labour_hbm_dwellings
+
+**Habitations à bon marché. a) Logements construits**  
+*Low-cost housing (habitations à bon marché): dwellings built, by period and type*
+
+Source `sgt`, table hbm_built, printed pages by edition. 90 rows. Value type: count. Flags: (empty) 80, row_realigned 10. Notes and validation: [`../yearbook_other_chapters/csv/labour_hbm_dwellings.md`](../yearbook_other_chapters/csv/labour_hbm_dwellings.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `year_from` | Coded dimension. |
+| `period_fr` | Place or label as printed (18 distinct values). |
+| `housing_type` | Coded dimension. |
+| `housing_type_fr` | Printed French label for `housing_type`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`year_from`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `1912` |  | 5 |
+| `1921` |  | 5 |
+| `1922` |  | 5 |
+| `1923` |  | 5 |
+| `1924` |  | 5 |
+| `1925` |  | 5 |
+| `1927` |  | 5 |
+| `1929` |  | 5 |
+| `1930` |  | 5 |
+| `1931` |  | 5 |
+| `1932` |  | 5 |
+| `1933` |  | 5 |
+| `1934` |  | 5 |
+| `1935` |  | 5 |
+| `1936` |  | 5 |
+| `1937` |  | 5 |
+| `1938` |  | 5 |
+| `1939` |  | 5 |
+
+`housing_type`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `collective` | Maisons collectives (nombre de logements) | 18 |
+| `individual` | Maisons individuelles | 18 |
+| `maritime` | Logements maritimes | 18 |
+| `military` | Logements militaires | 18 |
+| `workers` | Logements ouvriers (individuels) | 18 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `dwellings` |  | 90 |
+
+### labour_hbm_finance
+
+**Habitations à bon marché. b) Subventions de l'Etat et capitaux investis**  
+*Low-cost housing: state subsidies and capital invested, by period and type of dwelling*
+
+Source `sgt`, table hbm_finance, printed pages by edition. 71 rows. Value type: francs. Flags: (empty) 67, row_realigned 3, reprint_corrected 1. Notes and validation: [`../yearbook_other_chapters/csv/labour_hbm_finance.md`](../yearbook_other_chapters/csv/labour_hbm_finance.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `year_from` | Coded dimension. |
+| `period_fr` | Place or label as printed (16 distinct values). |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `housing_type` | Coded dimension. |
+| `housing_type_fr` | Printed French label for `housing_type`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`year_from`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `1912` |  | 5 |
+| `1921` |  | 5 |
+| `1922` |  | 5 |
+| `1923` |  | 5 |
+| `1924` |  | 5 |
+| `1925` |  | 5 |
+| `1926` |  | 5 |
+| `1927` |  | 5 |
+| `1928` |  | 1 |
+| `1929` |  | 5 |
+| `1930` |  | 5 |
+| `1931` |  | 5 |
+| `1932` |  | 5 |
+| `1933` |  | 5 |
+| `1934` |  | 5 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `capital_invested` | Capitaux investis | 56 |
+| `state_subsidy` | Subventions de l'Etat | 15 |
+
+`housing_type`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `(empty)` |  | 15 |
+| `individual_and_collective` | Maisons individuelles et collectives | 14 |
+| `maritime` | Logements maritimes | 14 |
+| `military` | Logements militaires | 14 |
+| `workers` | Logements ouvriers | 14 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `francs` |  | 71 |
+
+### labour_hbm_pending
+
+**Habitations à bon marché. Logements en cours d'adjudication (observations, 1930)**  
+*Low-cost housing: dwellings under award in 1930 (observations column of sgt1930)*
+
+Source `sgt`, table hbm_award, printed pages by edition. 4 rows. Value type: count. Flags: (empty) 4. Notes and validation: [`../yearbook_other_chapters/csv/labour_hbm_pending.md`](../yearbook_other_chapters/csv/labour_hbm_pending.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `project_fr` | Place or label as printed (4 distinct values). |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `dwellings` |  | 4 |
+
+### labour_accidents_nationality
+
+**Accidents du travail. a) Répartition des accidents d'après la nationalité des victimes**  
+*Industrial accidents by occupational category and nationality of the victim*
+
+Source `sgt`, table acc_nat, printed pages by edition. 447 rows. Value type: count. Flags: (empty) 444, total_mismatch 3. Notes and validation: [`../yearbook_other_chapters/csv/labour_accidents_nationality.md`](../yearbook_other_chapters/csv/labour_accidents_nationality.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `category` | Coded dimension. |
+| `category_fr` | Printed French label for `category`. |
+| `nationality` | Coded dimension. |
+| `nationality_fr` | Printed French label for `nationality`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`category`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `agriculture` | Agriculture | 9 |
+| `agriculture_forestry` | Agriculture et forêts | 24 |
+| `armed_forces` | Armées de terre et de mer | 24 |
+| `building_public_works` | Bâtiment et travaux publics, théâtre / Bâtiments et travaux publics | 25 |
+| `chemicals_utilities` | Industries chimiques, services d'eau et gaz et d'électricité | 24 |
+| `commerce` | Commerce | 1 |
+| `commerce_banking` | Commerce de gros et de détail, banques | 24 |
+| `construction` | Construction | 8 |
+| `electricity_water_gas` | Electricité, Eau, Gaz | 8 |
+| `food` | Alimentation | 8 |
+| `food_drink_tobacco` | Alimentation (moulins, boissons, produits alimentaires, tabacs) | 24 |
+| `handling` | Manutention | 8 |
+| `lime_cement` | Chaux et Ciment | 8 |
+| `metallurgy` | Grande et petite métallurgie / Métallurgie | 33 |
+| `mines` | Mines | 24 |
+| `mines_quarries` | Mines et Carrières / Mines et carrières | 9 |
+| `other` | Autres / Autres professions | 33 |
+| `paper_printing` | Papier et industrie polygraphique | 24 |
+| `stone_earth` | Pierres et terres (carrières, pierres au feu) | 24 |
+| `textiles_cleaning_leather` | Industrie textile, nettoyage, cuirs et peaux | 24 |
+| `tobacco_state_services` | Tabac, Services d'Etat | 8 |
+| `transport` | Transports / Transports : chemins de fer et tramways, autres transports par terre et entrepôts, poste et télégraphe, navigation aérienne et maritime | 25 |
+| `transport_operations` | Transports : transport | 8 |
+| `transport_workshops` | Transports : ateliers | 8 |
+| `wood_industry` | Industrie du bois | 8 |
+| `wood_toys` | Bois et bimbeloterie | 24 |
+
+`nationality`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `TOTAL (printed)` | Totaux | 7 |
+| `foreign` | Autres étrangers / Etrangers | 110 |
+| `french` | Français | 110 |
+| `indigenous` | Indigènes / Tunisiens | 110 |
+| `italian` | Italiens | 110 |
+
+### labour_accidents_outcome
+
+**Accidents du travail. b) Répartition d'après la gravité / Suites connues ou probables des accidents**  
+*Industrial accidents by occupational category and outcome (deaths, incapacity)*
+
+Source `sgt`, table acc_sev, printed pages by edition. 414 rows. Value type: count. Flags: (empty) 411, derived_from_totals 2, total_mismatch 1. Notes and validation: [`../yearbook_other_chapters/csv/labour_accidents_outcome.md`](../yearbook_other_chapters/csv/labour_accidents_outcome.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `category` | Coded dimension. |
+| `category_fr` | Printed French label for `category`. |
+| `outcome` | Coded dimension. |
+| `outcome_fr` | Printed French label for `outcome`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`category`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `agriculture` | Agriculture | 6 |
+| `agriculture_forestry` | Agriculture et forêts | 24 |
+| `armed_forces` | Armées de terre et de mer | 24 |
+| `building_public_works` | Bâtiment et travaux publics, théâtre | 24 |
+| `chemicals_utilities` | Industries chimiques, services d'eau et gaz et d'électricité | 24 |
+| `commerce_banking` | Commerce de gros et de détail, banques | 24 |
+| `construction` | Construction | 6 |
+| `electricity_water_gas` | Electricité, Eau, Gaz | 6 |
+| `food` | Alimentation | 6 |
+| `food_drink_tobacco` | Alimentation (moulins, boissons, produits alimentaires, tabacs) | 24 |
+| `handling` | Manutention | 6 |
+| `lime_cement` | Chaux et Ciment | 6 |
+| `metallurgy` | Grande et petite métallurgie / Métallurgie | 30 |
+| `mines` | Mines | 24 |
+| `mines_quarries` | Mines et Carrières | 6 |
+| `other` | Autres | 30 |
+| `paper_printing` | Papier et industrie polygraphique | 24 |
+| `stone_earth` | Pierres et terres (carrières, pierres au feu) | 24 |
+| `textiles_cleaning_leather` | Industrie textile, nettoyage, cuirs et peaux | 24 |
+| `tobacco_state_services` | Tabac, Services d'Etat | 6 |
+| `transport` | Transports : chemins de fer et tramways, autres transports par terre et entrepôts, poste et télégraphe, navigation aérienne et maritime | 24 |
+| `transport_operations` | Transports : transport | 6 |
+| `transport_workshops` | Transports : ateliers | 6 |
+| `wood_industry` | Industrie du bois | 6 |
+| `wood_toys` | Bois et bimbeloterie | 24 |
+
+`outcome`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `dead` | Morts | 110 |
+| `incapacity_over_1_month` | Incapacités de plus d'un mois | 26 |
+| `incapacity_under_1_month` | Incapacités de moins d'un mois | 26 |
+| `outcome_unknown` | Suites inconnues | 84 |
+| `permanent_incapacity` | Incapacité permanente | 84 |
+| `temporary_incapacity_over_4_days` | Incapacité temporaire de plus de 4 jours | 84 |
+
+### labour_accidents_causes
+
+**Accidents du travail. c) Causes matérielles des accidents dans les diverses catégories professionnelles**  
+*Industrial accidents by occupational category and material cause*
+
+Source `sgt`, table acc_cause, printed pages by edition. 1,650 rows. Value type: count. Flags: (empty) 1,643, total_mismatch 5, reprint_corrected 2. Notes and validation: [`../yearbook_other_chapters/csv/labour_accidents_causes.md`](../yearbook_other_chapters/csv/labour_accidents_causes.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `category` | Coded dimension. |
+| `category_fr` | Printed French label for `category`. |
+| `cause` | Coded dimension. |
+| `cause_fr` | Printed French label for `cause`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`category`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `agriculture` | Agriculture | 30 |
+| `agriculture_forestry` | Agriculture et forêts | 90 |
+| `armed_forces` | Armées de terre et de mer | 90 |
+| `building_public_works` | Bâtiment et travaux publics, théâtre | 90 |
+| `chemicals_utilities` | Industries chimiques, service d'eau et gaz et d'électricité / Industries chimiques, services d'eau et gaz et d'électricité | 90 |
+| `commerce_banking` | Commerce de gros et de détail, banques | 90 |
+| `construction` | Construction | 30 |
+| `electricity_water_gas` | Electricité, Eau, Gaz | 30 |
+| `food` | Alimentation | 30 |
+| `food_drink_tobacco` | Alimentation (moulins, boissons, produits alimentaires, tabacs) | 90 |
+| `handling` | Manutention | 30 |
+| `lime_cement` | Chaux et Ciment | 30 |
+| `metallurgy` | Grande et petite métallurgie / Métallurgie | 120 |
+| `mines` | Mines | 90 |
+| `mines_quarries` | Mines et Carrières | 30 |
+| `other` | Autres | 120 |
+| `paper_printing` | Papier et industrie polygraphique | 90 |
+| `stone_earth` | Pierres et terres (carrières, pierres au feu) / Pierres et terres (carrières, pierres à feu) | 90 |
+| `textiles_cleaning_leather` | Industrie textile, nettoyage, cuirs et peaux | 90 |
+| `tobacco_state_services` | Tabac, Services d'Etat | 30 |
+| `transport` | Transports : chemins de fer et tramways, autres transports par terre entrepôts, poste et télégraphe, navigation aérienne et maritime / Transports : chemins de fer et tramways, autres transports par terre et entrepôts, poste et télégraphe, navigation aérienne et maritime | 90 |
+| `transport_operations` | Transports : transport | 30 |
+| `transport_workshops` | Transports : ateliers | 30 |
+| `wood_industry` | Industrie du bois | 30 |
+| `wood_toys` | Bois et bimbeloterie | 90 |
+
+`cause`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `autoclaves` | Autoclaves, Chaudières à vapeur | 26 |
+| `boilers` | Chaudières, canalisations de vapeur, explosions | 84 |
+| `collapse` | Rupture, renversement, éboulement d'objets | 84 |
+| `explosives` | Explosifs / Matières explosibles | 110 |
+| `falling_objects` | Eboulements, chute d'objets, etc. | 26 |
+| `falls_height` | Chutes d'endroits élevés | 84 |
+| `footwear` | Défaut de chaussures | 26 |
+| `hand_tools` | Outils à main : scies, hâches, marteaux / Outils à main, éclats et fragments y compris | 110 |
+| `handling` | Manutention de fardeaux | 26 |
+| `hot_matter` | Matières brûlantes et corrosives / Matières incandescentes, brûlantes, corrosives | 110 |
+| `lifting` | Ascenseurs, Grues, Appareils de levage / Ascenseurs, grues, appareils de levage | 110 |
+| `loading` | Chargement et déchargement à la main | 84 |
+| `machine_motors` | Machines : moteurs / Moteurs | 110 |
+| `machine_tools_looms` | Machines : machines, outils, métiers / Machines outils, Métiers | 110 |
+| `machine_transmission` | Machines : transmission / Transmission | 110 |
+| `miscellaneous` | Causes diverses / Divers | 110 |
+| `navigation` | Navigation | 84 |
+| `railways` | Voies ferrées | 84 |
+| `traction` | Traction - Accidents occasionnés par les animaux | 26 |
+| `unknown` | Causes inconnues | 26 |
+| `vehicles` | Véhicules et animaux | 84 |
+| `worker_fall` | Chute de l'ouvrier d'une échelle, etc. | 26 |
+
+### labour_strikes
+
+**Grèves. b) Grèves survenues de <année> à <année>**  
+*Strikes per year: number, duration, establishments, strikers and results*
+
+Source `sgt`, table strikes, printed pages by edition. 168 rows. Value type: mixed. Flags: (empty) 168. Notes and validation: [`../yearbook_other_chapters/csv/labour_strikes.md`](../yearbook_other_chapters/csv/labour_strikes.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `duration_days` | Durée en jours des grèves | 24 |
+| `establishments` | Nombre d'établissements atteints | 24 |
+| `result_compromise` | Résultats : transaction | 24 |
+| `result_failure` | Résultats : échec | 24 |
+| `result_success` | Résultats : réussite | 24 |
+| `strikers` | Nombre de grévistes | 24 |
+| `strikes` | Nombre de grèves | 24 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `count` |  | 144 |
+| `days` |  | 24 |
+
+### labour_strike_details
+
+**Grèves. a) Etat détaillé des grèves**  
+*Strikes: detail of each strike (occupation, locality, duration, establishments, strikers, aim, result)*
+
+Source `sgt`, table strike_detail, printed pages by edition. 153 rows. Value type: mixed. Flags: (empty) 153. Notes and validation: [`../yearbook_other_chapters/csv/labour_strike_details.md`](../yearbook_other_chapters/csv/labour_strike_details.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `strike_no` | Coded dimension. |
+| `occupation_fr` | Place or label as printed (30 distinct values). |
+| `locality` | Place or label as printed (13 distinct values). |
+| `goal_fr` | Place or label as printed (18 distinct values). |
+| `result` | Coded dimension. |
+| `result_fr` | Printed French label for `result`. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`strike_no`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `1` |  | 18 |
+| `10` |  | 6 |
+| `11` |  | 3 |
+| `2` |  | 18 |
+| `3` |  | 18 |
+| `4` |  | 18 |
+| `5` |  | 18 |
+| `6` |  | 18 |
+| `7` |  | 15 |
+| `8` |  | 12 |
+| `9` |  | 9 |
+
+`result`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `compromise` | Reprise du travail avec augmentation de salaires. / Transaction | 54 |
+| `failure` | Echec / Reprise du travail aux anciennes conditions / Reprise du travail aux anciennes conditions. | 63 |
+| `success` | Réussite | 36 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `duration_days` | Durée en jours des grèves | 51 |
+| `establishments` | Nombre d'établissements atteints | 51 |
+| `strikers` | Nombre de grévistes | 51 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `count` |  | 102 |
+| `days` |  | 51 |
+
+### labour_placement
+
+**Placement. Opérations de l'Office du Placement Français en Tunisie**  
+*French Placement Office in Tunisia: job applications, offers and placements by occupation*
+
+Source `sgt`, table placement, printed pages by edition. 480 rows. Value type: count. Flags: (empty) 476, reprint_corrected 4. Notes and validation: [`../yearbook_other_chapters/csv/labour_placement.md`](../yearbook_other_chapters/csv/labour_placement.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `occupation` | Coded dimension. |
+| `occupation_fr` | Printed French label for `occupation`. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`occupation`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `agriculture` | Agriculture | 60 |
+| `building` | Bâtiment | 60 |
+| `commerce_industry` | Commerce et Industrie / Commerce et industrie / Commerce et transports terrestres | 60 |
+| `domestic_services` | Services domestiques | 60 |
+| `metallurgy` | Métallurgie | 60 |
+| `mines_quarries` | Mines et Carrières / Mines et carrières | 60 |
+| `miscellaneous` | Divers | 60 |
+| `public_services` | Industrie hôtelière / Services publics | 60 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `applications` | Demandes d'emploi | 160 |
+| `offers` | Offres d'emploi | 160 |
+| `placements` | Placements effectués | 160 |
+
+### labour_cost_of_living
+
+**Coût de la vie. Nombres-indices du coût de la vie (base : 100 en juillet 1914)**  
+*Cost-of-living index numbers for French, Italian and indigenous working families (July 1914 = 100)*
+
+Source `sgt`, table col, printed pages by edition. 201 rows. Value type: rate. Flags: (empty) 198, not_applicable 3. Notes and validation: [`../yearbook_other_chapters/csv/labour_cost_of_living.md`](../yearbook_other_chapters/csv/labour_cost_of_living.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `period` | Coded dimension. |
+| `period_fr` | Printed French label for `period`. |
+| `group` | Coded dimension. |
+| `group_fr` | Printed French label for `group`. |
+| `basis` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`period`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `s1` | 1er semestre | 9 |
+| `s2` | 2e semestre | 9 |
+| `t1` | 1er trimestre | 39 |
+| `t2` | 2e trimestre | 39 |
+| `t3` | 3e trimestre | 39 |
+| `t4` | 4e trimestre | 39 |
+| `year` | année | 27 |
+
+`group`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `french` | Français | 67 |
+| `indigenous` | Indigènes | 67 |
+| `italian` | Italiens | 67 |
+
+`basis`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `all_expenditure` |  | 135 |
+| `food_only` |  | 66 |
+
+### labour_immigration_visas
+
+**Immigration des travailleurs. Contrats de travail visés au cours de l'année 1939 ; répartition des visas accordés**  
+*Immigrant workers: labour contracts visaed in 1939 (renewals, transfers, new immigrants) and new immigrants by trade and nationality*
+
+Source `sgt`, table visa_trade;visas, printed pages by edition. 19 rows. Value type: count. Flags: (empty) 19. Notes and validation: [`../yearbook_other_chapters/csv/labour_immigration_visas.md`](../yearbook_other_chapters/csv/labour_immigration_visas.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `item` | Coded dimension. |
+| `item_fr` | Printed French label for `item`. |
+| `trade` | Coded dimension. |
+| `trade_fr` | Printed French label for `trade`. |
+| `nationality` | Coded dimension. |
+| `nationality_fr` | Printed French label for `nationality`. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`item`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `new_immigrants` | Immigrants nouveaux / Immigrants nouveaux (répartition des visas accordés) | 17 |
+| `renewals` | Renouvellements | 1 |
+| `transfers` | Transferts | 1 |
+
+`trade`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `(empty)` |  | 3 |
+| `building_metallurgy` | Bâtiment et Métallurgie | 4 |
+| `domestic_services` | Services domestiques | 4 |
+| `forestry` | Industrie forestière | 4 |
+| `miscellaneous` | Divers | 4 |
+
+`nationality`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `(empty)` |  | 3 |
+| `dutch` | Hollandais | 4 |
+| `italian` | Italiens | 4 |
+| `other` | Autres nationalités | 4 |
+| `swiss` | Suisses | 4 |
