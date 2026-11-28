@@ -1453,6 +1453,129 @@ def build_cereals(secs, write):
     return res
 
 
+# ----------------------------------------------------------------- Céréales : b) stocks, c) consommation moyenne
+
+T_CST = "commerce_cereals_stocks"
+CST_PRODUCT = {"wheat": "Blés (1)", "barley": "Orge", "oats": "Avoine", "maize": "Maïs et sorgho"}
+CST_MEASURE = {"production": ("Production", "thousand_quintals"),
+               "campaign": ("Campagne commerciale consécutive", "thousand_quintals"),
+               "remaining": ("Quantités restant dans le pays", "thousand_quintals"),
+               "seed": ("Quantités prélevées pour les semences", "thousand_quintals"),
+               "consumption": ("Quantités restant pour la consommation", "thousand_quintals"),
+               "avg_consumption_total": ("Consommation moyenne totale", "quintals"),
+               "avg_consumption_per_capita": ("Consommation moyenne par habitant", "kilograms_per_inhabitant")}
+# printed average omits one year of the b) column (see notes)
+CST_MISPRINTS = {("sgt1923", "maize", "avg_consumption_total")}
+CST_DOC = {
+    "census": "edition the value is taken from (b: latest edition printing the harvest, rule 4; c: each edition "
+              "prints its own ten-year period)",
+    "table_id": "`cereals_stocks` (b) Stoks disponibles) or `cereals_consumption` (c) Consommation moyenne)",
+    "gallica_ark": "Gallica volume ark", "source_page": "printed page number", "gallica_view": "Gallica view (fNNNN)",
+    "year": "b: harvest year (Récolte); c: last year of the averaging period",
+    "period": "b: harvest year; c: averaging period as printed (e.g. `1912-1921`)",
+    "product": "`wheat`, `barley`, `oats`, `maize` (c) has no oats line)",
+    "product_fr": "line heading as printed",
+    "measure": "`production`, `campaign`, `remaining`, `seed`, `consumption` (b); `avg_consumption_total`, "
+               "`avg_consumption_per_capita` (c)",
+    "measure_fr": "column heading (translated column codes in the notes)",
+    "unit": "`thousand_quintals` (b, printed *1.000 qt*), `quintals` (c total), `kilograms_per_inhabitant` (c per "
+            "capita)",
+    "value": "as printed; campaign signed as printed (+ = excess of imports, - = excess of exports)",
+    "flag": "empty, `not_applicable` (per capita printed », not computed) or `total_mismatch` (see notes)",
+}
+
+
+def build_cereals_stocks(secs, write):
+    recs, used, b = [], [], {}
+    for s in secs:
+        if s["table"] not in ("cereals_stocks", "cereals_consumption"):
+            continue
+        used.append(s)
+        ed = s["ed"]
+        for r in s["rows"]:
+            if s["table"] == "cereals_stocks":
+                y, prod = r["label"].split(".")
+                year, period = int(y), y
+            else:
+                prod, period = r["label"], s["period"]
+                year = int(period[5:])
+            for c, cell in r["cells"].items():
+                m = c if s["table"] == "cereals_stocks" else "avg_consumption_" + c
+                if s["table"] == "cereals_stocks":
+                    b[(ed, year, prod, c)] = cell.value
+                recs.append({"census": ed, "table_id": s["table"], "gallica_ark": s["ark"], "source_page": s["page"],
+                             "gallica_view": s["view"], "year": year, "period": period, "product": prod,
+                             "product_fr": CST_PRODUCT[prod] if s["table"] == "cereals_stocks"
+                             else {"wheat": "Blé (1)"}.get(prod, CST_PRODUCT[prod]),
+                             "measure": m, "measure_fr": CST_MEASURE[m][0], "unit": CST_MEASURE[m][1],
+                             "value": cell.value,
+                             "flag": "total_mismatch" if (ed, prod, m) in CST_MISPRINTS else cell.flag})
+    for (ed, y, prod, c), val in sorted(b.items()):
+        if c == "remaining":
+            CHK.eq(T_CST, f"{ed} {y} {prod}: production + campaign = remaining",
+                   b[(ed, y, prod, "production")] + b[(ed, y, prod, "campaign")], val)
+        if c == "consumption":
+            CHK.eq(T_CST, f"{ed} {y} {prod}: remaining - seed = consumption",
+                   b[(ed, y, prod, "remaining")] - b[(ed, y, prod, "seed")], val)
+    for r in recs:
+        if r["measure"] == "avg_consumption_total":
+            y0, y1 = int(r["period"][:4]), int(r["period"][5:])
+            vals = [b[(r["census"], y, r["product"], "consumption")] for y in range(y0, y1 + 1)]
+            CHK.eq(T_CST, f"{r['census']} {r['product']}: average consumption {r['period']} = mean of the b) "
+                   f"consumption column x 1000", sum(vals) * 1000 / len(vals), r["value"])
+    kept, compared, diffs, n_ill = select_legible(recs, ["table_id", "period", "product", "measure"])
+    kept.sort(key=lambda r: (r["table_id"] != "cereals_stocks", r["year"], list(CST_PRODUCT).index(r["product"]),
+                             list(CST_MEASURE).index(r["measure"])))
+    fails = CHK.fail[T_CST]
+    flagged = [f"{r['census']} {r['period']} {r['product']} {r['measure']} {r['flag']}" for r in kept if r["flag"]]
+    res = dict(rows=len(kept), checks=CHK.n[T_CST], failed=list(fails), overlap_compared=compared,
+               overlap_diffs=[list(d) for d in diffs], flagged=flagged, editions=EDITIONS_DONE, value_type="count",
+               illegible_printings_skipped=n_ill)
+    if write:
+        cols = COMMON + ["period", "product", "product_fr", "measure", "measure_fr", "unit", "value", "flag"]
+        paras = [
+            "Cereal stocks available after each harvest and average consumption. Full printed titles: *Céréales : "
+            "b) Stoks disponibles* (two-page spread) and *c) Consommation moyenne des années 1912 à 1921* (sgt1922; "
+            "sgt1923 *1913 à 1922*, sgt1924 *1914-1923*). Footnotes (translated): (1) wheat includes flours and "
+            "semolinas, counted as the corresponding weight of grain; (2) the sign + indicates the excess of imports "
+            "over exports, the sign -, the excess of exports over imports; (3) seed not included.",
+            "Column codes of b) (all in thousands of quintals): `production` = Production; `campaign` = Campagne "
+            "commerciale consécutive (net trade of the commercial campaign following the harvest, signed); "
+            "`remaining` = Quantités restant dans le pays; `seed` = Quantités prélevées pour les semences; "
+            "`consumption` = Quantités restant pour la consommation. The identities production + campaign = "
+            "remaining and remaining - seed = consumption are checks (all values are stored as printed). The c) "
+            "totals are checked against the mean of the b) consumption column of the same edition (x 1000).",
+            "c) prints a per-capita figure for wheat only; the barley and maize cells are printed » (no figure "
+            "computed) and are stored as NA with flag `not_applicable` rather than 0.",
+            "sgt1923 labels its last harvest *1923* (f901); the sequence runs 1913-1921 then 1923 and sgt1924 prints "
+            "the same four lines under 1922 (and different ones under 1923), so the label is a misprint and the "
+            "lines were transcribed as harvest 1922 (stored from sgt1924 under rule 4 in any case).",
+            "Explanation of the failed checks (cells re-read on native-resolution crops of f410-411, f900-901 and "
+            "f1404-1405; each recurs identically in the three printings, each typed from its own image). Oats 1916 "
+            "(360 - 277 = 83, printed remaining 93) and oats 1919 (450 - 318 = 132, printed 148): the campaign "
+            "figures agree with the a) table (`commerce_cereals_balance`, oats balance 1916-1917 -277.087 and "
+            "1919-1920 -317.983 quintals) and remaining - seed = consumption holds (93 - 42 = 51, 148 - 38 = 110), "
+            "so either the production or the remaining-and-consumption figures are misprinted; the table does not "
+            "decide which, so nothing is flagged. sgt1923 c) maize total is printed 138.200 quintals while the ten "
+            "harvests 1913-1922 average 154.700; 138.200 is the sum of the nine harvests 1914-1922 (1.382 thousand "
+            "quintals) divided by ten, i.e. the 1913 line (165) was left out. sgt1924 (141.900) and sgt1922 "
+            "(215.600) agree with their columns. The printed value is kept and flagged `total_mismatch`.",
+            "Survey of the whole chapter: `commerce_survey.md`.",
+        ]
+        write_csv(T_CST, cols, kept)
+        write_notes(T_CST, CHAPTER, SCRIPT, kept, cols, CST_DOC,
+                    "Céréales : b) Stoks disponibles ; c) Consommation moyenne",
+                    "Cereals: available stocks and average consumption", paras, CHK.n[T_CST], fails, compared,
+                    diffs, coverage_lines(used),
+                    "Selection (SPEC_ADDENDUM rule 4): b) each edition prints the last ten harvests (sgt1922 "
+                    "1912-1921, sgt1923 1913-1922, sgt1924 1914-1923); each harvest is stored once, from the latest "
+                    "edition printing it; every other printing is compared and differences listed below. c) each "
+                    "edition prints a different ten-year average; all three are stored.",
+                    "Units: thousands of quintals (b), quintals and kilograms per inhabitant (c), as printed; "
+                    "value_type: count (quantity).")
+    return res
+
+
 def build(write):
     secs = []
     for ed in EDITIONS_DONE:
@@ -1496,6 +1619,7 @@ def build(write):
     res[T_FISH] = build_fisheries(secs, write)
     res[T_SLA] = build_slaughter(secs, write)
     res[T_CER] = build_cereals(secs, write)
+    res[T_CST] = build_cereals_stocks(secs, write)
     if write:
         cols = COMMON + DIMS + ["value", "flag"]
         write_csv(T, cols, kept)

@@ -568,6 +568,37 @@
   "value_type": "count",
   "illegible_printings_skipped": 25
  },
+ "commerce_cereals_stocks": {
+  "rows": 258,
+  "checks": 249,
+  "failed": [
+   "sgt1922 1916 oats: production + campaign = remaining: cells give 83, printed 93 (difference 10)",
+   "sgt1922 1919 oats: production + campaign = remaining: cells give 132, printed 148 (difference 16)",
+   "sgt1923 1916 oats: production + campaign = remaining: cells give 83, printed 93 (difference 10)",
+   "sgt1923 1919 oats: production + campaign = remaining: cells give 132, printed 148 (difference 16)",
+   "sgt1924 1916 oats: production + campaign = remaining: cells give 83, printed 93 (difference 10)",
+   "sgt1924 1919 oats: production + campaign = remaining: cells give 132, printed 148 (difference 16)",
+   "sgt1923 maize: average consumption 1913-1922 = mean of the b) consumption column x 1000: cells give 154700, printed 138200 (difference -16500)"
+  ],
+  "overlap_compared": 360,
+  "overlap_diffs": [],
+  "flagged": [
+   "sgt1922 1912-1921 barley avg_consumption_per_capita not_applicable",
+   "sgt1922 1912-1921 maize avg_consumption_per_capita not_applicable",
+   "sgt1923 1913-1922 barley avg_consumption_per_capita not_applicable",
+   "sgt1923 1913-1922 maize avg_consumption_total total_mismatch",
+   "sgt1923 1913-1922 maize avg_consumption_per_capita not_applicable",
+   "sgt1924 1914-1923 barley avg_consumption_per_capita not_applicable",
+   "sgt1924 1914-1923 maize avg_consumption_per_capita not_applicable"
+  ],
+  "editions": [
+   "sgt1922",
+   "sgt1923",
+   "sgt1924"
+  ],
+  "value_type": "count",
+  "illegible_printings_skipped": 6
+ },
  "_chapter_views": {
   "sgt1922": [
    281,

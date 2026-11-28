@@ -845,3 +845,64 @@ oats.balance | -484142 -479391 -317983 -156896 -319776 -59271 -369354 -266664 -3
 maize.import | 16 0 2 476300 9113 208715 93590 138826 116208
 maize.export | 3747 2423 14644 3315 435 2430 7191 4649 5920
 maize.balance | -3731 -2423 -14642 +463985 +8673 +206285 +86399 +134177 +110288
+
+# ---- Céréales : b) Stoks disponibles (1.000 qt). Rows <récolte>.<product>; cols production = Production,
+# campaign = Campagne commerciale consécutive (signed: + excess of imports over exports), remaining = Quantités
+# restant dans le pays, seed = prélevées pour les semences, consumption = restant pour la consommation.
+# Blés (1): including flours and semolinas as the corresponding weight of grain.
+@cereals_stocks view=900 page=398 years=1913-1918
+img: all
+cols: production campaign remaining seed consumption
+1913.wheat | 2220 +327 2547 300 2247
+1913.barley | 2050 -799 1251 198 1053
+1913.oats | 524 -460 64 34 30
+1913.maize | 30 +142 172 7 165
+1914.wheat | 600 +620 1220 405 815
+1914.barley | 700 +203 903 277 626
+1914.oats | 149 -80 69 51 18
+1914.maize | 20 +319 339 9 330
+1915.wheat | 2250 -59 2191 447 1744
+1915.barley | 2300 -887 1413 312 1101
+1915.oats | 640 -545 95 56 39
+1915.maize | 70 -10 60 6 54
+1916.wheat | 1500 +146 1646 395 1251
+1916.barley | 1070 -92 978 263 715
+1916.oats | 360 -277 93 42 51
+1916.maize | 33 -4 29 8 21
+1917.wheat | 1990 -61 1929 413 1516
+1917.barley | 1700 -293 1407 300 1107
+1917.oats | 580 -484 96 52 44
+1917.maize | 90 -4 86 6 80
+1918.wheat | 3250 -854 2396 403 1993
+1918.barley | 2850 -1070 1780 204 1576
+1918.oats | 620 -479 141 32 109
+1918.maize | 78 -2 76 8 68
+@cereals_stocks view=901 page=399 years=1919-1922
+img: all
+# the last harvest is printed '1923', a misprint for 1922 (the sequence runs 1913-1921 then 1923; sgt1924 prints
+# the same values under 1922 and different ones under 1923); typed as 1922
+cols: production campaign remaining seed consumption
+1919.wheat | 1900 -410 1490 398 1092
+1919.barley | 1200 -770 430 178 252
+1919.oats | 450 -318 148 38 110
+1919.maize | 65 -15 50 4 46
+1920.wheat | 1422 +497 1919 421 1498
+1920.barley | 570 +43 613 220 393
+1920.oats | 215 -157 58 36 22
+1920.maize | 28 +464 492 10 482
+1921.wheat | 2438 -464 1974 351 1623
+1921.barley | 2500 -1504 996 159 837
+1921.oats | 600 -539 61 28 33
+1921.maize | 90 +6 96 2 94
+1922.wheat | 1000 +644 1644 456 1188
+1922.barley | 400 +182 582 209 373
+1922.oats | 140 -59 81 29 52
+1922.maize | 8 +206 214 7 207
+# c) Consommation moyenne des années 1913 à 1922. total = Totale (3) (quintaux; (3) non compris les semences),
+# per_capita = Par habitant (kilogr.); barley and maize per capita printed » (not computed): typed '-'
+@cereals_consumption view=901 page=399 period=1913-1922
+img: all
+cols: total per_capita
+wheat | 1496700 76
+barley | 803300 -
+maize | 138200 -

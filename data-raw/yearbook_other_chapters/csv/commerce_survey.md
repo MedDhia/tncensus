@@ -28,7 +28,7 @@ years (1913-1922, 1914-1923, 1915-1924), so every yearly series falls under SPEC
 | 326-403 | Commerce des principaux produits (1913-1922): per product (livestock by species, hides, wool, eggs, fish, cereals and flours, pulses, dates, olive oil, alfa, cork, minerals: phosphates, iron, lead, zinc ore; metals; manufactures: sacks, chéchias, machines, soap, sparterie ...): import/export quantity and value by year (left page) and by country of provenance/destination for the last three years (boxed sub-tables) | ~78 views, ~15000 | `commerce_product_trade` and `commerce_product_trade_by_country` |
 | 404-407 | Consommation: animals slaughtered by commune (boeufs/vaches, veaux, moutons, chèvres, porcs, chameaux, autres), one year | ~500 | `commerce_slaughter_by_commune` |
 | 408-409 | Céréales: a) importation/exportation by campaign 1912-13 to 1921-22 with balance (7 products), 10 campaigns + 3 averages | ~260 | `commerce_cereals_balance` (**done**) |
-| 410-411 | Céréales: b) stocks (production, commercial campaign, seed, consumption) 1913-1921; c) consommation moyenne 1912-1921 | ~100 | `commerce_cereals_stocks` |
+| 410-411 | Céréales: b) stocks (production, commercial campaign, seed, consumption) 1913-1921; c) consommation moyenne 1912-1921 | ~100 | `commerce_cereals_stocks` (**done**) |
 | 412-415 | same for olive oil (huile d'olive) and wine (vins) | ~150 | `commerce_oil_wine_balance` |
 | 416-421 | Mercuriales: monthly prices at Tunis (meat by cut, hides, wool, eggs, cereals, pulses, olive oil ...), minimum/maximum/average | ~2500 | `commerce_prices` |
 | 422-424 | Magasins généraux: mouvement des marchandises, Tunis and Sousse (existing, entries, exits, remaining; quantity and value) | ~400 | `commerce_bonded_warehouses` |
@@ -62,7 +62,8 @@ consumption / prices / warehouses / weights pages.
 | `commerce_fisheries` | **done**, sgt1922-1924, 252 rows | f434-435, f924-925, f1428-1429, every cell read on native-resolution crops (img: all); Greek crews in the gutter |
 | `commerce_slaughter_by_commune` | **done**, sgt1922-1924, 1298 rows | f404-407, f894-897, f1398-1401, every cell read on native-resolution crops (img: all), each printing independently; 21 failed checks (printed totals), explained in the notes; sgt1924 Tunis/Tozeur bœufs realigned |
 | `commerce_cereals_balance` | **done**, sgt1922-1924, 252 rows | f408-409, f898-899, f1402-1403, every cell read on native-resolution crops (img: all), each printing independently; gutter cells `?` (sgt1922 1915-16 maize, sgt1923 1916-17 all lines, sgt1923 flour export 1914-15 ink blot); 4 balances `total_mismatch` (located by the printed averages), 1 `row_realigned` |
-| all others listed above | to do (next: f410-427, then f298-403) | – |
+| `commerce_cereals_stocks` | **done**, sgt1922-1924, 258 rows | f410-411, f900-901, f1404-1405, every cell read on native-resolution crops (img: all), each printing typed separately; sgt1923 prints harvest 1922 as "1923" (misprint); 6 failed identities (oats 1916, 1919 in each edition) and 1 failed average (sgt1923 maize, flagged `total_mismatch`), explained in the notes |
+| all others listed above | to do (next: f412-427, then f298-403) | – |
 
 ## Image reading
 

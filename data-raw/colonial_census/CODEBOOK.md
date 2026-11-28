@@ -335,6 +335,7 @@ Every table is tidy: one row per printed cell. Printed subtotals and totals are 
 | [`commerce_fisheries`](#commerce_fisheries) | fisheries | by edition | 252 | mixed | Sea fisheries, by nationality and type of fishing |
 | [`commerce_slaughter_by_commune`](#commerce_slaughter_by_commune) | slaughter | by edition | 1,298 | count | Consumption: animals slaughtered, by commune |
 | [`commerce_cereals_balance`](#commerce_cereals_balance) | cereals | by edition | 252 | mixed | Cereals: imports and exports by commercial campaign |
+| [`commerce_cereals_stocks`](#commerce_cereals_stocks) | cereals_consumption;cereals_stocks | by edition | 258 | mixed | Cereals: available stocks and average consumption |
 
 ### eur1906_t1_circonscription_nationality
 
@@ -16956,3 +16957,76 @@ Source `sgt`, table cereals, printed pages by edition. 252 rows. Value type: mix
 | Code | Printed label | N |
 |---|---|---:|
 | `quintals` |  | 252 |
+
+### commerce_cereals_stocks
+
+**Céréales : b) Stoks disponibles ; c) Consommation moyenne**  
+*Cereals: available stocks and average consumption*
+
+Source `sgt`, table cereals_consumption;cereals_stocks, printed pages by edition. 258 rows. Value type: mixed. Flags: (empty) 251, not_applicable 6, total_mismatch 1. Notes and validation: [`../yearbook_other_chapters/csv/commerce_cereals_stocks.md`](../yearbook_other_chapters/csv/commerce_cereals_stocks.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `period` | Coded dimension. |
+| `product` | Coded dimension. |
+| `product_fr` | Printed French label for `product`. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`period`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `1912` |  | 20 |
+| `1912-1921` |  | 6 |
+| `1913` |  | 20 |
+| `1913-1922` |  | 6 |
+| `1914` |  | 20 |
+| `1914-1923` |  | 6 |
+| `1915` |  | 20 |
+| `1916` |  | 20 |
+| `1917` |  | 20 |
+| `1918` |  | 20 |
+| `1919` |  | 20 |
+| `1920` |  | 20 |
+| `1921` |  | 20 |
+| `1922` |  | 20 |
+| `1923` |  | 20 |
+
+`product`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `barley` | Orge | 66 |
+| `maize` | Maïs et sorgho | 66 |
+| `oats` | Avoine | 60 |
+| `wheat` | Blé (1) / Blés (1) | 66 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `avg_consumption_per_capita` | Consommation moyenne par habitant | 9 |
+| `avg_consumption_total` | Consommation moyenne totale | 9 |
+| `campaign` | Campagne commerciale consécutive | 48 |
+| `consumption` | Quantités restant pour la consommation | 48 |
+| `production` | Production | 48 |
+| `remaining` | Quantités restant dans le pays | 48 |
+| `seed` | Quantités prélevées pour les semences | 48 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `kilograms_per_inhabitant` |  | 9 |
+| `quintals` |  | 9 |
+| `thousand_quintals` |  | 240 |
