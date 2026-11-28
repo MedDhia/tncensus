@@ -482,6 +482,92 @@
   ],
   "value_type": "count"
  },
+ "commerce_cereals_balance": {
+  "rows": 252,
+  "checks": 342,
+  "failed": [
+   "sgt1922 1920-1921 flour: balance = import - export: cells give 855, printed 850 (difference -5)",
+   "sgt1922 1916-1917 maize: balance = import - export: cells give -16720, printed 16720 (difference 33440)",
+   "sgt1922 1920-1921 maize: balance = import - export: cells give 472985, printed 463985 (difference -9000)",
+   "sgt1922 1913-1914 semolina_pasta: balance = import - export: cells give 2793, printed 2843 (difference 50)",
+   "sgt1922 1915-1916 semolina_pasta: balance = import - export: cells give 2100, printed 2099 (difference -1)",
+   "sgt1922 1919-1920 wheat: balance = import - export: cells give -310374, printed -311374 (difference -1000)",
+   "sgt1922 1920-1921 wheat: balance = import - export: cells give 498096, printed 497996 (difference -100)",
+   "sgt1923 1920-1921 flour: balance = import - export: cells give 855, printed 850 (difference -5)",
+   "sgt1923 1920-1921 maize: balance = import - export: cells give 472985, printed 463985 (difference -9000)",
+   "sgt1923 1921-1922 maize: balance = import - export: cells give 8678, printed 8673 (difference -5)",
+   "sgt1923 1913-1914 semolina_pasta: balance = import - export: cells give 2793, printed 2843 (difference 50)",
+   "sgt1923 1915-1916 semolina_pasta: balance = import - export: cells give 2100, printed 2099 (difference -1)",
+   "sgt1923 1919-1920 wheat: balance = import - export: cells give -310374, printed -311374 (difference -1000)",
+   "sgt1923 1920-1921 wheat: balance = import - export: cells give 498096, printed 497996 (difference -100)",
+   "sgt1924 1920-1921 flour: balance = import - export: cells give 855, printed 850 (difference -5)",
+   "sgt1924 1916-1917 maize: balance = import - export: cells give -16720, printed 16720 (difference 33440)",
+   "sgt1924 1920-1921 maize: balance = import - export: cells give 472985, printed 463985 (difference -9000)",
+   "sgt1924 1915-1916 semolina_pasta: balance = import - export: cells give 2100, printed 2099 (difference -1)",
+   "sgt1924 1919-1920 wheat: balance = import - export: cells give -310374, printed -311374 (difference -1000)",
+   "sgt1924 1920-1921 wheat: balance = import - export: cells give 498096, printed 497996 (difference -100)",
+   "sgt1922 flour balance: printed average 1912-1913/1916-1917 = mean of the years: cells give 209156, printed 200150 (difference -9006)",
+   "sgt1922 flour balance: printed average 1912-1913/1921-1922 = mean of the years: cells give 121675, printed 121673 (difference -2)",
+   "sgt1922 flour import: printed average 1912-1913/1916-1917 = mean of the years: cells give 227626, printed 227620 (difference -6)",
+   "sgt1922 flour import: printed average 1912-1913/1921-1922 = mean of the years: cells give 141443, printed 141440 (difference -3)",
+   "sgt1922 maize balance: printed average 1917-1918/1921-1922 = mean of the years: cells give 90373, printed 92773 (difference 2400)",
+   "sgt1922 semolina_groats balance: printed average 1912-1913/1916-1917 = mean of the years: cells give 57366, printed 3455 (difference -53911)",
+   "sgt1922 semolina_groats balance: printed average 1912-1913/1921-1922 = mean of the years: cells give 24517, printed -2438 (difference -26955)",
+   "sgt1922 semolina_groats export: printed average 1912-1913/1916-1917 = mean of the years: cells give 1494, printed 55405 (difference 53911)",
+   "sgt1922 semolina_groats export: printed average 1912-1913/1921-1922 = mean of the years: cells give 7602, printed 34557 (difference 26955)",
+   "sgt1922 semolina_pasta import: printed average 1912-1913/1916-1917 = mean of the years: cells give 2320, printed 2330 (difference 10)",
+   "sgt1922 semolina_pasta import: printed average 1912-1913/1921-1922 = mean of the years: cells give 1866, printed 1871 (difference 5)",
+   "sgt1922 wheat balance: printed average 1912-1913/1916-1917 = mean of the years: cells give 208497, printed 208297 (difference -200)",
+   "sgt1922 wheat balance: printed average 1912-1913/1921-1922 = mean of the years: cells give 2100, printed 2210 (difference 110)",
+   "sgt1922 wheat balance: printed average 1917-1918/1921-1922 = mean of the years: cells give -204298, printed -204078 (difference 220)",
+   "sgt1923 maize balance: printed average 1918-1919/1922-1923 = mean of the years: cells give 132376, printed 134177 (difference 1801)",
+   "sgt1923 oats import: printed average 1918-1919/1922-1923 = mean of the years: cells give 3465, printed 5465 (difference 2000)",
+   "sgt1923 wheat balance: printed average 1918-1919/1922-1923 = mean of the years: cells give -92621, printed -92401 (difference 220)",
+   "sgt1924 flour balance: printed average 1914-1915/1923-1924 = mean of the years: cells give 68995, printed 67998 (difference -997)",
+   "sgt1924 flour balance: printed average 1919-1920/1923-1924 = mean of the years: cells give 74542, printed 74545 (difference 3)",
+   "sgt1924 flour import: printed average 1914-1915/1923-1924 = mean of the years: cells give 90697, printed 90699 (difference 2)",
+   "sgt1924 flour import: printed average 1919-1920/1923-1924 = mean of the years: cells give 104449, printed 104451 (difference 2)",
+   "sgt1924 maize balance: printed average 1914-1915/1918-1919 = mean of the years: cells give 64095, printed 57407 (difference -6688)",
+   "sgt1924 maize balance: printed average 1914-1915/1923-1924 = mean of the years: cells give 96816, printed 94373 (difference -2443)",
+   "sgt1924 maize balance: printed average 1919-1920/1923-1924 = mean of the years: cells give 129538, printed 131338 (difference 1800)",
+   "sgt1924 maize import: printed average 1919-1920/1923-1924 = mean of the years: cells give 138896, printed 138806 (difference -90)",
+   "sgt1924 oats export: printed average 1919-1920/1923-1924 = mean of the years: cells give 241590, printed 241582 (difference -8)",
+   "sgt1924 semolina_pasta export: printed average 1919-1920/1923-1924 = mean of the years: cells give 6091, printed 3090 (difference -3001)",
+   "sgt1924 wheat balance: printed average 1914-1915/1918-1919 = mean of the years: cells give -138176, printed -138162 (difference 14)",
+   "sgt1924 wheat balance: printed average 1914-1915/1923-1924 = mean of the years: cells give -126491, printed -126374 (difference 117)",
+   "sgt1924 wheat balance: printed average 1919-1920/1923-1924 = mean of the years: cells give -114806, printed -114586 (difference 220)",
+   "sgt1924 wheat import: printed average 1914-1915/1918-1919 = mean of the years: cells give 78946, printed 78959 (difference 13)",
+   "sgt1924 wheat import: printed average 1914-1915/1923-1924 = mean of the years: cells give 180654, printed 180660 (difference 6)"
+  ],
+  "overlap_compared": 353,
+  "overlap_diffs": [
+   [
+    [
+     "1921-1922",
+     "maize",
+     "balance"
+    ],
+    "sgt1923",
+    "8673",
+    "sgt1924",
+    "8678"
+   ]
+  ],
+  "flagged": [
+   "sgt1922 1912-1913 flour import row_realigned",
+   "sgt1924 1916-1917 maize balance total_mismatch",
+   "sgt1924 1919-1920 wheat balance total_mismatch",
+   "sgt1924 1920-1921 wheat balance total_mismatch",
+   "sgt1924 1920-1921 maize balance total_mismatch"
+  ],
+  "editions": [
+   "sgt1922",
+   "sgt1923",
+   "sgt1924"
+  ],
+  "value_type": "count",
+  "illegible_printings_skipped": 25
+ },
  "_chapter_views": {
   "sgt1922": [
    281,

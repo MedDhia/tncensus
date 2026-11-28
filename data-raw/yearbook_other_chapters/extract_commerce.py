@@ -1329,6 +1329,130 @@ def build_slaughter(secs, write):
     return res
 
 
+# ----------------------------------------------------------------- Céréales : a) importation et exportation
+
+T_CER = "commerce_cereals_balance"
+CER_PRODUCT = {"wheat": "Blés (dur et tendre)", "flour": "Farine", "semolina_groats": "Semoules en gruaux",
+               "semolina_pasta": "Semoules en pâtes", "barley": "Orge", "oats": "Avoine",
+               "maize": "Maïs et sorgho"}
+CER_FLOW = {"import": "Importation", "export": "Exportation", "balance": "Balance"}
+# printed sign contradicted by the import/export lines and by the printed five-year averages of the balance
+CER_MISPRINTS = {("1916-1917", "maize", "balance"), ("1919-1920", "wheat", "balance"),
+                 ("1920-1921", "wheat", "balance"), ("1920-1921", "maize", "balance")}
+# printed one line too high (above the Importation line); the balance confirms the line
+CER_REALIGN = {("sgt1922", "1912-1913", "flour", "import")}
+CER_DOC = {
+    "census": "edition (each prints the last ten campaigns)",
+    "table_id": "`cereals` (Céréales : a) Importation et exportation par campagne commerciale)",
+    "gallica_ark": "Gallica volume ark", "source_page": "printed page number", "gallica_view": "Gallica view (fNNNN)",
+    "year": "year in which the commercial campaign ends (campaign 1912-1913 -> 1913)",
+    "campaign": "commercial campaign as printed (e.g. `1912-1913`)",
+    "product": "`wheat`, `flour`, `semolina_groats`, `semolina_pasta`, `barley`, `oats`, `maize`",
+    "product_fr": "line heading as printed",
+    "flow": "`import`, `export`, `balance` (balance = import - export, printed with its sign: + = excess of "
+            "imports, - = excess of exports)",
+    "flow_fr": "Importation, Exportation, Balance",
+    "measure": "`quantity`", "measure_fr": "quantité", "unit": "`quintals` (printed *quint*, metric quintals)",
+    "value": "quantity as printed (» stored as 0); balances signed as printed",
+    "flag": "empty, `total_mismatch` or `row_realigned` (see notes)",
+}
+
+
+def build_cereals(secs, write):
+    recs, used, cells, avgs = [], [], {}, {}
+    for s in secs:
+        if s["table"] != "cereals":
+            continue
+        used.append(s)
+        ed = s["ed"]
+        for r in s["rows"]:
+            prod, flow = r["label"].split(".")
+            for c, cell in r["cells"].items():
+                if c.startswith("avg"):
+                    avgs[(ed, prod, flow, c)] = cell.value
+                    continue
+                cells[(ed, prod, flow, c)] = cell.value
+                flag = cell.flag
+                if (c, prod, flow) in CER_MISPRINTS:
+                    flag = "total_mismatch"
+                elif (ed, c, prod, flow) in CER_REALIGN:
+                    flag = "row_realigned"
+                recs.append({"census": ed, "table_id": "cereals", "gallica_ark": s["ark"], "source_page": s["page"],
+                             "gallica_view": s["view"], "year": int(c[5:]), "campaign": c, "product": prod,
+                             "product_fr": CER_PRODUCT[prod], "flow": flow, "flow_fr": CER_FLOW[flow],
+                             "measure": "quantity", "measure_fr": "quantité", "unit": "quintals",
+                             "value": cell.value, "flag": flag})
+    for (ed, prod, flow, c), b in sorted(cells.items()):
+        if flow == "balance":
+            i, e = cells[(ed, prod, "import", c)], cells[(ed, prod, "export", c)]
+            if None not in (i, e):
+                CHK.eq(T_CER, f"{ed} {c} {prod}: balance = import - export", i - e, b)
+    for (ed, prod, flow, a), printed in sorted(avgs.items()):
+        y0, y1 = int(a[3:7]), int(a[8:12])
+        vals = [v for (e2, p2, f2, c), v in cells.items() if (e2, p2, f2) == (ed, prod, flow) and y0 <= int(c[5:]) <= y1]
+        if len(vals) == y1 - y0 + 1 and None not in vals:
+            CHK.eq(T_CER, f"{ed} {prod} {flow}: printed average {y0 - 1}-{y0}/{y1 - 1}-{y1} = mean of the years",
+                   (sum(vals) / len(vals)).quantize(Decimal(1)), printed, tol=Decimal(1))
+    kept, compared, diffs, n_ill = select_legible(recs, ["campaign", "product", "flow"])
+    kept.sort(key=lambda r: (r["year"], list(CER_PRODUCT).index(r["product"]), list(CER_FLOW).index(r["flow"])))
+    fails = CHK.fail[T_CER]
+    flagged = [f"{r['census']} {r['campaign']} {r['product']} {r['flow']} {r['flag']}" for r in kept if r["flag"]]
+    res = dict(rows=len(kept), checks=CHK.n[T_CER], failed=list(fails), overlap_compared=compared,
+               overlap_diffs=[list(d) for d in diffs], flagged=flagged, editions=EDITIONS_DONE, value_type="count",
+               illegible_printings_skipped=n_ill)
+    if write:
+        cols = COMMON + ["campaign", "product", "product_fr", "flow", "flow_fr", "measure", "measure_fr", "unit",
+                         "value", "flag"]
+        paras = [
+            "Imports, exports and balance of cereals and cereal products by commercial campaign (quintals). Full "
+            "printed title: *Céréales (blé dur et dérivés, blé tendre et dérivés, orge, avoine, maïs) : a) "
+            "Importation et exportation par campagne commerciale*. Footnote (1) (translated): the sign + indicates "
+            "the excess of imports over exports; the sign -, the excess of exports over imports. The balance line "
+            "is printed and is stored as printed (signed), and also used as a check (balance = import - export). "
+            "The three printed averages (*Moyenne des années*, two five-campaign and one ten-campaign average) were "
+            "transcribed as checks and are not stored.",
+            "Gutter: the fourth campaign of each spread lies against the binding. sgt1922 1915-1916 maize (three "
+            "cells) and sgt1923 1916-1917 (whole column) have digits hidden in the fold and were typed `?`; sgt1923 "
+            "flour export 1914-1915 has its first digit under an ink blot (`?`). Each of these campaigns is legible "
+            "in another printing, from which it is stored (latest legible printing). sgt1922 prints the flour import "
+            "of 1912-1913 (596.204) one line too high, above *Importation*; stored on the import line (the balance "
+            "596.204 - 33.024 = 563.180 agrees), flagged `row_realigned`.",
+            "Explanation of the failed balance checks (each cell re-read on native-resolution crops of every printing; "
+            "every one recurs identically in the two or three printings, each typed from its own image): "
+            "maize 1916-1917 is printed *+ 16.720* in all three editions while exports (18.663) exceed imports "
+            "(1.943); the printed five-campaign averages of sgt1924 (+57.407, i.e. the mean with - 16.720) confirm the "
+            "negative value, so the cell is flagged `total_mismatch` (printed sign kept). Wheat 1919-1920 (703 - 311.077, "
+            "printed - 311.374), wheat 1920-1921 (printed 497.996 for 498.096) and maize 1920-1921 (463.985 for "
+            "472.985): the printed averages of the balance that include these campaigns are higher by exactly "
+            "(1.000 + 100) / 5 = 220 (wheat, all three editions) and 9.000 / 5 = 1.800 (maize, sgt1923 and sgt1924; sgt1922 2.400), i.e. they were "
+            "computed from the correct balances; the three cells are flagged `total_mismatch` (printed value kept). "
+            "Flour 1920-1921 (850 for 855), semolina in pasta 1913-1914 (2.843 for 2.793) and 1915-1916 (2.099 for "
+            "2.100): the import and export lines and the balance are each clearly printed and the averages do not "
+            "decide; so nothing is flagged. sgt1923 prints the maize balance 1921-1922 as 8.673 "
+            "(sgt1922 and sgt1924: 8.678, which agrees with 9.113 - 435); the sgt1924 value is stored.",
+            "Explanation of the remaining failed average checks (besides those explained above by the four flagged "
+            "balances): the printed averages were evidently computed from figures "
+            "differing slightly from the yearly lines (differences of a few units to a few hundred quintals on most "
+            "lines, larger on balances, which the printer averaged from balances that do not always equal import - "
+            "export). A few are grossly wrong (sgt1922 semolina in groats export 1912-13/1916-17 printed 55.405 "
+            "where the five campaigns average 1.494; sgt1923 oats import 1918-19/1922-23 5.465 for 3.465; sgt1924 "
+            "semolina in pasta export 1919-20/1923-24 3.090 for 6.091). The yearly cells concerned were re-read and "
+            "stand as transcribed; averages are not stored, so nothing is flagged on their account.",
+            "Survey of the whole chapter: `commerce_survey.md`.",
+        ]
+        write_csv(T_CER, cols, kept)
+        write_notes(T_CER, CHAPTER, SCRIPT, kept, cols, CER_DOC,
+                    "Céréales : a) Importation et exportation par campagne commerciale",
+                    "Cereals: imports and exports by commercial campaign", paras, CHK.n[T_CER], fails, compared,
+                    diffs, coverage_lines(used),
+                    "Selection (SPEC_ADDENDUM rule 4): each edition prints the last ten campaigns (sgt1922 "
+                    "1912-1913 to 1921-1922, sgt1923 to 1922-1923, sgt1924 to 1923-1924); each campaign is stored "
+                    "once, from the latest edition printing it legibly; every other printing is compared and the "
+                    "differences listed below.",
+                    "Unit: metric quintals, as printed. value_type: count (quantity).")
+    return res
+
+
 def build(write):
     secs = []
     for ed in EDITIONS_DONE:
@@ -1371,6 +1495,7 @@ def build(write):
     res[T_CAB] = build_cabotage(secs, write)
     res[T_FISH] = build_fisheries(secs, write)
     res[T_SLA] = build_slaughter(secs, write)
+    res[T_CER] = build_cereals(secs, write)
     if write:
         cols = COMMON + DIMS + ["value", "flag"]
         write_csv(T, cols, kept)

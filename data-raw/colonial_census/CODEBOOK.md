@@ -334,6 +334,7 @@ Every table is tidy: one row per printed cell. Printed subtotals and totals are 
 | [`commerce_cabotage`](#commerce_cabotage) | navigation_d | by edition | 150 | mixed | Navigation: coastal trade, by port of dispatch and destination |
 | [`commerce_fisheries`](#commerce_fisheries) | fisheries | by edition | 252 | mixed | Sea fisheries, by nationality and type of fishing |
 | [`commerce_slaughter_by_commune`](#commerce_slaughter_by_commune) | slaughter | by edition | 1,298 | count | Consumption: animals slaughtered, by commune |
+| [`commerce_cereals_balance`](#commerce_cereals_balance) | cereals | by edition | 252 | mixed | Cereals: imports and exports by commercial campaign |
 
 ### eur1906_t1_circonscription_nationality
 
@@ -16880,3 +16881,78 @@ Source `sgt`, table slaughter, printed pages by edition. 1,298 rows. Value type:
 | Code | Printed label | N |
 |---|---|---:|
 | `head` |  | 1,298 |
+
+### commerce_cereals_balance
+
+**Céréales : a) Importation et exportation par campagne commerciale**  
+*Cereals: imports and exports by commercial campaign*
+
+Source `sgt`, table cereals, printed pages by edition. 252 rows. Value type: mixed. Flags: (empty) 247, total_mismatch 4, row_realigned 1. Notes and validation: [`../yearbook_other_chapters/csv/commerce_cereals_balance.md`](../yearbook_other_chapters/csv/commerce_cereals_balance.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `campaign` | Coded dimension. |
+| `product` | Coded dimension. |
+| `product_fr` | Printed French label for `product`. |
+| `flow` | Coded dimension. |
+| `flow_fr` | Printed French label for `flow`. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`campaign`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `1912-1913` |  | 21 |
+| `1913-1914` |  | 21 |
+| `1914-1915` |  | 21 |
+| `1915-1916` |  | 21 |
+| `1916-1917` |  | 21 |
+| `1917-1918` |  | 21 |
+| `1918-1919` |  | 21 |
+| `1919-1920` |  | 21 |
+| `1920-1921` |  | 21 |
+| `1921-1922` |  | 21 |
+| `1922-1923` |  | 21 |
+| `1923-1924` |  | 21 |
+
+`product`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `barley` | Orge | 36 |
+| `flour` | Farine | 36 |
+| `maize` | Maïs et sorgho | 36 |
+| `oats` | Avoine | 36 |
+| `semolina_groats` | Semoules en gruaux | 36 |
+| `semolina_pasta` | Semoules en pâtes | 36 |
+| `wheat` | Blés (dur et tendre) | 36 |
+
+`flow`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `balance` | Balance | 84 |
+| `export` | Exportation | 84 |
+| `import` | Importation | 84 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `quantity` | quantité | 252 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `quintals` |  | 252 |

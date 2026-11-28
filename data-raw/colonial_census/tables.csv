@@ -306,3 +306,4 @@ commerce_navigation_yearly,sgt,navigation_c,Navigation : c) sur le littoral ; ma
 commerce_cabotage,sgt,navigation_d,Navigation : d) cabotage ; mouvement par port d'expédition et de destination,"Navigation: coastal trade, by port of dispatch and destination",by edition,mixed
 commerce_fisheries,sgt,fisheries,Pêches maritimes par nationalité et par genre de pêche,"Sea fisheries, by nationality and type of fishing",by edition,mixed
 commerce_slaughter_by_commune,sgt,slaughter,Consommation : animaux abattus,"Consumption: animals slaughtered, by commune",by edition,count
+commerce_cereals_balance,sgt,cereals,Céréales : a) Importation et exportation par campagne commerciale,Cereals: imports and exports by commercial campaign,by edition,mixed
