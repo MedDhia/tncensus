@@ -39,7 +39,7 @@ Notes:
 | 1 | Communes: **done** (`extract_communes.py`, all tables, surveyed page by page) |
 | 2 | Justice: **done** (`extract_justice.py`; hearing-schedule text pages not transcribed). Prisons: **done** (`extract_prisons.py`, 9 tables, survey in `csv/prisons_survey.md`). Property: **done** (`extract_property.py`, 13 tables, survey in `csv/property_survey.md`) |
 | 3 | Posts: **done** (`extract_posts.py`, 6 tables, survey in `csv/posts_survey.md`; exchange-rate pages to do). Public works: **done** (`extract_publicworks.py`, 12 tables, survey in `csv/publicworks_survey.md`) |
-| 4 | Finances: budget, public debt, patente, taxe personnelle and livestock tax **done** (`extract_finance.py`); achour, canoun to do (views in `csv/finance_survey.md`) |
+| 4 | Finances: budget, public debt, patente, taxe personnelle and livestock tax **done** (`extract_finance.py`); achour **done** (`extract_finance_achour.py`); canoun in progress (views in `csv/finance_survey.md`) |
 | 5 | Agriculture: land, crops, cereal zones **done** (`extract_agriculture.py`); tax-class tables, vines, olives, dates, livestock, forests to do (views in `csv/agriculture_survey.md`); the 1922–1930 meteorology and école coloniale / botanique / laboratory pages go to `research_` |
 | 6 | Colonisation: 8 tables **done** (`extract_colonisation.py`; sgt1922–1923 old-layout recapitulations, planting sales, habous/enzel cessions to do). Economic institutions, labour, research institutions: to do |
 | 7–10 | Commerce and navigation, by edition groups (1922–24, 1925–27, 1928–30, 1935–39) |

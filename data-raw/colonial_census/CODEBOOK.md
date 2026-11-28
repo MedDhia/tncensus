@@ -263,6 +263,7 @@ Every table is tidy: one row per printed cell. Printed subtotals and totals are 
 | [`agriculture_land`](#agriculture_land) | land_a;land_b;land_c;land_d | by edition | 348 | mixed | Land area: territorial area and population density; productive and unproductive area; use of the productive area; use of the arable area |
 | [`agriculture_crops`](#agriculture_crops) | crops_a;crops_b;crops_c;crops_d | by edition | 1,492 | mixed | Crop production: area, production and yield of cereals, other food plants, industrial plants and tree crops |
 | [`agriculture_cereal_zones`](#agriculture_cereal_zones) | zones | by edition | 504 | mixed | Cereals (durum and soft wheat, barley, oats): area, production and yield per hectare by zone |
+| [`finance_achour`](#finance_achour) | achour_a;achour_b;achour_nat;achour_roll | by edition | 20,808 | hectares | Achour (tithe on cereals): areas sown by caïdat, crop, roll (Europeans / indigenous) and yield class |
 
 ### eur1906_t1_circonscription_nationality
 
@@ -12205,3 +12206,96 @@ Source `sgt`, table zones, printed pages by edition. 504 rows. Value type: mixed
 | `hectares` |  | 168 |
 | `quintals` |  | 168 |
 | `quintals_per_hectare` |  | 168 |
+
+### finance_achour
+
+**Achour. Superficies ensemencées par les européens et par les indigènes**  
+*Achour (tithe on cereals): areas sown by caïdat, crop, roll (Europeans / indigenous) and yield class*
+
+Source `sgt`, table achour_a;achour_b;achour_nat;achour_roll, printed pages by edition. 20,808 rows. Value type: hectares. Flags: (empty) 20,733, total_mismatch 36, derived_from_totals 34, row_realigned 3, not_applicable 2. Notes and validation: [`../yearbook_other_chapters/csv/finance_achour.md`](../yearbook_other_chapters/csv/finance_achour.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `region` | Coded dimension. |
+| `controle_civil` | Place or label as printed (19 distinct values). |
+| `caidat` | Place or label as printed (48 distinct values). |
+| `crop` | Coded dimension. |
+| `crop_fr` | Printed French label for `crop`. |
+| `roll` | Coded dimension. |
+| `roll_fr` | Printed French label for `roll`. |
+| `yield_class` | Coded dimension. |
+| `yield_class_fr` | Printed French label for `yield_class`. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`region`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `(empty)` |  | 11,904 |
+| `1re Région (Bizerte)` |  | 1,488 |
+| `2e Région (Tunis)` |  | 456 |
+| `2me Région (Tunis)` |  | 512 |
+| `3e Région (Le Kef)` |  | 720 |
+| `3me Région (Le Kef)` |  | 768 |
+| `4e Région (Sousse)` |  | 1,320 |
+| `4me Région (Sousse)` |  | 1,408 |
+| `5e Région (Sfax)` |  | 600 |
+| `5me Région (Sfax)` |  | 640 |
+| `Territoires Militaires du Sud` |  | 992 |
+
+`crop`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `barley` | Orge / b) Orge | 2,604 |
+| `broad_beans` | Fèves / d) Fèves | 2,604 |
+| `chickpeas` | Pois chiches / e) Pois chiches | 2,604 |
+| `flax` | Lin / h) Lin | 2,604 |
+| `maize` | Maïs / f) Maïs | 2,604 |
+| `oats` | Avoine / c) Avoine | 2,604 |
+| `sorghum` | Sorgho / g) Sorgho | 2,604 |
+| `wheat` | Blé / a) Blé | 2,580 |
+
+`roll`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `all` | Européens et Indigènes / européens et tunisiens | 1,440 |
+| `european` | a) Superficies ensemencées par des européens / par les européens | 9,672 |
+| `indigenous` | b) Superficies ensemencées par des indigènes / par les indigènes / par les tunisiens | 9,696 |
+
+`yield_class`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `(empty)` |  | 6,381 |
+| `1` | 1 hectol. | 2,061 |
+| `2` | 2 hectol. | 2,061 |
+| `3` | 3 hectol. | 2,061 |
+| `4` | 4 hectol. | 2,061 |
+| `5` | 5 hectol. | 2,061 |
+| `6_plus` | 6 hectol. et au-dessus | 2,061 |
+| `under_1` | moins d'un hectolitre | 2,061 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `area_new_land_exempt` | Cultures effectuées sur terrains nouvellement défrichés et exemptées de l'achour | 3,501 |
+| `area_sown` | Nombre d'hectares d'un rendement de : / Nombre d'hectares ensemencés | 17,307 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `hectares` |  | 20,808 |
