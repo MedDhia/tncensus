@@ -442,6 +442,46 @@
   ],
   "value_type": "count"
  },
+ "commerce_slaughter_by_commune": {
+  "rows": 1298,
+  "checks": 223,
+  "failed": [
+   "sgt1922 f404 Bizerte: total = sum of species: cells give 27399, printed 23799 (difference -3600)",
+   "sgt1922 f404 A reporter goats = lines: cells give 67783, printed 68683 (difference 900)",
+   "sgt1922 f404 A reporter total = lines: cells give 242132, printed 246632 (difference 4500)",
+   "sgt1922 f406 Totaux goats = lines + Report: cells give 175007, printed 174107 (difference -900)",
+   "sgt1922 f406 Totaux total = lines + Report: cells give 775487, printed 774587 (difference -900)",
+   "sgt1923 f896 Sfax: total = sum of species: cells give 62062, printed 62067 (difference 5)",
+   "sgt1923 f896 Totaux sheep = lines + Report: cells give 379843, printed 379833 (difference -10)",
+   "sgt1923 f896 Totaux pigs = lines + Report: cells give 5665, printed 5670 (difference 5)",
+   "sgt1923 f896 Totaux total = lines + Report: cells give 668693, printed 668683 (difference -10)",
+   "sgt1924 f1398 Ferryville: total = sum of species: cells give 5803, printed 5797 (difference -6)",
+   "sgt1924 f1398 Foum-Tatahouine: total = sum of species: cells give 13574, printed 13585 (difference 11)",
+   "sgt1924 f1398 A reporter sheep = lines: cells give 133590, printed 133600 (difference 10)",
+   "sgt1924 f1398 A reporter camels = lines: cells give 876, printed 877 (difference 1)",
+   "sgt1924 f1398 A reporter total = lines: cells give 239261, printed 239267 (difference 6)",
+   "sgt1924 f1400 Souk-el-Arba: total = sum of species: cells give 10351, printed 10358 (difference 7)",
+   "sgt1924 f1400 Teboursouk: total = sum of species: cells give 8476, printed 8467 (difference -9)",
+   "sgt1924 f1400 Totaux cattle = lines + Report: cells give 71362, printed 53353 (difference -18009)",
+   "sgt1924 f1400 Totaux calves = lines + Report: cells give 8997, printed 8897 (difference -100)",
+   "sgt1924 f1400 Totaux goats = lines + Report: cells give 184916, printed 184926 (difference 10)",
+   "sgt1924 f1400 Totaux pigs = lines + Report: cells give 5053, printed 5056 (difference 3)",
+   "sgt1924 f1400 Totaux total = lines + Report: cells give 722603, printed 704508 (difference -18095)"
+  ],
+  "overlap_compared": 0,
+  "overlap_diffs": [],
+  "flagged": [
+   "sgt1923 Sfax pigs total_mismatch",
+   "sgt1924 Tunis cattle row_realigned",
+   "sgt1924 Tozeur cattle row_realigned"
+  ],
+  "editions": [
+   "sgt1922",
+   "sgt1923",
+   "sgt1924"
+  ],
+  "value_type": "count"
+ },
  "_chapter_views": {
   "sgt1922": [
    281,

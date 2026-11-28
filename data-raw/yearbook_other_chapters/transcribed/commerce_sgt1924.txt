@@ -749,3 +749,80 @@ Pêche dans les lacs | 44 72 74 7 3 60 1 2 0 0 0 0 0 0 7 0 52 77 141 634000 2437
 Éponges | 507 694 1712 369 2653 1135 0 0 0 8 35 163 1 17 5 0 885 3399 3015 113430 5744300
 Thonaires | 0 0 222 84 981 452 0 0 0 0 0 0 0 0 4 414 84 981 678 1163510 3615000
 Totaux | 2633 4429 9591 943 5152 3664 54 103 199 11 39 172 61 86 179 628 3702 9809 13805 5457140 18477300
+
+# ---- Consommation : animaux abattus by commune (year 1924, not printed). Spread f1398|f1399 (A reporter) and
+# f1400|f1401 (Report, TOTAUX). sgt1924 adds the column CHEVAUX MULETS (horses) and prints MOUTONS AGNEAUX,
+# CHÈVRES CHEVREAUX; no footnote. » typed 0. Medjez-el-Bab prints "Droits d'abatage affermés" with » in the
+# other columns: typed -. Soliman total printed "10.358 et 829 kig. viande foraine" (typed 10358).
+# Tunis and Tozeur boeufs: printed 228 (Tunis) and 37.622 (Tozeur), evidently interchanged (row totals agree only
+# with the swap); typed as printed, realigned in the script (row_realigned).
+# Sousse boeufs: third digit damaged on the crop, read 3.782 (= total minus the other cells).
+@slaughter view=1398 page=408 year=1924
+img: all
+cols: cattle calves sheep goats pigs horses camels other total
+Aïn-Draham | 213 74 836 1007 16 0 0 7 2153
+Ariana (L') | 332 46 1361 0 0 0 0 0 1739
+Bardo (Le) | 0 0 0 0 0 0 0 0 0
+Ben-Gardane | 38 11 2392 7753 0 0 71 0 10265
+Béja | 1134 108 9015 7221 74 0 6 16 17574
+Bizerte | 5945 238 10934 4971 533 0 13 1426 24060
+Carthage | 0 0 0 0 0 0 0 0 0
+Djemmal | 373 0 4746 1564 0 0 47 0 6730
+Djerba | 19 20 2337 3185 3 0 59 1 5624
+Ebba-Ksour | 350 81 5304 5529 12 0 2 0 11278
+El-Djem | 5 0 3184 2662 0 0 11 0 5862
+Ferryville | 1113 227 4042 102 266 0 0 53 5797
+Feriana | 30 19 796 462 0 0 0 0 1307
+Foum-Tatahouine | 297 0 5084 8193 0 0 0 0 13585
+Gabès | 807 0 21353 10603 0 0 0 0 32763
+Gafsa | 553 115 9269 2325 1 0 52 3 12318
+Ghardimaou | 53 30 315 529 22 0 0 0 949
+Goulette (La) | 3143 207 3454 0 0 0 0 0 6804
+Grombalia | 317 0 1735 1315 15 0 4 0 3386
+Hadjeb-el-Aioun | 128 0 3012 3288 0 0 0 0 6428
+Hammam-Lif | 1018 35 788 144 14 0 2 0 2001
+El-Hamma | 40 14 1802 2801 0 0 100 0 4757
+Kairouan | 2177 16 24829 7230 6 0 430 1 34689
+Kala-Kebira | 10 6 1354 3325 0 0 28 0 4723
+Ksour-Essaf | 4 7 7349 712 0 0 47 1 8120
+Le Kef | 736 283 8076 6794 36 0 1 1 15927
+Le Kram | 0 0 0 0 0 0 0 0 0
+Le Krib | 1 0 49 92 0 0 0 0 142
+Maharès | 2 2 174 99 0 0 3 0 280
+A reporter | 18838 1539 133600 81906 998 0 877 1509 239267
+
+@slaughter view=1400 page=410 year=1924
+img: all
+cols: cattle calves sheep goats pigs horses camels other total
+Report | 18838 1539 133600 81906 998 0 877 1509 239267
+Mahdia | 8 410 7447 117 0 0 1 0 7983
+La Marsa | 799 27 1530 0 0 0 0 0 2356
+Mateur | 500 77 6720 4742 61 0 2 3 12105
+Maxula-Radès | 161 143 1430 8 3 0 0 110 1855
+Médenine | 109 0 3566 8683 0 0 35 0 12393
+Medjez-el-Bab | - - - - - - - - -
+M'Saken | 15 8 1889 5371 0 0 124 0 7407
+Menzel-bou-Zelfa | 101 99 1800 6577 0 0 2 0 8579
+Menzel-Temime | 227 0 4873 3256 1 0 14 0 8371
+Moknine | 325 124 7992 661 0 0 24 0 9126
+Monastir | 816 194 2643 98 0 0 0 0 3751
+Nabeul | 1402 0 5589 342 1 0 3 0 7337
+Nefta | 47 0 2729 1760 0 0 140 0 4676
+La Pêcherie | 0 0 0 0 0 0 0 0 0
+Philippe-Thomas | 385 36 4672 829 63 0 21 0 6006
+Saint-Germain | 0 0 0 0 0 0 0 0 0
+Sfax | 3284 1159 46427 14120 208 0 169 0 65367
+Sidi-bou-Saïd | 776 14 1504 5 0 0 0 0 2299
+Soliman | 413 77 3212 3581 0 0 7 0 7290
+Souk-el-Arba | 461 99 4597 5174 4 0 1 15 10358
+Souk-el-Khemis | 319 51 3212 2073 22 0 0 0 5677
+Sousse | 3782 2746 19385 3199 181 0 41 0 29334
+Tabarka | 108 259 566 840 44 0 0 132 1949
+Thala | 128 0 2784 3629 0 0 0 0 6541
+Tebourba | 51 36 1848 1338 15 0 2 0 3290
+Teboursouk | 229 145 3635 4467 0 0 0 0 8467
+Tunis | 228 1701 165630 22158 3447 642 145 154 231499
+Tozeur | 37622 0 5153 2515 0 0 81 0 7977
+Zazhouan | 197 53 1916 6267 4 0 0 0 8437
+Zarzis | 31 0 1650 1200 1 0 24 0 2906
+Totaux | 53353 8897 447999 184926 5056 642 1713 1923 704508

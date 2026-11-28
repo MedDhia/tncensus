@@ -1216,6 +1216,119 @@ def build_fisheries(secs, write):
     return res
 
 
+# ----------------------------------------------------------------- Consommation: animaux abattus
+
+T_SLA = "commerce_slaughter_by_commune"
+SLA_SPECIES = {"cattle": "Bœufs ou vaches", "calves": "Veaux", "sheep": "Moutons", "goats": "Chèvres",
+               "pigs": "Porcs", "horses": "Chevaux, mulets", "camels": "Chameaux", "other": "Autres"}
+SLA_SPECIES_1924 = {"cattle": "Bœufs, vaches", "sheep": "Moutons, agneaux", "goats": "Chèvres, chevreaux"}
+SLA_LEFT = ("cattle", "calves", "sheep")  # printed on the even (left) view; the rest on view + 1
+# (edition, commune) -> {column: realigned value}; printed values interchanged between two lines
+SLA_REALIGN = {("sgt1924", "Tunis"): {"cattle": Decimal(37622)}, ("sgt1924", "Tozeur"): {"cattle": Decimal(228)}}
+SLA_NONTOTAL = ("A reporter", "Report", "Totaux")
+SLA_DOC = {
+    "census": "edition (each prints one year; no overlap)",
+    "table_id": "`slaughter` (Consommation : animaux abattus)",
+    "gallica_ark": "Gallica volume ark", "source_page": "printed page number", "gallica_view": "Gallica view (fNNNN)",
+    "year": "reference year of the edition (not printed: 1922, 1923, 1924)",
+    "commune": "commune as printed in that edition",
+    "species": "`cattle`, `calves`, `sheep`, `goats`, `pigs`, `horses` (sgt1924 only), `camels`, `other`",
+    "species_fr": "column heading as printed",
+    "measure": "`animals_slaughtered`", "measure_fr": "animaux abattus", "unit": "`head`",
+    "value": "number of animals as printed (» stored as 0); empty when the slaughter dues were farmed out "
+             "or not yet instituted",
+    "flag": "empty, `not_applicable`, `row_realigned` or `total_mismatch` (see notes)",
+}
+# cells located as misprints by the row and column totals together: (edition, commune, species) -> note
+SLA_MISPRINT = {("sgt1923", "Sfax", "pigs"): "printed 203; the Sfax total and the pigs TOTAUX both need 208"}
+
+
+def build_slaughter(secs, write):
+    recs, used = [], []
+    for s in secs:
+        if s["table"] != "slaughter":
+            continue
+        used.append(s)
+        ed = s["ed"]
+        sp = [c for c in s["cols"] if c != "total"]
+        body = [r for r in s["rows"] if r["label"] not in SLA_NONTOTAL]
+        realigned = []
+        for r in body:
+            vals = {c: r["cells"][c].value for c in s["cols"]}
+            vals.update(SLA_REALIGN.get((ed, r["label"]), {}))
+            realigned.append((r, vals))
+            CHK.eq(T_SLA, f"{ed} f{s['view']} {r['label']}: total = sum of species", ssum(vals[c] for c in sp),
+                   vals["total"])
+        rep = [r for r in s["rows"] if r["label"] == "Report"]
+        tot = [r for r in s["rows"] if r["label"] in ("A reporter", "Totaux")][0]
+        for c in s["cols"]:
+            got = ssum([v[c] for _, v in realigned if v[c] is not None] + [r["cells"][c].value for r in rep])
+            CHK.eq(T_SLA, f"{ed} f{s['view']} {tot['label']} {c} = lines" + (" + Report" if rep else ""), got,
+                   tot["cells"][c].value)
+        for r, vals in realigned:
+            for c in sp:
+                cell = r["cells"][c]
+                flag = cell.flag
+                if (ed, r["label"]) in SLA_REALIGN and c in SLA_REALIGN[(ed, r["label"])]:
+                    flag = "row_realigned"
+                elif (ed, r["label"], c) in SLA_MISPRINT:
+                    flag = "total_mismatch"
+                fr = SLA_SPECIES_1924.get(c, SLA_SPECIES[c]) if ed == "sgt1924" else SLA_SPECIES[c]
+                recs.append({"census": ed, "table_id": "slaughter", "gallica_ark": s["ark"],
+                             "source_page": s["page"] + (0 if c in SLA_LEFT else 1),
+                             "gallica_view": s["view"] + (0 if c in SLA_LEFT else 1), "year": int(s["year"]),
+                             "commune": r["label"], "species": c, "species_fr": fr,
+                             "measure": "animals_slaughtered", "measure_fr": "animaux abattus", "unit": "head",
+                             "value": vals[c], "flag": flag})
+    kept, compared, diffs = select_latest(recs, ["year", "commune", "species"])
+    fails = CHK.fail[T_SLA]
+    flagged = [f"{r['census']} {r['commune']} {r['species']} {r['flag']}" for r in kept if r["flag"]
+               and r["flag"] != "not_applicable"]
+    res = dict(rows=len(kept), checks=CHK.n[T_SLA], failed=list(fails), overlap_compared=compared,
+               overlap_diffs=[list(d) for d in diffs], flagged=flagged, editions=EDITIONS_DONE, value_type="count")
+    if write:
+        cols = COMMON + ["commune", "species", "species_fr", "measure", "measure_fr", "unit", "value", "flag"]
+        paras = [
+            "Animals slaughtered, by commune and species, one year per edition (the reference year, not printed). "
+            "The table runs over two spreads (A reporter / Report); the TOTAUX column and line and the A reporter "
+            "/ Report lines are not stored, they were used as checks. Footnote (1) in sgt1922 and sgt1923 "
+            "(translated): animals slaughtered outside the centres constituted as communes are not included.",
+            "Columns: sgt1922 and sgt1923 print seven species (bœufs ou vaches, veaux, moutons, chèvres, porcs, "
+            "chameaux, autres); sgt1924 adds *chevaux, mulets* and prints *moutons, agneaux* and *chèvres, "
+            "chevreaux*. Communes as printed in each edition (sgt1924 writes *Ariana (L')*, *El-Hamma*, *Le Kef*, "
+            "*La Marsa*, *Zazhouan* [sic] ...; sgt1923 prints Souk-el-Arba before Soliman). No English "
+            "translation or harmonisation of commune names is attempted.",
+            "Not applicable: sgt1923 Ksour-Essaf and Medjez-el-Bab (*Droits affermés*: slaughter dues farmed out) "
+            "and Maharès (*Taxe instituée en 1924*); sgt1924 Medjez-el-Bab (*Droits d'abatage affermés*): stored "
+            "empty with `not_applicable`. sgt1924 Souk-el-Arba total printed *10.358 et 829 kig. viande foraine* "
+            "(829 kg of meat brought in from outside; not stored).",
+            "sgt1924: the bœufs of Tunis and Tozeur are printed 228 and 37.622, evidently interchanged (the two "
+            "row totals, 231.499 and 7.977, agree only with the swap); stored realigned, flagged `row_realigned`.",
+            "Explanation of the failed checks (every cell concerned re-read on native-resolution crops). "
+            "sgt1922: Bizerte prints total 23.799 for lines summing to 27.399, and the A reporter line prints "
+            "chèvres 68.683 and total 246.632 where the lines give 67.783 and 245.732; the TOTAUX line agrees "
+            "with the lines (the Report line repeats the misprinted A reporter, hence the second-spread failures "
+            "of 900). Totals only, nothing stored is affected. "
+            "sgt1923: Sfax pigs printed 203; the Sfax total (62.067) and the pigs TOTAUX (5.670) both need 208, "
+            "so the cell is flagged `total_mismatch` (printed value kept). The moutons TOTAUX (379.833) and the "
+            "grand total (668.683) are 10 below the lines; no single cell could be located (the moutons column "
+            "lies against the binding but every figure is legible). "
+            "sgt1924: several lines do not add to their printed totals (Ferryville +6, Foum-Tatahouine -11, "
+            "Souk-el-Arba -7, Teboursouk +9) and the A reporter / TOTAUX lines differ from the column sums "
+            "(moutons, chameaux, total on the first spread; bœufs 18.009 lower, veaux 100 lower, chèvres and "
+            "porcs slightly higher on the second). The printed TOTAUX line is consistent with itself (the "
+            "species add to 704.508 within one unit), so it was evidently set from different figures than the "
+            "lines; the cells stand as printed and nothing is flagged.",
+            "Survey of the whole chapter: `commerce_survey.md`.",
+        ]
+        write_csv(T_SLA, cols, kept)
+        write_notes(T_SLA, CHAPTER, SCRIPT, kept, cols, SLA_DOC, "Consommation : animaux abattus",
+                    "Consumption: animals slaughtered, by commune", paras, CHK.n[T_SLA], fails, compared, diffs,
+                    coverage_lines(used), "Selection: each edition prints a single year; no overlap.",
+                    "Unit: head (number of animals), as printed. value_type: count.")
+    return res
+
+
 def build(write):
     secs = []
     for ed in EDITIONS_DONE:
@@ -1257,6 +1370,7 @@ def build(write):
     res[T_YR] = build_nav_yearly(secs, write)
     res[T_CAB] = build_cabotage(secs, write)
     res[T_FISH] = build_fisheries(secs, write)
+    res[T_SLA] = build_slaughter(secs, write)
     if write:
         cols = COMMON + DIMS + ["value", "flag"]
         write_csv(T, cols, kept)

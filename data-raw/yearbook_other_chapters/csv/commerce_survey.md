@@ -59,7 +59,8 @@ consumption / prices / warehouses / weights pages.
 | `commerce_navigation_yearly` | **done**, 1913-1924, 72 rows | f432, f922, f1426, every cell read on native-resolution crops (img: all); one overlap difference (1923 exits goods, sgt1923 misprint) |
 | `commerce_cabotage` | **done**, sgt1922-1924, 150 rows | f433, f923, f1427, every cell read on native-resolution crops (img: all) |
 | `commerce_fisheries` | **done**, sgt1922-1924, 252 rows | f434-435, f924-925, f1428-1429, every cell read on native-resolution crops (img: all); Greek crews in the gutter |
-| all others listed above | to do (next: f404-427, then f298-403) | – |
+| `commerce_slaughter_by_commune` | **done**, sgt1922-1924, 1298 rows | f404-407, f894-897, f1398-1401, every cell read on native-resolution crops (img: all), each printing independently; 21 failed checks (printed totals), explained in the notes; sgt1924 Tunis/Tozeur bœufs realigned |
+| all others listed above | to do (next: f408-427, then f298-403) | – |
 
 ## Image reading
 

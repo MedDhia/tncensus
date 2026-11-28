@@ -333,6 +333,7 @@ Every table is tidy: one row per printed cell. Printed subtotals and totals are 
 | [`commerce_navigation_yearly`](#commerce_navigation_yearly) | navigation_c | by edition | 72 | mixed | Navigation: shipping on the coast, goods and passengers, by year |
 | [`commerce_cabotage`](#commerce_cabotage) | navigation_d | by edition | 150 | mixed | Navigation: coastal trade, by port of dispatch and destination |
 | [`commerce_fisheries`](#commerce_fisheries) | fisheries | by edition | 252 | mixed | Sea fisheries, by nationality and type of fishing |
+| [`commerce_slaughter_by_commune`](#commerce_slaughter_by_commune) | slaughter | by edition | 1,298 | count | Consumption: animals slaughtered, by commune |
 
 ### eur1906_t1_circonscription_nationality
 
@@ -16830,3 +16831,52 @@ Source `sgt`, table fisheries, printed pages by edition. 252 rows. Value type: m
 | `kg` |  | 14 |
 | `persons` |  | 84 |
 | `tons register` |  | 70 |
+
+### commerce_slaughter_by_commune
+
+**Consommation : animaux abattus**  
+*Consumption: animals slaughtered, by commune*
+
+Source `sgt`, table slaughter, printed pages by edition. 1,298 rows. Value type: count. Flags: (empty) 1,266, not_applicable 29, row_realigned 2, total_mismatch 1. Notes and validation: [`../yearbook_other_chapters/csv/commerce_slaughter_by_commune.md`](../yearbook_other_chapters/csv/commerce_slaughter_by_commune.md).
+
+| Column | Description |
+|---|---|
+| `census` | Source volume: `eur1906` (1906 European census), `ind1931` (1931 indigenous census), or the *Statistique générale* edition the value is taken from (`sgt1922` ... `sgt1939`). |
+| `table_id` | Table number or letter as printed (`text` for tables printed in the commentary). |
+| `gallica_ark` | Gallica ark of the bound volume holding that edition (views are numbered within it). |
+| `source_page` | Printed page number. |
+| `gallica_view` | Gallica page view; the scan is at https://gallica.bnf.fr/ark:/12148/<ark>/f<view>. |
+| `year` | Year the figure refers to. |
+| `commune` | Place or label as printed (73 distinct values). |
+| `species` | Coded dimension. |
+| `species_fr` | Printed French label for `species`. |
+| `measure` | Coded dimension. |
+| `measure_fr` | Printed French label for `measure`. |
+| `unit` | Coded dimension. |
+| `value` | The printed figure. |
+| `flag` | Data-quality flag; see the legend at the top. |
+
+`species`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `calves` | Veaux | 177 |
+| `camels` | Chameaux | 177 |
+| `cattle` | Bœufs ou vaches / Bœufs, vaches | 177 |
+| `goats` | Chèvres / Chèvres, chevreaux | 177 |
+| `horses` | Chevaux, mulets | 59 |
+| `other` | Autres | 177 |
+| `pigs` | Porcs | 177 |
+| `sheep` | Moutons / Moutons, agneaux | 177 |
+
+`measure`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `animals_slaughtered` | animaux abattus | 1,298 |
+
+`unit`:
+
+| Code | Printed label | N |
+|---|---|---:|
+| `head` |  | 1,298 |
